@@ -66,8 +66,8 @@ artefact; this change does not publish its 90-entry outline or incorporate
 handbook text. The semantic pilot does not depend on those local files.
 
 Content freeze is 24 September 2026; the seminar is 30 September. WebMCP and
-MacBook/PA integration are at feasibility stage, with the personal-AI product
-awaiting clarification. No new website, audio configuration or voice-tool
+MacBook/PA integration are at feasibility stage, with ChatGPT live voice identified and its actual
+Mac/task/browser/audio integration awaiting rehearsal. No new website, audio configuration or voice-tool
 integration is delivered by this candidate.
 
 The stage-two candidate snapshot is
@@ -79,3 +79,5 @@ baseline. Local deterministic generation, all-assertion/RDF validation,
 metadata census pass. Independent agent review covered semantic wording and
 validation failure modes; this is not human domain review. See
 `validation/semantics.json` and `validation/semantic-review.json`.
+
+The exact stage-two content commit `48abaff6c640e4a3e206af1adc71e21efd12738f` passed live Explorer import checks in installed Edge for YAML-LD and JSON, semantic relationship inspection, graph labels, the non-executable candidate and its original PDF-page link. No warning or error logs were captured in either test tab. [Browser receipt](validation/stage-two-browser.json).

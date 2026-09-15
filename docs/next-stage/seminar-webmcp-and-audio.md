@@ -13,10 +13,11 @@ source passages and follow its evidenced relationships. Project the selected
 evidence while the personal AI explains what it found, including uncertainty.
 
 Keep the personal AI in the participant's chosen host. The website can serve
-bounded evidence without hosting a general-purpose model. “Live 1” is currently
-an unresolved product reference. Its identity, subscription, macOS support,
-voice capabilities and ability to call page tools must be established before
-it becomes the named demonstration host. Voice output and a paid subscription
+bounded evidence without hosting a general-purpose model. The owner has clarified that “Live 1” means **ChatGPT live voice**.
+Current [ChatGPT Voice documentation](https://learn.chatgpt.com/docs/features/voice)
+describes GPT-Live in the desktop app, including macOS and supported subscription
+plans. Account/rollout availability and the actual voice-to-page-tool path still
+need a rehearsal before it becomes the verified demonstration host. Voice output and a paid subscription
 do not themselves establish WebMCP access.
 
 ```mermaid
@@ -44,7 +45,7 @@ browser page does not prove that the voice host has the tool connection.
 | Existing WebMCP exemplar | [govuk-webmcp source][tools-source] and [dated host observations][host-observations], read-only at `32f3d55bf34c4056a4b51b8fa00ad3c94a799d03` | Reusable implementation and evaluation patterns exist. Keep the submitted exemplar intact; build the DWP demonstration separately. |
 | Current tool environment | Enabled tool metadata includes `mcp__playwright__browser_webmcp_list` and `mcp__playwright__browser_webmcp_call` | A dedicated WebMCP adapter is available in this task's tool inventory. No DWP-page inventory or invocation was performed in this assessment. Ordinary DOM and screenshot tools are separate capabilities. |
 | Browser platform | [Current Chrome documentation][webmcp], reviewed on 15 September | WebMCP is a proposed standard with an origin trial from Chrome 149 and a local testing flag. Pin and test the actual browser/host combination. |
-| Personal AI and voice | Product clarification outstanding | No “Live 1” compatibility, subscription entitlement or voice/tool concurrency claim can yet be made. |
+| Personal AI and voice | Owner clarified ChatGPT live voice; official desktop Voice documentation inspected | GPT-Live supports desktop voice and task coordination. Account availability and the actual DWP WebMCP/voice combination remain untested. |
 | Room equipment | No room inspection or equipment inventory | Microphone, PA, projector, connectors, network and operator arrangements remain to be confirmed and rehearsed. |
 
 The existing exemplar records successful direct calls through a named Chrome
@@ -112,7 +113,7 @@ to see.
 
 | Stage and proposed timing | Required demonstration | Evidence to retain |
 |---|---|---|
-| Scope, 15–17 September | Identify personal AI; select three synthetic journeys; agree the exact website/tool boundary and room contacts | Product/version/subscription record, journey IDs, expected tools and unresolved constraints |
+| Scope, 15–17 September | Confirm ChatGPT Voice account availability; select three synthetic journeys; agree the exact website/tool boundary and room contacts | Product/version/subscription record, journey IDs, expected tools and unresolved constraints |
 | Human website, 18–20 September | Search, concept view, source passage, relationship view and deep link work with WebMCP unavailable | Build and bundle hashes; keyboard and projection checks; deterministic query receipts |
 | Native tools, 20–21 September | Register expected tools, enumerate them, execute each contract and reject malformed/oversized input | Exact browser version, flags/trial state, tool schemas, arguments, returned IDs and digests |
 | Personal AI in text mode, 21–22 September | Chosen host selects and calls page tools; visible evidence matches tool output; unsupported follow-up remains unsupported | Host/version, call trace where available, page state, source links, timings and limitations |
@@ -132,6 +133,22 @@ baseline independently of model wording. Suggested journeys are capital
 disregards, a change of circumstances and the boundary between DMG, ADM and
 Universal Credit guidance. Include one deliberately unsupported question so
 the audience sees a useful limit as well as a success.
+
+## ChatGPT Voice: confirmed product, rehearsal pending
+
+The owner clarified the product on 15 September 2026. [Official documentation](https://learn.chatgpt.com/docs/features/voice) says GPT-Live coordinates conversations and work in the desktop app; voice in an existing Codex task uses its conversation and selected task model, subject to rollout. Voice can steer other tasks and follows their permissions. This supports the proposed architecture, but it does not independently prove that this voice session can call a particular website's WebMCP tools.
+
+Recommended rehearsal route:
+
+1. Open the DWP demonstration task in the ChatGPT desktop app on the MacBook.
+2. Use **Start voice chat** where available. First-use microphone access and voice choice are interactive setup steps for the presenter; no microphone or screen permissions were changed by this assessment.
+3. Open the frozen evidence website through the connected supported browser and verify its exact tool inventory before the voice test.
+4. Ask one synthetic question, inspect the actual tool call/result and confirm that the projected source agrees with the spoken answer.
+5. Select and test Mac sound input/output with the venue operator. Re-test after connecting the projector, and test an interruption plus mute/recovery.
+
+Screen context can provide an appshot when requested on macOS. It is optional and is not evidence of WebMCP invocation. Only one desktop voice chat can be active at a time; confirm the correct task is active. If the existing task lacks Voice because of rollout, assess a supported new voice chat route without claiming that dictation is equivalent.
+
+[Current pricing documentation](https://learn.chatgpt.com/docs/pricing#how-much-does-voice-cost), checked 15 September 2026, lists desktop voice at $0.05 per minute against the existing Codex usage budget; task-model token usage is separate and shares the plan's limits. This is published pricing, not an observed bill or a benchmark of this demonstration. No paid voice run was started here.
 
 ## MacBook and room audio
 
@@ -182,10 +199,10 @@ evidence story should remain useful even when the conversational layer fails.
 
 ## Open decisions
 
-- Exact identity and version of “Live 1”, its subscription, and the device/host
-  through which it would access the website.
-- Whether that product supports WebMCP in the same session as voice, or needs a
-  different integration whose feasibility and authorisation must be assessed.
+- Installed ChatGPT desktop version, account/rollout availability, subscription
+  allowance and the exact task/browser connection for the voice session.
+- Whether the selected task can invoke the DWP page tools while GPT-Live handles
+  the conversation, with the returned evidence visible on the projected page.
 - Agreed hosting location for the new DWP website and its exact publication
   scope. No site was created or published in this assessment.
 - Room AV contact, equipment and rehearsal slot; recording and audience-question

@@ -110,3 +110,5 @@ python3 source/discovery-2026-09-15/acquire_metadata.py --check
 
 The earlier Explorer links remain pinned to their original snapshots. Stage-two
 browser verification and publication state are recorded in [repository status](REPOSITORY_STATUS.md).
+
+[Open the stage-two semantic graph in Explorer](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F48abaff6c640e4a3e206af1adc71e21efd12738f%2Fbundle%2Fokf-bundle.yamlld&view=graph#term/capital-disregards). The [browser receipt](validation/stage-two-browser.json) binds this view to the checked content commit.

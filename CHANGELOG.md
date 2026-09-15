@@ -30,3 +30,5 @@
 - Capture a reproducible official metadata census of 331 DMG and 182 separate ADM PDFs; plan a 24 September content freeze and 30 September seminar.
 - Record WebMCP/website/Mac audio feasibility and a model-comparison design; neither integration nor comparative model performance is claimed as tested.
 - Extend deterministic generation, source-passage/locator validation, RDF triple checks, identity-preservation and negative controls. Keep previous source snapshots, domain profile and browser receipts intact.
+
+- Clarify the seminar host as ChatGPT live voice; record verified desktop Voice documentation and usage boundaries while retaining the untested integration status.
