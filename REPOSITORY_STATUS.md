@@ -39,8 +39,9 @@ reference. The 744 DWP source-page records are data-equivalent to the initial
 meeting snapshot. The original domain-profile handoff remains frozen; the
 CPAG access review is separate under `docs/cpag-handbook.md`.
 
-Publication timestamps now follow the latest recorded source or authoring
-observation. YAML whitespace is normalised only when decoding proves that
+Bundle observation timestamps follow the latest recorded source or authoring
+observation; they do not establish a referenced source's publication date.
+YAML whitespace is normalised only when decoding proves that
 the data is unchanged. Existing source-rendering and initial browser receipts
 remain scoped to their named snapshot; the CPAG browser check is recorded
 separately.
@@ -91,3 +92,23 @@ records that month separately from the original 15 September metadata capture,
 record generation and later publication-metadata review. The source statement
 does not establish an exact release day or a legal effective date. Earlier
 browser receipts retain their original snapshot scope.
+
+In this 821-record snapshot, CPAG is the only record with an explicit structured
+publication date. The Timeline correction uses declared date roles; it does not
+infer source dates for the other records. Their observation or generation dates
+remain labelled as such. Wider DMG document publication and revision dates still
+need evidence-backed mapping, separately from legal applicability.
+
+The corrected content commit `7d3c69df0571b8d5206c8edce92963d99979cb5c`
+passed live Timeline checks in both YAML-LD and JSON: **Source published —
+April 2026**, machine-readable month precision and three separately labelled
+September audit dates. The current capital-disregard graph, source link and
+exact snapshot also passed. No warnings or errors were captured in these tabs.
+[Current browser receipt](validation/cpag-timeline-browser.json).
+
+The companion Explorer correction was merged in
+[PR 120](https://github.com/chris-page-gov/okf-explorer/pull/120). Its
+`51601b5d94ac33ce5be654e81943ca2e049743d8` deployment passed all required
+application, cross-browser and exact deployed-identity checks. The preserved
+[deployment receipt](validation/explorer-timeline-deployment.json) records the
+Explorer host check; it does not establish DWP policy correctness.

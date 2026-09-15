@@ -3,7 +3,7 @@
 Reviewed on **15 September 2026**. This is a project decision based on public
 catalogue and terms pages, not a legal opinion or a CPAG-approved integration.
 
-[Open the CPAG reference in Explorer](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fa29749eb79565d7aa595cf78b9964e5ee1f19cf3%2Fbundle%2Fokf-bundle.yamlld&q=CPAG#resource/cpag-welfare-benefits-handbook).
+[Open the CPAG reference in Explorer](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7d3c69df0571b8d5206c8edce92963d99979cb5c%2Fbundle%2Fokf-bundle.yamlld&view=timeline&q=CPAG#resource/cpag-welfare-benefits-handbook).
 
 ## Addition to the bundle
 

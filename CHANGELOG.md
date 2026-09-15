@@ -33,3 +33,4 @@
 
 - Clarify the seminar host as ChatGPT live voice; record verified desktop Voice documentation and usage boundaries while retaining the untested integration status.
 - Correct CPAG temporal metadata: publisher-described April 2026 edition release and 6 April online announcement remain separate from September project capture; preserve month precision.
+- Verify the corrected Timeline in both public bundle formats against the deployed Explorer, and retain the exact deployment receipts. Refresh current launch links, distinguish source-date coverage from labelled record dates, and clarify extraction gaps and the remaining legislation/website work.

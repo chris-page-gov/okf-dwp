@@ -35,7 +35,7 @@ The source and concept totals are separate denominators. Fifteen relationships d
 1. **Source-complete DMG discovery:** acquire against the 331-PDF denominator, classify chapters/memos/amendments, measure extraction quality and publish any failures. Preserve the original Pension Credit snapshot.
 2. **A reviewed Pension Credit example:** take DMG 84351–84356 through evidence, proposed meaning, legal dependencies, exceptions, evidence requirements and independently accepted synthetic cases. The current candidate is a review packet, not executable policy.
 3. **Cross-benefit relationships:** build source-family and benefit applicability before linking shared terms. Bring in ADM where the official guidance directs; do not apply Pension Credit rules to UC by analogy.
-4. **Seminar experience:** expose search, passage retrieval, concept relationships and coverage through a website and bounded read-only tools. Prove each host connection and keep citations visible on the projected page.
+4. **Seminar experience:** expose search, passage retrieval, concept relationships and coverage through a website, bounded read-only retrieval tools and a separately labelled presentation action. Prove each host connection and keep citations visible on the projected page.
 5. **Freeze exact bytes on 24 September:** record source, semantic, human-review and interface coverage separately. Use 25 to 29 September for room/audio rehearsal and defect handling under a documented change decision.
 
 ## Review inputs still needed
@@ -46,4 +46,4 @@ The original Markdown plan referred to in the private correspondence was not sup
 
 This stage is an additive discovery and semantic pilot. The original `domain-profile/` handoff and its hash-bound evidence remain unchanged. It is not silently reissued as a full-DMG profile. [Stage-two scope](scope.json) records the expansion and open production gates.
 
-The builder now reads `knowledge/**/*.yamlld` and compiles explicit `semantic_relations` from the authored source. [The semantic contract](semantic-contract.md) defines the four permitted predicates. The generated graph, runtime relationships, Markdown and map come from the same inputs. No sibling repository was changed.
+The builder now reads `knowledge/**/*.yamlld` and compiles explicit `semantic_relations` from the authored source. [The semantic contract](semantic-contract.md) defines the four permitted predicates. The generated graph, runtime relationships, Markdown and map come from the same inputs. The legislation and existing WebMCP repositories were inspected read-only. A companion [Explorer Timeline correction](https://github.com/chris-page-gov/okf-explorer/pull/120) separates source publication from capture and generation dates; its application checks and deployment are recorded separately.

@@ -94,14 +94,14 @@ been acquired and checked for this project.
 | Evidence preservation | [Acquisition contract][acquisition] separates immutable original captures from publication projections. | Keep source bodies, request observations and hashes; publish only the appropriate projection with visible limitations. |
 | Evaluation | [Answer schema][answer-schema] requires proposition-level citations and temporal context; [Whole-Law release evaluation][evaluation] distinguishes corpus navigation from substantive legal answers. | Maintain separate navigation, source-grounding, semantic relationship, temporal and specialist-reviewed policy tests. A passing retrieval score must not be reported as legal or entitlement correctness. |
 
-## Narrow integration to implement next
+## Narrow integration: progress and next steps
 
-1. Create local external-resource records for the two Pension Credit instruments,
-   linked to the pinned catalogue evidence and official pages. Record them as
-   references awaiting provision acquisition and review.
-2. Select one Pension Credit rule family from the stakeholder journeys, such as
-   capital disregards. Build concept-to-DMG-passage relationships first, with
-   paragraph and page locators. Keep interpretation status explicit.
+1. **Delivered in this candidate:** local external-resource records for the two
+   Pension Credit instruments, linked to the pinned catalogue evidence and
+   official pages. They remain references awaiting provision acquisition and review.
+2. **Pilot initiated:** capital-disregard concepts, source-backed semantic
+   proposals and a non-executable review candidate have paragraph and page
+   locators. These interpretations still need specialist review.
 3. Resolve each actual statutory citation in those passages to the official work
    and provision. Acquire selected provision versions and relevant effects in a
    separate, dated source family; report unresolved citations as gaps.
