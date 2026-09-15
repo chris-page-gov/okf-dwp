@@ -1,0 +1,47 @@
+{
+  "consumers": [
+    {
+      "commit": "167d54dd924ce496f173105a8b390744b3b2a311",
+      "id": "explorer",
+      "interfaces": [
+        "okf-explorer.json",
+        "okf-bundle.json",
+        "YAML-LD/JSON-LD"
+      ],
+      "kind": "viewer",
+      "repository": "https://github.com/chris-page-gov/okf-explorer",
+      "verification": "not-run-by-domain-agent"
+    },
+    {
+      "execution": "JSON Schema Draft 2020-12 plus format checking; see domain-profile/validation.json",
+      "id": "profile-validator",
+      "kind": "validator",
+      "schema_path": "domain-profile/domain-profile.schema.json",
+      "schema_sha256": "a224946e4996fe3673e7817d6187cf5ed54a2f9730d206d8127a65fb4a7641d1",
+      "executable_identity": {
+        "python": "3.12.11",
+        "jsonschema": "4.26.0",
+        "PyYAML": "6.0.3",
+        "runtime": "Existing locked OKF Explorer environment, no dependency changes",
+        "explorer_uv_lock_sha256": "dfc3c0ce9d59cccc73ad7d9b4c0ca4c27205252f55b07fbe711406a7231c3812"
+      }
+    }
+  ],
+  "limitations": [
+    "A pinned repository commit is not proof that the currently deployed public consumer has that version.",
+    "Actual browser acceptance and full executable/dependency inventory are separate root-agent work."
+  ],
+  "observed_at": "2026-09-15T14:27:08Z",
+  "prompt_pins": [
+    {
+      "path": "https://github.com/chris-page-gov/okf-explorer/blob/167d54dd924ce496f173105a8b390744b3b2a311/docs/prompts/okf-domain-warm-up.md",
+      "sha256": "d22557d0aedc1e8ead7ffa6d3faa133887f7cf791ae972a9914ce1cff9bcbcae"
+    },
+    {
+      "path": "https://github.com/chris-page-gov/okf-explorer/blob/167d54dd924ce496f173105a8b390744b3b2a311/docs/prompts/okf-bundle-build.md",
+      "sha256": "203c88f8403a08f30d6fac35aa36cb9419a436b7966952805fbed167a0256e08"
+    }
+  ],
+  "schema": "okf-dwp-consumer-lock.v1",
+  "state": "draft-exploratory"
+}
