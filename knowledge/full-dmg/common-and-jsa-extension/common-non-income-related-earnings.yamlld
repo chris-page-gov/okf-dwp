@@ -1,0 +1,96 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/common-non-income-related-earnings
+  '@type': skos:Concept
+  route: term/common-non-income-related-earnings
+  title: Gainful employment in the non-income-related earnings chapter
+  type: Concept
+  description: The captured chapter describes gainful employment through a desire, hope or intention
+    of remuneration, or actual payment regardless of that intention, for the non-income-related
+    benefit contexts it lists.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Gainful employment in the non-income-related earnings chapter
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured chapter describes gainful employment through a desire, hope or intention
+      of remuneration, or actual payment regardless of that intention, for the non-income-related
+      benefit contexts it lists.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 15000 expressly excludes UC, JSA, IS, ESA and Pension Credit from this chapter’s
+      earnings rules. Its Incapacity Benefit, Carer’s Allowance and dependency-increase uses have
+      their own conditions and historical boundaries. This is not a universal employment or
+      tax-status definition.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch15/0002
+  - page/dmg-vol3-ch15/0004
+  - page/dmg-vol3-ch15/0005
+  source: https://assets.publishing.service.gov.uk/media/69a04ed307d7bff3604d6dc3/dmgch15.pdf#page=2
+  resource:
+    https://assets.publishing.service.gov.uk/media/69a04ed307d7bff3604d6dc3/dmgch15.pdf#page=2
+  sources:
+  - id: dmg-vol3-ch15
+    title: 'DMG Vol 3: Ch 15: Earnings for non-income-related benefits'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69a04ed307d7bff3604d6dc3/dmgch15.pdf
+    retrieved_at: '2026-09-15T19:45:22.161271Z'
+    sha256: b9a278572b8205196c4b0c2d1b0c3c8032dddff62587e3ba0ff7fc897c670e4e
+  body: "# Gainful employment in the non-income-related earnings chapter\n\n## Authored interpretation\n\
+    \nThe captured chapter describes gainful employment through a desire, hope or intention of remuneration,
+    or actual payment regardless of that intention, for the non-income-related benefit contexts it lists.\n\
+    \n## Scope and exceptions\n\nDMG 15000 expressly excludes UC, JSA, IS, ESA and Pension Credit from
+    this chapter’s earnings rules. Its Incapacity Benefit, Carer’s Allowance and dependency-increase uses
+    have their own conditions and historical boundaries. This is not a universal employment or tax-status
+    definition.\n\n## Inspected source passages\n\n- [DMG 15000, PDF page 2](https://assets.publishing.service.gov.uk/media/69a04ed307d7bff3604d6dc3/dmgch15.pdf#page=2)
+    — DMG Vol 3: Ch 15: Earnings for non-income-related benefits.\n- [DMG 15010, PDF page 4](https://assets.publishing.service.gov.uk/media/69a04ed307d7bff3604d6dc3/dmgch15.pdf#page=4)
+    — DMG Vol 3: Ch 15: Earnings for non-income-related benefits.\n- [DMG 15011, PDF page 4](https://assets.publishing.service.gov.uk/media/69a04ed307d7bff3604d6dc3/dmgch15.pdf#page=4)
+    — DMG Vol 3: Ch 15: Earnings for non-income-related benefits.\n\n## Evidence and review status\n\n\
+    Model-assisted interpretation of selected passages in the 15 September 2026 frozen source snapshot.
+    Specialist review is required. Source acquisition, source revision, legal effective dates and this
+    record’s authoring time are separate.\n\nThis is an independent experimental publication, not an official
+    DWP document, individual advice, an entitlement decision or an executable rule. Machine-extracted
+    text may alter reading order, footnotes and characters. No PDF visual inspection, whole-chapter coverage
+    or behavioural evaluation pass is claimed by this record.\n\n- `dmg-vol3-ch15`: PDF SHA-256 `b9a278572b8205196c4b0c2d1b0c3c8032dddff62587e3ba0ff7fc897c670e4e`;
+    extracted pages SHA-256 `37d8db04ba2cd204591b67e3f3d8099a4c96be8f86ee788c70ab275322060a70`.\n"
+  semantic_relations:
+  - target: term/common-unknown-versus-unreceived-earnings
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter distinguishes estimating earnings whose amount is unknown from treating
+      unreceived earnings as possessed; the gainful-employment meaning does not collapse those
+      cases.
+    evidence:
+    - page: page/dmg-vol3-ch15/0005
+      quote: "15014 Where it is not possible to find out what the claimant’s earnings are at the time
+        the DM is making\nthe decision, the claimant is treated as having such earnings as is reasonable
+        in the circumstances taking\n\ninto account the number of hours worked and the earnings paid for
+        comparable employment in the area 1.\n\n\n                                                   \
+        \                        1 SS Ben (C of E) Regs, reg 4(1)\n\n\n\n\nNo earnings or earnings less
+        than for comparable employment"
+      locator: DMG 15014
+    - page: page/dmg-vol3-ch15/0005
+      quote: "15015 On 11.11.02 a Commissioner decided1 that the regulation2 which permits a DM to take
+        into account\nnotional earnings where a person is working for nothing or for less than that paid
+        for comparable\nemployment in the area was ultra vires.\n\n\n                                \
+        \                              1 R(IB) 7/03; 2 SS Ben (C of E) Regs, reg 4(2)"
+      locator: DMG 15015
+    - page: page/dmg-vol3-ch15/0005
+      quote: "15016 This means that, in these circumstances, a claimant cannot be treated as possessing
+        earnings\nwhich that person does not in fact possess. As the notional earnings provisions are
+        not available DMs\nshould consider the NMW Provisions. See DMG 15017 - 15019.\n\n\n\n\nNational
+        minimum wage"
+      locator: DMG 15016

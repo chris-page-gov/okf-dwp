@@ -44,6 +44,33 @@
       "relationships": 35,
       "report_passages_and_dependencies": 201,
       "result": "canonical YAML alias correction verified; no outstanding material semantic finding"
+    },
+    "common_and_jsa_extension": {
+      "reviewer": "root, separate from batch author",
+      "concepts": 35,
+      "relationships": 54,
+      "distinct_relation_passages_read": 60,
+      "additional_definition_passages_read": 50,
+      "method": "Read definitions, scope and exceptions; independently loaded all canonical YAML, matched 54 relations to exact frozen text and paragraph locators, verified all 35 file hashes and 14 page-file hashes. Read all 110 distinct selected passages.",
+      "result": "No material finding within the bounded research scope; not whole-chapter or specialist acceptance."
+    },
+    "esa": {
+      "reviewer": "agent separate from ESA author",
+      "concepts": 36,
+      "relationships": 37,
+      "definition_passages_read": 128,
+      "result": "Wrapped-reference paragraph misidentification and three truncated excerpts corrected; all corrected passages independently rechecked. No outstanding material finding."
+    },
+    "non_income_and_industrial": {
+      "reviewer": "agent separate from batch author",
+      "concepts": 51,
+      "relationships": 76,
+      "distinct_exact_passages": 177,
+      "result": "All definitions, scope, high-risk qualifications and 51 source identities checked. No material semantic or authority finding within selected evidence."
+    },
+    "indexed_delivery_and_retrieval": {
+      "reviewer": "agent separate from root implementation author",
+      "result": "Actual consumer functions and licences verified. Raw-source quotation checks now reject display wrappers. Reference-location recogniser excludes wrapped et-seq cross-references; source-page hashes verified. Portable gzip CI passed."
     }
   },
   "resolved_findings": [
@@ -62,6 +89,18 @@
     {
       "id": "international-pre-settled-context",
       "resolution": "Record acquired AT paragraphs073496–073499, Memo15-25, UC wording versus SPC example and unresolved scope; reviewer confirmed the fix."
+    },
+    {
+      "id": "esa-wrapped-cross-reference-and-truncation",
+      "resolution": "Replace false51006 excerpt with genuine paragraph; extend51003 and46133 through wrapped references and exception notes. Independently verified."
+    },
+    {
+      "id": "indexed-consumer-contract-rejection",
+      "resolution": "Use exact pinned Explorer research banner and normalise endpoint-label whitespace. Verify using vendored actual consumer functions and negative controls; fresh browser verification pending."
+    },
+    {
+      "id": "raw-source-versus-display-evidence",
+      "resolution": "Require exact quoted passage in hashed raw page text as well as indexed Narrative; reject project-added source-link display wrappers."
     }
   ],
   "inputs": [
@@ -100,12 +139,40 @@
     {
       "path": "evaluation/full-dmg-jsa-income-support-review.json",
       "sha256": "c98ed989c3aecf37a00988e0e33e1dc6da57056b6df27624dc7c3b406a0c7da3"
+    },
+    {
+      "path": "evaluation/full-dmg-common-and-jsa-extension-review.json",
+      "sha256": "94b041656e8992f9cce366c8d46afa13ead2c5ffcbc64eb1648b7719e705ad78"
+    },
+    {
+      "path": "evaluation/full-dmg-esa-review.json",
+      "sha256": "2a506af8f3273563aec5ebe8a97cff8a2ae1976fed4cfdd43d00f5284abd3a2f"
+    },
+    {
+      "path": "evaluation/full-dmg-non-income-and-industrial-review.json",
+      "sha256": "833959e9e022e7dfd3e82f14aba4f6710f800ae86753c52c083ceee0e3645c54"
+    },
+    {
+      "path": "scripts/build_full_dmg.py",
+      "sha256": "e9ebea04a9b369158c9c59bc476f7e2158cbf5c4d2170fdb7f340271ace4eff7"
+    },
+    {
+      "path": "scripts/evaluate_full_dmg.py",
+      "sha256": "24bf5f8b95caedcda616b290e3a43f9f930a0b1671edb342da6bf6cb535d4ce4"
+    },
+    {
+      "path": "scripts/reconcile_full_dmg_references.py",
+      "sha256": "dffb6eff9cc1e24e2c617220807d9743dd201849b8ac78371ed066768740868e"
+    },
+    {
+      "path": "scripts/check_full_dmg_consumer.mjs",
+      "sha256": "0934ad78dc163c7da8d3e2727c98ca228be7bda919d613e235c1f0cd53cfe87a"
     }
   ],
   "limitations": [
     "Authors did not independently approve their own semantic batches.",
-    "Source-backed proposals do not establish full chapter modelling or legal currency.",
-    "34 of78 substantive source units currently have bounded proposals; the remaining44 are assigned. Coverage is not exhaustive policy modelling.",
-    "Browser checks and wider persona/behavioural evaluation are separate gates."
+    "All78 substantive source units have bounded proposals. This does not establish full chapter modelling or legal currency.",
+    "Browser checks and observed model trials are separate acceptance evidence.",
+    "No specialist legal or operational acceptance is claimed."
   ]
 }

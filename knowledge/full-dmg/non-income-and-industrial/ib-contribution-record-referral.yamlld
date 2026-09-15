@@ -1,0 +1,77 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/ib-contribution-record-referral
+  '@type': skos:Concept
+  route: term/ib-contribution-record-referral
+  title: Incapacity Benefit contribution-record referral
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured IB guidance distinguishes the DM’s contribution-condition decision from an HMRC
+    formal decision needed when the underlying national insurance contribution record is disputed.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol10-ch56/0007
+  - page/dmg-vol10-ch56/0010
+  source: https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf#page=7
+  sources:
+  - id: dmg-vol10-ch56
+    title: 'DMG Vol 10 Ch 56: Incapacity Benefit'
+    resource: https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf
+    author: organisation:dwp
+    sha256: 24fde3944e7e2605c24baf711da1ace4dfe0032fe13b6bfc169e4562bf5ecca5
+    retrieved_at: '2026-09-15T19:45:32.379452Z'
+  skos:prefLabel:
+    '@value': Incapacity Benefit contribution-record referral
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured IB guidance distinguishes the DM’s contribution-condition decision from an HMRC
+      formal decision needed when the underlying national insurance contribution record is disputed.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is not permission for the project to settle a contribution dispute. Late contributions,
+      credited years, relevant benefit years, linking periods, revision and supersession remain separate legal
+      questions within the legacy regime.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Incapacity Benefit contribution-record referral\n\n## Authored interpretation\n\nThe captured IB guidance
+    distinguishes the DM’s contribution-condition decision from an HMRC formal decision needed when the underlying
+    national insurance contribution record is disputed.\n\n## Scope and exceptions\n\nThis is not permission for
+    the project to settle a contribution dispute. Late contributions, credited years, relevant benefit years, linking
+    periods, revision and supersession remain separate legal questions within the legacy regime.\n\n## Inspected
+    passages\n\n- [DMG 56007, PDF page 7](https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf#page=7).\n\
+    - [DMG 56008, PDF page 7](https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf#page=7).\n\
+    - [DMG 56016, PDF page 10](https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf#page=10).\n\
+    - [DMG 56017, PDF page 10](https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf#page=10).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol10-ch56`:
+    PDF `24fde3944e7e2605c24baf711da1ace4dfe0032fe13b6bfc169e4562bf5ecca5`; extracted pages `b5dc3260133af75807e6248202525da77a6610befc0b7ff20bc883d2ebba530e`;
+    acquired `2026-09-15T19:45:32.379452Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf#page=7
+  semantic_relations:
+  - target: term/dmg-revision
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source directs consideration of revision or supersession after late contributions are
+      treated as paid.
+    evidence:
+    - page: page/dmg-vol10-ch56/0010
+      quote: "56017   If there is an existing decision, the DM may need to consider revising or\n        superseding
+        it. A change of circumstances will occur on the date it is accepted that\n        late contributions are
+        treated as having been paid1. See DMG Chapter 03 for full\n        guidance on revision and DMG Chapter
+        04 for full guidance on supersession.\n                                                                \
+        \             1 SS (Crediting etc) Regs, regs 4-8\n\n\n\n\nVol 10 Amendment 37 June 2014"
+      locator: DMG 56017

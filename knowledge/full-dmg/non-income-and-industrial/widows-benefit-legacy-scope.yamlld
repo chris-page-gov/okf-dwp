@@ -1,0 +1,98 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/widows-benefit-legacy-scope
+  '@type': skos:Concept
+  route: term/widows-benefit-legacy-scope
+  title: 'Widow’s Benefits: the earlier death-date regime'
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: Chapter 58 retains guidance on Widowed Mother’s Allowance and Widow’s Pension and points to
+    Bereavement Benefit for deaths on or after 9 April 2001.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol10-ch58/0003
+  - page/dmg-vol10-ch58/0005
+  - page/dmg-vol10-ch63/0001
+  - page/dmg-vol10-ch58/0007
+  source: https://assets.publishing.service.gov.uk/media/5a8050b9ed915d74e33f9b7e/dmgch58.pdf#page=3
+  sources:
+  - id: dmg-vol10-ch58
+    title: 'DMG Vol 10 Ch 58: Widows Benefits '
+    resource: https://assets.publishing.service.gov.uk/media/5a8050b9ed915d74e33f9b7e/dmgch58.pdf
+    author: organisation:dwp
+    sha256: 6b9d46772e961138cd132e6441896d15c2c5f90f76d2577f72119654be82d3f8
+    retrieved_at: '2026-09-15T19:45:32.573488Z'
+  - id: dmg-vol10-ch63
+    title: 'DMG Vol 10 Ch 63: Bereavement Benefit '
+    resource: https://assets.publishing.service.gov.uk/media/68efa22be7b6794c076bbec0/dmg-v-10-ch-63.pdf
+    author: organisation:dwp
+    sha256: 7f894b8bac8a4056f9b89fff0df4cdb4231c1c2b187de78b5c64b6cc33636d88
+    retrieved_at: '2026-09-15T19:45:32.914779Z'
+  skos:prefLabel:
+    '@value': 'Widow’s Benefits: the earlier death-date regime'
+    '@language': en-GB
+  skos:definition:
+    '@value': Chapter 58 retains guidance on Widowed Mother’s Allowance and Widow’s Pension and points to
+      Bereavement Benefit for deaths on or after 9 April 2001.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is a historical regime boundary, not a complete present survivor-benefit test.
+      Contribution, child-benefit, pregnancy, pension and later changes must be considered within the correct
+      regime; BSP has its own later death-date boundary.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Widow’s Benefits: the earlier death-date regime\n\n## Authored interpretation\n\nChapter 58 retains guidance
+    on Widowed Mother’s Allowance and Widow’s Pension and points to Bereavement Benefit for deaths on or after 9
+    April 2001.\n\n## Scope and exceptions\n\nThis is a historical regime boundary, not a complete present survivor-benefit
+    test. Contribution, child-benefit, pregnancy, pension and later changes must be considered within the correct
+    regime; BSP has its own later death-date boundary.\n\n## Inspected passages\n\n- [DMG 58001, PDF page 3](https://assets.publishing.service.gov.uk/media/5a8050b9ed915d74e33f9b7e/dmgch58.pdf#page=3).\n\
+    - [DMG 58016, PDF page 5](https://assets.publishing.service.gov.uk/media/5a8050b9ed915d74e33f9b7e/dmgch58.pdf#page=5).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol10-ch58`:
+    PDF `6b9d46772e961138cd132e6441896d15c2c5f90f76d2577f72119654be82d3f8`; extracted pages `6d6ef555ba93c68a3a178d5cc02057ef4b54ad3dba4b14baa5c18491c307c94c`;
+    acquired `2026-09-15T19:45:32.573488Z`.\n- `dmg-vol10-ch63`: PDF `7f894b8bac8a4056f9b89fff0df4cdb4231c1c2b187de78b5c64b6cc33636d88`;
+    extracted pages `ed410bfb75f7f3ac15120a0dd10024bfb246faea02695229229deaed09d9033e`; acquired `2026-09-15T19:45:32.914779Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/5a8050b9ed915d74e33f9b7e/dmgch58.pdf#page=3
+  semantic_relations:
+  - target: term/bereavement-benefit-regime
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source explicitly sends later deaths to chapter 63, while allowing retained earlier awards
+      to be considered in their own regime.
+    evidence:
+    - page: page/dmg-vol10-ch58/0003
+      quote: "58001   This Chapter gives brief guidance on Widow’s Benefits (WMA and WP) that have\n        been
+        replaced by BB where the late spouse died on or after 9.4.011. Detailed\n        guidance on BB can be found
+        in DMG Chapter 63.\n                                                                                 1 WRP
+        Act 99"
+      locator: DMG 58001
+    - page: page/dmg-vol10-ch63/0001
+      quote: "63002 No new claims for WB were accepted in respect of deaths on or after 9.4.01. People already\n\
+        receiving WB on that date can continue to receive it for as long as the qualifying conditions apply (see\n\
+        DMG Chapter 58)."
+      locator: DMG 63002
+  - target: term/wma-child-benefit-evidence
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Outside pregnancy cases the chapter makes WMA dependent on Child Benefit entitlement and seeks
+      HMRC evidence.
+    evidence:
+    - page: page/dmg-vol10-ch58/0007
+      quote: "58203   WMA (except pregnancy cases) and the increase of WMA for a child depend on the\n        claimant
+        being entitled to CHB. Decisions on entitlement to CHB are now given by\n        HMRC. DMs should seek evidence
+        from HMRC about entitlement to CHB.\n\n\n        Treating as entitled to child benefit where married more\n\
+        \        than once"
+      locator: DMG 58203

@@ -41,6 +41,7 @@ def deterministic_gzip(raw: bytes) -> bytes:
         output.write(raw)
     return stream.getvalue()
 NOTICE = "Independent experimental publication, not an official DWP document, benefits advice or an entitlement decision."
+EXPLORATORY_BANNER = "This is an incomplete research view, not an authoritative service or released data product. Content and links may change. Check the cited official source before making a decision."
 LIMITATIONS = [
     NOTICE,
     "All acquired document roles are searchable, including memos, historical amendments, transitional and administrative material. A currently linked document is not proof of current legal applicability.",
@@ -144,6 +145,17 @@ def source_dates(doc: dict) -> dict:
     return result
 
 
+def referenced_publication_date(row: dict) -> str:
+    """Retain explicitly typed publication precision for a referenced work."""
+    about = row.get('schema:about')
+    value = about.get('schema:datePublished') if isinstance(about, dict) else None
+    if not isinstance(value, dict):
+        return ''
+    text, kind = value.get('@value'), value.get('@type')
+    patterns = {'xsd:gYear': r'\d{4}', 'xsd:gYearMonth': r'\d{4}-(?:0[1-9]|1[0-2])', 'xsd:date': r'\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\d|3[01])'}
+    return text if isinstance(text, str) and kind in patterns and re.fullmatch(patterns[kind], text) else ''
+
+
 def page_routes(doc: dict, pilot_nodes: dict, original: dict) -> tuple[str, bool]:
     old = original.get(doc["url"])
     if old and old["sha256"] != doc["sha256"]:
@@ -195,7 +207,9 @@ def check_full_relation(spec: dict, source: dict, nodes: dict) -> dict:
             if (paragraph[2] and len(paragraph[2]) != width) or (width == 6 and (page.get("chapter") != 7 or not paragraph[1].startswith("07"))):
                 raise ValueError("Paragraph locator width disagrees with the source chapter")
             start, end = int(paragraph[1]), int(paragraph[2] or paragraph[1])
-            if end < start or end - start > 20 or any(not re.search(rf"^\s*{number:0{width}d}\b", quote, re.MULTILINE) for number in range(start, end + 1)):
+            def body_start(number):
+                return re.search(rf"^[ \t]*{number:0{width}d}\b[ \t]*(?:\n[ \t]*)?[\"'‘“]?(?=[A-Za-z\[(])(?!(?:et\s+seq|for\s+guidance)\b)", quote, re.MULTILINE | re.IGNORECASE)
+            if end < start or end - start > 20 or any(not body_start(number) for number in range(start, end + 1)):
                 raise ValueError("Paragraph locator is not supported by the exact quoted passage")
         elif navigation:
             if int(navigation[1]) != page.get("chapter") or int(navigation[2]) != page["page_number"]:
@@ -484,6 +498,9 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
         doc = source_by_route.get(route)
         source_role = role_label(role(doc)) if doc else "Project-authored research aid — unreviewed"
         metadata = source_dates(doc) if doc else {"captured_at": row.get("captured_at"), "observed_at": row.get("observedAt"), "generated_at": row.get("generated", {}).get("at")}
+        referenced_publication = referenced_publication_date(row)
+        if referenced_publication:
+            metadata['referenced_work_publication'] = row['schema:about']['schema:datePublished']
         if doc and doc["id"] in date_evidence:
             metadata["revision_statement_review"] = date_evidence[doc["id"]]
         provenance = {"semantic_iri": row["@id"], "source_role": source_role, "authority": row.get("authority", "independent project-authored navigation"),
@@ -512,6 +529,8 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
                   "license_id": "uk-ogl" if doc else "mixed-see-notice", "license_title": "Open Government Licence v3.0" if doc else "Original metadata MIT; source-specific rights apply",
                   "license_source_id": OGL if doc else REPO + "/blob/main/NOTICE.md", "provenance": provenance,
                   "extras": {"source_dates": metadata, "source_page_number": row.get("page_number"), "source_publication_date": row.get("schema:about", {}).get("schema:datePublished") if isinstance(row.get("schema:about"), dict) else None}}
+        if referenced_publication:
+            record['published_at'] = referenced_publication
         records.append(record)
     if len(records) > 50_000:
         raise ValueError("Corpus exceeds the reviewed 50,000-record search/full-index boundary")
@@ -595,7 +614,7 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
     publishers = [{"id": "publisher/dwp", "name": "dwp", "title": "DWP source; independent extraction", "dataset_count": len(source_by_route), "resource_count": len(resources)},
                   {"id": "publisher/independent-project", "name": "independent-project", "title": "Independent project-authored research", "dataset_count": len(records) - len(source_by_route), "resource_count": 0}]
     put("data/publishers.json", publishers)
-    endpoint_labels = [{"route": row["route"], "iri": row["id"], "label": row["title"],
+    endpoint_labels = [{"route": row["route"], "iri": row["id"], "label": re.sub(r"\s+", " ", row["title"]).strip(),
                         "language": "en-GB", "type": row["record_type"],
                         "label_authority": {"class": "editorial", "source": REPO + "/blob/main/scripts/build_full_dmg.py"}}
                        for row in records]
@@ -612,7 +631,7 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
     roots = {"source": digest(inventory_bytes), "semantic": semantic_manifest["semantic_identity"]["sha256"], "data": digest(canonical(record_shards)), "search": digest(canonical(search_shards)), "presentation": digest(canonical(LIMITATIONS))}
     publication = {"schema": "okf-exploratory-publication.v1", "publication_state": "exploratory", "snapshot_id": snapshot, "generated_at": when, "applicable_plane_roots": roots,
                    "publisher": {"name": "Chris Page — independent research", "url": REPO, "authority_status": "independent-research"},
-                   "banner": {"label": "Exploratory", "message": NOTICE, "feedback_url": REPO + "/issues/new", "preserve_route": True},
+                   "banner": {"label": "Exploratory", "message": EXPLORATORY_BANNER, "feedback_url": REPO + "/issues/new", "preserve_route": True},
                    "indexing_policy": "noindex", "limitations": LIMITATIONS, "permitted_claims": ["Complete acquired-source accounting and extracted-text retrieval with provenance."],
                    "prohibited_claims": ["Official endorsement, entitlement decisions, current-law assurance or specialist validation."], "promotion_rule": "Specialist review and fresh assurance are required for policy claims."}
     descriptor = {"schema": "okf-explorer-large-corpus.v1", "kind": "okf-large-corpus", "title": TITLE, "description": NOTICE, "okf_version": "0.2", "version": "0.1.0", "status": "experimental",
@@ -620,7 +639,7 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
                   "entrypoints": {"data_manifest": "data/manifest.json", "overview_index": "data/overview.json", "search_manifest": "data/search/manifest.json", "record_locator": binding("data/locator/manifest.json"), "relationship_adjacency": "data/adjacency/manifest.json", "markdown_index": "index.md", "endpoint_labels": binding("data/endpoint-labels.json.gz")},
                   "entrypoint_integrity": {key: binding(path) for key, path in {"data_manifest": "data/manifest.json", "overview_index": "data/overview.json", "search_manifest": "data/search/manifest.json", "relationship_adjacency": "data/adjacency/manifest.json", "endpoint_labels": "data/endpoint-labels.json.gz"}.items()},
                   "vocabulary": {"record_singular": "guidance record", "record_plural": "guidance records", "publisher_singular": "source organisation", "publisher_plural": "source organisations", "resource_singular": "source", "resource_plural": "sources", "search_placeholder": "Search all extracted DMG pages, including labelled memos and history"},
-                  "exploratory_publication": publication, "source": {"url": COLLECTION, "inventory": inventory_path, "sha256": digest(inventory_bytes), "observed_at": when},
+                  "exploratory_publication": publication, "source": {"url": COLLECTION, "inventory": inventory_path, "sha256": digest(inventory_bytes), "observed_at": max((observed(doc) for doc in docs), key=utc_key)},
                   "consumer": inputs["consumer"]}
     put("okf-explorer.json", descriptor)
     outputs["okf-explorer.yamlld"] = yaml_bytes({"@context": context(), **descriptor})

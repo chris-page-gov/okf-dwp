@@ -1,0 +1,79 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-self-employed-earner
+  '@type': skos:Concept
+  route: term/esa-self-employed-earner
+  title: Self-employed earner in the ESA source
+  type: Concept
+  description: The source describes self-employment as gainful employment in Great Britain outside employed-earner employment, while allowing a person to have separate employed work.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Self-employed earner in the ESA source
+    '@language': en-GB
+  skos:definition:
+    '@value': The source describes self-employment as gainful employment in Great Britain outside employed-earner employment, while allowing a person to have separate employed work.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 50007 and 50016 distinguish limited-company directors as office holders. The separate claimant/partner effects in ESA(Cont) and ESA(IR) remain explicit; neither a business label nor tax treatment alone determines the outcome.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 50
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol9-ch50/0002
+  - page/dmg-vol9-ch50/0005
+  source: https://assets.publishing.service.gov.uk/media/61976ff0d3bf7f055fce727f/dmgch50.pdf#page=2
+  resource: https://assets.publishing.service.gov.uk/media/61976ff0d3bf7f055fce727f/dmgch50.pdf#page=2
+  sources:
+  - id: dmg-vol9-ch50
+    title: 'DMG Vol 9 Ch 50: Self-employed earners'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/61976ff0d3bf7f055fce727f/dmgch50.pdf
+    retrieved_at: '2026-09-15T19:45:30.643995Z'
+    sha256: 6b49f1951d5c6d26dac8fd8932178608a01b3971fde8bb36ef63e69a35702f03
+  body: |
+    # Self-employed earner in the ESA source
+
+    ## Authored interpretation
+
+    The source describes self-employment as gainful employment in Great Britain outside employed-earner employment, while allowing a person to have separate employed work.
+
+    ## Scope and boundaries
+
+    DMG 50007 and 50016 distinguish limited-company directors as office holders. The separate claimant/partner effects in ESA(Cont) and ESA(IR) remain explicit; neither a business label nor tax treatment alone determines the outcome.
+
+    ## Inspected source passages
+
+    - [DMG 50007, PDF page 2](https://assets.publishing.service.gov.uk/media/61976ff0d3bf7f055fce727f/dmgch50.pdf#page=2)
+    - [DMG 50016, PDF page 5](https://assets.publishing.service.gov.uk/media/61976ff0d3bf7f055fce727f/dmgch50.pdf#page=5)
+    - [DMG 50004, PDF page 2](https://assets.publishing.service.gov.uk/media/61976ff0d3bf7f055fce727f/dmgch50.pdf#page=2)
+    - [DMG 50005, PDF page 2](https://assets.publishing.service.gov.uk/media/61976ff0d3bf7f055fce727f/dmgch50.pdf#page=2)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:30.643995Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `6b49f1951d5c6d26dac8fd8932178608a01b3971fde8bb36ef63e69a35702f03`. Extracted pages SHA-256: `9ea4b8075301b50de51d295b6d676a1a92b66ad11c35522b8fe467869c2e9f39`.
+  semantic_relations:
+  - target: term/esa-employed-earner
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source distinguishes the statuses while allowing separate work in both and identifies limited-company directors as employed earners.
+    evidence:
+    - page: page/dmg-vol9-ch50/0002
+      quote: "50007 A S/E earner is a person who is gainfully employed\n\n\n1. in GB and\n\n\n2. in employment that is not employed earners employment1.\n\n\nNote: A person may also be employed as an employed earner. This does not stop the person being S/E.\n\n\n                                                                1 ESA Regs, reg 2(1); SS CB Act 92, s 2(1)(b)"
+      locator: DMG 50007
+    - page: page/dmg-vol9-ch50/0005
+      quote: "50016 A limited company, of whatever size, is separate from its employees, officers and shareholders 1.\nThis means that the profits of the company do not belong to the directors. A director of a limited\n\ncompany is an office holder in the company2 and is an employed earner (see DMG Chapter 49).\n\n\n                                                             1 R(SB) 57/83; 2 McMillan v Guest 1942, AC 561\n\n\n\nEarnings of self-employed earners"
+      locator: DMG 50016

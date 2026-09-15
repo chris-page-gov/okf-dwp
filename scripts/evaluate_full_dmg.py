@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 import re
 
-from build_bundle import ROOT, canonical, digest, load_yaml
+from build_bundle import ROOT, canonical, digest
 from build_full_dmg import tokens
 
 OUTPUT = "evaluation/full-dmg-retrieval.json"
@@ -25,6 +25,9 @@ class IndexedEvidence:
 
     def __init__(self, directory: Path):
         self.directory = directory
+        for entry in read(directory / 'checksums.json')['files']:
+            if digest((directory / entry['path']).read_bytes()) != entry['sha256']:
+                raise ValueError('Indexed evaluation input identity differs: ' + entry['path'])
         self.descriptor = read(directory / "okf-explorer.json")
         self.manifest = read(directory / "data/search/manifest.json")
         self.records = [row for part in read(directory / "data/manifest.json")["chunks"]["datasets"]
@@ -32,6 +35,22 @@ class IndexedEvidence:
         self.routes = {row["route"]: row for row in self.records}
         self.postings = {token: rows for part in self.manifest["entrypoints"]["postings"]
                          for token, rows in read(directory / part)["tokens"].items()}
+        sources = read(directory / 'data/source-documents.json')
+        raw_inventory = (directory.parent / sources['inventory']).read_bytes()
+        if digest(raw_inventory) != sources['inventory_sha256']:
+            raise ValueError('Indexed source inventory identity differs')
+        inventory = {row['id']:row for row in json.loads(raw_inventory)['documents']}
+        self.source_pages = {}
+        for source in sources['documents']:
+            doc = inventory[source['id']]
+            raw = (directory.parent / doc['pages_path']).read_bytes()
+            if digest(raw) != doc['pages_sha256']:
+                raise ValueError('Indexed source page artefact identity differs')
+            pages = json.loads(raw)
+            if pages['source_sha256'] != doc['sha256']:
+                raise ValueError('Source page/PDF identity differs')
+            for route,page in zip(source['page_routes'], pages['pages'], strict=True):
+                self.source_pages[route] = page['text']
 
     def search(self, query: str, document_id: str | None = None) -> list[dict]:
         terms = tokens(query)
@@ -44,8 +63,10 @@ class IndexedEvidence:
 
     def verify_passage(self, route: str, quote: str, source_sha256: str) -> dict:
         row = self.routes[route]
-        if not quote or quote not in row["narrative"]["body"]:
+        if not quote or quote not in self.source_pages.get(route, '') or quote not in row["narrative"]["body"]:
             raise ValueError("The expected passage is absent from the indexed record")
+        if digest(self.source_pages[route].encode()) != row['provenance']['page_text_sha256']:
+            raise ValueError('Indexed page text identity differs')
         if row["provenance"]["source_sha256"] != source_sha256:
             raise ValueError("The source PDF identity differs")
         return {"route": route, "title": row["title"], "source_url": row["url"],
@@ -64,15 +85,20 @@ def evaluate(root: Path = ROOT) -> dict:
     source_units = {unit["id"]: unit for unit in plan["source_units"]}
     source_routes = {doc["id"]: doc["page_routes"] for doc in read(root / "full-dmg/data/source-documents.json")["documents"]}
     semantic_passages = {}
-    inputs = []
-    for path in sorted((root / "knowledge").rglob("*.yamlld")):
-        inputs.append({"path": path.relative_to(root).as_posix(), "sha256": digest(path.read_bytes())})
-        for node in load_yaml(path).get("@graph", []):
-            for relation in node.get("semantic_relations", []):
-                for evidence in relation.get("evidence", []):
-                    row = corpus.routes.get(evidence.get("page"))
-                    if row:
-                        semantic_passages.setdefault(row.get("document_id"), evidence)
+    # Select only proposals actually present in this immutable built corpus.
+    # Concurrent authoring files outside it cannot expand this receipt's scope.
+    manifest = read(root / 'full-dmg/data/manifest.json')
+    for part in manifest['chunks']['relationships']:
+        for relation in read(root / 'full-dmg' / part):
+            if relation.get('assertion_status') != 'model-derived':
+                continue
+            for evidence in relation.get('evidence', []):
+                route = evidence.get('source_page_route')
+                row = corpus.routes.get(route)
+                if row:
+                    semantic_passages.setdefault(row.get('document_id'), {
+                        'page':route, 'quote':evidence['source_value'], 'locator':evidence['locator'],
+                        'assertion_id':relation['id']})
     @lru_cache(maxsize=None)
     def pages(document_id):
         return read(root / documents[document_id]["pages_path"])["pages"]
@@ -145,7 +171,7 @@ def evaluate(root: Path = ROOT) -> dict:
     binding_paths = ["scripts/evaluate_full_dmg.py", "full-dmg/checksums.json", "evaluation/full-dmg-coverage-plan.json", "source/full-dmg-2026-09-15/inventory.json"]
     return {"schema": "okf-dwp-indexed-retrieval-evaluation.v1", "snapshot": corpus.descriptor["snapshot"],
             "execution_kind": "deterministic evidence retrieval; no language model response generation",
-            "status": "passed-for-executed-controls", "inputs": [{"path": path, "sha256": digest((root / path).read_bytes())} for path in binding_paths] + inputs,
+            "status": "passed-for-executed-controls", "inputs": [{"path": path, "sha256": digest((root / path).read_bytes())} for path in binding_paths],
             "counts": {"substantive_units": len(cases), "locator_and_no_result_pairs_passed": len(probes),
                        "not_run_without_authored_passage": len(cases) - len(probes), "baseline_routes_checked": len(baseline),
                        "family_controls_passed": len(families), "behavioural_or_specialist_cases_executed": 0},

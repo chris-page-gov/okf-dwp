@@ -1,0 +1,94 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/aa-care-needs
+  '@type': skos:Concept
+  route: term/aa-care-needs
+  title: Attendance Allowance care needs in the source
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The AA introduction describes needs for attention, supervision or watching over and identifies
+    a single component with higher and lower rates.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol10-ch61/0003
+  - page/dmg-vol10-ch61/0004
+  - page/dmg-vol10-ch61/0007
+  - page/dmg-vol10-ch61/0005
+  source: https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=3
+  sources:
+  - id: dmg-vol10-ch61
+    title: 'DMG Vol 10 Ch 61: Attendance Allowance and Disability Living Allowance'
+    resource: https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf
+    author: organisation:dwp
+    sha256: 884dc79907770bd9e178fe4122c0b7d404697f4ccc882b067e9220b34a0f002a
+    retrieved_at: '2026-09-15T19:45:32.783276Z'
+  skos:prefLabel:
+    '@value': Attendance Allowance care needs in the source
+    '@language': en-GB
+  skos:definition:
+    '@value': The AA introduction describes needs for attention, supervision or watching over and identifies a
+      single component with higher and lower rates.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The source separately requires age, residence/presence/competency and disability conditions. It
+      does not establish entitlement from age, a diagnosis or a care need alone. The printed age paragraph on
+      page 5 lacks the expected 61013 number in this extraction; it is not silently invented.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Attendance Allowance care needs in the source\n\n## Authored interpretation\n\nThe AA introduction describes
+    needs for attention, supervision or watching over and identifies a single component with higher and lower rates.\n\
+    \n## Scope and exceptions\n\nThe source separately requires age, residence/presence/competency and disability
+    conditions. It does not establish entitlement from age, a diagnosis or a care need alone. The printed age paragraph
+    on page 5 lacks the expected 61013 number in this extraction; it is not silently invented.\n\n## Inspected passages\n\
+    \n- [DMG 61001, PDF page 3](https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=3).\n\
+    - [DMG 61002, PDF page 3](https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=3).\n\
+    - [DMG 61012, PDF page 4](https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=4).\n\
+    \n## Additional context\n\n- [Context: chapter 61, PDF page 5](https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=5).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol10-ch61`:
+    PDF `884dc79907770bd9e178fe4122c0b7d404697f4ccc882b067e9220b34a0f002a`; extracted pages `23b4405d725de2fde124df29a8c753b9fcb7530405c83d588bd321e1e83226cc`;
+    acquired `2026-09-15T19:45:32.783276Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=3
+  semantic_relations:
+  - target: term/dla-component-distinction
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter contrasts AA’s one component with DLA’s separate care and mobility components.
+    evidence:
+    - page: page/dmg-vol10-ch61/0003
+      quote: "61002 There is only one AA component made with two rates which are\n\n\n1. the higher rate and\n\n\
+        \n2. the lower rate.\n\n\nSeverely disabled people may be entitled to either of these rates. The rate depends
+        on the level of\n\nattention, supervision or watching over a person needs1.\n\n\n                      \
+        \                                                               1 SS CB Act 92, s 64"
+      locator: DMG 61002
+    - page: page/dmg-vol10-ch61/0004
+      quote: "61009 DLA is made up of two components. These are\n\n\n1. the care component and\n\n\n2. the mobility
+        component.\n\n\nA disabled person may be entitled to one or both components. See guidance in DMG 61603 for
+        claims\nwith evidence of one component only."
+      locator: DMG 61009
+  - target: term/aa-dla-medical-advice
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter treats medical advice as evidence assisting the DM, not as a claim determination.
+    evidence:
+    - page: page/dmg-vol10-ch61/0007
+      quote: "61024 If the DM has difficulty in interpreting the medical evidence the case may be referred to Medical\n\
+        Services for advice. In the event of an appeal, the advice should be put before the tribunal for comment.\n\
+        DMs should consider the guidance in DMG Chapter 03 when giving consideration to a medical opinion.\nWhere
+        the Medical Services advice conflicts with the claimed needs, the DM should consider whether\nfurther evidence
+        needs to be obtained.\n\n\nNote: Medical Services have no authority to determine claims and cannot advise
+        directly on whether a\nperson satisfies one of the disability tests."
+      locator: DMG 61024

@@ -1,0 +1,89 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id':
+    https://chris-page-gov.github.io/okf-dwp/id/term/common-child-dependency-entitlement-payment
+  '@type': skos:Concept
+  route: term/common-child-dependency-entitlement-payment
+  title: Entitlement and payability of a retained child dependency increase
+  type: Concept
+  description: 'The captured guidance separates entitlement to a child dependency increase from its payability:
+    the child-benefit and exclusion conditions are distinguished from treated-as-living-with or maintenance
+    conditions.'
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Entitlement and payability of a retained child dependency increase
+    '@language': en-GB
+  skos:definition:
+    '@value': 'The captured guidance separates entitlement to a child dependency increase from its payability:
+      the child-benefit and exclusion conditions are distinguished from treated-as-living-with or maintenance
+      conditions.'
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': These are retained dependency provisions in the chapter’s savings, transitional or
+      unaffected-benefit scope. Child Benefit receipt alone does not establish payment, and living
+      together alone does not establish entitlement. Current rates, maintenance calculation, family
+      definitions and all exclusions remain unresolved.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch16/0009
+  - page/dmg-vol3-ch16/0015
+  source: https://assets.publishing.service.gov.uk/media/5eda569e86650c4abf424bc2/dmgch16.pdf#page=9
+  resource:
+    https://assets.publishing.service.gov.uk/media/5eda569e86650c4abf424bc2/dmgch16.pdf#page=9
+  sources:
+  - id: dmg-vol3-ch16
+    title: 'DMG Vol 3 Ch 16: Dependency increases'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5eda569e86650c4abf424bc2/dmgch16.pdf
+    retrieved_at: '2026-09-15T19:45:22.283468Z'
+    sha256: 98d3f27a839795c416988c7a5770c403b8f046be78de244feaf612e4515ac3ed
+  body: "# Entitlement and payability of a retained child dependency increase\n\n## Authored interpretation\n\
+    \nThe captured guidance separates entitlement to a child dependency increase from its payability:
+    the child-benefit and exclusion conditions are distinguished from treated-as-living-with or maintenance
+    conditions.\n\n## Scope and exceptions\n\nThese are retained dependency provisions in the chapter’s
+    savings, transitional or unaffected-benefit scope. Child Benefit receipt alone does not establish
+    payment, and living together alone does not establish entitlement. Current rates, maintenance calculation,
+    family definitions and all exclusions remain unresolved.\n\n## Inspected source passages\n\n- [DMG
+    16000, PDF page 9](https://assets.publishing.service.gov.uk/media/5eda569e86650c4abf424bc2/dmgch16.pdf#page=9)
+    — DMG Vol 3 Ch 16: Dependency increases.\n- [DMG 16029, PDF page 15](https://assets.publishing.service.gov.uk/media/5eda569e86650c4abf424bc2/dmgch16.pdf#page=15)
+    — DMG Vol 3 Ch 16: Dependency increases.\n- [DMG 16030, PDF page 15](https://assets.publishing.service.gov.uk/media/5eda569e86650c4abf424bc2/dmgch16.pdf#page=15)
+    — DMG Vol 3 Ch 16: Dependency increases.\n- [DMG 16033, PDF page 15](https://assets.publishing.service.gov.uk/media/5eda569e86650c4abf424bc2/dmgch16.pdf#page=15)
+    — DMG Vol 3 Ch 16: Dependency increases.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol3-ch16`: PDF SHA-256 `98d3f27a839795c416988c7a5770c403b8f046be78de244feaf612e4515ac3ed`;
+    extracted pages SHA-256 `7d8c71fa0ff5bbf0e45ab1044c34ebd8cb9bac48f582b20924e3ba78fd12fe5d`.\n"
+  semantic_relations:
+  - target: term/common-child-dependency-transition
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter warns that much of the dependency text is retained for transitional and
+      unaffected cases; the entitlement/payability distinction must remain inside that scope.
+    evidence:
+    - page: page/dmg-vol3-ch16/0009
+      quote: "16000   Certain CDIs have been abolished1. DMG 16003 -16013 provides guidance on this\n\
+        \        and on the transitional and savings arrangements2. The guidance on CDIs in DMG\n    \
+        \    16015 et seq is retained for transitional cases and benefits not affected (see DMG\n    \
+        \    16002).\n                                                                 1 TC Act 02, s
+        1(3)(e); 2 TC Comm No. 3 Order, art. 3\n\n\n        Benefits affected"
+      locator: DMG 16000
+    - page: page/dmg-vol3-ch16/0015
+      quote: "16029   DMs should note the difference between entitlement1 and payability. Although benefit\n\
+        \        may not be payable, entitlement may remain2.\n                                      \
+        \                       1 [1984] 1 WLR 1353; 2 SS CB Act 92, s 122(1)\n\n\n        Entitlement"
+      locator: DMG 16029

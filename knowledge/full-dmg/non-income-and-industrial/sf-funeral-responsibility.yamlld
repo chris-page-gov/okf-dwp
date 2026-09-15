@@ -1,0 +1,94 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/sf-funeral-responsibility
+  '@type': skos:Concept
+  route: term/sf-funeral-responsibility
+  title: Funeral-payment contractual responsibility
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: For the captured funeral-payment conditions, accepting responsibility means contractual
+    liability for funeral expenses; a moral obligation alone does not count. An authorised agent may arrange
+    or pay on the responsible person’s behalf.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol7-ch39/0010
+  - page/dmg-vol7-ch39/0011
+  - page/dmg-vol7-ch39/0005
+  - page/dmg-vol7-ch39/0006
+  - page/dmg-vol7-ch39/0007
+  source: https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=10
+  sources:
+  - id: dmg-vol7-ch39
+    title: 'DMG Vol 7 Ch 39: Social Fund payments'
+    resource: https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf
+    author: organisation:dwp
+    sha256: ab13db0cf4d33fd90fb4cd8a90b909af568d39169f617f4b86b1037278d3fa9f
+    retrieved_at: '2026-09-15T19:45:28.411887Z'
+  skos:prefLabel:
+    '@value': Funeral-payment contractual responsibility
+    '@language': en-GB
+  skos:definition:
+    '@value': For the captured funeral-payment conditions, accepting responsibility means contractual
+      liability for funeral expenses; a moral obligation alone does not count. An authorised agent may arrange
+      or pay on the responsible person’s behalf.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Contractual responsibility does not by itself satisfy every condition. The source’s conditions
+      span pages 5–7, including qualifying benefit, claim time, residence, geography and overseas-funeral
+      provisions. A name on an invoice is evidence requiring context; the agent example prevents equating the
+      payer or named person automatically with the responsible person.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Funeral-payment contractual responsibility\n\n## Authored interpretation\n\nFor the captured funeral-payment
+    conditions, accepting responsibility means contractual liability for funeral expenses; a moral obligation alone
+    does not count. An authorised agent may arrange or pay on the responsible person’s behalf.\n\n## Scope and exceptions\n\
+    \nContractual responsibility does not by itself satisfy every condition. The source’s conditions span pages
+    5–7, including qualifying benefit, claim time, residence, geography and overseas-funeral provisions. A name
+    on an invoice is evidence requiring context; the agent example prevents equating the payer or named person automatically
+    with the responsible person.\n\n## Inspected passages\n\n- [DMG 39135, PDF page 10](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=10).\n\
+    - [DMG 39136, PDF page 10](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=10).\n\
+    - [DMG 39138, PDF page 11](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=11).\n\
+    - [DMG 39140, PDF page 11](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=11).\n\
+    \n## Additional context\n\n- [Context: chapter 39, PDF page 5](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=5).\n\
+    - [Context: chapter 39, PDF page 6](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=6).\n\
+    - [Context: chapter 39, PDF page 7](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=7).\n\
+    - [Context: chapter 39, PDF page 10](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=10).\n\
+    - [Context: chapter 39, PDF page 11](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=11).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol7-ch39`:
+    PDF `ab13db0cf4d33fd90fb4cd8a90b909af568d39169f617f4b86b1037278d3fa9f`; extracted pages `625425d7933417f8895628354b1be65fc86df4d1f97a55acb13426d6cbe2b8a7`;
+    acquired `2026-09-15T19:45:28.411887Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=10
+  semantic_relations:
+  - target: term/sf-funeral-contract-evidence
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source distinguishes contractual responsibility from the evidence of a contract and
+      authorised agency.
+    evidence:
+    - page: page/dmg-vol7-ch39/0011
+      quote: "39138 It is not necessary that the funeral arrangements are made by the responsible person. Another\n\
+        person can act as agent for the responsible person. The responsible person does not have to be named\non
+        the funeral account and the funeral director does not have to know that the person who is instructing\n\
+        them is an agent. However there should be evidence that the responsible person gave the other person\n\n\
+        the authority to make the arrangements on their behalf1.\n\n\n                                         \
+        \                                                       1 R(IS) 6/98"
+      locator: DMG 39138
+    - page: page/dmg-vol7-ch39/0011
+      quote: "39139 The account is evidence that a contract exists for\n\n\n1. the funeral director to provide goods
+        and services and\n\n\n2. the responsible person to pay for those goods and services."
+      locator: DMG 39139

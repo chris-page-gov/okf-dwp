@@ -1,0 +1,87 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/sda-continuation-boundary
+  '@type': skos:Concept
+  route: term/sda-continuation-boundary
+  title: Severe Disablement Allowance continuation after closure
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The SDA introduction says the non-contributory benefit ceased to be available to new claimants
+    from 6 April 2001 while specified previous or existing entitlement could continue.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol10-ch57/0005
+  - page/dmg-vol10-ch57/0006
+  source: https://assets.publishing.service.gov.uk/media/5a818c4440f0b62302697e6e/dmgch57.pdf#page=5
+  sources:
+  - id: dmg-vol10-ch57
+    title: 'DMG Vol 10 Ch 57: Severe Disablement Allowance'
+    resource: https://assets.publishing.service.gov.uk/media/5a818c4440f0b62302697e6e/dmgch57.pdf
+    author: organisation:dwp
+    sha256: e5308157f4aed131c245dfd1554a126ad2800f670127de7995f6c643db8ce63b
+    retrieved_at: '2026-09-15T19:45:32.506330Z'
+  skos:prefLabel:
+    '@value': Severe Disablement Allowance continuation after closure
+    '@language': en-GB
+  skos:definition:
+    '@value': The SDA introduction says the non-contributory benefit ceased to be available to new claimants
+      from 6 April 2001 while specified previous or existing entitlement could continue.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The continuation conditions differ according to age at the transition and the period of
+      incapacity. This does not open a present SDA claim route, transfer criteria to ESA or infer that every
+      historical award still continues.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Severe Disablement Allowance continuation after closure\n\n## Authored interpretation\n\nThe SDA introduction
+    says the non-contributory benefit ceased to be available to new claimants from 6 April 2001 while specified
+    previous or existing entitlement could continue.\n\n## Scope and exceptions\n\nThe continuation conditions differ
+    according to age at the transition and the period of incapacity. This does not open a present SDA claim route,
+    transfer criteria to ESA or infer that every historical award still continues.\n\n## Inspected passages\n\n\
+    - [DMG 57001, PDF page 5](https://assets.publishing.service.gov.uk/media/5a818c4440f0b62302697e6e/dmgch57.pdf#page=5).\n\
+    - [DMG 57002, PDF page 5](https://assets.publishing.service.gov.uk/media/5a818c4440f0b62302697e6e/dmgch57.pdf#page=5).\n\
+    - [DMG 57003, PDF page 5](https://assets.publishing.service.gov.uk/media/5a818c4440f0b62302697e6e/dmgch57.pdf#page=5).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol10-ch57`:
+    PDF `e5308157f4aed131c245dfd1554a126ad2800f670127de7995f6c643db8ce63b`; extracted pages `5b68aac36596be58528e0c3561d5ef604ec3cf774a61eb2ab93d8639dca9531c`;
+    acquired `2026-09-15T19:45:32.506330Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/5a818c4440f0b62302697e6e/dmgch57.pdf#page=5
+  semantic_relations:
+  - target: term/sda-youth-transition
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source distinguishes continuing SDA from a specified youth transition to IB.
+    evidence:
+    - page: page/dmg-vol10-ch57/0006
+      quote: "57005   Days of entitlement to SDA in the period 6.4.01 to 5.4.02 are treated as days of\n       \
+        \ entitlement to IB(Y) if the claimant\n\n        1.      was aged under 20 on 5.4.01 and\n\n        2.\
+        \      continues to be incapable of work (see DMG 57006 where incapacity is not\n                continuous).\n\
+        \n        If incapacity continues the person is entitled to IBLT from 6.4.021. IB under this\n        paragraph
+        is not reduced by pension payments (See DMG 56135).\n                                                  \
+        \                                       1 SS (IB) Regs, reg 19(1)"
+      locator: DMG 57005
+    - page: page/dmg-vol10-ch57/0006
+      quote: "57006   Days of entitlement to SDA in the period 6.4.01 to 6.4.02 may not be continuous.\n       \
+        \ SDA entitlement may depend on satisfaction of the linking provisions (DMG 57059 -\n        57064). Such
+        days are treated as days of entitlement to IB(Y) if\n\n        1.      the claimant was under age 20 on
+        5.4.01 and\n\n        2.      there is a PIW on or after 6.4.02 which links with previous PIW and\n\n  \
+        \      3.      there was entitlement to SDA in the previous PIW.\n\n        In such cases IBLT is due from
+        6.4.02 or the first day of a PIW starting after that\n        date (whether or not there are 364 days in
+        the PIW). IB under this paragraph is not\n                                        1\n        reduced by
+        pension payments (see DMG 56135).\n                                                                    \
+        \                     1 SS (IB) Regs, reg 19(2)"
+      locator: DMG 57006

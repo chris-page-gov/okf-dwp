@@ -1,0 +1,115 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-hardship-privation
+  '@type': skos:Concept
+  route: term/legacy-jsa-hardship-privation
+  title: Hardship as privation of basic necessities
+  type: Concept
+  description: The captured JSA hardship chapter asks whether hardship would occur if JSA were
+    unpaid and describes severe suffering or privation of basic necessities, with all relevant
+    circumstances considered.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Hardship as privation of basic necessities
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured JSA hardship chapter asks whether hardship would occur if JSA were unpaid
+      and describes severe suffering or privation of basic necessities, with all relevant
+      circumstances considered.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 35000 excludes IS from this chapter’s hardship provisions; DMG 35001 concerns
+      specified JSA(IB) payments. Access conditions, periods, income and other-benefit exclusions
+      remain separate. Hardship is not established by a vulnerability label alone, and no payment or
+      award is calculated.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol6-ch35/0003
+  - page/dmg-vol6-ch35/0039
+  - page/dmg-vol6-ch35/0013
+  - page/dmg-vol6-ch35/0044
+  - page/dmg-vol6-ch35/0045
+  source:
+    https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=3
+  resource:
+    https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=3
+  sources:
+  - id: dmg-vol6-ch35
+    title: 'DMG Vol 6 Ch 35: Hardship'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf
+    retrieved_at: '2026-09-15T19:45:27.106679Z'
+    sha256: e54a2eb89b7e4d4d4ff30802ef129a0ea6c418e6ece7a4e70d142dcb5a7de18b
+  body: "# Hardship as privation of basic necessities\n\n## Authored interpretation\n\nThe captured JSA
+    hardship chapter asks whether hardship would occur if JSA were unpaid and describes severe suffering
+    or privation of basic necessities, with all relevant circumstances considered.\n\n## Scope and exceptions\n\
+    \nDMG 35000 excludes IS from this chapter’s hardship provisions; DMG 35001 concerns specified JSA(IB)
+    payments. Access conditions, periods, income and other-benefit exclusions remain separate. Hardship
+    is not established by a vulnerability label alone, and no payment or award is calculated.\n\n## Inspected
+    source passages\n\n- [DMG 35000, PDF page 3](https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=3)
+    — DMG Vol 6 Ch 35: Hardship.\n- [DMG 35001, PDF page 3](https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=3)
+    — DMG Vol 6 Ch 35: Hardship.\n- [DMG 35153, PDF page 39](https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=39)
+    — DMG Vol 6 Ch 35: Hardship.\n- [DMG 35155, PDF page 39](https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=39)
+    — DMG Vol 6 Ch 35: Hardship.\n- [DMG 35156, PDF page 39](https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=39)
+    — DMG Vol 6 Ch 35: Hardship.\n\n## Evidence and review status\n\nModel-assisted interpretation of
+    selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol6-ch35`: PDF SHA-256 `e54a2eb89b7e4d4d4ff30802ef129a0ea6c418e6ece7a4e70d142dcb5a7de18b`;
+    extracted pages SHA-256 `f636b425bb3f5b43a4d10c90c7d93e6a5e1abecd710a1d751b97704b24345753`.\n"
+  semantic_relations:
+  - target: term/legacy-jsa-hardship-vulnerable-group
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter explicitly distinguishes the hardship test from its specialised
+      vulnerable-group categories used for access without a waiting period.
+    evidence:
+    - page: page/dmg-vol6-ch35/0013
+      quote: "35055 [See memo DMG 18/17] Vulnerable group is the term used in this guidance to describe
+        people\nwho are more likely to suffer hardship if JSA is not paid without a waiting period, i.e.
+        those people who are\n\ndefined as “persons in hardship” in JSA legislation1. Claimants in a defined
+        vulnerable group are entitled\n\nto hardship payments in circumstances where other claimants are
+        not 2.\n\n\nNote 1: The test of hardship is not a test of ‘vulnerability’ but a test of the lack
+        of the basic essential\nnecessities of life, e.g. accommodation, food, water, heating and hygiene
+        (see DMG 35155).\n\n\nNote 2: The term ‘vulnerable group’ for hardship purposes is not the same
+        as the DWP wider definition of\n‘vulnerability’, or ‘vulnerable groups’ for any other purposes
+        and applies exclusively to those defined in\n\nJSA regulations as “persons in hardship”1. Where
+        the term ‘vulnerable group’ is used throughout this\nchapter it means those defined exclusively
+        for hardship purposes (i.e. those who have access to hardship\nwithout a waiting period).\n\n\n\
+        \                                                      1 JSA Regs, regs 140(1) & 146A(1); 2 regs
+        141 & 146C(1)"
+      locator: DMG 35055
+  - target: term/legacy-jsa-hardship-available-resources
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Assessment of available resources is one specified part of the hardship enquiry, with
+      express limits on what can reasonably be expected.
+    evidence:
+    - page: page/dmg-vol6-ch35/0044
+      quote: "35175 Resources is not defined in the law. The word should be given its normal everyday
+        meaning 1 of\nthe means available or a stock or supply that can be drawn upon.\n\n\n         \
+        \                                                                                       1 R(SB)
+        19/82"
+      locator: DMG 35175
+    - page: page/dmg-vol6-ch35/0045
+      quote: "35177 It is not considered reasonable to expect claimants to rely upon\n\n\n1. charities,
+        such as food banks, (see DMG 35214)\n\n\n2. increase debts by seeking credit or using or extending
+        overdraft facilities (see DMG 35196)\n\n\n3. sell or pawn items to obtain cash (see DMG 35213)\n\
+        \n\n4. find cheaper housing (see DMG 35216) or\n\n\n5. ask friends and family for help (see DMG
+        35217).\n\n\nThese are not considered available resources. While claimants may be prepared to
+        request such help\nthere is no requirement to do so and claimants should not be denied access
+        to hardship payments if they\ndon’t."
+      locator: DMG 35177

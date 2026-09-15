@@ -1,0 +1,96 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/industrial-old-compensation
+  '@type': skos:Concept
+  route: term/industrial-old-compensation
+  title: Compensation and damages in retained old-scheme guidance
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The retained PB and MDB material distinguishes prior compensation entitlement from actual
+    payment and distinguishes the timing effect of damages on weekly allowance from the timing effect on death
+    benefit.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol11-ch73/0005
+  - page/dmg-vol11-ch73/0008
+  - page/dmg-vol11-ch73/0003
+  source: https://assets.publishing.service.gov.uk/media/5a8019b540f0b62305b892c3/dmgch73.pdf#page=5
+  sources:
+  - id: dmg-vol11-ch73
+    title: 'DMG Vol 11 Ch 73: Old cases'
+    resource: https://assets.publishing.service.gov.uk/media/5a8019b540f0b62305b892c3/dmgch73.pdf
+    author: organisation:dwp
+    sha256: 3b17129736cf09e79f9df7079d4a83c4c2b74676d356c2c92947ef6cb12839ba
+    retrieved_at: '2026-09-15T19:45:34.331056Z'
+  skos:prefLabel:
+    '@value': Compensation and damages in retained old-scheme guidance
+    '@language': en-GB
+  skos:definition:
+    '@value': The retained PB and MDB material distinguishes prior compensation entitlement from actual
+      payment and distinguishes the timing effect of damages on weekly allowance from the timing effect on
+      death benefit.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Read this within chapter 73’s expressly limited retained scope after 5 December 2012. The source
+      distinguishes awards never received, other-disease compensation and before/after-claim damages. It is
+      not a universal rule for modern IIDB, personal-injury compensation or bereavement payments.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Compensation and damages in retained old-scheme guidance\n\n## Authored interpretation\n\nThe retained
+    PB and MDB material distinguishes prior compensation entitlement from actual payment and distinguishes the timing
+    effect of damages on weekly allowance from the timing effect on death benefit.\n\n## Scope and exceptions\n\n\
+    Read this within chapter 73’s expressly limited retained scope after 5 December 2012. The source distinguishes
+    awards never received, other-disease compensation and before/after-claim damages. It is not a universal rule
+    for modern IIDB, personal-injury compensation or bereavement payments.\n\n## Inspected passages\n\n- [DMG 73333,
+    PDF page 5](https://assets.publishing.service.gov.uk/media/5a8019b540f0b62305b892c3/dmgch73.pdf#page=5).\n-
+    [DMG 73335, PDF page 5](https://assets.publishing.service.gov.uk/media/5a8019b540f0b62305b892c3/dmgch73.pdf#page=5).\n\
+    - [DMG 73348, PDF page 8](https://assets.publishing.service.gov.uk/media/5a8019b540f0b62305b892c3/dmgch73.pdf#page=8).\n\
+    - [DMG 73349, PDF page 8](https://assets.publishing.service.gov.uk/media/5a8019b540f0b62305b892c3/dmgch73.pdf#page=8).\n\
+    - [DMG 73350, PDF page 8](https://assets.publishing.service.gov.uk/media/5a8019b540f0b62305b892c3/dmgch73.pdf#page=8).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol11-ch73`:
+    PDF `3b17129736cf09e79f9df7079d4a83c4c2b74676d356c2c92947ef6cb12839ba`; extracted pages `d3ddd9b78f348565850afeafbaecd17ef9937905318211d171770a38ceadd7a3`;
+    acquired `2026-09-15T19:45:34.331056Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/5a8019b540f0b62305b892c3/dmgch73.pdf#page=5
+  semantic_relations:
+  - target: term/industrial-old-scheme-transition
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: These provisions are retained exceptions to the chapter’s post-2012 transition narrative.
+    evidence:
+    - page: page/dmg-vol11-ch73/0003
+      quote: "73001   WC (Supp) and PB and MDB will not apply from 5.12.121. Therefore, from that date,\n      \
+        \  people wishing to claim for\n\n        1.       accidents which happened or\n\n        2.       diseases
+        caused by employment\n\n        before 5.7.48 should claim IIDB under the normal rules2. Apart from DMG
+        73002 –\n        73003, the only guidance being retained is on other compensation (see DMG 73332\n     \
+        \   et seq) and death benefit (see DMG 73412 et seq).\n                                                \
+        \                 1 WR Act 12, s 64(2); 2 SS CB Act 92, s 94(1) & 108(1)\n\n\n        People receiving WC
+        (Supp) or PB and MDB"
+      locator: DMG 73001
+  - target: term/industrial-old-death-benefit
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source gives death benefit a distinct damages-timing treatment from a weekly allowance.
+    evidence:
+    - page: page/dmg-vol11-ch73/0008
+      quote: "73349   If death benefit is involved, the benefit is not payable if the damages are received\n   \
+        \     before the claim is made."
+      locator: DMG 73349
+    - page: page/dmg-vol11-ch73/0008
+      quote: "73350   A payment of damages received after the date of claim has no effect on the payment\n     \
+        \   of death benefit. This applies even if the damages are received between the date of\n        claim and
+        the date the DM decides the claim."
+      locator: DMG 73350

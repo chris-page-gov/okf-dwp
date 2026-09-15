@@ -7,6 +7,7 @@ from collections import Counter
 from functools import lru_cache
 import gzip
 import json
+import re
 from pathlib import Path
 from datetime import datetime
 
@@ -72,7 +73,7 @@ def validate(root: Path = ROOT, output: str = OUTPUT, inventory_path: str = INPU
     labels = read_json(out / label_ref["path"])
     require(labels["snapshot"] == snapshot and labels["counts"]["entries"] == len(records), "Endpoint label snapshot or denominator differs")
     require({row["route"]: (row["iri"], row["label"], row["type"]) for row in labels["entries"]} ==
-            {row["route"]: (row["id"], row["title"], row["record_type"]) for row in records}, "Endpoint labels lose a semantic route or source title")
+            {row["route"]: (row["id"], re.sub(r"\s+", " ", row["title"]).strip(), row["record_type"]) for row in records}, "Endpoint labels lose a semantic route or source title")
     locator = read_json(out / "data/locator/manifest.json")
     locator_buckets = {key: read_json(out / ref["path"]) for key, ref in locator["buckets"].items()}
     for ordinal, record in enumerate(records):

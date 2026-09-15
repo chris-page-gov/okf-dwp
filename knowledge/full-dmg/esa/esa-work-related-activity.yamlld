@@ -1,0 +1,89 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-work-related-activity
+  '@type': skos:Concept
+  route: term/esa-work-related-activity
+  title: ESA work-related activity and its work boundary
+  type: Concept
+  description: The source distinguishes work-related activity from ordinary paid or unpaid work, differentiates a required work placement from voluntary work experience, and restricts what may be required.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': ESA work-related activity and its work boundary
+    '@language': en-GB
+  skos:definition:
+    '@value': The source distinguishes work-related activity from ordinary paid or unpaid work, differentiates a required work placement from voluntary work experience, and restricts what may be required.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 53071–53077 do not authorise requiring employment, a job application or medical treatment. Requirement scope, reasonableness, exemptions, support-group status and later legal changes must be checked; no sanction decision follows from this concept.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 53
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol9-ch53/0016
+  - page/dmg-vol9-ch53/0017
+  - page/dmg-vol8-ch42/0081
+  source: https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=16
+  resource: https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=16
+  sources:
+  - id: dmg-vol9-ch53
+    title: 'DMG Vol 9 Ch 53: ESA –  WfI, WRA, sanctions and hardship, disqualification and advance awards'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf
+    retrieved_at: '2026-09-15T19:45:30.951851Z'
+    sha256: 4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8
+  body: |
+    # ESA work-related activity and its work boundary
+
+    ## Authored interpretation
+
+    The source distinguishes work-related activity from ordinary paid or unpaid work, differentiates a required work placement from voluntary work experience, and restricts what may be required.
+
+    ## Scope and boundaries
+
+    DMG 53071–53077 do not authorise requiring employment, a job application or medical treatment. Requirement scope, reasonableness, exemptions, support-group status and later legal changes must be checked; no sanction decision follows from this concept.
+
+    ## Inspected source passages
+
+    - [DMG 53071, PDF page 16](https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=16)
+    - [DMG 53072, PDF page 16](https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=16)
+    - [DMG 53073, PDF page 16](https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=16)
+    - [DMG 53077, PDF page 17](https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=17)
+    - [DMG 53080, PDF page 17](https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=17)
+    - [DMG 53081, PDF page 17](https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=17)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:30.951851Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8`. Extracted pages SHA-256: `739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1`.
+  semantic_relations:
+  - target: term/esa-work-meaning
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: A required WRA work placement is expressly separated from the chapter-41 work provisions; no equivalence is inferred.
+    evidence:
+    - page: page/dmg-vol9-ch53/0016
+      quote: "53072 Where a claimant is required to undertake a work placement as part of their WRA action plan, this\n\nis not paid or unpaid work. The guidance in DMG Chapter 41 about work 1, including exempt work2 and\n\nremunerative work3, does not apply.\n\n\n                                                               1 ESA Regs, reg 40 & 44; 2 reg 45; 3 reg 41"
+      locator: DMG 53072
+  - target: term/esa-limited-capability-work-related-activity
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source says the WRA requirement ceases on support-group membership, which is associated with LCWRA in the capability chapter.
+    evidence:
+    - page: page/dmg-vol9-ch53/0017
+      quote: "53080 The requirement to undertake WRA ceases to have effect if the claimant becomes a member of\n\nthe support group1. See DMG 53011 for the meaning of “member of the support group”.\n\n\n                                                          1 ESA (WRA) Regs, reg 3(3); WR Act 07, s 24(4)"
+      locator: DMG 53080
+    - page: page/dmg-vol8-ch42/0081
+      quote: "42612 Claimants with the most severe illnesses or disabilities who have LCWRA will receive the support\n\ncomponent1 without conditionality although they may participate in work-related activity on a voluntary\nbasis if they so wish.\n\n\n                                                                               1 WR Act 07, s 2(2) & 4(4)"
+      locator: DMG 42612

@@ -1,0 +1,81 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/rea-regular-occupation
+  '@type': skos:Concept
+  route: term/rea-regular-occupation
+  title: Regular occupation for REA
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: For REA, the source describes regular occupation as the trade, profession or type of work
+    actually followed, usually assessed at accident or disease-onset date, rather than one job with one
+    employer.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol11-ch71/0011
+  - page/dmg-vol11-ch71/0012
+  source: https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=11
+  sources:
+  - id: dmg-vol11-ch71
+    title: 'DMG Vol 11 Ch 71: Reduced earnings allowance '
+    resource: https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf
+    author: organisation:dwp
+    sha256: e001c101fb7be9bc739a8a5b9c1281637a93f34a099658e7dafef6fbb2b5d4f5
+    retrieved_at: '2026-09-15T19:45:34.428591Z'
+  skos:prefLabel:
+    '@value': Regular occupation for REA
+    '@language': en-GB
+  skos:definition:
+    '@value': For REA, the source describes regular occupation as the trade, profession or type of work
+      actually followed, usually assessed at accident or disease-onset date, rather than one job with one
+      employer.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The source includes gainful-occupation, multiple-occupation, recent-change and progression
+      qualifications. The relevant date is a claimant-event date, not a publication date. No occupational
+      capacity or hypothetical wage is decided.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Regular occupation for REA\n\n## Authored interpretation\n\nFor REA, the source describes regular occupation
+    as the trade, profession or type of work actually followed, usually assessed at accident or disease-onset date,
+    rather than one job with one employer.\n\n## Scope and exceptions\n\nThe source includes gainful-occupation,
+    multiple-occupation, recent-change and progression qualifications. The relevant date is a claimant-event date,
+    not a publication date. No occupational capacity or hypothetical wage is decided.\n\n## Inspected passages\n\
+    \n- [DMG 71041, PDF page 11](https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=11).\n\
+    - [DMG 71044, PDF page 11](https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=11).\n\
+    - [DMG 71045, PDF page 11](https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=11).\n\
+    - [DMG 71052, PDF page 12](https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=12).\n\
+    - [DMG 71054, PDF page 12](https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=12).\n\
+    - [DMG 71055, PDF page 12](https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=12).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol11-ch71`:
+    PDF `e001c101fb7be9bc739a8a5b9c1281637a93f34a099658e7dafef6fbb2b5d4f5`; extracted pages `1414e514cf78c7a2e0a3ce66e2d88727d3fda28f764fd2e8654361dc569356d6`;
+    acquired `2026-09-15T19:45:34.428591Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=11
+  semantic_relations:
+  - target: term/rea-earning-capacity
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source explicitly relates identification of the regular occupation to loss of earning
+      power.
+    evidence:
+    - page: page/dmg-vol11-ch71/0012
+      quote: "71052   REA is related to loss of earning power, so that a claimant’s regular occupation\n       \
+        \ need not be\n\n        1.    employed earner’s employment or\n\n        2.    confined to the work actually
+        being done at the time of an accident1.\n\n        The regular occupation must however be a gainful occupation.
+        Unpaid work should\n        be ignored2.\n                                                             \
+        \          1 R(I) 15/56; 2 CI 441/50(KL)"
+      locator: DMG 71052

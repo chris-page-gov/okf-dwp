@@ -1,0 +1,105 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-trade-dispute-evidence
+  '@type': skos:Concept
+  route: term/legacy-jsa-trade-dispute-evidence
+  title: Causation and evidence for a trade-dispute decision
+  type: Concept
+  description: The captured guidance requires the relevant place of employment, dispute, stoppage
+    and causal loss of employment to be established and allows oral or written evidence, while
+    rejecting reliance on unchallenged newspaper reports.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Causation and evidence for a trade-dispute decision
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance requires the relevant place of employment, dispute, stoppage and
+      causal loss of employment to be established and allows oral or written evidence, while
+      rejecting reliance on unchallenged newspaper reports.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': A public report of a dispute does not establish its effect on a particular claimant.
+      Evidence from the claimant and employer, the exceptions and the correct benefit scope remain
+      necessary. The project does not decide disputed facts, merits or entitlement.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol6-ch32/0010
+  - page/dmg-vol6-ch32/0011
+  - page/dmg-vol6-ch32/0009
+  source:
+    https://assets.publishing.service.gov.uk/media/5a815c4fe5274a2e8ab53931/dmgch32.pdf#page=10
+  resource:
+    https://assets.publishing.service.gov.uk/media/5a815c4fe5274a2e8ab53931/dmgch32.pdf#page=10
+  sources:
+  - id: dmg-vol6-ch32
+    title: 'DMG Vol 6 Ch 32: Trade disputes'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a815c4fe5274a2e8ab53931/dmgch32.pdf
+    retrieved_at: '2026-09-15T19:45:26.806544Z'
+    sha256: 5db1b5b8f473bf748cdbe42d45b23d48a5838c583013e1a554454644e2b5dbdb
+  body: "# Causation and evidence for a trade-dispute decision\n\n## Authored interpretation\n\nThe captured
+    guidance requires the relevant place of employment, dispute, stoppage and causal loss of employment
+    to be established and allows oral or written evidence, while rejecting reliance on unchallenged newspaper
+    reports.\n\n## Scope and exceptions\n\nA public report of a dispute does not establish its effect
+    on a particular claimant. Evidence from the claimant and employer, the exceptions and the correct
+    benefit scope remain necessary. The project does not decide disputed facts, merits or entitlement.\n\
+    \n## Inspected source passages\n\n- [DMG 32012, PDF page 10](https://assets.publishing.service.gov.uk/media/5a815c4fe5274a2e8ab53931/dmgch32.pdf#page=10)
+    — DMG Vol 6 Ch 32: Trade disputes.\n- [DMG 32015, PDF page 11](https://assets.publishing.service.gov.uk/media/5a815c4fe5274a2e8ab53931/dmgch32.pdf#page=11)
+    — DMG Vol 6 Ch 32: Trade disputes.\n- [DMG 32007, PDF page 9](https://assets.publishing.service.gov.uk/media/5a815c4fe5274a2e8ab53931/dmgch32.pdf#page=9)
+    — DMG Vol 6 Ch 32: Trade disputes.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol6-ch32`: PDF SHA-256 `5db1b5b8f473bf748cdbe42d45b23d48a5838c583013e1a554454644e2b5dbdb`;
+    extracted pages SHA-256 `a1dc36fa3d3513b1c9d7218f10c80a1417cd76cbe718b88baa3d57c6806de15b`.\n"
+  semantic_relations:
+  - target: term/dmg-evidence-assessment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source explicitly contrasts relevant oral or written evidence with unchallenged
+      newspaper reports.
+    evidence:
+    - page: page/dmg-vol6-ch32/0011
+      quote: "32015   Evidence is usually in the form of oral or written statements from the claimant
+        or the\n                                                                                  1\n\
+        \        employer. The DM should not rely on unchallenged newspaper reports .\n              \
+        \                                                                 1 R(U)6/61; R(U)11/63\n\n\n\n\
+        \nVol 6 Amendment 14 October 2004"
+      locator: DMG 32015
+  - target: term/legacy-jsa-trade-dispute
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The evidential chain supports the trade-dispute question, which has express
+      exceptions rather than automatic exclusion.
+    evidence:
+    - page: page/dmg-vol6-ch32/0010
+      quote: "32012   Before deciding whether the claimant has lost employment because of a stoppage of\n\
+        \        work caused by a TD the DM must establish\n\n        1.    the claimant's place of work
+        (see DMG 32016 - 32057) and\n\n        2.    that there was a TD at the place of work and\n\n\
+        \        3.    that there was a stoppage of work at the place of work and\n\n        4.    that
+        the stoppage was due to the TD and\n\n        5.    that the claimant lost employment because
+        of the stoppage of work.\n\n\n\n\nVol 6 Amendment 14 October 2004"
+      locator: DMG 32012
+    - page: page/dmg-vol6-ch32/0009
+      quote: "32006   The TD provisions do not apply if claimants can show that during the stoppage of\n\
+        \             1\n        work they\n\n        1.       start work somewhere else (see DMG 32252
+        - 32260) or\n                                                2\n        2.       have been made
+        redundant (see DMG 32264 - 32265) or\n\n        3.       have returned to work for their employer
+        but have then left for reasons other\n                 than the TD (see DMG 32266 -32274) or\n\
+        \                                                               3\n        4.       are not directly
+        interested in the dispute (see DMG 32201 - 32222).\n                                         \
+        \                1 s 14(3); 2 ER Act 96, s 139(1) & (2); 3 JS Act 95, s 14(1)"
+      locator: DMG 32006

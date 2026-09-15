@@ -253,6 +253,10 @@
       {
         "path": "evaluation/**",
         "role": "evaluation-design"
+      },
+      {
+        "path": "profiles/explorer-runtime/**",
+        "role": "pinned-consumer-contract-code-and-licence"
       }
     ],
     "generated": [
@@ -298,7 +302,10 @@
         "full-dmg-evidence-check",
         "full-dmg-build-check",
         "full-dmg-validate",
-        "full-dmg-coverage-check"
+        "full-dmg-coverage-check",
+        "full-dmg-consumer-check",
+        "full-dmg-retrieval-check",
+        "full-dmg-reference-check"
       ]
     },
     {
@@ -438,6 +445,45 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 5
+      },
+      {
+        "id": "full-dmg-consumer-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "node --experimental-strip-types scripts/check_full_dmg_consumer.mjs",
+        "source": "profiles/explorer-runtime/vendor-lock.json",
+        "review_status": "pinned-upstream-consumer-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "full-dmg-retrieval-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/evaluate_full_dmg.py --check",
+        "source": "docs/next-stage/unattended-completion.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "full-dmg-reference-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/reconcile_full_dmg_references.py --check",
+        "source": "docs/next-stage/full-dmg-acquisition.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
       }
     ]
   },
@@ -454,7 +500,8 @@
       "docs/evidence/cpag-access-review.json",
       "evaluation/**",
       "docs/evidence/cpag-publication-date-review.json",
-      "full-dmg/**"
+      "full-dmg/**",
+      "profiles/explorer-runtime/**"
     ],
     "documentation_paths": [
       "README.md",

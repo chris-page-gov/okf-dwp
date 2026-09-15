@@ -8,7 +8,7 @@ import unittest
 from unittest.mock import patch
 
 from build_full_dmg import (ROOT, build_search, canonical, check_full_relation, deterministic_gzip,
-                            compile_full, digest, page_routes, source_dates, tokens)
+                            compile_full, digest, page_routes, referenced_publication_date, source_dates, tokens)
 from validate_full_dmg import validate
 from evaluate_full_dmg import IndexedEvidence
 
@@ -50,6 +50,7 @@ class FullDmgTests(unittest.TestCase):
             for name in ("bundle.schema.json", "semantic-assertion.schema.json"):
                 (profiles / name).write_bytes((ROOT / "profiles/bundle-wiki/v1" / name).read_bytes())
             outputs = compile_full(root, "source/inventory.json", include_pilot=False)
+            self.assertEqual(json.loads(outputs['okf-explorer.json'])['source']['observed_at'], when)
             self.assertEqual(outputs, compile_full(root, "source/inventory.json", include_pilot=False))
             for path, data in outputs.items():
                 target = root / "full-dmg" / path
@@ -64,6 +65,8 @@ class FullDmgTests(unittest.TestCase):
             index.verify_passage(matches[0]["route"], text, digest(pdf))
             with self.assertRaisesRegex(ValueError, "passage"):
                 index.verify_passage(matches[0]["route"], "Invented entitlement", digest(pdf))
+            with self.assertRaisesRegex(ValueError, "passage"):
+                index.verify_passage(matches[0]["route"], "[Verify the original PDF page 1](https://example.test/fixture.pdf#page=1)", digest(pdf))
             with self.assertRaisesRegex(ValueError, "identity"):
                 index.verify_passage(matches[0]["route"], text, "0" * 64)
             self.assertEqual(result["checks"]["source_documents"], 1)
@@ -109,6 +112,9 @@ class FullDmgTests(unittest.TestCase):
         self.assertEqual(value["captured_at"], date)
         self.assertEqual(value["publication_date_status"], "not-established-from-document-evidence")
         self.assertNotIn("published_at", value)
+        self.assertEqual(referenced_publication_date({'schema:about': {'schema:datePublished': {'@value': '2026-04', '@type': 'xsd:gYearMonth'}}}), '2026-04')
+        self.assertEqual(referenced_publication_date({'captured_at': date}), '')
+        self.assertEqual(referenced_publication_date({'schema:about': {'schema:datePublished': {'@value': '2026-99', '@type': 'xsd:gYearMonth'}}}), '')
 
     def test_leading_zero_paragraph_evidence_is_checked_exactly(self):
         quote = "01001 This is an exact paragraph statement from the source."
@@ -117,6 +123,7 @@ class FullDmgTests(unittest.TestCase):
         spec = {"target": "term/b", "predicate": "http://www.w3.org/2004/02/skos/core#related", "rationale": "Source-backed relationship proposal",
                 "evidence": [{"page": "page/dmg-vol1-ch1/0001", "quote": quote, "locator": "DMG 01001"}]}
         self.assertEqual(check_full_relation(spec, source, nodes), target)
+
         spec["evidence"][0]["locator"] = "DMG 01002"
         with self.assertRaisesRegex(ValueError, "Paragraph locator"):
             check_full_relation(spec, source, nodes)
@@ -131,6 +138,26 @@ class FullDmgTests(unittest.TestCase):
         page['chapter'] = 1
         with self.assertRaisesRegex(ValueError, 'width'):
             check_full_relation(spec, source, nodes)
+
+    def test_wrapped_range_is_not_semantic_paragraph_evidence(self):
+        quote = '51006 - 51008 and DMG 51080 describe an exception elsewhere.'
+        source, target = {'route':'term/a','type':'Concept'}, {'route':'term/b','type':'Concept'}
+        nodes = {'term/b':target, 'page/ch51/0003':{'type':'Source PDF page','body':quote,'chapter':51,'page_number':3}}
+        spec = {'target':'term/b','predicate':'http://www.w3.org/2004/02/skos/core#related','rationale':'Scoped association','evidence':[{'page':'page/ch51/0003','quote':quote,'locator':'DMG 51006'}]}
+        with self.assertRaisesRegex(ValueError, 'Paragraph locator'):
+            check_full_relation(spec, source, nodes)
+
+    def test_quotation_led_paragraph_body_is_supported(self):
+        quote = '42320 “Substantial” is not defined in the relevant regulations.'
+        source, target = {'route':'term/a','type':'Concept'}, {'route':'term/b','type':'Concept'}
+        nodes = {'term/b':target, 'page/ch42/0001':{'type':'Source PDF page','body':quote,'chapter':42,'page_number':1}}
+        spec = {'target':'term/b','predicate':'http://www.w3.org/2004/02/skos/core#related','rationale':'Scoped association','evidence':[{'page':'page/ch42/0001','quote':quote,'locator':'DMG 42320'}]}
+        self.assertEqual(check_full_relation(spec, source, nodes), target)
+
+        quote = '42320 (See DMG memo 13-22) A decision cannot be revised in this example.'
+        nodes['page/ch42/0001']['body'] = quote
+        spec['evidence'][0]['quote'] = quote
+        self.assertEqual(check_full_relation(spec, source, nodes), target)
 
 
 if __name__ == "__main__":

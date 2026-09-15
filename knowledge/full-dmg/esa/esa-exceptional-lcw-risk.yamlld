@@ -1,0 +1,84 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-exceptional-lcw-risk
+  '@type': skos:Concept
+  route: term/esa-exceptional-lcw-risk
+  title: Exceptional LCW circumstances and substantial risk
+  type: Concept
+  description: The source describes circumstances in which a claimant without sufficient assessment points is treated as having LCW, including specified disease conditions or substantial risk to a person’s health.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Exceptional LCW circumstances and substantial risk
+    '@language': en-GB
+  skos:definition:
+    '@value': The source describes circumstances in which a claimant without sufficient assessment points is treated as having LCW, including specified disease conditions or substantial risk to a person’s health.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 42310 retains a work-related exclusion and separate disease/evidence conditions. Substantial risk is assessed from the evidence and circumstances under 42320 onwards; it is not established by a condition label, a low score or anxiety alone. No medical assessment is made here.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 42
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol8-ch42/0038
+  - page/dmg-vol8-ch42/0039
+  source: https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=38
+  resource: https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=38
+  sources:
+  - id: dmg-vol8-ch42
+    title: 'DMG Vol 8 Ch 42: Limited capability for work and limited capability for work-related activity'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf
+    retrieved_at: '2026-09-15T19:45:28.980458Z'
+    sha256: 94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110
+  body: |
+    # Exceptional LCW circumstances and substantial risk
+
+    ## Authored interpretation
+
+    The source describes circumstances in which a claimant without sufficient assessment points is treated as having LCW, including specified disease conditions or substantial risk to a person’s health.
+
+    ## Scope and boundaries
+
+    DMG 42310 retains a work-related exclusion and separate disease/evidence conditions. Substantial risk is assessed from the evidence and circumstances under 42320 onwards; it is not established by a condition label, a low score or anxiety alone. No medical assessment is made here.
+
+    ## Inspected source passages
+
+    - [DMG 42310, PDF page 38](https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=38)
+    - [DMG 42315, PDF page 38](https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=38)
+    - [DMG 42320, PDF page 39](https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=39)
+    - [DMG 42322, PDF page 39](https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=39)
+    - [DMG 42323, PDF page 39](https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=39)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:28.980458Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110`. Extracted pages SHA-256: `76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5`.
+  semantic_relations:
+  - target: term/esa-limited-capability-work
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The specified exceptional circumstances concern being treated as having LCW without sufficient assessment points, subject to an explicit work exclusion.
+    evidence:
+    - page: page/dmg-vol8-ch42/0038
+      quote: "42310 Claimants who do not satisfy the LCWA by having enough points must be treated as having LCW 1\nif they\n\n\n1. are suffering from a life threatening disease for which\n\n\n      1.1 there is medical evidence (see DMG 42316) that the disease is uncontrollable, or uncontrolled\n      by a recognised therapeutic procedure and\n\n\n      1.2 in the case of a disease that is uncontrolled, there is a reasonable cause for it not to be\n      controlled by a recognised therapeutic procedure or\n\n\n2. are suffering from some specific disease or bodily or mental disablement and, by reasons of such\ndisease or disablement, there would be a substantial risk (see DMG 42320) to the mental or physical\nhealth of any person if they were found not to have LCW\n\n\nunless they are treated as not having LCW because they are working 2 (see DMG 42600 et seq).\n\n\n                                                                         1 ESA Regs, reg 29; 2 regs 40 & 44"
+      locator: DMG 42310
+  - target: term/dmg-evidence-assessment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source requires all available evidence and circumstances for the substantial-risk question, not an automatic inference from a diagnosis.
+    evidence:
+    - page: page/dmg-vol8-ch42/0039
+      quote: "42320 ‘Substantial’ is not defined and should be given its ordinary meaning. What amounts to\n‘substantial’ is a question which must be determined using all the available evidence and taking account\nof all the circumstances."
+      locator: DMG 42320

@@ -109,7 +109,9 @@
       "uv run --locked python scripts/validate_bundle.py",
       "uv run --locked python scripts/build_full_dmg.py --check",
       "uv run --locked python scripts/validate_full_dmg.py",
-      "uv run --locked python scripts/report_full_dmg_coverage.py --check"
+      "uv run --locked python scripts/report_full_dmg_coverage.py --check",
+      "node --experimental-strip-types scripts/check_full_dmg_consumer.mjs",
+      "uv run --locked python scripts/evaluate_full_dmg.py --check"
     ]
   },
   "reader": {

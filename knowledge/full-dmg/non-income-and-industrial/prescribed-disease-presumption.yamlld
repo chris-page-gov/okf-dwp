@@ -1,0 +1,106 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/prescribed-disease-presumption
+  '@type': skos:Concept
+  route: term/prescribed-disease-presumption
+  title: Presumption of occupational cause for prescribed disease
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The source describes rebuttable presumptions tying particular prescribed diseases to
+    employed-earner employment, with disease-specific occupation and timing conditions.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol11-ch67/0019
+  - page/dmg-vol11-ch67/0020
+  - page/dmg-vol11-ch67/0006
+  source: https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf#page=19
+  sources:
+  - id: dmg-vol11-ch67
+    title: 'DMG Vol 11 Ch 67: Prescribed diseases'
+    resource: https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf
+    author: organisation:dwp
+    sha256: 3c7414b2ec9ba0ec4073199a063a97072e1bf2c670f1620e241884a39b7e201a
+    retrieved_at: '2026-09-15T19:45:34.130077Z'
+  skos:prefLabel:
+    '@value': Presumption of occupational cause for prescribed disease
+    '@language': en-GB
+  skos:definition:
+    '@value': The source describes rebuttable presumptions tying particular prescribed diseases to
+      employed-earner employment, with disease-specific occupation and timing conditions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': 'DMG 67101 identifies changes from 16 March 2015 and sends earlier cases to Appendix 6. Not all diseases
+      have the same period or a presumption: C22(b) and B5 occupation (b) are explicit counterexamples. Presumption
+      is not proof of every benefit condition or a medical diagnosis.'
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Presumption of occupational cause for prescribed disease\n\n## Authored interpretation\n\nThe source
+    describes rebuttable presumptions tying particular prescribed diseases to employed-earner employment, with disease-specific
+    occupation and timing conditions.\n\n## Scope and exceptions\n\nDMG 67101 identifies changes from 16 March 2015
+    and sends earlier cases to Appendix 6. Not all diseases have the same period or a presumption: C22(b) and B5
+    occupation (b) are explicit counterexamples. Presumption is not proof of every benefit condition or a medical
+    diagnosis.\n\n## Inspected passages\n\n- [DMG 67101, PDF page 19](https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf#page=19).\n\
+    - [DMG 67102, PDF page 19](https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf#page=19).\n\
+    - [DMG 67103, PDF page 19](https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf#page=19).\n\
+    - [DMG 67104, PDF page 20](https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf#page=20).\n\
+    - [DMG 67105, PDF page 20](https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf#page=20).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol11-ch67`:
+    PDF `3c7414b2ec9ba0ec4073199a063a97072e1bf2c670f1620e241884a39b7e201a`; extracted pages `f6415f436f2f1eea4febaa9f82fbd0ad34a6fc754ce3c59c24fd10311ba0ad12`;
+    acquired `2026-09-15T19:45:34.130077Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf#page=19
+  semantic_relations:
+  - target: term/prescribed-disease-occupation
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Each selected presumption is conditioned on a specified disease and occupation; some expressly
+      require an onset interval.
+    evidence:
+    - page: page/dmg-vol11-ch67/0019
+      quote: "67102 Where a person has contracted PDs A3(a), A4, A5, A6, A7, A8, A11, B1(a), B3, B4(a), B9, B10,
+        B11,\n\nB12, B14, B15, C3, C24A, D4 and D7 there is a presumption1,\n\n\nunless the contrary is proved,
+        that the PD is due to the employed earner’s employment if the person who\nhas contracted the PD\n\n\n1.
+        was employed in a prescribed occupation2 and\n\n\n2. was so employed on, or at any time within one month
+        immediately preceding, the date of onset of the\n\ndisease3.\n\n\nNote 1: There is a different presumption
+        for PD A3(b) (see DMG 67103).\n\n\nNote 2: There is a different presumption for PDs B1(b) and B4(b) (see
+        DMG 67105).\n\n\n                                       1 SS (II) (PD) Regs, reg 4(1); 2 reg 4(1)(a) & Sch
+        1, Part 1; 3 reg 4(1)(b)"
+      locator: DMG 67102
+    - page: page/dmg-vol11-ch67/0020
+      quote: "67104 Where a person for whom PD B5 is prescribed develops the disease it is presumed, unless the\n\
+        contrary is proved, to be due to the nature of their employed earner's employment if\n\n\n1. occupation
+        (a) applies and\n\n\n2. the date on which they are treated as having developed the disease is\n\n\n    \
+        \  2.1 not less than six weeks after the date on which they were first employed in a prescribed\n      occupation
+        (being employed earner's employment) and\n\n\n      2.2 not more than two years after the date on which
+        they were last so employed in employed\n\n      earner's employment1.\n\n\nNote 1: See DMG 67481 et seq
+        for guidance on PD B5\n\n\nNote 2: There is no presumption for PD B5 occupation (b).\n\n\n             \
+        \                                                                      1 SS (II) (PD) Regs, reg 4(3)\n\n\
+        \nPrescribed diseases B1(b), B4(b), B7 and B8A"
+      locator: DMG 67104
+  - target: term/dmg-burden-of-proof
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter states the claimant’s onus while identifying statutory provisions that can operate
+      in their favour.
+    evidence:
+    - page: page/dmg-vol11-ch67/0006
+      quote: "67017 The onus of proving that a person is or was suffering from a PD and that the remaining conditions\n\
+        for award of benefit under the PD provisions are satisfied rests on the claimant. But there are statutory\n\
+        provisions which can operate in the claimant's favour. These relate to\n\n\n1. the satisfaction of the conditions
+        for an REA award in pneumoconiosis cases (see DMG Chapter 71)\n\n\n2. the satisfaction of the condition
+        that the PD is due to the nature of the employment (see DMG 67101\net seq)\n\n\n3. determining the date
+        of onset (see DMG 67249)\n\n\n4. recrudescence (see DMG 67141 et seq)."
+      locator: DMG 67017

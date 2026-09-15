@@ -1,0 +1,75 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-limited-capability-work
+  '@type': skos:Concept
+  route: term/esa-limited-capability-work
+  title: Limited capability for work in the ESA source
+  type: Concept
+  description: The source relates limited capability for work to a physical or mental condition and whether it is reasonable to require work, and describes this as the first capability question in the assessment process.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Limited capability for work in the ESA source
+    '@language': en-GB
+  skos:definition:
+    '@value': The source relates limited capability for work to a physical or mental condition and whether it is reasonable to require work, and describes this as the first capability question in the assessment process.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 42020–42021 are a capability definition, not a diagnosis or sufficient proof of entitlement. Points-based assessment, treated-as rules, exceptions, work and other basic conditions remain distinct. LCW and LCWRA are not interchangeable.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 42
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol8-ch42/0004
+  - page/dmg-vol8-ch42/0081
+  source: https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=4
+  resource: https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=4
+  sources:
+  - id: dmg-vol8-ch42
+    title: 'DMG Vol 8 Ch 42: Limited capability for work and limited capability for work-related activity'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf
+    retrieved_at: '2026-09-15T19:45:28.980458Z'
+    sha256: 94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110
+  body: |
+    # Limited capability for work in the ESA source
+
+    ## Authored interpretation
+
+    The source relates limited capability for work to a physical or mental condition and whether it is reasonable to require work, and describes this as the first capability question in the assessment process.
+
+    ## Scope and boundaries
+
+    DMG 42020–42021 are a capability definition, not a diagnosis or sufficient proof of entitlement. Points-based assessment, treated-as rules, exceptions, work and other basic conditions remain distinct. LCW and LCWRA are not interchangeable.
+
+    ## Inspected source passages
+
+    - [DMG 42020, PDF page 4](https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=4)
+    - [DMG 42021, PDF page 4](https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=4)
+    - [DMG 42610, PDF page 81](https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=81)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:28.980458Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110`. Extracted pages SHA-256: `76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5`.
+  semantic_relations:
+  - target: term/esa-limited-capability-work-related-activity
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source requires a further LCWRA determination for a claimant with LCW; these are separate questions.
+    evidence:
+    - page: page/dmg-vol8-ch42/0081
+      quote: "42610 A determination has to be made whether a claimant who has LCW also has LCWRA at the end of\n\nthe assessment phase1.\n\n\n                                                                                 1 WR Act 07, s 9(1) & (2)"
+      locator: DMG 42610

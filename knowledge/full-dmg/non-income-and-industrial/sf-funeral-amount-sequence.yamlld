@@ -1,0 +1,87 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/sf-funeral-amount-sequence
+  '@type': skos:Concept
+  route: term/sf-funeral-amount-sequence
+  title: Funeral-payment conditions, allowable expenses and deductions
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured guide places satisfaction of the funeral-payment conditions before consideration
+    of amount, and allowable funeral expenses before deductions. Necessary and reasonable specified expenses
+    have an evidence requirement.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol7-ch39/0002
+  - page/dmg-vol7-ch39/0032
+  - page/dmg-vol7-ch39/0033
+  source: https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=2
+  sources:
+  - id: dmg-vol7-ch39
+    title: 'DMG Vol 7 Ch 39: Social Fund payments'
+    resource: https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf
+    author: organisation:dwp
+    sha256: ab13db0cf4d33fd90fb4cd8a90b909af568d39169f617f4b86b1037278d3fa9f
+    retrieved_at: '2026-09-15T19:45:28.411887Z'
+  skos:prefLabel:
+    '@value': Funeral-payment conditions, allowable expenses and deductions
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guide places satisfaction of the funeral-payment conditions before consideration of
+      amount, and allowable funeral expenses before deductions. Necessary and reasonable specified expenses
+      have an evidence requirement.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The rule that capital has no effect on SSMG or funeral-payment claims from 8 October 2001 does
+      not remove deductions from allowable funeral expenses. Necessary/reasonable-cost evidence is expressly
+      distinguished from other funeral expenses. No amount or present monetary cap is calculated.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Funeral-payment conditions, allowable expenses and deductions\n\n## Authored interpretation\n\nThe captured
+    guide places satisfaction of the funeral-payment conditions before consideration of amount, and allowable funeral
+    expenses before deductions. Necessary and reasonable specified expenses have an evidence requirement.\n\n##
+    Scope and exceptions\n\nThe rule that capital has no effect on SSMG or funeral-payment claims from 8 October
+    2001 does not remove deductions from allowable funeral expenses. Necessary/reasonable-cost evidence is expressly
+    distinguished from other funeral expenses. No amount or present monetary cap is calculated.\n\n## Inspected
+    passages\n\n- [DMG 39003, PDF page 2](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=2).\n\
+    - [DMG 39251, PDF page 32](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=32).\n\
+    - [DMG 39252, PDF page 32](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=32).\n\
+    - [DMG 39253, PDF page 32](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=32).\n\
+    - [DMG 39261, PDF page 33](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=33).\n\
+    - [DMG 39262, PDF page 33](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=33).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol7-ch39`:
+    PDF `ab13db0cf4d33fd90fb4cd8a90b909af568d39169f617f4b86b1037278d3fa9f`; extracted pages `625425d7933417f8895628354b1be65fc86df4d1f97a55acb13426d6cbe2b8a7`;
+    acquired `2026-09-15T19:45:28.411887Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=2
+  semantic_relations:
+  - target: term/sf-funeral-responsibility
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The amount provision expressly concerns expenses for which the claimant, partner or agent is
+      responsible, after all entitlement conditions.
+    evidence:
+    - page: page/dmg-vol7-ch39/0032
+      quote: "39251 The amount of the SFFP is made up of1\n\n\n1. the allowable funeral expenses2 which the claimant,
+        their partner, or a person acting on their behalf,\nare responsible for (see DMG 39255) less\n\n\n2. any
+        deductions3 (see DMG 39371).\n\n\n                                                     1 SFMFE (Gen) Regs,
+        reg 9(1) & (2); 2 reg 9(3); 3 reg 10"
+      locator: DMG 39251
+    - page: page/dmg-vol7-ch39/0032
+      quote: "39252 The DM should consider the amount of the SFFP only if all the conditions of entitlement are\n\
+        \nsatisfied1.\n\n\n                                                                                 1 SFMFE
+        (Gen) Regs, reg 7"
+      locator: DMG 39252

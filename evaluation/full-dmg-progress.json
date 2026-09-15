@@ -26,7 +26,7 @@
     },
     {
       "id": "indexed-compiler",
-      "status": "initial-build-and-source-semantic-validation-passed; browser-and-authored-batch-integration-pending",
+      "status": "all78-units-integrated; deterministic-validation-and-pinned-consumer-check-passed; final-browser-check-pending",
       "owner": "comms_implications",
       "output": "full-dmg/okf-explorer.json"
     },
@@ -38,29 +38,32 @@
     },
     {
       "id": "concepts-and-relationships",
-      "status": "in-progress",
+      "status": "complete-for-bounded-research-scope",
       "depends_on": [
         "acquisition",
         "finite-semantic-plan"
       ],
       "batches": [
         "common-decision",
+        "common-and-jsa-extension",
         "pension-credit",
-        "international",
+        "non-income-and-industrial",
         "pension-regimes",
-        "jsa-income-support"
+        "esa",
+        "jsa-income-support",
+        "international"
       ]
     },
     {
       "id": "source-dates-and-legal-dependencies",
-      "status": "in-progress",
+      "status": "literal-date-and-reference-location-registers-complete; interpretation-and-version-gaps-retained",
       "depends_on": [
         "acquisition"
       ]
     },
     {
       "id": "persona-retrieval-evaluation",
-      "status": "deterministic-indexed-evidence-controls-added; behavioural-questions-pending",
+      "status": "78-indexed-locator-and-no-result-pairs-passed; observed-source-model-trials-in-progress",
       "depends_on": [
         "indexed-compiler",
         "concepts-and-relationships"
@@ -144,7 +147,7 @@
     "documents": 331,
     "documents_with_stated_revision_dates": 178,
     "index": "evaluation/full-dmg-evidence/index.json",
-    "status": "candidate-reference-discovery-complete; reconciliation-pending"
+    "status": "candidate-discovery-and-location-reconciliation-complete; legal-identity-and-version-not-inferred"
   },
   "pull_request": "https://github.com/chris-page-gov/okf-dwp/pull/5",
   "acquisition_checkpoint_commit": "7155bcd73f24743431242a9e32d64d86b1b45635",
@@ -154,34 +157,33 @@
   },
   "coverage_report": "evaluation/full-dmg-coverage.json",
   "semantic_checkpoint": {
-    "additional_concepts": 123,
-    "additional_proposals": 161,
-    "substantive_units_with_proposals": 34,
-    "substantive_units_pending_proposals": 44,
-    "status": "cross-reviewed-for-research-checkpoint; specialist-acceptance-pending",
+    "additional_concepts": 245,
+    "additional_proposals": 328,
+    "substantive_units_with_proposals": 78,
+    "substantive_units_pending_proposals": 0,
+    "status": "bounded-proposals-complete-and-cross-reviewed; specialist-acceptance-not-claimed",
     "next_priority": [
-      "Complete remaining44 assigned substantive units",
-      "Reconcile other source classes and dependencies",
-      "Execute and grade persona questions separately from deterministic retrieval"
+      "Complete source-family gap register and observed model trials",
+      "Verify immutable consumer candidate",
+      "Publish checked research release"
     ],
     "review_packets": [
+      "evaluation/full-dmg-common-and-jsa-extension-review.json",
       "evaluation/full-dmg-common-decision-review.json",
-      "evaluation/full-dmg-pension-credit-review.json",
+      "evaluation/full-dmg-esa-review.json",
       "evaluation/full-dmg-international-review.json",
-      "evaluation/full-dmg-pension-regimes-review.json",
-      "evaluation/full-dmg-jsa-income-support-review.json"
+      "evaluation/full-dmg-jsa-income-support-review.json",
+      "evaluation/full-dmg-non-income-and-industrial-review.json",
+      "evaluation/full-dmg-pension-credit-review.json",
+      "evaluation/full-dmg-pension-regimes-review.json"
     ],
-    "in_progress_next_batches": [
-      "common-and-jsa-extension",
-      "esa",
-      "non-income-and-industrial"
-    ]
+    "in_progress_next_batches": []
   },
   "indexed_checkpoint": {
-    "snapshot": "dwp-full-dmg-2026-09-15-9663e36f6aba",
-    "records": 15193,
-    "assertions": 15493,
-    "status": "validated-and-reproducible; corrected immutable browser candidate pending"
+    "snapshot": "dwp-full-dmg-2026-09-15-286bc3706366",
+    "records": 15390,
+    "assertions": 16210,
+    "status": "all78-units-integrated-and-consumer-functions-passed; immutable-browser-check-pending"
   },
   "independent_review": "validation/full-dmg-independent-review.json",
   "open_consumer_findings": [
@@ -191,5 +193,6 @@
       "detail": "Before whole-corpus resource hydration, Evidence Sources count is0 although record declares1source. Original PDF is available under Overview > Overview; direct source link also added to Narrative. Resource-list hydration needs separate consumer assessment."
     }
   ],
-  "indexed_retrieval": "evaluation/full-dmg-retrieval.json"
+  "indexed_retrieval": "evaluation/full-dmg-retrieval.json",
+  "dependency_register": "evaluation/full-dmg-dependencies/index.json"
 }

@@ -1,0 +1,80 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dla-component-distinction
+  '@type': skos:Concept
+  route: term/dla-component-distinction
+  title: DLA care and mobility components
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The source identifies separate DLA care and mobility components, allowing one or both, and
+    relates the disability questions to functional care and mobility needs.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol10-ch61/0003
+  - page/dmg-vol10-ch61/0004
+  - page/dmg-vol10-ch61/0008
+  - page/dmg-vol10-ch61/0005
+  source: https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=3
+  sources:
+  - id: dmg-vol10-ch61
+    title: 'DMG Vol 10 Ch 61: Attendance Allowance and Disability Living Allowance'
+    resource: https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf
+    author: organisation:dwp
+    sha256: 884dc79907770bd9e178fe4122c0b7d404697f4ccc882b067e9220b34a0f002a
+    retrieved_at: '2026-09-15T19:45:32.783276Z'
+  skos:prefLabel:
+    '@value': DLA care and mobility components
+    '@language': en-GB
+  skos:definition:
+    '@value': The source identifies separate DLA care and mobility components, allowing one or both, and
+      relates the disability questions to functional care and mobility needs.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The illustrative child example on page 4 concerns needs despite absence of a diagnosis; it is
+      not an individual assessment rule. Age, residence, component-specific criteria, transitions to other
+      benefits and devolved schemes require separate review. DLA and PIP are not made equivalent.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# DLA care and mobility components\n\n## Authored interpretation\n\nThe source identifies separate DLA
+    care and mobility components, allowing one or both, and relates the disability questions to functional care
+    and mobility needs.\n\n## Scope and exceptions\n\nThe illustrative child example on page 4 concerns needs despite
+    absence of a diagnosis; it is not an individual assessment rule. Age, residence, component-specific criteria,
+    transitions to other benefits and devolved schemes require separate review. DLA and PIP are not made equivalent.\n\
+    \n## Inspected passages\n\n- [DMG 61008, PDF page 3](https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=3).\n\
+    - [DMG 61009, PDF page 4](https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=4).\n\
+    - [DMG 61011, PDF page 4](https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=4).\n\
+    - [DMG 61012, PDF page 4](https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=4).\n\
+    \n## Additional context\n\n- [Context: chapter 61, PDF page 4](https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=4).\n\
+    - [Context: chapter 61, PDF page 5](https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=5).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol10-ch61`:
+    PDF `884dc79907770bd9e178fe4122c0b7d404697f4ccc882b067e9220b34a0f002a`; extracted pages `23b4405d725de2fde124df29a8c753b9fcb7530405c83d588bd321e1e83226cc`;
+    acquired `2026-09-15T19:45:32.783276Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=3
+  semantic_relations:
+  - target: term/aa-dla-medical-advice
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Individual effects and evidence, rather than generic assumptions from a medical condition,
+      guide requests for medical advice.
+    evidence:
+    - page: page/dmg-vol10-ch61/0008
+      quote: "61027 The questions should refer specifically to the effects of the medical conditions in each individual\n\
+        case. General inquiries about disability needs arising from a particular medical condition should be\navoided
+        where possible. General advice may not always be relevant and may be misleading.\n\n\n\nExamination and
+        report"
+      locator: DMG 61027

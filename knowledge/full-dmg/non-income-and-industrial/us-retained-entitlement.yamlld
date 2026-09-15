@@ -1,0 +1,101 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/us-retained-entitlement
+  '@type': skos:Concept
+  route: term/us-retained-entitlement
+  title: Unemployability Supplement retained entitlement
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The US chapter says the supplement was abolished from 6 April 1987 but describes continuation
+    for specified entitlement immediately before that date, including claims awarded later.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol11-ch72/0003
+  - page/dmg-vol11-ch64/0004
+  - page/dmg-vol11-ch72/0007
+  source: https://assets.publishing.service.gov.uk/media/5a808824e5274a2e87dba585/dmgch72.pdf#page=3
+  sources:
+  - id: dmg-vol11-ch72
+    title: 'DMG Vol 11 Ch 72: Unemployability supplement'
+    resource: https://assets.publishing.service.gov.uk/media/5a808824e5274a2e87dba585/dmgch72.pdf
+    author: organisation:dwp
+    sha256: 9a84638b670cf30857abd8f0b34b65529c5c3075dcd52198c66b50c343d54f3b
+    retrieved_at: '2026-09-15T19:45:34.257115Z'
+  - id: dmg-vol11-ch64
+    title: 'DMG Vol 11 Ch 64:  Background to the Industrial Injuries scheme'
+    resource:
+      https://assets.publishing.service.gov.uk/media/664b1c4dbd01f5ed32793e51/dmg-chapter-64-background-to-the-industrial-scheme.pdf
+    author: organisation:dwp
+    sha256: 6397b92476509f66c98cbd574ef4692bf1888e41fe7da4a9ec227b7a13a62b78
+    retrieved_at: '2026-09-15T19:45:33.768652Z'
+  skos:prefLabel:
+    '@value': Unemployability Supplement retained entitlement
+    '@language': en-GB
+  skos:definition:
+    '@value': The US chapter says the supplement was abolished from 6 April 1987 but describes continuation
+      for specified entitlement immediately before that date, including claims awarded later.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The overview at DMG 64020 instead says no new claims from 8 April 1987. This discrepancy is
+      unresolved and must not be silently harmonised. The source says entitlement cannot be regained after
+      cessation; this is not a current new-claim route or an ESA capability test.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Unemployability Supplement retained entitlement\n\n## Authored interpretation\n\nThe US chapter says
+    the supplement was abolished from 6 April 1987 but describes continuation for specified entitlement immediately
+    before that date, including claims awarded later.\n\n## Scope and exceptions\n\nThe overview at DMG 64020 instead
+    says no new claims from 8 April 1987. This discrepancy is unresolved and must not be silently harmonised. The
+    source says entitlement cannot be regained after cessation; this is not a current new-claim route or an ESA
+    capability test.\n\n## Inspected passages\n\n- [DMG 72001, PDF page 3](https://assets.publishing.service.gov.uk/media/5a808824e5274a2e87dba585/dmgch72.pdf#page=3).\n\
+    - [DMG 72002, PDF page 3](https://assets.publishing.service.gov.uk/media/5a808824e5274a2e87dba585/dmgch72.pdf#page=3).\n\
+    - [DMG 72003, PDF page 3](https://assets.publishing.service.gov.uk/media/5a808824e5274a2e87dba585/dmgch72.pdf#page=3).\n\
+    - [DMG 64020, PDF page 4](https://assets.publishing.service.gov.uk/media/664b1c4dbd01f5ed32793e51/dmg-chapter-64-background-to-the-industrial-scheme.pdf#page=4).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol11-ch72`:
+    PDF `9a84638b670cf30857abd8f0b34b65529c5c3075dcd52198c66b50c343d54f3b`; extracted pages `2572584f692b21dde3ce3612396d6abc9e0a86f4c5b612a30ab54dd3f498feac`;
+    acquired `2026-09-15T19:45:34.257115Z`.\n- `dmg-vol11-ch64`: PDF `6397b92476509f66c98cbd574ef4692bf1888e41fe7da4a9ec227b7a13a62b78`;
+    extracted pages `2bbe57d32fca42027ea6a81e508bda907df0d56da34c4d59ba73862530a659e8`; acquired `2026-09-15T19:45:33.768652Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/5a808824e5274a2e87dba585/dmgch72.pdf#page=3
+  semantic_relations:
+  - target: term/us-incapacity-evidence
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter has its own evidence and loss-of-faculty test for incapacity within retained US
+      entitlement.
+    evidence:
+    - page: page/dmg-vol11-ch72/0007
+      quote: "72130   The question whether, as the result of the relevant loss of faculty, the claimant is\n   \
+        \     incapable of work is a question of fact to be decided by the DM having regard to the\n        nature
+        and degree of disablement, the medical evidence regarding incapacity and\n        any other relevant medical
+        or lay evidence. The opinion of a medical adviser or of a\n        HCP regarding incapacity may be obtained1.
+        Such an opinion is simply medical\n        evidence to help the authorities in reaching a decision and is
+        not binding on them.\n        Departmental procedure provides for the opinion of members of a medical board
+        to\n        be obtained automatically on certain occasions but, in addition, the DM can ask for\n      \
+        \  a further opinion to be obtained at any time before his decision is given.\n                        \
+        \                                                                     1 SS Act 98, s 19(2)\n\n\n       \
+        \ Meaning of HCP"
+      locator: DMG 72130
+    - page: page/dmg-vol11-ch72/0007
+      quote: "72135   A person is incapable of work if, having regard to his age, education, experience,\n     \
+        \   state of health and other personal factors, there is no work or type of work which he\n        can reasonably
+        be expected to do1. The fact that there is no such work locally, or\n        that owing to the state of
+        the labour market the claimant has only a remote prospect\n        of obtaining it, or that there is none
+        in connection with the occupation in which they\n        have previously been employed, does not prove that
+        he is incapable of work for US\n        purposes; the incapacity must be the result of the relevant loss
+        of faculty and is not\n        concerned with inability to obtain work from other causes2.\n           \
+        \                                                                        1 CI 99/48 (KL); 2 R(I) 43/54"
+      locator: DMG 72135

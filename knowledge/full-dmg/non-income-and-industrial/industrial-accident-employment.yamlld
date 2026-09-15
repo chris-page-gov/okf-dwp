@@ -1,0 +1,78 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/industrial-accident-employment
+  '@type': skos:Concept
+  route: term/industrial-accident-employment
+  title: Employment connection of an industrial accident
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The source separates “arising out of” from “in the course of” employment and examines when,
+    where and what the person was doing, with further enquiry sometimes needed even during normal work.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol11-ch66/0014
+  - page/dmg-vol11-ch66/0059
+  source: https://assets.publishing.service.gov.uk/media/5a814e8b40f0b6230269697f/dmgch66.pdf#page=14
+  sources:
+  - id: dmg-vol11-ch66
+    title: 'DMG Vol 11 Ch 66: Industrial accidents '
+    resource: https://assets.publishing.service.gov.uk/media/5a814e8b40f0b6230269697f/dmgch66.pdf
+    author: organisation:dwp
+    sha256: 8a2f49feb6557c0bc2833c308c458204e0f28cefeabbe85bc7a1ec3ae0461155
+    retrieved_at: '2026-09-15T19:45:34.019999Z'
+  skos:prefLabel:
+    '@value': Employment connection of an industrial accident
+    '@language': en-GB
+  skos:definition:
+    '@value': The source separates “arising out of” from “in the course of” employment and examines when,
+      where and what the person was doing, with further enquiry sometimes needed even during normal work.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': An event on work premises is not automatically an industrial accident. Employed-earner status,
+      treated groups, excluded groups, territorial scope and statutory extensions must be reviewed. This
+      source-specific test is not the same as tort negligence or all self-employed work.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Employment connection of an industrial accident\n\n## Authored interpretation\n\nThe source separates
+    “arising out of” from “in the course of” employment and examines when, where and what the person was doing,
+    with further enquiry sometimes needed even during normal work.\n\n## Scope and exceptions\n\nAn event on work
+    premises is not automatically an industrial accident. Employed-earner status, treated groups, excluded groups,
+    territorial scope and statutory extensions must be reviewed. This source-specific test is not the same as tort
+    negligence or all self-employed work.\n\n## Inspected passages\n\n- [DMG 66061, PDF page 14](https://assets.publishing.service.gov.uk/media/5a814e8b40f0b6230269697f/dmgch66.pdf#page=14).\n\
+    - [DMG 66062, PDF page 14](https://assets.publishing.service.gov.uk/media/5a814e8b40f0b6230269697f/dmgch66.pdf#page=14).\n\
+    - [DMG 66063, PDF page 14](https://assets.publishing.service.gov.uk/media/5a814e8b40f0b6230269697f/dmgch66.pdf#page=14).\n\
+    - [DMG 66301, PDF page 59](https://assets.publishing.service.gov.uk/media/5a814e8b40f0b6230269697f/dmgch66.pdf#page=59).\n\
+    - [DMG 66302, PDF page 59](https://assets.publishing.service.gov.uk/media/5a814e8b40f0b6230269697f/dmgch66.pdf#page=59).\n\
+    - [DMG 66304, PDF page 59](https://assets.publishing.service.gov.uk/media/5a814e8b40f0b6230269697f/dmgch66.pdf#page=59).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol11-ch66`:
+    PDF `8a2f49feb6557c0bc2833c308c458204e0f28cefeabbe85bc7a1ec3ae0461155`; extracted pages `a4efac777c187bd7b7d95994b53893fc4b480fe08736216f641a27ec9d6ed3d7`;
+    acquired `2026-09-15T19:45:34.019999Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/5a814e8b40f0b6230269697f/dmgch66.pdf#page=14
+  semantic_relations:
+  - target: term/industrial-accident-question
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source expressly makes the two employment connections part of the industrial-accident
+      question.
+    evidence:
+    - page: page/dmg-vol11-ch66/0059
+      quote: "66301   Before accepting an accident as an IA the DM must be satisfied that it arose\n\n        1.\
+        \      out of and\n\n        2.      in the course of\n\n        the injured person’s employed earner’s
+        employment1 (see DMG 66061 et seq).\n                                                                  \
+        \           1 SS Act 98, s 29(6)(b)"
+      locator: DMG 66301

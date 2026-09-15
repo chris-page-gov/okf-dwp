@@ -1,0 +1,72 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/bsp-remarriage-treatment
+  '@type': skos:Concept
+  route: term/bsp-remarriage-treatment
+  title: BSP and a later marriage or partnership
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured BSP chapter says receipt continues on remarriage, formation of a civil partnership
+    or starting to live together as a married couple, expressly contrasting this with WB and BB.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol10-ch59/0004
+  - page/dmg-vol10-ch59/0006
+  source: https://assets.publishing.service.gov.uk/media/63e64acce90e0706cd61fb95/dmgch59.pdf#page=4
+  sources:
+  - id: dmg-vol10-ch59
+    title: 'DMG Vol 10 Ch 59: Bereavement support payment'
+    resource: https://assets.publishing.service.gov.uk/media/63e64acce90e0706cd61fb95/dmgch59.pdf
+    author: organisation:dwp
+    sha256: 71e82cafa85c42d01158e79ffef2753cee93cbf6f70ca25e1f51a3e5e13e5192
+    retrieved_at: '2026-09-15T19:45:32.706049Z'
+  skos:prefLabel:
+    '@value': BSP and a later marriage or partnership
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured BSP chapter says receipt continues on remarriage, formation of a civil partnership
+      or starting to live together as a married couple, expressly contrasting this with WB and BB.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is a comparison of one source-described circumstance, not indefinite payment or complete
+      entitlement. Pensionable age, maximum payment periods, claim timing and the 2023 remedial-order scope
+      remain separate questions.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# BSP and a later marriage or partnership\n\n## Authored interpretation\n\nThe captured BSP chapter says
+    receipt continues on remarriage, formation of a civil partnership or starting to live together as a married
+    couple, expressly contrasting this with WB and BB.\n\n## Scope and exceptions\n\nThis is a comparison of one
+    source-described circumstance, not indefinite payment or complete entitlement. Pensionable age, maximum payment
+    periods, claim timing and the 2023 remedial-order scope remain separate questions.\n\n## Inspected passages\n\
+    \n- [DMG 59007, PDF page 4](https://assets.publishing.service.gov.uk/media/63e64acce90e0706cd61fb95/dmgch59.pdf#page=4).\n\
+    - [DMG 59016, PDF page 6](https://assets.publishing.service.gov.uk/media/63e64acce90e0706cd61fb95/dmgch59.pdf#page=6).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol10-ch59`:
+    PDF `71e82cafa85c42d01158e79ffef2753cee93cbf6f70ca25e1f51a3e5e13e5192`; extracted pages `495f463962f1954952a4c175629d05ea9edda5403a3e95cb44d4ce64414beb61`;
+    acquired `2026-09-15T19:45:32.706049Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/63e64acce90e0706cd61fb95/dmgch59.pdf#page=4
+  semantic_relations:
+  - target: term/bereavement-benefit-regime
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The explicit comparison shows why a later-partnership rule must not be transferred across all
+      bereavement benefits.
+    evidence:
+    - page: page/dmg-vol10-ch59/0004
+      quote: "59007 Unlike WB and BB, a person will continue to receive BSP if they\n\n\n1. remarry or\n\n\n2. form
+        a civil partnership or\n\n\n3. start LTAMC."
+      locator: DMG 59007

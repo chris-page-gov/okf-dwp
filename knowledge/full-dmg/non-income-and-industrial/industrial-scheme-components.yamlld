@@ -1,0 +1,98 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/industrial-scheme-components
+  '@type': skos:Concept
+  route: term/industrial-scheme-components
+  title: Industrial Injuries scheme components and boundaries
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The source lists IIDB, US, CAA, ESDA, REA, RA and retained old/death-benefit cases as different
+    components, with IIDB linked to loss of faculty from an industrial accident or prescribed disease.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol11-ch64/0002
+  - page/dmg-vol11-ch64/0003
+  - page/dmg-vol11-ch64/0004
+  - page/dmg-vol11-ch64/0005
+  source:
+    https://assets.publishing.service.gov.uk/media/664b1c4dbd01f5ed32793e51/dmg-chapter-64-background-to-the-industrial-scheme.pdf#page=2
+  sources:
+  - id: dmg-vol11-ch64
+    title: 'DMG Vol 11 Ch 64:  Background to the Industrial Injuries scheme'
+    resource:
+      https://assets.publishing.service.gov.uk/media/664b1c4dbd01f5ed32793e51/dmg-chapter-64-background-to-the-industrial-scheme.pdf
+    author: organisation:dwp
+    sha256: 6397b92476509f66c98cbd574ef4692bf1888e41fe7da4a9ec227b7a13a62b78
+    retrieved_at: '2026-09-15T19:45:33.768652Z'
+  skos:prefLabel:
+    '@value': Industrial Injuries scheme components and boundaries
+    '@language': en-GB
+  skos:definition:
+    '@value': The source lists IIDB, US, CAA, ESDA, REA, RA and retained old/death-benefit cases as different
+      components, with IIDB linked to loss of faculty from an industrial accident or prescribed disease.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The opening paragraph calls the scheme non-contributory but its next numbered phrase says “no
+      fault contributory”; this internal wording inconsistency is retained as a source-owner question.
+      Component introductions include closed routes and dated conditions, not a current menu of new claims.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Industrial Injuries scheme components and boundaries\n\n## Authored interpretation\n\nThe source lists
+    IIDB, US, CAA, ESDA, REA, RA and retained old/death-benefit cases as different components, with IIDB linked
+    to loss of faculty from an industrial accident or prescribed disease.\n\n## Scope and exceptions\n\nThe opening
+    paragraph calls the scheme non-contributory but its next numbered phrase says “no fault contributory”; this
+    internal wording inconsistency is retained as a source-owner question. Component introductions include closed
+    routes and dated conditions, not a current menu of new claims.\n\n## Inspected passages\n\n- [DMG 64001, PDF
+    page 2](https://assets.publishing.service.gov.uk/media/664b1c4dbd01f5ed32793e51/dmg-chapter-64-background-to-the-industrial-scheme.pdf#page=2).\n\
+    - [DMG 64007, PDF page 3](https://assets.publishing.service.gov.uk/media/664b1c4dbd01f5ed32793e51/dmg-chapter-64-background-to-the-industrial-scheme.pdf#page=3).\n\
+    - [DMG 64012, PDF page 3](https://assets.publishing.service.gov.uk/media/664b1c4dbd01f5ed32793e51/dmg-chapter-64-background-to-the-industrial-scheme.pdf#page=3).\n\
+    \n## Additional context\n\n- [Context: chapter 64, PDF page 5](https://assets.publishing.service.gov.uk/media/664b1c4dbd01f5ed32793e51/dmg-chapter-64-background-to-the-industrial-scheme.pdf#page=5).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol11-ch64`:
+    PDF `6397b92476509f66c98cbd574ef4692bf1888e41fe7da4a9ec227b7a13a62b78`; extracted pages `2bbe57d32fca42027ea6a81e508bda907df0d56da34c4d59ba73862530a659e8`;
+    acquired `2026-09-15T19:45:33.768652Z`.\n"
+  resource:
+    https://assets.publishing.service.gov.uk/media/664b1c4dbd01f5ed32793e51/dmg-chapter-64-background-to-the-industrial-scheme.pdf#page=2
+  semantic_relations:
+  - target: term/iidb-loss-of-faculty
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The overview links IIDB to loss of faculty arising from accident or prescribed disease.
+    evidence:
+    - page: page/dmg-vol11-ch64/0003
+      quote: "64012 IIDB is the main benefit in the scheme. It provides for people who suffer a loss of faculty
+        because\nof an IA or a PD."
+      locator: DMG 64012
+  - target: term/rea-earning-capacity
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: REA is identified as a distinct component with its own loss-of-earnings and historical
+      boundaries.
+    evidence:
+    - page: page/dmg-vol11-ch64/0004
+      quote: "64029 A person may be entitled to REA if they are assessed as 1% disabled or more because of their\n\
+        injury or disease and they cannot go back to their normal job or one which pays as much. The accident or\n\
+        date of onset must be before 1.10.90. In addition a person cannot be entitled to REA in respect of any\n\
+        diseases prescribed or any extension to the prescriptions of existing diseases on or after 10.10.94."
+      locator: DMG 64029
+  - target: term/industrial-old-scheme-transition
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The overview identifies old scheme cases separately and scopes them to claims before 5 December
+      2012.
+    evidence:
+    - page: page/dmg-vol11-ch64/0004
+      quote: 64037 Old scheme cases are claims made before 5.12.12 under the
+      locator: DMG 64037

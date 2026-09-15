@@ -16,6 +16,8 @@ The [evidence index](../../evaluation/full-dmg-evidence/index.json) covers all a
 
 **178 documents contain recognised explicit revision statements.** This is not a count of known publication or commencement dates. Multiple dates are retained, and unlabelled dates remain context-dependent. The recogniser does not establish the current effect of an amendment, resolve statutory versions or exhaust every citation format. Its output is a worklist with evidence for further reconciliation.
 
+The [dependency register](../../evaluation/full-dmg-dependencies/index.json) retains **46,144 literal reference candidates**. A separate mechanical pass links paragraph and memo labels to possible acquired locations, excludes obvious wrapped-reference continuations and keeps multiple matches ambiguous. Statutory work, provision and version identities remain unresolved unless separately researched. Candidate navigation is not an assertion that a rule is current or a memo has been incorporated.
+
 ## Verify locally
 
 Use the locked Python environment and installed Poppler tools:
@@ -23,6 +25,7 @@ Use the locked Python environment and installed Poppler tools:
 ```sh
 uv run --locked python scripts/acquire_full_dmg.py --check
 uv run --locked python scripts/discover_full_dmg_evidence.py --check
+uv run --locked python scripts/reconcile_full_dmg_references.py --check
 uv run --locked python scripts/query.py '84351' --scope full-dmg --limit 5
 uv run --locked python scripts/query.py '84351' --scope full-dmg --include-history --limit 5
 ```

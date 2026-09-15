@@ -1,0 +1,111 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/rea-earning-capacity
+  '@type': skos:Concept
+  route: term/rea-earning-capacity
+  title: Reduced Earnings Allowance and earning capacity
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: REA is described as a benefit in its own right compensating loss of earning capacity following
+    industrial accident or prescribed disease, rather than a comparison of all household income with former
+    wages.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol11-ch71/0007
+  - page/dmg-vol11-ch71/0008
+  - page/dmg-vol11-ch71/0011
+  - page/dmg-vol11-ch71/0009
+  source: https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=7
+  sources:
+  - id: dmg-vol11-ch71
+    title: 'DMG Vol 11 Ch 71: Reduced earnings allowance '
+    resource: https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf
+    author: organisation:dwp
+    sha256: e001c101fb7be9bc739a8a5b9c1281637a93f34a099658e7dafef6fbb2b5d4f5
+    retrieved_at: '2026-09-15T19:45:34.428591Z'
+  skos:prefLabel:
+    '@value': Reduced Earnings Allowance and earning capacity
+    '@language': en-GB
+  skos:definition:
+    '@value': REA is described as a benefit in its own right compensating loss of earning capacity following
+      industrial accident or prescribed disease, rather than a comparison of all household income with former
+      wages.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The source has pre-1 October 1990 accident and later disease-prescription boundaries. Its
+      benefit-plus-earnings example is not a means test for Pension Credit or UC. Assessment, relevant loss of
+      faculty, regular occupation, equivalent employment and rate limits remain separate.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Reduced Earnings Allowance and earning capacity\n\n## Authored interpretation\n\nREA is described as
+    a benefit in its own right compensating loss of earning capacity following industrial accident or prescribed
+    disease, rather than a comparison of all household income with former wages.\n\n## Scope and exceptions\n\n\
+    The source has pre-1 October 1990 accident and later disease-prescription boundaries. Its benefit-plus-earnings
+    example is not a means test for Pension Credit or UC. Assessment, relevant loss of faculty, regular occupation,
+    equivalent employment and rate limits remain separate.\n\n## Inspected passages\n\n- [DMG 71001, PDF page 7](https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=7).\n\
+    - [DMG 71002, PDF page 7](https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=7).\n\
+    - [DMG 71003, PDF page 7](https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=7).\n\
+    - [DMG 71011, PDF page 8](https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=8).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol11-ch71`:
+    PDF `e001c101fb7be9bc739a8a5b9c1281637a93f34a099658e7dafef6fbb2b5d4f5`; extracted pages `1414e514cf78c7a2e0a3ce66e2d88727d3fda28f764fd2e8654361dc569356d6`;
+    acquired `2026-09-15T19:45:34.428591Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=7
+  semantic_relations:
+  - target: term/rea-regular-occupation
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source measures loss of earning capacity against the claimant’s regular occupation and
+      suitable equivalent employment.
+    evidence:
+    - page: page/dmg-vol11-ch71/0007
+      quote: "71002   REA compensates for the loss of earnings capacity where, as a result of an IA or\n       \
+        \ PD, employed earners are unable to\n\n        1.    return to their regular occupation or\n\n        2.\
+        \    carry out other work producing as high a level of earnings."
+      locator: DMG 71002
+    - page: page/dmg-vol11-ch71/0011
+      quote: "71041   One of the conditions for the award of REA is that the claimant is incapable of\n        following
+        their regular occupation. It is therefore necessary to establish whether the\n        claimant had a regular
+        occupation and, if so, what it was. This must usually be\n        considered in relation to the date of
+        the accident or date of onset of the disease1.\n        This date is important and is referred to as “the
+        relevant date”.\n                                                                                      \
+        \     1 R(I) 18/60"
+      locator: DMG 71041
+  - target: term/rea-entitlement-gap
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter distinguishes gaps in entitlement from non-payment and limits the historical gap
+      rule.
+    evidence:
+    - page: page/dmg-vol11-ch71/0008
+      quote: "71012   A person who\n\n        1.    is entitled to REA on 30.9.90 and\n\n        2.    ceases to
+        be entitled to REA for one or more days from 1.10.90\n\n        cannot again become entitled to REA for
+        that accident1 or PD (but see DMG 71015).\n                                                            \
+        \                    1 SS CB Act 92, Sch 7, para 11(2)"
+      locator: DMG 71012
+    - page: page/dmg-vol11-ch71/0008
+      quote: "71013   REA can still be awarded where\n\n        1.    a continuation claim is made for a period
+        beginning on the day following the\n              last day of entitlement and\n\n        2.    the DM accepts
+        that the entitlement conditions have been continuously\n              satisfied since 1.10.901.\n\n    \
+        \    There may still be underlying entitlement to REA even though REA is not payable.\n                \
+        \                                                                1 SS CB Act 92, Sch 7, para 11(2)"
+      locator: DMG 71013
+    - page: page/dmg-vol11-ch71/0009
+      quote: "71015   A person who was not entitled to REA on 30.9.90, for example, initial entitlement\n      \
+        \  starts after that date, is not affected by DMG 71012 and gaps in entitlement from\n                 \
+        \                                        1\n        1.10.90 have no effect on future REA entitlement .\n\
+        \                                                                     1 SS CB Act 92, Sch 7, para 11(2)"
+      locator: DMG 71015

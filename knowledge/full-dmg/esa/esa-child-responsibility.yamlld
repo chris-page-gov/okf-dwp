@@ -1,0 +1,78 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-child-responsibility
+  '@type': skos:Concept
+  route: term/esa-child-responsibility
+  title: Child responsibility in the ESA(IR) household source
+  type: Concept
+  description: The source identifies responsibility by where the child or young person usually lives and permits responsibility to rest with more than one person during a benefit week.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Child responsibility in the ESA(IR) household source
+    '@language': en-GB
+  skos:definition:
+    '@value': The source identifies responsibility by where the child or young person usually lives and permits responsibility to rest with more than one person during a benefit week.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 43041–43042 concern the source’s ESA(IR) household provisions. Responsibility is not equated with legal custody, a benefit payment, a single address or an entitlement award.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 43
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol8-ch43/0013
+  - page/dmg-vol8-ch43/0015
+  source: https://assets.publishing.service.gov.uk/media/5ede1a10d3bf7f2c9a297c32/dmgch43.pdf#page=13
+  resource: https://assets.publishing.service.gov.uk/media/5ede1a10d3bf7f2c9a297c32/dmgch43.pdf#page=13
+  sources:
+  - id: dmg-vol8-ch43
+    title: 'DMG Vol 8 Ch 43: Membership of the household'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5ede1a10d3bf7f2c9a297c32/dmgch43.pdf
+    retrieved_at: '2026-09-15T19:45:28.912702Z'
+    sha256: 57bd59f52fdfa8e20f17af6ad78869ca8be872c7502f4563d41fef887350b115
+  body: |
+    # Child responsibility in the ESA(IR) household source
+
+    ## Authored interpretation
+
+    The source identifies responsibility by where the child or young person usually lives and permits responsibility to rest with more than one person during a benefit week.
+
+    ## Scope and boundaries
+
+    DMG 43041–43042 concern the source’s ESA(IR) household provisions. Responsibility is not equated with legal custody, a benefit payment, a single address or an entitlement award.
+
+    ## Inspected source passages
+
+    - [DMG 43041, PDF page 13](https://assets.publishing.service.gov.uk/media/5ede1a10d3bf7f2c9a297c32/dmgch43.pdf#page=13)
+    - [DMG 43042, PDF page 13](https://assets.publishing.service.gov.uk/media/5ede1a10d3bf7f2c9a297c32/dmgch43.pdf#page=13)
+    - [DMG 43051, PDF page 15](https://assets.publishing.service.gov.uk/media/5ede1a10d3bf7f2c9a297c32/dmgch43.pdf#page=15)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:28.912702Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `57bd59f52fdfa8e20f17af6ad78869ca8be872c7502f4563d41fef887350b115`. Extracted pages SHA-256: `ee841a1b07f174796b85dcde290c4f1899ae6cf7aaca4d5fea6faa2c39eb33ac`.
+  semantic_relations:
+  - target: term/esa-household
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source’s household list expressly includes children for whom specified members are responsible.
+    evidence:
+    - page: page/dmg-vol8-ch43/0015
+      quote: "43051   The claimant’s household may include\n\n        1.    the claimant\n\n        2.    the claimant’s partner or partners\n\n        3.    any child or young person who is the responsibility of anyone in 1. or 2.\n\n        4.    any child who is the responsibility of anyone in 31.\n\n        This applies even if any of these people are temporarily living away from the other\n        members of the family2, for example to work or visit relatives.\n                                                                     1 ESA Regs, reg 156(1); 2 reg 156(2)\n\n\n        People not treated as members of the claimant’s\n        household"
+      locator: DMG 43051
+    - page: page/dmg-vol8-ch43/0013
+      quote: "43042   The responsible person is the person who the child or young person usually lives\n        with1.\n                                                                             1 ESA Regs, reg 156(10)"
+      locator: DMG 43042

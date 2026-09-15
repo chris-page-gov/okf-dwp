@@ -1,0 +1,124 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsais-child-responsibility
+  '@type': skos:Concept
+  route: term/legacy-jsais-child-responsibility
+  title: Child responsibility and the legacy JSA shared-care exception
+  type: Concept
+  description: The source gives weekly rules for responsibility for a child or young person and a
+    dated JSA exception for specified existing child-allowance cases involving a substantial
+    minority of care.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Child responsibility and the legacy JSA shared-care exception
+    '@language': en-GB
+  skos:definition:
+    '@value': The source gives weekly rules for responsibility for a child or young person and a
+      dated JSA exception for specified existing child-allowance cases involving a substantial
+      minority of care.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 22033 expressly retains the ordinary DMG 22032 approach for IS. The JSA exception
+      is tied to the stated 8 September 2005 change and already receiving JSA with child allowances;
+      it is not a general shared-care rule. Child Benefit, residence, partial-week exceptions and
+      settled daily care must be read in context.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol4-ch22/0011
+  - page/dmg-vol4-ch22/0012
+  - page/dmg-vol4-ch22/0003
+  - page/dmg-vol4-ch22/0015
+  source:
+    https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf#page=11
+  resource:
+    https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf#page=11
+  sources:
+  - id: dmg-vol4-ch22
+    title: 'DMG Vol 4 Ch 22: Membership of the family'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf
+    retrieved_at: '2026-09-15T19:45:23.421750Z'
+    sha256: f8545cc90dbcffa59e0255fcf5a9335d94c0e29ee7e8a714385a146121959c0d
+  body: "# Child responsibility and the legacy JSA shared-care exception\n\n## Authored interpretation\n\
+    \nThe source gives weekly rules for responsibility for a child or young person and a dated JSA exception
+    for specified existing child-allowance cases involving a substantial minority of care.\n\n## Scope
+    and exceptions\n\nDMG 22033 expressly retains the ordinary DMG 22032 approach for IS. The JSA exception
+    is tied to the stated 8 September 2005 change and already receiving JSA with child allowances; it
+    is not a general shared-care rule. Child Benefit, residence, partial-week exceptions and settled daily
+    care must be read in context.\n\n## Inspected source passages\n\n- [DMG 22031, PDF page 11](https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf#page=11)
+    — DMG Vol 4 Ch 22: Membership of the family.\n- [DMG 22032, PDF page 11](https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf#page=11)
+    — DMG Vol 4 Ch 22: Membership of the family.\n- [DMG 22033, PDF page 12](https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf#page=12)
+    — DMG Vol 4 Ch 22: Membership of the family.\n- [DMG 22034, PDF page 12](https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf#page=12)
+    — DMG Vol 4 Ch 22: Membership of the family.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol4-ch22`: PDF SHA-256 `f8545cc90dbcffa59e0255fcf5a9335d94c0e29ee7e8a714385a146121959c0d`;
+    extracted pages SHA-256 `336e01c44bf057e8c30ad34752a8ea72e08961d201c6f61c71a3b897890d2c1e`.\n"
+  semantic_relations:
+  - target: term/legacy-jsais-family-composition
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Responsibility is one input to the chapter’s family definition, not interchangeable
+      with residence or receipt of Child Benefit alone.
+    evidence:
+    - page: page/dmg-vol4-ch22/0003
+      quote: "22003   A family is1\n\n        1.    a couple or\n\n        2.    a couple and any child
+        or young person who is\n\n              2.1      a member of the same household and\n\n      \
+        \        2.2      the responsibility of either or both members of the couple or\n\n        3.\
+        \    a person who is not a member of a couple (this will usually be a lone parent)\n         \
+        \     and any child or young person who is\n\n              3.1      a member of the same household
+        and\n\n              3.2      the responsibility of that person.\n\n        4.    a couple and
+        any child or young person who has\n\n              4.1      died and\n\n              4.2    \
+        \  CHB in respect of them is extended following their death2.\n\n        Note: The child or young
+        person stops being a member of the family when\n        entitlement to CHB ends.\n           \
+        \               1 JS Act 95, s 35(1); SS CB Act 92, s 137(1); 2 IS (Gen) Regs, reg 14(3), JSA
+        Regs, reg 76(3)\n\n\n\n\nVol 4 Amendment 61 June 2020"
+      locator: DMG 22003
+    - page: page/dmg-vol4-ch22/0011
+      quote: "22032   The responsible person is\n\n        1.     the person receiving CHB for the child
+        or young person1 or\n\n        2.     where the CHB is in payment to another child, the person
+        who is responsible\n               for that child2 or\n\n        3.     where CHB is not in payment\n\
+        \n               3.1      and only one claim for CHB has been made, the person who has made\n\
+        \                        that claim3 or\n\n               3.2      in any other case, the person
+        who the child or young person usually\n                        lives with4.\n                \
+        \     1 JSA Regs, reg 77(1); IS (Gen) Regs, reg 15(1); 2 JSA Regs, reg 77(2); IS (Gen) Regs, reg
+        15(1A);\n             3 JSA Regs, reg 77(3)(b); IS (Gen) Regs, reg 15(2)(b); 4 JSA Regs, reg 77(3)(a);
+        IS (Gen) Regs, reg 15(2)(a)\n\n\n        “Usually lives” is not defined in legislation and should
+        be given its everyday meaning.\n        The test should be applied on a weekly basis rather than
+        looking at the overall\n        picture over a longer period.\n\n        Example 1\n\n       \
+        \ Alan is claiming IS. He lives with his partner, Barbara, her daughter Caroline, aged\n     \
+        \   15, and Caroline's daughter Danielle, aged 1. Barbara receives CHB for Caroline.\n       \
+        \ She is the responsible person for Caroline. Caroline receives CHB for Danielle, but\n      \
+        \  Caroline, at 15, is herself a child. The responsible person for Danielle is Barbara.\n\n\n\
+        Vol 4 Amendment 21 February 2007"
+      locator: DMG 22032
+  - target: term/legacy-jsais-temporary-absence
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Responsibility and household membership are distinct questions; the household passage
+      uses responsibility but also separately addresses absence.
+    evidence:
+    - page: page/dmg-vol4-ch22/0015
+      quote: "22041   The claimant’s household may include\n\n        1.     the claimant\n\n        2.\
+        \     the claimant’s partner or partners\n\n        3.     the members of a joint-claim couple\n\
+        \n        4.     any child or young person who is the responsibility of anyone in 1. or 2.\n\n\
+        \        This applies even if any of these people are temporarily living away from the other\n\
+        \        members of the family1, for example to work or visit relatives.\n\n        Note: The
+        definition of a claimant for JSA(IB) in DMG 22002\n                                          \
+        \                         1 JSA Regs, reg 78(1), (1A); IS (Gen) Regs, reg 16(1)\n\n\n\n      \
+        \  When can they not be treated as members of the\n        claimant’s household"
+      locator: DMG 22041

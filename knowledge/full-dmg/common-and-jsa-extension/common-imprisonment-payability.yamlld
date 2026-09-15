@@ -1,0 +1,110 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability
+  '@type': skos:Concept
+  route: term/common-imprisonment-payability
+  title: Imprisonment disqualification and payability
+  type: Concept
+  description: The captured general guidance distinguishes disqualification from payment during
+    imprisonment from entitlement itself, and describes resumption when the relevant conditions
+    remain satisfied unless entitlement has terminated.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Imprisonment disqualification and payability
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured general guidance distinguishes disqualification from payment during
+      imprisonment from entitlement itself, and describes resumption when the relevant conditions
+      remain satisfied unless entitlement has terminated.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is not a rule for every benefit or detention. DMG 12015 routes JSA, IS, Pension
+      Credit and ESA to benefit-specific chapters; DMG 12016 routes UC, PIP and New Style JSA/ESA to
+      ADM. The listed exceptions, types of custody, mental-health law, overseas circumstances and
+      termination decisions remain separate questions.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch12/0003
+  - page/dmg-vol3-ch12/0008
+  - page/dmg-vol3-ch12/0005
+  source: https://assets.publishing.service.gov.uk/media/651bcf2e6dfda6000d8e39d2/dmgch12.pdf#page=3
+  resource:
+    https://assets.publishing.service.gov.uk/media/651bcf2e6dfda6000d8e39d2/dmgch12.pdf#page=3
+  sources:
+  - id: dmg-vol3-ch12
+    title: 'DMG Vol 3 Ch 12: Imprisonment'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/651bcf2e6dfda6000d8e39d2/dmgch12.pdf
+    retrieved_at: '2026-09-15T19:45:22.073369Z'
+    sha256: be79f9d6f8baf23290b8d6af5f384d31c2435b960fe3a59c14febd510fbaa9fe
+  body: "# Imprisonment disqualification and payability\n\n## Authored interpretation\n\nThe captured
+    general guidance distinguishes disqualification from payment during imprisonment from entitlement
+    itself, and describes resumption when the relevant conditions remain satisfied unless entitlement
+    has terminated.\n\n## Scope and exceptions\n\nThis is not a rule for every benefit or detention. DMG
+    12015 routes JSA, IS, Pension Credit and ESA to benefit-specific chapters; DMG 12016 routes UC, PIP
+    and New Style JSA/ESA to ADM. The listed exceptions, types of custody, mental-health law, overseas
+    circumstances and termination decisions remain separate questions.\n\n## Inspected source passages\n\
+    \n- [DMG 12003, PDF page 3](https://assets.publishing.service.gov.uk/media/651bcf2e6dfda6000d8e39d2/dmgch12.pdf#page=3)
+    — DMG Vol 3 Ch 12: Imprisonment.\n- [DMG 12015, PDF page 3](https://assets.publishing.service.gov.uk/media/651bcf2e6dfda6000d8e39d2/dmgch12.pdf#page=3)
+    — DMG Vol 3 Ch 12: Imprisonment.\n- [DMG 12016, PDF page 3](https://assets.publishing.service.gov.uk/media/651bcf2e6dfda6000d8e39d2/dmgch12.pdf#page=3)
+    — DMG Vol 3 Ch 12: Imprisonment.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol3-ch12`: PDF SHA-256 `be79f9d6f8baf23290b8d6af5f384d31c2435b960fe3a59c14febd510fbaa9fe`;
+    extracted pages SHA-256 `989a5b292ba1f6129362ddc7ee736133798156d58c3539be2d0232fad5c92660`.\n"
+  semantic_relations:
+  - target: term/common-criminal-custody
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source limits the relevant general detention to criminal proceedings or
+      imprisonment by a criminal court and expressly distinguishes civil proceedings.
+    evidence:
+    - page: page/dmg-vol3-ch12/0008
+      quote: "12027 The term “imprisonment or detention in legal custody” means\n\n\n1. any detention
+        connected with criminal proceedings1or\n\n\n2. imprisonment imposed by a criminal court2.\n\n\n\
+        A claimant sentenced to imprisonment as a result of civil proceedings is not disqualified 2.\n\
+        \n\n                                                                                       1 R(P)
+        2/57; 2 R(S) 8/79"
+      locator: DMG 12027
+  - target: term/common-sp-remand-outcome
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The State Pension remand passage has its own pending-outcome suspension and
+      subsequent-sentence qualifications; the general payability distinction does not settle that
+      case.
+    evidence:
+    - page: page/dmg-vol3-ch12/0005
+      quote: "12020 A person who is remanded in custody is not a prisoner1 in accordance with DMG 12018
+        so can be\npaid SP unless\n\n\n1. a sentence of imprisonment or detention in legal custody as
+        a result of criminal proceedings 2or\n\n\n2. a sentence of detention where paragraph 12018 3.1
+        or 4. applies3or\n\n\n3. a suspended sentence of imprisonment4\n\n\nis later imposed on the person
+        for the offence5. Therefore DMs should suspend SP when a person is\nremanded in custody pending
+        the outcome of proceedings.\n\n\n                   1 SP Regs, reg 3(1); 2 reg 3(2)(a); 3 reg
+        3(2)(b); 4 reg 3(2)(c); Criminal Justice Act 03, s\n                   189;\n                \
+        \   5 SP Regs, reg 3(1)"
+      locator: DMG 12020
+    - page: page/dmg-vol3-ch12/0003
+      quote: "12003 Claimants are disqualified from receiving these benefits when they are imprisoned
+        or detained in\n\nlegal custody following criminal proceedings 1. Disqualification only affects
+        the payability of the benefit\n\nnot claimants’ entitlement to that benefit2. This means that
+        when the conditions supporting the\ndisqualification no longer apply, payment of benefit can resume
+        providing all the conditions of\nentitlement remain satisfied. Unless entitlement has been terminated
+        during the period of imprisonment\nor detention in legal custody, a claimant should not be required
+        to make a new claim to benefit on\nrelease.\n\n\n                                            \
+        \                   1 SS CB Act 92, s 113(1)(b); 2 CDLA/1930/04\n\n\n12004 - 12014\n\n\n\nEffect
+        of imprisonment on JSA, IS, SPC and ESA"
+      locator: DMG 12003

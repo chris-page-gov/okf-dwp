@@ -1,0 +1,103 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/iidb-loss-of-faculty
+  '@type': skos:Concept
+  route: term/iidb-loss-of-faculty
+  title: IIDB injury, loss of faculty and disablement
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The source distinguishes injury, impaired bodily or mental function, disability and the
+    aggregate disablement assessment, rather than using all four terms interchangeably.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol11-ch69/0002
+  - page/dmg-vol11-ch69/0003
+  - page/dmg-vol11-ch69/0006
+  source: https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=2
+  sources:
+  - id: dmg-vol11-ch69
+    title: 'DMG Vol 11 Ch 69: Disablement benefits'
+    resource: https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf
+    author: organisation:dwp
+    sha256: 3bbd376d12fc0a6633010680e88d11efdf7f5b34dde311016a073e80ac3e56b8
+    retrieved_at: '2026-09-15T19:45:34.033473Z'
+  skos:prefLabel:
+    '@value': IIDB injury, loss of faculty and disablement
+    '@language': en-GB
+  skos:definition:
+    '@value': The source distinguishes injury, impaired bodily or mental function, disability and the
+      aggregate disablement assessment, rather than using all four terms interchangeably.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': These are IIDB assessment concepts, not universal disability definitions or a finding about any
+      person. Conditions differ before and from 1 October 1986, and accidents and prescribed diseases have
+      exceptions. No percentage is assigned.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# IIDB injury, loss of faculty and disablement\n\n## Authored interpretation\n\nThe source distinguishes
+    injury, impaired bodily or mental function, disability and the aggregate disablement assessment, rather than
+    using all four terms interchangeably.\n\n## Scope and exceptions\n\nThese are IIDB assessment concepts, not
+    universal disability definitions or a finding about any person. Conditions differ before and from 1 October
+    1986, and accidents and prescribed diseases have exceptions. No percentage is assigned.\n\n## Inspected passages\n\
+    \n- [DMG 69002, PDF page 2](https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=2).\n\
+    - [DMG 69003, PDF page 2](https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=2).\n\
+    - [DMG 69004, PDF page 2](https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=2).\n\
+    - [DMG 69005, PDF page 2](https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=2).\n\
+    - [DMG 69006, PDF page 2](https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=2).\n\
+    - [DMG 69007, PDF page 2](https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=2).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol11-ch69`:
+    PDF `3bbd376d12fc0a6633010680e88d11efdf7f5b34dde311016a073e80ac3e56b8`; extracted pages `fcaf30907d52d71cc7473cf40c8c876469efc3f8d18f7f9af7b3d32bf5016d95`;
+    acquired `2026-09-15T19:45:34.033473Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=2
+  semantic_relations:
+  - target: term/iidb-assessment-boundaries
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter applies different assessment conditions by claim date, aggregation and disease.
+    evidence:
+    - page: page/dmg-vol11-ch69/0003
+      quote: "69009 An employed earner was entitled to IIDB if, as a result of an IA, a loss of physical or mental
+        faculty\n\noccurred for which the extent of disablement was assessed at not less than one 1% 1. A person
+        with\npneumoconiosis was treated as having satisfied that condition irrespective of whether there was an\n\
+        \nactual loss of faculty2.\n\n\n                                                                       \
+        \          1 SS Act 75, s 57(1); 2 s 78(3)\n\n\n\nClaims made on or after 1.10.86"
+      locator: DMG 69009
+    - page: page/dmg-vol11-ch69/0003
+      quote: "69010 To become entitled to IIDB an employed earner must establish that\n\n\n1. as a result of an
+        IA, a loss of physical or mental faculty occurs for which disablement is assessed at not\n\nless than 14%1or\n\
+        \n\n2. as a result of more than one accident, losses of physical or mental faculty occur, for each of which\n\
+        \ndisablement is assessed at less than 14% but which in total amount to 14% or more 2or\n\n\n3. in pneumoconiosis
+        and byssinosis cases, disablement is assessed, or treated as assessed, at not less\n\nthan 1%3or\n\n\n4.
+        in the case of claims for occupational deafness, disablement is assessed at not less than 20% 4.\n\n\n \
+        \                           1 SS CB Act 92, s 103(1); 2 s 103(2)(a)(b); 3 SS (II) (PD) Regs, reg 20; 4 reg
+        34(6)\n\n\n\nProvision of NINO"
+      locator: DMG 69010
+  - target: term/iidb-medical-nonmedical-questions
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Loss of faculty and disablement assessment are among the medical questions in the outcome
+      decision.
+    evidence:
+    - page: page/dmg-vol11-ch69/0006
+      quote: "69020 DMs will give an outcome decision on the claim which consists of a statement to the effect that\n\
+        the claimant is either entitled or not entitled to benefit. In arriving at an outcome decision, the DM must\n\
+        consider various questions. For IIDB, these questions fall into two categories\n\n\n1. non medical questions
+        such as employed earners employment, rate of benefit 1and\n\n\n2. medical questions such as diagnosis, relevant
+        loss of faculty and disablement assessment.\n\n\nNote: See DMG Chapter 01 for further guidance on IIDB decisions.\n\
+        \n\n                                                                                       1 SS CB Act 92,
+        s 94"
+      locator: DMG 69020

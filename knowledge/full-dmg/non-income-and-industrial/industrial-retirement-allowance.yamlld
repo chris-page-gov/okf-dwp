@@ -1,0 +1,90 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/industrial-retirement-allowance
+  '@type': skos:Concept
+  route: term/industrial-retirement-allowance
+  title: Industrial Retirement Allowance and REA conversion
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The industrial-injuries guidance distinguishes Retirement Allowance from REA, with conversion
+    linked to pensionable age, regular employment and prior REA conditions, and separate award/payment days.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol11-ch64/0004
+  - page/dmg-vol11-ch71/0124
+  - page/dmg-vol11-ch71/0125
+  source:
+    https://assets.publishing.service.gov.uk/media/664b1c4dbd01f5ed32793e51/dmg-chapter-64-background-to-the-industrial-scheme.pdf#page=4
+  sources:
+  - id: dmg-vol11-ch64
+    title: 'DMG Vol 11 Ch 64:  Background to the Industrial Injuries scheme'
+    resource:
+      https://assets.publishing.service.gov.uk/media/664b1c4dbd01f5ed32793e51/dmg-chapter-64-background-to-the-industrial-scheme.pdf
+    author: organisation:dwp
+    sha256: 6397b92476509f66c98cbd574ef4692bf1888e41fe7da4a9ec227b7a13a62b78
+    retrieved_at: '2026-09-15T19:45:33.768652Z'
+  - id: dmg-vol11-ch71
+    title: 'DMG Vol 11 Ch 71: Reduced earnings allowance '
+    resource: https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf
+    author: organisation:dwp
+    sha256: e001c101fb7be9bc739a8a5b9c1281637a93f34a099658e7dafef6fbb2b5d4f5
+    retrieved_at: '2026-09-15T19:45:34.428591Z'
+  skos:prefLabel:
+    '@value': Industrial Retirement Allowance and REA conversion
+    '@language': en-GB
+  skos:definition:
+    '@value': The industrial-injuries guidance distinguishes Retirement Allowance from REA, with conversion
+      linked to pensionable age, regular employment and prior REA conditions, and separate award/payment days.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is Industrial Injuries Retirement Allowance, not State Pension or Retirement Pension.
+      Historical examples using age 65 do not establish current pensionable age. The source’s rate and
+      threshold figures are not applied as a calculation, and its post-1 October 1990 restriction on returning
+      to REA remains explicit.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Industrial Retirement Allowance and REA conversion\n\n## Authored interpretation\n\nThe industrial-injuries
+    guidance distinguishes Retirement Allowance from REA, with conversion linked to pensionable age, regular employment
+    and prior REA conditions, and separate award/payment days.\n\n## Scope and exceptions\n\nThis is Industrial
+    Injuries Retirement Allowance, not State Pension or Retirement Pension. Historical examples using age 65 do
+    not establish current pensionable age. The source’s rate and threshold figures are not applied as a calculation,
+    and its post-1 October 1990 restriction on returning to REA remains explicit.\n\n## Inspected passages\n\n-
+    [DMG 64035, PDF page 4](https://assets.publishing.service.gov.uk/media/664b1c4dbd01f5ed32793e51/dmg-chapter-64-background-to-the-industrial-scheme.pdf#page=4).\n\
+    - [DMG 71777, PDF page 124](https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=124).\n\
+    - [DMG 71778, PDF page 125](https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=125).\n\
+    - [DMG 71780, PDF page 125](https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=125).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol11-ch64`:
+    PDF `6397b92476509f66c98cbd574ef4692bf1888e41fe7da4a9ec227b7a13a62b78`; extracted pages `2bbe57d32fca42027ea6a81e508bda907df0d56da34c4d59ba73862530a659e8`;
+    acquired `2026-09-15T19:45:33.768652Z`.\n- `dmg-vol11-ch71`: PDF `e001c101fb7be9bc739a8a5b9c1281637a93f34a099658e7dafef6fbb2b5d4f5`;
+    extracted pages `1414e514cf78c7a2e0a3ce66e2d88727d3fda28f764fd2e8654361dc569356d6`; acquired `2026-09-15T19:45:34.428591Z`.\n"
+  resource:
+    https://assets.publishing.service.gov.uk/media/664b1c4dbd01f5ed32793e51/dmg-chapter-64-background-to-the-industrial-scheme.pdf#page=4
+  semantic_relations:
+  - target: term/rea-earning-capacity
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source expressly conditions Retirement Allowance on prior REA, without equating the two
+      benefits.
+    evidence:
+    - page: page/dmg-vol11-ch71/0125
+      quote: "71778   A person who ceases to be entitled to REA is entitled to RA for life if on the day\n     \
+        \   before it ceased there was entitlement to REA at a rate of £2.00 or more per week\n                \
+        \                    1\n        (from one or more awards) . If the assessment of IIDB ceases from a date
+        after the\n        award of RA starts entitlement to RA continues.\n                                   \
+        \                                         1 SS CB Act 92, Sch 7, para 13(2) & (3)"
+      locator: DMG 71778

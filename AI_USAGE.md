@@ -51,7 +51,9 @@ For the full-DMG candidate:
 - `full-dmg/data/search/manifest.json`: complete extracted-text token index; short result snippets do not limit indexed content.
 - `source/full-dmg-2026-09-15/inventory.json`: all 331 source identities and observations.
 - `evaluation/full-dmg-evidence/index.json`: exact date/reference candidates with explicit unresolved context.
+- `evaluation/full-dmg-dependencies/index.json`: paragraph and memo location candidates; unresolved statutory identities and ambiguous references remain explicit.
 - `evaluation/full-dmg-coverage.json`: measured source and authored-passage coverage; no specialist acceptance implied.
+- `evaluation/full-dmg-retrieval.json`: actually executed indexed locator and no-result controls, separated from unexecuted behavioural questions.
 
 CLI retrieval returns source citations and identifies its scope:
 

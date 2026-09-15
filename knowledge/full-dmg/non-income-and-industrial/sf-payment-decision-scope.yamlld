@@ -1,0 +1,85 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/sf-payment-decision-scope
+  '@type': skos:Concept
+  route: term/sf-payment-decision-scope
+  title: Social Fund payment decisions in the captured guide
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The Social Fund introduction distinguishes the listed maternity, funeral and heating expenses
+    from other needs decided under separate directions, and lists payment claims decided by a decision maker
+    with appeal rights.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol7-ch39/0002
+  source: https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=2
+  sources:
+  - id: dmg-vol7-ch39
+    title: 'DMG Vol 7 Ch 39: Social Fund payments'
+    resource: https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf
+    author: organisation:dwp
+    sha256: ab13db0cf4d33fd90fb4cd8a90b909af568d39169f617f4b86b1037278d3fa9f
+    retrieved_at: '2026-09-15T19:45:28.411887Z'
+  skos:prefLabel:
+    '@value': Social Fund payment decisions in the captured guide
+    '@language': en-GB
+  skos:definition:
+    '@value': The Social Fund introduction distinguishes the listed maternity, funeral and heating expenses
+      from other needs decided under separate directions, and lists payment claims decided by a decision maker
+      with appeal rights.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is the scope of the captured introduction, not a complete current directory of assistance.
+      The substantive text inspected here concerns funeral payments and Winter Fuel Payments. Devolved
+      provision, Sure Start Maternity Grant and Cold Weather Payment dependencies remain unresolved; not all
+      Social Fund needs follow one decision route.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Social Fund payment decisions in the captured guide\n\n## Authored interpretation\n\nThe Social Fund
+    introduction distinguishes the listed maternity, funeral and heating expenses from other needs decided under
+    separate directions, and lists payment claims decided by a decision maker with appeal rights.\n\n## Scope and
+    exceptions\n\nThis is the scope of the captured introduction, not a complete current directory of assistance.
+    The substantive text inspected here concerns funeral payments and Winter Fuel Payments. Devolved provision,
+    Sure Start Maternity Grant and Cold Weather Payment dependencies remain unresolved; not all Social Fund needs
+    follow one decision route.\n\n## Inspected passages\n\n- [DMG 39001, PDF page 2](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=2).\n\
+    - [DMG 39002, PDF page 2](https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=2).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol7-ch39`:
+    PDF `ab13db0cf4d33fd90fb4cd8a90b909af568d39169f617f4b86b1037278d3fa9f`; extracted pages `625425d7933417f8895628354b1be65fc86df4d1f97a55acb13426d6cbe2b8a7`;
+    acquired `2026-09-15T19:45:28.411887Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/6a68da370d360fa159c37c47/dmg-v-7-ch-39.pdf#page=2
+  semantic_relations:
+  - target: term/sf-funeral-responsibility
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The introduction identifies Social Fund Funeral Payments as claims decided by a DM.
+    evidence:
+    - page: page/dmg-vol7-ch39/0002
+      quote: "39002 A DM decides any claim for\n\n\n1. SSMG\n\n\n2. SFFP\n\n\n3. CWP\n\n\n4. WFP.\n\n\nThese decisions
+        have the same right of appeal as other DM decisions 1.\n\n\n                                           \
+        \                                              1 SS Act 1998, s 12\n\n\n\nEffect of capital"
+      locator: DMG 39002
+  - target: term/dmg-first-tier-appeal
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source states that these DM decisions have the same right of appeal as other DM decisions,
+      without resolving present procedure.
+    evidence:
+    - page: page/dmg-vol7-ch39/0002
+      quote: "39002 A DM decides any claim for\n\n\n1. SSMG\n\n\n2. SFFP\n\n\n3. CWP\n\n\n4. WFP.\n\n\nThese decisions
+        have the same right of appeal as other DM decisions 1.\n\n\n                                           \
+        \                                              1 SS Act 1998, s 12\n\n\n\nEffect of capital"
+      locator: DMG 39002

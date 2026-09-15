@@ -1,0 +1,78 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-limited-capability-work-related-activity
+  '@type': skos:Concept
+  route: term/esa-limited-capability-work-related-activity
+  title: Limited capability for work-related activity in the ESA source
+  type: Concept
+  description: The source requires a further determination of limited capability for work-related activity for a claimant with limited capability for work, and links LCWRA to the support component.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Limited capability for work-related activity in the ESA source
+    '@language': en-GB
+  skos:definition:
+    '@value': The source requires a further determination of limited capability for work-related activity for a claimant with limited capability for work, and links LCWRA to the support component.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 42610–42613 contain general component wording. Chapter 44 paragraph 44631 expressly records removal of WRAC for specified claims from 3 April 2017 with savings. No automatic current WRAC payment is inferred from not having LCWRA, and no UC/New Style test is substituted.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 42
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol8-ch42/0081
+  - page/dmg-vol8-ch44/0117
+  source: https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=81
+  resource: https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=81
+  sources:
+  - id: dmg-vol8-ch42
+    title: 'DMG Vol 8 Ch 42: Limited capability for work and limited capability for work-related activity'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf
+    retrieved_at: '2026-09-15T19:45:28.980458Z'
+    sha256: 94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110
+  body: |
+    # Limited capability for work-related activity in the ESA source
+
+    ## Authored interpretation
+
+    The source requires a further determination of limited capability for work-related activity for a claimant with limited capability for work, and links LCWRA to the support component.
+
+    ## Scope and boundaries
+
+    DMG 42610–42613 contain general component wording. Chapter 44 paragraph 44631 expressly records removal of WRAC for specified claims from 3 April 2017 with savings. No automatic current WRAC payment is inferred from not having LCWRA, and no UC/New Style test is substituted.
+
+    ## Inspected source passages
+
+    - [DMG 42610, PDF page 81](https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=81)
+    - [DMG 42612, PDF page 81](https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=81)
+    - [DMG 44631, PDF page 117](https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf#page=117)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:28.980458Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110`. Extracted pages SHA-256: `76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5`.
+  semantic_relations:
+  - target: term/esa-support-component
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source connects LCWRA with the support component; payment scope and other conditions remain separate.
+    evidence:
+    - page: page/dmg-vol8-ch42/0081
+      quote: "42612 Claimants with the most severe illnesses or disabilities who have LCWRA will receive the support\n\ncomponent1 without conditionality although they may participate in work-related activity on a voluntary\nbasis if they so wish.\n\n\n                                                                               1 WR Act 07, s 2(2) & 4(4)"
+      locator: DMG 42612
+    - page: page/dmg-vol8-ch44/0117
+      quote: "44631 Both ESA(Cont) and ESA(IR) attract entitlement to the support component 1.\n\n\nNote: From 3.4.17 the WRAC is no longer included in an award of ESA for claims made on or after that\ndate. See Appendix 6 for where transitional provisions apply.\n\n\nExample\n\n\nCindy, who is 23, claims and is entitled to ESA from 21.4.17 at the assessment phase rate for claimants\naged under 25. Following application of the WCA, Cindy is found to have LCW and is placed in the WRAG.\nCindy’s award of ESA is superseded to increase the applicable amount to the main phase rate from\n28.7.17. The WRAC is not included.\n\n\n                                                                              1 WR Act 07, s 2(1)(b); s 4(2)(b)"
+      locator: DMG 44631

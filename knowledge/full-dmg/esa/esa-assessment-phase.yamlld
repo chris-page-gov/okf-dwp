@@ -1,0 +1,77 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-assessment-phase
+  '@type': skos:Concept
+  route: term/esa-assessment-phase
+  title: ESA assessment phase in the source
+  type: Concept
+  description: The source describes the assessment phase as the period of the initial limited-capability-for-work assessment, generally thirteen weeks but capable of extension or different calculation in specified cases.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': ESA assessment phase in the source
+    '@language': en-GB
+  skos:definition:
+    '@value': The source describes the assessment phase as the period of the initial limited-capability-for-work assessment, generally thirteen weeks but capable of extension or different calculation in specified cases.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 44011–44012 preserve waiting-day, linking, appeal and previous-JSA qualifications. This is not the self-employment earnings assessment period in chapter 50, and thirteen weeks does not guarantee a payment increase.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 44
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol8-ch44/0006
+  - page/dmg-vol8-ch42/0004
+  source: https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf#page=6
+  resource: https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf#page=6
+  sources:
+  - id: dmg-vol8-ch44
+    title: 'DMG Vol 8 Ch 44: Normal amount payable and components'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf
+    retrieved_at: '2026-09-15T19:45:29.100396Z'
+    sha256: 4764230f43cecc5451e351aaa54c1b307d0797d7cd5cbec19a6aaf5c4f183d10
+  body: |
+    # ESA assessment phase in the source
+
+    ## Authored interpretation
+
+    The source describes the assessment phase as the period of the initial limited-capability-for-work assessment, generally thirteen weeks but capable of extension or different calculation in specified cases.
+
+    ## Scope and boundaries
+
+    DMG 44011–44012 preserve waiting-day, linking, appeal and previous-JSA qualifications. This is not the self-employment earnings assessment period in chapter 50, and thirteen weeks does not guarantee a payment increase.
+
+    ## Inspected source passages
+
+    - [DMG 44011, PDF page 6](https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf#page=6)
+    - [DMG 44012, PDF page 6](https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf#page=6)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:29.100396Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `4764230f43cecc5451e351aaa54c1b307d0797d7cd5cbec19a6aaf5c4f183d10`. Extracted pages SHA-256: `ad7172a3107059757b1a166101b58d6e86f970fe59ad751c83586c1674b919d2`.
+  semantic_relations:
+  - target: term/esa-limited-capability-work
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source identifies the phase with the initial LCW assessment while preserving duration qualifications.
+    evidence:
+    - page: page/dmg-vol8-ch44/0006
+      quote: "44011 The assessment phase is the period of time during which the initial LCWA takes place. It is\n\ngenerally a fixed period of 13 weeks beginning with the first day of entitlement to ESA 1. Entitlement will\n\nusually commence after the claimant has served seven waiting days 2. The assessment phase may\nsometimes be extended in certain circumstances, for example should the WCA not take place within the\n\nfirst 13 weeks3.\n\n\nNote: DMG Chapter 41 provides guidance on waiting days.\n\n\n                                                 1 WR Act 07, s 24(2); 2 Sch 2, para 2; 3 ESA Regs, reg 4(2)"
+      locator: DMG 44011
+    - page: page/dmg-vol8-ch42/0004
+      quote: "42021 The question of LCW must be decided first in the WCA process as this determines entitlement to\nbenefit. The medical examination may be conducted in person, by telephone or by video. This part of the\nWCA process is referred to as the LCWA."
+      locator: DMG 42021

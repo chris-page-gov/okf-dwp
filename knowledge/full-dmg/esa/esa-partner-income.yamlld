@@ -1,0 +1,77 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-partner-income
+  '@type': skos:Concept
+  route: term/esa-partner-income
+  title: Partner and child income in the ESA(IR) source
+  type: Concept
+  description: The source generally treats the partner’s income as the claimant’s for ESA(IR), subject to specified exceptions, while excluding income paid to or in respect of a child or young person in the family.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Partner and child income in the ESA(IR) source
+    '@language': en-GB
+  skos:definition:
+    '@value': The source generally treats the partner’s income as the claimant’s for ESA(IR), subject to specified exceptions, while excluding income paid to or in respect of a child or young person in the family.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 48008–48009 include under-eighteen couple and allowance qualifications. This is not the JSA/IS child-income wording and is not transferred to ESA(Cont), UC or Pension Credit.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 48
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol9-ch48/0005
+  - page/dmg-vol8-ch43/0003
+  source: https://assets.publishing.service.gov.uk/media/5a8020bded915d74e33f89b8/dmgch48.pdf#page=5
+  resource: https://assets.publishing.service.gov.uk/media/5a8020bded915d74e33f89b8/dmgch48.pdf#page=5
+  sources:
+  - id: dmg-vol9-ch48
+    title: 'DMG Vol 9 Ch 48: General rules on income'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a8020bded915d74e33f89b8/dmgch48.pdf
+    retrieved_at: '2026-09-15T19:45:30.529917Z'
+    sha256: 9b1283018143058d4efa6708572097a6854a42987dcb2a627609e489b0b1ba75
+  body: |
+    # Partner and child income in the ESA(IR) source
+
+    ## Authored interpretation
+
+    The source generally treats the partner’s income as the claimant’s for ESA(IR), subject to specified exceptions, while excluding income paid to or in respect of a child or young person in the family.
+
+    ## Scope and boundaries
+
+    DMG 48008–48009 include under-eighteen couple and allowance qualifications. This is not the JSA/IS child-income wording and is not transferred to ESA(Cont), UC or Pension Credit.
+
+    ## Inspected source passages
+
+    - [DMG 48008, PDF page 5](https://assets.publishing.service.gov.uk/media/5a8020bded915d74e33f89b8/dmgch48.pdf#page=5)
+    - [DMG 48009, PDF page 5](https://assets.publishing.service.gov.uk/media/5a8020bded915d74e33f89b8/dmgch48.pdf#page=5)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:30.529917Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `9b1283018143058d4efa6708572097a6854a42987dcb2a627609e489b0b1ba75`. Extracted pages SHA-256: `3d4424a48a17325dbd571c341bd1df39eec1668d8f308e4eb0c01c617287e533`.
+  semantic_relations:
+  - target: term/esa-household
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source’s income-attribution provision distinguishes partner income from child or young-person income in the ESA(IR) family context.
+    evidence:
+    - page: page/dmg-vol9-ch48/0005
+      quote: "48008   In a claim for ESA(IR), the DM should calculate the income of the claimant's partner\n        in the same way as for the claimant1. This income should then be treated as the\n        claimant’s income2. But DMs should consider if the circumstances in DMG 48009 to\n        DMG 48017 applies. Income paid to, or in respect of a child or young person who is\n        a member of the claimant’s family must not be treated as the claimant’s income3.\n        See DMG Chapter 51 for definitions of child, young person and family.\n                                             1 reg 83 (1); 2 WR Act 07, Sch 1, para 6(2); 3 ESA Regs, reg 83(2)\n\n\n\n        Treatment of income - couples"
+      locator: DMG 48008
+    - page: page/dmg-vol8-ch43/0003
+      quote: "43001     This Chapter gives guidance on how to establish membership of a family and\n          membership of the claimant's household for ESA(IR). There is no need for the DM\n          to establish membership of a family and household for ESA(Cont)."
+      locator: DMG 43001

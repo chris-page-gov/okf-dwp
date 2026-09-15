@@ -1,0 +1,77 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-wrac-date-boundary
+  '@type': skos:Concept
+  route: term/esa-wrac-date-boundary
+  title: The source’s 3 April 2017 WRAC boundary
+  type: Concept
+  description: Chapter 44 records that the work-related activity component is not included for claims made on or after 3 April 2017, subject to the savings identified in its appendix.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': The source’s 3 April 2017 WRAC boundary
+    '@language': en-GB
+  skos:definition:
+    '@value': Chapter 44 records that the work-related activity component is not included for claims made on or after 3 April 2017, subject to the savings identified in its appendix.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The note to DMG 44631 qualifies the general component language in chapter 42, including 42613. The date is a source-stated claims boundary, not a document publication date. Appendix 6, later amendments and personal applicability remain unresolved.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 44
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol8-ch44/0117
+  - page/dmg-vol8-ch42/0081
+  source: https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf#page=117
+  resource: https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf#page=117
+  sources:
+  - id: dmg-vol8-ch44
+    title: 'DMG Vol 8 Ch 44: Normal amount payable and components'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf
+    retrieved_at: '2026-09-15T19:45:29.100396Z'
+    sha256: 4764230f43cecc5451e351aaa54c1b307d0797d7cd5cbec19a6aaf5c4f183d10
+  body: |
+    # The source’s 3 April 2017 WRAC boundary
+
+    ## Authored interpretation
+
+    Chapter 44 records that the work-related activity component is not included for claims made on or after 3 April 2017, subject to the savings identified in its appendix.
+
+    ## Scope and boundaries
+
+    The note to DMG 44631 qualifies the general component language in chapter 42, including 42613. The date is a source-stated claims boundary, not a document publication date. Appendix 6, later amendments and personal applicability remain unresolved.
+
+    ## Inspected source passages
+
+    - [DMG 44631, PDF page 117](https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf#page=117)
+    - [DMG 42613, PDF page 81](https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=81)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:29.100396Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `4764230f43cecc5451e351aaa54c1b307d0797d7cd5cbec19a6aaf5c4f183d10`. Extracted pages SHA-256: `ad7172a3107059757b1a166101b58d6e86f970fe59ad751c83586c1674b919d2`.
+  semantic_relations:
+  - target: term/esa-limited-capability-work-related-activity
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The dated removal-and-savings note qualifies the chapter-42 general WRAC wording. This is a scoped association identifying a version boundary, not a consolidated legal decision.
+    evidence:
+    - page: page/dmg-vol8-ch44/0117
+      quote: "44631 Both ESA(Cont) and ESA(IR) attract entitlement to the support component 1.\n\n\nNote: From 3.4.17 the WRAC is no longer included in an award of ESA for claims made on or after that\ndate. See Appendix 6 for where transitional provisions apply.\n\n\nExample\n\n\nCindy, who is 23, claims and is entitled to ESA from 21.4.17 at the assessment phase rate for claimants\naged under 25. Following application of the WCA, Cindy is found to have LCW and is placed in the WRAG.\nCindy’s award of ESA is superseded to increase the applicable amount to the main phase rate from\n28.7.17. The WRAC is not included.\n\n\n                                                                              1 WR Act 07, s 2(1)(b); s 4(2)(b)"
+      locator: DMG 44631
+    - page: page/dmg-vol8-ch42/0081
+      quote: "42613 Claimants who do not have LCWRA will receive the WRAC 1. These claimants are required to\nengage in the WfI and WRA regime in the main phase of their ESA entitlement.\n\n\nNote: For further guidance on WfIs and WRA see DMG Chapter 53."
+      locator: DMG 42613

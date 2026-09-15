@@ -1,0 +1,82 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-household
+  '@type': skos:Concept
+  route: term/esa-household
+  title: Household in the ESA(IR) source
+  type: Concept
+  description: The guidance describes a household through domestic life and ties between people, distinguishing sharing a dwelling from membership of the same household.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Household in the ESA(IR) source
+    '@language': en-GB
+  skos:definition:
+    '@value': The guidance describes a household through domestic life and ties between people, distinguishing sharing a dwelling from membership of the same household.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 43001 limits this family and household exercise to ESA(IR). The source says the same exercise is not needed for ESA(Cont). A shared address, temporary separation or family label alone does not decide household membership.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 43
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol8-ch43/0003
+  - page/dmg-vol8-ch43/0010
+  - page/dmg-vol8-ch43/0015
+  source: https://assets.publishing.service.gov.uk/media/5ede1a10d3bf7f2c9a297c32/dmgch43.pdf#page=3
+  resource: https://assets.publishing.service.gov.uk/media/5ede1a10d3bf7f2c9a297c32/dmgch43.pdf#page=3
+  sources:
+  - id: dmg-vol8-ch43
+    title: 'DMG Vol 8 Ch 43: Membership of the household'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5ede1a10d3bf7f2c9a297c32/dmgch43.pdf
+    retrieved_at: '2026-09-15T19:45:28.912702Z'
+    sha256: 57bd59f52fdfa8e20f17af6ad78869ca8be872c7502f4563d41fef887350b115
+  body: |
+    # Household in the ESA(IR) source
+
+    ## Authored interpretation
+
+    The guidance describes a household through domestic life and ties between people, distinguishing sharing a dwelling from membership of the same household.
+
+    ## Scope and boundaries
+
+    DMG 43001 limits this family and household exercise to ESA(IR). The source says the same exercise is not needed for ESA(Cont). A shared address, temporary separation or family label alone does not decide household membership.
+
+    ## Inspected source passages
+
+    - [DMG 43001, PDF page 3](https://assets.publishing.service.gov.uk/media/5ede1a10d3bf7f2c9a297c32/dmgch43.pdf#page=3)
+    - [DMG 43027, PDF page 10](https://assets.publishing.service.gov.uk/media/5ede1a10d3bf7f2c9a297c32/dmgch43.pdf#page=10)
+    - [DMG 43051, PDF page 15](https://assets.publishing.service.gov.uk/media/5ede1a10d3bf7f2c9a297c32/dmgch43.pdf#page=15)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:28.912702Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `57bd59f52fdfa8e20f17af6ad78869ca8be872c7502f4563d41fef887350b115`. Extracted pages SHA-256: `ee841a1b07f174796b85dcde290c4f1899ae6cf7aaca4d5fea6faa2c39eb33ac`.
+  semantic_relations:
+  - target: term/esa-household-absence
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Household membership can persist during temporary absence but is qualified by intention, duration and the stated exception.
+    evidence:
+    - page: page/dmg-vol8-ch43/0015
+      quote: "43051   The claimant’s household may include\n\n        1.    the claimant\n\n        2.    the claimant’s partner or partners\n\n        3.    any child or young person who is the responsibility of anyone in 1. or 2.\n\n        4.    any child who is the responsibility of anyone in 31.\n\n        This applies even if any of these people are temporarily living away from the other\n        members of the family2, for example to work or visit relatives.\n                                                                     1 ESA Regs, reg 156(1); 2 reg 156(2)\n\n\n        People not treated as members of the claimant’s\n        household"
+      locator: DMG 43051
+    - page: page/dmg-vol8-ch43/0015
+      quote: "43052   A person who is living away from the other members of the family cannot be treated\n        as a member of the claimant’s household if that person\n\n        1.    does not intend to resume living with the rest of the family1 or\n\n        2.    is likely to be away from the family for more than 52 weeks 2.\n                                                              1 ESA Regs, reg 156(3)(a); 2 reg 156(3)(b)\n\n\n        Exception"
+      locator: DMG 43052
+    - page: page/dmg-vol8-ch43/0015
+      quote: "43053   The absent member may be treated as a member of the claimant’s household if\n\n        1.    that person intends to resume living with the family and\n\n        2.    the absence is unlikely to last\n\n              2.1     more than 52 weeks or\n\n              2.2     substantially more than 52 weeks1 where exceptional circumstances\n                      apply.\n\n        Substantially is not defined in legislation and should be given its everyday meaning,\n        that is, in this context - of large size or amount.\n\n        Note: This exception only applies if the family has previously lived as members of\n        the same household (notwithstanding that that household may have been abroad)\n        and the intention to resume living with the family must not be conditional.\n                                                                               1 ESA Regs, reg 156(3)(b)\n\n\n\n\nVol 8 Amendment 14 February 2014"
+      locator: DMG 43053

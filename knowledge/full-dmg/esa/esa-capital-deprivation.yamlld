@@ -1,0 +1,97 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-capital-deprivation
+  '@type': skos:Concept
+  route: term/esa-capital-deprivation
+  title: Ownership and purpose in the ESA capital-deprivation source
+  type: Concept
+  description: The source ties notional capital after deprivation to prior beneficial ownership and a significant benefit purpose, while distinguishing another person’s actions and specified exceptions.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Ownership and purpose in the ESA capital-deprivation source
+    '@language': en-GB
+  skos:definition:
+    '@value': The source ties notional capital after deprivation to prior beneficial ownership and a significant benefit purpose, while distinguishing another person’s actions and specified exceptions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 52805–52811 and 52825–52833 retain personal-injury trusts, diminishing notional capital, choice, necessities and enforceable-debt qualifications. A gift or bank-account name alone is insufficient. Source references to IS/JSA do not establish identical rules across benefits.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 52
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol9-ch52/0144
+  - page/dmg-vol9-ch52/0145
+  - page/dmg-vol9-ch52/0147
+  - page/dmg-vol9-ch52/0148
+  source: https://assets.publishing.service.gov.uk/media/69d8f30ad3e08b8871b665ac/dmg-Ch-52.pdf#page=144
+  resource: https://assets.publishing.service.gov.uk/media/69d8f30ad3e08b8871b665ac/dmg-Ch-52.pdf#page=144
+  sources:
+  - id: dmg-vol9-ch52
+    title: 'DMG Vol 9 Ch 52: Capital'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69d8f30ad3e08b8871b665ac/dmg-Ch-52.pdf
+    retrieved_at: '2026-09-15T19:45:30.801815Z'
+    sha256: b88f230f3ed5c6068c47d39bd29c25f1738607a87b6966adb99d6e65e77e7d2b
+  body: |
+    # Ownership and purpose in the ESA capital-deprivation source
+
+    ## Authored interpretation
+
+    The source ties notional capital after deprivation to prior beneficial ownership and a significant benefit purpose, while distinguishing another person’s actions and specified exceptions.
+
+    ## Scope and boundaries
+
+    DMG 52805–52811 and 52825–52833 retain personal-injury trusts, diminishing notional capital, choice, necessities and enforceable-debt qualifications. A gift or bank-account name alone is insufficient. Source references to IS/JSA do not establish identical rules across benefits.
+
+    ## Inspected source passages
+
+    - [DMG 52805, PDF page 144](https://assets.publishing.service.gov.uk/media/69d8f30ad3e08b8871b665ac/dmg-Ch-52.pdf#page=144)
+    - [DMG 52806, PDF page 144](https://assets.publishing.service.gov.uk/media/69d8f30ad3e08b8871b665ac/dmg-Ch-52.pdf#page=144)
+    - [DMG 52809, PDF page 145](https://assets.publishing.service.gov.uk/media/69d8f30ad3e08b8871b665ac/dmg-Ch-52.pdf#page=145)
+    - [DMG 52810, PDF page 145](https://assets.publishing.service.gov.uk/media/69d8f30ad3e08b8871b665ac/dmg-Ch-52.pdf#page=145)
+    - [DMG 52811, PDF page 145](https://assets.publishing.service.gov.uk/media/69d8f30ad3e08b8871b665ac/dmg-Ch-52.pdf#page=145)
+    - [DMG 52825, PDF page 147](https://assets.publishing.service.gov.uk/media/69d8f30ad3e08b8871b665ac/dmg-Ch-52.pdf#page=147)
+    - [DMG 52827, PDF page 148](https://assets.publishing.service.gov.uk/media/69d8f30ad3e08b8871b665ac/dmg-Ch-52.pdf#page=148)
+    - [DMG 52832, PDF page 148](https://assets.publishing.service.gov.uk/media/69d8f30ad3e08b8871b665ac/dmg-Ch-52.pdf#page=148)
+    - [DMG 52833, PDF page 148](https://assets.publishing.service.gov.uk/media/69d8f30ad3e08b8871b665ac/dmg-Ch-52.pdf#page=148)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:30.801815Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `b88f230f3ed5c6068c47d39bd29c25f1738607a87b6966adb99d6e65e77e7d2b`. Extracted pages SHA-256: `01a4baa2bd35c6402dedb2b151c4f9e167a66cfd722d42b122d52f99ece27904`.
+  semantic_relations:
+  - target: term/esa-beneficial-capital-ownership
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source expressly conditions this deprivation treatment on prior beneficial or joint beneficial ownership.
+    evidence:
+    - page: page/dmg-vol9-ch52/0145
+      quote: "52809 The law applies to claimants and partners only if they were the beneficial owner or joint beneficial\nowners of the capital. So if a claimant is the joint beneficial owner of a building society account which has\n£10,000 in it and the claimant's share is £4,000 the law\n\n\n1. applies if the claimant spends or gives away that £4,000 or any part of it for the purpose of getting\nbenefit or more benefit and\n\n\n2. does not apply if the other £6,000 or any part of it is spent or given away."
+      locator: DMG 52809
+  - target: term/dmg-burden-of-proof
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source requires the DM to show a significant benefit purpose for deprivation, distinct from the disregard question.
+    evidence:
+    - page: page/dmg-vol9-ch52/0147
+      quote: "52825 DMs have to show the claimant's or partner's purpose was to get benefit or more benefit if they\ndecide claimants or partners have deprived themselves of capital. Getting benefit or more benefit may\n\nnot be the claimant's or partner's predominant purpose but it must be a significant one 1. So when\nclaimants give away all their capital to a relative just before claiming benefit their\n\n\n1. main, or predominant, purpose may be to benefit the relative and\n\n\n2. intention, or significant purpose, may be to reduce their capital so they can get benefit or more benefit.\n\n\n                                                                                               1 R(SB) 40/85\n\n\nWhat the DM decides"
+      locator: DMG 52825
+  - target: term/esa-capital-disregard
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source preserves specified personal-injury trust and diminishing-notional-capital exceptions instead of counting every disposal.
+    evidence:
+    - page: page/dmg-vol9-ch52/0144
+      quote: "52806 People are not treated as having capital of which they have deprived themselves if\n\n\n1. the capital is a payment made because of a personal injury to them (including payments from the\nChildren’s Memorial Trust - see DMG 52417) and\n\n\n2. the payment is held on trust for their benefit1.\n\n\nThey are also not treated as having the amount by which notional capital is reduced under the\n\ndiminishing notional capital rule2.\n\n\n                                                      1 ESA Regs, reg 115(1)(a), (1)(c) & (1)(d); 2 reg 115(1)(b)"
+      locator: DMG 52806

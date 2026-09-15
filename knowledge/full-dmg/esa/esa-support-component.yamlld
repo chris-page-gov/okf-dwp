@@ -1,0 +1,78 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-support-component
+  '@type': skos:Concept
+  route: term/esa-support-component
+  title: ESA support component in the source
+  type: Concept
+  description: The source states that both ESA(Cont) and ESA(IR) can attract the support component, which is based on the claimant’s entitlement rather than a couple rate or the partner’s circumstances.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': ESA support component in the source
+    '@language': en-GB
+  skos:definition:
+    '@value': The source states that both ESA(Cont) and ESA(IR) can attract the support component, which is based on the claimant’s entitlement rather than a couple rate or the partner’s circumstances.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 44631–44632 require the capability and phase conditions to be considered separately. This concept does not calculate a component or transfer its rules to UC or New Style ESA.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 44
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol8-ch44/0117
+  - page/dmg-vol8-ch42/0081
+  source: https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf#page=117
+  resource: https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf#page=117
+  sources:
+  - id: dmg-vol8-ch44
+    title: 'DMG Vol 8 Ch 44: Normal amount payable and components'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf
+    retrieved_at: '2026-09-15T19:45:29.100396Z'
+    sha256: 4764230f43cecc5451e351aaa54c1b307d0797d7cd5cbec19a6aaf5c4f183d10
+  body: |
+    # ESA support component in the source
+
+    ## Authored interpretation
+
+    The source states that both ESA(Cont) and ESA(IR) can attract the support component, which is based on the claimant’s entitlement rather than a couple rate or the partner’s circumstances.
+
+    ## Scope and boundaries
+
+    DMG 44631–44632 require the capability and phase conditions to be considered separately. This concept does not calculate a component or transfer its rules to UC or New Style ESA.
+
+    ## Inspected source passages
+
+    - [DMG 44631, PDF page 117](https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf#page=117)
+    - [DMG 44632, PDF page 117](https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf#page=117)
+    - [DMG 42612, PDF page 81](https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=81)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:29.100396Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `4764230f43cecc5451e351aaa54c1b307d0797d7cd5cbec19a6aaf5c4f183d10`. Extracted pages SHA-256: `ad7172a3107059757b1a166101b58d6e86f970fe59ad751c83586c1674b919d2`.
+  semantic_relations:
+  - target: term/esa-limited-capability-work-related-activity
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The LCWRA passage links the finding to support-component treatment; neither a couple rate nor other-condition equivalence is inferred.
+    evidence:
+    - page: page/dmg-vol8-ch42/0081
+      quote: "42612 Claimants with the most severe illnesses or disabilities who have LCWRA will receive the support\n\ncomponent1 without conditionality although they may participate in work-related activity on a voluntary\nbasis if they so wish.\n\n\n                                                                               1 WR Act 07, s 2(2) & 4(4)"
+      locator: DMG 42612
+    - page: page/dmg-vol8-ch44/0117
+      quote: "44632 The support component is based on the claimant’s entitlement. There is no couple rate and the\n\ncircumstances of any partner are not relevant to the claimant’s entitlement to the support component 1.\n\n\n                                                                1 ESA Regs, reg 67(3) & Sch 4, paras 12 & 13"
+      locator: DMG 44632

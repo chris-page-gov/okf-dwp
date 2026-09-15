@@ -1,0 +1,82 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/iidb-assessment-boundaries
+  '@type': skos:Concept
+  route: term/iidb-assessment-boundaries
+  title: IIDB assessment and waiting-period boundaries
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The source separates pre-1 October 1986 and later assessment conditions, including aggregation
+    and disease-specific thresholds, and distinguishes onset and waiting-period exceptions.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol11-ch69/0003
+  - page/dmg-vol11-ch69/0004
+  - page/dmg-vol11-ch69/0005
+  source: https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=3
+  sources:
+  - id: dmg-vol11-ch69
+    title: 'DMG Vol 11 Ch 69: Disablement benefits'
+    resource: https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf
+    author: organisation:dwp
+    sha256: 3bbd376d12fc0a6633010680e88d11efdf7f5b34dde311016a073e80ac3e56b8
+    retrieved_at: '2026-09-15T19:45:34.033473Z'
+  skos:prefLabel:
+    '@value': IIDB assessment and waiting-period boundaries
+    '@language': en-GB
+  skos:definition:
+    '@value': The source separates pre-1 October 1986 and later assessment conditions, including aggregation
+      and disease-specific thresholds, and distinguishes onset and waiting-period exceptions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Neither a single percentage nor a universal 90-day wait describes every case. DMG 69013 names
+      disease-specific exceptions and a distinction between date of onset and addition to the schedule. No
+      assessment, onset date, rate or award is computed.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# IIDB assessment and waiting-period boundaries\n\n## Authored interpretation\n\nThe source separates pre-1
+    October 1986 and later assessment conditions, including aggregation and disease-specific thresholds, and distinguishes
+    onset and waiting-period exceptions.\n\n## Scope and exceptions\n\nNeither a single percentage nor a universal
+    90-day wait describes every case. DMG 69013 names disease-specific exceptions and a distinction between date
+    of onset and addition to the schedule. No assessment, onset date, rate or award is computed.\n\n## Inspected
+    passages\n\n- [DMG 69009, PDF page 3](https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=3).\n\
+    - [DMG 69010, PDF page 3](https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=3).\n\
+    - [DMG 69013, PDF page 4](https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=4).\n\
+    - [DMG 69015, PDF page 5](https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=5).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol11-ch69`:
+    PDF `3bbd376d12fc0a6633010680e88d11efdf7f5b34dde311016a073e80ac3e56b8`; extracted pages `fcaf30907d52d71cc7473cf40c8c876469efc3f8d18f7f9af7b3d32bf5016d95`;
+    acquired `2026-09-15T19:45:34.033473Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=3
+  semantic_relations:
+  - target: term/prescribed-disease-version
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source permits onset to predate addition to the schedule while preventing payment before
+      that addition.
+    evidence:
+    - page: page/dmg-vol11-ch69/0004
+      quote: "69013 There is no entitlement to IIDB for the 90 days, disregarding Sundays, beginning with the date
+        of\n\nthe accident or date of onset in PD claims1. However, entitlement arises from the date of onset in
+        claims\nfor\n\n\n1. occupational deafness2 (PD A10) and\n\n\n2. diffuse mesothelioma3 (PD D3) and\n\n\n\
+        3. primary carcinoma of the lung (PD D8 and PD D8A) from 6.4.06 4.\n\n\nNote 1: In PD A10 claims the date
+        of onset is the date of claim 5.\n\n\nNote 2: The date of onset for a PD can be prior to the date the disease
+        was added to the schedule,\n\nalthough no benefit can be payable prior to that date 6.\n\n\n  1 SS CB Act
+        92, s 103(6); 2 SS (II) (PD) Regs, reg 28; 3 reg 20(4)(a); 4 reg 20B(2)(a); 5 reg 6(2)(c)(ii) ; 6 R(I)\n\
+        \                                                                                                      \
+        \        4/96"
+      locator: DMG 69013

@@ -1,0 +1,89 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-earnings-and-permitted-work
+  '@type': skos:Concept
+  route: term/esa-earnings-and-permitted-work
+  title: ESA earnings and the separate permitted-work question
+  type: Concept
+  description: The source distinguishes the income effect of employed earnings for ESA(IR) from their relevance to permitted-work limits, including for ESA(Cont).
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': ESA earnings and the separate permitted-work question
+    '@language': en-GB
+  skos:definition:
+    '@value': The source distinguishes the income effect of employed earnings for ESA(IR) from their relevance to permitted-work limits, including for ESA(Cont).
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 49003–49004 do not support saying that work or earnings never matter for ESA(Cont). Work status, limits, exceptions and current New Style rules are not resolved or calculated here.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 49
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol9-ch49/0003
+  - page/dmg-vol9-ch48/0005
+  - page/dmg-vol9-ch49/0005
+  source: https://assets.publishing.service.gov.uk/media/69e6000e44a079b27f997f4e/dmg-Chap-49.pdf#page=3
+  resource: https://assets.publishing.service.gov.uk/media/69e6000e44a079b27f997f4e/dmg-Chap-49.pdf#page=3
+  sources:
+  - id: dmg-vol9-ch49
+    title: 'DMG Vol 9 Ch 49: Earnings of employed earners'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69e6000e44a079b27f997f4e/dmg-Chap-49.pdf
+    retrieved_at: '2026-09-15T19:45:30.556786Z'
+    sha256: fbebe7a07e841df655ca881b7c2d699f5b332e91187ba3d5ce600758f206beee
+  body: |
+    # ESA earnings and the separate permitted-work question
+
+    ## Authored interpretation
+
+    The source distinguishes the income effect of employed earnings for ESA(IR) from their relevance to permitted-work limits, including for ESA(Cont).
+
+    ## Scope and boundaries
+
+    DMG 49003–49004 do not support saying that work or earnings never matter for ESA(Cont). Work status, limits, exceptions and current New Style rules are not resolved or calculated here.
+
+    ## Inspected source passages
+
+    - [DMG 49003, PDF page 3](https://assets.publishing.service.gov.uk/media/69e6000e44a079b27f997f4e/dmg-Chap-49.pdf#page=3)
+    - [DMG 49004, PDF page 3](https://assets.publishing.service.gov.uk/media/69e6000e44a079b27f997f4e/dmg-Chap-49.pdf#page=3)
+    - [DMG 48007, PDF page 5](https://assets.publishing.service.gov.uk/media/5a8020bded915d74e33f89b8/dmgch48.pdf#page=5)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:30.556786Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `fbebe7a07e841df655ca881b7c2d699f5b332e91187ba3d5ce600758f206beee`. Extracted pages SHA-256: `d2d03afaaefe6a6df5f85e2883ae04dfead57fd44bf931850cb407c766c2cf25`.
+  semantic_relations:
+  - target: term/esa-work-meaning
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source says earnings may determine whether claimant work lies within permitted-work limits, including for ESA(Cont).
+    evidence:
+    - page: page/dmg-vol9-ch49/0003
+      quote: "49003 The earnings of an employed earner are income1. The calculation of this income can affect\nentitlement to ESA(IR) because it is a condition of entitlement to ESA(IR) that income does not exceed\n\nthe claimant’s applicable amount2. The level of earnings from work performed by the claimant will also\n\ndetermine whether the work is within the PWK limits3. DMG Chapter 41 gives guidance on what\nconstitutes PWK.\n\n\n                 1 ESA Regs, reg 91(1); 2 WR Act 07, Sch 1, para 6(1)(a); 3 ESA Regs, reg 45(2), (3), (4) & 88"
+      locator: DMG 49003
+    - page: page/dmg-vol9-ch49/0003
+      quote: "49004 ESA(Cont) has no condition of entitlement based on income and so earnings are not taken into\naccount. However, where a claimant who is entitled to ESA(Cont) is working then the guidance in this\n\nchapter should be used along with the guidance in Chapters 41 and 48 to decide the level of earnings 1.\n\nThe level of earnings will then determine whether the work is within the PWK limits 2.\n\n\n                                                                    1 ESA Regs, reg 88; 2 reg 45(2), (3) & (4)"
+      locator: DMG 49004
+  - target: term/esa-employed-earner
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter’s employed-earner definition scopes the earnings and permitted-work provisions.
+    evidence:
+    - page: page/dmg-vol9-ch49/0005
+      quote: "49013 The term employed earner means1 a person who is gainfully employed in GB\n\n\n1. under a contract of service or\n\n\n2. in an office (including an elective office) with general earnings 2.\n\n\n       1 ESA Regs, reg 2(1); SS CB Act 92, s 2(1)(a); 2 Income Tax (Earnings and Pensions) Act 2003, s 7(3)"
+      locator: DMG 49013
+    - page: page/dmg-vol9-ch49/0003
+      quote: "49003 The earnings of an employed earner are income1. The calculation of this income can affect\nentitlement to ESA(IR) because it is a condition of entitlement to ESA(IR) that income does not exceed\n\nthe claimant’s applicable amount2. The level of earnings from work performed by the claimant will also\n\ndetermine whether the work is within the PWK limits3. DMG Chapter 41 gives guidance on what\nconstitutes PWK.\n\n\n                 1 ESA Regs, reg 91(1); 2 WR Act 07, Sch 1, para 6(1)(a); 3 ESA Regs, reg 45(2), (3), (4) & 88"
+      locator: DMG 49003

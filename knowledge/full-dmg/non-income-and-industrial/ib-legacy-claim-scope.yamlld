@@ -1,0 +1,89 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/ib-legacy-claim-scope
+  '@type': skos:Concept
+  route: term/ib-legacy-claim-scope
+  title: 'Incapacity Benefit: the captured legacy claim boundary'
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The Incapacity Benefit introduction records its replacement of earlier sickness/invalidity
+    benefits and a closure to claims from 31 January 2011, subject to the exception it signposts for certain
+    existing disability-related Income Support claimants.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol10-ch56/0005
+  - page/dmg-vol10-ch56/0007
+  source: https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf#page=5
+  sources:
+  - id: dmg-vol10-ch56
+    title: 'DMG Vol 10 Ch 56: Incapacity Benefit'
+    resource: https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf
+    author: organisation:dwp
+    sha256: 24fde3944e7e2605c24baf711da1ace4dfe0032fe13b6bfc169e4562bf5ecca5
+    retrieved_at: '2026-09-15T19:45:32.379452Z'
+  skos:prefLabel:
+    '@value': 'Incapacity Benefit: the captured legacy claim boundary'
+    '@language': en-GB
+  skos:definition:
+    '@value': The Incapacity Benefit introduction records its replacement of earlier sickness/invalidity
+      benefits and a closure to claims from 31 January 2011, subject to the exception it signposts for certain
+      existing disability-related Income Support claimants.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is legacy guidance, not a new claim route for ESA or Universal Credit. The source retains
+      contribution, incapacity and transitional provisions. The exception, chapter 45 and statutory versions
+      need review before applying the date to any real claim.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Incapacity Benefit: the captured legacy claim boundary\n\n## Authored interpretation\n\nThe Incapacity
+    Benefit introduction records its replacement of earlier sickness/invalidity benefits and a closure to claims
+    from 31 January 2011, subject to the exception it signposts for certain existing disability-related Income Support
+    claimants.\n\n## Scope and exceptions\n\nThis is legacy guidance, not a new claim route for ESA or Universal
+    Credit. The source retains contribution, incapacity and transitional provisions. The exception, chapter 45 and
+    statutory versions need review before applying the date to any real claim.\n\n## Inspected passages\n\n- [DMG
+    56001, PDF page 5](https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf#page=5).\n\
+    - [DMG 56002, PDF page 5](https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf#page=5).\n\
+    - [DMG 56004, PDF page 7](https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf#page=7).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol10-ch56`:
+    PDF `24fde3944e7e2605c24baf711da1ace4dfe0032fe13b6bfc169e4562bf5ecca5`; extracted pages `b5dc3260133af75807e6248202525da77a6610befc0b7ff20bc883d2ebba530e`;
+    acquired `2026-09-15T19:45:32.379452Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf#page=5
+  semantic_relations:
+  - target: term/ib-youth-overlap-classification
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source expressly calls IB(Y) a category of IB, not a separate benefit.
+    evidence:
+    - page: page/dmg-vol10-ch56/0005
+      quote: "56002   Entitlement to IB depends, at the outset, on satisfying certain contribution\n        conditions.
+        IB is payable at three basic rates according to the length of time the\n        incapacity has lasted. A
+        person who does not satisfy the contribution conditions may\n        still qualify for IB(Y). This is a
+        category of IB and is not a separate benefit (see DMG"
+      locator: DMG 56002
+  - target: term/ib-contribution-record-referral
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Contribution conditions and a disputed contribution record are separate source questions.
+    evidence:
+    - page: page/dmg-vol10-ch56/0007
+      quote: "56008   Entitlement to IB depends on the contribution conditions being satisfied. In practice\n  \
+        \      the NI contribution record is usually obtained and any decision is based on the\n        assumption
+        that the record is factually correct. However, where there is a dispute\n        about the record, the matter
+        must be referred by the DM to HMRC for a formal\n        decision1.\n\n        Note 1: See DMG Chapters
+        03, 04 and 06 for guidance on how decisions and\n        appeals are handled after a reference to HMRC.\n\
+        \n\n\n\nVol 10 Amendment 33 February 2012"
+      locator: DMG 56008
