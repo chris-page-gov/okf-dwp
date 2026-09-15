@@ -1,0 +1,89 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-notional-employed-earnings
+  '@type': skos:Concept
+  route: term/jsais-notional-employed-earnings
+  title: Notional employed earnings and exceptions
+  type: Concept
+  description: The captured guidance describes earnings treated as held despite not actually being
+    received where a person performs a service without pay or for less than comparable local
+    employment, subject to explicit exceptions.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Notional employed earnings and exceptions
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance describes earnings treated as held despite not actually being
+      received where a person performs a service without pay or for less than comparable local
+      employment, subject to explicit exceptions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': A volunteered service or low payment is not automatically notional earnings. Ability
+      to pay, reasonable voluntary service, training programmes and approved placements are
+      qualifications. The comparable rate is an evidence question, not an assumed minimum-wage rate;
+      the source’s separate minimum-wage provisions need review. No fraud or entitlement inference
+      is made.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol5-ch26/0042
+  - page/dmg-vol5-ch26/0043
+  source:
+    https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf#page=42
+  resource:
+    https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf#page=42
+  sources:
+  - id: dmg-vol5-ch26
+    title: 'DMG Vol 5 Ch 26: Employed earners'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf
+    retrieved_at: '2026-09-15T19:45:25.089797Z'
+    sha256: fe619693d2f8cc78cac3786dadab88e81467ec56d38f00727285612af92b80c9
+  body: "# Notional employed earnings and exceptions\n\n## Authored interpretation\n\nThe captured guidance
+    describes earnings treated as held despite not actually being received where a person performs a service
+    without pay or for less than comparable local employment, subject to explicit exceptions.\n\n## Scope
+    and exceptions\n\nA volunteered service or low payment is not automatically notional earnings. Ability
+    to pay, reasonable voluntary service, training programmes and approved placements are qualifications.
+    The comparable rate is an evidence question, not an assumed minimum-wage rate; the source’s separate
+    minimum-wage provisions need review. No fraud or entitlement inference is made.\n\n## Inspected source
+    passages\n\n- [DMG 26180, PDF page 42](https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf#page=42)
+    — DMG Vol 5 Ch 26: Employed earners.\n- [DMG 26183, PDF page 43](https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf#page=43)
+    — DMG Vol 5 Ch 26: Employed earners.\n- [DMG 26184, PDF page 43](https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf#page=43)
+    — DMG Vol 5 Ch 26: Employed earners.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol5-ch26`: PDF SHA-256 `fe619693d2f8cc78cac3786dadab88e81467ec56d38f00727285612af92b80c9`;
+    extracted pages SHA-256 `f4089f7088e6a987d028072f4968eb39f2686b7a588e2c38f8ebc1cb3042102a`.\n"
+  semantic_relations:
+  - target: term/dmg-evidence-assessment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The passage requires evidence for the comparable local employment rate and warns
+      against assuming it is the minimum wage.
+    evidence:
+    - page: page/dmg-vol5-ch26/0042
+      quote: "26180 Notional earnings are earnings that a person does not actually have, but is treated
+        as having. The\n\nDM should treat the claimant or any other member of the family as having notional
+        earnings where 1\n\n\n1. they perform a service for another person and\n\n\n2. that person\n\n\
+        \n      2.1 makes no payment of earnings or\n\n\n      2.2 pays less than the rate paid for a
+        comparable employment in the area.\n\n\nThe rate for comparable employment in the area is a question
+        of fact and must be based on evidence. It\nshould not be assumed to be the NMW. If the notional
+        income rules are satisfied the DM must take into\naccount at least the NMW rate relevant to the
+        claimant, unless one of the situations in DMG 26183\napplies.\n\n\n                          \
+        \                               1 JSA Regs, reg 105(13); IS (Gen) Regs, reg 42(6)"
+      locator: DMG 26180

@@ -1,0 +1,75 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/rp-shared-additional-pension
+  '@type': skos:Concept
+  route: term/rp-shared-additional-pension
+  title: Shared additional pension following a pension sharing order
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The RP chapter links shared additional pension to a court’s pension sharing order following
+    divorce or civil-partnership dissolution and distinguishes associated pension-credit and debit terms.
+  tags:
+  - full DMG
+  - pension regimes
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol12-ch75/0142
+  - page/dmg-vol12-ch75/0143
+  source: https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=142
+  resource: https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=142
+  sources:
+  - id: dmg-vol12-ch75
+    title: 'DMG Vol 12 Ch 75: Retirement Pension'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=142
+    sha256: 655e7acb31f09f5169efbe40419091ee479f88c0c45b65c7a507b042b67712f9
+    retrieved_at: '2026-09-15T19:45:35.356599Z'
+  skos:prefLabel:
+    '@value': Shared additional pension following a pension sharing order
+    '@language': en-GB
+  skos:definition:
+    '@value': The RP chapter links shared additional pension to a court’s pension sharing order following
+      divorce or civil-partnership dissolution and distinguishes associated pension-credit and debit terms.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Shared additional pension is a pension-sharing concept, not the Pension Credit means-tested
+      benefit. Old and new state scheme pension credits and the relevant court-order and pensionable-age dates
+      require their own legal review.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-regimes
+    at: '2026-09-15T20:17:36Z'
+  observedAt: '2026-09-15T20:17:36Z'
+  body: "# Shared additional pension following a pension sharing order\n\n## Source-backed proposal\n\nThe RP chapter
+    links shared additional pension to a court’s pension sharing order following divorce or civil-partnership dissolution
+    and distinguishes associated pension-credit and debit terms.\n\n## Scope and exceptions\n\nShared additional
+    pension is a pension-sharing concept, not the Pension Credit means-tested benefit. Old and new state scheme
+    pension credits and the relevant court-order and pensionable-age dates require their own legal review.\n\n##
+    Inspected passages\n\n- [DMG 75611, PDF page 142](https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=142).\n\
+    - [DMG 75615, PDF page 143](https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=143).\n\
+    - [DMG 75617, PDF page 143](https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=143).\n\
+    \n## Provenance and review\n\nIndependent experimental interpretation of DWP guidance, not an official DWP document.
+    All definitions and relationships are model-assisted and unreviewed. No individual eligibility, award, legal
+    conclusion or executable rule is supplied.\n\nSource observation, listing-page update, printed revision, stated
+    legal date and pension event date have separate meanings. PDF page numbers are one-based file positions; extraction
+    may damage reading order, footnotes and characters. No visual PDF or specialist acceptance is claimed.\n\n-
+    `dmg-vol12-ch75` — PDF SHA-256 `655e7acb31f09f5169efbe40419091ee479f88c0c45b65c7a507b042b67712f9`; page-extraction
+    SHA-256 `0d037880d2aeaff1be89235ee987ca4acb1c839fcf1ead8b8be2daa9f6795465`.\n"
+  semantic_relations:
+  - target: term/rp-pension-sharing-valuation-day
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source defines the valuation day as the day the pension-sharing credit and debit are
+      created, rather than the source capture or publication date.
+    evidence:
+    - page: page/dmg-vol12-ch75/0143
+      quote: "75616 The valuation day is the day on which the pension credit and pension debit are created 1. On
+        the\nvaluation day the AP belonging to one spouse or civil partner is reduced by the percentage ordered
+        by\nthe court and a sum of money equal to the amount of the reduction is deposited in the NI account of
+        the\nother spouse or civil partner. This is the old state scheme pension credit.\n\n\n                 \
+        \                                                                      1 WRP Act 99, s 49"
+      locator: DMG 75616

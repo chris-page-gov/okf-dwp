@@ -1,0 +1,108 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-self-employed-assessment-period
+  '@type': skos:Concept
+  route: term/jsais-self-employed-assessment-period
+  title: Assessment period for JSA and IS self-employment
+  type: Concept
+  description: The source bases normal weekly self-employed earnings on receipts and expenses paid
+    during an assessment period, with period selection responsive to a new business or a change in
+    normal trading.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Assessment period for JSA and IS self-employment
+    '@language': en-GB
+  skos:definition:
+    '@value': The source bases normal weekly self-employed earnings on receipts and expenses paid
+      during an assessment period, with period selection responsive to a new business or a change in
+      normal trading.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Do not assume the previous tax year or a universal twelve-month period. Stable
+      established businesses, newer businesses and changes have separate provisions; royalties and
+      similar payments also differ. Source examples illustrate the guidance and are not current
+      entitlements. No cash-flow or profit calculation is implemented.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol5-ch27/0014
+  - page/dmg-vol5-ch27/0015
+  - page/dmg-vol5-ch27/0034
+  source:
+    https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=14
+  resource:
+    https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=14
+  sources:
+  - id: dmg-vol5-ch27
+    title: 'DMG Vol 5 Ch 27: Self-employed earners and share fishermen'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf
+    retrieved_at: '2026-09-15T19:45:25.036028Z'
+    sha256: 90b6c5ec739d2366936d67d78cd5a6f857b764b92000200f4a44ac956c88b3ac
+  body: "# Assessment period for JSA and IS self-employment\n\n## Authored interpretation\n\nThe source
+    bases normal weekly self-employed earnings on receipts and expenses paid during an assessment period,
+    with period selection responsive to a new business or a change in normal trading.\n\n## Scope and
+    exceptions\n\nDo not assume the previous tax year or a universal twelve-month period. Stable established
+    businesses, newer businesses and changes have separate provisions; royalties and similar payments
+    also differ. Source examples illustrate the guidance and are not current entitlements. No cash-flow
+    or profit calculation is implemented.\n\n## Inspected source passages\n\n- [DMG 27051, PDF page 14](https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=14)
+    — DMG Vol 5 Ch 27: Self-employed earners and share fishermen.\n- [DMG 27052, PDF page 14](https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=14)
+    — DMG Vol 5 Ch 27: Self-employed earners and share fishermen.\n- [DMG 27060, PDF page 15](https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=15)
+    — DMG Vol 5 Ch 27: Self-employed earners and share fishermen.\n- [DMG 27062, PDF page 15](https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=15)
+    — DMG Vol 5 Ch 27: Self-employed earners and share fishermen.\n\n## Evidence and review status\n\n\
+    Model-assisted interpretation of selected passages in the 15 September 2026 frozen source snapshot.
+    Specialist review is required. Source acquisition, source revision, legal effective dates and this
+    record’s authoring time are separate.\n\nThis is an independent experimental publication, not an official
+    DWP document, individual advice, an entitlement decision or an executable rule. Machine-extracted
+    text may alter reading order, footnotes and characters. No PDF visual inspection, whole-chapter coverage
+    or behavioural evaluation pass is claimed by this record.\n\n- `dmg-vol5-ch27`: PDF SHA-256 `90b6c5ec739d2366936d67d78cd5a6f857b764b92000200f4a44ac956c88b3ac`;
+    extracted pages SHA-256 `7f84279f4a44373405ce06d32bf1c927a9f25dda507895b1540e6bb8b1b5185a`.\n"
+  semantic_relations:
+  - target: term/jsais-business-expense-conditions
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Receipts and paid expenses are the stated inputs; the expense provision separately
+      requires payment during that assessment period and other conditions.
+    evidence:
+    - page: page/dmg-vol5-ch27/0014
+      quote: "27051 The normal weekly earnings of a S/E earner should be calculated by using the\n\n\n\
+        1. gross receipts (see DMG 27125) and\n\n\n2. expenses paid out (see DMG 27190)\n\n\nduring the
+        assessment period. Different rules apply for royalties, copyright payments and Public Lending\n\
+        Rights payments."
+      locator: DMG 27051
+    - page: page/dmg-vol5-ch27/0034
+      quote: "27190 When calculating the net profit of a S/E earner the DM should deduct from the gross
+        receipts any\n\nbusiness expense that1\n\n\n1. was paid out wholly and exclusively for the purposes
+        of the business 2 and\n\n\n2. was paid out during the assessment period and\n\n\n3. was reasonably
+        incurred3 (see DMG 27198) and\n\n\n4. is an allowable expense (see DMG 27206).\n\n\n         \
+        \                   1 JSA Regs, reg 101(4)(a); IS (Gen) Regs, reg 38(3)(a); 2 JSA Regs, reg 101(9)(a);\n\
+        \                               IS (Gen) Regs, reg 38(8)(a); 3 JSA Regs, reg 101(8); IS (Gen)
+        Regs, reg 38(7)"
+      locator: DMG 27190
+  - target: term/dmg-supersession
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The changing-period procedure expressly refers to supersession if new figures affect
+      entitlement and distinguishes a decision not to supersede.
+    evidence:
+    - page: page/dmg-vol5-ch27/0015
+      quote: "27062 The earnings would then be averaged over that period and apportioned on a weekly basis
+        until\nthe figures for the following week or month become available. The assessment period would
+        then be\nextended. The assessment period would\n\n\n1. start on the date the change affecting
+        the pattern of business occurred and\n\n\n2. end on the date that the new figures became available.\n\
+        \n\nThe DM should supersede if the new figures affect entitlement to IS or JSA. Where entitlement
+        is not\naffected, a decision not to supersede should be made if the claimant asked for earnings
+        to be looked at\nagain. For further guidance on supersession including the effective date rule,
+        see DMG Chapter 04."
+      locator: DMG 27062

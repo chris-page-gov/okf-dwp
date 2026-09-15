@@ -33,6 +33,7 @@ def validate(root: Path = ROOT, output: str = OUTPUT, inventory_path: str = INPU
     documents = inventory["documents"]
     descriptor = read_json(out / "okf-explorer.json")
     snapshot = descriptor["snapshot"]
+    require(descriptor.get("plane_roots") == descriptor["exploratory_publication"]["applicable_plane_roots"], "Exploratory publication roots differ from the descriptor envelope")
     @lru_cache(maxsize=None)
     def source_hash(relative: str) -> str:
         return digest(safe_path(root, relative).read_bytes())
@@ -66,6 +67,12 @@ def validate(root: Path = ROOT, output: str = OUTPUT, inventory_path: str = INPU
         records.extend(read_json(out / path))
     routes = {row["route"]: row for row in records}
     require(len(routes) == len(records) == descriptor["counts"]["records"], "Record identities/counts mismatch")
+    label_ref = descriptor["entrypoints"]["endpoint_labels"]
+    require(label_ref == manifest["indexes"]["endpoint_labels"] == descriptor["entrypoint_integrity"]["endpoint_labels"], "Endpoint label bindings differ")
+    labels = read_json(out / label_ref["path"])
+    require(labels["snapshot"] == snapshot and labels["counts"]["entries"] == len(records), "Endpoint label snapshot or denominator differs")
+    require({row["route"]: (row["iri"], row["label"], row["type"]) for row in labels["entries"]} ==
+            {row["route"]: (row["id"], row["title"], row["record_type"]) for row in records}, "Endpoint labels lose a semantic route or source title")
     locator = read_json(out / "data/locator/manifest.json")
     locator_buckets = {key: read_json(out / ref["path"]) for key, ref in locator["buckets"].items()}
     for ordinal, record in enumerate(records):

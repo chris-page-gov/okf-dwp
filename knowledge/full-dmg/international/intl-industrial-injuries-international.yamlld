@@ -1,0 +1,84 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-industrial-injuries-international
+  '@type': skos:Concept
+  route: term/intl-industrial-injuries-international
+  title: Industrial Injuries international residence and presence scope
+  type: Concept
+  description: The guidance covers named Industrial Injuries benefits and distinguishes domestic conditions, EC provisions and reciprocal agreements when considering residence and presence.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-international-research
+    at: '2026-09-15T20:19:49.223063Z'
+  observedAt: '2026-09-15T20:19:49.223063Z'
+  skos:prefLabel:
+    '@value': Industrial Injuries international residence and presence scope
+    '@language': en-GB
+  skos:definition:
+    '@value': The guidance covers named Industrial Injuries benefits and distinguishes domestic conditions, EC provisions and reciprocal agreements when considering residence and presence.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 074360–074362 list Disablement Benefit, Reduced Earnings Allowance, Retirement Allowance and Industrial Death Benefit. The chapter directs other schemes elsewhere. No extension to ESA or to every industrial-injury payment is inferred.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - international subjects
+  - chapter 7 part 4
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol2-ch7-part4/0091
+  - page/dmg-vol2-ch7-part1/0057
+  source: https://assets.publishing.service.gov.uk/media/692421b6367485ea116a55db/dmg-ch-07-part-04.pdf#page=91
+  resource: https://assets.publishing.service.gov.uk/media/692421b6367485ea116a55db/dmg-ch-07-part-04.pdf#page=91
+  sources:
+  - id: dmg-vol2-ch7-part4
+    title: 'DMG Vol 2 Ch 7 Part 4: Incapacity Benefit to Industrial Injuries Benefit [073780 to 075329]'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/692421b6367485ea116a55db/dmg-ch-07-part-04.pdf
+    retrieved_at: '2026-09-15T19:45:20.082376Z'
+    sha256: d24ed4bc8730be76af2c9d29b670a39ff61f3cd9f5f2e882345d36a86ac6fe3c
+  body: |
+    # Industrial Injuries international residence and presence scope
+
+    ## Authored interpretation
+
+    The guidance covers named Industrial Injuries benefits and distinguishes domestic conditions, EC provisions and reciprocal agreements when considering residence and presence.
+
+    ## Scope and boundaries
+
+    DMG 074360–074362 list Disablement Benefit, Reduced Earnings Allowance, Retirement Allowance and Industrial Death Benefit. The chapter directs other schemes elsewhere. No extension to ESA or to every industrial-injury payment is inferred.
+
+    ## Inspected source passages
+
+    - [DMG 074360, PDF page 91](https://assets.publishing.service.gov.uk/media/692421b6367485ea116a55db/dmg-ch-07-part-04.pdf#page=91)
+    - [DMG 074362, PDF page 91](https://assets.publishing.service.gov.uk/media/692421b6367485ea116a55db/dmg-ch-07-part-04.pdf#page=91)
+
+    ## Evidence and review status
+
+    This is a model-assisted, unreviewed interpretation of selected passages in the frozen DWP source. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable rule. No specialist acceptance, current-law reconciliation or complete coverage of this chapter part is claimed. References to EU law, countries and benefits retain the scope and date context of the cited text; they do not establish applicability to a person or a later regime. Machine extraction may alter reading order and characters; no visual PDF review is claimed.
+
+    Source captured: 2026-09-15T19:45:20.082376Z. This is an acquisition time, not a publication or legal commencement date. The attachment publication date is not established by the frozen metadata. Source-stated dates require their own role and precision.
+
+    PDF SHA-256: `d24ed4bc8730be76af2c9d29b670a39ff61f3cd9f5f2e882345d36a86ac6fe3c`. Extracted pages SHA-256: `bba1c55bf646754d77fddba1d3b77c8b015e46b07c871f3f6243dc76e6938ba5`.
+  semantic_relations:
+  - target: term/intl-industrial-injuries-export
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The substantive scope statement separates claims from export and identifies the legal sources for each.
+    evidence:
+    - page: page/dmg-vol2-ch7-part4/0091
+      quote: "074361 The guidance covers\n\n\n• claims to benefit, including UK law (074370 - 074378) and European Community law (074379 -\n074392) and reciprocal agreements and claims from outside Great Britain (074430 - 074431) and\n\n\n• export of benefit to other countries, including Great Britain law (074440 - 074449) and European\nCommunity law (074450 - 074454) and reciprocal agreements (074460)."
+      locator: DMG 074361
+  - target: term/intl-reciprocal-benefit-scope
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The Industrial Injuries passage identifies reciprocal agreements as a distinct possible source after domestic and EC conditions; agreement and benefit coverage remain to be checked.
+    evidence:
+    - page: page/dmg-vol2-ch7-part4/0091
+      quote: "074362 If a claimant does not satisfy the conditions in Great Britain law, the decision maker should\nconsider whether the claimant is helped by European Community law and, if not, by any reciprocal\nagreements."
+      locator: DMG 074362
+    - page: page/dmg-vol2-ch7-part1/0057
+      quote: "070310 The UK has reciprocal agreements with both EEA countries and other countries. Lists of the\ncountries with which the UK has agreements are at\n\n\n• DMG 070330 for EEA countries and\n\n\n• DMG 070333 for non-EEA countries.\n\n\nThose lists also set out which benefits are covered by the agreements."
+      locator: DMG 070310

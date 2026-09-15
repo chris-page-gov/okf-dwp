@@ -1,0 +1,2360 @@
+{
+  "chapters": [
+    {
+      "authored_relationships": 6,
+      "chapter": 23,
+      "chapter_task": "chapter-23",
+      "concept_routes": [
+        "term/jsa-personal-rate",
+        "term/jsais-applicable-amount",
+        "term/jsais-is-incomplete-element-evidence"
+      ],
+      "context_pdf_pages_inspected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11
+      ],
+      "document_id": "dmg-vol4-ch23",
+      "evaluation_designs": [
+        {
+          "execution_result": null,
+          "execution_status": "designed-not-run",
+          "expected_behaviour": [
+            "Retain the IS-only scope.",
+            "Distinguish further evidence, revision and supersession.",
+            "Do not calculate an award or treat old monetary examples as current rates."
+          ],
+          "expected_evidence": [
+            {
+              "locator": "DMG 23029",
+              "page": "page/dmg-vol4-ch23/0011",
+              "quote": "23029 When deciding an IS claim the applicable amount may be awarded without\n\n\n1. housing costs1 or\n\n\n2. SDP2\n\n\nif there is not enough evidence to include these elements.\n\n\n                                                                   1 SS CS (D&A) Regs, reg 13(1); 2 reg 13(2)",
+              "quote_sha256": "e5d2bf2658d91ed6248293c25002ecf5059bf845a91a4044d95b7a2f4194291b"
+            },
+            {
+              "locator": "DMG 23030",
+              "page": "page/dmg-vol4-ch23/0011",
+              "quote": "23030 The applicable amount may be revised or superseded if further information about SDP or housing\n\ncosts is received after the IS claim or question has been decided 1.\n\n\n                                                                              1 SS CS (D&A) Regs, reg 3 & 6",
+              "quote_sha256": "a51dae34cdcddf3cbca2d4ee84be82f62a4d88166b802b112207055a45b6b481"
+            }
+          ],
+          "id": "eval-positive-23",
+          "kind": "source-grounding",
+          "personas": [
+            "persona/policy-law-reviewer",
+            "persona/rules-architect"
+          ],
+          "question": "How does the captured IS guidance distinguish insufficient evidence for housing costs or SDP from the applicable amount as a whole?",
+          "questions": [
+            "question/stage2-001",
+            "question/stage2-006"
+          ],
+          "stories": [
+            "story/policy-law-trace",
+            "story/rule-candidate-review"
+          ]
+        },
+        {
+          "execution_result": null,
+          "execution_status": "designed-not-run",
+          "expected_behaviour": [
+            "Retain the IS-only scope.",
+            "Distinguish further evidence, revision and supersession.",
+            "Do not calculate an award or treat old monetary examples as current rates."
+          ],
+          "expected_evidence": [
+            "page/dmg-vol4-ch23/0011",
+            "page/dmg-vol4-ch23/0011"
+          ],
+          "id": "eval-negative-23",
+          "kind": "boundary-control",
+          "personas": [
+            "persona/evidence-assurance-reviewer",
+            "persona/assisted-support"
+          ],
+          "question": "Does the IS incomplete-evidence procedure automatically apply to JSA or establish a current award amount?",
+          "questions": [
+            "question/stage2-001",
+            "question/stage2-006"
+          ],
+          "stories": [
+            "story/evidence-requirements",
+            "story/assisted-discovery"
+          ]
+        }
+      ],
+      "inspection_method": "Model reading of machine-extracted body passages and the listed neighbouring pages; no PDF visual or specialist review.",
+      "literal_dependency_candidates": [
+        {
+          "page": "page/dmg-vol4-ch23/0003",
+          "quote": "                                                                 1 JS Act 95, s 35(1); IS (Gen) Regs, reg 2(1)",
+          "quote_sha256": "0706ee2e5188fa15d603141e3ee37fc4a3af4e9869f0dc5e92933ec1184504fb",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0004",
+          "quote": "                                                1 JS Act 95, s 4(1); 2 JSA Regs, reg 80; 3 reg 81; 4 reg 79(2)",
+          "quote_sha256": "9b000dd195c572a59c36449635b15e8dc8659d65a569fc6598964c4e30fe7bca",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0004",
+          "quote": "                                                                     1 JS Act 95, s 4(2); JSA Regs, reg 79(1)",
+          "quote_sha256": "32b726cc8574f9fa5f09c7168bb2fb2b13dd9b999013650b0edd78a92459f452",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0005",
+          "quote": "                     1 JS Act 95, s 35; JSA Regs, regs 76, 77 & 78; 2 JS Act, s 4(5); JSA Regs, regs 83 to 87;",
+          "quote_sha256": "f9cd07faec656d13954231510b569b4c57e1c1e6d53d54808435a4b3de91af74",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0005",
+          "quote": "                                                                         3 regs 84(1) & 86B; 4 JS Act, s 4(12)",
+          "quote_sha256": "b9c9f0338dd9a98df0a8238d187370a629099da7801dd762fdae89383fd507ef",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0005",
+          "quote": "                                                                                  1 SS CS (D&A) Regs, reg 15",
+          "quote_sha256": "a367b830cfd38f892babe9f1f06ff60e367a94a58fb2aeecdc583e511718f3d9",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0005",
+          "quote": "                                                                        1 SS (C&P) Regs, reg 17(3); 2 reg 17(1)",
+          "quote_sha256": "f5c39fc7327c02c65256a9f36fa7d190d48f7d4efd26eb21d31513e979a5d657",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0005",
+          "quote": "                                                   1 R(IS) 8/95; 2 SS Act 98, s 10; SS CS (D&A) Regs, reg 6(2)",
+          "quote_sha256": "b51a157b8a36623d3133cb90cc1bb4bcd88857eccb3d46ff3f5c28c9d9dc8d7d",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0006",
+          "quote": "                                                                                          1 JS Act 95, s 4(6)",
+          "quote_sha256": "66625e23822d252adf8fb86934cf4978b47e37402be5d58dab7b864f6b0a2eac",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0006",
+          "quote": "                                                                                          1 JS Act 95, s 4(7)",
+          "quote_sha256": "55608c26f789950358b7ff7d932bc311890fb54e7059b4189758e97115997bbe",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0009",
+          "quote": "                                                                                         1 JS Act 95, s 4A(3)",
+          "quote_sha256": "7e99639b41fb78c78650e0cf26b580637d1dca60e2d7d8faeb0ea1330c09f72c",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0009",
+          "quote": "                                                                                          1 JS Act 95 s 4A(5)",
+          "quote_sha256": "9b17c070d4d315929bda5bcbaa410f15f3ae408562019072b5ea4c89b7f626d0",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0010",
+          "quote": "                                                                                       1 JS Act 95, s 4A(6)",
+          "quote_sha256": "110d2d52a5be2813444318d85ba5996b7c4b8c92505765078c3fbefcceb080f3",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0010",
+          "quote": "                                                                                1 JS Act 95, s 4A(4) and (7)",
+          "quote_sha256": "e83af98623fc2e61df6f5a284eb5ca1778e23c9c9ca6e52f1d2d18e64e802b32",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0010",
+          "quote": "                                                                                1 SS CB Act 92, s 124(1)(b)",
+          "quote_sha256": "d6f39e83417ebf34d5793ab0c3a3c55dd3f4278a1a265c00316a85f507604dea",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0011",
+          "quote": "                                                                                    1 SS CB Act 92, s 124(4)",
+          "quote_sha256": "5373d2a36fe737e8faccafc43f86e8df5cdca3519f5ecd1410516ba8e3d78017",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0011",
+          "quote": "       1 SS CB Act 92, s 137; IS (Gen) Regs, regs 14, 15 & 16; 2 reg 17; 3 reg 18(1); 4 SS CB Act 92, s 135(2)",
+          "quote_sha256": "cf70b103ec5de41a01c571f8264d19e582f3d1110f0f2e018fb379eb45408056",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0011",
+          "quote": "                                                                   1 SS CS (D&A) Regs, reg 13(1); 2 reg 13(2)",
+          "quote_sha256": "31e205dea9277e59ae49a1b6ca582f6945c910d24ad8cb222b7469a1e2ae161d",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch23/0011",
+          "quote": "                                                                              1 SS CS (D&A) Regs, reg 3 & 6",
+          "quote_sha256": "94a3ffd7eade6b1e1ad3f7360d1ea4f567b6f69acd33c7ba66961afb03d7f072",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        }
+      ],
+      "measured_pdf_pages": 188,
+      "observed_at": "2026-09-15T19:45:23.512001Z",
+      "remaining_scope": [
+        "Premium eligibility, housing-cost rules, appendices, current rates and most of the chapter remain unmodelled.",
+        "The JSA(IB) component list and personal-rate rounding continue across pages; retain the cited neighbouring context.",
+        "Historical monetary examples must not become current rates; statutory and transitional changes are not reconciled."
+      ],
+      "requirement_outcomes": {
+        "RQ01": "exact existing PDF/text/page hashes verified; no new acquisition",
+        "RQ02": "selected paragraph spans and context inspected; whole-chapter segmentation remains incomplete",
+        "RQ03": "scoped concepts drafted from selected body passages; remaining terms and specialist review open",
+        "RQ04": "selected SKOS-related proposals checked against exact passages; no new predicate or equivalence",
+        "RQ05": "source observation and discovered revision statements distinguished; publication and legal applicability unresolved",
+        "RQ06": "literal citations retained from inspected pages; no legal text acquisition or consolidation",
+        "RQ07": "two evidence-specific cases designed; retrieval and model execution pending",
+        "RQ08": "this bounded batch receipt records source identifiers, selected coverage, mechanical checks and explicit gaps",
+        "RQ09": "benefit-specific distinctions retained; no PC/UC/New Style equivalence or cross-benefit rule transfer"
+      },
+      "selected_evidence": [
+        {
+          "locator": "DMG 23015",
+          "page": "page/dmg-vol4-ch23/0006",
+          "quote": "23015 Where a claimant satisfies both the JSA(Cont) and JSA(IB) conditions of entitlement and has no\nincome, the amount payable is\n\n\n1. the applicable amount, if it is greater than the personal rate or\n\n\n2. if 1. does not apply, the personal rate1.\n\n\n                                                                                          1 JS Act 95, s 4(6)",
+          "quote_sha256": "afb8a3494b1e6248ab65a5ccbbab8f86eb00f65ea95b586cec2080c8366cfa8f"
+        },
+        {
+          "locator": "DMG 23029",
+          "page": "page/dmg-vol4-ch23/0011",
+          "quote": "23029 When deciding an IS claim the applicable amount may be awarded without\n\n\n1. housing costs1 or\n\n\n2. SDP2\n\n\nif there is not enough evidence to include these elements.\n\n\n                                                                   1 SS CS (D&A) Regs, reg 13(1); 2 reg 13(2)",
+          "quote_sha256": "e5d2bf2658d91ed6248293c25002ecf5059bf845a91a4044d95b7a2f4194291b"
+        },
+        {
+          "locator": "DMG 23028",
+          "page": "page/dmg-vol4-ch23/0011",
+          "quote": "23028 IS is paid for the claimant and any family1. The applicable amount includes2\n\n\n1. the claimant's personal allowance. This may include an amount for any partner or, in the case of a\n\npolygamous marriage, partners3 (see DMG 23034) and\n\n\n2. if appropriate\n\n\n      2.1 a personal allowance for any dependants (see DMG 23039)\n\n\n      2.2 a FP\n\n\n      2.3 other premiums\n\n\n      2.4 certain housing costs\n\n\n      2.5 any TE (see DMG Chapter 36).\n\n\nNote: In special circumstances a claimant may have an applicable amount of nil 4. An applicable amount\nmay also be reduced in certain circumstances or may be limited to allowable housing costs only (see\nDMG Chapter 24).\n\n\n       1 SS CB Act 92, s 137; IS (Gen) Regs, regs 14, 15 & 16; 2 reg 17; 3 reg 18(1); 4 SS CB Act 92, s 135(2)",
+          "quote_sha256": "dd5898969f9dcf8f17342a0df8c9ab790ce7f0e675137b0ea1852b0811a023fc"
+        },
+        {
+          "locator": "DMG 23010",
+          "page": "page/dmg-vol4-ch23/0004",
+          "quote": "23010 JSA(IB) is paid for the claimant and any family1. The applicable amount includes2\n\n\n1. the claimant's personal allowance. This may include an amount for a joint-claim couple, partner or, in\n\nthe case of a polygamous marriage, partners 3 (see DMG 23034) and\n\n\n2. if appropriate\n\n\n      2.1 a personal allowance for any dependants (see DMG 23039)\n\n\n      2.2 a FP",
+          "quote_sha256": "35898ec7f24c2bc5068179a77fa751a55c9aae181a656aeaccbb8d9dbd13123c"
+        },
+        {
+          "locator": "DMG 23007",
+          "page": "page/dmg-vol4-ch23/0003",
+          "quote": "23007 JSA(Cont) is paid for the claimant only. There are no increases for any partner or dependants. The\n\npersonal rate is calculated by1\n\n\n1. deciding the age-related amount payable to the claimant and\n\n\n2. deducting, in each benefit week\n\n\n        2.1 any earnings2 (see DMG 26001 et seq and 27000 et seq) and\n\n\n        2.2 pension payments3 (see DMG 23800 et seq).",
+          "quote_sha256": "ee6f7aea17cc4ddb46816db3a6c443e28fd64f86e7b8e42cb95a4254419f9882"
+        },
+        {
+          "locator": "DMG 23030",
+          "page": "page/dmg-vol4-ch23/0011",
+          "quote": "23030 The applicable amount may be revised or superseded if further information about SDP or housing\n\ncosts is received after the IS claim or question has been decided 1.\n\n\n                                                                              1 SS CS (D&A) Regs, reg 3 & 6",
+          "quote_sha256": "a51dae34cdcddf3cbca2d4ee84be82f62a4d88166b802b112207055a45b6b481"
+        }
+      ],
+      "source_date_review": {
+        "legal_applicability_established": false,
+        "publication_date": null,
+        "revision_statements": [],
+        "role": "stated source revision dates, not source publication or legal commencement"
+      },
+      "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol4-ch23.json",
+      "source_pages_sha256": "387302f09bbce9873dbafcd6af6a19b06842b35392e7d7771058ed22a0bd8bd2",
+      "source_pdf_sha256": "174fce491e7a72ca89f2739a64ab4e2f3a0da6e33d9e48eaa5c33c7ff9a5f734",
+      "source_unit_id": "dmg-3d479e7dfd8f1609",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e0f95b98c6c9802f7ed9c7/dmg-Ch-23.pdf",
+      "specialist_acceptance": "not-recorded",
+      "status": "initial-source-backed-batch; further-chapter-research-and-behavioural-evaluation-pending"
+    },
+    {
+      "authored_relationships": 3,
+      "chapter": 24,
+      "chapter_task": "chapter-24",
+      "concept_routes": [
+        "term/jsais-free-inpatient-treatment",
+        "term/jsais-hospital-family-membership",
+        "term/jsais-accommodation-boundary"
+      ],
+      "context_pdf_pages_inspected": [
+        1,
+        2,
+        3,
+        9,
+        11,
+        14,
+        15,
+        25,
+        26,
+        27,
+        33,
+        34
+      ],
+      "document_id": "dmg-vol4-ch24",
+      "evaluation_designs": [
+        {
+          "execution_result": null,
+          "execution_status": "designed-not-run",
+          "expected_behaviour": [
+            "Use the source-specific shelter and occupation criteria.",
+            "Preserve the JSA(Cont) exclusion and temporary-absence qualification.",
+            "Do not infer a real person’s circumstances or current eligibility."
+          ],
+          "expected_evidence": [
+            {
+              "locator": "DMG 24157",
+              "page": "page/dmg-vol4-ch24/0033",
+              "quote": "24157   DMG 24156 applies only to people without accommodation. The fact that a person\n        may have no fixed address is not relevant to the decision.\n\n\n        Meaning of accommodation",
+              "quote_sha256": "6f34ad8cbdee7579f7c2bb4d7a66591e6d86bcd8e4201824f68902eb4b72f19c"
+            },
+            {
+              "locator": "DMG 24158",
+              "page": "page/dmg-vol4-ch24/0033",
+              "quote": "24158   The word “accommodation” is not defined in the SS legislation, but in this context it\n        means an effective shelter from the elements\n\n        1.    which is capable of being heated and\n\n        2.    in which the occupants can sit, lie down, cook and eat and\n\n        3.    which is reasonably suited for continuous occupation.",
+              "quote_sha256": "58849ba1953347ebed85976c941baab092550fe737fd02431adb485c68af143a"
+            },
+            {
+              "locator": "DMG 24156",
+              "page": "page/dmg-vol4-ch24/0033",
+              "quote": "24156   Where a DM decides that a claimant has no accommodation the applicable amount\n        should include only the normal personal allowance for the claimant and any\n        partner1. The DM cannot for example include dependants allowances, housing\n        costs, premiums or TE.\n\n        Note: JSA(Cont) is not affected by this guidance.\n                         1 JSA Regs, reg 85 & Sch 5, para 3 & Sch 5A, para 2; IS (Gen) Regs, reg 21 & Sch 7, para 6",
+              "quote_sha256": "c54c5f20cac626750100a03960f60a35bac1cd70bc58e2b8792c53bf2dfcd671"
+            }
+          ],
+          "id": "eval-positive-24",
+          "kind": "source-grounding",
+          "personas": [
+            "persona/policy-law-reviewer",
+            "persona/rules-architect"
+          ],
+          "question": "How does the source distinguish no fixed address from having no accommodation?",
+          "questions": [
+            "question/stage2-001",
+            "question/stage2-006"
+          ],
+          "stories": [
+            "story/policy-law-trace",
+            "story/rule-candidate-review"
+          ]
+        },
+        {
+          "execution_result": null,
+          "execution_status": "designed-not-run",
+          "expected_behaviour": [
+            "Use the source-specific shelter and occupation criteria.",
+            "Preserve the JSA(Cont) exclusion and temporary-absence qualification.",
+            "Do not infer a real person’s circumstances or current eligibility."
+          ],
+          "expected_evidence": [
+            "page/dmg-vol4-ch24/0033",
+            "page/dmg-vol4-ch24/0033",
+            "page/dmg-vol4-ch24/0033"
+          ],
+          "id": "eval-negative-24",
+          "kind": "boundary-control",
+          "personas": [
+            "persona/evidence-assurance-reviewer",
+            "persona/assisted-support"
+          ],
+          "question": "Does sleeping at different addresses automatically mean the claimant has no accommodation for every benefit?",
+          "questions": [
+            "question/stage2-001",
+            "question/stage2-006"
+          ],
+          "stories": [
+            "story/evidence-requirements",
+            "story/assisted-discovery"
+          ]
+        }
+      ],
+      "inspection_method": "Model reading of machine-extracted body passages and the listed neighbouring pages; no PDF visual or specialist review.",
+      "literal_dependency_candidates": [
+        {
+          "page": "page/dmg-vol4-ch24/0011",
+          "quote": "                                                                  1 NHS Act 06; NHS (Scot) Act 78; NHS & CC Act 90",
+          "quote_sha256": "c6892993f339d2113db8131ec42271caba82bafedaa7c55c77d73b903c91e18d",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch24/0011",
+          "quote": "                             1 SS (HIP) Regs, reg 2(2); 2 NHS Act 06, s 44; NHS (Scot) Act 78, s 58 & Sch 7A, para 14;",
+          "quote_sha256": "7f5ed8db8a1b6ca9414d4c6f6740746a0cd79f6dae3f027fc1a49d1f3d216c8d",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch24/0011",
+          "quote": "                                                           NHS & CC Act 90, Sch 2, para 14; 3 SS (HIP) Regs, reg 2(2)",
+          "quote_sha256": "d057b99ba569b7a82a2c50e433522cbca67f79a39a39532e97c4bf4dc0b10797",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch24/0014",
+          "quote": "                                                                   1 NHS Act 06, s 4; NHS (Scot) Act 78, s 102",
+          "quote_sha256": "6e765eb06a4d97a4ffd3c91616f5c9f7cb5a8684c103d65a0c281500dd797166",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch24/0015",
+          "quote": "                                                                                   1 R(I) 27/59; R(S) 8/51",
+          "quote_sha256": "102d5ad88174cb18a507b9518274de6c6b5ce27a2f4736f293256a90329bcd7c",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch24/0015",
+          "quote": "                                                                                              1 R(S) 2/52",
+          "quote_sha256": "aadfc6fb1b636aeec6efd71bea9638f2942d9f933ec9c1390bc65e7b1229d51e",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch24/0015",
+          "quote": "                                                                                1 R(I) 14/56; 2 R(S) 28/52",
+          "quote_sha256": "09802b74d424fe75b2e98e4123da4d8ea3cda238746f1becc8a6095ad2f252aa",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch24/0015",
+          "quote": "                                                        1 NHS Act 06; NHS (Scot) Act 78; NHS & CC Act 90",
+          "quote_sha256": "3b902ab4013ecead480d3646ecaf0d0002bfd40a187cb3eda978bb4797567190",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch24/0026",
+          "quote": "                                     1 JSA Regs, Sch 5, para 18 & Sch 5A, para 13; IS (Gen) Regs, Sch 7, para 20",
+          "quote_sha256": "df758a33e28147d7fd337925abcac88028c7a7bf275df4be848ffec0a3623666",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch24/0027",
+          "quote": "               1 JSA Regs, Sch 1, para 12(5), 13(2), 15A(2), 16(2); IS (Gen) Regs, Sch 2, para 10(6), 11(2), 13A(2), 14(2)",
+          "quote_sha256": "106a03d70bffa06b53e93e044a2c19048667fb83a2b7301b1efc83f345e12b28",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch24/0033",
+          "quote": "                         1 JSA Regs, reg 85 & Sch 5, para 3 & Sch 5A, para 2; IS (Gen) Regs, reg 21 & Sch 7, para 6",
+          "quote_sha256": "0fd94691d43def5b8a831b4186c09b69480103d019b60406592273cce0490029",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch24/0034",
+          "quote": "                                                                                                    1 R(IS) 23/98",
+          "quote_sha256": "7e956cfad5ca8d04a24c46b9ea4e2792c851618cd5d6c53fe7cc98e5ff9d76c9",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch24/0034",
+          "quote": "                                     1 National Health Service Act 2006, sec 275; Care Standards Act 2000, sec 2;",
+          "quote_sha256": "dd33bc3bdbad70b87d5729a4e5f7584f9540556ac0de8e09aee6677a81db26c7",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol4-ch24/0034",
+          "quote": "                                                         Regulation of Care (Scotland) Act 2001, sec 2(5)(a) & (b)",
+          "quote_sha256": "f97885ab2cb9695133fa45740af6a5c8912b1eaa9f89fd206691c04f3ed778d0",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        }
+      ],
+      "measured_pdf_pages": 66,
+      "observed_at": "2026-09-15T19:45:23.687172Z",
+      "remaining_scope": [
+        "This selection covers hospital and accommodation distinctions only; prisoners, religious orders, abroad, immigration and other special cases remain unmodelled.",
+        "Source footers range across older amendments; the selected time periods are not verified as legally current.",
+        "Family membership is routed to chapter 22; present-day NHS legislation and local territorial provisions remain unresolved."
+      ],
+      "requirement_outcomes": {
+        "RQ01": "exact existing PDF/text/page hashes verified; no new acquisition",
+        "RQ02": "selected paragraph spans and context inspected; whole-chapter segmentation remains incomplete",
+        "RQ03": "scoped concepts drafted from selected body passages; remaining terms and specialist review open",
+        "RQ04": "selected SKOS-related proposals checked against exact passages; no new predicate or equivalence",
+        "RQ05": "source observation and discovered revision statements distinguished; publication and legal applicability unresolved",
+        "RQ06": "literal citations retained from inspected pages; no legal text acquisition or consolidation",
+        "RQ07": "two evidence-specific cases designed; retrieval and model execution pending",
+        "RQ08": "this bounded batch receipt records source identifiers, selected coverage, mechanical checks and explicit gaps",
+        "RQ09": "benefit-specific distinctions retained; no PC/UC/New Style equivalence or cross-benefit rule transfer"
+      },
+      "selected_evidence": [
+        {
+          "locator": "DMG 24158",
+          "page": "page/dmg-vol4-ch24/0033",
+          "quote": "24158   The word “accommodation” is not defined in the SS legislation, but in this context it\n        means an effective shelter from the elements\n\n        1.    which is capable of being heated and\n\n        2.    in which the occupants can sit, lie down, cook and eat and\n\n        3.    which is reasonably suited for continuous occupation.",
+          "quote_sha256": "58849ba1953347ebed85976c941baab092550fe737fd02431adb485c68af143a"
+        },
+        {
+          "locator": "DMG 24156",
+          "page": "page/dmg-vol4-ch24/0033",
+          "quote": "24156   Where a DM decides that a claimant has no accommodation the applicable amount\n        should include only the normal personal allowance for the claimant and any\n        partner1. The DM cannot for example include dependants allowances, housing\n        costs, premiums or TE.\n\n        Note: JSA(Cont) is not affected by this guidance.\n                         1 JSA Regs, reg 85 & Sch 5, para 3 & Sch 5A, para 2; IS (Gen) Regs, reg 21 & Sch 7, para 6",
+          "quote_sha256": "c54c5f20cac626750100a03960f60a35bac1cd70bc58e2b8792c53bf2dfcd671"
+        },
+        {
+          "locator": "DMG 24157",
+          "page": "page/dmg-vol4-ch24/0033",
+          "quote": "24157   DMG 24156 applies only to people without accommodation. The fact that a person\n        may have no fixed address is not relevant to the decision.\n\n\n        Meaning of accommodation",
+          "quote_sha256": "6f34ad8cbdee7579f7c2bb4d7a66591e6d86bcd8e4201824f68902eb4b72f19c"
+        },
+        {
+          "locator": "DMG 24160",
+          "page": "page/dmg-vol4-ch24/0034",
+          "quote": "24160   Motor cars are designed as a means of transport. They are not intended for use as\n        a dwelling house or living premises and are not suited for continuous occupation. A\n        person who is living in a car cannot be regarded as having accommodation1.\n                                                                                                    1 R(IS) 23/98\n\n        Mobile motor homes",
+          "quote_sha256": "c4ded63df7c56ae6622a4cbac7e3089db870f0aedc2c8c3e552a3857f4497fd5"
+        },
+        {
+          "locator": "DMG 24108",
+          "page": "page/dmg-vol4-ch24/0027",
+          "quote": "24108   The normal applicable amount of a claimant may be affected when the claimant or a\n        member of his family has been a patient for a continuous period of more than 52\n        weeks. At this point the DM should consider withdrawing1 any\n\n        1.    HPP\n\n        2.    DP\n\n        3.    EDP\n\n        4.    DCP.\n\n        Note: But the claimant will not normally be able to satisfy all the conditions for JSA\n        (see DMG 24106), and may need to claim IS or another appropriate benefit, for\n        example IB.\n               1 JSA Regs, Sch 1, para 12(5), 13(2), 15A(2), 16(2); IS (Gen) Regs, Sch 2, para 10(6), 11(2), 13A(2), 14(2)",
+          "quote_sha256": "af04a68d3c59f7b4bbcad4949ebb5592a01a9e922b8428c96d60dabbfd3b819a"
+        },
+        {
+          "locator": "DMG 24097",
+          "page": "page/dmg-vol4-ch24/0025",
+          "quote": "24097   The DM should consider the guidance in DMG Chapter 22 to decide whether a\n        patient is still a member of a family if the patient is a\n\n        1.      lone parent or\n\n        2.      member of a couple or\n\n        3.      member of a polygamous marriage\n\n        4.      a child or young person.\n\n\n\n\nVol 4 Amendment 22 June 2007",
+          "quote_sha256": "ed6ba0cd2425ab045be5f99544884c6bab3c28fd2f029269561bcd5415e08440"
+        },
+        {
+          "locator": "DMG 24008",
+          "page": "page/dmg-vol4-ch24/0011",
+          "quote": "24008   A person is treated as being maintained free of charge1 in a hospital or similar\n        institution unless\n\n        1.    accommodation and services are being provided for that person as a private\n              patient2 or\n\n        2.    the person is meeting the full cost of their maintenance as a private patient in\n              a private hospital3.\n                             1 SS (HIP) Regs, reg 2(2); 2 NHS Act 06, s 44; NHS (Scot) Act 78, s 58 & Sch 7A, para 14;\n                                                           NHS & CC Act 90, Sch 2, para 14; 3 SS (HIP) Regs, reg 2(2)",
+          "quote_sha256": "7717afe27905903d4270abe035ea46fafc1c4c219aae37c1464aedeef043c5df"
+        },
+        {
+          "locator": "DMG 24007",
+          "page": "page/dmg-vol4-ch24/0011",
+          "quote": "24007   A person must be in each of the following categories to be receiving free in-patient\n        treatment\n\n        1.    maintained free of charge\n\n        2.    receiving medical or other treatment\n\n        3.    in a hospital or similar institution\n\n        4.    an in-patient\n\n        5.    receiving the treatment\n\n              5.1      under prescribed legislation1 or\n\n              5.2      in a hospital or similar institution maintained or administered by the\n                       Defence Council.\n\n        Note: A person who does not meet any one of these conditions is not receiving free\n        in-patient treatment. The DM does not need to consider the other conditions.\n                                                                  1 NHS Act 06; NHS (Scot) Act 78; NHS & CC Act 90\n\n        Maintained free of charge",
+          "quote_sha256": "4436fc9ae6cd127476d8154a6da2f48387b108823757fd9c7a0664b69177328e"
+        },
+        {
+          "locator": "DMG 24161",
+          "page": "page/dmg-vol4-ch24/0034",
+          "quote": "24161   Some mobile motor homes have reached a level of sophistication and are designed\n        for living in. Mobile motor homes that contain the normal range of facilities for\n        domestic life and are suited for continuous occupation should be regarded as\n        accommodation.\n\n\n        Absence from home",
+          "quote_sha256": "8c704f604ef4e9930be53d20146b8d61906610c986392c00c4418f7e937fbd0f"
+        }
+      ],
+      "source_date_review": {
+        "legal_applicability_established": false,
+        "publication_date": null,
+        "revision_statements": [
+          "2004-02",
+          "2006-10",
+          "2007-06",
+          "2008-02",
+          "2008-10",
+          "2009-10",
+          "2010-10",
+          "2012-06",
+          "2014-02",
+          "2015-10",
+          "2017-10",
+          "2018-10",
+          "2019-06",
+          "2020-02"
+        ],
+        "role": "stated source revision dates, not source publication or legal commencement"
+      },
+      "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol4-ch24.json",
+      "source_pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "source_pdf_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "source_unit_id": "dmg-5a7d00012383e751",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf",
+      "specialist_acceptance": "not-recorded",
+      "status": "initial-source-backed-batch; further-chapter-research-and-behavioural-evaluation-pending"
+    },
+    {
+      "authored_relationships": 5,
+      "chapter": 25,
+      "chapter_task": "chapter-25",
+      "concept_routes": [
+        "term/jsais-family-income-attribution",
+        "term/jsais-income-assessment-period",
+        "term/jsais-income-payment-dates"
+      ],
+      "context_pdf_pages_inspected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        13,
+        17,
+        18
+      ],
+      "document_id": "dmg-vol5-ch25",
+      "evaluation_designs": [
+        {
+          "execution_result": null,
+          "execution_status": "designed-not-run",
+          "expected_behaviour": [
+            "Distinguish due, received and treated-as-paid dates.",
+            "Retain the self-employment exclusion and further payment-specific rules.",
+            "Record missing timing evidence instead of inventing it."
+          ],
+          "expected_evidence": [
+            {
+              "locator": "DMG 25031",
+              "page": "page/dmg-vol5-ch25/0007",
+              "quote": "25031   To determine the period over which any income other than income from self-\n        employment is taken into account the DM needs to establish\n\n        1.    the date of claim\n\n        2.    the first day of the claimant's benefit week (see DMG 25052 - 25054)\n\n        3.    the date on which the income is due to be paid (see DMG 25034 et seq)\n\n        4.    the date on which the income is treated as paid (see DMG 25043 et seq) and\n\n        5.    either1\n\n              5.1   the period for which the payment is made or\n\n              5.2   the amount of\n\n                    5.2.a    JSA or IS that would be payable without the income and\n\n                    5.2.b    any disregard the DM would normally make on the weekly\n                             amount of the income.\n\n        See DMG Chapter 26 on earnings disregards and DMG Chapter 28 on other\n        income with partial disregards.\n\n        Note 1: If the income is a payment of earnings when employment ends see DMG",
+              "quote_sha256": "7a25abb28ba7931ec3dd60af6150ccc4a08ff9960f717ee19e37564cdfab0be7"
+            },
+            {
+              "locator": "DMG 25034",
+              "page": "page/dmg-vol5-ch25/0009",
+              "quote": "25034   To determine the period over which income should be taken into account, the DM\n        needs information on the date a payment is due to be paid. This may be different\n        from the date a payment is actually made or received. But income is often paid on\n        the date it is due.",
+              "quote_sha256": "1a188e589b963a68ca7b755fea85aef03f1f06d94bc8511d3f44dc7882af7bdc"
+            },
+            {
+              "locator": "DMG 25043",
+              "page": "page/dmg-vol5-ch25/0013",
+              "quote": "25043   The date on which a payment of income is treated as paid may not be the same as\n        the date on which it is due to be paid under DMG 25034 et seq.\n\n        Note: There are no longer any special rules for the date on which WTC or CTC is\n        treated as paid.\n\n\n        Income due before the first benefit week of the claim",
+              "quote_sha256": "d302e23504b64a0802f18cc6f7a07c8b0a9bcb93c8d90edc63810bd83f513fc3"
+            }
+          ],
+          "id": "eval-positive-25",
+          "kind": "source-grounding",
+          "personas": [
+            "persona/policy-law-reviewer",
+            "persona/rules-architect"
+          ],
+          "question": "Which dates does the captured guidance require to determine the period for income other than self-employment?",
+          "questions": [
+            "question/stage2-001",
+            "question/stage2-006"
+          ],
+          "stories": [
+            "story/policy-law-trace",
+            "story/rule-candidate-review"
+          ]
+        },
+        {
+          "execution_result": null,
+          "execution_status": "designed-not-run",
+          "expected_behaviour": [
+            "Distinguish due, received and treated-as-paid dates.",
+            "Retain the self-employment exclusion and further payment-specific rules.",
+            "Record missing timing evidence instead of inventing it."
+          ],
+          "expected_evidence": [
+            "page/dmg-vol5-ch25/0007",
+            "page/dmg-vol5-ch25/0009",
+            "page/dmg-vol5-ch25/0013"
+          ],
+          "id": "eval-negative-25",
+          "kind": "boundary-control",
+          "personas": [
+            "persona/evidence-assurance-reviewer",
+            "persona/assisted-support"
+          ],
+          "question": "Can the date a payment reaches a bank be used automatically for all income, including self-employment?",
+          "questions": [
+            "question/stage2-001",
+            "question/stage2-006"
+          ],
+          "stories": [
+            "story/evidence-requirements",
+            "story/assisted-discovery"
+          ]
+        }
+      ],
+      "inspection_method": "Model reading of machine-extracted body passages and the listed neighbouring pages; no PDF visual or specialist review.",
+      "literal_dependency_candidates": [
+        {
+          "page": "page/dmg-vol5-ch25/0003",
+          "quote": "                                                             1 JS Act 95, s 35(1); IS (Gen) Regs, reg 2(1)",
+          "quote_sha256": "394c541f21aae1a83fcc6ed638583d187426a196abc48264d427f3e54e2004f7",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch25/0004",
+          "quote": "25007   [See DMG Memo JSA/IS 64] In a claim for JSA(IB) or IS, the DM should calculate",
+          "quote_sha256": "7d13f21886504a6529305b0f0e8b24869e756f56339170ab4df468d561552c24",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch25/0004",
+          "quote": "                    1 JSA Regs, reg 88(1); reg 88ZA; IS (Gen) Regs, reg 23(1); 2 JS Act, s 13(2); SS CB Act 92, s 136(1)",
+          "quote_sha256": "b878553fb7055e364be2cb561caffbddaeb6ad6af41eeee9a9e8a431f6e5f5f8",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch25/0005",
+          "quote": "                                                                                                       1 JSA Regs, reg 88ZA(1)",
+          "quote_sha256": "9788fffb9f34c8533f9d255536d5a5f40e70c3314004b0c488787859ea749f2c",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch25/0005",
+          "quote": "                                                                        1 Reg 88(3) or reg 88ZA(2); IS (Gen) Regs, reg 23(4);",
+          "quote_sha256": "de28e64644eb71daee9cfadaa359bc9cdc85b5c50c53825b18f0d143185a7388",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch25/0005",
+          "quote": "                           2 JSA Regs, Sch 1, paras 1(3)(b), (c), (g) or (h); IS (Gen) Regs, Sch 2, paras 1(3)(b), (c), (f) or (g)",
+          "quote_sha256": "b191139d7f208a2924b33205e058977790fa30fa3c52fe7b8f7f6a7b9de8cdfb",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch25/0005",
+          "quote": "25010   [See DMG Memo JSA/IS 64] If a claimant or partner is married polygamously to",
+          "quote_sha256": "37a67ddd85886959a1e8c643a6770a468c1057538f9b1f64beb0871486ef1396",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch25/0005",
+          "quote": "             1 JSA Regs, reg 88(4) & reg 88ZA(3); IS (Gen) Regs, reg 23(3); 2 JSA Regs, reg 88(5); IS (Gen) Regs, reg 23(5)",
+          "quote_sha256": "b3d4860b73e3a3ff3e4ba1acfd221d3e192052536dbefe358fbb5ff0cfc3ccf4",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch25/0007",
+          "quote": "                                                         1 JSA Regs, reg 94(2); IS (Gen) Regs, reg 29(2)",
+          "quote_sha256": "8155c541f162628a7d98b3c56d27a05a0d78cd357568b4638eb3bc90f9bf85db",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch25/0009",
+          "quote": "                                                                                     1 R(SB) 33/83",
+          "quote_sha256": "e67bc3be2238082ce91bac969944c4591854c60a1a94a3bdaca2dbacf72d7085",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch25/0013",
+          "quote": "                                                          1 JSA Regs, reg 96(1)(a); IS (Gen) Regs, reg 31(1)(a)",
+          "quote_sha256": "b7736e340a9d03193f2f5c9a62b29c1583a67f27095f3656c63093bcfa345422",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch25/0013",
+          "quote": "                                                          1 JSA Regs, reg 96(1)(b); IS (Gen) Regs, reg 31(1)(b)",
+          "quote_sha256": "ac5f92ddee740b092a40c101a18adb267dcfe65f5bbdd55c0f9accf6d00ee5b4",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch25/0017",
+          "quote": "                                           1 JSA Regs, reg 96(1); IS (Gen) Regs, reg 31(1); 2 SS A Act 92, s 74",
+          "quote_sha256": "9d8922301a85021cbf90dfd893f8576270ae9fdb965c8bf55a5763f4b375e4c4",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch25/0017",
+          "quote": "                                                                                          1 JSA Regs, reg 1(3)",
+          "quote_sha256": "f9fff636aeb1a2da06527c52f5a97beaf44dd0f32d41cd5b8a27b6768717db9d",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch25/0018",
+          "quote": "                                     1 SS (C&P) Regs, Sch 7, para 4; 2 Sch 7, para 4; 3 IS (Gen) Regs, reg 2(1)",
+          "quote_sha256": "52eb4833d3c555ca8358cad9335c1996fd490c0a9fd49a324191bd45cf544eab",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch25/0018",
+          "quote": "                                                                               1 SS (C&P) Regs, Sch 7, para 4",
+          "quote_sha256": "204d4b413b9c53c7bd2b0277026da85c3cc387aeba5a3a7f64789e1806d5bf13",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        }
+      ],
+      "measured_pdf_pages": 34,
+      "observed_at": "2026-09-15T19:45:25.058286Z",
+      "remaining_scope": [
+        "Weekly amount calculations, arrears, overlapping periods, averaging and special payment classes remain unmodelled.",
+        "The general timing provisions explicitly exclude self-employment; JSA and IS benefit-week definitions also differ.",
+        "JSA/IS 64 and child/young-partner treatment require source-memo and legal reconciliation."
+      ],
+      "requirement_outcomes": {
+        "RQ01": "exact existing PDF/text/page hashes verified; no new acquisition",
+        "RQ02": "selected paragraph spans and context inspected; whole-chapter segmentation remains incomplete",
+        "RQ03": "scoped concepts drafted from selected body passages; remaining terms and specialist review open",
+        "RQ04": "selected SKOS-related proposals checked against exact passages; no new predicate or equivalence",
+        "RQ05": "source observation and discovered revision statements distinguished; publication and legal applicability unresolved",
+        "RQ06": "literal citations retained from inspected pages; no legal text acquisition or consolidation",
+        "RQ07": "two evidence-specific cases designed; retrieval and model execution pending",
+        "RQ08": "this bounded batch receipt records source identifiers, selected coverage, mechanical checks and explicit gaps",
+        "RQ09": "benefit-specific distinctions retained; no PC/UC/New Style equivalence or cross-benefit rule transfer"
+      },
+      "selected_evidence": [
+        {
+          "locator": "DMG 25044",
+          "page": "page/dmg-vol5-ch25/0013",
+          "quote": "25044   A payment of income (including WTC) should be treated as paid on the date it was\n        due, if it was due to be paid before the first benefit week of the claim1. But see DMG",
+          "quote_sha256": "d488bbfa6fde27259bb1b2faeae0ebfe5ed799da1aff3f3eb81214ce4cc1fd49"
+        },
+        {
+          "locator": "DMG 25034",
+          "page": "page/dmg-vol5-ch25/0009",
+          "quote": "25034   To determine the period over which income should be taken into account, the DM\n        needs information on the date a payment is due to be paid. This may be different\n        from the date a payment is actually made or received. But income is often paid on\n        the date it is due.",
+          "quote_sha256": "1a188e589b963a68ca7b755fea85aef03f1f06d94bc8511d3f44dc7882af7bdc"
+        },
+        {
+          "locator": "DMG 25035",
+          "page": "page/dmg-vol5-ch25/0009",
+          "quote": "25035   When deciding the date a payment is due the DM should consider that\n\n        1.     due means legally due, for example under a contract or statutory provision\n\n        2.     if there is no legal obligation to make the payment on a particular day, the\n               person or body making the payment should be asked when they consider the\n               payment is due\n\n        3.     the date when the payment is received may be assumed to be the due date\n               where\n\n               3.1     the available evidence\n                                                           1\n                       3.1.a   does not give a due date or\n\n                       3.1.b   is not considered credible and\n\n               3.2     no further evidence can be obtained.\n                                                                                     1 R(SB) 33/83\n\n        Income other than earnings",
+          "quote_sha256": "48dccf10db8ea694ae0b90d3fb2ef2b86e6808db4f07a85d5f8a0ac7b3826de2"
+        },
+        {
+          "locator": "DMG 25045",
+          "page": "page/dmg-vol5-ch25/0013",
+          "quote": "25045   If a payment (including WTC) was due to be paid in or after the first benefit week of\n        the claim, it should be treated as paid on1 the first day of the benefit week in which it\n        is\n\n        1.     due to be paid or\n\n        2.     practicable to take the payment into account (if this rule is used the DM\n               should record the reasons for using it).\n\n        But see DMG 25076 if the payment is UC, ESA, JSA, IS, MA, IB, or SDA, or DMG\n        Chapter 33 if the period involved is a part week.\n\n        Note: A payment of income may be due before the date of claim and still be within\n        the first benefit week (see DMG 25053 and 25054 2.1).\n                                                          1 JSA Regs, reg 96(1)(b); IS (Gen) Regs, reg 31(1)(b)",
+          "quote_sha256": "946f3a9fa3604ff4ebd79d17d727072505803a5a7d9b1698bb6d23237e8082ee"
+        },
+        {
+          "locator": "DMG 25007",
+          "page": "page/dmg-vol5-ch25/0004",
+          "quote": "25007   [See DMG Memo JSA/IS 64] In a claim for JSA(IB) or IS, the DM should calculate\n        the income of\n\n        1.    the claimant's partner and\n\n        2.    a child or young person who is a member of the claimant's family\n\n        in the same way as for the claimant1. This income should then be treated as the\n        claimant's income2. However DMs should consider if the circumstances in DMG",
+          "quote_sha256": "0ed4e65fa78436b5b9a6cecaee3ecaa8ae5e43fe8cfa1d4de6f8d629988d59c3"
+        },
+        {
+          "locator": "DMG 25008",
+          "page": "page/dmg-vol5-ch25/0005",
+          "quote": "25008   To calculate the income of a joint-claim couple, the DM should1\n\n        1.       determine the income of each member of the joint-claim couple and\n\n        2.       add together the amount of income calculated for each member.\n                                                                                                       1 JSA Regs, reg 88ZA(1)\n\n        Income of a couple when one member is aged less than\n        18",
+          "quote_sha256": "f0ed0e6e21a1528012b2d960885db3e008be0d0ffa8250de15e98b22e11d6c5e"
+        },
+        {
+          "locator": "DMG 25004",
+          "page": "page/dmg-vol5-ch25/0004",
+          "quote": "25004   The DM should follow the guidance in this Chapter when determining the amount of\n        a claimant's own earnings in a claim for JSA(Cont). The guidance on other income,\n        and the treatment of income of the members of the claimant's family does not apply\n        to a claim for JSA(Cont).\n\n        Note: For guidance on the treatment of occupational and personal pensions in\n        JSA(Cont) see DMG Chapter 23.",
+          "quote_sha256": "0e06e6dfc8ac229e508cd92fe847e65bc2cd55d77b28008898fdc63cf5972f99"
+        },
+        {
+          "locator": "DMG 25031",
+          "page": "page/dmg-vol5-ch25/0007",
+          "quote": "25031   To determine the period over which any income other than income from self-\n        employment is taken into account the DM needs to establish\n\n        1.    the date of claim\n\n        2.    the first day of the claimant's benefit week (see DMG 25052 - 25054)\n\n        3.    the date on which the income is due to be paid (see DMG 25034 et seq)\n\n        4.    the date on which the income is treated as paid (see DMG 25043 et seq) and\n\n        5.    either1\n\n              5.1   the period for which the payment is made or\n\n              5.2   the amount of\n\n                    5.2.a    JSA or IS that would be payable without the income and\n\n                    5.2.b    any disregard the DM would normally make on the weekly\n                             amount of the income.\n\n        See DMG Chapter 26 on earnings disregards and DMG Chapter 28 on other\n        income with partial disregards.\n\n        Note 1: If the income is a payment of earnings when employment ends see DMG",
+          "quote_sha256": "7a25abb28ba7931ec3dd60af6150ccc4a08ff9960f717ee19e37564cdfab0be7"
+        },
+        {
+          "locator": "DMG 25043",
+          "page": "page/dmg-vol5-ch25/0013",
+          "quote": "25043   The date on which a payment of income is treated as paid may not be the same as\n        the date on which it is due to be paid under DMG 25034 et seq.\n\n        Note: There are no longer any special rules for the date on which WTC or CTC is\n        treated as paid.\n\n\n        Income due before the first benefit week of the claim",
+          "quote_sha256": "d302e23504b64a0802f18cc6f7a07c8b0a9bcb93c8d90edc63810bd83f513fc3"
+        },
+        {
+          "locator": "DMG 25009",
+          "page": "page/dmg-vol5-ch25/0005",
+          "quote": "25009   Special rules apply1 when\n\n        1.       at least one member of a couple is aged less than 18 (for IS or JSA(IB)) or\n\n        2.       one member only of a joint-claim couple is aged less than 18 (JSA(IB) only)\n                 and\n\n        3.       certain conditions determine the couple’s applicable amount2.\n\n        These allow some income of a claimant’s partner or member of a joint-claim couple\n        to be ignored when calculating income.\n                                                                        1 Reg 88(3) or reg 88ZA(2); IS (Gen) Regs, reg 23(4);\n                           2 JSA Regs, Sch 1, paras 1(3)(b), (c), (g) or (h); IS (Gen) Regs, Sch 2, paras 1(3)(b), (c), (f) or (g)\n\n\n        Note: DMG Chapter 30 gives further guidance about applicable amounts and the\n        treatment of resources in these circumstances.\n\n\n        Polygamous marriage or relationship",
+          "quote_sha256": "86712f6e75f7c6288503e2013b7844b760695e4feb0eda2d76423fad8609155f"
+        }
+      ],
+      "source_date_review": {
+        "legal_applicability_established": false,
+        "publication_date": null,
+        "revision_statements": [
+          "2009-02",
+          "2013-06",
+          "2014-02",
+          "2014-06",
+          "2015-06",
+          "2016-02",
+          "2016-06"
+        ],
+        "role": "stated source revision dates, not source publication or legal commencement"
+      },
+      "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-ch25.json",
+      "source_pages_sha256": "db488637a179cc93910c4e243381b5c961d6959ce72cd1d34aff14e403517e73",
+      "source_pdf_sha256": "39edc3ed8ee9c875eb68ce4cd4148194b23dbd23bb6444883a2f2cae90a75337",
+      "source_unit_id": "dmg-4e82122c95900ddb",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf",
+      "specialist_acceptance": "not-recorded",
+      "status": "initial-source-backed-batch; further-chapter-research-and-behavioural-evaluation-pending"
+    },
+    {
+      "authored_relationships": 5,
+      "chapter": 26,
+      "chapter_task": "chapter-26",
+      "concept_routes": [
+        "term/jsais-employed-earner",
+        "term/jsais-gross-employed-earnings",
+        "term/jsais-net-employed-earnings",
+        "term/jsais-notional-employed-earnings"
+      ],
+      "context_pdf_pages_inspected": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10,
+        42,
+        43
+      ],
+      "document_id": "dmg-vol5-ch26",
+      "evaluation_designs": [
+        {
+          "execution_result": null,
+          "execution_status": "designed-not-run",
+          "expected_behaviour": [
+            "Preserve evidence for comparable local employment and the listed exceptions.",
+            "Do not infer benefit purpose or fraud from unpaid work.",
+            "Do not calculate notional earnings or determine current applicability."
+          ],
+          "expected_evidence": [
+            {
+              "locator": "DMG 26180",
+              "page": "page/dmg-vol5-ch26/0042",
+              "quote": "26180 Notional earnings are earnings that a person does not actually have, but is treated as having. The\n\nDM should treat the claimant or any other member of the family as having notional earnings where 1\n\n\n1. they perform a service for another person and\n\n\n2. that person\n\n\n      2.1 makes no payment of earnings or\n\n\n      2.2 pays less than the rate paid for a comparable employment in the area.\n\n\nThe rate for comparable employment in the area is a question of fact and must be based on evidence. It\nshould not be assumed to be the NMW. If the notional income rules are satisfied the DM must take into\naccount at least the NMW rate relevant to the claimant, unless one of the situations in DMG 26183\napplies.\n\n\n                                                         1 JSA Regs, reg 105(13); IS (Gen) Regs, reg 42(6)",
+              "quote_sha256": "c1b05b3a4afb1966462bb42d027d8c79b35bb97e28c185c0e8e860380990fbae"
+            },
+            {
+              "locator": "DMG 26183",
+              "page": "page/dmg-vol5-ch26/0043",
+              "quote": "26183 The DM should not take notional earnings into account 1 where the claimant, the claimant's\npartner or any member of the family\n\n\n1. satisfies the DM that the means of the person for whom the service is performed, are not enough to\npay, or to pay more for the service or\n\n\n2. is engaged by a charitable or voluntary organization or is a volunteer and the DM is satisfied that it is\nreasonable for the services to be provided free of charge or\n\n\n3. provides a service under an employment or training programme (see DMG Chapter 21) if\n\n\n      3.1 no training allowance is payable to the claimant or the claimant's partner for the programme or\n\n\n      3.2 where such an allowance is payable it is for the sole purpose of reimbursement of travelling or\n      meal expenses to the person participating in the programme.\n\n\n                                         1 JSA Regs, reg 105(13), (13A); IS (Gen) Regs, reg 42(6), reg 42(6A)",
+              "quote_sha256": "a4301cdbfd0deb0596d68be14f5c4d291ddcda117720b1b81f4dc68ff1c0f28f"
+            },
+            {
+              "locator": "DMG 26184",
+              "page": "page/dmg-vol5-ch26/0043",
+              "quote": "26184 The DM should not take notional earnings into account where the claimant is participating in a\nwork placement which is approved by the Secretary of State (or a person providing services to the\n\nSecretary of State) before the placement commences 1 and for which the claimant receives no payment.\n\n\n                                                    1 JSA Regs, reg 105(13A)(c); IS (Gen) Regs, reg 42(6A)(d)",
+              "quote_sha256": "fd94c6d3bd3e383fc0b7272e71656df40eeb600fc038223efa7470edfabb347e"
+            }
+          ],
+          "id": "eval-positive-26",
+          "kind": "source-grounding",
+          "personas": [
+            "persona/policy-law-reviewer",
+            "persona/rules-architect"
+          ],
+          "question": "What evidence and exceptions qualify the source’s treatment of unpaid services as notional earnings?",
+          "questions": [
+            "question/stage2-001",
+            "question/stage2-006"
+          ],
+          "stories": [
+            "story/policy-law-trace",
+            "story/rule-candidate-review"
+          ]
+        },
+        {
+          "execution_result": null,
+          "execution_status": "designed-not-run",
+          "expected_behaviour": [
+            "Preserve evidence for comparable local employment and the listed exceptions.",
+            "Do not infer benefit purpose or fraud from unpaid work.",
+            "Do not calculate notional earnings or determine current applicability."
+          ],
+          "expected_evidence": [
+            "page/dmg-vol5-ch26/0042",
+            "page/dmg-vol5-ch26/0043",
+            "page/dmg-vol5-ch26/0043"
+          ],
+          "id": "eval-negative-26",
+          "kind": "boundary-control",
+          "personas": [
+            "persona/evidence-assurance-reviewer",
+            "persona/assisted-support"
+          ],
+          "question": "Does every unpaid voluntary activity count as notional earnings at the minimum wage?",
+          "questions": [
+            "question/stage2-001",
+            "question/stage2-006"
+          ],
+          "stories": [
+            "story/evidence-requirements",
+            "story/assisted-discovery"
+          ]
+        }
+      ],
+      "inspection_method": "Model reading of machine-extracted body passages and the listed neighbouring pages; no PDF visual or specialist review.",
+      "literal_dependency_candidates": [
+        {
+          "page": "page/dmg-vol5-ch26/0002",
+          "quote": "                                                                1 JS Act 95, s 35(1), IS (Gen) Regs, Reg 2(1)",
+          "quote_sha256": "d286f817eeec274e98eb218bc304a4e00567ffb229835413b376d8f1a962202d",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0003",
+          "quote": "                                                              1 JSA Regs, reg 80(1); 2 reg 94-102; 3 reg 105",
+          "quote_sha256": "6fd1deec247e701b1fa27b9118470bd876dacabd4a386fcc3c240ef193bcd625",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0003",
+          "quote": "                                                                      1 JS Act 95, s 4(1); JSA Regs, reg 80(2)",
+          "quote_sha256": "70e8929b5afb238c959477d2366fe8adbd951ceda4baea9bc81f2d7e24912e2a",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0003",
+          "quote": "                                                  1 JS Act 95, s 4(3) & 13(2); SS CB Act 92, s 124(1) & 136(1)",
+          "quote_sha256": "41f1fe55cd667fe756b0a804594b4d7b74de2bebaa08371a7566d7b9c2694368",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0003",
+          "quote": "                                                                             1 IS (Gen) Regs, Sch 8, para 15C",
+          "quote_sha256": "a7e054a374c48dc2bae6b6e6660b182dd4b76a527a053ef1bc487e434f3f9d3e",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0005",
+          "quote": "                                             1 JSA Regs, reg 3; IS (Gen) Regs, reg 2(1); SS CB Act 92, s 2(1)(a);",
+          "quote_sha256": "35e8e2bd31ff94ff4f87c52b4d574192ec174ae9470987279aedde5c94000059",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0005",
+          "quote": "                                                      2 Income Tax (Earnings and Pensions) Act 2003, s 7(3)",
+          "quote_sha256": "8c156239f702be8edbab474904a181b58311d13df6a4b216f3aaa7b7ed2ebcbc",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0005",
+          "quote": "26011 [See DMG memo 12/23] Employed earners who are gainfully employed under a contract of service",
+          "quote_sha256": "b740751b692ffef53c75fb6c2fbf0de09295fff1895f2aa2d26f45a0ee07eb1f",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0005",
+          "quote": "                                               1 Income Tax (Earnings and Pensions) Act 2003, s 7(3) & s 62",
+          "quote_sha256": "98bb6c2291da6d83a9fe232e6e49a1fe9574398e54d8a2dda4be3a0daa0b894c",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0005",
+          "quote": "26013 [See Memo DMG 13/20] Earnings means any pay or profit derived from employment and includes 1",
+          "quote_sha256": "2af475b63b2ba5b009b88c7e0177b429b13fd166b22a800b8fa6ced4997a6450",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0006",
+          "quote": "1 JSA Regs, reg 98(1); IS (Gen) Regs 35(1); 2 ER Act 96, s 55(4), 68 & 69, 70(1)-(3), 77 & 79, 92(6), 112(3) &",
+          "quote_sha256": "853c94a0e9641fe3a7fa1836351a6c1c092928b101c65e246eda3534fade54ba",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0006",
+          "quote": "                113, 121(a), 128, 132; 3 TULR (C) Act 92, s 156, 157, 189 & 192; 4 IS (Gen) Regs, reg 35(1)(j);",
+          "quote_sha256": "afbd9be16cd668645b0dba970680c0a8765fe2609e90e7e1b8e754c8a094dda2",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0006",
+          "quote": "                                                                                       JSA Regs, reg 98(1)(h)",
+          "quote_sha256": "6bc2c9b55b641b36d523a2c896f19bbfa31129a157405a5cb2ba5b070eb91319",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0006",
+          "quote": "26014 [See DMG Memo 08/20] Earnings do not include1",
+          "quote_sha256": "2677199eddfce73a5543e37274a0b5e863ed74be48938109ae4a80303fad37d6",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0007",
+          "quote": "       1 JSA Regs, reg 98(2); IS (Gen) Regs, reg 35(2); 2 JSA Regs, reg 98(2)(b); IS (Gen) Regs, reg 35(1)(b);",
+          "quote_sha256": "e7ff684fe8921e845bba16fc46f7d72ed9759209987c36bac318c46ba875143e",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0007",
+          "quote": "                                   3 JSA Regs, reg 98(2)(e); IS (Gen) Regs, reg 35(2)(d); 4 ER Act 96, s 135;",
+          "quote_sha256": "732538b0f6d7f0eb7ebb1f034a1241f7d655c0af1cf3c08ac2a4380d4a11ab00",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0007",
+          "quote": "  5 JSA Regs, reg 98(2)(g); IS (Gen) Regs, reg 35(2)(e); 6 JSA Regs, reg 98(2)(h); IS (Gen) Regs, reg 35(2)(f)",
+          "quote_sha256": "58ffdf8dfe256e1e571b3e0f708bc5e8f7dbdb4b8a97bef45d8fdeefa1b7d1cb",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0007",
+          "quote": "                                                                                               1 R(SB) 21/86",
+          "quote_sha256": "867c9e82fa93a66f13ce51f3b0b78a547c3617f39d4d06ef247c15576b34141c",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0007",
+          "quote": "                                                                    1 R(FC) 1/90 & R(IS) 16/93; 2 R(TC) 2/03",
+          "quote_sha256": "c268b97551c2362656d0340aaebfaa431699d2acdb3161594c3faa869fc7142b",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0009",
+          "quote": "                                                          1 JSA Regs, reg 99(4); IS (Gen) Regs, reg 36(3)",
+          "quote_sha256": "71d4897365c86343fc14adfd7b76afb7d5af8b914fe248e2ee1bfee984de29c4",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0010",
+          "quote": "                                                      1 JS Act 95, s 35(1); PS Act 93, s 1; SS Act 86, s 84(1)",
+          "quote_sha256": "849a7b12c4e98cb50ab6a90750546d0ade49f59a945b184285005e759c9a2c71",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0010",
+          "quote": "                              1 JS Act 95, s 35(1); PS Act 93, s 1; SS Act 86, s 84(1); IS (Gen) Regs, reg 2(1)",
+          "quote_sha256": "f84c4b44957b50fca14208fb38656b6b68a3f2e6e3864e7b2f7bd9cb2aa0fc76",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0010",
+          "quote": "                                                                                                 1 R(FC) 1/90",
+          "quote_sha256": "199c56d65718d7a9f5a7f4675c0b2a2f62b0a1fcf8787ae00de1c73b9e0d3664",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0010",
+          "quote": "                                                                                                 1 R(IS) 16/93",
+          "quote_sha256": "7c1055ab53f1d01d4369ce8590941a0e33cf3cb6f7da462328d35a4aab482a9f",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0042",
+          "quote": "                                                         1 JSA Regs, reg 105(13); IS (Gen) Regs, reg 42(6)",
+          "quote_sha256": "be664b6b367ef2b49f352ed8d592953812a85a0eb78aeaee3daff3602f37f05d",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0043",
+          "quote": "                                         1 JSA Regs, reg 105(13), (13A); IS (Gen) Regs, reg 42(6), reg 42(6A)",
+          "quote_sha256": "53e97996c0440846dda5dd2999a0a73e79c8444fe0f44e6fed1a6c901ac30a42",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0043",
+          "quote": "                                                    1 JSA Regs, reg 105(13A)(c); IS (Gen) Regs, reg 42(6A)(d)",
+          "quote_sha256": "4d5210e0b134b21461b374add19ac1e0f5579f47f4b9cebd9edb276e463d6a6b",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch26/0043",
+          "quote": "                                                          1 JSA Regs, reg 105(16); IS (Gen) Regs, reg 42(6AA)",
+          "quote_sha256": "818e742ad25ac3221f0c98c9486d788fd53949a38015939a700ee50e163e5b77",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        }
+      ],
+      "measured_pdf_pages": 144,
+      "observed_at": "2026-09-15T19:45:25.089797Z",
+      "remaining_scope": [
+        "Payment categories, termination, employment protection, disregards, notional-rate calculation and appendices remain largely unmodelled.",
+        "Memos 12/23, 13/20 and 08/20 and current minimum-wage applicability are not reconciled.",
+        "No assumption is made that payroll gross/net labels correspond to the benefit definitions."
+      ],
+      "requirement_outcomes": {
+        "RQ01": "exact existing PDF/text/page hashes verified; no new acquisition",
+        "RQ02": "selected paragraph spans and context inspected; whole-chapter segmentation remains incomplete",
+        "RQ03": "scoped concepts drafted from selected body passages; remaining terms and specialist review open",
+        "RQ04": "selected SKOS-related proposals checked against exact passages; no new predicate or equivalence",
+        "RQ05": "source observation and discovered revision statements distinguished; publication and legal applicability unresolved",
+        "RQ06": "literal citations retained from inspected pages; no legal text acquisition or consolidation",
+        "RQ07": "two evidence-specific cases designed; retrieval and model execution pending",
+        "RQ08": "this bounded batch receipt records source identifiers, selected coverage, mechanical checks and explicit gaps",
+        "RQ09": "benefit-specific distinctions retained; no PC/UC/New Style equivalence or cross-benefit rule transfer"
+      },
+      "selected_evidence": [
+        {
+          "locator": "DMG 26010",
+          "page": "page/dmg-vol5-ch26/0005",
+          "quote": "26010 The term employed earner means1 a person who is gainfully employed in GB\n\n\n1. under a contract of service or\n\n\n2. in an office (including an elective office) with general earnings 2.\n\n\n                                             1 JSA Regs, reg 3; IS (Gen) Regs, reg 2(1); SS CB Act 92, s 2(1)(a);\n                                                      2 Income Tax (Earnings and Pensions) Act 2003, s 7(3)",
+          "quote_sha256": "992050bb8ad9f3319a593e47d66edd26d8abd1eb7eea4d68db24bc9cbec57c89"
+        },
+        {
+          "locator": "DMG 26183",
+          "page": "page/dmg-vol5-ch26/0043",
+          "quote": "26183 The DM should not take notional earnings into account 1 where the claimant, the claimant's\npartner or any member of the family\n\n\n1. satisfies the DM that the means of the person for whom the service is performed, are not enough to\npay, or to pay more for the service or\n\n\n2. is engaged by a charitable or voluntary organization or is a volunteer and the DM is satisfied that it is\nreasonable for the services to be provided free of charge or\n\n\n3. provides a service under an employment or training programme (see DMG Chapter 21) if\n\n\n      3.1 no training allowance is payable to the claimant or the claimant's partner for the programme or\n\n\n      3.2 where such an allowance is payable it is for the sole purpose of reimbursement of travelling or\n      meal expenses to the person participating in the programme.\n\n\n                                         1 JSA Regs, reg 105(13), (13A); IS (Gen) Regs, reg 42(6), reg 42(6A)",
+          "quote_sha256": "a4301cdbfd0deb0596d68be14f5c4d291ddcda117720b1b81f4dc68ff1c0f28f"
+        },
+        {
+          "locator": "DMG 26027",
+          "page": "page/dmg-vol5-ch26/0010",
+          "quote": "26027 An expense that is not repaid to an employee by the employer should be deducted from earnings\nif it is incurred in the performance of the duties of the employment and is wholly, exclusively and\n\nnecessarily incurred1.\n\n\n                                                                                                 1 R(IS) 16/93",
+          "quote_sha256": "805361e01469cdded8922ca627e499bf0c04e82aa1e54340da7fc183ee341847"
+        },
+        {
+          "locator": "DMG 26016",
+          "page": "page/dmg-vol5-ch26/0007",
+          "quote": "26016 Gross earnings means the amount of earnings\n\n\n1. after the deduction of expenses wholly, exclusively and necessarily incurred in the performance of the\n\nemployment1 (see DMG 26027) but\n\n\n2. before any authorized deductions are made by the employer. These may include\n\n\n      2.1 income tax\n\n\n      2.2 pensions contributions\n\n\n      2.3 SS contributions (sometimes called NI contributions)\n\n\n      2.4 TU subscriptions\n\n\n      2.5 payments under a court order\n\n\n      2.6 recovery of any debt.\n\n\nNote: Where an overpayment of wages is being recovered by means of deductions from the earnings to\nbe taken into account, the DM should not include the amount being recovered to repay the overpayment\n\nas part of the gross amount of those earnings 2.\n\n\n                                                                    1 R(FC) 1/90 & R(IS) 16/93; 2 R(TC) 2/03",
+          "quote_sha256": "ac1efea9486cf2c4c3e25eaf9ab9c427adaeb560e5ecdcbf25caa92928d1277b"
+        },
+        {
+          "locator": "DMG 26020",
+          "page": "page/dmg-vol5-ch26/0009",
+          "quote": "26020 Net earnings are gross earnings less1\n\n\n1. income tax and\n\n\n2. Class 1 SS contributions and\n\n\n3. half of any sum paid by the employee, towards an occupational or personal pension scheme.\n\n\n                                                          1 JSA Regs, reg 99(4); IS (Gen) Regs, reg 36(3)",
+          "quote_sha256": "c1d800422c5bea12e34246f90ab0761f26529387993339e3c9b604f00fd238ef"
+        },
+        {
+          "locator": "DMG 26180",
+          "page": "page/dmg-vol5-ch26/0042",
+          "quote": "26180 Notional earnings are earnings that a person does not actually have, but is treated as having. The\n\nDM should treat the claimant or any other member of the family as having notional earnings where 1\n\n\n1. they perform a service for another person and\n\n\n2. that person\n\n\n      2.1 makes no payment of earnings or\n\n\n      2.2 pays less than the rate paid for a comparable employment in the area.\n\n\nThe rate for comparable employment in the area is a question of fact and must be based on evidence. It\nshould not be assumed to be the NMW. If the notional income rules are satisfied the DM must take into\naccount at least the NMW rate relevant to the claimant, unless one of the situations in DMG 26183\napplies.\n\n\n                                                         1 JSA Regs, reg 105(13); IS (Gen) Regs, reg 42(6)",
+          "quote_sha256": "c1b05b3a4afb1966462bb42d027d8c79b35bb97e28c185c0e8e860380990fbae"
+        },
+        {
+          "locator": "DMG 26012",
+          "page": "page/dmg-vol5-ch26/0005",
+          "quote": "26012 The phrase in an office includes directors of limited companies, clergy, LA councillors, MPs and\nsub-postmasters and mistresses. General earnings include any wage, salary, fee, gratuity, profit or\n\nincidental benefit1.\n\n\n                                               1 Income Tax (Earnings and Pensions) Act 2003, s 7(3) & s 62",
+          "quote_sha256": "8587512ac5743cede6ab64813bb24b5173b918017d9e722b646cac97eabd46a7"
+        },
+        {
+          "locator": "DMG 26015",
+          "page": "page/dmg-vol5-ch26/0007",
+          "quote": "26015 The words “derived from” mean having their origins in1. Payments made for past or present\nemployment should be treated as earnings, unless they are excluded under DMG 26014. Work out the\nperiod for which earnings are to be taken into account before deciding the claim (see DMG Chapter 25).\n\n\n                                                                                               1 R(SB) 21/86\n\n\n\nMeaning of gross earnings",
+          "quote_sha256": "31773cbe25598b0af336133e93ff2932bedb4a556cfd0c28ba46ecf0192ed069"
+        },
+        {
+          "locator": "DMG 26184",
+          "page": "page/dmg-vol5-ch26/0043",
+          "quote": "26184 The DM should not take notional earnings into account where the claimant is participating in a\nwork placement which is approved by the Secretary of State (or a person providing services to the\n\nSecretary of State) before the placement commences 1 and for which the claimant receives no payment.\n\n\n                                                    1 JSA Regs, reg 105(13A)(c); IS (Gen) Regs, reg 42(6A)(d)",
+          "quote_sha256": "fd94c6d3bd3e383fc0b7272e71656df40eeb600fc038223efa7470edfabb347e"
+        }
+      ],
+      "source_date_review": {
+        "legal_applicability_established": false,
+        "publication_date": null,
+        "revision_statements": [],
+        "role": "stated source revision dates, not source publication or legal commencement"
+      },
+      "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-ch26.json",
+      "source_pages_sha256": "f4089f7088e6a987d028072f4968eb39f2686b7a588e2c38f8ebc1cb3042102a",
+      "source_pdf_sha256": "fe619693d2f8cc78cac3786dadab88e81467ec56d38f00727285612af92b80c9",
+      "source_unit_id": "dmg-521c99592e0deee5",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf",
+      "specialist_acceptance": "not-recorded",
+      "status": "initial-source-backed-batch; further-chapter-research-and-behavioural-evaluation-pending"
+    },
+    {
+      "authored_relationships": 6,
+      "chapter": 27,
+      "chapter_task": "chapter-27",
+      "concept_routes": [
+        "term/jsais-self-employed-earner",
+        "term/jsais-self-employed-assessment-period",
+        "term/jsais-business-expense-conditions",
+        "term/jsais-share-fisherman"
+      ],
+      "context_pdf_pages_inspected": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        14,
+        15,
+        34,
+        35,
+        78,
+        79
+      ],
+      "document_id": "dmg-vol5-ch27",
+      "evaluation_designs": [
+        {
+          "execution_result": null,
+          "execution_status": "designed-not-run",
+          "expected_behaviour": [
+            "Retain payment-period, business-purpose, reasonableness and allowability conditions.",
+            "Distinguish changed trading from an established normal pattern.",
+            "Do not equate tax and benefits expense rules or calculate profit."
+          ],
+          "expected_evidence": [
+            {
+              "locator": "DMG 27060",
+              "page": "page/dmg-vol5-ch27/0015",
+              "quote": "27060 If there has been a change that is likely to affect the normal pattern of trading, the assessment\n\nperiod should be a period that will allow the DM to calculate the earnings most accurately 1. The period\ndoes not need to be made up of complete weeks.\n\n\n                                                         1 JSA Regs, reg 95(1)(b); IS (Gen) Regs, reg 30(1)(b)",
+              "quote_sha256": "b46b37810ab593f977dffb4dbbeee2efa59c57dbb14fe23537bd96b3943742ba"
+            },
+            {
+              "locator": "DMG 27190",
+              "page": "page/dmg-vol5-ch27/0034",
+              "quote": "27190 When calculating the net profit of a S/E earner the DM should deduct from the gross receipts any\n\nbusiness expense that1\n\n\n1. was paid out wholly and exclusively for the purposes of the business 2 and\n\n\n2. was paid out during the assessment period and\n\n\n3. was reasonably incurred3 (see DMG 27198) and\n\n\n4. is an allowable expense (see DMG 27206).\n\n\n                            1 JSA Regs, reg 101(4)(a); IS (Gen) Regs, reg 38(3)(a); 2 JSA Regs, reg 101(9)(a);\n                               IS (Gen) Regs, reg 38(8)(a); 3 JSA Regs, reg 101(8); IS (Gen) Regs, reg 38(7)",
+              "quote_sha256": "ce3d6b43a2df3008cde0fd36970248e6280d82b535f1685771616c030e0462db"
+            },
+            {
+              "locator": "DMG 27192",
+              "page": "page/dmg-vol5-ch27/0034",
+              "quote": "27192 If expenditure is for both business and private use, for example\n\n\n1. a business that is run from home or\n\n\n2. there is only one vehicle for both business and private use\n\n\nthe DM should apportion the cost. Only the portion of the expenditure that is wholly attributable to the\nbusiness can be deducted.",
+              "quote_sha256": "22891b742d9058b17029844967a5b1accb54d4a5527e5d91c681e2ed1748c42d"
+            }
+          ],
+          "id": "eval-positive-27",
+          "kind": "source-grounding",
+          "personas": [
+            "persona/policy-law-reviewer",
+            "persona/rules-architect"
+          ],
+          "question": "How do the source’s assessment-period and expense provisions address a changed business and mixed private use?",
+          "questions": [
+            "question/stage2-001",
+            "question/stage2-006"
+          ],
+          "stories": [
+            "story/policy-law-trace",
+            "story/rule-candidate-review"
+          ]
+        },
+        {
+          "execution_result": null,
+          "execution_status": "designed-not-run",
+          "expected_behaviour": [
+            "Retain payment-period, business-purpose, reasonableness and allowability conditions.",
+            "Distinguish changed trading from an established normal pattern.",
+            "Do not equate tax and benefits expense rules or calculate profit."
+          ],
+          "expected_evidence": [
+            "page/dmg-vol5-ch27/0015",
+            "page/dmg-vol5-ch27/0034",
+            "page/dmg-vol5-ch27/0034"
+          ],
+          "id": "eval-negative-27",
+          "kind": "boundary-control",
+          "personas": [
+            "persona/evidence-assurance-reviewer",
+            "persona/assisted-support"
+          ],
+          "question": "Can every item in business accounts be deducted and the previous tax year always used?",
+          "questions": [
+            "question/stage2-001",
+            "question/stage2-006"
+          ],
+          "stories": [
+            "story/evidence-requirements",
+            "story/assisted-discovery"
+          ]
+        }
+      ],
+      "inspection_method": "Model reading of machine-extracted body passages and the listed neighbouring pages; no PDF visual or specialist review.",
+      "literal_dependency_candidates": [
+        {
+          "page": "page/dmg-vol5-ch27/0003",
+          "quote": "                                                                     1 JS Act 95, s 4(1); JSA Regs, reg 80(2)",
+          "quote_sha256": "9581dca51921ab159608a0ad541f3e623c4afb2333eac6cb72f43b15b0d05020",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0004",
+          "quote": "                                                                     1 JS Act 95, s 35(1), IS (Gen) Regs, Reg 2(1)",
+          "quote_sha256": "d5b456aa7cab73fe4b526b20310b1c11b3cd82b6fc3467b10e37496e8d63399e",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0004",
+          "quote": "                                             1 JSA Regs, reg 1(3); IS (Gen) Regs, reg 2(1); SS CB Act 92, s 2(1)(b)",
+          "quote_sha256": "20e7f1b52abf34c751fd0b8294612c379b435194d69c43b64ec6358cf739201a",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0006",
+          "quote": "                         1 JC v SSWP (JSA) [2008] UKUT 40 (AAC), R (JSA) 1/09; 2 JSA Regs, Sch 6, para 4;",
+          "quote_sha256": "dae775efaa2dfddc30785bd5ce99e2d7c03e904c57a314dc4f780e33703f0274",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0006",
+          "quote": "                            IS (Gen) Regs, Sch 8, para 3; 3 JSA Regs, reg 51(1); IS (Gen) Regs, reg 5(1) & (1A);",
+          "quote_sha256": "a890e88e4a8fa53e03c9aa8746dd150cb53078b451c9ba2f61e45c3ae6f36a50",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0006",
+          "quote": "                                                               4 JSA Regs, reg 100(1); IS (Gen) Regs, reg 37(1);",
+          "quote_sha256": "584bd4b1cd409140944c7e9cec185adbd17ae3a281fb4343ebb886b3a6c45e4c",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0006",
+          "quote": "                                                5 JSA Regs, reg 95(1)(a) & (b); IS (Gen) Regs, reg 30(1)(a) & (b)",
+          "quote_sha256": "9ae42ede54bceb90b54f5255f38c4024625040397b8e24a7ea5cd4ebcf1c16c7",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0006",
+          "quote": "                                                                                                  1 R(SB) 57/83",
+          "quote_sha256": "1c87d736e8fd611e2b5ea3e1b3a2525d83c5a81e3a3ee3718c8e6b86d1aa4ad8",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0006",
+          "quote": "                                                             1 R(SB) 57/83; 2 McMillan v Guest 1942, AC 561",
+          "quote_sha256": "05e8fce979aa5e1e218cd7d59e790adbac4684122237ec069696cd228ac7b416",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0014",
+          "quote": "                                                        1 JSA Regs, reg 95(1)(b); IS (Gen) Regs, reg 30(1)(b)",
+          "quote_sha256": "18262562449b77c1c09f5f4765c775a1b582529d8ddd0104e3d2d0f2e2b4ddd9",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0015",
+          "quote": "                                                         1 JSA Regs, reg 95(1)(a); IS (Gen) Regs, reg 30(1)(a)",
+          "quote_sha256": "61c75cb715e381d5f2fd144d568c856276b01daab486ffa23fc42365357c1f92",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0015",
+          "quote": "                                                         1 JSA Regs, reg 95(1)(b); IS (Gen) Regs, reg 30(1)(b)",
+          "quote_sha256": "ea81cd0e5d172c2a04150769ceccad583cf0358b75800a744ae3024e56a09f76",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0034",
+          "quote": "                            1 JSA Regs, reg 101(4)(a); IS (Gen) Regs, reg 38(3)(a); 2 JSA Regs, reg 101(9)(a);",
+          "quote_sha256": "2073c51dea50448c74ae50eed5ee450df0655853755feba22df66f5826f845f0",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0034",
+          "quote": "                               IS (Gen) Regs, reg 38(8)(a); 3 JSA Regs, reg 101(8); IS (Gen) Regs, reg 38(7)",
+          "quote_sha256": "e01a2a0295a9a331a2641007b48ff7269bd28598f116c22a1d808fa4c5c60f0b",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0034",
+          "quote": "                                                       1 JSA Regs, reg 101(4)(a); IS (Gen) Regs, reg 38(3)(a)",
+          "quote_sha256": "e83ba90e0d9f4e32e9ed9f73643dbf200a55a80041b36a3d14288adcd1565322",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0035",
+          "quote": "                                                                                  1 R(FC) 1/91; R(IS) 13/91",
+          "quote_sha256": "6484be417671ebe1b201ef911e2d83b47a53f8a9f3702345bb36ed684e5399d8",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0035",
+          "quote": "                                                                                  1 R(FC) 1/91; R(IS) 13/91",
+          "quote_sha256": "6484be417671ebe1b201ef911e2d83b47a53f8a9f3702345bb36ed684e5399d8",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0079",
+          "quote": "                                                   1 JSA Regs, reg 156; 2 SS (Mariners' Benefits) Regs, reg 1(2)",
+          "quote_sha256": "b331e8d20657b48d91bee54d672760c2f391af2dc5398de8cfab198fd9bab2f1",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0079",
+          "quote": "                                                                                                   1 R(U) 10/51",
+          "quote_sha256": "abc4b7376bf5f65e5c93b65a622d9d8bed1e9a05f96e4a82b8b70b8810d121b2",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch27/0079",
+          "quote": "                                                    1 JSA Regs, reg 156; Merchant Shipping Act 1995, s 313(1)",
+          "quote_sha256": "ef0763a6b7729e20863e77c12313913a3c7ae5b1dda2c223b747c92995abda4e",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        }
+      ],
+      "measured_pdf_pages": 146,
+      "observed_at": "2026-09-15T19:45:25.036028Z",
+      "remaining_scope": [
+        "Most gross-receipt categories, excluded expenses, tax/contribution deductions, particular trades, cessation and share-fisherman calculations remain unmodelled.",
+        "The IS-specific British-boat qualification continues on the next PDF page and must remain visible.",
+        "New or changed trading periods differ from stable established businesses; no universal tax-year assessment is adopted."
+      ],
+      "requirement_outcomes": {
+        "RQ01": "exact existing PDF/text/page hashes verified; no new acquisition",
+        "RQ02": "selected paragraph spans and context inspected; whole-chapter segmentation remains incomplete",
+        "RQ03": "scoped concepts drafted from selected body passages; remaining terms and specialist review open",
+        "RQ04": "selected SKOS-related proposals checked against exact passages; no new predicate or equivalence",
+        "RQ05": "source observation and discovered revision statements distinguished; publication and legal applicability unresolved",
+        "RQ06": "literal citations retained from inspected pages; no legal text acquisition or consolidation",
+        "RQ07": "two evidence-specific cases designed; retrieval and model execution pending",
+        "RQ08": "this bounded batch receipt records source identifiers, selected coverage, mechanical checks and explicit gaps",
+        "RQ09": "benefit-specific distinctions retained; no PC/UC/New Style equivalence or cross-benefit rule transfer"
+      },
+      "selected_evidence": [
+        {
+          "locator": "DMG 27060",
+          "page": "page/dmg-vol5-ch27/0015",
+          "quote": "27060 If there has been a change that is likely to affect the normal pattern of trading, the assessment\n\nperiod should be a period that will allow the DM to calculate the earnings most accurately 1. The period\ndoes not need to be made up of complete weeks.\n\n\n                                                         1 JSA Regs, reg 95(1)(b); IS (Gen) Regs, reg 30(1)(b)",
+          "quote_sha256": "b46b37810ab593f977dffb4dbbeee2efa59c57dbb14fe23537bd96b3943742ba"
+        },
+        {
+          "locator": "DMG 27011",
+          "page": "page/dmg-vol5-ch27/0006",
+          "quote": "27011 A limited company, of whatever size, is separate from its employees, officers and shareholders 1.\nThis means that the profits of the company do not belong to the directors. A director of a limited\n\ncompany is an office holder in the company2 and is an employed earner (see DMG 26048).\n\n\n                                                             1 R(SB) 57/83; 2 McMillan v Guest 1942, AC 561",
+          "quote_sha256": "18a46a67ddf2178b56744fcae1e46fe837caf788162d5add97cf6ebf9f39c6e8"
+        },
+        {
+          "locator": "DMG 27005",
+          "page": "page/dmg-vol5-ch27/0004",
+          "quote": "27005 A person may be S/E and also have other work as an employed earner. If so the earnings from\neach employment should be calculated separately.",
+          "quote_sha256": "011cd76e194e15920a0aba57c4bd88a9e5230b26ddaca69b42c23aa84c860843"
+        },
+        {
+          "locator": "DMG 27190",
+          "page": "page/dmg-vol5-ch27/0034",
+          "quote": "27190 When calculating the net profit of a S/E earner the DM should deduct from the gross receipts any\n\nbusiness expense that1\n\n\n1. was paid out wholly and exclusively for the purposes of the business 2 and\n\n\n2. was paid out during the assessment period and\n\n\n3. was reasonably incurred3 (see DMG 27198) and\n\n\n4. is an allowable expense (see DMG 27206).\n\n\n                            1 JSA Regs, reg 101(4)(a); IS (Gen) Regs, reg 38(3)(a); 2 JSA Regs, reg 101(9)(a);\n                               IS (Gen) Regs, reg 38(8)(a); 3 JSA Regs, reg 101(8); IS (Gen) Regs, reg 38(7)",
+          "quote_sha256": "ce3d6b43a2df3008cde0fd36970248e6280d82b535f1685771616c030e0462db"
+        },
+        {
+          "locator": "DMG 27192",
+          "page": "page/dmg-vol5-ch27/0034",
+          "quote": "27192 If expenditure is for both business and private use, for example\n\n\n1. a business that is run from home or\n\n\n2. there is only one vehicle for both business and private use\n\n\nthe DM should apportion the cost. Only the portion of the expenditure that is wholly attributable to the\nbusiness can be deducted.",
+          "quote_sha256": "22891b742d9058b17029844967a5b1accb54d4a5527e5d91c681e2ed1748c42d"
+        },
+        {
+          "locator": "DMG 27051",
+          "page": "page/dmg-vol5-ch27/0014",
+          "quote": "27051 The normal weekly earnings of a S/E earner should be calculated by using the\n\n\n1. gross receipts (see DMG 27125) and\n\n\n2. expenses paid out (see DMG 27190)\n\n\nduring the assessment period. Different rules apply for royalties, copyright payments and Public Lending\nRights payments.",
+          "quote_sha256": "feb53bf2310febfaf1a5d9a809fc9725f7c87f7943a3c7a2fd76a1512877ff2f"
+        },
+        {
+          "locator": "DMG 27194",
+          "page": "page/dmg-vol5-ch27/0035",
+          "quote": "27194 The DM should normally accept the evidence of\n\n\n1. the S/E earner or\n\n\n2. an accountant or\n\n\n3. any apportionment already agreed by HMRC for tax and contribution purposes 1.\n\n\n                                                                                  1 R(FC) 1/91; R(IS) 13/91",
+          "quote_sha256": "1aab5cdfe3db8367f0dfe91bbb7dee694e2a9835e9f433f4de054ddd6fc6c10b"
+        },
+        {
+          "locator": "DMG 27062",
+          "page": "page/dmg-vol5-ch27/0015",
+          "quote": "27062 The earnings would then be averaged over that period and apportioned on a weekly basis until\nthe figures for the following week or month become available. The assessment period would then be\nextended. The assessment period would\n\n\n1. start on the date the change affecting the pattern of business occurred and\n\n\n2. end on the date that the new figures became available.\n\n\nThe DM should supersede if the new figures affect entitlement to IS or JSA. Where entitlement is not\naffected, a decision not to supersede should be made if the claimant asked for earnings to be looked at\nagain. For further guidance on supersession including the effective date rule, see DMG Chapter 04.",
+          "quote_sha256": "b8cf7d311ff5af5fdf83e7a28a2dfda4f01d4bd1f7c75cf257daa09702e9e582"
+        },
+        {
+          "locator": "DMG 27002",
+          "page": "page/dmg-vol5-ch27/0004",
+          "quote": "27002 A S/E earner is a person who is gainfully employed\n\n\n1. in GB and\n\n\n2. in employment that is not employed earners employment1.\n\n\nNote: A person may also be employed as an employed earner. This does not stop the person being S/E.\n\n\n                                             1 JSA Regs, reg 1(3); IS (Gen) Regs, reg 2(1); SS CB Act 92, s 2(1)(b)",
+          "quote_sha256": "55b2ba97ce20dc4c3d69860fbefff1a519226acf5e8979db730a63a75b4f3747"
+        },
+        {
+          "locator": "DMG 27501",
+          "page": "page/dmg-vol5-ch27/0078",
+          "quote": "27501 A share fisherman is1\n\n\n1. a person who\n\n\n      1.1 usually works in the fishing industry and\n\n\n      1.2 is S/E and\n\n\n      1.3 is the master or a crew member of a fishing boat crewed by more than one person and\n\n\n      1.4 is paid for that work wholly or partly by a share of the profits or gross earnings of the fishing\n      boat or\n\n\n2. a person who\n\n\n      2.1 was a person who worked as in 1., but has permanently stopped such work because of age or ill\n      health and\n\n\n      2.2 usually works\n\n\n            2.2.a ashore in GB (see DMG 070702) and\n\n\n            2.2.b as S/E and\n\n\n            2.2.c making or mending any gear belonging to a fishing boat or performing other services\n            that help, or are connected with, a fishing boat and\n\n\n      2.3 is paid for that work wholly or partly by a share of the profits or gross earnings of the fishing\n      boat and\n\n\n      2.4 has not ceased to usually work as described in 2.2.",
+          "quote_sha256": "b3e7a3abc5a549b1b6b20342e4c01dc939ed7f54c462bc29d9bb93b94e03983b"
+        },
+        {
+          "locator": "DMG 27000",
+          "page": "page/dmg-vol5-ch27/0003",
+          "quote": "27000 This Chapter deals with the calculation and treatment of the earnings of S/E earners and share\nfishermen. The guidance for\n\n\n1. S/E earners applies to\n\n\n      1.1 JSA(Cont), but only the claimant’s own earnings affect the amount of JSA(Cont) payable 1and\n\n\n      1.2 JSA(IB) and\n\n\n      1.3 IS and\n\n\n2. share fishermen explains that the calculation of a share fisherman’s earnings is different for\n\n\n      2.1 JSA(Cont) and\n\n\n      2.2 JSA(IB) and IS.\n\n\n                                                                     1 JS Act 95, s 4(1); JSA Regs, reg 80(2)",
+          "quote_sha256": "18b95815a915fad80ec5eb24706bf727e322b6ee9b6048ba043a10684db2a070"
+        },
+        {
+          "locator": "DMG 27052",
+          "page": "page/dmg-vol5-ch27/0014",
+          "quote": "27052 If the business has been trading for less than a year, the assessment period should be a period\n\nthat will allow the DM to calculate the earnings most accurately 1.\n\n\n                                                        1 JSA Regs, reg 95(1)(b); IS (Gen) Regs, reg 30(1)(b)",
+          "quote_sha256": "108c0ac76061b545d37531d0da417ea15fd3a59dda2dca23e081aefd4b4c6446"
+        }
+      ],
+      "source_date_review": {
+        "legal_applicability_established": false,
+        "publication_date": null,
+        "revision_statements": [],
+        "role": "stated source revision dates, not source publication or legal commencement"
+      },
+      "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-ch27.json",
+      "source_pages_sha256": "7f84279f4a44373405ce06d32bf1c927a9f25dda507895b1540e6bb8b1b5185a",
+      "source_pdf_sha256": "90b6c5ec739d2366936d67d78cd5a6f857b764b92000200f4a44ac956c88b3ac",
+      "source_unit_id": "dmg-bff00ffc1555b329",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf",
+      "specialist_acceptance": "not-recorded",
+      "status": "initial-source-backed-batch; further-chapter-research-and-behavioural-evaluation-pending"
+    },
+    {
+      "authored_relationships": 5,
+      "chapter": 28,
+      "chapter_task": "chapter-28",
+      "concept_routes": [
+        "term/jsais-income-capital-distinction",
+        "term/jsais-gross-other-income",
+        "term/jsais-notional-income",
+        "term/jsais-income-deprivation"
+      ],
+      "context_pdf_pages_inspected": [
+        1,
+        2,
+        3,
+        134,
+        135,
+        137,
+        138,
+        139
+      ],
+      "document_id": "dmg-vol5-ch28",
+      "evaluation_designs": [
+        {
+          "execution_result": null,
+          "execution_status": "designed-not-run",
+          "expected_behaviour": [
+            "Distinguish actual receipt from potential notional-income bases.",
+            "Require the source’s purpose and factual context; retain exceptions.",
+            "Do not transfer the rule to another benefit or treat designed expectations as a passed test."
+          ],
+          "expected_evidence": [
+            {
+              "locator": "DMG 28568",
+              "page": "page/dmg-vol5-ch28/0134",
+              "quote": "28568 A person may be treated as having an income that is not actually received. This type of income is\nknown as notional income and may take a number of different forms.",
+              "quote_sha256": "5a7c22767675c2555f982d69e001b9446da80d1fe3b668a93f16de6d812c3cff"
+            },
+            {
+              "locator": "DMG 28569",
+              "page": "page/dmg-vol5-ch28/0134",
+              "quote": "28569 Notional income may be calculated because of\n\n\n1. deprivation of income\n\n\n2. income available if applied for (including special rules for personal pensions)\n\n\n3. income due but not yet paid\n\n\n4. income for a member of the family paid to a third party\n\n\n5. income for a third party made to a member of the family\n\n\n6. a child or young person attending a boarding school.",
+              "quote_sha256": "e1331e135a6dcdd454035a0562339f5b20b9570b9be78882a57a49e497691b38"
+            },
+            {
+              "locator": "DMG 28581",
+              "page": "page/dmg-vol5-ch28/0138",
+              "quote": "28581 Claimants cannot deprive themselves of income that they have already received. If a payment of\nincome is received it is actual income and should be taken into account in the normal way.",
+              "quote_sha256": "5f4a5fbcc8eb45cb1afb44ee394df3e253c084d5a4f30bf9d206eaceb05201e3"
+            },
+            {
+              "locator": "DMG 28589",
+              "page": "page/dmg-vol5-ch28/0139",
+              "quote": "28589 Getting or increasing IS, JSA(IB) or ESA(IR) need not be the most important reason for disposing\n\nof an income but it must be a significant reason1.\n\n\n                                                                                               1 R(SB) 40/85",
+              "quote_sha256": "c4b108f0e430b4246ada7344917bf63b5fadd0b570e1effcb38779d2a673b811"
+            },
+            {
+              "locator": "DMG 28590",
+              "page": "page/dmg-vol5-ch28/0139",
+              "quote": "28590 It is unlikely that there will be direct evidence that a deprivation was for the purpose of getting\nbenefit. Decide on a person's reasons for disposing of an income after considering all the facts of the\ncase. These may include\n\n\n1. the person's explanations\n\n\n2. the timing of the disposal\n\n\n3. the claimant's knowledge of the benefit system\n\n\n4. the likelihood of a benefit claim at the time of the deprivation.",
+              "quote_sha256": "e68387a2059857e5a27db6ebfe851171968754764d63b117bc9a40ad51732bee"
+            }
+          ],
+          "id": "eval-positive-28",
+          "kind": "source-grounding",
+          "personas": [
+            "persona/policy-law-reviewer",
+            "persona/rules-architect"
+          ],
+          "question": "How does the guidance distinguish actual income, notional income and a significant benefit purpose in deprivation?",
+          "questions": [
+            "question/stage2-001",
+            "question/stage2-006"
+          ],
+          "stories": [
+            "story/policy-law-trace",
+            "story/rule-candidate-review"
+          ]
+        },
+        {
+          "execution_result": null,
+          "execution_status": "designed-not-run",
+          "expected_behaviour": [
+            "Distinguish actual receipt from potential notional-income bases.",
+            "Require the source’s purpose and factual context; retain exceptions.",
+            "Do not transfer the rule to another benefit or treat designed expectations as a passed test."
+          ],
+          "expected_evidence": [
+            "page/dmg-vol5-ch28/0134",
+            "page/dmg-vol5-ch28/0134",
+            "page/dmg-vol5-ch28/0138",
+            "page/dmg-vol5-ch28/0139",
+            "page/dmg-vol5-ch28/0139"
+          ],
+          "id": "eval-negative-28",
+          "kind": "boundary-control",
+          "personas": [
+            "persona/evidence-assurance-reviewer",
+            "persona/assisted-support"
+          ],
+          "question": "Does any missing income establish deprivation or allow the same rule to be applied to UC or Pension Credit?",
+          "questions": [
+            "question/stage2-001",
+            "question/stage2-006"
+          ],
+          "stories": [
+            "story/evidence-requirements",
+            "story/assisted-discovery"
+          ]
+        }
+      ],
+      "inspection_method": "Model reading of machine-extracted body passages and the listed neighbouring pages; no PDF visual or specialist review.",
+      "literal_dependency_candidates": [
+        {
+          "page": "page/dmg-vol5-ch28/0002",
+          "quote": "                                                                                       1 JS Act 95, s 4(1)(b)",
+          "quote_sha256": "5423c3a6451d6f5d4d6e054880cd6e9a552807f46672f5c7e85f7d14b684638b",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0002",
+          "quote": "                                                                   1 JS Act 95, 35(1); IS Gen Regs, reg 2(1)",
+          "quote_sha256": "11878a4910dd30b7fd927d3dce3fcc4b46b832226b4c9e27a33d8c1f3765f423",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0003",
+          "quote": "                1 JS Act 95; SS CB Act 92; 2 Lillystone v. Supplementary Benefits Commission (1982) FLR;",
+          "quote_sha256": "b1ee5231fc2cd62704945b6d814ca1ee4802eac38b42a74209eea10d6e77bdca",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0003",
+          "quote": "28003 [See DMG Memo IS/JSA 64] The DM should take into account the gross amount of any income 1.",
+          "quote_sha256": "d0857c3622ff350139544c19ef9c78f466a35f49e7956e83faa52108ea452dae",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0003",
+          "quote": "                                                           1 JSA Regs, reg 103(1); IS (Gen) Regs, reg 40(1)",
+          "quote_sha256": "e0cc28bf6086d3d35156b8bff9c09f57c669da0f46a169016e9c9bd6de5791e4",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0003",
+          "quote": "                                                          1 JSA Regs, reg 103(3); IS (Gen) Regs, reg 40(3)",
+          "quote_sha256": "663a30e22cbe5e0958e3d2b851d3a1cf0b372b10f81f5d7ae8594a105a8b5d01",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0135",
+          "quote": "                                                           1 JSA Regs, reg 105(14); IS (Gen) Regs, reg 42(7)",
+          "quote_sha256": "f0f13a42f4848451ea14d628ffc50e1f383230b93bb4a9d595468078e27ab573",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0135",
+          "quote": "                          1 JSA Regs, reg 105(13) & 19(1)(q); IS (Gen) Regs, reg 42(6); 2 JSA Regs, reg 19(3)",
+          "quote_sha256": "7dfa80ab565fc22d42f2f80c20c348446876f6f770956d4131a8051006863c89",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0135",
+          "quote": "28573 [See memo DMG JSA/IS 64] Notional income is no longer taken in to account for those claimants",
+          "quote_sha256": "ab55c326b655288fd0d8f82de5df2007dec5c1badf3f8d1d0a9e94a56a132308",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0135",
+          "quote": "                                                                   1 JSA Regs, reg 89; IS (Gen) Regs, reg 25",
+          "quote_sha256": "dd761e1e5d685166f2b191cf48bafedc55a1810a6ab7d6ceb9fbfc20bb8cc1f9",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0137",
+          "quote": "                                                            1 JSA Regs, reg 105(1); IS (Gen) Regs, reg 42(1)",
+          "quote_sha256": "e585a27c92e8b263ee76ccb46e1a1b91fcef76b404bee1d3fc4d21a21dc180d5",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0137",
+          "quote": "                                                                                          1 SS Act 98, s 17",
+          "quote_sha256": "b6f15d2296ac0bb188a7604cb3388c82ee7f130da3d8e28c0d6aa6cb4b0ec902",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0138",
+          "quote": "                                                                                             1 R(SB) 38/85",
+          "quote_sha256": "867cdc36bd852e1f5f3bae236f03b01baefe1123e54d9d1073bf97efd8000943",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0138",
+          "quote": "                                                                                             1 R(SB) 40/85",
+          "quote_sha256": "2d73f76142e771f5ee7cd62605cb71fca71ae99281a46ba700de59c25dd0986b",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0138",
+          "quote": "                                                                                              1 R(SB) 12/91",
+          "quote_sha256": "190c9bf774f90b5a16a3bb20ea18b7a61b3991bd850af925dc675a40276f7f7d",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0139",
+          "quote": "                                                                                               1 R(SB) 38/85",
+          "quote_sha256": "9b7f88141751bbb9735299986322b26cf0557714986b723cdf4e0fbe2faa7e73",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0139",
+          "quote": "                                                                                               1 R(SB) 38/85",
+          "quote_sha256": "9b7f88141751bbb9735299986322b26cf0557714986b723cdf4e0fbe2faa7e73",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch28/0139",
+          "quote": "                                                                                               1 R(SB) 40/85",
+          "quote_sha256": "6c71a42156a5ed05b18938d9019b97c3b4d693888b35bfcd9e2b6d0c24168f53",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        }
+      ],
+      "measured_pdf_pages": 226,
+      "observed_at": "2026-09-15T19:45:25.311635Z",
+      "remaining_scope": [
+        "The many payment-specific disregards, pensions, liable-relative rules, third-party arrangements and special income categories remain unmodelled.",
+        "The adjacent NDYP taster text and later memo-qualified training rule require historical/incorporation reconciliation.",
+        "The selected deprivation passages mention ESA but no ESA rule has been derived in this batch."
+      ],
+      "requirement_outcomes": {
+        "RQ01": "exact existing PDF/text/page hashes verified; no new acquisition",
+        "RQ02": "selected paragraph spans and context inspected; whole-chapter segmentation remains incomplete",
+        "RQ03": "scoped concepts drafted from selected body passages; remaining terms and specialist review open",
+        "RQ04": "selected SKOS-related proposals checked against exact passages; no new predicate or equivalence",
+        "RQ05": "source observation and discovered revision statements distinguished; publication and legal applicability unresolved",
+        "RQ06": "literal citations retained from inspected pages; no legal text acquisition or consolidation",
+        "RQ07": "two evidence-specific cases designed; retrieval and model execution pending",
+        "RQ08": "this bounded batch receipt records source identifiers, selected coverage, mechanical checks and explicit gaps",
+        "RQ09": "benefit-specific distinctions retained; no PC/UC/New Style equivalence or cross-benefit rule transfer"
+      },
+      "selected_evidence": [
+        {
+          "locator": "DMG 28571",
+          "page": "page/dmg-vol5-ch28/0135",
+          "quote": "28571 Calculate notional income in the same way as actual income 1. Any notional income of a child or\nyoung person should be added to their actual income. The total should then be taken into account using\nnormal rules, including applying any appropriate disregard.\n\n\n                                                           1 JSA Regs, reg 105(14); IS (Gen) Regs, reg 42(7)",
+          "quote_sha256": "976dc37a0cd1788b4ab818daf0ac239af7a6789a1b3c65f81d590ea215bdd5fc"
+        },
+        {
+          "locator": "DMG 28582",
+          "page": "page/dmg-vol5-ch28/0138",
+          "quote": "28582 A deprivation of income may occur where a claimant's income is reduced to repay an overpaid\nincome. The DM should decide if a significant reason for the reduction is to get or increase the amount of\nJSA(IB), ESA(IR) or IS. DMs should bear in mind that the repayment of a\n\n\n1. legally enforceable and\n\n\n2. immediately repayable\n\n\ndebt cannot be for the purpose of increasing or getting JSA(IB), ESA(IR) or IS 1.\n\n\n                                                                                              1 R(SB) 12/91",
+          "quote_sha256": "9325f2f752813161d1241fe0af0cc2662dbc3937da239403e79b8cd7200236b3"
+        },
+        {
+          "locator": "DMG 28576",
+          "page": "page/dmg-vol5-ch28/0137",
+          "quote": "28576 DMs should treat1 claimants as receiving income that they have deprived themselves of for the\npurpose of\n\n\n1. securing entitlement to or\n\n\n2. increasing the amount of\n\n\n      2.1 IS or\n\n\n      2.2 JSA or\n\n\n      2.3 ESA.\n\n\n                                                            1 JSA Regs, reg 105(1); IS (Gen) Regs, reg 42(1)",
+          "quote_sha256": "fb23f9bacf8cb10beeeef4ffb886b879eb4e44d6560e477603010b0156a42061"
+        },
+        {
+          "locator": "DMG 28590",
+          "page": "page/dmg-vol5-ch28/0139",
+          "quote": "28590 It is unlikely that there will be direct evidence that a deprivation was for the purpose of getting\nbenefit. Decide on a person's reasons for disposing of an income after considering all the facts of the\ncase. These may include\n\n\n1. the person's explanations\n\n\n2. the timing of the disposal\n\n\n3. the claimant's knowledge of the benefit system\n\n\n4. the likelihood of a benefit claim at the time of the deprivation.",
+          "quote_sha256": "e68387a2059857e5a27db6ebfe851171968754764d63b117bc9a40ad51732bee"
+        },
+        {
+          "locator": "DMG 28003",
+          "page": "page/dmg-vol5-ch28/0003",
+          "quote": "28003 [See DMG Memo IS/JSA 64] The DM should take into account the gross amount of any income 1.\nReferences in this Chapter to income means income other than earnings. When calculating gross income\ndisregard the sums in DMG 28008 - 28010 and DMG 28150 et seq. No disregards should be made for\nany other expenses or deductions.\n\n\n                                                           1 JSA Regs, reg 103(1); IS (Gen) Regs, reg 40(1)",
+          "quote_sha256": "c8441ce80a9b891f4ce810a0cc1a0b96cea78fa2df21922c5f048dfe2a23ed24"
+        },
+        {
+          "locator": "DMG 28002",
+          "page": "page/dmg-vol5-ch28/0003",
+          "quote": "28002 Income is not defined in law1. It can normally be separated from capital because a payment of\nincome\n\n\n1. forms part of a series of payments, whether or not they are made regularly or\n\n\n2. is made for a period of time or\n\n\n3. satisfies both the conditions in 1. and 2..\n\n\nNote: Where capital2 is being paid by instalments each payment will be capital unless DMG 28530 et seq\napplies.\n\n\n                1 JS Act 95; SS CB Act 92; 2 Lillystone v. Supplementary Benefits Commission (1982) FLR;\n                                Morrell v. Secretary of State for Work and Pensions [2003] EWCA Civ 526",
+          "quote_sha256": "9b4a880e570240afcc43df16292d1ca83d4a4b603d3e86af27d48c7847902c08"
+        },
+        {
+          "locator": "DMG 28568",
+          "page": "page/dmg-vol5-ch28/0134",
+          "quote": "28568 A person may be treated as having an income that is not actually received. This type of income is\nknown as notional income and may take a number of different forms.",
+          "quote_sha256": "5a7c22767675c2555f982d69e001b9446da80d1fe3b668a93f16de6d812c3cff"
+        },
+        {
+          "locator": "DMG 28573",
+          "page": "page/dmg-vol5-ch28/0135",
+          "quote": "28573 [See memo DMG JSA/IS 64] Notional income is no longer taken in to account for those claimants\nor claimant's partners on an employment or training programme, regardless of its duration, providing a\ntraining allowance is not payable, or where such an allowance is payable, it is for the sole purpose of\nreimbursement of travelling or meal expenses to the person participating in the programme.",
+          "quote_sha256": "e5c84b2ebe85910ffc84ba17145402ce55790d9e7b9a107319936cbda5ce9bd5"
+        },
+        {
+          "locator": "DMG 28589",
+          "page": "page/dmg-vol5-ch28/0139",
+          "quote": "28589 Getting or increasing IS, JSA(IB) or ESA(IR) need not be the most important reason for disposing\n\nof an income but it must be a significant reason1.\n\n\n                                                                                               1 R(SB) 40/85",
+          "quote_sha256": "c4b108f0e430b4246ada7344917bf63b5fadd0b570e1effcb38779d2a673b811"
+        },
+        {
+          "locator": "DMG 28581",
+          "page": "page/dmg-vol5-ch28/0138",
+          "quote": "28581 Claimants cannot deprive themselves of income that they have already received. If a payment of\nincome is received it is actual income and should be taken into account in the normal way.",
+          "quote_sha256": "5f4a5fbcc8eb45cb1afb44ee394df3e253c084d5a4f30bf9d206eaceb05201e3"
+        },
+        {
+          "locator": "DMG 28577",
+          "page": "page/dmg-vol5-ch28/0137",
+          "quote": "28577 DMs should bear in mind that a decision that a person has deprived themselves of an income to\nget or increase IS, JSA or ESA will usually apply to a subsequent IS, JSA or ESAclaim. A fresh decision\n\nshould be made each time there is a new claim1.\n\n\n                                                                                          1 SS Act 98, s 17",
+          "quote_sha256": "c78b262de2b0dc660ac2cb6e4133fdac31f3d9a600914448db28d362f0108bfe"
+        },
+        {
+          "locator": "DMG 28000",
+          "page": "page/dmg-vol5-ch28/0002",
+          "quote": "28000 This Chapter deals with the calculation of income other than earnings for IS and JSA(IB). With the\n\nexception of occupational and personal pension payments 1, income other than earnings does not affect\nthe calculation of JSA(Cont).\n\n\nNote: For guidance on the treatment of pension payments for JSA(Cont) see DMG Chapter 23.\n\n\n                                                                                       1 JS Act 95, s 4(1)(b)",
+          "quote_sha256": "4e13ed96ba1d475ea70c827e616a024ee57d33fca3df255c5f6dfd2eca0b4a98"
+        },
+        {
+          "locator": "DMG 28569",
+          "page": "page/dmg-vol5-ch28/0134",
+          "quote": "28569 Notional income may be calculated because of\n\n\n1. deprivation of income\n\n\n2. income available if applied for (including special rules for personal pensions)\n\n\n3. income due but not yet paid\n\n\n4. income for a member of the family paid to a third party\n\n\n5. income for a third party made to a member of the family\n\n\n6. a child or young person attending a boarding school.",
+          "quote_sha256": "e1331e135a6dcdd454035a0562339f5b20b9570b9be78882a57a49e497691b38"
+        }
+      ],
+      "source_date_review": {
+        "legal_applicability_established": false,
+        "publication_date": null,
+        "revision_statements": [],
+        "role": "stated source revision dates, not source publication or legal commencement"
+      },
+      "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-ch28.json",
+      "source_pages_sha256": "f7e554c1af4c7d8b915524f441c1680c5bea7429ac8fff9fd18bc0c925f25c31",
+      "source_pdf_sha256": "bcaea58ee40a9dca60a21b0f79c525a1f15e95c6b8315d6aaa73f0f53dd5460f",
+      "source_unit_id": "dmg-d60b8759b1eda735",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf",
+      "specialist_acceptance": "not-recorded",
+      "status": "initial-source-backed-batch; further-chapter-research-and-behavioural-evaluation-pending"
+    },
+    {
+      "authored_relationships": 5,
+      "chapter": 29,
+      "chapter_task": "chapter-29",
+      "concept_routes": [
+        "term/jsais-beneficial-capital-ownership",
+        "term/jsais-capital-disregard-assessment",
+        "term/jsais-capital-deprivation"
+      ],
+      "context_pdf_pages_inspected": [
+        1,
+        2,
+        3,
+        9,
+        43,
+        158,
+        159,
+        162,
+        163
+      ],
+      "document_id": "dmg-vol5-ch29",
+      "evaluation_designs": [
+        {
+          "execution_result": null,
+          "execution_status": "designed-not-run",
+          "expected_behaviour": [
+            "Distinguish legal and beneficial ownership.",
+            "Retain the different burdens for disregard evidence and benefit purpose.",
+            "Preserve partner/child boundaries and exceptions; do not infer fraud or transfer PC rules."
+          ],
+          "expected_evidence": [
+            {
+              "locator": "DMG 29070",
+              "page": "page/dmg-vol5-ch29/0009",
+              "quote": "29070 Only the capital where people are the beneficial owners is included when working out what\ncapital they have.",
+              "quote_sha256": "deaf399b54318d431af86f829f4c5316b9ac589005be1fa700a3757954adfdb6"
+            },
+            {
+              "locator": "DMG 29352",
+              "page": "page/dmg-vol5-ch29/0043",
+              "quote": "29352 The claimant has to show that the capital can be disregarded. If there is no evidence to show\ncapital can be disregarded, it is included when working out the amount of capital a claimant has.",
+              "quote_sha256": "d16499ba7db58f37b6877cb339cb9bc790b1f5f641ea61fa23f3deb22c88cde7"
+            },
+            {
+              "locator": "DMG 29825",
+              "page": "page/dmg-vol5-ch29/0162",
+              "quote": "29825 DMs have to show the claimant's or partner's purpose was to get benefit or more benefit if they\ndecide claimants or partners have deprived themselves of capital. Getting benefit or more benefit may\n\nnot be the claimant's or partner's predominant purpose but it must be a significant one 1. So when\nclaimants give away all their capital to a relative just before claiming benefit their\n\n\n1. main, or predominant, purpose may be to benefit the relative and\n\n\n2. intention, or significant purpose, may be to reduce their capital so they can get benefit or more benefit.\n\n\n                                                                                              1 R(SB) 40/85",
+              "quote_sha256": "5d871aa2198b0410c5934eb387f1f3fa3411ea14640396e7e566815dbd28a18e"
+            },
+            {
+              "locator": "DMG 29809",
+              "page": "page/dmg-vol5-ch29/0159",
+              "quote": "29809 The law applies to claimants and partners only if they were the beneficial owner or joint beneficial\nowners of the capital. So if a claimant is the joint beneficial owner of a building society account which has\n£10,000 in it and the claimant's share is £4,000 the law\n\n\n1. applies if the claimant spends or gives away that £4,000 or any part of it for the purpose of getting\nbenefit or more benefit and\n\n\n2. does not apply if the other £6,000 or any part of it is spent or given away.",
+              "quote_sha256": "b30602b253875e323fa90b9eacd62a728cb4ed6b917730b9c44c7a7ea7c3f349"
+            }
+          ],
+          "id": "eval-positive-29",
+          "kind": "source-grounding",
+          "personas": [
+            "persona/policy-law-reviewer",
+            "persona/rules-architect"
+          ],
+          "question": "Which ownership and evidential questions distinguish a capital disregard from deprivation of capital?",
+          "questions": [
+            "question/stage2-001",
+            "question/stage2-006",
+            "question/stage2-002"
+          ],
+          "stories": [
+            "story/policy-law-trace",
+            "story/rule-candidate-review"
+          ]
+        },
+        {
+          "execution_result": null,
+          "execution_status": "designed-not-run",
+          "expected_behaviour": [
+            "Distinguish legal and beneficial ownership.",
+            "Retain the different burdens for disregard evidence and benefit purpose.",
+            "Preserve partner/child boundaries and exceptions; do not infer fraud or transfer PC rules."
+          ],
+          "expected_evidence": [
+            "page/dmg-vol5-ch29/0009",
+            "page/dmg-vol5-ch29/0043",
+            "page/dmg-vol5-ch29/0162",
+            "page/dmg-vol5-ch29/0159"
+          ],
+          "id": "eval-negative-29",
+          "kind": "boundary-control",
+          "personas": [
+            "persona/evidence-assurance-reviewer",
+            "persona/assisted-support"
+          ],
+          "question": "Does a bank account name or any gift prove capital deprivation, and does the claimant bear every burden?",
+          "questions": [
+            "question/stage2-001",
+            "question/stage2-006",
+            "question/stage2-002"
+          ],
+          "stories": [
+            "story/evidence-requirements",
+            "story/assisted-discovery"
+          ]
+        }
+      ],
+      "inspection_method": "Model reading of machine-extracted body passages and the listed neighbouring pages; no PDF visual or specialist review.",
+      "literal_dependency_candidates": [
+        {
+          "page": "page/dmg-vol5-ch29/0003",
+          "quote": "29015 [See DMG Memo JSA/IS 64] The law says",
+          "quote_sha256": "ae38a6d828dae2c0ab4c2c6970ffb9a6d2ad4c736e8f7793ce0359bd88142085",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch29/0009",
+          "quote": "                                                                                                1 R(SB) 23/85",
+          "quote_sha256": "36a084a4128585999c56e18d2435035986f043947416f691dd5ab097747baade",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch29/0043",
+          "quote": "29351 [See DMG Memo 11/20] The law allows for all capital to be included unless it can be disregarded 1.",
+          "quote_sha256": "db91751deb9dc6c1118c3a3385094b2aeb06d952075efe1e67a6ed1a8527e69f",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch29/0043",
+          "quote": "                                                 1 JSA Regs, reg 108 & Sch 8; IS (Gen) Regs, reg 46 & Sch 10",
+          "quote_sha256": "42ea377893f6014b8515834ecb5512f7b393cfc81688bfc8efbd6984b17db9c9",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch29/0158",
+          "quote": "                                                         1 JSA Regs, reg 113(1); 2 IS (Gen) Regs, reg 51(1)",
+          "quote_sha256": "5579db401ea9c62d835e7b688d8e7570d1a37115828d2a32c5d3007e8bc72068",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch29/0159",
+          "quote": "            1 JSA Regs, reg 113(1)(a); IS (Gen) Regs, reg 51(1)(a); 2 JSA Regs, reg 113(1)(b) & 114; IS (Gen) Regs,",
+          "quote_sha256": "d50bf5a51f57651efcb90ffb3b9f4af7806cd54469e7ec634619f22ee079d98f",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch29/0159",
+          "quote": "                                                      1 JSA Regs, Sch 8, para 15; IS (Gen) Regs, Sch 10, para 10",
+          "quote_sha256": "bb28ddcbbcb63fd54309ffea6a3eeb917fe2967cf24134705f899981703e172b",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch29/0162",
+          "quote": "                                                                                              1 R(SB) 40/85",
+          "quote_sha256": "3c4df39469093693ca2b6a5b319cc79caf9e3699390d390417a0f5a12c17347a",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch29/0163",
+          "quote": "                                                                                                  1 R(SB) 9/91",
+          "quote_sha256": "6926747611307d66a116e685fcf406bdb543c7c8c5681c10a41ea3fae088a4a1",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        },
+        {
+          "page": "page/dmg-vol5-ch29/0163",
+          "quote": "                                                                                                 1 R(SB) 12/91",
+          "quote_sha256": "68bb3f0872e221ad99ac7d61bca5e7affffefdb864602e6759b7e33f81c4d1f1",
+          "status": "literal-source-citation-candidate; identifier-version-effects-not-reconciled"
+        }
+      ],
+      "measured_pdf_pages": 202,
+      "observed_at": "2026-09-15T19:45:25.597731Z",
+      "remaining_scope": [
+        "Particular assets, trusts, valuation, capital limits, tariff income, disregard periods and diminishing notional capital remain largely unmodelled.",
+        "Memos 11/20 and JSA/IS 64 and source-specific JSA-versus-IS distinctions require reconciliation.",
+        "The selected evidence does not justify importing the existing Pension Credit capital predicates or definitions as equivalences."
+      ],
+      "requirement_outcomes": {
+        "RQ01": "exact existing PDF/text/page hashes verified; no new acquisition",
+        "RQ02": "selected paragraph spans and context inspected; whole-chapter segmentation remains incomplete",
+        "RQ03": "scoped concepts drafted from selected body passages; remaining terms and specialist review open",
+        "RQ04": "selected SKOS-related proposals checked against exact passages; no new predicate or equivalence",
+        "RQ05": "source observation and discovered revision statements distinguished; publication and legal applicability unresolved",
+        "RQ06": "literal citations retained from inspected pages; no legal text acquisition or consolidation",
+        "RQ07": "two evidence-specific cases designed; retrieval and model execution pending",
+        "RQ08": "this bounded batch receipt records source identifiers, selected coverage, mechanical checks and explicit gaps",
+        "RQ09": "benefit-specific distinctions retained; no PC/UC/New Style equivalence or cross-benefit rule transfer"
+      },
+      "selected_evidence": [
+        {
+          "locator": "DMG 29354",
+          "page": "page/dmg-vol5-ch29/0043",
+          "quote": "29354 The DM decides all of the disregards which apply to each item of capital. This is because income\nfrom capital is taken into account as income and not capital if certain disregards apply. DMs should note\nthat this also applies if the capital is worth nothing.",
+          "quote_sha256": "3a360a9f6217005128d15c15956b7d407118d9cd347fd646ef0dea0f0f50b1a6"
+        },
+        {
+          "locator": "DMG 29353",
+          "page": "page/dmg-vol5-ch29/0043",
+          "quote": "29353 The DM decides if capital can be disregarded\n\n\n1. at the date of claim or revision and\n\n\n2. before it is valued.\n\n\nThe DM does not have to know the value of capital to decide if it can be disregarded.",
+          "quote_sha256": "05475a0a2c38efed05da83e768c4cd8b8a21dbe33250a527f58db0468f307709"
+        },
+        {
+          "locator": "DMG 29071",
+          "page": "page/dmg-vol5-ch29/0009",
+          "quote": "29071 People are beneficial owners of capital if they have a beneficial interest in it. A person is the joint\nbeneficial owner of capital if more than one person has a beneficial interest in the same capital.",
+          "quote_sha256": "8dceb24b805e1e0f09863b28251edf1e7ccbf50e849cd62083c48b876911b7ce"
+        },
+        {
+          "locator": "DMG 29832",
+          "page": "page/dmg-vol5-ch29/0163",
+          "quote": "29832 The DM has to decide why claimants or partners chose to deprive themselves of capital when\n\nthey did if they had a choice in the matter1. The fact that claimants had a choice does not mean their\npurpose was to get benefit or more benefit. It is a fact which the DM should take into account when\ndeciding the claimant's or partner's purpose.\n\n\n                                                                                                 1 R(SB) 12/91",
+          "quote_sha256": "1c116f859bc4e590593d3c34408292281ddf70356a472d3f173cab35403a21c6"
+        },
+        {
+          "locator": "DMG 29805",
+          "page": "page/dmg-vol5-ch29/0158",
+          "quote": "29805 The law says people are treated as having capital they do not have if they deprive themselves of\ntheir capital for the purpose of getting\n\n\n1. for JSA\n\n\n       1.1 JSA or IS or\n\n\n       1.2 more JSA or IS1 or\n\n\n2. for IS\n\n\n       2.1 IS or\n\n\n       2.2 more IS2.\n\n\n                                                         1 JSA Regs, reg 113(1); 2 IS (Gen) Regs, reg 51(1)",
+          "quote_sha256": "6f54733aeac7ff250808d2fc0f4ddeff68be243825abfed30328eae0e22187c5"
+        },
+        {
+          "locator": "DMG 29351",
+          "page": "page/dmg-vol5-ch29/0043",
+          "quote": "29351 [See DMG Memo 11/20] The law allows for all capital to be included unless it can be disregarded 1.\n\n\n                                                 1 JSA Regs, reg 108 & Sch 8; IS (Gen) Regs, reg 46 & Sch 10",
+          "quote_sha256": "113dcb5f510c369442f8942fd1b26df22a488656b25d20580f07a24846ef5252"
+        },
+        {
+          "locator": "DMG 29826",
+          "page": "page/dmg-vol5-ch29/0162",
+          "quote": "29826 DMs have to decide if the claimant's or partner's significant purpose was to get benefit or more\nbenefit. The DM has to make such a decision each time claimants or partners deprive themselves of\ncapital. So if claimants have spent their capital on several things the DM has to decide the claimant's\npurpose for each act of deprivation.",
+          "quote_sha256": "4baef1d6e2ad5aa25b9a1bf4075a76c87e7715db57109eaa018afcfdcd32aa84"
+        },
+        {
+          "locator": "DMG 29806",
+          "page": "page/dmg-vol5-ch29/0158",
+          "quote": "29806 People are not treated as having capital of which they have deprived themselves if\n\n\n1. the capital is a payment made because of a personal injury to them (including payments from the\nChildren’s Memorial Trust - see DMG 29418) and\n\n\n2. the payment is held on trust for their benefit1.\n\n\nThey are also not treated as having the amount by which notional capital is reduced under the\n\ndiminishing notional capital rule2.",
+          "quote_sha256": "ba95daded02e569c0843f67486b5e40d5d1cadcd45ed75cee86935d99fa91c7d"
+        },
+        {
+          "locator": "DMG 29808",
+          "page": "page/dmg-vol5-ch29/0159",
+          "quote": "29808 The law applies only to a claimant and partner. It does not apply to a\n\n\n1. child or\n\n\n2. young person\n\n\neven if a child's or young person's capital has been disposed of.",
+          "quote_sha256": "83ea3d43b07e7540913d021f3f282f2a6c1907216d57b5febc05703cb249e1cb"
+        },
+        {
+          "locator": "DMG 29072",
+          "page": "page/dmg-vol5-ch29/0009",
+          "quote": "29072 A person whose name the capital is in is called the legal owner. A person is the joint legal owner of\ncapital if more than one person is the legal owner of the same capital.",
+          "quote_sha256": "0b00e07473eee16e78ef59f6da664ba6348392b4b29b7cadbbcebaf2ead4c628"
+        },
+        {
+          "locator": "DMG 29833",
+          "page": "page/dmg-vol5-ch29/0163",
+          "quote": "29833 Claimants or partners have no choice if they use their capital to pay\n\n\n1. for the necessities of life, such as food and fuel or\n\n\n2. debts which are\n\n\n      2.1 immediately repayable and\n\n\n      2.2 legal debts capable of enforcement1 or\n\n\n3. the Department to repay an overpayment.\n\n\nClaimants or partners who had no choice have not deprived themselves of capital to get benefit or more\nbenefit.",
+          "quote_sha256": "d8a123ad46adacda21fbab8e94df015c1848bc436678e9484772453de3b2f32a"
+        },
+        {
+          "locator": "DMG 29070",
+          "page": "page/dmg-vol5-ch29/0009",
+          "quote": "29070 Only the capital where people are the beneficial owners is included when working out what\ncapital they have.",
+          "quote_sha256": "deaf399b54318d431af86f829f4c5316b9ac589005be1fa700a3757954adfdb6"
+        },
+        {
+          "locator": "DMG 29809",
+          "page": "page/dmg-vol5-ch29/0159",
+          "quote": "29809 The law applies to claimants and partners only if they were the beneficial owner or joint beneficial\nowners of the capital. So if a claimant is the joint beneficial owner of a building society account which has\n£10,000 in it and the claimant's share is £4,000 the law\n\n\n1. applies if the claimant spends or gives away that £4,000 or any part of it for the purpose of getting\nbenefit or more benefit and\n\n\n2. does not apply if the other £6,000 or any part of it is spent or given away.",
+          "quote_sha256": "b30602b253875e323fa90b9eacd62a728cb4ed6b917730b9c44c7a7ea7c3f349"
+        },
+        {
+          "locator": "DMG 29352",
+          "page": "page/dmg-vol5-ch29/0043",
+          "quote": "29352 The claimant has to show that the capital can be disregarded. If there is no evidence to show\ncapital can be disregarded, it is included when working out the amount of capital a claimant has.",
+          "quote_sha256": "d16499ba7db58f37b6877cb339cb9bc790b1f5f641ea61fa23f3deb22c88cde7"
+        },
+        {
+          "locator": "DMG 29825",
+          "page": "page/dmg-vol5-ch29/0162",
+          "quote": "29825 DMs have to show the claimant's or partner's purpose was to get benefit or more benefit if they\ndecide claimants or partners have deprived themselves of capital. Getting benefit or more benefit may\n\nnot be the claimant's or partner's predominant purpose but it must be a significant one 1. So when\nclaimants give away all their capital to a relative just before claiming benefit their\n\n\n1. main, or predominant, purpose may be to benefit the relative and\n\n\n2. intention, or significant purpose, may be to reduce their capital so they can get benefit or more benefit.\n\n\n                                                                                              1 R(SB) 40/85",
+          "quote_sha256": "5d871aa2198b0410c5934eb387f1f3fa3411ea14640396e7e566815dbd28a18e"
+        },
+        {
+          "locator": "DMG 29000",
+          "page": "page/dmg-vol5-ch29/0003",
+          "quote": "29000 This Chapter gives guidance on capital and its effect on JSA(IB) and IS. The JSA(Cont) claimants\ncan get is not affected by their capital.",
+          "quote_sha256": "3d156d81382d71bb0b1b8f793658e3678cbcf4e8e5b86c4dbb90660737cc6496"
+        },
+        {
+          "locator": "DMG 29074",
+          "page": "page/dmg-vol5-ch29/0009",
+          "quote": "29074 Legal owners who are not the beneficial owners of capital are holding that capital on trust for the\n\nbeneficial owners1. They cannot use the capital for themselves. It should be used for the beneficial\nowners.\n\n\n                                                                                                1 R(SB) 23/85",
+          "quote_sha256": "60a09b0a9646f8258380d2b0d6e4c3448237b53d58c0525ef62f47eb2c6bd095"
+        }
+      ],
+      "source_date_review": {
+        "legal_applicability_established": false,
+        "publication_date": null,
+        "revision_statements": [],
+        "role": "stated source revision dates, not source publication or legal commencement"
+      },
+      "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-ch29.json",
+      "source_pages_sha256": "b490507e3aaf6110ea0593fee2ee4d772fd5a1f9a75f4f91008734caec51cfd9",
+      "source_pdf_sha256": "a1b086fdad8d32d6273b35fb8895516b6957faacd05fd3b06e091032598a47b9",
+      "source_unit_id": "dmg-53eb1641bc9342b8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69d8f3a496c86b751317022c/dmg-Ch-29.pdf",
+      "specialist_acceptance": "not-recorded",
+      "status": "initial-source-backed-batch; further-chapter-research-and-behavioural-evaluation-pending"
+    }
+  ],
+  "checks": {
+    "alias_removal_preserved_parsed_data": true,
+    "authored_file_hashes": [
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsa-personal-rate.yamlld",
+        "sha256": "94162aa35b7aa5d480613c277793ac92872d563746d6d50ca4a1faf1ec447f11"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-accommodation-boundary.yamlld",
+        "sha256": "3c2823c84eb416d632a1d3e594c272b9aab17ca7822e5664ef77a64fdbea3d54"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-applicable-amount.yamlld",
+        "sha256": "84538aa3a960c49463e58a4e77491c09439500957fae1b89e3f8feb75aa4675f"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-beneficial-capital-ownership.yamlld",
+        "sha256": "c690fe8ac3e76e36c29acf95753da844bfb1a13cbcf7b4e1b3c658773cf01b18"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-business-expense-conditions.yamlld",
+        "sha256": "d5bf704a0b1a782ee0c7e9a24eacc158a455766cfd9a28e415bd275c81be575a"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-capital-deprivation.yamlld",
+        "sha256": "d5372a516473a51138eaf82bf79109e720893b28d35cd4943bce9db248b808ef"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-capital-disregard-assessment.yamlld",
+        "sha256": "97e39fcb48cb4f7bfc583489559072137c880cc21fe64e733355b3f55bc921bb"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-employed-earner.yamlld",
+        "sha256": "b8095e190a5697bf8486647e70408e62e264e015c91d9ade3cacd27f46bff259"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-family-income-attribution.yamlld",
+        "sha256": "f5966ed5cbf16f5f5f25e2c79af514717076fece82ef91422e149b125c3beded"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-free-inpatient-treatment.yamlld",
+        "sha256": "d69bfd8f1ad5c22296be86fb586e9f8c72174ad95f1c368fea60fcef81cd8699"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-gross-employed-earnings.yamlld",
+        "sha256": "a6d6140f9f4ff3ab92eca4fa8c46609889affc540d9e1c3bd2bb9f5572fb6472"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-gross-other-income.yamlld",
+        "sha256": "0a309c5774ba305d68bbf604cfb6f307cf34f1ffe8dc561cd5fb8f15122a7972"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-hospital-family-membership.yamlld",
+        "sha256": "ba9cc1a136fb8d85dbf4e00d4ef8ba004a9c7ee2e66e9e76a833f67acd98dc3d"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-income-assessment-period.yamlld",
+        "sha256": "bdabf7f980da2d0397becd87541bceb0eddaa100658dca64e7870b82ab0d756c"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-income-capital-distinction.yamlld",
+        "sha256": "024690ce3373189c9c1080438f52c7bf0af02c10a18d07787f43ad154e04ad47"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-income-deprivation.yamlld",
+        "sha256": "a96367e4ee40a500bedc187381592edba59929997ab85fa4262a40e570ee91d2"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-income-payment-dates.yamlld",
+        "sha256": "5250d4a2df7baf1eae814335207c4bd46fbde27b431a1480d7be3b18acc965fe"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-is-incomplete-element-evidence.yamlld",
+        "sha256": "da305973b3cc71ffd1cca02c088ec5e972d9558ec3374ceca9a05912314679cd"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-net-employed-earnings.yamlld",
+        "sha256": "b6d86548b26ed09d8ad5d5baba240bec846ee97dd7369e3d23d0118969a31853"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-notional-employed-earnings.yamlld",
+        "sha256": "485c633ced2e5b12a60da707931e2111588beaad8ebea0424b415103dbd7438b"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-notional-income.yamlld",
+        "sha256": "0abdef00e4841695d17789a9dcfd2b4de91c88ea490304866f462060d6248452"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-self-employed-assessment-period.yamlld",
+        "sha256": "af8d6dffe5ce2ee4827054bfedc94e465fcbc42cd2156185ff8b70d287b0a694"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-self-employed-earner.yamlld",
+        "sha256": "c86e278ff4bef573a29f419cec68e73ff9a422a2bd50fdf772cd327f41492084"
+      },
+      {
+        "path": "knowledge/full-dmg/jsa-income-support/jsais-share-fisherman.yamlld",
+        "sha256": "584233382b5e5da6f96e6e154393f80695f88fde75f5bdddb71b694c9b18169c"
+      }
+    ],
+    "behavioural_cases_executed": 0,
+    "browser_checks_executed": false,
+    "canonical_yaml_loader_all_files_passed": true,
+    "concepts": 24,
+    "finished_at": "2026-09-15T20:19:08.795381Z",
+    "full_build_executed": false,
+    "meaning": "Mechanical source integrity only; not semantic correctness, current law, operational acceptance or an executed question-answer evaluation.",
+    "method": "Executed scripts/build_full_dmg.py check_full_relation in memory for each proposal, verified all seven PDF/text/page hashes and YAML round-trip data equality.",
+    "negative_controls": [
+      "fabricated quote",
+      "wrong paragraph locator",
+      "absent endpoint",
+      "unregistered predicate"
+    ],
+    "negative_mutations_rejected": 140,
+    "relation_evidence_passages": 44,
+    "relations": 35,
+    "started_at": "2026-09-15T20:19:08.289888Z",
+    "status": "passed-local-mechanical-validation",
+    "yaml_aliases_emitted": false
+  },
+  "generated_at": "2026-09-15T20:19:08.289888Z",
+  "inputs": [
+    {
+      "path": "source/full-dmg-2026-09-15/inventory.json",
+      "sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a"
+    },
+    {
+      "path": "evaluation/full-dmg-coverage-plan.json",
+      "sha256": "b182a73c622e303d0c5f0bdf0213e8a1be4c2ec6b7ff6b92529cb1e94b5008f6"
+    }
+  ],
+  "limitations": [
+    "This is a selected substantive batch across seven chapters, not complete semantic coverage of their 1,006 pages.",
+    "Definitions, relationships and case expectations remain model-authored and unreviewed.",
+    "No entitlement amounts, claimant data, legal advice or executable benefits rules are produced.",
+    "Numerical examples and amendment dates are not current rates or commencement dates.",
+    "Existing Pension Credit concepts remain unchanged; SKOS association does not assert equivalence."
+  ],
+  "method": {
+    "authoring": "Model-assisted source interpretation and case design.",
+    "authority": "Unreviewed project interpretation; DWP guidance, statutory text and project proposals remain distinct.",
+    "extraction": "Existing frozen Poppler output preserved verbatim; no OCR or source repair.",
+    "model_identity": "Exact runtime model identifier not exposed; no model usage measurement is claimed.",
+    "source_instructions": "Source text is inert evidence, not authority to execute instructions."
+  },
+  "publication_state": "Authored research batch; full-corpus compilation, independent review and consumer checks remain separate gates.",
+  "schema": "okf-dwp-full-dmg-jsa-income-support-review.v1",
+  "scope": {
+    "behavioural_cases_executed": 0,
+    "chapters": [
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "concept_files": 24,
+    "context_pages_inspected": 69,
+    "cross_benefit_equivalence_asserted": false,
+    "documents": 7,
+    "new_source_acquisition": false,
+    "private_correspondence_used": false,
+    "semantic_relationships": 35,
+    "source_pdf_pages": 1006,
+    "specialist_accepted": 0,
+    "whole_chapter_coverage_claimed": false
+  },
+  "status": "source-backed-initial-semantic-batch; further-research-and-behavioural-evaluation-pending"
+}

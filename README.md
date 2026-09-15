@@ -10,7 +10,7 @@ This repository turns the public [DWP Decision makers’ guide, volumes 13 and 1
 
 **Full-DMG completion is now under way.** The owner has authorised unattended processing and publication against the frozen 331-PDF census, with content frozen by 24 September. The [completion plan](docs/next-stage/unattended-completion.md) and [current checkpoint](evaluation/full-dmg-progress.json) distinguish work in progress from delivered coverage. The existing links above remain the verified Pension Credit demonstration.
 
-The [full-DMG acquisition](docs/next-stage/full-dmg-acquisition.md) is complete: **331 PDFs and 14,743 measured pages**, with source hashes and extraction-quality flags. An indexed consumer has passed local source, search and semantic checks; live consumer verification is pending. The first wider authoring batches add **48 concepts and 72 proposals** across 17 substantive PDF units. [Measured coverage](evaluation/full-dmg-coverage.json) keeps the 61 remaining substantive units and specialist-review gaps visible.
+The [full-DMG acquisition](docs/next-stage/full-dmg-acquisition.md) is complete: **331 PDFs and 14,743 measured pages**, with source hashes and extraction-quality flags. An indexed consumer has passed local source, search and semantic checks; live consumer verification is in progress. The first five wider authoring batches add **123 concepts and 161 proposals** across 34 substantive PDF units. [Measured coverage](evaluation/full-dmg-coverage.json) keeps the 44 remaining substantive units and specialist-review gaps visible.
 
 | Layer | Delivered scope |
 | --- | --- |
@@ -52,6 +52,7 @@ uv run --locked python scripts/build_full_dmg.py
 uv run --locked python scripts/build_full_dmg.py --check
 uv run --locked python scripts/validate_full_dmg.py
 uv run --locked python scripts/report_full_dmg_coverage.py --check
+uv run --locked python scripts/evaluate_full_dmg.py --check
 ```
 
 Its Explorer entry point is `full-dmg/okf-explorer.json` (or `okf-explorer.yamlld`). `full-dmg/okf-bundle.yamlld` is a semantic control document pointing to bounded graph shards; it is not a small-bundle import. Final launch links will name the immutable candidate actually checked in the browser.

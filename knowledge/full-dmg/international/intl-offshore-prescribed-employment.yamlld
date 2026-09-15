@@ -1,0 +1,77 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-offshore-prescribed-employment
+  '@type': skos:Concept
+  route: term/intl-offshore-prescribed-employment
+  title: Continental shelf prescribed employment in the source
+  type: Concept
+  description: The source describes a continental shelf worker by prescribed employment and says the relevant employment can be under a contract of service or otherwise in an appointed or designated area.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-international-research
+    at: '2026-09-15T20:19:49.223063Z'
+  observedAt: '2026-09-15T20:19:49.223063Z'
+  skos:prefLabel:
+    '@value': Continental shelf prescribed employment in the source
+    '@language': en-GB
+  skos:definition:
+    '@value': The source describes a continental shelf worker by prescribed employment and says the relevant employment can be under a contract of service or otherwise in an appointed or designated area.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 078080–078081 are qualified by the separate accident and disease definitions at 078084. No ordinary land-based employment or whole-UK territorial rule is substituted.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - international subjects
+  - chapter 7 part 7
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol2-ch7-part7/0007
+  source: https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=7
+  resource: https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=7
+  sources:
+  - id: dmg-vol2-ch7-part7
+    title: "DMG Vol 2 Ch 7 Part 7: Offshore workers and Her Majesty's forces [078060 to 079999]"
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf
+    retrieved_at: '2026-09-15T19:45:20.233458Z'
+    sha256: 0ca8d6f5ffc6a7c24b630b8ac219371f5e8b29c12b247ee9b18c8e27203eb532
+  body: |
+    # Continental shelf prescribed employment in the source
+
+    ## Authored interpretation
+
+    The source describes a continental shelf worker by prescribed employment and says the relevant employment can be under a contract of service or otherwise in an appointed or designated area.
+
+    ## Scope and boundaries
+
+    DMG 078080–078081 are qualified by the separate accident and disease definitions at 078084. No ordinary land-based employment or whole-UK territorial rule is substituted.
+
+    ## Inspected source passages
+
+    - [DMG 078080, PDF page 7](https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=7)
+    - [DMG 078081, PDF page 7](https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=7)
+    - [DMG 078084, PDF page 7](https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=7)
+
+    ## Evidence and review status
+
+    This is a model-assisted, unreviewed interpretation of selected passages in the frozen DWP source. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable rule. No specialist acceptance, current-law reconciliation or complete coverage of this chapter part is claimed. References to EU law, countries and benefits retain the scope and date context of the cited text; they do not establish applicability to a person or a later regime. Machine extraction may alter reading order and characters; no visual PDF review is claimed.
+
+    Source captured: 2026-09-15T19:45:20.233458Z. This is an acquisition time, not a publication or legal commencement date. The attachment publication date is not established by the frozen metadata. Source-stated dates require their own role and precision.
+
+    PDF SHA-256: `0ca8d6f5ffc6a7c24b630b8ac219371f5e8b29c12b247ee9b18c8e27203eb532`. Extracted pages SHA-256: `7375d9e98727f909c1efe0321340b929a153a64466d6d7161d6e1f6d86515424`.
+  semantic_relations:
+  - target: term/intl-offshore-area
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The employment definition is qualified by the relevant area, and the source warns of a different accident/disease definition.
+    evidence:
+    - page: page/dmg-vol2-ch7-part7/0007
+      quote: "078081 Prescribed employment means any employment , whether under a contract of\n                                                                      2\n         service or not, in any appointed or designated area , but see DMG Volume 1 ­\n         Decision Making and Appeals.\n                                        1 Oil and Gas (Enterprise) Act 1982, s 23(2); 2 SS Ben (PA) Regs, reg 11(1)"
+      locator: DMG 078081
+    - page: page/dmg-vol2-ch7-part7/0007
+      quote: "078084 For accidents happening or prescribed diseases caught outside Great Britain\n                                                                                                        1\n         “prescribed employment” and “prescribed area” are defined slightly differently .\n                                                                                   1 SS Ben (PA) Regs, reg 10C(1)"
+      locator: DMG 078084

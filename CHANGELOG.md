@@ -6,7 +6,9 @@
 - Begin acquisition against all 331 DMG URLs and a separate indexed Explorer projection, preserving the existing Pension Credit demonstration.
 - Add a finite semantic/evaluation worklist and make CLI retrieval scope explicit. Keep CPAG body reuse, specialist acceptance and full ADM outside this research-bundle completion claim.
 - Complete acquisition and hash/page verification of 331 PDFs. Add bounded evidence discovery, an indexed full-text compiler and source/semantic coverage reporting.
-- Add the first wider authoring batches: 48 concepts and 72 exact-passage relationship proposals across 17 substantive source units, with explicit exceptions and pending specialist review.
+- Add five wider authoring batches: 123 concepts and 161 exact-passage relationship proposals across 34 substantive source units, with explicit exceptions and pending specialist review.
+- Correct the indexed exploratory notice envelope, add route labels and direct original-PDF narrative links, and use platform-independent gzip headers for reproducible macOS/Linux builds.
+- Execute indexed locator, source identity, no-result and baseline navigation controls separately from the designed behavioural questions.
 
 ## CPAG external reference — 15 September 2026
 

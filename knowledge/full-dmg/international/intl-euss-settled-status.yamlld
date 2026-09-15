@@ -1,0 +1,80 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-euss-settled-status
+  '@type': skos:Concept
+  route: term/intl-euss-settled-status
+  title: EUSS settled status in the source-described residence test
+  type: Concept
+  description: The source identifies EUSS settled status as indefinite leave and says it satisfies the right-to-reside element of the stated habitual residence test.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-international-research
+    at: '2026-09-15T20:19:49.223063Z'
+  observedAt: '2026-09-15T20:19:49.223063Z'
+  skos:prefLabel:
+    '@value': EUSS settled status in the source-described residence test
+    '@language': en-GB
+  skos:definition:
+    '@value': The source identifies EUSS settled status as indefinite leave and says it satisfies the right-to-reside element of the stated habitual residence test.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 073490–073491; this concerns one element of the test, not complete benefit entitlement or a finding of actual habitual residence. The applicable benefit and later legal changes still require review.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - international subjects
+  - chapter 7 part 3
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol2-ch7-part3/0115
+  source: https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=115
+  resource: https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=115
+  sources:
+  - id: dmg-vol2-ch7-part3
+    title: 'DMG Vol 2 Ch 7 Part 3: Habitual residence and right to reside IS, JSA and SPC [072770 to 073779]'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf
+    retrieved_at: '2026-09-15T19:45:19.782804Z'
+    sha256: f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70
+  body: |
+    # EUSS settled status in the source-described residence test
+
+    ## Authored interpretation
+
+    The source identifies EUSS settled status as indefinite leave and says it satisfies the right-to-reside element of the stated habitual residence test.
+
+    ## Scope and boundaries
+
+    DMG 073490–073491; this concerns one element of the test, not complete benefit entitlement or a finding of actual habitual residence. The applicable benefit and later legal changes still require review.
+
+    ## Inspected source passages
+
+    - [DMG 073490, PDF page 115](https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=115)
+    - [DMG 073491, PDF page 115](https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=115)
+
+    ## Evidence and review status
+
+    This is a model-assisted, unreviewed interpretation of selected passages in the frozen DWP source. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable rule. No specialist acceptance, current-law reconciliation or complete coverage of this chapter part is claimed. References to EU law, countries and benefits retain the scope and date context of the cited text; they do not establish applicability to a person or a later regime. Machine extraction may alter reading order and characters; no visual PDF review is claimed.
+
+    Source captured: 2026-09-15T19:45:19.782804Z. This is an acquisition time, not a publication or legal commencement date. The attachment publication date is not established by the frozen metadata. Source-stated dates require their own role and precision.
+
+    PDF SHA-256: `f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70`. Extracted pages SHA-256: `bb4be572465a2e6a522fc07e675172436459d73a8850e76d7d112c9f88db0471`.
+  semantic_relations:
+  - target: term/intl-qualifying-right-to-reside
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source treats settled status as satisfying the right-to-reside element, not the complete benefit test.
+    evidence:
+    - page: page/dmg-vol2-ch7-part3/0115
+      quote: "073491 Where a claimant has been granted ILR i.e. settled status under the EUSS, they will satisfy the\nright to reside element of the Habitual Residence Test for the purposes of claiming IS, JSA, ESA or SPC.\n\n\nNote: It is not necessary for DMs to apply the Imm (EEA) Regs 2016 where the claimant has been\ngranted ILR, as the claimant does not need a qualifying right to reside.\n\n\nPre-settled Status – Limited Leave to Remain"
+      locator: DMG 073491
+  - target: term/intl-euss-pre-settled-status
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source identifies two different kinds of EUSS leave; the association preserves their distinction.
+    evidence:
+    - page: page/dmg-vol2-ch7-part3/0115
+      quote: "073490 A new right to reside has been created for EEA nationals in Appendix EU to the Immigration\nRules made under the Immigration Act 1971. Applicants to the EUSS can be granted either\n\n\n1. Indefinite Leave to Enter (ILE)/Indefinite Leave to Remain (ILR)(\"settled status“) or\n\n\n2. Limited Leave to Enter (LLE)/Limited Leave to Remain (LLR)(“pre-settled status“)\n\n\nby the Home Office.\n\n\n\nSettled Status – Indefinite Leave to Remain"
+      locator: DMG 073490

@@ -1,0 +1,82 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-hrt-sequence
+  '@type': skos:Concept
+  route: term/intl-hrt-sequence
+  title: The source-described habitual residence assessment sequence
+  type: Concept
+  description: The guidance separates immigration-control and exclusion questions, a qualifying right to reside, excluded rights, and the factual assessment of actual habitual residence.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-international-research
+    at: '2026-09-15T20:19:49.223063Z'
+  observedAt: '2026-09-15T20:19:49.223063Z'
+  skos:prefLabel:
+    '@value': The source-described habitual residence assessment sequence
+    '@language': en-GB
+  skos:definition:
+    '@value': The guidance separates immigration-control and exclusion questions, a qualifying right to reside, excluded rights, and the factual assessment of actual habitual residence.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 072791–072792 are scoped by the IS, income-based JSA, income-related ESA and SPC introduction at 072770. Memo 10/25 and other later references are unresolved. No sequence here determines a real claim.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - international subjects
+  - chapter 7 part 3
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol2-ch7-part3/0002
+  - page/dmg-vol2-ch7-part3/0003
+  source: https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=2
+  resource: https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=2
+  sources:
+  - id: dmg-vol2-ch7-part3
+    title: 'DMG Vol 2 Ch 7 Part 3: Habitual residence and right to reside IS, JSA and SPC [072770 to 073779]'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf
+    retrieved_at: '2026-09-15T19:45:19.782804Z'
+    sha256: f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70
+  body: |
+    # The source-described habitual residence assessment sequence
+
+    ## Authored interpretation
+
+    The guidance separates immigration-control and exclusion questions, a qualifying right to reside, excluded rights, and the factual assessment of actual habitual residence.
+
+    ## Scope and boundaries
+
+    DMG 072791–072792 are scoped by the IS, income-based JSA, income-related ESA and SPC introduction at 072770. Memo 10/25 and other later references are unresolved. No sequence here determines a real claim.
+
+    ## Inspected source passages
+
+    - [DMG 072770, PDF page 2](https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=2)
+    - [DMG 072791, PDF page 3](https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=3)
+    - [DMG 072792, PDF page 3](https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=3)
+
+    ## Evidence and review status
+
+    This is a model-assisted, unreviewed interpretation of selected passages in the frozen DWP source. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable rule. No specialist acceptance, current-law reconciliation or complete coverage of this chapter part is claimed. References to EU law, countries and benefits retain the scope and date context of the cited text; they do not establish applicability to a person or a later regime. Machine extraction may alter reading order and characters; no visual PDF review is claimed.
+
+    Source captured: 2026-09-15T19:45:19.782804Z. This is an acquisition time, not a publication or legal commencement date. The attachment publication date is not established by the frozen metadata. Source-stated dates require their own role and precision.
+
+    PDF SHA-256: `f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70`. Extracted pages SHA-256: `bb4be572465a2e6a522fc07e675172436459d73a8850e76d7d112c9f88db0471`.
+  semantic_relations:
+  - target: term/intl-actual-habitual-residence
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The passage requires a separate factual habitual residence test after the preceding qualifying-right questions.
+    evidence:
+    - page: page/dmg-vol2-ch7-part3/0003
+      quote: "072791 [See Memo DMG 10/25] If other conditions of entitlement to benefit are satisfied the DM should\nconsider whether the claimant is excluded from benefit by being a PSIC. If not the DM should consider\n\n\n1. whether the claimant is excluded from treatment as a person from abroad in consequence of EC law or\nunder other specific exclusions if not\n\n\n2. whether the claimant has the right to reside in the CTA and\n\n\n3. whether that right to reside is excluded.\n\n\nIf the claimant has the right to reside in the CTA which is not excluded the DM should apply the test for\nactual habitual residence."
+      locator: DMG 072791
+  - target: term/intl-qualifying-right-to-reside
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source distinguishes a qualifying right, excluded rights and subsequent factual residence within a stated sequence.
+    evidence:
+    - page: page/dmg-vol2-ch7-part3/0003
+      quote: "072791 [See Memo DMG 10/25] If other conditions of entitlement to benefit are satisfied the DM should\nconsider whether the claimant is excluded from benefit by being a PSIC. If not the DM should consider\n\n\n1. whether the claimant is excluded from treatment as a person from abroad in consequence of EC law or\nunder other specific exclusions if not\n\n\n2. whether the claimant has the right to reside in the CTA and\n\n\n3. whether that right to reside is excluded.\n\n\nIf the claimant has the right to reside in the CTA which is not excluded the DM should apply the test for\nactual habitual residence."
+      locator: DMG 072791

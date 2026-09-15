@@ -1,0 +1,72 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/rp-old-pension-regime
+  '@type': skos:Concept
+  route: term/rp-old-pension-regime
+  title: 'Retirement Pension: the older regime in the DMG'
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: Chapter 75 uses RP as the legislative term for old State Pension and distinguishes its
+    components and contribution routes from the State Pension regime discussed in chapter 74.
+  tags:
+  - full DMG
+  - pension regimes
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol12-ch75/0002
+  - page/dmg-vol12-ch75/0004
+  source: https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=2
+  resource: https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=2
+  sources:
+  - id: dmg-vol12-ch75
+    title: 'DMG Vol 12 Ch 75: Retirement Pension'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=2
+    sha256: 655e7acb31f09f5169efbe40419091ee479f88c0c45b65c7a507b042b67712f9
+    retrieved_at: '2026-09-15T19:45:35.356599Z'
+  skos:prefLabel:
+    '@value': 'Retirement Pension: the older regime in the DMG'
+    '@language': en-GB
+  skos:definition:
+    '@value': Chapter 75 uses RP as the legislative term for old State Pension and distinguishes its
+      components and contribution routes from the State Pension regime discussed in chapter 74.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The introductory pensionable-age boundary does not remove the need to examine category-specific
+      provisions. The source signposts a Category C exception and retains historical material. No award or
+      present rate is established here.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-regimes
+    at: '2026-09-15T20:17:36Z'
+  observedAt: '2026-09-15T20:17:36Z'
+  body: "# Retirement Pension: the older regime in the DMG\n\n## Source-backed proposal\n\nChapter 75 uses RP as
+    the legislative term for old State Pension and distinguishes its components and contribution routes from the
+    State Pension regime discussed in chapter 74.\n\n## Scope and exceptions\n\nThe introductory pensionable-age
+    boundary does not remove the need to examine category-specific provisions. The source signposts a Category C
+    exception and retains historical material. No award or present rate is established here.\n\n## Inspected passages\n\
+    \n- [DMG 75001, PDF page 2](https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=2).\n\
+    - [DMG 75002, PDF page 2](https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=2).\n\
+    - [DMG 75004, PDF page 2](https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=2).\n\
+    \n## Provenance and review\n\nIndependent experimental interpretation of DWP guidance, not an official DWP document.
+    All definitions and relationships are model-assisted and unreviewed. No individual eligibility, award, legal
+    conclusion or executable rule is supplied.\n\nSource observation, listing-page update, printed revision, stated
+    legal date and pension event date have separate meanings. PDF page numbers are one-based file positions; extraction
+    may damage reading order, footnotes and characters. No visual PDF or specialist acceptance is claimed.\n\n-
+    `dmg-vol12-ch75` — PDF SHA-256 `655e7acb31f09f5169efbe40419091ee479f88c0c45b65c7a507b042b67712f9`; page-extraction
+    SHA-256 `0d037880d2aeaff1be89235ee987ca4acb1c839fcf1ead8b8be2daa9f6795465`.\n"
+  semantic_relations:
+  - target: term/rp-pension-categories
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source describes contributory and non-contributory categories within RP, with a dated scope
+      note.
+    evidence:
+    - page: page/dmg-vol12-ch75/0004
+      quote: "75011 There are four categories of RP. These consist of\n\n\n1. contributory pensions and\n\n\n2.
+        non-contributory pensions.\n\n\nNote: This applies only to people whose pensionable age is before 6.4.16."
+      locator: DMG 75011

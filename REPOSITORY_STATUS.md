@@ -2,7 +2,7 @@
 
 ## Unattended full-DMG work in progress
 
-On 15 September 2026 the owner instructed completion of the bundle unattended. This authorises the public-source processing, semantic drafting, verification and normal reviewed PR publication in [the completion plan](docs/next-stage/unattended-completion.md). The [checkpoint](evaluation/full-dmg-progress.json) records actual task state. Full-DMG acquisition and an indexed consumer projection are in progress; this statement does not promote their acceptance gates. The previously verified Pension Credit publication remains available.
+On 15 September 2026 the owner instructed completion of the bundle unattended. This authorises the public-source processing, semantic drafting, verification and normal reviewed PR publication in [the completion plan](docs/next-stage/unattended-completion.md). The [checkpoint](evaluation/full-dmg-progress.json) records actual task state. Full-DMG acquisition is complete at 331 PDFs and 14,743 pages. The indexed projection is undergoing browser verification; five semantic batches cover 34 of 78 substantive PDF units with bounded research proposals. The previously verified Pension Credit publication remains available.
 
 CPAG substantive reuse and specialist acceptance are separate external decisions. Neither is required to complete an explicitly unreviewed research bundle from public GOV.UK sources. No handbook body acquisition or specialist acceptance is authorised or asserted by the unattended instruction.
 

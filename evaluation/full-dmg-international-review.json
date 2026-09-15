@@ -1,0 +1,2632 @@
+{
+  "schema": "okf-dwp-full-dmg-international-review.v1",
+  "scope": "Selected substantive passages in DMG chapter 7 parts 1–7 only; partial source-backed semantic research, not a complete chapter ontology or current legal assessment.",
+  "materialised_at": "2026-09-15T20:19:49.223063Z",
+  "mechanical_checks_finished_at": "2026-09-15T20:19:49.592298Z",
+  "method": "Model reading of frozen machine-extracted body passages and neighbouring scope material; individual scoped YAML-LD concepts; exact quote and six-digit locator checks with negative mutations.",
+  "tool_or_model_identity": {
+    "author": "Codex assistant",
+    "exact_runtime_model_identifier": "not-exposed-in-this-task",
+    "model_usage": "not-recorded",
+    "validator": "scripts/build_full_dmg.py:check_full_relation",
+    "validator_sha256": "d8feab62f61af6196db68e6eaf37621e46742dcd1c9d4ea0b3efbd3ec8b02c2b"
+  },
+  "inputs": {
+    "inventory_path": "source/full-dmg-2026-09-15/inventory.json",
+    "inventory_sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a",
+    "coverage_plan_path": "evaluation/full-dmg-coverage-plan.json",
+    "coverage_plan_sha256": "b182a73c622e303d0c5f0bdf0213e8a1be4c2ec6b7ff6b92529cb1e94b5008f6"
+  },
+  "summary": {
+    "source_parts": 7,
+    "source_pdf_pages": 792,
+    "selected_passages": 51,
+    "selected_evidence_pages": 25,
+    "new_concepts": 30,
+    "supported_relationship_proposals": 23,
+    "predicate_counts": {
+      "http://www.w3.org/2004/02/skos/core#related": 23
+    },
+    "designed_cases": 14,
+    "behavioural_cases_executed": 0,
+    "specialist_accepted": 0,
+    "additional_context_passages": 2,
+    "additional_context_pages": 2
+  },
+  "checks": {
+    "state": "passed",
+    "counts": {
+      "source_pdf_hashes": 7,
+      "extracted_page_hashes": 7,
+      "selected_passage_exact_matches": 51,
+      "definition_evidence_passages": 63,
+      "relationship_proposals": 23,
+      "negative_controls_rejected": 161,
+      "authored_file_hashes": 30,
+      "yaml_whitespace_and_roundtrip": 30,
+      "additional_context_exact_matches": 2
+    },
+    "negative_controls": [
+      {
+        "source": "term/intl-ec-personal-scope",
+        "target": "term/intl-reciprocal-benefit-scope",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-ni-review-appeal-scope",
+        "target": "term/intl-ni-presence",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-care-cash-classification",
+        "target": "term/intl-dla-mobility-classification",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-care-cash-classification",
+        "target": "term/intl-coordination-regulation-versions",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-dla-mobility-classification",
+        "target": "term/intl-coordination-regulation-versions",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-hrt-sequence",
+        "target": "term/intl-actual-habitual-residence",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-hrt-sequence",
+        "target": "term/intl-qualifying-right-to-reside",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-euss-settled-status",
+        "target": "term/intl-qualifying-right-to-reside",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-euss-settled-status",
+        "target": "term/intl-euss-pre-settled-status",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-euss-pre-settled-status",
+        "target": "term/intl-qualifying-right-to-reside",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-invalidity-type-a",
+        "target": "term/intl-invalidity-type-b",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-industrial-injuries-international",
+        "target": "term/intl-industrial-injuries-export",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-industrial-injuries-international",
+        "target": "term/intl-reciprocal-benefit-scope",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-jsa-foreign-insurance",
+        "target": "term/intl-income-jsa-international-residence",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-category-cd-residence",
+        "target": "term/intl-category-cd-retention",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-rp-uprating-abroad",
+        "target": "term/intl-reciprocal-benefit-scope",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-spc-claimant-absence",
+        "target": "term/intl-spc-household-absence",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-spc-claimant-absence",
+        "target": "term/intl-spc-non-export",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-spc-claimant-absence",
+        "target": "term/intl-spc-absence-transition-2016",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-mariner-industrial-injuries",
+        "target": "term/intl-mariner-other-benefits",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-offshore-prescribed-employment",
+        "target": "term/intl-offshore-area",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-overseas-delayed-claim",
+        "target": "term/intl-mariner-other-benefits",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      },
+      {
+        "source": "term/intl-overseas-delayed-claim",
+        "target": "term/intl-offshore-prescribed-employment",
+        "rejected_mutations": [
+          "fabricated-quote",
+          "wrong-paragraph",
+          "unknown-target",
+          "unapproved-equivalence",
+          "wrong-page",
+          "self-reference",
+          "six-digit-truncated"
+        ]
+      }
+    ],
+    "meaning": "Mechanical grounding and contract checks only; neither semantic correctness, legal currency, browser acceptance nor behavioural evaluation is established."
+  },
+  "concepts": [
+    {
+      "route": "term/intl-ec-personal-scope",
+      "path": "knowledge/full-dmg/international/intl-ec-personal-scope.yamlld",
+      "sha256": "36572acbd97c1d04bf2fb3ba55f380885a470c1be7b65e06eca9318bd6957d03",
+      "part": 1,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part1/0015",
+          "quote": "070050 [See Memo DMG 32/10] In order to be covered by EC provisions 1 a person must come within\ntheir personal scope. Set out below are the categories of people who come within the personal scope of\nEC provisions.\n\n\n                                                                     1 Reg (EEC) 1408/71, Reg (EEC) 574/72",
+          "locator": "DMG 070050"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part1/0057",
+          "quote": "070311 In general a person covered by EC provisions cannot rely on a reciprocal agreement for\nentitlement to benefit (see DMG 070320).",
+          "locator": "DMG 070311"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-reciprocal-benefit-scope",
+      "path": "knowledge/full-dmg/international/intl-reciprocal-benefit-scope.yamlld",
+      "sha256": "d14286909fb2f86cd4140c4991570ce95f05efbcf3738b1f78475630d6ba5a96",
+      "part": 1,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part1/0057",
+          "quote": "070310 The UK has reciprocal agreements with both EEA countries and other countries. Lists of the\ncountries with which the UK has agreements are at\n\n\n• DMG 070330 for EEA countries and\n\n\n• DMG 070333 for non-EEA countries.\n\n\nThose lists also set out which benefits are covered by the agreements.",
+          "locator": "DMG 070310"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part1/0057",
+          "quote": "070312 Detailed guidance on the effects of those agreements is set out in the section of the Chapter\ndealing with each benefit. ESA(C) is not covered by any reciprocal agreement with EEA countries despite\nprovisions being made for IB. However certain non EEA countries now have a reciprocal agreement with\n\nthe UK for ESA(C)1 see DMG 070333.\n\n\n                                                                     1 SS (Reciprocal Agreements) Order 12\n\n\n\nGeneral principles\n\nAdjudication under reciprocal agreements",
+          "locator": "DMG 070312"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-ni-review-appeal-scope",
+      "path": "knowledge/full-dmg/international/intl-ni-review-appeal-scope.yamlld",
+      "sha256": "9030773c85cf8de63e6338c4fee66e64288aff7d2774ea2fcc68b2de32d9f618",
+      "part": 1,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part1/0098",
+          "quote": "070530 [See memo DMG 1/17] A decision made in Great Britain or Northern Ireland can be revised,\n\nsuperseded or heard on appeal in whichever of the two countries the claimant is 1.\n\n\n                                        1 SS (N Ireland Reciprocal Arrangements) Regs 76, Sch, para 3(1);\n                                 Child Benefit (N Ireland Reciprocal Arrangements) Regs 77, Sch 1, para 3\n\n\nExample\n\n\nA person claims DLA whilst in Great Britain but is disallowed. That person moves to Northern Ireland and\nthe appeal can be heard in Northern Ireland.\n\n\n\nIn Great Britain or Northern Ireland",
+          "locator": "DMG 070530"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part1/0098",
+          "quote": "070533 The agreement applies to most benefits however reviews or appeals cannot be undertaken for\nUC, Pension Credit, Christmas Bonus, Income Support, Social Fund (maternity and funeral expenses),\nFamily Credit, Statutory Sick Pay or Statutory Maternity Pay.",
+          "locator": "DMG 070533"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-ni-presence",
+      "path": "knowledge/full-dmg/international/intl-ni-presence.yamlld",
+      "sha256": "c5338280c3de32e46cde441b898df64bca83ee59a10be29dd3432aea8fc8afaa",
+      "part": 1,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part1/0098",
+          "quote": "070531 For a revision, supersession or appeal to take place in the other country, the person must be \"in\"\n\nthat country. A casual presence is not enough1.\n\n\n                                                                                               1 R(S) 5/85",
+          "locator": "DMG 070531"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part1/0098",
+          "quote": "070532 If the person is not \"in\" that country, the revision, supersession or appeal must be decided in the\ncountry where the original decision was made.\n\n\n\nWhen the agreement applies",
+          "locator": "DMG 070532"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part1/0098",
+          "quote": "070533 The agreement applies to most benefits however reviews or appeals cannot be undertaken for\nUC, Pension Credit, Christmas Bonus, Income Support, Social Fund (maternity and funeral expenses),\nFamily Credit, Statutory Sick Pay or Statutory Maternity Pay.",
+          "locator": "DMG 070533"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-coordination-regulation-versions",
+      "path": "knowledge/full-dmg/international/intl-coordination-regulation-versions.yamlld",
+      "sha256": "d73ab13a03fd2c1aacfe01bd48469f780c2497db22741a09a51f7db5ccc17cab",
+      "part": 2,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part2/0024",
+          "quote": "071751 There are two current sets of EU regulations relating to the co-ordination of Social Security\nbenefits across the Member States. These are\n\n\n1. Regulation (EC) No. 883/2004 which sets out the main rules, and\n\n\n2. Regulation (EC) No. 987/2009 which deals with the administrative procedures to be followed in\nimplementing the main rules.\n\n\nNote: For the EU Member States, these regulations replaced earlier regulations 1 with effect from 1.5.10.\nThey applied to Switzerland from 1.4.12 and to Norway, Iceland and Liechtenstein from 1.6.12. The old\n\nregulations1 continue to apply in certain transitional cases. DMs are advised to seek guidance from DMA\n(Leeds) where issues relating to the old regulations apply. See also DMG 071756 to 071758 below\nconcerning third country nationals.\n\n\n                                                                   1 Reg (EEC) 1408/71 & Reg (EEC) 574/72\n\n\n\nWhat types of benefit are AA, DLA & CA?",
+          "locator": "DMG 071751"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-care-cash-classification",
+      "path": "knowledge/full-dmg/international/intl-care-cash-classification.yamlld",
+      "sha256": "0c61521cf182a244d0ea82f01aa5f264a233e4446cb9a00561dc27add8d522af",
+      "part": 2,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part2/0024",
+          "quote": "071752 The EU Social Security Co-ordination Regs set out different rules depending upon the branch of\nsocial security involved (e.g. “sickness benefits”, “old-age benefits”, “family benefits”). On 18.10.07 the\n\nCourt of Justice of the European Union (the CJEU) held1 that the care component of DLA was a sickness\nbenefit. However, on 5.5.11 the CJEU confirmed that the mobility component of DLA was a Special Non-\nContributory Benefit (SNCB). DLA (Mobility Component) cannot, therefore, be paid to a person residing\nabroad. For the purposes of the EU regulations concerning the co-ordination of social security benefits\nAA, DLA (Care only) and CA are sickness benefits in cash for long term care.\n\n\n                                                                            1 ECJ Judgement Case C 299/05;\n      2 Bartlett, Gonzales Ramos and Taylor v Secretary of State for Work and Pensions Case C-537/09,\n\n\n\nExportability - General Rules for AA, DLA (Care) or CA",
+          "locator": "DMG 071752"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part2/0024",
+          "quote": "071751 There are two current sets of EU regulations relating to the co-ordination of Social Security\nbenefits across the Member States. These are\n\n\n1. Regulation (EC) No. 883/2004 which sets out the main rules, and\n\n\n2. Regulation (EC) No. 987/2009 which deals with the administrative procedures to be followed in\nimplementing the main rules.\n\n\nNote: For the EU Member States, these regulations replaced earlier regulations 1 with effect from 1.5.10.\nThey applied to Switzerland from 1.4.12 and to Norway, Iceland and Liechtenstein from 1.6.12. The old\n\nregulations1 continue to apply in certain transitional cases. DMs are advised to seek guidance from DMA\n(Leeds) where issues relating to the old regulations apply. See also DMG 071756 to 071758 below\nconcerning third country nationals.\n\n\n                                                                   1 Reg (EEC) 1408/71 & Reg (EEC) 574/72\n\n\n\nWhat types of benefit are AA, DLA & CA?",
+          "locator": "DMG 071751"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-dla-mobility-classification",
+      "path": "knowledge/full-dmg/international/intl-dla-mobility-classification.yamlld",
+      "sha256": "3094dcc401c435c3c007e0f295ea51663d10db33233311182eaa82fe8ba1afc5",
+      "part": 2,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part2/0024",
+          "quote": "071752 The EU Social Security Co-ordination Regs set out different rules depending upon the branch of\nsocial security involved (e.g. “sickness benefits”, “old-age benefits”, “family benefits”). On 18.10.07 the\n\nCourt of Justice of the European Union (the CJEU) held1 that the care component of DLA was a sickness\nbenefit. However, on 5.5.11 the CJEU confirmed that the mobility component of DLA was a Special Non-\nContributory Benefit (SNCB). DLA (Mobility Component) cannot, therefore, be paid to a person residing\nabroad. For the purposes of the EU regulations concerning the co-ordination of social security benefits\nAA, DLA (Care only) and CA are sickness benefits in cash for long term care.\n\n\n                                                                            1 ECJ Judgement Case C 299/05;\n      2 Bartlett, Gonzales Ramos and Taylor v Secretary of State for Work and Pensions Case C-537/09,\n\n\n\nExportability - General Rules for AA, DLA (Care) or CA",
+          "locator": "DMG 071752"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part2/0041",
+          "quote": "071800 The Mobility Component of DLA, is a SNCB 1, It cannot be claimed from abroad and where an\naward has been made to a person residing in the UK under UK domestic law provisions DLA (Mob) that\naward cannot be exported when the claimant moves to reside permanently abroad but see DMG 071743\net seq regarding certain claimants with transitional protection.\n\n\n                1 Reg (EEC) 1408/71 Art 4(2a), Art 10a, & Annex IIA & Reg (EC) 883/04 Art 3(3) & Art 70 &\n                                                              Annex X & CJEU Judgement case C-537/09.\n\n\n\nClaims by incomers",
+          "locator": "DMG 071800"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-hrt-sequence",
+      "path": "knowledge/full-dmg/international/intl-hrt-sequence.yamlld",
+      "sha256": "544ecd8f5ac463ae18dcf3ebee68a894d42f2893281971912e539aaa13fd43bf",
+      "part": 3,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part3/0002",
+          "quote": "072770 [See Memo DMG 01-23] [See Memo DMG 05-23] [See Memo DMG 11-23] [See Memo DMG\n10/25] The habitual residence test applies to IS, JSA(IB), ESA(IR) and SPC. A claimant who is not\nhabitually resident in the CTA\n\n\n1. is a person from abroad and has an applicable amount of nil for IS, JSA(IB) and ESA(IR) 1 and\n\n\n2. is treated as not in GB for SPC2.\n\n\n 1 IS (Gen) Regs, reg 21(3) & 21AA; JSA Regs, reg 85(4) & 85A; ESA Regs, reg 70(1) & Sch 5 Part 1 para 11;\n                                                                                          2 SPC Regs, reg 2",
+          "locator": "DMG 072770"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part3/0003",
+          "quote": "072791 [See Memo DMG 10/25] If other conditions of entitlement to benefit are satisfied the DM should\nconsider whether the claimant is excluded from benefit by being a PSIC. If not the DM should consider\n\n\n1. whether the claimant is excluded from treatment as a person from abroad in consequence of EC law or\nunder other specific exclusions if not\n\n\n2. whether the claimant has the right to reside in the CTA and\n\n\n3. whether that right to reside is excluded.\n\n\nIf the claimant has the right to reside in the CTA which is not excluded the DM should apply the test for\nactual habitual residence.",
+          "locator": "DMG 072791"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part3/0003",
+          "quote": "072792 The second element of the habitual residence test, the factual assessment of habitual residence\nshould also be applied if a claimant at any time ceases to be subject to immigration control or gains the\nright to reside in the CTA (for instance, where a PSIC is granted British citizenship).",
+          "locator": "DMG 072792"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-actual-habitual-residence",
+      "path": "knowledge/full-dmg/international/intl-actual-habitual-residence.yamlld",
+      "sha256": "2b30f6114291b357d26e03e66585ab254d38008315a1490837be58b8ee2181c7",
+      "part": 3,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part3/0003",
+          "quote": "072780 Although it is used in both domestic and European law, there is no statutory definition of the\nterm ‘habitual residence’. There are different considerations in applying domestic and EC law but in both\ninstances the expression should be given its ordinary and natural meaning. DMs should determine the\nquestion by considering all the facts of the case in a common sense way and applying the relevant case\nlaw.",
+          "locator": "DMG 072780"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part3/0003",
+          "quote": "072786 The legislation requires that a claimant is habitually resident in the UK, the Channel Islands, the\n\nIsle of Man or the Republic of Ireland. This is known as the Common Travel Area (CTA) 1.\n\n\n                       1 IS (Gen) Regs, reg 21AA; JSA Regs, reg 85A; ESA Regs, reg 70(1); SPC Regs, reg 2",
+          "locator": "DMG 072786"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part3/0003",
+          "quote": "072791 [See Memo DMG 10/25] If other conditions of entitlement to benefit are satisfied the DM should\nconsider whether the claimant is excluded from benefit by being a PSIC. If not the DM should consider\n\n\n1. whether the claimant is excluded from treatment as a person from abroad in consequence of EC law or\nunder other specific exclusions if not\n\n\n2. whether the claimant has the right to reside in the CTA and\n\n\n3. whether that right to reside is excluded.\n\n\nIf the claimant has the right to reside in the CTA which is not excluded the DM should apply the test for\nactual habitual residence.",
+          "locator": "DMG 072791"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-qualifying-right-to-reside",
+      "path": "knowledge/full-dmg/international/intl-qualifying-right-to-reside.yamlld",
+      "sha256": "561b6221ee5fc83046e01d287cf3e645116946a9007798ae2ff36c5df5321099",
+      "part": 3,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part3/0079",
+          "quote": "073234 Regulations1 provide that a person cannot be habitually resident where he does not have a\nqualifying right to reside in the CTA unless he falls within one of the exclusion categories. But see\n\ntransitional provisions2 for those already in receipt of benefit at 30.4.04. There is no statutory definition\nof the term “right to reside”. Whether a person has a right to reside in the UK is determined by domestic\nnationality and immigration law for non-EEA nationals and by EU law and domestic immigration law for\n\nEEA nationals arriving in the UK and claiming free movement rights 3.\n\n\n                       1 IS (Gen) Regs, reg 21AA; JSA Regs, reg 85A; ESA Regs, reg 70(2); SPC Regs, reg 2;\n\n                                                                     2 SS Hab Res Regs, reg 6 ; 3 R(IS) 8/07",
+          "locator": "DMG 073234"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part3/0003",
+          "quote": "072791 [See Memo DMG 10/25] If other conditions of entitlement to benefit are satisfied the DM should\nconsider whether the claimant is excluded from benefit by being a PSIC. If not the DM should consider\n\n\n1. whether the claimant is excluded from treatment as a person from abroad in consequence of EC law or\nunder other specific exclusions if not\n\n\n2. whether the claimant has the right to reside in the CTA and\n\n\n3. whether that right to reside is excluded.\n\n\nIf the claimant has the right to reside in the CTA which is not excluded the DM should apply the test for\nactual habitual residence.",
+          "locator": "DMG 072791"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-euss-settled-status",
+      "path": "knowledge/full-dmg/international/intl-euss-settled-status.yamlld",
+      "sha256": "50eea82a59eb6dc6dc23e750fd2d6f1aba4d335f8379d8080336119f7edc882b",
+      "part": 3,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part3/0115",
+          "quote": "073490 A new right to reside has been created for EEA nationals in Appendix EU to the Immigration\nRules made under the Immigration Act 1971. Applicants to the EUSS can be granted either\n\n\n1. Indefinite Leave to Enter (ILE)/Indefinite Leave to Remain (ILR)(\"settled status“) or\n\n\n2. Limited Leave to Enter (LLE)/Limited Leave to Remain (LLR)(“pre-settled status“)\n\n\nby the Home Office.\n\n\n\nSettled Status – Indefinite Leave to Remain",
+          "locator": "DMG 073490"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part3/0115",
+          "quote": "073491 Where a claimant has been granted ILR i.e. settled status under the EUSS, they will satisfy the\nright to reside element of the Habitual Residence Test for the purposes of claiming IS, JSA, ESA or SPC.\n\n\nNote: It is not necessary for DMs to apply the Imm (EEA) Regs 2016 where the claimant has been\ngranted ILR, as the claimant does not need a qualifying right to reside.\n\n\nPre-settled Status – Limited Leave to Remain",
+          "locator": "DMG 073491"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-euss-pre-settled-status",
+      "path": "knowledge/full-dmg/international/intl-euss-pre-settled-status.yamlld",
+      "sha256": "8d17f8d997055fae27ab1add4734e5c39c6b0cc4eebf8341bd54fca78dc18a9f",
+      "part": 3,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part3/0115",
+          "quote": "073490 A new right to reside has been created for EEA nationals in Appendix EU to the Immigration\nRules made under the Immigration Act 1971. Applicants to the EUSS can be granted either\n\n\n1. Indefinite Leave to Enter (ILE)/Indefinite Leave to Remain (ILR)(\"settled status“) or\n\n\n2. Limited Leave to Enter (LLE)/Limited Leave to Remain (LLR)(“pre-settled status“)\n\n\nby the Home Office.\n\n\n\nSettled Status – Indefinite Leave to Remain",
+          "locator": "DMG 073490"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part3/0115",
+          "quote": "073492 [See Memo DMG 01/21][See Memo DMG 01-22][See Memo DMG 14/25] Where a claimant\nhas been granted LLR i.e. pre-settled status under the EUSS, they will not automatically have a right to\nreside which is relevant for the purposes of claiming IS, JSA, ESA or SPC. The claimant is still required to\ndemonstrate that they are exercising a qualifying right to reside under the Imm (EEA) Regs 2016, such as\nworker status, self-employed status or permanent residence.",
+          "locator": "DMG 073492"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed",
+      "additional_context_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part3/0117",
+          "locator": "DMG 073496",
+          "quote": "073496 Prior to the AT judgment1, if an individual had no qualifying right to reside, or did not fall within a\nrelevant exemption, they were deemed to be not entitled to UC. Specifically, EU nationals and their family\nmembers whose only right to reside in the UK was having pre-settled status under EUSS.\n\n\nThe conclusion in AT was that EU Charter of Fundamental Rights 2 applied through the Withdrawal\nAgreement. This means that before a refusal of UC an assessment of a person's individual\ncircumstances should be assessed to determine whether a refusal to UC will infringe on a person's\nCharter rights.\n\n\n                     1 SSWP v AT (Aire Centre and IMA intervening) UC [2022] 300 (AAC)(link is external)\n\n\n                                                                        2 EU Charter of Fundamental Rights",
+          "quote_sha256": "97e09e959469b74c7a857b8799dfe912bc209b57f073b8bede7e90e18c52d041",
+          "source_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+          "status": "source-context-dependency-unresolved; not a new semantic assertion"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part3/0118",
+          "locator": "DMG 073499 continuation, Example 1",
+          "quote": "On initial consideration of the HRT it is apparent that Louisa has no qualifying right to reside for SPC\npurposes. However, given the details provided regarding her current circumstances, the DM considers\nthat Louisa is currently unable to meet her and her grandchild’s most basic needs. The DM accepts that\nLouisa was covered by the Withdrawal Agreement at the relevant time, and decides that she meets\nthe AT threshold. Louisa’s claim is allowed.",
+          "quote_sha256": "2bd1799896448cdb5af81e9d36f1a0e2ed747f8d8731f4e0a642579ad581ae71",
+          "source_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+          "status": "source-context-dependency-unresolved; not a new semantic assertion"
+        }
+      ]
+    },
+    {
+      "route": "term/intl-invalidity-type-a",
+      "path": "knowledge/full-dmg/international/intl-invalidity-type-a.yamlld",
+      "sha256": "39ae2ef708290045e27a3fbc48e1ac77f870691ec05c24169e4261a0a8a94710",
+      "part": 4,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part4/0055",
+          "quote": "074080 Entitlement to and the rate of invalidity benefit or long term Incapacity Benefit under European\n\nCommunity provisions depends on the legislation to which the claimant has been subject 1. There are two\ntypes of legislation, Type A and Type B.\n\n\n                                                                          1 Reg (EEC) 1408/71, Art 37 & 40",
+          "locator": "DMG 074080"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part4/0055",
+          "quote": "074081 Type A1 are those where the rate of invalidity benefit does not depend on the length of\n\ninsurance2. Type B3 are those where the rate of invalidity benefit depends on the length of insurance 4.\n\n\n                                                       1 R(S) 1/80; R(S) 13/83; 2 Reg (EEC) 1408/71, Art 37;\n                                                       3 R(S) 1/80; R(S) 13/83; 4 Reg (EEC) 1408/71, Art 40",
+          "locator": "DMG 074081"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-invalidity-type-b",
+      "path": "knowledge/full-dmg/international/intl-invalidity-type-b.yamlld",
+      "sha256": "a6b977e9d3aed0c4e45843a7d9296b1b4deda11cb78ec6d37f0173145e3229b7",
+      "part": 4,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part4/0055",
+          "quote": "074080 Entitlement to and the rate of invalidity benefit or long term Incapacity Benefit under European\n\nCommunity provisions depends on the legislation to which the claimant has been subject 1. There are two\ntypes of legislation, Type A and Type B.\n\n\n                                                                          1 Reg (EEC) 1408/71, Art 37 & 40",
+          "locator": "DMG 074080"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part4/0055",
+          "quote": "074081 Type A1 are those where the rate of invalidity benefit does not depend on the length of\n\ninsurance2. Type B3 are those where the rate of invalidity benefit depends on the length of insurance 4.\n\n\n                                                       1 R(S) 1/80; R(S) 13/83; 2 Reg (EEC) 1408/71, Art 37;\n                                                       3 R(S) 1/80; R(S) 13/83; 4 Reg (EEC) 1408/71, Art 40",
+          "locator": "DMG 074081"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part4/0055",
+          "quote": "074082 Detailed guidance on entitlement to invalidity benefit where a person has been subject only to\nType A legislation is at 074100. Guidance on entitlement to invalidity benefit where a person has been\nsubject to Type B legislation is at 074120.\n\n\nType A invalidity benefit",
+          "locator": "DMG 074082"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-industrial-injuries-international",
+      "path": "knowledge/full-dmg/international/intl-industrial-injuries-international.yamlld",
+      "sha256": "c1257f0d161fe4236554eaa2d6332d7ccc98cd3f2c6be13320ed791f0bf47470",
+      "part": 4,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part4/0091",
+          "quote": "074360 This section contains guidance on residence and presence for Industrial Injuries benefits.\nIndustrial Injuries benefits are\n\n\n• Disablement Benefit\n\n\n• Reduced Earnings Allowance\n\n\n• Retirement Allowance\n\n\n• Industrial Death Benefit.\n\n\nSee Benefit Specific Guidance for guidance on Workmen's Compensation (Supplementation) Scheme\nand Pneumoconiosis, Byssinosis and Miscellaneous Diseases Benefit Scheme.",
+          "locator": "DMG 074360"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part4/0091",
+          "quote": "074362 If a claimant does not satisfy the conditions in Great Britain law, the decision maker should\nconsider whether the claimant is helped by European Community law and, if not, by any reciprocal\nagreements.",
+          "locator": "DMG 074362"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-industrial-injuries-export",
+      "path": "knowledge/full-dmg/international/intl-industrial-injuries-export.yamlld",
+      "sha256": "a1de1d6300ba5d02cdb22187abf0247add8f79bcadf801ef49466518f1a3040e",
+      "part": 4,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part4/0091",
+          "quote": "074361 The guidance covers\n\n\n• claims to benefit, including UK law (074370 - 074378) and European Community law (074379 -\n074392) and reciprocal agreements and claims from outside Great Britain (074430 - 074431) and\n\n\n• export of benefit to other countries, including Great Britain law (074440 - 074449) and European\nCommunity law (074450 - 074454) and reciprocal agreements (074460).",
+          "locator": "DMG 074361"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part4/0091",
+          "quote": "074362 If a claimant does not satisfy the conditions in Great Britain law, the decision maker should\nconsider whether the claimant is helped by European Community law and, if not, by any reciprocal\nagreements.",
+          "locator": "DMG 074362"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-jsa-foreign-insurance",
+      "path": "knowledge/full-dmg/international/intl-jsa-foreign-insurance.yamlld",
+      "sha256": "270649e98987f650c5d492a856432946cd6a0fadffd6b765c5812a751bfec23d",
+      "part": 5,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part5/0015",
+          "quote": "075330 [See Memo DMG 32/10] This section contains guidance on\n\n         1.     entitlement to JSA when a person is outside GB (see DMG 075332)\n\n         2.     the restrictions on entitlement to income based JSA when a person has come\n                from abroad (see DMG 075550)\n\n         3.     the use of insurance paid in another country to satisfy the contribution conditions\n                for entitlement to contribution based JSA (see DMG 075520) and\n\n         4.     who pays UB (see DMG 075530).\n\n\n\n         Meaning of UB",
+          "locator": "DMG 075330"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part5/0015",
+          "quote": "075331 In this section the term UB is used when referring to either\n\n         1.     EC provisions relating to UB or\n\n         2.     benefits paid by other EEA countries to unemployed people.\n\n         JSA is used when referring to UK unemployment benefit.\n\n\n\n         Absence from Great Britain",
+          "locator": "DMG 075331"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-income-jsa-international-residence",
+      "path": "knowledge/full-dmg/international/intl-income-jsa-international-residence.yamlld",
+      "sha256": "e225b2cae6e3dc40472ef11d4e589f40f9d98b9e906b9fa94276f9d7030b8b3a",
+      "part": 5,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part5/0015",
+          "quote": "075330 [See Memo DMG 32/10] This section contains guidance on\n\n         1.     entitlement to JSA when a person is outside GB (see DMG 075332)\n\n         2.     the restrictions on entitlement to income based JSA when a person has come\n                from abroad (see DMG 075550)\n\n         3.     the use of insurance paid in another country to satisfy the contribution conditions\n                for entitlement to contribution based JSA (see DMG 075520) and\n\n         4.     who pays UB (see DMG 075530).\n\n\n\n         Meaning of UB",
+          "locator": "DMG 075330"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-category-cd-residence",
+      "path": "knowledge/full-dmg/international/intl-category-cd-residence.yamlld",
+      "sha256": "8469fb09a6a42c8c1df928565b8cc06fca2c9af9b4370d21181005d3d292c2db",
+      "part": 5,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part5/0077",
+          "quote": "075760 To be entitled to either Category C (see DMG 075761) or Category D (see DMG\n         075767) RP a person must be\n\n         either\n\n         1.       resident or\n\n         2.       ordinarily resident in GB.\n\n\n         Category C Retirement Pension",
+          "locator": "DMG 075760"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part5/0080",
+          "quote": "075772 The provisions which allow a person already entitled to Category C or D RP to\n          retain entitlement in another EEA country1 do not help that person to satisfy the\n          residence conditions for becoming entitled2 (see DMG 075762 and 075767).\n                       1 Reg (EEuropean Community) 1408/71, Art 10(1); 2 R(A) 4/75; R(A) 2/78; R(S) 7/81; R(M) 2/84;\n                                                               Re an Italian Widow [1982] 2 CMLR 128 (CP/90/79)",
+          "locator": "DMG 075772"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-category-cd-retention",
+      "path": "knowledge/full-dmg/international/intl-category-cd-retention.yamlld",
+      "sha256": "1768029e40417bfd1283376d10a40ee14a08da76c14fb2ea5b3f089eaa3bb63c",
+      "part": 5,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part5/0080",
+          "quote": "075772 The provisions which allow a person already entitled to Category C or D RP to\n          retain entitlement in another EEA country1 do not help that person to satisfy the\n          residence conditions for becoming entitled2 (see DMG 075762 and 075767).\n                       1 Reg (EEuropean Community) 1408/71, Art 10(1); 2 R(A) 4/75; R(A) 2/78; R(S) 7/81; R(M) 2/84;\n                                                               Re an Italian Widow [1982] 2 CMLR 128 (CP/90/79)",
+          "locator": "DMG 075772"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-rp-uprating-abroad",
+      "path": "knowledge/full-dmg/international/intl-rp-uprating-abroad.yamlld",
+      "sha256": "884e4e77c1528e4c2f0e383e0f34c9dbb1290048b402567ac6d60bb29ca2e1c5",
+      "part": 5,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part5/0081",
+          "quote": "075780 The rate of RP paid to a person absent from GB is increased by the general\n         uprating of the rates of benefit1 if that person is\n\n         1.    ordinarily resident in GB or\n\n         2.    in an EEA country and is within the scope of EC provisions2 (see DMG\n               070050) or\n\n         3.    in an EEA country and the agreement with that country still applies to them\n               (see DMG 075820) or\n\n         4.    in a country with which the UK has an agreement which allows the rate to be\n               increased (see DMG 075831) or\n\n         5.    in Sark3.\n                                 1 SS Administration Act 92, sec 150; 2 reg 1408/71, Art 2; 3 SS Ben (PA) Regs, reg 12",
+          "locator": "DMG 075780"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part5/0081",
+          "quote": "075783 RP which is not increased by upratings is referred to as being frozen.\n\n\n\n\nVol 2 Amendment 21 July 2011",
+          "locator": "DMG 075783"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-spc-claimant-absence",
+      "path": "knowledge/full-dmg/international/intl-spc-claimant-absence.yamlld",
+      "sha256": "718affbb21fe15ab1ac66223e0883e36bc211e46d7d4c935864b9120bf80a772",
+      "part": 6,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part6/0008",
+          "quote": "077001 SPC can continue to be paid whilst a claimant is temporarily absent from GB 1 if the other\nconditions of entitlement continue to be satisfied and the absence is no longer than\n\n\n1. 4 weeks where the absence is not expected to exceed 4 weeks2 or\n\n\n2. 8 weeks3 where paragraph 077002 applies or\n\n\n3. 26 weeks4 where paragraph 077003 applies.\n\n\nNote: See DMG 04642 for effective dates for supersession.\n\n\n                                                 1 SPC Regs, reg 3; 2 reg 3(1)(a); 3 reg 3(1)(b); 4 reg 3(1)(c)\n\n\nExample 1\n\n\nJason notifies the DM that he is going abroad for 3 weeks. The DM decides that he remains entitled for\nthose 3 weeks. He contracts food poisoning and has to extend his stay by a further 2 weeks. As Jason’s",
+          "locator": "DMG 077001"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part6/0009",
+          "quote": "077002 The temporary absence can be up to 8 weeks where\n\n\n1. the absence is not expected to exceed 8 weeks and\n\n\n2. the absence is in connection with the death of\n\n\n      2.1 the claimant’s partner or\n\n\n      2.2 a child or qualifying young person who normally lives with the claimant or\n\n\n      2.3 a close relative of the claimant, their partner or a child or qualifying young person normally\n      living with the claimant and\n\n\nthe Secretary of State considers that it would be unreasonable to expect the claimant to return to GB\n\nwithin the first 4 weeks1.\n\n\n                                                                                        1 SPC Regs, reg 3(2)\n\n\n\nThe 26 week rule",
+          "locator": "DMG 077002"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-spc-household-absence",
+      "path": "knowledge/full-dmg/international/intl-spc-household-absence.yamlld",
+      "sha256": "bd6ed71940d543f3ef8bcb08f0c35a94454324b4889f772aa0c01cc2723b0901",
+      "part": 6,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part6/0011",
+          "quote": "077005 A person is treated as being a member of the claimant’s household whilst temporarily absent\n\nfrom GB1 if the absence is no longer than\n\n\n1. 4 weeks where the absence is not expected to exceed 4 weeks2or\n\n\n2. 8 weeks3 where paragraph 077006 applies or\n\n\n3. 26 weeks4 where paragraph 077007 applies.\n\n\n                                            1 SPC Regs, reg 5(1)(f); 2 Reg 5(1A)(a); 3 reg 5(1A)(b); 4 reg 5(1A)\n\n\n\nThe 8 week rule",
+          "locator": "DMG 077005"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part6/0008",
+          "quote": "077001 SPC can continue to be paid whilst a claimant is temporarily absent from GB 1 if the other\nconditions of entitlement continue to be satisfied and the absence is no longer than\n\n\n1. 4 weeks where the absence is not expected to exceed 4 weeks2 or\n\n\n2. 8 weeks3 where paragraph 077002 applies or\n\n\n3. 26 weeks4 where paragraph 077003 applies.\n\n\nNote: See DMG 04642 for effective dates for supersession.\n\n\n                                                 1 SPC Regs, reg 3; 2 reg 3(1)(a); 3 reg 3(1)(b); 4 reg 3(1)(c)\n\n\nExample 1\n\n\nJason notifies the DM that he is going abroad for 3 weeks. The DM decides that he remains entitled for\nthose 3 weeks. He contracts food poisoning and has to extend his stay by a further 2 weeks. As Jason’s",
+          "locator": "DMG 077001"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-spc-non-export",
+      "path": "knowledge/full-dmg/international/intl-spc-non-export.yamlld",
+      "sha256": "edf853ec4a5bca60cf836504df7fd2dcdc34b3689d689bc5f80277f458b3a6ff",
+      "part": 6,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part6/0013",
+          "quote": "077025 SPC is listed as a special non-contributory benefit for the purposes of EC law 1. Such benefits are\nonly payable in, and at the expense of, the State in which the person is habitually resident. This means\nthat SPC is payable in the UK only and EC law does not permit export of this benefit to claimants living\nabroad.",
+          "locator": "DMG 077025"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part6/0008",
+          "quote": "077001 SPC can continue to be paid whilst a claimant is temporarily absent from GB 1 if the other\nconditions of entitlement continue to be satisfied and the absence is no longer than\n\n\n1. 4 weeks where the absence is not expected to exceed 4 weeks2 or\n\n\n2. 8 weeks3 where paragraph 077002 applies or\n\n\n3. 26 weeks4 where paragraph 077003 applies.\n\n\nNote: See DMG 04642 for effective dates for supersession.\n\n\n                                                 1 SPC Regs, reg 3; 2 reg 3(1)(a); 3 reg 3(1)(b); 4 reg 3(1)(c)\n\n\nExample 1\n\n\nJason notifies the DM that he is going abroad for 3 weeks. The DM decides that he remains entitled for\nthose 3 weeks. He contracts food poisoning and has to extend his stay by a further 2 weeks. As Jason’s",
+          "locator": "DMG 077001"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-spc-absence-transition-2016",
+      "path": "knowledge/full-dmg/international/intl-spc-absence-transition-2016.yamlld",
+      "sha256": "b27728e978c4ae27c4e31d17c5f16a62ef77da17c5d24c7509692dab51566cae",
+      "part": 6,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part6/0013",
+          "quote": "077015 Any person temporarily absent on 28.7.16 will be subject to the previous regulations until they\n\nreturn to GB1. All further absences will be subject to the new rules.\n\n\n                                    1 HB and SPC (Temporary Absence) (Amendment) Regs 2016, reg 5(3)",
+          "locator": "DMG 077015"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part6/0008",
+          "quote": "077001 SPC can continue to be paid whilst a claimant is temporarily absent from GB 1 if the other\nconditions of entitlement continue to be satisfied and the absence is no longer than\n\n\n1. 4 weeks where the absence is not expected to exceed 4 weeks2 or\n\n\n2. 8 weeks3 where paragraph 077002 applies or\n\n\n3. 26 weeks4 where paragraph 077003 applies.\n\n\nNote: See DMG 04642 for effective dates for supersession.\n\n\n                                                 1 SPC Regs, reg 3; 2 reg 3(1)(a); 3 reg 3(1)(b); 4 reg 3(1)(c)\n\n\nExample 1\n\n\nJason notifies the DM that he is going abroad for 3 weeks. The DM decides that he remains entitled for\nthose 3 weeks. He contracts food poisoning and has to extend his stay by a further 2 weeks. As Jason’s",
+          "locator": "DMG 077001"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-mariner-industrial-injuries",
+      "path": "knowledge/full-dmg/international/intl-mariner-industrial-injuries.yamlld",
+      "sha256": "8db71b3f5813eb6b85c2b343c5a8e931d2c549f5615a8349544c9b621320e632",
+      "part": 7,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part7/0005",
+          "quote": "078070   For Industrial Injuries benefits a mariner is a person employed under a contract of\n         service\n\n         1.    on board any ship or vessel as a master or as a crew member or as a pilot on\n               board or in any other capacity on board and\n                                                                  1\n         2.    treated as employed earner's employment .\n                                                                           1 SS (II) (Mariners’ Ben) Regs, reg 1(2)",
+          "locator": "DMG 078070"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part7/0005",
+          "quote": "078071   For other benefits a mariner is a person employed under a contract of service on\n         board any ship or vessel\n\n         1.    as a master or\n\n         2.    as a crew member or\n\n         3.    in any other capacity on board when the employment in that other capacity is\n               with the ship or vessel or the crew or any passengers or cargo or mail carried\n               and the contract is entered into in the UK with a view to its performance (in\n               whole or in part) while the ship or vessel is on its voyage.",
+          "locator": "DMG 078071"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part7/0005",
+          "quote": "078072   This does not include a serving member of the forces except those undergoing\n                                                                                                        1\n         training or instruction in certain prescribed establishments and organizations for 72\n                                      2\n         consecutive hours or less .\n                                          1 SS (II) (Mariners’ Ben) Regs, reg 1(2); 2 SS (Conts) Regs, Sch 6, Part 1",
+          "locator": "DMG 078072"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-mariner-other-benefits",
+      "path": "knowledge/full-dmg/international/intl-mariner-other-benefits.yamlld",
+      "sha256": "86eba58066fffcd00c9c967085a4db0714db690aa04e9ea2ce46b15536d21a10",
+      "part": 7,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part7/0005",
+          "quote": "078071   For other benefits a mariner is a person employed under a contract of service on\n         board any ship or vessel\n\n         1.    as a master or\n\n         2.    as a crew member or\n\n         3.    in any other capacity on board when the employment in that other capacity is\n               with the ship or vessel or the crew or any passengers or cargo or mail carried\n               and the contract is entered into in the UK with a view to its performance (in\n               whole or in part) while the ship or vessel is on its voyage.",
+          "locator": "DMG 078071"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part7/0005",
+          "quote": "078072   This does not include a serving member of the forces except those undergoing\n                                                                                                        1\n         training or instruction in certain prescribed establishments and organizations for 72\n                                      2\n         consecutive hours or less .\n                                          1 SS (II) (Mariners’ Ben) Regs, reg 1(2); 2 SS (Conts) Regs, Sch 6, Part 1",
+          "locator": "DMG 078072"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-offshore-prescribed-employment",
+      "path": "knowledge/full-dmg/international/intl-offshore-prescribed-employment.yamlld",
+      "sha256": "59c452a28577545d75257ac26d6cda655ce0384456370996eb7be021462f9b17",
+      "part": 7,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part7/0007",
+          "quote": "078080   A continental shelf worker is a person who is or has been in prescribed employment\n         on the continental shelf.\n\n         Definition of prescribed employment\n                                                                  1",
+          "locator": "DMG 078080"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part7/0007",
+          "quote": "078081 Prescribed employment means any employment , whether under a contract of\n                                                                      2\n         service or not, in any appointed or designated area , but see DMG Volume 1 ­\n         Decision Making and Appeals.\n                                        1 Oil and Gas (Enterprise) Act 1982, s 23(2); 2 SS Ben (PA) Regs, reg 11(1)",
+          "locator": "DMG 078081"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part7/0007",
+          "quote": "078084 For accidents happening or prescribed diseases caught outside Great Britain\n                                                                                                        1\n         “prescribed employment” and “prescribed area” are defined slightly differently .\n                                                                                   1 SS Ben (PA) Regs, reg 10C(1)",
+          "locator": "DMG 078084"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-offshore-area",
+      "path": "knowledge/full-dmg/international/intl-offshore-area.yamlld",
+      "sha256": "17cb0c065e26f49ed3b0600ccd095ca7265101851d545fa02d721b77f5813fbb",
+      "part": 7,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part7/0007",
+          "quote": "078082 Designated area means any area set out by Order in Council under the Continental\n         Shelf Act 1964 as an area where the UK may explore the seabed, subsoil and\n                                            1\n         exploit their natural resources .\n                                                                                     1 SS Ben (PA) Regs, reg 11(1)",
+          "locator": "DMG 078082"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part7/0007",
+          "quote": "078083   Prescribed area means any area over which Norway or any EC country (except the\n         UK) exercises sovereign rights to explore the seabed and subsoil and exploit the\n         natural resources or other named areas (but see DMG 078081). This area must be\n         outside the territorial water of\n\n         1.     Norway or\n\n         2.     any EC country (except the UK).\n\n\n\n         Accidents happening or prescribed diseases caught outside\n         Great Britain",
+          "locator": "DMG 078083"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part7/0007",
+          "quote": "078084 For accidents happening or prescribed diseases caught outside Great Britain\n                                                                                                        1\n         “prescribed employment” and “prescribed area” are defined slightly differently .\n                                                                                   1 SS Ben (PA) Regs, reg 10C(1)",
+          "locator": "DMG 078084"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/intl-overseas-delayed-claim",
+      "path": "knowledge/full-dmg/international/intl-overseas-delayed-claim.yamlld",
+      "sha256": "b7f4c5ab3b9857ba76627866678ff5be85e09a9ace9c35b87d0f462061733824",
+      "part": 7,
+      "definition_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part7/0009",
+          "quote": "078100    A claim for benefit made by a mariner, airman, continental shelf worker or member\n                      1\n          of the forces is treated as made within the prescribed time if that person\n\n          1.    is outside the United Kingdom because of that employment and unable to\n                claim within the prescribed time and\n\n          2.    claims as soon as is reasonably practicable.\n                          1 SS (Mariners' Ben) Regs, reg 9; SS (Airmen's Ben) Regs, reg 3; SS (II) (Mariners' Ben) Regs,\n                                                 reg 8; SS (II) (Airmen's Ben) Regs, reg 5; SS Ben (PA) Regs, reg 11(4);\n                                                                           SS (Ben) (Members of the Forces) Regs, reg 5",
+          "locator": "DMG 078100"
+        }
+      ],
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    }
+  ],
+  "source_units": [
+    {
+      "task": "chapter-07-part-1",
+      "source_unit": "dmg-9a4cb25fd2feca7b",
+      "part": 1,
+      "document_id": "dmg-vol2-ch7-part1",
+      "title": "DMG Vol 2 Ch 7 Part 1: Common subjects [070000 to 070699]",
+      "url": "https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf",
+      "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol2-ch7-part1.pdf",
+      "pdf_sha256": "32a065d37da4bd460b25258d71b5dfc3127d6c98e65c53ab5562491aea16f18a",
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part1.json",
+      "pages_sha256": "4ffe86a4c907dcc7b8bf3883bfdc46b6a8b9db03a0ccda563189ee12cbead47c",
+      "measured_pdf_pages": 165,
+      "acquired_at": "2026-09-15T19:45:19.912030Z",
+      "document_dates": {
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata",
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates."
+      },
+      "source_role": "substantive",
+      "source_role_boundary": "Listed substantive chapter; individual passages may be historical, transitional or superseded.",
+      "selected_evidence_pages": [
+        15,
+        57,
+        98
+      ],
+      "selected_passages": 8,
+      "concepts": 4,
+      "relationship_proposals": 2,
+      "findings": [
+        "Personal scope under the cited EC provisions is distinguished from reliance on reciprocal agreements.",
+        "Reciprocal-agreement benefit coverage is specific: the source warns against inferring ESA(C) coverage from provision for IB.",
+        "GB/NI arrangements retain both a presence condition and explicit benefit exclusions, including Pension Credit and UC."
+      ],
+      "gaps": [
+        "Country tables, exceptions in 070320, later memos and underlying agreements are not reconciled.",
+        "Catalogue bounds 070000–070699 differ from actual PDF title bounds 070000–071699.",
+        "No current post-transition personal scope is established."
+      ],
+      "source_stated_dates": [],
+      "dependency_candidates": [
+        {
+          "literal": "Reg (EEC) 1408/71",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "Reg (EEC) 574/72",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "Memo DMG 32/10",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "memo DMG 1/17",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "SS (Reciprocal Agreements) Order 12",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "SS (N Ireland Reciprocal Arrangements) Regs 76",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        }
+      ],
+      "requirement_outcomes": {
+        "RQ01": "Seven source PDF and page-file identities verified against the frozen inventory; capture and publisher metadata remain separate.",
+        "RQ02": "Partial: selected body paragraphs and neighbouring scope material inspected as machine-extracted text; no full-part segmentation or visual PDF check.",
+        "RQ03": "Selected source-backed, scoped concept proposals authored; specialist review pending.",
+        "RQ04": "Selected SKOS-related proposals have exact quotes and successful mechanical locator/endpoint checks; no equivalence or executable rule.",
+        "RQ05": "Source-stated dates retained with their role and precision where selected; document publication date and current applicability remain unresolved.",
+        "RQ06": "Selected literal dependencies logged as unresolved; no work/provision/version or supersession adjudication.",
+        "RQ07": "Two cases designed for this part; no behavioural/model execution or specialist acceptance.",
+        "RQ08": "This bounded partial-coverage row records counts, findings and gaps; full-part completion is not claimed.",
+        "RQ09": "Benefit, component, territorial and regime distinctions preserved; no equivalence to ADM, UC, new State Pension or New Style benefits."
+      },
+      "research_status": "partial-selected-passages-reviewed",
+      "specialist_status": "unreviewed"
+    },
+    {
+      "task": "chapter-07-part-2",
+      "source_unit": "dmg-7cba65bd59ce38ce",
+      "part": 2,
+      "document_id": "dmg-vol2-ch7-part2",
+      "title": "DMG Vol 2 Ch 7 Part 2: AA, DLA and CA to dependency increases, and ESA [071700 to 072769]",
+      "url": "https://assets.publishing.service.gov.uk/media/6a17044d050971fbebf3bb35/dmg-ch-07-part-02.pdf",
+      "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol2-ch7-part2.pdf",
+      "pdf_sha256": "0c6c01cb8779938fac372447813bb9339008e0164499b80b172aa3488a977ad2",
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part2.json",
+      "pages_sha256": "b72f983b3003c8cd5cdee30d0245bb7a8c3a9cafa292da5f36b38b7d2da2b9aa",
+      "measured_pdf_pages": 95,
+      "acquired_at": "2026-09-15T19:45:19.839692Z",
+      "document_dates": {
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata",
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates."
+      },
+      "source_role": "substantive",
+      "source_role_boundary": "Listed substantive chapter; individual passages may be historical, transitional or superseded.",
+      "selected_evidence_pages": [
+        2,
+        24,
+        41,
+        61
+      ],
+      "selected_passages": 6,
+      "concepts": 3,
+      "relationship_proposals": 3,
+      "findings": [
+        "DLA care and mobility are assigned different classifications in the cited EU coordination rules.",
+        "Regulation transition dates are territory-specific; old regulations remain relevant in stated transitional cases.",
+        "ESA introduction is separately described in 071910; no DLA-to-ESA rule transfer is supported."
+      ],
+      "gaps": [
+        "Personal scope, competency, genuine and sufficient link, temporary absence and appendix exceptions are not fully modelled.",
+        "The later memo references in 071753 were identified but their content and legal effect were not reconciled.",
+        "No current export decision or treatment of a particular claimant is established."
+      ],
+      "source_stated_dates": [
+        {
+          "source_literal": "1.5.10",
+          "normalised_value": "2010-05-01",
+          "precision": "day",
+          "role": "EU Member State regulation replacement as stated",
+          "locator": "DMG 071751",
+          "page": "page/dmg-vol2-ch7-part2/0024",
+          "review_status": "source-stated-unreconciled",
+          "document_publication_date": false
+        },
+        {
+          "source_literal": "1.4.12",
+          "normalised_value": "2012-04-01",
+          "precision": "day",
+          "role": "application to Switzerland as stated",
+          "locator": "DMG 071751",
+          "page": "page/dmg-vol2-ch7-part2/0024",
+          "review_status": "source-stated-unreconciled",
+          "document_publication_date": false
+        },
+        {
+          "source_literal": "1.6.12",
+          "normalised_value": "2012-06-01",
+          "precision": "day",
+          "role": "application to Norway, Iceland and Liechtenstein as stated",
+          "locator": "DMG 071751",
+          "page": "page/dmg-vol2-ch7-part2/0024",
+          "review_status": "source-stated-unreconciled",
+          "document_publication_date": false
+        },
+        {
+          "source_literal": "18.10.07",
+          "normalised_value": "2007-10-18",
+          "precision": "day",
+          "role": "judgment date as stated",
+          "locator": "DMG 071752",
+          "page": "page/dmg-vol2-ch7-part2/0024",
+          "review_status": "source-stated-unreconciled",
+          "document_publication_date": false
+        },
+        {
+          "source_literal": "5.5.11",
+          "normalised_value": "2011-05-05",
+          "precision": "day",
+          "role": "judgment date as stated",
+          "locator": "DMG 071752",
+          "page": "page/dmg-vol2-ch7-part2/0024",
+          "review_status": "source-stated-unreconciled",
+          "document_publication_date": false
+        }
+      ],
+      "dependency_candidates": [
+        {
+          "literal": "Regulation (EC) No. 883/2004",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "Regulation (EC) No. 987/2009",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "Reg (EEC) 1408/71",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "Reg (EEC) 574/72",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "Case C 299/05",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "Case C-537/09",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "DMG 071743",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        }
+      ],
+      "requirement_outcomes": {
+        "RQ01": "Seven source PDF and page-file identities verified against the frozen inventory; capture and publisher metadata remain separate.",
+        "RQ02": "Partial: selected body paragraphs and neighbouring scope material inspected as machine-extracted text; no full-part segmentation or visual PDF check.",
+        "RQ03": "Selected source-backed, scoped concept proposals authored; specialist review pending.",
+        "RQ04": "Selected SKOS-related proposals have exact quotes and successful mechanical locator/endpoint checks; no equivalence or executable rule.",
+        "RQ05": "Source-stated dates retained with their role and precision where selected; document publication date and current applicability remain unresolved.",
+        "RQ06": "Selected literal dependencies logged as unresolved; no work/provision/version or supersession adjudication.",
+        "RQ07": "Two cases designed for this part; no behavioural/model execution or specialist acceptance.",
+        "RQ08": "This bounded partial-coverage row records counts, findings and gaps; full-part completion is not claimed.",
+        "RQ09": "Benefit, component, territorial and regime distinctions preserved; no equivalence to ADM, UC, new State Pension or New Style benefits."
+      },
+      "research_status": "partial-selected-passages-reviewed",
+      "specialist_status": "unreviewed"
+    },
+    {
+      "task": "chapter-07-part-3",
+      "source_unit": "dmg-5a75e74f525d2ce2",
+      "part": 3,
+      "document_id": "dmg-vol2-ch7-part3",
+      "title": "DMG Vol 2 Ch 7 Part 3: Habitual residence and right to reside IS, JSA and SPC [072770 to 073779]",
+      "url": "https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf",
+      "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol2-ch7-part3.pdf",
+      "pdf_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part3.json",
+      "pages_sha256": "bb4be572465a2e6a522fc07e675172436459d73a8850e76d7d112c9f88db0471",
+      "measured_pdf_pages": 153,
+      "acquired_at": "2026-09-15T19:45:19.782804Z",
+      "document_dates": {
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata",
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates."
+      },
+      "source_role": "substantive",
+      "source_role_boundary": "Listed substantive chapter; individual passages may be historical, transitional or superseded.",
+      "selected_evidence_pages": [
+        2,
+        3,
+        79,
+        115
+      ],
+      "selected_passages": 10,
+      "concepts": 5,
+      "relationship_proposals": 5,
+      "findings": [
+        "The source separates a qualifying right to reside from actual habitual residence.",
+        "Its introductory scope is IS, income-based JSA, income-related ESA and SPC.",
+        "Settled and pre-settled status are distinct; pre-settled guidance points to later memos."
+      ],
+      "gaps": [
+        "Immigration legislation, case law, exclusions, later memos and transition effects have not been reconciled.",
+        "A pre-settled-status refusal rule would overstate this unresolved passage.",
+        "Not every worker, family, residence and accession category in the 153-page part has been reviewed.",
+        "The same captured part then presents an AT destitution assessment at DMG 073496–073499 (Memo 15-25): PDF page 117 uses UC wording, while its continuation and Example 1 on page 118 concern SPC. This is an explicit unresolved qualification and cross-benefit wording issue within the acquired source, not a resolved legal mapping. The judgment, Withdrawal Agreement scope, dated exclusions and memo require reconciliation before any refusal inference."
+      ],
+      "source_stated_dates": [
+        {
+          "source_literal": "30.4.04",
+          "normalised_value": "2004-04-30",
+          "precision": "day",
+          "role": "benefit-receipt boundary for stated transitional provisions",
+          "locator": "DMG 073234",
+          "page": "page/dmg-vol2-ch7-part3/0079",
+          "review_status": "source-stated-unreconciled",
+          "document_publication_date": false
+        }
+      ],
+      "dependency_candidates": [
+        {
+          "literal": "Imm (EEA) Regs 2016",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "Appendix EU to the Immigration Rules",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "Memo DMG 10/25",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "Memo DMG 01/21",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "Memo DMG 01-22",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "Memo DMG 14/25",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "SPC Regs, reg 2",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "SS Hab Res Regs, reg 6",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "[See Memo 15-25]",
+          "resolution": "unresolved-memo-and-cross-benefit-scope"
+        },
+        {
+          "literal": "SSWP v AT (Aire Centre and IMA intervening) UC [2022] 300 (AAC)",
+          "resolution": "unresolved-judgment-and-Withdrawal-Agreement-scope"
+        }
+      ],
+      "requirement_outcomes": {
+        "RQ01": "Seven source PDF and page-file identities verified against the frozen inventory; capture and publisher metadata remain separate.",
+        "RQ02": "Partial: selected body paragraphs and neighbouring scope material inspected as machine-extracted text; no full-part segmentation or visual PDF check.",
+        "RQ03": "Selected source-backed, scoped concept proposals authored; specialist review pending.",
+        "RQ04": "Selected SKOS-related proposals have exact quotes and successful mechanical locator/endpoint checks; no equivalence or executable rule.",
+        "RQ05": "Source-stated dates retained with their role and precision where selected; document publication date and current applicability remain unresolved.",
+        "RQ06": "Selected literal dependencies logged as unresolved; no work/provision/version or supersession adjudication.",
+        "RQ07": "Two cases designed for this part; no behavioural/model execution or specialist acceptance.",
+        "RQ08": "This bounded partial-coverage row records counts, findings and gaps; full-part completion is not claimed.",
+        "RQ09": "Benefit, component, territorial and regime distinctions preserved; no equivalence to ADM, UC, new State Pension or New Style benefits."
+      },
+      "research_status": "partial-selected-passages-reviewed",
+      "specialist_status": "unreviewed",
+      "additional_context_review": [
+        {
+          "page": "page/dmg-vol2-ch7-part3/0117",
+          "locator": "DMG 073496",
+          "quote": "073496 Prior to the AT judgment1, if an individual had no qualifying right to reside, or did not fall within a\nrelevant exemption, they were deemed to be not entitled to UC. Specifically, EU nationals and their family\nmembers whose only right to reside in the UK was having pre-settled status under EUSS.\n\n\nThe conclusion in AT was that EU Charter of Fundamental Rights 2 applied through the Withdrawal\nAgreement. This means that before a refusal of UC an assessment of a person's individual\ncircumstances should be assessed to determine whether a refusal to UC will infringe on a person's\nCharter rights.\n\n\n                     1 SSWP v AT (Aire Centre and IMA intervening) UC [2022] 300 (AAC)(link is external)\n\n\n                                                                        2 EU Charter of Fundamental Rights",
+          "quote_sha256": "97e09e959469b74c7a857b8799dfe912bc209b57f073b8bede7e90e18c52d041",
+          "source_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+          "status": "source-context-dependency-unresolved; not a new semantic assertion"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part3/0118",
+          "locator": "DMG 073499 continuation, Example 1",
+          "quote": "On initial consideration of the HRT it is apparent that Louisa has no qualifying right to reside for SPC\npurposes. However, given the details provided regarding her current circumstances, the DM considers\nthat Louisa is currently unable to meet her and her grandchild’s most basic needs. The DM accepts that\nLouisa was covered by the Withdrawal Agreement at the relevant time, and decides that she meets\nthe AT threshold. Louisa’s claim is allowed.",
+          "quote_sha256": "2bd1799896448cdb5af81e9d36f1a0e2ed747f8d8731f4e0a642579ad581ae71",
+          "source_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+          "status": "source-context-dependency-unresolved; not a new semantic assertion"
+        }
+      ],
+      "additional_context_pages_inspected": [
+        117,
+        118
+      ]
+    },
+    {
+      "task": "chapter-07-part-4",
+      "source_unit": "dmg-f0809561a341df27",
+      "part": 4,
+      "document_id": "dmg-vol2-ch7-part4",
+      "title": "DMG Vol 2 Ch 7 Part 4: Incapacity Benefit to Industrial Injuries Benefit [073780 to 075329]",
+      "url": "https://assets.publishing.service.gov.uk/media/692421b6367485ea116a55db/dmg-ch-07-part-04.pdf",
+      "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol2-ch7-part4.pdf",
+      "pdf_sha256": "d24ed4bc8730be76af2c9d29b670a39ff61f3cd9f5f2e882345d36a86ac6fe3c",
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part4.json",
+      "pages_sha256": "bba1c55bf646754d77fddba1d3b77c8b015e46b07c871f3f6243dc76e6938ba5",
+      "measured_pdf_pages": 116,
+      "acquired_at": "2026-09-15T19:45:20.082376Z",
+      "document_dates": {
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata",
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates."
+      },
+      "source_role": "substantive",
+      "source_role_boundary": "Listed substantive chapter; individual passages may be historical, transitional or superseded.",
+      "selected_evidence_pages": [
+        55,
+        91
+      ],
+      "selected_passages": 6,
+      "concepts": 4,
+      "relationship_proposals": 3,
+      "findings": [
+        "Type A and Type B legislation distinguish insurance-length dependence within a cited invalidity framework.",
+        "Industrial Injuries guidance distinguishes claims from export and domestic, EC and agreement sources."
+      ],
+      "gaps": [
+        "Country-specific invalidity agreements, contribution periods, calculations and case authorities remain unresolved.",
+        "The Type A/B distinction is not transferred to ESA or New Style ESA.",
+        "Most Incapacity Benefit and Industrial Injuries conditions in this part remain unmodelled."
+      ],
+      "source_stated_dates": [],
+      "dependency_candidates": [
+        {
+          "literal": "Reg (EEC) 1408/71, Art 37 & 40",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "R(S) 1/80",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "R(S) 13/83",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "074100",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "074120",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "074460",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        }
+      ],
+      "requirement_outcomes": {
+        "RQ01": "Seven source PDF and page-file identities verified against the frozen inventory; capture and publisher metadata remain separate.",
+        "RQ02": "Partial: selected body paragraphs and neighbouring scope material inspected as machine-extracted text; no full-part segmentation or visual PDF check.",
+        "RQ03": "Selected source-backed, scoped concept proposals authored; specialist review pending.",
+        "RQ04": "Selected SKOS-related proposals have exact quotes and successful mechanical locator/endpoint checks; no equivalence or executable rule.",
+        "RQ05": "Source-stated dates retained with their role and precision where selected; document publication date and current applicability remain unresolved.",
+        "RQ06": "Selected literal dependencies logged as unresolved; no work/provision/version or supersession adjudication.",
+        "RQ07": "Two cases designed for this part; no behavioural/model execution or specialist acceptance.",
+        "RQ08": "This bounded partial-coverage row records counts, findings and gaps; full-part completion is not claimed.",
+        "RQ09": "Benefit, component, territorial and regime distinctions preserved; no equivalence to ADM, UC, new State Pension or New Style benefits."
+      },
+      "research_status": "partial-selected-passages-reviewed",
+      "specialist_status": "unreviewed"
+    },
+    {
+      "task": "chapter-07-part-5",
+      "source_unit": "dmg-60ebb5ee528ed8da",
+      "part": 5,
+      "document_id": "dmg-vol2-ch7-part5",
+      "title": "DMG Vol 2 Ch 7 Part 5: JSA to Retirement Pension [075330 to 076959]",
+      "url": "https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf",
+      "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol2-ch7-part5.pdf",
+      "pdf_sha256": "ff92b6dba9bf7fe9f7be115cd203593e5a65979a569892d625bb3ae5395418c9",
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part5.json",
+      "pages_sha256": "adde790b1114f9bbe6eea3da605de6d911d40342a4d0ce73e7f450f9f2f4eb6f",
+      "measured_pdf_pages": 175,
+      "acquired_at": "2026-09-15T19:45:20.299037Z",
+      "document_dates": {
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata",
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates."
+      },
+      "source_role": "substantive",
+      "source_role_boundary": "Listed substantive chapter; individual passages may be historical, transitional or superseded.",
+      "selected_evidence_pages": [
+        15,
+        77,
+        80,
+        81
+      ],
+      "selected_passages": 6,
+      "concepts": 5,
+      "relationship_proposals": 3,
+      "findings": [
+        "Foreign insurance for contribution-based JSA and residence restrictions for income-based JSA are different questions.",
+        "Retention of Category C/D entitlement abroad does not itself satisfy initial residence conditions.",
+        "RP uprating abroad is country, residence, personal-scope and agreement dependent in the cited legacy text."
+      ],
+      "gaps": [
+        "Maternity Allowance, most pension categories, actual uprating rates and all country agreements remain unmodelled.",
+        "Amendment labels and historical examples cannot establish current rules for New Style JSA or new State Pension.",
+        "The source uses legacy regulation names and an inconsistent printed abbreviation; literal citations are retained."
+      ],
+      "source_stated_dates": [],
+      "dependency_candidates": [
+        {
+          "literal": "Reg (EEuropean Community) 1408/71, Art 10(1)",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "R(A) 4/75",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "R(A) 2/78",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "R(S) 7/81",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "R(M) 2/84",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "SS Ben (PA) Regs, reg 12",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "Memo DMG 32/10",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        }
+      ],
+      "requirement_outcomes": {
+        "RQ01": "Seven source PDF and page-file identities verified against the frozen inventory; capture and publisher metadata remain separate.",
+        "RQ02": "Partial: selected body paragraphs and neighbouring scope material inspected as machine-extracted text; no full-part segmentation or visual PDF check.",
+        "RQ03": "Selected source-backed, scoped concept proposals authored; specialist review pending.",
+        "RQ04": "Selected SKOS-related proposals have exact quotes and successful mechanical locator/endpoint checks; no equivalence or executable rule.",
+        "RQ05": "Source-stated dates retained with their role and precision where selected; document publication date and current applicability remain unresolved.",
+        "RQ06": "Selected literal dependencies logged as unresolved; no work/provision/version or supersession adjudication.",
+        "RQ07": "Two cases designed for this part; no behavioural/model execution or specialist acceptance.",
+        "RQ08": "This bounded partial-coverage row records counts, findings and gaps; full-part completion is not claimed.",
+        "RQ09": "Benefit, component, territorial and regime distinctions preserved; no equivalence to ADM, UC, new State Pension or New Style benefits."
+      },
+      "research_status": "partial-selected-passages-reviewed",
+      "specialist_status": "unreviewed"
+    },
+    {
+      "task": "chapter-07-part-6",
+      "source_unit": "dmg-551f4b7992e2891b",
+      "part": 6,
+      "document_id": "dmg-vol2-ch7-part6",
+      "title": "DMG Vol 2 Ch 7 Part 6: SDA, SPC, WB/Bereavement Benefit and Winter Fuel Payments [076960 to 078059] ",
+      "url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf",
+      "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol2-ch7-part6.pdf",
+      "pdf_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part6.json",
+      "pages_sha256": "efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9",
+      "measured_pdf_pages": 66,
+      "acquired_at": "2026-09-15T19:45:20.305518Z",
+      "document_dates": {
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata",
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates."
+      },
+      "source_role": "substantive",
+      "source_role_boundary": "Listed substantive chapter; individual passages may be historical, transitional or superseded.",
+      "selected_evidence_pages": [
+        8,
+        9,
+        11,
+        13,
+        56
+      ],
+      "selected_passages": 6,
+      "concepts": 4,
+      "relationship_proposals": 3,
+      "findings": [
+        "SPC claimant payment and household-membership absence questions use separate provisions.",
+        "Temporary absence is not equated with export to a claimant living abroad.",
+        "The source explicitly preserves a transition for absences underway on 28 July 2016.",
+        "Winter Fuel Payment paragraph 077245 records a judgment date and a different regulation-effect date; no 2026 WFP entitlement rule is authored."
+      ],
+      "gaps": [
+        "The twenty-six-week treatment conditions span pages and are not reduced to a standalone rule.",
+        "SDA, bereavement, most Winter Fuel Payment conditions and historic appendices remain unmodelled.",
+        "Current WFP legislation, applicable winter, later changes and treaty effects remain unresolved."
+      ],
+      "source_stated_dates": [
+        {
+          "source_literal": "28.7.16",
+          "normalised_value": "2016-07-28",
+          "precision": "day",
+          "role": "temporary-absence transition boundary as stated",
+          "locator": "DMG 077015",
+          "page": "page/dmg-vol2-ch7-part6/0013",
+          "review_status": "source-stated-unreconciled",
+          "document_publication_date": false
+        },
+        {
+          "source_literal": "21.7.11",
+          "normalised_value": "2011-07-21",
+          "precision": "day",
+          "role": "Stewart judgment date as stated",
+          "locator": "DMG 077245",
+          "page": "page/dmg-vol2-ch7-part6/0056",
+          "review_status": "source-stated-unreconciled",
+          "document_publication_date": false
+        },
+        {
+          "source_literal": "16.9.13",
+          "normalised_value": "2013-09-16",
+          "precision": "day",
+          "role": "WFP regulation amendment effect as stated",
+          "locator": "DMG 077245",
+          "page": "page/dmg-vol2-ch7-part6/0056",
+          "review_status": "source-stated-unreconciled",
+          "document_publication_date": false
+        }
+      ],
+      "dependency_candidates": [
+        {
+          "literal": "SPC Regs, reg 3",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "SPC Regs, reg 5",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "HB and SPC (Temporary Absence) (Amendment) Regs 2016, reg 5(3)",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "Stewart v Secretary of State for Work and Pensions, Case C-503/09",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        }
+      ],
+      "requirement_outcomes": {
+        "RQ01": "Seven source PDF and page-file identities verified against the frozen inventory; capture and publisher metadata remain separate.",
+        "RQ02": "Partial: selected body paragraphs and neighbouring scope material inspected as machine-extracted text; no full-part segmentation or visual PDF check.",
+        "RQ03": "Selected source-backed, scoped concept proposals authored; specialist review pending.",
+        "RQ04": "Selected SKOS-related proposals have exact quotes and successful mechanical locator/endpoint checks; no equivalence or executable rule.",
+        "RQ05": "Source-stated dates retained with their role and precision where selected; document publication date and current applicability remain unresolved.",
+        "RQ06": "Selected literal dependencies logged as unresolved; no work/provision/version or supersession adjudication.",
+        "RQ07": "Two cases designed for this part; no behavioural/model execution or specialist acceptance.",
+        "RQ08": "This bounded partial-coverage row records counts, findings and gaps; full-part completion is not claimed.",
+        "RQ09": "Benefit, component, territorial and regime distinctions preserved; no equivalence to ADM, UC, new State Pension or New Style benefits."
+      },
+      "research_status": "partial-selected-passages-reviewed",
+      "specialist_status": "unreviewed"
+    },
+    {
+      "task": "chapter-07-part-7",
+      "source_unit": "dmg-4df65f3ea72b3089",
+      "part": 7,
+      "document_id": "dmg-vol2-ch7-part7",
+      "title": "DMG Vol 2 Ch 7 Part 7: Offshore workers and Her Majesty's forces [078060 to 079999]",
+      "url": "https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf",
+      "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol2-ch7-part7.pdf",
+      "pdf_sha256": "0ca8d6f5ffc6a7c24b630b8ac219371f5e8b29c12b247ee9b18c8e27203eb532",
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part7.json",
+      "pages_sha256": "7375d9e98727f909c1efe0321340b929a153a64466d6d7161d6e1f6d86515424",
+      "measured_pdf_pages": 22,
+      "acquired_at": "2026-09-15T19:45:20.233458Z",
+      "document_dates": {
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata",
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates."
+      },
+      "source_role": "substantive",
+      "source_role_boundary": "Listed substantive chapter; individual passages may be historical, transitional or superseded.",
+      "selected_evidence_pages": [
+        5,
+        7,
+        9
+      ],
+      "selected_passages": 9,
+      "concepts": 5,
+      "relationship_proposals": 4,
+      "findings": [
+        "Mariner definitions differ between Industrial Injuries and other benefits.",
+        "Offshore prescribed employment and area definitions depend on legal purpose, with different accident/disease wording.",
+        "The special claim-timing paragraph requires an employment-related inability to claim and a subsequent claim as soon as reasonably practicable."
+      ],
+      "gaps": [
+        "Airmen and armed-forces definitions were inspected but not fully modelled.",
+        "Country boundaries, Orders in Council, statutory versions and remaining payment provisions are unverified.",
+        "The PDF retains historical royal titles, amendment labels and deleted-text artefacts; they are not silently modernised or promoted to current law."
+      ],
+      "source_stated_dates": [],
+      "dependency_candidates": [
+        {
+          "literal": "SS (II) (Mariners’ Ben) Regs, reg 1(2)",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "SS (Conts) Regs, Sch 6, Part 1",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "Oil and Gas (Enterprise) Act 1982, s 23(2)",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "SS Ben (PA) Regs, reg 10C(1)",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        },
+        {
+          "literal": "SS Ben (PA) Regs, reg 11(1)",
+          "resolution": "unresolved-work-provision-version; no official legislative text acquired in this batch"
+        }
+      ],
+      "requirement_outcomes": {
+        "RQ01": "Seven source PDF and page-file identities verified against the frozen inventory; capture and publisher metadata remain separate.",
+        "RQ02": "Partial: selected body paragraphs and neighbouring scope material inspected as machine-extracted text; no full-part segmentation or visual PDF check.",
+        "RQ03": "Selected source-backed, scoped concept proposals authored; specialist review pending.",
+        "RQ04": "Selected SKOS-related proposals have exact quotes and successful mechanical locator/endpoint checks; no equivalence or executable rule.",
+        "RQ05": "Source-stated dates retained with their role and precision where selected; document publication date and current applicability remain unresolved.",
+        "RQ06": "Selected literal dependencies logged as unresolved; no work/provision/version or supersession adjudication.",
+        "RQ07": "Two cases designed for this part; no behavioural/model execution or specialist acceptance.",
+        "RQ08": "This bounded partial-coverage row records counts, findings and gaps; full-part completion is not claimed.",
+        "RQ09": "Benefit, component, territorial and regime distinctions preserved; no equivalence to ADM, UC, new State Pension or New Style benefits."
+      },
+      "research_status": "partial-selected-passages-reviewed",
+      "specialist_status": "unreviewed"
+    }
+  ],
+  "selected_passages": [
+    {
+      "part": 1,
+      "document_id": "dmg-vol2-ch7-part1",
+      "page_number": 15,
+      "page": "page/dmg-vol2-ch7-part1/0015",
+      "locator": "DMG 070050",
+      "quote": "070050 [See Memo DMG 32/10] In order to be covered by EC provisions 1 a person must come within\ntheir personal scope. Set out below are the categories of people who come within the personal scope of\nEC provisions.\n\n\n                                                                     1 Reg (EEC) 1408/71, Reg (EEC) 574/72",
+      "quote_sha256": "620259a300f38b210ba3938f1eaccff075a154b68b66ace8c5332ee093b00337",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf#page=15",
+      "source_sha256": "32a065d37da4bd460b25258d71b5dfc3127d6c98e65c53ab5562491aea16f18a",
+      "pages_sha256": "4ffe86a4c907dcc7b8bf3883bfdc46b6a8b9db03a0ccda563189ee12cbead47c"
+    },
+    {
+      "part": 1,
+      "document_id": "dmg-vol2-ch7-part1",
+      "page_number": 57,
+      "page": "page/dmg-vol2-ch7-part1/0057",
+      "locator": "DMG 070310",
+      "quote": "070310 The UK has reciprocal agreements with both EEA countries and other countries. Lists of the\ncountries with which the UK has agreements are at\n\n\n• DMG 070330 for EEA countries and\n\n\n• DMG 070333 for non-EEA countries.\n\n\nThose lists also set out which benefits are covered by the agreements.",
+      "quote_sha256": "6482ae3fab41ce0bae0c5c45424b090952e101d7f7441590c8a68a071610f841",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf#page=57",
+      "source_sha256": "32a065d37da4bd460b25258d71b5dfc3127d6c98e65c53ab5562491aea16f18a",
+      "pages_sha256": "4ffe86a4c907dcc7b8bf3883bfdc46b6a8b9db03a0ccda563189ee12cbead47c"
+    },
+    {
+      "part": 1,
+      "document_id": "dmg-vol2-ch7-part1",
+      "page_number": 57,
+      "page": "page/dmg-vol2-ch7-part1/0057",
+      "locator": "DMG 070311",
+      "quote": "070311 In general a person covered by EC provisions cannot rely on a reciprocal agreement for\nentitlement to benefit (see DMG 070320).",
+      "quote_sha256": "98154da59052e4b49639c2a0916541fa6b4e167a83c4ca5fa6dab0b448a147c1",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf#page=57",
+      "source_sha256": "32a065d37da4bd460b25258d71b5dfc3127d6c98e65c53ab5562491aea16f18a",
+      "pages_sha256": "4ffe86a4c907dcc7b8bf3883bfdc46b6a8b9db03a0ccda563189ee12cbead47c"
+    },
+    {
+      "part": 1,
+      "document_id": "dmg-vol2-ch7-part1",
+      "page_number": 57,
+      "page": "page/dmg-vol2-ch7-part1/0057",
+      "locator": "DMG 070312",
+      "quote": "070312 Detailed guidance on the effects of those agreements is set out in the section of the Chapter\ndealing with each benefit. ESA(C) is not covered by any reciprocal agreement with EEA countries despite\nprovisions being made for IB. However certain non EEA countries now have a reciprocal agreement with\n\nthe UK for ESA(C)1 see DMG 070333.\n\n\n                                                                     1 SS (Reciprocal Agreements) Order 12\n\n\n\nGeneral principles\n\nAdjudication under reciprocal agreements",
+      "quote_sha256": "e76f69aec782f4aedf6cf6323c76d9a289b51c3d87cffffe03e50d0af60f919b",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf#page=57",
+      "source_sha256": "32a065d37da4bd460b25258d71b5dfc3127d6c98e65c53ab5562491aea16f18a",
+      "pages_sha256": "4ffe86a4c907dcc7b8bf3883bfdc46b6a8b9db03a0ccda563189ee12cbead47c"
+    },
+    {
+      "part": 1,
+      "document_id": "dmg-vol2-ch7-part1",
+      "page_number": 98,
+      "page": "page/dmg-vol2-ch7-part1/0098",
+      "locator": "DMG 070530",
+      "quote": "070530 [See memo DMG 1/17] A decision made in Great Britain or Northern Ireland can be revised,\n\nsuperseded or heard on appeal in whichever of the two countries the claimant is 1.\n\n\n                                        1 SS (N Ireland Reciprocal Arrangements) Regs 76, Sch, para 3(1);\n                                 Child Benefit (N Ireland Reciprocal Arrangements) Regs 77, Sch 1, para 3\n\n\nExample\n\n\nA person claims DLA whilst in Great Britain but is disallowed. That person moves to Northern Ireland and\nthe appeal can be heard in Northern Ireland.\n\n\n\nIn Great Britain or Northern Ireland",
+      "quote_sha256": "5ca179c667b9e9c92f223f1d0e9c137fb1fd60339fbb16b3e09ee527506efd79",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf#page=98",
+      "source_sha256": "32a065d37da4bd460b25258d71b5dfc3127d6c98e65c53ab5562491aea16f18a",
+      "pages_sha256": "4ffe86a4c907dcc7b8bf3883bfdc46b6a8b9db03a0ccda563189ee12cbead47c"
+    },
+    {
+      "part": 1,
+      "document_id": "dmg-vol2-ch7-part1",
+      "page_number": 98,
+      "page": "page/dmg-vol2-ch7-part1/0098",
+      "locator": "DMG 070531",
+      "quote": "070531 For a revision, supersession or appeal to take place in the other country, the person must be \"in\"\n\nthat country. A casual presence is not enough1.\n\n\n                                                                                               1 R(S) 5/85",
+      "quote_sha256": "e35826e5b739fb47ffd293f5caea289f30620015f7c12bd9504b8a596cc734ed",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf#page=98",
+      "source_sha256": "32a065d37da4bd460b25258d71b5dfc3127d6c98e65c53ab5562491aea16f18a",
+      "pages_sha256": "4ffe86a4c907dcc7b8bf3883bfdc46b6a8b9db03a0ccda563189ee12cbead47c"
+    },
+    {
+      "part": 1,
+      "document_id": "dmg-vol2-ch7-part1",
+      "page_number": 98,
+      "page": "page/dmg-vol2-ch7-part1/0098",
+      "locator": "DMG 070532",
+      "quote": "070532 If the person is not \"in\" that country, the revision, supersession or appeal must be decided in the\ncountry where the original decision was made.\n\n\n\nWhen the agreement applies",
+      "quote_sha256": "07d5b19dd48ddc435ee1d7e6f8ef8921d8020d1cc720729f3ea47c9810c1cdb9",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf#page=98",
+      "source_sha256": "32a065d37da4bd460b25258d71b5dfc3127d6c98e65c53ab5562491aea16f18a",
+      "pages_sha256": "4ffe86a4c907dcc7b8bf3883bfdc46b6a8b9db03a0ccda563189ee12cbead47c"
+    },
+    {
+      "part": 1,
+      "document_id": "dmg-vol2-ch7-part1",
+      "page_number": 98,
+      "page": "page/dmg-vol2-ch7-part1/0098",
+      "locator": "DMG 070533",
+      "quote": "070533 The agreement applies to most benefits however reviews or appeals cannot be undertaken for\nUC, Pension Credit, Christmas Bonus, Income Support, Social Fund (maternity and funeral expenses),\nFamily Credit, Statutory Sick Pay or Statutory Maternity Pay.",
+      "quote_sha256": "51a3aab310eb2fb58b134660d2191b1a35f16bd5dfdc16e51baff23d16bbe7b3",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf#page=98",
+      "source_sha256": "32a065d37da4bd460b25258d71b5dfc3127d6c98e65c53ab5562491aea16f18a",
+      "pages_sha256": "4ffe86a4c907dcc7b8bf3883bfdc46b6a8b9db03a0ccda563189ee12cbead47c"
+    },
+    {
+      "part": 2,
+      "document_id": "dmg-vol2-ch7-part2",
+      "page_number": 2,
+      "page": "page/dmg-vol2-ch7-part2/0002",
+      "locator": "DMG 071700",
+      "quote": "071700 This section contains guidance on the residence and presence conditions, and competency\nconditions, for AA, DLA and CA. The guidance covers\n\n\n1. residence and presence conditions under UK law\n\n\n2. periods of temporary absence from GB under UK law\n\n\n3. export of benefit to other countries, under EU law\n\n\n4. new and repeat claims from abroad under EU law\n\n\n5. claims made by “incomers” (i.e. EEA nationals who have recently moved to the UK)\n\n\n6. reciprocal agreements on residence and presence.\n\n\nNote: See appendices 3 and 4 for further guidance on competency.",
+      "quote_sha256": "5271e5a20ce8a23da8fc55b15a288cc4cf3d41deed6fd97f0f16b5038c78afdc",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6a17044d050971fbebf3bb35/dmg-ch-07-part-02.pdf#page=2",
+      "source_sha256": "0c6c01cb8779938fac372447813bb9339008e0164499b80b172aa3488a977ad2",
+      "pages_sha256": "b72f983b3003c8cd5cdee30d0245bb7a8c3a9cafa292da5f36b38b7d2da2b9aa"
+    },
+    {
+      "part": 2,
+      "document_id": "dmg-vol2-ch7-part2",
+      "page_number": 2,
+      "page": "page/dmg-vol2-ch7-part2/0002",
+      "locator": "DMG 071701",
+      "quote": "071701 If a claimant does not satisfy the residence and presence conditions in UK law, the DM should\nconsider whether the claimant is helped by EU law and, if not, by any reciprocal agreements.",
+      "quote_sha256": "478885bae35512200640f735aac8750891740f5407f5bfe951b2429b5e9870f4",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6a17044d050971fbebf3bb35/dmg-ch-07-part-02.pdf#page=2",
+      "source_sha256": "0c6c01cb8779938fac372447813bb9339008e0164499b80b172aa3488a977ad2",
+      "pages_sha256": "b72f983b3003c8cd5cdee30d0245bb7a8c3a9cafa292da5f36b38b7d2da2b9aa"
+    },
+    {
+      "part": 2,
+      "document_id": "dmg-vol2-ch7-part2",
+      "page_number": 24,
+      "page": "page/dmg-vol2-ch7-part2/0024",
+      "locator": "DMG 071751",
+      "quote": "071751 There are two current sets of EU regulations relating to the co-ordination of Social Security\nbenefits across the Member States. These are\n\n\n1. Regulation (EC) No. 883/2004 which sets out the main rules, and\n\n\n2. Regulation (EC) No. 987/2009 which deals with the administrative procedures to be followed in\nimplementing the main rules.\n\n\nNote: For the EU Member States, these regulations replaced earlier regulations 1 with effect from 1.5.10.\nThey applied to Switzerland from 1.4.12 and to Norway, Iceland and Liechtenstein from 1.6.12. The old\n\nregulations1 continue to apply in certain transitional cases. DMs are advised to seek guidance from DMA\n(Leeds) where issues relating to the old regulations apply. See also DMG 071756 to 071758 below\nconcerning third country nationals.\n\n\n                                                                   1 Reg (EEC) 1408/71 & Reg (EEC) 574/72\n\n\n\nWhat types of benefit are AA, DLA & CA?",
+      "quote_sha256": "345c666a0a1f6defd7d0d979006fef2c0e3a345a18c81bc9bcc2df7d58b116ca",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6a17044d050971fbebf3bb35/dmg-ch-07-part-02.pdf#page=24",
+      "source_sha256": "0c6c01cb8779938fac372447813bb9339008e0164499b80b172aa3488a977ad2",
+      "pages_sha256": "b72f983b3003c8cd5cdee30d0245bb7a8c3a9cafa292da5f36b38b7d2da2b9aa"
+    },
+    {
+      "part": 2,
+      "document_id": "dmg-vol2-ch7-part2",
+      "page_number": 24,
+      "page": "page/dmg-vol2-ch7-part2/0024",
+      "locator": "DMG 071752",
+      "quote": "071752 The EU Social Security Co-ordination Regs set out different rules depending upon the branch of\nsocial security involved (e.g. “sickness benefits”, “old-age benefits”, “family benefits”). On 18.10.07 the\n\nCourt of Justice of the European Union (the CJEU) held1 that the care component of DLA was a sickness\nbenefit. However, on 5.5.11 the CJEU confirmed that the mobility component of DLA was a Special Non-\nContributory Benefit (SNCB). DLA (Mobility Component) cannot, therefore, be paid to a person residing\nabroad. For the purposes of the EU regulations concerning the co-ordination of social security benefits\nAA, DLA (Care only) and CA are sickness benefits in cash for long term care.\n\n\n                                                                            1 ECJ Judgement Case C 299/05;\n      2 Bartlett, Gonzales Ramos and Taylor v Secretary of State for Work and Pensions Case C-537/09,\n\n\n\nExportability - General Rules for AA, DLA (Care) or CA",
+      "quote_sha256": "a31e804b40c1c1ceab1599db5d87c6ff051742bb5c0416504cb9d179f2d53fb8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6a17044d050971fbebf3bb35/dmg-ch-07-part-02.pdf#page=24",
+      "source_sha256": "0c6c01cb8779938fac372447813bb9339008e0164499b80b172aa3488a977ad2",
+      "pages_sha256": "b72f983b3003c8cd5cdee30d0245bb7a8c3a9cafa292da5f36b38b7d2da2b9aa"
+    },
+    {
+      "part": 2,
+      "document_id": "dmg-vol2-ch7-part2",
+      "page_number": 41,
+      "page": "page/dmg-vol2-ch7-part2/0041",
+      "locator": "DMG 071800",
+      "quote": "071800 The Mobility Component of DLA, is a SNCB 1, It cannot be claimed from abroad and where an\naward has been made to a person residing in the UK under UK domestic law provisions DLA (Mob) that\naward cannot be exported when the claimant moves to reside permanently abroad but see DMG 071743\net seq regarding certain claimants with transitional protection.\n\n\n                1 Reg (EEC) 1408/71 Art 4(2a), Art 10a, & Annex IIA & Reg (EC) 883/04 Art 3(3) & Art 70 &\n                                                              Annex X & CJEU Judgement case C-537/09.\n\n\n\nClaims by incomers",
+      "quote_sha256": "b6e4fc8c679e2221b94ba7adeea1343a010f35ae5c71a498379f18de6caa710e",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6a17044d050971fbebf3bb35/dmg-ch-07-part-02.pdf#page=41",
+      "source_sha256": "0c6c01cb8779938fac372447813bb9339008e0164499b80b172aa3488a977ad2",
+      "pages_sha256": "b72f983b3003c8cd5cdee30d0245bb7a8c3a9cafa292da5f36b38b7d2da2b9aa"
+    },
+    {
+      "part": 2,
+      "document_id": "dmg-vol2-ch7-part2",
+      "page_number": 61,
+      "page": "page/dmg-vol2-ch7-part2/0061",
+      "locator": "DMG 071910",
+      "quote": "071910 ESA was introduced for new claimants on 27.10.08. ESA(Cont) replaced IB, and ESA(IR) replaced\nIS on grounds of disability.",
+      "quote_sha256": "6397822ab6b47309c1450f78fac9448ef41229eca09b2612b59b22e9fdef7278",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6a17044d050971fbebf3bb35/dmg-ch-07-part-02.pdf#page=61",
+      "source_sha256": "0c6c01cb8779938fac372447813bb9339008e0164499b80b172aa3488a977ad2",
+      "pages_sha256": "b72f983b3003c8cd5cdee30d0245bb7a8c3a9cafa292da5f36b38b7d2da2b9aa"
+    },
+    {
+      "part": 3,
+      "document_id": "dmg-vol2-ch7-part3",
+      "page_number": 2,
+      "page": "page/dmg-vol2-ch7-part3/0002",
+      "locator": "DMG 072770",
+      "quote": "072770 [See Memo DMG 01-23] [See Memo DMG 05-23] [See Memo DMG 11-23] [See Memo DMG\n10/25] The habitual residence test applies to IS, JSA(IB), ESA(IR) and SPC. A claimant who is not\nhabitually resident in the CTA\n\n\n1. is a person from abroad and has an applicable amount of nil for IS, JSA(IB) and ESA(IR) 1 and\n\n\n2. is treated as not in GB for SPC2.\n\n\n 1 IS (Gen) Regs, reg 21(3) & 21AA; JSA Regs, reg 85(4) & 85A; ESA Regs, reg 70(1) & Sch 5 Part 1 para 11;\n                                                                                          2 SPC Regs, reg 2",
+      "quote_sha256": "edc31076e6fa3e61f5471902ac0db7ccc2bb09bdf6ea49c6d956e9a27605c894",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=2",
+      "source_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+      "pages_sha256": "bb4be572465a2e6a522fc07e675172436459d73a8850e76d7d112c9f88db0471"
+    },
+    {
+      "part": 3,
+      "document_id": "dmg-vol2-ch7-part3",
+      "page_number": 2,
+      "page": "page/dmg-vol2-ch7-part3/0002",
+      "locator": "DMG 072771",
+      "quote": "072771 Regulations1 provide that a claimant cannot be habitually resident unless he has the right to\n\nreside in the CTA (see DMG 073234). However certain types of EU rights to reside do not count 2 (see\nDMG 073450 et seq).\n\n\n                      1 IS (Gen) Regs, reg 21AA; JSA Regs, reg 85A; ESA Regs, reg 70(2); SPC Regs, reg 2;\n              2 IS (Gen) Regs, reg 21AA (3); JSA Regs, reg 85A(3); ESA Regs, reg 70(3); SPC Regs, reg 2(3)",
+      "quote_sha256": "a78482f8c207b4e79397476a84e167108949a3f2a69488585a6994b2b1cd756c",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=2",
+      "source_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+      "pages_sha256": "bb4be572465a2e6a522fc07e675172436459d73a8850e76d7d112c9f88db0471"
+    },
+    {
+      "part": 3,
+      "document_id": "dmg-vol2-ch7-part3",
+      "page_number": 3,
+      "page": "page/dmg-vol2-ch7-part3/0003",
+      "locator": "DMG 072780",
+      "quote": "072780 Although it is used in both domestic and European law, there is no statutory definition of the\nterm ‘habitual residence’. There are different considerations in applying domestic and EC law but in both\ninstances the expression should be given its ordinary and natural meaning. DMs should determine the\nquestion by considering all the facts of the case in a common sense way and applying the relevant case\nlaw.",
+      "quote_sha256": "c0ac924942801401634878fdfb5add965b1ef78d8fd8a4dec2d84b9f340781f5",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=3",
+      "source_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+      "pages_sha256": "bb4be572465a2e6a522fc07e675172436459d73a8850e76d7d112c9f88db0471"
+    },
+    {
+      "part": 3,
+      "document_id": "dmg-vol2-ch7-part3",
+      "page_number": 3,
+      "page": "page/dmg-vol2-ch7-part3/0003",
+      "locator": "DMG 072786",
+      "quote": "072786 The legislation requires that a claimant is habitually resident in the UK, the Channel Islands, the\n\nIsle of Man or the Republic of Ireland. This is known as the Common Travel Area (CTA) 1.\n\n\n                       1 IS (Gen) Regs, reg 21AA; JSA Regs, reg 85A; ESA Regs, reg 70(1); SPC Regs, reg 2",
+      "quote_sha256": "2f01d45959cfc09ed4fd2ee3fbeb0fc71c04bdcb3c8d15b3d673f561c0a4bff1",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=3",
+      "source_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+      "pages_sha256": "bb4be572465a2e6a522fc07e675172436459d73a8850e76d7d112c9f88db0471"
+    },
+    {
+      "part": 3,
+      "document_id": "dmg-vol2-ch7-part3",
+      "page_number": 3,
+      "page": "page/dmg-vol2-ch7-part3/0003",
+      "locator": "DMG 072791",
+      "quote": "072791 [See Memo DMG 10/25] If other conditions of entitlement to benefit are satisfied the DM should\nconsider whether the claimant is excluded from benefit by being a PSIC. If not the DM should consider\n\n\n1. whether the claimant is excluded from treatment as a person from abroad in consequence of EC law or\nunder other specific exclusions if not\n\n\n2. whether the claimant has the right to reside in the CTA and\n\n\n3. whether that right to reside is excluded.\n\n\nIf the claimant has the right to reside in the CTA which is not excluded the DM should apply the test for\nactual habitual residence.",
+      "quote_sha256": "9e6af3243b4c8467f177a287c705c3406a4d83567b1b66362b7febb429b24bac",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=3",
+      "source_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+      "pages_sha256": "bb4be572465a2e6a522fc07e675172436459d73a8850e76d7d112c9f88db0471"
+    },
+    {
+      "part": 3,
+      "document_id": "dmg-vol2-ch7-part3",
+      "page_number": 3,
+      "page": "page/dmg-vol2-ch7-part3/0003",
+      "locator": "DMG 072792",
+      "quote": "072792 The second element of the habitual residence test, the factual assessment of habitual residence\nshould also be applied if a claimant at any time ceases to be subject to immigration control or gains the\nright to reside in the CTA (for instance, where a PSIC is granted British citizenship).",
+      "quote_sha256": "3a1e46e77478e2421d0730411a6f02da71fe51ceb3ee8982fc945ad6f096c05e",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=3",
+      "source_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+      "pages_sha256": "bb4be572465a2e6a522fc07e675172436459d73a8850e76d7d112c9f88db0471"
+    },
+    {
+      "part": 3,
+      "document_id": "dmg-vol2-ch7-part3",
+      "page_number": 79,
+      "page": "page/dmg-vol2-ch7-part3/0079",
+      "locator": "DMG 073234",
+      "quote": "073234 Regulations1 provide that a person cannot be habitually resident where he does not have a\nqualifying right to reside in the CTA unless he falls within one of the exclusion categories. But see\n\ntransitional provisions2 for those already in receipt of benefit at 30.4.04. There is no statutory definition\nof the term “right to reside”. Whether a person has a right to reside in the UK is determined by domestic\nnationality and immigration law for non-EEA nationals and by EU law and domestic immigration law for\n\nEEA nationals arriving in the UK and claiming free movement rights 3.\n\n\n                       1 IS (Gen) Regs, reg 21AA; JSA Regs, reg 85A; ESA Regs, reg 70(2); SPC Regs, reg 2;\n\n                                                                     2 SS Hab Res Regs, reg 6 ; 3 R(IS) 8/07",
+      "quote_sha256": "a12a31dd5cc290306f9dab84cc0be85b969016942681b3f91086ba41b7a38ee6",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=79",
+      "source_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+      "pages_sha256": "bb4be572465a2e6a522fc07e675172436459d73a8850e76d7d112c9f88db0471"
+    },
+    {
+      "part": 3,
+      "document_id": "dmg-vol2-ch7-part3",
+      "page_number": 115,
+      "page": "page/dmg-vol2-ch7-part3/0115",
+      "locator": "DMG 073490",
+      "quote": "073490 A new right to reside has been created for EEA nationals in Appendix EU to the Immigration\nRules made under the Immigration Act 1971. Applicants to the EUSS can be granted either\n\n\n1. Indefinite Leave to Enter (ILE)/Indefinite Leave to Remain (ILR)(\"settled status“) or\n\n\n2. Limited Leave to Enter (LLE)/Limited Leave to Remain (LLR)(“pre-settled status“)\n\n\nby the Home Office.\n\n\n\nSettled Status – Indefinite Leave to Remain",
+      "quote_sha256": "198e8ed419d2524553d61b5b2910aeae0de440bd5b7bd9ee140108cb82d8d305",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=115",
+      "source_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+      "pages_sha256": "bb4be572465a2e6a522fc07e675172436459d73a8850e76d7d112c9f88db0471"
+    },
+    {
+      "part": 3,
+      "document_id": "dmg-vol2-ch7-part3",
+      "page_number": 115,
+      "page": "page/dmg-vol2-ch7-part3/0115",
+      "locator": "DMG 073491",
+      "quote": "073491 Where a claimant has been granted ILR i.e. settled status under the EUSS, they will satisfy the\nright to reside element of the Habitual Residence Test for the purposes of claiming IS, JSA, ESA or SPC.\n\n\nNote: It is not necessary for DMs to apply the Imm (EEA) Regs 2016 where the claimant has been\ngranted ILR, as the claimant does not need a qualifying right to reside.\n\n\nPre-settled Status – Limited Leave to Remain",
+      "quote_sha256": "b228d4ebf5cb6ca5e20a195254d7e7634cb27b2970f5ccbcc68aa87d2a8fbc89",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=115",
+      "source_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+      "pages_sha256": "bb4be572465a2e6a522fc07e675172436459d73a8850e76d7d112c9f88db0471"
+    },
+    {
+      "part": 3,
+      "document_id": "dmg-vol2-ch7-part3",
+      "page_number": 115,
+      "page": "page/dmg-vol2-ch7-part3/0115",
+      "locator": "DMG 073492",
+      "quote": "073492 [See Memo DMG 01/21][See Memo DMG 01-22][See Memo DMG 14/25] Where a claimant\nhas been granted LLR i.e. pre-settled status under the EUSS, they will not automatically have a right to\nreside which is relevant for the purposes of claiming IS, JSA, ESA or SPC. The claimant is still required to\ndemonstrate that they are exercising a qualifying right to reside under the Imm (EEA) Regs 2016, such as\nworker status, self-employed status or permanent residence.",
+      "quote_sha256": "cd51106910d4d31935ae750ba34a90b2a8e49b995920e593c05800d35d374358",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=115",
+      "source_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+      "pages_sha256": "bb4be572465a2e6a522fc07e675172436459d73a8850e76d7d112c9f88db0471"
+    },
+    {
+      "part": 4,
+      "document_id": "dmg-vol2-ch7-part4",
+      "page_number": 55,
+      "page": "page/dmg-vol2-ch7-part4/0055",
+      "locator": "DMG 074080",
+      "quote": "074080 Entitlement to and the rate of invalidity benefit or long term Incapacity Benefit under European\n\nCommunity provisions depends on the legislation to which the claimant has been subject 1. There are two\ntypes of legislation, Type A and Type B.\n\n\n                                                                          1 Reg (EEC) 1408/71, Art 37 & 40",
+      "quote_sha256": "b3cd9de5be32683d311dc9b0b6fbf2911e099b55c66b35204d47b66a67c2ea2e",
+      "source_url": "https://assets.publishing.service.gov.uk/media/692421b6367485ea116a55db/dmg-ch-07-part-04.pdf#page=55",
+      "source_sha256": "d24ed4bc8730be76af2c9d29b670a39ff61f3cd9f5f2e882345d36a86ac6fe3c",
+      "pages_sha256": "bba1c55bf646754d77fddba1d3b77c8b015e46b07c871f3f6243dc76e6938ba5"
+    },
+    {
+      "part": 4,
+      "document_id": "dmg-vol2-ch7-part4",
+      "page_number": 55,
+      "page": "page/dmg-vol2-ch7-part4/0055",
+      "locator": "DMG 074081",
+      "quote": "074081 Type A1 are those where the rate of invalidity benefit does not depend on the length of\n\ninsurance2. Type B3 are those where the rate of invalidity benefit depends on the length of insurance 4.\n\n\n                                                       1 R(S) 1/80; R(S) 13/83; 2 Reg (EEC) 1408/71, Art 37;\n                                                       3 R(S) 1/80; R(S) 13/83; 4 Reg (EEC) 1408/71, Art 40",
+      "quote_sha256": "594d30119ec7cc4299f69546c8685d9aaf21784a79d38afc7834b27c64a0b914",
+      "source_url": "https://assets.publishing.service.gov.uk/media/692421b6367485ea116a55db/dmg-ch-07-part-04.pdf#page=55",
+      "source_sha256": "d24ed4bc8730be76af2c9d29b670a39ff61f3cd9f5f2e882345d36a86ac6fe3c",
+      "pages_sha256": "bba1c55bf646754d77fddba1d3b77c8b015e46b07c871f3f6243dc76e6938ba5"
+    },
+    {
+      "part": 4,
+      "document_id": "dmg-vol2-ch7-part4",
+      "page_number": 55,
+      "page": "page/dmg-vol2-ch7-part4/0055",
+      "locator": "DMG 074082",
+      "quote": "074082 Detailed guidance on entitlement to invalidity benefit where a person has been subject only to\nType A legislation is at 074100. Guidance on entitlement to invalidity benefit where a person has been\nsubject to Type B legislation is at 074120.\n\n\nType A invalidity benefit",
+      "quote_sha256": "947a66cd7eb48dea46b70032b45bed086bffc8262e8ed50103c3c1adc85e5b53",
+      "source_url": "https://assets.publishing.service.gov.uk/media/692421b6367485ea116a55db/dmg-ch-07-part-04.pdf#page=55",
+      "source_sha256": "d24ed4bc8730be76af2c9d29b670a39ff61f3cd9f5f2e882345d36a86ac6fe3c",
+      "pages_sha256": "bba1c55bf646754d77fddba1d3b77c8b015e46b07c871f3f6243dc76e6938ba5"
+    },
+    {
+      "part": 4,
+      "document_id": "dmg-vol2-ch7-part4",
+      "page_number": 91,
+      "page": "page/dmg-vol2-ch7-part4/0091",
+      "locator": "DMG 074360",
+      "quote": "074360 This section contains guidance on residence and presence for Industrial Injuries benefits.\nIndustrial Injuries benefits are\n\n\n• Disablement Benefit\n\n\n• Reduced Earnings Allowance\n\n\n• Retirement Allowance\n\n\n• Industrial Death Benefit.\n\n\nSee Benefit Specific Guidance for guidance on Workmen's Compensation (Supplementation) Scheme\nand Pneumoconiosis, Byssinosis and Miscellaneous Diseases Benefit Scheme.",
+      "quote_sha256": "1eb7a9d2bd6e6c972c30cf804eeedb1e1dab8f6cc38e0f2094a9173a34ecc04d",
+      "source_url": "https://assets.publishing.service.gov.uk/media/692421b6367485ea116a55db/dmg-ch-07-part-04.pdf#page=91",
+      "source_sha256": "d24ed4bc8730be76af2c9d29b670a39ff61f3cd9f5f2e882345d36a86ac6fe3c",
+      "pages_sha256": "bba1c55bf646754d77fddba1d3b77c8b015e46b07c871f3f6243dc76e6938ba5"
+    },
+    {
+      "part": 4,
+      "document_id": "dmg-vol2-ch7-part4",
+      "page_number": 91,
+      "page": "page/dmg-vol2-ch7-part4/0091",
+      "locator": "DMG 074361",
+      "quote": "074361 The guidance covers\n\n\n• claims to benefit, including UK law (074370 - 074378) and European Community law (074379 -\n074392) and reciprocal agreements and claims from outside Great Britain (074430 - 074431) and\n\n\n• export of benefit to other countries, including Great Britain law (074440 - 074449) and European\nCommunity law (074450 - 074454) and reciprocal agreements (074460).",
+      "quote_sha256": "29806ed95f16c374fb509675a4b012db84d98001f6be3d058d162def9c5e11ae",
+      "source_url": "https://assets.publishing.service.gov.uk/media/692421b6367485ea116a55db/dmg-ch-07-part-04.pdf#page=91",
+      "source_sha256": "d24ed4bc8730be76af2c9d29b670a39ff61f3cd9f5f2e882345d36a86ac6fe3c",
+      "pages_sha256": "bba1c55bf646754d77fddba1d3b77c8b015e46b07c871f3f6243dc76e6938ba5"
+    },
+    {
+      "part": 4,
+      "document_id": "dmg-vol2-ch7-part4",
+      "page_number": 91,
+      "page": "page/dmg-vol2-ch7-part4/0091",
+      "locator": "DMG 074362",
+      "quote": "074362 If a claimant does not satisfy the conditions in Great Britain law, the decision maker should\nconsider whether the claimant is helped by European Community law and, if not, by any reciprocal\nagreements.",
+      "quote_sha256": "f1f69bad49cdec83e28b78f30d675c03e56e26577dd0a65f03a7e1afaa098c20",
+      "source_url": "https://assets.publishing.service.gov.uk/media/692421b6367485ea116a55db/dmg-ch-07-part-04.pdf#page=91",
+      "source_sha256": "d24ed4bc8730be76af2c9d29b670a39ff61f3cd9f5f2e882345d36a86ac6fe3c",
+      "pages_sha256": "bba1c55bf646754d77fddba1d3b77c8b015e46b07c871f3f6243dc76e6938ba5"
+    },
+    {
+      "part": 5,
+      "document_id": "dmg-vol2-ch7-part5",
+      "page_number": 15,
+      "page": "page/dmg-vol2-ch7-part5/0015",
+      "locator": "DMG 075330",
+      "quote": "075330 [See Memo DMG 32/10] This section contains guidance on\n\n         1.     entitlement to JSA when a person is outside GB (see DMG 075332)\n\n         2.     the restrictions on entitlement to income based JSA when a person has come\n                from abroad (see DMG 075550)\n\n         3.     the use of insurance paid in another country to satisfy the contribution conditions\n                for entitlement to contribution based JSA (see DMG 075520) and\n\n         4.     who pays UB (see DMG 075530).\n\n\n\n         Meaning of UB",
+      "quote_sha256": "0920ec5f1215c6ee9185e64d6c7e2d7941d12b1f85c2c3f85be852657fb980c2",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf#page=15",
+      "source_sha256": "ff92b6dba9bf7fe9f7be115cd203593e5a65979a569892d625bb3ae5395418c9",
+      "pages_sha256": "adde790b1114f9bbe6eea3da605de6d911d40342a4d0ce73e7f450f9f2f4eb6f"
+    },
+    {
+      "part": 5,
+      "document_id": "dmg-vol2-ch7-part5",
+      "page_number": 15,
+      "page": "page/dmg-vol2-ch7-part5/0015",
+      "locator": "DMG 075331",
+      "quote": "075331 In this section the term UB is used when referring to either\n\n         1.     EC provisions relating to UB or\n\n         2.     benefits paid by other EEA countries to unemployed people.\n\n         JSA is used when referring to UK unemployment benefit.\n\n\n\n         Absence from Great Britain",
+      "quote_sha256": "99bb85796bde476d137d13e4f8ae27b3156aa06e7881405dc8e0ccdcd13dc90c",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf#page=15",
+      "source_sha256": "ff92b6dba9bf7fe9f7be115cd203593e5a65979a569892d625bb3ae5395418c9",
+      "pages_sha256": "adde790b1114f9bbe6eea3da605de6d911d40342a4d0ce73e7f450f9f2f4eb6f"
+    },
+    {
+      "part": 5,
+      "document_id": "dmg-vol2-ch7-part5",
+      "page_number": 77,
+      "page": "page/dmg-vol2-ch7-part5/0077",
+      "locator": "DMG 075760",
+      "quote": "075760 To be entitled to either Category C (see DMG 075761) or Category D (see DMG\n         075767) RP a person must be\n\n         either\n\n         1.       resident or\n\n         2.       ordinarily resident in GB.\n\n\n         Category C Retirement Pension",
+      "quote_sha256": "426f9be5ba851eed422a5c5016cbc12a6229ad04fd9c463ad2991c609b83dbfd",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf#page=77",
+      "source_sha256": "ff92b6dba9bf7fe9f7be115cd203593e5a65979a569892d625bb3ae5395418c9",
+      "pages_sha256": "adde790b1114f9bbe6eea3da605de6d911d40342a4d0ce73e7f450f9f2f4eb6f"
+    },
+    {
+      "part": 5,
+      "document_id": "dmg-vol2-ch7-part5",
+      "page_number": 80,
+      "page": "page/dmg-vol2-ch7-part5/0080",
+      "locator": "DMG 075772",
+      "quote": "075772 The provisions which allow a person already entitled to Category C or D RP to\n          retain entitlement in another EEA country1 do not help that person to satisfy the\n          residence conditions for becoming entitled2 (see DMG 075762 and 075767).\n                       1 Reg (EEuropean Community) 1408/71, Art 10(1); 2 R(A) 4/75; R(A) 2/78; R(S) 7/81; R(M) 2/84;\n                                                               Re an Italian Widow [1982] 2 CMLR 128 (CP/90/79)",
+      "quote_sha256": "21accbb0dba4c9bf02e578df32c0cb90b1b3ded6e4499b3e52c601a5d15aa9e3",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf#page=80",
+      "source_sha256": "ff92b6dba9bf7fe9f7be115cd203593e5a65979a569892d625bb3ae5395418c9",
+      "pages_sha256": "adde790b1114f9bbe6eea3da605de6d911d40342a4d0ce73e7f450f9f2f4eb6f"
+    },
+    {
+      "part": 5,
+      "document_id": "dmg-vol2-ch7-part5",
+      "page_number": 81,
+      "page": "page/dmg-vol2-ch7-part5/0081",
+      "locator": "DMG 075780",
+      "quote": "075780 The rate of RP paid to a person absent from GB is increased by the general\n         uprating of the rates of benefit1 if that person is\n\n         1.    ordinarily resident in GB or\n\n         2.    in an EEA country and is within the scope of EC provisions2 (see DMG\n               070050) or\n\n         3.    in an EEA country and the agreement with that country still applies to them\n               (see DMG 075820) or\n\n         4.    in a country with which the UK has an agreement which allows the rate to be\n               increased (see DMG 075831) or\n\n         5.    in Sark3.\n                                 1 SS Administration Act 92, sec 150; 2 reg 1408/71, Art 2; 3 SS Ben (PA) Regs, reg 12",
+      "quote_sha256": "c5b1f20c962b45bf39ac0d9499da556ad04cbff64700dbf1633f584014dd6243",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf#page=81",
+      "source_sha256": "ff92b6dba9bf7fe9f7be115cd203593e5a65979a569892d625bb3ae5395418c9",
+      "pages_sha256": "adde790b1114f9bbe6eea3da605de6d911d40342a4d0ce73e7f450f9f2f4eb6f"
+    },
+    {
+      "part": 5,
+      "document_id": "dmg-vol2-ch7-part5",
+      "page_number": 81,
+      "page": "page/dmg-vol2-ch7-part5/0081",
+      "locator": "DMG 075783",
+      "quote": "075783 RP which is not increased by upratings is referred to as being frozen.\n\n\n\n\nVol 2 Amendment 21 July 2011",
+      "quote_sha256": "6bedd995e85b4bd28792cf6dde2b79e2d28f880354d23c2d477fa42aeec65eff",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf#page=81",
+      "source_sha256": "ff92b6dba9bf7fe9f7be115cd203593e5a65979a569892d625bb3ae5395418c9",
+      "pages_sha256": "adde790b1114f9bbe6eea3da605de6d911d40342a4d0ce73e7f450f9f2f4eb6f"
+    },
+    {
+      "part": 6,
+      "document_id": "dmg-vol2-ch7-part6",
+      "page_number": 8,
+      "page": "page/dmg-vol2-ch7-part6/0008",
+      "locator": "DMG 077001",
+      "quote": "077001 SPC can continue to be paid whilst a claimant is temporarily absent from GB 1 if the other\nconditions of entitlement continue to be satisfied and the absence is no longer than\n\n\n1. 4 weeks where the absence is not expected to exceed 4 weeks2 or\n\n\n2. 8 weeks3 where paragraph 077002 applies or\n\n\n3. 26 weeks4 where paragraph 077003 applies.\n\n\nNote: See DMG 04642 for effective dates for supersession.\n\n\n                                                 1 SPC Regs, reg 3; 2 reg 3(1)(a); 3 reg 3(1)(b); 4 reg 3(1)(c)\n\n\nExample 1\n\n\nJason notifies the DM that he is going abroad for 3 weeks. The DM decides that he remains entitled for\nthose 3 weeks. He contracts food poisoning and has to extend his stay by a further 2 weeks. As Jason’s",
+      "quote_sha256": "1ceecff0c5dab98047b06772e990a49fe9e87698c6c9eca9869460f27a56fe30",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=8",
+      "source_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
+      "pages_sha256": "efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9"
+    },
+    {
+      "part": 6,
+      "document_id": "dmg-vol2-ch7-part6",
+      "page_number": 9,
+      "page": "page/dmg-vol2-ch7-part6/0009",
+      "locator": "DMG 077002",
+      "quote": "077002 The temporary absence can be up to 8 weeks where\n\n\n1. the absence is not expected to exceed 8 weeks and\n\n\n2. the absence is in connection with the death of\n\n\n      2.1 the claimant’s partner or\n\n\n      2.2 a child or qualifying young person who normally lives with the claimant or\n\n\n      2.3 a close relative of the claimant, their partner or a child or qualifying young person normally\n      living with the claimant and\n\n\nthe Secretary of State considers that it would be unreasonable to expect the claimant to return to GB\n\nwithin the first 4 weeks1.\n\n\n                                                                                        1 SPC Regs, reg 3(2)\n\n\n\nThe 26 week rule",
+      "quote_sha256": "b7485515fc2c4127878288db237a54e9335a8dbb721cf794c207da3eac7f77d8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=9",
+      "source_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
+      "pages_sha256": "efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9"
+    },
+    {
+      "part": 6,
+      "document_id": "dmg-vol2-ch7-part6",
+      "page_number": 11,
+      "page": "page/dmg-vol2-ch7-part6/0011",
+      "locator": "DMG 077005",
+      "quote": "077005 A person is treated as being a member of the claimant’s household whilst temporarily absent\n\nfrom GB1 if the absence is no longer than\n\n\n1. 4 weeks where the absence is not expected to exceed 4 weeks2or\n\n\n2. 8 weeks3 where paragraph 077006 applies or\n\n\n3. 26 weeks4 where paragraph 077007 applies.\n\n\n                                            1 SPC Regs, reg 5(1)(f); 2 Reg 5(1A)(a); 3 reg 5(1A)(b); 4 reg 5(1A)\n\n\n\nThe 8 week rule",
+      "quote_sha256": "d2adcba0b70d5b7e41f5a6f83780d53e4f9c94d3f2e2488f24ae6cc579f04d62",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=11",
+      "source_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
+      "pages_sha256": "efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9"
+    },
+    {
+      "part": 6,
+      "document_id": "dmg-vol2-ch7-part6",
+      "page_number": 13,
+      "page": "page/dmg-vol2-ch7-part6/0013",
+      "locator": "DMG 077015",
+      "quote": "077015 Any person temporarily absent on 28.7.16 will be subject to the previous regulations until they\n\nreturn to GB1. All further absences will be subject to the new rules.\n\n\n                                    1 HB and SPC (Temporary Absence) (Amendment) Regs 2016, reg 5(3)",
+      "quote_sha256": "1cb233048024806b1838d6942011d7e70ee3b83487cf80cbbc32a529b95995bd",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=13",
+      "source_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
+      "pages_sha256": "efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9"
+    },
+    {
+      "part": 6,
+      "document_id": "dmg-vol2-ch7-part6",
+      "page_number": 13,
+      "page": "page/dmg-vol2-ch7-part6/0013",
+      "locator": "DMG 077025",
+      "quote": "077025 SPC is listed as a special non-contributory benefit for the purposes of EC law 1. Such benefits are\nonly payable in, and at the expense of, the State in which the person is habitually resident. This means\nthat SPC is payable in the UK only and EC law does not permit export of this benefit to claimants living\nabroad.",
+      "quote_sha256": "fe8ef4cfbe81244c3bff144cb7056d8cb2115f4ff830a068f42285ee7b4c6385",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=13",
+      "source_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
+      "pages_sha256": "efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9"
+    },
+    {
+      "part": 6,
+      "document_id": "dmg-vol2-ch7-part6",
+      "page_number": 56,
+      "page": "page/dmg-vol2-ch7-part6/0056",
+      "locator": "DMG 077245",
+      "quote": "077245 On 21.7.11, the CJEU made a decision in the case of Stewart (“the Stewart judgment”)1 which\nchanged the way the relevant EU regs applied in the case of WFPs. With effect from 16.9.13, the SFWFP\nregs were amended to incorporate this EU case law.\n\n\nNote: Guidance on the position prior to 16.9.13 is given in Appendix 1 to this Part of DMG Chapter 07.\n\n\n                                   1 Stewart v Secretary of State for Work and Pensions, Case C-503/09",
+      "quote_sha256": "1167a524f2e871d330bfd6ac263bb408b93e9a73246a4f6afd62bfe784c6bfb5",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=56",
+      "source_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
+      "pages_sha256": "efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9"
+    },
+    {
+      "part": 7,
+      "document_id": "dmg-vol2-ch7-part7",
+      "page_number": 5,
+      "page": "page/dmg-vol2-ch7-part7/0005",
+      "locator": "DMG 078070",
+      "quote": "078070   For Industrial Injuries benefits a mariner is a person employed under a contract of\n         service\n\n         1.    on board any ship or vessel as a master or as a crew member or as a pilot on\n               board or in any other capacity on board and\n                                                                  1\n         2.    treated as employed earner's employment .\n                                                                           1 SS (II) (Mariners’ Ben) Regs, reg 1(2)",
+      "quote_sha256": "ef5557c75c306ecbff5c94995985025eea216fcf1bdfc4d094aecf04fd1b37f8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=5",
+      "source_sha256": "0ca8d6f5ffc6a7c24b630b8ac219371f5e8b29c12b247ee9b18c8e27203eb532",
+      "pages_sha256": "7375d9e98727f909c1efe0321340b929a153a64466d6d7161d6e1f6d86515424"
+    },
+    {
+      "part": 7,
+      "document_id": "dmg-vol2-ch7-part7",
+      "page_number": 5,
+      "page": "page/dmg-vol2-ch7-part7/0005",
+      "locator": "DMG 078071",
+      "quote": "078071   For other benefits a mariner is a person employed under a contract of service on\n         board any ship or vessel\n\n         1.    as a master or\n\n         2.    as a crew member or\n\n         3.    in any other capacity on board when the employment in that other capacity is\n               with the ship or vessel or the crew or any passengers or cargo or mail carried\n               and the contract is entered into in the UK with a view to its performance (in\n               whole or in part) while the ship or vessel is on its voyage.",
+      "quote_sha256": "b4573fac6c17551e5f1797fc1dbd7f78fb04c0b98bdc7d7e19285e84a0030e63",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=5",
+      "source_sha256": "0ca8d6f5ffc6a7c24b630b8ac219371f5e8b29c12b247ee9b18c8e27203eb532",
+      "pages_sha256": "7375d9e98727f909c1efe0321340b929a153a64466d6d7161d6e1f6d86515424"
+    },
+    {
+      "part": 7,
+      "document_id": "dmg-vol2-ch7-part7",
+      "page_number": 5,
+      "page": "page/dmg-vol2-ch7-part7/0005",
+      "locator": "DMG 078072",
+      "quote": "078072   This does not include a serving member of the forces except those undergoing\n                                                                                                        1\n         training or instruction in certain prescribed establishments and organizations for 72\n                                      2\n         consecutive hours or less .\n                                          1 SS (II) (Mariners’ Ben) Regs, reg 1(2); 2 SS (Conts) Regs, Sch 6, Part 1",
+      "quote_sha256": "0f114af36552e5d2613d4bca5baa5b950024305a2f8358647aa754499d63f31a",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=5",
+      "source_sha256": "0ca8d6f5ffc6a7c24b630b8ac219371f5e8b29c12b247ee9b18c8e27203eb532",
+      "pages_sha256": "7375d9e98727f909c1efe0321340b929a153a64466d6d7161d6e1f6d86515424"
+    },
+    {
+      "part": 7,
+      "document_id": "dmg-vol2-ch7-part7",
+      "page_number": 7,
+      "page": "page/dmg-vol2-ch7-part7/0007",
+      "locator": "DMG 078080",
+      "quote": "078080   A continental shelf worker is a person who is or has been in prescribed employment\n         on the continental shelf.\n\n         Definition of prescribed employment\n                                                                  1",
+      "quote_sha256": "9dc0ddf07669dc31dd8a80a8d2dcf555b918a078496af01c484c5a7293feb348",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=7",
+      "source_sha256": "0ca8d6f5ffc6a7c24b630b8ac219371f5e8b29c12b247ee9b18c8e27203eb532",
+      "pages_sha256": "7375d9e98727f909c1efe0321340b929a153a64466d6d7161d6e1f6d86515424"
+    },
+    {
+      "part": 7,
+      "document_id": "dmg-vol2-ch7-part7",
+      "page_number": 7,
+      "page": "page/dmg-vol2-ch7-part7/0007",
+      "locator": "DMG 078081",
+      "quote": "078081 Prescribed employment means any employment , whether under a contract of\n                                                                      2\n         service or not, in any appointed or designated area , but see DMG Volume 1 ­\n         Decision Making and Appeals.\n                                        1 Oil and Gas (Enterprise) Act 1982, s 23(2); 2 SS Ben (PA) Regs, reg 11(1)",
+      "quote_sha256": "f25cd0590021aa4910fe8d70744298d259b6c6772ebbd7c695a4856b01127a6c",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=7",
+      "source_sha256": "0ca8d6f5ffc6a7c24b630b8ac219371f5e8b29c12b247ee9b18c8e27203eb532",
+      "pages_sha256": "7375d9e98727f909c1efe0321340b929a153a64466d6d7161d6e1f6d86515424"
+    },
+    {
+      "part": 7,
+      "document_id": "dmg-vol2-ch7-part7",
+      "page_number": 7,
+      "page": "page/dmg-vol2-ch7-part7/0007",
+      "locator": "DMG 078082",
+      "quote": "078082 Designated area means any area set out by Order in Council under the Continental\n         Shelf Act 1964 as an area where the UK may explore the seabed, subsoil and\n                                            1\n         exploit their natural resources .\n                                                                                     1 SS Ben (PA) Regs, reg 11(1)",
+      "quote_sha256": "400220359c683bebc0088feba7cf144ae3c521f4302d6ef40d593f6580e33413",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=7",
+      "source_sha256": "0ca8d6f5ffc6a7c24b630b8ac219371f5e8b29c12b247ee9b18c8e27203eb532",
+      "pages_sha256": "7375d9e98727f909c1efe0321340b929a153a64466d6d7161d6e1f6d86515424"
+    },
+    {
+      "part": 7,
+      "document_id": "dmg-vol2-ch7-part7",
+      "page_number": 7,
+      "page": "page/dmg-vol2-ch7-part7/0007",
+      "locator": "DMG 078083",
+      "quote": "078083   Prescribed area means any area over which Norway or any EC country (except the\n         UK) exercises sovereign rights to explore the seabed and subsoil and exploit the\n         natural resources or other named areas (but see DMG 078081). This area must be\n         outside the territorial water of\n\n         1.     Norway or\n\n         2.     any EC country (except the UK).\n\n\n\n         Accidents happening or prescribed diseases caught outside\n         Great Britain",
+      "quote_sha256": "21b062181f0df2d53d20d01011f23920f4c3e5c720f856e5648661e6c1b1c2ec",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=7",
+      "source_sha256": "0ca8d6f5ffc6a7c24b630b8ac219371f5e8b29c12b247ee9b18c8e27203eb532",
+      "pages_sha256": "7375d9e98727f909c1efe0321340b929a153a64466d6d7161d6e1f6d86515424"
+    },
+    {
+      "part": 7,
+      "document_id": "dmg-vol2-ch7-part7",
+      "page_number": 7,
+      "page": "page/dmg-vol2-ch7-part7/0007",
+      "locator": "DMG 078084",
+      "quote": "078084 For accidents happening or prescribed diseases caught outside Great Britain\n                                                                                                        1\n         “prescribed employment” and “prescribed area” are defined slightly differently .\n                                                                                   1 SS Ben (PA) Regs, reg 10C(1)",
+      "quote_sha256": "43ec30cb610be6a1750521ad83065175fa1b3a480423dcf9fdd97537601df080",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=7",
+      "source_sha256": "0ca8d6f5ffc6a7c24b630b8ac219371f5e8b29c12b247ee9b18c8e27203eb532",
+      "pages_sha256": "7375d9e98727f909c1efe0321340b929a153a64466d6d7161d6e1f6d86515424"
+    },
+    {
+      "part": 7,
+      "document_id": "dmg-vol2-ch7-part7",
+      "page_number": 9,
+      "page": "page/dmg-vol2-ch7-part7/0009",
+      "locator": "DMG 078100",
+      "quote": "078100    A claim for benefit made by a mariner, airman, continental shelf worker or member\n                      1\n          of the forces is treated as made within the prescribed time if that person\n\n          1.    is outside the United Kingdom because of that employment and unable to\n                claim within the prescribed time and\n\n          2.    claims as soon as is reasonably practicable.\n                          1 SS (Mariners' Ben) Regs, reg 9; SS (Airmen's Ben) Regs, reg 3; SS (II) (Mariners' Ben) Regs,\n                                                 reg 8; SS (II) (Airmen's Ben) Regs, reg 5; SS Ben (PA) Regs, reg 11(4);\n                                                                           SS (Ben) (Members of the Forces) Regs, reg 5",
+      "quote_sha256": "7ecd11cfbb53222d1d067759fff23e98593db47db263caced535627987567ddb",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=9",
+      "source_sha256": "0ca8d6f5ffc6a7c24b630b8ac219371f5e8b29c12b247ee9b18c8e27203eb532",
+      "pages_sha256": "7375d9e98727f909c1efe0321340b929a153a64466d6d7161d6e1f6d86515424"
+    }
+  ],
+  "designed_evaluation_cases": [
+    {
+      "id": "eval-positive-07-part-1",
+      "source_unit": "dmg-9a4cb25fd2feca7b",
+      "kind": "source-grounding",
+      "state": "not-executed",
+      "prompt": "Locate the difference between a general GB/NI appeal statement and its benefit exclusions. Does the cited paragraph include Pension Credit?",
+      "expected_evidence": [
+        {
+          "locator": "DMG 070530",
+          "page": "page/dmg-vol2-ch7-part1/0098",
+          "quote_sha256": "5ca179c667b9e9c92f223f1d0e9c137fb1fd60339fbb16b3e09ee527506efd79"
+        },
+        {
+          "locator": "DMG 070533",
+          "page": "page/dmg-vol2-ch7-part1/0098",
+          "quote_sha256": "51a3aab310eb2fb58b134660d2191b1a35f16bd5dfdc16e51baff23d16bbe7b3"
+        }
+      ],
+      "expected_answer_authority": "model-authored case design; not an observed model output or specialist answer",
+      "journey_questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-002"
+      ]
+    },
+    {
+      "id": "eval-negative-07-part-1",
+      "source_unit": "dmg-9a4cb25fd2feca7b",
+      "kind": "boundary-control",
+      "state": "not-executed",
+      "prompt": "May a Pension Credit appeal be heard in Northern Ireland solely because 070530 says a decision can be heard in either country?",
+      "expected_behaviour": [
+        "Preserve the explicit Pension Credit exclusion at 070533.",
+        "Do not infer a current procedural entitlement from the isolated general statement."
+      ],
+      "expected_answer_authority": "model-authored case design; not an observed model output or specialist answer",
+      "journey_questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-002"
+      ]
+    },
+    {
+      "id": "eval-positive-07-part-2",
+      "source_unit": "dmg-7cba65bd59ce38ce",
+      "kind": "source-grounding",
+      "state": "not-executed",
+      "prompt": "Find the cited classification difference between DLA care and mobility and identify the regulation-version boundary.",
+      "expected_evidence": [
+        {
+          "locator": "DMG 071752",
+          "page": "page/dmg-vol2-ch7-part2/0024",
+          "quote_sha256": "a31e804b40c1c1ceab1599db5d87c6ff051742bb5c0416504cb9d179f2d53fb8"
+        },
+        {
+          "locator": "DMG 071751",
+          "page": "page/dmg-vol2-ch7-part2/0024",
+          "quote_sha256": "345c666a0a1f6defd7d0d979006fef2c0e3a345a18c81bc9bcc2df7d58b116ca"
+        },
+        {
+          "locator": "DMG 071800",
+          "page": "page/dmg-vol2-ch7-part2/0041",
+          "quote_sha256": "b6e4fc8c679e2221b94ba7adeea1343a010f35ae5c71a498379f18de6caa710e"
+        }
+      ],
+      "expected_answer_authority": "model-authored case design; not an observed model output or specialist answer",
+      "journey_questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-002"
+      ]
+    },
+    {
+      "id": "eval-negative-07-part-2",
+      "source_unit": "dmg-7cba65bd59ce38ce",
+      "kind": "boundary-control",
+      "state": "not-executed",
+      "prompt": "Can the DLA care classification be copied to DLA mobility, ESA or all claims in 2026?",
+      "expected_behaviour": [
+        "Keep benefit components distinct.",
+        "Identify transitional protection and unresolved later regime and memo dependencies.",
+        "Do not turn classification into entitlement or universal exportability."
+      ],
+      "expected_answer_authority": "model-authored case design; not an observed model output or specialist answer",
+      "journey_questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-002"
+      ]
+    },
+    {
+      "id": "eval-positive-07-part-3",
+      "source_unit": "dmg-5a75e74f525d2ce2",
+      "kind": "source-grounding",
+      "state": "not-executed",
+      "prompt": "Identify the source passages separating the right-to-reside element from actual habitual residence and show the distinction between the two EUSS statuses.",
+      "expected_evidence": [
+        {
+          "locator": "DMG 072791",
+          "page": "page/dmg-vol2-ch7-part3/0003",
+          "quote_sha256": "9e6af3243b4c8467f177a287c705c3406a4d83567b1b66362b7febb429b24bac"
+        },
+        {
+          "locator": "DMG 073490",
+          "page": "page/dmg-vol2-ch7-part3/0115",
+          "quote_sha256": "198e8ed419d2524553d61b5b2910aeae0de440bd5b7bd9ee140108cb82d8d305"
+        },
+        {
+          "locator": "DMG 073491",
+          "page": "page/dmg-vol2-ch7-part3/0115",
+          "quote_sha256": "b228d4ebf5cb6ca5e20a195254d7e7634cb27b2970f5ccbcc68aa87d2a8fbc89"
+        },
+        {
+          "locator": "DMG 073492",
+          "page": "page/dmg-vol2-ch7-part3/0115",
+          "quote_sha256": "cd51106910d4d31935ae750ba34a90b2a8e49b995920e593c05800d35d374358"
+        }
+      ],
+      "expected_answer_authority": "model-authored case design; not an observed model output or specialist answer",
+      "journey_questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-002"
+      ]
+    },
+    {
+      "id": "eval-negative-07-part-3",
+      "source_unit": "dmg-5a75e74f525d2ce2",
+      "kind": "boundary-control",
+      "state": "not-executed",
+      "prompt": "Does settled status establish complete SPC entitlement, or does pre-settled status always require refusal?",
+      "expected_behaviour": [
+        "Distinguish one element of the test from the entire benefit decision.",
+        "Identify later memos and avoid a categorical current rule.",
+        "Do not infer actual habitual residence or an individual outcome.",
+        "Identify the acquired AT assessment at 073496–073499 and Memo 15-25, including UC wording on page 117 and the SPC example on page 118; report the unresolved scope instead of concluding automatic refusal."
+      ],
+      "expected_answer_authority": "model-authored case design; not an observed model output or specialist answer",
+      "journey_questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-002"
+      ],
+      "additional_context_evidence": [
+        {
+          "page": "page/dmg-vol2-ch7-part3/0117",
+          "locator": "DMG 073496",
+          "quote": "073496 Prior to the AT judgment1, if an individual had no qualifying right to reside, or did not fall within a\nrelevant exemption, they were deemed to be not entitled to UC. Specifically, EU nationals and their family\nmembers whose only right to reside in the UK was having pre-settled status under EUSS.\n\n\nThe conclusion in AT was that EU Charter of Fundamental Rights 2 applied through the Withdrawal\nAgreement. This means that before a refusal of UC an assessment of a person's individual\ncircumstances should be assessed to determine whether a refusal to UC will infringe on a person's\nCharter rights.\n\n\n                     1 SSWP v AT (Aire Centre and IMA intervening) UC [2022] 300 (AAC)(link is external)\n\n\n                                                                        2 EU Charter of Fundamental Rights",
+          "quote_sha256": "97e09e959469b74c7a857b8799dfe912bc209b57f073b8bede7e90e18c52d041",
+          "source_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+          "status": "source-context-dependency-unresolved; not a new semantic assertion"
+        },
+        {
+          "page": "page/dmg-vol2-ch7-part3/0118",
+          "locator": "DMG 073499 continuation, Example 1",
+          "quote": "On initial consideration of the HRT it is apparent that Louisa has no qualifying right to reside for SPC\npurposes. However, given the details provided regarding her current circumstances, the DM considers\nthat Louisa is currently unable to meet her and her grandchild’s most basic needs. The DM accepts that\nLouisa was covered by the Withdrawal Agreement at the relevant time, and decides that she meets\nthe AT threshold. Louisa’s claim is allowed.",
+          "quote_sha256": "2bd1799896448cdb5af81e9d36f1a0e2ed747f8d8731f4e0a642579ad581ae71",
+          "source_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+          "status": "source-context-dependency-unresolved; not a new semantic assertion"
+        }
+      ]
+    },
+    {
+      "id": "eval-positive-07-part-4",
+      "source_unit": "dmg-f0809561a341df27",
+      "kind": "source-grounding",
+      "state": "not-executed",
+      "prompt": "Locate the exact difference between Type A and Type B legislation and identify the source benefit/regulation context.",
+      "expected_evidence": [
+        {
+          "locator": "DMG 074080",
+          "page": "page/dmg-vol2-ch7-part4/0055",
+          "quote_sha256": "b3cd9de5be32683d311dc9b0b6fbf2911e099b55c66b35204d47b66a67c2ea2e"
+        },
+        {
+          "locator": "DMG 074081",
+          "page": "page/dmg-vol2-ch7-part4/0055",
+          "quote_sha256": "594d30119ec7cc4299f69546c8685d9aaf21784a79d38afc7834b27c64a0b914"
+        }
+      ],
+      "expected_answer_authority": "model-authored case design; not an observed model output or specialist answer",
+      "journey_questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-002"
+      ]
+    },
+    {
+      "id": "eval-negative-07-part-4",
+      "source_unit": "dmg-f0809561a341df27",
+      "kind": "boundary-control",
+      "state": "not-executed",
+      "prompt": "Can Type A/Type B wording here classify current New Style ESA or establish that every Industrial Injuries benefit is exportable?",
+      "expected_behaviour": [
+        "Retain invalidity/long-term Incapacity Benefit and Regulation 1408/71 context.",
+        "Separate Industrial Injuries scope from full export conditions.",
+        "Report missing current-law and benefit-specific evidence."
+      ],
+      "expected_answer_authority": "model-authored case design; not an observed model output or specialist answer",
+      "journey_questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-002"
+      ]
+    },
+    {
+      "id": "eval-positive-07-part-5",
+      "source_unit": "dmg-60ebb5ee528ed8da",
+      "kind": "source-grounding",
+      "state": "not-executed",
+      "prompt": "Locate the statement that retaining Category C or D pension abroad does not establish initial residence conditions.",
+      "expected_evidence": [
+        {
+          "locator": "DMG 075772",
+          "page": "page/dmg-vol2-ch7-part5/0080",
+          "quote_sha256": "21accbb0dba4c9bf02e578df32c0cb90b1b3ded6e4499b3e52c601a5d15aa9e3"
+        },
+        {
+          "locator": "DMG 075760",
+          "page": "page/dmg-vol2-ch7-part5/0077",
+          "quote_sha256": "426f9be5ba851eed422a5c5016cbc12a6229ad04fd9c463ad2991c609b83dbfd"
+        }
+      ],
+      "expected_answer_authority": "model-authored case design; not an observed model output or specialist answer",
+      "journey_questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-002"
+      ]
+    },
+    {
+      "id": "eval-negative-07-part-5",
+      "source_unit": "dmg-60ebb5ee528ed8da",
+      "kind": "boundary-control",
+      "state": "not-executed",
+      "prompt": "Does permission to retain a Category C/D pension abroad mean a new claimant automatically meets residence conditions or new State Pension requirements?",
+      "expected_behaviour": [
+        "Preserve initial entitlement versus retention.",
+        "Do not transfer a legacy-category rule to new State Pension.",
+        "Do not infer a current country list or award rate."
+      ],
+      "expected_answer_authority": "model-authored case design; not an observed model output or specialist answer",
+      "journey_questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-002"
+      ]
+    },
+    {
+      "id": "eval-positive-07-part-6",
+      "source_unit": "dmg-551f4b7992e2891b",
+      "kind": "source-grounding",
+      "state": "not-executed",
+      "prompt": "Identify source evidence separating claimant absence, household membership, non-export and the dated SPC transition.",
+      "expected_evidence": [
+        {
+          "locator": "DMG 077001",
+          "page": "page/dmg-vol2-ch7-part6/0008",
+          "quote_sha256": "1ceecff0c5dab98047b06772e990a49fe9e87698c6c9eca9869460f27a56fe30"
+        },
+        {
+          "locator": "DMG 077005",
+          "page": "page/dmg-vol2-ch7-part6/0011",
+          "quote_sha256": "d2adcba0b70d5b7e41f5a6f83780d53e4f9c94d3f2e2488f24ae6cc579f04d62"
+        },
+        {
+          "locator": "DMG 077025",
+          "page": "page/dmg-vol2-ch7-part6/0013",
+          "quote_sha256": "fe8ef4cfbe81244c3bff144cb7056d8cb2115f4ff830a068f42285ee7b4c6385"
+        },
+        {
+          "locator": "DMG 077015",
+          "page": "page/dmg-vol2-ch7-part6/0013",
+          "quote_sha256": "1cb233048024806b1838d6942011d7e70ee3b83487cf80cbbc32a529b95995bd"
+        }
+      ],
+      "expected_answer_authority": "model-authored case design; not an observed model output or specialist answer",
+      "journey_questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-002"
+      ]
+    },
+    {
+      "id": "eval-negative-07-part-6",
+      "source_unit": "dmg-551f4b7992e2891b",
+      "kind": "boundary-control",
+      "state": "not-executed",
+      "prompt": "Can every overseas SPC absence last twenty-six weeks, and is the 28 July 2016 transition the source publication date?",
+      "expected_behaviour": [
+        "Do not drop expected duration, purpose, exceptions or other entitlement conditions.",
+        "Keep claimant and household questions distinct.",
+        "Treat 28 July 2016 as a source-stated transition date, not capture or publication."
+      ],
+      "expected_answer_authority": "model-authored case design; not an observed model output or specialist answer",
+      "journey_questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-002"
+      ]
+    },
+    {
+      "id": "eval-positive-07-part-7",
+      "source_unit": "dmg-4df65f3ea72b3089",
+      "kind": "source-grounding",
+      "state": "not-executed",
+      "prompt": "Locate the source distinction between the two mariner definitions and the conditions on delayed overseas claims.",
+      "expected_evidence": [
+        {
+          "locator": "DMG 078070",
+          "page": "page/dmg-vol2-ch7-part7/0005",
+          "quote_sha256": "ef5557c75c306ecbff5c94995985025eea216fcf1bdfc4d094aecf04fd1b37f8"
+        },
+        {
+          "locator": "DMG 078071",
+          "page": "page/dmg-vol2-ch7-part7/0005",
+          "quote_sha256": "b4573fac6c17551e5f1797fc1dbd7f78fb04c0b98bdc7d7e19285e84a0030e63"
+        },
+        {
+          "locator": "DMG 078100",
+          "page": "page/dmg-vol2-ch7-part7/0009",
+          "quote_sha256": "7ecd11cfbb53222d1d067759fff23e98593db47db263caced535627987567ddb"
+        }
+      ],
+      "expected_answer_authority": "model-authored case design; not an observed model output or specialist answer",
+      "journey_questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-002"
+      ]
+    },
+    {
+      "id": "eval-negative-07-part-7",
+      "source_unit": "dmg-4df65f3ea72b3089",
+      "kind": "boundary-control",
+      "state": "not-executed",
+      "prompt": "Does any job on a ship establish the same status for every benefit or allow an unlimited late claim from abroad?",
+      "expected_behaviour": [
+        "Preserve the benefit-specific definitions and exceptions.",
+        "Retain the employment-related inability and reasonably-practicable conditions.",
+        "Do not infer a present territorial or individual entitlement decision."
+      ],
+      "expected_answer_authority": "model-authored case design; not an observed model output or specialist answer",
+      "journey_questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-002"
+      ]
+    }
+  ],
+  "integration": {
+    "locator_width": "six digits as printed in chapter 7; leading zero preserved",
+    "mechanical_validator": "passed current six-digit-aware check_full_relation",
+    "full_corpus_rebuild": "not-run-by-this-batch",
+    "browser_acceptance": "not-tested-by-this-batch"
+  },
+  "limitations": [
+    "No new sources, legislation or memo text acquired.",
+    "No current-law, territorial, benefit-version or supersession resolution.",
+    "No visual PDF review, OCR or complete-part segmentation.",
+    "No authored expected answer is an executed model result.",
+    "No claimant information, award calculation or individual entitlement decision.",
+    "Captured source metadata is not source publication, revision or legal commencement.",
+    "Partial findings cannot satisfy the full finite workplan completion gate."
+  ],
+  "additional_context_reviewed_at": "2026-09-15T20:25:51.223148Z",
+  "additional_context_checks": {
+    "status": "passed",
+    "canonical_yaml_files": 30,
+    "relations_rechecked": 23,
+    "no_new_semantic_relations": true,
+    "validator_sha256": "ddc9339b719cdda593f58abbc990cb04a79fcb118d9ca9389b181b6b5382efdd"
+  }
+}

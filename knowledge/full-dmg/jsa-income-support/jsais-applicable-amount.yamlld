@@ -1,0 +1,105 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-applicable-amount
+  '@type': skos:Concept
+  route: term/jsais-applicable-amount
+  title: Applicable amount for JSA(IB) and Income Support
+  type: Concept
+  description: The captured guidance describes applicable amounts for JSA(IB) and IS through
+    personal allowances and, where appropriate, additional components such as premiums, certain
+    housing costs and transitional elements.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Applicable amount for JSA(IB) and Income Support
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance describes applicable amounts for JSA(IB) and IS through personal
+      allowances and, where appropriate, additional components such as premiums, certain housing
+      costs and transitional elements.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The JSA(IB) and IS provisions are separate. A component is not automatically payable,
+      and the applicable amount is not necessarily the final payment. DMG 23010 continues onto PDF
+      page 5; DMG 23028 gives the IS list and expressly notes nil, reduced and housing-cost-only
+      cases. Current rates, transitional eligibility and children’s provisions are unresolved.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol4-ch23/0004
+  - page/dmg-vol4-ch23/0011
+  - page/dmg-vol5-ch25/0004
+  - page/dmg-vol5-ch25/0005
+  source:
+    https://assets.publishing.service.gov.uk/media/69e0f95b98c6c9802f7ed9c7/dmg-Ch-23.pdf#page=4
+  resource:
+    https://assets.publishing.service.gov.uk/media/69e0f95b98c6c9802f7ed9c7/dmg-Ch-23.pdf#page=4
+  sources:
+  - id: dmg-vol4-ch23
+    title: 'DMG Vol 4 Ch 23: Normal amount payable'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69e0f95b98c6c9802f7ed9c7/dmg-Ch-23.pdf
+    retrieved_at: '2026-09-15T19:45:23.512001Z'
+    sha256: 174fce491e7a72ca89f2739a64ab4e2f3a0da6e33d9e48eaa5c33c7ff9a5f734
+  - id: dmg-vol5-ch25
+    title: 'DMG Vol 5 Ch 25: General rules on income'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf
+    retrieved_at: '2026-09-15T19:45:25.058286Z'
+    sha256: 39edc3ed8ee9c875eb68ce4cd4148194b23dbd23bb6444883a2f2cae90a75337
+  body: "# Applicable amount for JSA(IB) and Income Support\n\n## Authored interpretation\n\nThe captured
+    guidance describes applicable amounts for JSA(IB) and IS through personal allowances and, where appropriate,
+    additional components such as premiums, certain housing costs and transitional elements.\n\n## Scope
+    and exceptions\n\nThe JSA(IB) and IS provisions are separate. A component is not automatically payable,
+    and the applicable amount is not necessarily the final payment. DMG 23010 continues onto PDF page
+    5; DMG 23028 gives the IS list and expressly notes nil, reduced and housing-cost-only cases. Current
+    rates, transitional eligibility and children’s provisions are unresolved.\n\n## Inspected source passages\n\
+    \n- [DMG 23010, PDF page 4](https://assets.publishing.service.gov.uk/media/69e0f95b98c6c9802f7ed9c7/dmg-Ch-23.pdf#page=4)
+    — DMG Vol 4 Ch 23: Normal amount payable.\n- [DMG 23028, PDF page 11](https://assets.publishing.service.gov.uk/media/69e0f95b98c6c9802f7ed9c7/dmg-Ch-23.pdf#page=11)
+    — DMG Vol 4 Ch 23: Normal amount payable.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol4-ch23`: PDF SHA-256 `174fce491e7a72ca89f2739a64ab4e2f3a0da6e33d9e48eaa5c33c7ff9a5f734`;
+    extracted pages SHA-256 `387302f09bbce9873dbafcd6af6a19b06842b35392e7d7771058ed22a0bd8bd2`.\n\n- `dmg-vol5-ch25`:
+    PDF SHA-256 `39edc3ed8ee9c875eb68ce4cd4148194b23dbd23bb6444883a2f2cae90a75337`; extracted pages SHA-256
+    `db488637a179cc93910c4e243381b5c961d6959ce72cd1d34aff14e403517e73`.\n"
+  semantic_relations:
+  - target: term/jsais-family-income-attribution
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Family income affects the applicable-amount context, but the income chapter gives
+      attribution rules and under-18 exceptions that must be considered separately.
+    evidence:
+    - page: page/dmg-vol5-ch25/0004
+      quote: "25007   [See DMG Memo JSA/IS 64] In a claim for JSA(IB) or IS, the DM should calculate\n\
+        \        the income of\n\n        1.    the claimant's partner and\n\n        2.    a child or
+        young person who is a member of the claimant's family\n\n        in the same way as for the claimant1.
+        This income should then be treated as the\n        claimant's income2. However DMs should consider
+        if the circumstances in DMG"
+      locator: DMG 25007
+    - page: page/dmg-vol5-ch25/0005
+      quote: "25009   Special rules apply1 when\n\n        1.       at least one member of a couple is
+        aged less than 18 (for IS or JSA(IB)) or\n\n        2.       one member only of a joint-claim
+        couple is aged less than 18 (JSA(IB) only)\n                 and\n\n        3.       certain conditions
+        determine the couple’s applicable amount2.\n\n        These allow some income of a claimant’s
+        partner or member of a joint-claim couple\n        to be ignored when calculating income.\n  \
+        \                                                                      1 Reg 88(3) or reg 88ZA(2);
+        IS (Gen) Regs, reg 23(4);\n                           2 JSA Regs, Sch 1, paras 1(3)(b), (c), (g)
+        or (h); IS (Gen) Regs, Sch 2, paras 1(3)(b), (c), (f) or (g)\n\n\n        Note: DMG Chapter 30
+        gives further guidance about applicable amounts and the\n        treatment of resources in these
+        circumstances.\n\n\n        Polygamous marriage or relationship"
+      locator: DMG 25009

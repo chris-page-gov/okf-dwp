@@ -1,0 +1,83 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-care-cash-classification
+  '@type': skos:Concept
+  route: term/intl-care-cash-classification
+  title: AA, DLA care and CA classification in the cited EU regime
+  type: Concept
+  description: For the cited EU coordination rules, the source classifies AA, the care component of DLA and CA as sickness benefits in cash for long-term care. It separates that classification from the DLA mobility component.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-international-research
+    at: '2026-09-15T20:19:49.223063Z'
+  observedAt: '2026-09-15T20:19:49.223063Z'
+  skos:prefLabel:
+    '@value': AA, DLA care and CA classification in the cited EU regime
+    '@language': en-GB
+  skos:definition:
+    '@value': For the cited EU coordination rules, the source classifies AA, the care component of DLA and CA as sickness benefits in cash for long-term care. It separates that classification from the DLA mobility component.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 071752 concerns a specific coordination classification and cites judgments dated 18 October 2007 and 5 May 2011. Classification alone does not establish exportability; the subsequent export paragraph has personal-scope, competency and memo dependencies not resolved here.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - international subjects
+  - chapter 7 part 2
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol2-ch7-part2/0024
+  source: https://assets.publishing.service.gov.uk/media/6a17044d050971fbebf3bb35/dmg-ch-07-part-02.pdf#page=24
+  resource: https://assets.publishing.service.gov.uk/media/6a17044d050971fbebf3bb35/dmg-ch-07-part-02.pdf#page=24
+  sources:
+  - id: dmg-vol2-ch7-part2
+    title: 'DMG Vol 2 Ch 7 Part 2: AA, DLA and CA to dependency increases, and ESA [071700 to 072769]'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6a17044d050971fbebf3bb35/dmg-ch-07-part-02.pdf
+    retrieved_at: '2026-09-15T19:45:19.839692Z'
+    sha256: 0c6c01cb8779938fac372447813bb9339008e0164499b80b172aa3488a977ad2
+  body: |
+    # AA, DLA care and CA classification in the cited EU regime
+
+    ## Authored interpretation
+
+    For the cited EU coordination rules, the source classifies AA, the care component of DLA and CA as sickness benefits in cash for long-term care. It separates that classification from the DLA mobility component.
+
+    ## Scope and boundaries
+
+    DMG 071752 concerns a specific coordination classification and cites judgments dated 18 October 2007 and 5 May 2011. Classification alone does not establish exportability; the subsequent export paragraph has personal-scope, competency and memo dependencies not resolved here.
+
+    ## Inspected source passages
+
+    - [DMG 071752, PDF page 24](https://assets.publishing.service.gov.uk/media/6a17044d050971fbebf3bb35/dmg-ch-07-part-02.pdf#page=24)
+    - [DMG 071751, PDF page 24](https://assets.publishing.service.gov.uk/media/6a17044d050971fbebf3bb35/dmg-ch-07-part-02.pdf#page=24)
+
+    ## Evidence and review status
+
+    This is a model-assisted, unreviewed interpretation of selected passages in the frozen DWP source. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable rule. No specialist acceptance, current-law reconciliation or complete coverage of this chapter part is claimed. References to EU law, countries and benefits retain the scope and date context of the cited text; they do not establish applicability to a person or a later regime. Machine extraction may alter reading order and characters; no visual PDF review is claimed.
+
+    Source captured: 2026-09-15T19:45:19.839692Z. This is an acquisition time, not a publication or legal commencement date. The attachment publication date is not established by the frozen metadata. Source-stated dates require their own role and precision.
+
+    PDF SHA-256: `0c6c01cb8779938fac372447813bb9339008e0164499b80b172aa3488a977ad2`. Extracted pages SHA-256: `b72f983b3003c8cd5cdee30d0245bb7a8c3a9cafa292da5f36b38b7d2da2b9aa`.
+  semantic_relations:
+  - target: term/intl-dla-mobility-classification
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The same substantive passage deliberately contrasts DLA care and mobility classifications. Association here records the distinction.
+    evidence:
+    - page: page/dmg-vol2-ch7-part2/0024
+      quote: "071752 The EU Social Security Co-ordination Regs set out different rules depending upon the branch of\nsocial security involved (e.g. “sickness benefits”, “old-age benefits”, “family benefits”). On 18.10.07 the\n\nCourt of Justice of the European Union (the CJEU) held1 that the care component of DLA was a sickness\nbenefit. However, on 5.5.11 the CJEU confirmed that the mobility component of DLA was a Special Non-\nContributory Benefit (SNCB). DLA (Mobility Component) cannot, therefore, be paid to a person residing\nabroad. For the purposes of the EU regulations concerning the co-ordination of social security benefits\nAA, DLA (Care only) and CA are sickness benefits in cash for long term care.\n\n\n                                                                            1 ECJ Judgement Case C 299/05;\n      2 Bartlett, Gonzales Ramos and Taylor v Secretary of State for Work and Pensions Case C-537/09,\n\n\n\nExportability - General Rules for AA, DLA (Care) or CA"
+      locator: DMG 071752
+  - target: term/intl-coordination-regulation-versions
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The classification is stated for EU coordination regulations, whose different versions and territorial start dates are identified immediately before it.
+    evidence:
+    - page: page/dmg-vol2-ch7-part2/0024
+      quote: "071751 There are two current sets of EU regulations relating to the co-ordination of Social Security\nbenefits across the Member States. These are\n\n\n1. Regulation (EC) No. 883/2004 which sets out the main rules, and\n\n\n2. Regulation (EC) No. 987/2009 which deals with the administrative procedures to be followed in\nimplementing the main rules.\n\n\nNote: For the EU Member States, these regulations replaced earlier regulations 1 with effect from 1.5.10.\nThey applied to Switzerland from 1.4.12 and to Norway, Iceland and Liechtenstein from 1.6.12. The old\n\nregulations1 continue to apply in certain transitional cases. DMs are advised to seek guidance from DMA\n(Leeds) where issues relating to the old regulations apply. See also DMG 071756 to 071758 below\nconcerning third country nationals.\n\n\n                                                                   1 Reg (EEC) 1408/71 & Reg (EEC) 574/72\n\n\n\nWhat types of benefit are AA, DLA & CA?"
+      locator: DMG 071751
+    - page: page/dmg-vol2-ch7-part2/0024
+      quote: "071752 The EU Social Security Co-ordination Regs set out different rules depending upon the branch of\nsocial security involved (e.g. “sickness benefits”, “old-age benefits”, “family benefits”). On 18.10.07 the\n\nCourt of Justice of the European Union (the CJEU) held1 that the care component of DLA was a sickness\nbenefit. However, on 5.5.11 the CJEU confirmed that the mobility component of DLA was a Special Non-\nContributory Benefit (SNCB). DLA (Mobility Component) cannot, therefore, be paid to a person residing\nabroad. For the purposes of the EU regulations concerning the co-ordination of social security benefits\nAA, DLA (Care only) and CA are sickness benefits in cash for long term care.\n\n\n                                                                            1 ECJ Judgement Case C 299/05;\n      2 Bartlett, Gonzales Ramos and Taylor v Secretary of State for Work and Pensions Case C-537/09,\n\n\n\nExportability - General Rules for AA, DLA (Care) or CA"
+      locator: DMG 071752

@@ -1,14 +1,16 @@
 """Controls for full-text fidelity, bounded partitioning and stable source IDs."""
 from copy import deepcopy
 import json
+import gzip
 from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
 
-from build_full_dmg import (ROOT, build_search, canonical, check_full_relation,
+from build_full_dmg import (ROOT, build_search, canonical, check_full_relation, deterministic_gzip,
                             compile_full, digest, page_routes, source_dates, tokens)
 from validate_full_dmg import validate
+from evaluate_full_dmg import IndexedEvidence
 
 
 def record(route, title="Example"):
@@ -20,6 +22,13 @@ def record(route, title="Example"):
 
 
 class FullDmgTests(unittest.TestCase):
+    def test_gzip_header_is_not_host_specific(self):
+        raw = b"Portable indexed corpus control" * 100
+        result = deterministic_gzip(raw)
+        self.assertEqual(result[:10], b"\x1f\x8b\x08\x00\x00\x00\x00\x00\x02\xff")
+        self.assertEqual(gzip.decompress(result), raw)
+        self.assertEqual(result, deterministic_gzip(raw))
+
     def test_isolated_pipeline_and_changed_source_rejection(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -47,6 +56,16 @@ class FullDmgTests(unittest.TestCase):
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_bytes(data)
             result = validate(root, inventory_path="source/inventory.json")
+            index = IndexedEvidence(root / "full-dmg")
+            matches = index.search("lateuniquetoken", "fixture-memo")
+            self.assertEqual(len(matches), 1)
+            self.assertEqual(index.search("lateuniquetoken", "different-benefit"), [])
+            self.assertEqual(index.search("unavailableclaimantdetails"), [])
+            index.verify_passage(matches[0]["route"], text, digest(pdf))
+            with self.assertRaisesRegex(ValueError, "passage"):
+                index.verify_passage(matches[0]["route"], "Invented entitlement", digest(pdf))
+            with self.assertRaisesRegex(ValueError, "identity"):
+                index.verify_passage(matches[0]["route"], text, "0" * 64)
             self.assertEqual(result["checks"]["source_documents"], 1)
             self.assertEqual(result["checks"]["measured_pages"], 1)
             self.assertTrue(result["checks"]["all_rdf_shards_recomputed"])
@@ -100,6 +119,17 @@ class FullDmgTests(unittest.TestCase):
         self.assertEqual(check_full_relation(spec, source, nodes), target)
         spec["evidence"][0]["locator"] = "DMG 01002"
         with self.assertRaisesRegex(ValueError, "Paragraph locator"):
+            check_full_relation(spec, source, nodes)
+
+    def test_six_digit_international_locators_preserve_width(self):
+        quote = "071700 This is an exact statement from the international source.\n071701 This is its next paragraph."
+        source, target = {"route": "term/a", "type": "Concept"}, {"route": "term/b", "type": "Concept"}
+        page = {"type": "Source PDF page", "body": quote, "chapter": 7, "page_number": 1}
+        nodes = {"term/b": target, "page/international/0001": page}
+        spec = {"target": "term/b", "predicate": "http://www.w3.org/2004/02/skos/core#related", "rationale": "Scoped association", "evidence": [{"page": "page/international/0001", "quote": quote, "locator": "DMG 071700–071701"}]}
+        self.assertEqual(check_full_relation(spec, source, nodes), target)
+        page['chapter'] = 1
+        with self.assertRaisesRegex(ValueError, 'width'):
             check_full_relation(spec, source, nodes)
 
 

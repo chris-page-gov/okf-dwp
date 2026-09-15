@@ -12,6 +12,7 @@ from collections import Counter, defaultdict
 from copy import deepcopy
 from datetime import datetime
 import gzip
+import io
 import json
 from pathlib import Path
 import re
@@ -31,6 +32,14 @@ CHUNK = 200
 SEARCH_CHUNK = 1000
 MAX_BYTES = 5 * 1024 * 1024
 STOP = set("a an and are as at be by for from in into is it of on or the to with".split())
+
+
+def deterministic_gzip(raw: bytes) -> bytes:
+    """Use a fixed header, including the OS byte, on macOS and Linux."""
+    stream = io.BytesIO()
+    with gzip.GzipFile(filename="", mode="wb", fileobj=stream, mtime=0) as output:
+        output.write(raw)
+    return stream.getvalue()
 NOTICE = "Independent experimental publication, not an official DWP document, benefits advice or an entitlement decision."
 LIMITATIONS = [
     NOTICE,
@@ -58,6 +67,9 @@ ROLE_LABELS = {
     "legislation-abbreviations": "Legislative abbreviations — references only",
     "supplementary-guidance-applicability-unreviewed": "Memo — applicability and incorporation unverified",
     "legislation-reference-list": "Legislative abbreviations — references only",
+    "annex-applicability-unreviewed": "Annex — applicability unreviewed",
+    "reference-not-legislation-text": "Legislative references — statutory text not acquired",
+    "reference": "Abbreviations — reference material",
 }
 
 
@@ -176,11 +188,14 @@ def check_full_relation(spec: dict, source: dict, nodes: dict) -> dict:
         page, quote = nodes.get(item.get("page")), item.get("quote", "")
         if not page or page.get("type") != "Source PDF page" or len(quote.strip()) < 20 or quote not in page["body"]:
             raise ValueError("Semantic evidence needs an exact substantive source passage")
-        paragraph = re.fullmatch(r"DMG (\d{5})(?:–(\d{5}))?", item.get("locator", ""))
+        paragraph = re.fullmatch(r"DMG (\d{5,6})(?:–(\d{5,6}))?", item.get("locator", ""))
         navigation = re.fullmatch(r"DMG chapter (\d+) section navigation, PDF page (\d+)", item.get("locator", ""))
         if paragraph:
+            width = len(paragraph[1])
+            if (paragraph[2] and len(paragraph[2]) != width) or (width == 6 and (page.get("chapter") != 7 or not paragraph[1].startswith("07"))):
+                raise ValueError("Paragraph locator width disagrees with the source chapter")
             start, end = int(paragraph[1]), int(paragraph[2] or paragraph[1])
-            if end < start or end - start > 20 or any(not re.search(rf"^\s*{number:05d}\b", quote, re.MULTILINE) for number in range(start, end + 1)):
+            if end < start or end - start > 20 or any(not re.search(rf"^\s*{number:0{width}d}\b", quote, re.MULTILINE) for number in range(start, end + 1)):
                 raise ValueError("Paragraph locator is not supported by the exact quoted passage")
         elif navigation:
             if int(navigation[1]) != page.get("chapter") or int(navigation[2]) != page["page_number"]:
@@ -460,7 +475,7 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
         raw = canonical(value)
         if len(raw) > 64 * 1024 * 1024:
             raise ValueError(f"Reader decoded-byte limit exceeded: {path}")
-        outputs[path] = gzip.compress(raw, mtime=0) if path.endswith(".gz") else raw
+        outputs[path] = deterministic_gzip(raw) if path.endswith(".gz") else raw
         return {"path": path, "bytes": len(outputs[path]), "sha256": digest(outputs[path]), "decoded_bytes": len(raw), "decoded_sha256": digest(raw), "snapshot": snapshot}
     def binding(path):
         return {"path": path, "bytes": len(outputs[path]), "sha256": digest(outputs[path])}
@@ -476,6 +491,7 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
                       "source_artifact": doc["pdf_path"] if doc else None, "date_roles": metadata,
                       "extraction": doc.get("extraction") if doc else None, "review_status": "unreviewed-specialist-review-required"}
         source_url = row.get("source") or row.get("resource")
+        source_link = f"[Verify the original PDF{' page ' + str(row['page_number']) if row.get('page_number') else ''}]({source_url})\n\n" if doc and source_url else ""
         resource_ids = []
         if isinstance(source_url, str) and source_url.startswith("https://"):
             resource_id = "resource/source-" + digest(route.encode())[:24]
@@ -485,7 +501,7 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
                               "provenance": provenance})
         record = {"id": row["@id"], "name": route, "route": route, "title": row["title"], "type": row["type"], "record_type": row["type"],
                   "notes": source_role + ". " + re.sub(r"\s+", " ", full_text[route]).strip()[:360],
-                  "narrative": {"title": row["title"], "body": "**" + source_role + ".**\n\n" + row.get("body", "")},
+                  "narrative": {"title": row["title"], "body": "**" + source_role + ".**\n\n" + source_link + row.get("body", "")},
                   "publisher": "dwp" if doc else "independent-project", "publisher_title": "Department for Work and Pensions — source; independent extraction" if doc else "Independent project-authored research",
                   "resource_ids": resource_ids, "resource_count": len(resource_ids), "formats": ["PDF"] if doc else ["Markdown"],
                   "tags": [source_role, str(row["type"])] + ([f"Volume {doc.get('volume')}"] if doc and doc.get("volume") else []),
@@ -555,7 +571,7 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
             # scoped to that shard, never concatenated as a purported global RDF.
             rdf = jsonld.normalize(graph, options={"algorithm": "URDNA2015", "format": "application/n-quads", "documentLoader": pinned_loader})
             rdf_path = path.replace(".jsonld.gz", ".nq.gz")
-            outputs[rdf_path] = gzip.compress(rdf.encode(), mtime=0)
+            outputs[rdf_path] = deterministic_gzip(rdf.encode())
             meta["rdf"] = {**binding(rdf_path), "canonical_sha256": digest(rdf.encode()), "statements": len(rdf.splitlines()), "canonicalisation": "URDNA2015; blank-node scope is this shard"}
             shards.append(meta)
         semantic_groups[kind] = shards
@@ -579,8 +595,17 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
     publishers = [{"id": "publisher/dwp", "name": "dwp", "title": "DWP source; independent extraction", "dataset_count": len(source_by_route), "resource_count": len(resources)},
                   {"id": "publisher/independent-project", "name": "independent-project", "title": "Independent project-authored research", "dataset_count": len(records) - len(source_by_route), "resource_count": 0}]
     put("data/publishers.json", publishers)
+    endpoint_labels = [{"route": row["route"], "iri": row["id"], "label": row["title"],
+                        "language": "en-GB", "type": row["record_type"],
+                        "label_authority": {"class": "editorial", "source": REPO + "/blob/main/scripts/build_full_dmg.py"}}
+                       for row in records]
+    if any(not row["label"].strip() or len(row["label"]) > 512 for row in endpoint_labels):
+        raise ValueError("Endpoint label is missing or exceeds the consumer limit")
+    put("data/endpoint-labels.json.gz", {"schema": "okf-explorer-endpoint-label-index.v1", "snapshot": snapshot,
+        "generated_at": when, "default_language": "en-GB", "opaque_identifier_patterns": [],
+        "entries": endpoint_labels, "counts": {"entries": len(endpoint_labels)}})
     manifest = {"title": TITLE, "generated_at": when, "snapshot": snapshot, "counts": counts,
-                "indexes": {"overview": "data/overview.json", "facets": "data/facets.json", "search": "data/search/manifest.json", "record_locator": binding("data/locator/manifest.json"), "relationship_adjacency": "data/adjacency/manifest.json"},
+                "indexes": {"overview": "data/overview.json", "facets": "data/facets.json", "search": "data/search/manifest.json", "record_locator": binding("data/locator/manifest.json"), "relationship_adjacency": "data/adjacency/manifest.json", "endpoint_labels": binding("data/endpoint-labels.json.gz")},
                 "chunks": {"datasets": record_paths, "resources": resource_paths, "publishers": [binding("data/publishers.json")], "relationships": relationship_paths},
                 "shards": {"datasets": record_shards, "resources": resource_shards, "relationships": relationship_shards}, "performance": {"startup_mode": "overview-first", "record_hydration": "hash-sharded locator", "search": "complete extracted text; bounded display"}}
     put("data/manifest.json", manifest)
@@ -591,9 +616,9 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
                    "indexing_policy": "noindex", "limitations": LIMITATIONS, "permitted_claims": ["Complete acquired-source accounting and extracted-text retrieval with provenance."],
                    "prohibited_claims": ["Official endorsement, entitlement decisions, current-law assurance or specialist validation."], "promotion_rule": "Specialist review and fresh assurance are required for policy claims."}
     descriptor = {"schema": "okf-explorer-large-corpus.v1", "kind": "okf-large-corpus", "title": TITLE, "description": NOTICE, "okf_version": "0.2", "version": "0.1.0", "status": "experimental",
-                  "snapshot": snapshot, "snapshot_id": snapshot, "generated_at": when, "counts": counts, "profile": PROFILE, "semantic_descriptor": "okf-bundle.yamlld",
-                  "entrypoints": {"data_manifest": "data/manifest.json", "overview_index": "data/overview.json", "search_manifest": "data/search/manifest.json", "record_locator": binding("data/locator/manifest.json"), "relationship_adjacency": "data/adjacency/manifest.json", "markdown_index": "index.md"},
-                  "entrypoint_integrity": {key: binding(path) for key, path in {"data_manifest": "data/manifest.json", "overview_index": "data/overview.json", "search_manifest": "data/search/manifest.json", "relationship_adjacency": "data/adjacency/manifest.json"}.items()},
+                  "snapshot": snapshot, "snapshot_id": snapshot, "generated_at": when, "plane_roots": roots, "counts": counts, "profile": PROFILE, "semantic_descriptor": "okf-bundle.yamlld",
+                  "entrypoints": {"data_manifest": "data/manifest.json", "overview_index": "data/overview.json", "search_manifest": "data/search/manifest.json", "record_locator": binding("data/locator/manifest.json"), "relationship_adjacency": "data/adjacency/manifest.json", "markdown_index": "index.md", "endpoint_labels": binding("data/endpoint-labels.json.gz")},
+                  "entrypoint_integrity": {key: binding(path) for key, path in {"data_manifest": "data/manifest.json", "overview_index": "data/overview.json", "search_manifest": "data/search/manifest.json", "relationship_adjacency": "data/adjacency/manifest.json", "endpoint_labels": "data/endpoint-labels.json.gz"}.items()},
                   "vocabulary": {"record_singular": "guidance record", "record_plural": "guidance records", "publisher_singular": "source organisation", "publisher_plural": "source organisations", "resource_singular": "source", "resource_plural": "sources", "search_placeholder": "Search all extracted DMG pages, including labelled memos and history"},
                   "exploratory_publication": publication, "source": {"url": COLLECTION, "inventory": inventory_path, "sha256": digest(inventory_bytes), "observed_at": when},
                   "consumer": inputs["consumer"]}

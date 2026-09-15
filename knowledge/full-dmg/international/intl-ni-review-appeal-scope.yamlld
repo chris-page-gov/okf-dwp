@@ -1,0 +1,76 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-ni-review-appeal-scope
+  '@type': skos:Concept
+  route: term/intl-ni-review-appeal-scope
+  title: Benefit scope of the stated GB and Northern Ireland review arrangements
+  type: Concept
+  description: The source describes cross-border revision, supersession and appeal arrangements, then excludes named benefits including Pension Credit and UC from reviews or appeals under that agreement.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-international-research
+    at: '2026-09-15T20:19:49.223063Z'
+  observedAt: '2026-09-15T20:19:49.223063Z'
+  skos:prefLabel:
+    '@value': Benefit scope of the stated GB and Northern Ireland review arrangements
+    '@language': en-GB
+  skos:definition:
+    '@value': The source describes cross-border revision, supersession and appeal arrangements, then excludes named benefits including Pension Credit and UC from reviews or appeals under that agreement.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 070530–070533, including Memo 1/17, are read together. The general statement in 070530 is not applied universally. The agreement text, amendments and current jurisdiction remain unverified.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - international subjects
+  - chapter 7 part 1
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol2-ch7-part1/0098
+  source: https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf#page=98
+  resource: https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf#page=98
+  sources:
+  - id: dmg-vol2-ch7-part1
+    title: 'DMG Vol 2 Ch 7 Part 1: Common subjects [070000 to 070699]'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf
+    retrieved_at: '2026-09-15T19:45:19.912030Z'
+    sha256: 32a065d37da4bd460b25258d71b5dfc3127d6c98e65c53ab5562491aea16f18a
+  body: |
+    # Benefit scope of the stated GB and Northern Ireland review arrangements
+
+    ## Authored interpretation
+
+    The source describes cross-border revision, supersession and appeal arrangements, then excludes named benefits including Pension Credit and UC from reviews or appeals under that agreement.
+
+    ## Scope and boundaries
+
+    DMG 070530–070533, including Memo 1/17, are read together. The general statement in 070530 is not applied universally. The agreement text, amendments and current jurisdiction remain unverified.
+
+    ## Inspected source passages
+
+    - [DMG 070530, PDF page 98](https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf#page=98)
+    - [DMG 070533, PDF page 98](https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf#page=98)
+
+    ## Evidence and review status
+
+    This is a model-assisted, unreviewed interpretation of selected passages in the frozen DWP source. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable rule. No specialist acceptance, current-law reconciliation or complete coverage of this chapter part is claimed. References to EU law, countries and benefits retain the scope and date context of the cited text; they do not establish applicability to a person or a later regime. Machine extraction may alter reading order and characters; no visual PDF review is claimed.
+
+    Source captured: 2026-09-15T19:45:19.912030Z. This is an acquisition time, not a publication or legal commencement date. The attachment publication date is not established by the frozen metadata. Source-stated dates require their own role and precision.
+
+    PDF SHA-256: `32a065d37da4bd460b25258d71b5dfc3127d6c98e65c53ab5562491aea16f18a`. Extracted pages SHA-256: `4ffe86a4c907dcc7b8bf3883bfdc46b6a8b9db03a0ccda563189ee12cbead47c`.
+  semantic_relations:
+  - target: term/intl-ni-presence
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The stated cross-border procedure requires more than casual presence and retains explicit benefit exclusions.
+    evidence:
+    - page: page/dmg-vol2-ch7-part1/0098
+      quote: "070531 For a revision, supersession or appeal to take place in the other country, the person must be \"in\"\n\nthat country. A casual presence is not enough1.\n\n\n                                                                                               1 R(S) 5/85"
+      locator: DMG 070531
+    - page: page/dmg-vol2-ch7-part1/0098
+      quote: "070533 The agreement applies to most benefits however reviews or appeals cannot be undertaken for\nUC, Pension Credit, Christmas Bonus, Income Support, Social Fund (maternity and funeral expenses),\nFamily Credit, Statutory Sick Pay or Statutory Maternity Pay."
+      locator: DMG 070533

@@ -22,6 +22,28 @@
       "reference_spans_checked": 18880,
       "partial_digit_runs": 0,
       "result": "truncated paragraph-reference finding fixed; no other outstanding actionable finding in assigned scope"
+    },
+    "international": {
+      "reviewer": "agent separate from international author",
+      "concepts": 30,
+      "relationships": 23,
+      "result": "canonical YAML alias correction verified; same-document AT destitution qualification made explicit and independently rechecked"
+    },
+    "pension_regimes": {
+      "reviewer": "agent separate from pension-regimes author",
+      "concepts": 21,
+      "relationships": 31,
+      "exact_relation_passages": 34,
+      "definition_and_scope_passages": 57,
+      "negative_mutations_rejected": 124,
+      "result": "no outstanding actionable finding"
+    },
+    "jsa_income_support": {
+      "reviewer": "agent separate from JSA/Income Support author",
+      "concepts": 24,
+      "relationships": 35,
+      "report_passages_and_dependencies": 201,
+      "result": "canonical YAML alias correction verified; no outstanding material semantic finding"
     }
   },
   "resolved_findings": [
@@ -32,6 +54,14 @@
     {
       "id": "authored-evaluation-response-overclaim",
       "resolution": "Relabel RQ07 and response entries as designed cases/authored exemplars; actual built-bundle retrieval and behavioural evaluation remain pending."
+    },
+    {
+      "id": "yaml-aliases-in-authored-inputs",
+      "resolution": "Disable aliases in international and JSA authoring; prove parsed equivalence and load all files with the canonical strict loader."
+    },
+    {
+      "id": "international-pre-settled-context",
+      "resolution": "Record acquired AT paragraphs073496–073499, Memo15-25, UC wording versus SPC example and unresolved scope; reviewer confirmed the fix."
     }
   ],
   "inputs": [
@@ -58,12 +88,24 @@
     {
       "path": "source/full-dmg-2026-09-15/inventory.json",
       "sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a"
+    },
+    {
+      "path": "evaluation/full-dmg-international-review.json",
+      "sha256": "81ed54372b85664961c3576bf4a53a2e3baedfc091ccc289ad3288a75ace5185"
+    },
+    {
+      "path": "evaluation/full-dmg-pension-regimes-review.json",
+      "sha256": "75677c274cfe6552976ba78c292ede6686f040596993e8aa7f89492cf867d48b"
+    },
+    {
+      "path": "evaluation/full-dmg-jsa-income-support-review.json",
+      "sha256": "c98ed989c3aecf37a00988e0e33e1dc6da57056b6df27624dc7c3b406a0c7da3"
     }
   ],
   "limitations": [
     "Authors did not independently approve their own semantic batches.",
     "Source-backed proposals do not establish full chapter modelling or legal currency.",
-    "Only17 of78 substantive source units currently have proposals; the remaining61 are queued.",
+    "34 of78 substantive source units currently have bounded proposals; the remaining44 are assigned. Coverage is not exhaustive policy modelling.",
     "Browser checks and wider persona/behavioural evaluation are separate gates."
   ]
 }

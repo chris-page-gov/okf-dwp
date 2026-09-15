@@ -1,0 +1,82 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-business-expense-conditions
+  '@type': skos:Concept
+  route: term/jsais-business-expense-conditions
+  title: Conditions for self-employed business expenses
+  type: Concept
+  description: The captured passage conditions deduction of a business expense on business purpose,
+    payment during the assessment period, reasonableness and allowability; mixed private and
+    business use requires apportionment.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Conditions for self-employed business expenses
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured passage conditions deduction of a business expense on business purpose,
+      payment during the assessment period, reasonableness and allowability; mixed private and
+      business use requires apportionment.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': An entry in business accounts is not proof that the whole amount is deductible. The
+      separate allowable and excluded categories, evidence and circumstances need review. This is a
+      JSA/IS source model, not tax advice or an assertion that HMRC and benefit expense rules are
+      identical.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol5-ch27/0034
+  - page/dmg-vol5-ch27/0035
+  source:
+    https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=34
+  resource:
+    https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=34
+  sources:
+  - id: dmg-vol5-ch27
+    title: 'DMG Vol 5 Ch 27: Self-employed earners and share fishermen'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf
+    retrieved_at: '2026-09-15T19:45:25.036028Z'
+    sha256: 90b6c5ec739d2366936d67d78cd5a6f857b764b92000200f4a44ac956c88b3ac
+  body: "# Conditions for self-employed business expenses\n\n## Authored interpretation\n\nThe captured
+    passage conditions deduction of a business expense on business purpose, payment during the assessment
+    period, reasonableness and allowability; mixed private and business use requires apportionment.\n\n\
+    ## Scope and exceptions\n\nAn entry in business accounts is not proof that the whole amount is deductible.
+    The separate allowable and excluded categories, evidence and circumstances need review. This is a
+    JSA/IS source model, not tax advice or an assertion that HMRC and benefit expense rules are identical.\n\
+    \n## Inspected source passages\n\n- [DMG 27190, PDF page 34](https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=34)
+    — DMG Vol 5 Ch 27: Self-employed earners and share fishermen.\n- [DMG 27192, PDF page 34](https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=34)
+    — DMG Vol 5 Ch 27: Self-employed earners and share fishermen.\n- [DMG 27194, PDF page 35](https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=35)
+    — DMG Vol 5 Ch 27: Self-employed earners and share fishermen.\n\n## Evidence and review status\n\n\
+    Model-assisted interpretation of selected passages in the 15 September 2026 frozen source snapshot.
+    Specialist review is required. Source acquisition, source revision, legal effective dates and this
+    record’s authoring time are separate.\n\nThis is an independent experimental publication, not an official
+    DWP document, individual advice, an entitlement decision or an executable rule. Machine-extracted
+    text may alter reading order, footnotes and characters. No PDF visual inspection, whole-chapter coverage
+    or behavioural evaluation pass is claimed by this record.\n\n- `dmg-vol5-ch27`: PDF SHA-256 `90b6c5ec739d2366936d67d78cd5a6f857b764b92000200f4a44ac956c88b3ac`;
+    extracted pages SHA-256 `7f84279f4a44373405ce06d32bf1c927a9f25dda507895b1540e6bb8b1b5185a`.\n"
+  semantic_relations:
+  - target: term/dmg-evidence-assessment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source specifies evidence routes for apportionment, including claimant,
+      accountant and an existing HMRC apportionment; this does not make all tax treatment binding.
+    evidence:
+    - page: page/dmg-vol5-ch27/0035
+      quote: "27194 The DM should normally accept the evidence of\n\n\n1. the S/E earner or\n\n\n2. an
+        accountant or\n\n\n3. any apportionment already agreed by HMRC for tax and contribution purposes
+        1.\n\n\n                                                                                  1 R(FC)
+        1/91; R(IS) 13/91"
+      locator: DMG 27194

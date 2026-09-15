@@ -1,0 +1,107 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/sp-contribution-record-dispute
+  '@type': skos:Concept
+  route: term/sp-contribution-record-dispute
+  title: State Pension contribution-record dispute
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured SP guidance distinguishes using a national insurance contribution record from
+    resolving a dispute about that record, which it routes to HMRC for a formal decision.
+  tags:
+  - full DMG
+  - pension regimes
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol12-ch74/0003
+  source: https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=3
+  resource: https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=3
+  sources:
+  - id: dmg-vol12-ch74
+    title: 'DMG Vol 12 Ch 74: State Pension'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=3
+    sha256: 5961a9cb7c86814a0f6fa147c0a8a551b4258c803680fac14a95cab9eca1afd6
+    retrieved_at: '2026-09-15T19:45:35.304148Z'
+  skos:prefLabel:
+    '@value': State Pension contribution-record dispute
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured SP guidance distinguishes using a national insurance contribution record from
+      resolving a dispute about that record, which it routes to HMRC for a formal decision.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The record is not validated by this project. A dispute about whether credits should be awarded
+      is separately signposted to chapter 1; revision, supersession and appeal handling require the
+      cross-referenced procedures.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-regimes
+    at: '2026-09-15T20:17:36Z'
+  observedAt: '2026-09-15T20:17:36Z'
+  body: "# State Pension contribution-record dispute\n\n## Source-backed proposal\n\nThe captured SP guidance distinguishes
+    using a national insurance contribution record from resolving a dispute about that record, which it routes to
+    HMRC for a formal decision.\n\n## Scope and exceptions\n\nThe record is not validated by this project. A dispute
+    about whether credits should be awarded is separately signposted to chapter 1; revision, supersession and appeal
+    handling require the cross-referenced procedures.\n\n## Inspected passages\n\n- [DMG 74012, PDF page 3](https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=3).\n\
+    \n## Provenance and review\n\nIndependent experimental interpretation of DWP guidance, not an official DWP document.
+    All definitions and relationships are model-assisted and unreviewed. No individual eligibility, award, legal
+    conclusion or executable rule is supplied.\n\nSource observation, listing-page update, printed revision, stated
+    legal date and pension event date have separate meanings. PDF page numbers are one-based file positions; extraction
+    may damage reading order, footnotes and characters. No visual PDF or specialist acceptance is claimed.\n\n-
+    `dmg-vol12-ch74` — PDF SHA-256 `5961a9cb7c86814a0f6fa147c0a8a551b4258c803680fac14a95cab9eca1afd6`; page-extraction
+    SHA-256 `c762e93940b4342d70d5bc96a80c3e094c91852d93868f5709e04f293faef61a`.\n"
+  semantic_relations:
+  - target: term/sp-qualifying-year
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter ties SP entitlement to its contribution conditions and routes disputes about the
+      underlying record to HMRC; it does not establish an individual qualifying-year count.
+    evidence:
+    - page: page/dmg-vol12-ch74/0003
+      quote: "74012 Entitlement to SP at any of the rates in DMG 74011 depends on the conditions of entitlement\n\
+        being satisfied. In practice the NI contribution record is usually obtained and any decision is based on
+        the\nassumption that the record is factually correct. However, where there is a dispute about the record,
+        the\n\nmatter must be referred by the DM to HMRC for a formal decision1. That referral should be made2 to:\n\
+        HMRC\nNational Insurance Contributions Office\nNE98 1ZZ\n\n\nNote 1: See DMG Chapters 03, 04 and 06 for
+        guidance on how decisions and appeals are handled after a\nreference to HMRC.\n\n\nNote 2: See DMG Chapter
+        01 where the dispute is about whether credits should be awarded.\n\n\n                        1 SS CS (D&A)
+        Regs, reg 11A and 38A; 2 Secretary of State for Work and Pensions\n                                    \
+        \            v TB v HMRC (RP) [2010} UKUT 88 (AAC) [2010] AACR 38"
+      locator: DMG 74012
+  - target: term/dmg-revision
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source explicitly refers revision, supersession and appeal handling following HMRC referral
+      to chapters 3, 4 and 6.
+    evidence:
+    - page: page/dmg-vol12-ch74/0003
+      quote: "74012 Entitlement to SP at any of the rates in DMG 74011 depends on the conditions of entitlement\n\
+        being satisfied. In practice the NI contribution record is usually obtained and any decision is based on
+        the\nassumption that the record is factually correct. However, where there is a dispute about the record,
+        the\n\nmatter must be referred by the DM to HMRC for a formal decision1. That referral should be made2 to:\n\
+        HMRC\nNational Insurance Contributions Office\nNE98 1ZZ\n\n\nNote 1: See DMG Chapters 03, 04 and 06 for
+        guidance on how decisions and appeals are handled after a\nreference to HMRC.\n\n\nNote 2: See DMG Chapter
+        01 where the dispute is about whether credits should be awarded.\n\n\n                        1 SS CS (D&A)
+        Regs, reg 11A and 38A; 2 Secretary of State for Work and Pensions\n                                    \
+        \            v TB v HMRC (RP) [2010} UKUT 88 (AAC) [2010] AACR 38"
+      locator: DMG 74012
+  - target: term/dmg-first-tier-appeal
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Appeal handling after a contribution-record referral is an explicit cross-reference, not a
+      claim that every HMRC issue follows one appeal route.
+    evidence:
+    - page: page/dmg-vol12-ch74/0003
+      quote: "74012 Entitlement to SP at any of the rates in DMG 74011 depends on the conditions of entitlement\n\
+        being satisfied. In practice the NI contribution record is usually obtained and any decision is based on
+        the\nassumption that the record is factually correct. However, where there is a dispute about the record,
+        the\n\nmatter must be referred by the DM to HMRC for a formal decision1. That referral should be made2 to:\n\
+        HMRC\nNational Insurance Contributions Office\nNE98 1ZZ\n\n\nNote 1: See DMG Chapters 03, 04 and 06 for
+        guidance on how decisions and appeals are handled after a\nreference to HMRC.\n\n\nNote 2: See DMG Chapter
+        01 where the dispute is about whether credits should be awarded.\n\n\n                        1 SS CS (D&A)
+        Regs, reg 11A and 38A; 2 Secretary of State for Work and Pensions\n                                    \
+        \            v TB v HMRC (RP) [2010} UKUT 88 (AAC) [2010] AACR 38"
+      locator: DMG 74012

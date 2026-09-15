@@ -45,7 +45,10 @@
       ],
       "batches": [
         "common-decision",
-        "pension-credit"
+        "pension-credit",
+        "international",
+        "pension-regimes",
+        "jsa-income-support"
       ]
     },
     {
@@ -57,7 +60,7 @@
     },
     {
       "id": "persona-retrieval-evaluation",
-      "status": "pending",
+      "status": "deterministic-indexed-evidence-controls-added; behavioural-questions-pending",
       "depends_on": [
         "indexed-compiler",
         "concepts-and-relationships"
@@ -151,32 +154,42 @@
   },
   "coverage_report": "evaluation/full-dmg-coverage.json",
   "semantic_checkpoint": {
-    "additional_concepts": 48,
-    "additional_proposals": 72,
-    "substantive_units_with_proposals": 17,
-    "substantive_units_pending_proposals": 61,
+    "additional_concepts": 123,
+    "additional_proposals": 161,
+    "substantive_units_with_proposals": 34,
+    "substantive_units_pending_proposals": 44,
     "status": "cross-reviewed-for-research-checkpoint; specialist-acceptance-pending",
     "next_priority": [
-      "international chapter7 parts1–7",
-      "State Pension chapter74",
-      "Retirement Pension chapter75",
-      "Forfeiture chapter76"
+      "Complete remaining44 assigned substantive units",
+      "Reconcile other source classes and dependencies",
+      "Execute and grade persona questions separately from deterministic retrieval"
     ],
     "review_packets": [
       "evaluation/full-dmg-common-decision-review.json",
-      "evaluation/full-dmg-pension-credit-review.json"
+      "evaluation/full-dmg-pension-credit-review.json",
+      "evaluation/full-dmg-international-review.json",
+      "evaluation/full-dmg-pension-regimes-review.json",
+      "evaluation/full-dmg-jsa-income-support-review.json"
     ],
     "in_progress_next_batches": [
-      "international",
-      "pension-regimes",
-      "jsa-income-support"
+      "common-and-jsa-extension",
+      "esa",
+      "non-income-and-industrial"
     ]
   },
   "indexed_checkpoint": {
     "snapshot": "dwp-full-dmg-2026-09-15-9663e36f6aba",
     "records": 15193,
     "assertions": 15493,
-    "status": "validated-and-reproducible; browser-verification-pending"
+    "status": "validated-and-reproducible; corrected immutable browser candidate pending"
   },
-  "independent_review": "validation/full-dmg-independent-review.json"
+  "independent_review": "validation/full-dmg-independent-review.json",
+  "open_consumer_findings": [
+    {
+      "id": "targeted-resource-hydration",
+      "status": "documented-consumer-limitation",
+      "detail": "Before whole-corpus resource hydration, Evidence Sources count is0 although record declares1source. Original PDF is available under Overview > Overview; direct source link also added to Narrative. Resource-list hydration needs separate consumer assessment."
+    }
+  ],
+  "indexed_retrieval": "evaluation/full-dmg-retrieval.json"
 }

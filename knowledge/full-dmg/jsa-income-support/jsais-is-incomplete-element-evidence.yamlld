@@ -1,0 +1,101 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-is-incomplete-element-evidence
+  '@type': skos:Concept
+  route: term/jsais-is-incomplete-element-evidence
+  title: Missing evidence for an Income Support element
+  type: Concept
+  description: For IS, the captured passage permits an applicable amount to be awarded without
+    housing costs or the severe disability premium where evidence is insufficient, and describes
+    revision or supersession when further information arrives.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Missing evidence for an Income Support element
+    '@language': en-GB
+  skos:definition:
+    '@value': For IS, the captured passage permits an applicable amount to be awarded without
+      housing costs or the severe disability premium where evidence is insufficient, and describes
+      revision or supersession when further information arrives.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is expressly the IS procedure in DMG 23029–23030. It does not authorise applying
+      the same procedure to JSA, refusing an entire claim automatically, or deciding entitlement in
+      this project. The source’s JSA provisions at 23011–23014 differ and need separate review.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol4-ch23/0011
+  source:
+    https://assets.publishing.service.gov.uk/media/69e0f95b98c6c9802f7ed9c7/dmg-Ch-23.pdf#page=11
+  resource:
+    https://assets.publishing.service.gov.uk/media/69e0f95b98c6c9802f7ed9c7/dmg-Ch-23.pdf#page=11
+  sources:
+  - id: dmg-vol4-ch23
+    title: 'DMG Vol 4 Ch 23: Normal amount payable'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69e0f95b98c6c9802f7ed9c7/dmg-Ch-23.pdf
+    retrieved_at: '2026-09-15T19:45:23.512001Z'
+    sha256: 174fce491e7a72ca89f2739a64ab4e2f3a0da6e33d9e48eaa5c33c7ff9a5f734
+  body: "# Missing evidence for an Income Support element\n\n## Authored interpretation\n\nFor IS, the
+    captured passage permits an applicable amount to be awarded without housing costs or the severe disability
+    premium where evidence is insufficient, and describes revision or supersession when further information
+    arrives.\n\n## Scope and exceptions\n\nThis is expressly the IS procedure in DMG 23029–23030. It does
+    not authorise applying the same procedure to JSA, refusing an entire claim automatically, or deciding
+    entitlement in this project. The source’s JSA provisions at 23011–23014 differ and need separate review.\n\
+    \n## Inspected source passages\n\n- [DMG 23029, PDF page 11](https://assets.publishing.service.gov.uk/media/69e0f95b98c6c9802f7ed9c7/dmg-Ch-23.pdf#page=11)
+    — DMG Vol 4 Ch 23: Normal amount payable.\n- [DMG 23030, PDF page 11](https://assets.publishing.service.gov.uk/media/69e0f95b98c6c9802f7ed9c7/dmg-Ch-23.pdf#page=11)
+    — DMG Vol 4 Ch 23: Normal amount payable.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol4-ch23`: PDF SHA-256 `174fce491e7a72ca89f2739a64ab4e2f3a0da6e33d9e48eaa5c33c7ff9a5f734`;
+    extracted pages SHA-256 `387302f09bbce9873dbafcd6af6a19b06842b35392e7d7771058ed22a0bd8bd2`.\n"
+  semantic_relations:
+  - target: term/jsais-applicable-amount
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source distinguishes insufficient evidence for specified IS elements from the
+      applicable amount as a whole.
+    evidence:
+    - page: page/dmg-vol4-ch23/0011
+      quote: "23029 When deciding an IS claim the applicable amount may be awarded without\n\n\n1. housing
+        costs1 or\n\n\n2. SDP2\n\n\nif there is not enough evidence to include these elements.\n\n\n \
+        \                                                                  1 SS CS (D&A) Regs, reg 13(1);
+        2 reg 13(2)"
+      locator: DMG 23029
+  - target: term/dmg-revision
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Further information about these IS elements may support revision; the passage also
+      names supersession, so this is not a mandatory single procedure.
+    evidence:
+    - page: page/dmg-vol4-ch23/0011
+      quote: "23030 The applicable amount may be revised or superseded if further information about SDP
+        or housing\n\ncosts is received after the IS claim or question has been decided 1.\n\n\n     \
+        \                                                                         1 SS CS (D&A) Regs,
+        reg 3 & 6"
+      locator: DMG 23030
+  - target: term/dmg-supersession
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The same paragraph expressly names supersession as an alternative route requiring the
+      decision rules to be checked.
+    evidence:
+    - page: page/dmg-vol4-ch23/0011
+      quote: "23030 The applicable amount may be revised or superseded if further information about SDP
+        or housing\n\ncosts is received after the IS claim or question has been decided 1.\n\n\n     \
+        \                                                                         1 SS CS (D&A) Regs,
+        reg 3 & 6"
+      locator: DMG 23030

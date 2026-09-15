@@ -1,0 +1,89 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/pension-forfeiture-rule
+  '@type': skos:Concept
+  route: term/pension-forfeiture-rule
+  title: Forfeiture rule in the pensions guidance
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured guidance describes a common-law forfeiture rule applied to social security
+    benefits where unlawful killing and an advantage arising from a spouse’s or civil partner’s death are in
+    issue.
+  tags:
+  - full DMG
+  - pension regimes
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol12-ch76/0003
+  - page/dmg-vol12-ch76/0004
+  source: https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=3
+  resource: https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=3
+  sources:
+  - id: dmg-vol12-ch76
+    title: 'DMG Vol 12 Ch 76: Forfeiture Act 1982'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=3
+    sha256: 074f2d3f00d4886954d5cbd6ba2653ec407c1ff9f0160a0ca74d337227f9f542
+    retrieved_at: '2026-09-15T19:45:35.402441Z'
+  skos:prefLabel:
+    '@value': Forfeiture rule in the pensions guidance
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance describes a common-law forfeiture rule applied to social security benefits
+      where unlawful killing and an advantage arising from a spouse’s or civil partner’s death are in issue.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': No allegation, guilt, unlawful killing or forfeiture is determined by this project. The source
+      gives an own-rights pension example where no forfeiture question arises, and distinguishes murder,
+      manslaughter and culpable homicide in Scotland. Current legislation and case law require specialist
+      review.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-regimes
+    at: '2026-09-15T20:17:36Z'
+  observedAt: '2026-09-15T20:17:36Z'
+  body: "# Forfeiture rule in the pensions guidance\n\n## Source-backed proposal\n\nThe captured guidance describes
+    a common-law forfeiture rule applied to social security benefits where unlawful killing and an advantage arising
+    from a spouse’s or civil partner’s death are in issue.\n\n## Scope and exceptions\n\nNo allegation, guilt, unlawful
+    killing or forfeiture is determined by this project. The source gives an own-rights pension example where no
+    forfeiture question arises, and distinguishes murder, manslaughter and culpable homicide in Scotland. Current
+    legislation and case law require specialist review.\n\n## Inspected passages\n\n- [DMG 76001, PDF page 3](https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=3).\n\
+    - [DMG 76002, PDF page 3](https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=3).\n\
+    - [DMG 76003, PDF page 3](https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=3).\n\
+    - [DMG 76004, PDF page 3](https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=3).\n\
+    \n## Provenance and review\n\nIndependent experimental interpretation of DWP guidance, not an official DWP document.
+    All definitions and relationships are model-assisted and unreviewed. No individual eligibility, award, legal
+    conclusion or executable rule is supplied.\n\nSource observation, listing-page update, printed revision, stated
+    legal date and pension event date have separate meanings. PDF page numbers are one-based file positions; extraction
+    may damage reading order, footnotes and characters. No visual PDF or specialist acceptance is claimed.\n\n-
+    `dmg-vol12-ch76` — PDF SHA-256 `074f2d3f00d4886954d5cbd6ba2653ec407c1ff9f0160a0ca74d337227f9f542`; page-extraction
+    SHA-256 `53eb7c5ec81ced813ac2faf2af9f772c5f3e9662112a7ef678dcb4daef0b73f8`.\n"
+  semantic_relations:
+  - target: term/pension-forfeiture-ut-determination
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source reserves determination of a forfeiture rule question to the Upper Tribunal, with
+      historical limits on modification.
+    evidence:
+    - page: page/dmg-vol12-ch76/0003
+      quote: "76005   Forfeiture rule questions can be determined only by the UT1. Before 25.7.86, there\n     \
+        \   could only be a decision whether or not the rule applied. If it did apply the claimant\n        was
+        prevented from deriving benefit directly from the unlawful act. There was no\n        power to modify the
+        effect of the rule2.\n                                                                  1 Forfeiture Act
+        1982, s 4(1); TP (UT) Rules, Rule 26;\n                                                                \
+        \                            2 R(G) 2/84(T); R(P) 1/84(T)"
+      locator: DMG 76005
+  - target: term/pension-forfeiture-benefit-scope
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter identifies SP/RP and bereavement-related benefit contexts affected by a deceased
+      person’s contributions.
+    evidence:
+    - page: page/dmg-vol12-ch76/0004
+      quote: "76008   The benefits most likely affected by the forfeiture rule are WB, BB, BSP, SP and RP\n    \
+        \    based wholly or in part on a late husband's, wife's or civil partner’s contributions\n        (see
+        DMG 76032 - 76033)."
+      locator: DMG 76008

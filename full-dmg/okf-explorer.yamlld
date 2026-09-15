@@ -119,14 +119,20 @@ description: Independent experimental publication, not an official DWP document,
 okf_version: '0.2'
 version: 0.1.0
 status: experimental
-snapshot: dwp-full-dmg-2026-09-15-9663e36f6aba
-snapshot_id: dwp-full-dmg-2026-09-15-9663e36f6aba
-generated_at: '2026-09-15T19:59:30Z'
+snapshot: dwp-full-dmg-2026-09-15-4766be3a825c
+snapshot_id: dwp-full-dmg-2026-09-15-4766be3a825c
+generated_at: '2026-09-15T20:19:49.223063Z'
+plane_roots:
+  source: 9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a
+  semantic: 0e59a3d6e56a6a6b0dc6918d9bd74183d4378d9e7d8032413841b92cfb46c288
+  data: 63d042623ec077cedae7b0d6b342e2bf8b767cb3085c4c1a0a0366534d84306d
+  search: 5d380f3ea2039774e39dc714e6009627f18443afcb5b1860c106a0f2e34041c1
+  presentation: 8dea4157deccf6087f5187120afe0a5448a0dd757d8d3ce9c3c5f75586f1fb2d
 counts:
-  records: 15193
-  datasets: 15193
-  resources: 15166
-  relationships: 15493
+  records: 15268
+  datasets: 15268
+  resources: 15241
+  relationships: 15728
   publishers: 2
   source_documents: 331
   source_pages: 14743
@@ -138,27 +144,35 @@ entrypoints:
   search_manifest: data/search/manifest.json
   record_locator:
     path: data/locator/manifest.json
-    bytes: 34590
-    sha256: 47630adb22530f2d89166a7936f96c9bc70ee9602efd0d6cf36488efcc5cd1f6
+    bytes: 34618
+    sha256: 522e7154a62df68039a761209ae5667047101a860e8f3455344afd83d6bd6de8
   relationship_adjacency: data/adjacency/manifest.json
   markdown_index: index.md
+  endpoint_labels:
+    path: data/endpoint-labels.json.gz
+    bytes: 154665
+    sha256: 1908d8bf87f1b9f3918f05938a03b21d32f444fe47c0cca64cb5ccde25b16b31
 entrypoint_integrity:
   data_manifest:
     path: data/manifest.json
-    bytes: 74153
-    sha256: aca2842f86ebef433f4e4c21e4c68011f80cc1d0b413d8eb6afff98b549ea6b8
+    bytes: 75259
+    sha256: c2e27f87e01b8436119168e88fdc9964141a64e1ce30bf64b3ce8ef2eef10c28
   overview_index:
     path: data/overview.json
-    bytes: 17786
-    sha256: 340503aa55184f91b492d5e054fc9da88b0062fc1b89584e8cc5d79a55afa9f7
+    bytes: 17758
+    sha256: a53485dcb3556c501be729f1c4b119006f3bf6b67a8a925d03d040f502ae0eda
   search_manifest:
     path: data/search/manifest.json
     bytes: 110924
-    sha256: 60d06bfeb588ab4d97d56b509f7ce7e5406c4503dc209d4190308cd77956d621
+    sha256: 9a800279f1b3e846c011aa0244605c339bd680e3df49f33dcc89e33430fa2b7e
   relationship_adjacency:
     path: data/adjacency/manifest.json
-    bytes: 81318
-    sha256: 942c5cad1becddf0cd2a9b0ecc6bc4bcbeadd1573a1ff1b8ef5694dd1da2a5c1
+    bytes: 81321
+    sha256: 49e7b165657d645f9163bbc3e839958caa2f7e1236332667b84016f50d085dbe
+  endpoint_labels:
+    path: data/endpoint-labels.json.gz
+    bytes: 154665
+    sha256: 1908d8bf87f1b9f3918f05938a03b21d32f444fe47c0cca64cb5ccde25b16b31
 vocabulary:
   record_singular: guidance record
   record_plural: guidance records
@@ -170,13 +184,13 @@ vocabulary:
 exploratory_publication:
   schema: okf-exploratory-publication.v1
   publication_state: exploratory
-  snapshot_id: dwp-full-dmg-2026-09-15-9663e36f6aba
-  generated_at: '2026-09-15T19:59:30Z'
+  snapshot_id: dwp-full-dmg-2026-09-15-4766be3a825c
+  generated_at: '2026-09-15T20:19:49.223063Z'
   applicable_plane_roots:
     source: 9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a
-    semantic: 1feacaa84e4fd7c256eba0ed28a3efedab02172984a99781ea9d347fec47e8b7
-    data: c57d3829deb5a33532ead4b97f8fe0bf4d1daba7de06c93da78d58dac5d6a8f3
-    search: 5a3d2b7a7d256cd7e7cb3c3bab82e1ced86d0a2c84fb9f0fa510814135ead8a1
+    semantic: 0e59a3d6e56a6a6b0dc6918d9bd74183d4378d9e7d8032413841b92cfb46c288
+    data: 63d042623ec077cedae7b0d6b342e2bf8b767cb3085c4c1a0a0366534d84306d
+    search: 5d380f3ea2039774e39dc714e6009627f18443afcb5b1860c106a0f2e34041c1
     presentation: 8dea4157deccf6087f5187120afe0a5448a0dd757d8d3ce9c3c5f75586f1fb2d
   publisher:
     name: Chris Page — independent research
@@ -216,7 +230,7 @@ source:
   url: https://www.gov.uk/government/collections/decision-makers-guide-staff-guide
   inventory: source/full-dmg-2026-09-15/inventory.json
   sha256: 9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a
-  observed_at: '2026-09-15T19:59:30Z'
+  observed_at: '2026-09-15T20:19:49.223063Z'
 consumer:
   repository: https://github.com/chris-page-gov/okf-explorer
   commit: 51601b5d94ac33ce5be654e81943ca2e049743d8
