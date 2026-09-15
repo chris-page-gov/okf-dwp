@@ -1,14 +1,14 @@
 {
   "schema": "okf-repository-publication-contract.v1",
-  "modified": "2026-08-18",
+  "modified": "2026-09-15",
   "locale": "en-GB",
   "time_zone": "Europe/London",
   "repository": {
-    "name": "okf-bundle",
-    "url": "https://example.invalid/replace-after-repository-review",
+    "name": "okf-dwp",
+    "url": "https://github.com/chris-page-gov/okf-dwp",
     "role": "governed-producer",
     "root_index": "README.md",
-    "lifecycle": "bootstrap"
+    "lifecycle": "experimental-preview"
   },
   "semantic_contract": {
     "path": "okf.semantic.json",
@@ -16,71 +16,90 @@
   },
   "source_families": [
     {
-      "id": "repository-foundations",
-      "label": "Repository foundations",
-      "description": "Authored bootstrap documentation awaiting domain review.",
-      "kind": "markdown-tree",
+      "id": "dwp-public-guidance",
+      "label": "DWP public guidance snapshot",
+      "description": "36 PDFs linked by the declared GOV.UK publication on 15 September 2026.",
+      "kind": "public-document-snapshot",
       "paths": [
         "source/**",
-        "README.md",
-        "REPOSITORY_STATUS.md"
+        "knowledge/**",
+        "domain-profile/**"
       ],
       "formats": [
-        "text/markdown"
+        "application/pdf",
+        "application/json",
+        "application/ld+yaml"
       ],
-      "origin": "authored",
-      "authority": "not-assessed",
+      "origin": "public-govuk-plus-project-authored-navigation",
+      "authority": "official-source-with-derived-extraction-and-project-authored-navigation",
       "snapshot_policy": "pinned-revision",
       "inventory": {
-        "method": "pinned-source-register",
-        "manifest_path": "source/README.md",
+        "method": "govuk-content-api-attachment-census",
+        "manifest_path": "source/inventory.json",
         "identity": [
-          "relative-path",
-          "source-identifier"
+          "official-attachment-url",
+          "sha256"
         ]
       },
       "rights": {
-        "status": "not-evaluated",
-        "evidence": []
+        "status": "OGL-v3-with-attribution-and-exceptions",
+        "evidence": [
+          "NOTICE.md",
+          "domain-profile/evidence/EV-OGL.json"
+        ]
       },
       "sensitivity": {
-        "status": "not-assessed",
-        "assessment": "Domain content has not been admitted to the bootstrap.",
-        "evidence": []
+        "status": "public-source-documents",
+        "assessment": "Public guidance and source-authored worked examples; no claimant case data acquired.",
+        "evidence": [
+          "source/inventory.json"
+        ]
       },
       "extraction": {
-        "mode": "none",
-        "network_access": "prohibited",
-        "command_ids": [],
+        "mode": "PDF-page-text",
+        "network_access": "explicit-acquisition-only",
+        "command_ids": [
+          "acquire"
+        ],
         "limitations": [
-          "Acquisition and generation remain disabled."
+          "Machine text extraction can damage reading order; chapter 83 has known letter-spacing defects."
         ]
       },
       "invalidates": [
         "source",
+        "semantic",
         "documentation"
       ],
       "limitations": [
-        "Replace this family with reviewed domain inputs before enabling CI or publication."
+        "Snapshot bounded; not a consolidated legal rule set."
       ]
     }
   ],
   "boundaries": {
     "authored": [
       {
+        "path": "knowledge/**",
+        "role": "semantic-input"
+      },
+      {
         "path": "source/**",
-        "role": "content",
-        "source_family_id": "repository-foundations"
+        "role": "frozen-evidence"
+      },
+      {
+        "path": "domain-profile/**",
+        "role": "discovery"
+      },
+      {
+        "path": "scripts/**",
+        "role": "generator"
       },
       {
         "path": "README.md",
-        "role": "documentation",
-        "source_family_id": "repository-foundations"
+        "role": "documentation"
       },
       {
-        "path": "REPOSITORY_STATUS.md",
-        "role": "documentation",
-        "source_family_id": "repository-foundations"
+        "path": "NOTICE.md",
+        "role": "rights"
       },
       {
         "path": "CHANGELOG.md",
@@ -99,43 +118,100 @@
         "role": "workflow"
       }
     ],
-    "generated": []
+    "generated": [
+      {
+        "path": "bundle/**",
+        "role": "semantic-and-reader-projections"
+      }
+    ]
   },
   "planes": [
     {
       "id": "source",
       "depends_on": [],
       "paths": [
-        "source/**",
-        "okf.semantic.json",
-        "okf.publication.json"
+        "source/**"
       ],
       "command_ids": [
-        "check-scaffold"
+        "validate"
+      ]
+    },
+    {
+      "id": "semantic",
+      "depends_on": [
+        "source"
+      ],
+      "paths": [
+        "knowledge/**",
+        "bundle/**"
+      ],
+      "command_ids": [
+        "build-check",
+        "validate"
       ]
     },
     {
       "id": "documentation",
       "depends_on": [
-        "source"
+        "source",
+        "semantic"
       ],
       "paths": [
         "README.md",
-        "REPOSITORY_STATUS.md",
+        "docs/**",
         "CHANGELOG.md"
       ],
       "command_ids": [
-        "check-scaffold"
+        "diff-check"
       ]
     }
   ],
   "tooling": {
     "commands": [
       {
-        "id": "check-scaffold",
+        "id": "acquire",
+        "kind": "build",
+        "planes": [
+          "source"
+        ],
+        "command": "uv run --locked python scripts/acquire_sources.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "official-public-govuk",
+        "mutates": "source",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "build-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/build_bundle.py --check",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "validate",
         "kind": "check",
         "planes": [
           "source",
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/validate_bundle.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "diff-check",
+        "kind": "check",
+        "planes": [
           "documentation"
         ],
         "command": "git diff --check",
@@ -143,14 +219,17 @@
         "review_status": "reviewed-local-guidance",
         "network": "none",
         "mutates": "none",
-        "timeout_minutes": 5
+        "timeout_minutes": 10
       }
     ]
   },
   "lockstep": {
     "controlled_paths": [
       "source/**",
-      "generated/**",
+      "knowledge/**",
+      "domain-profile/**",
+      "scripts/**",
+      "bundle/**",
       ".github/workflows/**",
       "okf.semantic.json",
       "okf.publication.json"
@@ -161,16 +240,18 @@
       "CHANGELOG.md"
     ],
     "changelog_path": "CHANGELOG.md",
-    "check_command_id": "check-scaffold",
+    "check_command_id": "diff-check",
     "dependency_update_policy": "assess-release-bound-bytes-no-blanket-exemption",
     "unknown_path_policy": "fail-closed"
   },
   "ci": {
-    "provider": "none",
-    "workflow_paths": [],
-    "impact_routing": "not-applicable",
-    "parallelism": "not-applicable",
-    "unknown_path_policy": "not-applicable",
+    "provider": "github-actions",
+    "workflow_paths": [
+      ".github/workflows/okf-ci.yml"
+    ],
+    "impact_routing": "all-preview-checks",
+    "parallelism": "single-bounded-job",
+    "unknown_path_policy": "run-all",
     "browser": {
       "ordinary": {
         "policy": "not-applicable",
@@ -189,28 +270,45 @@
     }
   },
   "publication": {
-    "mode": "none",
-    "scope": "unpublished",
+    "mode": "github-repository-and-prerelease",
+    "scope": "experimental-preview",
     "authority": {
-      "decision": "Publication is disabled until repository and domain review.",
+      "decision": "Owner explicitly requested a public chris-page-gov repository and an unofficial meeting exemplar on 15 September 2026.",
       "evidence_paths": [
         "REPOSITORY_STATUS.md"
       ]
     },
     "candidate_policy": "promote-exact-assured-bytes-without-rebuild",
-    "targets": []
+    "targets": [
+      {
+        "id": "github",
+        "url": "https://github.com/chris-page-gov/okf-dwp",
+        "kind": "public-repository"
+      }
+    ]
   },
   "verification": {
-    "required": false,
-    "browser": "not-applicable",
-    "exact_commit_required": false,
-    "identity_checks": [],
-    "journeys": [],
-    "console_policy": "not-applicable",
+    "required": true,
+    "browser": "installed-browser",
+    "exact_commit_required": true,
+    "identity_checks": [
+      "bundle title",
+      "snapshot id",
+      "selected source page"
+    ],
+    "journeys": [
+      "overview",
+      "question/pc001",
+      "page/84/0035",
+      "source PDF link",
+      "graph relationships",
+      "search"
+    ],
+    "console_policy": "record-errors",
     "command_ids": []
   },
   "limitations": [
-    "The placeholder repository URL, source family and command set must be replaced during review.",
-    "A schema-valid bootstrap does not authorise acquisition, generation, CI or publication."
+    "Experimental preview contract; full Foundry production gates are not claimed.",
+    "The local publication contract is descriptive; semantic schema and all-assertion receipts are separate."
   ]
 }

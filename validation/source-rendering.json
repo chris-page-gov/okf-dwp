@@ -1,0 +1,24 @@
+{
+  "schema": "okf-dwp-source-rendering.v1",
+  "status": "passed",
+  "snapshot_id": "dwp-pension-credit-2026-09-15-bdee692f1126",
+  "bundle_sha256": "98f87f4237e5b9cbc326c70ed59b2e408abde9613fb7ffb8765b02fecd07991a",
+  "consumer_commit": "167d54dd924ce496f173105a8b390744b3b2a311",
+  "consumer_files": [
+    {
+      "path": "src/lib/okfV02.ts",
+      "sha256": "d0c3f6a7eac96a58600e2686020c064ea289acf3c3512f4f1f50c508fec0506a"
+    },
+    {
+      "path": "src/lib/viewer/smallNodePresentation.ts",
+      "sha256": "df5dbadb06c86c275a0da7073ebcac09809b12b47c2975934e6fcbd7b8dc55ac"
+    }
+  ],
+  "pages_checked": 744,
+  "checks": [
+    "Every source page renders inside exactly one literal text block",
+    "Rendered source text preserves exact line breaks and numbering",
+    "No source PDF page produces an ordered Markdown list"
+  ],
+  "scope": "Actual pinned renderer function transpiled with the locked Explorer TypeScript; browser presentation checked separately"
+}

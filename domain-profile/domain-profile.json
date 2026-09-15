@@ -1,0 +1,2488 @@
+{
+  "$schema": "https://chris-page-gov.github.io/okf-explorer/profile/authoring/v1/domain-profile.schema.json",
+  "schema": "okf-domain-profile.v1",
+  "profile_id": "urn:okf-domain-profile:dwp-pension-credit:2026-09-15",
+  "version": "0.1.0",
+  "status": "draft",
+  "prepared_at": "2026-09-15T14:30:26Z",
+  "research_cutoff": "2026-09-15",
+  "title": "Pension Credit decision makers guide discovery profile",
+  "description": "Snapshot-bound experimental OKF+ discovery contract. Public research authorisation does not constitute DWP endorsement, expert approval or production conformance.",
+  "repository_lifecycle": {
+    "classification": "existing",
+    "bootstrap_status": "planned",
+    "bootstrap_evidence": [
+      "okf.publication.json"
+    ],
+    "initial_commit_policy": "Preserve the existing scaffold and its history. Record the public demonstrator as an explicit experimental change.",
+    "default_branch": "main",
+    "feature_branch_policy": "Use a task branch and reviewed pull request where supported; the user explicitly authorised public repository publication for this exemplar.",
+    "required_checks": [
+      "Domain profile JSON Schema validation",
+      "Source inventory and PDF extraction reconciliation",
+      "Bundle syntax, links and source evidence",
+      "Actual Explorer load before claiming Explorer readiness"
+    ],
+    "ci_state": "disabled-pending-validation",
+    "source_paths": [
+      "source/",
+      "domain-profile/"
+    ],
+    "generated_paths": [
+      "bundle/",
+      "generated/"
+    ],
+    "remote_policy": "The user explicitly authorises chris-page-gov/okf-dwp public publication; no wider publication or claimant-data use is authorised.",
+    "handoff": "Concurrent agents have disjoint paths. The root agent reconciles, validates and records the final commit."
+  },
+  "intent": {
+    "problem": "Staff guidance is spread across chapter PDFs, change summaries and historical amendments; readers need to find and inspect relevant evidence without mistaking historical guidance for current law.",
+    "desired_outcomes": [
+      "Demonstrate searchable source-linked chapter and paragraph evidence in OKF Explorer.",
+      "Expose an inspectable YAML-LD graph and JSON-LD projection for bounded AI retrieval.",
+      "Make authority, source versions, gaps and extraction limitations visible."
+    ],
+    "non_goals": [
+      "Determine entitlement, calculate awards, recommend a claim decision or provide legal advice.",
+      "Claim complete coverage of Pension Credit law, DWP guidance, amendments or case law.",
+      "Process claimant personal data or simulate official DWP branding."
+    ],
+    "target_okf_version": "0.2",
+    "risk_level": "high"
+  },
+  "input_snapshot": {
+    "locations": [
+      "https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide",
+      "source/inventory.json"
+    ],
+    "snapshot_id": "dmg-pension-credit-2026-09-15",
+    "inventory_sha256": "bf225f86a43959d45e59204d3de34dccba6590970626eb659038febca47889df",
+    "item_count": 36,
+    "byte_count": 23475769,
+    "sampling_method": "Census of document links on the named landing page; automated text extraction of acquired PDFs with sampled paragraph/source inspection.",
+    "exclusions": [
+      "Other DMG volumes and separately published DMG memos are research references, not admitted corpus documents."
+    ]
+  },
+  "collection_profile": {
+    "document_families": [
+      "Chapter PDFs, including transitional and spare chapters",
+      "Volume change summaries",
+      "Historical amendment PDFs",
+      "Collection landing page metadata"
+    ],
+    "formats": [
+      "application/pdf",
+      "text/html"
+    ],
+    "languages": [
+      "en-GB"
+    ],
+    "date_ranges": [
+      "Landing page first published 1 June 2013; observed update date 20 July 2026.",
+      "Historical documents and source paragraphs retain their own dates."
+    ],
+    "representation_relationships": [
+      "A chapter work, its acquired PDF bytes, its extracted text and its generated page are distinct representations.",
+      "Historical amendments may repeat or replace text; they are not independent current rules."
+    ],
+    "duplicate_policy": "Keep all named source documents. Hash exact bytes; never deduplicate historical evidence by textual similarity.",
+    "extraction_constraints": [
+      "PDF reading order, tables, cross-references, page furniture and footnotes may be imperfect.",
+      "Printed paragraph identifiers differ from PDF page indices; preserve both.",
+      "Spare chapters are retained as source-labelled placeholders."
+    ],
+    "sensitivity_findings": [
+      "Only public staff guidance is admitted. No claimant records are requested or authorised.",
+      "Source examples are publisher illustrations, not project casework."
+    ]
+  },
+  "scope": {
+    "record_definition": "One named linked PDF is one inventory document. A generated passage or paragraph is a derived evidence unit with a document and locator; it is not a new source document.",
+    "included": [
+      "The 36 PDF document links observed on the nominated landing page, subject to acquisition receipts."
+    ],
+    "excluded": [
+      "Other benefits guides; unrelated departmental publications; claimant data.",
+      "Unlinked amending instruments, case law and DMG memos as corpus text; they remain declared research gaps."
+    ],
+    "boundary_status": "complete-against-declared-denominator",
+    "denominators": [
+      {
+        "id": "DEN-DOCUMENTS",
+        "description": "PDF document links on the nominated publication page",
+        "value": 36,
+        "as_of": "2026-09-15",
+        "basis": "Exact source/inventory.json document list, reconciled to the source publication attachment census; all 36 PDFs acquired and text-extracted.",
+        "evidence_refs": [
+          "EV-COLLECTION",
+          "EV-INVENTORY"
+        ]
+      }
+    ],
+    "unexplained_omissions": [],
+    "snapshot_policy": "snapshot-bounded"
+  },
+  "authority_model": {
+    "source_authorities": [
+      "DWP is the publisher of the staff guide; the guide explains departmental decision-making practice.",
+      "Legislation.gov.uk publishes legislation with revision, commencement and outstanding-effects notices."
+    ],
+    "semantic_authorities": [
+      "Preserve DWP chapter titles, paragraph numbers, abbreviations and source wording.",
+      "Local vocabulary is an editorial navigation aid, not a legally authoritative pension ontology."
+    ],
+    "operational_authorities": [
+      "The chris-page-gov repository maintainer owns extraction, indexing and demonstration behaviour."
+    ],
+    "decision_authorities": [
+      "DWP decision makers and the applicable review/appeal institutions retain their lawful functions.",
+      "The repository maintainer approves this experimental publication; a pensions representative can review domain interpretation."
+    ]
+  },
+  "claims": [
+    {
+      "id": "CLAIM-GUIDE",
+      "statement": "DWP publishes this guide for staff who make benefit and pension decisions and to explain departmental decision-making.",
+      "claim_status": "observed",
+      "workflow_status": "produced",
+      "derivation": "source-native",
+      "authority": "Named official publisher; project paraphrase",
+      "confidence": {
+        "level": "high",
+        "score": null,
+        "calibrated": false,
+        "method": "Direct official-source inspection",
+        "basis": [
+          "EV-COLLECTION"
+        ],
+        "limitations": [
+          "Not an independent legal or domain review."
+        ]
+      },
+      "evidence_refs": [
+        "EV-COLLECTION"
+      ],
+      "decision_refs": [],
+      "gap_refs": []
+    },
+    {
+      "id": "CLAIM-TIME",
+      "statement": "The landing page lists a 20 July 2026 update; this is not a uniform effective date for all paragraphs or historical attachments.",
+      "claim_status": "observed",
+      "workflow_status": "produced",
+      "derivation": "source-native",
+      "authority": "Named official publisher; project paraphrase",
+      "confidence": {
+        "level": "high",
+        "score": null,
+        "calibrated": false,
+        "method": "Direct official-source inspection",
+        "basis": [
+          "EV-COLLECTION"
+        ],
+        "limitations": [
+          "Not an independent legal or domain review."
+        ]
+      },
+      "evidence_refs": [
+        "EV-COLLECTION"
+      ],
+      "decision_refs": [],
+      "gap_refs": []
+    },
+    {
+      "id": "CLAIM-YAMLLD",
+      "statement": "The selected YAML-LD 1.0 specification is a W3C Working Draft dated 10 September 2026.",
+      "claim_status": "observed",
+      "workflow_status": "produced",
+      "derivation": "source-native",
+      "authority": "Named official publisher; project paraphrase",
+      "confidence": {
+        "level": "high",
+        "score": null,
+        "calibrated": false,
+        "method": "Direct official-source inspection",
+        "basis": [
+          "EV-YAMLLD"
+        ],
+        "limitations": [
+          "Not an independent legal or domain review."
+        ]
+      },
+      "evidence_refs": [
+        "EV-YAMLLD"
+      ],
+      "decision_refs": [],
+      "gap_refs": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-COLLECTION",
+      "title": "Decision makers guide volumes 13 and 14",
+      "owner": "Department for Work and Pensions",
+      "authority_role": "authoritative",
+      "url": "https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide",
+      "access_status": "verified-working",
+      "access_tested_at": "2026-09-15T14:21:08Z",
+      "source_families": [
+        "Admitted staff-guide collection"
+      ],
+      "access_methods": [
+        "Read-only public HTTP GET"
+      ],
+      "formats": [
+        "text/html"
+      ],
+      "schemas": [],
+      "identifier_model": "Keep canonical official URL; DMG chapters additionally retain native chapter and paragraph identifiers.",
+      "version_model": "The URL is a mutable pointer; acquired bytes are identified by SHA-256 and observation time.",
+      "update_cadence": "Event-driven or irregular; no fixed schedule assumed.",
+      "coverage": "Named official reference only; no claim to complete law or guidance.",
+      "known_omissions": [],
+      "acquisition_method": "Bounded public retrieval, recorded terminal URL/status and digest.",
+      "rights_ref": "RIGHT-SOURCE",
+      "freshness_policy": "Observed on 15 September 2026. Recheck source and temporal applicability before operational use.",
+      "evidence_refs": [
+        "EV-COLLECTION"
+      ]
+    },
+    {
+      "id": "SRC-ADVISERS",
+      "title": "Pension Credit advisers guide April 2026",
+      "owner": "Department for Work and Pensions",
+      "authority_role": "official-reference",
+      "url": "https://www.gov.uk/government/publications/pension-credit-technical-guidance/a-detailed-guide-to-pension-credit-for-advisers-and-others",
+      "access_status": "verified-working",
+      "access_tested_at": "2026-09-15T14:21:08Z",
+      "source_families": [
+        "External reference, not admitted corpus"
+      ],
+      "access_methods": [
+        "Read-only public HTTP GET"
+      ],
+      "formats": [
+        "text/html"
+      ],
+      "schemas": [],
+      "identifier_model": "Keep canonical official URL; DMG chapters additionally retain native chapter and paragraph identifiers.",
+      "version_model": "The URL is a mutable pointer; acquired bytes are identified by SHA-256 and observation time.",
+      "update_cadence": "Event-driven or irregular; no fixed schedule assumed.",
+      "coverage": "Named official reference only; no claim to complete law or guidance.",
+      "known_omissions": [],
+      "acquisition_method": "Bounded public retrieval, recorded terminal URL/status and digest.",
+      "rights_ref": "RIGHT-SOURCE",
+      "freshness_policy": "Observed on 15 September 2026. Recheck source and temporal applicability before operational use.",
+      "evidence_refs": [
+        "EV-ADVISERS"
+      ]
+    },
+    {
+      "id": "SRC-SPCA",
+      "title": "State Pension Credit Act 2002",
+      "owner": "The National Archives / legislation.gov.uk",
+      "authority_role": "official-reference",
+      "url": "https://www.legislation.gov.uk/ukpga/2002/16/contents",
+      "access_status": "verified-working",
+      "access_tested_at": "2026-09-15T14:21:08Z",
+      "source_families": [
+        "External reference, not admitted corpus"
+      ],
+      "access_methods": [
+        "Read-only public HTTP GET"
+      ],
+      "formats": [
+        "text/html"
+      ],
+      "schemas": [],
+      "identifier_model": "Keep canonical official URL; DMG chapters additionally retain native chapter and paragraph identifiers.",
+      "version_model": "The URL is a mutable pointer; acquired bytes are identified by SHA-256 and observation time.",
+      "update_cadence": "Event-driven or irregular; no fixed schedule assumed.",
+      "coverage": "Named official reference only; no claim to complete law or guidance.",
+      "known_omissions": [
+        "Provision-level in-force and outstanding-effects reconciliation is not complete."
+      ],
+      "acquisition_method": "Bounded public retrieval, recorded terminal URL/status and digest.",
+      "rights_ref": "RIGHT-SOURCE",
+      "freshness_policy": "Observed on 15 September 2026. Recheck source and temporal applicability before operational use.",
+      "evidence_refs": [
+        "EV-SPCA"
+      ]
+    },
+    {
+      "id": "SRC-SPCR",
+      "title": "The State Pension Credit Regulations 2002",
+      "owner": "The National Archives / legislation.gov.uk",
+      "authority_role": "official-reference",
+      "url": "https://www.legislation.gov.uk/uksi/2002/1792/contents",
+      "access_status": "verified-working",
+      "access_tested_at": "2026-09-15T14:21:08Z",
+      "source_families": [
+        "External reference, not admitted corpus"
+      ],
+      "access_methods": [
+        "Read-only public HTTP GET"
+      ],
+      "formats": [
+        "text/html"
+      ],
+      "schemas": [],
+      "identifier_model": "Keep canonical official URL; DMG chapters additionally retain native chapter and paragraph identifiers.",
+      "version_model": "The URL is a mutable pointer; acquired bytes are identified by SHA-256 and observation time.",
+      "update_cadence": "Event-driven or irregular; no fixed schedule assumed.",
+      "coverage": "Named official reference only; no claim to complete law or guidance.",
+      "known_omissions": [
+        "Provision-level in-force and outstanding-effects reconciliation is not complete."
+      ],
+      "acquisition_method": "Bounded public retrieval, recorded terminal URL/status and digest.",
+      "rights_ref": "RIGHT-SOURCE",
+      "freshness_policy": "Observed on 15 September 2026. Recheck source and temporal applicability before operational use.",
+      "evidence_refs": [
+        "EV-SPCR"
+      ]
+    },
+    {
+      "id": "SRC-SSAA",
+      "title": "Social Security Administration Act 1992",
+      "owner": "The National Archives / legislation.gov.uk",
+      "authority_role": "official-reference",
+      "url": "https://www.legislation.gov.uk/ukpga/1992/5/contents",
+      "access_status": "verified-working",
+      "access_tested_at": "2026-09-15T14:21:08Z",
+      "source_families": [
+        "External reference, not admitted corpus"
+      ],
+      "access_methods": [
+        "Read-only public HTTP GET"
+      ],
+      "formats": [
+        "text/html"
+      ],
+      "schemas": [],
+      "identifier_model": "Keep canonical official URL; DMG chapters additionally retain native chapter and paragraph identifiers.",
+      "version_model": "The URL is a mutable pointer; acquired bytes are identified by SHA-256 and observation time.",
+      "update_cadence": "Event-driven or irregular; no fixed schedule assumed.",
+      "coverage": "Named official reference only; no claim to complete law or guidance.",
+      "known_omissions": [
+        "Provision-level in-force and outstanding-effects reconciliation is not complete."
+      ],
+      "acquisition_method": "Bounded public retrieval, recorded terminal URL/status and digest.",
+      "rights_ref": "RIGHT-SOURCE",
+      "freshness_policy": "Observed on 15 September 2026. Recheck source and temporal applicability before operational use.",
+      "evidence_refs": [
+        "EV-SSAA"
+      ]
+    },
+    {
+      "id": "SRC-SSA",
+      "title": "Social Security Act 1998",
+      "owner": "The National Archives / legislation.gov.uk",
+      "authority_role": "official-reference",
+      "url": "https://www.legislation.gov.uk/ukpga/1998/14/contents",
+      "access_status": "verified-working",
+      "access_tested_at": "2026-09-15T14:21:08Z",
+      "source_families": [
+        "External reference, not admitted corpus"
+      ],
+      "access_methods": [
+        "Read-only public HTTP GET"
+      ],
+      "formats": [
+        "text/html"
+      ],
+      "schemas": [],
+      "identifier_model": "Keep canonical official URL; DMG chapters additionally retain native chapter and paragraph identifiers.",
+      "version_model": "The URL is a mutable pointer; acquired bytes are identified by SHA-256 and observation time.",
+      "update_cadence": "Event-driven or irregular; no fixed schedule assumed.",
+      "coverage": "Named official reference only; no claim to complete law or guidance.",
+      "known_omissions": [
+        "Provision-level in-force and outstanding-effects reconciliation is not complete."
+      ],
+      "acquisition_method": "Bounded public retrieval, recorded terminal URL/status and digest.",
+      "rights_ref": "RIGHT-SOURCE",
+      "freshness_policy": "Observed on 15 September 2026. Recheck source and temporal applicability before operational use.",
+      "evidence_refs": [
+        "EV-SSA"
+      ]
+    },
+    {
+      "id": "SRC-DAR",
+      "title": "Social Security and Child Support Decisions and Appeals Regulations 1999",
+      "owner": "The National Archives / legislation.gov.uk",
+      "authority_role": "official-reference",
+      "url": "https://www.legislation.gov.uk/uksi/1999/991/contents",
+      "access_status": "verified-working",
+      "access_tested_at": "2026-09-15T14:21:08Z",
+      "source_families": [
+        "External reference, not admitted corpus"
+      ],
+      "access_methods": [
+        "Read-only public HTTP GET"
+      ],
+      "formats": [
+        "text/html"
+      ],
+      "schemas": [],
+      "identifier_model": "Keep canonical official URL; DMG chapters additionally retain native chapter and paragraph identifiers.",
+      "version_model": "The URL is a mutable pointer; acquired bytes are identified by SHA-256 and observation time.",
+      "update_cadence": "Event-driven or irregular; no fixed schedule assumed.",
+      "coverage": "Named official reference only; no claim to complete law or guidance.",
+      "known_omissions": [
+        "Provision-level in-force and outstanding-effects reconciliation is not complete."
+      ],
+      "acquisition_method": "Bounded public retrieval, recorded terminal URL/status and digest.",
+      "rights_ref": "RIGHT-SOURCE",
+      "freshness_policy": "Observed on 15 September 2026. Recheck source and temporal applicability before operational use.",
+      "evidence_refs": [
+        "EV-DAR"
+      ]
+    },
+    {
+      "id": "SRC-PENSIONS2014",
+      "title": "Pensions Act 2014 section 28",
+      "owner": "The National Archives / legislation.gov.uk",
+      "authority_role": "official-reference",
+      "url": "https://www.legislation.gov.uk/ukpga/2014/19/section/28",
+      "access_status": "verified-working",
+      "access_tested_at": "2026-09-15T14:21:08Z",
+      "source_families": [
+        "External reference, not admitted corpus"
+      ],
+      "access_methods": [
+        "Read-only public HTTP GET"
+      ],
+      "formats": [
+        "text/html"
+      ],
+      "schemas": [],
+      "identifier_model": "Keep canonical official URL; DMG chapters additionally retain native chapter and paragraph identifiers.",
+      "version_model": "The URL is a mutable pointer; acquired bytes are identified by SHA-256 and observation time.",
+      "update_cadence": "Event-driven or irregular; no fixed schedule assumed.",
+      "coverage": "Named official reference only; no claim to complete law or guidance.",
+      "known_omissions": [
+        "Provision-level in-force and outstanding-effects reconciliation is not complete."
+      ],
+      "acquisition_method": "Bounded public retrieval, recorded terminal URL/status and digest.",
+      "rights_ref": "RIGHT-SOURCE",
+      "freshness_policy": "Observed on 15 September 2026. Recheck source and temporal applicability before operational use.",
+      "evidence_refs": [
+        "EV-PENSIONS2014"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "USER-REVIEWER",
+      "role": "Pensions representative or benefits guidance researcher",
+      "context": "User-supplied demonstration meeting on 15 September 2026.",
+      "authority_requirement": "Inspect official evidence and see clear historical/experimental boundaries.",
+      "accessibility_language_needs": [
+        "British English, plain labels, keyboard-operable reader, source links."
+      ],
+      "needs": [
+        "Find the relevant guidance and inspect provenance.",
+        "Review whether this representation preserves the source meaning."
+      ],
+      "risks": [
+        "Mistaking a historical amendment for current guidance.",
+        "Treating an AI summary as an entitlement decision."
+      ],
+      "evidence_refs": [
+        "EV-OWNER"
+      ]
+    },
+    {
+      "id": "USER-AI",
+      "role": "AI or software consumer",
+      "context": "Querying the public demonstrator with source-linked retrieval.",
+      "authority_requirement": "Every factual answer must cite admitted source evidence; abstain outside the snapshot.",
+      "accessibility_language_needs": [
+        "Explicit labels, stable identifiers and machine-readable caveats."
+      ],
+      "needs": [
+        "Retrieve paragraphs with chapter identity, locator, derivation and source URL."
+      ],
+      "risks": [
+        "Invented legal equivalence or ungrounded calculations."
+      ],
+      "evidence_refs": [
+        "EV-OWNER"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "TASK-FIND",
+      "user_ids": [
+        "USER-REVIEWER",
+        "USER-AI"
+      ],
+      "goal": "Find guidance on capital, earnings or income other than earnings.",
+      "context": "Exploratory meeting demonstration.",
+      "authority_requirement": "Official source evidence, independent project presentation.",
+      "required_evidence": [
+        "Source URL, document title and role, observation timestamp, source digest and precise locator."
+      ],
+      "freshness_tolerance": "The named 15 September 2026 snapshot only; no operational freshness claim.",
+      "likely_confusions": [
+        "Pension Credit versus State Pension.",
+        "Document update date versus rule effective date.",
+        "Source paragraphs versus editorial labels."
+      ],
+      "consequences_of_error": [
+        "Misdirected research or inappropriate reliance on historical content."
+      ],
+      "hard_failures": [
+        "A personalised entitlement answer or unsupported law/conformance claim."
+      ],
+      "success": "The reader identifies the right chapter and can open its cited PDF."
+    },
+    {
+      "id": "TASK-EVIDENCE",
+      "user_ids": [
+        "USER-REVIEWER",
+        "USER-AI"
+      ],
+      "goal": "Inspect an extracted paragraph and the source page that supports it.",
+      "context": "Exploratory meeting demonstration.",
+      "authority_requirement": "Official source evidence, independent project presentation.",
+      "required_evidence": [
+        "Source URL, document title and role, observation timestamp, source digest and precise locator."
+      ],
+      "freshness_tolerance": "The named 15 September 2026 snapshot only; no operational freshness claim.",
+      "likely_confusions": [
+        "Pension Credit versus State Pension.",
+        "Document update date versus rule effective date.",
+        "Source paragraphs versus editorial labels."
+      ],
+      "consequences_of_error": [
+        "Misdirected research or inappropriate reliance on historical content."
+      ],
+      "hard_failures": [
+        "A personalised entitlement answer or unsupported law/conformance claim."
+      ],
+      "success": "The source document, native paragraph identifier where available, page locator, digest and extraction caveat are visible."
+    },
+    {
+      "id": "TASK-TIME",
+      "user_ids": [
+        "USER-REVIEWER",
+        "USER-AI"
+      ],
+      "goal": "Distinguish chapter guidance, change summaries and historical amendments.",
+      "context": "Exploratory meeting demonstration.",
+      "authority_requirement": "Official source evidence, independent project presentation.",
+      "required_evidence": [
+        "Source URL, document title and role, observation timestamp, source digest and precise locator."
+      ],
+      "freshness_tolerance": "The named 15 September 2026 snapshot only; no operational freshness claim.",
+      "likely_confusions": [
+        "Pension Credit versus State Pension.",
+        "Document update date versus rule effective date.",
+        "Source paragraphs versus editorial labels."
+      ],
+      "consequences_of_error": [
+        "Misdirected research or inappropriate reliance on historical content."
+      ],
+      "hard_failures": [
+        "A personalised entitlement answer or unsupported law/conformance claim."
+      ],
+      "success": "The reader recognises the document role and does not infer a current legal rule from an old amendment."
+    },
+    {
+      "id": "TASK-AI",
+      "user_ids": [
+        "USER-REVIEWER",
+        "USER-AI"
+      ],
+      "goal": "Ask a bounded evidence question and inspect the cited evidence.",
+      "context": "Exploratory meeting demonstration.",
+      "authority_requirement": "Official source evidence, independent project presentation.",
+      "required_evidence": [
+        "Source URL, document title and role, observation timestamp, source digest and precise locator."
+      ],
+      "freshness_tolerance": "The named 15 September 2026 snapshot only; no operational freshness claim.",
+      "likely_confusions": [
+        "Pension Credit versus State Pension.",
+        "Document update date versus rule effective date.",
+        "Source paragraphs versus editorial labels."
+      ],
+      "consequences_of_error": [
+        "Misdirected research or inappropriate reliance on historical content."
+      ],
+      "hard_failures": [
+        "A personalised entitlement answer or unsupported law/conformance claim."
+      ],
+      "success": "The answer is traceable or explicitly states that the corpus cannot determine it."
+    }
+  ],
+  "terminology": [
+    {
+      "id": "TERM-001",
+      "preferred_label": "Pension Credit",
+      "definition": "Name of the benefit in this source collection; keep separate from State Pension.",
+      "source_scope": "The frozen DMG collection; external references support discovery only.",
+      "language": "en-GB",
+      "owner": "DWP source terminology; project explanations are editorial",
+      "variants": [
+        "State Pension Credit",
+        "SPC"
+      ],
+      "confusable_terms": [
+        "State Pension"
+      ],
+      "mapping_status": "source-native-only",
+      "evidence_refs": [
+        "EV-ADVISERS"
+      ]
+    },
+    {
+      "id": "TERM-002",
+      "preferred_label": "Guarantee Credit",
+      "definition": "Source-native component label; retrieve the cited guidance for its conditions.",
+      "source_scope": "The frozen DMG collection; external references support discovery only.",
+      "language": "en-GB",
+      "owner": "DWP source terminology; project explanations are editorial",
+      "variants": [],
+      "confusable_terms": [
+        "Savings Credit"
+      ],
+      "mapping_status": "source-native-only",
+      "evidence_refs": [
+        "EV-ADVISERS"
+      ]
+    },
+    {
+      "id": "TERM-003",
+      "preferred_label": "Savings Credit",
+      "definition": "Source-native component label with historical qualification context.",
+      "source_scope": "The frozen DMG collection; external references support discovery only.",
+      "language": "en-GB",
+      "owner": "DWP source terminology; project explanations are editorial",
+      "variants": [],
+      "confusable_terms": [
+        "Guarantee Credit"
+      ],
+      "mapping_status": "source-native-only",
+      "evidence_refs": [
+        "EV-ADVISERS"
+      ]
+    },
+    {
+      "id": "TERM-004",
+      "preferred_label": "Assessed income period",
+      "definition": "Source-native topic requiring historical award context; do not assume all awards use one.",
+      "source_scope": "The frozen DMG collection; external references support discovery only.",
+      "language": "en-GB",
+      "owner": "DWP source terminology; project explanations are editorial",
+      "variants": [
+        "AIP"
+      ],
+      "confusable_terms": [
+        "Universal Credit assessment period"
+      ],
+      "mapping_status": "source-native-only",
+      "evidence_refs": [
+        "EV-PENSIONS2014"
+      ]
+    },
+    {
+      "id": "TERM-005",
+      "preferred_label": "Deemed weekly income from capital",
+      "definition": "Chapter 84 topic label; do not equate it with actual interest received.",
+      "source_scope": "The frozen DMG collection; external references support discovery only.",
+      "language": "en-GB",
+      "owner": "DWP source terminology; project explanations are editorial",
+      "variants": [],
+      "confusable_terms": [
+        "Actual income"
+      ],
+      "mapping_status": "source-native-only",
+      "evidence_refs": [
+        "EV-COLLECTION"
+      ]
+    },
+    {
+      "id": "TERM-006",
+      "preferred_label": "Income other than earnings",
+      "definition": "Chapter 85 topic label, kept distinct from earnings.",
+      "source_scope": "The frozen DMG collection; external references support discovery only.",
+      "language": "en-GB",
+      "owner": "DWP source terminology; project explanations are editorial",
+      "variants": [],
+      "confusable_terms": [
+        "Earnings"
+      ],
+      "mapping_status": "source-native-only",
+      "evidence_refs": [
+        "EV-COLLECTION"
+      ]
+    },
+    {
+      "id": "TERM-007",
+      "preferred_label": "Earnings",
+      "definition": "Chapter 86 topic label.",
+      "source_scope": "The frozen DMG collection; external references support discovery only.",
+      "language": "en-GB",
+      "owner": "DWP source terminology; project explanations are editorial",
+      "variants": [],
+      "confusable_terms": [
+        "Income other than earnings"
+      ],
+      "mapping_status": "source-native-only",
+      "evidence_refs": [
+        "EV-COLLECTION"
+      ]
+    },
+    {
+      "id": "TERM-008",
+      "preferred_label": "Additional amounts and special groups",
+      "definition": "Chapter 78 topic label.",
+      "source_scope": "The frozen DMG collection; external references support discovery only.",
+      "language": "en-GB",
+      "owner": "DWP source terminology; project explanations are editorial",
+      "variants": [],
+      "confusable_terms": [],
+      "mapping_status": "source-native-only",
+      "evidence_refs": [
+        "EV-COLLECTION"
+      ]
+    },
+    {
+      "id": "TERM-009",
+      "preferred_label": "Payment questions",
+      "definition": "Chapter 79 topic label.",
+      "source_scope": "The frozen DMG collection; external references support discovery only.",
+      "language": "en-GB",
+      "owner": "DWP source terminology; project explanations are editorial",
+      "variants": [],
+      "confusable_terms": [],
+      "mapping_status": "source-native-only",
+      "evidence_refs": [
+        "EV-COLLECTION"
+      ]
+    },
+    {
+      "id": "TERM-010",
+      "preferred_label": "Historical amendment",
+      "definition": "Editorial document-role label for a source attachment explicitly labelled as an amendment.",
+      "source_scope": "The frozen DMG collection; external references support discovery only.",
+      "language": "en-GB",
+      "owner": "DWP source terminology; project explanations are editorial",
+      "variants": [],
+      "confusable_terms": [
+        "Current consolidated guidance"
+      ],
+      "mapping_status": "source-native-only",
+      "evidence_refs": [
+        "EV-COLLECTION"
+      ]
+    },
+    {
+      "id": "TERM-011",
+      "preferred_label": "DMG paragraph",
+      "definition": "A source-native numbered passage within a chapter, where detected.",
+      "source_scope": "The frozen DMG collection; external references support discovery only.",
+      "language": "en-GB",
+      "owner": "DWP source terminology; project explanations are editorial",
+      "variants": [],
+      "confusable_terms": [
+        "PDF page number"
+      ],
+      "mapping_status": "source-native-only",
+      "evidence_refs": [
+        "EV-COLLECTION"
+      ]
+    }
+  ],
+  "semantic_model": {
+    "entity_types": [
+      {
+        "id": "TYPE-COLLECTION",
+        "label": "Guidance collection",
+        "source_native_type": "GOV.UK publication page",
+        "proposed_class": "Use DCMI/PROV document provenance and local typed navigation; no claim of a legal ontology.",
+        "identity_key": "Publication URL",
+        "version_key": "Source digest plus acquisition snapshot; printed dates remain separate.",
+        "required_properties": [
+          "Stable IRI",
+          "Human label",
+          "en-GB label language",
+          "Source URL",
+          "Derivation",
+          "Evidence locator"
+        ],
+        "optional_properties": [
+          "Source-native paragraph identifier",
+          "Explicit effective date if evidenced"
+        ],
+        "examples": [],
+        "excluded_conflations": [
+          "Work, file version, source-native paragraph and extracted passage are different entities."
+        ],
+        "task_refs": [
+          "TASK-FIND",
+          "TASK-EVIDENCE"
+        ],
+        "evidence_refs": [
+          "EV-COLLECTION"
+        ]
+      },
+      {
+        "id": "TYPE-DOCUMENT",
+        "label": "Guidance document",
+        "source_native_type": "Named chapter, summary or amendment",
+        "proposed_class": "Use DCMI/PROV document provenance and local typed navigation; no claim of a legal ontology.",
+        "identity_key": "Collection attachment URL plus observed document role",
+        "version_key": "Source digest plus acquisition snapshot; printed dates remain separate.",
+        "required_properties": [
+          "Stable IRI",
+          "Human label",
+          "en-GB label language",
+          "Source URL",
+          "Derivation",
+          "Evidence locator"
+        ],
+        "optional_properties": [
+          "Source-native paragraph identifier",
+          "Explicit effective date if evidenced"
+        ],
+        "examples": [],
+        "excluded_conflations": [
+          "Work, file version, source-native paragraph and extracted passage are different entities."
+        ],
+        "task_refs": [
+          "TASK-FIND",
+          "TASK-EVIDENCE"
+        ],
+        "evidence_refs": [
+          "EV-COLLECTION"
+        ]
+      },
+      {
+        "id": "TYPE-PASSAGE",
+        "label": "Evidence passage",
+        "source_native_type": "DMG paragraph or bounded extracted passage",
+        "proposed_class": "Use DCMI/PROV document provenance and local typed navigation; no claim of a legal ontology.",
+        "identity_key": "Document snapshot ID plus printed paragraph number; otherwise explicit page/sequence locator",
+        "version_key": "Source digest plus acquisition snapshot; printed dates remain separate.",
+        "required_properties": [
+          "Stable IRI",
+          "Human label",
+          "en-GB label language",
+          "Source URL",
+          "Derivation",
+          "Evidence locator"
+        ],
+        "optional_properties": [
+          "Source-native paragraph identifier",
+          "Explicit effective date if evidenced"
+        ],
+        "examples": [],
+        "excluded_conflations": [
+          "Work, file version, source-native paragraph and extracted passage are different entities."
+        ],
+        "task_refs": [
+          "TASK-FIND",
+          "TASK-EVIDENCE"
+        ],
+        "evidence_refs": [
+          "EV-COLLECTION"
+        ]
+      },
+      {
+        "id": "TYPE-TERM",
+        "label": "Navigation term",
+        "source_native_type": "Editorial topic based on source terminology",
+        "proposed_class": "Use DCMI/PROV document provenance and local typed navigation; no claim of a legal ontology.",
+        "identity_key": "Stable local topic slug",
+        "version_key": "Source digest plus acquisition snapshot; printed dates remain separate.",
+        "required_properties": [
+          "Stable IRI",
+          "Human label",
+          "en-GB label language",
+          "Source URL",
+          "Derivation",
+          "Evidence locator"
+        ],
+        "optional_properties": [
+          "Source-native paragraph identifier",
+          "Explicit effective date if evidenced"
+        ],
+        "examples": [],
+        "excluded_conflations": [
+          "Work, file version, source-native paragraph and extracted passage are different entities."
+        ],
+        "task_refs": [
+          "TASK-FIND",
+          "TASK-EVIDENCE"
+        ],
+        "evidence_refs": [
+          "EV-COLLECTION"
+        ]
+      }
+    ],
+    "identifier_schemes": [
+      {
+        "id": "ID-DMG",
+        "issuer": "DWP for native identifiers; chris-page-gov for local IRIs",
+        "syntax": "Retain chapter and paragraph numbers as source strings; make route-safe slugs separately.",
+        "scope": "The frozen guidance collection",
+        "persistence": "Source numbers may be reused or removed in later revisions; qualify evidence with snapshot.",
+        "normalization": "Whitespace and route normalisation only; preserve native source values.",
+        "collision_policy": "Fail on duplicate route identity; record repeated source paragraph labels rather than merge silently.",
+        "uri_policy": "https://chris-page-gov.github.io/okf-dwp/id/",
+        "equivalence_policy": "No owl:sameAs or SKOS exactMatch claims are authorised.",
+        "evidence_refs": [
+          "EV-COLLECTION"
+        ]
+      }
+    ],
+    "identifier_policy": {
+      "native_identifier_rule": "Preserve source identifiers verbatim alongside normalised routes.",
+      "route_rule": "Create deterministic route-safe local identifiers and record collisions.",
+      "iri_rule": "https://chris-page-gov.github.io/okf-dwp/id/",
+      "collision_rule": "Fail closed on two source identities mapping to one local identifier.",
+      "redirect_rule": "Keep semantic identity distinct from the reader route; record route changes explicitly."
+    },
+    "relationship_types": [
+      {
+        "id": "REL-SOURCE",
+        "label": "Has source",
+        "predicate_iri": "http://purl.org/dc/terms/source",
+        "inverse_label": "Is source for",
+        "source_types": [
+          "TYPE-DOCUMENT",
+          "TYPE-PASSAGE"
+        ],
+        "target_types": [
+          "TYPE-COLLECTION",
+          "TYPE-DOCUMENT"
+        ],
+        "direction": "directed",
+        "minimum_evidence": "The exact publication attachment link or a passage-to-acquired-document record.",
+        "permitted_derivations": [
+          "source-native",
+          "normalized"
+        ],
+        "temporal_meaning": "Applies to the observed source snapshot; does not imply legal effect.",
+        "cardinality": "Many-to-many except each passage has one source document snapshot.",
+        "non_properties": [
+          "Not a legal entailment.",
+          "References is not transitive.",
+          "Does not establish equivalence."
+        ],
+        "task_refs": [
+          "TASK-EVIDENCE",
+          "TASK-TIME"
+        ]
+      },
+      {
+        "id": "REL-PART",
+        "label": "Is part of",
+        "predicate_iri": "http://purl.org/dc/terms/isPartOf",
+        "inverse_label": "Contains",
+        "source_types": [
+          "TYPE-PASSAGE"
+        ],
+        "target_types": [
+          "TYPE-DOCUMENT"
+        ],
+        "direction": "directed",
+        "minimum_evidence": "Extraction metadata binds this passage to the acquired document.",
+        "permitted_derivations": [
+          "source-native",
+          "normalized"
+        ],
+        "temporal_meaning": "Applies to the observed source snapshot; does not imply legal effect.",
+        "cardinality": "Many-to-many except each passage has one source document snapshot.",
+        "non_properties": [
+          "Not a legal entailment.",
+          "References is not transitive.",
+          "Does not establish equivalence."
+        ],
+        "task_refs": [
+          "TASK-EVIDENCE",
+          "TASK-TIME"
+        ]
+      },
+      {
+        "id": "REL-REF",
+        "label": "References",
+        "predicate_iri": "http://purl.org/dc/terms/references",
+        "inverse_label": "Is referenced by",
+        "source_types": [
+          "TYPE-PASSAGE"
+        ],
+        "target_types": [
+          "TYPE-PASSAGE"
+        ],
+        "direction": "directed",
+        "minimum_evidence": "An explicit native cross-reference, with exact supporting text and resolved target; unresolved targets remain visible.",
+        "permitted_derivations": [
+          "source-native",
+          "normalized"
+        ],
+        "temporal_meaning": "Applies to the observed source snapshot; does not imply legal effect.",
+        "cardinality": "Many-to-many except each passage has one source document snapshot.",
+        "non_properties": [
+          "Not a legal entailment.",
+          "References is not transitive.",
+          "Does not establish equivalence."
+        ],
+        "task_refs": [
+          "TASK-EVIDENCE",
+          "TASK-TIME"
+        ]
+      }
+    ],
+    "temporal_model": {
+      "distinctions": [
+        "Landing-page publication/update dates",
+        "Document-labelled amendment dates",
+        "Source-native rule effective dates",
+        "Acquisition timestamps",
+        "Build timestamps"
+      ],
+      "version_semantics": "Source document SHA-256 binds the acquired manifestation; never use a page update date as a provision effective date.",
+      "freshness_semantics": "Snapshot-bounded; previous and subsequent law or guidance is outside the completeness claim."
+    },
+    "equivalence_policy": "Do not assert identity from label, URL, hierarchy or embedding similarity.",
+    "prohibited_inferences": [
+      "Do not infer absence from missing metadata.",
+      "Do not infer authority from model confidence.",
+      "Do not use owl:sameAs without authoritative identity evidence."
+    ]
+  },
+  "semantic_linking": {
+    "objective": "Bind the one collection identity to its evidenced official source. Corpus-document and legal-reference linking remain separate build outputs and review gates.",
+    "local_iri_policy": "https://chris-page-gov.github.io/okf-dwp/id/",
+    "external_link_policy": "Use only explicit official links. Preserve unresolved references; do not manufacture legislation provision URLs from ambiguous abbreviations.",
+    "mapping_policy": "Use provenance/part/reference predicates; no identity or SKOS mapping-strength claims.",
+    "eligible_entity_denominators": [
+      {
+        "id": "DEN-LINK-COLLECTION",
+        "entity_type": "TYPE-COLLECTION",
+        "eligibility_rule": "Select exactly the single nominated publication URL in input_snapshot.locations and assign collection-pension-credit-dmg; no document, paragraph or law entity is included in this collection-only ledger.",
+        "eligible_count": 1,
+        "candidate_ids": [
+          "collection-pension-credit-dmg"
+        ],
+        "candidate_list_sha256": "bd657f1197749dcb0c6d19ffa8c4fcdef97d05be0e8ff7a7cb7d46ea962a6f2d",
+        "source_snapshot_id": "dmg-pension-credit-2026-09-15",
+        "evidence_refs": [
+          "EV-COLLECTION"
+        ],
+        "minimum_coverage_percent": 100,
+        "exclusions": []
+      }
+    ],
+    "link_sets": [
+      {
+        "id": "LINKSET-COLLECTION",
+        "label": "Collection to official publication page",
+        "predicate_iri": "http://purl.org/dc/terms/source",
+        "target_namespace": "https://www.gov.uk/government/publications/",
+        "mapping_relation": "domain-relationship",
+        "authority": "User-nominated DWP publication page retrieved and title-checked.",
+        "evidence_rule": "Exact requested URL, terminal HTTP status, observation timestamp and SHA-256 in EV-COLLECTION.",
+        "task_refs": [
+          "TASK-EVIDENCE"
+        ],
+        "denominator_ref": "DEN-LINK-COLLECTION",
+        "coverage_result_sha256": "cd7ab322aa645fd976a4b2ed4b3056a2512abd3ae3ef92694180a48578a52676",
+        "coverage_result": {
+          "eligible_count": 1,
+          "linked_count": 1,
+          "linked_candidate_ids": [
+            "collection-pension-credit-dmg"
+          ],
+          "linked_assertion_count": 1,
+          "link_assertions": [
+            {
+              "id": "assertion-collection-official-source",
+              "candidate_id": "collection-pension-credit-dmg",
+              "target_iri": "https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide",
+              "evidence_refs": [
+                "EV-COLLECTION"
+              ]
+            }
+          ],
+          "unresolved_count": 0,
+          "unresolved_candidate_ids": [],
+          "excluded_count": 0,
+          "exclusion_results": [],
+          "conflicting_count": 0,
+          "conflicting_candidate_ids": [],
+          "achieved_coverage_percent": 100,
+          "dereference": {
+            "attempted_count": 1,
+            "succeeded_count": 1,
+            "failed_count": 0,
+            "method": "One bounded public HTTP GET; no authentication, bypass or retry",
+            "results": [
+              {
+                "assertion_ref": "assertion-collection-official-source",
+                "outcome": "succeeded",
+                "terminal_kind": "http-status",
+                "http_status": 200,
+                "observed_status": "Public collection page returned HTTP 200.",
+                "evidence_refs": [
+                  "EV-COLLECTION"
+                ]
+              }
+            ]
+          },
+          "observed_at": "2026-09-15T14:21:08Z",
+          "freshness_policy": {
+            "maximum_age_days": 1,
+            "clock": "profile-prepared-at",
+            "stale_result_action": "fail-closed"
+          },
+          "freshness_status": "current",
+          "evidence_refs": [
+            "EV-COLLECTION"
+          ]
+        }
+      }
+    ],
+    "prohibited_shortcuts": [
+      "Do not interpret this one-entity ledger as corpus-wide semantic coverage.",
+      "Do not infer equivalence or operational legal rules from titles, shared labels or co-occurrence."
+    ]
+  },
+  "presentation_contract": {
+    "default_language": "en-GB",
+    "label_priority": [
+      "Reviewed source-native preferred label",
+      "Reviewed domain-profile preferred label",
+      "Deterministic editorial display label with explicit derivation",
+      "Visible missing-label defect; expose the identifier only through inspection"
+    ],
+    "graph_reachable_label_rule": "Every graph-reachable entity must have a concise human label, language and label authority available without full-record hydration.",
+    "identifier_fallback": "debug-only",
+    "compact_label_index": {
+      "schema": "okf-explorer-endpoint-label-index.v1",
+      "descriptor_entrypoint": "endpoint_labels",
+      "manifest_index": "endpoint_labels",
+      "path": "data/labels/index.json",
+      "snapshot_bound": true,
+      "integrity_bound": true,
+      "missing_label_display": "Missing label"
+    },
+    "relationship_display_rule": "Predicates must read naturally in context and semantic/compatibility projections must not create unexplained duplicate edges.",
+    "citizen_checks": [
+      "Show source titles, paragraph identifiers with readable labels and explicit document roles.",
+      "No opaque IRI alone as the default graph-node label.",
+      "Keep experimental status and original source links visible."
+    ]
+  },
+  "exploratory_publication": {
+    "enabled": true,
+    "descriptor_schema": "okf-exploratory-publication.v1",
+    "publication_state": "exploratory",
+    "publisher": {
+      "name": "Chris Page — independent OKF exemplar",
+      "url": "https://github.com/chris-page-gov/okf-dwp",
+      "authority_status": "independent-research"
+    },
+    "banner": {
+      "label": "Exploratory",
+      "message": "This is an incomplete research view, not an authoritative service or released data product. Content and links may change. Check the cited official source before making a decision.",
+      "feedback_url": "https://github.com/chris-page-gov/okf-dwp/issues/new",
+      "preserve_route": true
+    },
+    "indexing_policy": "noindex",
+    "snapshot_bound": true,
+    "plane_root_bound": true,
+    "invalid_contract_policy": "explicit-warning-and-noindex",
+    "snapshot_policy": "Every shared iteration receives an immutable snapshot identifier and retains the applicable plane roots.",
+    "limitations": [
+      "No expert sign-off, legal consolidation, completeness or production conformance claim.",
+      "PDF extraction and semantic links need review; historical amendments are retained as historical evidence."
+    ],
+    "permitted_claims": [
+      "A bounded public demonstration of source-linked discovery and inspectable YAML-LD."
+    ],
+    "prohibited_claims": [
+      "Official endorsement, personalised benefit advice, automatic entitlement decisions, complete pension law or independently assured OKF+ production conformance."
+    ],
+    "promotion_rule": "Owner review creates a fresh candidate; exploratory bytes are never silently relabelled as a release candidate."
+  },
+  "standards": [
+    {
+      "id": "STD-OKF",
+      "title": "Open Knowledge Format 0.2",
+      "version": "0.2 at commit 3fcbb9f828c2f23d109c855ee403c3a4c81f3a96",
+      "publication_status": "Repository specification",
+      "canonical_url": "https://raw.githubusercontent.com/GoogleCloudPlatform/knowledge-catalog/3fcbb9f828c2f23d109c855ee403c3a4c81f3a96/okf/SPEC.md",
+      "applicability": "normative",
+      "scope": "Portable Markdown bundle core",
+      "terms_adopted": [
+        "type",
+        "sources",
+        "status",
+        "generated",
+        "verified",
+        "stale_after"
+      ],
+      "supported_source_fields": [
+        "Retain DWP wording and native identifiers."
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "Validation remains planned unless a separate receipt explicitly records it."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "Declared bundle/control projections; conditional standards are deferred.",
+      "validation": "Inspect separate validation receipts; schema parsing is not full semantic or accessibility conformance.",
+      "licence": "Publisher licence applies to specification text; reference only.",
+      "retrieved_at": "2026-09-15T14:21:10Z",
+      "evidence_refs": [
+        "EV-OKF"
+      ]
+    },
+    {
+      "id": "STD-YAML",
+      "title": "YAML 1.2.2",
+      "version": "1.2.2, 1 October 2021",
+      "publication_status": "Language specification",
+      "canonical_url": "https://yaml.org/spec/1.2.2/",
+      "applicability": "normative",
+      "scope": "JSON-compatible YAML authoring subset",
+      "terms_adopted": [],
+      "supported_source_fields": [
+        "Retain DWP wording and native identifiers."
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "Validation remains planned unless a separate receipt explicitly records it."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "Declared bundle/control projections; conditional standards are deferred.",
+      "validation": "Inspect separate validation receipts; schema parsing is not full semantic or accessibility conformance.",
+      "licence": "Publisher licence applies to specification text; reference only.",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "evidence_refs": [
+        "EV-YAML"
+      ]
+    },
+    {
+      "id": "STD-YAMLLD",
+      "title": "YAML-LD 1.0 Working Draft 10 September 2026",
+      "version": "1.0 Working Draft, 10 September 2026",
+      "publication_status": "W3C Working Draft",
+      "canonical_url": "https://www.w3.org/TR/2026/WD-yaml-ld-10-20260910/",
+      "applicability": "projection",
+      "scope": "Human-readable semantic projection; full processor-suite conformance is not claimed",
+      "terms_adopted": [
+        "@context",
+        "@id",
+        "@type",
+        "@graph"
+      ],
+      "supported_source_fields": [
+        "Retain DWP wording and native identifiers."
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "Validation remains planned unless a separate receipt explicitly records it."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "Declared bundle/control projections; conditional standards are deferred.",
+      "validation": "Inspect separate validation receipts; schema parsing is not full semantic or accessibility conformance.",
+      "licence": "Publisher licence applies to specification text; reference only.",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "evidence_refs": [
+        "EV-YAMLLD"
+      ]
+    },
+    {
+      "id": "STD-JSONLD",
+      "title": "JSON-LD 1.1",
+      "version": "1.1, 16 July 2020",
+      "publication_status": "W3C Recommendation",
+      "canonical_url": "https://www.w3.org/TR/2020/REC-json-ld11-20200716/",
+      "applicability": "projection",
+      "scope": "Machine-readable equivalent of YAML-LD",
+      "terms_adopted": [
+        "@context",
+        "@id",
+        "@type",
+        "@graph"
+      ],
+      "supported_source_fields": [
+        "Retain DWP wording and native identifiers."
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "Validation remains planned unless a separate receipt explicitly records it."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "Declared bundle/control projections; conditional standards are deferred.",
+      "validation": "Inspect separate validation receipts; schema parsing is not full semantic or accessibility conformance.",
+      "licence": "Publisher licence applies to specification text; reference only.",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "evidence_refs": [
+        "EV-JSONLD"
+      ]
+    },
+    {
+      "id": "STD-PROV",
+      "title": "PROV-O",
+      "version": "PROV-O, 30 April 2013",
+      "publication_status": "W3C Recommendation",
+      "canonical_url": "https://www.w3.org/TR/2013/REC-prov-o-20130430/",
+      "applicability": "projection",
+      "scope": "Source, acquisition and derivation provenance",
+      "terms_adopted": [
+        "Entity",
+        "wasDerivedFrom",
+        "generatedAtTime"
+      ],
+      "supported_source_fields": [
+        "Retain DWP wording and native identifiers."
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "Validation remains planned unless a separate receipt explicitly records it."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "Declared bundle/control projections; conditional standards are deferred.",
+      "validation": "Inspect separate validation receipts; schema parsing is not full semantic or accessibility conformance.",
+      "licence": "Publisher licence applies to specification text; reference only.",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "evidence_refs": [
+        "EV-PROV"
+      ]
+    },
+    {
+      "id": "STD-SKOS",
+      "title": "SKOS reference",
+      "version": "18 August 2009",
+      "publication_status": "W3C Recommendation",
+      "canonical_url": "https://www.w3.org/TR/2009/REC-skos-reference-20090818/",
+      "applicability": "conditional",
+      "scope": "Use only if a reviewed concept scheme or qualified mapping is introduced",
+      "terms_adopted": [
+        "Concept",
+        "prefLabel",
+        "altLabel"
+      ],
+      "supported_source_fields": [
+        "Retain DWP wording and native identifiers."
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "Validation remains planned unless a separate receipt explicitly records it."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "Declared bundle/control projections; conditional standards are deferred.",
+      "validation": "Inspect separate validation receipts; schema parsing is not full semantic or accessibility conformance.",
+      "licence": "Publisher licence applies to specification text; reference only.",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "evidence_refs": [
+        "EV-SKOS"
+      ]
+    },
+    {
+      "id": "STD-DCTERMS",
+      "title": "DCMI Metadata Terms",
+      "version": "20 January 2020",
+      "publication_status": "DCMI Recommendation",
+      "canonical_url": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/",
+      "applicability": "projection",
+      "scope": "Labels and document provenance relationships",
+      "terms_adopted": [
+        "title",
+        "source",
+        "isPartOf",
+        "references",
+        "license"
+      ],
+      "supported_source_fields": [
+        "Retain DWP wording and native identifiers."
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "Validation remains planned unless a separate receipt explicitly records it.",
+        "Direct reference retrieval returned HTTP 403."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "Declared bundle/control projections; conditional standards are deferred.",
+      "validation": "Inspect separate validation receipts; schema parsing is not full semantic or accessibility conformance.",
+      "licence": "Publisher licence applies to specification text; reference only.",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "evidence_refs": [
+        "EV-DCTERMS"
+      ]
+    },
+    {
+      "id": "STD-JSONSCHEMA",
+      "title": "JSON Schema 2020-12",
+      "version": "2020-12",
+      "publication_status": "Specification draft",
+      "canonical_url": "https://json-schema.org/draft/2020-12/json-schema-core.html",
+      "applicability": "normative",
+      "scope": "Profile and control-document structure",
+      "terms_adopted": [],
+      "supported_source_fields": [
+        "Retain DWP wording and native identifiers."
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "Validation remains planned unless a separate receipt explicitly records it.",
+        "Direct reference retrieval returned HTTP 403."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "Declared bundle/control projections; conditional standards are deferred.",
+      "validation": "Inspect separate validation receipts; schema parsing is not full semantic or accessibility conformance.",
+      "licence": "Publisher licence applies to specification text; reference only.",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "evidence_refs": [
+        "EV-JSONSCHEMA"
+      ]
+    },
+    {
+      "id": "STD-RDF",
+      "title": "RDF 1.1 Concepts",
+      "version": "1.1, 25 February 2014",
+      "publication_status": "W3C Recommendation",
+      "canonical_url": "https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/",
+      "applicability": "reference-only",
+      "scope": "Distinguish linked-data meaning from closed-world validation",
+      "terms_adopted": [],
+      "supported_source_fields": [
+        "Retain DWP wording and native identifiers."
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "Validation remains planned unless a separate receipt explicitly records it."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "Declared bundle/control projections; conditional standards are deferred.",
+      "validation": "Inspect separate validation receipts; schema parsing is not full semantic or accessibility conformance.",
+      "licence": "Publisher licence applies to specification text; reference only.",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "evidence_refs": [
+        "EV-RDF"
+      ]
+    },
+    {
+      "id": "STD-RDFC",
+      "title": "RDF Dataset Canonicalization 1.0",
+      "version": "1.0, 21 May 2024",
+      "publication_status": "W3C Recommendation",
+      "canonical_url": "https://www.w3.org/TR/2024/REC-rdf-canon-20240521/",
+      "applicability": "conditional",
+      "scope": "Required only if publishing canonical RDF dataset digests; file SHA-256 is not RDF canonicalisation",
+      "terms_adopted": [],
+      "supported_source_fields": [
+        "Retain DWP wording and native identifiers."
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "Validation remains planned unless a separate receipt explicitly records it."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "Declared bundle/control projections; conditional standards are deferred.",
+      "validation": "Inspect separate validation receipts; schema parsing is not full semantic or accessibility conformance.",
+      "licence": "Publisher licence applies to specification text; reference only.",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "evidence_refs": [
+        "EV-RDFC"
+      ]
+    },
+    {
+      "id": "STD-SHACL",
+      "title": "SHACL",
+      "version": "20 July 2017",
+      "publication_status": "W3C Recommendation",
+      "canonical_url": "https://www.w3.org/TR/2017/REC-shacl-20170720/",
+      "applicability": "conditional",
+      "scope": "Required for a future closed-world RDF publication contract; no shapes or validation pass claimed",
+      "terms_adopted": [],
+      "supported_source_fields": [
+        "Retain DWP wording and native identifiers."
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "Validation remains planned unless a separate receipt explicitly records it."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "Declared bundle/control projections; conditional standards are deferred.",
+      "validation": "Inspect separate validation receipts; schema parsing is not full semantic or accessibility conformance.",
+      "licence": "Publisher licence applies to specification text; reference only.",
+      "retrieved_at": "2026-09-15T14:21:10Z",
+      "evidence_refs": [
+        "EV-SHACL"
+      ]
+    },
+    {
+      "id": "STD-WCAG",
+      "title": "WCAG 2.2",
+      "version": "2.2, 12 December 2024",
+      "publication_status": "W3C Recommendation",
+      "canonical_url": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+      "applicability": "reference-only",
+      "scope": "Guide accessibility review of the demonstrator; formal conformance audit deferred",
+      "terms_adopted": [],
+      "supported_source_fields": [
+        "Retain DWP wording and native identifiers."
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "Validation remains planned unless a separate receipt explicitly records it."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "Declared bundle/control projections; conditional standards are deferred.",
+      "validation": "Inspect separate validation receipts; schema parsing is not full semantic or accessibility conformance.",
+      "licence": "Publisher licence applies to specification text; reference only.",
+      "retrieved_at": "2026-09-15T14:21:10Z",
+      "evidence_refs": [
+        "EV-WCAG"
+      ]
+    },
+    {
+      "id": "LAW-SPCA",
+      "title": "State Pension Credit Act 2002",
+      "version": "2002 c.16; observed consolidated contents 15 September 2026",
+      "publication_status": "UK legislation; commencement and outstanding effects require provision-level review",
+      "canonical_url": "https://www.legislation.gov.uk/ukpga/2002/16/contents",
+      "applicability": "reference-only",
+      "scope": "Statutory framework for State Pension Credit; entitlement, components, income and capital.",
+      "terms_adopted": [],
+      "supported_source_fields": [
+        "Source-native legal citation strings"
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "No complete legislative version, commencement, territorial extent, case-law or outstanding-effects reconciliation."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "External-reference register; no executable legal rules.",
+      "validation": "Human domain/legal review of any future provision-level mapping.",
+      "licence": "Crown copyright / applicable official terms",
+      "retrieved_at": "2026-09-15T14:21:08Z",
+      "evidence_refs": [
+        "EV-SPCA"
+      ]
+    },
+    {
+      "id": "LAW-SPCR",
+      "title": "The State Pension Credit Regulations 2002",
+      "version": "S.I. 2002/1792; observed contents 15 September 2026",
+      "publication_status": "UK legislation; commencement and outstanding effects require provision-level review",
+      "canonical_url": "https://www.legislation.gov.uk/uksi/2002/1792/contents",
+      "applicability": "reference-only",
+      "scope": "Detailed rules and schedules; preserve regulation, schedule and amendment context.",
+      "terms_adopted": [],
+      "supported_source_fields": [
+        "Source-native legal citation strings"
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "No complete legislative version, commencement, territorial extent, case-law or outstanding-effects reconciliation."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "External-reference register; no executable legal rules.",
+      "validation": "Human domain/legal review of any future provision-level mapping.",
+      "licence": "Crown copyright / applicable official terms",
+      "retrieved_at": "2026-09-15T14:21:08Z",
+      "evidence_refs": [
+        "EV-SPCR"
+      ]
+    },
+    {
+      "id": "LAW-SSAA",
+      "title": "Social Security Administration Act 1992",
+      "version": "1992 c.5; observed contents 15 September 2026",
+      "publication_status": "UK legislation; commencement and outstanding effects require provision-level review",
+      "canonical_url": "https://www.legislation.gov.uk/ukpga/1992/5/contents",
+      "applicability": "reference-only",
+      "scope": "Administration, claims and related powers.",
+      "terms_adopted": [],
+      "supported_source_fields": [
+        "Source-native legal citation strings"
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "No complete legislative version, commencement, territorial extent, case-law or outstanding-effects reconciliation."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "External-reference register; no executable legal rules.",
+      "validation": "Human domain/legal review of any future provision-level mapping.",
+      "licence": "Crown copyright / applicable official terms",
+      "retrieved_at": "2026-09-15T14:21:08Z",
+      "evidence_refs": [
+        "EV-SSAA"
+      ]
+    },
+    {
+      "id": "LAW-SSA",
+      "title": "Social Security Act 1998",
+      "version": "1998 c.14; observed contents 15 September 2026",
+      "publication_status": "UK legislation; commencement and outstanding effects require provision-level review",
+      "canonical_url": "https://www.legislation.gov.uk/ukpga/1998/14/contents",
+      "applicability": "reference-only",
+      "scope": "Decision-making and appeal framework.",
+      "terms_adopted": [],
+      "supported_source_fields": [
+        "Source-native legal citation strings"
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "No complete legislative version, commencement, territorial extent, case-law or outstanding-effects reconciliation."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "External-reference register; no executable legal rules.",
+      "validation": "Human domain/legal review of any future provision-level mapping.",
+      "licence": "Crown copyright / applicable official terms",
+      "retrieved_at": "2026-09-15T14:21:08Z",
+      "evidence_refs": [
+        "EV-SSA"
+      ]
+    },
+    {
+      "id": "LAW-DAR",
+      "title": "Social Security and Child Support Decisions and Appeals Regulations 1999",
+      "version": "S.I. 1999/991; observed contents 15 September 2026",
+      "publication_status": "UK legislation; commencement and outstanding effects require provision-level review",
+      "canonical_url": "https://www.legislation.gov.uk/uksi/1999/991/contents",
+      "applicability": "reference-only",
+      "scope": "Decisions and appeals procedural reference.",
+      "terms_adopted": [],
+      "supported_source_fields": [
+        "Source-native legal citation strings"
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "No complete legislative version, commencement, territorial extent, case-law or outstanding-effects reconciliation."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "External-reference register; no executable legal rules.",
+      "validation": "Human domain/legal review of any future provision-level mapping.",
+      "licence": "Crown copyright / applicable official terms",
+      "retrieved_at": "2026-09-15T14:21:08Z",
+      "evidence_refs": [
+        "EV-DAR"
+      ]
+    },
+    {
+      "id": "LAW-PENSIONS2014",
+      "title": "Pensions Act 2014 section 28",
+      "version": "2014 c.19 section 28; observed 15 September 2026",
+      "publication_status": "UK legislation; commencement and outstanding effects require provision-level review",
+      "canonical_url": "https://www.legislation.gov.uk/ukpga/2014/19/section/28",
+      "applicability": "reference-only",
+      "scope": "Historical treatment of assessed income periods.",
+      "terms_adopted": [],
+      "supported_source_fields": [
+        "Source-native legal citation strings"
+      ],
+      "mappings": [],
+      "unmet_requirements": [
+        "No complete legislative version, commencement, territorial extent, case-law or outstanding-effects reconciliation."
+      ],
+      "semantic_conflicts": [],
+      "conformance_artifact": "External-reference register; no executable legal rules.",
+      "validation": "Human domain/legal review of any future provision-level mapping.",
+      "licence": "Crown copyright / applicable official terms",
+      "retrieved_at": "2026-09-15T14:21:08Z",
+      "evidence_refs": [
+        "EV-PENSIONS2014"
+      ]
+    }
+  ],
+  "rights_access_privacy": [
+    {
+      "id": "RIGHT-SOURCE",
+      "layer": "GOV.UK and DWP source metadata and public document content",
+      "operation": "Read, extract, transform, model-process and redistribute eligible source information",
+      "status": "conditional",
+      "basis": "GOV.UK publication terms and Open Government Licence v3.0, subject to document-specific notices and licence exemptions.",
+      "licence": "Open Government Licence v3.0",
+      "attribution": "Contains public sector information licensed under the Open Government Licence v3.0. Source: Department for Work and Pensions, Decision makers guide volumes 13 and 14; acquired 15 September 2026.",
+      "third_party_terms": "Any identified third-party content and excluded material require separate consideration.",
+      "access_constraint": "Public GET only; do not bypass access controls.",
+      "mitigation": "Preserve source attribution and licence links; do not reuse branding or imply DWP endorsement; record transformations.",
+      "owner": "Repository maintainer",
+      "evidence_refs": [
+        "EV-GOVUK-RIGHTS",
+        "EV-OGL",
+        "EV-COLLECTION"
+      ]
+    },
+    {
+      "id": "RIGHT-PERSONAL",
+      "layer": "Claimant personal data and private casework",
+      "operation": "Acquire, process or publish",
+      "status": "prohibited",
+      "basis": "Outside the explicit public-source demonstrator scope.",
+      "attribution": "Not applicable",
+      "owner": "Repository maintainer",
+      "evidence_refs": [
+        "EV-OWNER"
+      ]
+    },
+    {
+      "id": "RIGHT-EDITORIAL",
+      "layer": "Project-authored labels, documentation, code and model-assisted discovery",
+      "operation": "Publish a public independent exemplar",
+      "status": "permitted",
+      "basis": "User explicitly authorised public publication under chris-page-gov. The repository licence declares the project-authored material terms separately.",
+      "attribution": "Chris Page — independent experimental exemplar",
+      "owner": "Repository maintainer",
+      "evidence_refs": [
+        "EV-OWNER"
+      ]
+    }
+  ],
+  "architecture": {
+    "profile_level": "minimal-okf",
+    "bundle_shape": "small-markdown",
+    "canonical_authoring": "markdown-yaml-ld",
+    "generated_representations": [
+      "okf-small-bundle",
+      "okf-explorer-descriptor",
+      "yaml-ld",
+      "json-ld"
+    ],
+    "refresh_strategy": "Manual snapshot rebuild from the nominated page; keep prior receipts and create a new snapshot identity on source change.",
+    "namespace_strategy": "https://chris-page-gov.github.io/okf-dwp/id/",
+    "scale_assumptions": "36 source PDFs; paragraph/passage count is a separate derived denominator. Start with source-linked chapter navigation and bounded passage retrieval. Richer OKF+ features are experimental additions; governed-semantic release conditions are not all met."
+  },
+  "enrichment": {
+    "enabled": true,
+    "purpose": "Model-assisted discovery and editorial navigation labels for the demonstration, visibly candidate until independent review.",
+    "permitted_derivations": [
+      "source-native",
+      "normalized",
+      "model-assisted"
+    ],
+    "evidence_requirement": "Every generated summary or relationship cites the admitted source and locator, identifies derivation and retains review state.",
+    "independent_review": "Separate pensions representative/domain review is outstanding.",
+    "authority_boundary": "No generated assertion acquires DWP or legal authority.",
+    "budget": "The user authorised parallel Codex agents for this task; no external paid API or claimant-data workflow is implied."
+  },
+  "validation": [
+    {
+      "id": "VAL-PROFILE",
+      "target": "Discovery profile structure",
+      "method": "Validate JSON Schema 2020-12 and YAML/JSON equality.",
+      "validator": "jsonschema against the vendored pinned Explorer schema",
+      "severity": "error",
+      "release_gate": true,
+      "receipt": "domain-profile/validation.json"
+    },
+    {
+      "id": "VAL-001",
+      "target": "Source evidence and deterministic bundle",
+      "method": "Check source inventory hashes, extraction provenance, record references and reproducible generated bytes.",
+      "validator": "Repository build/check commands recorded by the root agent",
+      "severity": "error",
+      "release_gate": true,
+      "receipt": "validation/build.json"
+    },
+    {
+      "id": "VAL-CONSUMER-001",
+      "target": "Actual Explorer loading",
+      "method": "Run the pinned real Explorer against generated bytes and inspect overview, record and source navigation.",
+      "validator": "Actual Explorer; see consumer-lock.json",
+      "severity": "error",
+      "release_gate": true,
+      "receipt": "validation/explorer.json"
+    },
+    {
+      "id": "VAL-DEPLOY-001",
+      "target": "Public entrypoints",
+      "method": "Open exact published links and verify bundle identity and source navigation before claiming readiness.",
+      "validator": "Real browser and bounded public HTTP checks",
+      "severity": "error",
+      "release_gate": true,
+      "receipt": "validation/public-links.json"
+    }
+  ],
+  "evaluation": {
+    "competency_questions": [
+      {
+        "id": "CQ-001",
+        "question": "Where should I look for guidance on earnings and income other than earnings?",
+        "task_refs": [
+          "TASK-FIND"
+        ],
+        "expected_evidence": "Chapter 86 and chapter 85 source labels and source PDFs.",
+        "near_miss_rule": "A shared word match without distinguishing the two chapters fails.",
+        "verification_status": "candidate"
+      },
+      {
+        "id": "CQ-002",
+        "question": "Which PDF and page supports this paragraph?",
+        "task_refs": [
+          "TASK-EVIDENCE"
+        ],
+        "expected_evidence": "Document title, source URL, SHA-256, paragraph/page locator.",
+        "near_miss_rule": "A generated summary without a source locator fails.",
+        "verification_status": "candidate"
+      },
+      {
+        "id": "CQ-003",
+        "question": "Is this amendment a current rule or a historical document?",
+        "task_refs": [
+          "TASK-TIME"
+        ],
+        "expected_evidence": "Source role, labelled amendment date and original PDF.",
+        "near_miss_rule": "Do not infer current legal effect from attachment availability.",
+        "verification_status": "candidate"
+      },
+      {
+        "id": "CQ-004",
+        "question": "Can this bundle tell me whether a particular person qualifies today?",
+        "task_refs": [
+          "TASK-AI"
+        ],
+        "expected_evidence": "The non-goal and scope boundaries; signpost official guidance.",
+        "near_miss_rule": "It must abstain from a personalised decision.",
+        "verification_status": "candidate"
+      },
+      {
+        "id": "CQ-005",
+        "question": "Does the source page cover every relevant law and DMG memo?",
+        "task_refs": [
+          "TASK-AI"
+        ],
+        "expected_evidence": "Named collection denominator and declared omissions.",
+        "near_miss_rule": "A completeness claim beyond the linked-PDF census fails.",
+        "verification_status": "candidate"
+      }
+    ],
+    "hard_failures": [
+      "Uncited source claims",
+      "Personalised entitlement determinations",
+      "Historical text presented as a current legal rule",
+      "Official endorsement or unrun validation claimed"
+    ],
+    "strata": [
+      "Chapter discovery",
+      "Paragraph/source inspection",
+      "Historical amendments",
+      "Missing or external reference",
+      "Deliberately unanswerable eligibility request"
+    ],
+    "citation_policy": "Cite the admitted PDF and precise available locator; distinguish source wording from editorial explanation.",
+    "independent_verification": "Questions and expected evidence are model-assisted candidates; independent pensions review is outstanding.",
+    "baselines": [
+      "Manual inspection of the DWP landing page and its PDFs."
+    ],
+    "metrics": [
+      "Correct chapter retrieval",
+      "Resolvable evidence citation rate",
+      "Explicit abstention on out-of-scope requests"
+    ],
+    "thresholds": [
+      "Zero hard failures in the demonstrated journeys."
+    ],
+    "challenge_policy": "The meeting is a bounded exploratory review; two independent held-out release passes remain deferred."
+  },
+  "constraints": [
+    {
+      "id": "CON-LAW",
+      "kind": "other",
+      "effect": "A guidance snapshot cannot establish current entitlement or complete applicable law.",
+      "mitigation": "Exclude decision automation; preserve historical/effective-date distinctions and source links.",
+      "owner": "Repository maintainer",
+      "disposition": "recorded",
+      "evidence_refs": [
+        "EV-COLLECTION",
+        "EV-SPCA"
+      ]
+    },
+    {
+      "id": "CON-PDF",
+      "kind": "technical",
+      "effect": "PDF extraction can alter reading order, tables and footnote context.",
+      "mitigation": "Keep original source links and locators; sample source layout; mark extraction limitations.",
+      "owner": "Repository maintainer",
+      "disposition": "recorded",
+      "evidence_refs": [
+        "EV-COLLECTION"
+      ]
+    },
+    {
+      "id": "CON-ACCESS",
+      "kind": "access",
+      "effect": "The DCMI and JSON Schema primary reference GETs returned HTTP 403.",
+      "mitigation": "Retain failure receipts and use the pinned local schema for structural validation; do not claim reference-body verification.",
+      "owner": "Repository maintainer",
+      "disposition": "recorded",
+      "evidence_refs": [
+        "EV-DCTERMS",
+        "EV-JSONSCHEMA"
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "id": "GAP-LEGAL",
+      "description": "Provision-level legal citations, commencement, outstanding effects and external DMG memos are not reconciled.",
+      "impact": "No legal completeness or current entitlement claim.",
+      "blocking": false,
+      "owner": "Repository maintainer / pensions domain reviewer",
+      "next_action": "Review explicit references and add law snapshots under a separate approved scope."
+    },
+    {
+      "id": "GAP-REVIEW",
+      "description": "No independent pensions expert review or held-out answer evaluation has occurred.",
+      "impact": "Editorial meaning and candidate answers remain provisional.",
+      "blocking": false,
+      "owner": "Repository maintainer / pensions domain reviewer",
+      "next_action": "Use the meeting to review a small sourced question set."
+    },
+    {
+      "id": "GAP-ASSURANCE",
+      "description": "Full Foundry tiny-fixture, bidirectional compatibility, per-plane roots, SHACL and independent conformance are incomplete.",
+      "impact": "This is an experimental scaffold and bounded demonstration.",
+      "blocking": false,
+      "owner": "Repository maintainer / pensions domain reviewer",
+      "next_action": "Run the applicable gates before promoting a production candidate."
+    },
+    {
+      "id": "GAP-TIME",
+      "description": "The advisers guide contains subsection-level temporal labels that need expert checking, including rates labelled April 2024 within a guide headed April 2026.",
+      "impact": "A title or update date must not govern every figure in a document.",
+      "blocking": false,
+      "owner": "Repository maintainer / pensions domain reviewer",
+      "next_action": "Record source-native dates; verify per provision before extracting executable rules."
+    },
+    {
+      "id": "GAP-STANDARDS",
+      "description": "Two primary standards-reference retrievals returned HTTP 403.",
+      "impact": "Their bodies have not been verified through that route.",
+      "blocking": false,
+      "owner": "Repository maintainer / pensions domain reviewer",
+      "next_action": "Retain the evidence gap; separately review canonical references when accessible."
+    }
+  ],
+  "decisions": [
+    {
+      "id": "DEC-EXPERIMENT",
+      "question": "What can be published for the meeting?",
+      "recommended_default": "A public, snapshot-bound independent exemplar with visible evidence and limitations.",
+      "alternatives": [
+        "Wait for full expert-reviewed production assurance."
+      ],
+      "consequences": [
+        "Demonstrates feasible discovery and retrieval; does not approve legal interpretations or unrun release gates."
+      ],
+      "status": "accepted",
+      "owner": "User",
+      "blocking_for_build": false,
+      "due_point": "Explicitly authorised in the task on 15 September 2026.",
+      "evidence_refs": [
+        "EV-OWNER"
+      ]
+    },
+    {
+      "id": "DEC-SEMANTICS",
+      "question": "How much ontology should this first exemplar introduce?",
+      "recommended_default": "Small document/passage/topic vocabulary with DCMI and PROV relationships; preserve native legal citations.",
+      "alternatives": [
+        "Full legal-rule model after independent domain review."
+      ],
+      "consequences": [
+        "Avoids ungrounded identity and legal entailment; richer mappings remain review work."
+      ],
+      "status": "accepted",
+      "owner": "Profile author within the authorised prototype scope",
+      "blocking_for_build": false,
+      "due_point": "This exploratory snapshot.",
+      "evidence_refs": [
+        "EV-COLLECTION",
+        "EV-PROV"
+      ]
+    }
+  ],
+  "traceability": [
+    {
+      "id": "TRACE-DISCOVERY",
+      "intent_or_requirement": "Find and inspect evidence in a bounded public Pension Credit staff-guide collection.",
+      "task_refs": [
+        "TASK-FIND",
+        "TASK-EVIDENCE",
+        "TASK-TIME",
+        "TASK-AI"
+      ],
+      "planned_artifacts": [
+        "source/",
+        "bundle/",
+        "okf-explorer.json",
+        "domain-profile/consumer-lock.json",
+        "docs/discovery.md"
+      ],
+      "validation_refs": [
+        "VAL-PROFILE",
+        "VAL-001",
+        "VAL-CONSUMER-001",
+        "VAL-DEPLOY-001"
+      ],
+      "evidence_refs": [
+        "EV-OWNER",
+        "EV-COLLECTION"
+      ],
+      "status": "in-progress"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EV-RDF",
+      "title": "RDF 1.1 Concepts",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.w3.org",
+      "location": "https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-RDF.json",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "observed_at": "2026-09-15T14:21:09Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "3838c992097f72ee8784b6c96194d9879f86f2e08f53ced5a05aa4031750c5ac",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-RDF"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-DCTERMS",
+      "title": "DCMI Metadata Terms",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.dublincore.org",
+      "location": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-DCTERMS.json",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "observed_at": "2026-09-15T14:21:09Z",
+      "access_state": "unavailable",
+      "verification": "failed",
+      "sha256": "unknown",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-DCTERMS"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-SSA",
+      "title": "Social Security Act 1998",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.legislation.gov.uk",
+      "location": "https://www.legislation.gov.uk/ukpga/1998/14/contents",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-SSA.json",
+      "retrieved_at": "2026-09-15T14:21:08Z",
+      "observed_at": "2026-09-15T14:21:08Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "d779046be9654823eefd306eced16e92cca871a1a2433c155d1774a712a13355",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-SSA"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-SSAA",
+      "title": "Social Security Administration Act 1992",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.legislation.gov.uk",
+      "location": "https://www.legislation.gov.uk/ukpga/1992/5/contents",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-SSAA.json",
+      "retrieved_at": "2026-09-15T14:21:08Z",
+      "observed_at": "2026-09-15T14:21:08Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "f0c9a112c6f3bca02db2921d0c19379e9eec5403452ed59d16996f10f792bc38",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-SSAA"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-PENSIONS2014",
+      "title": "Pensions Act 2014 section 28",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.legislation.gov.uk",
+      "location": "https://www.legislation.gov.uk/ukpga/2014/19/section/28",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-PENSIONS2014.json",
+      "retrieved_at": "2026-09-15T14:21:08Z",
+      "observed_at": "2026-09-15T14:21:08Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "bf64803c4af091557d77dd4ac525356ff9d173377ccafb193c7a66b99af65a26",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-PENSIONS2014"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-RDFC",
+      "title": "RDF Dataset Canonicalization 1.0",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.w3.org",
+      "location": "https://www.w3.org/TR/2024/REC-rdf-canon-20240521/",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-RDFC.json",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "observed_at": "2026-09-15T14:21:09Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "330eb4f00c5f12300e23cb7a7b979bdfc910890a41bfb87a93327d7b43161fd0",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-RDFC"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-JSONSCHEMA",
+      "title": "JSON Schema 2020-12",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "json-schema.org",
+      "location": "https://json-schema.org/draft/2020-12/json-schema-core.html",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-JSONSCHEMA.json",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "observed_at": "2026-09-15T14:21:09Z",
+      "access_state": "unavailable",
+      "verification": "failed",
+      "sha256": "unknown",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-JSONSCHEMA"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-ADVISERS",
+      "title": "Pension Credit advisers guide April 2026",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.gov.uk",
+      "location": "https://www.gov.uk/government/publications/pension-credit-technical-guidance/a-detailed-guide-to-pension-credit-for-advisers-and-others",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-ADVISERS.json",
+      "retrieved_at": "2026-09-15T14:21:08Z",
+      "observed_at": "2026-09-15T14:21:08Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "88126d26f638f3172f2c773f5c1e08a8b6cd9ee3b512d54a8bf9b06d74f10243",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-ADVISERS"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-SHACL",
+      "title": "SHACL",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.w3.org",
+      "location": "https://www.w3.org/TR/2017/REC-shacl-20170720/",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-SHACL.json",
+      "retrieved_at": "2026-09-15T14:21:10Z",
+      "observed_at": "2026-09-15T14:21:10Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "ccca77caed771f42ea649c03d190b9c7ea0b82286c22c457b9edc8087c9ad0f8",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-SHACL"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-OKF",
+      "title": "Open Knowledge Format 0.2",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "raw.githubusercontent.com",
+      "location": "https://raw.githubusercontent.com/GoogleCloudPlatform/knowledge-catalog/3fcbb9f828c2f23d109c855ee403c3a4c81f3a96/okf/SPEC.md",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-OKF.json",
+      "retrieved_at": "2026-09-15T14:21:10Z",
+      "observed_at": "2026-09-15T14:21:10Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "5a3311d270bebb16d558010e75064f5b75323f284992641732b1c8097511f948",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-OKF"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-GOVUK-RIGHTS",
+      "title": "GOV.UK terms and conditions",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.gov.uk",
+      "location": "https://www.gov.uk/help/terms-conditions",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-GOVUK-RIGHTS.json",
+      "retrieved_at": "2026-09-15T14:21:08Z",
+      "observed_at": "2026-09-15T14:21:08Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "e579b005356371d477f9dfdb0fcbe866a831732d08930736216ce55b91b6af75",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-GOVUK-RIGHTS"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-DAR",
+      "title": "Social Security and Child Support Decisions and Appeals Regulations 1999",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.legislation.gov.uk",
+      "location": "https://www.legislation.gov.uk/uksi/1999/991/contents",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-DAR.json",
+      "retrieved_at": "2026-09-15T14:21:08Z",
+      "observed_at": "2026-09-15T14:21:08Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "515fb4ca7f10541b8ded36e4f0fda9df3a7c220f9dd5eb776c0610edcfad37b0",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-DAR"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-SKOS",
+      "title": "SKOS reference",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.w3.org",
+      "location": "https://www.w3.org/TR/2009/REC-skos-reference-20090818/",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-SKOS.json",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "observed_at": "2026-09-15T14:21:09Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "3aa00cd16ee4d86d3a19b75501bb317d0b0c134e1f4029e9f3098c4dd3669e4c",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-SKOS"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-YAMLLD",
+      "title": "YAML-LD 1.0 Working Draft 10 September 2026",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.w3.org",
+      "location": "https://www.w3.org/TR/2026/WD-yaml-ld-10-20260910/",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-YAMLLD.json",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "observed_at": "2026-09-15T14:21:09Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "23b994895fae4986ee0ea69df10a64be1b5e480730d7c5545ff3ce85c85dbfcc",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-YAMLLD"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-COLLECTION",
+      "title": "Decision makers guide volumes 13 and 14",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.gov.uk",
+      "location": "https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-COLLECTION.json",
+      "retrieved_at": "2026-09-15T14:21:08Z",
+      "observed_at": "2026-09-15T14:21:08Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "cb03e4d4202ecf7b37de6178dda3d42b1b5b241b30a09dc1dbda048be1c67261",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-COLLECTION"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-JSONLD",
+      "title": "JSON-LD 1.1",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.w3.org",
+      "location": "https://www.w3.org/TR/2020/REC-json-ld11-20200716/",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-JSONLD.json",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "observed_at": "2026-09-15T14:21:09Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "9e2c9972d0f60bc744e975731643a9a63d410afc6b682eb8898ad2720e452866",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-JSONLD"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-SPCA",
+      "title": "State Pension Credit Act 2002",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.legislation.gov.uk",
+      "location": "https://www.legislation.gov.uk/ukpga/2002/16/contents",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-SPCA.json",
+      "retrieved_at": "2026-09-15T14:21:08Z",
+      "observed_at": "2026-09-15T14:21:08Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "fe15e5dc02cb5ace25245c0a7ed4b2b0dd8e2a997381e381ebbe8306e00f35ce",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-SPCA"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-YAML",
+      "title": "YAML 1.2.2",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "yaml.org",
+      "location": "https://yaml.org/spec/1.2.2/",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-YAML.json",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "observed_at": "2026-09-15T14:21:09Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "2fe1bf40792df22ef8b8a5972a34c48e639969222e0bbae605aa9bb2ca85e9ab",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-YAML"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-SPCR",
+      "title": "The State Pension Credit Regulations 2002",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.legislation.gov.uk",
+      "location": "https://www.legislation.gov.uk/uksi/2002/1792/contents",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-SPCR.json",
+      "retrieved_at": "2026-09-15T14:21:08Z",
+      "observed_at": "2026-09-15T14:21:08Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "ed894a7c0b853ae3663e2079fcd079145f46aca94e7eb38a2ff50cc45965535f",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-SPCR"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-PROV",
+      "title": "PROV-O",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.w3.org",
+      "location": "https://www.w3.org/TR/2013/REC-prov-o-20130430/",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-PROV.json",
+      "retrieved_at": "2026-09-15T14:21:09Z",
+      "observed_at": "2026-09-15T14:21:09Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "6b96671ab84faf12ce3f041aca12c3f93a6df2ed242348810743179a68e69555",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-PROV"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-WCAG",
+      "title": "WCAG 2.2",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.w3.org",
+      "location": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-WCAG.json",
+      "retrieved_at": "2026-09-15T14:21:10Z",
+      "observed_at": "2026-09-15T14:21:10Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "6e3c5fe397257cae509a2fb4752b73062cf8cbeb92c2cec618989b17e4cf7057",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-WCAG"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-OGL",
+      "title": "Open Government Licence v3.0",
+      "evidence_type": "Official reference observation receipt",
+      "authority": "www.nationalarchives.gov.uk",
+      "location": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "locator": "Named document or contents page; HTTP receipt at domain-profile/evidence/EV-OGL.json",
+      "retrieved_at": "2026-09-15T14:21:08Z",
+      "observed_at": "2026-09-15T14:21:08Z",
+      "access_state": "verified-working",
+      "verification": "locator-checked",
+      "sha256": "f5b2b9f2af63647cde889fa6c3508f5705925295b74912c68caa28dd37e64aa5",
+      "supports": [
+        "Source identity, observed publication status and the applicability decision associated with EV-OGL"
+      ],
+      "contradicts": []
+    },
+    {
+      "id": "EV-OWNER",
+      "title": "User-authorised Pension Credit public exemplar",
+      "authority": "User task instruction, 15 September 2026",
+      "location": "docs/discovery.md#mandate-and-boundary",
+      "retrieved_at": "2026-09-15T14:27:08Z",
+      "verification": "support-checked",
+      "sha256": "421abe4ab3ed82adf410eef15ac17eff9c529bc456c1e7ae7a1962cd6fb8957d",
+      "supports": [
+        "Public chris-page-gov repository publication, linked-document parallelism, 4pm demonstration, independent status caveats."
+      ]
+    },
+    {
+      "id": "EV-WARMUP",
+      "title": "okf-domain-warm-up.md",
+      "authority": "Pinned local OKF Explorer repository",
+      "location": "https://github.com/chris-page-gov/okf-explorer/blob/167d54dd924ce496f173105a8b390744b3b2a311/docs/prompts/okf-domain-warm-up.md",
+      "retrieved_at": "2026-09-15T14:27:08Z",
+      "verification": "locator-checked",
+      "sha256": "d22557d0aedc1e8ead7ffa6d3faa133887f7cf791ae972a9914ce1cff9bcbcae",
+      "supports": [
+        "Discovery-before-build methodology and declared prototype exceptions."
+      ]
+    },
+    {
+      "id": "EV-BUILD-PROMPT",
+      "title": "okf-bundle-build.md",
+      "authority": "Pinned local OKF Explorer repository",
+      "location": "https://github.com/chris-page-gov/okf-explorer/blob/167d54dd924ce496f173105a8b390744b3b2a311/docs/prompts/okf-bundle-build.md",
+      "retrieved_at": "2026-09-15T14:27:08Z",
+      "verification": "locator-checked",
+      "sha256": "203c88f8403a08f30d6fac35aa36cb9419a436b7966952805fbed167a0256e08",
+      "supports": [
+        "Discovery-before-build methodology and declared prototype exceptions."
+      ]
+    },
+    {
+      "id": "EV-INVENTORY",
+      "title": "Complete attachment acquisition inventory",
+      "evidence_type": "Local source acquisition manifest",
+      "authority": "Deterministic source acquisition, not independent domain assurance",
+      "location": "source/inventory.json",
+      "locator": "documents and summary",
+      "retrieved_at": "2026-09-15T14:21:03Z",
+      "observed_at": "2026-09-15T14:21:01Z",
+      "access_state": "verified-working",
+      "verification": "support-checked",
+      "sha256": "bf225f86a43959d45e59204d3de34dccba6590970626eb659038febca47889df",
+      "supports": [
+        "36 acquired PDFs, exact byte/page/text counts and per-document provenance."
+      ],
+      "contradicts": []
+    }
+  ],
+  "build_recommendation": {
+    "required_features": [
+      "Document census with hashes and source roles.",
+      "Source-linked human chapter/passage pages.",
+      "Inspectable YAML-LD and equivalent JSON-LD.",
+      "Readable labels, historical markers, source provenance and explicit abstention boundaries.",
+      "Actual Explorer load before claiming it works there."
+    ],
+    "deferred_features": [
+      "Rule extraction and personalised benefit decisions.",
+      "Complete legislative and case-law graph.",
+      "Full governed-semantic release assurance, RDF canonical digests and SHACL."
+    ],
+    "blocking_decision_ids": [],
+    "canonical_fixture": "Use a chapter, a historical amendment and a spare chapter to exercise distinct source roles; include a missing citation and unanswerable eligibility question. A future production release needs the complete Foundry two-stage fixture.",
+    "acceptance_gates": [
+      "Profile schema and YAML/JSON equality validate.",
+      "Input collection and acquired source counts reconcile.",
+      "Generated passage counts remain distinct from source-document counts.",
+      "Bundle/source links and actual Explorer journeys have recorded results.",
+      "Publication preserves the independent, experimental and snapshot-bound caveats."
+    ]
+  }
+}
