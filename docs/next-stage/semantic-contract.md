@@ -28,3 +28,7 @@ No age, rate, duration or current-law assumption is promoted from a captured exa
 ## Coverage and extension
 
 The generated [map](../../bundle/semantic-map.md) shows all 26 authored concepts and 15 proposals. It is deliberately incomplete. Future additions require a competency question, benefit and temporal scope, exact source evidence, consistent predicate meaning, counterexamples and a review record. Context-only CPAG contents links cannot support a substantive policy relationship.
+
+## Temporal metadata
+
+Source publication is recorded on the referenced work (`schema:about.schema:datePublished`), with an explicit `xsd:gYearMonth` value when only the month is evidenced. CPAG's `captured_at` records the original public catalogue acquisition review, mapped to the local `dwp:sourceCapturedAt` property. `observedAt` records the latest metadata review and `generated.at` remains the project reference creation time. None is substituted for legal effect, commencement or applicability. A Timeline must label the date role and retain its actual precision.

@@ -112,6 +112,9 @@
             '@type': '@id'
           assertion: okf:assertionRights
 - dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+- captured_at:
+    '@id': https://chris-page-gov.github.io/okf-dwp/ns#sourceCapturedAt
+    '@type': xsd:dateTime
 '@id': https://chris-page-gov.github.io/okf-dwp/id/bundle/pension-credit
 '@type': okf:Bundle
 title: 'Pension Credit guidance: independent OKF exploration'
@@ -46399,13 +46402,21 @@ dcterms:rights: 'Mixed rights: DWP source extracts retain OGL attribution; origi
   generated:
     by: process:codex-research-authoring
     at: '2026-09-15T16:14:01Z'
-  observedAt: '2026-09-15T16:14:01Z'
+  observedAt: '2026-09-15T17:15:00Z'
   publisher: https://github.com/chris-page-gov
   resource: https://askcpag.org.uk/publications/-268900/welfare-benefits-handbook-2026-27
   source: https://cpag.org.uk/welfare-rights/online-handbooks
   license: https://github.com/chris-page-gov/okf-dwp/blob/main/LICENSE
   schema:about:
     '@id': https://askcpag.org.uk/publications/-268900/welfare-benefits-handbook-2026-27
+    '@type': schema:Book
+    schema:name: Welfare Benefits Handbook, 2026/27
+    schema:bookEdition: 28th edition (2026/27)
+    schema:datePublished:
+      '@value': 2026-04
+      '@type': xsd:gYearMonth
+    schema:publisher:
+      '@id': https://cpag.org.uk/
   dcterms:accessRights: Handbook access requires a subscription. This project has not acquired
     subscriber text or examined a user-held licence.
   dcterms:rights: MIT applies only to this original reference record. CPAG content retains its own
@@ -46414,6 +46425,7 @@ dcterms:rights: 'Mixed rights: DWP source extracts retain OGL attribution; origi
   okf:reviewReceiptSha256: 91d1e652a1a14c34db4caaca28bddf24228c53a8c13762265cc355cfd46ff53a
   evidence:
   - https://github.com/chris-page-gov/okf-dwp/blob/main/docs/evidence/cpag-access-review.json
+  - https://github.com/chris-page-gov/okf-dwp/blob/main/docs/evidence/cpag-publication-date-review.json
   tags:
   - CPAG
   - Child Poverty Action Group
@@ -46434,18 +46446,26 @@ dcterms:rights: 'Mixed rights: DWP source extracts retain OGL attribution; origi
   body: "# CPAG Welfare Benefits Handbook\n\n**External reference — metadata and links only. Handbook
     text is not included.**\n\nPublisher: Child Poverty Action Group (CPAG). CPAG's [online handbook catalogue](https://cpag.org.uk/welfare-rights/online-handbooks)
     lists the Welfare Benefits Handbook for subscribers. [Open the handbook on AskCPAG](https://askcpag.org.uk/publications/-268900/welfare-benefits-handbook-2026-27).\n\
-    \nThe linked URL was observed on 15 September 2026. Its edition and subscriber contents have not been
-    independently checked. CPAG's public [housing-costs topic index](https://cpag.org.uk/welfare-rights/key-topics/housing-costs)
-    links a Pension Credit chapter, making this a relevant adviser reference.\n\n## Access and reuse\n\
-    \nCPAG's [terms and conditions](https://cpag.org.uk/terms-and-conditions), subscription clause 9.3,
-    require prior written consent to incorporate subscription content into AI tools or automated processes.
-    Website clauses 6.2, 11.2 and 12 address reproduction, permission requests and automated reuse. See
-    the [access review](https://github.com/chris-page-gov/okf-dwp/blob/main/docs/cpag-handbook.md).\n\n\
-    This record provides a route for an authorised reader to consult CPAG. No handbook passages, legal
+    \nThe publisher describes the 2026/27 edition as released in **April 2026**; CPAG announced online
+    availability on **6 April 2026**. These are source-publication metadata, not the project capture date
+    or a legal effective date. The linked URL was first observed by this project on **15 September 2026**.
+    Month precision is retained for publication; a day is not inferred. Subscriber contents have not been
+    acquired. [Publisher release statement](https://cpag.org.uk/shop/subscription/print-subscription);
+    [online availability announcement](https://cpag.org.uk/welfare-rights/whats-new). CPAG's public [housing-costs
+    topic index](https://cpag.org.uk/welfare-rights/key-topics/housing-costs) links a Pension Credit chapter,
+    making this a relevant adviser reference.\n\n## Access and reuse\n\nCPAG's [terms and conditions](https://cpag.org.uk/terms-and-conditions),
+    subscription clause 9.3, require prior written consent to incorporate subscription content into AI
+    tools or automated processes. Website clauses 6.2, 11.2 and 12 address reproduction, permission requests
+    and automated reuse. See the [access review](https://github.com/chris-page-gov/okf-dwp/blob/main/docs/cpag-handbook.md).\n\
+    \nThis record provides a route for an authorised reader to consult CPAG. No handbook passages, legal
     propositions, rules or calculations have been extracted. Its topic relationship is project-authored
     navigation and does not establish agreement between CPAG and DWP. Original catalogue commentary here
     is MIT-licensed; CPAG's book is not covered by this project's MIT licence or the GOV.UK Open Government
     Licence.\n\n\n[Research reference: State Pension Credit](https://github.com/chris-page-gov/okf-dwp/blob/main/bundle/records/term/pension-credit.md)."
+  modified: '2026-09-15T17:15:00Z'
+  okf:publicationMetadataReceiptSha256:
+    286a995a219b87ce8598f4e1f62dac9ccae89f2cc1a2b85fb9d6e4dc736c9160
+  captured_at: '2026-09-15T16:13:11Z'
   id: resource/cpag-welfare-benefits-handbook
   dcterms:references:
   - '@id': https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit
@@ -64397,20 +64417,20 @@ dcterms:rights: 'Mixed rights: DWP source extracts retain OGL attribution; origi
     label: Authored research navigation
     source: https://github.com/chris-page-gov/okf-dwp
   derivation: https://chris-page-gov.github.io/okf-dwp/rules/authored-reference-v1
-  observed_at: '2026-09-15T16:14:01Z'
+  observed_at: '2026-09-15T17:15:00Z'
   evidence:
   - '@id':
       https://chris-page-gov.github.io/okf-dwp/id/evidence/ef0abe67051a2d04f976be3d8e90e6828439c8c51833f0810edc0a4b3e5570a3
     type: authored-navigation
     url: https://github.com/chris-page-gov/okf-dwp/blob/main/knowledge/external-resources.yamlld
     source_artifact: knowledge/external-resources.yamlld
-    source_sha256: d3500d166781194190a63b3e742620d2b219e732d15a3596e24f7a17c5480e0a
+    source_sha256: cadc90777889cd90b6c28d2c93964615c1709753984f203659832dc38c3871c4
     source_field: resource/cpag-welfare-benefits-handbook.references
     source_value: term/pension-credit
     source_value_sha256: 5ac117fea82cffcef632073600a19c4264730c1086a1a327db049204fb1b7f2b
     source_value_hash_canonicalization: utf8-verbatim
     locator: resource/cpag-welfare-benefits-handbook
-    retrieved_at: '2026-09-15T16:14:01Z'
+    retrieved_at: '2026-09-15T17:15:00Z'
   rights:
     source: https://github.com/chris-page-gov/okf-dwp/blob/main/LICENSE
     assertion: navigation-only
@@ -84270,25 +84290,25 @@ dcterms:rights: 'Mixed rights: DWP source extracts retain OGL attribution; origi
   rights:
     source: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
     assertion: source-derived-structure
-snapshot_id: dwp-pension-credit-2026-09-15-42c0a30e120c
-generated_at: '2026-09-15T16:57:46Z'
+snapshot_id: dwp-pension-credit-2026-09-15-1b84574268ad
+generated_at: '2026-09-15T17:15:00Z'
 plane_roots:
   source: bf225f86a43959d45e59204d3de34dccba6590970626eb659038febca47889df
-  data: ce854977c7acac204cc2fdf52937298e98a4b5fbe4ad740e58e26c6fa91cf18c
-  semantic: faa771b783149a807b9a40c2c5bc694da2cada71b160f42a93aa8cf3223d0831
-  search: 63d427fd8af691429de7283582c523815eeb5ab14a1a2302b1b2d9a57512e6f6
+  data: 58a169c9f3ad75c8459ea0bd0e87cce807b9bf58a06ba3709606b87fd2095ffa
+  semantic: 2ee556c3b59b626a5c8486a8559a9b14f61555db4221ad8edfba93490a689187
+  search: 5e144022ff38577073902912ba8e8dffcd806c6fa11b268eac6e8b81bdc8fda6
   presentation: eab9c717353897b5fc88e845a482526ce4a9e3dfdfb03ea415c2331329533238
 publication_state: exploratory
 exploratory_publication:
   schema: okf-exploratory-publication.v1
   publication_state: exploratory
-  snapshot_id: dwp-pension-credit-2026-09-15-42c0a30e120c
-  generated_at: '2026-09-15T16:57:46Z'
+  snapshot_id: dwp-pension-credit-2026-09-15-1b84574268ad
+  generated_at: '2026-09-15T17:15:00Z'
   applicable_plane_roots:
     source: bf225f86a43959d45e59204d3de34dccba6590970626eb659038febca47889df
-    data: ce854977c7acac204cc2fdf52937298e98a4b5fbe4ad740e58e26c6fa91cf18c
-    semantic: faa771b783149a807b9a40c2c5bc694da2cada71b160f42a93aa8cf3223d0831
-    search: 63d427fd8af691429de7283582c523815eeb5ab14a1a2302b1b2d9a57512e6f6
+    data: 58a169c9f3ad75c8459ea0bd0e87cce807b9bf58a06ba3709606b87fd2095ffa
+    semantic: 2ee556c3b59b626a5c8486a8559a9b14f61555db4221ad8edfba93490a689187
+    search: 5e144022ff38577073902912ba8e8dffcd806c6fa11b268eac6e8b81bdc8fda6
     presentation: eab9c717353897b5fc88e845a482526ce4a9e3dfdfb03ea415c2331329533238
   publisher:
     name: Chris Page — independent research

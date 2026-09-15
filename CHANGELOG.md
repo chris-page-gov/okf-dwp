@@ -32,3 +32,4 @@
 - Extend deterministic generation, source-passage/locator validation, RDF triple checks, identity-preservation and negative controls. Keep previous source snapshots, domain profile and browser receipts intact.
 
 - Clarify the seminar host as ChatGPT live voice; record verified desktop Voice documentation and usage boundaries while retaining the untested integration status.
+- Correct CPAG temporal metadata: publisher-described April 2026 edition release and 6 April online announcement remain separate from September project capture; preserve month precision.

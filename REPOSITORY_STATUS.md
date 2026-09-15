@@ -70,7 +70,7 @@ MacBook/PA integration are at feasibility stage, with ChatGPT live voice identif
 Mac/task/browser/audio integration awaiting rehearsal. No new website, audio configuration or voice-tool
 integration is delivered by this candidate.
 
-The stage-two candidate snapshot is
+The initial stage-two candidate snapshot was
 `dwp-pension-credit-2026-09-15-42c0a30e120c`: **821 records and 964 assertions**
 (744 page-containment, 205 navigation and 15 model-derived semantic proposals).
 All 744 source-page runtime records are unchanged from the previous public
@@ -81,3 +81,13 @@ validation failure modes; this is not human domain review. See
 `validation/semantics.json` and `validation/semantic-review.json`.
 
 The exact stage-two content commit `48abaff6c640e4a3e206af1adc71e21efd12738f` passed live Explorer import checks in installed Edge for YAML-LD and JSON, semantic relationship inspection, graph labels, the non-executable candidate and its original PDF-page link. No warning or error logs were captured in either test tab. [Browser receipt](validation/stage-two-browser.json).
+
+### CPAG source date correction
+
+The updated candidate `dwp-pension-credit-2026-09-15-1b84574268ad` preserves the
+same 821 records, 964 assertions and source pages. CPAG's public metadata
+establishes April 2026 as the handbook release month. The referenced book now
+records that month separately from the original 15 September metadata capture,
+record generation and later publication-metadata review. The source statement
+does not establish an exact release day or a legal effective date. Earlier
+browser receipts retain their original snapshot scope.

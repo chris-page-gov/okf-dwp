@@ -53,3 +53,7 @@ If permission is obtained, agree the authorised edition, scope, update process,
 permitted users and public/private boundary first. Keep adviser commentary,
 DWP policy, legislation and case law identifiable throughout. Paragraph-level
 mapping and substantive comparison require access and expert review.
+
+## Edition, publication and capture dates
+
+CPAG identifies the 2026/27 handbook as the 28th edition and describes its release as April 2026. Its 6 April 2026 update announces online availability. The bundle records the book publication month as `2026-04` on the referenced `schema:about` Book, not as the publication date of our own reference record. The original capture remains 15 September 2026. No exact release day or legal effective date is inferred. See the [dated metadata review](evidence/cpag-publication-date-review.json), [CPAG catalogue](https://cpag.org.uk/shop/handbook/welfare-benefits-handbook-202627), [release statement](https://cpag.org.uk/shop/subscription/print-subscription) and [online announcement](https://cpag.org.uk/welfare-rights/whats-new).

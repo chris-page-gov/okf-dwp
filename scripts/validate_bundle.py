@@ -57,6 +57,19 @@ def main() -> None:
                         f"Publication predates an input observation: {row['route']}")
     require(bundle["exploratory_publication"]["generated_at"] == bundle["generated_at"], "Publication timestamps disagree")
     checks["publication_timestamp_covers_inputs"] = {"status": "passed", "generated_at": bundle["generated_at"]}
+    cpag = bundle["nodes"].get("resource/cpag-welfare-benefits-handbook")
+    date_receipt_path = ROOT / "docs/evidence/cpag-publication-date-review.json"
+    if cpag and date_receipt_path.is_file():
+        dates = json.loads(date_receipt_path.read_text())
+        require(digest(date_receipt_path.read_bytes()) == cpag["okf:publicationMetadataReceiptSha256"],
+                "CPAG publication metadata receipt hash mismatch")
+        require(cpag["schema:about"]["schema:datePublished"] == {"@value": dates["release_month"], "@type": "xsd:gYearMonth"},
+                "CPAG publication precision or source date differs from publisher evidence")
+        require(cpag["generated"]["at"].startswith("2026-09-15"), "Original CPAG reference authoring date was replaced")
+        capture_receipt = json.loads((ROOT / "docs/evidence/cpag-access-review.json").read_text())
+        require(cpag["captured_at"] == capture_receipt["observed_at"], "Original CPAG metadata capture date was replaced")
+        require(cpag["observedAt"] == dates["observed_at"], "CPAG publication metadata review date differs from its receipt")
+        checks["cpag_source_publication_separate_from_capture"] = "passed"
     for row in entities:
         require(bool(ROUTE.fullmatch(row["route"])), f"Unsafe route {row['route']}")
         require(bool(row.get("title", "").strip()), f"Missing human-readable label: {row['route']}")
