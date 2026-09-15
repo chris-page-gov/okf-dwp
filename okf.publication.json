@@ -295,7 +295,10 @@
       "command_ids": [
         "build-check",
         "validate",
-        "full-dmg-evidence-check"
+        "full-dmg-evidence-check",
+        "full-dmg-build-check",
+        "full-dmg-validate",
+        "full-dmg-coverage-check"
       ]
     },
     {
@@ -390,6 +393,46 @@
           "semantic"
         ],
         "command": "uv run --locked python scripts/discover_full_dmg_evidence.py --check",
+        "source": "docs/next-stage/unattended-completion.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "full-dmg-build-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/build_full_dmg.py --check",
+        "source": "docs/next-stage/unattended-completion.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 15
+      },
+      {
+        "id": "full-dmg-validate",
+        "kind": "check",
+        "planes": [
+          "source",
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/validate_full_dmg.py",
+        "source": "docs/next-stage/unattended-completion.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 15
+      },
+      {
+        "id": "full-dmg-coverage-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/report_full_dmg_coverage.py --check",
         "source": "docs/next-stage/unattended-completion.md",
         "review_status": "project-authored-validation",
         "network": "none",

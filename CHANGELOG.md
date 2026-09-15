@@ -5,6 +5,8 @@
 - Record the owner's unattended completion authority, finite acceptance gates and an hourly task continuation with durable checkpoints.
 - Begin acquisition against all 331 DMG URLs and a separate indexed Explorer projection, preserving the existing Pension Credit demonstration.
 - Add a finite semantic/evaluation worklist and make CLI retrieval scope explicit. Keep CPAG body reuse, specialist acceptance and full ADM outside this research-bundle completion claim.
+- Complete acquisition and hash/page verification of 331 PDFs. Add bounded evidence discovery, an indexed full-text compiler and source/semantic coverage reporting.
+- Add the first wider authoring batches: 48 concepts and 72 exact-passage relationship proposals across 17 substantive source units, with explicit exceptions and pending specialist review.
 
 ## CPAG external reference — 15 September 2026
 

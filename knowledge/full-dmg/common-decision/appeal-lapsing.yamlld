@@ -1,0 +1,103 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-appeal-lapsing
+  '@type': skos:Concept
+  route: term/dmg-appeal-lapsing
+  title: Lapsing an appeal after revision
+  type: Concept
+  description: The source relates lapsing an appeal to the outcome of a revision and expressly says that
+    supersession cannot lapse an appeal.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Lapsing an appeal after revision
+    '@language': en-GB
+  skos:definition:
+    '@value': The source relates lapsing an appeal to the outcome of a revision and expressly says that
+      supersession cannot lapse an appeal.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The discretion must not be used to prevent an appeal being heard. Partial revision, contact with
+      the claimant or representative, and new dispute rights need review alongside the source’s differing
+      dated routes.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol1-ch6/0031
+  - page/dmg-vol1-ch6/0033
+  source: https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=31
+  resource: https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=31
+  sources:
+  - id: dmg-vol1-ch6
+    title: 'DMG Vol 1 Ch 6: Making appeals and staying'
+    author: organisation:dwp
+    resource:
+      https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=31
+    retrieved_at: '2026-09-15T19:45:18.546591Z'
+    sha256: dcd2a7ede4499792d9bc6762c94a2d6c0ca6e811cb077abbbd4e41e4d405a4e4
+  body: "# Lapsing an appeal after revision\n\n## Authored interpretation\n\nThe source relates lapsing an appeal
+    to the outcome of a revision and expressly says that supersession cannot lapse an appeal.\n\n## Scope and exceptions\n\
+    \nThe discretion must not be used to prevent an appeal being heard. Partial revision, contact with the claimant
+    or representative, and new dispute rights need review alongside the source’s differing dated routes.\n\n## Inspected
+    source passages\n\n- [DMG 06160, PDF page 31](https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=31)
+    — DMG Vol 1 Ch 6: Making appeals and staying.\n- [DMG 06161, PDF page 31](https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=31)
+    — DMG Vol 1 Ch 6: Making appeals and staying.\n- [DMG 06165, PDF page 33](https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=33)
+    — DMG Vol 1 Ch 6: Making appeals and staying.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source is DWP guidance,
+    not a consolidated statement of legislation. This is an independent experimental publication, not an official
+    DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are one-based file
+    positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships preserve
+    extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current applicability
+    remain separate review tasks.\n\n- `dmg-vol1-ch6` PDF SHA-256: `dcd2a7ede4499792d9bc6762c94a2d6c0ca6e811cb077abbbd4e41e4d405a4e4`;
+    extracted pages SHA-256: `e95434f7e856adbd1c8550b369066644a6bf6aa7567af05a1d41768d3dae0c3e`.\n\nThe publicly
+    acquired chapter 6 PDF carries the printed footer “Official - DWP Use Only”. This observation is preserved alongside
+    its public acquisition URL; the source owner should clarify any conflict with intended reuse. It is not evidence
+    of access to unpublished material.\n"
+  semantic_relations:
+  - target: term/dmg-revision
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source makes the revised outcome relevant to lapsing and then qualifies how the revision
+      power should be used.
+    evidence:
+    - page: page/dmg-vol1-ch6/0031
+      quote: "06160 Where\n\n\n1. the DM revises the decision under appeal (for decisions notified before 28.10.13)
+        or\n\n\n2. the appeal is accepted by HMCTS, the DM can still consider revising the decision under appeal
+        (for\ndecisions notified on or after 28.10.13)\n\n\nthe outcome determines whether the appeal lapses. An
+        appeal should be lapsed where the revised\n\ndecision is to the claimant’s advantage1.\n\n\nNote: An appeal
+        cannot be lapsed where the decision is superseded.\n\n\n                                               \
+        \                                           1 SS Act 98, s 9(6)"
+      locator: DMG 06160
+    - page: page/dmg-vol1-ch6/0031
+      quote: "06161 The purpose of lapsing an appeal is to prevent unnecessary appeals going ahead. The power to\n\
+        revise is discretionary rather than mandatory, and should not be used in order to prevent an appeal being\n\
+        heard. DMs are therefore advised to consider whether a decision under appeal should be revised.\n\n\nYou
+        can revise and lapse an appeal where the decision will give the claimant everything they could get\nfrom
+        the tribunal. For example:\n\n\n-     with DLA you can award the highest rate of the care and mobility component\n\
+        \n\n-     with ESA you can put the claimant in the support group\n\n\nWhere the decision would not give
+        the claimant everything as above, you would be making a ‘partial\nrevision’ – see examples below. Before
+        you make a partial revision you must contact the claimant and/or\ntheir representative, to discuss the new
+        decision. You must refer to the “Best Practice Memorandum”\nwhich is found in your operational instructions."
+      locator: DMG 06161
+  - target: term/dmg-supersession
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: 'This is an association by explicit distinction: the source says an appeal cannot be lapsed by supersession.'
+    evidence:
+    - page: page/dmg-vol1-ch6/0031
+      quote: "06160 Where\n\n\n1. the DM revises the decision under appeal (for decisions notified before 28.10.13)
+        or\n\n\n2. the appeal is accepted by HMCTS, the DM can still consider revising the decision under appeal
+        (for\ndecisions notified on or after 28.10.13)\n\n\nthe outcome determines whether the appeal lapses. An
+        appeal should be lapsed where the revised\n\ndecision is to the claimant’s advantage1.\n\n\nNote: An appeal
+        cannot be lapsed where the decision is superseded.\n\n\n                                               \
+        \                                           1 SS Act 98, s 9(6)"
+      locator: DMG 06160

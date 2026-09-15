@@ -27,6 +27,24 @@ class EvidenceBoundaryTests(unittest.TestCase):
         self.assertEqual(len(rows), 1)
         self.assertEqual(rows[0]['kind'], 'date-mention')
 
+    def test_amendment_mentioned_in_prose_does_not_relabel_an_effective_date(self):
+        rows = page_candidates('Amendment 15 contains a change effective from 1 April 2026.\nAmendment 16 – 6 May 2026')
+        self.assertEqual([(r['kind'], r['value']) for r in rows], [('date-mention', '2026-04-01'), ('stated-revision-date', '2026-05-06')])
+
+    def test_six_digit_chapter_seven_and_range_are_preserved(self):
+        rows = page_candidates('See DMG 072791 and DMG 071756-071758.')
+        self.assertEqual([(r['target_label'], r['range_end']) for r in rows], [('072791', None), ('071756', '071758')])
+        self.assertTrue(all(r['kind'] == 'dmg-paragraph-reference' for r in rows))
+
+    def test_concatenated_footnote_digits_are_not_truncated(self):
+        rows = page_candidates('DMG 843511 and DMG 0717561 and DMG 071756-0717581')
+        self.assertEqual([r['quote'] for r in rows], ['DMG 843511', 'DMG 0717561', 'DMG 071756-0717581'])
+        self.assertTrue(all(r['kind'] == 'dmg-unresolved-digit-reference' for r in rows))
+
+    def test_slash_memo_label_does_not_become_a_paragraph(self):
+        rows = page_candidates('See DMG 05/25 and DMG Memo 11/20.')
+        self.assertTrue(all(r['kind'] == 'dmg-memo-reference' for r in rows))
+
 
 if __name__ == '__main__':
     unittest.main()

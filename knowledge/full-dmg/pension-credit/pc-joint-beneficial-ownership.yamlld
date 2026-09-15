@@ -1,0 +1,65 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/pc-joint-beneficial-ownership
+  route: term/pc-joint-beneficial-ownership
+  title: Joint beneficial ownership of capital
+  type: Concept
+  status: draft
+  authority: model-assisted scoped proposal; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured guidance describes beneficial ownership through a beneficial interest
+    and joint beneficial ownership where more than one person has that interest in the same capital.
+  tags:
+  - pension credit
+  - source-backed proposal
+  - full DMG
+  - unreviewed
+  references:
+  - chapter/84
+  - page/84/0008
+  - term/beneficial-ownership
+  resource:
+    https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=8
+  sources:
+  - id: dmg-vol14-ch84
+    resource:
+      https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=8
+    title: 'DMG Vol 14 Ch 84: Deemed weekly income from capital'
+    author: organisation:dwp
+  skos:prefLabel:
+    '@value': Joint beneficial ownership of capital
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance describes beneficial ownership through a beneficial interest and
+      joint beneficial ownership where more than one person has that interest in the same capital.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Scoped to the captured Pension Credit guidance. The definition does not identify
+      owners, shares, valuation or disregard entitlement in an individual case.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-credit-review
+    at: '2026-09-15T19:58:30Z'
+  observedAt: '2026-09-15T19:58:30Z'
+  body: "# Joint beneficial ownership of capital\n\n**Model-assisted source interpretation; unreviewed.
+    No entitlement decision or executable rule.**\n\nThe captured guidance describes beneficial ownership
+    through a beneficial interest and joint beneficial ownership where more than one person has that interest
+    in the same capital.\n\n## Evidence and scope\n\n[DMG 84072, PDF page 8](https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=8)
+    supports this scoped proposal. The source PDF SHA-256 is `f5c610b29bdb81e11736409b7f33ccf7917a4d8945f2821802801073e0d753ee`.\n\
+    \nThe definition does not identify owners, shares, valuation or disregard entitlement in an individual
+    case.\n\nThe capture date, the publication page's update date and a date stated in the guidance have
+    different meanings. Linked legislation and memos need their own provision, version and applicability
+    review.\n"
+  semantic_relations:
+  - target: term/beneficial-ownership
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The paragraph directly relates joint ownership to beneficial interests in the same
+      capital; it does not equate legal title with beneficial ownership.
+    evidence:
+    - page: page/84/0008
+      quote: "84072 People are beneficial owners of capital if they have a beneficial interest in it.
+        A person is the joint\nbeneficial owner of capital if more than one person has a beneficial interest
+        in the same capital."
+      locator: DMG 84072

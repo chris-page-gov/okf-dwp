@@ -1,0 +1,94 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/pc-aip-reporting-boundary
+  route: term/pc-aip-reporting-boundary
+  title: 'AIP reporting: historical boundary'
+  type: Concept
+  status: draft
+  authority: model-assisted scoped proposal; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured introduction defines an AIP as fixing retirement provision subject to
+    deemed increases, then records that no new AIPs are set on or after 6.4.16 and links that change
+    to reporting relevant circumstances.
+  tags:
+  - pension credit
+  - source-backed proposal
+  - full DMG
+  - unreviewed
+  references:
+  - chapter/83
+  - page/83/0003
+  - term/assessed-income-period
+  - term/pc-change-and-aip
+  resource:
+    https://assets.publishing.service.gov.uk/media/5aa9038ee5274a3e391e3e7c/dmgch83.pdf#page=3
+  sources:
+  - id: dmg-vol14-ch83
+    resource:
+      https://assets.publishing.service.gov.uk/media/5aa9038ee5274a3e391e3e7c/dmgch83.pdf#page=3
+    title: 'DMG Vol 14 Ch 83: Assessed income periods'
+    author: organisation:dwp
+  skos:prefLabel:
+    '@value': 'AIP reporting: historical boundary'
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured introduction defines an AIP as fixing retirement provision subject to
+      deemed increases, then records that no new AIPs are set on or after 6.4.16 and links that
+      change to reporting relevant circumstances.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Scoped to the captured Pension Credit guidance. This is a source-stated historical
+      boundary, not independent verification of current law. Much of chapter 83 has damaged letter
+      spacing; deeper modelling is recorded as a gap.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-credit-review
+    at: '2026-09-15T19:58:30Z'
+  observedAt: '2026-09-15T19:58:30Z'
+  body: "# AIP reporting: historical boundary\n\n**Model-assisted source interpretation; unreviewed. No
+    entitlement decision or executable rule.**\n\nThe captured introduction defines an AIP as fixing retirement
+    provision subject to deemed increases, then records that no new AIPs are set on or after 6.4.16 and
+    links that change to reporting relevant circumstances.\n\n## Evidence and scope\n\n[DMG 83000, PDF
+    page 3](https://assets.publishing.service.gov.uk/media/5aa9038ee5274a3e391e3e7c/dmgch83.pdf#page=3)
+    supports this scoped proposal. The source PDF SHA-256 is `b7b36dae645ea1886638833a099c6eccf6a2f1312c1e2708fa1de7bd8a63e43e`.\n\
+    \nThis is a source-stated historical boundary, not independent verification of current law. Much of
+    chapter 83 has damaged letter spacing; deeper modelling is recorded as a gap.\n\nThe capture date,
+    the publication page's update date and a date stated in the guidance have different meanings. Linked
+    legislation and memos need their own provision, version and applicability review.\n"
+  semantic_relations:
+  - target: term/assessed-income-period
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The definition and accompanying note expressly connect the historical AIP arrangement
+      with the reporting boundary. The association retains the note instead of treating old
+      AIP-setting instructions as current.
+    evidence:
+    - page: page/83/0003
+      quote: "83000   An assessed income period (AIP) is a period specified by a DM during which the\n\
+        \        amount of a claimant’s retirement provision is fixed subject to deemed increases\n  \
+        \                                                           1\n        made in accordance with
+        the relevant legislation .\n                                                                 \
+        \                      1SPCAct02,s7(4)\n\n                                                   \
+        \           1\n        Note: No new AIPs will be set on, or after 6.4.16 . As a consequence, claimants
+        will\n        be expected to report all relevant changes in their circumstances, including their\n\
+        \        retirement provision. Accompanying changes to existing, fixed period and some\n     \
+        \   indefinite period AIPs are described in this chapter.\n                           1PensionsAct14,s28;PensionsAct2014(CommencementNo.5)Order2015.s2(2)(b)"
+      locator: DMG 83000
+  - target: term/pc-change-and-aip
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The definition and accompanying note expressly connect the historical AIP arrangement
+      with the reporting boundary. The association retains the note instead of treating old
+      AIP-setting instructions as current.
+    evidence:
+    - page: page/83/0003
+      quote: "83000   An assessed income period (AIP) is a period specified by a DM during which the\n\
+        \        amount of a claimant’s retirement provision is fixed subject to deemed increases\n  \
+        \                                                           1\n        made in accordance with
+        the relevant legislation .\n                                                                 \
+        \                      1SPCAct02,s7(4)\n\n                                                   \
+        \           1\n        Note: No new AIPs will be set on, or after 6.4.16 . As a consequence, claimants
+        will\n        be expected to report all relevant changes in their circumstances, including their\n\
+        \        retirement provision. Accompanying changes to existing, fixed period and some\n     \
+        \   indefinite period AIPs are described in this chapter.\n                           1PensionsAct14,s28;PensionsAct2014(CommencementNo.5)Order2015.s2(2)(b)"
+      locator: DMG 83000

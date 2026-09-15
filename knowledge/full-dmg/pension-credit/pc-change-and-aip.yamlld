@@ -1,0 +1,67 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/pc-change-and-aip
+  route: term/pc-change-and-aip
+  title: Change of circumstances and assessed income periods
+  type: Concept
+  status: draft
+  authority: model-assisted scoped proposal; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured payment guidance says a change of circumstances can provide grounds for
+    supersession and directs readers to the AIP chapter for changes during an assessed income
+    period.
+  tags:
+  - pension credit
+  - source-backed proposal
+  - full DMG
+  - unreviewed
+  references:
+  - chapter/79
+  - page/79/0006
+  - term/assessed-income-period
+  resource:
+    https://assets.publishing.service.gov.uk/media/69e1035298c6c9802f7ed9e0/dmg-Chap-79.pdf#page=6
+  sources:
+  - id: dmg-vol13-ch79
+    resource:
+      https://assets.publishing.service.gov.uk/media/69e1035298c6c9802f7ed9e0/dmg-Chap-79.pdf#page=6
+    title: 'DMG Vol 13 Ch 79: Payment questions '
+    author: organisation:dwp
+  skos:prefLabel:
+    '@value': Change of circumstances and assessed income periods
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured payment guidance says a change of circumstances can provide grounds for
+      supersession and directs readers to the AIP chapter for changes during an assessed income
+      period.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Scoped to the captured Pension Credit guidance. A change does not itself prove a new
+      award outcome. The AIP's historical boundary and decision-making legislation must be checked.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-credit-review
+    at: '2026-09-15T19:58:30Z'
+  observedAt: '2026-09-15T19:58:30Z'
+  body: "# Change of circumstances and assessed income periods\n\n**Model-assisted source interpretation;
+    unreviewed. No entitlement decision or executable rule.**\n\nThe captured payment guidance says a
+    change of circumstances can provide grounds for supersession and directs readers to the AIP chapter
+    for changes during an assessed income period.\n\n## Evidence and scope\n\n[DMG 79050, PDF page 6](https://assets.publishing.service.gov.uk/media/69e1035298c6c9802f7ed9e0/dmg-Chap-79.pdf#page=6)
+    supports this scoped proposal. The source PDF SHA-256 is `0098a2267cb9b321cae6bf25b3493b3674c4e8cb1b859fcd6b8ae7d459323be8`.\n\
+    \nA change does not itself prove a new award outcome. The AIP's historical boundary and decision-making
+    legislation must be checked.\n\nThe capture date, the publication page's update date and a date stated
+    in the guidance have different meanings. Linked legislation and memos need their own provision, version
+    and applicability review.\n"
+  semantic_relations:
+  - target: term/assessed-income-period
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source makes an explicit cross-reference from changes of circumstances to AIP
+      guidance, which prevents a blanket change rule being inferred.
+    evidence:
+    - page: page/79/0006
+      quote: "79050 A change in the claimant’s circumstances can give grounds to supersede the award 1.
+        But see\nDMG Chapter 83 regarding changes during the AIP.\n\n\n                              \
+        \                                                   1 SS Act 98, s 9 & 10"
+      locator: DMG 79050

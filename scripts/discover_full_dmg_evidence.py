@@ -15,8 +15,8 @@ OUTPUT = Path('evaluation/full-dmg-evidence')
 MONTHS = ('January February March April May June July August September October November December').split()
 MONTH_PATTERN = '|'.join(m + '|' + m[:3] for m in MONTHS)
 DATE = re.compile(r'\b(?:(\d{1,2})\s+)?(' + MONTH_PATTERN + r')\s+(19\d{2}|20\d{2})\b', re.I)
-REVISION = re.compile(r'\b(?:Amendment\s+\d+\s*[–—-]?\s*|Amended Chapters for\s+)', re.I)
-DMG = re.compile(r'\bDMG\s+(?:(Memo)\s+)?(\d{1,2}/\d{2}|\d{5})(?:\s*(?:–|-|to)\s*(\d{5}))?', re.I)
+REVISION = re.compile(r'\b(?:Amendment\s+\d+\s*[–—-]?\s*|Amended Chapters for\s+)$', re.I)
+DMG = re.compile(r'\bDMG\s+(?:(Memo)\s+)?(\d{1,2}/\d{2}(?!\d)|\d{5,})(?:\s*(?:–|-|to)\s*(\d{5,}))?(?!\d)', re.I)
 LEGAL_LINE = re.compile(r'\b(?:Act\s+(?:\d{2}|(?:19|20)\d{2})|Regs?\b|Regulations\b|SI\s+(?:19|20)\d{2}/\d+)|\bR\([A-Z ]+\)\s*\d+/\d+', re.I)
 
 
@@ -51,7 +51,7 @@ def page_candidates(text):
         start, end = text.rfind('\n', 0, match.start()) + 1, text.find('\n', match.end())
         end = len(text) if end < 0 else end
         line = text[start:end]
-        label = REVISION.search(text[start:match.start(2)])
+        label = REVISION.search(text[start:match.start(2) if amendment_number else match.start()])
         result.append({'kind': 'stated-revision-date' if label else 'date-mention',
                        'quote': line, 'start': start, 'end': end, 'matched_text': match[0],
                        'value': normalised[0], 'precision': normalised[1],
@@ -59,10 +59,15 @@ def page_candidates(text):
                        'legal_effective_date_established': False,
                        'source_publication_date_established': False})
     for match in DMG.finditer(text):
-        result.append({'kind': 'dmg-memo-reference' if match[1] else 'dmg-paragraph-reference',
+        labels = [label for label in (match[2], match[3]) if label]
+        is_memo = bool(match[1]) or '/' in match[2]
+        # Chapter 7 uses six digits. Other long digit runs may contain a
+        # flattened footnote marker; keep them intact and unresolved.
+        ambiguous = not is_memo and any(not (len(label) == 5 or (len(label) == 6 and label.startswith('07'))) for label in labels)
+        result.append({'kind': 'dmg-memo-reference' if is_memo else ('dmg-unresolved-digit-reference' if ambiguous else 'dmg-paragraph-reference'),
                        'quote': match[0], 'start': match.start(), 'end': match.end(),
                        'target_label': match[2], 'range_end': match[3],
-                       'status': 'literal-reference-unresolved-applicability'})
+                       'status': 'ambiguous-digit-run-no-identifier-assigned' if ambiguous else 'literal-reference-unresolved-applicability'})
     offset = 0
     for line in text.splitlines(keepends=True):
         quote = line.rstrip('\r\n')

@@ -1,0 +1,90 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-claim-evidence
+  '@type': skos:Concept
+  route: term/dmg-claim-evidence
+  title: Evidence after a claim is properly made
+  type: Concept
+  description: The claims guidance distinguishes meeting the prescribed manner of claiming from having
+    sufficient information and evidence for an outcome decision, and requires an opportunity to provide
+    requested material.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Evidence after a claim is properly made
+    '@language': en-GB
+  skos:definition:
+    '@value': The claims guidance distinguishes meeting the prescribed manner of claiming from having
+      sufficient information and evidence for an outcome decision, and requires an opportunity to provide
+      requested material.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 02166 contains a memo reference and legacy assessed-income-period wording. No current AIP
+      requirement or universal deadline is adopted. Benefit-specific response rules and missing-document
+      alternatives remain dependencies.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol1-ch2/0048
+  source: https://assets.publishing.service.gov.uk/media/6a68d934f23ff62c51c1a7a2/dmg-v-1-ch-2.pdf#page=48
+  resource: https://assets.publishing.service.gov.uk/media/6a68d934f23ff62c51c1a7a2/dmg-v-1-ch-2.pdf#page=48
+  sources:
+  - id: dmg-vol1-ch2
+    title: 'DMG Vol 1 Ch 2: Claims'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6a68d934f23ff62c51c1a7a2/dmg-v-1-ch-2.pdf#page=48
+    retrieved_at: '2026-09-15T19:45:18.205486Z'
+    sha256: 218f6a34945a5dd17cdccb1737ea317b2dcfd1ab62f66a9a0b8d681202e8934f
+  body: "# Evidence after a claim is properly made\n\n## Authored interpretation\n\nThe claims guidance distinguishes
+    meeting the prescribed manner of claiming from having sufficient information and evidence for an outcome decision,
+    and requires an opportunity to provide requested material.\n\n## Scope and exceptions\n\nDMG 02166 contains
+    a memo reference and legacy assessed-income-period wording. No current AIP requirement or universal deadline
+    is adopted. Benefit-specific response rules and missing-document alternatives remain dependencies.\n\n## Inspected
+    source passages\n\n- [DMG 02166, PDF page 48](https://assets.publishing.service.gov.uk/media/6a68d934f23ff62c51c1a7a2/dmg-v-1-ch-2.pdf#page=48)
+    — DMG Vol 1 Ch 2: Claims.\n- [DMG 02168, PDF page 48](https://assets.publishing.service.gov.uk/media/6a68d934f23ff62c51c1a7a2/dmg-v-1-ch-2.pdf#page=48)
+    — DMG Vol 1 Ch 2: Claims.\n\n## Evidence and review status\n\nModel-assisted interpretation of the 15 September
+    2026 source snapshot; unreviewed and requiring specialist review. The source is DWP guidance, not a consolidated
+    statement of legislation. This is an independent experimental publication, not an official DWP document, an
+    entitlement decision or an executable benefits rule.\n\nPDF page numbers are one-based file positions. Machine
+    extraction can alter reading order, footnotes and characters. Quoted relationships preserve extracted text;
+    no visual or specialist acceptance is claimed. Source dates, legal effects and current applicability remain
+    separate review tasks.\n\n- `dmg-vol1-ch2` PDF SHA-256: `218f6a34945a5dd17cdccb1737ea317b2dcfd1ab62f66a9a0b8d681202e8934f`;
+    extracted pages SHA-256: `77cb8966f05e501c4d970026bdfcd5bc271abe17a546b02ec8c8704395e56ee3`.\n"
+  semantic_relations:
+  - target: term/dmg-prescribed-claim
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: A properly made claim can still require evidence or corroboration; these are distinct
+      conditions in the passage.
+    evidence:
+    - page: page/dmg-vol1-ch2/0048
+      quote: "02166 [See DMG memo 03/25] A form or document may meet all the criteria to be a claim made in the\n\
+        prescribed manner but the information and evidence it contains may be insufficient or need\ncorroboration
+        before an outcome decision can be made. The claimant is required to produce any\ncertificates, documents,
+        information and evidence as required by the Secretary of State but must be\n\ngiven the opportunity to do
+        so1 (for CA this information may be provided electronically - see DMG\n02069). The claimant has a set time
+        to reply as specified for each benefit. SPC claimants are required to\nprovide information or evidence as
+        to the likelihood of future changes of circumstances so that a\n\ndecision can be made2 on whether an AIP
+        should be set and if so of what length. Except where DMG"
+      locator: DMG 02166
+  - target: term/dmg-outcome-decision
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source says that an outcome decision has to be made in the described
+      failure-to-provide-evidence cases; it does not prescribe the outcome here.
+    evidence:
+    - page: page/dmg-vol1-ch2/0048
+      quote: "02168 Where\n\n\n1. for benefits other than IS or JSA, a claimant claims in the prescribed manner
+        but fails to provide\nadditional information or evidence required under DMG 02166 or\n\n\n2. for IS and
+        JSA, a claimant claims in the prescribed manner as described in DMG 02086 but has not\nprovided additional
+        information or evidence required under DMG 02166\n\n\nan outcome decision has to be made."
+      locator: DMG 02168

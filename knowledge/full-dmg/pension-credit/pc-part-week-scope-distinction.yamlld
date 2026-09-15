@@ -1,0 +1,96 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/pc-part-week-scope-distinction
+  route: term/pc-part-week-scope-distinction
+  title: 'Part-week payment: scope distinction'
+  type: Concept
+  status: draft
+  authority: model-assisted scoped proposal; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured guidance distinguishes its specific part-week payment category from
+    other payments covering less than a full week and links the category to named
+    benefit-to-Guarantee-Credit transitions.
+  tags:
+  - pension credit
+  - source-backed proposal
+  - full DMG
+  - unreviewed
+  references:
+  - chapter/79
+  - page/79/0008
+  - term/part-week-payments
+  - term/guarantee-credit
+  resource:
+    https://assets.publishing.service.gov.uk/media/69e1035298c6c9802f7ed9e0/dmg-Chap-79.pdf#page=8
+  sources:
+  - id: dmg-vol13-ch79
+    resource:
+      https://assets.publishing.service.gov.uk/media/69e1035298c6c9802f7ed9e0/dmg-Chap-79.pdf#page=8
+    title: 'DMG Vol 13 Ch 79: Payment questions '
+    author: organisation:dwp
+  skos:prefLabel:
+    '@value': 'Part-week payment: scope distinction'
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance distinguishes its specific part-week payment category from other
+      payments covering less than a full week and links the category to named
+      benefit-to-Guarantee-Credit transitions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Scoped to the captured Pension Credit guidance. Do not generalise an isolated
+      transition rule to every short payment. Regulation 13A, exceptions and later changes require
+      specialist review.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-credit-review
+    at: '2026-09-15T19:58:30Z'
+  observedAt: '2026-09-15T19:58:30Z'
+  body: "# Part-week payment: scope distinction\n\n**Model-assisted source interpretation; unreviewed.
+    No entitlement decision or executable rule.**\n\nThe captured guidance distinguishes its specific
+    part-week payment category from other payments covering less than a full week and links the category
+    to named benefit-to-Guarantee-Credit transitions.\n\n## Evidence and scope\n\n[DMG 79100–79101, PDF
+    page 8](https://assets.publishing.service.gov.uk/media/69e1035298c6c9802f7ed9e0/dmg-Chap-79.pdf#page=8)
+    supports this scoped proposal. The source PDF SHA-256 is `0098a2267cb9b321cae6bf25b3493b3674c4e8cb1b859fcd6b8ae7d459323be8`.\n\
+    \nDo not generalise an isolated transition rule to every short payment. Regulation 13A, exceptions
+    and later changes require specialist review.\n\nThe capture date, the publication page's update date
+    and a date stated in the guidance have different meanings. Linked legislation and memos need their
+    own provision, version and applicability review.\n"
+  semantic_relations:
+  - target: term/part-week-payments
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The two paragraphs explicitly distinguish the category and describe its Guarantee
+      Credit transition scope; similarity of duration does not make all short payments the same
+      category.
+    evidence:
+    - page: page/79/0008
+      quote: "79100 This section gives guidance on how to calculate part-week payments 1 in SPC claims.
+        The term\n“part-week” payment has a specific meaning in SPC. Part-week payments must not be confused
+        with\n\npayments of SPC which may be made for less than a full week 2 in other circumstances.
+        Guidance on\npart-week payments is at DMG 79101 et seq. Guidance on payments of SPC for periods
+        of less than a full\nweek in other circumstances is at DMG 79106 et seq.\n\n\n               \
+        \                       1 SPC Act 02, Sch 1, para 13; 2 SS CS (D&A) Regs, Sch 3B, para 4(b)\n\n\
+        \n\n\nWhen part-week payments are appropriate\n\n79101 In SPC, part-week payments can only be
+        made where existing IS, ESA(IR), JSA(IB) or UC claimants\n\nbecome entitled to the GC1. Part-week
+        payments should not be made in any other circumstances.\n\n\n                                \
+        \                                                    1 SPC Regs, reg 13A"
+      locator: DMG 79100–79101
+  - target: term/guarantee-credit
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The two paragraphs explicitly distinguish the category and describe its Guarantee
+      Credit transition scope; similarity of duration does not make all short payments the same
+      category.
+    evidence:
+    - page: page/79/0008
+      quote: "79100 This section gives guidance on how to calculate part-week payments 1 in SPC claims.
+        The term\n“part-week” payment has a specific meaning in SPC. Part-week payments must not be confused
+        with\n\npayments of SPC which may be made for less than a full week 2 in other circumstances.
+        Guidance on\npart-week payments is at DMG 79101 et seq. Guidance on payments of SPC for periods
+        of less than a full\nweek in other circumstances is at DMG 79106 et seq.\n\n\n               \
+        \                       1 SPC Act 02, Sch 1, para 13; 2 SS CS (D&A) Regs, Sch 3B, para 4(b)\n\n\
+        \n\n\nWhen part-week payments are appropriate\n\n79101 In SPC, part-week payments can only be
+        made where existing IS, ESA(IR), JSA(IB) or UC claimants\n\nbecome entitled to the GC1. Part-week
+        payments should not be made in any other circumstances.\n\n\n                                \
+        \                                                    1 SPC Regs, reg 13A"
+      locator: DMG 79100–79101

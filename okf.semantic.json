@@ -66,7 +66,7 @@
         "state": "generated-yaml-ld-sharded-graph",
         "path": "full-dmg/okf-explorer.json",
         "authored_scope": "existing pilot plus knowledge/full-dmg/**/*.yamlld",
-        "status": "implementation-in-progress"
+        "status": "local-indexed-build-validated; browser-verification-pending"
       }
     ]
   },
@@ -101,11 +101,15 @@
       "uv sync --locked"
     ],
     "build": [
-      "uv run --locked python scripts/build_bundle.py"
+      "uv run --locked python scripts/build_bundle.py",
+      "uv run --locked python scripts/build_full_dmg.py"
     ],
     "check": [
       "uv run --locked python scripts/build_bundle.py --check",
-      "uv run --locked python scripts/validate_bundle.py"
+      "uv run --locked python scripts/validate_bundle.py",
+      "uv run --locked python scripts/build_full_dmg.py --check",
+      "uv run --locked python scripts/validate_full_dmg.py",
+      "uv run --locked python scripts/report_full_dmg_coverage.py --check"
     ]
   },
   "reader": {

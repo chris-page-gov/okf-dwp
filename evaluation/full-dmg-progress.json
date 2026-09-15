@@ -26,7 +26,7 @@
     },
     {
       "id": "indexed-compiler",
-      "status": "in-progress",
+      "status": "initial-build-and-source-semantic-validation-passed; browser-and-authored-batch-integration-pending",
       "owner": "comms_implications",
       "output": "full-dmg/okf-explorer.json"
     },
@@ -142,5 +142,41 @@
     "documents_with_stated_revision_dates": 178,
     "index": "evaluation/full-dmg-evidence/index.json",
     "status": "candidate-reference-discovery-complete; reconciliation-pending"
-  }
+  },
+  "pull_request": "https://github.com/chris-page-gov/okf-dwp/pull/5",
+  "acquisition_checkpoint_commit": "7155bcd73f24743431242a9e32d64d86b1b45635",
+  "source_checkpoint_ci": {
+    "run": 35016327034,
+    "status": "passed"
+  },
+  "coverage_report": "evaluation/full-dmg-coverage.json",
+  "semantic_checkpoint": {
+    "additional_concepts": 48,
+    "additional_proposals": 72,
+    "substantive_units_with_proposals": 17,
+    "substantive_units_pending_proposals": 61,
+    "status": "cross-reviewed-for-research-checkpoint; specialist-acceptance-pending",
+    "next_priority": [
+      "international chapter7 parts1–7",
+      "State Pension chapter74",
+      "Retirement Pension chapter75",
+      "Forfeiture chapter76"
+    ],
+    "review_packets": [
+      "evaluation/full-dmg-common-decision-review.json",
+      "evaluation/full-dmg-pension-credit-review.json"
+    ],
+    "in_progress_next_batches": [
+      "international",
+      "pension-regimes",
+      "jsa-income-support"
+    ]
+  },
+  "indexed_checkpoint": {
+    "snapshot": "dwp-full-dmg-2026-09-15-9663e36f6aba",
+    "records": 15193,
+    "assertions": 15493,
+    "status": "validated-and-reproducible; browser-verification-pending"
+  },
+  "independent_review": "validation/full-dmg-independent-review.json"
 }

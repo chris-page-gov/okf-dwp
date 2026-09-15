@@ -1,0 +1,65 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/pc-partner-meaning
+  route: term/pc-partner-meaning
+  title: Partner in Pension Credit guidance
+  type: Concept
+  status: draft
+  authority: model-assisted scoped proposal; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured guidance calls each member of a couple a partner and refers to both
+    members as partners.
+  tags:
+  - pension credit
+  - source-backed proposal
+  - full DMG
+  - unreviewed
+  references:
+  - chapter/77
+  - page/77/0008
+  - term/pc-couple-meaning
+  resource:
+    https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=8
+  sources:
+  - id: dmg-vol13-ch77
+    resource:
+      https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=8
+    title: 'DMG Vol 13 Ch 77: Conditions of entitlement, membership of the household and normal amount
+      payable'
+    author: organisation:dwp
+  skos:prefLabel:
+    '@value': Partner in Pension Credit guidance
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance calls each member of a couple a partner and refers to both
+      members as partners.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Scoped to the captured Pension Credit guidance. This term requires the separate couple
+      and household tests; it does not establish membership in a particular case.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-credit-review
+    at: '2026-09-15T19:58:30Z'
+  observedAt: '2026-09-15T19:58:30Z'
+  body: "# Partner in Pension Credit guidance\n\n**Model-assisted source interpretation; unreviewed. No
+    entitlement decision or executable rule.**\n\nThe captured guidance calls each member of a couple
+    a partner and refers to both members as partners.\n\n## Evidence and scope\n\n[DMG 77015, PDF page
+    8](https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=8) supports
+    this scoped proposal. The source PDF SHA-256 is `0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708`.\n\
+    \nThis term requires the separate couple and household tests; it does not establish membership in
+    a particular case.\n\nThe capture date, the publication page's update date and a date stated in the
+    guidance have different meanings. Linked legislation and memos need their own provision, version and
+    applicability review.\n"
+  semantic_relations:
+  - target: term/pc-couple-meaning
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source explicitly defines the partner label by membership of a couple in SPC.
+    evidence:
+    - page: page/77/0008
+      quote: "77015 In SPC a member of a couple is referred to as a partner and both members are referred
+        to as\n\npartners1\n\n\n                                                                     \
+        \                   1 SPC Regs, reg 1(3)"
+      locator: DMG 77015

@@ -1,0 +1,101 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-payment-suspension
+  '@type': skos:Concept
+  route: term/dmg-payment-suspension
+  title: Suspension of benefit payment in the DMG
+  type: Concept
+  description: The guidance describes withholding all or part of payment while specified questions about
+    entitlement, revision, supersession, appeals or information are considered.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Suspension of benefit payment in the DMG
+    '@language': en-GB
+  skos:definition:
+    '@value': The guidance describes withholding all or part of payment while specified questions about
+      entitlement, revision, supersession, appeals or information are considered.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Payment suspension is not equated with termination or a final entitlement decision. The source
+      requires attention to hardship and contains benefit-specific provisions; an unanswered request does not
+      justify an automatic project decision.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol1-ch4/0121
+  - page/dmg-vol1-ch4/0122
+  - page/dmg-vol1-ch4/0126
+  source: https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=121
+  resource: https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=121
+  sources:
+  - id: dmg-vol1-ch4
+    title: 'DMG Vol 1 Ch 4: Supersession, suspension and termination '
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=121
+    retrieved_at: '2026-09-15T19:45:18.361556Z'
+    sha256: 9c96b49a78aa4dc40df8594cf65cbd435a681d0be3737729cd87882542d0e2ea
+  body: "# Suspension of benefit payment in the DMG\n\n## Authored interpretation\n\nThe guidance describes withholding
+    all or part of payment while specified questions about entitlement, revision, supersession, appeals or information
+    are considered.\n\n## Scope and exceptions\n\nPayment suspension is not equated with termination or a final
+    entitlement decision. The source requires attention to hardship and contains benefit-specific provisions; an
+    unanswered request does not justify an automatic project decision.\n\n## Inspected source passages\n\n- [DMG
+    04800, PDF page 121](https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=121)
+    — DMG Vol 1 Ch 4: Supersession, suspension and termination .\n- [DMG 04810, PDF page 122](https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=122)
+    — DMG Vol 1 Ch 4: Supersession, suspension and termination .\n- [DMG 04811, PDF page 122](https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=122)
+    — DMG Vol 1 Ch 4: Supersession, suspension and termination .\n- [DMG 04841, PDF page 126](https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=126)
+    — DMG Vol 1 Ch 4: Supersession, suspension and termination .\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source
+    is DWP guidance, not a consolidated statement of legislation. This is an independent experimental publication,
+    not an official DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are
+    one-based file positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships
+    preserve extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current
+    applicability remain separate review tasks.\n\n- `dmg-vol1-ch4` PDF SHA-256: `9c96b49a78aa4dc40df8594cf65cbd435a681d0be3737729cd87882542d0e2ea`;
+    extracted pages SHA-256: `bef5fc9f04b2a78c5bb5dc99468f94a1841f1ef4afa117d47aa9c1e5040f3752`.\n"
+  semantic_relations:
+  - target: term/dmg-revision
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: One described ground for considering suspension is a question whether an award should be
+      revised; the relation records a possibility, not a mandatory result.
+    evidence:
+    - page: page/dmg-vol1-ch4/0122
+      quote: "04811 Suspension may be appropriate where a question has arisen during the currency of a claim\n\n\
+        \n1. about whether the claimant satisfies the conditions of entitlement to the benefit 1\n\n\n2. about whether
+        an award of benefit should be revised or superseded 2\n\n\n3. about the award of benefit because an appeal
+        is pending against a decision made by a FtT, UT or a\n\ncourt3\n\n\n4. because an appeal is pending in a
+        different case before a UT or a court, and it appears to the DM that\n\nthe outcome of that case might require
+        the award to be revised or superseded 4\n\n\n5. about whether an overpayment of benefit is recoverable 5\n\
+        \n\n6. about whether the claimant is still residing at the last address notified to the Secretary of State
+        6.\n\n\n             1 SS CS (D&A) Regs, reg 16(3)(a)(i); 2 reg 16(3)(a)(ii); 3 SS Act 98, s 21(2)(c); SS
+        CS (D&A) Regs,\n                                 reg 16(3)(b) & (4); 4 SS Act 98, s 21(2)(d); SS CS (D&A)
+        Regs, reg 16 (3)(b)(i);\n                                  5 SS Act 98, s 21(1)(a); SS CS (D&A) Regs, reg
+        16(3)(a)(iii); 6 reg 16(3)(a)(iv)"
+      locator: DMG 04811
+  - target: term/dmg-supersession
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The same passage identifies a question about supersession as a possible suspension context.
+    evidence:
+    - page: page/dmg-vol1-ch4/0122
+      quote: "04811 Suspension may be appropriate where a question has arisen during the currency of a claim\n\n\
+        \n1. about whether the claimant satisfies the conditions of entitlement to the benefit 1\n\n\n2. about whether
+        an award of benefit should be revised or superseded 2\n\n\n3. about the award of benefit because an appeal
+        is pending against a decision made by a FtT, UT or a\n\ncourt3\n\n\n4. because an appeal is pending in a
+        different case before a UT or a court, and it appears to the DM that\n\nthe outcome of that case might require
+        the award to be revised or superseded 4\n\n\n5. about whether an overpayment of benefit is recoverable 5\n\
+        \n\n6. about whether the claimant is still residing at the last address notified to the Secretary of State
+        6.\n\n\n             1 SS CS (D&A) Regs, reg 16(3)(a)(i); 2 reg 16(3)(a)(ii); 3 SS Act 98, s 21(2)(c); SS
+        CS (D&A) Regs,\n                                 reg 16(3)(b) & (4); 4 SS Act 98, s 21(2)(d); SS CS (D&A)
+        Regs, reg 16 (3)(b)(i);\n                                  5 SS Act 98, s 21(1)(a); SS CS (D&A) Regs, reg
+        16(3)(a)(iii); 6 reg 16(3)(a)(iv)"
+      locator: DMG 04811

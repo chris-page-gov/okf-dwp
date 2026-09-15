@@ -1,0 +1,1823 @@
+{
+  "schema": "okf-dwp-full-dmg-pension-credit-review.v1",
+  "scope": "Bounded substantive paragraph review across seven Pension Credit chapters plus three relevant memo excerpts; not a complete ontology or policy review.",
+  "materialisation_started_at": "2026-09-15T19:58:30Z",
+  "finished_at": "2026-09-15T19:58:30Z",
+  "execution_method": "Model reading of frozen body passages and nearby scope notes; authored scoped concepts; deterministic exact-quote/locator validation with explicit negative mutations.",
+  "tool_or_model_identity": {
+    "tool": "scripts/semantic_authoring.py:check_relation",
+    "tool_sha256": "c4fb1ed81f30d7d10b3e9d89b80f6ca0a99f7f4cf0e68e4cd523828871d799c9",
+    "author": "Codex assistant",
+    "exact_runtime_model_identifier": "not-exposed-in-this-task",
+    "model_usage": "not-recorded"
+  },
+  "authoring_revision": "7155bcd73f24743431242a9e32d64d86b1b45635",
+  "inputs": {
+    "inventory_path": "source/full-dmg-2026-09-15/inventory.json",
+    "inventory_sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a",
+    "coverage_plan_sha256": "b182a73c622e303d0c5f0bdf0213e8a1be4c2ec6b7ff6b92529cb1e94b5008f6"
+  },
+  "summary": {
+    "chapters_reviewed": 7,
+    "new_concepts": 14,
+    "supported_relationship_proposals": 20,
+    "exact_quote_locator_checks_passed": 20,
+    "negative_mutations_rejected": 100,
+    "memo_excerpts_reviewed": 3,
+    "specialist_accepted": 0
+  },
+  "concepts": [
+    {
+      "route": "term/pc-couple-meaning",
+      "path": "knowledge/full-dmg/pension-credit/pc-couple-meaning.yamlld",
+      "sha256": "0dd676badd8f83440d9bf6549934ae4fd94b5f6d4bd708fcb2fd027d56cc3827",
+      "chapter": 77,
+      "source_paragraph": "DMG 77013",
+      "source_page": 7,
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/pc-partner-meaning",
+      "path": "knowledge/full-dmg/pension-credit/pc-partner-meaning.yamlld",
+      "sha256": "8edcda2e83e895de619499ec452bbd2744a49aa4a577ff44fe1608111bce1d4a",
+      "chapter": 77,
+      "source_paragraph": "DMG 77015",
+      "source_page": 8,
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/pc-carer-additional-amount-exclusions",
+      "path": "knowledge/full-dmg/pension-credit/pc-carer-additional-amount-exclusions.yamlld",
+      "sha256": "202e6becf2903569d198ce8db92783d2f1f6443dd10250e787eed2854003ce73",
+      "chapter": 78,
+      "source_paragraph": "DMG 78100",
+      "source_page": 27,
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/pc-child-responsibility-amount-boundary",
+      "path": "knowledge/full-dmg/pension-credit/pc-child-responsibility-amount-boundary.yamlld",
+      "sha256": "75f751488e3f91b04250867efc70a5a41fe87f1ae49192307c62f6480aee64d6",
+      "chapter": 78,
+      "source_paragraph": "DMG 78549",
+      "source_page": 81,
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/pc-benefit-week",
+      "path": "knowledge/full-dmg/pension-credit/pc-benefit-week.yamlld",
+      "sha256": "dce038b2f2f11e2d0708a0537822ae3e2138b339f2c964a57d8b4a8f220ce515",
+      "chapter": 79,
+      "source_paragraph": "DMG 79010–79011",
+      "source_page": 4,
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/pc-part-week-scope-distinction",
+      "path": "knowledge/full-dmg/pension-credit/pc-part-week-scope-distinction.yamlld",
+      "sha256": "b49cd5c8250bbf6e1dc0ea2c09c29e2cac6fe6967ee986d760904df6748dea19",
+      "chapter": 79,
+      "source_paragraph": "DMG 79100–79101",
+      "source_page": 8,
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/pc-change-and-aip",
+      "path": "knowledge/full-dmg/pension-credit/pc-change-and-aip.yamlld",
+      "sha256": "c0b24e777732c3a1d7b6e03a02bfc717a675949a0226684f7ba3f50bfcf09a5a",
+      "chapter": 79,
+      "source_paragraph": "DMG 79050",
+      "source_page": 6,
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/pc-aip-reporting-boundary",
+      "path": "knowledge/full-dmg/pension-credit/pc-aip-reporting-boundary.yamlld",
+      "sha256": "4fe4ea29a1938f2ef8986d9ccf59c4c730a377f63efb8801cdf925de8d0872cd",
+      "chapter": 83,
+      "source_paragraph": "DMG 83000",
+      "source_page": 3,
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/pc-joint-beneficial-ownership",
+      "path": "knowledge/full-dmg/pension-credit/pc-joint-beneficial-ownership.yamlld",
+      "sha256": "1002025667bb6cd979c8ea9ea78bfece8d258132b39636bea3c2d4b04a090886",
+      "chapter": 84,
+      "source_paragraph": "DMG 84072",
+      "source_page": 8,
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/pc-uk-capital-valuation-basis",
+      "path": "knowledge/full-dmg/pension-credit/pc-uk-capital-valuation-basis.yamlld",
+      "sha256": "c2e9ac54c2c52b397258bc4a2684712253cdececad527d6286500d88bb9fc99a",
+      "chapter": 84,
+      "source_paragraph": "DMG 84692",
+      "source_page": 92,
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/pc-partner-income-attribution",
+      "path": "knowledge/full-dmg/pension-credit/pc-partner-income-attribution.yamlld",
+      "sha256": "2f81843956a4f5b357b199b67b07da0d3e68da6a1ab6ff8d8dfd579f95e6667a",
+      "chapter": 85,
+      "source_paragraph": "DMG 85016",
+      "source_page": 7,
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/pc-capital-income-disregard-distinction",
+      "path": "knowledge/full-dmg/pension-credit/pc-capital-income-disregard-distinction.yamlld",
+      "sha256": "bed60d2191f093669d3b228ad4d836fc3363c16c00c56d7263002e6cf61e3300",
+      "chapter": 85,
+      "source_paragraph": "DMG 85006",
+      "source_page": 5,
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/pc-earnings-assessment-timing",
+      "path": "knowledge/full-dmg/pension-credit/pc-earnings-assessment-timing.yamlld",
+      "sha256": "ca77ee2f2c75cc69bf3ba0c79aee545312b4c730cc0cbf24f75c4f1a4d843902",
+      "chapter": 86,
+      "source_paragraph": "DMG 86007–86008",
+      "source_page": 4,
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    },
+    {
+      "route": "term/pc-dual-employment-status",
+      "path": "knowledge/full-dmg/pension-credit/pc-dual-employment-status.yamlld",
+      "sha256": "ecb4b3f6b6d37a56fda2288e046e5aee524d5f4ca73f79409c00183142780ef0",
+      "chapter": 86,
+      "source_paragraph": "DMG 86201",
+      "source_page": 44,
+      "definition_status": "source-backed-model-paraphrase-unreviewed"
+    }
+  ],
+  "deterministic_checks": [
+    {
+      "source": "term/pc-couple-meaning",
+      "target": "term/household",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-partner-meaning",
+      "target": "term/pc-couple-meaning",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-carer-additional-amount-exclusions",
+      "target": "term/carers",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-child-responsibility-amount-boundary",
+      "target": "term/children",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-benefit-week",
+      "target": "term/pension-credit",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-part-week-scope-distinction",
+      "target": "term/part-week-payments",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-part-week-scope-distinction",
+      "target": "term/guarantee-credit",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-change-and-aip",
+      "target": "term/assessed-income-period",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-aip-reporting-boundary",
+      "target": "term/assessed-income-period",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-aip-reporting-boundary",
+      "target": "term/pc-change-and-aip",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-joint-beneficial-ownership",
+      "target": "term/beneficial-ownership",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-uk-capital-valuation-basis",
+      "target": "term/capital-valuation",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-partner-income-attribution",
+      "target": "term/pc-partner-meaning",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-partner-income-attribution",
+      "target": "term/income-other-than-earnings",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-capital-income-disregard-distinction",
+      "target": "term/capital-disregards",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-capital-income-disregard-distinction",
+      "target": "term/deemed-weekly-income",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-earnings-assessment-timing",
+      "target": "term/earnings",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-earnings-assessment-timing",
+      "target": "term/pc-benefit-week",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-dual-employment-status",
+      "target": "term/self-employment",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    },
+    {
+      "source": "term/pc-dual-employment-status",
+      "target": "term/earnings",
+      "positive_exact_quote_and_locator": "passed",
+      "negative_controls": {
+        "missing-evidence": {
+          "status": "rejected-as-required",
+          "error": "Semantic proposal needs a rationale and source evidence"
+        },
+        "fabricated-quote": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "wrong-paragraph": {
+          "status": "rejected-as-required",
+          "error": "Paragraph locator is not supported by the quoted passage"
+        },
+        "wrong-page": {
+          "status": "rejected-as-required",
+          "error": "Semantic evidence passage or locator does not match the source page"
+        },
+        "unregistered-predicate": {
+          "status": "rejected-as-required",
+          "error": "Unregistered semantic predicate"
+        }
+      }
+    }
+  ],
+  "memo_reviews": [
+    {
+      "document_id": "dmg-memo-01-26-0605724317",
+      "source_sha256": "3f9046be5c3e80ca1e96cf59e5b648a358d07cf0ede104bd1d91daf785887db7",
+      "page": 3,
+      "source_url": "https://assets.publishing.service.gov.uk/media/69d8f55d96c86b751317022e/dmg-memo-01-26.pdf#page=3",
+      "source_page_route": "page/dmg-memo-01-26-0605724317/0003",
+      "source_artifact": "source/full-dmg-2026-09-15/pages/dmg-memo-01-26-0605724317.json",
+      "source_text_sha256": "b22a4c493020cbc96b3368d9de8f516e26df14f10a5baea8fdb5628af4ae707a",
+      "examined_text": "State Pension Credit\n\nAdditional amount for the severely disabled\n5. DMG 78030 and 78610 and DMG Memo 12-23 give guidance that when considering entitlement to\nan additional amount for claimants who are severely disabled, no amount is payable in respect of a\nclaimant or their partner if someone is in receipt of\n\n\n      1. a CA or\n\n\n      2. the carer element of UC or\n\n\n      3. CSP\n\n\n      in respect of caring for them.\n\n\nFrom 15.03.26, CSP means the carer support component of carer support.\n\n\nAdditional amount for carers\n6. DMG 78100 and 78620 gives guidance that an additional amount for carers may be awarded for each\nclaimant who is entitled to CA. From 15.03.26 that also includes those claimants entitled to the carer\n\nsupport payment component of carer support1.\n\n\n7. An additional amount for carers continues to be paid for a period of 8 weeks when the person being\ncared for dies. From 15.03.26, where that additional amount has been awarded because the claimant is\nentitled to the carer support payment component of carer support, that period will be 12 weeks.\n\n\n                                                                 1 SPC Regs, Sch 1 para 4 (link is external)\n\n\n\nEmployment and Support Allowance\n\nEntitlement to premiums\n8. A carer premium continues to be paid for a period of 8 weeks where the person being cared for dies.\nHowever, where the carer premium has been awarded because the claimant or their partner is entitled\nto a CSP, that period will be 12 weeks.\n\n\n                                                                   1 ESA Regs 08, Sch 4, Reg 8(2a) & (4).\n\n\n\nDeferring Entitlement to State Pension/Retirement Pension\n\nLump Sum Payments\n9. DMG 75405 et seq provides guidance on people entitled to a lump sum payment when they defer their\nRP. The amount of RP which would have been payable had it not been deferred does not include any\n",
+      "finding": "The captured memo states a carer-support-payment scope change and a dated run-on distinction. It is a dependency for the chapter78 carer review; its legislative effect has not been independently verified.",
+      "related_chapters": [
+        78
+      ],
+      "status": "reviewed-excerpt-with-documented-legal-and-temporal-gaps",
+      "source_role": "supplementary-guidance",
+      "semantic_relation_status": "not-authored-memo-locator-not-in-approved-pilot-grammar",
+      "unresolved_dependencies": [
+        "Exact statutory provisions and versions not acquired in this batch.",
+        "No assertion that a listed memo is wholly incorporated, superseded or currently applicable."
+      ],
+      "review_status": "unreviewed-specialist-review-required"
+    },
+    {
+      "document_id": "dmg-memo-04-24-282c3cef22",
+      "source_sha256": "35741a2aae92c4082f3cf9fe493674d3c33d998bdf9ecd8bc40a3014edb4ae75",
+      "page": 2,
+      "source_url": "https://assets.publishing.service.gov.uk/media/66867768899a6f92e5d9ccf0/dmg-memo-04-24.pdf#page=2",
+      "source_page_route": "page/dmg-memo-04-24-282c3cef22/0002",
+      "source_artifact": "source/full-dmg-2026-09-15/pages/dmg-memo-04-24-282c3cef22.json",
+      "source_text_sha256": "8569aee3aaade9e027716127cf6150c31a89bb3c2f4c502d41b756cbfb1158d1",
+      "examined_text": "Amendments Regarding the Deferral of State Pension                                       39\n\n\nAnnotations\n\n\nContacts\n\n\n\n\nINTRODUCTION\n\n\n1. This Memo gives guidance on The Social Security (State Pension Age Claimants – Closure of Tax\nCredits) (Amendment) Regulations 2024 and the accompanying The Welfare Reform Act 2012\n(Commencement No. 31 and Savings and Transitional Provisions) (Amendment) Order 2024. The\nregulations come into force on 08/06/24. The amendment made by the Order also takes effect from\n08/6/24.\n\n\n2. All remaining Tax Credit awards will need to end during the tax year 2024-25 ahead of the planned\nclosure of the Tax Credits service, with effect from 06/04/25. Working age persons, including most\nmixed-age couples (MACs), will transfer to Universal Credit (UC), which is the subject of other\nregulations. These regulations (and the Commencement Order) described in this guidance concern what\nhappens to those people with a Tax Credit award who are of state pension age, including couples where\nboth members are of state pension age and certain “protected” MACs (see paragraph 15) who will not\ntransfer to UC.\n\n\n3. The principle is that those with a positive Working Tax Credit (WTC) award (including those WTC\nrecipients who also have a Child Tax Credit (CTC) award) will transfer to UC. CTC-only recipients entitled\nto WTC but whose income has eroded the WTC element to nil will also transfer to UC. The exception is\nthose who are already in receipt of Pension Credit (PC), who will remain on PC. Those with only a positive\nCTC award, including protected MACs with a CTC-only Tax Credit award, will transfer to PC. These\nRegulations (and the Order) are intended to remove impediments, smooth the transfer and allow for\nTransitional Protection for these cohorts.\n\n\nTRANSFERS TO UNIVERSAL CREDIT\n\nNOTIFICATION TO CLAIM UNIVERSAL CREDIT\n\n\n4. Persons of state pension age entitled to WTC will receive a migration notice giving a deadline date of\nat least three months in which to claim UC.\n\n\n5. Where a second migration notice must be issued, the deadline for that second notice can be a for\nperiod of less than three months – indeed, any length of time that the Secretary of State deems\n",
+      "finding": "The captured memo distinguishes transfer cohorts and identifies separate PC/UC routes for tax-credit closure. It prevents treating a child-responsibility paragraph as a complete transfer journey.",
+      "related_chapters": [
+        78,
+        79
+      ],
+      "status": "reviewed-excerpt-with-documented-legal-and-temporal-gaps",
+      "source_role": "supplementary-guidance",
+      "semantic_relation_status": "not-authored-memo-locator-not-in-approved-pilot-grammar",
+      "unresolved_dependencies": [
+        "Exact statutory provisions and versions not acquired in this batch.",
+        "No assertion that a listed memo is wholly incorporated, superseded or currently applicable."
+      ],
+      "review_status": "unreviewed-specialist-review-required"
+    },
+    {
+      "document_id": "dmg-m-11-20-83e16ba3cc",
+      "source_sha256": "7c6922abee53eb004a3f9c69ea1142ee47664702434295ffbd4313761e17e174",
+      "page": 2,
+      "source_url": "https://assets.publishing.service.gov.uk/media/5ece50c486650c76b02b2d25/m-11-20.pdf#page=2",
+      "source_page_route": "page/dmg-m-11-20-83e16ba3cc/0002",
+      "source_artifact": "source/full-dmg-2026-09-15/pages/dmg-m-11-20-83e16ba3cc.json",
+      "source_text_sha256": "78afcaef0cb2e2f94c49a20309bf1f27a367e3e6a2147ec5fc2a749f8b37f98a",
+      "examined_text": "EFFECT ON INCOME FOR SPC PURPOSES\n\n5. VPs are not a prescribed income1 for SPC purposes so are disregarded in full.\n\n                                  1. SPC Act 02, s 15; SPC Regs, reg 15; The V P Regs 2020, reg 26(1)(a)\n\n\nEFFECT ON INCOME FOR IS, JSA(IB) AND ESA(IR) PURPOSES\n\n6. VPs are fully disregarded as income for IS1, JSA(IB)2 and ESA(IR)3 purposes.\n\n   1. The V P Regs 2020, reg 26(1)(a) & (2)(c)(i); 2. The V P Regs 2020, reg 26(1)(a) & (2)(d)(i); 3. The V P\n                                                                          Regs 2020, reg 26(1)(a) & (2)(a)(i)\n\n\nEFFECT ON CAPITAL FOR SPC, IS, JSA(IB) AND ESA(IR)\n   PURPOSES\n\n7. VPs are fully disregarded indefinitely as capital for SPC 1, IS2, JSA(IB)3 and\n   ESA(IR)4 purposes.\n\n 1. The V P Regs 2020, reg 26(1)(a) & (2)(e); 2. The V P Regs, reg 26(1)(a) & (2)(c); 3. 26(1)(a) & (2)(d); 4.\n                                                                                             26(1)(a) & (2)(a)\n\n\nANNOTATIONS\n\nPlease annotate the number of this memo (11/20) against the following DMG\n   paragraphs.\n\n28350 29351 51210 52351 84351 85280\n\n\n\nCONTACTS\n\nIf you have any queries about this memo, please write to Decision Making and\nAppeals (DMA) Leeds, 3E zone E, Quarry House, Leeds. Existing arrangements for\nsuch referrals should be followed, as set out in – Memo 4/19 Requesting case\nguidance from DMA Leeds for all benefits.\n\n                                                                               DMA Leeds: May 2020\n\n\n\n\nThe content of the examples in this document (including use of imagery) is for illustrative\n   purposes only\n",
+      "finding": "The captured memo distinguishes income and capital treatment of victims’ payments and explicitly requests annotations against DMG84351 and85280. Incorporation and continuing applicability remain unverified.",
+      "related_chapters": [
+        84,
+        85
+      ],
+      "status": "reviewed-excerpt-with-documented-legal-and-temporal-gaps",
+      "source_role": "supplementary-guidance",
+      "semantic_relation_status": "not-authored-memo-locator-not-in-approved-pilot-grammar",
+      "unresolved_dependencies": [
+        "Exact statutory provisions and versions not acquired in this batch.",
+        "No assertion that a listed memo is wholly incorporated, superseded or currently applicable."
+      ],
+      "review_status": "unreviewed-specialist-review-required"
+    }
+  ],
+  "chapter_receipts": [
+    {
+      "task_id": "research-pc-77",
+      "source_unit_id": "dmg-0998a9724857111d",
+      "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+      "document_id": "dmg-vol13-ch77",
+      "chapter": 77,
+      "authoring_revision": "7155bcd73f24743431242a9e32d64d86b1b45635",
+      "started_at": "2026-09-15T19:58:30Z",
+      "finished_at": "2026-09-15T19:58:30Z",
+      "execution_method": "Model reading of frozen body passages and nearby scope notes; authored scoped concepts; deterministic exact-quote/locator validation with explicit negative mutations.",
+      "tool_or_model_identity": {
+        "tool": "scripts/semantic_authoring.py:check_relation",
+        "tool_sha256": "c4fb1ed81f30d7d10b3e9d89b80f6ca0a99f7f4cf0e68e4cd523828871d799c9",
+        "author": "Codex assistant",
+        "exact_runtime_model_identifier": "not-exposed-in-this-task",
+        "model_usage": "not-recorded"
+      },
+      "outcome": "completed-with-documented-gaps",
+      "evidence_paths": [
+        "source/pages/dmg-vol13-ch77.json",
+        "knowledge/full-dmg/pension-credit/pc-couple-meaning.yamlld",
+        "knowledge/full-dmg/pension-credit/pc-partner-meaning.yamlld",
+        "evaluation/full-dmg-evidence/dmg-vol13-ch77.json"
+      ],
+      "findings": [
+        "The captured definition distinguishes spouses or civil partners in the same household from people living together as if they were married or civil partners.",
+        "The captured guidance calls each member of a couple a partner and refers to both members as partners."
+      ],
+      "review_status": "unreviewed-specialist-review-required",
+      "unresolved_dependencies": [
+        "Selected paragraphs are a bounded sample; the remaining chapter definitions, exceptions, worked examples and relationships have not been exhaustively modelled.",
+        "Source publication/update/capture dates do not establish legal effective dates or present applicability.",
+        "Named specialist acceptance and independently accepted scenario outcomes are absent."
+      ],
+      "requirements": {
+        "RQ01": {
+          "outcome": "completed-unreviewed",
+          "evidence": "source/full-dmg-2026-09-15/verification.json",
+          "finding": "Exact PDF, page and text identities verified; original acquisition observation preserved."
+        },
+        "RQ02": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "DMG 77013",
+            "DMG 77015"
+          ],
+          "finding": "Selected body passages separated from headings and examples. Full chapter segmentation and complex table/footnote interpretation remain in the deterministic evidence register and require review."
+        },
+        "RQ03": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "knowledge/full-dmg/pension-credit/pc-couple-meaning.yamlld",
+            "knowledge/full-dmg/pension-credit/pc-partner-meaning.yamlld"
+          ],
+          "finding": "Scoped concept paraphrases authored; existing broad terms reused as endpoints. No exhaustive term inventory is claimed."
+        },
+        "RQ04": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "term/pc-couple-meaning",
+            "term/pc-partner-meaning"
+          ],
+          "finding": "Source-backed SKOS related proposals checked. No unapproved predicate, legal equivalence or executable rule introduced."
+        },
+        "RQ05": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": "evaluation/full-dmg-evidence/dmg-vol13-ch77.json",
+          "finding": "Publication/update, original acquisition and source-stated time expressions kept separate. Current applicability and incorporation unverified."
+        },
+        "RQ06": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            {
+              "literal_citation_line": "1 SPC Regs Reg 1(2)",
+              "page": 7,
+              "locator": "DMG 77013",
+              "resolution": "unresolved-provision-version-and-applicability",
+              "evidence_kind": "exact-line-in-selected-source-passage"
+            },
+            {
+              "literal_citation_line": "1 SPC Regs, reg 1(3)",
+              "page": 8,
+              "locator": "DMG 77015",
+              "resolution": "unresolved-provision-version-and-applicability",
+              "evidence_kind": "exact-line-in-selected-source-passage"
+            }
+          ],
+          "finding": "Literal citation lines from selected body passages retained; statutory work/provision/version resolution is incomplete."
+        },
+        "RQ07": {
+          "outcome": "cases-designed; built-bundle-retrieval-and-behavioural-evaluation-pending",
+          "evidence": [
+            "eval-positive-77",
+            "eval-negative-77"
+          ],
+          "finding": "Authored response exemplars and deterministic evidence-mutation checks are recorded separately. No actual question/run against a pinned built bundle or specialist-approved answer is claimed."
+        },
+        "RQ08": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": "evaluation/full-dmg-pension-credit-review.json",
+          "finding": "Coverage row records source unit, bounded scope, actual checks and unresolved issues."
+        },
+        "RQ09": {
+          "outcome": "completed-with-documented-gaps",
+          "finding": "No equivalence to ADM/UC terminology or rules asserted; cross-regime comparisons await separately acquired and reviewed source evidence."
+        }
+      },
+      "evaluations": [
+        {
+          "task_id": "eval-positive-77",
+          "execution": "authored-response-exemplar; not an executed retrieval or behavioural evaluation",
+          "response": "The captured Pension Credit source supports these bounded concepts: Couple in Pension Credit guidance, Partner in Pension Credit guidance. Exact source locators: DMG 77013, DMG 77015. Source role: departmental guidance; scope and temporal/legal gaps remain as recorded.",
+          "evidence_routes": [
+            "page/77/0007",
+            "page/77/0008"
+          ],
+          "review_status": "unreviewed-specialist-review-required"
+        },
+        {
+          "task_id": "eval-negative-77",
+          "execution": "authored-response-exemplar; not an executed retrieval or behavioural evaluation",
+          "response": "No. A heading or isolated Pension Credit passage does not establish a currently applicable rule for another benefit or date. Keep the stated conditions, source role and any source-stated date; acquire the relevant statutory version, inspect exceptions and obtain specialist review before a rule or entitlement claim.",
+          "unsupported_proposition_rejected": "The selected statement is automatically a current Universal Credit rule because the terminology is similar.",
+          "review_status": "unreviewed-specialist-review-required"
+        }
+      ],
+      "source_dates": {
+        "document_publication_date": null,
+        "publication_page_first_published_at": "2013-06-01T00:00:00+01:00",
+        "publication_page_updated_at": "2026-07-20T16:39:55+01:00",
+        "original_pdf_observed_at": "2026-09-15T14:21:01Z"
+      },
+      "related_personas": [
+        "persona/pensions-specialist",
+        "persona/policy-law-reviewer",
+        "persona/rules-architect"
+      ],
+      "related_stories": [
+        "story/policy-law-trace",
+        "story/rule-candidate-review",
+        "story/apply-and-report-change"
+      ],
+      "questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-003",
+        "question/stage2-005",
+        "question/stage2-002",
+        "question/stage2-004"
+      ]
+    },
+    {
+      "task_id": "research-pc-78",
+      "source_unit_id": "dmg-e880cb19453da618",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "document_id": "dmg-vol13-ch78",
+      "chapter": 78,
+      "authoring_revision": "7155bcd73f24743431242a9e32d64d86b1b45635",
+      "started_at": "2026-09-15T19:58:30Z",
+      "finished_at": "2026-09-15T19:58:30Z",
+      "execution_method": "Model reading of frozen body passages and nearby scope notes; authored scoped concepts; deterministic exact-quote/locator validation with explicit negative mutations.",
+      "tool_or_model_identity": {
+        "tool": "scripts/semantic_authoring.py:check_relation",
+        "tool_sha256": "c4fb1ed81f30d7d10b3e9d89b80f6ca0a99f7f4cf0e68e4cd523828871d799c9",
+        "author": "Codex assistant",
+        "exact_runtime_model_identifier": "not-exposed-in-this-task",
+        "model_usage": "not-recorded"
+      },
+      "outcome": "completed-with-documented-gaps",
+      "evidence_paths": [
+        "source/pages/dmg-vol13-ch78.json",
+        "knowledge/full-dmg/pension-credit/pc-carer-additional-amount-exclusions.yamlld",
+        "knowledge/full-dmg/pension-credit/pc-child-responsibility-amount-boundary.yamlld",
+        "evaluation/full-dmg-evidence/dmg-vol13-ch78.json"
+      ],
+      "findings": [
+        "The captured paragraph describes a possible carer additional amount and names prisoners and people fully maintained by a religious order as exclusions.",
+        "The captured paragraph links a child or qualifying young person amount to responsibility for them, records a new-claim date of 1.2.19, and states an immigration-status limitation."
+      ],
+      "review_status": "unreviewed-specialist-review-required",
+      "unresolved_dependencies": [
+        "Selected paragraphs are a bounded sample; the remaining chapter definitions, exceptions, worked examples and relationships have not been exhaustively modelled.",
+        "Source publication/update/capture dates do not establish legal effective dates or present applicability.",
+        "Named specialist acceptance and independently accepted scenario outcomes are absent.",
+        "Relevant memo excerpts are recorded separately; their incorporation and statutory effects remain unresolved."
+      ],
+      "requirements": {
+        "RQ01": {
+          "outcome": "completed-unreviewed",
+          "evidence": "source/full-dmg-2026-09-15/verification.json",
+          "finding": "Exact PDF, page and text identities verified; original acquisition observation preserved."
+        },
+        "RQ02": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "DMG 78100",
+            "DMG 78549"
+          ],
+          "finding": "Selected body passages separated from headings and examples. Full chapter segmentation and complex table/footnote interpretation remain in the deterministic evidence register and require review."
+        },
+        "RQ03": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "knowledge/full-dmg/pension-credit/pc-carer-additional-amount-exclusions.yamlld",
+            "knowledge/full-dmg/pension-credit/pc-child-responsibility-amount-boundary.yamlld"
+          ],
+          "finding": "Scoped concept paraphrases authored; existing broad terms reused as endpoints. No exhaustive term inventory is claimed."
+        },
+        "RQ04": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "term/pc-carer-additional-amount-exclusions",
+            "term/pc-child-responsibility-amount-boundary"
+          ],
+          "finding": "Source-backed SKOS related proposals checked. No unapproved predicate, legal equivalence or executable rule introduced."
+        },
+        "RQ05": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": "evaluation/full-dmg-evidence/dmg-vol13-ch78.json",
+          "finding": "Publication/update, original acquisition and source-stated time expressions kept separate. Current applicability and incorporation unverified."
+        },
+        "RQ06": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            {
+              "literal_citation_line": "78100 [See DMG memo 12/23] [See Memo DMG 01/26] When considering the amount of the AMG, an",
+              "page": 27,
+              "locator": "DMG 78100",
+              "resolution": "unresolved-provision-version-and-applicability",
+              "evidence_kind": "exact-line-in-selected-source-passage"
+            },
+            {
+              "literal_citation_line": "1 SPC Act 02, s 2(3)(b) & (8); SPC Regs, reg 6(6)(a) & Sch I, para 4(1); 2 reg 6(2), (3) & (6)",
+              "page": 27,
+              "locator": "DMG 78100",
+              "resolution": "unresolved-provision-version-and-applicability",
+              "evidence_kind": "exact-line-in-selected-source-passage"
+            },
+            {
+              "literal_citation_line": "78549    (See ADM memo 05-24) (see DMG memo 04-24) From 1.2.19, when considering a new claim to",
+              "page": 81,
+              "locator": "DMG 78549",
+              "resolution": "unresolved-provision-version-and-applicability",
+              "evidence_kind": "exact-line-in-selected-source-passage"
+            },
+            {
+              "literal_citation_line": "1 SPC Regs, reg 6(6)(d) & Sch IIA, para 3; 2 WR Act 12; s.33 & Sch 6, para 6",
+              "page": 81,
+              "locator": "DMG 78549",
+              "resolution": "unresolved-provision-version-and-applicability",
+              "evidence_kind": "exact-line-in-selected-source-passage"
+            }
+          ],
+          "finding": "Literal citation lines from selected body passages retained; statutory work/provision/version resolution is incomplete."
+        },
+        "RQ07": {
+          "outcome": "cases-designed; built-bundle-retrieval-and-behavioural-evaluation-pending",
+          "evidence": [
+            "eval-positive-78",
+            "eval-negative-78"
+          ],
+          "finding": "Authored response exemplars and deterministic evidence-mutation checks are recorded separately. No actual question/run against a pinned built bundle or specialist-approved answer is claimed."
+        },
+        "RQ08": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": "evaluation/full-dmg-pension-credit-review.json",
+          "finding": "Coverage row records source unit, bounded scope, actual checks and unresolved issues."
+        }
+      },
+      "evaluations": [
+        {
+          "task_id": "eval-positive-78",
+          "execution": "authored-response-exemplar; not an executed retrieval or behavioural evaluation",
+          "response": "The captured Pension Credit source supports these bounded concepts: Carer additional amount: named exclusions, Child responsibility amount: dated source boundary. Exact source locators: DMG 78100, DMG 78549. Source role: departmental guidance; scope and temporal/legal gaps remain as recorded.",
+          "evidence_routes": [
+            "page/78/0027",
+            "page/78/0081"
+          ],
+          "review_status": "unreviewed-specialist-review-required"
+        },
+        {
+          "task_id": "eval-negative-78",
+          "execution": "authored-response-exemplar; not an executed retrieval or behavioural evaluation",
+          "response": "No. A heading or isolated Pension Credit passage does not establish a currently applicable rule for another benefit or date. Keep the stated conditions, source role and any source-stated date; acquire the relevant statutory version, inspect exceptions and obtain specialist review before a rule or entitlement claim.",
+          "unsupported_proposition_rejected": "The selected statement is automatically a current Universal Credit rule because the terminology is similar.",
+          "review_status": "unreviewed-specialist-review-required"
+        }
+      ],
+      "source_dates": {
+        "document_publication_date": null,
+        "publication_page_first_published_at": "2013-06-01T00:00:00+01:00",
+        "publication_page_updated_at": "2026-07-20T16:39:55+01:00",
+        "original_pdf_observed_at": "2026-09-15T14:21:01Z"
+      },
+      "related_personas": [
+        "persona/pensions-specialist",
+        "persona/policy-law-reviewer",
+        "persona/rules-architect"
+      ],
+      "related_stories": [
+        "story/policy-law-trace",
+        "story/rule-candidate-review",
+        "story/apply-and-report-change"
+      ],
+      "questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-004"
+      ]
+    },
+    {
+      "task_id": "research-pc-79",
+      "source_unit_id": "dmg-3648287ccc6a3ed9",
+      "source_sha256": "0098a2267cb9b321cae6bf25b3493b3674c4e8cb1b859fcd6b8ae7d459323be8",
+      "document_id": "dmg-vol13-ch79",
+      "chapter": 79,
+      "authoring_revision": "7155bcd73f24743431242a9e32d64d86b1b45635",
+      "started_at": "2026-09-15T19:58:30Z",
+      "finished_at": "2026-09-15T19:58:30Z",
+      "execution_method": "Model reading of frozen body passages and nearby scope notes; authored scoped concepts; deterministic exact-quote/locator validation with explicit negative mutations.",
+      "tool_or_model_identity": {
+        "tool": "scripts/semantic_authoring.py:check_relation",
+        "tool_sha256": "c4fb1ed81f30d7d10b3e9d89b80f6ca0a99f7f4cf0e68e4cd523828871d799c9",
+        "author": "Codex assistant",
+        "exact_runtime_model_identifier": "not-exposed-in-this-task",
+        "model_usage": "not-recorded"
+      },
+      "outcome": "completed-with-documented-gaps",
+      "evidence_paths": [
+        "source/pages/dmg-vol13-ch79.json",
+        "knowledge/full-dmg/pension-credit/pc-benefit-week.yamlld",
+        "knowledge/full-dmg/pension-credit/pc-part-week-scope-distinction.yamlld",
+        "knowledge/full-dmg/pension-credit/pc-change-and-aip.yamlld",
+        "evaluation/full-dmg-evidence/dmg-vol13-ch79.json"
+      ],
+      "findings": [
+        "The captured guidance defines a seven-day benefit week by its starting payment day for advance payment and its ending payment day for payment in arrears.",
+        "The captured guidance distinguishes its specific part-week payment category from other payments covering less than a full week and links the category to named benefit-to-Guarantee-Credit transitions.",
+        "The captured payment guidance says a change of circumstances can provide grounds for supersession and directs readers to the AIP chapter for changes during an assessed income period."
+      ],
+      "review_status": "unreviewed-specialist-review-required",
+      "unresolved_dependencies": [
+        "Selected paragraphs are a bounded sample; the remaining chapter definitions, exceptions, worked examples and relationships have not been exhaustively modelled.",
+        "Source publication/update/capture dates do not establish legal effective dates or present applicability.",
+        "Named specialist acceptance and independently accepted scenario outcomes are absent.",
+        "Relevant memo excerpts are recorded separately; their incorporation and statutory effects remain unresolved."
+      ],
+      "requirements": {
+        "RQ01": {
+          "outcome": "completed-unreviewed",
+          "evidence": "source/full-dmg-2026-09-15/verification.json",
+          "finding": "Exact PDF, page and text identities verified; original acquisition observation preserved."
+        },
+        "RQ02": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "DMG 79010–79011",
+            "DMG 79100–79101",
+            "DMG 79050"
+          ],
+          "finding": "Selected body passages separated from headings and examples. Full chapter segmentation and complex table/footnote interpretation remain in the deterministic evidence register and require review."
+        },
+        "RQ03": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "knowledge/full-dmg/pension-credit/pc-benefit-week.yamlld",
+            "knowledge/full-dmg/pension-credit/pc-part-week-scope-distinction.yamlld",
+            "knowledge/full-dmg/pension-credit/pc-change-and-aip.yamlld"
+          ],
+          "finding": "Scoped concept paraphrases authored; existing broad terms reused as endpoints. No exhaustive term inventory is claimed."
+        },
+        "RQ04": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "term/pc-benefit-week",
+            "term/pc-part-week-scope-distinction",
+            "term/pc-change-and-aip"
+          ],
+          "finding": "Source-backed SKOS related proposals checked. No unapproved predicate, legal equivalence or executable rule introduced."
+        },
+        "RQ05": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": "evaluation/full-dmg-evidence/dmg-vol13-ch79.json",
+          "finding": "Publication/update, original acquisition and source-stated time expressions kept separate. Current applicability and incorporation unverified."
+        },
+        "RQ06": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            {
+              "literal_citation_line": "1 SPC Regs, reg 1(2)",
+              "page": 4,
+              "locator": "DMG 79010–79011",
+              "resolution": "unresolved-provision-version-and-applicability",
+              "evidence_kind": "exact-line-in-selected-source-passage"
+            },
+            {
+              "literal_citation_line": "1 SPC Regs, reg 1(2)",
+              "page": 4,
+              "locator": "DMG 79010–79011",
+              "resolution": "unresolved-provision-version-and-applicability",
+              "evidence_kind": "exact-line-in-selected-source-passage"
+            },
+            {
+              "literal_citation_line": "1 SPC Act 02, Sch 1, para 13; 2 SS CS (D&A) Regs, Sch 3B, para 4(b)",
+              "page": 8,
+              "locator": "DMG 79100–79101",
+              "resolution": "unresolved-provision-version-and-applicability",
+              "evidence_kind": "exact-line-in-selected-source-passage"
+            },
+            {
+              "literal_citation_line": "1 SPC Regs, reg 13A",
+              "page": 8,
+              "locator": "DMG 79100–79101",
+              "resolution": "unresolved-provision-version-and-applicability",
+              "evidence_kind": "exact-line-in-selected-source-passage"
+            },
+            {
+              "literal_citation_line": "DMG Chapter 83 regarding changes during the AIP.",
+              "page": 6,
+              "locator": "DMG 79050",
+              "resolution": "unresolved-provision-version-and-applicability",
+              "evidence_kind": "exact-line-in-selected-source-passage"
+            },
+            {
+              "literal_citation_line": "1 SS Act 98, s 9 & 10",
+              "page": 6,
+              "locator": "DMG 79050",
+              "resolution": "unresolved-provision-version-and-applicability",
+              "evidence_kind": "exact-line-in-selected-source-passage"
+            }
+          ],
+          "finding": "Literal citation lines from selected body passages retained; statutory work/provision/version resolution is incomplete."
+        },
+        "RQ07": {
+          "outcome": "cases-designed; built-bundle-retrieval-and-behavioural-evaluation-pending",
+          "evidence": [
+            "eval-positive-79",
+            "eval-negative-79"
+          ],
+          "finding": "Authored response exemplars and deterministic evidence-mutation checks are recorded separately. No actual question/run against a pinned built bundle or specialist-approved answer is claimed."
+        },
+        "RQ08": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": "evaluation/full-dmg-pension-credit-review.json",
+          "finding": "Coverage row records source unit, bounded scope, actual checks and unresolved issues."
+        }
+      },
+      "evaluations": [
+        {
+          "task_id": "eval-positive-79",
+          "execution": "authored-response-exemplar; not an executed retrieval or behavioural evaluation",
+          "response": "The captured Pension Credit source supports these bounded concepts: Benefit week for Pension Credit payment, Part-week payment: scope distinction, Change of circumstances and assessed income periods. Exact source locators: DMG 79010–79011, DMG 79100–79101, DMG 79050. Source role: departmental guidance; scope and temporal/legal gaps remain as recorded.",
+          "evidence_routes": [
+            "page/79/0004",
+            "page/79/0008",
+            "page/79/0006"
+          ],
+          "review_status": "unreviewed-specialist-review-required"
+        },
+        {
+          "task_id": "eval-negative-79",
+          "execution": "authored-response-exemplar; not an executed retrieval or behavioural evaluation",
+          "response": "No. A heading or isolated Pension Credit passage does not establish a currently applicable rule for another benefit or date. Keep the stated conditions, source role and any source-stated date; acquire the relevant statutory version, inspect exceptions and obtain specialist review before a rule or entitlement claim.",
+          "unsupported_proposition_rejected": "The selected statement is automatically a current Universal Credit rule because the terminology is similar.",
+          "review_status": "unreviewed-specialist-review-required"
+        }
+      ],
+      "source_dates": {
+        "document_publication_date": null,
+        "publication_page_first_published_at": "2013-06-01T00:00:00+01:00",
+        "publication_page_updated_at": "2026-07-20T16:39:55+01:00",
+        "original_pdf_observed_at": "2026-09-15T14:21:01Z"
+      },
+      "related_personas": [
+        "persona/pensions-specialist",
+        "persona/policy-law-reviewer",
+        "persona/rules-architect"
+      ],
+      "related_stories": [
+        "story/policy-law-trace",
+        "story/rule-candidate-review",
+        "story/apply-and-report-change"
+      ],
+      "questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-003",
+        "question/stage2-005"
+      ]
+    },
+    {
+      "task_id": "research-pc-83",
+      "source_unit_id": "dmg-3b0ea9b230953b51",
+      "source_sha256": "b7b36dae645ea1886638833a099c6eccf6a2f1312c1e2708fa1de7bd8a63e43e",
+      "document_id": "dmg-vol14-ch83",
+      "chapter": 83,
+      "authoring_revision": "7155bcd73f24743431242a9e32d64d86b1b45635",
+      "started_at": "2026-09-15T19:58:30Z",
+      "finished_at": "2026-09-15T19:58:30Z",
+      "execution_method": "Model reading of frozen body passages and nearby scope notes; authored scoped concepts; deterministic exact-quote/locator validation with explicit negative mutations.",
+      "tool_or_model_identity": {
+        "tool": "scripts/semantic_authoring.py:check_relation",
+        "tool_sha256": "c4fb1ed81f30d7d10b3e9d89b80f6ca0a99f7f4cf0e68e4cd523828871d799c9",
+        "author": "Codex assistant",
+        "exact_runtime_model_identifier": "not-exposed-in-this-task",
+        "model_usage": "not-recorded"
+      },
+      "outcome": "completed-with-documented-gaps",
+      "evidence_paths": [
+        "source/pages/dmg-vol14-ch83.json",
+        "knowledge/full-dmg/pension-credit/pc-aip-reporting-boundary.yamlld",
+        "evaluation/full-dmg-evidence/dmg-vol14-ch83.json"
+      ],
+      "findings": [
+        "The captured introduction defines an AIP as fixing retirement provision subject to deemed increases, then records that no new AIPs are set on or after 6.4.16 and links that change to reporting relevant circumstances."
+      ],
+      "review_status": "unreviewed-specialist-review-required",
+      "unresolved_dependencies": [
+        "Selected paragraphs are a bounded sample; the remaining chapter definitions, exceptions, worked examples and relationships have not been exhaustively modelled.",
+        "Source publication/update/capture dates do not establish legal effective dates or present applicability.",
+        "Named specialist acceptance and independently accepted scenario outcomes are absent.",
+        "Much of chapter83 has damaged letter spacing. Deeper AIP-setting and retirement-provision rules were not promoted from that text.",
+        "Historical AIP instructions must not be applied as a current new-claim rule."
+      ],
+      "requirements": {
+        "RQ01": {
+          "outcome": "completed-unreviewed",
+          "evidence": "source/full-dmg-2026-09-15/verification.json",
+          "finding": "Exact PDF, page and text identities verified; original acquisition observation preserved."
+        },
+        "RQ02": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "DMG 83000"
+          ],
+          "finding": "Selected body passages separated from headings and examples. Full chapter segmentation and complex table/footnote interpretation remain in the deterministic evidence register and require review."
+        },
+        "RQ03": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "knowledge/full-dmg/pension-credit/pc-aip-reporting-boundary.yamlld"
+          ],
+          "finding": "Scoped concept paraphrases authored; existing broad terms reused as endpoints. No exhaustive term inventory is claimed."
+        },
+        "RQ04": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "term/pc-aip-reporting-boundary"
+          ],
+          "finding": "Source-backed SKOS related proposals checked. No unapproved predicate, legal equivalence or executable rule introduced."
+        },
+        "RQ05": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": "evaluation/full-dmg-evidence/dmg-vol14-ch83.json",
+          "finding": "Publication/update, original acquisition and source-stated time expressions kept separate. Current applicability and incorporation unverified."
+        },
+        "RQ06": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [],
+          "finding": "Literal citation lines from selected body passages retained; statutory work/provision/version resolution is incomplete."
+        },
+        "RQ07": {
+          "outcome": "cases-designed; built-bundle-retrieval-and-behavioural-evaluation-pending",
+          "evidence": [
+            "eval-positive-83",
+            "eval-negative-83"
+          ],
+          "finding": "Authored response exemplars and deterministic evidence-mutation checks are recorded separately. No actual question/run against a pinned built bundle or specialist-approved answer is claimed."
+        },
+        "RQ08": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": "evaluation/full-dmg-pension-credit-review.json",
+          "finding": "Coverage row records source unit, bounded scope, actual checks and unresolved issues."
+        }
+      },
+      "evaluations": [
+        {
+          "task_id": "eval-positive-83",
+          "execution": "authored-response-exemplar; not an executed retrieval or behavioural evaluation",
+          "response": "The captured Pension Credit source supports these bounded concepts: AIP reporting: historical boundary. Exact source locators: DMG 83000. Source role: departmental guidance; scope and temporal/legal gaps remain as recorded.",
+          "evidence_routes": [
+            "page/83/0003"
+          ],
+          "review_status": "unreviewed-specialist-review-required"
+        },
+        {
+          "task_id": "eval-negative-83",
+          "execution": "authored-response-exemplar; not an executed retrieval or behavioural evaluation",
+          "response": "No. A heading or isolated Pension Credit passage does not establish a currently applicable rule for another benefit or date. Keep the stated conditions, source role and any source-stated date; acquire the relevant statutory version, inspect exceptions and obtain specialist review before a rule or entitlement claim.",
+          "unsupported_proposition_rejected": "The selected statement is automatically a current Universal Credit rule because the terminology is similar.",
+          "review_status": "unreviewed-specialist-review-required"
+        }
+      ],
+      "source_dates": {
+        "document_publication_date": null,
+        "publication_page_first_published_at": "2013-06-01T00:00:00+01:00",
+        "publication_page_updated_at": "2026-07-20T16:39:55+01:00",
+        "original_pdf_observed_at": "2026-09-15T14:21:02Z"
+      },
+      "related_personas": [
+        "persona/pensions-specialist",
+        "persona/policy-law-reviewer",
+        "persona/rules-architect"
+      ],
+      "related_stories": [
+        "story/policy-law-trace",
+        "story/rule-candidate-review",
+        "story/apply-and-report-change"
+      ],
+      "questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-002"
+      ]
+    },
+    {
+      "task_id": "research-pc-84",
+      "source_unit_id": "dmg-3d4e6ab3259f2442",
+      "source_sha256": "f5c610b29bdb81e11736409b7f33ccf7917a4d8945f2821802801073e0d753ee",
+      "document_id": "dmg-vol14-ch84",
+      "chapter": 84,
+      "authoring_revision": "7155bcd73f24743431242a9e32d64d86b1b45635",
+      "started_at": "2026-09-15T19:58:30Z",
+      "finished_at": "2026-09-15T19:58:30Z",
+      "execution_method": "Model reading of frozen body passages and nearby scope notes; authored scoped concepts; deterministic exact-quote/locator validation with explicit negative mutations.",
+      "tool_or_model_identity": {
+        "tool": "scripts/semantic_authoring.py:check_relation",
+        "tool_sha256": "c4fb1ed81f30d7d10b3e9d89b80f6ca0a99f7f4cf0e68e4cd523828871d799c9",
+        "author": "Codex assistant",
+        "exact_runtime_model_identifier": "not-exposed-in-this-task",
+        "model_usage": "not-recorded"
+      },
+      "outcome": "completed-with-documented-gaps",
+      "evidence_paths": [
+        "source/pages/dmg-vol14-ch84.json",
+        "knowledge/full-dmg/pension-credit/pc-joint-beneficial-ownership.yamlld",
+        "knowledge/full-dmg/pension-credit/pc-uk-capital-valuation-basis.yamlld",
+        "evaluation/full-dmg-evidence/dmg-vol14-ch84.json"
+      ],
+      "findings": [
+        "The captured guidance describes beneficial ownership through a beneficial interest and joint beneficial ownership where more than one person has that interest in the same capital.",
+        "The captured paragraph uses current market or surrender value for capital in the UK and describes deductions for sale costs and secured encumbrances."
+      ],
+      "review_status": "unreviewed-specialist-review-required",
+      "unresolved_dependencies": [
+        "Selected paragraphs are a bounded sample; the remaining chapter definitions, exceptions, worked examples and relationships have not been exhaustively modelled.",
+        "Source publication/update/capture dates do not establish legal effective dates or present applicability.",
+        "Named specialist acceptance and independently accepted scenario outcomes are absent.",
+        "Relevant memo excerpts are recorded separately; their incorporation and statutory effects remain unresolved."
+      ],
+      "requirements": {
+        "RQ01": {
+          "outcome": "completed-unreviewed",
+          "evidence": "source/full-dmg-2026-09-15/verification.json",
+          "finding": "Exact PDF, page and text identities verified; original acquisition observation preserved."
+        },
+        "RQ02": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "DMG 84072",
+            "DMG 84692"
+          ],
+          "finding": "Selected body passages separated from headings and examples. Full chapter segmentation and complex table/footnote interpretation remain in the deterministic evidence register and require review."
+        },
+        "RQ03": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "knowledge/full-dmg/pension-credit/pc-joint-beneficial-ownership.yamlld",
+            "knowledge/full-dmg/pension-credit/pc-uk-capital-valuation-basis.yamlld"
+          ],
+          "finding": "Scoped concept paraphrases authored; existing broad terms reused as endpoints. No exhaustive term inventory is claimed."
+        },
+        "RQ04": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "term/pc-joint-beneficial-ownership",
+            "term/pc-uk-capital-valuation-basis"
+          ],
+          "finding": "Source-backed SKOS related proposals checked. No unapproved predicate, legal equivalence or executable rule introduced."
+        },
+        "RQ05": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": "evaluation/full-dmg-evidence/dmg-vol14-ch84.json",
+          "finding": "Publication/update, original acquisition and source-stated time expressions kept separate. Current applicability and incorporation unverified."
+        },
+        "RQ06": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            {
+              "literal_citation_line": "1 SPC Regs, reg 19, R(SB) 2/83, CJSA 3067/09",
+              "page": 92,
+              "locator": "DMG 84692",
+              "resolution": "unresolved-provision-version-and-applicability",
+              "evidence_kind": "exact-line-in-selected-source-passage"
+            }
+          ],
+          "finding": "Literal citation lines from selected body passages retained; statutory work/provision/version resolution is incomplete."
+        },
+        "RQ07": {
+          "outcome": "cases-designed; built-bundle-retrieval-and-behavioural-evaluation-pending",
+          "evidence": [
+            "eval-positive-84",
+            "eval-negative-84"
+          ],
+          "finding": "Authored response exemplars and deterministic evidence-mutation checks are recorded separately. No actual question/run against a pinned built bundle or specialist-approved answer is claimed."
+        },
+        "RQ08": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": "evaluation/full-dmg-pension-credit-review.json",
+          "finding": "Coverage row records source unit, bounded scope, actual checks and unresolved issues."
+        },
+        "RQ09": {
+          "outcome": "completed-with-documented-gaps",
+          "finding": "No equivalence to ADM/UC terminology or rules asserted; cross-regime comparisons await separately acquired and reviewed source evidence."
+        }
+      },
+      "evaluations": [
+        {
+          "task_id": "eval-positive-84",
+          "execution": "authored-response-exemplar; not an executed retrieval or behavioural evaluation",
+          "response": "The captured Pension Credit source supports these bounded concepts: Joint beneficial ownership of capital, UK capital: valuation basis and deductions. Exact source locators: DMG 84072, DMG 84692. Source role: departmental guidance; scope and temporal/legal gaps remain as recorded.",
+          "evidence_routes": [
+            "page/84/0008",
+            "page/84/0092"
+          ],
+          "review_status": "unreviewed-specialist-review-required"
+        },
+        {
+          "task_id": "eval-negative-84",
+          "execution": "authored-response-exemplar; not an executed retrieval or behavioural evaluation",
+          "response": "No. A heading or isolated Pension Credit passage does not establish a currently applicable rule for another benefit or date. Keep the stated conditions, source role and any source-stated date; acquire the relevant statutory version, inspect exceptions and obtain specialist review before a rule or entitlement claim.",
+          "unsupported_proposition_rejected": "The selected statement is automatically a current Universal Credit rule because the terminology is similar.",
+          "review_status": "unreviewed-specialist-review-required"
+        }
+      ],
+      "source_dates": {
+        "document_publication_date": null,
+        "publication_page_first_published_at": "2013-06-01T00:00:00+01:00",
+        "publication_page_updated_at": "2026-07-20T16:39:55+01:00",
+        "original_pdf_observed_at": "2026-09-15T14:21:02Z"
+      },
+      "related_personas": [
+        "persona/pensions-specialist",
+        "persona/policy-law-reviewer",
+        "persona/rules-architect"
+      ],
+      "related_stories": [
+        "story/policy-law-trace",
+        "story/rule-candidate-review",
+        "story/apply-and-report-change"
+      ],
+      "questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-003",
+        "question/stage2-005",
+        "question/stage2-002",
+        "question/stage2-004"
+      ]
+    },
+    {
+      "task_id": "research-pc-85",
+      "source_unit_id": "dmg-0846c2c7bcbfdc80",
+      "source_sha256": "fe6fe79a4ff52271d6edf97af6b01ebd4290867b30d6288c38eb5e3a6d613c74",
+      "document_id": "dmg-vol14-ch85",
+      "chapter": 85,
+      "authoring_revision": "7155bcd73f24743431242a9e32d64d86b1b45635",
+      "started_at": "2026-09-15T19:58:30Z",
+      "finished_at": "2026-09-15T19:58:30Z",
+      "execution_method": "Model reading of frozen body passages and nearby scope notes; authored scoped concepts; deterministic exact-quote/locator validation with explicit negative mutations.",
+      "tool_or_model_identity": {
+        "tool": "scripts/semantic_authoring.py:check_relation",
+        "tool_sha256": "c4fb1ed81f30d7d10b3e9d89b80f6ca0a99f7f4cf0e68e4cd523828871d799c9",
+        "author": "Codex assistant",
+        "exact_runtime_model_identifier": "not-exposed-in-this-task",
+        "model_usage": "not-recorded"
+      },
+      "outcome": "completed-with-documented-gaps",
+      "evidence_paths": [
+        "source/pages/dmg-vol14-ch85.json",
+        "knowledge/full-dmg/pension-credit/pc-partner-income-attribution.yamlld",
+        "knowledge/full-dmg/pension-credit/pc-capital-income-disregard-distinction.yamlld",
+        "evaluation/full-dmg-evidence/dmg-vol14-ch85.json"
+      ],
+      "findings": [
+        "The captured paragraph says to calculate a partner's income in the same way as the claimant's and attribute it to the claimant, while its note identifies a household exception involving immigration control.",
+        "The captured paragraph explains that some capital is disregarded only for the deemed-income rule, so actual income generated by it may still be taken into account."
+      ],
+      "review_status": "unreviewed-specialist-review-required",
+      "unresolved_dependencies": [
+        "Selected paragraphs are a bounded sample; the remaining chapter definitions, exceptions, worked examples and relationships have not been exhaustively modelled.",
+        "Source publication/update/capture dates do not establish legal effective dates or present applicability.",
+        "Named specialist acceptance and independently accepted scenario outcomes are absent.",
+        "Relevant memo excerpts are recorded separately; their incorporation and statutory effects remain unresolved."
+      ],
+      "requirements": {
+        "RQ01": {
+          "outcome": "completed-unreviewed",
+          "evidence": "source/full-dmg-2026-09-15/verification.json",
+          "finding": "Exact PDF, page and text identities verified; original acquisition observation preserved."
+        },
+        "RQ02": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "DMG 85016",
+            "DMG 85006"
+          ],
+          "finding": "Selected body passages separated from headings and examples. Full chapter segmentation and complex table/footnote interpretation remain in the deterministic evidence register and require review."
+        },
+        "RQ03": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "knowledge/full-dmg/pension-credit/pc-partner-income-attribution.yamlld",
+            "knowledge/full-dmg/pension-credit/pc-capital-income-disregard-distinction.yamlld"
+          ],
+          "finding": "Scoped concept paraphrases authored; existing broad terms reused as endpoints. No exhaustive term inventory is claimed."
+        },
+        "RQ04": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "term/pc-partner-income-attribution",
+            "term/pc-capital-income-disregard-distinction"
+          ],
+          "finding": "Source-backed SKOS related proposals checked. No unapproved predicate, legal equivalence or executable rule introduced."
+        },
+        "RQ05": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": "evaluation/full-dmg-evidence/dmg-vol14-ch85.json",
+          "finding": "Publication/update, original acquisition and source-stated time expressions kept separate. Current applicability and incorporation unverified."
+        },
+        "RQ06": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            {
+              "literal_citation_line": "1 SPC Regs, reg 14; 2 SPC Act 02, s 5; 3 SPC Regs, reg 1(3)",
+              "page": 7,
+              "locator": "DMG 85016",
+              "resolution": "unresolved-provision-version-and-applicability",
+              "evidence_kind": "exact-line-in-selected-source-passage"
+            },
+            {
+              "literal_citation_line": "1 SPC Regs, Sch V, Part II",
+              "page": 5,
+              "locator": "DMG 85006",
+              "resolution": "unresolved-provision-version-and-applicability",
+              "evidence_kind": "exact-line-in-selected-source-passage"
+            }
+          ],
+          "finding": "Literal citation lines from selected body passages retained; statutory work/provision/version resolution is incomplete."
+        },
+        "RQ07": {
+          "outcome": "cases-designed; built-bundle-retrieval-and-behavioural-evaluation-pending",
+          "evidence": [
+            "eval-positive-85",
+            "eval-negative-85"
+          ],
+          "finding": "Authored response exemplars and deterministic evidence-mutation checks are recorded separately. No actual question/run against a pinned built bundle or specialist-approved answer is claimed."
+        },
+        "RQ08": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": "evaluation/full-dmg-pension-credit-review.json",
+          "finding": "Coverage row records source unit, bounded scope, actual checks and unresolved issues."
+        },
+        "RQ09": {
+          "outcome": "completed-with-documented-gaps",
+          "finding": "No equivalence to ADM/UC terminology or rules asserted; cross-regime comparisons await separately acquired and reviewed source evidence."
+        }
+      },
+      "evaluations": [
+        {
+          "task_id": "eval-positive-85",
+          "execution": "authored-response-exemplar; not an executed retrieval or behavioural evaluation",
+          "response": "The captured Pension Credit source supports these bounded concepts: Partner income: attribution and household exception, Capital disregard purpose and actual income. Exact source locators: DMG 85016, DMG 85006. Source role: departmental guidance; scope and temporal/legal gaps remain as recorded.",
+          "evidence_routes": [
+            "page/85/0007",
+            "page/85/0005"
+          ],
+          "review_status": "unreviewed-specialist-review-required"
+        },
+        {
+          "task_id": "eval-negative-85",
+          "execution": "authored-response-exemplar; not an executed retrieval or behavioural evaluation",
+          "response": "No. A heading or isolated Pension Credit passage does not establish a currently applicable rule for another benefit or date. Keep the stated conditions, source role and any source-stated date; acquire the relevant statutory version, inspect exceptions and obtain specialist review before a rule or entitlement claim.",
+          "unsupported_proposition_rejected": "The selected statement is automatically a current Universal Credit rule because the terminology is similar.",
+          "review_status": "unreviewed-specialist-review-required"
+        }
+      ],
+      "source_dates": {
+        "document_publication_date": null,
+        "publication_page_first_published_at": "2013-06-01T00:00:00+01:00",
+        "publication_page_updated_at": "2026-07-20T16:39:55+01:00",
+        "original_pdf_observed_at": "2026-09-15T14:21:03Z"
+      },
+      "related_personas": [
+        "persona/pensions-specialist",
+        "persona/policy-law-reviewer",
+        "persona/rules-architect"
+      ],
+      "related_stories": [
+        "story/policy-law-trace",
+        "story/rule-candidate-review",
+        "story/apply-and-report-change"
+      ],
+      "questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-004"
+      ]
+    },
+    {
+      "task_id": "research-pc-86",
+      "source_unit_id": "dmg-56e6375a1db92870",
+      "source_sha256": "909d328088dda0b6a94e0fc671bfa41f6d300689ff02d6f8a0292e30172f9908",
+      "document_id": "dmg-vol14-ch86",
+      "chapter": 86,
+      "authoring_revision": "7155bcd73f24743431242a9e32d64d86b1b45635",
+      "started_at": "2026-09-15T19:58:30Z",
+      "finished_at": "2026-09-15T19:58:30Z",
+      "execution_method": "Model reading of frozen body passages and nearby scope notes; authored scoped concepts; deterministic exact-quote/locator validation with explicit negative mutations.",
+      "tool_or_model_identity": {
+        "tool": "scripts/semantic_authoring.py:check_relation",
+        "tool_sha256": "c4fb1ed81f30d7d10b3e9d89b80f6ca0a99f7f4cf0e68e4cd523828871d799c9",
+        "author": "Codex assistant",
+        "exact_runtime_model_identifier": "not-exposed-in-this-task",
+        "model_usage": "not-recorded"
+      },
+      "outcome": "completed-with-documented-gaps",
+      "evidence_paths": [
+        "source/pages/dmg-vol14-ch86.json",
+        "knowledge/full-dmg/pension-credit/pc-earnings-assessment-timing.yamlld",
+        "knowledge/full-dmg/pension-credit/pc-dual-employment-status.yamlld",
+        "evaluation/full-dmg-evidence/dmg-vol14-ch86.json"
+      ],
+      "findings": [
+        "The captured guidance requires identification of the benefit week and weekly earnings amount, and distinguishes earnings already in payment, newly payable earnings and changed earnings.",
+        "The captured definition of a self-employed earner contains territorial and employment-category conditions and notes that employed-earner work does not itself prevent a person also being self-employed."
+      ],
+      "review_status": "unreviewed-specialist-review-required",
+      "unresolved_dependencies": [
+        "Selected paragraphs are a bounded sample; the remaining chapter definitions, exceptions, worked examples and relationships have not been exhaustively modelled.",
+        "Source publication/update/capture dates do not establish legal effective dates or present applicability.",
+        "Named specialist acceptance and independently accepted scenario outcomes are absent."
+      ],
+      "requirements": {
+        "RQ01": {
+          "outcome": "completed-unreviewed",
+          "evidence": "source/full-dmg-2026-09-15/verification.json",
+          "finding": "Exact PDF, page and text identities verified; original acquisition observation preserved."
+        },
+        "RQ02": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "DMG 86007–86008",
+            "DMG 86201"
+          ],
+          "finding": "Selected body passages separated from headings and examples. Full chapter segmentation and complex table/footnote interpretation remain in the deterministic evidence register and require review."
+        },
+        "RQ03": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "knowledge/full-dmg/pension-credit/pc-earnings-assessment-timing.yamlld",
+            "knowledge/full-dmg/pension-credit/pc-dual-employment-status.yamlld"
+          ],
+          "finding": "Scoped concept paraphrases authored; existing broad terms reused as endpoints. No exhaustive term inventory is claimed."
+        },
+        "RQ04": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            "term/pc-earnings-assessment-timing",
+            "term/pc-dual-employment-status"
+          ],
+          "finding": "Source-backed SKOS related proposals checked. No unapproved predicate, legal equivalence or executable rule introduced."
+        },
+        "RQ05": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": "evaluation/full-dmg-evidence/dmg-vol14-ch86.json",
+          "finding": "Publication/update, original acquisition and source-stated time expressions kept separate. Current applicability and incorporation unverified."
+        },
+        "RQ06": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": [
+            {
+              "literal_citation_line": "1 SPC Regs, reg 17B; SS Ben (C of E) Regs, reg",
+              "page": 44,
+              "locator": "DMG 86201",
+              "resolution": "unresolved-provision-version-and-applicability",
+              "evidence_kind": "exact-line-in-selected-source-passage"
+            }
+          ],
+          "finding": "Literal citation lines from selected body passages retained; statutory work/provision/version resolution is incomplete."
+        },
+        "RQ07": {
+          "outcome": "cases-designed; built-bundle-retrieval-and-behavioural-evaluation-pending",
+          "evidence": [
+            "eval-positive-86",
+            "eval-negative-86"
+          ],
+          "finding": "Authored response exemplars and deterministic evidence-mutation checks are recorded separately. No actual question/run against a pinned built bundle or specialist-approved answer is claimed."
+        },
+        "RQ08": {
+          "outcome": "completed-with-documented-gaps",
+          "evidence": "evaluation/full-dmg-pension-credit-review.json",
+          "finding": "Coverage row records source unit, bounded scope, actual checks and unresolved issues."
+        }
+      },
+      "evaluations": [
+        {
+          "task_id": "eval-positive-86",
+          "execution": "authored-response-exemplar; not an executed retrieval or behavioural evaluation",
+          "response": "The captured Pension Credit source supports these bounded concepts: Earnings assessment: weekly amount and timing facts, Self-employment alongside employed-earner work. Exact source locators: DMG 86007–86008, DMG 86201. Source role: departmental guidance; scope and temporal/legal gaps remain as recorded.",
+          "evidence_routes": [
+            "page/86/0004",
+            "page/86/0044"
+          ],
+          "review_status": "unreviewed-specialist-review-required"
+        },
+        {
+          "task_id": "eval-negative-86",
+          "execution": "authored-response-exemplar; not an executed retrieval or behavioural evaluation",
+          "response": "No. A heading or isolated Pension Credit passage does not establish a currently applicable rule for another benefit or date. Keep the stated conditions, source role and any source-stated date; acquire the relevant statutory version, inspect exceptions and obtain specialist review before a rule or entitlement claim.",
+          "unsupported_proposition_rejected": "The selected statement is automatically a current Universal Credit rule because the terminology is similar.",
+          "review_status": "unreviewed-specialist-review-required"
+        }
+      ],
+      "source_dates": {
+        "document_publication_date": null,
+        "publication_page_first_published_at": "2013-06-01T00:00:00+01:00",
+        "publication_page_updated_at": "2026-07-20T16:39:55+01:00",
+        "original_pdf_observed_at": "2026-09-15T14:21:02Z"
+      },
+      "related_personas": [
+        "persona/pensions-specialist",
+        "persona/policy-law-reviewer",
+        "persona/rules-architect"
+      ],
+      "related_stories": [
+        "story/policy-law-trace",
+        "story/rule-candidate-review",
+        "story/apply-and-report-change"
+      ],
+      "questions": [
+        "question/stage2-001",
+        "question/stage2-006",
+        "question/stage2-004"
+      ]
+    }
+  ],
+  "independent_review_correction": {
+    "finding": "Response exemplars lacked question, bundle digest and observed retrieval results, so RQ07 execution was not established.",
+    "resolution": "Relabelled as designed cases and authored exemplars; execution remains pending.",
+    "reviewer": "separate Codex agent; not specialist review"
+  },
+  "yaml_whitespace_normalisation": "Trailing whitespace removed only after YAML data-equivalence check; concept file digests refreshed."
+}

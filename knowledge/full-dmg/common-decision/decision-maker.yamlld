@@ -1,0 +1,72 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-decision-maker
+  '@type': skos:Concept
+  route: term/dmg-decision-maker
+  title: DWP decision maker in the DMG
+  type: Concept
+  description: The captured DMG calls officials acting on behalf of the Secretary of State decision makers,
+    and describes evidence gathering, decisions on claims and administrative tasks among their functions.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': DWP decision maker in the DMG
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured DMG calls officials acting on behalf of the Secretary of State decision makers, and
+      describes evidence gathering, decisions on claims and administrative tasks among their functions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': A source-specific institutional role. This project, its AI tools and a website user do not
+      acquire decision-making authority. Training, authorisation and separation of duties require operational
+      review.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol1-ch1/0002
+  source: https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=2
+  resource: https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=2
+  sources:
+  - id: dmg-vol1-ch1
+    title: 'DMG Vol 1 Ch 1: Principles of decision making and evidence'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=2
+    retrieved_at: '2026-09-15T19:45:18.139103Z'
+    sha256: 58b168c7b0a01f54713f6cfa60953549ebc099cbe568ffaeea551d0b756495d2
+  body: "# DWP decision maker in the DMG\n\n## Authored interpretation\n\nThe captured DMG calls officials acting
+    on behalf of the Secretary of State decision makers, and describes evidence gathering, decisions on claims and
+    administrative tasks among their functions.\n\n## Scope and exceptions\n\nA source-specific institutional role.
+    This project, its AI tools and a website user do not acquire decision-making authority. Training, authorisation
+    and separation of duties require operational review.\n\n## Inspected source passages\n\n- [DMG 01001, PDF page
+    2](https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=2) — DMG Vol
+    1 Ch 1: Principles of decision making and evidence.\n- [DMG 01004, PDF page 2](https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=2)
+    — DMG Vol 1 Ch 1: Principles of decision making and evidence.\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source
+    is DWP guidance, not a consolidated statement of legislation. This is an independent experimental publication,
+    not an official DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are
+    one-based file positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships
+    preserve extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current
+    applicability remain separate review tasks.\n\n- `dmg-vol1-ch1` PDF SHA-256: `58b168c7b0a01f54713f6cfa60953549ebc099cbe568ffaeea551d0b756495d2`;
+    extracted pages SHA-256: `cf7a000e2c54c5361a03ec4ad73fa22cc14e8cdb0d4f03b53919a4a509a6eacb`.\n"
+  semantic_relations:
+  - target: term/dmg-evidence-assessment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source includes gathering information among decision-maker functions; the relation does not
+      confer official authority on the project.
+    evidence:
+    - page: page/dmg-vol1-ch1/0002
+      quote: "01004 The DM takes all necessary actions on behalf of the Secretary of State, including\n\n\n1. gathering
+        information\n\n\n2. making decisions on claims and applications\n\n\n3. dealing with administrative matters
+        such as suspension of payment.\n\n\nNote: The DM is not an independent officer."
+      locator: DMG 01004

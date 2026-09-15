@@ -1,0 +1,102 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-ltamc-assessment
+  '@type': skos:Concept
+  route: term/dmg-ltamc-assessment
+  title: Living together as a married couple in DMG chapter 11
+  type: Concept
+  description: The chapter describes considering the whole relationship and the totality of evidence, with no
+    single factor deciding whether people are living together as a married couple.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Living together as a married couple in DMG chapter 11
+    '@language': en-GB
+  skos:definition:
+    '@value': The chapter describes considering the whole relationship and the totality of evidence, with no
+      single factor deciding whether people are living together as a married couple.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Scope depends on the benefit and preliminary conditions in DMG 11005–11006. The chapter
+      explicitly sends Universal Credit to ADM E4. Historic dated pages and cited cases need current-law
+      review; no inference about a real person’s relationship is authorised.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch11/0005
+  - page/dmg-vol3-ch11/0013
+  - page/dmg-vol3-ch11/0014
+  source: https://assets.publishing.service.gov.uk/media/5a820c1ae5274a2e8ab5738a/dmgch11.pdf#page=5
+  resource: https://assets.publishing.service.gov.uk/media/5a820c1ae5274a2e8ab5738a/dmgch11.pdf#page=5
+  sources:
+  - id: dmg-vol3-ch11
+    title: 'DMG Vol 3 Ch 11: Living together as husband and wife or as civil partners '
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a820c1ae5274a2e8ab5738a/dmgch11.pdf#page=5
+    retrieved_at: '2026-09-15T19:45:21.788339Z'
+    sha256: 1f83a691baec9f1ff9f946289647f53b1b4b3b91788c4f39f71983b136382289
+  body: "# Living together as a married couple in DMG chapter 11\n\n## Authored interpretation\n\nThe chapter describes
+    considering the whole relationship and the totality of evidence, with no single factor deciding whether people
+    are living together as a married couple.\n\n## Scope and exceptions\n\nScope depends on the benefit and preliminary
+    conditions in DMG 11005–11006. The chapter explicitly sends Universal Credit to ADM E4. Historic dated pages
+    and cited cases need current-law review; no inference about a real person’s relationship is authorised.\n\n\
+    ## Inspected source passages\n\n- [DMG 11021, PDF page 5](https://assets.publishing.service.gov.uk/media/5a820c1ae5274a2e8ab5738a/dmgch11.pdf#page=5)
+    — DMG Vol 3 Ch 11: Living together as husband and wife or as civil partners .\n- [DMG 11101, PDF page 13](https://assets.publishing.service.gov.uk/media/5a820c1ae5274a2e8ab5738a/dmgch11.pdf#page=13)
+    — DMG Vol 3 Ch 11: Living together as husband and wife or as civil partners .\n- [DMG 11103, PDF page 13](https://assets.publishing.service.gov.uk/media/5a820c1ae5274a2e8ab5738a/dmgch11.pdf#page=13)
+    — DMG Vol 3 Ch 11: Living together as husband and wife or as civil partners .\n- [DMG 11107, PDF page 14](https://assets.publishing.service.gov.uk/media/5a820c1ae5274a2e8ab5738a/dmgch11.pdf#page=14)
+    — DMG Vol 3 Ch 11: Living together as husband and wife or as civil partners .\n\n## Evidence and review status\n\
+    \nModel-assisted interpretation of the 15 September 2026 source snapshot; unreviewed and requiring specialist
+    review. The source is DWP guidance, not a consolidated statement of legislation. This is an independent experimental
+    publication, not an official DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page
+    numbers are one-based file positions. Machine extraction can alter reading order, footnotes and characters.
+    Quoted relationships preserve extracted text; no visual or specialist acceptance is claimed. Source dates, legal
+    effects and current applicability remain separate review tasks.\n\n- `dmg-vol3-ch11` PDF SHA-256: `1f83a691baec9f1ff9f946289647f53b1b4b3b91788c4f39f71983b136382289`;
+    extracted pages SHA-256: `73fbd1921b0dcf803d66aab7915a768921372438265b337362b080284bc6e59f`.\n"
+  semantic_relations:
+  - target: term/pension-credit
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The benefits-affected list expressly includes SPC and separately directs UC readers to ADM E4.
+    evidence:
+    - page: page/dmg-vol3-ch11/0005
+      quote: "11021   The benefits affected are\n                1\n        1.    IS\n                    2\n  \
+        \      2.    WP (but RP paid to a widow based on her late husband’s contribution record\n              is
+        not affected by the LTAMC rules)\n                            3\n        3.    WMA\n                   \
+        \     4\n        4.    BPT\n                            5\n        5.    WPA\n                    6\n  \
+        \      6.    BA\n                                 7\n        7.    JSA(IB)\n                        8\n\
+        \        8.    SPC\n                                  9\n        9.    ESA(IR) .\n\n        In making decisions
+        DMs need to be aware of the effect on HB and CTB.\n\n        Note: ADM Chapter E4 contains guidance on LTAMC
+        for UC.\n                                1 SS CB Act 92, s 124(1); 2 s 38(3); 3 s 37(4)(b); 4 s 36(2); 5
+        s 39A; 6 s 39B; 7 JS Act 95, s 3(1);\n                                                                 \
+        \            8 SPC Act 2002, s 5; 9 WR Act 07, Sch 1, para. 6(1)"
+      locator: DMG 11021
+  - target: term/dmg-evidence-assessment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The paragraph requires totality of evidence, attention to the period and further evidence where
+      needed; no single observable factor is decisive.
+    evidence:
+    - page: page/dmg-vol3-ch11/0014
+      quote: "11107   In considering the points in DMG 11104 and DMG 11106 DMs should be aware that\n          \
+        \                                                             1\n        1.    no single point can decide
+        the question of LTAMC . It is essential to have as\n              much information as possible on all the
+        points and consider the totality of the\n                        2\n              evidence ;\n\n       \
+        \ 2.    where they are looking at a past period, the information gathered should relate\n              to
+        the whole period in question;\n\n        3.    a determination on whether two people are LTAMC must be based
+        on the\n              evidence available;\n\n        4.    they should obtain further evidence if living
+        together is reported, to determine\n              if two people are LTAMC;\n\n        5.    they can accept
+        a signed statement or letter from the claimant saying that they\n              are LTAMC, as voluntary evidence
+        of LTAMC;\n\n        6.    they must obtain further evidence to determine when LTAMC began if a\n      \
+        \        disclosure of LTAMC is given after co-residence has begun and the statement\n              or letter
+        does not cover the whole period of co-residence.\n                                                     \
+        \                          1 R(G) 1/71; 2 [2017] AACR 10\n\n\n        Sexual Orientation and Sexual Relationship"
+      locator: DMG 11107

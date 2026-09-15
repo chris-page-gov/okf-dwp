@@ -19,8 +19,8 @@
     },
     {
       "end": 1481,
-      "id": "a3e962e36585ebe8be70790c73178c381e8683a79fda236f7251966f5ef0f40f",
-      "kind": "stated-revision-date",
+      "id": "ca5768521041bede9581406bc5e57b2895ffb5bbe596caa0b10fcac254e87e81",
+      "kind": "date-mention",
       "legal_effective_date_established": false,
       "matched_text": "October 2015",
       "page_text_sha256": "5c7b68b0809d93ffb5a6b11ffee9185a42f4c4f60617cae40ba88f1dcd77e469",
@@ -30,14 +30,14 @@
       "quote_sha256": "116d687537aa91f22e7f2aa1d9deb9a1b338e32d0bb58a5490a9fadadee21a02",
       "source_publication_date_established": false,
       "start": 1448,
-      "status": "normalised-source-statement",
+      "status": "unresolved-context",
       "url": "https://assets.publishing.service.gov.uk/media/5a815a0840f0b62302696d65/v4am48.pdf#page=1",
       "value": "2015-10"
     },
     {
       "end": 1513,
-      "id": "a0e9a967a6f47a04e54d8f03b94ce68baffc8a982a0e4fe6ebf690f1d24dbc60",
-      "kind": "stated-revision-date",
+      "id": "41f82a7c4fedc90ab23f9a108d42443f5d92db5bc76222863dda28d4039fd01f",
+      "kind": "date-mention",
       "legal_effective_date_established": false,
       "matched_text": "June 2015",
       "page_text_sha256": "5c7b68b0809d93ffb5a6b11ffee9185a42f4c4f60617cae40ba88f1dcd77e469",
@@ -47,7 +47,7 @@
       "quote_sha256": "019887d9e9c73179651983b98d09a615e46996a8bacb68cc05b7cbd6fe11d180",
       "source_publication_date_established": false,
       "start": 1483,
-      "status": "normalised-source-statement",
+      "status": "unresolved-context",
       "url": "https://assets.publishing.service.gov.uk/media/5a815a0840f0b62302696d65/v4am48.pdf#page=1",
       "value": "2015-06"
     },
@@ -66,17 +66,17 @@
       "url": "https://assets.publishing.service.gov.uk/media/5a815a0840f0b62302696d65/v4am48.pdf#page=1"
     },
     {
-      "end": 1269,
-      "id": "aaa4157f2f29b3c7dd5c993b678030b4c02a4ff482d17304504307cb74706da8",
-      "kind": "dmg-paragraph-reference",
+      "end": 1270,
+      "id": "0e7a7652f0de7e9a4c6dd6fd80f01c51e043998d0f1a442f2b4fcdf1c72ff9ea",
+      "kind": "dmg-unresolved-digit-reference",
       "page_text_sha256": "5c7b68b0809d93ffb5a6b11ffee9185a42f4c4f60617cae40ba88f1dcd77e469",
       "pdf_page": 1,
-      "quote": "DMG 21855",
-      "quote_sha256": "c51a28c3590e149dbacd553e4aaf9fea5d6af7c426008ea28ef0a827c075658a",
+      "quote": "DMG 218551",
+      "quote_sha256": "6d0e9b2da2270039d5fe0cfbfcd584112bea9bb94f677a889c6862e7bd0ad382",
       "range_end": null,
       "start": 1260,
-      "status": "literal-reference-unresolved-applicability",
-      "target_label": "21855",
+      "status": "ambiguous-digit-run-no-identifier-assigned",
+      "target_label": "218551",
       "url": "https://assets.publishing.service.gov.uk/media/5a815a0840f0b62302696d65/v4am48.pdf#page=1"
     },
     {
@@ -2351,9 +2351,11 @@
     }
   ],
   "counts": {
-    "dmg-paragraph-reference": 32,
+    "date-mention": 2,
+    "dmg-paragraph-reference": 31,
+    "dmg-unresolved-digit-reference": 1,
     "legal-reference-line-candidate": 123,
-    "stated-revision-date": 25
+    "stated-revision-date": 23
   },
   "document_id": "dmg-vol4-amendment48",
   "document_publication_date": null,
@@ -2366,8 +2368,6 @@
   "source_role": "historical-amendment-not-current-rules",
   "source_url": "https://assets.publishing.service.gov.uk/media/5a815a0840f0b62302696d65/v4am48.pdf",
   "stated_revision_dates": [
-    "2015-06",
-    "2015-10",
     "2016-02"
   ]
 }

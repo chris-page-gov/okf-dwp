@@ -1,0 +1,77 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-benefit-payment-arrangements
+  '@type': skos:Concept
+  route: term/dmg-benefit-payment-arrangements
+  title: Benefit payment arrangements in the DMG
+  type: Concept
+  description: The captured chapter describes arrangements for paying benefit, including nominated accounts,
+    appointees and benefit-specific guidance routes.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Benefit payment arrangements in the DMG
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured chapter describes arrangements for paying benefit, including nominated accounts,
+      appointees and benefit-specific guidance routes.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': An award, the amount payable and the payment arrangement are distinct. DMG 08002 routes UC, PIP
+      and new-style ESA/JSA payment to ADM B1; this batch does not apply the DMG procedure to those benefits.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch8/0003
+  - page/dmg-vol3-ch8/0004
+  source:
+    https://assets.publishing.service.gov.uk/media/66fd5bbbe84ae1fd8592ecf1/dmg-chapter-8-payment-of-benefit-and-deductions-from-benefit.pdf#page=3
+  resource:
+    https://assets.publishing.service.gov.uk/media/66fd5bbbe84ae1fd8592ecf1/dmg-chapter-8-payment-of-benefit-and-deductions-from-benefit.pdf#page=3
+  sources:
+  - id: dmg-vol3-ch8
+    title: 'DMG Vol 3 Ch 8: Payment of benefit and deductions from benefit '
+    author: organisation:dwp
+    resource:
+      https://assets.publishing.service.gov.uk/media/66fd5bbbe84ae1fd8592ecf1/dmg-chapter-8-payment-of-benefit-and-deductions-from-benefit.pdf#page=3
+    retrieved_at: '2026-09-15T19:45:21.641420Z'
+    sha256: 8bf08435715020c8cc57be24e06e6fd8c90d99232254004ba67d1c5dfc3dd864
+  body: "# Benefit payment arrangements in the DMG\n\n## Authored interpretation\n\nThe captured chapter describes
+    arrangements for paying benefit, including nominated accounts, appointees and benefit-specific guidance routes.\n\
+    \n## Scope and exceptions\n\nAn award, the amount payable and the payment arrangement are distinct. DMG 08002
+    routes UC, PIP and new-style ESA/JSA payment to ADM B1; this batch does not apply the DMG procedure to those
+    benefits.\n\n## Inspected source passages\n\n- [DMG 08002, PDF page 3](https://assets.publishing.service.gov.uk/media/66fd5bbbe84ae1fd8592ecf1/dmg-chapter-8-payment-of-benefit-and-deductions-from-benefit.pdf#page=3)
+    — DMG Vol 3 Ch 8: Payment of benefit and deductions from benefit .\n- [DMG 08007, PDF page 4](https://assets.publishing.service.gov.uk/media/66fd5bbbe84ae1fd8592ecf1/dmg-chapter-8-payment-of-benefit-and-deductions-from-benefit.pdf#page=4)
+    — DMG Vol 3 Ch 8: Payment of benefit and deductions from benefit .\n- [DMG 08010, PDF page 4](https://assets.publishing.service.gov.uk/media/66fd5bbbe84ae1fd8592ecf1/dmg-chapter-8-payment-of-benefit-and-deductions-from-benefit.pdf#page=4)
+    — DMG Vol 3 Ch 8: Payment of benefit and deductions from benefit .\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source
+    is DWP guidance, not a consolidated statement of legislation. This is an independent experimental publication,
+    not an official DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are
+    one-based file positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships
+    preserve extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current
+    applicability remain separate review tasks.\n\n- `dmg-vol3-ch8` PDF SHA-256: `8bf08435715020c8cc57be24e06e6fd8c90d99232254004ba67d1c5dfc3dd864`;
+    extracted pages SHA-256: `e6c5a71afbf2536bc63a91a4389284b2b6b8aaaa8bff015d4f34b478f77b28cc`.\n"
+  semantic_relations:
+  - target: term/pension-credit
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source explicitly points payment research for SPC to chapter 79; this does not equate all
+      benefits’ payment rules.
+    evidence:
+    - page: page/dmg-vol3-ch8/0003
+      quote: "08002 Guidance on payment of benefit follows but other guidance on this subject may be found in\n\
+        benefit specific DMG Chapters:-\n\n\n1. IS/JSA Chapter 33\n\n\n2. ESA Chapter 46\n\n\n3. AA/DLA Chapter
+        61\n\n\n4. SPC Chapter 79.\n\n\nNote 1: ADM Chapter B1 contains guidance on the payment of UC, PIP, new
+        style ESA and new style JSA.\n\n\nNote 2: ADM Chapter M1 contains guidance on the meaning of new style ESA
+        and new style JSA."
+      locator: DMG 08002

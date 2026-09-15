@@ -1,0 +1,75 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/pc-child-responsibility-amount-boundary
+  route: term/pc-child-responsibility-amount-boundary
+  title: 'Child responsibility amount: dated source boundary'
+  type: Concept
+  status: draft
+  authority: model-assisted scoped proposal; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured paragraph links a child or qualifying young person amount to
+    responsibility for them, records a new-claim date of 1.2.19, and states an immigration-status
+    limitation.
+  tags:
+  - pension credit
+  - source-backed proposal
+  - full DMG
+  - unreviewed
+  references:
+  - chapter/78
+  - page/78/0081
+  - term/children
+  - page/dmg-memo-04-24-282c3cef22/0002
+  resource:
+    https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=81
+  sources:
+  - id: dmg-vol13-ch78
+    resource:
+      https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=81
+    title: 'DMG Vol 13 Ch 78: State Pension Credit: additional amounts and special groups '
+    author: organisation:dwp
+  skos:prefLabel:
+    '@value': 'Child responsibility amount: dated source boundary'
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured paragraph links a child or qualifying young person amount to
+      responsibility for them, records a new-claim date of 1.2.19, and states an immigration-status
+      limitation.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Scoped to the captured Pension Credit guidance. The source-stated date is not the
+      capture date. Tax-credit closure and transfer rules require DMG memo 04/24 and other cited
+      material; no transfer outcome is inferred.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-credit-review
+    at: '2026-09-15T19:58:30Z'
+  observedAt: '2026-09-15T19:58:30Z'
+  body: "# Child responsibility amount: dated source boundary\n\n**Model-assisted source interpretation;
+    unreviewed. No entitlement decision or executable rule.**\n\nThe captured paragraph links a child
+    or qualifying young person amount to responsibility for them, records a new-claim date of 1.2.19,
+    and states an immigration-status limitation.\n\n## Evidence and scope\n\n[DMG 78549, PDF page 81](https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=81)
+    supports this scoped proposal. The source PDF SHA-256 is `d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8`.\n\
+    \nThe source-stated date is not the capture date. Tax-credit closure and transfer rules require DMG
+    memo 04/24 and other cited material; no transfer outcome is inferred.\n\nThe capture date, the publication
+    page's update date and a date stated in the guidance have different meanings. Linked legislation and
+    memos need their own provision, version and applicability review.\n\nMemo references are navigation
+    to separately captured source evidence. They do not assert incorporation, supersession or current
+    legal validity.\n"
+  semantic_relations:
+  - target: term/children
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source expressly relates the additional amount to responsibility for a child or
+      qualifying young person, with date and scope conditions retained.
+    evidence:
+    - page: page/78/0081
+      quote: "78549    (See ADM memo 05-24) (see DMG memo 04-24) From 1.2.19, when considering a new claim
+        to\nSPC, the claimant’s maximum amount shall include an amount for any child or qualifying young
+        person\n\nfor whom they are responsible1. Prior to that date, support for pensioners with such
+        responsibility was\n\nprovided by tax credits2.\n\n\nNote: An additional amount is not payable
+        for any child/ren who’s immigration status is such that they\nhave no recourse to public funds.\n\
+        \n\n                              1 SPC Regs, reg 6(6)(d) & Sch IIA, para 3; 2 WR Act 12; s.33
+        & Sch 6, para 6"
+      locator: DMG 78549

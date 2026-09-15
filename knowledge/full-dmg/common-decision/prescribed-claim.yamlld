@@ -1,0 +1,76 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-prescribed-claim
+  '@type': skos:Concept
+  route: term/dmg-prescribed-claim
+  title: Claim in the prescribed manner
+  type: Concept
+  description: The captured claims guidance distinguishes a claim made through an accepted procedure from an
+    intention to claim, and describes benefit-specific written, electronic and telephone routes.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Claim in the prescribed manner
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured claims guidance distinguishes a claim made through an accepted procedure from an
+      intention to claim, and describes benefit-specific written, electronic and telephone routes.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': There is no universal rule that a claim requires paper or that every telephone contact is a
+      claim. Particular benefits and routes have exceptions, and making a claim correctly does not prove
+      entitlement.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol1-ch2/0015
+  - page/dmg-vol1-ch2/0026
+  source: https://assets.publishing.service.gov.uk/media/6a68d934f23ff62c51c1a7a2/dmg-v-1-ch-2.pdf#page=15
+  resource: https://assets.publishing.service.gov.uk/media/6a68d934f23ff62c51c1a7a2/dmg-v-1-ch-2.pdf#page=15
+  sources:
+  - id: dmg-vol1-ch2
+    title: 'DMG Vol 1 Ch 2: Claims'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6a68d934f23ff62c51c1a7a2/dmg-v-1-ch-2.pdf#page=15
+    retrieved_at: '2026-09-15T19:45:18.205486Z'
+    sha256: 218f6a34945a5dd17cdccb1737ea317b2dcfd1ab62f66a9a0b8d681202e8934f
+  body: "# Claim in the prescribed manner\n\n## Authored interpretation\n\nThe captured claims guidance distinguishes
+    a claim made through an accepted procedure from an intention to claim, and describes benefit-specific written,
+    electronic and telephone routes.\n\n## Scope and exceptions\n\nThere is no universal rule that a claim requires
+    paper or that every telephone contact is a claim. Particular benefits and routes have exceptions, and making
+    a claim correctly does not prove entitlement.\n\n## Inspected source passages\n\n- [DMG 02048, PDF page 15](https://assets.publishing.service.gov.uk/media/6a68d934f23ff62c51c1a7a2/dmg-v-1-ch-2.pdf#page=15)
+    — DMG Vol 1 Ch 2: Claims.\n- [DMG 02082, PDF page 26](https://assets.publishing.service.gov.uk/media/6a68d934f23ff62c51c1a7a2/dmg-v-1-ch-2.pdf#page=26)
+    — DMG Vol 1 Ch 2: Claims.\n- [DMG 02084, PDF page 26](https://assets.publishing.service.gov.uk/media/6a68d934f23ff62c51c1a7a2/dmg-v-1-ch-2.pdf#page=26)
+    — DMG Vol 1 Ch 2: Claims.\n\n## Evidence and review status\n\nModel-assisted interpretation of the 15 September
+    2026 source snapshot; unreviewed and requiring specialist review. The source is DWP guidance, not a consolidated
+    statement of legislation. This is an independent experimental publication, not an official DWP document, an
+    entitlement decision or an executable benefits rule.\n\nPDF page numbers are one-based file positions. Machine
+    extraction can alter reading order, footnotes and characters. Quoted relationships preserve extracted text;
+    no visual or specialist acceptance is claimed. Source dates, legal effects and current applicability remain
+    separate review tasks.\n\n- `dmg-vol1-ch2` PDF SHA-256: `218f6a34945a5dd17cdccb1737ea317b2dcfd1ab62f66a9a0b8d681202e8934f`;
+    extracted pages SHA-256: `77cb8966f05e501c4d970026bdfcd5bc271abe17a546b02ec8c8704395e56ee3`.\n"
+  semantic_relations:
+  - target: term/dmg-intention-to-claim
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The paragraph distinguishes an intention expressed by telephone from a claim and expressly
+      names benefit-specific telephone exceptions.
+    evidence:
+    - page: page/dmg-vol1-ch2/0026
+      quote: "02084 An intention to claim stated in a phone conversation is not a claim in the prescribed manner
+        1 (but\nsee DMG 02073, and 02131 for claims to SFFP, BB, RP, GRB, SAPs and SPC made by telephone). For AA\n\
+        and DLA there are provisions which allow the date of claim to be backdated to the date of a request for
+        a\nclaim form. This includes oral requests made, for example, using the Benefit Enquiry Line.\n\n\n    \
+        \                                                                                                 1 R(F)
+        1/92\n\n\n\nWritten communication - sufficient to constitute a claim for benefit"
+      locator: DMG 02084

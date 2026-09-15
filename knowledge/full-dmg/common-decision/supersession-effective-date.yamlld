@@ -1,0 +1,83 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-supersession-effective-date
+  '@type': skos:Concept
+  route: term/dmg-supersession-effective-date
+  title: Effective date of a supersession
+  type: Concept
+  description: The supersession process separately requires a decision about the date from which the new
+    decision takes effect.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Effective date of a supersession
+    '@language': en-GB
+  skos:definition:
+    '@value': The supersession process separately requires a decision about the date from which the new
+      decision takes effect.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': A date of change, date of notification, application date and legal effective date are not
+      interchangeable. The initial batch has not modelled the chapter’s benefit-specific effective-date rules.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol1-ch4/0015
+  - page/dmg-vol1-ch4/0017
+  source: https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=15
+  resource: https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=15
+  sources:
+  - id: dmg-vol1-ch4
+    title: 'DMG Vol 1 Ch 4: Supersession, suspension and termination '
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=15
+    retrieved_at: '2026-09-15T19:45:18.361556Z'
+    sha256: 9c96b49a78aa4dc40df8594cf65cbd435a681d0be3737729cd87882542d0e2ea
+  body: "# Effective date of a supersession\n\n## Authored interpretation\n\nThe supersession process separately
+    requires a decision about the date from which the new decision takes effect.\n\n## Scope and exceptions\n\n\
+    A date of change, date of notification, application date and legal effective date are not interchangeable. The
+    initial batch has not modelled the chapter’s benefit-specific effective-date rules.\n\n## Inspected source passages\n\
+    \n- [DMG 04050, PDF page 15](https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=15)
+    — DMG Vol 1 Ch 4: Supersession, suspension and termination .\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source
+    is DWP guidance, not a consolidated statement of legislation. This is an independent experimental publication,
+    not an official DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are
+    one-based file positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships
+    preserve extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current
+    applicability remain separate review tasks.\n\n- `dmg-vol1-ch4` PDF SHA-256: `9c96b49a78aa4dc40df8594cf65cbd435a681d0be3737729cd87882542d0e2ea`;
+    extracted pages SHA-256: `bef5fc9f04b2a78c5bb5dc99468f94a1841f1ef4afa117d47aa9c1e5040f3752`.\n"
+  semantic_relations:
+  - target: term/dmg-relevant-change-of-circumstances
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The change-of-circumstances passage distinguishes the time a change happened from whether it
+      can support supersession, including disallowance qualifications.
+    evidence:
+    - page: page/dmg-vol1-ch4/0017
+      quote: "04102 For the purposes of supersession a relevant change of circumstance is a change which happens\n\
+        after the original decision had effect and which has a relevance to the award of benefit. A decision\ndisallowing
+        a benefit cannot be superseded if there is a change of circumstances from a date after the\n\ndecision had
+        effect. The claimant must make a fresh claim 1. But see DMG 04103 for an exception to this\ngeneral rule.\n\
+        \n\n                                                                                            1 s 8(2)(b);
+        R(A) 4/81"
+      locator: DMG 04102
+    - page: page/dmg-vol1-ch4/0017
+      quote: "04103 The claim continues to exist until it is decided1. A new claim may not be required where\n\n\
+        \n1. a claim is disallowed and\n\n\n2. a change occurs after the date of claim but before the claim was
+        decided and\n\n\n3. the claimant notifies the change within the time limits (see DMG 04201 -04211).\n\n\n\
+        Where the effect of the change is that entitlement would begin before the date of the disallowance (or\n\
+        for AA and DLA, the qualifying period would begin before the date of the disallowance), the decision can\n\
+        be superseded for a relevant change of circumstances. The effective date rules apply in the normal way.\n\
+        \n\n                                                                                            1 SS Act
+        98, s 8(2)(a)"
+      locator: DMG 04103

@@ -1,0 +1,67 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/pc-uk-capital-valuation-basis
+  route: term/pc-uk-capital-valuation-basis
+  title: 'UK capital: valuation basis and deductions'
+  type: Concept
+  status: draft
+  authority: model-assisted scoped proposal; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured paragraph uses current market or surrender value for capital in the UK
+    and describes deductions for sale costs and secured encumbrances.
+  tags:
+  - pension credit
+  - source-backed proposal
+  - full DMG
+  - unreviewed
+  references:
+  - chapter/84
+  - page/84/0092
+  - term/capital-valuation
+  resource:
+    https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=92
+  sources:
+  - id: dmg-vol14-ch84
+    resource:
+      https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=92
+    title: 'DMG Vol 14 Ch 84: Deemed weekly income from capital'
+    author: organisation:dwp
+  skos:prefLabel:
+    '@value': 'UK capital: valuation basis and deductions'
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured paragraph uses current market or surrender value for capital in the UK
+      and describes deductions for sale costs and secured encumbrances.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Scoped to the captured Pension Credit guidance. This concept supplies no asset
+      valuation or award calculation. Regulation 19, cited decisions and the surrounding valuation
+      guidance require review.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-credit-review
+    at: '2026-09-15T19:58:30Z'
+  observedAt: '2026-09-15T19:58:30Z'
+  body: "# UK capital: valuation basis and deductions\n\n**Model-assisted source interpretation; unreviewed.
+    No entitlement decision or executable rule.**\n\nThe captured paragraph uses current market or surrender
+    value for capital in the UK and describes deductions for sale costs and secured encumbrances.\n\n\
+    ## Evidence and scope\n\n[DMG 84692, PDF page 92](https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=92)
+    supports this scoped proposal. The source PDF SHA-256 is `f5c610b29bdb81e11736409b7f33ccf7917a4d8945f2821802801073e0d753ee`.\n\
+    \nThis concept supplies no asset valuation or award calculation. Regulation 19, cited decisions and
+    the surrounding valuation guidance require review.\n\nThe capture date, the publication page's update
+    date and a date stated in the guidance have different meanings. Linked legislation and memos need
+    their own provision, version and applicability review.\n"
+  semantic_relations:
+  - target: term/capital-valuation
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: This is an explicit valuation basis within the capital-valuation topic. Geographic
+      scope, conditional sale costs and secured debts remain part of the statement.
+    evidence:
+    - page: page/84/0092
+      quote: "84692 The value of capital which a person has in the UK (see DMG 070880), is its current
+        market or\nsurrender value less\n\n\n1. 10% of the value if there are costs of sale and\n\n\n\
+        2. the amount of any encumbrance secured on the capital1.\n\n\n                              \
+        \                                 1 SPC Regs, reg 19, R(SB) 2/83, CJSA 3067/09"
+      locator: DMG 84692
