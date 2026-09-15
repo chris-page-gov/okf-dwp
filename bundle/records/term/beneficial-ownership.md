@@ -1,0 +1,54 @@
+---
+'@id': https://chris-page-gov.github.io/okf-dwp/id/term/beneficial-ownership
+'@type': skos:Concept
+route: term/beneficial-ownership
+title: Beneficial ownership of capital
+type: Concept
+description: The chapter distinguishes a beneficial interest in capital from the name in which
+  capital is held. This concept records that distinction for source review, without deciding
+  ownership in a case.
+status: draft
+authority: model-assisted source interpretation; unreviewed
+generated:
+  by: process:codex-semantic-stage-two
+  at: '2026-09-15T16:57:46Z'
+observedAt: '2026-09-15T16:57:46Z'
+skos:prefLabel:
+  '@value': Beneficial ownership of capital
+  '@language': en-GB
+skos:definition:
+  '@value': The chapter distinguishes a beneficial interest in capital from the name in which
+    capital is held. This concept records that distinction for source review, without deciding
+    ownership in a case.
+  '@language': en-GB
+skos:scopeNote:
+  '@value': Pension Credit; captured DMG guidance, not a finding about current law or a claimant.
+    Specialist review required.
+  '@language': en-GB
+tags:
+- Pension Credit
+- semantic pilot
+- unreviewed
+source: https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=8
+resource:
+  https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=8
+sources:
+- author: process:dwp-source-publication
+  id: dmg-vol14-ch84
+  resource:
+    https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=8
+  retrieved_at: '2026-09-15T14:21:03Z'
+  sha256: f5c610b29bdb81e11736409b7f33ccf7917a4d8945f2821802801073e0d753ee
+  title: 'DMG Vol 14 Ch 84: Deemed weekly income from capital'
+id: term/beneficial-ownership
+dcterms:references:
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/page/84/0008
+---
+
+# Beneficial ownership of capital
+
+The chapter distinguishes a beneficial interest in capital from the name in which capital is held. This concept records that distinction for source review, without deciding ownership in a case.
+
+Project-authored interpretation awaiting specialist review. Evidence: [DMG 84071–84077, PDF page 8](https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=8); source SHA-256 `f5c610b29bdb81e11736409b7f33ccf7917a4d8945f2821802801073e0d753ee`. The date records this capture, not legal currency.
+
+[Research reference: Chapter 84 — PDF page 8](https://github.com/chris-page-gov/okf-dwp/blob/main/bundle/records/page/84/0008.md).

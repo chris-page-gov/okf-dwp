@@ -18,6 +18,14 @@ sources:
     https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=1
   title: 'DMG Vol 13 Ch 78: State Pension Credit: additional amounts and special groups '
   author: organisation:dwp
+skos:prefLabel:
+  '@value': Housing costs
+  '@language': en-GB
+skos:scopeNote:
+  '@value': Pension Credit source-discovery concept in the 15 September 2026 DMG snapshot. The entry
+    point is not a complete legal definition; applicability, exceptions and current law require
+    separate review.
+  '@language': en-GB
 id: term/housing-costs
 '@type': skos:Concept
 generated:

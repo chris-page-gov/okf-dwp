@@ -17,6 +17,14 @@ sources:
     https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=1
   title: 'DMG Vol 14 Ch 84: Deemed weekly income from capital'
   author: organisation:dwp
+skos:prefLabel:
+  '@value': Notional capital
+  '@language': en-GB
+skos:scopeNote:
+  '@value': Pension Credit source-discovery concept in the 15 September 2026 DMG snapshot. The entry
+    point is not a complete legal definition; applicability, exceptions and current law require
+    separate review.
+  '@language': en-GB
 id: term/notional-capital
 '@type': skos:Concept
 generated:

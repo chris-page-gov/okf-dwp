@@ -39,8 +39,9 @@ reference. The 744 DWP source-page records are data-equivalent to the initial
 meeting snapshot. The original domain-profile handoff remains frozen; the
 CPAG access review is separate under `docs/cpag-handbook.md`.
 
-Publication timestamps now follow the latest recorded source or authoring
-observation. YAML whitespace is normalised only when decoding proves that
+Bundle observation timestamps follow the latest recorded source or authoring
+observation; they do not establish a referenced source's publication date.
+YAML whitespace is normalised only when decoding proves that
 the data is unchanged. Existing source-rendering and initial browser receipts
 remain scoped to their named snapshot; the CPAG browser check is recorded
 separately.
@@ -49,3 +50,65 @@ The CPAG reference passed live Explorer checks in Edge using both YAML-LD and
 JSON. Search, access wording, publisher links, Graph and the exact snapshot
 notice were checked; neither tab captured warning or error logs. See
 `validation/cpag-browser.json` for the immutable content commit and hashes.
+
+## Semantic stage two
+
+Started following the owner's request to move beyond the meeting preview and
+prepare a wider exemplar. The working candidate adds individual concepts,
+source-backed semantic proposals, a non-executable rule review packet,
+legislation catalogue references and expanded evaluation journeys. The new
+full-DMG/ADM census contains publication metadata only. No additional PDF
+content is claimed as acquired.
+
+The original domain profile and earlier browser receipts remain frozen. New
+behavioural cases are designed but not run, and no specialist approval is
+recorded. The CPAG public contents harvest remains a separate local research
+artefact; this change does not publish its 90-entry outline or incorporate
+handbook text. The semantic pilot does not depend on those local files.
+
+Content freeze is 24 September 2026; the seminar is 30 September. WebMCP and
+MacBook/PA integration are at feasibility stage, with ChatGPT live voice identified and its actual
+Mac/task/browser/audio integration awaiting rehearsal. No new website, audio configuration or voice-tool
+integration is delivered by this candidate.
+
+The initial stage-two candidate snapshot was
+`dwp-pension-credit-2026-09-15-42c0a30e120c`: **821 records and 964 assertions**
+(744 page-containment, 205 navigation and 15 model-derived semantic proposals).
+All 744 source-page runtime records are unchanged from the previous public
+baseline. Local deterministic generation, all-assertion/RDF validation,
+12 semantic negative controls, eight retrieval controls and the frozen wider
+metadata census pass. Independent agent review covered semantic wording and
+validation failure modes; this is not human domain review. See
+`validation/semantics.json` and `validation/semantic-review.json`.
+
+The exact stage-two content commit `48abaff6c640e4a3e206af1adc71e21efd12738f` passed live Explorer import checks in installed Edge for YAML-LD and JSON, semantic relationship inspection, graph labels, the non-executable candidate and its original PDF-page link. No warning or error logs were captured in either test tab. [Browser receipt](validation/stage-two-browser.json).
+
+### CPAG source date correction
+
+The updated candidate `dwp-pension-credit-2026-09-15-1b84574268ad` preserves the
+same 821 records, 964 assertions and source pages. CPAG's public metadata
+establishes April 2026 as the handbook release month. The referenced book now
+records that month separately from the original 15 September metadata capture,
+record generation and later publication-metadata review. The source statement
+does not establish an exact release day or a legal effective date. Earlier
+browser receipts retain their original snapshot scope.
+
+In this 821-record snapshot, CPAG is the only record with an explicit structured
+publication date. The Timeline correction uses declared date roles; it does not
+infer source dates for the other records. Their observation or generation dates
+remain labelled as such. Wider DMG document publication and revision dates still
+need evidence-backed mapping, separately from legal applicability.
+
+The corrected content commit `7d3c69df0571b8d5206c8edce92963d99979cb5c`
+passed live Timeline checks in both YAML-LD and JSON: **Source published —
+April 2026**, machine-readable month precision and three separately labelled
+September audit dates. The current capital-disregard graph, source link and
+exact snapshot also passed. No warnings or errors were captured in these tabs.
+[Current browser receipt](validation/cpag-timeline-browser.json).
+
+The companion Explorer correction was merged in
+[PR 120](https://github.com/chris-page-gov/okf-explorer/pull/120). Its
+`51601b5d94ac33ce5be654e81943ca2e049743d8` deployment passed all required
+application, cross-browser and exact deployed-identity checks. The preserved
+[deployment receipt](validation/explorer-timeline-deployment.json) records the
+Explorer host check; it does not establish DWP policy correctness.

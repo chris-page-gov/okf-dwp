@@ -16,6 +16,14 @@ sources:
     https://assets.publishing.service.gov.uk/media/698462dd468d351e1406b4a7/dmgch86.pdf#page=2
   title: 'DMG Vol 14 Ch 86: Earnings '
   author: organisation:dwp
+skos:prefLabel:
+  '@value': Earnings
+  '@language': en-GB
+skos:scopeNote:
+  '@value': Pension Credit source-discovery concept in the 15 September 2026 DMG snapshot. The entry
+    point is not a complete legal definition; applicability, exceptions and current law require
+    separate review.
+  '@language': en-GB
 id: term/earnings
 '@type': skos:Concept
 generated:

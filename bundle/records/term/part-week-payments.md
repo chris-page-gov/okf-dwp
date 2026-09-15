@@ -18,6 +18,14 @@ sources:
     https://assets.publishing.service.gov.uk/media/69e1035298c6c9802f7ed9e0/dmg-Chap-79.pdf#page=8
   title: 'DMG Vol 13 Ch 79: Payment questions '
   author: organisation:dwp
+skos:prefLabel:
+  '@value': Part-week payments
+  '@language': en-GB
+skos:scopeNote:
+  '@value': Pension Credit source-discovery concept in the 15 September 2026 DMG snapshot. The entry
+    point is not a complete legal definition; applicability, exceptions and current law require
+    separate review.
+  '@language': en-GB
 id: term/part-week-payments
 '@type': skos:Concept
 generated:

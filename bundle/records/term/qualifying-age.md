@@ -18,6 +18,14 @@ sources:
     https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=14
   title: 'DMG Vol 13 Ch 77: Conditions of entitlement, membership of the household and normal amount payable'
   author: organisation:dwp
+skos:prefLabel:
+  '@value': Qualifying age
+  '@language': en-GB
+skos:scopeNote:
+  '@value': Pension Credit source-discovery concept in the 15 September 2026 DMG snapshot. The entry
+    point is not a complete legal definition; applicability, exceptions and current law require
+    separate review.
+  '@language': en-GB
 id: term/qualifying-age
 '@type': skos:Concept
 generated:

@@ -1,0 +1,40 @@
+{
+  "schema": "okf-dwp-browser-validation.v1",
+  "status": "passed-bounded-journeys",
+  "observed_on": "2026-09-15",
+  "content_commit": "48abaff6c640e4a3e206af1adc71e21efd12738f",
+  "snapshot_id": "dwp-pension-credit-2026-09-15-42c0a30e120c",
+  "browser": "Installed Edge, extension browser 1; exact browser version not recorded",
+  "formats": [
+    "YAML-LD",
+    "runtime JSON"
+  ],
+  "bundle_hashes": {
+    "bundle/okf-bundle.yamlld": "38d3b48dd27746fac78c22040edbe6d9bcc8604d8c925402ac61e09d5947581e",
+    "bundle/okf-bundle.json": "447dad944abc48f46d23fbd26d0513adfa22cc4877f75deb97a03ceac645f0c1"
+  },
+  "launch_url": "https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F48abaff6c640e4a3e206af1adc71e21efd12738f%2Fbundle%2Fokf-bundle.yamlld&view=graph#term/capital-disregards",
+  "checks": [
+    "YAML-LD import displayed821 records,26concepts,8personas,10stories,14questions",
+    "Review boundaries displayed exact snapshot and unofficial/model-assisted limitations",
+    "Capital-disregards body displayed five proposed relationships",
+    "Evidence-requirement inspector preserved source/target routes, absolute predicate, model-derived status and unreviewed authority",
+    "Relationship evidence displayed authored/source artefact hashes, DMG84354 locator and official PDFpage36 URL",
+    "Graph neighbourhood displayed19nodes/47relationships including evidence,period and guidance-sequence labels",
+    "Direct JSON import selected non-executable candidate; candidate search displayed7matches",
+    "Source page36 rendered DMG84354–84356 with literal numbering and original PDFpage link"
+  ],
+  "captured_console": {
+    "yaml_ld_warnings": 0,
+    "yaml_ld_errors": 0,
+    "json_warnings": 0,
+    "json_errors": 0
+  },
+  "limitations": [
+    "Bounded consumer verification, not full accessibility or cross-browser assurance",
+    "No WebMCP, ChatGPT Voice or room audio invocation tested",
+    "Semantic confidence0.5 is an uncalibrated schema placeholder, documented in the semantic contract",
+    "Semantic identifiers and derivation IRIs are identifiers; separate web endpoints are not claimed",
+    "Behavioural/persona model evaluations and specialist review remain unexecuted"
+  ]
+}

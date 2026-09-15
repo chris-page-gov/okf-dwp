@@ -190,28 +190,41 @@
     "PDF extraction preserves page boundaries but may lose tables, footnotes, reading order and formatting. Check the linked source PDF page.",
     "Chapter 83 has letter-spaced PDF text that reduces search quality. Some pages have no extracted text and may contain blank space or images; inspect their PDFs.",
     "Seven substantive chapters form the default searchable corpus. Transitional, spare and amendment documents remain separately identified in the source inventory.",
-    "Authored terminology and research journeys are AI-assisted navigation aids awaiting pensions specialist review. They do not establish legal relationships or decisions.",
+    "Authored concepts, semantic relationships and research journeys are model-assisted proposals awaiting specialist review. Source-backed associations do not establish legal applicability or executable decisions.",
     "External-reference records contain project-authored metadata and links only. CPAG handbook text is not included; its subscription and reuse restrictions remain applicable."
   ],
   "node_types": {
     "Collection overview": 1,
-    "Concept": 22,
-    "External reference": 1,
+    "Concept": 26,
+    "External reference": 7,
     "Guidance chapter": 7,
-    "Persona": 3,
-    "Question": 8,
-    "Research navigation": 1,
+    "Persona": 8,
+    "Question": 14,
+    "Research navigation": 2,
+    "RuleCandidate": 1,
     "Scope note": 1,
     "Source PDF page": 744,
-    "UserStory": 4
+    "UserStory": 10
   },
-  "nodes": 792,
+  "nodes": 821,
   "nonempty_pdf_pages": 734,
   "pages_without_extracted_text": 10,
-  "relationships": 852,
+  "relationship_predicates": {
+    "http://purl.org/dc/terms/isPartOf": 744,
+    "http://purl.org/dc/terms/references": 205,
+    "http://www.w3.org/2004/02/skos/core#related": 11,
+    "https://chris-page-gov.github.io/okf-dwp/ns#hasDisregardPeriod": 1,
+    "https://chris-page-gov.github.io/okf-dwp/ns#hasEvidenceRequirement": 1,
+    "https://chris-page-gov.github.io/okf-dwp/ns#precedesAssessmentOf": 2
+  },
+  "relationship_statuses": {
+    "model-derived": 15,
+    "normalized": 949
+  },
+  "relationships": 964,
   "schema": "okf-dwp-coverage.v1",
   "searchable_pdf_pages": 744,
-  "snapshot_id": "dwp-pension-credit-2026-09-15-e49131bd7ef0",
+  "snapshot_id": "dwp-pension-credit-2026-09-15-1b84574268ad",
   "source_documents": 36,
   "source_pages": 1524,
   "source_roles": {

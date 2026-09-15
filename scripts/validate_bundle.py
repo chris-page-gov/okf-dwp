@@ -57,6 +57,19 @@ def main() -> None:
                         f"Publication predates an input observation: {row['route']}")
     require(bundle["exploratory_publication"]["generated_at"] == bundle["generated_at"], "Publication timestamps disagree")
     checks["publication_timestamp_covers_inputs"] = {"status": "passed", "generated_at": bundle["generated_at"]}
+    cpag = bundle["nodes"].get("resource/cpag-welfare-benefits-handbook")
+    date_receipt_path = ROOT / "docs/evidence/cpag-publication-date-review.json"
+    if cpag and date_receipt_path.is_file():
+        dates = json.loads(date_receipt_path.read_text())
+        require(digest(date_receipt_path.read_bytes()) == cpag["okf:publicationMetadataReceiptSha256"],
+                "CPAG publication metadata receipt hash mismatch")
+        require(cpag["schema:about"]["schema:datePublished"] == {"@value": dates["release_month"], "@type": "xsd:gYearMonth"},
+                "CPAG publication precision or source date differs from publisher evidence")
+        require(cpag["generated"]["at"].startswith("2026-09-15"), "Original CPAG reference authoring date was replaced")
+        capture_receipt = json.loads((ROOT / "docs/evidence/cpag-access-review.json").read_text())
+        require(cpag["captured_at"] == capture_receipt["observed_at"], "Original CPAG metadata capture date was replaced")
+        require(cpag["observedAt"] == dates["observed_at"], "CPAG publication metadata review date differs from its receipt")
+        checks["cpag_source_publication_separate_from_capture"] = "passed"
     for row in entities:
         require(bool(ROUTE.fullmatch(row["route"])), f"Unsafe route {row['route']}")
         require(bool(row.get("title", "").strip()), f"Missing human-readable label: {row['route']}")
@@ -83,6 +96,20 @@ def main() -> None:
                 require(evidence_path.is_file(), f"Missing evidence artefact {evidence_path}")
                 require(digest(evidence_path.read_bytes()) == evidence["source_sha256"], f"Evidence hash mismatch: {evidence_path}")
             require(digest(str(evidence["source_value"]).encode()) == evidence["source_value_sha256"], "Evidence source-value hash mismatch")
+            if evidence.get("type") == "source-passage-for-model-proposal":
+                page = bundle["nodes"][evidence["source_page_route"]]
+                require(evidence["source_value"] in page["body"], "Semantic quotation is absent from the cited page")
+                page_doc = json.loads((ROOT / evidence["source_artifact"]).read_text())
+                require(evidence["source_value"] in page_doc["pages"][page["page_number"] - 1]["text"],
+                        "Semantic quotation is absent from the frozen extraction")
+                require(digest((ROOT / evidence["source_pdf_artifact"]).read_bytes()) == evidence["source_pdf_sha256"],
+                        "Semantic passage PDF hash mismatch")
+                require(page["source_sha256"] == evidence["source_pdf_sha256"], "Semantic page and PDF identities disagree")
+        if row["assertion_status"] == "model-derived":
+            from semantic_authoring import PREDICATES
+            require(row["predicate"] in PREDICATES, "Unregistered model-derived predicate")
+            require(row["review_status"] == "unreviewed-specialist-review-required", "Pilot review state changed without review")
+            require(any(e.get("type") == "source-passage-for-model-proposal" for e in row["evidence"]), "Missing semantic source passage")
     checks["all_semantic_assertions"] = {"status": "passed" if not errors else "failed", "count": len(assertions), "schema": assertion_schema["$id"]}
     require(len(bundle["relationships"]) == len(assertions), "Semantic/runtime relationship count mismatch")
     runtime_assertions = {row["id"]: row for row in bundle["relationships"]}
@@ -113,6 +140,11 @@ def main() -> None:
     require(rdf.encode() == (ROOT / "bundle/okf-bundle.nq").read_bytes(), "Canonical RDF dataset differs")
     require(digest(rdf.encode()) == bundle["plane_roots"]["semantic"], "Semantic digest differs")
     checks["canonical_rdf_identity"] = {"status": "passed", "algorithm": "URDNA2015", "sha256": digest(rdf.encode()), "statements": len(rdf.splitlines())}
+    for row in assertions:
+        triple = f'<{row["source"]}> <{row["predicate"]}> <{row["target"]}>'
+        require(any(line.startswith(triple + " ") for line in rdf.splitlines()),
+                f"Relationship lost or changed in RDF expansion: {row['@id']}")
+    checks["assertion_direct_triples_survive_rdf_expansion"] = "passed"
     manifest = json.loads((ROOT / "bundle/checksums.json").read_text())
     for entry in manifest["files"]:
         data = (ROOT / entry["path"]).read_bytes()
