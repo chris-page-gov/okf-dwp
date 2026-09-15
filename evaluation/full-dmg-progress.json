@@ -1,7 +1,7 @@
 {
   "schema": "okf-dwp-unattended-progress.v1",
   "updated": "2026-09-15",
-  "status": "in-progress",
+  "status": "final-publication-assurance",
   "authorisation": "Owner requested unattended completion of the public unofficial bundle on 15 September 2026.",
   "branch": "codex/full-dmg-completion",
   "base_commit": "82ffb603842d48d3ad71a661297ffcd85f4929e7",
@@ -56,14 +56,14 @@
     },
     {
       "id": "source-dates-and-legal-dependencies",
-      "status": "literal-date-and-reference-location-registers-complete; interpretation-and-version-gaps-retained",
+      "status": "bounded-registers-and253-source-family-attempts-complete; interpretation-and-version-gaps-retained",
       "depends_on": [
         "acquisition"
       ]
     },
     {
       "id": "persona-retrieval-evaluation",
-      "status": "78-indexed-locator-and-no-result-pairs-passed; observed-source-model-trials-in-progress",
+      "status": "complete-for-recorded-research-cases; 160-source-guided-responses-and-independent-assessments; specialist-and-runtime-acceptance-not-claimed",
       "depends_on": [
         "indexed-compiler",
         "concepts-and-relationships"
@@ -76,7 +76,7 @@
     },
     {
       "id": "independent-review-and-ci",
-      "status": "pending"
+      "status": "independent-review-and-local-checks-passed; final-candidate-ci-pending"
     },
     {
       "id": "immutable-browser-verification",
@@ -163,7 +163,6 @@
     "substantive_units_pending_proposals": 0,
     "status": "bounded-proposals-complete-and-cross-reviewed; specialist-acceptance-not-claimed",
     "next_priority": [
-      "Complete source-family gap register and observed model trials",
       "Verify immutable consumer candidate",
       "Publish checked research release"
     ],
@@ -180,7 +179,7 @@
     "in_progress_next_batches": []
   },
   "indexed_checkpoint": {
-    "snapshot": "dwp-full-dmg-2026-09-15-286bc3706366",
+    "snapshot": "dwp-full-dmg-2026-09-15-098a43318cca",
     "records": 15390,
     "assertions": 16210,
     "status": "all78-units-integrated-and-consumer-functions-passed; immutable-browser-check-pending"
@@ -191,8 +190,24 @@
       "id": "targeted-resource-hydration",
       "status": "documented-consumer-limitation",
       "detail": "Before whole-corpus resource hydration, Evidence Sources count is0 although record declares1source. Original PDF is available under Overview > Overview; direct source link also added to Narrative. Resource-list hydration needs separate consumer assessment."
+    },
+    {
+      "id": "source-labels-and-indexed-timeline",
+      "status": "fixes-reviewed; final-candidate-browser-pending",
+      "detail": "Source/publisher labels and resource hosts repaired. Separate Explorer fix hydrates selected Timeline and honours explicitly declared source-release dates; original capture dates remain separate."
     }
   ],
   "indexed_retrieval": "evaluation/full-dmg-retrieval.json",
-  "dependency_register": "evaluation/full-dmg-dependencies/index.json"
+  "dependency_register": "evaluation/full-dmg-dependencies/index.json",
+  "model_trials": {
+    "summary": "evaluation/full-dmg-behavioural/summary.json",
+    "observed_responses": 160,
+    "independent_assessments": 160,
+    "supported": 90,
+    "partial": 56,
+    "rubric_underspecified": 14,
+    "interpretation": "Recorded independent-model categories, not an accuracy score. Source-guided, context-aware trials; no live runtime or specialist acceptance."
+  },
+  "source_family_review": "evaluation/full-dmg-source-family-review.json",
+  "remaining_research_gaps": "docs/next-stage/full-dmg-research-gaps.md"
 }

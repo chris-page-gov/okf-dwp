@@ -1,8 +1,16 @@
 # Repository status
 
-## Unattended full-DMG work in progress
+<a id="unattended-full-dmg-work-in-progress"></a>
 
-On 15 September 2026 the owner instructed completion of the bundle unattended. This authorises the public-source processing, semantic drafting, verification and normal reviewed PR publication in [the completion plan](docs/next-stage/unattended-completion.md). The [checkpoint](evaluation/full-dmg-progress.json) records actual task state. Full-DMG acquisition is complete at 331 PDFs and 14,743 pages. The indexed projection is undergoing browser verification; eight semantic batches cover all 78 substantive PDF units with bounded research proposals. The previously verified Pension Credit publication remains available.
+## Full-DMG research candidate
+
+On 15 September 2026 the owner instructed completion of the bundle unattended. This authorises the public-source processing, semantic drafting, verification and normal reviewed PR publication in [the completion plan](docs/next-stage/unattended-completion.md). The [checkpoint](evaluation/full-dmg-progress.json) records actual task state. The final research candidate contains **331 PDFs and 14,743 measured pages**. Eight semantic batches add **245 concepts and 328 proposals** across **78 of 78 substantive PDF units**. Including the pilot, it has **271 concepts, 343 proposals, 15,390 entities, 16,210 assertions and 15,363 resource records**. These are selected-passage research outputs, not a complete entitlement model.
+
+Research attempts for the other **253 source-family units** have terminal outcomes: 242 completed with documented gaps and 11 spare units marked not applicable with evidence. The [source-family review](evaluation/full-dmg-source-family-review.json) preserves those limits; it does not claim exhaustive body review. Across the 331 PDFs, **802 pages have no extracted text**. No exhaustive visual review or OCR has established their contents.
+
+All **160 context-aware, source-guided answer trials** have observed responses and separate model assessments: **90 supported, 56 partial and 14 rubric-underspecified**. These are assessor categories rather than a calibrated accuracy measure. The [summary](evaluation/full-dmg-behavioural/summary.json) binds the unchanged answers, source reads and per-case findings. This is not a blind or end-to-end retrieval benchmark. Specialist acceptance remains **zero**.
+
+**Final browser verification and publication of the full-DMG candidate are pending.** Earlier browser checks belong to their named immutable snapshots and do not close this final gate. The previously verified Pension Credit publication remains available, with its original 36-PDF inventory, 744 default page records and frozen domain profile.
 
 CPAG substantive reuse and specialist acceptance are separate external decisions. Neither is required to complete an explicitly unreviewed research bundle from public GOV.UK sources. No handbook body acquisition or specialist acceptance is authorised or asserted by the unattended instruction.
 
@@ -12,7 +20,21 @@ The initial repository scaffold was committed separately before feature work. So
 
 ## Evidence
 
-- `source/inventory.json`: complete attachment census and byte identities.
+Full-DMG candidate:
+
+- `source/full-dmg-2026-09-15/inventory.json`: all 331 acquired source identities and 14,743 measured pages.
+- `full-dmg/coverage.json`: indexed entity, assertion, resource and extraction counts.
+- `evaluation/full-dmg-coverage.json`: bounded semantic coverage across all 78 substantive source units.
+- `evaluation/full-dmg-source-family-review.json`: outcomes and gaps for the remaining 253 units.
+- `evaluation/full-dmg-dependencies/index.json`: located, ambiguous and unresolved source-reference candidates.
+- `evaluation/full-dmg-retrieval.json`: executed indexed locator, no-result and navigation controls.
+- `evaluation/full-dmg-behavioural/summary.json`: the 160 observed source-guided responses and independent-of-answerer model assessments.
+
+Verify the retained trial evidence with `uv run --locked python scripts/verify_full_dmg_trials.py --check`. This replays integrity checks and reproduces recorded assessment categories; it does not run or grade new answers.
+
+Original Pension Credit pilot and its later small-bundle additions:
+
+- `source/inventory.json`: the original 36-PDF attachment census and byte identities.
 - `source/extraction-quality.json`: extraction counts and sampled visual inspection.
 - `source/review-samples.json`: seven representative chapter samples and caveats.
 - `domain-profile/check.json`: schema, evidence and snapshot binding checks.
@@ -34,7 +56,7 @@ Original project material uses British English and sentence case. Official title
 
 The initial meeting browser-verified snapshot is `dwp-pension-credit-2026-09-15-bdee692f1126`: 791 nodes and 850 evidence-bearing assertions. Direct JSON and YAML-LD imports both passed in the live Explorer. All 744 source pages also passed literal-text rendering checks after a numbering defect was found and corrected.
 
-Publication consists of the public GitHub repository, immutable commit URLs and the verified Explorer demonstration. No separate GitHub prerelease or uploaded release assets have been created.
+The earlier pilot publication consists of the public GitHub repository, immutable commit URLs and its verified Explorer demonstration. No separate GitHub prerelease or uploaded release assets have been created.
 
 ## CPAG external reference addition
 
@@ -60,15 +82,16 @@ notice were checked; neither tab captured warning or error logs. See
 ## Semantic stage two
 
 Started following the owner's request to move beyond the meeting preview and
-prepare a wider exemplar. The working candidate adds individual concepts,
+prepare a wider exemplar. The initial stage-two candidate added individual concepts,
 source-backed semantic proposals, a non-executable rule review packet,
 legislation catalogue references and expanded evaluation journeys. The new
-full-DMG/ADM census contains publication metadata only. No additional PDF
-content is claimed as acquired.
+full-DMG/ADM census initially contained publication metadata only. The later
+full-DMG candidate described above acquires all 331 DMG PDFs; the separate
+182-PDF ADM census remains metadata-only.
 
-The original domain profile and earlier browser receipts remain frozen. New
-behavioural cases are designed but not run, and no specialist approval is
-recorded. The CPAG public contents harvest remains a separate local research
+The original domain profile and earlier browser receipts remain frozen. The
+initial behavioural designs now have the separate observed trials and model
+assessments described above; specialist approval remains zero. The CPAG public contents harvest remains a separate local research
 artefact; this change does not publish its 90-entry outline or incorporate
 handbook text. The semantic pilot does not depend on those local files.
 
@@ -112,9 +135,12 @@ September audit dates. The current capital-disregard graph, source link and
 exact snapshot also passed. No warnings or errors were captured in these tabs.
 [Current browser receipt](validation/cpag-timeline-browser.json).
 
-The companion Explorer correction was merged in
+The earlier pilot's companion Explorer correction was merged in
 [PR 120](https://github.com/chris-page-gov/okf-explorer/pull/120). Its
 `51601b5d94ac33ce5be654e81943ca2e049743d8` deployment passed all required
 application, cross-browser and exact deployed-identity checks. The preserved
 [deployment receipt](validation/explorer-timeline-deployment.json) records the
-Explorer host check; it does not establish DWP policy correctness.
+Explorer host check; it does not establish DWP policy correctness or bind the
+later full-DMG candidate. The latter's reviewed consumer source pin is recorded
+in `profiles/explorer-runtime/vendor-lock.json`; final deployed-host identity
+and browser verification remain separate release evidence.

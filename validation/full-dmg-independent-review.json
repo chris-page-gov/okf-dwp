@@ -71,6 +71,21 @@
     "indexed_delivery_and_retrieval": {
       "reviewer": "agent separate from root implementation author",
       "result": "Actual consumer functions and licences verified. Raw-source quotation checks now reject display wrappers. Reference-location recogniser excludes wrapped et-seq cross-references; source-page hashes verified. Portable gzip CI passed."
+    },
+    "final_resource_labels_and_publication_date": {
+      "reviewer": "agent separate from root implementation author",
+      "result": "No material finding. Verified 30755 endpoint labels against the actual pinned consumer, resource route shape, publisher counts and resource hosts. Only the explicitly dated CPAG reference gains source-release metadata; April2026 precision and separate capture/observation dates retained.",
+      "checks": "10 focused tests and actual consumer check passed."
+    },
+    "recorded_model_trial_replay": {
+      "reviewer": "root separate from verifier author",
+      "result": "Read full verifier and negative controls. All42 repository tests and full160-case replay passed under locked dependencies. Response, prompt, assessment and source hashes verified; partial grades retained. No material finding.",
+      "source": "evaluation/full-dmg-behavioural/summary.json"
+    },
+    "consumer_source_pin": {
+      "commit": "8e01dfe16538c6045ee1d55b64c3f6e24bada9f7",
+      "reviewer": "root",
+      "result": "Read Timeline hydration, strict partial-date validation and UI tests; no material finding. Byte-compared vendored acceptance functions and licences with this exact source commit. Deployed application identity remains a separate browser gate."
     }
   },
   "resolved_findings": [
@@ -80,7 +95,7 @@
     },
     {
       "id": "authored-evaluation-response-overclaim",
-      "resolution": "Relabel RQ07 and response entries as designed cases/authored exemplars; actual built-bundle retrieval and behavioural evaluation remain pending."
+      "resolution": "Authored examples remain labelled as designed/not run. Separate retained observations now contain160 source-guided responses and independent model assessments; runtime and specialist acceptance remain unclaimed."
     },
     {
       "id": "yaml-aliases-in-authored-inputs",
@@ -154,7 +169,7 @@
     },
     {
       "path": "scripts/build_full_dmg.py",
-      "sha256": "e9ebea04a9b369158c9c59bc476f7e2158cbf5c4d2170fdb7f340271ace4eff7"
+      "sha256": "baa6c49ba9c5ca2c1221e8a1624a42e7e918be0cff44000d2ddad0447a4a7d7a"
     },
     {
       "path": "scripts/evaluate_full_dmg.py",
@@ -166,7 +181,35 @@
     },
     {
       "path": "scripts/check_full_dmg_consumer.mjs",
-      "sha256": "0934ad78dc163c7da8d3e2727c98ca228be7bda919d613e235c1f0cd53cfe87a"
+      "sha256": "a963e80a305348c2cd30d8db112832cdbe472a0d1fedff28512d5b28035bcb32"
+    },
+    {
+      "path": "scripts/validate_full_dmg.py",
+      "sha256": "b121859b8ac4b0429254b60841131f5012beff674836ce487c43b703602d5344"
+    },
+    {
+      "path": "scripts/verify_full_dmg_trials.py",
+      "sha256": "9a34512a45dc6d98fb9c01a501551f561af35bc7ba5009f8c88410a871f5c430"
+    },
+    {
+      "path": "scripts/test_full_dmg_trials.py",
+      "sha256": "587317307e79425010d823fd54c21ad67ec67545b2853757c4aaf76c773197e1"
+    },
+    {
+      "path": "evaluation/full-dmg-behavioural/summary.json",
+      "sha256": "c420bf8d8c8dc5cd63119ead119ce50a0452f53d752fb43cec7905353cbc7e38"
+    },
+    {
+      "path": "evaluation/full-dmg-behavioural/comms-assessment.json",
+      "sha256": "2ec7f83be5f19e76370b6ffa32be8dd854075286641764b5604bf25b8ee4a0bc"
+    },
+    {
+      "path": "evaluation/full-dmg-behavioural/personas-assessment.json",
+      "sha256": "20553a299b7dfadc1c2b57e1736c6ab802c09150f6863e79ee7ab40dc1773610"
+    },
+    {
+      "path": "evaluation/full-dmg-behavioural/esa-assessment.json",
+      "sha256": "81037c88d3fb989ea6ac13b3606cd40f086993347b577cae41034f55d3f82ef9"
     }
   ],
   "limitations": [

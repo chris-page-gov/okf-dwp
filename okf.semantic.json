@@ -52,7 +52,7 @@
     "limitations": [
       "Independent experimental source discovery; no specialist legal review or full Foundry production assurance.",
       "Authored references are navigation; explicit semantic relations are source-backed model proposals awaiting specialist review. PDF page containment is deterministically derived.",
-      "Chapter 83 extraction quality varies. Historical amendments are retained outside default page search."
+      "Machine extraction has known defects. Full-DMG search includes clearly labelled historical amendments; the preserved Pension Credit pilot keeps them outside its default page search."
     ],
     "deliveries": [
       {
@@ -111,7 +111,9 @@
       "uv run --locked python scripts/validate_full_dmg.py",
       "uv run --locked python scripts/report_full_dmg_coverage.py --check",
       "node --experimental-strip-types scripts/check_full_dmg_consumer.mjs",
-      "uv run --locked python scripts/evaluate_full_dmg.py --check"
+      "uv run --locked python scripts/evaluate_full_dmg.py --check",
+      "uv run --locked python scripts/reconcile_full_dmg_references.py --check",
+      "uv run --locked python scripts/verify_full_dmg_trials.py --check"
     ]
   },
   "reader": {
@@ -140,7 +142,7 @@
         "scope": "full-dmg",
         "delivery": "indexed-large-corpus",
         "descriptor": "full-dmg/okf-explorer.json",
-        "consumer_commit": "51601b5d94ac33ce5be654e81943ca2e049743d8",
+        "consumer_commit": "8e01dfe16538c6045ee1d55b64c3f6e24bada9f7",
         "verification_status": "pending"
       }
     ]

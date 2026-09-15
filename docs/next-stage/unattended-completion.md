@@ -35,7 +35,7 @@ If an external permission, unavailable source, usage limit or specialist decisio
 
 The current Explorer YAML-LD small importer permits 10,000 total graph entries. The full corpus exceeds that with pages and containment assertions alone. Keep `bundle/` as the existing Pension Credit demonstration; add `full-dmg/okf-explorer.json` as an indexed corpus with compact YAML-LD control files and bounded semantic shards. Build full-text postings from complete page text, independently of short result snippets.
 
-Current consumer inspection is against Explorer commit `51601b5d94ac33ce5be654e81943ca2e049743d8`. Bind final validation to the exact consumer and producer bytes actually tested. Indexed Timeline behaviour needs its own check: the prior source-date correction covered only small bundles.
+The full-DMG consumer source is pinned to reviewed Explorer commit `8e01dfe16538c6045ee1d55b64c3f6e24bada9f7` (PR #121). The final browser receipt also records the deployed main commit and application identity, so an identical application tree can be traced through its merge. Bind validation to the exact producer and application bytes actually tested. Indexed Timeline checks cover direct opening and the declared source release month.
 
 ## Current checkpoint
 

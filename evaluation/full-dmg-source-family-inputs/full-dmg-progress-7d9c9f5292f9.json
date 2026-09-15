@@ -1,0 +1,198 @@
+{
+  "schema": "okf-dwp-unattended-progress.v1",
+  "updated": "2026-09-15",
+  "status": "in-progress",
+  "authorisation": "Owner requested unattended completion of the public unofficial bundle on 15 September 2026.",
+  "branch": "codex/full-dmg-completion",
+  "base_commit": "82ffb603842d48d3ad71a661297ffcd85f4929e7",
+  "content_freeze": "2026-09-24",
+  "seminar": "2026-09-30",
+  "scope": {
+    "dmg_pdf_urls": 331,
+    "original_pdf_urls": 36,
+    "additional_pdf_urls": 295,
+    "publisher_declared_pages": 14743,
+    "full_adm_included": false,
+    "cpag_body_included": false,
+    "specialist_approved": false
+  },
+  "tasks": [
+    {
+      "id": "acquisition",
+      "status": "complete",
+      "owner": "personas_next_stage",
+      "output": "source/full-dmg-2026-09-15/inventory.json",
+      "verification": "source/full-dmg-2026-09-15/verification.json"
+    },
+    {
+      "id": "indexed-compiler",
+      "status": "all78-units-integrated; deterministic-validation-and-pinned-consumer-check-passed; final-browser-check-pending",
+      "owner": "comms_implications",
+      "output": "full-dmg/okf-explorer.json"
+    },
+    {
+      "id": "finite-semantic-plan",
+      "status": "complete",
+      "owner": "legislation_reconciliation",
+      "output": "evaluation/full-dmg-coverage-plan.json"
+    },
+    {
+      "id": "concepts-and-relationships",
+      "status": "complete-for-bounded-research-scope",
+      "depends_on": [
+        "acquisition",
+        "finite-semantic-plan"
+      ],
+      "batches": [
+        "common-decision",
+        "common-and-jsa-extension",
+        "pension-credit",
+        "non-income-and-industrial",
+        "pension-regimes",
+        "esa",
+        "jsa-income-support",
+        "international"
+      ]
+    },
+    {
+      "id": "source-dates-and-legal-dependencies",
+      "status": "literal-date-and-reference-location-registers-complete; interpretation-and-version-gaps-retained",
+      "depends_on": [
+        "acquisition"
+      ]
+    },
+    {
+      "id": "persona-retrieval-evaluation",
+      "status": "78-indexed-locator-and-no-result-pairs-passed; observed-source-model-trials-in-progress",
+      "depends_on": [
+        "indexed-compiler",
+        "concepts-and-relationships"
+      ]
+    },
+    {
+      "id": "contracts-and-documents",
+      "status": "in-progress",
+      "owner": "root"
+    },
+    {
+      "id": "independent-review-and-ci",
+      "status": "pending"
+    },
+    {
+      "id": "immutable-browser-verification",
+      "status": "pending"
+    },
+    {
+      "id": "publication-and-freeze",
+      "status": "pending"
+    }
+  ],
+  "continuation": {
+    "status": "active",
+    "automation_id": "complete-the-full-dmg-research-bundle",
+    "kind": "thread-heartbeat",
+    "interval": "hourly",
+    "stop_policy": "pause on completion, external-only blockage or 24 September content freeze"
+  },
+  "external_decisions": [
+    {
+      "id": "cpag-permission",
+      "blocks_research_bundle": false,
+      "description": "Written publisher permission required before substantive handbook processing."
+    },
+    {
+      "id": "specialist-acceptance",
+      "blocks_research_bundle": false,
+      "description": "Needed before claiming legal or operational acceptance; all authored interpretations remain unreviewed."
+    }
+  ],
+  "acquisition_result": {
+    "expected_pdf_documents": 331,
+    "complete_documents": 331,
+    "reused_original_documents": 36,
+    "additional_documents": 295,
+    "declared_pages": 14743,
+    "measured_pages": 14743,
+    "pdf_bytes": 146090882,
+    "text_characters": 27613797,
+    "documents_by_kind": {
+      "memo": 66,
+      "abbreviations": 1,
+      "legislation-reference-list": 2,
+      "change-summary": 15,
+      "chapter": 92,
+      "annex": 4,
+      "historical-amendment": 151
+    },
+    "pages_by_kind": {
+      "memo": 534,
+      "abbreviations": 17,
+      "legislation-reference-list": 19,
+      "change-summary": 57,
+      "chapter": 8196,
+      "annex": 71,
+      "historical-amendment": 5849
+    },
+    "quality_flags": {
+      "no-machine-extracted-text": 802,
+      "sparse-machine-extracted-text": 176,
+      "possible-letter-spacing-defect": 512
+    },
+    "declared_page_mismatches": [],
+    "declared_byte_mismatches": [],
+    "failure_count": 0,
+    "complete_for_frozen_dmg_census": true
+  },
+  "evidence_discovery": {
+    "documents": 331,
+    "documents_with_stated_revision_dates": 178,
+    "index": "evaluation/full-dmg-evidence/index.json",
+    "status": "candidate-discovery-and-location-reconciliation-complete; legal-identity-and-version-not-inferred"
+  },
+  "pull_request": "https://github.com/chris-page-gov/okf-dwp/pull/5",
+  "acquisition_checkpoint_commit": "7155bcd73f24743431242a9e32d64d86b1b45635",
+  "source_checkpoint_ci": {
+    "run": 35016327034,
+    "status": "passed"
+  },
+  "coverage_report": "evaluation/full-dmg-coverage.json",
+  "semantic_checkpoint": {
+    "additional_concepts": 245,
+    "additional_proposals": 328,
+    "substantive_units_with_proposals": 78,
+    "substantive_units_pending_proposals": 0,
+    "status": "bounded-proposals-complete-and-cross-reviewed; specialist-acceptance-not-claimed",
+    "next_priority": [
+      "Complete source-family gap register and observed model trials",
+      "Verify immutable consumer candidate",
+      "Publish checked research release"
+    ],
+    "review_packets": [
+      "evaluation/full-dmg-common-and-jsa-extension-review.json",
+      "evaluation/full-dmg-common-decision-review.json",
+      "evaluation/full-dmg-esa-review.json",
+      "evaluation/full-dmg-international-review.json",
+      "evaluation/full-dmg-jsa-income-support-review.json",
+      "evaluation/full-dmg-non-income-and-industrial-review.json",
+      "evaluation/full-dmg-pension-credit-review.json",
+      "evaluation/full-dmg-pension-regimes-review.json"
+    ],
+    "in_progress_next_batches": []
+  },
+  "indexed_checkpoint": {
+    "snapshot": "dwp-full-dmg-2026-09-15-286bc3706366",
+    "records": 15390,
+    "assertions": 16210,
+    "status": "all78-units-integrated-and-consumer-functions-passed; immutable-browser-check-pending"
+  },
+  "independent_review": "validation/full-dmg-independent-review.json",
+  "open_consumer_findings": [
+    {
+      "id": "targeted-resource-hydration",
+      "status": "documented-consumer-limitation",
+      "detail": "Before whole-corpus resource hydration, Evidence Sources count is0 although record declares1source. Original PDF is available under Overview > Overview; direct source link also added to Narrative. Resource-list hydration needs separate consumer assessment."
+    }
+  ],
+  "indexed_retrieval": "evaluation/full-dmg-retrieval.json",
+  "dependency_register": "evaluation/full-dmg-dependencies/index.json"
+}

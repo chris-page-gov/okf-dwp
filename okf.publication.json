@@ -154,7 +154,7 @@
       },
       "limitations": [
         "No executable rules or human-approved interpretations.",
-        "Projected personas and behavioural evaluations remain unvalidated."
+        "Projected personas are unvalidated by staff. Observed source-guided model trials and independent model grades are retained, including partial answers and underspecified rubrics; no specialist or live-runtime acceptance is claimed."
       ]
     },
     {
@@ -305,7 +305,8 @@
         "full-dmg-coverage-check",
         "full-dmg-consumer-check",
         "full-dmg-retrieval-check",
-        "full-dmg-reference-check"
+        "full-dmg-reference-check",
+        "full-dmg-trials-check"
       ]
     },
     {
@@ -484,6 +485,19 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 5
+      },
+      {
+        "id": "full-dmg-trials-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/verify_full_dmg_trials.py --check",
+        "source": "docs/next-stage/unattended-completion.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
       }
     ]
   },

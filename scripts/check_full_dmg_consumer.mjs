@@ -18,7 +18,16 @@ const publication = parseExploratoryPublication(descriptor);
 assert.equal(publication.state, 'valid', publication.warning);
 const labels = JSON.parse(gunzipSync(read('full-dmg/data/endpoint-labels.json.gz')));
 const registry = normaliseEndpointLabelIndex(labels, descriptor.snapshot);
-assert.equal(registry.byRoute.size, descriptor.counts.records);
+assert.equal(registry.byRoute.size, descriptor.counts.records + descriptor.counts.resources + descriptor.counts.publishers);
+for (const publisher of json('full-dmg/data/publishers.json')) {
+  assert.equal(registry.byRoute.get('publisher/' + publisher.name)?.label, publisher.title);
+}
+for (const part of json('full-dmg/data/manifest.json').chunks.resources) {
+  for (const resource of JSON.parse(gunzipSync(read('full-dmg/' + part)))) {
+    assert.ok(registry.byRoute.get('resource/' + resource.id)?.label);
+    assert.equal(resource.host, new URL(resource.url).hostname);
+  }
+}
 // These are actual browser failures retained as consumer-level controls.
 const badDescriptor = structuredClone(descriptor);
 badDescriptor.exploratory_publication.banner.message = 'A different warning';

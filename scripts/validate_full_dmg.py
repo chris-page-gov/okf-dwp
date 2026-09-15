@@ -10,10 +10,11 @@ import json
 import re
 from pathlib import Path
 from datetime import datetime
+from urllib.parse import urlsplit
 
 from jsonschema import Draft202012Validator, FormatChecker
 from pyld import jsonld
-from build_full_dmg import (CONSUMER_COMMIT, INPUT, OUTPUT, ROOT, PROFILE,
+from build_full_dmg import (BASE, CONSUMER_COMMIT, INPUT, OUTPUT, ROOT, PROFILE,
                             bucket, canonical, digest, load_yaml, pinned_loader,
                             safe_path, tokens)
 
@@ -71,9 +72,18 @@ def validate(root: Path = ROOT, output: str = OUTPUT, inventory_path: str = INPU
     label_ref = descriptor["entrypoints"]["endpoint_labels"]
     require(label_ref == manifest["indexes"]["endpoint_labels"] == descriptor["entrypoint_integrity"]["endpoint_labels"], "Endpoint label bindings differ")
     labels = read_json(out / label_ref["path"])
-    require(labels["snapshot"] == snapshot and labels["counts"]["entries"] == len(records), "Endpoint label snapshot or denominator differs")
-    require({row["route"]: (row["iri"], row["label"], row["type"]) for row in labels["entries"]} ==
+    label_map = {row['route']:row for row in labels['entries']}
+    resources = [row for part in manifest['chunks']['resources'] for row in read_json(out / part)]
+    publishers = read_json(out / 'data/publishers.json')
+    require(labels["snapshot"] == snapshot and labels["counts"]["entries"] == len(label_map) == len(records) + len(resources) + len(publishers), "Endpoint label snapshot or denominator differs")
+    require({route: (label_map[route]["iri"], label_map[route]["label"], label_map[route]["type"]) for route in routes} ==
             {row["route"]: (row["id"], re.sub(r"\s+", " ", row["title"]).strip(), row["record_type"]) for row in records}, "Endpoint labels lose a semantic route or source title")
+    for publisher in publishers:
+        require(label_map[publisher['id']]['label'] == publisher['title'], 'Publisher label missing')
+        require(publisher['resource_count'] == sum(row['resource_count'] for row in records if row['publisher'] == publisher['name']), 'Publisher source count mismatch')
+    for resource in resources:
+        require(label_map['resource/' + resource['id']]['iri'] == BASE + 'id/' + resource['id'], 'Resource label route mismatch')
+        require(resource['host'] == urlsplit(resource['url']).hostname, 'Resource host missing or changed')
     locator = read_json(out / "data/locator/manifest.json")
     locator_buckets = {key: read_json(out / ref["path"]) for key, ref in locator["buckets"].items()}
     for ordinal, record in enumerate(records):

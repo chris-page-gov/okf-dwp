@@ -1,16 +1,24 @@
 # Changelog
 
-## Full-DMG completion in progress — 15 September 2026
+<a id="full-dmg-completion-in-progress--15-september-2026"></a>
+
+## Full-DMG research candidate — 15 September 2026
 
 - Record the owner's unattended completion authority, finite acceptance gates and an hourly task continuation with durable checkpoints.
-- Begin acquisition against all 331 DMG URLs and a separate indexed Explorer projection, preserving the existing Pension Credit demonstration.
+- Complete acquisition against all 331 DMG URLs and a separate indexed Explorer projection, preserving the original 36-PDF Pension Credit inventory, stable routes, frozen domain profile and immutable demonstration links.
 - Add a finite semantic/evaluation worklist and make CLI retrieval scope explicit. Keep CPAG body reuse, specialist acceptance and full ADM outside this research-bundle completion claim.
-- Complete acquisition and hash/page verification of 331 PDFs. Add bounded evidence discovery, an indexed full-text compiler and source/semantic coverage reporting.
+- Verify source hashes and all 14,743 measured pages. Add bounded evidence discovery, an indexed full-text compiler and source/semantic coverage reporting. Retain 802 pages with no extracted text and the absence of exhaustive visual review or OCR.
 - Add eight wider authoring batches: 245 concepts and 328 exact-passage relationship proposals across all 78 substantive source units, with explicit exceptions and pending specialist review.
+- Record totals including the pilot: 271 concepts, 343 semantic proposals, 15,390 entities, 16,210 assertions and 15,363 resource records. Keep those counts distinct from complete policy modelling or specialist acceptance.
+- Complete bounded research accounting for the other 253 source-family units: 242 outcomes with documented gaps and 11 spare units marked not applicable with evidence; do not claim exhaustive source-body review.
 - Correct the indexed exploratory notice envelope, add route labels and direct original-PDF narrative links, and use platform-independent gzip headers for reproducible macOS/Linux builds.
-- Execute indexed locator, source identity, no-result and baseline navigation controls separately from the designed behavioural questions.
+- Execute indexed locator, source identity, no-result and baseline navigation controls separately from model answer trials.
+- Record 160 context-aware, source-guided observed answers and separate model assessments: 90 supported, 56 partial and 14 with underspecified rubrics. Preserve original responses and omissions; these are assessor categories, not an accuracy score, blind benchmark or end-to-end retrieval evaluation. Specialist acceptance remains zero.
+- Add `scripts/verify_full_dmg_trials.py --check` to replay evidence integrity and reproduce the retained trial summary without model calls or automatic grading.
 - Run unmodified, pinned Explorer acceptance functions in CI; retain its exact warning and normalise label whitespace without changing source titles.
+- Add publisher/resource endpoint labels and source hosts, reconcile per-publisher resource counts, and preserve CPAG's typed April 2026 publication month separately from capture and observation dates. CPAG remains metadata and links only.
 - Reconcile literal paragraph and memo references to acquired location candidates, preserving ambiguous matches and unresolved legal identifiers across all 331 source documents.
+- Keep final full-DMG browser verification and publication pending; earlier consumer receipts retain their original snapshot scope.
 
 ## CPAG external reference — 15 September 2026
 

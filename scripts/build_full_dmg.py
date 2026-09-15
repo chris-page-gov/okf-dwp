@@ -17,13 +17,14 @@ import json
 from pathlib import Path
 import re
 import unicodedata
+from urllib.parse import urlsplit
 
 from pyld import jsonld
 from build_bundle import (BASE, OGL, PROFILE, REPO, ROOT, ROUTE, canonical,
                           context, digest, load_yaml, make_assertion,
                           pinned_loader, source_text_block, yaml_bytes)
 
-CONSUMER_COMMIT = "51601b5d94ac33ce5be654e81943ca2e049743d8"
+CONSUMER_COMMIT = "8e01dfe16538c6045ee1d55b64c3f6e24bada9f7"
 INPUT = "source/full-dmg-2026-09-15/inventory.json"
 OUTPUT = "full-dmg"
 TITLE = "Full Decision makers’ guide: independent source exploration"
@@ -514,7 +515,7 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
             resource_id = "resource/source-" + digest(route.encode())[:24]
             resource_ids.append(resource_id)
             resources.append({"id": resource_id, "route": resource_id, "dataset": route, "name": "Official source PDF page" if doc else "Referenced external resource",
-                              "url": source_url, "format": "PDF" if doc else "HTML", "source_access": {"url": source_url, "label": "Verify the official PDF" if doc else "Open referenced resource", "media_type": "application/pdf" if doc else "text/html", "display_mode": "link"},
+                              "url": source_url, "host": urlsplit(source_url).hostname, "format": "PDF" if doc else "HTML", "source_access": {"url": source_url, "label": "Verify the official PDF" if doc else "Open referenced resource", "media_type": "application/pdf" if doc else "text/html", "display_mode": "link"},
                               "provenance": provenance})
         record = {"id": row["@id"], "name": route, "route": route, "title": row["title"], "type": row["type"], "record_type": row["type"],
                   "notes": source_role + ". " + re.sub(r"\s+", " ", full_text[route]).strip()[:360],
@@ -531,6 +532,12 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
                   "extras": {"source_dates": metadata, "source_page_number": row.get("page_number"), "source_publication_date": row.get("schema:about", {}).get("schema:datePublished") if isinstance(row.get("schema:about"), dict) else None}}
         if referenced_publication:
             record['published_at'] = referenced_publication
+            record['operational_metadata'] = {
+                'canonical_source': {'url': row['schema:about']['@id'], 'label': 'Referenced publication'},
+                'latest_release': {'date': referenced_publication, 'label': 'Referenced work publication'},
+                'provenance': {'source_url': row['schema:about']['@id'],
+                               'observed_at': row.get('captured_at') or row.get('observedAt'),
+                               'method': 'Explicit typed publication date of the referenced work; original precision and source receipt retained in the semantic record.'}}
         records.append(record)
     if len(records) > 50_000:
         raise ValueError("Corpus exceeds the reviewed 50,000-record search/full-index boundary")
@@ -611,13 +618,27 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
     put("build-inputs.json", inputs)
     put("data/overview.json", {"schema": "okf-large-overview.v1", "title": TITLE, "generated_at": when, "counts": counts, "recent_datasets": search["results"][:12],
                                "notices": LIMITATIONS, "facet_previews": {key: value[:15] for key, value in search["facets"].items()}, "format_counts": [{"value": "PDF", "count": page_count}]})
-    publishers = [{"id": "publisher/dwp", "name": "dwp", "title": "DWP source; independent extraction", "dataset_count": len(source_by_route), "resource_count": len(resources)},
-                  {"id": "publisher/independent-project", "name": "independent-project", "title": "Independent project-authored research", "dataset_count": len(records) - len(source_by_route), "resource_count": 0}]
+    publishers = [{"id": "publisher/" + name, "name": name, "title": title,
+                   "dataset_count": sum(row['publisher'] == name for row in records),
+                   "resource_count": sum(row['resource_count'] for row in records if row['publisher'] == name)}
+                  for name, title in [('dwp', 'DWP source; independent extraction'), ('independent-project', 'Independent project-authored research')]]
     put("data/publishers.json", publishers)
     endpoint_labels = [{"route": row["route"], "iri": row["id"], "label": re.sub(r"\s+", " ", row["title"]).strip(),
                         "language": "en-GB", "type": row["record_type"],
                         "label_authority": {"class": "editorial", "source": REPO + "/blob/main/scripts/build_full_dmg.py"}}
                        for row in records]
+    # The indexed Reader resolves publisher and resource labels through the same
+    # registry as record labels. Its resource route prefixes the resource ID.
+    endpoint_labels.extend({"route": row['id'], "iri": BASE + 'id/' + row['id'],
+                            "label": row['title'], "language": "en-GB", "type": "Source organisation",
+                            "label_authority": {"class": "editorial", "source": REPO + "/blob/main/scripts/build_full_dmg.py"}}
+                           for row in publishers)
+    record_titles = {row['route']: row['title'] for row in records}
+    endpoint_labels.extend({"route": 'resource/' + row['id'], "iri": BASE + 'id/' + row['id'],
+                            "label": re.sub(r'\s+', ' ', row['name'] + ' — ' + record_titles[row['dataset']]).strip(),
+                            "language": "en-GB", "type": "Source resource",
+                            "label_authority": {"class": "editorial", "source": REPO + "/blob/main/scripts/build_full_dmg.py"}}
+                           for row in resources)
     if any(not row["label"].strip() or len(row["label"]) > 512 for row in endpoint_labels):
         raise ValueError("Endpoint label is missing or exceeds the consumer limit")
     put("data/endpoint-labels.json.gz", {"schema": "okf-explorer-endpoint-label-index.v1", "snapshot": snapshot,

@@ -1,0 +1,155 @@
+{
+  "cases": [
+    {
+      "case_id": "common-decision/CD-17-P",
+      "original_id": "CD-17-P",
+      "prompt": "How does overlapping entitlement differ from incompatible benefits, and why does it affect adjustment order?",
+      "prompt_sha256": "2dc6a91879f559953cea90bfd7f9e833961c96bf32663fa1357b734c073c628f",
+      "response": null,
+      "selection_method": "case-designed source locator hints",
+      "source_read_ids": [
+        "page/dmg-vol3-ch17/0002#17005",
+        "page/dmg-vol3-ch17/0022#17170"
+      ],
+      "source_unit": {
+        "chapter": 17,
+        "chapter_task": "chapter-17",
+        "document_id": "dmg-vol3-ch17",
+        "id": "dmg-8338058a8cb3f9ce",
+        "part": null,
+        "pdf_sha256": "ce6967960168b301ae0b454df6824017202f6d3f6a14282a7ef0d4778bdac19a",
+        "source_url": "https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf"
+      },
+      "status": "sources-read; response-not-yet-recorded"
+    },
+    {
+      "case_id": "common-decision/CD-17-N",
+      "original_id": "CD-17-N",
+      "prompt": "Does every pair of benefits overlap and can the paragraph calculate a Pension Credit award?",
+      "prompt_sha256": "2b708312e05ec192a14885ba326cf2997fc1b14d8561a36ab8982a47be758c71",
+      "response": null,
+      "selection_method": "case-designed source locator hints",
+      "source_read_ids": [
+        "page/dmg-vol3-ch17/0002#17004",
+        "page/dmg-vol3-ch17/0002#17005",
+        "page/dmg-vol3-ch17/0023#17180"
+      ],
+      "source_unit": {
+        "chapter": 17,
+        "chapter_task": "chapter-17",
+        "document_id": "dmg-vol3-ch17",
+        "id": "dmg-8338058a8cb3f9ce",
+        "part": null,
+        "pdf_sha256": "ce6967960168b301ae0b454df6824017202f6d3f6a14282a7ef0d4778bdac19a",
+        "source_url": "https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf"
+      },
+      "status": "sources-read; response-not-yet-recorded"
+    }
+  ],
+  "finished_at": "2026-09-15T20:56:33.164207Z",
+  "inventory_sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a",
+  "method": "Executed frozen-source file reads and literal paragraph extraction; not search retrieval or built-bundle interrogation. Source addresses were selected from authored expectations.",
+  "reader_path": "/Users/crpage/tmp/okf-dwp-authored-evaluation/read_trial_sources.py",
+  "reader_sha256": "5e325ca62ab3c864187df31454ebfdd34eb7a5549b9a2dc66276380bf8d7262b",
+  "reads": [
+    {
+      "arguments": {
+        "paragraph_label": "17005",
+        "path": "source/full-dmg-2026-09-15/pages/dmg-vol3-ch17.json",
+        "pdf_page": 2
+      },
+      "id": "page/dmg-vol3-ch17/0002#17005",
+      "observed_at": "2026-09-15T20:56:33.163930Z",
+      "output": {
+        "document_id": "dmg-vol3-ch17",
+        "excerpt": "17005 Benefits can only overlap where there is entitlement to both or all of those benefits. There can be\nno overlap where entitlement to one benefit is prevented by entitlement to another benefit. These\nbenefits are referred to as being incompatible. See Appendix 1 for a list of incompatible benefits.\n\n\nBenefits not payable out of public funds",
+        "excerpt_sha256": "0d8ef185354c8387d2c01a8b94f4428c2122331a622379e3f4c244f97a6c90a5",
+        "limitation": "Selected machine-extracted paragraph or page; surrounding text and visual layout may matter.",
+        "page_text_sha256": "98d5c434ac03b9eb19957bec849b423c2be42dedabf42f561207470d8980492b",
+        "route": "page/dmg-vol3-ch17/0002",
+        "source_date_status": "capture is not publication or legal applicability",
+        "source_http_observed_at": "2026-09-15T19:45:22.416226Z",
+        "source_pages_sha256": "c00f0acadb11047d22fe6c046a756a164cc7be254aaebfb91470f2f38201af99",
+        "source_pdf_sha256": "ce6967960168b301ae0b454df6824017202f6d3f6a14282a7ef0d4778bdac19a",
+        "source_role": "substantive",
+        "source_url": "https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=2"
+      },
+      "tool": "frozen-source-page-read"
+    },
+    {
+      "arguments": {
+        "paragraph_label": "17170",
+        "path": "source/full-dmg-2026-09-15/pages/dmg-vol3-ch17.json",
+        "pdf_page": 22
+      },
+      "id": "page/dmg-vol3-ch17/0022#17170",
+      "observed_at": "2026-09-15T20:56:33.164026Z",
+      "output": {
+        "document_id": "dmg-vol3-ch17",
+        "excerpt": "17170 Before considering adjustment of benefits in the order set out below the DM should check that\nthe benefits in question are not incompatible (see DMG 17005). If they are not incompatible the order of\nadjustment is as follows\n\n\n1. make adjustments due for other reasons, for example, earnings and Invalidity Addition/AP\nadjustments. This is because the overlapping benefits provisions take account of amounts payable. An\nexception to this is with hospital in-patients where an adjustment for overlapping benefits should be\n\ncarried out before any hospital in-patient deduction1\n\n\n2. deduct personal Industrial Injuries and non-Act benefits from personal Act benefit 2\n\n\n3. deduct personal Act benefit from other personal Act benefit 3\n\n\n4. deduct Act and non-Act dependency benefit from other Act dependency benefit 4\n\n\n5. deduct Act and non-Act personal benefit payable to dependants in their own right from Act\n\ndependency benefit payable for them5\n\n\n6. make any hospital in-patient adjustments6 (see DMG 17161 for exception).\n\n\n                 1 SS (HIP) Regs, reg 18; 2 SS (OB) Regs, reg 6(1); 3 reg 4; 4 reg 7, reg 9; 5 reg 10; 6 reg 18\n\n\n17171 - 17179",
+        "excerpt_sha256": "9db500be8dc9db7ef71d05df904701c722ea03ed13aace58a07dbbee4e02cc62",
+        "limitation": "Selected machine-extracted paragraph or page; surrounding text and visual layout may matter.",
+        "page_text_sha256": "e02cc68a4042cffd3d86c2d4da34ba629089e47d5ff588d4e5e7e7dfde4a82f1",
+        "route": "page/dmg-vol3-ch17/0022",
+        "source_date_status": "capture is not publication or legal applicability",
+        "source_http_observed_at": "2026-09-15T19:45:22.416226Z",
+        "source_pages_sha256": "c00f0acadb11047d22fe6c046a756a164cc7be254aaebfb91470f2f38201af99",
+        "source_pdf_sha256": "ce6967960168b301ae0b454df6824017202f6d3f6a14282a7ef0d4778bdac19a",
+        "source_role": "substantive",
+        "source_url": "https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=22"
+      },
+      "tool": "frozen-source-page-read"
+    },
+    {
+      "arguments": {
+        "paragraph_label": "17004",
+        "path": "source/full-dmg-2026-09-15/pages/dmg-vol3-ch17.json",
+        "pdf_page": 2
+      },
+      "id": "page/dmg-vol3-ch17/0002#17004",
+      "observed_at": "2026-09-15T20:56:33.164112Z",
+      "output": {
+        "document_id": "dmg-vol3-ch17",
+        "excerpt": "17004 Not all benefits overlap. Benefits that do not overlap are those that are incompatible - see DMG\n17005 - and those not payable out of public funds - see DMG 17006.\n\n\nIncompatible benefits",
+        "excerpt_sha256": "21d7dc43461f79af97bb89b672e509e56b497a10a501cd88257cb82e15e900d1",
+        "limitation": "Selected machine-extracted paragraph or page; surrounding text and visual layout may matter.",
+        "page_text_sha256": "98d5c434ac03b9eb19957bec849b423c2be42dedabf42f561207470d8980492b",
+        "route": "page/dmg-vol3-ch17/0002",
+        "source_date_status": "capture is not publication or legal applicability",
+        "source_http_observed_at": "2026-09-15T19:45:22.416226Z",
+        "source_pages_sha256": "c00f0acadb11047d22fe6c046a756a164cc7be254aaebfb91470f2f38201af99",
+        "source_pdf_sha256": "ce6967960168b301ae0b454df6824017202f6d3f6a14282a7ef0d4778bdac19a",
+        "source_role": "substantive",
+        "source_url": "https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=2"
+      },
+      "tool": "frozen-source-page-read"
+    },
+    {
+      "arguments": {
+        "paragraph_label": "17180",
+        "path": "source/full-dmg-2026-09-15/pages/dmg-vol3-ch17.json",
+        "pdf_page": 23
+      },
+      "id": "page/dmg-vol3-ch17/0023#17180",
+      "observed_at": "2026-09-15T20:56:33.164201Z",
+      "output": {
+        "document_id": "dmg-vol3-ch17",
+        "excerpt": "17180 The special rules for SDA and CA are1\n\n\n1. instead of taking into account separately the payable amounts of personal, ADI and CDI they should be\ntotalled and adjustment made by using this total and the total amount the other benefit involved\nincluding dependency increases but excluding AP and GRB\n\n\n2. the amount of benefit payable after adjustment should not be less than the sum of the amounts which\nwould have been payable by way of SDA or CA as personal and dependency benefit.\n\n\n                                                                                  1 SS (OB) Regs, reg 12\n\n\nNote: The special rules do not apply where an increase for a dependant would be reduced by a personal\nbenefit payable to, or for, that dependant as in 17160.\n\n\n17181 - 17189",
+        "excerpt_sha256": "4f4b5dbd4336a21eb28e994c66cb51af98c5c785be726125a2b0a62531338997",
+        "limitation": "Selected machine-extracted paragraph or page; surrounding text and visual layout may matter.",
+        "page_text_sha256": "8221d7ab37bc04ee9465dd5e30f9d2e547c321852e300f93174eb95bbc6a20a3",
+        "route": "page/dmg-vol3-ch17/0023",
+        "source_date_status": "capture is not publication or legal applicability",
+        "source_http_observed_at": "2026-09-15T19:45:22.416226Z",
+        "source_pages_sha256": "c00f0acadb11047d22fe6c046a756a164cc7be254aaebfb91470f2f38201af99",
+        "source_pdf_sha256": "ce6967960168b301ae0b454df6824017202f6d3f6a14282a7ef0d4778bdac19a",
+        "source_role": "substantive",
+        "source_url": "https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=23"
+      },
+      "tool": "frozen-source-page-read"
+    }
+  ],
+  "registry_sha256": "67ad6ba92f67d346542e3ea30e771c2182a7e8b1be53836c862bb0007340c20e",
+  "schema": "okf-dwp-observed-source-read-trace.v1",
+  "started_at": "2026-09-15T20:56:33.162968Z"
+}
