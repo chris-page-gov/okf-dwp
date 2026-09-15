@@ -1,0 +1,90 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/common-legacy-incapacity-tests
+  '@type': skos:Concept
+  route: term/common-legacy-incapacity-tests
+  title: Own occupation and personal capability tests in the legacy guidance
+  type: Concept
+  description: 'The captured incapacity chapter requires the decision maker to identify which of its two
+    tests applies: the own occupation test or the personal capability assessment.'
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Own occupation and personal capability tests in the legacy guidance
+    '@language': en-GB
+  skos:definition:
+    '@value': 'The captured incapacity chapter requires the decision maker to identify which of its two
+      tests applies: the own occupation test or the personal capability assessment.'
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The chapter’s listed uses include Incapacity Benefit, Severe Disablement Allowance and
+      particular IS/JSA or credit contexts. DMG 13002 expressly excludes IIDB, SSP and ESA. These
+      tests must not be relabelled as ESA or UC work capability assessments, or assumed to establish
+      current benefit entitlement.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch13/0006
+  - page/dmg-vol3-ch13/0010
+  source: https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf#page=6
+  resource:
+    https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf#page=6
+  sources:
+  - id: dmg-vol3-ch13
+    title: 'DMG Vol 3 Ch 13: Incapacity for work'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf
+    retrieved_at: '2026-09-15T19:45:22.145249Z'
+    sha256: fc4496aae0bb510fea99ee047b82bbb00182dd336af8dfb065ef040f3967078f
+  body: "# Own occupation and personal capability tests in the legacy guidance\n\n## Authored interpretation\n\
+    \nThe captured incapacity chapter requires the decision maker to identify which of its two tests applies:
+    the own occupation test or the personal capability assessment.\n\n## Scope and exceptions\n\nThe chapter’s
+    listed uses include Incapacity Benefit, Severe Disablement Allowance and particular IS/JSA or credit
+    contexts. DMG 13002 expressly excludes IIDB, SSP and ESA. These tests must not be relabelled as ESA
+    or UC work capability assessments, or assumed to establish current benefit entitlement.\n\n## Inspected
+    source passages\n\n- [DMG 13001, PDF page 6](https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf#page=6)
+    — DMG Vol 3 Ch 13: Incapacity for work.\n- [DMG 13002, PDF page 6](https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf#page=6)
+    — DMG Vol 3 Ch 13: Incapacity for work.\n- [DMG 13025, PDF page 6](https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf#page=6)
+    — DMG Vol 3 Ch 13: Incapacity for work.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol3-ch13`: PDF SHA-256 `fc4496aae0bb510fea99ee047b82bbb00182dd336af8dfb065ef040f3967078f`;
+    extracted pages SHA-256 `1c3e2ae8cf5c3f45273274f24d1bafff88d21a657237c557d555fed53088c931`.\n"
+  semantic_relations:
+  - target: term/common-incapacity-alternative-evidence
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source separately identifies evidence supporting incapacity; the evidence route
+      does not remove the need to select the applicable legacy test.
+    evidence:
+    - page: page/dmg-vol3-ch13/0006
+      quote: "13025   There are two tests of incapacity\n\n        1.       the OOT (see DMG 13200) and\n\
+        \n        2.       the PCA (see DMG 13300).\n\n        The DM must first determine which test
+        applies."
+      locator: DMG 13025
+    - page: page/dmg-vol3-ch13/0010
+      quote: "13101   Evidence of incapacity should be provided for the day or days of incapacity for
+        work\n        until the person has been assessed for the PCA. Evidence may be\n              \
+        \                  1\n        1.    self-certification (see DMG 13120) or\n                  \
+        \                         2\n        2.    a statement from a doctor (see DMG 13140) or\n\n  \
+        \      3.     if it is unreasonable to require such a statement, other evidence which is\n   \
+        \            sufficient to show that the person should refrain from work because of some\n   \
+        \                                                                      3\n               specific
+        disease or bodily or mental disablement (see DMG 13160).\n                                   \
+        \       1 SS (Med Ev) Regs, reg 5; 2 reg 2(1); SS (IW) (Gen) Regs, reg 6(1)(a);\n            \
+        \                                                                       3 SS (Med Ev) Regs, reg
+        2(1A)"
+      locator: DMG 13101

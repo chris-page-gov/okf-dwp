@@ -1,0 +1,77 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-rp-uprating-abroad
+  '@type': skos:Concept
+  route: term/intl-rp-uprating-abroad
+  title: Country and agreement scope of the cited pension uprating guidance
+  type: Concept
+  description: The source makes its description of Retirement Pension uprating abroad depend on residence, EC personal scope or a relevant agreement, and calls pension not increased by uprating “frozen”.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-international-research
+    at: '2026-09-15T20:19:49.223063Z'
+  observedAt: '2026-09-15T20:19:49.223063Z'
+  skos:prefLabel:
+    '@value': Country and agreement scope of the cited pension uprating guidance
+    '@language': en-GB
+  skos:definition:
+    '@value': The source makes its description of Retirement Pension uprating abroad depend on residence, EC personal scope or a relevant agreement, and calls pension not increased by uprating “frozen”.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 075780 and 075783, on a page labelled July 2011, describe a particular historical source regime. No current country list, award rate or new State Pension outcome is inferred.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - international subjects
+  - chapter 7 part 5
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol2-ch7-part5/0081
+  - page/dmg-vol2-ch7-part1/0057
+  source: https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf#page=81
+  resource: https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf#page=81
+  sources:
+  - id: dmg-vol2-ch7-part5
+    title: 'DMG Vol 2 Ch 7 Part 5: JSA to Retirement Pension [075330 to 076959]'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf
+    retrieved_at: '2026-09-15T19:45:20.299037Z'
+    sha256: ff92b6dba9bf7fe9f7be115cd203593e5a65979a569892d625bb3ae5395418c9
+  body: |
+    # Country and agreement scope of the cited pension uprating guidance
+
+    ## Authored interpretation
+
+    The source makes its description of Retirement Pension uprating abroad depend on residence, EC personal scope or a relevant agreement, and calls pension not increased by uprating “frozen”.
+
+    ## Scope and boundaries
+
+    DMG 075780 and 075783, on a page labelled July 2011, describe a particular historical source regime. No current country list, award rate or new State Pension outcome is inferred.
+
+    ## Inspected source passages
+
+    - [DMG 075780, PDF page 81](https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf#page=81)
+    - [DMG 075783, PDF page 81](https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf#page=81)
+
+    ## Evidence and review status
+
+    This is a model-assisted, unreviewed interpretation of selected passages in the frozen DWP source. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable rule. No specialist acceptance, current-law reconciliation or complete coverage of this chapter part is claimed. References to EU law, countries and benefits retain the scope and date context of the cited text; they do not establish applicability to a person or a later regime. Machine extraction may alter reading order and characters; no visual PDF review is claimed.
+
+    Source captured: 2026-09-15T19:45:20.299037Z. This is an acquisition time, not a publication or legal commencement date. The attachment publication date is not established by the frozen metadata. Source-stated dates require their own role and precision.
+
+    PDF SHA-256: `ff92b6dba9bf7fe9f7be115cd203593e5a65979a569892d625bb3ae5395418c9`. Extracted pages SHA-256: `adde790b1114f9bbe6eea3da605de6d911d40342a4d0ce73e7f450f9f2f4eb6f`.
+  semantic_relations:
+  - target: term/intl-reciprocal-benefit-scope
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The uprating passage requires a relevant agreement for its agreement-based alternatives; it does not treat every reciprocal agreement as covering uprating.
+    evidence:
+    - page: page/dmg-vol2-ch7-part5/0081
+      quote: "075780 The rate of RP paid to a person absent from GB is increased by the general\n         uprating of the rates of benefit1 if that person is\n\n         1.    ordinarily resident in GB or\n\n         2.    in an EEA country and is within the scope of EC provisions2 (see DMG\n               070050) or\n\n         3.    in an EEA country and the agreement with that country still applies to them\n               (see DMG 075820) or\n\n         4.    in a country with which the UK has an agreement which allows the rate to be\n               increased (see DMG 075831) or\n\n         5.    in Sark3.\n                                 1 SS Administration Act 92, sec 150; 2 reg 1408/71, Art 2; 3 SS Ben (PA) Regs, reg 12"
+      locator: DMG 075780
+    - page: page/dmg-vol2-ch7-part1/0057
+      quote: "070310 The UK has reciprocal agreements with both EEA countries and other countries. Lists of the\ncountries with which the UK has agreements are at\n\n\n• DMG 070330 for EEA countries and\n\n\n• DMG 070333 for non-EEA countries.\n\n\nThose lists also set out which benefits are covered by the agreements."
+      locator: DMG 070310

@@ -1,0 +1,114 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-overpayment-evidence
+  '@type': skos:Concept
+  route: term/dmg-overpayment-evidence
+  title: Evidence for DMG overpayment recoverability
+  type: Concept
+  description: The overpayment chapter places the initial recoverability burden on the decision maker and
+    calls for further enquiries when evidence is insufficient, including evidence that entitlement decisions
+    were changed.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Evidence for DMG overpayment recoverability
+    '@language': en-GB
+  skos:definition:
+    '@value': The overpayment chapter places the initial recoverability burden on the decision maker and calls
+      for further enquiries when evidence is insufficient, including evidence that entitlement decisions were
+      changed.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Missing records are not proof of their contents. The appeal material may need the warnings and
+      instructions actually issued; the source permits explained nearest equivalents where the original print
+      is unavailable. No claimant-specific conclusion is modelled.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch9/0038
+  - page/dmg-vol3-ch9/0005
+  - page/dmg-vol3-ch9/0039
+  - page/dmg-vol1-ch6/0048
+  source: https://assets.publishing.service.gov.uk/media/678776493a9388161c5d23d5/dmgch09.pdf#page=38
+  resource: https://assets.publishing.service.gov.uk/media/678776493a9388161c5d23d5/dmgch09.pdf#page=38
+  sources:
+  - id: dmg-vol3-ch9
+    title: 'DMG Vol 3 Ch 9: Overpayments, offsets and recoverability'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/678776493a9388161c5d23d5/dmgch09.pdf#page=38
+    retrieved_at: '2026-09-15T19:45:21.694431Z'
+    sha256: 96933fc64fcacb0a3e253a686218757a85fb415574fde11e4d3435149b1a2505
+  - id: dmg-vol1-ch6
+    title: 'DMG Vol 1 Ch 6: Making appeals and staying'
+    author: organisation:dwp
+    resource:
+      https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=48
+    retrieved_at: '2026-09-15T19:45:18.546591Z'
+    sha256: dcd2a7ede4499792d9bc6762c94a2d6c0ca6e811cb077abbbd4e41e4d405a4e4
+  body: "# Evidence for DMG overpayment recoverability\n\n## Authored interpretation\n\nThe overpayment chapter
+    places the initial recoverability burden on the decision maker and calls for further enquiries when evidence
+    is insufficient, including evidence that entitlement decisions were changed.\n\n## Scope and exceptions\n\n\
+    Missing records are not proof of their contents. The appeal material may need the warnings and instructions
+    actually issued; the source permits explained nearest equivalents where the original print is unavailable. No
+    claimant-specific conclusion is modelled.\n\n## Inspected source passages\n\n- [DMG 09175, PDF page 38](https://assets.publishing.service.gov.uk/media/678776493a9388161c5d23d5/dmgch09.pdf#page=38)
+    — DMG Vol 3 Ch 9: Overpayments, offsets and recoverability.\n- [DMG 09176, PDF page 38](https://assets.publishing.service.gov.uk/media/678776493a9388161c5d23d5/dmgch09.pdf#page=38)
+    — DMG Vol 3 Ch 9: Overpayments, offsets and recoverability.\n- [DMG 09027, PDF page 5](https://assets.publishing.service.gov.uk/media/678776493a9388161c5d23d5/dmgch09.pdf#page=5)
+    — DMG Vol 3 Ch 9: Overpayments, offsets and recoverability.\n- [DMG 09180, PDF page 39](https://assets.publishing.service.gov.uk/media/678776493a9388161c5d23d5/dmgch09.pdf#page=39)
+    — DMG Vol 3 Ch 9: Overpayments, offsets and recoverability.\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source
+    is DWP guidance, not a consolidated statement of legislation. This is an independent experimental publication,
+    not an official DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are
+    one-based file positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships
+    preserve extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current
+    applicability remain separate review tasks.\n\n- `dmg-vol3-ch9` PDF SHA-256: `96933fc64fcacb0a3e253a686218757a85fb415574fde11e4d3435149b1a2505`;
+    extracted pages SHA-256: `069cefdb6e8a7486021d251c6991ef627fc063a3b842eff2e98cde688ed831d2`.\n- `dmg-vol1-ch6`
+    PDF SHA-256: `dcd2a7ede4499792d9bc6762c94a2d6c0ca6e811cb077abbbd4e41e4d405a4e4`; extracted pages SHA-256: `e95434f7e856adbd1c8550b369066644a6bf6aa7567af05a1d41768d3dae0c3e`.\n\
+    \nThe publicly acquired chapter 6 PDF carries the printed footer “Official - DWP Use Only”. This observation
+    is preserved alongside its public acquisition URL; the source owner should clarify any conflict with intended
+    reuse. It is not evidence of access to unpublished material.\n"
+  semantic_relations:
+  - target: term/dmg-burden-of-proof
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter expressly allocates the initial recoverability burden to the DM.
+    evidence:
+    - page: page/dmg-vol3-ch9/0038
+      quote: "09175 The onus of proof that overpaid benefit is recoverable initially rests with the DM 1.\n\n\n\
+        \                                                                                       1 SS A Act 92, s
+        71(1)"
+      locator: DMG 09175
+  - target: term/dmg-overpayment-recoverability
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source links sufficiency of evidence to deciding both the overpayment and recoverability
+      questions.
+    evidence:
+    - page: page/dmg-vol3-ch9/0038
+      quote: "09176 The DM should\n\n\n1. examine the evidence and decide whether it is sufficient to determine
+        the overpayment and the\n\nrecoverability question1 and\n\n\n2. make further enquiries where evidence is
+        insufficient and\n\n\n3. bear in mind that if statements made by the DM are contested at any appeal hearing,
+        the FtT will look\n\nfor supporting evidence2.\n\n\n                                                   \
+        \                       1 SS A Act 92, s 71; 2 R(SB) 10/86"
+      locator: DMG 09176
+  - target: term/dmg-tribunal-evidence-disclosure
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The appeals chapter gives specific warnings-and-instructions evidence for a
+      recoverable-overpayment appeal.
+    evidence:
+    - page: page/dmg-vol1-ch6/0048
+      quote: "06306 If an appeal is made against a recoverable overpayment, the evidence should include\n\n\n1.
+        the warnings and instructions in a printed form\n\n\n2. a copy of any leaflet sent to the claimant if the
+        advice in that leaflet is relevant.\n\n\nIf the particular print of a form or leaflet is no longer available,
+        the nearest equivalent should be included.\nIf there have been any changes to the warnings and instructions
+        to the claimant then the DM should\ninclude an explanation as to the effect, if any, those changes have
+        on the case."
+      locator: DMG 06306

@@ -1,0 +1,90 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-share-fisherman
+  '@type': skos:Concept
+  route: term/jsais-share-fisherman
+  title: Share fisherman in JSA and Income Support guidance
+  type: Concept
+  description: The captured definition combines work in the fishing industry, self-employment,
+    specified boat or shore-based work and remuneration linked wholly or partly to the boat’s
+    profits or gross earnings.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Share fisherman in JSA and Income Support guidance
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured definition combines work in the fishing industry, self-employment,
+      specified boat or shore-based work and remuneration linked wholly or partly to the boat’s
+      profits or gross earnings.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Not every fishing worker or piece-rate worker automatically meets the definition. The
+      shore-based route has retirement or ill-health and continued-work conditions. DMG 27501
+      continues onto page 79 with an IS-specific British-boat qualification. JSA(Cont), JSA(IB) and
+      IS earnings calculations differ; all additional conditions and current applicability remain
+      unreviewed.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol5-ch27/0078
+  - page/dmg-vol5-ch27/0003
+  source:
+    https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=78
+  resource:
+    https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=78
+  sources:
+  - id: dmg-vol5-ch27
+    title: 'DMG Vol 5 Ch 27: Self-employed earners and share fishermen'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf
+    retrieved_at: '2026-09-15T19:45:25.036028Z'
+    sha256: 90b6c5ec739d2366936d67d78cd5a6f857b764b92000200f4a44ac956c88b3ac
+  body: "# Share fisherman in JSA and Income Support guidance\n\n## Authored interpretation\n\nThe captured
+    definition combines work in the fishing industry, self-employment, specified boat or shore-based work
+    and remuneration linked wholly or partly to the boat’s profits or gross earnings.\n\n## Scope and
+    exceptions\n\nNot every fishing worker or piece-rate worker automatically meets the definition. The
+    shore-based route has retirement or ill-health and continued-work conditions. DMG 27501 continues
+    onto page 79 with an IS-specific British-boat qualification. JSA(Cont), JSA(IB) and IS earnings calculations
+    differ; all additional conditions and current applicability remain unreviewed.\n\n## Inspected source
+    passages\n\n- [DMG 27501, PDF page 78](https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=78)
+    — DMG Vol 5 Ch 27: Self-employed earners and share fishermen.\n- [DMG 27000, PDF page 3](https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=3)
+    — DMG Vol 5 Ch 27: Self-employed earners and share fishermen.\n\n## Evidence and review status\n\n\
+    Model-assisted interpretation of selected passages in the 15 September 2026 frozen source snapshot.
+    Specialist review is required. Source acquisition, source revision, legal effective dates and this
+    record’s authoring time are separate.\n\nThis is an independent experimental publication, not an official
+    DWP document, individual advice, an entitlement decision or an executable rule. Machine-extracted
+    text may alter reading order, footnotes and characters. No PDF visual inspection, whole-chapter coverage
+    or behavioural evaluation pass is claimed by this record.\n\n- `dmg-vol5-ch27`: PDF SHA-256 `90b6c5ec739d2366936d67d78cd5a6f857b764b92000200f4a44ac956c88b3ac`;
+    extracted pages SHA-256 `7f84279f4a44373405ce06d32bf1c927a9f25dda507895b1540e6bb8b1b5185a`.\n"
+  semantic_relations:
+  - target: term/jsais-self-employed-earner
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Both branches of the share-fisherman definition explicitly require self-employment,
+      alongside other conditions.
+    evidence:
+    - page: page/dmg-vol5-ch27/0078
+      quote: "27501 A share fisherman is1\n\n\n1. a person who\n\n\n      1.1 usually works in the fishing
+        industry and\n\n\n      1.2 is S/E and\n\n\n      1.3 is the master or a crew member of a fishing
+        boat crewed by more than one person and\n\n\n      1.4 is paid for that work wholly or partly
+        by a share of the profits or gross earnings of the fishing\n      boat or\n\n\n2. a person who\n\
+        \n\n      2.1 was a person who worked as in 1., but has permanently stopped such work because
+        of age or ill\n      health and\n\n\n      2.2 usually works\n\n\n            2.2.a ashore in
+        GB (see DMG 070702) and\n\n\n            2.2.b as S/E and\n\n\n            2.2.c making or mending
+        any gear belonging to a fishing boat or performing other services\n            that help, or are
+        connected with, a fishing boat and\n\n\n      2.3 is paid for that work wholly or partly by a
+        share of the profits or gross earnings of the fishing\n      boat and\n\n\n      2.4 has not ceased
+        to usually work as described in 2.2."
+      locator: DMG 27501

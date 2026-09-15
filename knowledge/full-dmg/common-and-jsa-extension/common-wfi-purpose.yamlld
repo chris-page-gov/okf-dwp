@@ -1,0 +1,102 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/common-wfi-purpose
+  '@type': skos:Concept
+  route: term/common-wfi-purpose
+  title: Work-focused interview purposes in the legacy guidance
+  type: Concept
+  description: The captured guidance describes a work-focused interview through employment
+    prospects, assistance, suitable activities, training and educational opportunities connected
+    with those prospects.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Work-focused interview purposes in the legacy guidance
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance describes a work-focused interview through employment prospects,
+      assistance, suitable activities, training and educational opportunities connected with those
+      prospects.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 05060 is in the lone-parent work-focused-interview context. Chapter 5 also
+      contains older Pathways, partner and incapacity arrangements. Interview purposes alone do not
+      establish who must attend, the frequency, a sanction or a current requirement; ESA has
+      separate guidance.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol1-ch5/0011
+  - page/dmg-vol1-ch5/0023
+  source:
+    https://assets.publishing.service.gov.uk/media/5a81b89640f0b62305b90790/dmgch05.pdf#page=11
+  resource:
+    https://assets.publishing.service.gov.uk/media/5a81b89640f0b62305b90790/dmgch05.pdf#page=11
+  sources:
+  - id: dmg-vol1-ch5
+    title: 'DMG Vol 1 Ch 5: Work-focused interviews'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a81b89640f0b62305b90790/dmgch05.pdf
+    retrieved_at: '2026-09-15T19:45:18.521088Z'
+    sha256: 7c9bdb92c805924d6f5b185651f5e21e2d3b7e78214dc3d8ec2a549c73b70728
+  body: "# Work-focused interview purposes in the legacy guidance\n\n## Authored interpretation\n\nThe
+    captured guidance describes a work-focused interview through employment prospects, assistance, suitable
+    activities, training and educational opportunities connected with those prospects.\n\n## Scope and
+    exceptions\n\nDMG 05060 is in the lone-parent work-focused-interview context. Chapter 5 also contains
+    older Pathways, partner and incapacity arrangements. Interview purposes alone do not establish who
+    must attend, the frequency, a sanction or a current requirement; ESA has separate guidance.\n\n##
+    Inspected source passages\n\n- [DMG 05060, PDF page 11](https://assets.publishing.service.gov.uk/media/5a81b89640f0b62305b90790/dmgch05.pdf#page=11)
+    — DMG Vol 1 Ch 5: Work-focused interviews.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol1-ch5`: PDF SHA-256 `7c9bdb92c805924d6f5b185651f5e21e2d3b7e78214dc3d8ec2a549c73b70728`;
+    extracted pages SHA-256 `08ac847e2add5e0757829b9491ec4f248002ad040b5fb707a7812c2464d6e2bc`.\n"
+  semantic_relations:
+  - target: term/common-lone-parent-wfi-deferral
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The later lone-parent section changes waiver and deferral treatment for a stated
+      group; it must be read alongside the interview purpose without treating older waiver
+      provisions as universally applicable.
+    evidence:
+    - page: page/dmg-vol1-ch5/0011
+      quote: "05060   A work-focused interview (WfI) is1 an interview with a person conducted for any
+        or\n        all of the following purposes\n\n        1.     assessing that person's prospects
+        for existing or future employment, (whether\n               paid or voluntary)\n\n        2. \
+        \    assisting or encouraging that person to improve their prospects of such\n               employment\n\
+        \n        3.     identifying activities which that person may undertake to strengthen their\n\
+        \               existing or future prospects for employment\n\n        4.     identifying current
+        or future employment or training opportunities suitable to\n               that person's needs\n\
+        \n        5.     identifying educational opportunities connected with the existing or future\n\
+        \               employment prospects or needs of that person.\n                              \
+        \                                  1 SS (WfI for Lone Parents) Regs, reg 1(4)\n\n\n\n        Waiving
+        the requirement to take part"
+      locator: DMG 05060
+    - page: page/dmg-vol1-ch5/0023
+      quote: "05102   Changes1 were made in April 2014 to both schemes so that lone parents who\n\n  \
+        \      1.    are over 18 and\n\n        2.    have a child aged between 1 and 4 years old and\n\
+        \n        3.    are entitled to IS solely on the basis of being a lone parent\n\n        are required
+        to take part in one or more WfIs as a condition of their continuing\n        entitlement to the
+        full amount of IS.\n                                                     1 SS (WfI for lone parents)
+        Regs, reg 2ZA; SS (JPI) Regs 02, reg 4A\n\n\n\n        The interview"
+      locator: DMG 05102
+    - page: page/dmg-vol1-ch5/0023
+      quote: "05104   The provisions which enable a WfI to be waived are removed. However interviews\n\
+        \        can be deferred until a specified date1.\n\n        Note: The ability to waive is only
+        removed in relation to IS Lone Parents claiming\n        solely on that basis.\n             \
+        \                                            1 SS (WfI for lone parents) Regs, reg 6: SS (JPI)
+        Regs 02, reg 6\n\n        Good cause period and notification"
+      locator: DMG 05104

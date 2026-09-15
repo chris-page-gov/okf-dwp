@@ -1,0 +1,99 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-overpayment-entitlement-decision
+  '@type': skos:Concept
+  route: term/dmg-overpayment-entitlement-decision
+  title: Entitlement decision supporting overpayment recovery
+  type: Concept
+  description: The chapter describes a valid revision or supersession decision before or alongside an
+    overpayment recoverability decision, with stated exceptions.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Entitlement decision supporting overpayment recovery
+    '@language': en-GB
+  skos:definition:
+    '@value': The chapter describes a valid revision or supersession decision before or alongside an
+      overpayment recoverability decision, with stated exceptions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 09026 and 09032 prevent treating the introductory requirement as universal. The period must
+      be covered correctly and the award-versus-payment distinction retained. This is not an executable
+      recovery sequence.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch9/0004
+  - page/dmg-vol3-ch9/0005
+  - page/dmg-vol3-ch9/0006
+  source: https://assets.publishing.service.gov.uk/media/678776493a9388161c5d23d5/dmgch09.pdf#page=4
+  resource: https://assets.publishing.service.gov.uk/media/678776493a9388161c5d23d5/dmgch09.pdf#page=4
+  sources:
+  - id: dmg-vol3-ch9
+    title: 'DMG Vol 3 Ch 9: Overpayments, offsets and recoverability'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/678776493a9388161c5d23d5/dmgch09.pdf#page=4
+    retrieved_at: '2026-09-15T19:45:21.694431Z'
+    sha256: 96933fc64fcacb0a3e253a686218757a85fb415574fde11e4d3435149b1a2505
+  body: "# Entitlement decision supporting overpayment recovery\n\n## Authored interpretation\n\nThe chapter describes
+    a valid revision or supersession decision before or alongside an overpayment recoverability decision, with stated
+    exceptions.\n\n## Scope and exceptions\n\nDMG 09026 and 09032 prevent treating the introductory requirement
+    as universal. The period must be covered correctly and the award-versus-payment distinction retained. This is
+    not an executable recovery sequence.\n\n## Inspected source passages\n\n- [DMG 09023, PDF page 4](https://assets.publishing.service.gov.uk/media/678776493a9388161c5d23d5/dmgch09.pdf#page=4)
+    — DMG Vol 3 Ch 9: Overpayments, offsets and recoverability.\n- [DMG 09026, PDF page 5](https://assets.publishing.service.gov.uk/media/678776493a9388161c5d23d5/dmgch09.pdf#page=5)
+    — DMG Vol 3 Ch 9: Overpayments, offsets and recoverability.\n- [DMG 09030, PDF page 6](https://assets.publishing.service.gov.uk/media/678776493a9388161c5d23d5/dmgch09.pdf#page=6)
+    — DMG Vol 3 Ch 9: Overpayments, offsets and recoverability.\n- [DMG 09032, PDF page 6](https://assets.publishing.service.gov.uk/media/678776493a9388161c5d23d5/dmgch09.pdf#page=6)
+    — DMG Vol 3 Ch 9: Overpayments, offsets and recoverability.\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source
+    is DWP guidance, not a consolidated statement of legislation. This is an independent experimental publication,
+    not an official DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are
+    one-based file positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships
+    preserve extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current
+    applicability remain separate review tasks.\n\n- `dmg-vol3-ch9` PDF SHA-256: `96933fc64fcacb0a3e253a686218757a85fb415574fde11e4d3435149b1a2505`;
+    extracted pages SHA-256: `069cefdb6e8a7486021d251c6991ef627fc063a3b842eff2e98cde688ed831d2`.\n"
+  semantic_relations:
+  - target: term/dmg-revision
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source names revision as one route for the supporting entitlement decision; the recorded
+      exceptions qualify the general requirement.
+    evidence:
+    - page: page/dmg-vol3-ch9/0004
+      quote: "09023 The following guidance deals with the requirement for a valid revision or supersession decision
+        to\nbe made before, or at the same time that an overpayment recoverability decision is made.\n\n\nNote:
+        Further guidance on revision is in DMG Chapter 03. Further guidance on supersession is in DMG\nChapter 04."
+      locator: DMG 09023
+    - page: page/dmg-vol3-ch9/0005
+      quote: "09026 There are exceptions to the general rule at DMG 09025. These are\n\n\n1. where the facts and
+        circumstances of the misrepresentation or the failure to disclose do not provide a\n\nbasis for revising
+        or superseding the decision1 (see DMG 09032) or\n\n\n2. certain JSA overpayments to 16/17 year olds2 (see
+        DMG 09295 - 09300).\n\n\n                                                                   1 SS (POR) Regs,
+        reg 12; 2 SS A Act, s 71A"
+      locator: DMG 09026
+  - target: term/dmg-supersession
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Supersession is the alternative route explicitly named in the same requirement; no equivalence
+      between the two procedures is asserted.
+    evidence:
+    - page: page/dmg-vol3-ch9/0004
+      quote: "09023 The following guidance deals with the requirement for a valid revision or supersession decision
+        to\nbe made before, or at the same time that an overpayment recoverability decision is made.\n\n\nNote:
+        Further guidance on revision is in DMG Chapter 03. Further guidance on supersession is in DMG\nChapter 04."
+      locator: DMG 09023
+    - page: page/dmg-vol3-ch9/0005
+      quote: "09026 There are exceptions to the general rule at DMG 09025. These are\n\n\n1. where the facts and
+        circumstances of the misrepresentation or the failure to disclose do not provide a\n\nbasis for revising
+        or superseding the decision1 (see DMG 09032) or\n\n\n2. certain JSA overpayments to 16/17 year olds2 (see
+        DMG 09295 - 09300).\n\n\n                                                                   1 SS (POR) Regs,
+        reg 12; 2 SS A Act, s 71A"
+      locator: DMG 09026

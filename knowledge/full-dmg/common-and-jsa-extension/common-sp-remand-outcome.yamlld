@@ -1,0 +1,82 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/common-sp-remand-outcome
+  '@type': skos:Concept
+  route: term/common-sp-remand-outcome
+  title: State Pension remand and the pending criminal outcome
+  type: Concept
+  description: The captured State Pension passage distinguishes remand from its prisoner definition,
+    qualifies payment by the later criminal outcome and directs suspension pending that outcome.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': State Pension remand and the pending criminal outcome
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured State Pension passage distinguishes remand from its prisoner definition,
+      qualifies payment by the later criminal outcome and directs suspension pending that outcome.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 12020 must be read with the full prisoner definition in DMG 12018 and the
+      specified later sentences. It does not promise payment throughout remand, treat all detention
+      alike or state current law. This is payment suspension in the remand context, not the separate
+      voluntary suspension of State Pension entitlement.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch12/0004
+  - page/dmg-vol3-ch12/0005
+  source: https://assets.publishing.service.gov.uk/media/651bcf2e6dfda6000d8e39d2/dmgch12.pdf#page=4
+  resource:
+    https://assets.publishing.service.gov.uk/media/651bcf2e6dfda6000d8e39d2/dmgch12.pdf#page=4
+  sources:
+  - id: dmg-vol3-ch12
+    title: 'DMG Vol 3 Ch 12: Imprisonment'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/651bcf2e6dfda6000d8e39d2/dmgch12.pdf
+    retrieved_at: '2026-09-15T19:45:22.073369Z'
+    sha256: be79f9d6f8baf23290b8d6af5f384d31c2435b960fe3a59c14febd510fbaa9fe
+  body: "# State Pension remand and the pending criminal outcome\n\n## Authored interpretation\n\nThe
+    captured State Pension passage distinguishes remand from its prisoner definition, qualifies payment
+    by the later criminal outcome and directs suspension pending that outcome.\n\n## Scope and exceptions\n\
+    \nDMG 12020 must be read with the full prisoner definition in DMG 12018 and the specified later sentences.
+    It does not promise payment throughout remand, treat all detention alike or state current law. This
+    is payment suspension in the remand context, not the separate voluntary suspension of State Pension
+    entitlement.\n\n## Inspected source passages\n\n- [DMG 12018, PDF page 4](https://assets.publishing.service.gov.uk/media/651bcf2e6dfda6000d8e39d2/dmgch12.pdf#page=4)
+    — DMG Vol 3 Ch 12: Imprisonment.\n- [DMG 12020, PDF page 5](https://assets.publishing.service.gov.uk/media/651bcf2e6dfda6000d8e39d2/dmgch12.pdf#page=5)
+    — DMG Vol 3 Ch 12: Imprisonment.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol3-ch12`: PDF SHA-256 `be79f9d6f8baf23290b8d6af5f384d31c2435b960fe3a59c14febd510fbaa9fe`;
+    extracted pages SHA-256 `989a5b292ba1f6129362ddc7ee736133798156d58c3539be2d0232fad5c92660`.\n"
+  semantic_relations:
+  - target: term/dmg-payment-suspension
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The remand paragraph expressly directs suspension pending the outcome; the general
+      payment-suspension concept is a procedural research link, not proof that every suspension uses
+      the same power.
+    evidence:
+    - page: page/dmg-vol3-ch12/0005
+      quote: "12020 A person who is remanded in custody is not a prisoner1 in accordance with DMG 12018
+        so can be\npaid SP unless\n\n\n1. a sentence of imprisonment or detention in legal custody as
+        a result of criminal proceedings 2or\n\n\n2. a sentence of detention where paragraph 12018 3.1
+        or 4. applies3or\n\n\n3. a suspended sentence of imprisonment4\n\n\nis later imposed on the person
+        for the offence5. Therefore DMs should suspend SP when a person is\nremanded in custody pending
+        the outcome of proceedings.\n\n\n                   1 SP Regs, reg 3(1); 2 reg 3(2)(a); 3 reg
+        3(2)(b); 4 reg 3(2)(c); Criminal Justice Act 03, s\n                   189;\n                \
+        \   5 SP Regs, reg 3(1)"
+      locator: DMG 12020

@@ -1,0 +1,94 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-self-employed-assessment-period
+  '@type': skos:Concept
+  route: term/esa-self-employed-assessment-period
+  title: Self-employed earnings assessment period for ESA
+  type: Concept
+  description: The source uses gross receipts and paid expenses during an earnings assessment period and varies period selection for a new business or changed trading pattern.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Self-employed earnings assessment period for ESA
+    '@language': en-GB
+  skos:definition:
+    '@value': The source uses gross receipts and paid expenses during an earnings assessment period and varies period selection for a new business or changed trading pattern.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 50051 expressly says this period must not be confused with the ESA assessment phase. Newer, established and changed businesses have different provisions; the period is not automatically the preceding tax year or thirteen weeks.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 50
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol9-ch50/0012
+  - page/dmg-vol9-ch50/0013
+  - page/dmg-vol9-ch50/0031
+  source: https://assets.publishing.service.gov.uk/media/61976ff0d3bf7f055fce727f/dmgch50.pdf#page=12
+  resource: https://assets.publishing.service.gov.uk/media/61976ff0d3bf7f055fce727f/dmgch50.pdf#page=12
+  sources:
+  - id: dmg-vol9-ch50
+    title: 'DMG Vol 9 Ch 50: Self-employed earners'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/61976ff0d3bf7f055fce727f/dmgch50.pdf
+    retrieved_at: '2026-09-15T19:45:30.643995Z'
+    sha256: 6b49f1951d5c6d26dac8fd8932178608a01b3971fde8bb36ef63e69a35702f03
+  body: |
+    # Self-employed earnings assessment period for ESA
+
+    ## Authored interpretation
+
+    The source uses gross receipts and paid expenses during an earnings assessment period and varies period selection for a new business or changed trading pattern.
+
+    ## Scope and boundaries
+
+    DMG 50051 expressly says this period must not be confused with the ESA assessment phase. Newer, established and changed businesses have different provisions; the period is not automatically the preceding tax year or thirteen weeks.
+
+    ## Inspected source passages
+
+    - [DMG 50051, PDF page 12](https://assets.publishing.service.gov.uk/media/61976ff0d3bf7f055fce727f/dmgch50.pdf#page=12)
+    - [DMG 50052, PDF page 12](https://assets.publishing.service.gov.uk/media/61976ff0d3bf7f055fce727f/dmgch50.pdf#page=12)
+    - [DMG 50054, PDF page 13](https://assets.publishing.service.gov.uk/media/61976ff0d3bf7f055fce727f/dmgch50.pdf#page=13)
+    - [DMG 50060, PDF page 13](https://assets.publishing.service.gov.uk/media/61976ff0d3bf7f055fce727f/dmgch50.pdf#page=13)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:30.643995Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `6b49f1951d5c6d26dac8fd8932178608a01b3971fde8bb36ef63e69a35702f03`. Extracted pages SHA-256: `9ea4b8075301b50de51d295b6d676a1a92b66ad11c35522b8fe467869c2e9f39`.
+  semantic_relations:
+  - target: term/esa-assessment-phase
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source explicitly warns not to confuse the earnings assessment period with the ESA assessment phase.
+    evidence:
+    - page: page/dmg-vol9-ch50/0012
+      quote: "50051 The normal weekly earnings of a S/E earner should be calculated by using the\n\n\n1. gross receipts (see DMG 50125) and\n\n\n2. expenses paid out (see DMG 50190)\n\n\nduring the assessment period. Different rules apply for royalties, copyright payments and Public Lending\nRight payments.\n\n\nNote: The assessment period for determining earnings from self-employment should not be confused\nwith the ESA Assessment Phase (see DMG Chapter 44).\n\n\n\nBusiness trading for less than a year"
+      locator: DMG 50051
+  - target: term/esa-business-expense-conditions
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Paid expenses during the assessment period are an input, and the expense provision adds purpose, reasonableness and allowability conditions.
+    evidence:
+    - page: page/dmg-vol9-ch50/0012
+      quote: "50051 The normal weekly earnings of a S/E earner should be calculated by using the\n\n\n1. gross receipts (see DMG 50125) and\n\n\n2. expenses paid out (see DMG 50190)\n\n\nduring the assessment period. Different rules apply for royalties, copyright payments and Public Lending\nRight payments.\n\n\nNote: The assessment period for determining earnings from self-employment should not be confused\nwith the ESA Assessment Phase (see DMG Chapter 44).\n\n\n\nBusiness trading for less than a year"
+      locator: DMG 50051
+    - page: page/dmg-vol9-ch50/0031
+      quote: "50190 When calculating the net profit of a S/E earner the DM should deduct from the gross receipts any\n\nbusiness expense that1\n\n\n1. was paid out wholly and exclusively for the purposes of the business 2 and\n\n\n2. was paid out during the assessment period and\n\n\n3. was reasonably incurred3 (see DMG 50198) and\n\n\n4. is an allowable expense (see DMG 50206).\n\n\n                                                       1 ESA Regs, reg 98(3)(a); 2 reg 98(8)(a); 3 reg 98(7)\n\n\nWholly and exclusively"
+      locator: DMG 50190
+  - target: term/dmg-supersession
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source separately considers supersession or a decision not to supersede when revised earnings figures become available.
+    evidence:
+    - page: page/dmg-vol9-ch50/0013
+      quote: "50062 The earnings would then be averaged over that period and apportioned on a weekly basis until\nthe figures for the following week or month become available. The assessment period would then be\nextended. The assessment period would\n\n\n1. start on the date the change affecting the pattern of business occurred and\n\n\n2. end on the date that the new figures became available.\n\n\nThe DM should supersede if the new figures affect entitlement to ESA. Where entitlement is not\naffected, a decision not to supersede should be made if the claimant asked for earnings to be looked at\nagain. For further guidance on supersession including the effective date rule, see DMG Chapter 04."
+      locator: DMG 50062

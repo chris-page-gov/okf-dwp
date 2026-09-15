@@ -1,0 +1,78 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-euss-pre-settled-status
+  '@type': skos:Concept
+  route: term/intl-euss-pre-settled-status
+  title: EUSS pre-settled status and the source’s qualifying-right question
+  type: Concept
+  description: The source identifies EUSS pre-settled status as limited leave and says it does not automatically establish the relevant qualifying right for the listed benefits.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-international-research
+    at: '2026-09-15T20:19:49.223063Z'
+  observedAt: '2026-09-15T20:19:49.223063Z'
+  skos:prefLabel:
+    '@value': EUSS pre-settled status and the source’s qualifying-right question
+    '@language': en-GB
+  skos:definition:
+    '@value': The source identifies EUSS pre-settled status as limited leave and says it does not automatically establish the relevant qualifying right for the listed benefits.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': 'DMG 073492 explicitly refers to Memos 01/21, 01-22 and 14/25. Their effect and later case law are unresolved here. This records a bounded source statement and must not be converted into a current categorical refusal rule. The same captured part then presents an AT destitution assessment at DMG 073496–073499 (Memo 15-25): PDF page 117 uses UC wording, while its continuation and Example 1 on page 118 concern SPC. This is an explicit unresolved qualification and cross-benefit wording issue within the acquired source, not a resolved legal mapping. The judgment, Withdrawal Agreement scope, dated exclusions and memo require reconciliation before any refusal inference.'
+    '@language': en-GB
+  tags:
+  - full DMG
+  - international subjects
+  - chapter 7 part 3
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol2-ch7-part3/0115
+  - page/dmg-vol2-ch7-part3/0117
+  - page/dmg-vol2-ch7-part3/0118
+  source: https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=115
+  resource: https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=115
+  sources:
+  - id: dmg-vol2-ch7-part3
+    title: 'DMG Vol 2 Ch 7 Part 3: Habitual residence and right to reside IS, JSA and SPC [072770 to 073779]'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf
+    retrieved_at: '2026-09-15T19:45:19.782804Z'
+    sha256: f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70
+  body: |
+    # EUSS pre-settled status and the source’s qualifying-right question
+
+    ## Authored interpretation
+
+    The source identifies EUSS pre-settled status as limited leave and says it does not automatically establish the relevant qualifying right for the listed benefits.
+
+    ## Scope and boundaries
+
+    DMG 073492 explicitly refers to Memos 01/21, 01-22 and 14/25. Their effect and later case law are unresolved here. This records a bounded source statement and must not be converted into a current categorical refusal rule. The same captured part then presents an AT destitution assessment at DMG 073496–073499 (Memo 15-25): PDF page 117 uses UC wording, while its continuation and Example 1 on page 118 concern SPC. This is an explicit unresolved qualification and cross-benefit wording issue within the acquired source, not a resolved legal mapping. The judgment, Withdrawal Agreement scope, dated exclusions and memo require reconciliation before any refusal inference.
+
+    ## Inspected source passages
+
+    - [DMG 073490, PDF page 115](https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=115)
+    - [DMG 073492, PDF page 115](https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=115)
+
+    - [DMG 073496–073499, AT assessment and Memo 15-25, PDF page 117](https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=117)
+    - [Continuation and SPC Example 1, PDF page 118](https://assets.publishing.service.gov.uk/media/69ce392fbed91051df63a90f/dmg-ch-07-part-03.pdf#page=118)
+
+    ## Evidence and review status
+
+    This is a model-assisted, unreviewed interpretation of selected passages in the frozen DWP source. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable rule. No specialist acceptance, current-law reconciliation or complete coverage of this chapter part is claimed. References to EU law, countries and benefits retain the scope and date context of the cited text; they do not establish applicability to a person or a later regime. Machine extraction may alter reading order and characters; no visual PDF review is claimed.
+
+    Source captured: 2026-09-15T19:45:19.782804Z. This is an acquisition time, not a publication or legal commencement date. The attachment publication date is not established by the frozen metadata. Source-stated dates require their own role and precision.
+
+    PDF SHA-256: `f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70`. Extracted pages SHA-256: `bb4be572465a2e6a522fc07e675172436459d73a8850e76d7d112c9f88db0471`.
+  semantic_relations:
+  - target: term/intl-qualifying-right-to-reside
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The memo-qualified source statement requires a further qualifying-right question for pre-settled status; later applicability is unresolved.
+    evidence:
+    - page: page/dmg-vol2-ch7-part3/0115
+      quote: "073492 [See Memo DMG 01/21][See Memo DMG 01-22][See Memo DMG 14/25] Where a claimant\nhas been granted LLR i.e. pre-settled status under the EUSS, they will not automatically have a right to\nreside which is relevant for the purposes of claiming IS, JSA, ESA or SPC. The claimant is still required to\ndemonstrate that they are exercising a qualifying right to reside under the Imm (EEA) Regs 2016, such as\nworker status, self-employed status or permanent residence."
+      locator: DMG 073492

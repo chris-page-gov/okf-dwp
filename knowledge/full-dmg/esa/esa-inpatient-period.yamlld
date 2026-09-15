@@ -1,0 +1,79 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-inpatient-period
+  '@type': skos:Concept
+  route: term/esa-inpatient-period
+  title: Period of free in-patient treatment in the ESA source
+  type: Concept
+  description: The source distinguishes admission and return days from discharge and temporary-leave days when identifying a period of free in-patient treatment.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Period of free in-patient treatment in the ESA source
+    '@language': en-GB
+  skos:definition:
+    '@value': The source distinguishes admission and return days from discharge and temporary-leave days when identifying a period of free in-patient treatment.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 54072–54074 apply only where the specified treatment conditions are met. These source-specific day-counting provisions are not generic hospital dates or an automatic entitlement reduction.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 54
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol9-ch54/0021
+  - page/dmg-vol9-ch54/0009
+  source: https://assets.publishing.service.gov.uk/media/5e9f025dd3bf7f031b0cc9e6/dmgch54.pdf#page=21
+  resource: https://assets.publishing.service.gov.uk/media/5e9f025dd3bf7f031b0cc9e6/dmgch54.pdf#page=21
+  sources:
+  - id: dmg-vol9-ch54
+    title: 'DMG Vol 9 Ch 54: Special cases'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5e9f025dd3bf7f031b0cc9e6/dmgch54.pdf
+    retrieved_at: '2026-09-15T19:45:31.021976Z'
+    sha256: 7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0
+  body: |
+    # Period of free in-patient treatment in the ESA source
+
+    ## Authored interpretation
+
+    The source distinguishes admission and return days from discharge and temporary-leave days when identifying a period of free in-patient treatment.
+
+    ## Scope and boundaries
+
+    DMG 54072–54074 apply only where the specified treatment conditions are met. These source-specific day-counting provisions are not generic hospital dates or an automatic entitlement reduction.
+
+    ## Inspected source passages
+
+    - [DMG 54072, PDF page 21](https://assets.publishing.service.gov.uk/media/5e9f025dd3bf7f031b0cc9e6/dmgch54.pdf#page=21)
+    - [DMG 54073, PDF page 21](https://assets.publishing.service.gov.uk/media/5e9f025dd3bf7f031b0cc9e6/dmgch54.pdf#page=21)
+    - [DMG 54074, PDF page 21](https://assets.publishing.service.gov.uk/media/5e9f025dd3bf7f031b0cc9e6/dmgch54.pdf#page=21)
+    - [DMG 54004, PDF page 9](https://assets.publishing.service.gov.uk/media/5e9f025dd3bf7f031b0cc9e6/dmgch54.pdf#page=9)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:31.021976Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0`. Extracted pages SHA-256: `904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e`.
+  semantic_relations:
+  - target: term/esa-free-inpatient-treatment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The day-counting provision is expressly conditional on satisfying the free-treatment definition.
+    evidence:
+    - page: page/dmg-vol9-ch54/0021
+      quote: "54072     A person is receiving free in-patient treatment for any period that the conditions in\n          DMG 54004 are satisfied. When working out such periods, DMs should not count\n\n          1.    the day of admission to hospital or\n\n          2.    the day of return to hospital following a period of temporary absence (for\n                example home leave)\n\n          as days of free in-patient treatment1.\n                                                                                1 SS (HIP) Regs, reg 2(5)"
+      locator: DMG 54072
+    - page: page/dmg-vol9-ch54/0009
+      quote: "54004     To be receiving free in-patient treatment a person must be\n\n          1.    maintained free of charge\n\n          2.    receiving medical or other treatment\n\n          3.    in a hospital or similar institution\n\n          4.    an in-patient\n\n          5.    receiving the treatment\n\n                5.1      under prescribed legislation1 or\n\n                5.2      in a hospital or similar institution maintained or administered by the\n                         Defence Council.\n\n          Note: A person who does not meet any one of these conditions is not receiving free\n          in-patient treatment. The DM does not need to consider the other conditions.\n                                                                    1 NHS Act 77; NHS (Scot) Act 78; NHS & CC Act 90\n\n\n          Maintained free of charge"
+      locator: DMG 54004

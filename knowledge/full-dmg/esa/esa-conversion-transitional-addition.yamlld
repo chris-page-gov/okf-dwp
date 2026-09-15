@@ -1,0 +1,77 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-conversion-transitional-addition
+  '@type': skos:Concept
+  route: term/esa-conversion-transitional-addition
+  title: Transitional addition for the source’s ESA conversion
+  type: Concept
+  description: The source’s transitional addition protects the conversion amount for a qualifying existing award and is explicitly distinguished from other earlier transitional additions.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Transitional addition for the source’s ESA conversion
+    '@language': en-GB
+  skos:definition:
+    '@value': The source’s transitional addition protects the conversion amount for a qualifying existing award and is explicitly distinguished from other earlier transitional additions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 45600–45602 describe conversion-specific protection, reduction and termination, including the stated 5 April 2020 end boundary. This does not establish an ongoing 2026 payment or UC transitional protection.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 45
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol8-ch45/0048
+  source: https://assets.publishing.service.gov.uk/media/6717a7f6194d62fb6854056b/dmg-chapter-45-ib-sda-and-is-claims-and-reassessment.pdf#page=48
+  resource: https://assets.publishing.service.gov.uk/media/6717a7f6194d62fb6854056b/dmg-chapter-45-ib-sda-and-is-claims-and-reassessment.pdf#page=48
+  sources:
+  - id: dmg-vol8-ch45
+    title: 'DMG Vol 8 Ch 45: IB, SDA and IS, claims and reassessment'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6717a7f6194d62fb6854056b/dmg-chapter-45-ib-sda-and-is-claims-and-reassessment.pdf
+    retrieved_at: '2026-09-15T19:45:29.299489Z'
+    sha256: 189648d83647f05d1685ddf24d4dc751a560bbc2eaa4e65fd5df99c3f0cdee77
+  body: |
+    # Transitional addition for the source’s ESA conversion
+
+    ## Authored interpretation
+
+    The source’s transitional addition protects the conversion amount for a qualifying existing award and is explicitly distinguished from other earlier transitional additions.
+
+    ## Scope and boundaries
+
+    DMG 45600–45602 describe conversion-specific protection, reduction and termination, including the stated 5 April 2020 end boundary. This does not establish an ongoing 2026 payment or UC transitional protection.
+
+    ## Inspected source passages
+
+    - [DMG 45600, PDF page 48](https://assets.publishing.service.gov.uk/media/6717a7f6194d62fb6854056b/dmg-chapter-45-ib-sda-and-is-claims-and-reassessment.pdf#page=48)
+    - [DMG 45601, PDF page 48](https://assets.publishing.service.gov.uk/media/6717a7f6194d62fb6854056b/dmg-chapter-45-ib-sda-and-is-claims-and-reassessment.pdf#page=48)
+    - [DMG 45602, PDF page 48](https://assets.publishing.service.gov.uk/media/6717a7f6194d62fb6854056b/dmg-chapter-45-ib-sda-and-is-claims-and-reassessment.pdf#page=48)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:29.299489Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `189648d83647f05d1685ddf24d4dc751a560bbc2eaa4e65fd5df99c3f0cdee77`. Extracted pages SHA-256: `71654e0a1111ddbbacb99d18af83eda820b706ca58e80abb6d14bb21371215c4`.
+  semantic_relations:
+  - target: term/esa-legacy-conversion
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source limits this transitional addition to converting existing awards and gives a termination boundary.
+    evidence:
+    - page: page/dmg-vol8-ch45/0048
+      quote: "45600 The TA is an amount which ensures that no claimant entitled to an existing award will be entitled\nto less benefit where their award qualifies for conversion to ESA. In this Chapter the abbreviation TA only\nrefers to a TA for the purposes of converting an existing award to ESA. Some claimants are already\nentitled to a TA as part of their existing award of IS, which was awarded when their Supp B award was\nconverted to IS. Other claimants have transitional protection when their award of SB or IVB was treated\nas a transitional award of IBLT. These amounts are taken into account when calculating the TA on\nconversion of an existing award to ESA, and then terminated when the existing award is converted to\nESA. See DMG 45204 for guidance on the meaning of an existing award."
+      locator: DMG 45600
+    - page: page/dmg-vol8-ch45/0048
+      quote: "45602 The TA is gradually reduced, for example on uprating or when the conditions for a dependency\nincrease are no longer satisfied. Any entitlement to TA is terminated when entitlement to a converted\naward ends, or on 5.4.20 if it is still in payment immediately before that date. See DMG 45800 et seq for\nfurther guidance."
+      locator: DMG 45602

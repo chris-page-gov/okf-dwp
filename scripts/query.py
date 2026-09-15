@@ -12,17 +12,22 @@ ROOT = Path(__file__).resolve().parents[1]
 STOP = set('a an and are as at be can do does for from how i in is it of on or should the to what when where which with'.split())
 
 
-def search(query: str, limit: int = 5, include_history: bool = False) -> dict:
+def search(query: str, limit: int = 5, include_history: bool = False, scope: str = 'pension-credit') -> dict:
+    if scope not in {'pension-credit', 'full-dmg'}:
+        raise ValueError('Unknown retrieval scope')
     terms = [t for t in re.findall(r"[a-z0-9]+", query.lower()) if t not in STOP]
     if not terms:
         return {'query': query, 'results': [], 'reason': 'No searchable terms supplied.'}
-    inventory = json.loads((ROOT / 'source/inventory.json').read_text())
+    inventory_path = ROOT / ('source/full-dmg-2026-09-15/inventory.json' if scope == 'full-dmg' else 'source/inventory.json')
+    inventory = json.loads(inventory_path.read_text())
+    searched_documents = []
     results = []
     for doc in inventory['documents']:
         if not include_history and doc.get('role') != 'substantive':
             continue
         if not doc.get('pages_path'):
             continue
+        searched_documents.append(doc['id'])
         pages = json.loads((ROOT / doc['pages_path']).read_text())['pages']
         for page in pages:
             content = page['text']
@@ -40,17 +45,21 @@ def search(query: str, limit: int = 5, include_history: bool = False) -> dict:
             snippet = content[start:min(len(content), first + 740)].strip()
             results.append({
                 'document_id': doc['id'], 'title': doc['title'],
-                'chapter': doc.get('chapter'), 'role': doc['role'],
+                'chapter': doc.get('chapter'), 'role': doc['role'], 'kind': doc['kind'],
                 'page': page['page'], 'source_url': page['url'],
                 'source_sha256': doc['sha256'],
                 'page_text_sha256': hashlib.sha256(content.encode()).hexdigest(),
                 'observed_at': doc['observed_at'],
+                'publication_status': 'Source publication and legal applicability are separate from observation time.',
                 'extract': snippet, 'score': score,
                 'extraction_status': 'machine-extracted; inspect original and neighbouring pages',
             })
     results.sort(key=lambda r: (-r['score'], r['document_id'], r['page']))
     return {
-        'query': query, 'scope': 'all acquired documents' if include_history else 'seven substantive chapter files',
+        'query': query, 'scope': ('Full DMG' if scope == 'full-dmg' else 'Pension Credit') + (' — all acquired document roles' if include_history else ' — substantive chapter files'),
+        'inventory': inventory_path.relative_to(ROOT).as_posix(),
+        'inventory_sha256': hashlib.sha256(inventory_path.read_bytes()).hexdigest(),
+        'searched_documents': len(searched_documents),
         'total_matching_pages': len(results), 'results': results[:limit],
         'notice': 'Unofficial source retrieval. This does not determine entitlement or legal currency.',
         'limitations': ['Substring matching is not semantic reasoning.', 'PDF extraction can damage reading order and searchability.',
@@ -63,7 +72,8 @@ if __name__ == '__main__':
     parser.add_argument('query')
     parser.add_argument('--limit', type=int, default=5)
     parser.add_argument('--include-history', action='store_true')
+    parser.add_argument('--scope', choices=['pension-credit', 'full-dmg'], default='pension-credit')
     args = parser.parse_args()
     if not 1 <= args.limit <= 50:
         parser.error('--limit must be between 1 and 50')
-    print(json.dumps(search(args.query, args.limit, args.include_history), ensure_ascii=False, indent=2))
+    print(json.dumps(search(args.query, args.limit, args.include_history, args.scope), ensure_ascii=False, indent=2))

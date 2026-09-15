@@ -1,0 +1,100 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-tribunal-evidence-disclosure
+  '@type': skos:Concept
+  route: term/dmg-tribunal-evidence-disclosure
+  title: Evidence for a DMG tribunal appeal
+  type: Concept
+  description: The appeals guidance calls for relevant evidence available to the decision maker to be
+    available to the tribunal and disclosed, while distinguishing legal advice and specific non-disclosure
+    directions.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Evidence for a DMG tribunal appeal
+    '@language': en-GB
+  skos:definition:
+    '@value': The appeals guidance calls for relevant evidence available to the decision maker to be available
+      to the tribunal and disclosed, while distinguishing legal advice and specific non-disclosure directions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This describes the source’s appeal procedure. It does not authorise publishing claimant data,
+      legal advice or restricted papers in this repository. The tribunal’s directions and the specific
+      redaction provisions qualify the general passage.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol1-ch6/0045
+  - page/dmg-vol1-ch6/0046
+  - page/dmg-vol1-ch6/0047
+  - page/dmg-vol1-ch6/0048
+  source: https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=45
+  resource: https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=45
+  sources:
+  - id: dmg-vol1-ch6
+    title: 'DMG Vol 1 Ch 6: Making appeals and staying'
+    author: organisation:dwp
+    resource:
+      https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=45
+    retrieved_at: '2026-09-15T19:45:18.546591Z'
+    sha256: dcd2a7ede4499792d9bc6762c94a2d6c0ca6e811cb077abbbd4e41e4d405a4e4
+  body: "# Evidence for a DMG tribunal appeal\n\n## Authored interpretation\n\nThe appeals guidance calls for relevant
+    evidence available to the decision maker to be available to the tribunal and disclosed, while distinguishing
+    legal advice and specific non-disclosure directions.\n\n## Scope and exceptions\n\nThis describes the source’s
+    appeal procedure. It does not authorise publishing claimant data, legal advice or restricted papers in this
+    repository. The tribunal’s directions and the specific redaction provisions qualify the general passage.\n\n\
+    ## Inspected source passages\n\n- [DMG 06286, PDF page 45](https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=45)
+    — DMG Vol 1 Ch 6: Making appeals and staying.\n- [DMG 06288, PDF page 46](https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=46)
+    — DMG Vol 1 Ch 6: Making appeals and staying.\n- [DMG 06296, PDF page 47](https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=47)
+    — DMG Vol 1 Ch 6: Making appeals and staying.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source is DWP guidance,
+    not a consolidated statement of legislation. This is an independent experimental publication, not an official
+    DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are one-based file
+    positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships preserve
+    extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current applicability
+    remain separate review tasks.\n\n- `dmg-vol1-ch6` PDF SHA-256: `dcd2a7ede4499792d9bc6762c94a2d6c0ca6e811cb077abbbd4e41e4d405a4e4`;
+    extracted pages SHA-256: `e95434f7e856adbd1c8550b369066644a6bf6aa7567af05a1d41768d3dae0c3e`.\n\nThe publicly
+    acquired chapter 6 PDF carries the printed footer “Official - DWP Use Only”. This observation is preserved alongside
+    its public acquisition URL; the source owner should clarify any conflict with intended reuse. It is not evidence
+    of access to unpublished material.\n"
+  semantic_relations:
+  - target: term/dmg-first-tier-appeal
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The passage sets an evidence-disclosure context for an appeal and expressly excludes advice on
+      law from evidence.
+    evidence:
+    - page: page/dmg-vol1-ch6/0045
+      quote: "06286 All evidence\n\n\n1. relevant to the appeal and\n\n\n2. available to the DM\n\n\nshould be available
+        to the tribunal and disclosed to the appellant or representative 1. (see DMG Chapter\n01).\n\n\nNote: Advice
+        on the law, such as guidance on an individual case, is not evidence and should not be\ndisclosed to the
+        appellant, representative or tribunal. See DMG Chapter 01 for further details.\n\n\n                   \
+        \                                                                               1 R(S) 1/58"
+      locator: DMG 06286
+  - target: term/dmg-evidence-assessment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The statement-presentation guidance requires readable records and original documents where
+      practicable; it is related to, but distinct from, general evidence assessment.
+    evidence:
+    - page: page/dmg-vol1-ch6/0048
+      quote: "06305 The Department should ensure that\n\n\n1. written statements are signed with an explanation
+        of why they were made and signed unless the\n\nreason is self-evident1\n\n\n2. all evidence that is hard
+        to read, especially records of interviews or phone calls, is typed and signed\n\n\n3. the original documents
+        are available at the hearing where practicable\n\n\n4. the advice in DMG Chapter 01 about evidence given
+        in confidence is followed where the evidence\nrefers to imprisonment\n\n\n5. anonymous letters are not included\n\
+        \n\n6. anonymous witness statements are not routinely included. Generally a witness should not be\nanonymous
+        unless there are special circumstances requiring anonymity and that would be a matter for\nthe tribunal
+        chairman to decide\n\n\n7. if redacted documents are included the papers, an unredacted copy in a sealed
+        envelope should be\nmade available to the chairman of the FtT.\n\n\n                                   \
+        \                                                                  1 R(G) 1/63"
+      locator: DMG 06305

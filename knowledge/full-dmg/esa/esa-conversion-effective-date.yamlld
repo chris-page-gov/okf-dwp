@@ -1,0 +1,76 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-conversion-effective-date
+  '@type': skos:Concept
+  route: term/esa-conversion-effective-date
+  title: Effective date of the source’s ESA conversion decision
+  type: Concept
+  description: The guidance connects the conversion decision’s effective date to notification and completed payment periods of the existing award, with separate fortnightly and non-fortnightly cases.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Effective date of the source’s ESA conversion decision
+    '@language': en-GB
+  skos:definition:
+    '@value': The guidance connects the conversion decision’s effective date to notification and completed payment periods of the existing award, with separate fortnightly and non-fortnightly cases.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 45500–45501 preserve payment-cycle conditions. Notification date, effective date, the example’s 2011 dates and source capture date must not be substituted for one another. No effective-date calculation is implemented.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 45
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol8-ch45/0032
+  source: https://assets.publishing.service.gov.uk/media/6717a7f6194d62fb6854056b/dmg-chapter-45-ib-sda-and-is-claims-and-reassessment.pdf#page=32
+  resource: https://assets.publishing.service.gov.uk/media/6717a7f6194d62fb6854056b/dmg-chapter-45-ib-sda-and-is-claims-and-reassessment.pdf#page=32
+  sources:
+  - id: dmg-vol8-ch45
+    title: 'DMG Vol 8 Ch 45: IB, SDA and IS, claims and reassessment'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6717a7f6194d62fb6854056b/dmg-chapter-45-ib-sda-and-is-claims-and-reassessment.pdf
+    retrieved_at: '2026-09-15T19:45:29.299489Z'
+    sha256: 189648d83647f05d1685ddf24d4dc751a560bbc2eaa4e65fd5df99c3f0cdee77
+  body: |
+    # Effective date of the source’s ESA conversion decision
+
+    ## Authored interpretation
+
+    The guidance connects the conversion decision’s effective date to notification and completed payment periods of the existing award, with separate fortnightly and non-fortnightly cases.
+
+    ## Scope and boundaries
+
+    DMG 45500–45501 preserve payment-cycle conditions. Notification date, effective date, the example’s 2011 dates and source capture date must not be substituted for one another. No effective-date calculation is implemented.
+
+    ## Inspected source passages
+
+    - [DMG 45500, PDF page 32](https://assets.publishing.service.gov.uk/media/6717a7f6194d62fb6854056b/dmg-chapter-45-ib-sda-and-is-claims-and-reassessment.pdf#page=32)
+    - [DMG 45501, PDF page 32](https://assets.publishing.service.gov.uk/media/6717a7f6194d62fb6854056b/dmg-chapter-45-ib-sda-and-is-claims-and-reassessment.pdf#page=32)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:29.299489Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `189648d83647f05d1685ddf24d4dc751a560bbc2eaa4e65fd5df99c3f0cdee77`. Extracted pages SHA-256: `71654e0a1111ddbbacb99d18af83eda820b706ca58e80abb6d14bb21371215c4`.
+  semantic_relations:
+  - target: term/esa-legacy-conversion
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The effective date is part of the conversion process and depends on notification and the existing award’s payment cycle.
+    evidence:
+    - page: page/dmg-vol8-ch45/0032
+      quote: "45500 The effective date of a conversion decision is the first day of the benefit week following the first\ncomplete fortnightly period of payment of the existing award after notification of the conversion\n\ndecision1. But see DMG 45501 where the claimant’s existing award is not paid fortnightly.\n\n\n                                                               1 ESA (TP, HB & CTB)(EA)(No. 2) Regs, reg 13(1)\n\n\nExample\n\n\nOlivia’s IB is paid fortnightly, and her BWE day is Wednesday. The notification that her existing award\nqualifies for conversion to ESA(Cont) is issued on 14.6.11. Her next payment of IB is due on 22.6.11. This\npayment is for the period 9 - 22.6.11. The following payment is due on 6.7.11 for the period 23.6.11 - 6.7.11.\nThis is the first full fortnight’s payment after 14.6.11. The effective date of the conversion is 7.7.11. Olivia’s\nentitlement to IB ends on 6.7.11. Her next payment on 20.7.11 will be the converted ESA award for the\nperiod 7.7.11 - 20.7.11."
+      locator: DMG 45500
+    - page: page/dmg-vol8-ch45/0032
+      quote: "45501 Where the claimant’s existing award is not paid fortnightly, the effective date is the first day of\nthe benefit week following the second complete benefit week of payment of the existing award made\n\nafter the conversion decision is notified1.\n\n\n                                                             1 ESA (TP, HB & CTB) (EA) (No. 2) Regs, reg 13(2)\n\n\nExample\n\n\nJonathan’s IS is paid weekly by cheque. His BWE day is Friday. His award does not qualify for conversion\nto ESA as he is found not to have LCW on application of the WCA. The conversion decision is notified on\n14.6.11. His next weekly payment is due on 17.6.11 with further payments on 24.6.11 and 1.7.11. The\neffective date of the conversion decision is 2.7.11. Jonathan’s entitlement to IS ends on 1.7.11."
+      locator: DMG 45501

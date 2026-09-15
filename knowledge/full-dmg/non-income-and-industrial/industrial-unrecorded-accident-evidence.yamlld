@@ -1,0 +1,76 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/industrial-unrecorded-accident-evidence
+  '@type': skos:Concept
+  route: term/industrial-unrecorded-accident-evidence
+  title: Evidence where an accident was unreported or unwitnessed
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The source says absence of an accident record does not itself defeat a claim, while delay,
+    explanations, consistency, corroboration and medical evidence may require investigation.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol11-ch66/0010
+  - page/dmg-vol11-ch66/0011
+  source: https://assets.publishing.service.gov.uk/media/5a814e8b40f0b6230269697f/dmgch66.pdf#page=10
+  sources:
+  - id: dmg-vol11-ch66
+    title: 'DMG Vol 11 Ch 66: Industrial accidents '
+    resource: https://assets.publishing.service.gov.uk/media/5a814e8b40f0b6230269697f/dmgch66.pdf
+    author: organisation:dwp
+    sha256: 8a2f49feb6557c0bc2833c308c458204e0f28cefeabbe85bc7a1ec3ae0461155
+    retrieved_at: '2026-09-15T19:45:34.019999Z'
+  skos:prefLabel:
+    '@value': Evidence where an accident was unreported or unwitnessed
+    '@language': en-GB
+  skos:definition:
+    '@value': The source says absence of an accident record does not itself defeat a claim, while delay,
+      explanations, consistency, corroboration and medical evidence may require investigation.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': No accident is assumed true or false from missing records alone. DMG 66046 continues onto the
+      next page; the selected categories are not a complete evidential checklist. The project records evidence
+      needs without collecting personal accident details.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Evidence where an accident was unreported or unwitnessed\n\n## Authored interpretation\n\nThe source
+    says absence of an accident record does not itself defeat a claim, while delay, explanations, consistency, corroboration
+    and medical evidence may require investigation.\n\n## Scope and exceptions\n\nNo accident is assumed true or
+    false from missing records alone. DMG 66046 continues onto the next page; the selected categories are not a
+    complete evidential checklist. The project records evidence needs without collecting personal accident details.\n\
+    \n## Inspected passages\n\n- [DMG 66045, PDF page 10](https://assets.publishing.service.gov.uk/media/5a814e8b40f0b6230269697f/dmgch66.pdf#page=10).\n\
+    - [DMG 66046, PDF page 10](https://assets.publishing.service.gov.uk/media/5a814e8b40f0b6230269697f/dmgch66.pdf#page=10).\n\
+    \n## Additional context\n\n- [Context: chapter 66, PDF page 11](https://assets.publishing.service.gov.uk/media/5a814e8b40f0b6230269697f/dmgch66.pdf#page=11).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol11-ch66`:
+    PDF `8a2f49feb6557c0bc2833c308c458204e0f28cefeabbe85bc7a1ec3ae0461155`; extracted pages `a4efac777c187bd7b7d95994b53893fc4b480fe08736216f641a27ec9d6ed3d7`;
+    acquired `2026-09-15T19:45:34.019999Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/5a814e8b40f0b6230269697f/dmgch66.pdf#page=10
+  semantic_relations:
+  - target: term/industrial-accident-question
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The missing-record guidance concerns evidence about the occurrence and effects of the accident.
+    evidence:
+    - page: page/dmg-vol11-ch66/0010
+      quote: "66045   When considering an unreported or unwitnessed accident the DM should note that\n\n       \
+        \ 1.    if notice of an accident is given and recorded by the employer soon after it\n              happened
+        this is usually enough to prove a claim that there was an accident\n\n        2.    the absence of a record
+        does not mean that the claim cannot succeed but\n              any long delay in reporting an accident may
+        throw doubt on the claim and\n              should be carefully investigated\n\n        3.    corroboration
+        by witnesses is helpful in cases where there is doubt over\n              whether an accident occurred."
+      locator: DMG 66045

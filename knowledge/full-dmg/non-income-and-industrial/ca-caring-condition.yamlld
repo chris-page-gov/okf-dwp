@@ -1,0 +1,110 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/ca-caring-condition
+  '@type': skos:Concept
+  route: term/ca-caring-condition
+  title: Carer’s Allowance caring condition
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The source defines a caring week beginning on Sunday and describes regular care of at least 35
+    hours in that week, allowing care on fewer than seven days and considering an intention to care.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol10-ch60/0005
+  - page/dmg-vol10-ch60/0007
+  - page/dmg-vol10-ch60/0004
+  - page/dmg-vol10-ch60/0006
+  source: https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=5
+  sources:
+  - id: dmg-vol10-ch60
+    title: 'DMG Vol 10 Ch 60: Carer’s Allowance'
+    resource: https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf
+    author: organisation:dwp
+    sha256: ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a
+    retrieved_at: '2026-09-15T19:45:32.596227Z'
+  skos:prefLabel:
+    '@value': Carer’s Allowance caring condition
+    '@language': en-GB
+  skos:definition:
+    '@value': The source defines a caring week beginning on Sunday and describes regular care of at least 35
+      hours in that week, allowing care on fewer than seven days and considering an intention to care.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is one CA condition, not a complete entitlement test. The source’s dated rule from 17
+      August 1993 does not aggregate care hours for different severely disabled people. Earnings, education,
+      residence, qualifying disability payment, breaks and Memos 12/23 and 12-25 remain separate dependencies.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Carer’s Allowance caring condition\n\n## Authored interpretation\n\nThe source defines a caring week
+    beginning on Sunday and describes regular care of at least 35 hours in that week, allowing care on fewer than
+    seven days and considering an intention to care.\n\n## Scope and exceptions\n\nThis is one CA condition, not
+    a complete entitlement test. The source’s dated rule from 17 August 1993 does not aggregate care hours for different
+    severely disabled people. Earnings, education, residence, qualifying disability payment, breaks and Memos 12/23
+    and 12-25 remain separate dependencies.\n\n## Inspected passages\n\n- [DMG 60035, PDF page 5](https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=5).\n\
+    - [DMG 60036, PDF page 5](https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=5).\n\
+    - [DMG 60037, PDF page 5](https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=5).\n\
+    - [DMG 60044, PDF page 7](https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=7).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol10-ch60`:
+    PDF `ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a`; extracted pages `bc5925c0d434fbc4bec575bea2e1e2dbd020b014497ab156973054e80e326f2f`;
+    acquired `2026-09-15T19:45:32.596227Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=5
+  semantic_relations:
+  - target: term/ca-qualifying-disability-payment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The caring condition refers to a specifically defined severely disabled person; that definition
+      is linked to qualifying payments.
+    evidence:
+    - page: page/dmg-vol10-ch60/0005
+      quote: "60035 For the caring condition to be satisfied in any week, claimants must show that in that week
+        they\n\n\n1. are or\n\n\n2. are likely to be\n\n\nengaged and regularly engaged in caring for a severely
+        disabled person for at least 35 hours a week 1 (see\n\nDMG 60045). For CA, a “caring week” means a period
+        of seven days beginning on a Sunday 2.\n\n\n                                                           \
+        \    1 SS (ICA) Regs, reg 4(1); 2 SS CB Act 92, s 122(1)"
+      locator: DMG 60035
+    - page: page/dmg-vol10-ch60/0004
+      quote: "60033 [see DMG memo 02/25] “Severely disabled person” means a person for whom\n\n\n1. AA1 or\n\n\n\
+        2. the care component of DLA at the highest or middle rate or pension age disability\npayment2 or\n\n3.
+        CAA payable as\n\n\n       3.1 an increase of IIDB3 or\n\n\n       3.2 an increase of an old scheme allowance4
+        or\n\n\n       3.3 an increase of WC5 or\n\n\n       3.4 a WDisP6 or\n\n\n4. the daily living component
+        of PIP at the standard or enhanced rate 7 or"
+      locator: DMG 60033
+  - target: term/ca-care-statement-evidence
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source specifies how to treat the claimant’s statement about care hours.
+    evidence:
+    - page: page/dmg-vol10-ch60/0006
+      quote: "60040 The claimant’s statement that the required number of hours are spent in caring should be\naccepted
+        without further enquiry unless there is good reason to doubt it.\n\n\nExample\n\n\nDenise and Lesley both
+        claim CA for caring for Mick who is a severely disabled person. The DM decides\nto make further enquiries
+        to establish who is entitled to CA (see DMG 60026)."
+      locator: DMG 60040
+  - target: term/ca-temporary-care-break
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source contains a separate mechanism for temporary breaks from the caring condition.
+    evidence:
+    - page: page/dmg-vol10-ch60/0007
+      quote: "60045 A week when a person does not satisfy the “caring condition” is treated as a week in which that\n\
+        condition is satisfied, if that person\n\n\n1. has only temporarily ceased to satisfy the “caring condition”
+        and\n\n\n2. has satisfied the caring condition for at least 14 weeks in a 26 week period. The 26 week period
+        ends\nwith the first week that person no longer satisfied the caring condition and\n\n\n3. would have satisfied
+        it for at least 22 weeks in the 26 week period described in DMG 60045 2., but for\nthe fact that\n\n\n \
+        \     3.1 either that person or\n\n\n      3.2 the severely disabled person\n\n\nwas undergoing medical
+        or other treatment, as an in-patient in a hospital or similar institution 1.\n\n\n                     \
+        \                                                                1 SS (ICA) Regs, reg 4(2)"
+      locator: DMG 60045

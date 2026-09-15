@@ -1,0 +1,1325 @@
+{
+  "schema": "okf-dwp-independent-source-trial-assessment.v1",
+  "status": "completed-with-partial-results",
+  "started_at": "2026-09-15T21:12:42.587232Z",
+  "finished_at": "2026-09-15T21:12:42.619275Z",
+  "assessor": "Codex subagent /root/legislation_reconciliation; model review, not a legal or operational specialist",
+  "independence": {
+    "answer_author": "root model in the active Codex session",
+    "different_agent_from_answer_author": true,
+    "assessor_prior_context": "Previously cross-reviewed ESA semantic/source packet; authored the source-family register. The prompt, answer, expected evidence and rubrics were visible during grading.",
+    "blind_or_holdout": false,
+    "human_specialist": false,
+    "model_comparison": false
+  },
+  "inputs": [
+    {
+      "path": "evaluation/full-dmg-behavioural/esa-trials.json",
+      "sha256": "ce9463771cc77de999dd78872c6131b746bdf979e5f22563ef27ac268ab93ebf"
+    },
+    {
+      "path": "evaluation/full-dmg-behavioural/case-registry.json",
+      "sha256": "67ad6ba92f67d346542e3ea30e771c2182a7e8b1be53836c862bb0007340c20e"
+    },
+    {
+      "path": "source/full-dmg-2026-09-15/inventory.json",
+      "sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a"
+    },
+    {
+      "path": "evaluation/full-dmg-esa-review.json",
+      "sha256": "2a506af8f3273563aec5ebe8a97cff8a2ae1976fed4cfdd43d00f5284abd3a2f"
+    },
+    {
+      "path": "evaluation/full-dmg-behavioural/answerer-tasks.json",
+      "sha256": "dcdc83da861e8262cdab0f85aa34a911ce9b9603b2cc965c95f0d9067a6ddabc"
+    }
+  ],
+  "method": "Read all 26 answers and authored prompts/rubrics; inspect every distinct attached quote and relevant missing raw-source passages; verify prompt/answer hashes, source PDF/page identities and exact quote/page hashes. Assess omissions and source meaning independently. Preserve all original answer bytes.",
+  "grading_policy": {
+    "unit": "Each answer plus its attached exact evidence and the common answer boundary; explanatory omissions remain visible even where the attached quote contains the missing detail.",
+    "pass": "Meets the bounded prompt and applicable authored expectations using exact source evidence; not specialist acceptance or complete chapter coverage.",
+    "partial": "Substantive statements are supported, but a requested or explicitly authored qualification, scope distinction or evidence requirement is omitted.",
+    "fail": "Would indicate contradicted source meaning, unsupported substantive claim, false entitlement/current-law claim or failed provenance. No such outcome was found in this bounded assessment.",
+    "alternative_evidence": "An exact alternative passage can satisfy the same requirement. Missing a planned locator alone is not automatically a failure.",
+    "authority": "The rubrics themselves are model-authored, not a specialist gold standard. Grades cannot establish legal correctness."
+  },
+  "common_answer_boundary": "These answers describe the captured departmental guidance only. They do not establish current legal applicability, decide individual entitlement or provide an award calculation. Verify original PDFs and specialist interpretation.",
+  "source_candidate": "source/full-dmg-2026-09-15/inventory.json",
+  "runtime_bundle_binding": null,
+  "summary": {
+    "assessed": 26,
+    "meets_bounded_authored_case": 13,
+    "partially_meets_authored_case": 13,
+    "failed_for_source_contradiction_or_provenance": 0,
+    "specialist_accepted": 0,
+    "observed_live_runtime_calls": 0,
+    "distinct_attached_evidence_passages": 74,
+    "source_files_hash_checked": 26,
+    "integrity_counts": {
+      "evidence_occurrences_checked": 150,
+      "prompt_answer_hash_pairs_checked": 26
+    }
+  },
+  "cases": [
+    {
+      "case_id": "esa/eval-positive-41",
+      "original_id": "eval-positive-41",
+      "kind": "source-grounding",
+      "prompt_sha256": "f8a1c414da00870ecde38eccaa49bf506370e40de382c799f9e7d88b8a9a59ff",
+      "answer_sha256": "8918ea77a3ba25b3735fa3b7bf0a96ceb28b37ee606e06583479ea84cf81adca",
+      "assessment": "partially-meets-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Correctly distinguishes basic/additional conditions, unpaid work and the exempt-work route, but misses the specifically designed negligible-work qualification.",
+      "criteria_assessment": [
+        {
+          "criterion": "Answer the stated source-grounding prompt using exact source passages and preserve relevant qualifications.",
+          "assessment": "partial"
+        }
+      ],
+      "material_omissions": [
+        "DMG 41145 is an expected evidence target: negligible work can be disregarded before applying the specific work rules. Exempt work in 41186 does not replace that distinct enquiry."
+      ],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 4,
+        "exact_planned_targets_returned": 3,
+        "planned_targets_not_returned": [
+          {
+            "locator": "DMG 41145",
+            "page": "page/dmg-vol8-ch41/0038"
+          }
+        ],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol8-ch41",
+          "pdf_page": 38,
+          "locator": "DMG 41145",
+          "url": "https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=38",
+          "quote": "41145 Negligible work is considered under a general principle that the law is not concerned with\ntrivialities. This principle is called “de minimis”. Negligible amounts of work can be disregarded before the\nspecific rules are applied so that the claimant is not regarded as working on the day or days in question.",
+          "quote_sha256": "d7af6a5fd48e3a7b1e2d0e059291d403edffb15d14bf3f678c9becc76586c455",
+          "page_text_sha256": "c9fdc6cf32a752d5b6a8ade2ca731081c124c730b56cd6169d415359060d2708",
+          "source_pdf_sha256": "bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418"
+        }
+      ],
+      "next_action": "Retain the original response; if revising, execute a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-negative-41",
+      "original_id": "eval-negative-41",
+      "kind": "boundary-control",
+      "prompt_sha256": "31ecf19b6bcb2edd6b0a1d1d370027c99812f9f6ce805639559f66dcc31d27f3",
+      "answer_sha256": "78d91da2900c4e2719b507e96a6481cf21b55ea6689666f5f5af9ed13627575d",
+      "assessment": "partially-meets-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Rejects both false absolutes and preserves unpaid/exempt-work scope and the no-individual-outcome boundary.",
+      "criteria_assessment": [
+        {
+          "criterion": "Retain the source meaning of work and the explicit exceptions.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Identify negligible-work evidence and further exempt-work dependencies.",
+          "assessment": "partial"
+        },
+        {
+          "criterion": "Do not infer an individual or current New Style ESA outcome.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [
+        "The explicit expected behaviour to identify negligible-work evidence is unmet: neither the answer nor attached evidence includes 41145."
+      ],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 0,
+        "exact_planned_targets_returned": 0,
+        "planned_targets_not_returned": [],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol8-ch41",
+          "pdf_page": 38,
+          "locator": "DMG 41145",
+          "url": "https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=38",
+          "quote": "41145 Negligible work is considered under a general principle that the law is not concerned with\ntrivialities. This principle is called “de minimis”. Negligible amounts of work can be disregarded before the\nspecific rules are applied so that the claimant is not regarded as working on the day or days in question.",
+          "quote_sha256": "d7af6a5fd48e3a7b1e2d0e059291d403edffb15d14bf3f678c9becc76586c455",
+          "page_text_sha256": "c9fdc6cf32a752d5b6a8ade2ca731081c124c730b56cd6169d415359060d2708",
+          "source_pdf_sha256": "bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418"
+        }
+      ],
+      "next_action": "Retain the original response; if revising, execute a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-positive-42",
+      "original_id": "eval-positive-42",
+      "kind": "source-grounding",
+      "prompt_sha256": "860d561d7e5589ec06bf40adfa9955e2cc601520476e02d31c46fe59bfb6e38e",
+      "answer_sha256": "f57bb5804935011515d2434939038e1f30961e36e45aa1af35ee0db9ac4ae247",
+      "assessment": "partially-meets-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Keeps LCW and LCWRA distinct and gives a well-supported exceptional-risk discussion, including the 2017 WRAC qualification.",
+      "criteria_assessment": [
+        {
+          "criterion": "Answer the stated source-grounding prompt using exact source passages and preserve relevant qualifications.",
+          "assessment": "partial"
+        }
+      ],
+      "material_omissions": [
+        "The answer expands the acronyms but does not provide the substantive LCW meaning in 42020 or the separate end-of-assessment-phase determination in 42610, both authored evidence targets."
+      ],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 4,
+        "exact_planned_targets_returned": 2,
+        "planned_targets_not_returned": [
+          {
+            "locator": "DMG 42020",
+            "page": "page/dmg-vol8-ch42/0004"
+          },
+          {
+            "locator": "DMG 42610",
+            "page": "page/dmg-vol8-ch42/0081"
+          }
+        ],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol8-ch42",
+          "pdf_page": 4,
+          "locator": "DMG 42020",
+          "url": "https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=4",
+          "quote": "42020 To be entitled to ESA a claimant must have LCW1. This means that the claimant’s capability for\n\nwork is limited by their physical or mental condition and it is not reasonable to require them to work 2.\n\n\n                                                                       1 WR Act 07, s 1(3)(a); 2 s 1(4)(a) & (b)",
+          "quote_sha256": "34e6ee8030bc7cf430c8779f09c1d5b10576786587342df53ec3bfc7313d688f",
+          "page_text_sha256": "11c3ca271b04331753e2a97ceed1bba95c65ed10b030fc1dc41703727188bf98",
+          "source_pdf_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110"
+        },
+        {
+          "document_id": "dmg-vol8-ch42",
+          "pdf_page": 81,
+          "locator": "DMG 42610",
+          "url": "https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=81",
+          "quote": "42610 A determination has to be made whether a claimant who has LCW also has LCWRA at the end of\n\nthe assessment phase1.\n\n\n                                                                                 1 WR Act 07, s 9(1) & (2)",
+          "quote_sha256": "b5f0775f52e7c5e807956ebe5bd3e6cf737333d4defe1d0dc6b098e650995e1f",
+          "page_text_sha256": "77c3f4acf485a2331663bb5a6debcfeda0e414bfac5c586ca433f9afacfff1bd",
+          "source_pdf_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110"
+        }
+      ],
+      "next_action": "Retain the original response; if revising, execute a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-negative-42",
+      "original_id": "eval-negative-42",
+      "kind": "boundary-control",
+      "prompt_sha256": "355209b1077634a310557fe44ad978203c57bf58fe1c62c275a877fcbda5c57c",
+      "answer_sha256": "7b6267ba17ece777ea841cd8f5a58981118a2919aab1a192d5bddc7b24c3ecab",
+      "assessment": "meets-bounded-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Rejects automatic current WRAC and diagnosis-only risk; preserves the claim-date/transitional route and evidence-dependent risk assessment.",
+      "criteria_assessment": [
+        {
+          "criterion": "Check the 3 April 2017 claims boundary and savings in 44631.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Retain all relevant facts and evidence for substantial risk.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Do not equate LCW with LCWRA or produce a clinical/entitlement decision.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": "44013 provides the same 3 April 2017 claim-date note and Appendix 6 transitional reference as the rubric-targeted 44631. This is accepted as equivalent evidence for this bounded boundary question, not as full review of all Appendix 6 savings.",
+      "planned_evidence_coverage": {
+        "planned_locator_count": 0,
+        "exact_planned_targets_returned": 0,
+        "planned_targets_not_returned": [],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol8-ch44",
+          "pdf_page": 117,
+          "locator": "DMG 44631",
+          "url": "https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf#page=117",
+          "quote": "44631 Both ESA(Cont) and ESA(IR) attract entitlement to the support component 1.\n\n\nNote: From 3.4.17 the WRAC is no longer included in an award of ESA for claims made on or after that\ndate. See Appendix 6 for where transitional provisions apply.\n\n\nExample\n\n\nCindy, who is 23, claims and is entitled to ESA from 21.4.17 at the assessment phase rate for claimants\naged under 25. Following application of the WCA, Cindy is found to have LCW and is placed in the WRAG.\nCindy’s award of ESA is superseded to increase the applicable amount to the main phase rate from\n28.7.17. The WRAC is not included.\n\n\n                                                                              1 WR Act 07, s 2(1)(b); s 4(2)(b)",
+          "quote_sha256": "7372555d02bd3c2b69d3fd77f1436704bd087845779e21024e2923b7abe76283",
+          "page_text_sha256": "6ae8e352def0869e4982694ab8d3f2a75cdbe08333e2f7a543f4598f1bffb24f",
+          "source_pdf_sha256": "4764230f43cecc5451e351aaa54c1b307d0797d7cd5cbec19a6aaf5c4f183d10"
+        }
+      ],
+      "next_action": "Retain as a bounded observed-source trial; specialist and runtime acceptance remain separate.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-positive-43",
+      "original_id": "eval-positive-43",
+      "kind": "source-grounding",
+      "prompt_sha256": "198a8935439e9ad66104c077c3ff9986e7c1b910303c7c61e65aedd1a1a2aaa4",
+      "answer_sha256": "28d5855fa68d6c908835cc25b91c14b09afae86c994f1ca39b9b3d7ea29a8e39",
+      "assessment": "meets-bounded-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Identifies ESA(IR) scope, dwelling/household distinction and temporary absence; preserves prior shared household and unconditional intention, with the full 52-week qualification in the attached evidence.",
+      "criteria_assessment": [
+        {
+          "criterion": "Answer the stated source-grounding prompt using exact source passages and preserve relevant qualifications.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 4,
+        "exact_planned_targets_returned": 4,
+        "planned_targets_not_returned": [],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [],
+      "next_action": "Retain as a bounded observed-source trial; specialist and runtime acceptance remain separate.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-negative-43",
+      "original_id": "eval-negative-43",
+      "kind": "boundary-control",
+      "prompt_sha256": "1e16c17819c0590c6812d72e49245429b2353d59060109a69f6fcb39ad9f4355",
+      "answer_sha256": "a05e146322372818e193d54520863dbb91491a47f77d69e64d7104f7e906efe7",
+      "assessment": "partially-meets-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Correctly rejects shared-address proof and transfer to ESA(Cont)/Pension Credit.",
+      "criteria_assessment": [
+        {
+          "criterion": "Retain ESA(IR) scope.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Consider intention, earlier shared household and exceptional circumstances.",
+          "assessment": "partial"
+        },
+        {
+          "criterion": "Do not equate a dwelling, responsibility, family and household.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [
+        "The answer refers to 43053 but does not itself explain the expected intention-to-return, previously shared household and exceptional-circumstances conditions. The attached quote contains these, so this is explanation completeness rather than fabricated evidence."
+      ],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 0,
+        "exact_planned_targets_returned": 0,
+        "planned_targets_not_returned": [],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol8-ch43",
+          "pdf_page": 15,
+          "locator": "DMG 43053",
+          "url": "https://assets.publishing.service.gov.uk/media/5ede1a10d3bf7f2c9a297c32/dmgch43.pdf#page=15",
+          "quote": "43053   The absent member may be treated as a member of the claimant’s household if\n\n        1.    that person intends to resume living with the family and\n\n        2.    the absence is unlikely to last\n\n              2.1     more than 52 weeks or\n\n              2.2     substantially more than 52 weeks1 where exceptional circumstances\n                      apply.\n\n        Substantially is not defined in legislation and should be given its everyday meaning,\n        that is, in this context - of large size or amount.\n\n        Note: This exception only applies if the family has previously lived as members of\n        the same household (notwithstanding that that household may have been abroad)\n        and the intention to resume living with the family must not be conditional.\n                                                                               1 ESA Regs, reg 156(3)(b)\n\n\n\n\nVol 8 Amendment 14 February 2014",
+          "quote_sha256": "07ef38675bd67b5ae4da1547072c6ee8106ca8ef04253f05a940b48f21cef9ab",
+          "page_text_sha256": "3ae2f63eb4acd7759add449b017952ce86496b937be815b3d36c29ca6e8936b4",
+          "source_pdf_sha256": "57bd59f52fdfa8e20f17af6ad78869ca8be872c7502f4563d41fef887350b115"
+        }
+      ],
+      "next_action": "Retain the original response; if revising, execute a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-positive-44",
+      "original_id": "eval-positive-44",
+      "kind": "source-grounding",
+      "prompt_sha256": "1096de6481c9fcc6b617cedaf1542607edb146fda315d48f8cf2eb5c8c02b3b4",
+      "answer_sha256": "83a7ea6383b6929e73c946d17c6cebfb5d99cd4a40c995da2fc058b834d47047",
+      "assessment": "meets-bounded-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Keeps the phase generally 13 weeks, identifies extension and differently calculated cases, and preserves conditional component/backdating and the 2017 change.",
+      "criteria_assessment": [
+        {
+          "criterion": "Answer the stated source-grounding prompt using exact source passages and preserve relevant qualifications.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": "44013 directly supports the older component-wording qualification sought by the prompt; its date/savings note is equivalent to the planned 44631 evidence. The absence of that exact locator is not itself a failure.",
+      "planned_evidence_coverage": {
+        "planned_locator_count": 3,
+        "exact_planned_targets_returned": 2,
+        "planned_targets_not_returned": [
+          {
+            "locator": "DMG 44631",
+            "page": "page/dmg-vol8-ch44/0117"
+          }
+        ],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol8-ch44",
+          "pdf_page": 117,
+          "locator": "DMG 44631",
+          "url": "https://assets.publishing.service.gov.uk/media/6a68db52229c578debc1a7a3/dmg-v-8-ch-44.pdf#page=117",
+          "quote": "44631 Both ESA(Cont) and ESA(IR) attract entitlement to the support component 1.\n\n\nNote: From 3.4.17 the WRAC is no longer included in an award of ESA for claims made on or after that\ndate. See Appendix 6 for where transitional provisions apply.\n\n\nExample\n\n\nCindy, who is 23, claims and is entitled to ESA from 21.4.17 at the assessment phase rate for claimants\naged under 25. Following application of the WCA, Cindy is found to have LCW and is placed in the WRAG.\nCindy’s award of ESA is superseded to increase the applicable amount to the main phase rate from\n28.7.17. The WRAC is not included.\n\n\n                                                                              1 WR Act 07, s 2(1)(b); s 4(2)(b)",
+          "quote_sha256": "7372555d02bd3c2b69d3fd77f1436704bd087845779e21024e2923b7abe76283",
+          "page_text_sha256": "6ae8e352def0869e4982694ab8d3f2a75cdbe08333e2f7a543f4598f1bffb24f",
+          "source_pdf_sha256": "4764230f43cecc5451e351aaa54c1b307d0797d7cd5cbec19a6aaf5c4f183d10"
+        }
+      ],
+      "next_action": "Retain as a bounded observed-source trial; specialist and runtime acceptance remain separate.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-negative-44",
+      "original_id": "eval-negative-44",
+      "kind": "boundary-control",
+      "prompt_sha256": "f633bbea1f5bb8cea2927c90587e9b201bfde687108b5a09d5059e6442777dd5",
+      "answer_sha256": "bbc6574251e646f1aa06af9434169bb9ca0f044ccd05caae9ff015f9f0011d6f",
+      "assessment": "meets-bounded-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Rejects automatic week-14 payment and separates a source-stated rule date from PDF publication. The transitional route remains explicit.",
+      "criteria_assessment": [
+        {
+          "criterion": "Retain assessment and determination conditions.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Identify claims-date and savings scope.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Keep source-stated legal context separate from document publication and acquisition.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 0,
+        "exact_planned_targets_returned": 0,
+        "planned_targets_not_returned": [],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [],
+      "next_action": "Retain as a bounded observed-source trial; specialist and runtime acceptance remain separate.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-positive-45",
+      "original_id": "eval-positive-45",
+      "kind": "source-grounding",
+      "prompt_sha256": "e138a4ed8ca404f53e71d8ed2a7491b489d211267c1aa26c305ed8f25f3081dd",
+      "answer_sha256": "f0cdb97e8634ae3c148a9d20891e9834febc087eeecea21e4393daf512d5d884",
+      "assessment": "meets-bounded-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Describes the conversion process and phase, conversion-specific TA meaning and 5 April 2020 end boundary without claiming ongoing payment.",
+      "criteria_assessment": [
+        {
+          "criterion": "Answer the stated source-grounding prompt using exact source passages and preserve relevant qualifications.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": "45320 and 45401 directly support the conversion process/phase requested, although the planned targets were 45300/45301. They are accepted alternative evidence, not evidence that every aspect of conversion has been explained.",
+      "planned_evidence_coverage": {
+        "planned_locator_count": 4,
+        "exact_planned_targets_returned": 2,
+        "planned_targets_not_returned": [
+          {
+            "locator": "DMG 45300",
+            "page": "page/dmg-vol8-ch45/0016"
+          },
+          {
+            "locator": "DMG 45301",
+            "page": "page/dmg-vol8-ch45/0016"
+          }
+        ],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [],
+      "next_action": "Retain as a bounded observed-source trial; specialist and runtime acceptance remain separate.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-negative-45",
+      "original_id": "eval-negative-45",
+      "kind": "boundary-control",
+      "prompt_sha256": "c731cc613f73ab37be789ebcd9e7f7f8e266d7a5d2bde27153935e3fb7f8a6bb",
+      "answer_sha256": "7dd33e223cf8501693a895f6427461323ed6a7a09c8308e81729572880322e33",
+      "assessment": "meets-bounded-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Rejects continuation into 2026 and transfer to UC, preserving the conversion-only meaning and source-stated termination.",
+      "criteria_assessment": [
+        {
+          "criterion": "Retain the source’s conversion-only meaning and 5 April 2020 termination wording.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Do not transfer a protection between regimes.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Treat historical dates and examples as source context.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 0,
+        "exact_planned_targets_returned": 0,
+        "planned_targets_not_returned": [],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [],
+      "next_action": "Retain as a bounded observed-source trial; specialist and runtime acceptance remain separate.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-positive-46",
+      "original_id": "eval-positive-46",
+      "kind": "source-grounding",
+      "prompt_sha256": "04a4ea39298ec76dfaadda29c07fd53f79dc2fc20a2d90b8cb774a63b6544d64",
+      "answer_sha256": "99a0516a0dfb9c9b364b3433f96f7df1f4ae4e60ffb35af63b84e5df8e8936c2",
+      "assessment": "partially-meets-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Correctly gives the two notional-entitlement meanings and distinguishes liability/dispute enquiries from the fine exclusion.",
+      "criteria_assessment": [
+        {
+          "criterion": "Answer the stated source-grounding prompt using exact source passages and preserve relevant qualifications.",
+          "assessment": "partial"
+        }
+      ],
+      "material_omissions": [
+        "The authored dispute-evidence target 46138 is absent. Enquiries to the third party under 46137 do not replace giving the claimant an opportunity to provide evidence that the debt is not liable to be paid."
+      ],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 5,
+        "exact_planned_targets_returned": 4,
+        "planned_targets_not_returned": [
+          {
+            "locator": "DMG 46138",
+            "page": "page/dmg-vol8-ch46/0029"
+          }
+        ],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol8-ch46",
+          "pdf_page": 29,
+          "locator": "DMG 46138",
+          "url": "https://assets.publishing.service.gov.uk/media/69e5ffc3de262afd82fcf92b/dmg-Chap-46.pdf#page=29",
+          "quote": "46138 Give the claimant the opportunity to provide evidence to support any claim that the debt is not\nliable to be paid.",
+          "quote_sha256": "1febf6d83fedec570f288998aa67c993ed9533ed069d6263d1662b3e0c4a15b5",
+          "page_text_sha256": "4d352b32fd82acf3bd540518a7acc1a7fd250c42cb60b2080197a1756fbb7415",
+          "source_pdf_sha256": "a27cee1bd8b3124d8cbfa0a41ed9dcde881510612b0b7b47b958967b99ce759c"
+        }
+      ],
+      "next_action": "Retain the original response; if revising, execute a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-negative-46",
+      "original_id": "eval-negative-46",
+      "kind": "boundary-control",
+      "prompt_sha256": "ccef6a12cabe4ad8f8db608f158a4514265aaf4e174ff7b8d7db5c7c5d03b7cc",
+      "answer_sha256": "7df64a8b8f3ecf11f6c27c5942377093afbea7a04a5df09e3dc387d61bc7bd2e",
+      "assessment": "meets-bounded-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Separates notional entitlement from notional income, retains the partner/dependant fine exclusion and does not equate an alleged debt with an automatic deduction.",
+      "criteria_assessment": [
+        {
+          "criterion": "Keep the calculation-specific definitions separate.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Preserve the partner/dependant fine exclusion in 46133.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Do not turn a bill or liability allegation into automatic deduction.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 0,
+        "exact_planned_targets_returned": 0,
+        "planned_targets_not_returned": [],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [],
+      "next_action": "Retain as a bounded observed-source trial; specialist and runtime acceptance remain separate.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-positive-48",
+      "original_id": "eval-positive-48",
+      "kind": "source-grounding",
+      "prompt_sha256": "c9e75f8f845f06ace0cc49f2af6ca15baee20d8f31c076c324386bd544e9109a",
+      "answer_sha256": "7233a42d0eda7920402021f7fa9936b6c80eb7fc39fcc68ee96f382fe0a6824e",
+      "assessment": "meets-bounded-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "States partner attribution with qualifications and child-income exclusion, separates required dates and retains the self-employment exclusion.",
+      "criteria_assessment": [
+        {
+          "criterion": "Answer the stated source-grounding prompt using exact source passages and preserve relevant qualifications.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 4,
+        "exact_planned_targets_returned": 4,
+        "planned_targets_not_returned": [],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [],
+      "next_action": "Retain as a bounded observed-source trial; specialist and runtime acceptance remain separate.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-negative-48",
+      "original_id": "eval-negative-48",
+      "kind": "boundary-control",
+      "prompt_sha256": "8d1770af683433be7fb4751c1323307563c3e9a2bc464145002de542972980a8",
+      "answer_sha256": "3ccf231d8b5a09e936dda40693beb0d13a4e5e05bc0bb18e62c934b0ba06d691",
+      "assessment": "meets-bounded-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Rejects household-wide attribution and bank-receipt-only timing; preserves family and self-employment qualifications.",
+      "criteria_assessment": [
+        {
+          "criterion": "Retain the child-income exclusion and couple qualifications.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Distinguish due, received and treated-as-paid dates.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Do not transfer the general period rule to self-employment.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 0,
+        "exact_planned_targets_returned": 0,
+        "planned_targets_not_returned": [],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [],
+      "next_action": "Retain as a bounded observed-source trial; specialist and runtime acceptance remain separate.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-positive-49",
+      "original_id": "eval-positive-49",
+      "kind": "source-grounding",
+      "prompt_sha256": "dbc9b5af225831a522b6f1284d950bdce5dabe90a3a682092d205e6db2ab821a",
+      "answer_sha256": "d88d75fd7b7ba8089c42c62e509c8230dea756fd2bbc2bbafb4f8a3e15afe539",
+      "assessment": "partially-meets-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Explains why earnings still matter to permitted work for ESA(Cont), despite the absence of an income condition.",
+      "criteria_assessment": [
+        {
+          "criterion": "Answer the stated source-grounding prompt using exact source passages and preserve relevant qualifications.",
+          "assessment": "partial"
+        }
+      ],
+      "material_omissions": [
+        "The prompt asks for employed-earner scope, and the authored target 49013 defines gainful employment in GB under a contract of service or an office with general earnings. The answer gives only the chapter subject and usual source of payment."
+      ],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 3,
+        "exact_planned_targets_returned": 2,
+        "planned_targets_not_returned": [
+          {
+            "locator": "DMG 49013",
+            "page": "page/dmg-vol9-ch49/0005"
+          }
+        ],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol9-ch49",
+          "pdf_page": 5,
+          "locator": "DMG 49013",
+          "url": "https://assets.publishing.service.gov.uk/media/69e6000e44a079b27f997f4e/dmg-Chap-49.pdf#page=5",
+          "quote": "49013 The term employed earner means1 a person who is gainfully employed in GB\n\n\n1. under a contract of service or\n\n\n2. in an office (including an elective office) with general earnings 2.\n\n\n       1 ESA Regs, reg 2(1); SS CB Act 92, s 2(1)(a); 2 Income Tax (Earnings and Pensions) Act 2003, s 7(3)",
+          "quote_sha256": "f328d7e7c4e548f1b665b1e00dc0aecfaeeef721ec4a657203f681fdf6f95843",
+          "page_text_sha256": "34e50b80d984f5c9ff8ce47b0189dbb1dda9803187888a32c4cbfa1585d20a3e",
+          "source_pdf_sha256": "fbebe7a07e841df655ca881b7c2d699f5b332e91187ba3d5ce600758f206beee"
+        }
+      ],
+      "next_action": "Retain the original response; if revising, execute a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-negative-49",
+      "original_id": "eval-negative-49",
+      "kind": "boundary-control",
+      "prompt_sha256": "401b9d8d61ea6ef8ed8e2f938fa8881014705b2bfde21316641731ef495afbad",
+      "answer_sha256": "936865ff34e6af79207f263c5fc2ef57d3408d853364e372ed48fcb10110fd33",
+      "assessment": "meets-bounded-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Preserves the separate permitted-work question, claimant/partner distinction and absence of a current cash-limit or individual award claim.",
+      "criteria_assessment": [
+        {
+          "criterion": "Retain the separate permitted-work question.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Do not supply a current threshold or individual outcome.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Check work status, exceptions and regime.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 0,
+        "exact_planned_targets_returned": 0,
+        "planned_targets_not_returned": [],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [],
+      "next_action": "Retain as a bounded observed-source trial; specialist and runtime acceptance remain separate.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-positive-50",
+      "original_id": "eval-positive-50",
+      "kind": "source-grounding",
+      "prompt_sha256": "cc6514b32c5898147eee36e3a7fa958f492404f4581969d8e8f9419ee56986d5",
+      "answer_sha256": "3eb09f0c4e4bfa6424c2453cd6445e3ebc40e2786dea13adfb19450916da7a74",
+      "assessment": "meets-bounded-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Locates the explicit earnings-period/ESA-phase distinction and states all four expense conditions plus private-use apportionment.",
+      "criteria_assessment": [
+        {
+          "criterion": "Answer the stated source-grounding prompt using exact source passages and preserve relevant qualifications.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": "50060 is an additional planned target concerning changed trading patterns; its absence does not negate the two distinctions expressly requested by this positive prompt. It remains a relevant completeness issue in the paired negative case.",
+      "planned_evidence_coverage": {
+        "planned_locator_count": 4,
+        "exact_planned_targets_returned": 3,
+        "planned_targets_not_returned": [
+          {
+            "locator": "DMG 50060",
+            "page": "page/dmg-vol9-ch50/0013"
+          }
+        ],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol9-ch50",
+          "pdf_page": 13,
+          "locator": "DMG 50060",
+          "url": "https://assets.publishing.service.gov.uk/media/61976ff0d3bf7f055fce727f/dmgch50.pdf#page=13",
+          "quote": "50060 If there has been a change that is likely to affect the normal pattern of trading, the assessment\n\nperiod should be a period that will allow the DM to calculate the earnings most accurately 1. The period\ndoes not need to be made up of complete weeks.\n\n\n                                                                                    1 ESA Regs, reg 92(1)(b)",
+          "quote_sha256": "c3c758e0d692ab1cc768f53f87e1523ddb1d14fd7a10d29137755512f572de2d",
+          "page_text_sha256": "3a0a5c8bd304eb230d52c3d48d782b2d7564b52c59c3cc8ef5b2c88266fa6c90",
+          "source_pdf_sha256": "6b49f1951d5c6d26dac8fd8932178608a01b3971fde8bb36ef63e69a35702f03"
+        }
+      ],
+      "next_action": "Retain as a bounded observed-source trial; specialist and runtime acceptance remain separate.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-negative-50",
+      "original_id": "eval-negative-50",
+      "kind": "boundary-control",
+      "prompt_sha256": "42abef2885103cfb583747a875f3553e63a22bed1caa96efcdaf166084af634a",
+      "answer_sha256": "391b90c369a7f9d78a48a55b2f50f2fd320c89cef889731cf75f3140a1f51934",
+      "assessment": "partially-meets-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Rejects a universal 13-week period and automatic deductibility of business-account spending.",
+      "criteria_assessment": [
+        {
+          "criterion": "Retain the explicit phase/period distinction.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Check trading history, change, payment period, purpose, reasonableness and allowability.",
+          "assessment": "partial"
+        },
+        {
+          "criterion": "Do not substitute tax treatment or compute an award.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [
+        "The explicit expected behaviour also requires trading history and changed trading pattern to be checked. 50052 is attached, but neither the answer nor evidence includes the 50060 change rule; merely distinguishing a phase and period is incomplete."
+      ],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 0,
+        "exact_planned_targets_returned": 0,
+        "planned_targets_not_returned": [],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol9-ch50",
+          "pdf_page": 13,
+          "locator": "DMG 50060",
+          "url": "https://assets.publishing.service.gov.uk/media/61976ff0d3bf7f055fce727f/dmgch50.pdf#page=13",
+          "quote": "50060 If there has been a change that is likely to affect the normal pattern of trading, the assessment\n\nperiod should be a period that will allow the DM to calculate the earnings most accurately 1. The period\ndoes not need to be made up of complete weeks.\n\n\n                                                                                    1 ESA Regs, reg 92(1)(b)",
+          "quote_sha256": "c3c758e0d692ab1cc768f53f87e1523ddb1d14fd7a10d29137755512f572de2d",
+          "page_text_sha256": "3a0a5c8bd304eb230d52c3d48d782b2d7564b52c59c3cc8ef5b2c88266fa6c90",
+          "source_pdf_sha256": "6b49f1951d5c6d26dac8fd8932178608a01b3971fde8bb36ef63e69a35702f03"
+        }
+      ],
+      "next_action": "Retain the original response; if revising, execute a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-positive-51",
+      "original_id": "eval-positive-51",
+      "kind": "source-grounding",
+      "prompt_sha256": "2c64d4eba6c93b31da7066b18654f3a5096c0ad9bf5f5c26f18abb1f7134f76b",
+      "answer_sha256": "b262a5436d1416a159dfe67763d0f162615ec755669ac1b334a107137a542c4d",
+      "assessment": "partially-meets-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Distinguishes possible notional-income bases and significant benefit purpose, with supported gross-income and enforced-recovery qualifications.",
+      "criteria_assessment": [
+        {
+          "criterion": "Answer the stated source-grounding prompt using exact source passages and preserve relevant qualifications.",
+          "assessment": "partial"
+        }
+      ],
+      "material_omissions": [
+        "The authored actual-income boundary in 51472 is missing: already-received income cannot be treated as deprivation of income and is actual income under normal rules. The planned 51459 normal-calculation/disregard rule is also omitted."
+      ],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 6,
+        "exact_planned_targets_returned": 4,
+        "planned_targets_not_returned": [
+          {
+            "locator": "DMG 51459",
+            "page": "page/dmg-vol9-ch51/0128"
+          },
+          {
+            "locator": "DMG 51472",
+            "page": "page/dmg-vol9-ch51/0130"
+          }
+        ],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol9-ch51",
+          "pdf_page": 128,
+          "locator": "DMG 51459",
+          "url": "https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=128",
+          "quote": "51459 Calculate notional income in the same way as actual income 1. The income should be taken into\naccount using normal rules, including applying any appropriate disregard.\n\n\n                                                                                     1 ESA Regs, reg 109(1)\n\n\n\nNotional income - tasters",
+          "quote_sha256": "e3969dce2843a4df20058b1724475cd804c91d858ae87b12441d8d6febe9b019",
+          "page_text_sha256": "601365bc4a6631b19af93892e8905bfca211eacafb6e578db146e2242441e7d4",
+          "source_pdf_sha256": "a4682bf466f316cef3bc9ca01e4eeff68729be7724068c913a306a910f9ceaa7"
+        },
+        {
+          "document_id": "dmg-vol9-ch51",
+          "pdf_page": 130,
+          "locator": "DMG 51472",
+          "url": "https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=130",
+          "quote": "51472 Claimants cannot deprive themselves of income that they have already received. If a payment of\nincome is received it is actual income and should be taken into account in the normal way.",
+          "quote_sha256": "ea128b9353804e155345d313acdda82cc94565026b8df8fb0a81ec9107047a73",
+          "page_text_sha256": "6b425b8f3da22d40cf7a3efa4385885b5726e496e226a8c57748d266fcadf88d",
+          "source_pdf_sha256": "a4682bf466f316cef3bc9ca01e4eeff68729be7724068c913a306a910f9ceaa7"
+        }
+      ],
+      "next_action": "Retain the original response; if revising, execute a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-negative-51",
+      "original_id": "eval-negative-51",
+      "kind": "boundary-control",
+      "prompt_sha256": "c8f382c5938bd99820f0e50df6c0f6318650844f45a799557c5363acab90c316",
+      "answer_sha256": "dc1c3d5af9eeb1e4f445d52481d4140882dcc46247b5a898440dfab117de48a0",
+      "assessment": "partially-meets-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Rejects missing-payment/disposal proof and unjustified benefit transfer; significant purpose and evidence are retained.",
+      "criteria_assessment": [
+        {
+          "criterion": "Identify scope and specified ESA(Cont) exceptions in 51000.",
+          "assessment": "partial"
+        },
+        {
+          "criterion": "Retain significant purpose, evidence, actual-income and debt qualifications.",
+          "assessment": "partial"
+        },
+        {
+          "criterion": "Do not infer fraud or transfer a rule across benefits.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [
+        "The expected ESA(Cont) exceptions in 51000 are not identified: public/local-function payments, pension protection fund periodic payments and occupational/personal pensions.",
+        "The actual-income qualification in 51472 is absent; the enforced-recovery reference does not substitute for it."
+      ],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 0,
+        "exact_planned_targets_returned": 0,
+        "planned_targets_not_returned": [],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol9-ch51",
+          "pdf_page": 2,
+          "locator": "DMG 51000",
+          "url": "https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=2",
+          "quote": "51000 This Chapter deals with the calculation of income other than earnings for ESA(IR) & (Cont) as well\nas student’s income. With the exception of payments made to a person carrying out public or local\n\nfunctions, pension protection fund periodic payments, occupational and personal pension payments 1,\nincome other than earnings does not affect the calculation of ESA(Cont).\n\n\n                                                                                        1 WR Act 07, s 3\n\n\n\nMeaning of claimant",
+          "quote_sha256": "e2fce185533df3197e6da4e15c07b11452f510d9142373fdb621ee2b0ad15d92",
+          "page_text_sha256": "03fec66549ec76ac24741904e0b004921bba0577ce870e31a1616e1ab9e9a805",
+          "source_pdf_sha256": "a4682bf466f316cef3bc9ca01e4eeff68729be7724068c913a306a910f9ceaa7"
+        },
+        {
+          "document_id": "dmg-vol9-ch51",
+          "pdf_page": 130,
+          "locator": "DMG 51472",
+          "url": "https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=130",
+          "quote": "51472 Claimants cannot deprive themselves of income that they have already received. If a payment of\nincome is received it is actual income and should be taken into account in the normal way.",
+          "quote_sha256": "ea128b9353804e155345d313acdda82cc94565026b8df8fb0a81ec9107047a73",
+          "page_text_sha256": "6b425b8f3da22d40cf7a3efa4385885b5726e496e226a8c57748d266fcadf88d",
+          "source_pdf_sha256": "a4682bf466f316cef3bc9ca01e4eeff68729be7724068c913a306a910f9ceaa7"
+        }
+      ],
+      "next_action": "Retain the original response; if revising, execute a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-positive-52",
+      "original_id": "eval-positive-52",
+      "kind": "source-grounding",
+      "prompt_sha256": "5586327c24ae955cc175fbf432ab25f6ce46942bfdb077c6b2d3f816803c4778",
+      "answer_sha256": "87f626e2451555136c7f2122fd942fafcddb07b962b8effbb547a4822db75aeb",
+      "assessment": "meets-bounded-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Separates legal/beneficial ownership, claimant evidence for disregard/no-longer-held capital and the decision maker’s significant-purpose/knowledge enquiry.",
+      "criteria_assessment": [
+        {
+          "criterion": "Answer the stated source-grounding prompt using exact source passages and preserve relevant qualifications.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": "Although 52809 was a planned target, 52070/52072/52074 and 52825 directly support the three comparisons asked for. The answer does not purport to enumerate every deprivation exception.",
+      "planned_evidence_coverage": {
+        "planned_locator_count": 5,
+        "exact_planned_targets_returned": 4,
+        "planned_targets_not_returned": [
+          {
+            "locator": "DMG 52809",
+            "page": "page/dmg-vol9-ch52/0145"
+          }
+        ],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [],
+      "next_action": "Retain as a bounded observed-source trial; specialist and runtime acceptance remain separate.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-negative-52",
+      "original_id": "eval-negative-52",
+      "kind": "boundary-control",
+      "prompt_sha256": "67d85653376bf0f3850970c6d85b7a6d4690e12fd46e9f45b638d6c40d977d86",
+      "answer_sha256": "c2f8bcf1295363908861d832270de99a73d5f3bf44360d2c22e891c77b28f0e5",
+      "assessment": "partially-meets-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Rejects account-name/gift proof and preserves the separate evidential burdens and significant-purpose requirement.",
+      "criteria_assessment": [
+        {
+          "criterion": "Keep beneficial ownership and legal-owner naming distinct.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Retain the separate burdens and significant-purpose requirement.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Consider exceptions, actions of another person and ESA(IR)-only capital scope.",
+          "assessment": "partial"
+        }
+      ],
+      "material_omissions": [
+        "The explicit expected behaviour additionally requires the ESA(IR)-only capital scope in 52001 and the treatment of another person’s actions in 52810, including its cross-referenced qualification. Neither is stated or attached."
+      ],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 0,
+        "exact_planned_targets_returned": 0,
+        "planned_targets_not_returned": [],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol9-ch52",
+          "pdf_page": 2,
+          "locator": "DMG 52001",
+          "url": "https://assets.publishing.service.gov.uk/media/69d8f30ad3e08b8871b665ac/dmg-Ch-52.pdf#page=2",
+          "quote": "52001 This Chapter gives guidance on capital and its effect on ESA(IR). The ESA(Cont) that claimants\nmay be entitled to is not affected by their capital.\n\n\nFlowchart",
+          "quote_sha256": "a4a45b9f9216a7f61f7e69b167bf87a4c6ffc3908d3dd9f05556844d44170e4c",
+          "page_text_sha256": "6ab3075727e75e4edaefd1e29771142e356ca639102807b56ac18ddf09433e15",
+          "source_pdf_sha256": "b88f230f3ed5c6068c47d39bd29c25f1738607a87b6966adb99d6e65e77e7d2b"
+        },
+        {
+          "document_id": "dmg-vol9-ch52",
+          "pdf_page": 145,
+          "locator": "DMG 52810",
+          "url": "https://assets.publishing.service.gov.uk/media/69d8f30ad3e08b8871b665ac/dmg-Ch-52.pdf#page=145",
+          "quote": "52810 The law does not apply to claimants and partners if another person, such as\n\n\n1. an appointee appointed by the DM to act for the claimant or\n\n\n2. someone with power of attorney (unless DMG 52289 applies)\n\n\ndeprives claimants of their capital. DMG 52288 gives guidance on how to treat claimants capital in these\ncircumstances.",
+          "quote_sha256": "8bf9175b57db48442b7e6e644734c37b9b18f5b5bc26ffef902954973bdfda31",
+          "page_text_sha256": "2ede3d9c86582b32a0f3f8a675964e45a7118da275d28adb71605dc098e1a696",
+          "source_pdf_sha256": "b88f230f3ed5c6068c47d39bd29c25f1738607a87b6966adb99d6e65e77e7d2b"
+        }
+      ],
+      "next_action": "Retain the original response; if revising, execute a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-positive-53",
+      "original_id": "eval-positive-53",
+      "kind": "source-grounding",
+      "prompt_sha256": "6b61d9282fae850ab8075e0f15ad207e43d6f4c933c57ca6eb4732fc37c8bac7",
+      "answer_sha256": "76ac710dfb947f64ad2d5ae50465ba85cbcf4f06ffaaf35dd3565c8b39652a28",
+      "assessment": "partially-meets-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Correctly separates required WRA placement from work, voluntary experience from failure, and hardship from WCA; adds useful evidence-gathering passages 53184/53185.",
+      "criteria_assessment": [
+        {
+          "criterion": "Answer the stated source-grounding prompt using exact source passages and preserve relevant qualifications.",
+          "assessment": "partial"
+        }
+      ],
+      "material_omissions": [
+        "The authored targets also include 53077 (reasonable requirements; no requirement to undertake work or medical treatment), 53150 (record reasons/factors/evidence) and 53152 (complete hardship conditions). They are absent; the added evidence passages do not replace these safeguards."
+      ],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 6,
+        "exact_planned_targets_returned": 3,
+        "planned_targets_not_returned": [
+          {
+            "locator": "DMG 53077",
+            "page": "page/dmg-vol9-ch53/0017"
+          },
+          {
+            "locator": "DMG 53150",
+            "page": "page/dmg-vol9-ch53/0032"
+          },
+          {
+            "locator": "DMG 53152",
+            "page": "page/dmg-vol9-ch53/0032"
+          }
+        ],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol9-ch53",
+          "pdf_page": 17,
+          "locator": "DMG 53077",
+          "url": "https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=17",
+          "quote": "53077 A requirement to undertake WRA must be reasonable in the view of the Secretary of State taking\n\ninto account the claimant’s circumstances1. The claimant cannot be required to\n\n\n1. apply for a job or undertake work, whether as an employee or otherwise or\n\n\n2. undergo medical treatment2.\n\n\n                                                              1 ESA (WRA) Regs, reg 3(4)(a); 2 reg 3(4)(b)",
+          "quote_sha256": "99a26849a4e96daea3006241751cdec7b9ab2f3c88fc31314b6d88faa44ae069",
+          "page_text_sha256": "7bd7de2ffa3f5c81c56291022219cfd6181de7f31d93b5d79a622f0f5c9f3b80",
+          "source_pdf_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8"
+        },
+        {
+          "document_id": "dmg-vol9-ch53",
+          "pdf_page": 32,
+          "locator": "DMG 53150",
+          "url": "https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=32",
+          "quote": "53150 DMs should record\n\n\n1. the reasons why hardship will or will not occur and\n\n\n2. the factors and evidence considered\n\n\nas part of the decision on hardship payments.",
+          "quote_sha256": "cda0bab483bd8381f6cf294d8dce6ba804af93d2c48ba63ddcb14d06ed87b664",
+          "page_text_sha256": "ec7834278025910de8c54d4b0903a15efc81fdad515514ff5dd04b39527a1508",
+          "source_pdf_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8"
+        },
+        {
+          "document_id": "dmg-vol9-ch53",
+          "pdf_page": 32,
+          "locator": "DMG 53152",
+          "url": "https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=32",
+          "quote": "53152 A hardship payment is made where all the following conditions are satisfied1:\n\n\n1. the DM is satisfied that the claimant is or will be in hardship unless hardship payments are made (but\nsee DMG 53110) and\n\n\n2. the claimant’s ESA has been reduced as in DMG 53112 2 and\n\n\n3. the claimant meets the conditions of entitlement to ESA(IR) – see DMG Chapter 41 and\n\n\n4. the claimant completes and submits a form approved or accepted by the DM in such manner as the\nDM determines and\n\n\n5. the claimant provides such information or evidence as the DM requires, in such manner as the DM\ndetermines.\n\n\n                                                                             1 ESA Regs, reg 64A; 2 reg 63",
+          "quote_sha256": "d2c03c1474f84f0e693be5644368feb0437fa9fad60d8b395c7d278eb2fdc8a8",
+          "page_text_sha256": "ec7834278025910de8c54d4b0903a15efc81fdad515514ff5dd04b39527a1508",
+          "source_pdf_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8"
+        }
+      ],
+      "next_action": "Retain the original response; if revising, execute a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-negative-53",
+      "original_id": "eval-negative-53",
+      "kind": "boundary-control",
+      "prompt_sha256": "7418fcce69e665b7e1405bbe02ca87685c0db9405211f466e9394127531460b9",
+      "answer_sha256": "e73c02c08ba041fee4628a5b289b75568e1412e7a9843e364c12387d5069d457",
+      "assessment": "partially-meets-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Rejects sanction for declining the voluntary experience described and rejects LCW as proof of hardship payment.",
+      "criteria_assessment": [
+        {
+          "criterion": "Retain the voluntary-work-experience statement in 53073.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Keep hardship and WCA separate and identify the complete conditions.",
+          "assessment": "partial"
+        },
+        {
+          "criterion": "Do not infer a sanction, requirement or payment outcome.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [
+        "The explicit expected behaviour requires the complete conditions. 53152 is missing: hardship, qualifying reduction, ESA(IR) entitlement, approved form and required information/evidence must be distinguished from WCA and evidence-gathering alone."
+      ],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 0,
+        "exact_planned_targets_returned": 0,
+        "planned_targets_not_returned": [],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol9-ch53",
+          "pdf_page": 32,
+          "locator": "DMG 53152",
+          "url": "https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=32",
+          "quote": "53152 A hardship payment is made where all the following conditions are satisfied1:\n\n\n1. the DM is satisfied that the claimant is or will be in hardship unless hardship payments are made (but\nsee DMG 53110) and\n\n\n2. the claimant’s ESA has been reduced as in DMG 53112 2 and\n\n\n3. the claimant meets the conditions of entitlement to ESA(IR) – see DMG Chapter 41 and\n\n\n4. the claimant completes and submits a form approved or accepted by the DM in such manner as the\nDM determines and\n\n\n5. the claimant provides such information or evidence as the DM requires, in such manner as the DM\ndetermines.\n\n\n                                                                             1 ESA Regs, reg 64A; 2 reg 63",
+          "quote_sha256": "d2c03c1474f84f0e693be5644368feb0437fa9fad60d8b395c7d278eb2fdc8a8",
+          "page_text_sha256": "ec7834278025910de8c54d4b0903a15efc81fdad515514ff5dd04b39527a1508",
+          "source_pdf_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8"
+        }
+      ],
+      "next_action": "Retain the original response; if revising, execute a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-positive-54",
+      "original_id": "eval-positive-54",
+      "kind": "source-grounding",
+      "prompt_sha256": "ac3295bbfacf2d1873566f848a32288e3f61aa01e2677b0dfeb2c05b1711ed63",
+      "answer_sha256": "654ef98be791cfc29400a63b5328bd4be99a9768ce1218b22166698111b662d8",
+      "assessment": "meets-bounded-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Identifies all five free-treatment conditions, the private-patient qualification and the precise admission/discharge and temporary-absence day distinction.",
+      "criteria_assessment": [
+        {
+          "criterion": "Answer the stated source-grounding prompt using exact source passages and preserve relevant qualifications.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": "54003 is useful benefit-specific context, but the positive prompt asks for treatment conditions and counting days; those are fully supported by 54004/54005/54072-54074.",
+      "planned_evidence_coverage": {
+        "planned_locator_count": 6,
+        "exact_planned_targets_returned": 5,
+        "planned_targets_not_returned": [
+          {
+            "locator": "DMG 54003",
+            "page": "page/dmg-vol9-ch54/0007"
+          }
+        ],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol9-ch54",
+          "pdf_page": 7,
+          "locator": "DMG 54003",
+          "url": "https://assets.publishing.service.gov.uk/media/5e9f025dd3bf7f031b0cc9e6/dmgch54.pdf#page=7",
+          "quote": "54003     A patient means a claimant (other than a prisoner) who is regarded as receiving\n          free in-patient treatment1. For how entitlement to ESA(Cont) is affected by being a\n          patient see DMG 54106. For how entitlement to ESA(IR) is affected by being a\n          patient see DMG 54091.\n                                                       1 SS (HIP) Regs, reg 2(4), 2(5) & ESA Regs, reg 69(2)\n\n\n\n\nVol 9 First Issue",
+          "quote_sha256": "83a0c4998a6ba6441821ebe505fcd71e3f059f0299cdb5f76ddc3b47a8cdfdec",
+          "page_text_sha256": "73db850ce2a8b5d42ebdb9d8efec7b13fa8caee6bc3c1e9dae94d74a62ef98fc",
+          "source_pdf_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0"
+        }
+      ],
+      "next_action": "Retain as a bounded observed-source trial; specialist and runtime acceptance remain separate.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "esa/eval-negative-54",
+      "original_id": "eval-negative-54",
+      "kind": "boundary-control",
+      "prompt_sha256": "2826458ff3795babf8129935e23a379f3a0fcacf688fbb3b55cf72e859747414",
+      "answer_sha256": "ccb9db4e07050773b8ad49311baf6574d91d208612f8ece81f1512334b65e5f4",
+      "assessment": "partially-meets-authored-case",
+      "exact_evidence_integrity": "passed",
+      "interpretation_assessment": "Rejects an NHS appointment as sufficient and correctly excludes admission day without an individual award conclusion.",
+      "criteria_assessment": [
+        {
+          "criterion": "Retain all conditions, private-patient exceptions and benefit-specific consequences.",
+          "assessment": "partial"
+        },
+        {
+          "criterion": "Use the source’s day-counting distinction only in its own scope.",
+          "assessment": "met"
+        },
+        {
+          "criterion": "Do not infer an individual award change.",
+          "assessment": "met"
+        }
+      ],
+      "material_omissions": [
+        "The authored boundary behaviour also requires private-patient exceptions and benefit-specific consequences. The private-patient quote is attached but not explained, and 54003’s distinct ESA(IR)/ESA(Cont) consequence routes are neither stated nor attached."
+      ],
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "alternative_evidence_assessment": null,
+      "planned_evidence_coverage": {
+        "planned_locator_count": 0,
+        "exact_planned_targets_returned": 0,
+        "planned_targets_not_returned": [],
+        "meaning": "Diagnostic coverage only; an alternative exact passage may satisfy the same prompt. No automatic pass/fail by matching locators."
+      },
+      "supplemental_grading_evidence": [
+        {
+          "document_id": "dmg-vol9-ch54",
+          "pdf_page": 7,
+          "locator": "DMG 54003",
+          "url": "https://assets.publishing.service.gov.uk/media/5e9f025dd3bf7f031b0cc9e6/dmgch54.pdf#page=7",
+          "quote": "54003     A patient means a claimant (other than a prisoner) who is regarded as receiving\n          free in-patient treatment1. For how entitlement to ESA(Cont) is affected by being a\n          patient see DMG 54106. For how entitlement to ESA(IR) is affected by being a\n          patient see DMG 54091.\n                                                       1 SS (HIP) Regs, reg 2(4), 2(5) & ESA Regs, reg 69(2)\n\n\n\n\nVol 9 First Issue",
+          "quote_sha256": "83a0c4998a6ba6441821ebe505fcd71e3f059f0299cdb5f76ddc3b47a8cdfdec",
+          "page_text_sha256": "73db850ce2a8b5d42ebdb9d8efec7b13fa8caee6bc3c1e9dae94d74a62ef98fc",
+          "source_pdf_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0"
+        },
+        {
+          "document_id": "dmg-vol9-ch54",
+          "pdf_page": 9,
+          "locator": "DMG 54005",
+          "url": "https://assets.publishing.service.gov.uk/media/5e9f025dd3bf7f031b0cc9e6/dmgch54.pdf#page=9",
+          "quote": "54005     A person is treated as being maintained free of charge1 in a hospital or similar\n          institution unless\n\n          1.    accommodation and services are being provided for that person as a private\n                patient2 or\n\n          2.    the person is meeting the full cost of their maintenance as a private patient in\n                a private hospital3.\n                               1 SS (HIP) Regs, reg 2(4); 2 NHS Act 77, s 65; NHS (Scot) Act 78, s 58 & Sch 7A, para 14;\n                                                             NHS & CC Act 90, Sch 2, para 14; 3 SS (HIP) Regs, reg 2(4)",
+          "quote_sha256": "4fd9dafe53975f07515a4bc3e5dd2459eb6af1b0afe2b69b484cb78bb046c415",
+          "page_text_sha256": "b7b27952a1449c5b03d716a15d5296a6612f630d3c35c098faf36f23fc186dfc",
+          "source_pdf_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0"
+        }
+      ],
+      "next_action": "Retain the original response; if revising, execute a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    }
+  ],
+  "findings": [
+    "Exact source grounding is stronger than explanatory completeness: every attached excerpt checked matches frozen text, while 13 answers omit a relevant authored qualification or safeguard.",
+    "The 44013 date/transitional note is an acceptable alternative to 44631 for the specified WRAC boundary; requiring a literal locator match would incorrectly reject equivalent evidence.",
+    "The most consequential omissions concern negligible work, claimant evidence on disputed debt, ESA(Cont) income exceptions, already-received income, capital actions by others and complete hardship conditions."
+  ],
+  "limitations": [
+    "This is a context-aware source trial followed by a different model agent’s assessment; it is not independent human legal review, blind evaluation or a model accuracy benchmark.",
+    "The assessment preserves captured-guidance authority only. It does not verify current legislation, actual claimant outcomes, full appendix/case-law dependencies or operational suitability.",
+    "No live bundle/browser/WebMCP/voice path or provider API was executed by this assessment; runtime_bundle_binding remains null.",
+    "Omitted evidence is grading feedback, not an instruction to rewrite or overwrite the original observed response. A retry needs a separately linked attempt.",
+    "No observed token cost, comparative model performance or affordability conclusion is established."
+  ],
+  "timing_semantics": {
+    "started_at_finished_at": "Local integrity checking and assessment-artifact serialisation only.",
+    "model_reading_and_grading_duration": null,
+    "limitation": "The assessor read the answers, rubrics and source context before the recorded mechanical pass; that reading and judgement phase was not separately timed. These fields do not measure model latency or grading throughput."
+  }
+}

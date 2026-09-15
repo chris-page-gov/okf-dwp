@@ -1,0 +1,143 @@
+{
+  "schema": "okf-dwp-full-dmg-browser-validation.v1",
+  "status": "passed-for-recorded-public-journeys",
+  "content_commit": "80b6f08426aea39dd2934fb8795b61215e2cc0ad",
+  "snapshot": "dwp-full-dmg-2026-09-15-2dd78242297c",
+  "browser": "Installed Microsoft Edge through Codex computer-use API",
+  "consumer_source_commit": "8e01dfe16538c6045ee1d55b64c3f6e24bada9f7",
+  "launch_url": "https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F80b6f08426aea39dd2934fb8795b61215e2cc0ad%2Ffull-dmg%2Fokf-explorer.json&q=84351&view=narrative#page/84/0035",
+  "files": {
+    "full-dmg/okf-explorer.json": "33224f07d73235a4628fac65d2a129227fdca4ef30af3e28d3d29846ac804601",
+    "full-dmg/okf-explorer.yamlld": "c9323446b4afc9e37412eed9770509490331b9edb085c8a602d81db863d3acb2",
+    "full-dmg/checksums.json": "db61c0b299bf95f51ea8c6441bebe76f4cf0fa8c280537d763d2b2b2f39af883",
+    "full-dmg/build-inputs.json": "2dd78242297c75cd87cb452b75f6de3ca0b743c862d5117ccae12bbddb261db1",
+    "profiles/explorer-runtime/vendor-lock.json": "86c18877679131c4d446887a55acae1926d7a8d434d692e98e8b17c07ac35f14",
+    "validation/full-dmg.json": "909df615a2fbbdc252d4406971ac91a63c2903952695ccbc065c38085d786404"
+  },
+  "local_preflight": {
+    "status": "passed",
+    "host": "http://127.0.0.1:8002",
+    "source_candidate": "29c3ced8da385167044c8718bc08dd50c5397f73",
+    "checks": [
+      "Direct selected-record CPAG Timeline loads nine records; CPAG displays Apr2026 without a catalogue fallback; eight other matching records label their fallback dates.",
+      "Resources show all three matching source names, publishers and hosts without missing labels.",
+      "Indexed YAML-LD opens chapter84PDFpage35, retained84351–84353 source text and the original PDF-page link.",
+      "Search reversionary returns24records including chapter84PDFpage35, beyond its short result snippet."
+    ],
+    "console_warnings_or_errors": 0
+  },
+  "public_checks": [
+    {
+      "id": "json-graph-labels",
+      "status": "passed",
+      "route": "term/esa-exceptional-lcw-risk",
+      "observed": "11 nodes,10 relationships; human labels for source organisation, Markdown format, project-authored topic/tag, Concept tag, semantic neighbours and two source pages; no Missing label."
+    },
+    {
+      "id": "relationship-evidence",
+      "status": "passed",
+      "assertion": "30b93204ac7c3cf88a29d10ec48a305ec760f8073aa2780007c424794398c6e3",
+      "observed": "SKOS related source/target, model-derived/unreviewed authority, exact DMG42320 passage, authored YAML-LD hash8ff076e6afe74897faca2aac89c73afc83dfe96e407637932d6bcda3f54a47a6 and page-file hash76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5 visible."
+    },
+    {
+      "id": "direct-json-timeline",
+      "status": "passed",
+      "query": "CPAG",
+      "route": "resource/cpag-welfare-benefits-handbook",
+      "observed": "Nine matching records. CPAG displays Apr2026 and published2026-04, with separate observed15Sep2026 provenance and metadata-only notice. Eight other matching records explicitly label catalogue timestamp fallback."
+    },
+    {
+      "id": "resources",
+      "status": "passed",
+      "query": "84351",
+      "observed": "Six source groups, with human names,publisher distinctions,assets.publishing.service.gov.uk hosts and PDF labels. The project-authored question correctly links a PDF resource."
+    },
+    {
+      "id": "yaml-ld-narrative",
+      "status": "passed",
+      "route": "page/84/0035",
+      "observed": "Indexed YAML-LD loads complete source passage84351–84353, extraction/applicability notice and original PDF page link.",
+      "verified_href": "https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=35"
+    },
+    {
+      "id": "late-full-text-search",
+      "status": "passed",
+      "query": "reversionary",
+      "observed": "24 results including chapter84PDFpage35, whose matching word is beyond its short snippet."
+    },
+    {
+      "id": "unmatched-query",
+      "status": "passed",
+      "query": "zzzxqvnomatch",
+      "observed": "Unmatched term; no retrieved records. UI states all meaningful terms are required."
+    },
+    {
+      "id": "split-chapter",
+      "status": "passed",
+      "query": "073499",
+      "route": "page/dmg-vol2-ch7-part3/0115",
+      "observed": "Six results including memo,amendment,chapter-part pages and authored concept; selected page115 retains leading-zero references and original source text."
+    },
+    {
+      "id": "last-record-chunk",
+      "status": "passed",
+      "route": "term/wpa-remedial-transition",
+      "observed": "Final record chunk hydrates WPA/remedial-order concept, scope exceptions, exact source pointers/hashes and unreviewed authority."
+    },
+    {
+      "id": "generic-facet-graph",
+      "status": "passed",
+      "route": "facet/record_type/Concept",
+      "observed": "Human-labelled Concept facet,2nodes/1derived relationship; explicitly bounded to200 loaded of271 exact index matches."
+    },
+    {
+      "id": "final-json-narrative",
+      "status": "passed",
+      "route": "page/84/0035",
+      "observed": "Final launch URL and desktop screenshot display source passage and visible unreviewed/extraction boundaries."
+    },
+    {
+      "id": "direct-resources-deep-link",
+      "status": "passed",
+      "query": "84351",
+      "route": "page/84/0035",
+      "observed": "Walkthrough Resources URL loaded directly and returned six labelled PDF source groups after hydration. Switching to Narrative retained the selected chapter84PDFpage35."
+    }
+  ],
+  "limitations": [
+    "Bounded browser journeys, not exhaustive accessibility or every interactive route.",
+    "All semantics remain unreviewed by specialists; acquisition does not establish legal currency.",
+    "No WebMCP, live voice or room audio invocation tested.",
+    "Model trial responses are source-guided and have no live-runtime binding.",
+    "No comparative performance, model cost or affordability claim.",
+    "The full-corpus Graph uses bounded membership views; the inspected Concept facet explicitly showed200 of271 index matches.",
+    "Targeted resource hydration may show zero in the Evidence Sources tab before full resource loading; Narrative retains a direct original PDF link.",
+    "No exact-match equivalence is claimed between the Python evaluator and Explorer term expansion."
+  ],
+  "pilot_preservation": {
+    "baseline_commit": "82ffb603842d48d3ad71a661297ffcd85f4929e7",
+    "relationship_count": 964,
+    "all_relationship_identity_and_meaning_fields_unchanged": true,
+    "navigation_generator_hash_updates": 6,
+    "original_source_and_domain_profile_files_unchanged": true,
+    "immutable_original_links_retained": true,
+    "nodes_equal_as_parsed": 821
+  },
+  "recorded_at": "2026-09-15T22:07:27.993717+00:00",
+  "consumer_deployed_commit": "ab2e863bd6707474e01a054f065f7da5fa2d7ff4",
+  "consumer_app_tree_sha256": "84381f7ccc93015e9fab6a364cde40b668cbbdc65af3c12eaefdd673e0c809f1",
+  "consumer_publication_evidence": "validation/explorer-pr121-publication/evidence-index.json",
+  "browser_observations": {
+    "warning_or_error_logs": [],
+    "initial_loading": "Some navigations first show the load placeholder; settled page state was inspected before recording results. No latency metric was measured.",
+    "search_expansion": "unavailableclaimantdetails expands to the visible indexed term unavailable and7results in Explorer; this is not the Python exact-match no-result control. Read the displayed matched term.",
+    "visual_check": "Passed: inspected final public JSON Narrative screenshot at normal desktop viewport; exploratory notice, source role, original PDF link, page title and separate catalogue date are visible. No comprehensive accessibility or responsive audit claimed."
+  },
+  "candidate_ci": {
+    "status": "passed",
+    "runs": [
+      35028883819,
+      35028878408
+    ]
+  }
+}

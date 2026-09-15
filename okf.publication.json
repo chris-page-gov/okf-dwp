@@ -154,7 +154,7 @@
       },
       "limitations": [
         "No executable rules or human-approved interpretations.",
-        "Projected personas and behavioural evaluations remain unvalidated."
+        "Projected personas are unvalidated by staff. Observed source-guided model trials and independent model grades are retained, including partial answers and underspecified rubrics; no specialist or live-runtime acceptance is claimed."
       ]
     },
     {
@@ -175,6 +175,32 @@
       "limitations": [
         "No statutory provision text or effects acquired here.",
         "Sibling local changes are not an integrated published dependency."
+      ]
+    },
+    {
+      "id": "full-dmg-public-guidance",
+      "label": "Full DMG public guidance snapshot",
+      "kind": "public-document-snapshot",
+      "paths": [
+        "source/full-dmg-2026-09-15/**",
+        "knowledge/full-dmg/**"
+      ],
+      "authority": "official-source-with-derived-extraction-and-unreviewed-project-interpretation",
+      "inventory": {
+        "manifest_path": "source/full-dmg-2026-09-15/inventory.json",
+        "denominator": 331,
+        "census_path": "source/discovery-2026-09-15/census.json"
+      },
+      "rights": {
+        "status": "OGL-v3-with-attribution-and-exceptions",
+        "evidence": [
+          "NOTICE.md"
+        ]
+      },
+      "limitations": [
+        "Acquisition and semantic completion are separate gates; see evaluation/full-dmg-progress.json.",
+        "Source publication, observation and legal applicability dates remain distinct.",
+        "ADM is separately scoped; no CPAG handbook body content is included."
       ]
     }
   ],
@@ -227,12 +253,20 @@
       {
         "path": "evaluation/**",
         "role": "evaluation-design"
+      },
+      {
+        "path": "profiles/explorer-runtime/**",
+        "role": "pinned-consumer-contract-code-and-licence"
       }
     ],
     "generated": [
       {
         "path": "bundle/**",
         "role": "semantic-and-reader-projections"
+      },
+      {
+        "path": "full-dmg/**",
+        "role": "indexed-full-dmg-and-sharded-semantic-projections"
       }
     ]
   },
@@ -244,7 +278,8 @@
         "source/**"
       ],
       "command_ids": [
-        "validate"
+        "validate",
+        "full-dmg-source-check"
       ]
     },
     {
@@ -258,11 +293,20 @@
         "docs/evidence/cpag-access-review.json",
         "scripts/semantic_authoring.py",
         "evaluation/**",
-        "docs/evidence/cpag-publication-date-review.json"
+        "docs/evidence/cpag-publication-date-review.json",
+        "full-dmg/**"
       ],
       "command_ids": [
         "build-check",
-        "validate"
+        "validate",
+        "full-dmg-evidence-check",
+        "full-dmg-build-check",
+        "full-dmg-validate",
+        "full-dmg-coverage-check",
+        "full-dmg-consumer-check",
+        "full-dmg-retrieval-check",
+        "full-dmg-reference-check",
+        "full-dmg-trials-check"
       ]
     },
     {
@@ -335,6 +379,125 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 10
+      },
+      {
+        "id": "full-dmg-source-check",
+        "kind": "check",
+        "planes": [
+          "source"
+        ],
+        "command": "uv run --locked python scripts/acquire_full_dmg.py --check",
+        "source": "docs/next-stage/unattended-completion.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "full-dmg-evidence-check",
+        "kind": "check",
+        "planes": [
+          "source",
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/discover_full_dmg_evidence.py --check",
+        "source": "docs/next-stage/unattended-completion.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "full-dmg-build-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/build_full_dmg.py --check",
+        "source": "docs/next-stage/unattended-completion.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 15
+      },
+      {
+        "id": "full-dmg-validate",
+        "kind": "check",
+        "planes": [
+          "source",
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/validate_full_dmg.py",
+        "source": "docs/next-stage/unattended-completion.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 15
+      },
+      {
+        "id": "full-dmg-coverage-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/report_full_dmg_coverage.py --check",
+        "source": "docs/next-stage/unattended-completion.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "full-dmg-consumer-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "node --experimental-strip-types scripts/check_full_dmg_consumer.mjs",
+        "source": "profiles/explorer-runtime/vendor-lock.json",
+        "review_status": "pinned-upstream-consumer-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "full-dmg-retrieval-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/evaluate_full_dmg.py --check",
+        "source": "docs/next-stage/unattended-completion.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "full-dmg-reference-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/reconcile_full_dmg_references.py --check",
+        "source": "docs/next-stage/full-dmg-acquisition.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "full-dmg-trials-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/verify_full_dmg_trials.py --check",
+        "source": "docs/next-stage/unattended-completion.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
       }
     ]
   },
@@ -350,7 +513,9 @@
       "okf.publication.json",
       "docs/evidence/cpag-access-review.json",
       "evaluation/**",
-      "docs/evidence/cpag-publication-date-review.json"
+      "docs/evidence/cpag-publication-date-review.json",
+      "full-dmg/**",
+      "profiles/explorer-runtime/**"
     ],
     "documentation_paths": [
       "README.md",
@@ -391,7 +556,7 @@
     "mode": "github-repository",
     "scope": "experimental-preview",
     "authority": {
-      "decision": "Owner explicitly requested a public chris-page-gov repository and an unofficial meeting exemplar on 15 September 2026. The owner requested the next semantic stage, full DMG target by 24 September and seminar exploration for 30 September.",
+      "decision": "Owner explicitly requested a public chris-page-gov repository and an unofficial meeting exemplar on 15 September 2026. The owner requested the next semantic stage, full DMG target by 24 September and seminar exploration for 30 September. The owner then requested unattended bundle completion; normal reviewed PR publication is authorised.",
       "evidence_paths": [
         "REPOSITORY_STATUS.md"
       ]

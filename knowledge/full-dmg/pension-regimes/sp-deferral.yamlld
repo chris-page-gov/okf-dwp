@@ -1,0 +1,87 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/sp-deferral
+  '@type': skos:Concept
+  route: term/sp-deferral
+  title: Deferring State Pension entitlement
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured SP guidance calls postponement or suspension of entitlement deferral and says that
+    this regime has no own-deferral lump-sum option of the kind described for RP.
+  tags:
+  - full DMG
+  - pension regimes
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol12-ch74/0058
+  - page/dmg-vol12-ch74/0062
+  source: https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=58
+  resource: https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=58
+  sources:
+  - id: dmg-vol12-ch74
+    title: 'DMG Vol 12 Ch 74: State Pension'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=58
+    sha256: 5961a9cb7c86814a0f6fa147c0a8a551b4258c803680fac14a95cab9eca1afd6
+    retrieved_at: '2026-09-15T19:45:35.304148Z'
+  skos:prefLabel:
+    '@value': Deferring State Pension entitlement
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured SP guidance calls postponement or suspension of entitlement deferral and says that
+      this regime has no own-deferral lump-sum option of the kind described for RP.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is the person’s own SP deferral; inherited deferred RP and survivor options are separate
+      provisions. Days excluded from increments, overseas residence, notices, claims and cited memos require
+      review. No advice about whether an individual should defer is given.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-regimes
+    at: '2026-09-15T20:17:36Z'
+  observedAt: '2026-09-15T20:17:36Z'
+  body: "# Deferring State Pension entitlement\n\n## Source-backed proposal\n\nThe captured SP guidance calls postponement
+    or suspension of entitlement deferral and says that this regime has no own-deferral lump-sum option of the kind
+    described for RP.\n\n## Scope and exceptions\n\nThis is the person’s own SP deferral; inherited deferred RP
+    and survivor options are separate provisions. Days excluded from increments, overseas residence, notices, claims
+    and cited memos require review. No advice about whether an individual should defer is given.\n\n## Inspected
+    passages\n\n- [DMG 74501, PDF page 58](https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=58).\n\
+    - [DMG 74526, PDF page 62](https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=62).\n\
+    \n## Provenance and review\n\nIndependent experimental interpretation of DWP guidance, not an official DWP document.
+    All definitions and relationships are model-assisted and unreviewed. No individual eligibility, award, legal
+    conclusion or executable rule is supplied.\n\nSource observation, listing-page update, printed revision, stated
+    legal date and pension event date have separate meanings. PDF page numbers are one-based file positions; extraction
+    may damage reading order, footnotes and characters. No visual PDF or specialist acceptance is claimed.\n\n-
+    `dmg-vol12-ch74` — PDF SHA-256 `5961a9cb7c86814a0f6fa147c0a8a551b4258c803680fac14a95cab9eca1afd6`; page-extraction
+    SHA-256 `c762e93940b4342d70d5bc96a80c3e094c91852d93868f5709e04f293faef61a`.\n"
+  semantic_relations:
+  - target: term/sp-entitlement-suspension
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source includes opting to suspend entitlement within the definition of SP deferral.
+    evidence:
+    - page: page/dmg-vol12-ch74/0062
+      quote: "74526 A person’s entitlement to SP is deferred for a period if they\n\n\n1. opted1 to suspend their
+        entitlement for that period 2 or\n\n\n2. are not entitled to SP for that period only because\n\n\n     \
+        \ 2.1 they have not made a claim3 or\n\n\n      2.2 they have deferred their entitlement to any other SP4.\n\
+        \n\nNote: This also applies5 to overseas residents (see DMG 74574 et seq).\n\n\n                       \
+        \                     1 Pensions Act 14, s 16; 2 s 17(7); 3 s 17(8)(a); SS Admin Act, s 1;\n           \
+        \                                           4 Pensions Act 14, s 17(8)(b) & (9); 5 s 17(7) & (8) & 18"
+      locator: DMG 74526
+  - target: term/rp-deferral-election
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source explicitly contrasts the SP deferral route with RP increments/lump-sum options; no
+      equivalence of the two regimes is asserted.
+    evidence:
+    - page: page/dmg-vol12-ch74/0058
+      quote: "74501 [See Memo ADM 09-25] [See Memo DMG 01/26] Entitlement to SP starts on the day all the\nconditions
+        for\n\n\n1. pensionable age and\n\n\n2. contributions and\n\n\n3. claims\n\n\nare satisfied. However, people
+        may postpone or suspend 1 their entitlement to SP. This is known as\ndeferral. For RP purposes people may
+        be able to choose Incs or a lump sum payment. However, for SP\npurposes there is no lump sum payment option.\n\
+        \n\n                                                                                   1 Pensions Act 14,
+        s 16"
+      locator: DMG 74501

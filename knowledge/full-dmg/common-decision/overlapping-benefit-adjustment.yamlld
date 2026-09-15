@@ -1,0 +1,104 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-overlapping-benefit-adjustment
+  '@type': skos:Concept
+  route: term/dmg-overlapping-benefit-adjustment
+  title: Order of adjustment for overlapping benefits
+  type: Concept
+  description: The captured chapter describes an order for considering payment adjustments after checking that
+    benefits are not incompatible, including qualifications for hospital deductions and special benefit rules.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Order of adjustment for overlapping benefits
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured chapter describes an order for considering payment adjustments after checking that
+      benefits are not incompatible, including qualifications for hospital deductions and special benefit
+      rules.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The order is a review subject, not implemented arithmetic. The full conditions, amounts,
+      historical rules, exceptions and benefit-specific provisions remain unmodelled. DMG 17040 cross-refers
+      to ADM M5 for new-style ESA/JSA terminology.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch17/0022
+  - page/dmg-vol3-ch17/0023
+  - page/dmg-vol3-ch17/0004
+  source: https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=22
+  resource: https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=22
+  sources:
+  - id: dmg-vol3-ch17
+    title: 'DMG Vol 3 Ch 17: Overlapping benefits'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=22
+    retrieved_at: '2026-09-15T19:45:22.416226Z'
+    sha256: ce6967960168b301ae0b454df6824017202f6d3f6a14282a7ef0d4778bdac19a
+  body: "# Order of adjustment for overlapping benefits\n\n## Authored interpretation\n\nThe captured chapter describes
+    an order for considering payment adjustments after checking that benefits are not incompatible, including qualifications
+    for hospital deductions and special benefit rules.\n\n## Scope and exceptions\n\nThe order is a review subject,
+    not implemented arithmetic. The full conditions, amounts, historical rules, exceptions and benefit-specific
+    provisions remain unmodelled. DMG 17040 cross-refers to ADM M5 for new-style ESA/JSA terminology.\n\n## Inspected
+    source passages\n\n- [DMG 17170, PDF page 22](https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=22)
+    — DMG Vol 3 Ch 17: Overlapping benefits.\n- [DMG 17180, PDF page 23](https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=23)
+    — DMG Vol 3 Ch 17: Overlapping benefits.\n- [DMG 17040, PDF page 4](https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=4)
+    — DMG Vol 3 Ch 17: Overlapping benefits.\n\n## Evidence and review status\n\nModel-assisted interpretation of
+    the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source is DWP guidance,
+    not a consolidated statement of legislation. This is an independent experimental publication, not an official
+    DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are one-based file
+    positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships preserve
+    extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current applicability
+    remain separate review tasks.\n\n- `dmg-vol3-ch17` PDF SHA-256: `ce6967960168b301ae0b454df6824017202f6d3f6a14282a7ef0d4778bdac19a`;
+    extracted pages SHA-256: `c00f0acadb11047d22fe6c046a756a164cc7be254aaebfb91470f2f38201af99`.\n"
+  semantic_relations:
+  - target: term/dmg-incompatible-benefits
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source explicitly requires checking incompatibility before considering the stated
+      adjustment order.
+    evidence:
+    - page: page/dmg-vol3-ch17/0022
+      quote: "17170 Before considering adjustment of benefits in the order set out below the DM should check that\n\
+        the benefits in question are not incompatible (see DMG 17005). If they are not incompatible the order of\n\
+        adjustment is as follows\n\n\n1. make adjustments due for other reasons, for example, earnings and Invalidity
+        Addition/AP\nadjustments. This is because the overlapping benefits provisions take account of amounts payable.
+        An\nexception to this is with hospital in-patients where an adjustment for overlapping benefits should be\n\
+        \ncarried out before any hospital in-patient deduction1\n\n\n2. deduct personal Industrial Injuries and
+        non-Act benefits from personal Act benefit 2\n\n\n3. deduct personal Act benefit from other personal Act
+        benefit 3\n\n\n4. deduct Act and non-Act dependency benefit from other Act dependency benefit 4\n\n\n5.
+        deduct Act and non-Act personal benefit payable to dependants in their own right from Act\n\ndependency
+        benefit payable for them5\n\n\n6. make any hospital in-patient adjustments6 (see DMG 17161 for exception).\n\
+        \n\n                 1 SS (HIP) Regs, reg 18; 2 SS (OB) Regs, reg 6(1); 3 reg 4; 4 reg 7, reg 9; 5 reg 10;
+        6 reg 18"
+      locator: DMG 17170
+  - target: term/dmg-overlapping-benefits
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The ordered steps refer to overlapping-benefit amounts payable and include a hospital-deduction
+      exception.
+    evidence:
+    - page: page/dmg-vol3-ch17/0022
+      quote: "17170 Before considering adjustment of benefits in the order set out below the DM should check that\n\
+        the benefits in question are not incompatible (see DMG 17005). If they are not incompatible the order of\n\
+        adjustment is as follows\n\n\n1. make adjustments due for other reasons, for example, earnings and Invalidity
+        Addition/AP\nadjustments. This is because the overlapping benefits provisions take account of amounts payable.
+        An\nexception to this is with hospital in-patients where an adjustment for overlapping benefits should be\n\
+        \ncarried out before any hospital in-patient deduction1\n\n\n2. deduct personal Industrial Injuries and
+        non-Act benefits from personal Act benefit 2\n\n\n3. deduct personal Act benefit from other personal Act
+        benefit 3\n\n\n4. deduct Act and non-Act dependency benefit from other Act dependency benefit 4\n\n\n5.
+        deduct Act and non-Act personal benefit payable to dependants in their own right from Act\n\ndependency
+        benefit payable for them5\n\n\n6. make any hospital in-patient adjustments6 (see DMG 17161 for exception).\n\
+        \n\n                 1 SS (HIP) Regs, reg 18; 2 SS (OB) Regs, reg 6(1); 3 reg 4; 4 reg 7, reg 9; 5 reg 10;
+        6 reg 18"
+      locator: DMG 17170

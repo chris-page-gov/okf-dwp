@@ -1,0 +1,85 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-outcome-decision
+  '@type': skos:Concept
+  route: term/dmg-outcome-decision
+  title: DMG outcome decision
+  type: Concept
+  description: An outcome decision communicates the result of a claim or application and incorporates
+    subsidiary determinations, including entitlement elements and the day payment begins.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': DMG outcome decision
+    '@language': en-GB
+  skos:definition:
+    '@value': An outcome decision communicates the result of a claim or application and incorporates
+      subsidiary determinations, including entitlement elements and the day payment begins.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The distinction between the outcome and its component findings matters for challenges. Annex D
+      and Annex E determine the appealable and non-appealable categories; these two paragraphs do not
+      enumerate them.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol1-ch1/0017
+  source: https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=17
+  resource: https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=17
+  sources:
+  - id: dmg-vol1-ch1
+    title: 'DMG Vol 1 Ch 1: Principles of decision making and evidence'
+    author: organisation:dwp
+    resource:
+      https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=17
+    retrieved_at: '2026-09-15T19:45:18.139103Z'
+    sha256: 58b168c7b0a01f54713f6cfa60953549ebc099cbe568ffaeea551d0b756495d2
+  body: "# DMG outcome decision\n\n## Authored interpretation\n\nAn outcome decision communicates the result of
+    a claim or application and incorporates subsidiary determinations, including entitlement elements and the day
+    payment begins.\n\n## Scope and exceptions\n\nThe distinction between the outcome and its component findings
+    matters for challenges. Annex D and Annex E determine the appealable and non-appealable categories; these two
+    paragraphs do not enumerate them.\n\n## Inspected source passages\n\n- [DMG 01101, PDF page 17](https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=17)
+    — DMG Vol 1 Ch 1: Principles of decision making and evidence.\n- [DMG 01102, PDF page 17](https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=17)
+    — DMG Vol 1 Ch 1: Principles of decision making and evidence.\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source
+    is DWP guidance, not a consolidated statement of legislation. This is an independent experimental publication,
+    not an official DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are
+    one-based file positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships
+    preserve extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current
+    applicability remain separate review tasks.\n\n- `dmg-vol1-ch1` PDF SHA-256: `58b168c7b0a01f54713f6cfa60953549ebc099cbe568ffaeea551d0b756495d2`;
+    extracted pages SHA-256: `cf7a000e2c54c5361a03ec4ad73fa22cc14e8cdb0d4f03b53919a4a509a6eacb`.\n"
+  semantic_relations:
+  - target: term/dmg-prescribed-claim
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: An outcome decision is described as the decision on a claim or application; this does not mean
+      that every application is a claim.
+    evidence:
+    - page: page/dmg-vol1-ch1/0017
+      quote: "01101 The decision on a claim or application is called an outcome decision because it tells the claimant\n\
+        the outcome of the claim or application. An outcome decision incorporates all subsidiary determinations\n\
+        such as the separate elements of entitlement to benefit and the day that benefit will be paid."
+      locator: DMG 01101
+  - target: term/dmg-first-tier-appeal
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The paragraph links appeal rights to outcome decisions while distinguishing subsidiary findings
+      and referring to the annexes.
+    evidence:
+    - page: page/dmg-vol1-ch1/0017
+      quote: "01102 The claimant has a right of appeal against outcome decisions only 1 as listed in Annex D to
+        this\nVolume. An outcome decision on a claim, for example, is whether or not the claimant is entitled to\n\
+        benefit. As part of the process of making that decision, the DM makes determinations or findings of fact\n\
+        which lead to the outcome. These determinations generally do not have the right of appeal - see Annex\n\n\
+        E2. Although an appeal is against the outcome decision, in practice the claimant may wish to focus on a\n\
+        component part of the decision. For further details on appeals see DMG Chapter 06."
+      locator: DMG 01102

@@ -1,0 +1,78 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/sda-youth-transition
+  '@type': skos:Concept
+  route: term/sda-youth-transition
+  title: SDA youth transition and qualifying-period distinctions
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The source describes a dated transition treating certain SDA days as IB(Y) days and separately
+    sets out SDA’s incapacity and, for some claimants, disablement qualifying-period requirements.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol10-ch57/0006
+  - page/dmg-vol10-ch57/0009
+  source: https://assets.publishing.service.gov.uk/media/5a818c4440f0b62302697e6e/dmgch57.pdf#page=6
+  sources:
+  - id: dmg-vol10-ch57
+    title: 'DMG Vol 10 Ch 57: Severe Disablement Allowance'
+    resource: https://assets.publishing.service.gov.uk/media/5a818c4440f0b62302697e6e/dmgch57.pdf
+    author: organisation:dwp
+    sha256: e5308157f4aed131c245dfd1554a126ad2800f670127de7995f6c643db8ce63b
+    retrieved_at: '2026-09-15T19:45:32.506330Z'
+  skos:prefLabel:
+    '@value': SDA youth transition and qualifying-period distinctions
+    '@language': en-GB
+  skos:definition:
+    '@value': The source describes a dated transition treating certain SDA days as IB(Y) days and separately
+      sets out SDA’s incapacity and, for some claimants, disablement qualifying-period requirements.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The youth transition depends on the source’s age, date and continuity/linking conditions. SDA’s
+      qualifying-period treatment of some disqualification days differs from IB; identical day counts do not
+      make the regimes interchangeable.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# SDA youth transition and qualifying-period distinctions\n\n## Authored interpretation\n\nThe source describes
+    a dated transition treating certain SDA days as IB(Y) days and separately sets out SDA’s incapacity and, for
+    some claimants, disablement qualifying-period requirements.\n\n## Scope and exceptions\n\nThe youth transition
+    depends on the source’s age, date and continuity/linking conditions. SDA’s qualifying-period treatment of some
+    disqualification days differs from IB; identical day counts do not make the regimes interchangeable.\n\n## Inspected
+    passages\n\n- [DMG 57005, PDF page 6](https://assets.publishing.service.gov.uk/media/5a818c4440f0b62302697e6e/dmgch57.pdf#page=6).\n\
+    - [DMG 57006, PDF page 6](https://assets.publishing.service.gov.uk/media/5a818c4440f0b62302697e6e/dmgch57.pdf#page=6).\n\
+    - [DMG 57013, PDF page 9](https://assets.publishing.service.gov.uk/media/5a818c4440f0b62302697e6e/dmgch57.pdf#page=9).\n\
+    - [DMG 57016, PDF page 9](https://assets.publishing.service.gov.uk/media/5a818c4440f0b62302697e6e/dmgch57.pdf#page=9).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol10-ch57`:
+    PDF `e5308157f4aed131c245dfd1554a126ad2800f670127de7995f6c643db8ce63b`; extracted pages `5b68aac36596be58528e0c3561d5ef604ec3cf774a61eb2ab93d8639dca9531c`;
+    acquired `2026-09-15T19:45:32.506330Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/5a818c4440f0b62302697e6e/dmgch57.pdf#page=6
+  semantic_relations:
+  - target: term/ib-youth-overlap-classification
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The historical SDA transition explicitly uses IB(Y), preserving the stated dates and
+      conditions.
+    evidence:
+    - page: page/dmg-vol10-ch57/0006
+      quote: "57005   Days of entitlement to SDA in the period 6.4.01 to 5.4.02 are treated as days of\n       \
+        \ entitlement to IB(Y) if the claimant\n\n        1.      was aged under 20 on 5.4.01 and\n\n        2.\
+        \      continues to be incapable of work (see DMG 57006 where incapacity is not\n                continuous).\n\
+        \n        If incapacity continues the person is entitled to IBLT from 6.4.021. IB under this\n        paragraph
+        is not reduced by pension payments (See DMG 56135).\n                                                  \
+        \                                       1 SS (IB) Regs, reg 19(1)"
+      locator: DMG 57005

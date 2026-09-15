@@ -1,0 +1,89 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/ca-qualifying-disability-payment
+  '@type': skos:Concept
+  route: term/ca-qualifying-disability-payment
+  title: Qualifying disability payment in the CA definition
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: For CA, the source’s definition of a severely disabled person refers to specified payable
+    benefits or components, rather than a diagnosis alone.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol10-ch60/0004
+  - page/dmg-vol10-ch60/0005
+  - page/dmg-vol10-ch60/0008
+  source: https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=4
+  sources:
+  - id: dmg-vol10-ch60
+    title: 'DMG Vol 10 Ch 60: Carer’s Allowance'
+    resource: https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf
+    author: organisation:dwp
+    sha256: ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a
+    retrieved_at: '2026-09-15T19:45:32.596227Z'
+  skos:prefLabel:
+    '@value': Qualifying disability payment in the CA definition
+    '@language': en-GB
+  skos:definition:
+    '@value': For CA, the source’s definition of a severely disabled person refers to specified payable
+      benefits or components, rather than a diagnosis alone.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 60033 spans pages 4–5 and refers to Memo 02/25, Scottish payments and an EU-equivalent
+      benefit. The list and weekly-rate requirement must be read in full. Do not equate DLA mobility with DLA
+      care or treat this as a generic definition of disability. DMG 60050’s shorter hospital list needs
+      reconciliation with the expanded definition.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Qualifying disability payment in the CA definition\n\n## Authored interpretation\n\nFor CA, the source’s
+    definition of a severely disabled person refers to specified payable benefits or components, rather than a diagnosis
+    alone.\n\n## Scope and exceptions\n\nDMG 60033 spans pages 4–5 and refers to Memo 02/25, Scottish payments and
+    an EU-equivalent benefit. The list and weekly-rate requirement must be read in full. Do not equate DLA mobility
+    with DLA care or treat this as a generic definition of disability. DMG 60050’s shorter hospital list needs reconciliation
+    with the expanded definition.\n\n## Inspected passages\n\n- [DMG 60033, PDF page 4](https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=4).\n\
+    \n## Additional context\n\n- [Context: chapter 60, PDF page 5](https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=5).\n\
+    - [Context: chapter 60, PDF page 8](https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=8).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol10-ch60`:
+    PDF `ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a`; extracted pages `bc5925c0d434fbc4bec575bea2e1e2dbd020b014497ab156973054e80e326f2f`;
+    acquired `2026-09-15T19:45:32.596227Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=4
+  semantic_relations:
+  - target: term/dla-component-distinction
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The CA definition specifically identifies the highest or middle DLA care component, supporting
+      a component-specific association.
+    evidence:
+    - page: page/dmg-vol10-ch60/0004
+      quote: "60033 [see DMG memo 02/25] “Severely disabled person” means a person for whom\n\n\n1. AA1 or\n\n\n\
+        2. the care component of DLA at the highest or middle rate or pension age disability\npayment2 or\n\n3.
+        CAA payable as\n\n\n       3.1 an increase of IIDB3 or\n\n\n       3.2 an increase of an old scheme allowance4
+        or\n\n\n       3.3 an increase of WC5 or\n\n\n       3.4 a WDisP6 or\n\n\n4. the daily living component
+        of PIP at the standard or enhanced rate 7 or"
+      locator: DMG 60033
+  - target: term/aa-care-needs
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: AA is a named qualifying payment in the captured CA definition.
+    evidence:
+    - page: page/dmg-vol10-ch60/0004
+      quote: "60033 [see DMG memo 02/25] “Severely disabled person” means a person for whom\n\n\n1. AA1 or\n\n\n\
+        2. the care component of DLA at the highest or middle rate or pension age disability\npayment2 or\n\n3.
+        CAA payable as\n\n\n       3.1 an increase of IIDB3 or\n\n\n       3.2 an increase of an old scheme allowance4
+        or\n\n\n       3.3 an increase of WC5 or\n\n\n       3.4 a WDisP6 or\n\n\n4. the daily living component
+        of PIP at the standard or enhanced rate 7 or"
+      locator: DMG 60033

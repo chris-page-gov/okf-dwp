@@ -1,0 +1,79 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-overseas-delayed-claim
+  '@type': skos:Concept
+  route: term/intl-overseas-delayed-claim
+  title: Source-described delayed claims caused by specified overseas employment
+  type: Concept
+  description: The source gives a claim-timing provision for the named mariner, airman, continental shelf worker and forces categories, where overseas employment prevents a timely claim and the claim is made as soon as reasonably practicable.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-international-research
+    at: '2026-09-15T20:19:49.223063Z'
+  observedAt: '2026-09-15T20:19:49.223063Z'
+  skos:prefLabel:
+    '@value': Source-described delayed claims caused by specified overseas employment
+    '@language': en-GB
+  skos:definition:
+    '@value': The source gives a claim-timing provision for the named mariner, airman, continental shelf worker and forces categories, where overseas employment prevents a timely claim and the claim is made as soon as reasonably practicable.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 078100 is conditional on both the employment-related impediment and prompt subsequent action. It is not an unlimited overseas deadline extension or a rule for every claimant abroad.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - international subjects
+  - chapter 7 part 7
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol2-ch7-part7/0009
+  source: https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=9
+  resource: https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=9
+  sources:
+  - id: dmg-vol2-ch7-part7
+    title: "DMG Vol 2 Ch 7 Part 7: Offshore workers and Her Majesty's forces [078060 to 079999]"
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf
+    retrieved_at: '2026-09-15T19:45:20.233458Z'
+    sha256: 0ca8d6f5ffc6a7c24b630b8ac219371f5e8b29c12b247ee9b18c8e27203eb532
+  body: |
+    # Source-described delayed claims caused by specified overseas employment
+
+    ## Authored interpretation
+
+    The source gives a claim-timing provision for the named mariner, airman, continental shelf worker and forces categories, where overseas employment prevents a timely claim and the claim is made as soon as reasonably practicable.
+
+    ## Scope and boundaries
+
+    DMG 078100 is conditional on both the employment-related impediment and prompt subsequent action. It is not an unlimited overseas deadline extension or a rule for every claimant abroad.
+
+    ## Inspected source passages
+
+    - [DMG 078100, PDF page 9](https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=9)
+
+    ## Evidence and review status
+
+    This is a model-assisted, unreviewed interpretation of selected passages in the frozen DWP source. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable rule. No specialist acceptance, current-law reconciliation or complete coverage of this chapter part is claimed. References to EU law, countries and benefits retain the scope and date context of the cited text; they do not establish applicability to a person or a later regime. Machine extraction may alter reading order and characters; no visual PDF review is claimed.
+
+    Source captured: 2026-09-15T19:45:20.233458Z. This is an acquisition time, not a publication or legal commencement date. The attachment publication date is not established by the frozen metadata. Source-stated dates require their own role and precision.
+
+    PDF SHA-256: `0ca8d6f5ffc6a7c24b630b8ac219371f5e8b29c12b247ee9b18c8e27203eb532`. Extracted pages SHA-256: `7375d9e98727f909c1efe0321340b929a153a64466d6d7161d6e1f6d86515424`.
+  semantic_relations:
+  - target: term/intl-mariner-other-benefits
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The conditional claim-timing paragraph explicitly names mariners among the special employment categories.
+    evidence:
+    - page: page/dmg-vol2-ch7-part7/0009
+      quote: "078100    A claim for benefit made by a mariner, airman, continental shelf worker or member\n                      1\n          of the forces is treated as made within the prescribed time if that person\n\n          1.    is outside the United Kingdom because of that employment and unable to\n                claim within the prescribed time and\n\n          2.    claims as soon as is reasonably practicable.\n                          1 SS (Mariners' Ben) Regs, reg 9; SS (Airmen's Ben) Regs, reg 3; SS (II) (Mariners' Ben) Regs,\n                                                 reg 8; SS (II) (Airmen's Ben) Regs, reg 5; SS Ben (PA) Regs, reg 11(4);\n                                                                           SS (Ben) (Members of the Forces) Regs, reg 5"
+      locator: DMG 078100
+  - target: term/intl-offshore-prescribed-employment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The same conditional claim-timing provision explicitly names continental shelf workers.
+    evidence:
+    - page: page/dmg-vol2-ch7-part7/0009
+      quote: "078100    A claim for benefit made by a mariner, airman, continental shelf worker or member\n                      1\n          of the forces is treated as made within the prescribed time if that person\n\n          1.    is outside the United Kingdom because of that employment and unable to\n                claim within the prescribed time and\n\n          2.    claims as soon as is reasonably practicable.\n                          1 SS (Mariners' Ben) Regs, reg 9; SS (Airmen's Ben) Regs, reg 3; SS (II) (Mariners' Ben) Regs,\n                                                 reg 8; SS (II) (Airmen's Ben) Regs, reg 5; SS Ben (PA) Regs, reg 11(4);\n                                                                           SS (Ben) (Members of the Forces) Regs, reg 5"
+      locator: DMG 078100

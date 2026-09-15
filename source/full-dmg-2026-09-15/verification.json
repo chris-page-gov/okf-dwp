@@ -1,0 +1,58 @@
+{
+  "schema": "okf-dwp-full-dmg-verification.v1",
+  "verified_at": "2026-09-15T19:49:16.407710Z",
+  "inventory_sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a",
+  "checks": {
+    "complete_documents": 331,
+    "all_pdf_text_and_page_hashes_verified": true,
+    "all_pdf_page_counts_remeasured": true,
+    "all_36_original_urls_paths_hashes_and_http_observations_preserved": true,
+    "quality_metrics_recomputed_from_exact_text": true,
+    "aggregate_summary_recomputed": true,
+    "frozen_inputs_unchanged": true,
+    "acquisition_negative_control_tests_passed": 8
+  },
+  "toolchain_observed_after_run": {
+    "pdfinfo": "26.08.0",
+    "pdftotext": "26.08.0",
+    "pdftoppm": "26.08.0"
+  },
+  "model_visual_samples": [
+    {
+      "document_id": "dmg-vol1-ch1",
+      "pdf_page": 10,
+      "source_url": "https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=10",
+      "pdf_sha256": "58b168c7b0a01f54713f6cfa60953549ebc099cbe568ffaeea551d0b756495d2",
+      "image_path": "source/full-dmg-2026-09-15/qa/vol1-ch1-page10.png",
+      "image_sha256": "b5ef9febaba1f39497ff43ce7f1579edbd7cbf614289bddba90f03e2bfa85c5d",
+      "reviewer_type": "model-visual-comparison",
+      "outcome": "Representative text and numbered conditions visually agree with the extraction; superscript footnotes are flattened in plain text."
+    },
+    {
+      "document_id": "dmg-vol1-ch5",
+      "pdf_page": 2,
+      "source_url": "https://assets.publishing.service.gov.uk/media/5a81b89640f0b62305b90790/dmgch05.pdf#page=2",
+      "pdf_sha256": "7c9bdb92c805924d6f5b185651f5e21e2d3b7e78214dc3d8ec2a549c73b70728",
+      "image_path": "source/full-dmg-2026-09-15/qa/vol1-ch5-page2.png",
+      "image_sha256": "398e43bf381288af164f00ecd61a5589a9a5990720ddd717bf74bceab15bac77",
+      "reviewer_type": "model-visual-comparison",
+      "outcome": "This single no-text sample renders as a blank page; no inference is made about the other no-text pages."
+    },
+    {
+      "document_id": "dmg-vol8-amendment27",
+      "pdf_page": 7,
+      "source_url": "https://assets.publishing.service.gov.uk/media/5caf2d9aed915d02879c6901/vol08am27.pdf#page=7",
+      "pdf_sha256": "b14c3165f6ed91e0c115a1e45fab6a109d9cf5f4de40e467cc1ec86d8fb61816",
+      "image_path": "source/full-dmg-2026-09-15/qa/vol8-amendment27-page7.png",
+      "image_sha256": "fb4a3dd6da2d90447991072502f02506bfc965b93876409716f8e4a062afd23d",
+      "reviewer_type": "model-visual-comparison",
+      "outcome": "Rendered text is legible while the extracted text inserts spaces within words. This confirms a text-layer spacing defect on this sampled historical amendment page; extraction remains unchanged."
+    }
+  ],
+  "limitations": [
+    "Only three new pages visually compared by the model; this is not whole-corpus or specialist review.",
+    "No OCR, word repair, legal consolidation or applicability review.",
+    "Poppler rendering reported unwritable font cache directories; all three output images were produced and inspected."
+  ],
+  "acquisition_script_sha256": "a62db02056131f00831e1062bd98b2204e630ec40b65a1ce04738afd9b861879"
+}

@@ -1,0 +1,104 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsais-student-eligibility
+  '@type': skos:Concept
+  route: term/legacy-jsais-student-eligibility
+  title: Student eligibility and benefit-specific exceptions
+  type: Concept
+  description: The captured student chapter explains the normal JSA and IS restrictions through
+    different underlying conditions and then identifies benefit-specific exceptions.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Student eligibility and benefit-specific exceptions
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured student chapter explains the normal JSA and IS restrictions through
+      different underlying conditions and then identifies benefit-specific exceptions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Student status alone does not settle entitlement. The selected exception passage
+      continues on PDF page 37 and includes course, holiday, family and territorial qualifications;
+      IS categories and transitional lone-parent provisions differ. No current student entitlement,
+      loan eligibility or course classification is determined.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol6-ch30/0007
+  - page/dmg-vol6-ch30/0036
+  - page/dmg-vol6-ch30/0037
+  - page/dmg-vol6-ch30/0040
+  source: https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf#page=7
+  resource:
+    https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf#page=7
+  sources:
+  - id: dmg-vol6-ch30
+    title: 'DMG Vol 6 Ch 30: Students, young claimants and their partners'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf
+    retrieved_at: '2026-09-15T19:45:26.638842Z'
+    sha256: 1540b54680884fdaa8a71e26fdebe12899d876b459d448198a7c941a37960780
+  body: "# Student eligibility and benefit-specific exceptions\n\n## Authored interpretation\n\nThe captured
+    student chapter explains the normal JSA and IS restrictions through different underlying conditions
+    and then identifies benefit-specific exceptions.\n\n## Scope and exceptions\n\nStudent status alone
+    does not settle entitlement. The selected exception passage continues on PDF page 37 and includes
+    course, holiday, family and territorial qualifications; IS categories and transitional lone-parent
+    provisions differ. No current student entitlement, loan eligibility or course classification is determined.\n\
+    \n## Inspected source passages\n\n- [DMG 30012, PDF page 7](https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf#page=7)
+    — DMG Vol 6 Ch 30: Students, young claimants and their partners.\n- [DMG 30206, PDF page 36](https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf#page=36)
+    — DMG Vol 6 Ch 30: Students, young claimants and their partners.\n- [DMG 30207, PDF page 36](https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf#page=36)
+    — DMG Vol 6 Ch 30: Students, young claimants and their partners.\n- [DMG 30208, PDF page 37](https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf#page=37)
+    — DMG Vol 6 Ch 30: Students, young claimants and their partners.\n- [Inspected continuation, PDF page
+    37](https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf#page=37) —
+    context for the selected paragraph.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol6-ch30`: PDF SHA-256 `1540b54680884fdaa8a71e26fdebe12899d876b459d448198a7c941a37960780`;
+    extracted pages SHA-256 `768537aba8259637b2425c4f5359b19a59adee89282078ead1e22f6c4f973665`.\n"
+  semantic_relations:
+  - target: term/legacy-jsais-study-period
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source gives separate JSA and IS study-period meanings for entitlement purposes,
+      so dates must be resolved within the relevant benefit.
+    evidence:
+    - page: page/dmg-vol6-ch30/0040
+      quote: "30218 For entitlement purposes only, the period of study 1 begins on the date that the student
+        starts\nattending or undertaking the course and ends on\n\n\n1. the last day of the course or\n\
+        \n\n2. such earlier date as the student\n\n\n      2.1 abandons the course or\n\n\n      2.2 is
+        dismissed from the course.\n\n\n                                                             \
+        \                      1 IS (Gen) Regs, reg 2(1)\n\n\nJSA"
+      locator: DMG 30218
+    - page: page/dmg-vol6-ch30/0040
+      quote: "30219 For entitlement purposes only, the period of study 1 is\n\n\n1. the period that the
+        student is treated as attending or undertaking the course of study and\n\n\n2. any period of attendance
+        by the student at their educational establishment or any period of study\nundertaken by a student
+        in connection with their course, which is before or after the period of the course.\n\n\n    \
+        \                                                                                     1 JSA Regs,
+        reg 4\n\n\nNote: The definition at DMG 30218 and DMG 30219 apply to eligibility only. They should
+        not be used for\nany other purpose."
+      locator: DMG 30219
+  - target: term/legacy-jsa-availability
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The normal JSA student restriction is explained through availability for work, while
+      IS uses its prescribed-category condition.
+    evidence:
+    - page: page/dmg-vol6-ch30/0036
+      quote: "30206 Students (F/T students) are not normally eligible for JSA or IS during the period
+        of study. This is\nbecause for\n\n\n1. JSA, they are not regarded as available for employment
+        1\n\n\n2. IS, they are not a prescribed category of person2.\n\n\n                           \
+        \                  1 JSA Regs, reg 15(a); 2 IS (Gen) Regs, reg 4ZA(1), (2) & Sch 1B\n\n\n\nJSA"
+      locator: DMG 30206

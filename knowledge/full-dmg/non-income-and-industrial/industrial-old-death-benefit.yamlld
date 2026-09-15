@@ -1,0 +1,86 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/industrial-old-death-benefit
+  '@type': skos:Concept
+  route: term/industrial-old-death-benefit
+  title: Death benefit in retained PB and MDB guidance
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The retained old-scheme guidance describes a lump sum for specified dependants, with disease,
+    death-date, pre-1948 employment and compensation conditions.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol11-ch73/0009
+  source: https://assets.publishing.service.gov.uk/media/5a8019b540f0b62305b892c3/dmgch73.pdf#page=9
+  sources:
+  - id: dmg-vol11-ch73
+    title: 'DMG Vol 11 Ch 73: Old cases'
+    resource: https://assets.publishing.service.gov.uk/media/5a8019b540f0b62305b892c3/dmgch73.pdf
+    author: organisation:dwp
+    sha256: 3b17129736cf09e79f9df7079d4a83c4c2b74676d356c2c92947ef6cb12839ba
+    retrieved_at: '2026-09-15T19:45:34.331056Z'
+  skos:prefLabel:
+    '@value': Death benefit in retained PB and MDB guidance
+    '@language': en-GB
+  skos:definition:
+    '@value': The retained old-scheme guidance describes a lump sum for specified dependants, with disease,
+      death-date, pre-1948 employment and compensation conditions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is not the BSP or general Bereavement Benefit regime and is not a newly opened claim route.
+      All historical scheme, dependant and compensation conditions require legal review in the context of the
+      2012 abolition/transfer statement.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Death benefit in retained PB and MDB guidance\n\n## Authored interpretation\n\nThe retained old-scheme
+    guidance describes a lump sum for specified dependants, with disease, death-date, pre-1948 employment and compensation
+    conditions.\n\n## Scope and exceptions\n\nThis is not the BSP or general Bereavement Benefit regime and is not
+    a newly opened claim route. All historical scheme, dependant and compensation conditions require legal review
+    in the context of the 2012 abolition/transfer statement.\n\n## Inspected passages\n\n- [DMG 73412, PDF page
+    9](https://assets.publishing.service.gov.uk/media/5a8019b540f0b62305b892c3/dmgch73.pdf#page=9).\n- [DMG 73413,
+    PDF page 9](https://assets.publishing.service.gov.uk/media/5a8019b540f0b62305b892c3/dmgch73.pdf#page=9).\n\n\
+    ## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an official
+    DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist review.
+    No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\n\
+    Source observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol11-ch73`:
+    PDF `3b17129736cf09e79f9df7079d4a83c4c2b74676d356c2c92947ef6cb12839ba`; extracted pages `d3ddd9b78f348565850afeafbaecd17ef9937905318211d171770a38ceadd7a3`;
+    acquired `2026-09-15T19:45:34.331056Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/5a8019b540f0b62305b892c3/dmgch73.pdf#page=9
+  semantic_relations:
+  - target: term/industrial-old-compensation
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The death-benefit conditions explicitly depend on the retained compensation provisions.
+    evidence:
+    - page: page/dmg-vol11-ch73/0009
+      quote: "73413   Death benefit is payable if\n\n        1.    death was due to1\n\n              1.1     pneumoconiosis
+        or\n\n              1.2     byssinosis or\n\n              1.3     one of Scheduled diseases2 and\n\n  \
+        \      2.    death occurred after\n\n              2.1     31.12.49 - where the relevant disease is pneumoconiosis,
+        byssinosis3 or\n                      Scheduled disease 1 or 24 or\n\n              2.2     27.7.67 - where
+        the relevant disease is one of Scheduled diseases 3 -\n                      55 (except where 2.7a applies)
+        or\n\n              2.3     27.5.69 - where the relevant disease is Scheduled disease 66 or\n\n        \
+        \      2.4     8.8.79 - where the relevant disease is Scheduled disease 77 or\n\n              2.5     1.4.85
+        - where the relevant disease is Sheduled disease 88 or\n\n              2.6     1.4.87 - where the relevant
+        disease is Scheduled disease 99 or\n\n              2.7     24.6.93 - where the relevant disease is10\n\n\
+        \                      2.7.a      Scheduled disease 4 and the nature of the occupation is that\n       \
+        \                          shown at (d) in the right hand column of Appendix 1 to this\n               \
+        \                  Chapter or\n\n                      2.7.b      Scheduled disease 10 and\n\n        3.\
+        \    the deceased had been employed before 5.7.48\n\n              3.1     in an occupation scheduled for
+        the relevant disease and\n\n              3.2     that occupation was scheduled before the date of death11
+        and\n\n        4.    the deceased had not been entitled to compensation as set out in DMG 73332\n      \
+        \        et seq.\n                1 PB & MDB Scheme, art 9(1); 2 Sch 1; 3 art 2(1)(a); 4 Sch 4; 5 Sch 4;
+        6 Sch 4; 7 Sch 4; 8 Sch 4; 9 Sch 4;\n                                                                  \
+        \                                      10 Sch 4; 11 art 2\n\n\n\n\nVol 11 Amendment 27 July 2011"
+      locator: DMG 73413

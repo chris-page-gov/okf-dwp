@@ -1,0 +1,107 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-claimant-commitment
+  '@type': skos:Concept
+  route: term/legacy-jsa-claimant-commitment
+  title: Claimant Commitment as the legacy jobseeker’s agreement
+  type: Concept
+  description: For the legacy JSA regime described in the source, the Claimant Commitment name
+    introduced from 2013 refers legally to a jobseeker’s agreement; the agreement is subject to
+    conditions and referral to a decision maker.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Claimant Commitment as the legacy jobseeker’s agreement
+    '@language': en-GB
+  skos:definition:
+    '@value': For the legacy JSA regime described in the source, the Claimant Commitment name
+      introduced from 2013 refers legally to a jobseeker’s agreement; the agreement is subject to
+      conditions and referral to a decision maker.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 21810 excludes IS from the agreement requirement. DMG 21811 expressly directs UC
+      and New Style JSA to ADM. A shared label does not establish the same legal instrument or rule
+      across benefits. The claimant-requested referral, reasonableness and full agreement conditions
+      remain important.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol4-ch21/0199
+  - page/dmg-vol4-ch21/0205
+  - page/dmg-vol4-ch21/0156
+  source:
+    https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=199
+  resource:
+    https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=199
+  sources:
+  - id: dmg-vol4-ch21
+    title: 'DMG Vol 4 Ch 21: Jobseeker’s Allowance Labour market questions, special conditions for JSA(Cont)
+      and jobseeking periods'
+    author: organisation:dwp
+    resource:
+      https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf
+    retrieved_at: '2026-09-15T19:45:23.409641Z'
+    sha256: d9fc5e120f85cb69386c9009d97ed2b33844523429224eded21be3c5003693e2
+  body: "# Claimant Commitment as the legacy jobseeker’s agreement\n\n## Authored interpretation\n\nFor
+    the legacy JSA regime described in the source, the Claimant Commitment name introduced from 2013 refers
+    legally to a jobseeker’s agreement; the agreement is subject to conditions and referral to a decision
+    maker.\n\n## Scope and exceptions\n\nDMG 21810 excludes IS from the agreement requirement. DMG 21811
+    expressly directs UC and New Style JSA to ADM. A shared label does not establish the same legal instrument
+    or rule across benefits. The claimant-requested referral, reasonableness and full agreement conditions
+    remain important.\n\n## Inspected source passages\n\n- [DMG 21810, PDF page 199](https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=199)
+    — DMG Vol 4 Ch 21: Jobseeker’s Allowance Labour market questions, special conditions for JSA(Cont)
+    and jobseeking periods.\n- [DMG 21811, PDF page 199](https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=199)
+    — DMG Vol 4 Ch 21: Jobseeker’s Allowance Labour market questions, special conditions for JSA(Cont)
+    and jobseeking periods.\n- [DMG 21840, PDF page 205](https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=205)
+    — DMG Vol 4 Ch 21: Jobseeker’s Allowance Labour market questions, special conditions for JSA(Cont)
+    and jobseeking periods.\n- [DMG 21841, PDF page 205](https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=205)
+    — DMG Vol 4 Ch 21: Jobseeker’s Allowance Labour market questions, special conditions for JSA(Cont)
+    and jobseeking periods.\n\n## Evidence and review status\n\nModel-assisted interpretation of selected
+    passages in the 15 September 2026 frozen source snapshot. Specialist review is required. Source acquisition,
+    source revision, legal effective dates and this record’s authoring time are separate.\n\nThis is an
+    independent experimental publication, not an official DWP document, individual advice, an entitlement
+    decision or an executable rule. Machine-extracted text may alter reading order, footnotes and characters.
+    No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is claimed by this
+    record.\n\n- `dmg-vol4-ch21`: PDF SHA-256 `d9fc5e120f85cb69386c9009d97ed2b33844523429224eded21be3c5003693e2`;
+    extracted pages SHA-256 `82d02218371af05595ac356e9c2f48f5434eb15adf97f0d0d057294c33b099c1`.\n"
+  semantic_relations:
+  - target: term/legacy-jsa-availability
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The decision-maker referral concerns whether the agreement would enable the claimant
+      to satisfy availability as well as the other stated tests.
+    evidence:
+    - page: page/dmg-vol4-ch21/0205
+      quote: "21840 Emp Os may refer a proposed JSAg to a DM to determine whether1\n\n\n1. if claimants
+        were to do what is in the proposed JSAg, they would satisfy\n\n\n      1.1 the availability condition
+        or\n\n\n      1.2 the ASE condition and\n\n\n2. it is reasonable to expect the claimant to have
+        to do what is in the proposed JSAg (see DMG 21850 -\n21851).\n\n\n                           \
+        \                                                           1 JS Act 95, s 9(6)"
+      locator: DMG 21840
+  - target: term/legacy-jsa-actively-seeking
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The same referral also addresses actively seeking employment and reasonableness; a
+      signed document alone does not resolve weekly activity.
+    evidence:
+    - page: page/dmg-vol4-ch21/0205
+      quote: "21840 Emp Os may refer a proposed JSAg to a DM to determine whether1\n\n\n1. if claimants
+        were to do what is in the proposed JSAg, they would satisfy\n\n\n      1.1 the availability condition
+        or\n\n\n      1.2 the ASE condition and\n\n\n2. it is reasonable to expect the claimant to have
+        to do what is in the proposed JSAg (see DMG 21850 -\n21851).\n\n\n                           \
+        \                                                           1 JS Act 95, s 9(6)"
+      locator: DMG 21840
+    - page: page/dmg-vol4-ch21/0156
+      quote: "21573 Details of what the claimant has agreed to do to satisfy the ASE test will be in the
+        claimant's JSAg.\nBut claimants must in each week take the steps that give them their best chance
+        of getting employment\nand this might not always be the same as the steps agreed in the JSAg."
+      locator: DMG 21573

@@ -1,0 +1,90 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-hardship-available-resources
+  '@type': skos:Concept
+  route: term/legacy-jsa-hardship-available-resources
+  title: Available resources and unreasonable expectations in hardship
+  type: Concept
+  description: The captured guidance considers resources that can actually be drawn on and expressly
+    excludes expectations such as approaching food banks or charities, obtaining new credit, selling
+    or pawning possessions, moving to cheaper housing or asking friends and family.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Available resources and unreasonable expectations in hardship
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance considers resources that can actually be drawn on and expressly
+      excludes expectations such as approaching food banks or charities, obtaining new credit,
+      selling or pawning possessions, moving to cheaper housing or asking friends and family.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The source separately addresses family and other household resources and specified
+      disregards. Those details are not a demand to disclose personal financial data here. Access to
+      hardship must not be inferred to fail merely because one of the listed unreasonable steps was
+      not taken; all conditions and current legal applicability remain to be reviewed.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol6-ch35/0044
+  - page/dmg-vol6-ch35/0045
+  - page/dmg-vol6-ch35/0039
+  source:
+    https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=44
+  resource:
+    https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=44
+  sources:
+  - id: dmg-vol6-ch35
+    title: 'DMG Vol 6 Ch 35: Hardship'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf
+    retrieved_at: '2026-09-15T19:45:27.106679Z'
+    sha256: e54a2eb89b7e4d4d4ff30802ef129a0ea6c418e6ece7a4e70d142dcb5a7de18b
+  body: "# Available resources and unreasonable expectations in hardship\n\n## Authored interpretation\n\
+    \nThe captured guidance considers resources that can actually be drawn on and expressly excludes expectations
+    such as approaching food banks or charities, obtaining new credit, selling or pawning possessions,
+    moving to cheaper housing or asking friends and family.\n\n## Scope and exceptions\n\nThe source separately
+    addresses family and other household resources and specified disregards. Those details are not a demand
+    to disclose personal financial data here. Access to hardship must not be inferred to fail merely because
+    one of the listed unreasonable steps was not taken; all conditions and current legal applicability
+    remain to be reviewed.\n\n## Inspected source passages\n\n- [DMG 35175, PDF page 44](https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=44)
+    — DMG Vol 6 Ch 35: Hardship.\n- [DMG 35176, PDF page 44](https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=44)
+    — DMG Vol 6 Ch 35: Hardship.\n- [DMG 35177, PDF page 45](https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=45)
+    — DMG Vol 6 Ch 35: Hardship.\n\n## Evidence and review status\n\nModel-assisted interpretation of
+    selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol6-ch35`: PDF SHA-256 `e54a2eb89b7e4d4d4ff30802ef129a0ea6c418e6ece7a4e70d142dcb5a7de18b`;
+    extracted pages SHA-256 `f636b425bb3f5b43a4d10c90c7d93e6a5e1abecd710a1d751b97704b24345753`.\n"
+  semantic_relations:
+  - target: term/legacy-jsa-hardship-privation
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source’s limits on available resources constrain the enquiry into whether
+      privation would occur; they do not themselves establish an award.
+    evidence:
+    - page: page/dmg-vol6-ch35/0039
+      quote: "35153 The DM, when determining if the claimant is entitled to hardship payments, must determine
+        if\nhardship will occur if JSA is not paid."
+      locator: DMG 35153
+    - page: page/dmg-vol6-ch35/0045
+      quote: "35177 It is not considered reasonable to expect claimants to rely upon\n\n\n1. charities,
+        such as food banks, (see DMG 35214)\n\n\n2. increase debts by seeking credit or using or extending
+        overdraft facilities (see DMG 35196)\n\n\n3. sell or pawn items to obtain cash (see DMG 35213)\n\
+        \n\n4. find cheaper housing (see DMG 35216) or\n\n\n5. ask friends and family for help (see DMG
+        35217).\n\n\nThese are not considered available resources. While claimants may be prepared to
+        request such help\nthere is no requirement to do so and claimants should not be denied access
+        to hardship payments if they\ndon’t."
+      locator: DMG 35177

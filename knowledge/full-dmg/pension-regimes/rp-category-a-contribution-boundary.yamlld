@@ -1,0 +1,82 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/rp-category-a-contribution-boundary
+  '@type': skos:Concept
+  route: term/rp-category-a-contribution-boundary
+  title: 'Category A contribution conditions: dated scope'
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured Category A guidance separates the single-contribution-condition route for people
+    reaching pensionable age from 6 April 2010 to before 6 April 2016 from the earlier contribution conditions
+    retained in an appendix.
+  tags:
+  - full DMG
+  - pension regimes
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol12-ch75/0009
+  - page/dmg-vol12-ch75/0010
+  source: https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=9
+  resource: https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=9
+  sources:
+  - id: dmg-vol12-ch75
+    title: 'DMG Vol 12 Ch 75: Retirement Pension'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=9
+    sha256: 655e7acb31f09f5169efbe40419091ee479f88c0c45b65c7a507b042b67712f9
+    retrieved_at: '2026-09-15T19:45:35.356599Z'
+  skos:prefLabel:
+    '@value': 'Category A contribution conditions: dated scope'
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured Category A guidance separates the single-contribution-condition route for people
+      reaching pensionable age from 6 April 2010 to before 6 April 2016 from the earlier contribution
+      conditions retained in an appendix.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The quoted year count is not a universal State Pension rule. Claims, qualifying earnings
+      factors, credits, reduced rates, record disputes and the claimant’s actual pensionable-age date require
+      review; no entitlement is calculated.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-regimes
+    at: '2026-09-15T20:17:36Z'
+  observedAt: '2026-09-15T20:17:36Z'
+  body: "# Category A contribution conditions: dated scope\n\n## Source-backed proposal\n\nThe captured Category
+    A guidance separates the single-contribution-condition route for people reaching pensionable age from 6 April
+    2010 to before 6 April 2016 from the earlier contribution conditions retained in an appendix.\n\n## Scope and
+    exceptions\n\nThe quoted year count is not a universal State Pension rule. Claims, qualifying earnings factors,
+    credits, reduced rates, record disputes and the claimant’s actual pensionable-age date require review; no entitlement
+    is calculated.\n\n## Inspected passages\n\n- [DMG 75026, PDF page 9](https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=9).\n\
+    - [DMG 75027, PDF page 9](https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=9).\n\
+    - [DMG 75030, PDF page 10](https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=10).\n\
+    \n## Provenance and review\n\nIndependent experimental interpretation of DWP guidance, not an official DWP document.
+    All definitions and relationships are model-assisted and unreviewed. No individual eligibility, award, legal
+    conclusion or executable rule is supplied.\n\nSource observation, listing-page update, printed revision, stated
+    legal date and pension event date have separate meanings. PDF page numbers are one-based file positions; extraction
+    may damage reading order, footnotes and characters. No visual PDF or specialist acceptance is claimed.\n\n-
+    `dmg-vol12-ch75` — PDF SHA-256 `655e7acb31f09f5169efbe40419091ee479f88c0c45b65c7a507b042b67712f9`; page-extraction
+    SHA-256 `0d037880d2aeaff1be89235ee987ca4acb1c839fcf1ead8b8be2daa9f6795465`.\n"
+  semantic_relations:
+  - target: term/rp-contribution-record-dispute
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter routes disputes about the Category A contribution record to HMRC instead of
+      treating the obtained record as incontestable.
+    evidence:
+    - page: page/dmg-vol12-ch75/0010
+      quote: "75032 Entitlement to Cat A RP depends on the contribution conditions being satisfied. In practice
+        the NI\ncontribution record is usually obtained and any decision is based on the assumption that the record
+        is\nfactually correct. However, where there is a dispute about the record, the matter must be referred by
+        the\n\nDM to HMRC for a formal decision1. That referral should be made2 to:\nHMRC\nNational Insurance Contributions
+        Office\nNE98 1ZZ\n\n\nNote 1: See DMG Chapters 03, 04 and 06 for guidance on how decisions and appeals are
+        handled after a\nreference to HMRC.\n\n\nNote 2: See DMG Chapter 01 where the dispute is about whether credits
+        should be awarded.\n\n\n     1 SS CS (D&A) Regs, reg 11A and 38A; 2 Secretary of State for Work and Pensions
+        v TB v HMRC (RP)\n                                                                                     \
+        \                    [2010]\n                                                                          \
+        \   UKUT 88 (AAC) [2010] AACR 38"
+      locator: DMG 75032

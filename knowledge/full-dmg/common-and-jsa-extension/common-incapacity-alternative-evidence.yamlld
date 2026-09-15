@@ -1,0 +1,90 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/common-incapacity-alternative-evidence
+  '@type': skos:Concept
+  route: term/common-incapacity-alternative-evidence
+  title: Alternative evidence of incapacity in the legacy guidance
+  type: Concept
+  description: The captured guidance allows other evidence where requiring a doctor’s statement
+    would be unreasonable and the alternative is sufficient to show that the person should refrain
+    from work because of a specified disease or disablement, with reasonableness considered case by
+    case.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Alternative evidence of incapacity in the legacy guidance
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance allows other evidence where requiring a doctor’s statement would
+      be unreasonable and the alternative is sufficient to show that the person should refrain from
+      work because of a specified disease or disablement, with reasonableness considered case by
+      case.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The two conditions must be retained together. The selected passages do not make every
+      medical statement optional, validate any particular evidence, or transfer this route to ESA,
+      UC or statutory sick pay. Existing test results, contact with the claimant and other chapter
+      exceptions still matter.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch13/0010
+  - page/dmg-vol3-ch13/0011
+  source:
+    https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf#page=10
+  resource:
+    https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf#page=10
+  sources:
+  - id: dmg-vol3-ch13
+    title: 'DMG Vol 3 Ch 13: Incapacity for work'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf
+    retrieved_at: '2026-09-15T19:45:22.145249Z'
+    sha256: fc4496aae0bb510fea99ee047b82bbb00182dd336af8dfb065ef040f3967078f
+  body: "# Alternative evidence of incapacity in the legacy guidance\n\n## Authored interpretation\n\n\
+    The captured guidance allows other evidence where requiring a doctor’s statement would be unreasonable
+    and the alternative is sufficient to show that the person should refrain from work because of a specified
+    disease or disablement, with reasonableness considered case by case.\n\n## Scope and exceptions\n\n\
+    The two conditions must be retained together. The selected passages do not make every medical statement
+    optional, validate any particular evidence, or transfer this route to ESA, UC or statutory sick pay.
+    Existing test results, contact with the claimant and other chapter exceptions still matter.\n\n##
+    Inspected source passages\n\n- [DMG 13101, PDF page 10](https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf#page=10)
+    — DMG Vol 3 Ch 13: Incapacity for work.\n- [DMG 13160, PDF page 11](https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf#page=11)
+    — DMG Vol 3 Ch 13: Incapacity for work.\n- [DMG 13161, PDF page 11](https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf#page=11)
+    — DMG Vol 3 Ch 13: Incapacity for work.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol3-ch13`: PDF SHA-256 `fc4496aae0bb510fea99ee047b82bbb00182dd336af8dfb065ef040f3967078f`;
+    extracted pages SHA-256 `1c3e2ae8cf5c3f45273274f24d1bafff88d21a657237c557d555fed53088c931`.\n"
+  semantic_relations:
+  - target: term/dmg-evidence-assessment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The passage requires an individual judgement about reasonableness and sufficient
+      evidence rather than acceptance or rejection based solely on document type.
+    evidence:
+    - page: page/dmg-vol3-ch13/0011
+      quote: "13160   Evidence other than on an approved form or from a registered medical practitioner\n\
+        \                         1\n        can be accepted if\n\n        1.    it is unreasonable to
+        require a doctor's statement and\n\n        2.    the evidence shows that the person should not
+        work because of a specific\n              disease or disablement.\n                          \
+        \                                                 1 SS (Med Ev) Regs, reg 2(1A)"
+      locator: DMG 13160
+    - page: page/dmg-vol3-ch13/0011
+      quote: "13161   The DM decides what is reasonable in each case. For example, evidence from\n   \
+        \     alternative therapists such as chiropractors, osteopaths, etc can be accepted if the\n \
+        \       person is usually treated by them as well as, or instead of, a general practitioner."
+      locator: DMG 13161

@@ -1,0 +1,98 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/common-unknown-versus-unreceived-earnings
+  '@type': skos:Concept
+  route: term/common-unknown-versus-unreceived-earnings
+  title: Unknown earnings and unreceived earnings in chapter 15
+  type: Concept
+  description: The source distinguishes a reasonable assessment where the amount of earnings is
+    unknown from treating unpaid or low-paid services as notional earnings; it records a 2002 ruling
+    against the latter provision in this chapter.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Unknown earnings and unreceived earnings in chapter 15
+    '@language': en-GB
+  skos:definition:
+    '@value': The source distinguishes a reasonable assessment where the amount of earnings is
+      unknown from treating unpaid or low-paid services as notional earnings; it records a 2002
+      ruling against the latter provision in this chapter.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 15015–15016 describe a particular regulation and retain a separate minimum-wage
+      qualification. Neither a current minimum-wage rate nor current legal effects are established.
+      The exclusion of JSA and IS in DMG 15000 means their chapter 26 notional-earnings provisions
+      cannot simply be imported here.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch15/0002
+  - page/dmg-vol3-ch15/0005
+  source: https://assets.publishing.service.gov.uk/media/69a04ed307d7bff3604d6dc3/dmgch15.pdf#page=2
+  resource:
+    https://assets.publishing.service.gov.uk/media/69a04ed307d7bff3604d6dc3/dmgch15.pdf#page=2
+  sources:
+  - id: dmg-vol3-ch15
+    title: 'DMG Vol 3: Ch 15: Earnings for non-income-related benefits'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69a04ed307d7bff3604d6dc3/dmgch15.pdf
+    retrieved_at: '2026-09-15T19:45:22.161271Z'
+    sha256: b9a278572b8205196c4b0c2d1b0c3c8032dddff62587e3ba0ff7fc897c670e4e
+  body: "# Unknown earnings and unreceived earnings in chapter 15\n\n## Authored interpretation\n\nThe
+    source distinguishes a reasonable assessment where the amount of earnings is unknown from treating
+    unpaid or low-paid services as notional earnings; it records a 2002 ruling against the latter provision
+    in this chapter.\n\n## Scope and exceptions\n\nDMG 15015–15016 describe a particular regulation and
+    retain a separate minimum-wage qualification. Neither a current minimum-wage rate nor current legal
+    effects are established. The exclusion of JSA and IS in DMG 15000 means their chapter 26 notional-earnings
+    provisions cannot simply be imported here.\n\n## Inspected source passages\n\n- [DMG 15000, PDF page
+    2](https://assets.publishing.service.gov.uk/media/69a04ed307d7bff3604d6dc3/dmgch15.pdf#page=2) — DMG
+    Vol 3: Ch 15: Earnings for non-income-related benefits.\n- [DMG 15014, PDF page 5](https://assets.publishing.service.gov.uk/media/69a04ed307d7bff3604d6dc3/dmgch15.pdf#page=5)
+    — DMG Vol 3: Ch 15: Earnings for non-income-related benefits.\n- [DMG 15015, PDF page 5](https://assets.publishing.service.gov.uk/media/69a04ed307d7bff3604d6dc3/dmgch15.pdf#page=5)
+    — DMG Vol 3: Ch 15: Earnings for non-income-related benefits.\n- [DMG 15016, PDF page 5](https://assets.publishing.service.gov.uk/media/69a04ed307d7bff3604d6dc3/dmgch15.pdf#page=5)
+    — DMG Vol 3: Ch 15: Earnings for non-income-related benefits.\n\n## Evidence and review status\n\n\
+    Model-assisted interpretation of selected passages in the 15 September 2026 frozen source snapshot.
+    Specialist review is required. Source acquisition, source revision, legal effective dates and this
+    record’s authoring time are separate.\n\nThis is an independent experimental publication, not an official
+    DWP document, individual advice, an entitlement decision or an executable rule. Machine-extracted
+    text may alter reading order, footnotes and characters. No PDF visual inspection, whole-chapter coverage
+    or behavioural evaluation pass is claimed by this record.\n\n- `dmg-vol3-ch15`: PDF SHA-256 `b9a278572b8205196c4b0c2d1b0c3c8032dddff62587e3ba0ff7fc897c670e4e`;
+    extracted pages SHA-256 `37d8db04ba2cd204591b67e3f3d8099a4c96be8f86ee788c70ab275322060a70`.\n"
+  semantic_relations:
+  - target: term/jsais-notional-employed-earnings
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter explicitly excludes JSA and IS and records a different notional-earnings
+      limitation; this association flags a regime boundary, not equivalence or incorporation of
+      chapter 26.
+    evidence:
+    - page: page/dmg-vol3-ch15/0002
+      quote: "15000 The guidance in this chapter concerns the calculation of the weekly amount of earnings
+        of\nemployed earners and self-employed earners for the purposes of\n\n\n1. benefits under certain
+        legislation (for example IB) 1\n\n\n2. the exempt work provision for IfW2\n\n\n3. CA\n\n\n4. ADI
+        and CDI.\n\n\nNote: This chapter does not provide guidance for UC, JSA, IS, ESA or SPC. For guidance
+        on earnings for\nthose benefits please refer to the relevant chapters of the DMG and ADM.\n\n\n\
+        \                                       1 SS CB Act 92 Parts II - V; SS Ben (C of E) Regs, reg
+        3(1); 2 R(IB) 1/06"
+      locator: DMG 15000
+    - page: page/dmg-vol3-ch15/0005
+      quote: "15015 On 11.11.02 a Commissioner decided1 that the regulation2 which permits a DM to take
+        into account\nnotional earnings where a person is working for nothing or for less than that paid
+        for comparable\nemployment in the area was ultra vires.\n\n\n                                \
+        \                              1 R(IB) 7/03; 2 SS Ben (C of E) Regs, reg 4(2)"
+      locator: DMG 15015
+    - page: page/dmg-vol3-ch15/0005
+      quote: "15016 This means that, in these circumstances, a claimant cannot be treated as possessing
+        earnings\nwhich that person does not in fact possess. As the notional earnings provisions are
+        not available DMs\nshould consider the NMW Provisions. See DMG 15017 - 15019.\n\n\n\n\nNational
+        minimum wage"
+      locator: DMG 15016

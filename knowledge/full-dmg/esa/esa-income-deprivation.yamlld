@@ -1,0 +1,85 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-deprivation
+  '@type': skos:Concept
+  route: term/esa-income-deprivation
+  title: Benefit purpose in the source’s income-deprivation guidance
+  type: Concept
+  description: The source requires a significant benefit purpose for deprivation of income and consideration of the facts, distinguishing income already received and an enforceable immediately repayable debt.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Benefit purpose in the source’s income-deprivation guidance
+    '@language': en-GB
+  skos:definition:
+    '@value': The source requires a significant benefit purpose for deprivation of income and consideration of the facts, distinguishing income already received and an enforceable immediately repayable debt.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 51469, 51472–51473 and 51485–51486 name ESA(IR), IS and JSA(IB), but no cross-benefit equivalence is inferred. Explanations, timing and other evidence are relevant; disposal or non-receipt alone does not establish purpose.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 51
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol9-ch51/0130
+  - page/dmg-vol9-ch51/0132
+  - page/dmg-vol9-ch51/0127
+  source: https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=130
+  resource: https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=130
+  sources:
+  - id: dmg-vol9-ch51
+    title: 'DMG Vol 9 Ch 51: Income other than earnings'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf
+    retrieved_at: '2026-09-15T19:45:30.832715Z'
+    sha256: a4682bf466f316cef3bc9ca01e4eeff68729be7724068c913a306a910f9ceaa7
+  body: |
+    # Benefit purpose in the source’s income-deprivation guidance
+
+    ## Authored interpretation
+
+    The source requires a significant benefit purpose for deprivation of income and consideration of the facts, distinguishing income already received and an enforceable immediately repayable debt.
+
+    ## Scope and boundaries
+
+    DMG 51469, 51472–51473 and 51485–51486 name ESA(IR), IS and JSA(IB), but no cross-benefit equivalence is inferred. Explanations, timing and other evidence are relevant; disposal or non-receipt alone does not establish purpose.
+
+    ## Inspected source passages
+
+    - [DMG 51469, PDF page 130](https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=130)
+    - [DMG 51472, PDF page 130](https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=130)
+    - [DMG 51473, PDF page 130](https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=130)
+    - [DMG 51485, PDF page 132](https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=132)
+    - [DMG 51486, PDF page 132](https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=132)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:30.832715Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `a4682bf466f316cef3bc9ca01e4eeff68729be7724068c913a306a910f9ceaa7`. Extracted pages SHA-256: `860dac41187f2c6fd07f6037f02a3e4cf121ae1d835852c641ad545f9803fefe`.
+  semantic_relations:
+  - target: term/esa-notional-income
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Deprivation is expressly one possible basis for notional income; it is not a synonym for all notional-income cases.
+    evidence:
+    - page: page/dmg-vol9-ch51/0127
+      quote: "51457 Notional income may be calculated because of\n\n\n1. deprivation of income\n\n\n2. income available if applied for (including special rules for personal pensions)\n\n\n3. income due but not yet paid\n\n\n4. income for a member of the family paid to a third party\n\n\n5. income for a third party made to a member of the family.\n\n\n\nActual and notional income"
+      locator: DMG 51457
+  - target: term/dmg-evidence-assessment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source lists explanations, timing, knowledge and the likelihood of a claim as relevant facts when assessing benefit purpose.
+    evidence:
+    - page: page/dmg-vol9-ch51/0132
+      quote: "51486 It is unlikely that there will be direct evidence that a deprivation was for the purpose of getting\nbenefit. Decide on a person's reasons for disposing of an income after considering all the facts of the\ncase. These may include\n\n\n1. the person's explanations\n\n\n2. the timing of the disposal\n\n\n3. the claimant's knowledge of the benefit system\n\n\n4. the likelihood of a benefit claim at the time of the deprivation."
+      locator: DMG 51486

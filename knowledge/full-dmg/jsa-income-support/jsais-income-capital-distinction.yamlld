@@ -1,0 +1,92 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-income-capital-distinction
+  '@type': skos:Concept
+  route: term/jsais-income-capital-distinction
+  title: Income and capital distinction in JSA(IB) and Income Support
+  type: Concept
+  description: The captured guidance says income is not defined in the cited law and offers
+    payment-series and payment-period characteristics to distinguish it from capital, with an
+    exception to the usual treatment of capital instalments.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Income and capital distinction in JSA(IB) and Income Support
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance says income is not defined in the cited law and offers
+      payment-series and payment-period characteristics to distinguish it from capital, with an
+      exception to the usual treatment of capital instalments.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': 'These are source-specific classification questions, not a universal accounting definition.
+      Repeated payments are not automatically income: the capital-instalment note and special provisions
+      must be considered. JSA(Cont) has a different scope for other income. No equivalence with Pension
+      Credit or UC is asserted.'
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol5-ch28/0003
+  - page/dmg-vol5-ch28/0002
+  source:
+    https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=3
+  resource:
+    https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=3
+  sources:
+  - id: dmg-vol5-ch28
+    title: 'DMG Vol 5 Ch 28: Income other than earnings'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf
+    retrieved_at: '2026-09-15T19:45:25.311635Z'
+    sha256: bcaea58ee40a9dca60a21b0f79c525a1f15e95c6b8315d6aaa73f0f53dd5460f
+  body: "# Income and capital distinction in JSA(IB) and Income Support\n\n## Authored interpretation\n\
+    \nThe captured guidance says income is not defined in the cited law and offers payment-series and
+    payment-period characteristics to distinguish it from capital, with an exception to the usual treatment
+    of capital instalments.\n\n## Scope and exceptions\n\nThese are source-specific classification questions,
+    not a universal accounting definition. Repeated payments are not automatically income: the capital-instalment
+    note and special provisions must be considered. JSA(Cont) has a different scope for other income.
+    No equivalence with Pension Credit or UC is asserted.\n\n## Inspected source passages\n\n- [DMG 28002,
+    PDF page 3](https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=3)
+    — DMG Vol 5 Ch 28: Income other than earnings.\n- [DMG 28000, PDF page 2](https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=2)
+    — DMG Vol 5 Ch 28: Income other than earnings.\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of selected passages in the 15 September 2026 frozen source snapshot. Specialist review
+    is required. Source acquisition, source revision, legal effective dates and this record’s authoring
+    time are separate.\n\nThis is an independent experimental publication, not an official DWP document,
+    individual advice, an entitlement decision or an executable rule. Machine-extracted text may alter
+    reading order, footnotes and characters. No PDF visual inspection, whole-chapter coverage or behavioural
+    evaluation pass is claimed by this record.\n\n- `dmg-vol5-ch28`: PDF SHA-256 `bcaea58ee40a9dca60a21b0f79c525a1f15e95c6b8315d6aaa73f0f53dd5460f`;
+    extracted pages SHA-256 `f7e554c1af4c7d8b915524f441c1680c5bea7429ac8fff9fd18bc0c925f25c31`.\n"
+  semantic_relations:
+  - target: term/jsais-gross-other-income
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Having identified other income, the chapter separately describes gross-income
+      treatment and its permitted disregards.
+    evidence:
+    - page: page/dmg-vol5-ch28/0003
+      quote: "28002 Income is not defined in law1. It can normally be separated from capital because a
+        payment of\nincome\n\n\n1. forms part of a series of payments, whether or not they are made regularly
+        or\n\n\n2. is made for a period of time or\n\n\n3. satisfies both the conditions in 1. and 2..\n\
+        \n\nNote: Where capital2 is being paid by instalments each payment will be capital unless DMG
+        28530 et seq\napplies.\n\n\n                1 JS Act 95; SS CB Act 92; 2 Lillystone v. Supplementary
+        Benefits Commission (1982) FLR;\n                                Morrell v. Secretary of State
+        for Work and Pensions [2003] EWCA Civ 526"
+      locator: DMG 28002
+    - page: page/dmg-vol5-ch28/0003
+      quote: "28003 [See DMG Memo IS/JSA 64] The DM should take into account the gross amount of any income
+        1.\nReferences in this Chapter to income means income other than earnings. When calculating gross
+        income\ndisregard the sums in DMG 28008 - 28010 and DMG 28150 et seq. No disregards should be
+        made for\nany other expenses or deductions.\n\n\n                                            \
+        \               1 JSA Regs, reg 103(1); IS (Gen) Regs, reg 40(1)"
+      locator: DMG 28003

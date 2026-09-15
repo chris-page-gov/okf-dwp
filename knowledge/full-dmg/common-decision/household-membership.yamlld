@@ -1,0 +1,91 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-household-membership
+  '@type': skos:Concept
+  route: term/dmg-household-membership
+  title: Household membership for DMG living-together assessment
+  type: Concept
+  description: For the captured living-together assessment, household membership is distinguished from sharing
+    a dwelling and is a condition considered before deciding whether people are living together as a married
+    couple.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Household membership for DMG living-together assessment
+    '@language': en-GB
+  skos:definition:
+    '@value': For the captured living-together assessment, household membership is distinguished from sharing
+      a dwelling and is a condition considered before deciding whether people are living together as a married
+      couple.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': A shared address, bill, accommodation or caring arrangement is not by itself a couple
+      determination. This is the chapter’s context-specific household concept, not an equivalence with
+      housing, census or Universal Credit household definitions.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch11/0007
+  - page/dmg-vol3-ch11/0008
+  source: https://assets.publishing.service.gov.uk/media/5a820c1ae5274a2e8ab5738a/dmgch11.pdf#page=7
+  resource: https://assets.publishing.service.gov.uk/media/5a820c1ae5274a2e8ab5738a/dmgch11.pdf#page=7
+  sources:
+  - id: dmg-vol3-ch11
+    title: 'DMG Vol 3 Ch 11: Living together as husband and wife or as civil partners '
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a820c1ae5274a2e8ab5738a/dmgch11.pdf#page=7
+    retrieved_at: '2026-09-15T19:45:21.788339Z'
+    sha256: 1f83a691baec9f1ff9f946289647f53b1b4b3b91788c4f39f71983b136382289
+  body: "# Household membership for DMG living-together assessment\n\n## Authored interpretation\n\nFor the captured
+    living-together assessment, household membership is distinguished from sharing a dwelling and is a condition
+    considered before deciding whether people are living together as a married couple.\n\n## Scope and exceptions\n\
+    \nA shared address, bill, accommodation or caring arrangement is not by itself a couple determination. This
+    is the chapter’s context-specific household concept, not an equivalence with housing, census or Universal Credit
+    household definitions.\n\n## Inspected source passages\n\n- [DMG 11051, PDF page 7](https://assets.publishing.service.gov.uk/media/5a820c1ae5274a2e8ab5738a/dmgch11.pdf#page=7)
+    — DMG Vol 3 Ch 11: Living together as husband and wife or as civil partners .\n- [DMG 11052, PDF page 7](https://assets.publishing.service.gov.uk/media/5a820c1ae5274a2e8ab5738a/dmgch11.pdf#page=7)
+    — DMG Vol 3 Ch 11: Living together as husband and wife or as civil partners .\n- [DMG 11054, PDF page 7](https://assets.publishing.service.gov.uk/media/5a820c1ae5274a2e8ab5738a/dmgch11.pdf#page=7)
+    — DMG Vol 3 Ch 11: Living together as husband and wife or as civil partners .\n- [DMG 11056, PDF page 8](https://assets.publishing.service.gov.uk/media/5a820c1ae5274a2e8ab5738a/dmgch11.pdf#page=8)
+    — DMG Vol 3 Ch 11: Living together as husband and wife or as civil partners .\n\n## Evidence and review status\n\
+    \nModel-assisted interpretation of the 15 September 2026 source snapshot; unreviewed and requiring specialist
+    review. The source is DWP guidance, not a consolidated statement of legislation. This is an independent experimental
+    publication, not an official DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page
+    numbers are one-based file positions. Machine extraction can alter reading order, footnotes and characters.
+    Quoted relationships preserve extracted text; no visual or specialist acceptance is claimed. Source dates, legal
+    effects and current applicability remain separate review tasks.\n\n- `dmg-vol3-ch11` PDF SHA-256: `1f83a691baec9f1ff9f946289647f53b1b4b3b91788c4f39f71983b136382289`;
+    extracted pages SHA-256: `73fbd1921b0dcf803d66aab7915a768921372438265b337362b080284bc6e59f`.\n"
+  semantic_relations:
+  - target: term/dmg-ltamc-assessment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source requires household membership but explicitly says that membership does not
+      necessarily mean the people are LTAMC.
+    evidence:
+    - page: page/dmg-vol3-ch11/0007
+      quote: "11051   Two people who are neither married to each other nor a civil partner of each other\n     \
+        \   must be members of the same household if they are to be treated as LTAMC and\n        thus a couple."
+      locator: DMG 11051
+    - page: page/dmg-vol3-ch11/0008
+      quote: "11056   The fact that two people, who are not married to each other, are members of the\n        same
+        household does not necessarily mean that they are LTAMC and so a couple.\n        A relationship may resemble
+        LTAMC but consideration of its origins may show it to\n        be something quite different. Additionally,
+        DMs should consider\n                                                                                  \
+        \               1\n        1.    the facts and circumstances that exist while the two people are living
+        together\n              and\n\n        2.    what their future plans are.\n                            \
+        \                                                            1 R(G) 1/79\n\n                           \
+        \                                  1\n        Such a relationship may not be classed as LTAMC , for example,
+        the need for care\n        or support is the main reason that the two people are living together. It is
+        not only the\n        reason that caused the parties to live together which is important, but the facts
+        and\n        circumstances that apply after they have done so (see DMG 11101 – DMG 11120\n        for further
+        guidance).\n                                                                                      1 R(SB)
+        35/85"
+      locator: DMG 11056

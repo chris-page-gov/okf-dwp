@@ -1,0 +1,98 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-hardship-vulnerable-group
+  '@type': skos:Concept
+  route: term/legacy-jsa-hardship-vulnerable-group
+  title: Vulnerable group as a hardship-specific category
+  type: Concept
+  description: The source distinguishes its defined vulnerable-group categories for JSA hardship
+    access from the wider DWP meaning of vulnerability and says the actual hardship test remains
+    privation.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Vulnerable group as a hardship-specific category
+    '@language': en-GB
+  skos:definition:
+    '@value': The source distinguishes its defined vulnerable-group categories for JSA hardship
+      access from the wider DWP meaning of vulnerability and says the actual hardship test remains
+      privation.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The chapter’s category labels do not mean every person with a support need qualifies
+      or that people outside them cannot be in hardship. Conditions for individual categories,
+      timing, other-benefit exclusions and historical scheme references require review. The project
+      does not classify any person or generalise this definition to service design.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol6-ch35/0011
+  - page/dmg-vol6-ch35/0013
+  - page/dmg-vol6-ch35/0039
+  source:
+    https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=11
+  resource:
+    https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=11
+  sources:
+  - id: dmg-vol6-ch35
+    title: 'DMG Vol 6 Ch 35: Hardship'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf
+    retrieved_at: '2026-09-15T19:45:27.106679Z'
+    sha256: e54a2eb89b7e4d4d4ff30802ef129a0ea6c418e6ece7a4e70d142dcb5a7de18b
+  body: "# Vulnerable group as a hardship-specific category\n\n## Authored interpretation\n\nThe source
+    distinguishes its defined vulnerable-group categories for JSA hardship access from the wider DWP meaning
+    of vulnerability and says the actual hardship test remains privation.\n\n## Scope and exceptions\n\
+    \nThe chapter’s category labels do not mean every person with a support need qualifies or that people
+    outside them cannot be in hardship. Conditions for individual categories, timing, other-benefit exclusions
+    and historical scheme references require review. The project does not classify any person or generalise
+    this definition to service design.\n\n## Inspected source passages\n\n- [DMG 35050, PDF page 11](https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=11)
+    — DMG Vol 6 Ch 35: Hardship.\n- [DMG 35055, PDF page 13](https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=13)
+    — DMG Vol 6 Ch 35: Hardship.\n- [DMG 35156, PDF page 39](https://assets.publishing.service.gov.uk/media/6895c9563080e72710b2e2c6/dmg-ch-35.pdf#page=39)
+    — DMG Vol 6 Ch 35: Hardship.\n\n## Evidence and review status\n\nModel-assisted interpretation of
+    selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol6-ch35`: PDF SHA-256 `e54a2eb89b7e4d4d4ff30802ef129a0ea6c418e6ece7a4e70d142dcb5a7de18b`;
+    extracted pages SHA-256 `f636b425bb3f5b43a4d10c90c7d93e6a5e1abecd710a1d751b97704b24345753`.\n"
+  semantic_relations:
+  - target: term/legacy-jsa-hardship-privation
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source expressly says that privation rather than vulnerability is the test of
+      hardship.
+    evidence:
+    - page: page/dmg-vol6-ch35/0013
+      quote: "35055 [See memo DMG 18/17] Vulnerable group is the term used in this guidance to describe
+        people\nwho are more likely to suffer hardship if JSA is not paid without a waiting period, i.e.
+        those people who are\n\ndefined as “persons in hardship” in JSA legislation1. Claimants in a defined
+        vulnerable group are entitled\n\nto hardship payments in circumstances where other claimants are
+        not 2.\n\n\nNote 1: The test of hardship is not a test of ‘vulnerability’ but a test of the lack
+        of the basic essential\nnecessities of life, e.g. accommodation, food, water, heating and hygiene
+        (see DMG 35155).\n\n\nNote 2: The term ‘vulnerable group’ for hardship purposes is not the same
+        as the DWP wider definition of\n‘vulnerability’, or ‘vulnerable groups’ for any other purposes
+        and applies exclusively to those defined in\n\nJSA regulations as “persons in hardship”1. Where
+        the term ‘vulnerable group’ is used throughout this\nchapter it means those defined exclusively
+        for hardship purposes (i.e. those who have access to hardship\nwithout a waiting period).\n\n\n\
+        \                                                      1 JSA Regs, regs 140(1) & 146A(1); 2 regs
+        141 & 146C(1)"
+      locator: DMG 35055
+    - page: page/dmg-vol6-ch35/0039
+      quote: "35156 When deciding if hardship will occur the DM should consider all the circumstances
+        of the claimant\nor family. There are certain factors that the DM must consider. DMs should bear
+        in mind that they are\ndeciding the likelihood that hardship will occur if JSA is not paid.\n\n\
+        \nNote: The test of hardship is not a test of ‘vulnerability’ but a test of the lack of the basic
+        essential\nnecessities of life, e.g. accommodation, food, water, heating and hygiene."
+      locator: DMG 35156

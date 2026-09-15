@@ -1,0 +1,76 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/pension-forfeiture-evidence-package
+  '@type': skos:Concept
+  route: term/pension-forfeiture-evidence-package
+  title: Evidence accompanying a forfeiture referral
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The chapter lists case papers, a benefit assessment and court material for a forfeiture
+    referral, with different transcript directions for guilty pleas in England and Wales and in Scotland.
+  tags:
+  - full DMG
+  - pension regimes
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol12-ch76/0006
+  - page/dmg-vol12-ch76/0005
+  source: https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=6
+  resource: https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=6
+  sources:
+  - id: dmg-vol12-ch76
+    title: 'DMG Vol 12 Ch 76: Forfeiture Act 1982'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=6
+    sha256: 074f2d3f00d4886954d5cbd6ba2653ec407c1ff9f0160a0ca74d337227f9f542
+    retrieved_at: '2026-09-15T19:45:35.402441Z'
+  skos:prefLabel:
+    '@value': Evidence accompanying a forfeiture referral
+    '@language': en-GB
+  skos:definition:
+    '@value': The chapter lists case papers, a benefit assessment and court material for a forfeiture
+      referral, with different transcript directions for guilty pleas in England and Wales and in Scotland.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is a source-described evidence package, not permission to collect or publish personal court
+      papers. The 6-item list must be read with the acquittal and non-conviction referral situations.
+      Territorial procedure and current operational guidance require review.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-regimes
+    at: '2026-09-15T20:17:36Z'
+  observedAt: '2026-09-15T20:17:36Z'
+  body: "# Evidence accompanying a forfeiture referral\n\n## Source-backed proposal\n\nThe chapter lists case papers,
+    a benefit assessment and court material for a forfeiture referral, with different transcript directions for
+    guilty pleas in England and Wales and in Scotland.\n\n## Scope and exceptions\n\nThis is a source-described
+    evidence package, not permission to collect or publish personal court papers. The 6-item list must be read with
+    the acquittal and non-conviction referral situations. Territorial procedure and current operational guidance
+    require review.\n\n## Inspected passages\n\n- [DMG 76029, PDF page 6](https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=6).\n\
+    - [DMG 76015, PDF page 5](https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=5).\n\
+    \n## Provenance and review\n\nIndependent experimental interpretation of DWP guidance, not an official DWP document.
+    All definitions and relationships are model-assisted and unreviewed. No individual eligibility, award, legal
+    conclusion or executable rule is supplied.\n\nSource observation, listing-page update, printed revision, stated
+    legal date and pension event date have separate meanings. PDF page numbers are one-based file positions; extraction
+    may damage reading order, footnotes and characters. No visual PDF or specialist acceptance is claimed.\n\n-
+    `dmg-vol12-ch76` — PDF SHA-256 `074f2d3f00d4886954d5cbd6ba2653ec407c1ff9f0160a0ca74d337227f9f542`; page-extraction
+    SHA-256 `53eb7c5ec81ced813ac2faf2af9f772c5f3e9662112a7ef678dcb4daef0b73f8`.\n"
+  semantic_relations:
+  - target: term/pension-forfeiture-referral
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source describes documents to send to DMA Leeds as part of the referral route, including
+      territorial differences.
+    evidence:
+    - page: page/dmg-vol12-ch76/0006
+      quote: "76029    The DM should send the following documents to DMA Leeds\n\n         1.    the case papers\n\
+        \n         2.    an assessment of the rate of benefit payable if the forfeiture rule did not apply\n\n \
+        \        3.    a certificate of conviction and sentence (obtainable from the Court)\n\n         4.    a
+        transcript of both the judge's summing up and the remarks upon conviction\n               in cases involving
+        a trial. These may be separate documents.\n\n         5.    a transcript of the entire proceedings in cases
+        in England and Wales involving\n               a guilty plea\n\n         6.    in guilty pleas in Scottish
+        cases, documents as directed by DMA Leeds."
+      locator: DMG 76029

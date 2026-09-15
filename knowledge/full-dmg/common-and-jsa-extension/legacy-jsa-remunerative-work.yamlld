@@ -1,0 +1,100 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-remunerative-work
+  '@type': skos:Concept
+  route: term/legacy-jsa-remunerative-work
+  title: Benefit-specific remunerative work and treated cases
+  type: Concept
+  description: The captured chapter combines work hours, payment or expected payment and
+    benefit-specific claimant/partner scope, while distinguishing actual remunerative work from
+    cases treated as in or not in it.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Benefit-specific remunerative work and treated cases
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured chapter combines work hours, payment or expected payment and
+      benefit-specific claimant/partner scope, while distinguishing actual remunerative work from
+      cases treated as in or not in it.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': 'JSA(Cont), JSA(IB) and IS must remain distinct. The selected hours passages are source
+      context, not a complete present-day threshold rule: fluctuations, averaging, treated cases, exceptions
+      and joint claims require further evidence. The definitions must not be applied to UC or New Style
+      JSA by analogy.'
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol4-ch20/0046
+  - page/dmg-vol4-ch20/0049
+  - page/dmg-vol4-ch20/0050
+  source:
+    https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=46
+  resource:
+    https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=46
+  sources:
+  - id: dmg-vol4-ch20
+    title: 'DMG Vol 4: Ch 20, JSA and IS, conditions of entitlement'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf
+    retrieved_at: '2026-09-15T19:45:23.333269Z'
+    sha256: 0474580014a697c47370992feee115d49c80b105b9c43270bf89afff0e4b0aa5
+  body: "# Benefit-specific remunerative work and treated cases\n\n## Authored interpretation\n\nThe captured
+    chapter combines work hours, payment or expected payment and benefit-specific claimant/partner scope,
+    while distinguishing actual remunerative work from cases treated as in or not in it.\n\n## Scope and
+    exceptions\n\nJSA(Cont), JSA(IB) and IS must remain distinct. The selected hours passages are source
+    context, not a complete present-day threshold rule: fluctuations, averaging, treated cases, exceptions
+    and joint claims require further evidence. The definitions must not be applied to UC or New Style
+    JSA by analogy.\n\n## Inspected source passages\n\n- [DMG 20201, PDF page 46](https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=46)
+    — DMG Vol 4: Ch 20, JSA and IS, conditions of entitlement.\n- [DMG 20202, PDF page 46](https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=46)
+    — DMG Vol 4: Ch 20, JSA and IS, conditions of entitlement.\n- [DMG 20210, PDF page 49](https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=49)
+    — DMG Vol 4: Ch 20, JSA and IS, conditions of entitlement.\n- [DMG 20212, PDF page 50](https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=50)
+    — DMG Vol 4: Ch 20, JSA and IS, conditions of entitlement.\n- [DMG 20213, PDF page 50](https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=50)
+    — DMG Vol 4: Ch 20, JSA and IS, conditions of entitlement.\n- [DMG 20214, PDF page 50](https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=50)
+    — DMG Vol 4: Ch 20, JSA and IS, conditions of entitlement.\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of selected passages in the 15 September 2026 frozen source snapshot. Specialist review
+    is required. Source acquisition, source revision, legal effective dates and this record’s authoring
+    time are separate.\n\nThis is an independent experimental publication, not an official DWP document,
+    individual advice, an entitlement decision or an executable rule. Machine-extracted text may alter
+    reading order, footnotes and characters. No PDF visual inspection, whole-chapter coverage or behavioural
+    evaluation pass is claimed by this record.\n\n- `dmg-vol4-ch20`: PDF SHA-256 `0474580014a697c47370992feee115d49c80b105b9c43270bf89afff0e4b0aa5`;
+    extracted pages SHA-256 `ed007251fa43ff9c63f5116f603798f2279c84006af8539bbbfd50194ab0ab56`.\n"
+  semantic_relations:
+  - target: term/jsa-personal-rate
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The work condition is claimant-only for JSA(Cont), consistent with its
+      personal-benefit scope; the means-tested provisions separately include a partner.
+    evidence:
+    - page: page/dmg-vol4-ch20/0046
+      quote: "20201 JSA(Cont) is a personal benefit and is not payable for a partner 1. The remunerative
+        work exclusion\ntherefore applies only to the claimant.\n\n\n                                \
+        \                                                            1 JS Act 95, s 4(1)\n\n\n\nJSA(IB)
+        and IS"
+      locator: DMG 20201
+    - page: page/dmg-vol4-ch20/0046
+      quote: "20202 The remunerative work exclusion applies where the person engaged in remunerative work
+        is the\n\n\n1. claimant or\n\n\n2. claimant’s partner, if the claimant is a member of a couple.\n\
+        \n\n\nDoes the claimant have employment"
+      locator: DMG 20202
+  - target: term/legacy-jsa-continuing-work
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source requires a factual continuing-work finding before the hours assessment.
+    evidence:
+    - page: page/dmg-vol4-ch20/0046
+      quote: "20200 [See Memo DMG 13/20] Being in remunerative work affects entitlement to JSA and IS
+        1. In all\ncases, before the DM applies the law to establish how many hours a person is working,
+        they must decide\nwhether or not the work is continuing.\n\n\n                               \
+        \                               1 JS Act 95, s 1(2)(e); SS CB Act 92, s 124(1)(c)\n\n\n\nJSA(Cont)"
+      locator: DMG 20200

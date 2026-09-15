@@ -1,0 +1,95 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-actively-seeking
+  '@type': skos:Concept
+  route: term/legacy-jsa-actively-seeking
+  title: Reasonable work-seeking steps in the actual week
+  type: Concept
+  description: The captured guidance assesses reasonable work-seeking steps in the week concerned
+    and warns that the steps recorded in an agreement will not necessarily be those giving the best
+    prospects in every week.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Reasonable work-seeking steps in the actual week
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance assesses reasonable work-seeking steps in the week concerned and
+      warns that the steps recorded in an agreement will not necessarily be those giving the best
+      prospects in every week.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 21571 preserves treated and joint-claim-exempt cases. The actual weekly
+      circumstances, evidence and full labour-market provisions remain necessary. This is not a
+      fixed checklist, an instruction to take an unsuitable job or a current UC/New Style JSA
+      claimant commitment rule.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol4-ch21/0156
+  - page/dmg-vol4-ch21/0158
+  source:
+    https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=156
+  resource:
+    https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=156
+  sources:
+  - id: dmg-vol4-ch21
+    title: 'DMG Vol 4 Ch 21: Jobseeker’s Allowance Labour market questions, special conditions for JSA(Cont)
+      and jobseeking periods'
+    author: organisation:dwp
+    resource:
+      https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf
+    retrieved_at: '2026-09-15T19:45:23.409641Z'
+    sha256: d9fc5e120f85cb69386c9009d97ed2b33844523429224eded21be3c5003693e2
+  body: "# Reasonable work-seeking steps in the actual week\n\n## Authored interpretation\n\nThe captured
+    guidance assesses reasonable work-seeking steps in the week concerned and warns that the steps recorded
+    in an agreement will not necessarily be those giving the best prospects in every week.\n\n## Scope
+    and exceptions\n\nDMG 21571 preserves treated and joint-claim-exempt cases. The actual weekly circumstances,
+    evidence and full labour-market provisions remain necessary. This is not a fixed checklist, an instruction
+    to take an unsuitable job or a current UC/New Style JSA claimant commitment rule.\n\n## Inspected
+    source passages\n\n- [DMG 21571, PDF page 156](https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=156)
+    — DMG Vol 4 Ch 21: Jobseeker’s Allowance Labour market questions, special conditions for JSA(Cont)
+    and jobseeking periods.\n- [DMG 21572, PDF page 156](https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=156)
+    — DMG Vol 4 Ch 21: Jobseeker’s Allowance Labour market questions, special conditions for JSA(Cont)
+    and jobseeking periods.\n- [DMG 21573, PDF page 156](https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=156)
+    — DMG Vol 4 Ch 21: Jobseeker’s Allowance Labour market questions, special conditions for JSA(Cont)
+    and jobseeking periods.\n- [Inspected continuation, PDF page 158](https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=158)
+    — context for the selected paragraph.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol4-ch21`: PDF SHA-256 `d9fc5e120f85cb69386c9009d97ed2b33844523429224eded21be3c5003693e2`;
+    extracted pages SHA-256 `82d02218371af05595ac356e9c2f48f5434eb15adf97f0d0d057294c33b099c1`.\n"
+  semantic_relations:
+  - target: term/legacy-jsa-claimant-commitment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source explicitly compares agreed steps with what is reasonable in the actual
+      week, so the agreement is relevant evidence rather than an automatic weekly pass or failure.
+    evidence:
+    - page: page/dmg-vol4-ch21/0156
+      quote: "21573 Details of what the claimant has agreed to do to satisfy the ASE test will be in the
+        claimant's JSAg.\nBut claimants must in each week take the steps that give them their best chance
+        of getting employment\nand this might not always be the same as the steps agreed in the JSAg."
+      locator: DMG 21573
+  - target: term/legacy-jsa-availability
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source allows treated actively-seeking and treated-availability findings to
+      differ for a particular set of circumstances.
+    evidence:
+    - page: page/dmg-vol4-ch21/0158
+      quote: "21585 Claimants may be treated, for a particular set of circumstances, as\n\n\n1. ASE but
+        not available for employment or\n\n\n2. available for employment but not ASE."
+      locator: DMG 21585

@@ -1,0 +1,89 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/ib-youth-overlap-classification
+  '@type': skos:Concept
+  route: term/ib-youth-overlap-classification
+  title: 'IB in youth: contribution and overlap classifications'
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The source describes IB(Y) as an IB category that is not based on contribution conditions,
+    while expressly treating it as contributory for the purpose of overlapping-benefit rules.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol10-ch56/0005
+  - page/dmg-vol10-ch56/0011
+  - page/dmg-vol10-ch56/0016
+  source: https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf#page=5
+  sources:
+  - id: dmg-vol10-ch56
+    title: 'DMG Vol 10 Ch 56: Incapacity Benefit'
+    resource: https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf
+    author: organisation:dwp
+    sha256: 24fde3944e7e2605c24baf711da1ace4dfe0032fe13b6bfc169e4562bf5ecca5
+    retrieved_at: '2026-09-15T19:45:32.379452Z'
+  skos:prefLabel:
+    '@value': 'IB in youth: contribution and overlap classifications'
+    '@language': en-GB
+  skos:definition:
+    '@value': The source describes IB(Y) as an IB category that is not based on contribution conditions, while
+      expressly treating it as contributory for the purpose of overlapping-benefit rules.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': “Contributory” is purpose-specific here. Do not infer a contribution requirement from the
+      overlap label or treat the label as an ontology-wide contradiction. Retained SDA, age, incapacity,
+      residence and historical claim restrictions still matter.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# IB in youth: contribution and overlap classifications\n\n## Authored interpretation\n\nThe source describes
+    IB(Y) as an IB category that is not based on contribution conditions, while expressly treating it as contributory
+    for the purpose of overlapping-benefit rules.\n\n## Scope and exceptions\n\n“Contributory” is purpose-specific
+    here. Do not infer a contribution requirement from the overlap label or treat the label as an ontology-wide
+    contradiction. Retained SDA, age, incapacity, residence and historical claim restrictions still matter.\n\n\
+    ## Inspected passages\n\n- [DMG 56002, PDF page 5](https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf#page=5).\n\
+    - [DMG 56019, PDF page 11](https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf#page=11).\n\
+    - [DMG 56034, PDF page 16](https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf#page=16).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol10-ch56`:
+    PDF `24fde3944e7e2605c24baf711da1ace4dfe0032fe13b6bfc169e4562bf5ecca5`; extracted pages `b5dc3260133af75807e6248202525da77a6610befc0b7ff20bc883d2ebba530e`;
+    acquired `2026-09-15T19:45:32.379452Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/5a80bf45ed915d74e623036c/dmgch56.pdf#page=5
+  semantic_relations:
+  - target: term/dmg-overlapping-benefits
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source explicitly gives IB(Y) a contributory classification only for overlapping-benefit
+      purposes.
+    evidence:
+    - page: page/dmg-vol10-ch56/0016
+      quote: "56034   For the purpose of overlapping benefits IB is a contributory benefit. This applies\n     \
+        \   even though IB(Y) is not based on contribution conditions. For the purpose of\n        overlapping benefits
+        contributory benefits are those benefits prescribed in\n        legislation1.\n                        \
+        \                                   1 SS (OB) Regs, reg 2(1); SS CB Act 92, Part 11\n\n\n        IB for
+        person incapacitated in youth and CHB"
+      locator: DMG 56034
+  - target: term/sda-continuation-boundary
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source excludes IB(Y) where SDA entitlement is retained; this is not equivalence of
+      benefits.
+    evidence:
+    - page: page/dmg-vol10-ch56/0011
+      quote: "56019   The conditions for receiving IB(Y), including the age conditions, are set out in DMG\n   \
+        \     56020. In some circumstances the upper age condition can be extended (see DMG\n        56023). In
+        some circumstances a person who does not satisfy the upper age\n        condition can be entitled to IB
+        because of previous entitlement to IB(Y) (see DMG\n        56031).\n\n        Note: A person who retains
+        entitlement to SDA (see DMG Chapter 57) has no\n        entitlement to IB(Y)."
+      locator: DMG 56019

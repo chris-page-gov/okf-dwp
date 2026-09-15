@@ -1,0 +1,76 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/wfp-pre-2024-historical-scope
+  '@type': skos:Concept
+  route: term/wfp-pre-2024-historical-scope
+  title: Winter Fuel Payment guidance for claims before 16 September 2024
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The first chapter 40 section expressly limits itself to Winter Fuel Payment claims before 16
+    September 2024 and describes annual payment by reference to a qualifying week.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol7-ch40/0002
+  - page/dmg-vol7-ch40/0010
+  source: https://assets.publishing.service.gov.uk/media/68d6a588620e762dc586644e/dmg-ch-40.pdf#page=2
+  sources:
+  - id: dmg-vol7-ch40
+    title: 'DMG Vol 7 Ch 40: Winter Fuel Payments - pre winter'
+    resource: https://assets.publishing.service.gov.uk/media/68d6a588620e762dc586644e/dmg-ch-40.pdf
+    author: organisation:dwp
+    sha256: 9b76037acc6c9d2fc308b1cf7f834f2d023277e0a08757925e62255b3aa71dd3
+    retrieved_at: '2026-09-15T19:45:28.419769Z'
+  skos:prefLabel:
+    '@value': Winter Fuel Payment guidance for claims before 16 September 2024
+    '@language': en-GB
+  skos:definition:
+    '@value': The first chapter 40 section expressly limits itself to Winter Fuel Payment claims before 16
+      September 2024 and describes annual payment by reference to a qualifying week.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': 'The prominent source warning says this guidance no longer applies and is retained for earlier claims
+      or appeals. The date does not govern the whole PDF: the later section separately covers a 2024–2025 period.
+      Historical overseas and benefit conditions are not current entitlement instructions.'
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Winter Fuel Payment guidance for claims before 16 September 2024\n\n## Authored interpretation\n\nThe
+    first chapter 40 section expressly limits itself to Winter Fuel Payment claims before 16 September 2024 and
+    describes annual payment by reference to a qualifying week.\n\n## Scope and exceptions\n\nThe prominent source
+    warning says this guidance no longer applies and is retained for earlier claims or appeals. The date does not
+    govern the whole PDF: the later section separately covers a 2024–2025 period. Historical overseas and benefit
+    conditions are not current entitlement instructions.\n\n## Inspected passages\n\n- [DMG 40000, PDF page 2](https://assets.publishing.service.gov.uk/media/68d6a588620e762dc586644e/dmg-ch-40.pdf#page=2).\n\
+    - [DMG 40001, PDF page 2](https://assets.publishing.service.gov.uk/media/68d6a588620e762dc586644e/dmg-ch-40.pdf#page=2).\n\
+    \n## Additional context\n\n- [Context: chapter 40, PDF page 2](https://assets.publishing.service.gov.uk/media/68d6a588620e762dc586644e/dmg-ch-40.pdf#page=2).\n\
+    - [Context: chapter 40, PDF page 10](https://assets.publishing.service.gov.uk/media/68d6a588620e762dc586644e/dmg-ch-40.pdf#page=10).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol7-ch40`:
+    PDF `9b76037acc6c9d2fc308b1cf7f834f2d023277e0a08757925e62255b3aa71dd3`; extracted pages `3e67a94776dd0edb568cbaca4d63bfef2587ca81bb5b154aad552d488c8de249`;
+    acquired `2026-09-15T19:45:28.419769Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/68d6a588620e762dc586644e/dmg-ch-40.pdf#page=2
+  semantic_relations:
+  - target: term/wfp-2024-historical-scope
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The PDF contains two separately bounded historical sections, rather than one universally
+      applicable rule.
+    evidence:
+    - page: page/dmg-vol7-ch40/0002
+      quote: 40000 This Chapter only applies to WFP claims prior to 16.9.24
+      locator: DMG 40000
+    - page: page/dmg-vol7-ch40/0010
+      quote: 40031 This guidance applies from 16.09.24 in respect of WFP claims from Winter 2024 onwards.
+      locator: DMG 40031

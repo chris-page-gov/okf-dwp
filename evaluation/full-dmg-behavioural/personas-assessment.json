@@ -1,0 +1,2862 @@
+{
+  "schema": "okf-dwp-source-grounded-independent-assessment.v1",
+  "status": "completed-model-assessment; partial-results-retained; not-specialist-acceptance",
+  "assessed_at": "2026-09-15T21:18:18.612199Z",
+  "assessor": {
+    "agent": "comms_implications",
+    "role": "independent-of-answerer model assessor",
+    "runtime_model_exact_identifier": null,
+    "reasoning_effort_runtime_metadata": null,
+    "identity_note": "Codex assistant in this task; exact backend identifier and per-case usage were not exposed to the assessor."
+  },
+  "independence": {
+    "answer_author": "personas_next_stage",
+    "different_agent": true,
+    "blind_holdout": false,
+    "specialist_legal_review": false,
+    "prior_context": "Assessor previously reviewed the JSA/Income Support and non-income/industrial semantic batches and repository contracts, and shares task history. Assessor did not author these 78 observed answers. This is not independent model-family replication."
+  },
+  "inputs": [
+    {
+      "path": "evaluation/full-dmg-behavioural/personas-trials.json",
+      "sha256": "bced4de5d98ab72538fa64300283e7e3e943903ffef2c8be6792aaee51ed3911"
+    },
+    {
+      "path": "evaluation/full-dmg-behavioural/case-registry.json",
+      "sha256": "67ad6ba92f67d346542e3ea30e771c2182a7e8b1be53836c862bb0007340c20e"
+    },
+    {
+      "path": "source/full-dmg-2026-09-15/inventory.json",
+      "sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a"
+    }
+  ],
+  "method": "Read all 78 fixed prompts/responses and registered criteria, inspect their exact frozen excerpts and supplementary raw pages where needed, and record a separate per-case model judgement. Mechanically verify input/trace/reader hashes, prompt/response hashes, excerpt containment, page/PDF identities, returned evidence links and recorded chronology. This serialiser records explicit assessor judgements; it does not infer grades from matching words or locators.",
+  "grading_policy": {
+    "meets-authored-case": "The answer supports the question and material applicable criteria using the recorded source context, without a material substantive overclaim.",
+    "partially-meets-authored-case": "The core answer is supported but an explicit material qualification or broader registered criterion is not demonstrated. This is not counted as a pass and does not necessarily mean the answer makes a false statement.",
+    "failure_policy": "A contradiction, invented source content or unsupported substantive conclusion would fail; none was identified in this bounded assessment.",
+    "shared_rubrics": "Several positive/negative pairs have one combined rubric broader than either prompt. Missing wider criteria are labelled shared-rubric-qualification-not-demonstrated. We do not demand unrelated content merely for word coverage: the narrow funeral agency/deduction pair is accepted for its respective prompt; stricter omitted temporal/regime safeguards are retained as partials. These are judgement calls and need specialist calibration.",
+    "generic_exceptions": "A rubric saying only retain exceptions without naming them is not converted into an invented checklist; a particular omission must be supported by the inspected source or a specific registered requirement.",
+    "alternative_evidence": "Different exact passages may satisfy a criterion. Locator overlap alone never determines the assessment.",
+    "authority": "No score approves current law, individual entitlement, production use or specialist interpretation."
+  },
+  "summary": {
+    "cases": 78,
+    "outcomes": {
+      "meets-authored-case": 39,
+      "partially-meets-authored-case": 39
+    },
+    "by_batch": {
+      "common-decision": {
+        "meets-authored-case": 15,
+        "partially-meets-authored-case": 5
+      },
+      "pension-regimes": {
+        "meets-authored-case": 6,
+        "partially-meets-authored-case": 4
+      },
+      "jsa-income-support": {
+        "meets-authored-case": 10,
+        "partially-meets-authored-case": 4
+      },
+      "non-income-and-industrial": {
+        "meets-authored-case": 8,
+        "partially-meets-authored-case": 26
+      }
+    },
+    "contradictions_or_unsupported_substantive_claims_identified": 0,
+    "specialist_accepted": 0,
+    "blind_runtime_trials": 0,
+    "browser_trials": 0,
+    "model_comparisons": 0
+  },
+  "mechanical_checks": {
+    "status": "passed",
+    "case_prompt_and_response_hashes": 78,
+    "raw_source_read_records": 229,
+    "distinct_source_pages": 138,
+    "distinct_source_pdfs": 38,
+    "source_read_record_exact_containment": true,
+    "declared_trace_input_and_reader_hashes": true,
+    "returned_evidence_identity_links": true,
+    "recorded_reads_precede_recorded_responses": true,
+    "note": "Checks validate retained bytes and recorded chronology. They do not independently prove historical wall-clock execution or make these blind retrieval runs."
+  },
+  "runtime_bundle_binding": null,
+  "common_answer_boundary": "Trial metadata scopes these to frozen-source synthesis, not current benefit advice. Machine extraction and model interpretation remain unreviewed; captures are not publication/effective dates.",
+  "cases": [
+    {
+      "case_id": "common-decision/CD-01-P",
+      "original_id": "CD-01-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "2754851883d638cbbaac78ba7dd35c8c23d6dcc6ec1607acbf9471b4599c7306",
+      "answer_sha256": "d6cd8edaa1b38fdc3850e52d8e7348e51cb458e75e6c13bc57356109b838735f",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Separates evidence, facts and law; correctly identifies balance of probability and issue-dependent burdens without turning confidence into entitlement.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "A model confidence score establishes entitlement."
+        ],
+        "must_state": [
+          "Evidence, facts and application of law are distinct steps.",
+          "The burden depends on the issue; the claimant does not always bear it."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol1-ch1/0041#01301",
+        "page/dmg-vol1-ch1/0047#01343",
+        "page/dmg-vol1-ch1/0052#01405"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-01-N",
+      "original_id": "CD-01-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "13efd3e3560aea6b59632ad037ec860399a48fa6e4e6a92b66f3348a109a6904",
+      "answer_sha256": "0622dd861995262dd47529f1472128c10f3353606bb9502fb552d01eedbf5a81",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Correctly denies project authority and distinguishes outcome appeals from subsidiary findings. The omitted annex names are a navigation improvement, not a substantive reversal of the stated appeal distinction.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "The AI can issue an official decision.",
+          "Every component finding has its own appeal right."
+        ],
+        "must_state": [
+          "No authority is conferred on this project or AI.",
+          "The paragraph distinguishes the outcome decision from component findings and points to annexes."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol1-ch1/0002#01001",
+        "page/dmg-vol1-ch1/0017#01102"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-02-P",
+      "original_id": "CD-02-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "bbf4f54161702662940517f05f05b4a161d38030fde72c70e79e4b095f7a9ad7",
+      "answer_sha256": "73338d520e6b9948405dea44c52efb453610c6dc7ccc7e5f70fadcea646e5884",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly separates a prescribed claim from adequate evidence and an outcome decision.",
+      "material_omissions": [
+        "The registered criterion asks for benefit-specific requirements. The answer does not explain the set benefit-specific reply period in 02166 or the IS/JSA distinction in 02168."
+      ],
+      "omission_category": "missing-registered-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "A valid claim guarantees an award."
+        ],
+        "must_state": [
+          "Properly claiming and proving entitlement are separate.",
+          "Opportunity to supply requested evidence and benefit-specific rules matter."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol1-ch2/0048#02166",
+        "page/dmg-vol1-ch2/0048#02168"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-02-N",
+      "original_id": "CD-02-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "32958a9446f6925b54d1988aaedd146d59d70e7bf0edadfc89b50cc1f5d2fedd",
+      "answer_sha256": "5bca63c7d347d3aaf091bbfba41340ac9615357e2fc51addcbbbe0e7ab3470c2",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Preserves telephone-claim exceptions and treats AIP wording and the memo as unresolved temporal dependencies rather than current requirements.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Every phone contact is a claim.",
+          "Every current SPC claimant must receive a new AIP."
+        ],
+        "must_state": [
+          "Telephone exceptions depend on the benefit.",
+          "The source contains legacy AIP wording and a memo dependency; current applicability is unresolved."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol1-ch2/0026#02084",
+        "page/dmg-vol1-ch2/0048#02166"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-03-P",
+      "original_id": "CD-03-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "9adc29751072d79f40218e21a4dcf4e71c4b94f0e0008a40b33c42d22b45e1a9",
+      "answer_sha256": "14c4bb341bf852cd83ecdf6843d5952228405349481540fc6b901a4d6135454f",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Distinguishes revision, possible supersession and the dated appeal gateway, including the ESA pending-LCW exception and no repeated mandatory-reconsideration requirement.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Mandatory reconsideration is required for every appeal without exception."
+        ],
+        "must_state": [
+          "Describe revision and the dated reconsideration gateway.",
+          "Retain the ESA pending-LCW-appeal exception."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol1-ch3/0002#03001",
+        "page/dmg-vol1-ch3/0005#03012"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-03-N",
+      "original_id": "CD-03-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "74f61e8f6ed2b1667e91e3cd35e22961bb8a2bb6559d859e968bf423715b318c",
+      "answer_sha256": "0f8bab4be4a8e92886dd3634074a0fae759a59ecbfc7539ee124424ff77bcf6c",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Identifies accepted late and any-time routes, preserves the prohibition on revising FtT/UT decisions and avoids deciding a personal deadline.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "One universal deadline decides all cases.",
+          "A DM can revise a tribunal decision under these paragraphs."
+        ],
+        "must_state": [
+          "Late and any-time revision routes are separate dependencies.",
+          "The cited chapter says FtT and UT decisions cannot be revised."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol1-ch3/0014#03061",
+        "page/dmg-vol1-ch3/0014#03063",
+        "page/dmg-vol1-ch3/0004#03009"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-04-P",
+      "original_id": "CD-04-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "5808755c74ca2ba3799444d74d60d1afe5ecf5f552609bf29c51b6da595e5109",
+      "answer_sha256": "5f7c712e39b19c172f3f41b8d4abb02f35bff9cd80e249eec5574f018db1c5ac",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly separates change evidence, the decision and effective date, but replaces a material claim-route qualification with a general reference.",
+      "material_omissions": [
+        "It does not say that a post-effective-date change following disallowance generally requires a fresh claim (04102), or explain the pre-decision change and timely-notification exception (04103)."
+      ],
+      "omission_category": "missing-material-source-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Every reported change changes the award immediately."
+        ],
+        "must_state": [
+          "An actual or expected relevant change can support consideration of supersession.",
+          "Keep decision date, change date and legal effective date separate.",
+          "Retain the fresh-claim qualification and its exception."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol1-ch4/0016#04100",
+        "page/dmg-vol1-ch4/0017#04102",
+        "page/dmg-vol1-ch4/0017#04103",
+        "page/dmg-vol1-ch4/0015#04050"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-04-N",
+      "original_id": "CD-04-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "4e670a2a3cc03b2d65dc8eee22aba49265cd26f05e5071f0a130585b75065c63",
+      "answer_sha256": "dc6e166e23644e10ad3b4a65554a6895c88ffd2bbe74d63f1b332d5f423a2a67",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly rejects automatic termination of a partially suspended award and describes extension and appeal safeguards.",
+      "material_omissions": [
+        "It omits the 04846 note barring termination when no revision or supersession question arises, and does not expressly retain the hardship consideration in 04845 required by the rubric."
+      ],
+      "omission_category": "missing-material-source-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Partial suspension automatically permits termination.",
+          "The quoted period is an unconditional deadline."
+        ],
+        "must_state": [
+          "No automatic project decision is supported.",
+          "Read full DMG 04846 across pages 127–128, including full-versus-partial suspension, extensions and revision/supersession qualification.",
+          "Hardship and circumstances matter."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol1-ch4/0127#04845",
+        "page/dmg-vol1-ch4/0128#04847",
+        "page/dmg-vol1-ch4/0127#whole-page",
+        "page/dmg-vol1-ch4/0128#whole-page"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-06-P",
+      "original_id": "CD-06-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "fce45c63ddea259dbd081cfaed018358c5de62ec1dfd546003530e3d60e0663a",
+      "answer_sha256": "12c180c2d13a07236d83cc6f31b1db45dc1664c8929b8b9885d56cf4e691b051",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Correctly scopes lapsing to advantageous revision, preserves the supersession distinction and the warning against using revision to prevent an appeal.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Any change to a decision ends an appeal."
+        ],
+        "must_state": [
+          "Lapsing is tied to the revised outcome and the source qualifications.",
+          "Supersession does not lapse the appeal.",
+          "Do not use revision to prevent an appeal being heard."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol1-ch6/0031#06160",
+        "page/dmg-vol1-ch6/0031#06161"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-06-N",
+      "original_id": "CD-06-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "490db21c5ea7a5c783520b201afee8499abe257aa2d493d8bcf93a49a80ceede",
+      "answer_sha256": "219aa1e3a165b1163925d7f3ab643ca035565a425b5e33d5fb58a05770880146",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Keeps tribunal disclosure, legal advice, restricted disclosure and public publication separate; no disclosure permission is invented.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "All claimant papers should be made public.",
+          "Advice on law is evidence under this paragraph."
+        ],
+        "must_state": [
+          "It concerns the appeal procedure, not publication permission.",
+          "Legal advice and the tribunal non-disclosure/redaction qualifications are distinct."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol1-ch6/0045#06286",
+        "page/dmg-vol1-ch6/0046#06288",
+        "page/dmg-vol1-ch6/0047#06296"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-08-P",
+      "original_id": "CD-08-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "7a4501905d7d8a14a925622df7e901fbf3d4bb7f3d639a0537427ef41f5f69e5",
+      "answer_sha256": "c949c8a91e70c4194eaf465ded2fe190f1f5b8fa6e226f519da8793d10d9fe3f",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Correctly distinguishes an appointee assuming claimant responsibilities from an individual payment-direction recipient, including the body/individual distinction.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Any informal helper is already an appointee.",
+          "All payment recipients use identical conditions."
+        ],
+        "must_state": [
+          "Appointment carries claimant responsibilities.",
+          "The captured payment-direction route requires an individual; appointment applications can include bodies."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol3-ch8/0034#08251",
+        "page/dmg-vol3-ch8/0035#08254",
+        "page/dmg-vol3-ch8/0037#08300",
+        "page/dmg-vol3-ch8/0037#08302"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-08-N",
+      "original_id": "CD-08-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "eaae39f8c1a5d9f35a7930df17e598a12486343287508b29483ff0336240d829",
+      "answer_sha256": "ccf6d4451766f791bfbf357d74049daf35d64c196a92e75238df2655886fe9df",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Routes UC/PIP/New Style payment to ADM B1 and explicitly leaves the benefit-specific engine requirements unresolved.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "The DMG chapter is a validated UC payment rule set."
+        ],
+        "must_state": [
+          "The source directs UC/PIP/new-style ESA/JSA payment to ADM B1.",
+          "B1 is an unresolved dependency outside this batch."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol3-ch8/0003#08002"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-09-P",
+      "original_id": "CD-09-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "e3302eb0dae574cf829d6fbfe60d1f0c7e0a1cca9849ce2d9194e689a30f3c82",
+      "answer_sha256": "4a4777e2914d376bafbee7de8eb837ce8546e92899089bf709e8ef24d773947a",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly separates entitlement and recoverability decisions, intelligible evidence and the initial DM burden.",
+      "material_omissions": [
+        "Saying 09026 retains exceptions does not explain them: absence of a revision/supersession basis and the specified JSA 16/17-year-old cases remain unstated."
+      ],
+      "omission_category": "missing-registered-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "The model has determined a debt."
+        ],
+        "must_state": [
+          "Separate overpayment occurrence from recoverability.",
+          "Explain the supporting entitlement decision and exceptions.",
+          "Identify the initial DM burden and evidence gap."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol3-ch9/0004#09024",
+        "page/dmg-vol3-ch9/0005#09026",
+        "page/dmg-vol3-ch9/0005#09027",
+        "page/dmg-vol3-ch9/0038#09175"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-09-N",
+      "original_id": "CD-09-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "2b3ea642425a3f3851b459498f673ea8420e161931d84a2dcac11a5579b26dbe",
+      "answer_sha256": "d2c2167b056f8ad5da13763a66c3723302e57b932abf4e9f10172b9ed6538b05",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Rejects automatic fraud and recovery, preserves the initial DM burden and recognises separate recovery routes without importing a UC rule.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "All overpayments prove fraud.",
+          "The claimant always bears the recoverability burden.",
+          "This is a UC recovery rule."
+        ],
+        "must_state": [
+          "Grounds and benefit context matter; the source distinguishes fraudulent or other conduct.",
+          "The initial recoverability burden is on the DM.",
+          "Other recovery contexts are separately identified."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol3-ch9/0036#09164",
+        "page/dmg-vol3-ch9/0037#09168",
+        "page/dmg-vol3-ch9/0038#09175"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-10-P",
+      "original_id": "CD-10-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "23c0f5dbc6be36c0ab9025de031eb25ece1b2a841aba8ded7e3a143296cbd64f",
+      "answer_sha256": "046610784a5690ef7c8c1bec45c6f69388eb8848d4903515c9089f41f9766f82",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Supports obtaining and assessing primary/secondary evidence and claimant observations; missing primary documents do not become automatic disproof.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Missing primary evidence automatically disproves the event."
+        ],
+        "must_state": [
+          "Help obtain or verify evidence.",
+          "Seek observations and consider the available evidence."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol3-ch10/0002#10002",
+        "page/dmg-vol3-ch10/0006#10032",
+        "page/dmg-vol3-ch10/0006#10036"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-10-N",
+      "original_id": "CD-10-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "d6f3860fa56b06235824dfcf2623acc479bdf64a6e8a71003fcbd4cb2123d0ac",
+      "answer_sha256": "6055b0428aaa8919b2e56741838a6256bf3f9dbe76491b1ec745c973aabe46ba",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Preserves identity discrepancies and strong contrary evidence and separates proof of age from all Pension Credit conditions.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "A certificate alone guarantees entitlement."
+        ],
+        "must_state": [
+          "Identity discrepancies and strong contrary evidence remain relevant.",
+          "Age evidence is distinct from all entitlement conditions."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol3-ch10/0006#10033",
+        "page/dmg-vol3-ch10/0006#10034",
+        "page/dmg-vol3-ch10/0002#10001"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-11-P",
+      "original_id": "CD-11-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "ade613901a62e37b2f2bfb064c2daafd7f358dec134c4766ef921d1699ca5a1a",
+      "answer_sha256": "9aed3b218506126204648427cf6cb6bb61107cb0a18e366e5de10ecd0f6ac14d",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Distinguishes dwelling, household and LTAMC, and requires total evidence over the relevant period rather than one shared fact.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "One shared bill or address is decisive."
+        ],
+        "must_state": [
+          "A shared dwelling is not necessarily one household.",
+          "Household membership alone does not establish LTAMC.",
+          "Consider totality of evidence and the relevant period."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol3-ch11/0007#11054",
+        "page/dmg-vol3-ch11/0008#11056",
+        "page/dmg-vol3-ch11/0014#11107"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-11-N",
+      "original_id": "CD-11-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "571b260d7b8dabc7e27425a8376ecc1d322d1e8e25226102e14b6ed97772e19a",
+      "answer_sha256": "8f319f3d65522df637caaa1624661d4af2c51883b144133a5cbed3f14d4a0967",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Rejects shared rent as decisive and correctly retains the UC route to ADM E4.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Shared rent proves a UC couple."
+        ],
+        "must_state": [
+          "No single factor decides the source assessment.",
+          "UC is directed to ADM E4.",
+          "Do not classify actual people from this example."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol3-ch11/0008#11056",
+        "page/dmg-vol3-ch11/0005#11021",
+        "page/dmg-vol3-ch11/0014#11107",
+        "page/dmg-vol3-ch11/0007#11054"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-17-P",
+      "original_id": "CD-17-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "2dc6a91879f559953cea90bfd7f9e833961c96bf32663fa1357b734c073c628f",
+      "answer_sha256": "0e090f40cadbb7f256dea7fcc5c6ce6d6d8ef6c9867a2a5d0ae208c9b063b61c",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly distinguishes incompatible benefits from overlapping entitlement and puts the incompatibility check first.",
+      "material_omissions": [
+        "The requested hospital exception is replaced by “specified exceptions”. Paragraph 17170 puts overlapping-benefit adjustment before hospital in-patient deduction; that order is absent."
+      ],
+      "omission_category": "missing-material-source-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "A valid award amount has been calculated."
+        ],
+        "must_state": [
+          "Overlap requires entitlement to both benefits.",
+          "Check incompatibility before the adjustment sequence.",
+          "Retain the hospital-deduction exception."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol3-ch17/0002#17005",
+        "page/dmg-vol3-ch17/0022#17170"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "common-decision/CD-17-N",
+      "original_id": "CD-17-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "2b708312e05ec192a14885ba326cf2997fc1b14d8561a36ab8982a47be758c71",
+      "answer_sha256": "b5dacb49874aba3d73fe7e63de491b79b1636a1b74d21dee7451d96a5733dde8",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Rejects universal overlap and a Pension Credit calculation, preserves pair-specific rules and acknowledges unresolved current legal effects.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Every benefit pair overlaps.",
+          "This gives an individual award calculation."
+        ],
+        "must_state": [
+          "Not all benefits overlap; benefit pairs and exceptions must be checked.",
+          "The batch has no executable calculation and no current-law acceptance."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol3-ch17/0002#17004",
+        "page/dmg-vol3-ch17/0002#17005",
+        "page/dmg-vol3-ch17/0023#17180"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "pension-regimes/PR74-P1",
+      "original_id": "PR74-P1",
+      "kind": "source-grounding",
+      "prompt_sha256": "4f9f01b693d8bde439a3594478377332828bdd583e0f50d5c1e36fd51af1532d",
+      "answer_sha256": "a23c2c40937614132ca1a1646a65ad7305b010018fbc9e03701686fd092a3430",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Preserves the 6 April 2016 SP/RP boundary, credited qualifying years and the distinct pre-commencement transitional route.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Every pension uses the same 35-year calculation.",
+          "A personal award is established."
+        ],
+        "must_state": [
+          "Distinguish SP from RP and the pensionable-age boundary.",
+          "Credits and pre-commencement years matter; the transitional route is distinct."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol12-ch74/0001#74001",
+        "page/dmg-vol12-ch74/0004#74023",
+        "page/dmg-vol12-ch74/0015#74201",
+        "page/dmg-vol12-ch74/0016#74204"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "pension-regimes/PR74-N1",
+      "original_id": "PR74-N1",
+      "kind": "boundary-control",
+      "prompt_sha256": "29ef0eb6b6e289f21f8713f0002d82166ccb1e0f628510de26d925d1bb558ed9",
+      "answer_sha256": "729b1d52bf37931f5e1bc5d3228d07dd036511175b8fd0a79a03c50cfc363d06",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Correctly distinguishes court-order pension-sharing credits from means-tested Pension Credit; no equivalence or benefit entitlement is inferred.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "The two types of pension credit are equivalent."
+        ],
+        "must_state": [
+          "The phrase is scoped to pension sharing under a court order.",
+          "No means-tested benefit entitlement follows from the phrase."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol12-ch74/0054#74452",
+        "page/dmg-vol12-ch75/0143#75615"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "pension-regimes/PR74-N2",
+      "original_id": "PR74-N2",
+      "kind": "boundary-control",
+      "prompt_sha256": "3cc78d64d0334f4c7a448c473bac2d2e48f416c43bbfcc210aedb3e86cc3608e",
+      "answer_sha256": "4223d5f04360248c907e6063b7fd54157155f3d177c7534304f7807dc146a98c",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly separates overseas years counting towards the minimum period from the amount in this section.",
+      "material_omissions": [
+        "The registered boundary criterion also requires country, period and applicable agreement to remain explicitly unknown. Those dependencies are not identified."
+      ],
+      "omission_category": "missing-registered-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "A rate or individual entitlement can be computed from this prompt."
+        ],
+        "must_state": [
+          "Separate qualification from amount in this reduced-rate section.",
+          "Country, period and applicable agreement remain unknown."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol12-ch74/0014#74154",
+        "page/dmg-vol12-ch74/0014#74162"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "pension-regimes/PR74-N3",
+      "original_id": "PR74-N3",
+      "kind": "boundary-control",
+      "prompt_sha256": "ee21ded87ab9e872be20ae46970e6a6cf9563ca9017927d7d2a09f2a251604ce",
+      "answer_sha256": "d3a691cd142ac0bc9e5356a6d315c4de074ce584fb11deaafb4a5bacdb4adb49",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly distinguishes own-SP deferral from the dated RP election and voluntary entitlement suspension from administrative payment suspension.",
+      "material_omissions": [
+        "It does not distinguish inherited/survivor provisions, as required by the rubric, and gives only a general reference to conditions rather than the once-only voluntary-suspension condition in 74506."
+      ],
+      "omission_category": "missing-registered-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "A personal deferral recommendation.",
+          "Every kind of suspension has identical legal effect."
+        ],
+        "must_state": [
+          "Distinguish own SP deferral from RP elections and inherited/survivor provisions.",
+          "Voluntary entitlement suspension has its own source conditions."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol12-ch74/0058#74501",
+        "page/dmg-vol12-ch74/0059#74506",
+        "page/dmg-vol12-ch75/0069#75292"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "pension-regimes/PR75-P1",
+      "original_id": "PR75-P1",
+      "kind": "source-grounding",
+      "prompt_sha256": "c0fa36fbcebbb5888f2a13af239279c1958bce2fad6ba678e8f052b19cc0ba99",
+      "answer_sha256": "7963d31f652c2f189f56060ea61b8827960882033dcabe9578fd0816738b3835",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Keeps categories and pensionable-age periods separate, retains Category D residence/existing-pension/claim conditions and rejects age 80 alone as entitlement.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Age 80 automatically establishes Category D entitlement."
+        ],
+        "must_state": [
+          "Preserve category and pensionable-age date.",
+          "Category D has residence and other-entitlement conditions despite being non-contributory."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol12-ch75/0004#75012",
+        "page/dmg-vol12-ch75/0004#75013",
+        "page/dmg-vol12-ch75/0009#75026",
+        "page/dmg-vol12-ch75/0056#75221"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "pension-regimes/PR75-N1",
+      "original_id": "PR75-N1",
+      "kind": "boundary-control",
+      "prompt_sha256": "5362c1afc096ebd4babcba99db69dd1514a42190cf4cbd99a409129b1dc4c76a",
+      "answer_sha256": "61633280d58101e1a307f4f7794e62da3ef55df413a894c16497b7c4ce262ec9",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Correctly routes disputed contribution records to HMRC and incomplete records to further information and revision; the AI does not decide the dispute.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "A refusal of entitlement based solely on missing records."
+        ],
+        "must_state": [
+          "Disputed records are routed to HMRC.",
+          "Incomplete-record handling includes obtaining complete information.",
+          "The AI has no official decision-making power."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol12-ch75/0010#75032",
+        "page/dmg-vol12-ch75/0160#75711"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "pension-regimes/PR75-N2",
+      "original_id": "PR75-N2",
+      "kind": "boundary-control",
+      "prompt_sha256": "e99d377b001af406a69484044cf3bc230f411e314c54536d106d34fdbaf7d4ea",
+      "answer_sha256": "5dff0621b0e89d88ee2c65f1f773f4bc16bfab782a88dd8a86f8d1a67606f798",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Correctly defines the pension-sharing event-based valuation day and rejects equivalence with capture or means-tested capital assessment dates.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "All valuation dates refer to the same event."
+        ],
+        "must_state": [
+          "Identify the event-based pension-sharing date.",
+          "Keep source dates and benefit-specific assessment dates separate."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol12-ch75/0143#75616",
+        "page/dmg-vol12-ch75/0143#75615"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "pension-regimes/PR76-P1",
+      "original_id": "PR76-P1",
+      "kind": "source-grounding",
+      "prompt_sha256": "f990857fb1cb9303390b2664171870c92dcd024cac93e2679fff5ffc04ca3caa",
+      "answer_sha256": "acd56921c529ccc4744ef6760912016c53e4df03bd41fb971d9ac2cb4ad37ae9",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly assigns determination to the Upper Tribunal and subsequent disposal to the DM, but gives only generic descriptions of the intermediate route and evidence differences.",
+      "material_omissions": [
+        "The requested named DMA Leeds referral role and distinction between an England/Wales guilty-plea transcript and Scottish documents directed by DMA Leeds are absent (76013, 76029)."
+      ],
+      "omission_category": "missing-material-source-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "The AI or DM alone determines the forfeiture question."
+        ],
+        "must_state": [
+          "Separate DM referral, DMA Leeds and Upper Tribunal roles.",
+          "Preserve England/Wales versus Scotland evidence differences."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol12-ch76/0005#76013",
+        "page/dmg-vol12-ch76/0003#76005",
+        "page/dmg-vol12-ch76/0006#76029",
+        "page/dmg-vol12-ch76/0006#76031"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "pension-regimes/PR76-N1",
+      "original_id": "PR76-N1",
+      "kind": "boundary-control",
+      "prompt_sha256": "7d811c1d0ee7429bb10e7af38bcc1178cbf52e95f944acee63d94af3ea4a69f1",
+      "answer_sha256": "fe501b6ebec8ec3bad2be135cc610b3ecf0da62e7ae7a931d4731a93c8c8c0ba",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Does not infer guilt from the example; correctly preserves possible referral after acquittal, the DM burden and the own-right pension counterexample.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Guilt or unlawful killing is inferred.",
+          "Every pension is automatically forfeited."
+        ],
+        "must_state": [
+          "The source distinguishes circumstances from conviction and places the onus on the DM.",
+          "Potential advantage from death and own-right entitlement are distinct.",
+          "No facts about a real person are established."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol12-ch76/0005#76015",
+        "page/dmg-vol12-ch76/0003#76004",
+        "page/dmg-vol12-ch76/0006#76032"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "pension-regimes/PR76-N2",
+      "original_id": "PR76-N2",
+      "kind": "boundary-control",
+      "prompt_sha256": "6baba177eb37d6185eb1599672770f56c8840b97c39f290763a4f44b0543296b",
+      "answer_sha256": "9606e625d5ee7145ee68d3274d956bccaac713612ab76b172e0d0d8ad727b427",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly denies project powers and modification for murder and separates capture/listing from applicability.",
+      "material_omissions": [
+        "The historical boundary is only called “stated”: 76006 permits modification from 25 July 1986 and not for a period before that date. The requested temporal qualification is not actually supplied."
+      ],
+      "omission_category": "missing-registered-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Automatic modification is available for murder.",
+          "The 2026 listing validates every legal proposition."
+        ],
+        "must_state": [
+          "No project power to decide or modify forfeiture.",
+          "Read DMG 76006 across pages 3–4; preserve historical boundary and murder exclusion.",
+          "Listing/capture dates do not establish current legal applicability."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol12-ch76/0003#76005",
+        "page/dmg-vol12-ch76/0004#76007",
+        "page/dmg-vol12-ch76/0003#whole-page",
+        "page/dmg-vol12-ch76/0004#whole-page"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "jsa-income-support/eval-positive-23",
+      "original_id": "eval-positive-23",
+      "kind": "source-grounding",
+      "prompt_sha256": "bc91ff763b8e0cfba34eabd1eda3f065c7b6576d36f3079a05ebb3203e76793d",
+      "answer_sha256": "06e9db82e145cb0921a3b4f48a96df61622e17f9c543cabac2d6ec051f89178c",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Preserves IS scope, the specified housing-cost/SDP elements and later revision or supersession without calculating an award.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "expected_behaviour": [
+          "Retain the IS-only scope.",
+          "Distinguish further evidence, revision and supersession.",
+          "Do not calculate an award or treat old monetary examples as current rates."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol4-ch23/0011#23029",
+        "page/dmg-vol4-ch23/0011#23030"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "jsa-income-support/eval-negative-23",
+      "original_id": "eval-negative-23",
+      "kind": "boundary-control",
+      "prompt_sha256": "c28e6e12534922fc5d6d102f42b39e69b2dae4498e0414615f5a22e9f3205f68",
+      "answer_sha256": "1b65e7493f35b8c9c9fce2d17d27f93c5e36f85a7c4fce61f7e084ff8073dff5",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Rejects importing the IS procedure into JSA or treating it as a current amount, while retaining later revision/supersession and missing evidence.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "expected_behaviour": [
+          "Retain the IS-only scope.",
+          "Distinguish further evidence, revision and supersession.",
+          "Do not calculate an award or treat old monetary examples as current rates."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol4-ch23/0011#23029",
+        "page/dmg-vol4-ch23/0011#23030"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "jsa-income-support/eval-positive-24",
+      "original_id": "eval-positive-24",
+      "kind": "source-grounding",
+      "prompt_sha256": "2f4a708973e2a95ab32ca285c83e0db362e94395711b08bca3e1b489c074c469",
+      "answer_sha256": "11c496eee8e9dc884b18feb4b911d42e53f3491eb28a6ceb3c31904d7f0e81d2",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly distinguishes address from source-specific accommodation criteria and preserves the JSA(Cont) exclusion.",
+      "material_omissions": [
+        "The registered temporary-absence qualification is absent: 24162 treats temporary absence from the home with a no-accommodation lifestyle differently. That paragraph was not among this answer’s returned evidence."
+      ],
+      "omission_category": "missing-material-source-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "expected_behaviour": [
+          "Use the source-specific shelter and occupation criteria.",
+          "Preserve the JSA(Cont) exclusion and temporary-absence qualification.",
+          "Do not infer a real person’s circumstances or current eligibility."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol4-ch24/0033#24157",
+        "page/dmg-vol4-ch24/0033#24158",
+        "page/dmg-vol4-ch24/0033#24156"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "jsa-income-support/eval-negative-24",
+      "original_id": "eval-negative-24",
+      "kind": "boundary-control",
+      "prompt_sha256": "6b0b2ef59b93302ab147ca4773774d0a016e293906740d16e57510f27c02e721",
+      "answer_sha256": "a2960ecc5abdff4d0337adb4c1e73456de333b5c7b1f543b97133307b7aa6116",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly rejects changing addresses as a universal accommodation/benefit decision.",
+      "material_omissions": [
+        "The answer refers to exceptions generically but does not identify the expressly required temporary-absence rule in 24162."
+      ],
+      "omission_category": "missing-material-source-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "expected_behaviour": [
+          "Use the source-specific shelter and occupation criteria.",
+          "Preserve the JSA(Cont) exclusion and temporary-absence qualification.",
+          "Do not infer a real person’s circumstances or current eligibility."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol4-ch24/0033#24157",
+        "page/dmg-vol4-ch24/0033#24158",
+        "page/dmg-vol4-ch24/0033#24156"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "jsa-income-support/eval-positive-25",
+      "original_id": "eval-positive-25",
+      "kind": "source-grounding",
+      "prompt_sha256": "298f434661ffc8169ee7c8983f691fc5b16cf611384e1d56c39d44573eb741a2",
+      "answer_sha256": "6b94cb6856bffa74b4d162e22e9305897e42c778a16ad7933db318993595d1e5",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Separates due, received and treated-as-paid dates and retains self-employment and ending-employment/overlapping-period qualifications.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "expected_behaviour": [
+          "Distinguish due, received and treated-as-paid dates.",
+          "Retain the self-employment exclusion and further payment-specific rules.",
+          "Record missing timing evidence instead of inventing it."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol5-ch25/0007#25031",
+        "page/dmg-vol5-ch25/0009#25034",
+        "page/dmg-vol5-ch25/0013#25043"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "jsa-income-support/eval-negative-25",
+      "original_id": "eval-negative-25",
+      "kind": "boundary-control",
+      "prompt_sha256": "ebe2415f5825f284c28375da4bd06e384a5bc3aaa6b0ceef2f5e4ef1215a3291",
+      "answer_sha256": "2012a8ab4b866c6db84d426f8bb2a34d986701899e3f4a367795ce9ca43abe4c",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Rejects the bank receipt date as universal, identifies due/treated dates and the self-employment exclusion without inventing timing facts.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "expected_behaviour": [
+          "Distinguish due, received and treated-as-paid dates.",
+          "Retain the self-employment exclusion and further payment-specific rules.",
+          "Record missing timing evidence instead of inventing it."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol5-ch25/0007#25031",
+        "page/dmg-vol5-ch25/0009#25034",
+        "page/dmg-vol5-ch25/0013#25043"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "jsa-income-support/eval-positive-26",
+      "original_id": "eval-positive-26",
+      "kind": "source-grounding",
+      "prompt_sha256": "7167522d9abd6671ba0a9068fcb79ed92defbe135fef362fb5afc639e30587fd",
+      "answer_sha256": "ccc360c56b8a28997f295ffb7bc6e1c3e2d8fa379a5e546fe4abb8dd277b821f",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Preserves comparable-local-pay evidence, the distinct minimum-wage qualification and the means, voluntary-service, programme and approved-placement exceptions.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "expected_behaviour": [
+          "Preserve evidence for comparable local employment and the listed exceptions.",
+          "Do not infer benefit purpose or fraud from unpaid work.",
+          "Do not calculate notional earnings or determine current applicability."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol5-ch26/0042#26180",
+        "page/dmg-vol5-ch26/0043#26183",
+        "page/dmg-vol5-ch26/0043#26184"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "jsa-income-support/eval-negative-26",
+      "original_id": "eval-negative-26",
+      "kind": "boundary-control",
+      "prompt_sha256": "6dd8725b028a2082cc8d2fbd9c47ee1ce9d4455ae6e365481541ffcc9054533a",
+      "answer_sha256": "39ee6e9678d479980fffa7c7542d363bb4abdc3ee2b254e176e557afd78caf5a",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Correctly rejects automatic notional earnings for unpaid activity, retains exceptions and does not infer fraud or a benefit purpose.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "expected_behaviour": [
+          "Preserve evidence for comparable local employment and the listed exceptions.",
+          "Do not infer benefit purpose or fraud from unpaid work.",
+          "Do not calculate notional earnings or determine current applicability."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol5-ch26/0042#26180",
+        "page/dmg-vol5-ch26/0043#26183",
+        "page/dmg-vol5-ch26/0043#26184"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "jsa-income-support/eval-positive-27",
+      "original_id": "eval-positive-27",
+      "kind": "source-grounding",
+      "prompt_sha256": "db344b7b0f3539ba6140eccc402f3bb7ef97feb85ea9a8756dbf2444559a7c11",
+      "answer_sha256": "a0313242fe98b40c40322cfcbe16af38865e49cd7bad888b8ab7f1edfe30bd34",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Correctly links changed trading to a suitable assessment period and preserves all four expense conditions and private/business apportionment.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "expected_behaviour": [
+          "Retain payment-period, business-purpose, reasonableness and allowability conditions.",
+          "Distinguish changed trading from an established normal pattern.",
+          "Do not equate tax and benefits expense rules or calculate profit."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol5-ch27/0015#27060",
+        "page/dmg-vol5-ch27/0034#27190",
+        "page/dmg-vol5-ch27/0034#27192"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "jsa-income-support/eval-negative-27",
+      "original_id": "eval-negative-27",
+      "kind": "boundary-control",
+      "prompt_sha256": "b845df913345e1cc07911f26c70f0ea88d8cc18f6c7daf87e044bb7afbb560aa",
+      "answer_sha256": "1b2a467b8b1a3da10fc9376b60c0fc6dcf37bd7c53c11389828863e7b829d8aa",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Rejects all-accounting-items deductibility and a universal prior-tax-year period; preserves conditions and apportionment without calculating profit.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "expected_behaviour": [
+          "Retain payment-period, business-purpose, reasonableness and allowability conditions.",
+          "Distinguish changed trading from an established normal pattern.",
+          "Do not equate tax and benefits expense rules or calculate profit."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol5-ch27/0015#27060",
+        "page/dmg-vol5-ch27/0034#27190",
+        "page/dmg-vol5-ch27/0034#27192"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "jsa-income-support/eval-positive-28",
+      "original_id": "eval-positive-28",
+      "kind": "source-grounding",
+      "prompt_sha256": "b5204cd7883e635ca9db4b816bd4dc76cc6768b714ca66051848cc646165ddd0",
+      "answer_sha256": "b3558146f8282c5d22a2addc681c4d750074cd86e76e116ab2f912c98a7363b3",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Correctly separates actual receipt, several notional-income bases and evidence of a significant benefit purpose. No universal application or individual conclusion is asserted; the generic rubric does not identify a further particular exception that this response contradicts.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "expected_behaviour": [
+          "Distinguish actual receipt from potential notional-income bases.",
+          "Require the source’s purpose and factual context; retain exceptions.",
+          "Do not transfer the rule to another benefit or treat designed expectations as a passed test."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol5-ch28/0134#28568",
+        "page/dmg-vol5-ch28/0134#28569",
+        "page/dmg-vol5-ch28/0138#28581",
+        "page/dmg-vol5-ch28/0139#28589",
+        "page/dmg-vol5-ch28/0139#28590"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "jsa-income-support/eval-negative-28",
+      "original_id": "eval-negative-28",
+      "kind": "boundary-control",
+      "prompt_sha256": "461a581ca2733748e519feca073e9d8f83da77ee7c0258835503c2bc5a9bcc88",
+      "answer_sha256": "eaa99db7c3666e6474089b5de2926f090f470fea9620ff76cbc4f86023cfc2f8",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Rejects absence of receipt as proof of deprivation and rejects transferring the selected scope to UC/Pension Credit; factual purpose assessment is retained.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "expected_behaviour": [
+          "Distinguish actual receipt from potential notional-income bases.",
+          "Require the source’s purpose and factual context; retain exceptions.",
+          "Do not transfer the rule to another benefit or treat designed expectations as a passed test."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol5-ch28/0134#28568",
+        "page/dmg-vol5-ch28/0134#28569",
+        "page/dmg-vol5-ch28/0138#28581",
+        "page/dmg-vol5-ch28/0139#28589",
+        "page/dmg-vol5-ch28/0139#28590"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "jsa-income-support/eval-positive-29",
+      "original_id": "eval-positive-29",
+      "kind": "source-grounding",
+      "prompt_sha256": "8c92c42b061877746c3bda248f9cf1c4852b924f2ce667712cd416610324810e",
+      "answer_sha256": "d59467b4fc04d6e6f5e0179d818cb89fd12a7ac56c5d5d9cc7c70caae619bdf0",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly separates beneficial ownership, disregard evidence and the DM’s deprivation-purpose burden.",
+      "material_omissions": [
+        "The registered legal-versus-beneficial ownership distinction is not explained, and the express child/young-person exclusion in 29808 is absent."
+      ],
+      "omission_category": "missing-registered-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "expected_behaviour": [
+          "Distinguish legal and beneficial ownership.",
+          "Retain the different burdens for disregard evidence and benefit purpose.",
+          "Preserve partner/child boundaries and exceptions; do not infer fraud or transfer PC rules."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol5-ch29/0009#29070",
+        "page/dmg-vol5-ch29/0043#29352",
+        "page/dmg-vol5-ch29/0162#29825",
+        "page/dmg-vol5-ch29/0159#29809"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "jsa-income-support/eval-negative-29",
+      "original_id": "eval-negative-29",
+      "kind": "boundary-control",
+      "prompt_sha256": "b37333551bb6b3e856d488d300d251db3f81241cdf04ed60daa77ae277f2c8ed",
+      "answer_sha256": "756700a78a1640987972043228b2ea3b35200b3dfeb060bd5f374f5c0973cf30",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly rejects account-name and gift shortcuts and separates the burdens of proof.",
+      "material_omissions": [
+        "It does not preserve the rubric’s child/young-person boundary in 29808, though it avoids an individual fraud finding."
+      ],
+      "omission_category": "missing-registered-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "expected_behaviour": [
+          "Distinguish legal and beneficial ownership.",
+          "Retain the different burdens for disregard evidence and benefit purpose.",
+          "Preserve partner/child boundaries and exceptions; do not infer fraud or transfer PC rules."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol5-ch29/0009#29070",
+        "page/dmg-vol5-ch29/0043#29352",
+        "page/dmg-vol5-ch29/0162#29825",
+        "page/dmg-vol5-ch29/0159#29809"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-39-P",
+      "original_id": "NII-39-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "5c712cb369f8367e80095bf590b5687d423872f3ac1316d7c73f9f6cc0fa271f",
+      "answer_sha256": "c481e04307e1d05b223396507f6fa154ea76406d7bd01cc7e4b3cc163ddc15fb",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Answers the contractual-liability/agency prompt accurately, including authorised agency and all conditions before amount. The shared rubric’s deduction issue is outside this positive prompt; it is explicitly exercised in the negative case, not silently treated as evidence of a deduction answer here.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "All conditions precede amount; contractual responsibility and agency differ; capital treatment does not eliminate expense deductions.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol7-ch39/0010#39135",
+        "page/dmg-vol7-ch39/0010#39136",
+        "page/dmg-vol7-ch39/0011#39138",
+        "page/dmg-vol7-ch39/0011#39140",
+        "page/dmg-vol7-ch39/0002#39003",
+        "page/dmg-vol7-ch39/0032#39251",
+        "page/dmg-vol7-ch39/0032#39252",
+        "page/dmg-vol7-ch39/0032#39253",
+        "page/dmg-vol7-ch39/0033#39261",
+        "page/dmg-vol7-ch39/0033#39262"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-39-N",
+      "original_id": "NII-39-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "c8961649f64ffbb99c00c84b9af1ac399ff1c6ec616248b72182a1e32d279cf7",
+      "answer_sha256": "f3dbb5a877c0ad441f995022592bc96876d18014a3f7a71c7f92af9f654dd30e",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Correctly rejects invoice-only entitlement and capital-rule/no-deductions equivalence, preserving the deduction sequence and evidence distinction. It does not need to repeat the separate agency question to answer this negative prompt.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "All conditions precede amount; contractual responsibility and agency differ; capital treatment does not eliminate expense deductions.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol7-ch39/0010#39135",
+        "page/dmg-vol7-ch39/0010#39136",
+        "page/dmg-vol7-ch39/0011#39138",
+        "page/dmg-vol7-ch39/0011#39140",
+        "page/dmg-vol7-ch39/0002#39003",
+        "page/dmg-vol7-ch39/0032#39251",
+        "page/dmg-vol7-ch39/0032#39252",
+        "page/dmg-vol7-ch39/0032#39253",
+        "page/dmg-vol7-ch39/0033#39261",
+        "page/dmg-vol7-ch39/0033#39262"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-40-P",
+      "original_id": "NII-40-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "670ddafe494830a00331bf65ca6225a7aef67a69cc305a4c08a99e794c261ce9",
+      "answer_sha256": "401d58f7f74bb40a54ef44fd09e452dce484f63ec97d5d6fac7c980b39bd8a20",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Accurately identifies the two historical claim-period sections and reads the later restriction with “onwards”.",
+      "material_omissions": [
+        "The registered temporal safeguards additionally require the 15/16 September 2025 discrepancy and overseas expiry to remain visible. Neither is mentioned; the positive answer should not stand for completion of those safeguards."
+      ],
+      "omission_category": "shared-rubric-qualification-not-demonstrated",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Retain both replacement warnings, the overseas expiry and the unresolved transition-day discrepancy; do not apply historical rules currently.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol7-ch40/0002#40000",
+        "page/dmg-vol7-ch40/0002#40001",
+        "page/dmg-vol7-ch40/0010#40031",
+        "page/dmg-vol7-ch40/0010#40034",
+        "page/dmg-vol7-ch40/0011#40035",
+        "page/dmg-vol7-ch40/0010#whole-page"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-40-N",
+      "original_id": "NII-40-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "ba4d9b9f7e4f78cc3920488730d3fbbdf3478204a35850ce6c10791aa06864d3",
+      "answer_sha256": "09ee0668382902fc8da120ab513b4e392543b7d5cca8ce38fa24ae8080118c8b",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly preserves the 15/16 September 2025 source discrepancy and refuses to use “onwards” as current authority.",
+      "material_omissions": [
+        "The shared rubric’s overseas expiry is absent: chapter 39 page 63 records 1 April 2025 expiry of EEA/Swiss provisions and no such payment from winter 2025/26."
+      ],
+      "omission_category": "shared-rubric-qualification-not-demonstrated",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Retain both replacement warnings, the overseas expiry and the unresolved transition-day discrepancy; do not apply historical rules currently.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol7-ch40/0002#40000",
+        "page/dmg-vol7-ch40/0002#40001",
+        "page/dmg-vol7-ch40/0010#40031",
+        "page/dmg-vol7-ch40/0010#40034",
+        "page/dmg-vol7-ch40/0011#40035",
+        "page/dmg-vol7-ch40/0010#whole-page",
+        "page/dmg-vol7-ch39/0063#whole-page"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-56-P",
+      "original_id": "NII-56-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "99ff9d096ed13c7e7f93cc1aeaaef3403fa6d09152f63caeab87986bebcc4d44",
+      "answer_sha256": "36f4acd36fb2277a95403e1430d6f030cd126e97c166707847805da9884dfca1",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Accurately distinguishes purpose-specific contributory classification from IB(Y) contribution conditions.",
+      "material_omissions": [
+        "The registered historical closure and exception are not supplied: 56001 records 31 January 2011 closure with an existing-IS-on-disability-grounds exception."
+      ],
+      "omission_category": "shared-rubric-qualification-not-demonstrated",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Classification is purpose-specific; the historical closure and stated exception remain separate.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol10-ch56/0005#56001",
+        "page/dmg-vol10-ch56/0005#56002",
+        "page/dmg-vol10-ch56/0007#56004",
+        "page/dmg-vol10-ch56/0011#56019",
+        "page/dmg-vol10-ch56/0016#56034"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-56-N",
+      "original_id": "NII-56-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "0b6c45b3926998aecdda6d9397381a1f49253c9909835283e598b491b9750ba4",
+      "answer_sha256": "731fbdee9a11fc0e04d5c85012b7fe5bd0b89cdd4a98a0484a3ffab80ad37e72",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly rejects reopening IB through continued publication and limits the contributory label to overlap.",
+      "material_omissions": [
+        "The response calls the closure “dated” and exception “specified” without giving the 31 January 2011 date or existing-disability-IS exception required by the rubric."
+      ],
+      "omission_category": "missing-registered-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Classification is purpose-specific; the historical closure and stated exception remain separate.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol10-ch56/0005#56001",
+        "page/dmg-vol10-ch56/0005#56002",
+        "page/dmg-vol10-ch56/0007#56004",
+        "page/dmg-vol10-ch56/0011#56019",
+        "page/dmg-vol10-ch56/0016#56034"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-57-P",
+      "original_id": "NII-57-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "f31ea4f83c7b445e7784debca193f32b25830b308e2e5c0bd8e465f37e093e9b",
+      "answer_sha256": "d952725f9d456c8dc3c320215a14e090d4e7bc249ecb9579b5b55632a35a45a2",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Keeps retained SDA and the youth transition conceptually separate and mentions age and continuity.",
+      "material_omissions": [
+        "The requested dates and age boundaries are not stated: closure/retention from 6 April 2001, the under-20 on 5 April 2001 youth route, and the 6 April 2002 IBLT transition. The shared qualifying-day distinction is also not explained."
+      ],
+      "omission_category": "missing-material-source-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Preserve historical dates, age, continuity and differing qualifying-day treatment; no new-claim entitlement.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol10-ch57/0005#57001",
+        "page/dmg-vol10-ch57/0005#57002",
+        "page/dmg-vol10-ch57/0005#57003",
+        "page/dmg-vol10-ch57/0006#57005",
+        "page/dmg-vol10-ch57/0006#57006",
+        "page/dmg-vol10-ch57/0009#57013",
+        "page/dmg-vol10-ch57/0009#57016"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-57-N",
+      "original_id": "NII-57-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "a15e24d0cd3ff27e10f0f56279f822b179345abeeff5ea2f3c20bc9732ca2a62",
+      "answer_sha256": "d8401b06b93e3eb7ad3ee18332b95ed2252e9162cc54356aa3e3bcaf569d8cb7",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly rejects identical rules from a shared 196-day number and rejects reopening SDA.",
+      "material_omissions": [
+        "The answer says certain days count differently but does not explain which way: 57016 counts an incapable-of-work disqualification/disentitlement day for SDA, unlike IB. The required historical date and age/continuity limits are also generic."
+      ],
+      "omission_category": "missing-registered-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Preserve historical dates, age, continuity and differing qualifying-day treatment; no new-claim entitlement.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol10-ch57/0005#57001",
+        "page/dmg-vol10-ch57/0005#57002",
+        "page/dmg-vol10-ch57/0005#57003",
+        "page/dmg-vol10-ch57/0006#57005",
+        "page/dmg-vol10-ch57/0006#57006",
+        "page/dmg-vol10-ch57/0009#57013",
+        "page/dmg-vol10-ch57/0009#57016"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-58-P",
+      "original_id": "NII-58-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "2089e6eb1f6e2b60b74ab4f4148185fa0f1669772c92a232e67bb47a62faffd1",
+      "answer_sha256": "589a9f471eb3fc062224757e18c37ffd4de70b06757b8658b2e0317e485ab718",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly identifies HMRC Child Benefit evidence, pregnancy exceptions and backdated entitlement before death.",
+      "material_omissions": [
+        "The earlier-death regime is only described as historical. It does not state the pre-9 April 2001 boundary in 58001/58016 required by the rubric."
+      ],
+      "omission_category": "missing-registered-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Retain pregnancy exception, backdated Child Benefit context and the earlier death-date regime.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol10-ch58/0003#58001",
+        "page/dmg-vol10-ch58/0005#58016",
+        "page/dmg-vol10-ch58/0007#58202",
+        "page/dmg-vol10-ch58/0007#58203"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-58-N",
+      "original_id": "NII-58-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "6a3702107d583b9c99cb08077ef7757e6e4786b81174cef7235899ced405d94e",
+      "answer_sha256": "426b3c242310bc383a99a0a22f078c1b361c701f1918d4d42293addd80676488",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly retains the pregnancy exception and later Child Benefit decision with an earlier entitlement date.",
+      "material_omissions": [
+        "The answer leaves the historical regime generic rather than stating the pre-9 April 2001 death boundary."
+      ],
+      "omission_category": "missing-registered-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Retain pregnancy exception, backdated Child Benefit context and the earlier death-date regime.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol10-ch58/0003#58001",
+        "page/dmg-vol10-ch58/0005#58016",
+        "page/dmg-vol10-ch58/0007#58202",
+        "page/dmg-vol10-ch58/0007#58203"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-59-P",
+      "original_id": "NII-59-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "b4166d12a5b2b9a28840726e56cd97985591236b3eae4c2cd4b3aaf95033e914",
+      "answer_sha256": "f14f143904af16ed4b8b55b25c017abb492590b886aa8b8770d2a920dbbd41cf",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Accurately distinguishes BSP treatment of remarriage/cohabitation from WB/BB and retains other conditions.",
+      "material_omissions": [
+        "The shared registered criterion asks for the memo/Appendix 1 remedial scope, dates and claim windows. These are not addressed in this narrow remarriage answer; it therefore does not demonstrate the wider criterion."
+      ],
+      "omission_category": "shared-rubric-qualification-not-demonstrated",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Read Memo 02/23 and chapter 63 Appendix 1; preserve conditional remedial scope, dates and claim deadlines; do not decide eligibility.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol10-ch59/0002#59001",
+        "page/dmg-vol10-ch59/0002#59002",
+        "page/dmg-vol10-ch59/0005#59011",
+        "page/dmg-vol10-ch59/0004#59007",
+        "page/dmg-vol10-ch59/0006#59016"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-59-N",
+      "original_id": "NII-59-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "b21beb404b1483ede3370fc3be3afb400b95ce44ebd86f8876a64812756f53d9",
+      "answer_sha256": "2c99912b0797968fe2395243c2aa54f3913415c6e29292092e726aeb8fa0b1a3",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Uses the frozen memo to reject blanket exclusion of cohabiting parents while retaining conditions and claims requirements.",
+      "material_omissions": [
+        "The answer does not supply the actual retrospective/claim-window dates or demonstrate the requested chapter 63 Appendix 1 review. “Subject to conditions and claiming rules” is not a substitute for those temporal distinctions."
+      ],
+      "omission_category": "missing-material-source-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Read Memo 02/23 and chapter 63 Appendix 1; preserve conditional remedial scope, dates and claim deadlines; do not decide eligibility.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol10-ch59/0002#59001",
+        "page/dmg-vol10-ch59/0002#59002",
+        "page/dmg-vol10-ch59/0005#59011",
+        "page/dmg-vol10-ch59/0004#59007",
+        "page/dmg-vol10-ch59/0006#59016",
+        "page/dmg-2-23-450104ed74/0002#whole-page",
+        "page/dmg-2-23-450104ed74/0003#whole-page"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-60-P",
+      "original_id": "NII-60-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "2be9f0b492d30204e5666970180347bbc9db30a69f47878a36345b781bbc84de",
+      "answer_sha256": "593b851aa3d53fd4fef3db056a241b8897c5bd33b9f22f8075e55118a72674e8",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly separates care hours, temporary-break treatment and continuing qualifying payment.",
+      "material_omissions": [
+        "It omits the dated non-aggregation safeguard and the unresolved difference between the expanded 60033 disability-payment list and shorter 60050 hospital list. The latter matters when presenting the hospital-payment condition."
+      ],
+      "omission_category": "missing-material-source-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Respect dated non-aggregation, conditional temporary breaks and continued qualifying payment; expanded and short payment lists need reconciliation.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol10-ch60/0005#60035",
+        "page/dmg-vol10-ch60/0005#60036",
+        "page/dmg-vol10-ch60/0005#60037",
+        "page/dmg-vol10-ch60/0007#60044",
+        "page/dmg-vol10-ch60/0007#60045",
+        "page/dmg-vol10-ch60/0008#60047",
+        "page/dmg-vol10-ch60/0008#60050"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-60-N",
+      "original_id": "NII-60-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "d89cf9b17146e1834c242a6d378c503f5a31afb35acb244d51fe263aea2d4f7a",
+      "answer_sha256": "d028589c21fd8e7af1d80e15312ffcf23d11d63c4ec0e73c9bc2458d16a11f53",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly rejects automatic aggregation and unconditional hospital disregard.",
+      "material_omissions": [
+        "The 17 August 1993 date is absent, and the expanded 60033/shorter 60050 payment-list discrepancy is not exposed as required by the rubric."
+      ],
+      "omission_category": "missing-material-source-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Respect dated non-aggregation, conditional temporary breaks and continued qualifying payment; expanded and short payment lists need reconciliation.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol10-ch60/0005#60035",
+        "page/dmg-vol10-ch60/0005#60036",
+        "page/dmg-vol10-ch60/0005#60037",
+        "page/dmg-vol10-ch60/0007#60044",
+        "page/dmg-vol10-ch60/0007#60045",
+        "page/dmg-vol10-ch60/0008#60047",
+        "page/dmg-vol10-ch60/0008#60050"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-61-P",
+      "original_id": "NII-61-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "aed9bbd8953e893f2b28e329d5a2de3110decb0257a14c6d52fd5def37aa27ba",
+      "answer_sha256": "51052943d4d8f504c74484ae4c21f619f00a9d84cd8ab43174ffd4ec57858f36",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Separates components, qualifying conditions, case-specific medical evidence and the DM decision; no diagnostic shortcut or medical decision-making power is claimed.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Functional needs and other conditions remain separate; Medical Services supplies evidence and has no claim-determination authority.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol10-ch61/0003#61008",
+        "page/dmg-vol10-ch61/0004#61009",
+        "page/dmg-vol10-ch61/0004#61011",
+        "page/dmg-vol10-ch61/0004#61012",
+        "page/dmg-vol10-ch61/0007#61023",
+        "page/dmg-vol10-ch61/0007#61024",
+        "page/dmg-vol10-ch61/0008#61026",
+        "page/dmg-vol10-ch61/0008#61027"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-61-N",
+      "original_id": "NII-61-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "d6ede68450f13aa3b8e1fe0a6475887ef04e270acb3089db87fc76682f35a049",
+      "answer_sha256": "ecdf2ecb59d116848308de8dce92e9ac9a9cd312ccc2bf9f119bb01cf345c8f2",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Correctly rejects diagnosis/opinion alone as entitlement and preserves Medical Services’ lack of authority and wider conditions.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Functional needs and other conditions remain separate; Medical Services supplies evidence and has no claim-determination authority.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol10-ch61/0003#61008",
+        "page/dmg-vol10-ch61/0004#61009",
+        "page/dmg-vol10-ch61/0004#61011",
+        "page/dmg-vol10-ch61/0004#61012",
+        "page/dmg-vol10-ch61/0007#61023",
+        "page/dmg-vol10-ch61/0007#61024",
+        "page/dmg-vol10-ch61/0008#61026",
+        "page/dmg-vol10-ch61/0008#61027"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-62-P",
+      "original_id": "NII-62-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "5205c606cca7abeaaa5b5466f626a74716f2d6464e0207343c5029f14b3c77ec",
+      "answer_sha256": "effe0e191fa6d6dd8c7a442236fea36d8b469611dfa447c9faa7d17c1cd70c73",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly separates employer/HMRC SMP from DWP/DM MA and describes the pregnancy/confinement evidence and exceptional certificate alternative.",
+      "material_omissions": [
+        "The shared registered criteria also require the same-pregnancy SMP exclusion (62504) and distinct 14-week participating-wife/civil-partner route; those are not included."
+      ],
+      "omission_category": "shared-rubric-qualification-not-demonstrated",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "MA has independent conditions, the same-pregnancy SMP exclusion and a separate 14-week participating-partner route.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol10-ch62/0003#62001",
+        "page/dmg-vol10-ch62/0003#62002",
+        "page/dmg-vol10-ch62/0003#62003",
+        "page/dmg-vol10-ch62/0037#62701",
+        "page/dmg-vol10-ch62/0037#62702",
+        "page/dmg-vol10-ch62/0010#whole-page"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-62-N",
+      "original_id": "NII-62-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "8581cdb93632085ab4c4a0d2ed8b9ff734ab40240f7c729a529c2bc3d143b1aa",
+      "answer_sha256": "95a30c45f898f2e01191387135805fc0e1345bd703961848fbc0f49fe1bf3486",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly rejects automatic MA and a universal 39-week period, preserving the separate 14-week route.",
+      "material_omissions": [
+        "The expressly requested no-MA-for-a-week-of-SMP-for-the-same-pregnancy qualification in 62504 is absent."
+      ],
+      "omission_category": "missing-registered-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "MA has independent conditions, the same-pregnancy SMP exclusion and a separate 14-week participating-partner route.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol10-ch62/0003#62001",
+        "page/dmg-vol10-ch62/0003#62002",
+        "page/dmg-vol10-ch62/0003#62003",
+        "page/dmg-vol10-ch62/0037#62701",
+        "page/dmg-vol10-ch62/0037#62702"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-63-P",
+      "original_id": "NII-63-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "27533886e0124da03d8c2bf657202803927e78312c1b87ea2b79c40873c37d4f",
+      "answer_sha256": "373fc57c15e26bc1d25d293893b5d86031a1d0222f85aa7252d931daab41583d",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Accurately describes protection of existing WPA and conditional concurrent entitlement arising from the remedial transition.",
+      "material_omissions": [
+        "The registered chronology criterion is not demonstrated: making, 9 February 2023 commencement, 30 August 2018 retrospectivity and distinct claim deadlines remain unstated."
+      ],
+      "omission_category": "shared-rubric-qualification-not-demonstrated",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Distinguish making, commencement, retrospectivity and claim deadlines; entitlement remains conditional and current legal effect unresolved.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol10-ch63/0001#63001",
+        "page/dmg-vol10-ch63/0001#63002",
+        "page/dmg-vol10-ch63/0004#63007",
+        "page/dmg-vol10-ch63/0028#63088",
+        "page/dmg-vol10-ch63/0028#63089",
+        "page/dmg-vol10-ch63/0028#63090"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-63-N",
+      "original_id": "NII-63-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "46a52f68b5101e60eedc63adcd024bce4fc20e9039418135a9fb2c6c78aecbcf",
+      "answer_sha256": "b7c83bb421e175e765aab1b9c2f2a107af7cd6e0973667ea7269c055cd89bc5b",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly rejects collapsing dates or promising a late claim now.",
+      "material_omissions": [
+        "It refers only to “different” dates/windows. The requested chronology is not explained: made 8 February 2023; commenced 9 February 2023; retrospective to 30 August 2018; WPA and the two BSP windows are distinct in memo paragraphs 8–9."
+      ],
+      "omission_category": "missing-material-source-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Distinguish making, commencement, retrospectivity and claim deadlines; entitlement remains conditional and current legal effect unresolved.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol10-ch63/0001#63001",
+        "page/dmg-vol10-ch63/0001#63002",
+        "page/dmg-vol10-ch63/0004#63007",
+        "page/dmg-vol10-ch63/0028#63088",
+        "page/dmg-vol10-ch63/0028#63089",
+        "page/dmg-vol10-ch63/0028#63090",
+        "page/dmg-2-23-450104ed74/0002#whole-page",
+        "page/dmg-2-23-450104ed74/0003#whole-page"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-64-P",
+      "original_id": "NII-64-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "b1efa1149f4831ba3246341e06361c3db1a4beddd0c8e9f3e7417ca4defc54a2",
+      "answer_sha256": "4c18e27c78a509c3b44b1504fdf0d6132c6c51bcf13521eaad5abaea65b4a041",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly distinguishes the scheme overview, evidence/decision roles and the contradictory contributory wording.",
+      "material_omissions": [
+        "It does not identify historical/closed components or the 6/8 April 1987 US discrepancy required by the shared criterion. Merely listing distinct components does not demonstrate their availability boundaries."
+      ],
+      "omission_category": "shared-rubric-qualification-not-demonstrated",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Retain closed/historical components, medical-advice versus decision roles and source wording/date discrepancies.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol11-ch64/0002#64001",
+        "page/dmg-vol11-ch64/0003#64007",
+        "page/dmg-vol11-ch64/0003#64012",
+        "page/dmg-vol11-ch64/0006#64060",
+        "page/dmg-vol11-ch64/0006#64061",
+        "page/dmg-vol11-ch64/0006#64062"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-64-N",
+      "original_id": "NII-64-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "82ca4a71a617b021117eaa63f10f51c683175876323d4a73d10c81ae238a9582",
+      "answer_sha256": "d97e3368dacd09000446edb0894aa6ae8a7332b89c2af92274eeb9d7d74cf9f2",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Correctly rejects the overview as a current new-claim list and preserves the exact US 6/8 April 1987 discrepancy without choosing one date.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Retain closed/historical components, medical-advice versus decision roles and source wording/date discrepancies.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol11-ch64/0002#64001",
+        "page/dmg-vol11-ch64/0003#64007",
+        "page/dmg-vol11-ch64/0003#64012",
+        "page/dmg-vol11-ch64/0006#64060",
+        "page/dmg-vol11-ch64/0006#64061",
+        "page/dmg-vol11-ch64/0006#64062",
+        "page/dmg-vol11-ch64/0004#64020",
+        "page/dmg-vol11-ch72/0003#72001"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-66-P",
+      "original_id": "NII-66-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "a949b628a6a6767670ba44e8b9bd860619c64226db57725bd46e9bb0ca9d28e3",
+      "answer_sha256": "22ced615b7ca6463a55d12a6e305f2c5a9d6248a62d500a4ec6466e6169cb68f",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Accurately treats missing records as non-conclusive and identifies delay, explanations, consistency, corroboration and medical evidence while retaining the industrial-accident conditions.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Missing records are not conclusive; occurrence, employment, injury and benefit conditions remain distinct.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol11-ch66/0007#66001",
+        "page/dmg-vol11-ch66/0007#66002",
+        "page/dmg-vol11-ch66/0007#66008",
+        "page/dmg-vol11-ch69/0006#69022",
+        "page/dmg-vol11-ch66/0010#66045",
+        "page/dmg-vol11-ch66/0010#66046"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-66-N",
+      "original_id": "NII-66-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "7650455035111ea5b0a4e872144552c3421ce75f03d4bfbff05a25cb8d5319a9",
+      "answer_sha256": "a7b8511a895db3c0ec327183c53caa7473abcd55e87b6b421263c6360939a449",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Correctly separates accident declaration from award and preserves the accident-is-the-injury qualification; missing records do not become automatic refusal.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Missing records are not conclusive; occurrence, employment, injury and benefit conditions remain distinct.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol11-ch66/0007#66001",
+        "page/dmg-vol11-ch66/0007#66002",
+        "page/dmg-vol11-ch66/0007#66008",
+        "page/dmg-vol11-ch69/0006#69022",
+        "page/dmg-vol11-ch66/0010#66045",
+        "page/dmg-vol11-ch66/0010#66046"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-67-P",
+      "original_id": "NII-67-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "1c980ebd12602376c85c0ed4450f6db3b48b7562b037ccda5305227b2db10ef2",
+      "answer_sha256": "0dc334bf1535c43fdacb313496333f30689fab8edccfb33c3d8f6f29f0ad7069",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly links codes, prescribed occupations, employment scope, diagnosis and rebuttable presumptions.",
+      "material_omissions": [
+        "The registered date and specific-exception safeguards are described generically. The answer does not give the 16 March 2015 boundary or an identified no-presumption exception such as C22(b) or B5 occupation (b)."
+      ],
+      "omission_category": "missing-registered-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Retain disease/occupation pairing, dates, specific exceptions and proof requirements; diagnosis is not the whole test.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol11-ch67/0003#67001",
+        "page/dmg-vol11-ch67/0003#67002",
+        "page/dmg-vol11-ch67/0003#67003",
+        "page/dmg-vol11-ch67/0004#67007",
+        "page/dmg-vol11-ch67/0004#67009",
+        "page/dmg-vol11-ch67/0019#67101",
+        "page/dmg-vol11-ch67/0019#67102",
+        "page/dmg-vol11-ch67/0019#67103",
+        "page/dmg-vol11-ch67/0020#67104",
+        "page/dmg-vol11-ch67/0020#67105"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-67-N",
+      "original_id": "NII-67-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "114c4134eade8563e76d7134aa77f047896f79f3589dcf490e0d170a4a0cdb74",
+      "answer_sha256": "cb55c7fe0a31dfadc7f416427fbf538b17e816309037049c79a419833a76715b",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Rejects a universal presumption and current entitlement from diagnosis alone.",
+      "material_omissions": [
+        "It mentions different timing/no-presumption rules without identifying the source date boundary or the particular exceptions required by the registered criterion."
+      ],
+      "omission_category": "missing-registered-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Retain disease/occupation pairing, dates, specific exceptions and proof requirements; diagnosis is not the whole test.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol11-ch67/0003#67001",
+        "page/dmg-vol11-ch67/0003#67002",
+        "page/dmg-vol11-ch67/0003#67003",
+        "page/dmg-vol11-ch67/0004#67007",
+        "page/dmg-vol11-ch67/0004#67009",
+        "page/dmg-vol11-ch67/0019#67101",
+        "page/dmg-vol11-ch67/0019#67102",
+        "page/dmg-vol11-ch67/0019#67103",
+        "page/dmg-vol11-ch67/0020#67104",
+        "page/dmg-vol11-ch67/0020#67105"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-69-P",
+      "original_id": "NII-69-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "e72b354c0b0fc03c3d6e670e6f7d2d6c253549976ea5c1a6e4faf08117a391d7",
+      "answer_sha256": "3f2c47063355eb16304b27998658380cc9166a4f03ce59da6a04da11e042c87a",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly distinguishes injury, loss of faculty, disability and assessed disablement rather than treating them as synonyms.",
+      "material_omissions": [
+        "The shared threshold/waiting criterion is not demonstrated: the 1 October 1986 claim boundary, aggregation and named disease exceptions remain unarticulated."
+      ],
+      "omission_category": "shared-rubric-qualification-not-demonstrated",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Historical boundaries, aggregation and named disease exceptions prevent a universal threshold or waiting-period rule.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol11-ch69/0002#69002",
+        "page/dmg-vol11-ch69/0002#69003",
+        "page/dmg-vol11-ch69/0002#69004",
+        "page/dmg-vol11-ch69/0002#69005",
+        "page/dmg-vol11-ch69/0002#69006",
+        "page/dmg-vol11-ch69/0002#69007",
+        "page/dmg-vol11-ch69/0003#69009",
+        "page/dmg-vol11-ch69/0003#69010",
+        "page/dmg-vol11-ch69/0004#69013",
+        "page/dmg-vol11-ch69/0005#69015"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-69-N",
+      "original_id": "NII-69-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "22b8af5e7771f9b3f1206d4790d0304abe90f75f15730a0ec553088be8a1931f",
+      "answer_sha256": "2b0f9871f647d6f2e4de68c44dbe1a2c70a290d5c6a491caa3c5393b5522e7c5",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly rejects a universal 14%/90-day rule, recognises aggregation and excludes Sundays.",
+      "material_omissions": [
+        "The answer does not name the required disease exceptions or actual 1 October 1986 boundary: pneumoconiosis/byssinosis and occupational-deafness thresholds, and the specified onset-date exceptions, are replaced by general references."
+      ],
+      "omission_category": "missing-material-source-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Historical boundaries, aggregation and named disease exceptions prevent a universal threshold or waiting-period rule.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol11-ch69/0002#69002",
+        "page/dmg-vol11-ch69/0002#69003",
+        "page/dmg-vol11-ch69/0002#69004",
+        "page/dmg-vol11-ch69/0002#69005",
+        "page/dmg-vol11-ch69/0002#69006",
+        "page/dmg-vol11-ch69/0002#69007",
+        "page/dmg-vol11-ch69/0003#69009",
+        "page/dmg-vol11-ch69/0003#69010",
+        "page/dmg-vol11-ch69/0004#69013",
+        "page/dmg-vol11-ch69/0005#69015"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-71-P",
+      "original_id": "NII-71-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "7fe97c7a8f9e5ad0f55f6aef9e8563000f93c25405b74a1a0905a55090ed838b",
+      "answer_sha256": "6ec422f340cfc44e9177319c05b3a352976842ef80fe492b205776aa1587801d",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Accurately separates regular occupation and loss of earning capacity from a particular employer or total receipts.",
+      "material_omissions": [
+        "The broader registered criterion on payability versus entitlement, the 71015 exception and Industrial RA versus SP/RP is not addressed by this answer."
+      ],
+      "omission_category": "shared-rubric-qualification-not-demonstrated",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Distinguish payability from entitlement, preserve 71015 exception and keep Industrial RA distinct from SP/RP.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol11-ch71/0011#71041",
+        "page/dmg-vol11-ch71/0011#71044",
+        "page/dmg-vol11-ch71/0011#71045",
+        "page/dmg-vol11-ch71/0012#71052",
+        "page/dmg-vol11-ch71/0012#71054",
+        "page/dmg-vol11-ch71/0012#71055",
+        "page/dmg-vol11-ch71/0008#71012",
+        "page/dmg-vol11-ch71/0008#71013",
+        "page/dmg-vol11-ch71/0008#71014",
+        "page/dmg-vol11-ch71/0009#71015",
+        "page/dmg-vol11-ch71/0007#whole-page"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-71-N",
+      "original_id": "NII-71-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "1b055272f547687771d4549c94d1bb4e89ee65e35edbd2d4a0ed2df72454bf10",
+      "answer_sha256": "1330ae2654b3dcefa46a9d63f5e6cbe7f2c12181be59a42996088214f658d3b3",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly distinguishes non-payment from underlying entitlement and Industrial RA from State Pension.",
+      "material_omissions": [
+        "It calls 71015 “cases outside that rule” without explaining that people not entitled on 30 September 1990 are outside 71012, so later gaps do not have that effect."
+      ],
+      "omission_category": "missing-material-source-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Distinguish payability from entitlement, preserve 71015 exception and keep Industrial RA distinct from SP/RP.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol11-ch71/0011#71041",
+        "page/dmg-vol11-ch71/0011#71044",
+        "page/dmg-vol11-ch71/0011#71045",
+        "page/dmg-vol11-ch71/0012#71052",
+        "page/dmg-vol11-ch71/0012#71054",
+        "page/dmg-vol11-ch71/0012#71055",
+        "page/dmg-vol11-ch71/0008#71012",
+        "page/dmg-vol11-ch71/0008#71013",
+        "page/dmg-vol11-ch71/0008#71014",
+        "page/dmg-vol11-ch71/0009#71015",
+        "page/dmg-vol11-ch71/0124#whole-page"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-72-P",
+      "original_id": "NII-72-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "bc0631cea066a026eda473ce3f6d3de1b5906cd17f2790b82874cc123d747197",
+      "answer_sha256": "bd8eee947c50925a3c6a7719bd72621fac0cb6b77aa68c0be8d6846f2872cde1",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly treats medical opinion as non-binding evidence and distinguishes incapacity from a lack of available jobs within retained US.",
+      "material_omissions": [
+        "The registered 6/8 April 1987 discrepancy is absent. The answer therefore does not demonstrate the full historical/date safeguard."
+      ],
+      "omission_category": "shared-rubric-qualification-not-demonstrated",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Medical opinion is evidence, US is a retained historical route and its date discrepancy remains unresolved.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol11-ch72/0003#72001",
+        "page/dmg-vol11-ch72/0003#72002",
+        "page/dmg-vol11-ch72/0003#72003",
+        "page/dmg-vol11-ch64/0004#64020",
+        "page/dmg-vol11-ch72/0007#72130",
+        "page/dmg-vol11-ch72/0007#72135",
+        "page/dmg-vol11-ch72/0008#72140",
+        "page/dmg-vol11-ch72/0008#72141"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-72-N",
+      "original_id": "NII-72-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "1a307e79ba2543436adc660209383db05912567473e1cc413d82cd609e8b4645",
+      "answer_sha256": "bbe27bf56c09dabda0e823b07cbac95d6876d532dff9410759b75f17084ef1a2",
+      "assessment": "meets-authored-case",
+      "interpretation_assessment": "Correctly rejects a rigid current ESA earnings rule and preserves both US dates as an unresolved source discrepancy.",
+      "material_omissions": [],
+      "omission_category": null,
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Medical opinion is evidence, US is a retained historical route and its date discrepancy remains unresolved.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol11-ch72/0003#72001",
+        "page/dmg-vol11-ch72/0003#72002",
+        "page/dmg-vol11-ch72/0003#72003",
+        "page/dmg-vol11-ch64/0004#64020",
+        "page/dmg-vol11-ch72/0007#72130",
+        "page/dmg-vol11-ch72/0007#72135",
+        "page/dmg-vol11-ch72/0008#72140",
+        "page/dmg-vol11-ch72/0008#72141"
+      ],
+      "next_action": "Retain this bounded source-grounded result; no current-law or specialist acceptance follows.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-73-P",
+      "original_id": "NII-73-P",
+      "kind": "source-grounding",
+      "prompt_sha256": "8cf4ef06a030f4440f8de42a578d4033d620bfcf6db85c2b152e2ac365176cf7",
+      "answer_sha256": "82844f6c4b24e7fa3bc3ba464436a180bbf306987854f7477ee942e04df69637",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly states the 5 December 2012 transfer and treatment of pending claims.",
+      "material_omissions": [
+        "The shared registered distinction between weekly allowance and death-benefit damages timing is not explained; retained text is mentioned only generally."
+      ],
+      "omission_category": "shared-rubric-qualification-not-demonstrated",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Preserve abolition/transfer and the distinction between weekly allowance and death-benefit damages timing.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol11-ch73/0003#73001",
+        "page/dmg-vol11-ch73/0003#73002",
+        "page/dmg-vol11-ch73/0003#73003",
+        "page/dmg-vol11-ch73/0005#73333",
+        "page/dmg-vol11-ch73/0005#73335",
+        "page/dmg-vol11-ch73/0008#73348",
+        "page/dmg-vol11-ch73/0008#73349",
+        "page/dmg-vol11-ch73/0008#73350"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    },
+    {
+      "case_id": "non-income-and-industrial/NII-73-N",
+      "original_id": "NII-73-N",
+      "kind": "boundary-control",
+      "prompt_sha256": "42f428e44ad65f8f819b6a90fef0f1080871bd2d6dbd33e1f43b2052164b908c",
+      "answer_sha256": "04f6b37410ff2bf0a2f6f9602e808ada19e42b86d5913062f49e7298014d965a",
+      "assessment": "partially-meets-authored-case",
+      "interpretation_assessment": "Correctly rejects a reopened parallel route and one universal damages-timing rule.",
+      "material_omissions": [
+        "The answer does not state the actual different effects: weekly allowance ends on recovery of damages, whereas post-claim damages do not affect death benefit, including before the decision (73348–73350)."
+      ],
+      "omission_category": "missing-material-source-qualification",
+      "exact_evidence_integrity": "passed",
+      "registered_criteria": {
+        "must_not_claim": [
+          "Individual entitlement, diagnosis, award or currently applicable legal rule is established.",
+          "A designed case is an executed retrieval or specialist-approved answer."
+        ],
+        "must_state": [
+          "Preserve abolition/transfer and the distinction between weekly allowance and death-benefit damages timing.",
+          "Cite exact source page and paragraph where available; distinguish captured guidance from unreviewed interpretation and current law."
+        ]
+      },
+      "contradictions_or_unsupported_substantive_claims_found": [],
+      "source_evidence_ids": [
+        "page/dmg-vol11-ch73/0003#73001",
+        "page/dmg-vol11-ch73/0003#73002",
+        "page/dmg-vol11-ch73/0003#73003",
+        "page/dmg-vol11-ch73/0005#73333",
+        "page/dmg-vol11-ch73/0005#73335",
+        "page/dmg-vol11-ch73/0008#73348",
+        "page/dmg-vol11-ch73/0008#73349",
+        "page/dmg-vol11-ch73/0008#73350"
+      ],
+      "next_action": "Preserve the observed answer. If revising, record a new linked attempt addressing the listed omissions.",
+      "specialist_accepted": false,
+      "independent_from_answer_author": true,
+      "independent_legal_review": false
+    }
+  ],
+  "supplemental_grading_evidence": [
+    {
+      "document_id": "dmg-vol4-ch24",
+      "pdf_page": 34,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol4-ch24.json",
+      "url": "https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf#page=34",
+      "purpose": "DMG 24162 temporary absence",
+      "source_pdf_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "source_pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "page_text_sha256": "c95250827a0be7ddd2c55962e8d4af8f3f6255e23340de5d20f44ba8f5a154d8"
+    },
+    {
+      "document_id": "dmg-vol5-ch29",
+      "pdf_page": 9,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol5-ch29.json",
+      "url": "https://assets.publishing.service.gov.uk/media/69d8f3a496c86b751317022c/dmg-Ch-29.pdf#page=9",
+      "purpose": "DMG 29075 legal and beneficial ownership",
+      "source_pdf_sha256": "a1b086fdad8d32d6273b35fb8895516b6957faacd05fd3b06e091032598a47b9",
+      "source_pages_sha256": "b490507e3aaf6110ea0593fee2ee4d772fd5a1f9a75f4f91008734caec51cfd9",
+      "page_text_sha256": "e79ecceced40639ab141f2fa5163fc8dac1ce634558b3ea0cde3f6d24c10b63f"
+    },
+    {
+      "document_id": "dmg-vol5-ch29",
+      "pdf_page": 159,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol5-ch29.json",
+      "url": "https://assets.publishing.service.gov.uk/media/69d8f3a496c86b751317022c/dmg-Ch-29.pdf#page=159",
+      "purpose": "DMG 29808 child/young-person exclusion",
+      "source_pdf_sha256": "a1b086fdad8d32d6273b35fb8895516b6957faacd05fd3b06e091032598a47b9",
+      "source_pages_sha256": "b490507e3aaf6110ea0593fee2ee4d772fd5a1f9a75f4f91008734caec51cfd9",
+      "page_text_sha256": "9c04770c459514cacefc4235de96d2cff69eaaccb0babb9ad649a682058743a0"
+    },
+    {
+      "document_id": "dmg-vol10-ch60",
+      "pdf_page": 4,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch60.json",
+      "url": "https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=4",
+      "purpose": "DMG 60033 expanded payment list; the paragraph continues onto the next page",
+      "source_pdf_sha256": "ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a",
+      "source_pages_sha256": "bc5925c0d434fbc4bec575bea2e1e2dbd020b014497ab156973054e80e326f2f",
+      "page_text_sha256": "da32faef31e491cbc565d0d34edba35e594321f26361ac8f6822a7c3e12b9edb"
+    },
+    {
+      "document_id": "dmg-vol10-ch62",
+      "pdf_page": 8,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch62.json",
+      "url": "https://assets.publishing.service.gov.uk/media/6915b60ebc34c86ce4e6e71b/dmg-ch-62.pdf#page=8",
+      "purpose": "DMG 62504 same-pregnancy SMP exclusion",
+      "source_pdf_sha256": "5c26aeea45beff88bc30b486b5af521d76c8db81a591a96f8f333285870d6431",
+      "source_pages_sha256": "a93501ebcedfbd5cd44cdd7432521274e54a477ee5db81316239e7bdcacdfe6d",
+      "page_text_sha256": "a977c8447448e79e2b59b235a18418c4cbca4bfe9e8fe0547306235cd6995138"
+    },
+    {
+      "document_id": "dmg-vol10-ch57",
+      "pdf_page": 9,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch57.json",
+      "url": "https://assets.publishing.service.gov.uk/media/5a818c4440f0b62302697e6e/dmgch57.pdf#page=9",
+      "purpose": "DMG 57016 SDA/IB qualifying-day difference",
+      "source_pdf_sha256": "e5308157f4aed131c245dfd1554a126ad2800f670127de7995f6c643db8ce63b",
+      "source_pages_sha256": "5b68aac36596be58528e0c3561d5ef604ec3cf774a61eb2ab93d8639dca9531c",
+      "page_text_sha256": "0b0fbec33671e3a89366df5d09c9f87f643990cbfae16a45d58b1c3403046658"
+    }
+  ],
+  "findings": [
+    {
+      "kind": "source-integrity",
+      "detail": "All 78 unchanged answers and 229 retained excerpt records pass independent byte and raw-source binding checks."
+    },
+    {
+      "kind": "material-qualification-omissions",
+      "cases": [
+        "common-decision/CD-04-P",
+        "common-decision/CD-04-N",
+        "common-decision/CD-17-P",
+        "pension-regimes/PR76-P1",
+        "jsa-income-support/eval-positive-24",
+        "non-income-and-industrial/NII-60-P"
+      ],
+      "detail": "Several answers replace a specifically required exception, route or territorial/temporal condition with a general reference, or omit it entirely. The individual records give the missing source qualification."
+    },
+    {
+      "kind": "rubric-design-limit",
+      "detail": "Some shared rubrics combine distinct positive/negative questions. Partial results labelled as shared-rubric omissions must not be presented as factual contradictions or a calibrated overall accuracy percentage."
+    },
+    {
+      "kind": "recovered-source-read",
+      "detail": "The answerer retains the chapter 17 preliminary excerpt-selection failure and corrected read. The assessment uses the corrected evidence and does not erase the initial failure."
+    }
+  ],
+  "limitations": [
+    "Independent from the answer author, but not a blind hold-out, external legal review or independent model-family replication.",
+    "The 78 short answers were evaluated against frozen machine-extracted material; no new legislation, case law or current official-source reconciliation was performed.",
+    "Evidence-guided raw-source answers do not validate natural-language retrieval, the indexed bundle, Explorer, MCP, voice interaction or deployed behaviour.",
+    "Several source excerpts are partial paragraphs or page continuations. Specific high-risk qualifications were inspected, but this is not whole-corpus visual or legal assurance.",
+    "A partial result can be an accurate narrow answer that does not demonstrate a broader registered temporal/benefit safeguard. Per-case reasons take precedence over aggregate counts.",
+    "All original response and source-read files remain unchanged. Improved answers would require new linked attempts, not alteration of the observed run."
+  ]
+}

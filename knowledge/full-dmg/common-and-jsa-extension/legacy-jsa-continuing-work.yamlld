@@ -1,0 +1,91 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-continuing-work
+  '@type': skos:Concept
+  route: term/legacy-jsa-continuing-work
+  title: Continuing employment before the hours question
+  type: Concept
+  description: The captured JSA/IS guidance asks whether work is continuing before assessing
+    remunerative-work hours and treats continuing employment as a factual question informed by the
+    actual relationship and work pattern.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Continuing employment before the hours question
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured JSA/IS guidance asks whether work is continuing before assessing
+      remunerative-work hours and treats continuing employment as a factual question informed by the
+      actual relationship and work pattern.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': A gap between jobs, a contract label or a P45 is not a substitute for the source’s
+      factual enquiry. JSA(Cont) concerns the claimant’s work, while JSA(IB) and IS also address a
+      partner’s work. Memo-qualified text and the full exceptions remain dependencies; no
+      employment-status or entitlement decision is made.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol4-ch20/0046
+  - page/dmg-vol4-ch20/0047
+  source:
+    https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=46
+  resource:
+    https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=46
+  sources:
+  - id: dmg-vol4-ch20
+    title: 'DMG Vol 4: Ch 20, JSA and IS, conditions of entitlement'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf
+    retrieved_at: '2026-09-15T19:45:23.333269Z'
+    sha256: 0474580014a697c47370992feee115d49c80b105b9c43270bf89afff0e4b0aa5
+  body: "# Continuing employment before the hours question\n\n## Authored interpretation\n\nThe captured
+    JSA/IS guidance asks whether work is continuing before assessing remunerative-work hours and treats
+    continuing employment as a factual question informed by the actual relationship and work pattern.\n\
+    \n## Scope and exceptions\n\nA gap between jobs, a contract label or a P45 is not a substitute for
+    the source’s factual enquiry. JSA(Cont) concerns the claimant’s work, while JSA(IB) and IS also address
+    a partner’s work. Memo-qualified text and the full exceptions remain dependencies; no employment-status
+    or entitlement decision is made.\n\n## Inspected source passages\n\n- [DMG 20200, PDF page 46](https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=46)
+    — DMG Vol 4: Ch 20, JSA and IS, conditions of entitlement.\n- [DMG 20201, PDF page 46](https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=46)
+    — DMG Vol 4: Ch 20, JSA and IS, conditions of entitlement.\n- [DMG 20202, PDF page 46](https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=46)
+    — DMG Vol 4: Ch 20, JSA and IS, conditions of entitlement.\n- [DMG 20206, PDF page 47](https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=47)
+    — DMG Vol 4: Ch 20, JSA and IS, conditions of entitlement.\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of selected passages in the 15 September 2026 frozen source snapshot. Specialist review
+    is required. Source acquisition, source revision, legal effective dates and this record’s authoring
+    time are separate.\n\nThis is an independent experimental publication, not an official DWP document,
+    individual advice, an entitlement decision or an executable rule. Machine-extracted text may alter
+    reading order, footnotes and characters. No PDF visual inspection, whole-chapter coverage or behavioural
+    evaluation pass is claimed by this record.\n\n- `dmg-vol4-ch20`: PDF SHA-256 `0474580014a697c47370992feee115d49c80b105b9c43270bf89afff0e4b0aa5`;
+    extracted pages SHA-256 `ed007251fa43ff9c63f5116f603798f2279c84006af8539bbbfd50194ab0ab56`.\n"
+  semantic_relations:
+  - target: term/legacy-jsa-remunerative-work
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter requires the continuing-work question to be considered before counting
+      hours for remunerative work.
+    evidence:
+    - page: page/dmg-vol4-ch20/0046
+      quote: "20200 [See Memo DMG 13/20] Being in remunerative work affects entitlement to JSA and IS
+        1. In all\ncases, before the DM applies the law to establish how many hours a person is working,
+        they must decide\nwhether or not the work is continuing.\n\n\n                               \
+        \                               1 JS Act 95, s 1(2)(e); SS CB Act 92, s 124(1)(c)\n\n\n\nJSA(Cont)"
+      locator: DMG 20200
+    - page: page/dmg-vol4-ch20/0047
+      quote: "20206 It is a question of fact for the DM whether the work is continuing or not. DMs will
+        need to consider\nsuch things as\n\n\n• the type and nature of the work\n\n\n• the frequency and
+        length of the contracts/periods of work\n\n\n• the process of securing the work\n\n\n• the employment
+        situation/opportunities in the area\n\n\n• whether there is a continuing relationship between
+        the claimant and the employer\n\n\n• whether there is evidence of the relationship between the
+        claimant and the employer having ended, e.g.\nthe production of a P45.\n\n\nThis list is not prescriptive
+        or exhaustive and other considerations may be equally valid in the\ncircumstances of each case."
+      locator: DMG 20206

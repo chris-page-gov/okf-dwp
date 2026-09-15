@@ -1,0 +1,82 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-burden-of-proof
+  '@type': skos:Concept
+  route: term/dmg-burden-of-proof
+  title: Burden of proof in DMG decisions
+  type: Concept
+  description: 'The DMG describes the burden of proof as depending on the issue: initial claims, exceptions, allegations,
+    revision or supersession applications and recoverable overpayments have distinct allocations.'
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Burden of proof in DMG decisions
+    '@language': en-GB
+  skos:definition:
+    '@value': 'The DMG describes the burden of proof as depending on the issue: initial claims, exceptions, allegations,
+      revision or supersession applications and recoverable overpayments have distinct allocations.'
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Do not infer that the claimant always bears the burden. The source also requires assistance in
+      obtaining relevant evidence and contains a prescribed-disease qualification. Allocation must be reviewed
+      in its benefit and procedural context.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol1-ch1/0052
+  source: https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=52
+  resource: https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=52
+  sources:
+  - id: dmg-vol1-ch1
+    title: 'DMG Vol 1 Ch 1: Principles of decision making and evidence'
+    author: organisation:dwp
+    resource:
+      https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=52
+    retrieved_at: '2026-09-15T19:45:18.139103Z'
+    sha256: 58b168c7b0a01f54713f6cfa60953549ebc099cbe568ffaeea551d0b756495d2
+  body: "# Burden of proof in DMG decisions\n\n## Authored interpretation\n\nThe DMG describes the burden of proof
+    as depending on the issue: initial claims, exceptions, allegations, revision or supersession applications and
+    recoverable overpayments have distinct allocations.\n\n## Scope and exceptions\n\nDo not infer that the claimant
+    always bears the burden. The source also requires assistance in obtaining relevant evidence and contains a prescribed-disease
+    qualification. Allocation must be reviewed in its benefit and procedural context.\n\n## Inspected source passages\n\
+    \n- [DMG 01405, PDF page 52](https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=52)
+    — DMG Vol 1 Ch 1: Principles of decision making and evidence.\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source
+    is DWP guidance, not a consolidated statement of legislation. This is an independent experimental publication,
+    not an official DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are
+    one-based file positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships
+    preserve extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current
+    applicability remain separate review tasks.\n\n- `dmg-vol1-ch1` PDF SHA-256: `58b168c7b0a01f54713f6cfa60953549ebc099cbe568ffaeea551d0b756495d2`;
+    extracted pages SHA-256: `cf7a000e2c54c5361a03ec4ad73fa22cc14e8cdb0d4f03b53919a4a509a6eacb`.\n"
+  semantic_relations:
+  - target: term/dmg-evidence-assessment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source connects identifying who bears the burden with weighing evidence and deciding
+      whether to seek more.
+    evidence:
+    - page: page/dmg-vol1-ch1/0052
+      quote: "01405 A clear understanding of where the burden of proof lies helps the DM to weigh the evidence and\n\
+        decide whether further evidence should be sought. DMs should note that\n\n\n1. initially the burden lies
+        with the claimant to prove that the conditions for a claim or application are\n\nsatisfied1 but they should
+        do as much as possible to ensure that the claimant has every opportunity to\nprovide all relevant evidence
+        and where the information is available to them rather than the claimant,\nthen they must make the necessary
+        steps to enable it to be traced\n\n\n2. where they wish to show that an exception to a condition of entitlement
+        is not satisfied, the burden of\n\nproof rests with them2\n\n\n3. there is no presumption in favour of the
+        claimant though for IIDB the claimant is normally presumed to\nhave the PD if he has worked in the prescribed
+        occupation; for example, a cotton weaver with byssinosis\n(see DMG Chapter 67 for full guidance)\n\n\n4.
+        where an allegation is denied by the claimant it is generally for DMs to prove the facts.\n\n\n5. the burden
+        of proving that the conditions for revision or supersession are satisfied lies with the person\nwho applies
+        for revision or supersession\n\n\n6. in overpayment cases the burden of proof for the purposes of determining
+        the sum to be recovered\n\nfalls on them3 (see DMG Chapter 09)."
+      locator: DMG 01405

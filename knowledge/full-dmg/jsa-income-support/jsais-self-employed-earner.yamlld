@@ -1,0 +1,94 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-self-employed-earner
+  '@type': skos:Concept
+  route: term/jsais-self-employed-earner
+  title: Self-employed earner in the JSA and Income Support guidance
+  type: Concept
+  description: The captured chapter describes gainful employment in Great Britain that is not
+    employed-earner employment, and recognises that a person may also have separate employed work.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Self-employed earner in the JSA and Income Support guidance
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured chapter describes gainful employment in Great Britain that is not
+      employed-earner employment, and recognises that a person may also have separate employed work.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Status requires weighing the source’s factors; no single label or tax arrangement
+      decides it here. Directors of limited companies are treated separately as office holders in
+      DMG 27011. Current trading status, sickness, cessation and capital assets remain distinct
+      questions. This is not an equivalence with the Pension Credit self-employment concept.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol5-ch27/0004
+  - page/dmg-vol5-ch27/0006
+  - page/dmg-vol5-ch27/0014
+  source:
+    https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=4
+  resource:
+    https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=4
+  sources:
+  - id: dmg-vol5-ch27
+    title: 'DMG Vol 5 Ch 27: Self-employed earners and share fishermen'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf
+    retrieved_at: '2026-09-15T19:45:25.036028Z'
+    sha256: 90b6c5ec739d2366936d67d78cd5a6f857b764b92000200f4a44ac956c88b3ac
+  body: "# Self-employed earner in the JSA and Income Support guidance\n\n## Authored interpretation\n\
+    \nThe captured chapter describes gainful employment in Great Britain that is not employed-earner employment,
+    and recognises that a person may also have separate employed work.\n\n## Scope and exceptions\n\n\
+    Status requires weighing the source’s factors; no single label or tax arrangement decides it here.
+    Directors of limited companies are treated separately as office holders in DMG 27011. Current trading
+    status, sickness, cessation and capital assets remain distinct questions. This is not an equivalence
+    with the Pension Credit self-employment concept.\n\n## Inspected source passages\n\n- [DMG 27002,
+    PDF page 4](https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=4)
+    — DMG Vol 5 Ch 27: Self-employed earners and share fishermen.\n- [DMG 27005, PDF page 4](https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=4)
+    — DMG Vol 5 Ch 27: Self-employed earners and share fishermen.\n- [DMG 27011, PDF page 6](https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf#page=6)
+    — DMG Vol 5 Ch 27: Self-employed earners and share fishermen.\n\n## Evidence and review status\n\n\
+    Model-assisted interpretation of selected passages in the 15 September 2026 frozen source snapshot.
+    Specialist review is required. Source acquisition, source revision, legal effective dates and this
+    record’s authoring time are separate.\n\nThis is an independent experimental publication, not an official
+    DWP document, individual advice, an entitlement decision or an executable rule. Machine-extracted
+    text may alter reading order, footnotes and characters. No PDF visual inspection, whole-chapter coverage
+    or behavioural evaluation pass is claimed by this record.\n\n- `dmg-vol5-ch27`: PDF SHA-256 `90b6c5ec739d2366936d67d78cd5a6f857b764b92000200f4a44ac956c88b3ac`;
+    extracted pages SHA-256 `7f84279f4a44373405ce06d32bf1c927a9f25dda507895b1540e6bb8b1b5185a`.\n"
+  semantic_relations:
+  - target: term/jsais-employed-earner
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source distinguishes a limited company and its director and identifies the
+      director as an employed earner; the association preserves the classification boundary.
+    evidence:
+    - page: page/dmg-vol5-ch27/0006
+      quote: "27011 A limited company, of whatever size, is separate from its employees, officers and
+        shareholders 1.\nThis means that the profits of the company do not belong to the directors. A
+        director of a limited\n\ncompany is an office holder in the company2 and is an employed earner
+        (see DMG 26048).\n\n\n                                                             1 R(SB) 57/83;
+        2 McMillan v Guest 1942, AC 561"
+      locator: DMG 27011
+  - target: term/jsais-self-employed-assessment-period
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter’s normal-weekly-earnings passage requires receipts and expenses for the
+      assessment period of a self-employed earner.
+    evidence:
+    - page: page/dmg-vol5-ch27/0014
+      quote: "27051 The normal weekly earnings of a S/E earner should be calculated by using the\n\n\n\
+        1. gross receipts (see DMG 27125) and\n\n\n2. expenses paid out (see DMG 27190)\n\n\nduring the
+        assessment period. Different rules apply for royalties, copyright payments and Public Lending\n\
+        Rights payments."
+      locator: DMG 27051

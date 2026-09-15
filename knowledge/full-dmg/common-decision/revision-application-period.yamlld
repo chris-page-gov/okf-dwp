@@ -1,0 +1,78 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-revision-application-period
+  '@type': skos:Concept
+  route: term/dmg-revision-application-period
+  title: Application period for DMG revision
+  type: Concept
+  description: The captured revision guidance uses the date of notification, requests for written reasons and
+    accepted late applications to describe how an application period is established.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Application period for DMG revision
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured revision guidance uses the date of notification, requests for written reasons and
+      accepted late applications to describe how an application period is established.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is a temporal dependency record, not a deadline calculator. Notification evidence,
+      benefit-specific provisions, late-application conditions, any-time revision and effective dates must be
+      considered separately.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol1-ch3/0014
+  source: https://assets.publishing.service.gov.uk/media/6a212d2e58aae59498cb2a1a/dmg-vol-1-ch-3.pdf#page=14
+  resource: https://assets.publishing.service.gov.uk/media/6a212d2e58aae59498cb2a1a/dmg-vol-1-ch-3.pdf#page=14
+  sources:
+  - id: dmg-vol1-ch3
+    title: 'DMG Vol 1 Ch 3: Revision '
+    author: organisation:dwp
+    resource:
+      https://assets.publishing.service.gov.uk/media/6a212d2e58aae59498cb2a1a/dmg-vol-1-ch-3.pdf#page=14
+    retrieved_at: '2026-09-15T19:45:18.312379Z'
+    sha256: 4aebcf1988fb7d96698dce77bf88d68272a5975171decc42f58c32cfa1d42eeb
+  body: "# Application period for DMG revision\n\n## Authored interpretation\n\nThe captured revision guidance uses
+    the date of notification, requests for written reasons and accepted late applications to describe how an application
+    period is established.\n\n## Scope and exceptions\n\nThis is a temporal dependency record, not a deadline calculator.
+    Notification evidence, benefit-specific provisions, late-application conditions, any-time revision and effective
+    dates must be considered separately.\n\n## Inspected source passages\n\n- [DMG 03060, PDF page 14](https://assets.publishing.service.gov.uk/media/6a212d2e58aae59498cb2a1a/dmg-vol-1-ch-3.pdf#page=14)
+    — DMG Vol 1 Ch 3: Revision .\n- [DMG 03061, PDF page 14](https://assets.publishing.service.gov.uk/media/6a212d2e58aae59498cb2a1a/dmg-vol-1-ch-3.pdf#page=14)
+    — DMG Vol 1 Ch 3: Revision .\n- [DMG 03063, PDF page 14](https://assets.publishing.service.gov.uk/media/6a212d2e58aae59498cb2a1a/dmg-vol-1-ch-3.pdf#page=14)
+    — DMG Vol 1 Ch 3: Revision .\n\n## Evidence and review status\n\nModel-assisted interpretation of the 15 September
+    2026 source snapshot; unreviewed and requiring specialist review. The source is DWP guidance, not a consolidated
+    statement of legislation. This is an independent experimental publication, not an official DWP document, an
+    entitlement decision or an executable benefits rule.\n\nPDF page numbers are one-based file positions. Machine
+    extraction can alter reading order, footnotes and characters. Quoted relationships preserve extracted text;
+    no visual or specialist acceptance is claimed. Source dates, legal effects and current applicability remain
+    separate review tasks.\n\n- `dmg-vol1-ch3` PDF SHA-256: `4aebcf1988fb7d96698dce77bf88d68272a5975171decc42f58c32cfa1d42eeb`;
+    extracted pages SHA-256: `444fa1a240db31b94cb75c13a2f2ece7c691f15aeca0bec2dd298e2f4e08f66a`.\n"
+  semantic_relations:
+  - target: term/dmg-revision
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source states that timing determines how an application for revision is dealt with, rather
+      than imposing one undifferentiated cut-off.
+    evidence:
+    - page: page/dmg-vol1-ch3/0014
+      quote: "03060 Claimants can apply for revision of decisions if they think they are wrong or unfair. The timing
+        of\nthe application determines how it is dealt with by the DM. For appeals to FtT, UT and the Courts see
+        DMG\nChapter 06."
+      locator: DMG 03060
+    - page: page/dmg-vol1-ch3/0014
+      quote: "03061 Where an application is made outside the time limits in DMG 03063 et seq , the DM should\nconsider
+        the ‘any time’ revision procedure. Where this is not applicable the DM should consider whether\nthe decision
+        can be superseded."
+      locator: DMG 03061

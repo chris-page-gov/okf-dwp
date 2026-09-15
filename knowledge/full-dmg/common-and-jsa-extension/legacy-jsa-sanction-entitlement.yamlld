@@ -1,0 +1,108 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-sanction-entitlement
+  '@type': skos:Concept
+  route: term/legacy-jsa-sanction-entitlement
+  title: A sanction reduction and underlying legacy JSA entitlement
+  type: Concept
+  description: The captured sanctions chapter describes a sanction as reducing JSA that would
+    otherwise be payable and requires underlying entitlement, while identifying its legacy
+    JSA(Cont)/JSA(IB) regime.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': A sanction reduction and underlying legacy JSA entitlement
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured sanctions chapter describes a sanction as reducing JSA that would
+      otherwise be payable and requires underlying entitlement, while identifying its legacy
+      JSA(Cont)/JSA(IB) regime.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 34001 gives the 22 October 2012 scope and directs UC and New Style JSA to separate
+      ADM chapters. Waiting days, claimant categories, sanction grounds and periods require their
+      own review. This concept does not impose a sanction or establish current legal effects.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol6-ch34/0002
+  - page/dmg-vol6-ch34/0008
+  - page/dmg-vol6-ch34/0058
+  - page/dmg-vol6-ch34/0009
+  source: https://assets.publishing.service.gov.uk/media/628f5e0bd3bf7f0373c74ef9/dmgch34.pdf#page=2
+  resource:
+    https://assets.publishing.service.gov.uk/media/628f5e0bd3bf7f0373c74ef9/dmgch34.pdf#page=2
+  sources:
+  - id: dmg-vol6-ch34
+    title: 'DMG Vol 6 Ch 34: Sanctions'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/628f5e0bd3bf7f0373c74ef9/dmgch34.pdf
+    retrieved_at: '2026-09-15T19:45:27.102150Z'
+    sha256: 0cf245521764b405f4d8983f1b93f131dbe6d9cacd000a0ed9edeb1aca4f9b0b
+  body: "# A sanction reduction and underlying legacy JSA entitlement\n\n## Authored interpretation\n\n\
+    The captured sanctions chapter describes a sanction as reducing JSA that would otherwise be payable
+    and requires underlying entitlement, while identifying its legacy JSA(Cont)/JSA(IB) regime.\n\n##
+    Scope and exceptions\n\nDMG 34001 gives the 22 October 2012 scope and directs UC and New Style JSA
+    to separate ADM chapters. Waiting days, claimant categories, sanction grounds and periods require
+    their own review. This concept does not impose a sanction or establish current legal effects.\n\n\
+    ## Inspected source passages\n\n- [DMG 34001, PDF page 2](https://assets.publishing.service.gov.uk/media/628f5e0bd3bf7f0373c74ef9/dmgch34.pdf#page=2)
+    — DMG Vol 6 Ch 34: Sanctions.\n- [DMG 34031, PDF page 8](https://assets.publishing.service.gov.uk/media/628f5e0bd3bf7f0373c74ef9/dmgch34.pdf#page=8)
+    — DMG Vol 6 Ch 34: Sanctions.\n- [DMG 34032, PDF page 8](https://assets.publishing.service.gov.uk/media/628f5e0bd3bf7f0373c74ef9/dmgch34.pdf#page=8)
+    — DMG Vol 6 Ch 34: Sanctions.\n- [Inspected continuation, PDF page 9](https://assets.publishing.service.gov.uk/media/628f5e0bd3bf7f0373c74ef9/dmgch34.pdf#page=9)
+    — context for the selected paragraph.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol6-ch34`: PDF SHA-256 `0cf245521764b405f4d8983f1b93f131dbe6d9cacd000a0ed9edeb1aca4f9b0b`;
+    extracted pages SHA-256 `b33b6233590a7183795624a56525dfb2594dae0d201c5d33b36ff7ec8a3c74ce`.\n"
+  semantic_relations:
+  - target: term/legacy-jsa-prior-information
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source treats prior understandable information about responsibilities and
+      consequences as part of a valid sanction process.
+    evidence:
+    - page: page/dmg-vol6-ch34/0008
+      quote: "34033 The ‘prior information requirement’ principle is from a judgement of the Court of
+        Appeal 1. The\njudgement provided, in the general interest of fairness,\n\n\n1.   each claimant’s
+        responsibilities and\n\n\n2. the consequences of not meeting them\n\n\nshould be set out clearly
+        in understandable terms at the stage of specification of particular actions or\nactivities so
+        that claimants can make informed and meaningful representations at the relevant time.\n\n\nNote
+        1: The ‘prior information requirement’ may therefore be relevant both to whether the claimant
+        has\nbeen validly referred to a specific requirement and also to whether there was good reason
+        for not\ncomplying with it."
+      locator: DMG 34033
+  - target: term/legacy-jsa-good-reason
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Good reason has specific roles and exceptions in the sanctions chapter; it cannot be
+      assumed to be the same enquiry for every reduction.
+    evidence:
+    - page: page/dmg-vol6-ch34/0058
+      quote: "34201 For JSA intermediate sanctions there is no ‘good reason’ for the DM to consider before
+        imposing\n\na reduction1. The DM is considering whether entitlement has ended on a previous occasion
+        due to the\nclaimant not being available and/or ASE (see guidance at DMG 34121 et seq).\n\n\n\
+        \                                                                                          1 JS
+        Act 95, s 19B"
+      locator: DMG 34201
+    - page: page/dmg-vol6-ch34/0058
+      quote: "34202 For sanctionable failures due to misconduct the claimant will not have an opportunity
+        to show\ngood reason for the failure but will be given the opportunity to provide facts and evidence
+        for\nconsideration by the DM (see guidance on Misconduct at DMG 34531).\n\n\n\n\nMeaning of good
+        reason"
+      locator: DMG 34202
+    - page: page/dmg-vol6-ch34/0058
+      quote: "34203 Good reason is not defined in legislation. DMs should take into account all relevant
+        information\nabout the claimant’s circumstances and their reasons for their actions or omissions."
+      locator: DMG 34203

@@ -1,0 +1,87 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsais-study-period
+  '@type': skos:Concept
+  route: term/legacy-jsais-study-period
+  title: Period of study for entitlement purposes
+  type: Concept
+  description: The captured chapter gives different IS and JSA meanings for the period of study and
+    expressly confines these definitions to entitlement purposes.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Period of study for entitlement purposes
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured chapter gives different IS and JSA meanings for the period of study and
+      expressly confines these definitions to entitlement purposes.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The IS course-start-to-end description and JSA treated-attendance description must not
+      become a single calendar definition. They do not automatically determine student-income
+      periods, loan assessments, holiday eligibility or current course status; abandonment,
+      dismissal, connected periods and exceptions require review.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol6-ch30/0040
+  source:
+    https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf#page=40
+  resource:
+    https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf#page=40
+  sources:
+  - id: dmg-vol6-ch30
+    title: 'DMG Vol 6 Ch 30: Students, young claimants and their partners'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf
+    retrieved_at: '2026-09-15T19:45:26.638842Z'
+    sha256: 1540b54680884fdaa8a71e26fdebe12899d876b459d448198a7c941a37960780
+  body: "# Period of study for entitlement purposes\n\n## Authored interpretation\n\nThe captured chapter
+    gives different IS and JSA meanings for the period of study and expressly confines these definitions
+    to entitlement purposes.\n\n## Scope and exceptions\n\nThe IS course-start-to-end description and
+    JSA treated-attendance description must not become a single calendar definition. They do not automatically
+    determine student-income periods, loan assessments, holiday eligibility or current course status;
+    abandonment, dismissal, connected periods and exceptions require review.\n\n## Inspected source passages\n\
+    \n- [DMG 30218, PDF page 40](https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf#page=40)
+    — DMG Vol 6 Ch 30: Students, young claimants and their partners.\n- [DMG 30219, PDF page 40](https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf#page=40)
+    — DMG Vol 6 Ch 30: Students, young claimants and their partners.\n\n## Evidence and review status\n\
+    \nModel-assisted interpretation of selected passages in the 15 September 2026 frozen source snapshot.
+    Specialist review is required. Source acquisition, source revision, legal effective dates and this
+    record’s authoring time are separate.\n\nThis is an independent experimental publication, not an official
+    DWP document, individual advice, an entitlement decision or an executable rule. Machine-extracted
+    text may alter reading order, footnotes and characters. No PDF visual inspection, whole-chapter coverage
+    or behavioural evaluation pass is claimed by this record.\n\n- `dmg-vol6-ch30`: PDF SHA-256 `1540b54680884fdaa8a71e26fdebe12899d876b459d448198a7c941a37960780`;
+    extracted pages SHA-256 `768537aba8259637b2425c4f5359b19a59adee89282078ead1e22f6c4f973665`.\n"
+  semantic_relations:
+  - target: term/legacy-jsais-student-eligibility
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source explicitly connects these definitions to deciding entitlement, rather than
+      every use of dates in the student chapter.
+    evidence:
+    - page: page/dmg-vol6-ch30/0040
+      quote: "30218 For entitlement purposes only, the period of study 1 begins on the date that the student
+        starts\nattending or undertaking the course and ends on\n\n\n1. the last day of the course or\n\
+        \n\n2. such earlier date as the student\n\n\n      2.1 abandons the course or\n\n\n      2.2 is
+        dismissed from the course.\n\n\n                                                             \
+        \                      1 IS (Gen) Regs, reg 2(1)\n\n\nJSA"
+      locator: DMG 30218
+    - page: page/dmg-vol6-ch30/0040
+      quote: "30219 For entitlement purposes only, the period of study 1 is\n\n\n1. the period that the
+        student is treated as attending or undertaking the course of study and\n\n\n2. any period of attendance
+        by the student at their educational establishment or any period of study\nundertaken by a student
+        in connection with their course, which is before or after the period of the course.\n\n\n    \
+        \                                                                                     1 JSA Regs,
+        reg 4\n\n\nNote: The definition at DMG 30218 and DMG 30219 apply to eligibility only. They should
+        not be used for\nany other purpose."
+      locator: DMG 30219

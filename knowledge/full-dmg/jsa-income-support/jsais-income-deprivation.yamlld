@@ -1,0 +1,88 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-income-deprivation
+  '@type': skos:Concept
+  route: term/jsais-income-deprivation
+  title: Purpose and evidence in deprivation of income
+  type: Concept
+  description: The captured guidance links deprivation of income to securing or increasing benefit,
+    requires the benefit purpose to be significant and calls for consideration of all facts rather
+    than assuming purpose from disposal alone.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Purpose and evidence in deprivation of income
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance links deprivation of income to securing or increasing benefit,
+      requires the benefit purpose to be significant and calls for consideration of all facts rather
+      than assuming purpose from disposal alone.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The chapter also mentions ESA in these passages; this batch establishes no ESA rule
+      and retains its JSA/IS focus. Income already received is treated separately, enforceable
+      immediately repayable debt has a qualification, and each new claim requires a fresh decision.
+      Missing income is not proof of fraud or intent.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol5-ch28/0137
+  - page/dmg-vol5-ch28/0138
+  - page/dmg-vol5-ch28/0139
+  source:
+    https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=137
+  resource:
+    https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=137
+  sources:
+  - id: dmg-vol5-ch28
+    title: 'DMG Vol 5 Ch 28: Income other than earnings'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf
+    retrieved_at: '2026-09-15T19:45:25.311635Z'
+    sha256: bcaea58ee40a9dca60a21b0f79c525a1f15e95c6b8315d6aaa73f0f53dd5460f
+  body: "# Purpose and evidence in deprivation of income\n\n## Authored interpretation\n\nThe captured
+    guidance links deprivation of income to securing or increasing benefit, requires the benefit purpose
+    to be significant and calls for consideration of all facts rather than assuming purpose from disposal
+    alone.\n\n## Scope and exceptions\n\nThe chapter also mentions ESA in these passages; this batch establishes
+    no ESA rule and retains its JSA/IS focus. Income already received is treated separately, enforceable
+    immediately repayable debt has a qualification, and each new claim requires a fresh decision. Missing
+    income is not proof of fraud or intent.\n\n## Inspected source passages\n\n- [DMG 28576, PDF page
+    137](https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=137)
+    — DMG Vol 5 Ch 28: Income other than earnings.\n- [DMG 28577, PDF page 137](https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=137)
+    — DMG Vol 5 Ch 28: Income other than earnings.\n- [DMG 28581, PDF page 138](https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=138)
+    — DMG Vol 5 Ch 28: Income other than earnings.\n- [DMG 28582, PDF page 138](https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=138)
+    — DMG Vol 5 Ch 28: Income other than earnings.\n- [DMG 28589, PDF page 139](https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=139)
+    — DMG Vol 5 Ch 28: Income other than earnings.\n- [DMG 28590, PDF page 139](https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=139)
+    — DMG Vol 5 Ch 28: Income other than earnings.\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of selected passages in the 15 September 2026 frozen source snapshot. Specialist review
+    is required. Source acquisition, source revision, legal effective dates and this record’s authoring
+    time are separate.\n\nThis is an independent experimental publication, not an official DWP document,
+    individual advice, an entitlement decision or an executable rule. Machine-extracted text may alter
+    reading order, footnotes and characters. No PDF visual inspection, whole-chapter coverage or behavioural
+    evaluation pass is claimed by this record.\n\n- `dmg-vol5-ch28`: PDF SHA-256 `bcaea58ee40a9dca60a21b0f79c525a1f15e95c6b8315d6aaa73f0f53dd5460f`;
+    extracted pages SHA-256 `f7e554c1af4c7d8b915524f441c1680c5bea7429ac8fff9fd18bc0c925f25c31`.\n"
+  semantic_relations:
+  - target: term/dmg-evidence-assessment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source lists explanation, timing, knowledge and likelihood of a claim as facts to
+      consider when assessing purpose, rather than prescribing an automatic inference.
+    evidence:
+    - page: page/dmg-vol5-ch28/0139
+      quote: "28590 It is unlikely that there will be direct evidence that a deprivation was for the purpose
+        of getting\nbenefit. Decide on a person's reasons for disposing of an income after considering
+        all the facts of the\ncase. These may include\n\n\n1. the person's explanations\n\n\n2. the timing
+        of the disposal\n\n\n3. the claimant's knowledge of the benefit system\n\n\n4. the likelihood
+        of a benefit claim at the time of the deprivation."
+      locator: DMG 28590

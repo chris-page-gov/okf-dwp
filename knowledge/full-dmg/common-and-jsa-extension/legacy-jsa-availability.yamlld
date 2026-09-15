@@ -1,0 +1,98 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-availability
+  '@type': skos:Concept
+  route: term/legacy-jsa-availability
+  title: Availability for employment and permitted restrictions
+  type: Concept
+  description: The captured JSA guidance distinguishes being available for employment, being treated
+    as available and specified joint-claim exemptions, with restrictions considered under their
+    particular rules.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Availability for employment and permitted restrictions
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured JSA guidance distinguishes being available for employment, being treated
+      as available and specified joint-claim exemptions, with restrictions considered under their
+      particular rules.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The selected passage does not make every restriction permissible or require
+      unrestricted availability from every claimant. Notice periods, caring, health, treated cases,
+      joint claims and hardship have further provisions. Availability and actively seeking
+      employment are separate tests; current New Style JSA and UC rules are not inferred.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol4-ch21/0054
+  - page/dmg-vol4-ch21/0158
+  - page/dmg-vol4-ch21/0205
+  source:
+    https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=54
+  resource:
+    https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=54
+  sources:
+  - id: dmg-vol4-ch21
+    title: 'DMG Vol 4 Ch 21: Jobseeker’s Allowance Labour market questions, special conditions for JSA(Cont)
+      and jobseeking periods'
+    author: organisation:dwp
+    resource:
+      https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf
+    retrieved_at: '2026-09-15T19:45:23.409641Z'
+    sha256: d9fc5e120f85cb69386c9009d97ed2b33844523429224eded21be3c5003693e2
+  body: "# Availability for employment and permitted restrictions\n\n## Authored interpretation\n\nThe
+    captured JSA guidance distinguishes being available for employment, being treated as available and
+    specified joint-claim exemptions, with restrictions considered under their particular rules.\n\n##
+    Scope and exceptions\n\nThe selected passage does not make every restriction permissible or require
+    unrestricted availability from every claimant. Notice periods, caring, health, treated cases, joint
+    claims and hardship have further provisions. Availability and actively seeking employment are separate
+    tests; current New Style JSA and UC rules are not inferred.\n\n## Inspected source passages\n\n- [DMG
+    21180, PDF page 54](https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=54)
+    — DMG Vol 4 Ch 21: Jobseeker’s Allowance Labour market questions, special conditions for JSA(Cont)
+    and jobseeking periods.\n- [DMG 21183, PDF page 54](https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=54)
+    — DMG Vol 4 Ch 21: Jobseeker’s Allowance Labour market questions, special conditions for JSA(Cont)
+    and jobseeking periods.\n- [Inspected continuation, PDF page 158](https://assets.publishing.service.gov.uk/media/6a8eee245a0c25165ae4658d/dmg-v-4-ch-21.pdf#page=158)
+    — context for the selected paragraph.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol4-ch21`: PDF SHA-256 `d9fc5e120f85cb69386c9009d97ed2b33844523429224eded21be3c5003693e2`;
+    extracted pages SHA-256 `82d02218371af05595ac356e9c2f48f5434eb15adf97f0d0d057294c33b099c1`.\n"
+  semantic_relations:
+  - target: term/legacy-jsa-actively-seeking
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter expressly distinguishes availability from the activity of seeking work; a
+      claimant may be treated as satisfying one without being treated as satisfying the other.
+    evidence:
+    - page: page/dmg-vol4-ch21/0158
+      quote: "21585 Claimants may be treated, for a particular set of circumstances, as\n\n\n1. ASE but
+        not available for employment or\n\n\n2. available for employment but not ASE."
+      locator: DMG 21585
+  - target: term/legacy-jsa-claimant-commitment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The agreement-referral passage links the proposed agreement to availability, actively
+      seeking employment and reasonableness rather than treating the agreement itself as proof of
+      entitlement.
+    evidence:
+    - page: page/dmg-vol4-ch21/0205
+      quote: "21840 Emp Os may refer a proposed JSAg to a DM to determine whether1\n\n\n1. if claimants
+        were to do what is in the proposed JSAg, they would satisfy\n\n\n      1.1 the availability condition
+        or\n\n\n      1.2 the ASE condition and\n\n\n2. it is reasonable to expect the claimant to have
+        to do what is in the proposed JSAg (see DMG 21850 -\n21851).\n\n\n                           \
+        \                                                           1 JS Act 95, s 9(6)"
+      locator: DMG 21840

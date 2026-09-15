@@ -1,0 +1,88 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-beneficial-capital-ownership
+  '@type': skos:Concept
+  route: term/jsais-beneficial-capital-ownership
+  title: Beneficial and legal capital ownership in JSA(IB) and IS
+  type: Concept
+  description: The captured capital chapter distinguishes a beneficial interest from holding capital
+    in one’s name and explains that a legal owner may hold capital on trust for another beneficial
+    owner.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Beneficial and legal capital ownership in JSA(IB) and IS
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured capital chapter distinguishes a beneficial interest from holding capital
+      in one’s name and explains that a legal owner may hold capital on trust for another beneficial
+      owner.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': An account name alone does not resolve beneficial ownership. Joint interests, trusts,
+      evidence presumptions and particular assets need separate examination. Chapter 29 says capital
+      does not affect JSA(Cont); no capital rule is transferred to Pension Credit or another
+      benefit. This is an unreviewed research concept, not a property-law determination.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol5-ch29/0009
+  - page/dmg-vol5-ch29/0003
+  - page/dmg-vol5-ch29/0159
+  source:
+    https://assets.publishing.service.gov.uk/media/69d8f3a496c86b751317022c/dmg-Ch-29.pdf#page=9
+  resource:
+    https://assets.publishing.service.gov.uk/media/69d8f3a496c86b751317022c/dmg-Ch-29.pdf#page=9
+  sources:
+  - id: dmg-vol5-ch29
+    title: 'DMG Vol 5 Ch 29: Capital'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69d8f3a496c86b751317022c/dmg-Ch-29.pdf
+    retrieved_at: '2026-09-15T19:45:25.597731Z'
+    sha256: a1b086fdad8d32d6273b35fb8895516b6957faacd05fd3b06e091032598a47b9
+  body: "# Beneficial and legal capital ownership in JSA(IB) and IS\n\n## Authored interpretation\n\n\
+    The captured capital chapter distinguishes a beneficial interest from holding capital in one’s name
+    and explains that a legal owner may hold capital on trust for another beneficial owner.\n\n## Scope
+    and exceptions\n\nAn account name alone does not resolve beneficial ownership. Joint interests, trusts,
+    evidence presumptions and particular assets need separate examination. Chapter 29 says capital does
+    not affect JSA(Cont); no capital rule is transferred to Pension Credit or another benefit. This is
+    an unreviewed research concept, not a property-law determination.\n\n## Inspected source passages\n\
+    \n- [DMG 29070, PDF page 9](https://assets.publishing.service.gov.uk/media/69d8f3a496c86b751317022c/dmg-Ch-29.pdf#page=9)
+    — DMG Vol 5 Ch 29: Capital.\n- [DMG 29071, PDF page 9](https://assets.publishing.service.gov.uk/media/69d8f3a496c86b751317022c/dmg-Ch-29.pdf#page=9)
+    — DMG Vol 5 Ch 29: Capital.\n- [DMG 29072, PDF page 9](https://assets.publishing.service.gov.uk/media/69d8f3a496c86b751317022c/dmg-Ch-29.pdf#page=9)
+    — DMG Vol 5 Ch 29: Capital.\n- [DMG 29074, PDF page 9](https://assets.publishing.service.gov.uk/media/69d8f3a496c86b751317022c/dmg-Ch-29.pdf#page=9)
+    — DMG Vol 5 Ch 29: Capital.\n- [DMG 29000, PDF page 3](https://assets.publishing.service.gov.uk/media/69d8f3a496c86b751317022c/dmg-Ch-29.pdf#page=3)
+    — DMG Vol 5 Ch 29: Capital.\n\n## Evidence and review status\n\nModel-assisted interpretation of selected
+    passages in the 15 September 2026 frozen source snapshot. Specialist review is required. Source acquisition,
+    source revision, legal effective dates and this record’s authoring time are separate.\n\nThis is an
+    independent experimental publication, not an official DWP document, individual advice, an entitlement
+    decision or an executable rule. Machine-extracted text may alter reading order, footnotes and characters.
+    No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is claimed by this
+    record.\n\n- `dmg-vol5-ch29`: PDF SHA-256 `a1b086fdad8d32d6273b35fb8895516b6957faacd05fd3b06e091032598a47b9`;
+    extracted pages SHA-256 `b490507e3aaf6110ea0593fee2ee4d772fd5a1f9a75f4f91008734caec51cfd9`.\n"
+  semantic_relations:
+  - target: term/jsais-capital-deprivation
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The deprivation provision expressly requires prior beneficial or joint beneficial
+      ownership and distinguishes the claimant’s share from another person’s share.
+    evidence:
+    - page: page/dmg-vol5-ch29/0159
+      quote: "29809 The law applies to claimants and partners only if they were the beneficial owner or
+        joint beneficial\nowners of the capital. So if a claimant is the joint beneficial owner of a building
+        society account which has\n£10,000 in it and the claimant's share is £4,000 the law\n\n\n1. applies
+        if the claimant spends or gives away that £4,000 or any part of it for the purpose of getting\n\
+        benefit or more benefit and\n\n\n2. does not apply if the other £6,000 or any part of it is spent
+        or given away."
+      locator: DMG 29809

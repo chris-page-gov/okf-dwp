@@ -1,0 +1,97 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/prescribed-disease-occupation
+  '@type': skos:Concept
+  route: term/prescribed-disease-occupation
+  title: Prescribed disease and occupation pairing
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The source links prescribed diseases or injuries to occupations laid down in legislation,
+    distinguishing prescription from the diagnosis and attribution questions.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol11-ch67/0003
+  - page/dmg-vol11-ch67/0004
+  - page/dmg-vol11-ch67/0006
+  source: https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf#page=3
+  sources:
+  - id: dmg-vol11-ch67
+    title: 'DMG Vol 11 Ch 67: Prescribed diseases'
+    resource: https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf
+    author: organisation:dwp
+    sha256: 3c7414b2ec9ba0ec4073199a063a97072e1bf2c670f1620e241884a39b7e201a
+    retrieved_at: '2026-09-15T19:45:34.130077Z'
+  skos:prefLabel:
+    '@value': Prescribed disease and occupation pairing
+    '@language': en-GB
+  skos:definition:
+    '@value': The source links prescribed diseases or injuries to occupations laid down in legislation,
+      distinguishing prescription from the diagnosis and attribution questions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': A diagnosis alone does not establish the required prescribed occupation or employed-earner
+      connection. The source points to a possible industrial-accident route where prescription is absent,
+      subject to its own conditions. Disease names, group letters and numbers and versions must be retained.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Prescribed disease and occupation pairing\n\n## Authored interpretation\n\nThe source links prescribed
+    diseases or injuries to occupations laid down in legislation, distinguishing prescription from the diagnosis
+    and attribution questions.\n\n## Scope and exceptions\n\nA diagnosis alone does not establish the required prescribed
+    occupation or employed-earner connection. The source points to a possible industrial-accident route where prescription
+    is absent, subject to its own conditions. Disease names, group letters and numbers and versions must be retained.\n\
+    \n## Inspected passages\n\n- [DMG 67001, PDF page 3](https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf#page=3).\n\
+    - [DMG 67002, PDF page 3](https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf#page=3).\n\
+    - [DMG 67003, PDF page 3](https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf#page=3).\n\
+    - [DMG 67007, PDF page 4](https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf#page=4).\n\
+    - [DMG 67009, PDF page 4](https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf#page=4).\n\
+    \n## Additional context\n\n- [Context: chapter 67, PDF page 4](https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf#page=4).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol11-ch67`:
+    PDF `3c7414b2ec9ba0ec4073199a063a97072e1bf2c670f1620e241884a39b7e201a`; extracted pages `f6415f436f2f1eea4febaa9f82fbd0ad34a6fc754ce3c59c24fd10311ba0ad12`;
+    acquired `2026-09-15T19:45:34.130077Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/693acc2f33c7ace9c4a4202e/dmg-v-11-ch-67.pdf#page=3
+  semantic_relations:
+  - target: term/prescribed-disease-presumption
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source distinguishes prescription from statutory presumptions connecting disease with
+      employment.
+    evidence:
+    - page: page/dmg-vol11-ch67/0006
+      quote: "67017 The onus of proving that a person is or was suffering from a PD and that the remaining conditions\n\
+        for award of benefit under the PD provisions are satisfied rests on the claimant. But there are statutory\n\
+        provisions which can operate in the claimant's favour. These relate to\n\n\n1. the satisfaction of the conditions
+        for an REA award in pneumoconiosis cases (see DMG Chapter 71)\n\n\n2. the satisfaction of the condition
+        that the PD is due to the nature of the employment (see DMG 67101\net seq)\n\n\n3. determining the date
+        of onset (see DMG 67249)\n\n\n4. recrudescence (see DMG 67141 et seq)."
+      locator: DMG 67017
+  - target: term/industrial-accident-question
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Some IA provisions apply to prescribed-disease claims with modifications; this is a scoped
+      association, not wholesale equivalence.
+    evidence:
+    - page: page/dmg-vol11-ch67/0006
+      quote: "67016 Many of the statutory provisions governing accident claims apply without change to PD claims.\n\
+        Some apply with modifications, and others do not apply at all. Guidance on the adaptations and\nmodifications
+        is at DMG 67017 - 67038.\n\n\n\nBurden of proof"
+      locator: DMG 67016
+    - page: page/dmg-vol11-ch67/0006
+      quote: "67021 The benefits payable for a PD and the general conditions for such benefits are the same as those\n\
+        \nfor injury by IA1. So the guidance in DMG Chapter 66 regarding benefits in respect of accidents applies\n\
+        also to PD claims, subject to modifications in DMG 67022 et seq.\n\n\n                                 \
+        \                                          1 SS CB Act 92, s 109(1)(a) & (b)"
+      locator: DMG 67021

@@ -1,0 +1,92 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-protective-payee
+  '@type': skos:Concept
+  route: term/dmg-protective-payee
+  title: Payment to another person to protect a beneficiary
+  type: Concept
+  description: The DMG describes directing all or part of benefit to another individual when necessary to
+    protect the interests of a beneficiary or dependant.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Payment to another person to protect a beneficiary
+    '@language': en-GB
+  skos:definition:
+    '@value': The DMG describes directing all or part of benefit to another individual when necessary to
+      protect the interests of a beneficiary or dependant.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This payment direction is distinct from the appointment procedure. The captured paragraph
+      requires an individual payee and excludes corporate bodies in this route; do not transfer that condition
+      to all appointees.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch8/0037
+  - page/dmg-vol3-ch8/0034
+  source:
+    https://assets.publishing.service.gov.uk/media/66fd5bbbe84ae1fd8592ecf1/dmg-chapter-8-payment-of-benefit-and-deductions-from-benefit.pdf#page=37
+  resource:
+    https://assets.publishing.service.gov.uk/media/66fd5bbbe84ae1fd8592ecf1/dmg-chapter-8-payment-of-benefit-and-deductions-from-benefit.pdf#page=37
+  sources:
+  - id: dmg-vol3-ch8
+    title: 'DMG Vol 3 Ch 8: Payment of benefit and deductions from benefit '
+    author: organisation:dwp
+    resource:
+      https://assets.publishing.service.gov.uk/media/66fd5bbbe84ae1fd8592ecf1/dmg-chapter-8-payment-of-benefit-and-deductions-from-benefit.pdf#page=37
+    retrieved_at: '2026-09-15T19:45:21.641420Z'
+    sha256: 8bf08435715020c8cc57be24e06e6fd8c90d99232254004ba67d1c5dfc3dd864
+  body: "# Payment to another person to protect a beneficiary\n\n## Authored interpretation\n\nThe DMG describes
+    directing all or part of benefit to another individual when necessary to protect the interests of a beneficiary
+    or dependant.\n\n## Scope and exceptions\n\nThis payment direction is distinct from the appointment procedure.
+    The captured paragraph requires an individual payee and excludes corporate bodies in this route; do not transfer
+    that condition to all appointees.\n\n## Inspected source passages\n\n- [DMG 08300, PDF page 37](https://assets.publishing.service.gov.uk/media/66fd5bbbe84ae1fd8592ecf1/dmg-chapter-8-payment-of-benefit-and-deductions-from-benefit.pdf#page=37)
+    — DMG Vol 3 Ch 8: Payment of benefit and deductions from benefit .\n- [DMG 08302, PDF page 37](https://assets.publishing.service.gov.uk/media/66fd5bbbe84ae1fd8592ecf1/dmg-chapter-8-payment-of-benefit-and-deductions-from-benefit.pdf#page=37)
+    — DMG Vol 3 Ch 8: Payment of benefit and deductions from benefit .\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source
+    is DWP guidance, not a consolidated statement of legislation. This is an independent experimental publication,
+    not an official DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are
+    one-based file positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships
+    preserve extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current
+    applicability remain separate review tasks.\n\n- `dmg-vol3-ch8` PDF SHA-256: `8bf08435715020c8cc57be24e06e6fd8c90d99232254004ba67d1c5dfc3dd864`;
+    extracted pages SHA-256: `e6c5a71afbf2536bc63a91a4389284b2b6b8aaaa8bff015d4f34b478f77b28cc`.\n"
+  semantic_relations:
+  - target: term/dmg-benefit-payment-arrangements
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source describes a direction changing who receives payment on behalf of the beneficiary.
+    evidence:
+    - page: page/dmg-vol3-ch8/0037
+      quote: "08300 The Secretary of State may direct that all or part of a claimant’s benefit entitlement be paid
+        to\nanother person on behalf of the beneficiary where it is necessary to protect the interests of the\n\n\
+        beneficiary or the dependant for whom the benefit is paid 1.\n\n\n                                     \
+        \                                               1 SS (C&P) Regs, reg 34(1)"
+      locator: DMG 08300
+  - target: term/dmg-appointee
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: 'The two procedures are related by their role in acting or receiving payment for a claimant, but
+      the cited provisions differ: an appointment application can come from a body, whereas this payee must be an
+      individual.'
+    evidence:
+    - page: page/dmg-vol3-ch8/0034
+      quote: "08251 The application must be in writing1 and can be from a\n\n\n1. person who is at least 18 years
+        old2 or\n\n\n2. body of people, for example a firm of solicitors, a Housing Authority or a LA but not an
+        officer of such a\n\ngroup named by their title only (for example, Finance Director) 3.\n\n\n          \
+        \                                              1 SS (C&P) Regs, reg 33(1); 2 reg 33(1); 3 R(SB) 2/87"
+      locator: DMG 08251
+    - page: page/dmg-vol3-ch8/0037
+      quote: "08302 The person who the Secretary of State directs that payment should be made to must be an\n\n\
+        individual, benefit can not be paid to corporate bodies, for example a firm of solicitors 1.\n\n\n     \
+        \                                                                                 1 SS (C&P) Regs, reg 34"
+      locator: DMG 08302

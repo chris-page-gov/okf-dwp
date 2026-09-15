@@ -1,0 +1,80 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/ca-temporary-care-break
+  '@type': skos:Concept
+  route: term/ca-temporary-care-break
+  title: CA temporary breaks in care
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured guidance provides conditional treatment of temporary breaks as weeks satisfying
+    the caring condition, with prior-care and hospital-treatment requirements.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol10-ch60/0007
+  - page/dmg-vol10-ch60/0008
+  source: https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=7
+  sources:
+  - id: dmg-vol10-ch60
+    title: 'DMG Vol 10 Ch 60: Carer’s Allowance'
+    resource: https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf
+    author: organisation:dwp
+    sha256: ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a
+    retrieved_at: '2026-09-15T19:45:32.596227Z'
+  skos:prefLabel:
+    '@value': CA temporary breaks in care
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance provides conditional treatment of temporary breaks as weeks satisfying the
+      caring condition, with prior-care and hospital-treatment requirements.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Read DMG 60045–60050 across pages 7–8, including Memo 06/20, time limits and continued
+      qualifying-benefit payment. This is not an automatic holiday or hospital entitlement. The shorter
+      payment list in 60050 and expanded 60033 require review.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# CA temporary breaks in care\n\n## Authored interpretation\n\nThe captured guidance provides conditional
+    treatment of temporary breaks as weeks satisfying the caring condition, with prior-care and hospital-treatment
+    requirements.\n\n## Scope and exceptions\n\nRead DMG 60045–60050 across pages 7–8, including Memo 06/20, time
+    limits and continued qualifying-benefit payment. This is not an automatic holiday or hospital entitlement. The
+    shorter payment list in 60050 and expanded 60033 require review.\n\n## Inspected passages\n\n- [DMG 60045, PDF
+    page 7](https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=7).\n-
+    [DMG 60047, PDF page 8](https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=8).\n\
+    - [DMG 60050, PDF page 8](https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=8).\n\
+    \n## Additional context\n\n- [Context: chapter 60, PDF page 7](https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=7).\n\
+    - [Context: chapter 60, PDF page 8](https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=8).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol10-ch60`:
+    PDF `ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a`; extracted pages `bc5925c0d434fbc4bec575bea2e1e2dbd020b014497ab156973054e80e326f2f`;
+    acquired `2026-09-15T19:45:32.596227Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=7
+  semantic_relations:
+  - target: term/ca-qualifying-disability-payment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The hospital passage makes continuing payment of the qualifying disability benefit relevant to
+      CA.
+    evidence:
+    - page: page/dmg-vol10-ch60/0008
+      quote: "60050 Where the reason for the temporary break in care is because the severely disabled person is
+        in\nhospital, entitlement to CA will depend on the continuing payment of\n\n\n1. AA or\n\n\n2. the care
+        component of DLA at the highest or middle rate or\n\n\n3. CAA.\n\n\nIf payment of these benefits ends there
+        can be no entitlement to CA 1. The severely disabled person in\neffect is not classed as severely disabled
+        due to the fact that the benefit they are entitled to is no longer\npayable after a prescribed period of
+        time in hospital. See DMG 60033 for meaning of severely disabled\nperson.\n\n\n                        \
+        \                                                           1 SS CB Act 1992, s 70(2)\n\n\n\nGainful employment"
+      locator: DMG 60050

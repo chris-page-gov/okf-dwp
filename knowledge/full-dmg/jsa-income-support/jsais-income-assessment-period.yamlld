@@ -1,0 +1,120 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-income-assessment-period
+  '@type': skos:Concept
+  route: term/jsais-income-assessment-period
+  title: Assessment period for income other than self-employment
+  type: Concept
+  description: The captured general-income guidance requires the claim date, benefit-week start, due
+    date, date treated as paid and the relevant payment period or prescribed alternative before
+    determining the period of assessment.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Assessment period for income other than self-employment
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured general-income guidance requires the claim date, benefit-week start, due
+      date, date treated as paid and the relevant payment period or prescribed alternative before
+      determining the period of assessment.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 25031 expressly excludes self-employment from these timing rules. Termination
+      payments, overlapping earnings, part weeks and certain benefit payments have further
+      provisions. This is an evidence checklist from the source, not a calendar or payment
+      calculator; it is not a Pension Credit assessment-period definition.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol5-ch25/0007
+  - page/dmg-vol5-ch27/0014
+  source: https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf#page=7
+  resource:
+    https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf#page=7
+  sources:
+  - id: dmg-vol5-ch25
+    title: 'DMG Vol 5 Ch 25: General rules on income'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf
+    retrieved_at: '2026-09-15T19:45:25.058286Z'
+    sha256: 39edc3ed8ee9c875eb68ce4cd4148194b23dbd23bb6444883a2f2cae90a75337
+  - id: dmg-vol5-ch27
+    title: 'DMG Vol 5 Ch 27: Self-employed earners and share fishermen'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69e0f9e520b52e4144868939/dmg-Ch-27.pdf
+    retrieved_at: '2026-09-15T19:45:25.036028Z'
+    sha256: 90b6c5ec739d2366936d67d78cd5a6f857b764b92000200f4a44ac956c88b3ac
+  body: "# Assessment period for income other than self-employment\n\n## Authored interpretation\n\nThe
+    captured general-income guidance requires the claim date, benefit-week start, due date, date treated
+    as paid and the relevant payment period or prescribed alternative before determining the period of
+    assessment.\n\n## Scope and exceptions\n\nDMG 25031 expressly excludes self-employment from these
+    timing rules. Termination payments, overlapping earnings, part weeks and certain benefit payments
+    have further provisions. This is an evidence checklist from the source, not a calendar or payment
+    calculator; it is not a Pension Credit assessment-period definition.\n\n## Inspected source passages\n\
+    \n- [DMG 25031, PDF page 7](https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf#page=7)
+    — DMG Vol 5 Ch 25: General rules on income.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol5-ch25`: PDF SHA-256 `39edc3ed8ee9c875eb68ce4cd4148194b23dbd23bb6444883a2f2cae90a75337`;
+    extracted pages SHA-256 `db488637a179cc93910c4e243381b5c961d6959ce72cd1d34aff14e403517e73`.\n\n- `dmg-vol5-ch27`:
+    PDF SHA-256 `90b6c5ec739d2366936d67d78cd5a6f857b764b92000200f4a44ac956c88b3ac`; extracted pages SHA-256
+    `7f84279f4a44373405ce06d32bf1c927a9f25dda507895b1540e6bb8b1b5185a`.\n"
+  semantic_relations:
+  - target: term/jsais-income-payment-dates
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The passage explicitly lists the due date and the date treated as paid as separate
+      inputs.
+    evidence:
+    - page: page/dmg-vol5-ch25/0007
+      quote: "25031   To determine the period over which any income other than income from self-\n   \
+        \     employment is taken into account the DM needs to establish\n\n        1.    the date of
+        claim\n\n        2.    the first day of the claimant's benefit week (see DMG 25052 - 25054)\n\n\
+        \        3.    the date on which the income is due to be paid (see DMG 25034 et seq)\n\n     \
+        \   4.    the date on which the income is treated as paid (see DMG 25043 et seq) and\n\n     \
+        \   5.    either1\n\n              5.1   the period for which the payment is made or\n\n     \
+        \         5.2   the amount of\n\n                    5.2.a    JSA or IS that would be payable
+        without the income and\n\n                    5.2.b    any disregard the DM would normally make
+        on the weekly\n                             amount of the income.\n\n        See DMG Chapter 26
+        on earnings disregards and DMG Chapter 28 on other\n        income with partial disregards.\n\n\
+        \        Note 1: If the income is a payment of earnings when employment ends see DMG"
+      locator: DMG 25031
+  - target: term/jsais-self-employed-assessment-period
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The general-income passage excludes self-employment; chapter 27 instead uses receipts
+      and expenses during its own assessment period. This records a scope distinction rather than
+      equivalence.
+    evidence:
+    - page: page/dmg-vol5-ch25/0007
+      quote: "25031   To determine the period over which any income other than income from self-\n   \
+        \     employment is taken into account the DM needs to establish\n\n        1.    the date of
+        claim\n\n        2.    the first day of the claimant's benefit week (see DMG 25052 - 25054)\n\n\
+        \        3.    the date on which the income is due to be paid (see DMG 25034 et seq)\n\n     \
+        \   4.    the date on which the income is treated as paid (see DMG 25043 et seq) and\n\n     \
+        \   5.    either1\n\n              5.1   the period for which the payment is made or\n\n     \
+        \         5.2   the amount of\n\n                    5.2.a    JSA or IS that would be payable
+        without the income and\n\n                    5.2.b    any disregard the DM would normally make
+        on the weekly\n                             amount of the income.\n\n        See DMG Chapter 26
+        on earnings disregards and DMG Chapter 28 on other\n        income with partial disregards.\n\n\
+        \        Note 1: If the income is a payment of earnings when employment ends see DMG"
+      locator: DMG 25031
+    - page: page/dmg-vol5-ch27/0014
+      quote: "27051 The normal weekly earnings of a S/E earner should be calculated by using the\n\n\n\
+        1. gross receipts (see DMG 27125) and\n\n\n2. expenses paid out (see DMG 27190)\n\n\nduring the
+        assessment period. Different rules apply for royalties, copyright payments and Public Lending\n\
+        Rights payments."
+      locator: DMG 27051

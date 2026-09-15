@@ -1,0 +1,83 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-hospital-family-membership
+  '@type': skos:Concept
+  route: term/jsais-hospital-family-membership
+  title: Family membership during hospital admission
+  type: Concept
+  description: The captured hospital guidance asks whether a patient remains a member of the family
+    and routes that question to the separate family-membership chapter.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Family membership during hospital admission
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured hospital guidance asks whether a patient remains a member of the family
+      and routes that question to the separate family-membership chapter.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The listed contexts include a lone parent, a couple, a polygamous marriage and a child
+      or young person. Neither a hospital admission nor a shared address alone resolves family
+      membership. The continuation of DMG 24097 is on PDF page 26; chapter 22 and any current
+      benefit-specific consequences require separate examination.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol4-ch24/0025
+  - page/dmg-vol4-ch24/0027
+  source:
+    https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf#page=25
+  resource:
+    https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf#page=25
+  sources:
+  - id: dmg-vol4-ch24
+    title: 'DMG Vol 4 Ch 24: Special cases'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf
+    retrieved_at: '2026-09-15T19:45:23.687172Z'
+    sha256: 2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a
+  body: "# Family membership during hospital admission\n\n## Authored interpretation\n\nThe captured hospital
+    guidance asks whether a patient remains a member of the family and routes that question to the separate
+    family-membership chapter.\n\n## Scope and exceptions\n\nThe listed contexts include a lone parent,
+    a couple, a polygamous marriage and a child or young person. Neither a hospital admission nor a shared
+    address alone resolves family membership. The continuation of DMG 24097 is on PDF page 26; chapter
+    22 and any current benefit-specific consequences require separate examination.\n\n## Inspected source
+    passages\n\n- [DMG 24097, PDF page 25](https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf#page=25)
+    — DMG Vol 4 Ch 24: Special cases.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol4-ch24`: PDF SHA-256 `2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a`;
+    extracted pages SHA-256 `91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c`.\n"
+  semantic_relations:
+  - target: term/jsais-applicable-amount
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The hospital section separately considers effects on a claimant’s applicable amount
+      when the claimant or a family member is a patient; the dated conditions are retained as
+      context, not an automated withdrawal instruction.
+    evidence:
+    - page: page/dmg-vol4-ch24/0027
+      quote: "24108   The normal applicable amount of a claimant may be affected when the claimant or
+        a\n        member of his family has been a patient for a continuous period of more than 52\n \
+        \       weeks. At this point the DM should consider withdrawing1 any\n\n        1.    HPP\n\n\
+        \        2.    DP\n\n        3.    EDP\n\n        4.    DCP.\n\n        Note: But the claimant
+        will not normally be able to satisfy all the conditions for JSA\n        (see DMG 24106), and
+        may need to claim IS or another appropriate benefit, for\n        example IB.\n              \
+        \ 1 JSA Regs, Sch 1, para 12(5), 13(2), 15A(2), 16(2); IS (Gen) Regs, Sch 2, para 10(6), 11(2),
+        13A(2), 14(2)"
+      locator: DMG 24108

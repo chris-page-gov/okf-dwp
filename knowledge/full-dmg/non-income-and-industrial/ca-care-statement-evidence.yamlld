@@ -1,0 +1,73 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/ca-care-statement-evidence
+  '@type': skos:Concept
+  route: term/ca-care-statement-evidence
+  title: Evidence of care hours for CA
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The source directs acceptance of the claimant’s statement about the required care hours unless
+    there is good reason to doubt it, and gives competing claims as an example requiring further enquiry.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol10-ch60/0006
+  - page/dmg-vol10-ch60/0004
+  source: https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=6
+  sources:
+  - id: dmg-vol10-ch60
+    title: 'DMG Vol 10 Ch 60: Carer’s Allowance'
+    resource: https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf
+    author: organisation:dwp
+    sha256: ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a
+    retrieved_at: '2026-09-15T19:45:32.596227Z'
+  skos:prefLabel:
+    '@value': Evidence of care hours for CA
+    '@language': en-GB
+  skos:definition:
+    '@value': The source directs acceptance of the claimant’s statement about the required care hours unless
+      there is good reason to doubt it, and gives competing claims as an example requiring further enquiry.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The paragraph does not remove all conditions or make every statement conclusive. It does not
+      authorise the project to collect care logs or claimant information. Where several people care for one
+      person, the source has a separate election and decision process.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# Evidence of care hours for CA\n\n## Authored interpretation\n\nThe source directs acceptance of the claimant’s
+    statement about the required care hours unless there is good reason to doubt it, and gives competing claims
+    as an example requiring further enquiry.\n\n## Scope and exceptions\n\nThe paragraph does not remove all conditions
+    or make every statement conclusive. It does not authorise the project to collect care logs or claimant information.
+    Where several people care for one person, the source has a separate election and decision process.\n\n## Inspected
+    passages\n\n- [DMG 60040, PDF page 6](https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=6).\n\
+    - [DMG 60026, PDF page 4](https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=4).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol10-ch60`:
+    PDF `ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a`; extracted pages `bc5925c0d434fbc4bec575bea2e1e2dbd020b014497ab156973054e80e326f2f`;
+    acquired `2026-09-15T19:45:32.596227Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=6
+  semantic_relations:
+  - target: term/ca-caring-condition
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The evidence instruction is specifically about the required hours of care.
+    evidence:
+    - page: page/dmg-vol10-ch60/0006
+      quote: "60040 The claimant’s statement that the required number of hours are spent in caring should be\naccepted
+        without further enquiry unless there is good reason to doubt it.\n\n\nExample\n\n\nDenise and Lesley both
+        claim CA for caring for Mick who is a severely disabled person. The DM decides\nto make further enquiries
+        to establish who is entitled to CA (see DMG 60026)."
+      locator: DMG 60040

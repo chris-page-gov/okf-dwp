@@ -1,0 +1,92 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsais-part-week
+  '@type': skos:Concept
+  route: term/legacy-jsais-part-week
+  title: Part-week payment and its local notional-entitlement meaning
+  type: Concept
+  description: For its part-week provisions, the source defines notional entitlement through
+    different JSA(Cont) and JSA(IB)/IS amounts and distinguishes the relevant week; it also retains
+    a JSA(Cont) share-fisherman exception.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Part-week payment and its local notional-entitlement meaning
+    '@language': en-GB
+  skos:definition:
+    '@value': For its part-week provisions, the source defines notional entitlement through
+      different JSA(Cont) and JSA(IB)/IS amounts and distinguishes the relevant week; it also
+      retains a JSA(Cont) share-fisherman exception.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Notional entitlement here is a local payment concept, not notional income or capital.
+      DMG 33103 requires a whole week for the specified JSA(Cont) share-fisherman case while
+      retaining ordinary part-week treatment for JSA(IB)/IS. No fraction, current rate or award is
+      calculated.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol6-ch33/0013
+  - page/dmg-vol6-ch33/0014
+  source:
+    https://assets.publishing.service.gov.uk/media/67349b9c0b168c11ea823019/dmgch33.pdf#page=13
+  resource:
+    https://assets.publishing.service.gov.uk/media/67349b9c0b168c11ea823019/dmgch33.pdf#page=13
+  sources:
+  - id: dmg-vol6-ch33
+    title: 'DMG Vol 6 Ch 33: Payment questions'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/67349b9c0b168c11ea823019/dmgch33.pdf
+    retrieved_at: '2026-09-15T19:45:26.887645Z'
+    sha256: 8dfef5032a37a357a10503574a00872e4af713b89d2c83463e8ee948b33c38c1
+  body: "# Part-week payment and its local notional-entitlement meaning\n\n## Authored interpretation\n\
+    \nFor its part-week provisions, the source defines notional entitlement through different JSA(Cont)
+    and JSA(IB)/IS amounts and distinguishes the relevant week; it also retains a JSA(Cont) share-fisherman
+    exception.\n\n## Scope and exceptions\n\nNotional entitlement here is a local payment concept, not
+    notional income or capital. DMG 33103 requires a whole week for the specified JSA(Cont) share-fisherman
+    case while retaining ordinary part-week treatment for JSA(IB)/IS. No fraction, current rate or award
+    is calculated.\n\n## Inspected source passages\n\n- [DMG 33100, PDF page 13](https://assets.publishing.service.gov.uk/media/67349b9c0b168c11ea823019/dmgch33.pdf#page=13)
+    — DMG Vol 6 Ch 33: Payment questions.\n- [DMG 33101, PDF page 13](https://assets.publishing.service.gov.uk/media/67349b9c0b168c11ea823019/dmgch33.pdf#page=13)
+    — DMG Vol 6 Ch 33: Payment questions.\n- [DMG 33102, PDF page 13](https://assets.publishing.service.gov.uk/media/67349b9c0b168c11ea823019/dmgch33.pdf#page=13)
+    — DMG Vol 6 Ch 33: Payment questions.\n- [DMG 33103, PDF page 14](https://assets.publishing.service.gov.uk/media/67349b9c0b168c11ea823019/dmgch33.pdf#page=14)
+    — DMG Vol 6 Ch 33: Payment questions.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol6-ch33`: PDF SHA-256 `8dfef5032a37a357a10503574a00872e4af713b89d2c83463e8ee948b33c38c1`;
+    extracted pages SHA-256 `f62f3e307149fe6c547a171b9c4be4ec49d0b49855ba6ab87630c29ba132f3b7`.\n"
+  semantic_relations:
+  - target: term/jsa-personal-rate
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The local notional-entitlement definition uses the JSA(Cont) personal rate,
+      separately from the income-based and IS amounts.
+    evidence:
+    - page: page/dmg-vol6-ch33/0013
+      quote: "33101 In this guidance notional entitlement means\n\n\n1. in JSA(Cont), the claimant's personal
+        rate\n\n\n2. in JSA(IB) and IS, the amount by which the applicable amount exceeds income.\n\n\n\
+        \n\nWhat is the relevant week - JSA and IS"
+      locator: DMG 33101
+  - target: term/jsais-share-fisherman
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The part-week passage expressly distinguishes JSA(Cont) share fishermen from
+      JSA(IB)/IS rather than treating every share fisherman identically.
+    evidence:
+    - page: page/dmg-vol6-ch33/0014
+      quote: "33103 Most JSA and IS claimants including JSA joint-claim couples will be able to get part-week\n\
+        payments. But share fishermen will receive payments of JSA(Cont) for whole weeks only. If they
+        claim\nJSA(IB) or IS normal part-week payment rules apply. Guidance on share fishermen is in DMG
+        Chapter 27."
+      locator: DMG 33103

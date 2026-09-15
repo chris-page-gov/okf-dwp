@@ -1,0 +1,178 @@
+{
+  "schema": "okf-dwp-full-dmg-independent-review.v1",
+  "status": "reviewed-for-research-checkpoint; browser-acceptance-pending",
+  "review_type": "cross-agent source and implementation review; not specialist legal or policy acceptance",
+  "scope": {
+    "common_decision": {
+      "reviewer": "agent separate from common-decision author",
+      "concepts": 34,
+      "relationships": 52,
+      "exact_passages": 60,
+      "negative_mutations_rejected": 208,
+      "result": "no outstanding material finding"
+    },
+    "pension_credit": {
+      "reviewer": "agent separate from Pension Credit author",
+      "concepts": 14,
+      "relationships": 20,
+      "result": "no material source mismatch; evaluation-execution wording corrected"
+    },
+    "root_pipeline": {
+      "reviewer": "agent separate from implementation author",
+      "reference_spans_checked": 18880,
+      "partial_digit_runs": 0,
+      "result": "truncated paragraph-reference finding fixed; no other outstanding actionable finding in assigned scope"
+    },
+    "international": {
+      "reviewer": "agent separate from international author",
+      "concepts": 30,
+      "relationships": 23,
+      "result": "canonical YAML alias correction verified; same-document AT destitution qualification made explicit and independently rechecked"
+    },
+    "pension_regimes": {
+      "reviewer": "agent separate from pension-regimes author",
+      "concepts": 21,
+      "relationships": 31,
+      "exact_relation_passages": 34,
+      "definition_and_scope_passages": 57,
+      "negative_mutations_rejected": 124,
+      "result": "no outstanding actionable finding"
+    },
+    "jsa_income_support": {
+      "reviewer": "agent separate from JSA/Income Support author",
+      "concepts": 24,
+      "relationships": 35,
+      "report_passages_and_dependencies": 201,
+      "result": "canonical YAML alias correction verified; no outstanding material semantic finding"
+    },
+    "common_and_jsa_extension": {
+      "reviewer": "root, separate from batch author",
+      "concepts": 35,
+      "relationships": 54,
+      "distinct_relation_passages_read": 60,
+      "additional_definition_passages_read": 50,
+      "method": "Read definitions, scope and exceptions; independently loaded all canonical YAML, matched 54 relations to exact frozen text and paragraph locators, verified all 35 file hashes and 14 page-file hashes. Read all 110 distinct selected passages.",
+      "result": "No material finding within the bounded research scope; not whole-chapter or specialist acceptance."
+    },
+    "esa": {
+      "reviewer": "agent separate from ESA author",
+      "concepts": 36,
+      "relationships": 37,
+      "definition_passages_read": 128,
+      "result": "Wrapped-reference paragraph misidentification and three truncated excerpts corrected; all corrected passages independently rechecked. No outstanding material finding."
+    },
+    "non_income_and_industrial": {
+      "reviewer": "agent separate from batch author",
+      "concepts": 51,
+      "relationships": 76,
+      "distinct_exact_passages": 177,
+      "result": "All definitions, scope, high-risk qualifications and 51 source identities checked. No material semantic or authority finding within selected evidence."
+    },
+    "indexed_delivery_and_retrieval": {
+      "reviewer": "agent separate from root implementation author",
+      "result": "Actual consumer functions and licences verified. Raw-source quotation checks now reject display wrappers. Reference-location recogniser excludes wrapped et-seq cross-references; source-page hashes verified. Portable gzip CI passed."
+    }
+  },
+  "resolved_findings": [
+    {
+      "id": "six-digit-dmg-reference-truncation",
+      "resolution": "Preserve five/six-digit labels and complete ambiguous digit runs; add actual-source and footnote controls; regenerate and verify all reference spans."
+    },
+    {
+      "id": "authored-evaluation-response-overclaim",
+      "resolution": "Relabel RQ07 and response entries as designed cases/authored exemplars; actual built-bundle retrieval and behavioural evaluation remain pending."
+    },
+    {
+      "id": "yaml-aliases-in-authored-inputs",
+      "resolution": "Disable aliases in international and JSA authoring; prove parsed equivalence and load all files with the canonical strict loader."
+    },
+    {
+      "id": "international-pre-settled-context",
+      "resolution": "Record acquired AT paragraphs073496–073499, Memo15-25, UC wording versus SPC example and unresolved scope; reviewer confirmed the fix."
+    },
+    {
+      "id": "esa-wrapped-cross-reference-and-truncation",
+      "resolution": "Replace false51006 excerpt with genuine paragraph; extend51003 and46133 through wrapped references and exception notes. Independently verified."
+    },
+    {
+      "id": "indexed-consumer-contract-rejection",
+      "resolution": "Use exact pinned Explorer research banner and normalise endpoint-label whitespace. Verify using vendored actual consumer functions and negative controls; fresh browser verification pending."
+    },
+    {
+      "id": "raw-source-versus-display-evidence",
+      "resolution": "Require exact quoted passage in hashed raw page text as well as indexed Narrative; reject project-added source-link display wrappers."
+    }
+  ],
+  "inputs": [
+    {
+      "path": "scripts/discover_full_dmg_evidence.py",
+      "sha256": "e879bd0d37e14a1c115fc5aadf9c46ebc912fba8fd81c3a5e06f464d992f6760"
+    },
+    {
+      "path": "scripts/query.py",
+      "sha256": "91367eb8579210b80180cb8b047dd2ad46fe2be6919d24cd25034a17ffdf95af"
+    },
+    {
+      "path": "scripts/report_full_dmg_coverage.py",
+      "sha256": "b77ea1408df97baa3f777a1788a6b2cc78442774fcea967ee3c90083e3b59f67"
+    },
+    {
+      "path": "evaluation/full-dmg-common-decision-review.json",
+      "sha256": "072b5a359a46e8496ab003c47755d8d9ecb4391d9b83317ef764e55f93adfdc0"
+    },
+    {
+      "path": "evaluation/full-dmg-pension-credit-review.json",
+      "sha256": "99b53369836987bb9410999efc731dcb96ab3152a10df67c80ea8d8a3a25e827"
+    },
+    {
+      "path": "source/full-dmg-2026-09-15/inventory.json",
+      "sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a"
+    },
+    {
+      "path": "evaluation/full-dmg-international-review.json",
+      "sha256": "81ed54372b85664961c3576bf4a53a2e3baedfc091ccc289ad3288a75ace5185"
+    },
+    {
+      "path": "evaluation/full-dmg-pension-regimes-review.json",
+      "sha256": "75677c274cfe6552976ba78c292ede6686f040596993e8aa7f89492cf867d48b"
+    },
+    {
+      "path": "evaluation/full-dmg-jsa-income-support-review.json",
+      "sha256": "c98ed989c3aecf37a00988e0e33e1dc6da57056b6df27624dc7c3b406a0c7da3"
+    },
+    {
+      "path": "evaluation/full-dmg-common-and-jsa-extension-review.json",
+      "sha256": "94b041656e8992f9cce366c8d46afa13ead2c5ffcbc64eb1648b7719e705ad78"
+    },
+    {
+      "path": "evaluation/full-dmg-esa-review.json",
+      "sha256": "2a506af8f3273563aec5ebe8a97cff8a2ae1976fed4cfdd43d00f5284abd3a2f"
+    },
+    {
+      "path": "evaluation/full-dmg-non-income-and-industrial-review.json",
+      "sha256": "833959e9e022e7dfd3e82f14aba4f6710f800ae86753c52c083ceee0e3645c54"
+    },
+    {
+      "path": "scripts/build_full_dmg.py",
+      "sha256": "e9ebea04a9b369158c9c59bc476f7e2158cbf5c4d2170fdb7f340271ace4eff7"
+    },
+    {
+      "path": "scripts/evaluate_full_dmg.py",
+      "sha256": "24bf5f8b95caedcda616b290e3a43f9f930a0b1671edb342da6bf6cb535d4ce4"
+    },
+    {
+      "path": "scripts/reconcile_full_dmg_references.py",
+      "sha256": "dffb6eff9cc1e24e2c617220807d9743dd201849b8ac78371ed066768740868e"
+    },
+    {
+      "path": "scripts/check_full_dmg_consumer.mjs",
+      "sha256": "0934ad78dc163c7da8d3e2727c98ca228be7bda919d613e235c1f0cd53cfe87a"
+    }
+  ],
+  "limitations": [
+    "Authors did not independently approve their own semantic batches.",
+    "All78 substantive source units have bounded proposals. This does not establish full chapter modelling or legal currency.",
+    "Browser checks and observed model trials are separate acceptance evidence.",
+    "No specialist legal or operational acceptance is claimed."
+  ]
+}

@@ -1,0 +1,94 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsais-benefit-week
+  '@type': skos:Concept
+  route: term/legacy-jsais-benefit-week
+  title: Benefit weeks and changes of circumstances
+  type: Concept
+  description: The captured payment chapter describes JSA and IS as weekly benefits, defines a
+    benefit week as seven days with benefit-specific determination and separately routes changes of
+    circumstances to supersession guidance.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Benefit weeks and changes of circumstances
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured payment chapter describes JSA and IS as weekly benefits, defines a
+      benefit week as seven days with benefit-specific determination and separately routes changes
+      of circumstances to supersession guidance.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': A benefit week is not assumed to be a calendar week or identical across JSA and IS.
+      The selected passages do not compute payment days, award amounts or effective dates;
+      benefit-week changes, first or last weeks and other payment rules remain dependencies.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol6-ch33/0005
+  - page/dmg-vol6-ch33/0010
+  - page/dmg-vol6-ch33/0013
+  source: https://assets.publishing.service.gov.uk/media/67349b9c0b168c11ea823019/dmgch33.pdf#page=5
+  resource:
+    https://assets.publishing.service.gov.uk/media/67349b9c0b168c11ea823019/dmgch33.pdf#page=5
+  sources:
+  - id: dmg-vol6-ch33
+    title: 'DMG Vol 6 Ch 33: Payment questions'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/67349b9c0b168c11ea823019/dmgch33.pdf
+    retrieved_at: '2026-09-15T19:45:26.887645Z'
+    sha256: 8dfef5032a37a357a10503574a00872e4af713b89d2c83463e8ee948b33c38c1
+  body: "# Benefit weeks and changes of circumstances\n\n## Authored interpretation\n\nThe captured payment
+    chapter describes JSA and IS as weekly benefits, defines a benefit week as seven days with benefit-specific
+    determination and separately routes changes of circumstances to supersession guidance.\n\n## Scope
+    and exceptions\n\nA benefit week is not assumed to be a calendar week or identical across JSA and
+    IS. The selected passages do not compute payment days, award amounts or effective dates; benefit-week
+    changes, first or last weeks and other payment rules remain dependencies.\n\n## Inspected source passages\n\
+    \n- [DMG 33009, PDF page 5](https://assets.publishing.service.gov.uk/media/67349b9c0b168c11ea823019/dmgch33.pdf#page=5)
+    — DMG Vol 6 Ch 33: Payment questions.\n- [DMG 33010, PDF page 5](https://assets.publishing.service.gov.uk/media/67349b9c0b168c11ea823019/dmgch33.pdf#page=5)
+    — DMG Vol 6 Ch 33: Payment questions.\n- [DMG 33050, PDF page 10](https://assets.publishing.service.gov.uk/media/67349b9c0b168c11ea823019/dmgch33.pdf#page=10)
+    — DMG Vol 6 Ch 33: Payment questions.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol6-ch33`: PDF SHA-256 `8dfef5032a37a357a10503574a00872e4af713b89d2c83463e8ee948b33c38c1`;
+    extracted pages SHA-256 `f62f3e307149fe6c547a171b9c4be4ec49d0b49855ba6ab87630c29ba132f3b7`.\n"
+  semantic_relations:
+  - target: term/legacy-jsais-part-week
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter separately addresses entitlement for part of a week instead of assuming
+      every award covers a full benefit week.
+    evidence:
+    - page: page/dmg-vol6-ch33/0005
+      quote: "33009 JSA and IS are weekly benefits that are normally paid for complete weeks (benefit
+        weeks). See\nDMG 33100 - 33238 for guidance on when payment may be made for part-weeks.\n\n\n\n\
+        \nMeaning of benefit week"
+      locator: DMG 33009
+    - page: page/dmg-vol6-ch33/0013
+      quote: "33100 This section gives guidance on how to calculate part-week payments in JSA and IS claims.\n\
+        \n\n\n\nDefinitions\n\nMeaning of notional entitlement"
+      locator: DMG 33100
+  - target: term/dmg-supersession
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The change-of-circumstances passage identifies supersession as a possible decision
+      ground and routes it to chapter 4.
+    evidence:
+    - page: page/dmg-vol6-ch33/0010
+      quote: "33050 A change in the claimant's circumstances can give grounds to supersede the award 1
+        in both JSA\nand IS. The normal rules on supersession are in DMG Chapter 04.\n\n\n           \
+        \                                                                          1 SS Act 98, s 10\n\
+        \n\n33051 - 33059"
+      locator: DMG 33050

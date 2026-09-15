@@ -1,0 +1,97 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/pension-forfeiture-benefit-scope
+  '@type': skos:Concept
+  route: term/pension-forfeiture-benefit-scope
+  title: Pension and bereavement benefits in forfeiture referrals
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The chapter describes forfeiture-referral contexts involving WB, BB, BSP, SP or RP based wholly
+    or partly on a deceased spouse’s or civil partner’s contributions, with further inheritable-component
+    cases.
+  tags:
+  - full DMG
+  - pension regimes
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol12-ch76/0004
+  - page/dmg-vol12-ch76/0006
+  source: https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=4
+  resource: https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=4
+  sources:
+  - id: dmg-vol12-ch76
+    title: 'DMG Vol 12 Ch 76: Forfeiture Act 1982'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=4
+    sha256: 074f2d3f00d4886954d5cbd6ba2653ec407c1ff9f0160a0ca74d337227f9f542
+    retrieved_at: '2026-09-15T19:45:35.402441Z'
+  skos:prefLabel:
+    '@value': Pension and bereavement benefits in forfeiture referrals
+    '@language': en-GB
+  skos:definition:
+    '@value': The chapter describes forfeiture-referral contexts involving WB, BB, BSP, SP or RP based wholly
+      or partly on a deceased spouse’s or civil partner’s contributions, with further inheritable-component
+      cases.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The list does not mean every pension held by the person is automatically forfeited. An own-right
+      pension without an advantage from the death is distinguished in DMG 76004. No equivalence with Pension
+      Credit or Universal Credit is asserted.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-regimes
+    at: '2026-09-15T20:17:36Z'
+  observedAt: '2026-09-15T20:17:36Z'
+  body: "# Pension and bereavement benefits in forfeiture referrals\n\n## Source-backed proposal\n\nThe chapter
+    describes forfeiture-referral contexts involving WB, BB, BSP, SP or RP based wholly or partly on a deceased
+    spouse’s or civil partner’s contributions, with further inheritable-component cases.\n\n## Scope and exceptions\n\
+    \nThe list does not mean every pension held by the person is automatically forfeited. An own-right pension without
+    an advantage from the death is distinguished in DMG 76004. No equivalence with Pension Credit or Universal Credit
+    is asserted.\n\n## Inspected passages\n\n- [DMG 76008, PDF page 4](https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=4).\n\
+    - [DMG 76032, PDF page 6](https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=6).\n\
+    - [DMG 76033, PDF page 6](https://assets.publishing.service.gov.uk/media/5a81fada40f0b6230269a321/dmgch76.pdf#page=6).\n\
+    \n## Provenance and review\n\nIndependent experimental interpretation of DWP guidance, not an official DWP document.
+    All definitions and relationships are model-assisted and unreviewed. No individual eligibility, award, legal
+    conclusion or executable rule is supplied.\n\nSource observation, listing-page update, printed revision, stated
+    legal date and pension event date have separate meanings. PDF page numbers are one-based file positions; extraction
+    may damage reading order, footnotes and characters. No visual PDF or specialist acceptance is claimed.\n\n-
+    `dmg-vol12-ch76` — PDF SHA-256 `074f2d3f00d4886954d5cbd6ba2653ec407c1ff9f0160a0ca74d337227f9f542`; page-extraction
+    SHA-256 `53eb7c5ec81ced813ac2faf2af9f772c5f3e9662112a7ef678dcb4daef0b73f8`.\n"
+  semantic_relations:
+  - target: term/sp-new-pension-regime
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source expressly includes SP in the contribution-based deceased-spouse referral context;
+      applicability still depends on the circumstances.
+    evidence:
+    - page: page/dmg-vol12-ch76/0006
+      quote: "76032    Where there is reason to believe that\n\n         1.    a person has been, or is likely to
+        be charged with their spouse's or civil\n               partner’s murder, manslaughter or culpable homicide
+        and\n\n         2.    the person’s claim for WB, BB, BSP, SP or RP is based wholly or partly on\n      \
+        \         their late spouse’s or civil partner’s contributions\n\n         the DM should send the claim
+        to DMA Leeds as soon as possible with the\n         documents in DMG 76029."
+      locator: DMG 76032
+  - target: term/rp-old-pension-regime
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source expressly includes RP and separately discusses inheritable components; it does not
+      forfeit all own-right RP.
+    evidence:
+    - page: page/dmg-vol12-ch76/0006
+      quote: "76032    Where there is reason to believe that\n\n         1.    a person has been, or is likely to
+        be charged with their spouse's or civil\n               partner’s murder, manslaughter or culpable homicide
+        and\n\n         2.    the person’s claim for WB, BB, BSP, SP or RP is based wholly or partly on\n      \
+        \         their late spouse’s or civil partner’s contributions\n\n         the DM should send the claim
+        to DMA Leeds as soon as possible with the\n         documents in DMG 76029."
+      locator: DMG 76032
+    - page: page/dmg-vol12-ch76/0006
+      quote: "76033    The DM should also send to DMA Leeds a claim received from a widower whose\n         entitlement
+        to benefit arises directly from his unlawful act of murder or\n                                        \
+        \                                       1\n         manslaughter. The benefit affected is an IB(LT) or a
+        Category A RP .\n\n         Any case in which the survivor's RP entitlement would normally be increased
+        on\n         account of inheritable components should be sent to DMA Leeds.\n                          \
+        \                                                         1 SS CB Act 92, s 41"
+      locator: DMG 76033

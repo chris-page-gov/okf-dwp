@@ -1,0 +1,113 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/rp-contribution-record-dispute
+  '@type': skos:Concept
+  route: term/rp-contribution-record-dispute
+  title: Retirement Pension contribution-record dispute
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The Category A section distinguishes a presumed-correct national insurance record from a
+    disputed record requiring an HMRC formal decision, and the awards section describes incomplete-record
+    handling.
+  tags:
+  - full DMG
+  - pension regimes
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol12-ch75/0010
+  - page/dmg-vol12-ch75/0160
+  - page/dmg-vol12-ch74/0003
+  source: https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=10
+  resource: https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=10
+  sources:
+  - id: dmg-vol12-ch75
+    title: 'DMG Vol 12 Ch 75: Retirement Pension'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=10
+    sha256: 655e7acb31f09f5169efbe40419091ee479f88c0c45b65c7a507b042b67712f9
+    retrieved_at: '2026-09-15T19:45:35.356599Z'
+  - id: dmg-vol12-ch74
+    title: 'DMG Vol 12 Ch 74: State Pension'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=3
+    sha256: 5961a9cb7c86814a0f6fa147c0a8a551b4258c803680fac14a95cab9eca1afd6
+    retrieved_at: '2026-09-15T19:45:35.304148Z'
+  skos:prefLabel:
+    '@value': Retirement Pension contribution-record dispute
+    '@language': en-GB
+  skos:definition:
+    '@value': The Category A section distinguishes a presumed-correct national insurance record from a
+      disputed record requiring an HMRC formal decision, and the awards section describes incomplete-record
+      handling.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Do not infer that a missing contribution record proves there is no entitlement. The source
+      describes obtaining the complete record and reconsidering an initial decision, but no real claimant’s
+      record is examined here.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-regimes
+    at: '2026-09-15T20:17:36Z'
+  observedAt: '2026-09-15T20:17:36Z'
+  body: "# Retirement Pension contribution-record dispute\n\n## Source-backed proposal\n\nThe Category A section
+    distinguishes a presumed-correct national insurance record from a disputed record requiring an HMRC formal decision,
+    and the awards section describes incomplete-record handling.\n\n## Scope and exceptions\n\nDo not infer that
+    a missing contribution record proves there is no entitlement. The source describes obtaining the complete record
+    and reconsidering an initial decision, but no real claimant’s record is examined here.\n\n## Inspected passages\n\
+    \n- [DMG 75032, PDF page 10](https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=10).\n\
+    - [DMG 75711, PDF page 160](https://assets.publishing.service.gov.uk/media/69d8f248eb7e7bc565170231/dmg-Ch-75.pdf#page=160).\n\
+    \n## Provenance and review\n\nIndependent experimental interpretation of DWP guidance, not an official DWP document.
+    All definitions and relationships are model-assisted and unreviewed. No individual eligibility, award, legal
+    conclusion or executable rule is supplied.\n\nSource observation, listing-page update, printed revision, stated
+    legal date and pension event date have separate meanings. PDF page numbers are one-based file positions; extraction
+    may damage reading order, footnotes and characters. No visual PDF or specialist acceptance is claimed.\n\n-
+    `dmg-vol12-ch75` — PDF SHA-256 `655e7acb31f09f5169efbe40419091ee479f88c0c45b65c7a507b042b67712f9`; page-extraction
+    SHA-256 `0d037880d2aeaff1be89235ee987ca4acb1c839fcf1ead8b8be2daa9f6795465`.\n- `dmg-vol12-ch74` — PDF SHA-256
+    `5961a9cb7c86814a0f6fa147c0a8a551b4258c803680fac14a95cab9eca1afd6`; page-extraction SHA-256 `c762e93940b4342d70d5bc96a80c3e094c91852d93868f5709e04f293faef61a`.\n"
+  semantic_relations:
+  - target: term/dmg-revision
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source says an initial decision based on incomplete contribution information is to be
+      revised when complete information becomes available.
+    evidence:
+    - page: page/dmg-vol12-ch75/0160
+      quote: "75711 If the conditions of entitlement are satisfied the DM should make an award of RP. However, the\n\
+        DM will sometimes be unable to obtain the claimant’s complete contribution record for the period up to\n\
+        the year before that in which entitlement occurs. In this event the DM should\n\n\n1. make an initial decision
+        based on the information held and\n\n\n2. commence action immediately to obtain the complete record and\n\
+        \n\n3. revise the initial decision when the complete information is available.\n\n\nThe DM may require HMRC
+        to decide the contribution issue."
+      locator: DMG 75711
+  - target: term/sp-contribution-record-dispute
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The two chapters both explicitly route disputes about NI contribution records to HMRC; this
+      association does not make their underlying benefit conditions equivalent.
+    evidence:
+    - page: page/dmg-vol12-ch75/0010
+      quote: "75032 Entitlement to Cat A RP depends on the contribution conditions being satisfied. In practice
+        the NI\ncontribution record is usually obtained and any decision is based on the assumption that the record
+        is\nfactually correct. However, where there is a dispute about the record, the matter must be referred by
+        the\n\nDM to HMRC for a formal decision1. That referral should be made2 to:\nHMRC\nNational Insurance Contributions
+        Office\nNE98 1ZZ\n\n\nNote 1: See DMG Chapters 03, 04 and 06 for guidance on how decisions and appeals are
+        handled after a\nreference to HMRC.\n\n\nNote 2: See DMG Chapter 01 where the dispute is about whether credits
+        should be awarded.\n\n\n     1 SS CS (D&A) Regs, reg 11A and 38A; 2 Secretary of State for Work and Pensions
+        v TB v HMRC (RP)\n                                                                                     \
+        \                    [2010]\n                                                                          \
+        \   UKUT 88 (AAC) [2010] AACR 38"
+      locator: DMG 75032
+    - page: page/dmg-vol12-ch74/0003
+      quote: "74012 Entitlement to SP at any of the rates in DMG 74011 depends on the conditions of entitlement\n\
+        being satisfied. In practice the NI contribution record is usually obtained and any decision is based on
+        the\nassumption that the record is factually correct. However, where there is a dispute about the record,
+        the\n\nmatter must be referred by the DM to HMRC for a formal decision1. That referral should be made2 to:\n\
+        HMRC\nNational Insurance Contributions Office\nNE98 1ZZ\n\n\nNote 1: See DMG Chapters 03, 04 and 06 for
+        guidance on how decisions and appeals are handled after a\nreference to HMRC.\n\n\nNote 2: See DMG Chapter
+        01 where the dispute is about whether credits should be awarded.\n\n\n                        1 SS CS (D&A)
+        Regs, reg 11A and 38A; 2 Secretary of State for Work and Pensions\n                                    \
+        \            v TB v HMRC (RP) [2010} UKUT 88 (AAC) [2010] AACR 38"
+      locator: DMG 74012

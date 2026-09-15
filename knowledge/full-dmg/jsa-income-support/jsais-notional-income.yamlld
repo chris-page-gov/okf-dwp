@@ -1,0 +1,98 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-notional-income
+  '@type': skos:Concept
+  route: term/jsais-notional-income
+  title: Notional income in the JSA and Income Support guidance
+  type: Concept
+  description: The captured chapter calls income not actually received but treated as held notional
+    income, and lists several potential bases including deprivation, available-on-application
+    income, unpaid due income and third-party arrangements.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Notional income in the JSA and Income Support guidance
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured chapter calls income not actually received but treated as held notional
+      income, and lists several potential bases including deprivation, available-on-application
+      income, unpaid due income and third-party arrangements.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': A list of possible bases is not a decision that any person has notional income. Actual
+      and notional income, relevant disregards, liable-relative payments and service-user exceptions
+      require separate examination. Adjacent older programme text and the later memo-qualified
+      provision at DMG 28573 must be reconciled before use; no universal programme-duration rule is
+      adopted.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol5-ch28/0134
+  - page/dmg-vol5-ch28/0135
+  source:
+    https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=134
+  resource:
+    https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=134
+  sources:
+  - id: dmg-vol5-ch28
+    title: 'DMG Vol 5 Ch 28: Income other than earnings'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf
+    retrieved_at: '2026-09-15T19:45:25.311635Z'
+    sha256: bcaea58ee40a9dca60a21b0f79c525a1f15e95c6b8315d6aaa73f0f53dd5460f
+  body: "# Notional income in the JSA and Income Support guidance\n\n## Authored interpretation\n\nThe
+    captured chapter calls income not actually received but treated as held notional income, and lists
+    several potential bases including deprivation, available-on-application income, unpaid due income
+    and third-party arrangements.\n\n## Scope and exceptions\n\nA list of possible bases is not a decision
+    that any person has notional income. Actual and notional income, relevant disregards, liable-relative
+    payments and service-user exceptions require separate examination. Adjacent older programme text and
+    the later memo-qualified provision at DMG 28573 must be reconciled before use; no universal programme-duration
+    rule is adopted.\n\n## Inspected source passages\n\n- [DMG 28568, PDF page 134](https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=134)
+    — DMG Vol 5 Ch 28: Income other than earnings.\n- [DMG 28569, PDF page 134](https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=134)
+    — DMG Vol 5 Ch 28: Income other than earnings.\n- [DMG 28571, PDF page 135](https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=135)
+    — DMG Vol 5 Ch 28: Income other than earnings.\n- [DMG 28573, PDF page 135](https://assets.publishing.service.gov.uk/media/69a16975f534e7e99adaea96/dmg-ch-28.pdf#page=135)
+    — DMG Vol 5 Ch 28: Income other than earnings.\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of selected passages in the 15 September 2026 frozen source snapshot. Specialist review
+    is required. Source acquisition, source revision, legal effective dates and this record’s authoring
+    time are separate.\n\nThis is an independent experimental publication, not an official DWP document,
+    individual advice, an entitlement decision or an executable rule. Machine-extracted text may alter
+    reading order, footnotes and characters. No PDF visual inspection, whole-chapter coverage or behavioural
+    evaluation pass is claimed by this record.\n\n- `dmg-vol5-ch28`: PDF SHA-256 `bcaea58ee40a9dca60a21b0f79c525a1f15e95c6b8315d6aaa73f0f53dd5460f`;
+    extracted pages SHA-256 `f7e554c1af4c7d8b915524f441c1680c5bea7429ac8fff9fd18bc0c925f25c31`.\n"
+  semantic_relations:
+  - target: term/jsais-gross-other-income
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source says to calculate notional income in the same way as actual income while
+      applying the normal rules and any appropriate disregard.
+    evidence:
+    - page: page/dmg-vol5-ch28/0135
+      quote: "28571 Calculate notional income in the same way as actual income 1. Any notional income
+        of a child or\nyoung person should be added to their actual income. The total should then be taken
+        into account using\nnormal rules, including applying any appropriate disregard.\n\n\n        \
+        \                                                   1 JSA Regs, reg 105(14); IS (Gen) Regs, reg
+        42(7)"
+      locator: DMG 28571
+  - target: term/jsais-income-deprivation
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Deprivation is expressly one potential basis of notional income, not a synonym for
+      every notional-income case.
+    evidence:
+    - page: page/dmg-vol5-ch28/0134
+      quote: "28569 Notional income may be calculated because of\n\n\n1. deprivation of income\n\n\n2.
+        income available if applied for (including special rules for personal pensions)\n\n\n3. income
+        due but not yet paid\n\n\n4. income for a member of the family paid to a third party\n\n\n5. income
+        for a third party made to a member of the family\n\n\n6. a child or young person attending a boarding
+        school."
+      locator: DMG 28569

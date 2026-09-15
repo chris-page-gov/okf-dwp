@@ -1,0 +1,84 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/maternity-payment-decision-roles
+  '@type': skos:Concept
+  route: term/maternity-payment-decision-roles
+  title: SMP and MA payment and decision roles
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The chapter distinguishes employer-paid Statutory Maternity Pay with HMRC entitlement decisions
+    from DWP-paid Maternity Allowance decided by the DM.
+  tags:
+  - full DMG
+  - non-income and industrial benefits
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol10-ch62/0003
+  - page/dmg-vol10-ch62/0008
+  source: https://assets.publishing.service.gov.uk/media/6915b60ebc34c86ce4e6e71b/dmg-ch-62.pdf#page=3
+  sources:
+  - id: dmg-vol10-ch62
+    title: 'DMG Vol 10 Ch 62: Maternity benefits'
+    resource: https://assets.publishing.service.gov.uk/media/6915b60ebc34c86ce4e6e71b/dmg-ch-62.pdf
+    author: organisation:dwp
+    sha256: 5c26aeea45beff88bc30b486b5af521d76c8db81a591a96f8f333285870d6431
+    retrieved_at: '2026-09-15T19:45:32.852961Z'
+  skos:prefLabel:
+    '@value': SMP and MA payment and decision roles
+    '@language': en-GB
+  skos:definition:
+    '@value': The chapter distinguishes employer-paid Statutory Maternity Pay with HMRC entitlement decisions
+      from DWP-paid Maternity Allowance decided by the DM.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The source’s general 39-week statement has a separate 14-week participating-spouse/civil-partner
+      MA route and curtailment provisions. Social Fund maternity expenses are another route. No individual
+      payment period or award is inferred.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-non-income-and-industrial
+    at: '2026-09-15T20:40:56Z'
+  observedAt: '2026-09-15T20:40:56Z'
+  body: "# SMP and MA payment and decision roles\n\n## Authored interpretation\n\nThe chapter distinguishes employer-paid
+    Statutory Maternity Pay with HMRC entitlement decisions from DWP-paid Maternity Allowance decided by the DM.\n\
+    \n## Scope and exceptions\n\nThe source’s general 39-week statement has a separate 14-week participating-spouse/civil-partner
+    MA route and curtailment provisions. Social Fund maternity expenses are another route. No individual payment
+    period or award is inferred.\n\n## Inspected passages\n\n- [DMG 62001, PDF page 3](https://assets.publishing.service.gov.uk/media/6915b60ebc34c86ce4e6e71b/dmg-ch-62.pdf#page=3).\n\
+    - [DMG 62002, PDF page 3](https://assets.publishing.service.gov.uk/media/6915b60ebc34c86ce4e6e71b/dmg-ch-62.pdf#page=3).\n\
+    - [DMG 62003, PDF page 3](https://assets.publishing.service.gov.uk/media/6915b60ebc34c86ce4e6e71b/dmg-ch-62.pdf#page=3).\n\
+    \n## Evidence and review status\n\nIndependent experimental interpretation of captured DWP guidance, not an
+    official DWP document. Definitions and semantic associations are model-assisted proposals awaiting specialist
+    review. No individual entitlement decision, medical conclusion, award calculation or executable rule is provided.\n\
+    \nSource observation, listing-page update, printed revision, legal event and claimant-event dates are separate.
+    Current legal applicability is unresolved. Page numbers are one-based PDF positions; machine extraction may
+    damage reading order, characters and footnotes. No visual PDF or specialist acceptance is claimed.\n\n- `dmg-vol10-ch62`:
+    PDF `5c26aeea45beff88bc30b486b5af521d76c8db81a591a96f8f333285870d6431`; extracted pages `a93501ebcedfbd5cd44cdd7432521274e54a477ee5db81316239e7bdcacdfe6d`;
+    acquired `2026-09-15T19:45:32.852961Z`.\n"
+  resource: https://assets.publishing.service.gov.uk/media/6915b60ebc34c86ce4e6e71b/dmg-ch-62.pdf#page=3
+  semantic_relations:
+  - target: term/ma-smp-non-overlap
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The MA section expressly excludes MA for a week of SMP entitlement for the same pregnancy.
+    evidence:
+    - page: page/dmg-vol10-ch62/0008
+      quote: "62504 A woman is not entitled to MA for any week she is entitled to SMP for the same pregnancy 1.\n\
+        \n\n                                                                                 1 SS CB Act 92, s 35(1)(d)\n\
+        \n\n\nProvision of NINO"
+      locator: DMG 62504
+  - target: term/ma-participating-partner-route
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The introduction separately identifies the participating-spouse/civil-partner route and its
+      different maximum period.
+    evidence:
+    - page: page/dmg-vol10-ch62/0003
+      quote: "62002 Both SMP and MA are payable for a maximum period of 39 weeks. SMP is paid to the woman by\n\
+        her employer; MA is claimed from and paid by DWP. From 1.4.99 decisions on entitlement to SMP are\nmade
+        by HMRC. All MA issues are determined by the DM. However, MA is payable for a period of 14\nweeks where
+        a woman is a participating wife or civil partner of a S/E earner.\n\n\nNote: From 1.12.14, women whose EWC
+        is on or after 5.4.15 can curtail their 39 week MAP (see DMG"
+      locator: DMG 62002

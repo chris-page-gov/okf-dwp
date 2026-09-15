@@ -1,0 +1,82 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-notional-income
+  '@type': skos:Concept
+  route: term/esa-notional-income
+  title: Notional income in the ESA source
+  type: Concept
+  description: The source calls income not received but treated as held notional income and lists several potential bases, with normal assessment rules and any appropriate disregard.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Notional income in the ESA source
+    '@language': en-GB
+  skos:definition:
+    '@value': The source calls income not received but treated as held notional income and lists several potential bases, with normal assessment rules and any appropriate disregard.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 51456–51462 distinguish actual income, possible notional bases, liable-relative payments and service-user exceptions. A missing payment does not establish notional income or fraud. Historical programme wording is not a current duration rule.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 51
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol9-ch51/0127
+  - page/dmg-vol9-ch51/0128
+  - page/dmg-vol9-ch51/0002
+  source: https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=127
+  resource: https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=127
+  sources:
+  - id: dmg-vol9-ch51
+    title: 'DMG Vol 9 Ch 51: Income other than earnings'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf
+    retrieved_at: '2026-09-15T19:45:30.832715Z'
+    sha256: a4682bf466f316cef3bc9ca01e4eeff68729be7724068c913a306a910f9ceaa7
+  body: |
+    # Notional income in the ESA source
+
+    ## Authored interpretation
+
+    The source calls income not received but treated as held notional income and lists several potential bases, with normal assessment rules and any appropriate disregard.
+
+    ## Scope and boundaries
+
+    DMG 51456–51462 distinguish actual income, possible notional bases, liable-relative payments and service-user exceptions. A missing payment does not establish notional income or fraud. Historical programme wording is not a current duration rule.
+
+    ## Inspected source passages
+
+    - [DMG 51456, PDF page 127](https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=127)
+    - [DMG 51457, PDF page 127](https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=127)
+    - [DMG 51458, PDF page 127](https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=127)
+    - [DMG 51459, PDF page 128](https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=128)
+    - [DMG 51461, PDF page 128](https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=128)
+    - [DMG 51462, PDF page 128](https://assets.publishing.service.gov.uk/media/69a16f9cf534e7e99adaeaa5/dmg-ch-51.pdf#page=128)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:30.832715Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `a4682bf466f316cef3bc9ca01e4eeff68729be7724068c913a306a910f9ceaa7`. Extracted pages SHA-256: `860dac41187f2c6fd07f6037f02a3e4cf121ae1d835852c641ad545f9803fefe`.
+  semantic_relations:
+  - target: term/esa-other-income-scope
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source applies normal actual-income assessment rules and appropriate disregards to notional income, within the chapter’s scope.
+    evidence:
+    - page: page/dmg-vol9-ch51/0128
+      quote: "51459 Calculate notional income in the same way as actual income 1. The income should be taken into\naccount using normal rules, including applying any appropriate disregard.\n\n\n                                                                                     1 ESA Regs, reg 109(1)\n\n\n\nNotional income - tasters"
+      locator: DMG 51459
+    - page: page/dmg-vol9-ch51/0002
+      quote: "51000 This Chapter deals with the calculation of income other than earnings for ESA(IR) & (Cont) as well\nas student’s income. With the exception of payments made to a person carrying out public or local\n\nfunctions, pension protection fund periodic payments, occupational and personal pension payments 1,\nincome other than earnings does not affect the calculation of ESA(Cont).\n\n\n                                                                                        1 WR Act 07, s 3\n\n\n\nMeaning of claimant"
+      locator: DMG 51000

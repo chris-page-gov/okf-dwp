@@ -1,0 +1,94 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-free-inpatient-treatment
+  '@type': skos:Concept
+  route: term/jsais-free-inpatient-treatment
+  title: Free in-patient treatment in the JSA and IS guidance
+  type: Concept
+  description: 'The captured guidance requires several conditions together for free in-patient treatment:
+    free maintenance, medical or other treatment, a hospital or similar institution, in-patient status
+    and a specified legislative or Defence Council basis.'
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Free in-patient treatment in the JSA and IS guidance
+    '@language': en-GB
+  skos:definition:
+    '@value': 'The captured guidance requires several conditions together for free in-patient treatment:
+      free maintenance, medical or other treatment, a hospital or similar institution, in-patient status
+      and a specified legislative or Defence Council basis.'
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': A hospital address or an NHS label alone is insufficient. Private-patient exceptions
+      and the factual meaning of in-patient must be checked. The source contains older dated
+      guidance; periods, premiums, current legislation and JSA labour-market exceptions remain
+      unresolved. It does not establish that every hospital stay changes an award.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol4-ch24/0011
+  - page/dmg-vol4-ch24/0025
+  source:
+    https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf#page=11
+  resource:
+    https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf#page=11
+  sources:
+  - id: dmg-vol4-ch24
+    title: 'DMG Vol 4 Ch 24: Special cases'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf
+    retrieved_at: '2026-09-15T19:45:23.687172Z'
+    sha256: 2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a
+  body: "# Free in-patient treatment in the JSA and IS guidance\n\n## Authored interpretation\n\nThe captured
+    guidance requires several conditions together for free in-patient treatment: free maintenance, medical
+    or other treatment, a hospital or similar institution, in-patient status and a specified legislative
+    or Defence Council basis.\n\n## Scope and exceptions\n\nA hospital address or an NHS label alone is
+    insufficient. Private-patient exceptions and the factual meaning of in-patient must be checked. The
+    source contains older dated guidance; periods, premiums, current legislation and JSA labour-market
+    exceptions remain unresolved. It does not establish that every hospital stay changes an award.\n\n\
+    ## Inspected source passages\n\n- [DMG 24007, PDF page 11](https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf#page=11)
+    — DMG Vol 4 Ch 24: Special cases.\n- [DMG 24008, PDF page 11](https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf#page=11)
+    — DMG Vol 4 Ch 24: Special cases.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol4-ch24`: PDF SHA-256 `2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a`;
+    extracted pages SHA-256 `91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c`.\n"
+  semantic_relations:
+  - target: term/jsais-hospital-family-membership
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Hospital treatment and continued family membership are separate questions in the
+      chapter; the family passage directs the reader to chapter 22 rather than deciding membership
+      from admission alone.
+    evidence:
+    - page: page/dmg-vol4-ch24/0011
+      quote: "24007   A person must be in each of the following categories to be receiving free in-patient\n\
+        \        treatment\n\n        1.    maintained free of charge\n\n        2.    receiving medical
+        or other treatment\n\n        3.    in a hospital or similar institution\n\n        4.    an in-patient\n\
+        \n        5.    receiving the treatment\n\n              5.1      under prescribed legislation1
+        or\n\n              5.2      in a hospital or similar institution maintained or administered by
+        the\n                       Defence Council.\n\n        Note: A person who does not meet any one
+        of these conditions is not receiving free\n        in-patient treatment. The DM does not need
+        to consider the other conditions.\n                                                          \
+        \        1 NHS Act 06; NHS (Scot) Act 78; NHS & CC Act 90\n\n        Maintained free of charge"
+      locator: DMG 24007
+    - page: page/dmg-vol4-ch24/0025
+      quote: "24097   The DM should consider the guidance in DMG Chapter 22 to decide whether a\n    \
+        \    patient is still a member of a family if the patient is a\n\n        1.      lone parent
+        or\n\n        2.      member of a couple or\n\n        3.      member of a polygamous marriage\n\
+        \n        4.      a child or young person.\n\n\n\n\nVol 4 Amendment 22 June 2007"
+      locator: DMG 24097

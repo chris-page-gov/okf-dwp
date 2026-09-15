@@ -1,0 +1,78 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsais-student-partner-income
+  '@type': skos:Concept
+  route: term/legacy-jsais-student-partner-income
+  title: Student partner income and family attribution
+  type: Concept
+  description: The captured guidance says student applies to the individual rather than the family
+    and describes treating a student partner’s income as the claimant’s after calculating its weekly
+    amount.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Student partner income and family attribution
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance says student applies to the individual rather than the family
+      and describes treating a student partner’s income as the claimant’s after calculating its
+      weekly amount.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is a scoped source attribution sequence, not a decision that every student
+      payment counts. Student-income calculation, disregards, children, the benefit involved and
+      transitional rules remain dependencies. Do not transplant the sequence into UC, Pension Credit
+      or a calculator without further evidence.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol6-ch30/0007
+  source: https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf#page=7
+  resource:
+    https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf#page=7
+  sources:
+  - id: dmg-vol6-ch30
+    title: 'DMG Vol 6 Ch 30: Students, young claimants and their partners'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf
+    retrieved_at: '2026-09-15T19:45:26.638842Z'
+    sha256: 1540b54680884fdaa8a71e26fdebe12899d876b459d448198a7c941a37960780
+  body: "# Student partner income and family attribution\n\n## Authored interpretation\n\nThe captured
+    guidance says student applies to the individual rather than the family and describes treating a student
+    partner’s income as the claimant’s after calculating its weekly amount.\n\n## Scope and exceptions\n\
+    \nThis is a scoped source attribution sequence, not a decision that every student payment counts.
+    Student-income calculation, disregards, children, the benefit involved and transitional rules remain
+    dependencies. Do not transplant the sequence into UC, Pension Credit or a calculator without further
+    evidence.\n\n## Inspected source passages\n\n- [DMG 30015, PDF page 7](https://assets.publishing.service.gov.uk/media/660bd8e238f66c001184a8db/dmgch30.pdf#page=7)
+    — DMG Vol 6 Ch 30: Students, young claimants and their partners.\n\n## Evidence and review status\n\
+    \nModel-assisted interpretation of selected passages in the 15 September 2026 frozen source snapshot.
+    Specialist review is required. Source acquisition, source revision, legal effective dates and this
+    record’s authoring time are separate.\n\nThis is an independent experimental publication, not an official
+    DWP document, individual advice, an entitlement decision or an executable rule. Machine-extracted
+    text may alter reading order, footnotes and characters. No PDF visual inspection, whole-chapter coverage
+    or behavioural evaluation pass is claimed by this record.\n\n- `dmg-vol6-ch30`: PDF SHA-256 `1540b54680884fdaa8a71e26fdebe12899d876b459d448198a7c941a37960780`;
+    extracted pages SHA-256 `768537aba8259637b2425c4f5359b19a59adee89282078ead1e22f6c4f973665`.\n"
+  semantic_relations:
+  - target: term/jsais-family-income-attribution
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The student paragraph explicitly separates the individual student from family
+      membership and identifies when partner income is attributed.
+    evidence:
+    - page: page/dmg-vol6-ch30/0007
+      quote: "30015 A reference to a student is a reference to that person alone. It does not include
+        the student's\npartner or a child or young person. But for JSA(IB) and IS if the student is the
+        claimant's partner, the\n\nstudent's income is treated as the claimant's1. This happens once the
+        weekly amount to be taken into\naccount has been worked out.\n\n\n                           \
+        \                                           1 JS Act, s 13(2); SS CB Act 92, s 136(1)"
+      locator: DMG 30015

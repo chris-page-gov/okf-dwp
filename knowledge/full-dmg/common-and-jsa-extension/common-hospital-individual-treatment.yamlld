@@ -1,0 +1,85 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/common-hospital-individual-treatment
+  '@type': skos:Concept
+  route: term/common-hospital-individual-treatment
+  title: Individual treatment and free in-patient conditions
+  type: Concept
+  description: The captured hospital guidance requires its free in-patient conditions together and
+    treats medical or nursing treatment as an individual factual question, rather than assuming
+    every resident of an establishment receives it.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Individual treatment and free in-patient conditions
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured hospital guidance requires its free in-patient conditions together and
+      treats medical or nursing treatment as an individual factual question, rather than assuming
+      every resident of an establishment receives it.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The source distinguishes professional medical or nursing treatment from
+      straightforward unqualified care and includes private-patient exceptions. Funding, prescribed
+      legal basis, in-patient status and the benefit-specific scope remain necessary; no conclusion
+      about an individual’s care setting or entitlement follows.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch18/0007
+  - page/dmg-vol3-ch18/0008
+  source: https://assets.publishing.service.gov.uk/media/5a80d88aed915d74e33fcbde/dmgch18.pdf#page=7
+  resource:
+    https://assets.publishing.service.gov.uk/media/5a80d88aed915d74e33fcbde/dmgch18.pdf#page=7
+  sources:
+  - id: dmg-vol3-ch18
+    title: 'DMG Vol 3 Ch 18: Hospital in-patients'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a80d88aed915d74e33fcbde/dmgch18.pdf
+    retrieved_at: '2026-09-15T19:45:22.510180Z'
+    sha256: cb377d4db23653485a8a4c10e1ea19da1bba9bb9aad731e382e22b53fc4fa863
+  body: "# Individual treatment and free in-patient conditions\n\n## Authored interpretation\n\nThe captured
+    hospital guidance requires its free in-patient conditions together and treats medical or nursing treatment
+    as an individual factual question, rather than assuming every resident of an establishment receives
+    it.\n\n## Scope and exceptions\n\nThe source distinguishes professional medical or nursing treatment
+    from straightforward unqualified care and includes private-patient exceptions. Funding, prescribed
+    legal basis, in-patient status and the benefit-specific scope remain necessary; no conclusion about
+    an individual’s care setting or entitlement follows.\n\n## Inspected source passages\n\n- [DMG 18020,
+    PDF page 7](https://assets.publishing.service.gov.uk/media/5a80d88aed915d74e33fcbde/dmgch18.pdf#page=7)
+    — DMG Vol 3 Ch 18: Hospital in-patients.\n- [DMG 18021, PDF page 7](https://assets.publishing.service.gov.uk/media/5a80d88aed915d74e33fcbde/dmgch18.pdf#page=7)
+    — DMG Vol 3 Ch 18: Hospital in-patients.\n- [DMG 18024, PDF page 8](https://assets.publishing.service.gov.uk/media/5a80d88aed915d74e33fcbde/dmgch18.pdf#page=8)
+    — DMG Vol 3 Ch 18: Hospital in-patients.\n- [DMG 18025, PDF page 8](https://assets.publishing.service.gov.uk/media/5a80d88aed915d74e33fcbde/dmgch18.pdf#page=8)
+    — DMG Vol 3 Ch 18: Hospital in-patients.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol3-ch18`: PDF SHA-256 `cb377d4db23653485a8a4c10e1ea19da1bba9bb9aad731e382e22b53fc4fa863`;
+    extracted pages SHA-256 `7953f5a17805c8271ec4bcc926e0414ba0b19c358597faaf4eee431006a456a8`.\n"
+  semantic_relations:
+  - target: term/dmg-evidence-assessment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The treatment passage expressly requires a factual finding for each person and warns
+      against assuming all residents have the same treatment status.
+    evidence:
+    - page: page/dmg-vol3-ch18/0008
+      quote: "18025   Whether a person is receiving treatment is a question of fact. It cannot be assumed\n\
+        \        that because one person is receiving treatment in a hospital or similar\n        establishment,
+        that another person in the same establishment can automatically be\n        regarded as receiving
+        treatment. But the fact that a person is an in-patient in a\n                                \
+        \                                                                          1\n        hospital
+        is strong evidence that the person is receiving medical or other treatment .\n               \
+        \                                                                                   1 R(S) 26/54"
+      locator: DMG 18025

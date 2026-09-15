@@ -1,0 +1,80 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-suspension-information-extension
+  '@type': skos:Concept
+  route: term/dmg-suspension-information-extension
+  title: Time to provide information before suspension
+  type: Concept
+  description: The suspension guidance allows consideration of longer periods for information and describes
+    circumstances such as difficulty obtaining evidence, disability, illness and bereavement.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Time to provide information before suspension
+    '@language': en-GB
+  skos:definition:
+    '@value': The suspension guidance allows consideration of longer periods for information and describes
+      circumstances such as difficulty obtaining evidence, disability, illness and bereavement.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The listed circumstances are not exhaustive. The quoted time periods are not converted into a
+      universal deadline; hardship, the request, the applicable benefit and reasons information cannot be
+      obtained require review.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol1-ch4/0126
+  - page/dmg-vol1-ch4/0127
+  source: https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=126
+  resource: https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=126
+  sources:
+  - id: dmg-vol1-ch4
+    title: 'DMG Vol 1 Ch 4: Supersession, suspension and termination '
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=126
+    retrieved_at: '2026-09-15T19:45:18.361556Z'
+    sha256: 9c96b49a78aa4dc40df8594cf65cbd435a681d0be3737729cd87882542d0e2ea
+  body: "# Time to provide information before suspension\n\n## Authored interpretation\n\nThe suspension guidance
+    allows consideration of longer periods for information and describes circumstances such as difficulty obtaining
+    evidence, disability, illness and bereavement.\n\n## Scope and exceptions\n\nThe listed circumstances are not
+    exhaustive. The quoted time periods are not converted into a universal deadline; hardship, the request, the
+    applicable benefit and reasons information cannot be obtained require review.\n\n## Inspected source passages\n\
+    \n- [DMG 04841, PDF page 126](https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=126)
+    — DMG Vol 1 Ch 4: Supersession, suspension and termination .\n- [DMG 04842, PDF page 126](https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=126)
+    — DMG Vol 1 Ch 4: Supersession, suspension and termination .\n- [DMG 04845, PDF page 127](https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=127)
+    — DMG Vol 1 Ch 4: Supersession, suspension and termination .\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source
+    is DWP guidance, not a consolidated statement of legislation. This is an independent experimental publication,
+    not an official DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are
+    one-based file positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships
+    preserve extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current
+    applicability remain separate review tasks.\n\n- `dmg-vol1-ch4` PDF SHA-256: `9c96b49a78aa4dc40df8594cf65cbd435a681d0be3737729cd87882542d0e2ea`;
+    extracted pages SHA-256: `bef5fc9f04b2a78c5bb5dc99468f94a1841f1ef4afa117d47aa9c1e5040f3752`.\n"
+  semantic_relations:
+  - target: term/dmg-payment-suspension
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source explicitly connects extending time with information difficulties and hardship before
+      suspension.
+    evidence:
+    - page: page/dmg-vol1-ch4/0127
+      quote: "04845 When considering whether to extend the 14 day period the DM should take into account all the\n\
+        circumstances including\n\n\n1. the claimant’s circumstances and the nature of the information requested\n\
+        \n\n2. whether there are difficulties in obtaining the information (e.g. where verification, which may not
+        be\n\nreadily available, has to be sought from a 3rd party such as a bank)\n\n\n3. any difficulty the claimant
+        may have in obtaining the information due to disability, illness or family\ncircumstances\n\n\n4. circumstances
+        beyond the claimant’s control such as hospitalisation, bereavement or postal\ndisruption\n\n\n5. whether
+        the nature of the award causes difficulties e.g. overseas awards\n\n\nThis list is not exhaustive and each
+        case should be considered on its merits. Extension is at the discretion\nof the DM. Before making a decision
+        to suspend the DM must consider hardship."
+      locator: DMG 04845

@@ -1,0 +1,75 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-part-week-relevant-week
+  '@type': skos:Concept
+  route: term/esa-part-week-relevant-week
+  title: Relevant week for ESA part-week payments
+  type: Concept
+  description: The source bases a part-week payment on notional entitlement for a relevant week that depends on whether the payment arises at the beginning, end or change of benefit week.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Relevant week for ESA part-week payments
+    '@language': en-GB
+  skos:definition:
+    '@value': The source bases a part-week payment on notional entitlement for a relevant week that depends on whether the payment arises at the beginning, end or change of benefit week.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 46043 points to separate definitions at 46052, 46082 and 46103. The relevant week cannot be assumed to be the current calendar week; no part-week award is calculated.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 46
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol8-ch46/0009
+  source: https://assets.publishing.service.gov.uk/media/69e5ffc3de262afd82fcf92b/dmg-Chap-46.pdf#page=9
+  resource: https://assets.publishing.service.gov.uk/media/69e5ffc3de262afd82fcf92b/dmg-Chap-46.pdf#page=9
+  sources:
+  - id: dmg-vol8-ch46
+    title: 'DMG Vol 8 Ch 46: ESA, Payment questions '
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69e5ffc3de262afd82fcf92b/dmg-Chap-46.pdf
+    retrieved_at: '2026-09-15T19:45:29.420524Z'
+    sha256: a27cee1bd8b3124d8cbfa0a41ed9dcde881510612b0b7b47b958967b99ce759c
+  body: |
+    # Relevant week for ESA part-week payments
+
+    ## Authored interpretation
+
+    The source bases a part-week payment on notional entitlement for a relevant week that depends on whether the payment arises at the beginning, end or change of benefit week.
+
+    ## Scope and boundaries
+
+    DMG 46043 points to separate definitions at 46052, 46082 and 46103. The relevant week cannot be assumed to be the current calendar week; no part-week award is calculated.
+
+    ## Inspected source passages
+
+    - [DMG 46043, PDF page 9](https://assets.publishing.service.gov.uk/media/69e5ffc3de262afd82fcf92b/dmg-Chap-46.pdf#page=9)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:29.420524Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `a27cee1bd8b3124d8cbfa0a41ed9dcde881510612b0b7b47b958967b99ce759c`. Extracted pages SHA-256: `b052e17c5c656ddc48cbd794a9a0d9fcccf8c922424a71ce9e6ef4e6c8b2d6c3`.
+  semantic_relations:
+  - target: term/esa-part-week-notional-entitlement
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source expressly bases the part-week calculation on notional entitlement in the relevant week.
+    evidence:
+    - page: page/dmg-vol8-ch46/0009
+      quote: "46042 In this guidance notional entitlement means\n\n\n1. in ESA(Cont), the claimant's personal rate\n\n\n2. in ESA(IR), the amount by which the applicable amount exceeds income.\n\n\n\n\nWhat is the relevant week"
+      locator: DMG 46042
+    - page: page/dmg-vol8-ch46/0009
+      quote: "46043 Part-week payment calculations are based on the claimant's notional entitlement during the\n\nrelevant week1 (sometimes known as the notional benefit week). The period covered by the relevant\nweek depends on when the need for a part-week payment arises. For a part-week payment\n\n\n1. at the beginning of an award, the relevant week is defined in DMG 46052\n\n\n2. at the end of an award, the relevant week is defined in DMG 46082\n\n\n3. on a change of benefit week , the relevant week is defined in DMG 46103.\n\n\n                                                                                   1 ESA Regs, reg 166"
+      locator: DMG 46043

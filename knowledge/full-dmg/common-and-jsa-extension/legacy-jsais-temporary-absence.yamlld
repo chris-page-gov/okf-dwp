@@ -1,0 +1,99 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsais-temporary-absence
+  '@type': skos:Concept
+  route: term/legacy-jsais-temporary-absence
+  title: Temporary absence and continued family household membership
+  type: Concept
+  description: The captured guidance allows household membership during some temporary absences and
+    considers intended return and expected duration, including the source’s qualified treatment of
+    the 52-week boundary.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Temporary absence and continued family household membership
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance allows household membership during some temporary absences and
+      considers intended return and expected duration, including the source’s qualified treatment of
+      the 52-week boundary.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The chapter concerns JSA(IB) and IS. A shared address, hospital stay or fixed number
+      of weeks alone does not determine membership. The source’s intention, previous membership,
+      duration and exception wording must remain together; no present-day family or residence
+      finding is made.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol4-ch22/0003
+  - page/dmg-vol4-ch22/0015
+  source: https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf#page=3
+  resource:
+    https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf#page=3
+  sources:
+  - id: dmg-vol4-ch22
+    title: 'DMG Vol 4 Ch 22: Membership of the family'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf
+    retrieved_at: '2026-09-15T19:45:23.421750Z'
+    sha256: f8545cc90dbcffa59e0255fcf5a9335d94c0e29ee7e8a714385a146121959c0d
+  body: "# Temporary absence and continued family household membership\n\n## Authored interpretation\n\
+    \nThe captured guidance allows household membership during some temporary absences and considers intended
+    return and expected duration, including the source’s qualified treatment of the 52-week boundary.\n\
+    \n## Scope and exceptions\n\nThe chapter concerns JSA(IB) and IS. A shared address, hospital stay
+    or fixed number of weeks alone does not determine membership. The source’s intention, previous membership,
+    duration and exception wording must remain together; no present-day family or residence finding is
+    made.\n\n## Inspected source passages\n\n- [DMG 22001, PDF page 3](https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf#page=3)
+    — DMG Vol 4 Ch 22: Membership of the family.\n- [DMG 22041, PDF page 15](https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf#page=15)
+    — DMG Vol 4 Ch 22: Membership of the family.\n- [DMG 22042, PDF page 15](https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf#page=15)
+    — DMG Vol 4 Ch 22: Membership of the family.\n- [DMG 22043, PDF page 15](https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf#page=15)
+    — DMG Vol 4 Ch 22: Membership of the family.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol4-ch22`: PDF SHA-256 `f8545cc90dbcffa59e0255fcf5a9335d94c0e29ee7e8a714385a146121959c0d`;
+    extracted pages SHA-256 `336e01c44bf057e8c30ad34752a8ea72e08961d201c6f61c71a3b897890d2c1e`.\n"
+  semantic_relations:
+  - target: term/jsais-hospital-family-membership
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The general household provision allows temporary absence, supplying the chapter 22
+      research context for the hospital family-membership question without treating admission as an
+      automatic loss.
+    evidence:
+    - page: page/dmg-vol4-ch22/0015
+      quote: "22041   The claimant’s household may include\n\n        1.     the claimant\n\n        2.\
+        \     the claimant’s partner or partners\n\n        3.     the members of a joint-claim couple\n\
+        \n        4.     any child or young person who is the responsibility of anyone in 1. or 2.\n\n\
+        \        This applies even if any of these people are temporarily living away from the other\n\
+        \        members of the family1, for example to work or visit relatives.\n\n        Note: The
+        definition of a claimant for JSA(IB) in DMG 22002\n                                          \
+        \                         1 JSA Regs, reg 78(1), (1A); IS (Gen) Regs, reg 16(1)\n\n\n\n      \
+        \  When can they not be treated as members of the\n        claimant’s household"
+      locator: DMG 22041
+    - page: page/dmg-vol4-ch22/0015
+      quote: "22043   The absent member may be treated as a member of the claimant’s household if\n\n\
+        \        1.     that person intends to resume living with the family and\n\n        2.     the
+        absence is unlikely to last\n\n               2.1      more than 52 weeks or\n\n             \
+        \  2.2      substantially more than 52 weeks1 where exceptional circumstances\n              \
+        \          apply.\n\n        Substantially is not defined in legislation and should be given its
+        everyday meaning,\n        that is, in this context - of large size or amount.\n\n        Note:
+        This exception only applies if the family has previously lived as members of\n        the same
+        household, (notwithstanding that that household may have been abroad)\n        and the intention
+        to resume living with the family must not be conditional.\n                                  \
+        \                                 1 JSA Regs, reg 78(2)(b); IS (Gen) Regs, reg 16(2)(b)\n\n\n\n\
+        \nVol 4 Amendment 32 October 2010"
+      locator: DMG 22043

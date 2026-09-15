@@ -1,0 +1,98 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-relevant-change-of-circumstances
+  '@type': skos:Concept
+  route: term/dmg-relevant-change-of-circumstances
+  title: Relevant change of circumstances for supersession
+  type: Concept
+  description: For supersession, the captured guidance asks whether a change after the decision took effect is
+    relevant to the benefit award, with a separate route for expected changes and qualifications for
+    disallowed claims.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Relevant change of circumstances for supersession
+    '@language': en-GB
+  skos:definition:
+    '@value': For supersession, the captured guidance asks whether a change after the decision took effect is
+      relevant to the benefit award, with a separate route for expected changes and qualifications for
+      disallowed claims.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Not every change produces a changed award. The general fresh-claim rule after disallowance has
+      the stated DMG 04103 exception; a change of opinion and a change of law need separate treatment. No
+      reporting deadline is inferred.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol1-ch4/0016
+  - page/dmg-vol1-ch4/0017
+  - page/dmg-vol1-ch4/0018
+  - page/dmg-vol1-ch3/0003
+  source: https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=16
+  resource: https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=16
+  sources:
+  - id: dmg-vol1-ch4
+    title: 'DMG Vol 1 Ch 4: Supersession, suspension and termination '
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=16
+    retrieved_at: '2026-09-15T19:45:18.361556Z'
+    sha256: 9c96b49a78aa4dc40df8594cf65cbd435a681d0be3737729cd87882542d0e2ea
+  - id: dmg-vol1-ch3
+    title: 'DMG Vol 1 Ch 3: Revision '
+    author: organisation:dwp
+    resource:
+      https://assets.publishing.service.gov.uk/media/6a212d2e58aae59498cb2a1a/dmg-vol-1-ch-3.pdf#page=3
+    retrieved_at: '2026-09-15T19:45:18.312379Z'
+    sha256: 4aebcf1988fb7d96698dce77bf88d68272a5975171decc42f58c32cfa1d42eeb
+  body: "# Relevant change of circumstances for supersession\n\n## Authored interpretation\n\nFor supersession,
+    the captured guidance asks whether a change after the decision took effect is relevant to the benefit award,
+    with a separate route for expected changes and qualifications for disallowed claims.\n\n## Scope and exceptions\n\
+    \nNot every change produces a changed award. The general fresh-claim rule after disallowance has the stated
+    DMG 04103 exception; a change of opinion and a change of law need separate treatment. No reporting deadline
+    is inferred.\n\n## Inspected source passages\n\n- [DMG 04100, PDF page 16](https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=16)
+    — DMG Vol 1 Ch 4: Supersession, suspension and termination .\n- [DMG 04102, PDF page 17](https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=17)
+    — DMG Vol 1 Ch 4: Supersession, suspension and termination .\n- [DMG 04103, PDF page 17](https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=17)
+    — DMG Vol 1 Ch 4: Supersession, suspension and termination .\n- [DMG 04104, PDF page 18](https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=18)
+    — DMG Vol 1 Ch 4: Supersession, suspension and termination .\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source
+    is DWP guidance, not a consolidated statement of legislation. This is an independent experimental publication,
+    not an official DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are
+    one-based file positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships
+    preserve extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current
+    applicability remain separate review tasks.\n\n- `dmg-vol1-ch4` PDF SHA-256: `9c96b49a78aa4dc40df8594cf65cbd435a681d0be3737729cd87882542d0e2ea`;
+    extracted pages SHA-256: `bef5fc9f04b2a78c5bb5dc99468f94a1841f1ef4afa117d47aa9c1e5040f3752`.\n- `dmg-vol1-ch3`
+    PDF SHA-256: `4aebcf1988fb7d96698dce77bf88d68272a5975171decc42f58c32cfa1d42eeb`; extracted pages SHA-256: `444fa1a240db31b94cb75c13a2f2ece7c691f15aeca0bec2dd298e2f4e08f66a`.\n"
+  semantic_relations:
+  - target: term/dmg-supersession
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The passage associates an actual or expected relevant change with possible supersession,
+      without saying supersession is automatic.
+    evidence:
+    - page: page/dmg-vol1-ch4/0016
+      quote: "04100 Where\n\n\n1. there has been a relevant change of circumstances since the decision\n\n\n   \
+        \   1.1 had effect or\n\n\n      1.2 was made in the case of an advance award1 or\n\n\n2. it is expected
+        that a change will occur\n\n\nthe DM may supersede the decision which is currently in force2. The application
+        period for revision is\nirrelevant in these cases. See also DMG 04115 - 04116.\n\n\n                   \
+        \                     1 SS (C&P) Regs, reg 13, 13A & 13C; 2 SS CS (D&A) Regs, reg 6(2)(a)"
+      locator: DMG 04100
+  - target: term/dmg-revision
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The revision chapter distinguishes reporting a change from revising a decision and routes it to
+      claim or supersession rules.
+    evidence:
+    - page: page/dmg-vol1-ch3/0003
+      quote: "03004 (see DMG memo 13-22) A decision cannot be revised where claimants report a change of\ncircumstances
+        during the application period. The claim or supersession rules apply instead (see DMG"
+      locator: DMG 03004

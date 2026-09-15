@@ -1,0 +1,76 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-civil-status-primary-evidence
+  '@type': skos:Concept
+  route: term/dmg-civil-status-primary-evidence
+  title: Primary evidence of age, marriage or death
+  type: Concept
+  description: The source identifies certified statutory-register entries as a primary evidential route, while
+    allowing discrepancies and strong contrary evidence to be considered.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Primary evidence of age, marriage or death
+    '@language': en-GB
+  skos:definition:
+    '@value': The source identifies certified statutory-register entries as a primary evidential route, while
+      allowing discrepancies and strong contrary evidence to be considered.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': A certificate is not infallible and a photocopy is not automatically equivalent. Foreign
+      certificates and identity discrepancies have specific qualifications. The full territorial and
+      historical marriage provisions are outside this batch.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch10/0005
+  - page/dmg-vol3-ch10/0006
+  source: https://assets.publishing.service.gov.uk/media/681c8caa9ef97b58cce3e5a4/dmgch10.pdf#page=5
+  resource: https://assets.publishing.service.gov.uk/media/681c8caa9ef97b58cce3e5a4/dmgch10.pdf#page=5
+  sources:
+  - id: dmg-vol3-ch10
+    title: 'DMG Vol 3 Ch 10: Evidence of age, marriage and death '
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/681c8caa9ef97b58cce3e5a4/dmgch10.pdf#page=5
+    retrieved_at: '2026-09-15T19:45:21.670046Z'
+    sha256: e87cd0079de36002a9ae5d065256197eccce3b9257537a29da5bd3220145021a
+  body: "# Primary evidence of age, marriage or death\n\n## Authored interpretation\n\nThe source identifies certified
+    statutory-register entries as a primary evidential route, while allowing discrepancies and strong contrary evidence
+    to be considered.\n\n## Scope and exceptions\n\nA certificate is not infallible and a photocopy is not automatically
+    equivalent. Foreign certificates and identity discrepancies have specific qualifications. The full territorial
+    and historical marriage provisions are outside this batch.\n\n## Inspected source passages\n\n- [DMG 10030,
+    PDF page 5](https://assets.publishing.service.gov.uk/media/681c8caa9ef97b58cce3e5a4/dmgch10.pdf#page=5) — DMG
+    Vol 3 Ch 10: Evidence of age, marriage and death .\n- [DMG 10032, PDF page 6](https://assets.publishing.service.gov.uk/media/681c8caa9ef97b58cce3e5a4/dmgch10.pdf#page=6)
+    — DMG Vol 3 Ch 10: Evidence of age, marriage and death .\n- [DMG 10033, PDF page 6](https://assets.publishing.service.gov.uk/media/681c8caa9ef97b58cce3e5a4/dmgch10.pdf#page=6)
+    — DMG Vol 3 Ch 10: Evidence of age, marriage and death .\n- [DMG 10034, PDF page 6](https://assets.publishing.service.gov.uk/media/681c8caa9ef97b58cce3e5a4/dmgch10.pdf#page=6)
+    — DMG Vol 3 Ch 10: Evidence of age, marriage and death .\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source
+    is DWP guidance, not a consolidated statement of legislation. This is an independent experimental publication,
+    not an official DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are
+    one-based file positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships
+    preserve extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current
+    applicability remain separate review tasks.\n\n- `dmg-vol3-ch10` PDF SHA-256: `e87cd0079de36002a9ae5d065256197eccce3b9257537a29da5bd3220145021a`;
+    extracted pages SHA-256: `0fdc816b2a57b058f8826c36ac756cd414da56c94f580a9b5b32e0ff874a68b8`.\n"
+  semantic_relations:
+  - target: term/dmg-civil-status-secondary-evidence
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The passage compares the evidential weight and handling of secondary material when primary
+      evidence is unavailable; the two types are not interchangeable.
+    evidence:
+    - page: page/dmg-vol3-ch10/0006
+      quote: "10036 If primary evidence is not available, the DM should ask for the claimant’s observations before\n\
+        making a decision. Unsupported secondary evidence carries less weight than primary evidence. The DM\nshould
+        ensure that as much information as possible has been obtained, before considering the relative\nvalue of
+        each piece of evidence."
+      locator: DMG 10036

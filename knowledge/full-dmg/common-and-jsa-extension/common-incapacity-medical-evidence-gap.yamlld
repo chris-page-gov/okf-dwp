@@ -1,0 +1,96 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/common-incapacity-medical-evidence-gap
+  '@type': skos:Concept
+  route: term/common-incapacity-medical-evidence-gap
+  title: Missing medical evidence and the incapacity decision
+  type: Concept
+  description: Where medical evidence has a gap before incapacity is determined and contact has not
+    been lost, the source distinguishes possible payment suspension from the incapacity
+    determination and says the gap alone does not justify superseding entitlement.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Missing medical evidence and the incapacity decision
+    '@language': en-GB
+  skos:definition:
+    '@value': Where medical evidence has a gap before incapacity is determined and contact has not
+      been lost, the source distinguishes possible payment suspension from the incapacity
+      determination and says the gap alone does not justify superseding entitlement.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 13182–13184 require the personal capability assessment and all available evidence
+      in the stated circumstances. Lost contact has separate provisions. This is legacy incapacity
+      guidance, not a blanket bar on suspension or a present-day ESA/UC decision rule.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch13/0012
+  source:
+    https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf#page=12
+  resource:
+    https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf#page=12
+  sources:
+  - id: dmg-vol3-ch13
+    title: 'DMG Vol 3 Ch 13: Incapacity for work'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf
+    retrieved_at: '2026-09-15T19:45:22.145249Z'
+    sha256: fc4496aae0bb510fea99ee047b82bbb00182dd336af8dfb065ef040f3967078f
+  body: "# Missing medical evidence and the incapacity decision\n\n## Authored interpretation\n\nWhere
+    medical evidence has a gap before incapacity is determined and contact has not been lost, the source
+    distinguishes possible payment suspension from the incapacity determination and says the gap alone
+    does not justify superseding entitlement.\n\n## Scope and exceptions\n\nDMG 13182–13184 require the
+    personal capability assessment and all available evidence in the stated circumstances. Lost contact
+    has separate provisions. This is legacy incapacity guidance, not a blanket bar on suspension or a
+    present-day ESA/UC decision rule.\n\n## Inspected source passages\n\n- [DMG 13182, PDF page 12](https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf#page=12)
+    — DMG Vol 3 Ch 13: Incapacity for work.\n- [DMG 13183, PDF page 12](https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf#page=12)
+    — DMG Vol 3 Ch 13: Incapacity for work.\n- [DMG 13184, PDF page 12](https://assets.publishing.service.gov.uk/media/5a74dd8b40f0b65f61322dcd/dmgch13.pdf#page=12)
+    — DMG Vol 3 Ch 13: Incapacity for work.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol3-ch13`: PDF SHA-256 `fc4496aae0bb510fea99ee047b82bbb00182dd336af8dfb065ef040f3967078f`;
+    extracted pages SHA-256 `1c3e2ae8cf5c3f45273274f24d1bafff88d21a657237c557d555fed53088c931`.\n"
+  semantic_relations:
+  - target: term/dmg-payment-suspension
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source allows payment suspension in the stated medical-evidence-gap circumstances
+      while preserving the separate entitlement determination.
+    evidence:
+    - page: page/dmg-vol3-ch13/0012
+      quote: "13182   If a claimant fails to provide medical evidence for a specific period before incapacity\n\
+        \        is determined and contact with them has not been lost, payment of benefit may be\n  \
+        \                  1\n        suspended (see DMG Chapter 04 for guidance on suspension of payment
+        of\n        benefit).\n                                                                      \
+        \       1 SS CS (D&A) Regs, reg 16"
+      locator: DMG 13182
+  - target: term/dmg-supersession
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source says the lack of a certificate is not itself the change establishing the
+      ground; the incapacity determination supplies the relevant basis.
+    evidence:
+    - page: page/dmg-vol3-ch13/0012
+      quote: "13184   Where there is a gap in medical evidence, this does not count as a change of\n \
+        \       circumstances to justify a decision to supersede the entitlement decision. The DM\n  \
+        \      can suspend payment to the claimant because of the failure to provide medical\n       \
+        \ evidence, but cannot conclude they are not entitled to IB without carrying out the\n       \
+        \      1\n        PCA . The determination of incapacity for work gives grounds for supersession,
+        not\n        the lack of medical evidence. Once incapacity has been determined, any days not\n\
+        \        covered by medical evidence will be included in the PCA determination (see DMG\n    \
+        \    13622).\n                                                                               \
+        \              1 R(IB) 1/05\n\n        Contact with claimant lost"
+      locator: DMG 13184

@@ -1,0 +1,88 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-income-payment-dates
+  '@type': skos:Concept
+  route: term/jsais-income-payment-dates
+  title: Due date and date treated as paid for JSA and IS income
+  type: Concept
+  description: The captured guidance distinguishes when a payment is due, when it is actually made
+    or received, and the date on which it is treated as paid for benefit assessment.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Due date and date treated as paid for JSA and IS income
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured guidance distinguishes when a payment is due, when it is actually made or
+      received, and the date on which it is treated as paid for benefit assessment.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The due date may require contractual, statutory or other evidence. Receipt may be used
+      only under the source’s stated evidence conditions. Before-first-week and later-payment rules,
+      practicability reasons and benefit-payment exceptions differ. Do not substitute a bank receipt
+      date automatically or transfer these rules to self-employment, Pension Credit or UC.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol5-ch25/0009
+  - page/dmg-vol5-ch25/0013
+  source: https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf#page=9
+  resource:
+    https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf#page=9
+  sources:
+  - id: dmg-vol5-ch25
+    title: 'DMG Vol 5 Ch 25: General rules on income'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf
+    retrieved_at: '2026-09-15T19:45:25.058286Z'
+    sha256: 39edc3ed8ee9c875eb68ce4cd4148194b23dbd23bb6444883a2f2cae90a75337
+  body: "# Due date and date treated as paid for JSA and IS income\n\n## Authored interpretation\n\nThe
+    captured guidance distinguishes when a payment is due, when it is actually made or received, and the
+    date on which it is treated as paid for benefit assessment.\n\n## Scope and exceptions\n\nThe due
+    date may require contractual, statutory or other evidence. Receipt may be used only under the source’s
+    stated evidence conditions. Before-first-week and later-payment rules, practicability reasons and
+    benefit-payment exceptions differ. Do not substitute a bank receipt date automatically or transfer
+    these rules to self-employment, Pension Credit or UC.\n\n## Inspected source passages\n\n- [DMG 25034,
+    PDF page 9](https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf#page=9)
+    — DMG Vol 5 Ch 25: General rules on income.\n- [DMG 25035, PDF page 9](https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf#page=9)
+    — DMG Vol 5 Ch 25: General rules on income.\n- [DMG 25043, PDF page 13](https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf#page=13)
+    — DMG Vol 5 Ch 25: General rules on income.\n- [DMG 25044, PDF page 13](https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf#page=13)
+    — DMG Vol 5 Ch 25: General rules on income.\n- [DMG 25045, PDF page 13](https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf#page=13)
+    — DMG Vol 5 Ch 25: General rules on income.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol5-ch25`: PDF SHA-256 `39edc3ed8ee9c875eb68ce4cd4148194b23dbd23bb6444883a2f2cae90a75337`;
+    extracted pages SHA-256 `db488637a179cc93910c4e243381b5c961d6959ce72cd1d34aff14e403517e73`.\n"
+  semantic_relations:
+  - target: term/dmg-evidence-assessment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The due-date passage calls for consideration of available evidence and further
+      enquiries before assuming receipt is the due date.
+    evidence:
+    - page: page/dmg-vol5-ch25/0009
+      quote: "25035   When deciding the date a payment is due the DM should consider that\n\n        1.\
+        \     due means legally due, for example under a contract or statutory provision\n\n        2.\
+        \     if there is no legal obligation to make the payment on a particular day, the\n         \
+        \      person or body making the payment should be asked when they consider the\n            \
+        \   payment is due\n\n        3.     the date when the payment is received may be assumed to be
+        the due date\n               where\n\n               3.1     the available evidence\n        \
+        \                                                   1\n                       3.1.a   does not
+        give a due date or\n\n                       3.1.b   is not considered credible and\n\n      \
+        \         3.2     no further evidence can be obtained.\n                                     \
+        \                                                1 R(SB) 33/83\n\n        Income other than earnings"
+      locator: DMG 25035

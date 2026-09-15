@@ -1,0 +1,87 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-net-employed-earnings
+  '@type': skos:Concept
+  route: term/jsais-net-employed-earnings
+  title: Net employed earnings for JSA and Income Support
+  type: Concept
+  description: The captured passage defines net earnings as gross earnings less specified
+    income-tax, Class 1 contribution and pension-contribution deductions.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Net employed earnings for JSA and Income Support
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured passage defines net earnings as gross earnings less specified income-tax,
+      Class 1 contribution and pension-contribution deductions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This does not mean every payroll deduction or expense is allowable. Pension period
+      alignment and qualifying scheme rules are separate, and current law and applicable benefit
+      must be verified. No deduction amount or award is calculated here; the source wording remains
+      available for review.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol5-ch26/0009
+  - page/dmg-vol5-ch26/0010
+  - page/dmg-vol5-ch26/0005
+  source:
+    https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf#page=9
+  resource:
+    https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf#page=9
+  sources:
+  - id: dmg-vol5-ch26
+    title: 'DMG Vol 5 Ch 26: Employed earners'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf
+    retrieved_at: '2026-09-15T19:45:25.089797Z'
+    sha256: fe619693d2f8cc78cac3786dadab88e81467ec56d38f00727285612af92b80c9
+  body: "# Net employed earnings for JSA and Income Support\n\n## Authored interpretation\n\nThe captured
+    passage defines net earnings as gross earnings less specified income-tax, Class 1 contribution and
+    pension-contribution deductions.\n\n## Scope and exceptions\n\nThis does not mean every payroll deduction
+    or expense is allowable. Pension period alignment and qualifying scheme rules are separate, and current
+    law and applicable benefit must be verified. No deduction amount or award is calculated here; the
+    source wording remains available for review.\n\n## Inspected source passages\n\n- [DMG 26020, PDF
+    page 9](https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf#page=9)
+    — DMG Vol 5 Ch 26: Employed earners.\n- [DMG 26027, PDF page 10](https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf#page=10)
+    — DMG Vol 5 Ch 26: Employed earners.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol5-ch26`: PDF SHA-256 `fe619693d2f8cc78cac3786dadab88e81467ec56d38f00727285612af92b80c9`;
+    extracted pages SHA-256 `f4089f7088e6a987d028072f4968eb39f2686b7a588e2c38f8ebc1cb3042102a`.\n"
+  semantic_relations:
+  - target: term/jsais-employed-earner
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The net-earnings passage belongs to the employed-earner treatment and must be read
+      with its employment definition rather than the separate self-employment profit method.
+    evidence:
+    - page: page/dmg-vol5-ch26/0005
+      quote: "26010 The term employed earner means1 a person who is gainfully employed in GB\n\n\n1. under
+        a contract of service or\n\n\n2. in an office (including an elective office) with general earnings
+        2.\n\n\n                                             1 JSA Regs, reg 3; IS (Gen) Regs, reg 2(1);
+        SS CB Act 92, s 2(1)(a);\n                                                      2 Income Tax (Earnings
+        and Pensions) Act 2003, s 7(3)"
+      locator: DMG 26010
+    - page: page/dmg-vol5-ch26/0009
+      quote: "26020 Net earnings are gross earnings less1\n\n\n1. income tax and\n\n\n2. Class 1 SS contributions
+        and\n\n\n3. half of any sum paid by the employee, towards an occupational or personal pension
+        scheme.\n\n\n                                                          1 JSA Regs, reg 99(4);
+        IS (Gen) Regs, reg 36(3)"
+      locator: DMG 26020

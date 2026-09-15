@@ -1,0 +1,82 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/sp-qualifying-year
+  '@type': skos:Concept
+  route: term/sp-qualifying-year
+  title: Qualifying year for State Pension in the DMG
+  type: Concept
+  status: draft
+  authority: model-assisted scoped source interpretation; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The chapter describes a qualifying year by reference to a tax year in working life and its
+    earnings factor; it may consist entirely of credits. Pre-commencement and post-commencement years are
+    distinguished.
+  tags:
+  - full DMG
+  - pension regimes
+  - source-backed proposal
+  - unreviewed
+  references:
+  - page/dmg-vol12-ch74/0004
+  - page/dmg-vol12-ch74/0005
+  - page/dmg-vol12-ch74/0006
+  - page/dmg-vol12-ch74/0015
+  source: https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=4
+  resource: https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=4
+  sources:
+  - id: dmg-vol12-ch74
+    title: 'DMG Vol 12 Ch 74: State Pension'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=4
+    sha256: 5961a9cb7c86814a0f6fa147c0a8a551b4258c803680fac14a95cab9eca1afd6
+    retrieved_at: '2026-09-15T19:45:35.304148Z'
+  skos:prefLabel:
+    '@value': Qualifying year for State Pension in the DMG
+    '@language': en-GB
+  skos:definition:
+    '@value': The chapter describes a qualifying year by reference to a tax year in working life and its
+      earnings factor; it may consist entirely of credits. Pre-commencement and post-commencement years are
+      distinguished.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': A calendar year of employment is not automatically a qualifying year. This record does not
+      verify a contribution record, award credits or calculate entitlement. The 6 April 2016 boundary, earlier
+      reckonable years and relevant contribution rules remain part of the review.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-regimes
+    at: '2026-09-15T20:17:36Z'
+  observedAt: '2026-09-15T20:17:36Z'
+  body: "# Qualifying year for State Pension in the DMG\n\n## Source-backed proposal\n\nThe chapter describes a
+    qualifying year by reference to a tax year in working life and its earnings factor; it may consist entirely
+    of credits. Pre-commencement and post-commencement years are distinguished.\n\n## Scope and exceptions\n\nA
+    calendar year of employment is not automatically a qualifying year. This record does not verify a contribution
+    record, award credits or calculate entitlement. The 6 April 2016 boundary, earlier reckonable years and relevant
+    contribution rules remain part of the review.\n\n## Inspected passages\n\n- [DMG 74023, PDF page 4](https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=4).\n\
+    - [DMG 74024, PDF page 4](https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=4).\n\
+    - [DMG 74025, PDF page 5](https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=5).\n\
+    - [DMG 74036, PDF page 6](https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=6).\n\
+    \n## Provenance and review\n\nIndependent experimental interpretation of DWP guidance, not an official DWP document.
+    All definitions and relationships are model-assisted and unreviewed. No individual eligibility, award, legal
+    conclusion or executable rule is supplied.\n\nSource observation, listing-page update, printed revision, stated
+    legal date and pension event date have separate meanings. PDF page numbers are one-based file positions; extraction
+    may damage reading order, footnotes and characters. No visual PDF or specialist acceptance is claimed.\n\n-
+    `dmg-vol12-ch74` — PDF SHA-256 `5961a9cb7c86814a0f6fa147c0a8a551b4258c803680fac14a95cab9eca1afd6`; page-extraction
+    SHA-256 `c762e93940b4342d70d5bc96a80c3e094c91852d93868f5709e04f293faef61a`.\n"
+  semantic_relations:
+  - target: term/sp-transitional-rate
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The transitional provision refers separately to qualifying years and pre-commencement
+      qualifying years; the relation preserves that distinction.
+    evidence:
+    - page: page/dmg-vol12-ch74/0015
+      quote: "74202 A person is entitled to SP payable at the transitional rate if they have\n\n\n1. reached pensionable
+        age1 and\n\n\n2. at least 10 qualifying years2 and\n\n\n3. at least one pre-commencement qualifying year3.\n\
+        \n\nNote 1: See DMG 74022 for the meaning of pensionable age, DMG 74023 for the meaning of qualifying\n\
+        year and DMG 74024 for the meaning of pre-commencement qualifying year.\n\n\nNote 2: See DMG 74012 for guidance
+        on references to HMRC if there is a dispute about a NI contribution\nrecord.\n\n\nNote 3: See DMG Chapter
+        03 for guidance on revision where there is a late award of contributions or\ncredits, or because of changes
+        to Class 2 NI collection."
+      locator: DMG 74202

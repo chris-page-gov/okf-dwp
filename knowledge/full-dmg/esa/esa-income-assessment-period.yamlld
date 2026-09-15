@@ -1,0 +1,93 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-assessment-period
+  '@type': skos:Concept
+  route: term/esa-income-assessment-period
+  title: Period for assessing ESA income other than self-employment
+  type: Concept
+  description: The source calls for the claim date, benefit-week start, due date, date treated as paid and payment period or stated alternative when deciding the period over which income is taken into account.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Period for assessing ESA income other than self-employment
+    '@language': en-GB
+  skos:definition:
+    '@value': The source calls for the claim date, benefit-week start, due date, date treated as paid and payment period or stated alternative when deciding the period over which income is taken into account.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 48030 expressly excludes self-employment. Earnings on termination and exceptional payments have further provisions. The assessment period is an evidence question, not an automatic bank-receipt or calendar calculation.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 48
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol9-ch48/0009
+  - page/dmg-vol9-ch48/0011
+  - page/dmg-vol9-ch48/0015
+  - page/dmg-vol9-ch50/0012
+  source: https://assets.publishing.service.gov.uk/media/5a8020bded915d74e33f89b8/dmgch48.pdf#page=9
+  resource: https://assets.publishing.service.gov.uk/media/5a8020bded915d74e33f89b8/dmgch48.pdf#page=9
+  sources:
+  - id: dmg-vol9-ch48
+    title: 'DMG Vol 9 Ch 48: General rules on income'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a8020bded915d74e33f89b8/dmgch48.pdf
+    retrieved_at: '2026-09-15T19:45:30.529917Z'
+    sha256: 9b1283018143058d4efa6708572097a6854a42987dcb2a627609e489b0b1ba75
+  body: |
+    # Period for assessing ESA income other than self-employment
+
+    ## Authored interpretation
+
+    The source calls for the claim date, benefit-week start, due date, date treated as paid and payment period or stated alternative when deciding the period over which income is taken into account.
+
+    ## Scope and boundaries
+
+    DMG 48030 expressly excludes self-employment. Earnings on termination and exceptional payments have further provisions. The assessment period is an evidence question, not an automatic bank-receipt or calendar calculation.
+
+    ## Inspected source passages
+
+    - [DMG 48030, PDF page 9](https://assets.publishing.service.gov.uk/media/5a8020bded915d74e33f89b8/dmgch48.pdf#page=9)
+    - [DMG 48031, PDF page 11](https://assets.publishing.service.gov.uk/media/5a8020bded915d74e33f89b8/dmgch48.pdf#page=11)
+    - [DMG 48048, PDF page 15](https://assets.publishing.service.gov.uk/media/5a8020bded915d74e33f89b8/dmgch48.pdf#page=15)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:30.529917Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `9b1283018143058d4efa6708572097a6854a42987dcb2a627609e489b0b1ba75`. Extracted pages SHA-256: `3d4424a48a17325dbd571c341bd1df39eec1668d8f308e4eb0c01c617287e533`.
+  semantic_relations:
+  - target: term/esa-income-payment-dates
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Due and treated-as-paid dates are explicitly separate inputs to the stated assessment-period question.
+    evidence:
+    - page: page/dmg-vol9-ch48/0009
+      quote: "48030   To determine the period over which any income other than income from self-\n        employment is taken into account the DM needs to establish\n\n        1.    the date of claim\n\n        2.    the first day of the claimant's benefit week (see DMG 48059)\n\n        3.    the date on which the income is due to be paid (see DMG 48031 et seq)\n\n        4.    the date on which the income is treated as paid (see DMG 48048 et seq) and\n\n        5.    either1\n\n              5.1   the period for which the payment is made or\n\n              5.2   the amount of\n\n                    5.2.a    ESA that would be payable without the income and\n\n                    5.2.b    any disregard the DM would normally allow on the weekly\n                             amount of the income.\n\n        See DMG Chapter 49 on earnings disregards and DMG Chapter 51 on other\n        income with partial disregards.\n\n        Note 1: If the income is a payment of earnings when employment ends see DMG"
+      locator: DMG 48030
+    - page: page/dmg-vol9-ch48/0011
+      quote: "48031   To determine the period over which income should be taken into account, the DM\n        needs information on the date a payment is due to be paid. This may be different\n        from the date a payment is actually made or received. But income is often paid on\n        the date it is due."
+      locator: DMG 48031
+    - page: page/dmg-vol9-ch48/0015
+      quote: "48048   The date on which a payment of income is treated as paid may not be the same as\n        the date on which it is due to be paid under DMG 48031 et seq.\n\n        Note: There are no longer any special rules that apply to the date on which WTC is\n        treated as paid.\n\n\n        Income due before the first benefit week of the claim"
+      locator: DMG 48048
+  - target: term/esa-self-employed-assessment-period
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The general-income provision excludes self-employment, which has its own receipts-and-expenses assessment period. Association preserves the scope distinction.
+    evidence:
+    - page: page/dmg-vol9-ch48/0009
+      quote: "48030   To determine the period over which any income other than income from self-\n        employment is taken into account the DM needs to establish\n\n        1.    the date of claim\n\n        2.    the first day of the claimant's benefit week (see DMG 48059)\n\n        3.    the date on which the income is due to be paid (see DMG 48031 et seq)\n\n        4.    the date on which the income is treated as paid (see DMG 48048 et seq) and\n\n        5.    either1\n\n              5.1   the period for which the payment is made or\n\n              5.2   the amount of\n\n                    5.2.a    ESA that would be payable without the income and\n\n                    5.2.b    any disregard the DM would normally allow on the weekly\n                             amount of the income.\n\n        See DMG Chapter 49 on earnings disregards and DMG Chapter 51 on other\n        income with partial disregards.\n\n        Note 1: If the income is a payment of earnings when employment ends see DMG"
+      locator: DMG 48030
+    - page: page/dmg-vol9-ch50/0012
+      quote: "50051 The normal weekly earnings of a S/E earner should be calculated by using the\n\n\n1. gross receipts (see DMG 50125) and\n\n\n2. expenses paid out (see DMG 50190)\n\n\nduring the assessment period. Different rules apply for royalties, copyright payments and Public Lending\nRight payments.\n\n\nNote: The assessment period for determining earnings from self-employment should not be confused\nwith the ESA Assessment Phase (see DMG Chapter 44).\n\n\n\nBusiness trading for less than a year"
+      locator: DMG 50051

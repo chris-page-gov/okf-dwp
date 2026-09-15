@@ -1,0 +1,92 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsa-personal-rate
+  '@type': skos:Concept
+  route: term/jsa-personal-rate
+  title: Personal rate of JSA(Cont) in the DMG
+  type: Concept
+  description: The captured chapter describes JSA(Cont) as paid for the claimant alone, without
+    increases for a partner or dependants, and distinguishes its personal rate from the JSA(IB)
+    applicable amount.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Personal rate of JSA(Cont) in the DMG
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured chapter describes JSA(Cont) as paid for the claimant alone, without
+      increases for a partner or dependants, and distinguishes its personal rate from the JSA(IB)
+      applicable amount.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is the frozen DMG JSA(Cont) context. It does not establish current New Style JSA
+      rules, current rates or entitlement. Earnings and pension deductions and the comparison where
+      both sets of conditions are satisfied require their own review; numerical examples are
+      historical source examples.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol4-ch23/0003
+  - page/dmg-vol4-ch23/0006
+  source:
+    https://assets.publishing.service.gov.uk/media/69e0f95b98c6c9802f7ed9c7/dmg-Ch-23.pdf#page=3
+  resource:
+    https://assets.publishing.service.gov.uk/media/69e0f95b98c6c9802f7ed9c7/dmg-Ch-23.pdf#page=3
+  sources:
+  - id: dmg-vol4-ch23
+    title: 'DMG Vol 4 Ch 23: Normal amount payable'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69e0f95b98c6c9802f7ed9c7/dmg-Ch-23.pdf
+    retrieved_at: '2026-09-15T19:45:23.512001Z'
+    sha256: 174fce491e7a72ca89f2739a64ab4e2f3a0da6e33d9e48eaa5c33c7ff9a5f734
+  body: "# Personal rate of JSA(Cont) in the DMG\n\n## Authored interpretation\n\nThe captured chapter
+    describes JSA(Cont) as paid for the claimant alone, without increases for a partner or dependants,
+    and distinguishes its personal rate from the JSA(IB) applicable amount.\n\n## Scope and exceptions\n\
+    \nThis is the frozen DMG JSA(Cont) context. It does not establish current New Style JSA rules, current
+    rates or entitlement. Earnings and pension deductions and the comparison where both sets of conditions
+    are satisfied require their own review; numerical examples are historical source examples.\n\n## Inspected
+    source passages\n\n- [DMG 23007, PDF page 3](https://assets.publishing.service.gov.uk/media/69e0f95b98c6c9802f7ed9c7/dmg-Ch-23.pdf#page=3)
+    — DMG Vol 4 Ch 23: Normal amount payable.\n- [DMG 23015, PDF page 6](https://assets.publishing.service.gov.uk/media/69e0f95b98c6c9802f7ed9c7/dmg-Ch-23.pdf#page=6)
+    — DMG Vol 4 Ch 23: Normal amount payable.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol4-ch23`: PDF SHA-256 `174fce491e7a72ca89f2739a64ab4e2f3a0da6e33d9e48eaa5c33c7ff9a5f734`;
+    extracted pages SHA-256 `387302f09bbce9873dbafcd6af6a19b06842b35392e7d7771058ed22a0bd8bd2`.\n"
+  semantic_relations:
+  - target: term/jsais-applicable-amount
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source compares the personal rate and applicable amount when both conditions of
+      entitlement are satisfied; the association does not add the two amounts or calculate an award.
+    evidence:
+    - page: page/dmg-vol4-ch23/0006
+      quote: "23015 Where a claimant satisfies both the JSA(Cont) and JSA(IB) conditions of entitlement
+        and has no\nincome, the amount payable is\n\n\n1. the applicable amount, if it is greater than
+        the personal rate or\n\n\n2. if 1. does not apply, the personal rate1.\n\n\n                 \
+        \                                                                         1 JS Act 95, s 4(6)"
+      locator: DMG 23015
+  - target: term/jsais-gross-employed-earnings
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The personal-rate passage expressly identifies earnings as a deduction and routes
+      employed-earnings research to chapter 26.
+    evidence:
+    - page: page/dmg-vol4-ch23/0003
+      quote: "23007 JSA(Cont) is paid for the claimant only. There are no increases for any partner or
+        dependants. The\n\npersonal rate is calculated by1\n\n\n1. deciding the age-related amount payable
+        to the claimant and\n\n\n2. deducting, in each benefit week\n\n\n        2.1 any earnings2 (see
+        DMG 26001 et seq and 27000 et seq) and\n\n\n        2.2 pension payments3 (see DMG 23800 et seq)."
+      locator: DMG 23007

@@ -1,0 +1,70 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/pc-carer-additional-amount-exclusions
+  route: term/pc-carer-additional-amount-exclusions
+  title: 'Carer additional amount: named exclusions'
+  type: Concept
+  status: draft
+  authority: model-assisted scoped proposal; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured paragraph describes a possible carer additional amount and names
+    prisoners and people fully maintained by a religious order as exclusions.
+  tags:
+  - pension credit
+  - source-backed proposal
+  - full DMG
+  - unreviewed
+  references:
+  - chapter/78
+  - page/78/0027
+  - term/carers
+  - page/dmg-memo-01-26-0605724317/0003
+  resource:
+    https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=27
+  sources:
+  - id: dmg-vol13-ch78
+    resource:
+      https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=27
+    title: 'DMG Vol 13 Ch 78: State Pension Credit: additional amounts and special groups '
+    author: organisation:dwp
+  skos:prefLabel:
+    '@value': 'Carer additional amount: named exclusions'
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured paragraph describes a possible carer additional amount and names
+      prisoners and people fully maintained by a religious order as exclusions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Scoped to the captured Pension Credit guidance. Read the qualifying conditions and DMG
+      memos 12/23 and 01/26. This record is not a complete eligibility test or a current award
+      decision.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-credit-review
+    at: '2026-09-15T19:58:30Z'
+  observedAt: '2026-09-15T19:58:30Z'
+  body: "# Carer additional amount: named exclusions\n\n**Model-assisted source interpretation; unreviewed.
+    No entitlement decision or executable rule.**\n\nThe captured paragraph describes a possible carer
+    additional amount and names prisoners and people fully maintained by a religious order as exclusions.\n\
+    \n## Evidence and scope\n\n[DMG 78100, PDF page 27](https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=27)
+    supports this scoped proposal. The source PDF SHA-256 is `d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8`.\n\
+    \nRead the qualifying conditions and DMG memos 12/23 and 01/26. This record is not a complete eligibility
+    test or a current award decision.\n\nThe capture date, the publication page's update date and a date
+    stated in the guidance have different meanings. Linked legislation and memos need their own provision,
+    version and applicability review.\n\nMemo references are navigation to separately captured source
+    evidence. They do not assert incorporation, supersession or current legal validity.\n"
+  semantic_relations:
+  - target: term/carers
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The exclusions are stated in the paragraph about the additional amount for carers;
+      retaining them prevents the broad carer concept being treated as unconditional entitlement.
+    evidence:
+    - page: page/78/0027
+      quote: "78100 [See DMG memo 12/23] [See Memo DMG 01/26] When considering the amount of the AMG,
+        an\n\nadditional amount for carers may be applicable 1. But the additional amount is not payable2
+        in the case of\n\n\n1. prisoners and\n\n\n2. members of religious orders who are fully maintained
+        by their order.\n\n\n                     1 SPC Act 02, s 2(3)(b) & (8); SPC Regs, reg 6(6)(a)
+        & Sch I, para 4(1); 2 reg 6(2), (3) & (6)"
+      locator: DMG 78100

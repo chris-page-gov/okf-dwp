@@ -1,0 +1,115 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/common-hospital-post-2006-scope
+  '@type': skos:Concept
+  route: term/common-hospital-post-2006-scope
+  title: Scope of the hospital guidance after the 2006 change
+  type: Concept
+  description: The source records the end of hospital downrating under the revoked regulations from
+    10 April 2006 and describes the remaining chapter uses for AA/DLA in-patient meaning and
+    specified dependency-increase questions.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Scope of the hospital guidance after the 2006 change
+    '@language': en-GB
+  skos:definition:
+    '@value': The source records the end of hospital downrating under the revoked regulations from
+      10 April 2006 and describes the remaining chapter uses for AA/DLA in-patient meaning and
+      specified dependency-increase questions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is a dated source account, not a claim that every benefit is unaffected by
+      hospital admission today. DMG 18000 routes IS/JSA and Pension Credit to their own chapters;
+      older material remains in chapter 18. Each benefit, period and retained exception requires
+      review.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol3-ch18/0003
+  - page/dmg-vol3-ch18/0007
+  - page/dmg-vol3-ch18/0008
+  source: https://assets.publishing.service.gov.uk/media/5a80d88aed915d74e33fcbde/dmgch18.pdf#page=3
+  resource:
+    https://assets.publishing.service.gov.uk/media/5a80d88aed915d74e33fcbde/dmgch18.pdf#page=3
+  sources:
+  - id: dmg-vol3-ch18
+    title: 'DMG Vol 3 Ch 18: Hospital in-patients'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a80d88aed915d74e33fcbde/dmgch18.pdf
+    retrieved_at: '2026-09-15T19:45:22.510180Z'
+    sha256: cb377d4db23653485a8a4c10e1ea19da1bba9bb9aad731e382e22b53fc4fa863
+  body: "# Scope of the hospital guidance after the 2006 change\n\n## Authored interpretation\n\nThe source
+    records the end of hospital downrating under the revoked regulations from 10 April 2006 and describes
+    the remaining chapter uses for AA/DLA in-patient meaning and specified dependency-increase questions.\n\
+    \n## Scope and exceptions\n\nThis is a dated source account, not a claim that every benefit is unaffected
+    by hospital admission today. DMG 18000 routes IS/JSA and Pension Credit to their own chapters; older
+    material remains in chapter 18. Each benefit, period and retained exception requires review.\n\n##
+    Inspected source passages\n\n- [DMG 18000, PDF page 3](https://assets.publishing.service.gov.uk/media/5a80d88aed915d74e33fcbde/dmgch18.pdf#page=3)
+    — DMG Vol 3 Ch 18: Hospital in-patients.\n- [DMG 18001, PDF page 3](https://assets.publishing.service.gov.uk/media/5a80d88aed915d74e33fcbde/dmgch18.pdf#page=3)
+    — DMG Vol 3 Ch 18: Hospital in-patients.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol3-ch18`: PDF SHA-256 `cb377d4db23653485a8a4c10e1ea19da1bba9bb9aad731e382e22b53fc4fa863`;
+    extracted pages SHA-256 `7953f5a17805c8271ec4bcc926e0414ba0b19c358597faaf4eee431006a456a8`.\n"
+  semantic_relations:
+  - target: term/common-hospital-individual-treatment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The remaining in-patient meaning depends on individual treatment facts and multiple
+      conditions, rather than the establishment’s label alone.
+    evidence:
+    - page: page/dmg-vol3-ch18/0003
+      quote: "18001   This Chapter therefore now only gives guidance on when a person is to be regarded\n\
+        \        as a hospital in-patient for the purposes of AA and DLA plus some minor matters\n   \
+        \     relating to the payability of ADIs and CDIs when the claimant or both the claimant\n   \
+        \     and the dependant have been hospital in-patients for 52 weeks or more.\n\n        18002
+        - 18009\n\n\n\n\nVol 3 Amendment 28 October 2008"
+      locator: DMG 18001
+    - page: page/dmg-vol3-ch18/0007
+      quote: "18020   There are five points to consider when deciding whether a person is receiving free\n\
+        \        in-patient treatment. The person must be all of the following\n\n        1.     maintained
+        free of charge\n\n        2.     receiving medical or other treatment\n\n        3.     in a hospital
+        or similar institution\n\n        4.     an in-patient\n\n        5.    receiving free in-patient
+        treatment under prescribed legislation1 or in a\n              hospital or similar institution
+        maintained or administered by the Defence\n              Council.\n\n        Note: A person who
+        does not meet any one of these conditions is not receiving free\n        in-patient treatment.
+        The decision maker does not need to consider the other\n        conditions.\n                \
+        \                               1 NHS Act 06; NHS (Wales) Act 06 NHS (Scot) Act 78; NHS & CC Act
+        90\n\n\n\n        Maintained free of charge"
+      locator: DMG 18020
+    - page: page/dmg-vol3-ch18/0008
+      quote: "18025   Whether a person is receiving treatment is a question of fact. It cannot be assumed\n\
+        \        that because one person is receiving treatment in a hospital or similar\n        establishment,
+        that another person in the same establishment can automatically be\n        regarded as receiving
+        treatment. But the fact that a person is an in-patient in a\n                                \
+        \                                                                          1\n        hospital
+        is strong evidence that the person is receiving medical or other treatment .\n               \
+        \                                                                                   1 R(S) 26/54"
+      locator: DMG 18025
+  - target: term/jsais-free-inpatient-treatment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter expressly sends IS and JSA hospital treatment to chapter 24; this is a
+      research route, not an assertion that all hospital rules are equivalent.
+    evidence:
+    - page: page/dmg-vol3-ch18/0003
+      quote: "18000   With effect from 10.4.06 the old Hospital In-Patients Regulations1 were revoked2.\n\
+        \        The result was that hospital downrating ceased to apply to the benefits to which\n  \
+        \      those regulations applied (see the list in DMG 18010).\n\n        Note: For guidance on
+        the effect of hospitalization on IS and JSA see DMG Vol 4\n        Chapter 24 and for SPC see
+        Vol 13 Chapter 78.\n                                                           1 SS (HIP) Regs
+        75; 2 SS (HIP) Regs 05, reg 9"
+      locator: DMG 18000

@@ -1,0 +1,77 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-evidence-assessment
+  '@type': skos:Concept
+  route: term/dmg-evidence-assessment
+  title: Evidence assessment in DMG decisions
+  type: Concept
+  description: The DMG describes considering evidence, establishing facts from it and applying law to those
+    facts, supported by careful recording of conversations and interviews.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Evidence assessment in DMG decisions
+    '@language': en-GB
+  skos:definition:
+    '@value': The DMG describes considering evidence, establishing facts from it and applying law to those
+      facts, supported by careful recording of conversations and interviews.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is a research model of the captured approach, not an evidential scoring algorithm. Direct,
+      indirect and hearsay evidence are distinguished from documentary, oral and real forms; admissibility and
+      weight are not the same question.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol1-ch1/0041
+  - page/dmg-vol1-ch1/0042
+  - page/dmg-vol1-ch1/0047
+  source: https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=41
+  resource: https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=41
+  sources:
+  - id: dmg-vol1-ch1
+    title: 'DMG Vol 1 Ch 1: Principles of decision making and evidence'
+    author: organisation:dwp
+    resource:
+      https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=41
+    retrieved_at: '2026-09-15T19:45:18.139103Z'
+    sha256: 58b168c7b0a01f54713f6cfa60953549ebc099cbe568ffaeea551d0b756495d2
+  body: "# Evidence assessment in DMG decisions\n\n## Authored interpretation\n\nThe DMG describes considering evidence,
+    establishing facts from it and applying law to those facts, supported by careful recording of conversations
+    and interviews.\n\n## Scope and exceptions\n\nThis is a research model of the captured approach, not an evidential
+    scoring algorithm. Direct, indirect and hearsay evidence are distinguished from documentary, oral and real forms;
+    admissibility and weight are not the same question.\n\n## Inspected source passages\n\n- [DMG 01301, PDF page
+    41](https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=41) — DMG
+    Vol 1 Ch 1: Principles of decision making and evidence.\n- [DMG 01302, PDF page 41](https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=41)
+    — DMG Vol 1 Ch 1: Principles of decision making and evidence.\n- [DMG 01310, PDF page 42](https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=42)
+    — DMG Vol 1 Ch 1: Principles of decision making and evidence.\n- [DMG 01311, PDF page 42](https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=42)
+    — DMG Vol 1 Ch 1: Principles of decision making and evidence.\n- [DMG 01313, PDF page 42](https://assets.publishing.service.gov.uk/media/68e8e657cf65bd04bad76752/dmg-v-1-ch-01.pdf#page=42)
+    — DMG Vol 1 Ch 1: Principles of decision making and evidence.\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source
+    is DWP guidance, not a consolidated statement of legislation. This is an independent experimental publication,
+    not an official DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are
+    one-based file positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships
+    preserve extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current
+    applicability remain separate review tasks.\n\n- `dmg-vol1-ch1` PDF SHA-256: `58b168c7b0a01f54713f6cfa60953549ebc099cbe568ffaeea551d0b756495d2`;
+    extracted pages SHA-256: `cf7a000e2c54c5361a03ec4ad73fa22cc14e8cdb0d4f03b53919a4a509a6eacb`.\n"
+  semantic_relations:
+  - target: term/dmg-balance-of-probability
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The evidence process is associated with the stated standard for claims and applications; no
+      numerical confidence threshold is created.
+    evidence:
+    - page: page/dmg-vol1-ch1/0047
+      quote: "01343 The DM must decide claims and applications on the balance of probability. This is not the same
+        as\n\"beyond reasonable doubt\", the standard test for proof in criminal trials."
+      locator: DMG 01343

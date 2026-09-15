@@ -1,0 +1,96 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-spc-claimant-absence
+  '@type': skos:Concept
+  route: term/intl-spc-claimant-absence
+  title: SPC claimant temporary absence in the source
+  type: Concept
+  description: The guidance describes different temporary-absence limits for an SPC claimant, conditional on expected duration, other entitlement conditions and specified exceptions.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-international-research
+    at: '2026-09-15T20:19:49.223063Z'
+  observedAt: '2026-09-15T20:19:49.223063Z'
+  skos:prefLabel:
+    '@value': SPC claimant temporary absence in the source
+    '@language': en-GB
+  skos:definition:
+    '@value': The guidance describes different temporary-absence limits for an SPC claimant, conditional on expected duration, other entitlement conditions and specified exceptions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 077001 refers to conditional four-, eight- and twenty-six-week cases. The death-related exception at 077002 and the treatment conditions at 077003 must not be replaced by a single universal limit. Current regulations and individual outcomes remain unreviewed.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - international subjects
+  - chapter 7 part 6
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol2-ch7-part6/0008
+  - page/dmg-vol2-ch7-part6/0009
+  - page/dmg-vol2-ch7-part6/0011
+  - page/dmg-vol2-ch7-part6/0013
+  source: https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=8
+  resource: https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=8
+  sources:
+  - id: dmg-vol2-ch7-part6
+    title: 'DMG Vol 2 Ch 7 Part 6: SDA, SPC, WB/Bereavement Benefit and Winter Fuel Payments [076960 to 078059] '
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf
+    retrieved_at: '2026-09-15T19:45:20.305518Z'
+    sha256: 098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790
+  body: |
+    # SPC claimant temporary absence in the source
+
+    ## Authored interpretation
+
+    The guidance describes different temporary-absence limits for an SPC claimant, conditional on expected duration, other entitlement conditions and specified exceptions.
+
+    ## Scope and boundaries
+
+    DMG 077001 refers to conditional four-, eight- and twenty-six-week cases. The death-related exception at 077002 and the treatment conditions at 077003 must not be replaced by a single universal limit. Current regulations and individual outcomes remain unreviewed.
+
+    ## Inspected source passages
+
+    - [DMG 077001, PDF page 8](https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=8)
+    - [DMG 077002, PDF page 9](https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=9)
+
+    ## Evidence and review status
+
+    This is a model-assisted, unreviewed interpretation of selected passages in the frozen DWP source. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable rule. No specialist acceptance, current-law reconciliation or complete coverage of this chapter part is claimed. References to EU law, countries and benefits retain the scope and date context of the cited text; they do not establish applicability to a person or a later regime. Machine extraction may alter reading order and characters; no visual PDF review is claimed.
+
+    Source captured: 2026-09-15T19:45:20.305518Z. This is an acquisition time, not a publication or legal commencement date. The attachment publication date is not established by the frozen metadata. Source-stated dates require their own role and precision.
+
+    PDF SHA-256: `098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790`. Extracted pages SHA-256: `efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9`.
+  semantic_relations:
+  - target: term/intl-spc-household-absence
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source supplies separate claimant-payment and household-membership provisions, each with its own exception references.
+    evidence:
+    - page: page/dmg-vol2-ch7-part6/0008
+      quote: "077001 SPC can continue to be paid whilst a claimant is temporarily absent from GB 1 if the other\nconditions of entitlement continue to be satisfied and the absence is no longer than\n\n\n1. 4 weeks where the absence is not expected to exceed 4 weeks2 or\n\n\n2. 8 weeks3 where paragraph 077002 applies or\n\n\n3. 26 weeks4 where paragraph 077003 applies.\n\n\nNote: See DMG 04642 for effective dates for supersession.\n\n\n                                                 1 SPC Regs, reg 3; 2 reg 3(1)(a); 3 reg 3(1)(b); 4 reg 3(1)(c)\n\n\nExample 1\n\n\nJason notifies the DM that he is going abroad for 3 weeks. The DM decides that he remains entitled for\nthose 3 weeks. He contracts food poisoning and has to extend his stay by a further 2 weeks. As Jason’s"
+      locator: DMG 077001
+    - page: page/dmg-vol2-ch7-part6/0011
+      quote: "077005 A person is treated as being a member of the claimant’s household whilst temporarily absent\n\nfrom GB1 if the absence is no longer than\n\n\n1. 4 weeks where the absence is not expected to exceed 4 weeks2or\n\n\n2. 8 weeks3 where paragraph 077006 applies or\n\n\n3. 26 weeks4 where paragraph 077007 applies.\n\n\n                                            1 SPC Regs, reg 5(1)(f); 2 Reg 5(1A)(a); 3 reg 5(1A)(b); 4 reg 5(1A)\n\n\n\nThe 8 week rule"
+      locator: DMG 077005
+  - target: term/intl-spc-non-export
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source treats temporary absence and export to a claimant living abroad separately; the association preserves that difference.
+    evidence:
+    - page: page/dmg-vol2-ch7-part6/0008
+      quote: "077001 SPC can continue to be paid whilst a claimant is temporarily absent from GB 1 if the other\nconditions of entitlement continue to be satisfied and the absence is no longer than\n\n\n1. 4 weeks where the absence is not expected to exceed 4 weeks2 or\n\n\n2. 8 weeks3 where paragraph 077002 applies or\n\n\n3. 26 weeks4 where paragraph 077003 applies.\n\n\nNote: See DMG 04642 for effective dates for supersession.\n\n\n                                                 1 SPC Regs, reg 3; 2 reg 3(1)(a); 3 reg 3(1)(b); 4 reg 3(1)(c)\n\n\nExample 1\n\n\nJason notifies the DM that he is going abroad for 3 weeks. The DM decides that he remains entitled for\nthose 3 weeks. He contracts food poisoning and has to extend his stay by a further 2 weeks. As Jason’s"
+      locator: DMG 077001
+    - page: page/dmg-vol2-ch7-part6/0013
+      quote: "077025 SPC is listed as a special non-contributory benefit for the purposes of EC law 1. Such benefits are\nonly payable in, and at the expense of, the State in which the person is habitually resident. This means\nthat SPC is payable in the UK only and EC law does not permit export of this benefit to claimants living\nabroad."
+      locator: DMG 077025
+  - target: term/intl-spc-absence-transition-2016
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The dated transition determines which source-described temporary-absence rules are being discussed for an absence already underway.
+    evidence:
+    - page: page/dmg-vol2-ch7-part6/0013
+      quote: "077015 Any person temporarily absent on 28.7.16 will be subject to the previous regulations until they\n\nreturn to GB1. All further absences will be subject to the new rules.\n\n\n                                    1 HB and SPC (Temporary Absence) (Amendment) Regs 2016, reg 5(3)"
+      locator: DMG 077015

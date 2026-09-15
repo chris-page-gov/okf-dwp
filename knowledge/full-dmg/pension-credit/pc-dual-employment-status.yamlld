@@ -1,0 +1,90 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/pc-dual-employment-status
+  route: term/pc-dual-employment-status
+  title: Self-employment alongside employed-earner work
+  type: Concept
+  status: draft
+  authority: model-assisted scoped proposal; specialist review required
+  review_status: unreviewed-specialist-review-required
+  description: The captured definition of a self-employed earner contains territorial and
+    employment-category conditions and notes that employed-earner work does not itself prevent a
+    person also being self-employed.
+  tags:
+  - pension credit
+  - source-backed proposal
+  - full DMG
+  - unreviewed
+  references:
+  - chapter/86
+  - page/86/0044
+  - term/self-employment
+  - term/earnings
+  resource:
+    https://assets.publishing.service.gov.uk/media/698462dd468d351e1406b4a7/dmgch86.pdf#page=44
+  sources:
+  - id: dmg-vol14-ch86
+    resource:
+      https://assets.publishing.service.gov.uk/media/698462dd468d351e1406b4a7/dmgch86.pdf#page=44
+    title: 'DMG Vol 14 Ch 86: Earnings '
+    author: organisation:dwp
+  skos:prefLabel:
+    '@value': Self-employment alongside employed-earner work
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured definition of a self-employed earner contains territorial and
+      employment-category conditions and notes that employed-earner work does not itself prevent a
+      person also being self-employed.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Scoped to the captured Pension Credit guidance. No employment-status decision is made.
+      Gainful employment, territorial treatment, disregarded contribution cases and the cited
+      regulations require review.
+    '@language': en-GB
+  generated:
+    by: process:codex-full-dmg-pension-credit-review
+    at: '2026-09-15T19:58:30Z'
+  observedAt: '2026-09-15T19:58:30Z'
+  body: "# Self-employment alongside employed-earner work\n\n**Model-assisted source interpretation; unreviewed.
+    No entitlement decision or executable rule.**\n\nThe captured definition of a self-employed earner
+    contains territorial and employment-category conditions and notes that employed-earner work does not
+    itself prevent a person also being self-employed.\n\n## Evidence and scope\n\n[DMG 86201, PDF page
+    44](https://assets.publishing.service.gov.uk/media/698462dd468d351e1406b4a7/dmgch86.pdf#page=44) supports
+    this scoped proposal. The source PDF SHA-256 is `909d328088dda0b6a94e0fc671bfa41f6d300689ff02d6f8a0292e30172f9908`.\n\
+    \nNo employment-status decision is made. Gainful employment, territorial treatment, disregarded contribution
+    cases and the cited regulations require review.\n\nThe capture date, the publication page's update
+    date and a date stated in the guidance have different meanings. Linked legislation and memos need
+    their own provision, version and applicability review.\n"
+  semantic_relations:
+  - target: term/self-employment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source explicitly allows the two employment descriptions to coexist, so a single
+      exclusive status flag would lose a stated distinction relevant to earnings.
+    evidence:
+    - page: page/86/0044
+      quote: "86201 A S/E earner is a person who is gainfully employed\n\n\n1.   in GB and\n\n\n2.   in
+        employment that is not employed earners employment.\n\n\nS/E earner includes people employed outside
+        of GB in employment which would be classed as\nemployment as a S/E earner if the employment was
+        in GB. It also includes people undertaking\nemployment as a S/E earner where that employment is
+        disregarded when working out social security\n\ncontributions1.\n\n\nNote: A person may also be
+        employed as an employed earner. This does not stop the person being S/E.\n\n\n               \
+        \                                         1 SPC Regs, reg 17B; SS Ben (C of E) Regs, reg\n   \
+        \                                                     2(1)"
+      locator: DMG 86201
+  - target: term/earnings
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source explicitly allows the two employment descriptions to coexist, so a single
+      exclusive status flag would lose a stated distinction relevant to earnings.
+    evidence:
+    - page: page/86/0044
+      quote: "86201 A S/E earner is a person who is gainfully employed\n\n\n1.   in GB and\n\n\n2.   in
+        employment that is not employed earners employment.\n\n\nS/E earner includes people employed outside
+        of GB in employment which would be classed as\nemployment as a S/E earner if the employment was
+        in GB. It also includes people undertaking\nemployment as a S/E earner where that employment is
+        disregarded when working out social security\n\ncontributions1.\n\n\nNote: A person may also be
+        employed as an employed earner. This does not stop the person being S/E.\n\n\n               \
+        \                                         1 SPC Regs, reg 17B; SS Ben (C of E) Regs, reg\n   \
+        \                                                     2(1)"
+      locator: DMG 86201

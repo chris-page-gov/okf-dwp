@@ -1,0 +1,77 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-ec-personal-scope
+  '@type': skos:Concept
+  route: term/intl-ec-personal-scope
+  title: Personal scope in the cited EC coordination regime
+  type: Concept
+  description: The cited guidance treats personal scope as a condition for coverage by the EC provisions and distinguishes that coverage from reliance on a reciprocal agreement.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-international-research
+    at: '2026-09-15T20:19:49.223063Z'
+  observedAt: '2026-09-15T20:19:49.223063Z'
+  skos:prefLabel:
+    '@value': Personal scope in the cited EC coordination regime
+    '@language': en-GB
+  skos:definition:
+    '@value': The cited guidance treats personal scope as a condition for coverage by the EC provisions and distinguishes that coverage from reliance on a reciprocal agreement.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 070050 cites Regulations 1408/71 and 574/72 and Memo 32/10. This is the source-described legacy regime; no present UK or post-transition coverage is inferred. DMG 070311 is qualified by “in general” and refers onwards to 070320.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - international subjects
+  - chapter 7 part 1
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol2-ch7-part1/0015
+  - page/dmg-vol2-ch7-part1/0057
+  source: https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf#page=15
+  resource: https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf#page=15
+  sources:
+  - id: dmg-vol2-ch7-part1
+    title: 'DMG Vol 2 Ch 7 Part 1: Common subjects [070000 to 070699]'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf
+    retrieved_at: '2026-09-15T19:45:19.912030Z'
+    sha256: 32a065d37da4bd460b25258d71b5dfc3127d6c98e65c53ab5562491aea16f18a
+  body: |
+    # Personal scope in the cited EC coordination regime
+
+    ## Authored interpretation
+
+    The cited guidance treats personal scope as a condition for coverage by the EC provisions and distinguishes that coverage from reliance on a reciprocal agreement.
+
+    ## Scope and boundaries
+
+    DMG 070050 cites Regulations 1408/71 and 574/72 and Memo 32/10. This is the source-described legacy regime; no present UK or post-transition coverage is inferred. DMG 070311 is qualified by “in general” and refers onwards to 070320.
+
+    ## Inspected source passages
+
+    - [DMG 070050, PDF page 15](https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf#page=15)
+    - [DMG 070311, PDF page 57](https://assets.publishing.service.gov.uk/media/69ce3908bed91051df63a90e/dmg0701.pdf#page=57)
+
+    ## Evidence and review status
+
+    This is a model-assisted, unreviewed interpretation of selected passages in the frozen DWP source. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable rule. No specialist acceptance, current-law reconciliation or complete coverage of this chapter part is claimed. References to EU law, countries and benefits retain the scope and date context of the cited text; they do not establish applicability to a person or a later regime. Machine extraction may alter reading order and characters; no visual PDF review is claimed.
+
+    Source captured: 2026-09-15T19:45:19.912030Z. This is an acquisition time, not a publication or legal commencement date. The attachment publication date is not established by the frozen metadata. Source-stated dates require their own role and precision.
+
+    PDF SHA-256: `32a065d37da4bd460b25258d71b5dfc3127d6c98e65c53ab5562491aea16f18a`. Extracted pages SHA-256: `4ffe86a4c907dcc7b8bf3883bfdc46b6a8b9db03a0ccda563189ee12cbead47c`.
+  semantic_relations:
+  - target: term/intl-reciprocal-benefit-scope
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source qualifies reliance on reciprocal agreements when EC provisions cover a person; the regimes remain distinct.
+    evidence:
+    - page: page/dmg-vol2-ch7-part1/0057
+      quote: "070311 In general a person covered by EC provisions cannot rely on a reciprocal agreement for\nentitlement to benefit (see DMG 070320)."
+      locator: DMG 070311
+    - page: page/dmg-vol2-ch7-part1/0057
+      quote: "070312 Detailed guidance on the effects of those agreements is set out in the section of the Chapter\ndealing with each benefit. ESA(C) is not covered by any reciprocal agreement with EEA countries despite\nprovisions being made for IB. However certain non EEA countries now have a reciprocal agreement with\n\nthe UK for ESA(C)1 see DMG 070333.\n\n\n                                                                     1 SS (Reciprocal Agreements) Order 12\n\n\n\nGeneral principles\n\nAdjudication under reciprocal agreements"
+      locator: DMG 070312

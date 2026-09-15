@@ -1,0 +1,109 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-family-income-attribution
+  '@type': skos:Concept
+  route: term/jsais-family-income-attribution
+  title: Family income attribution for JSA(IB) and Income Support
+  type: Concept
+  description: The captured chapter describes calculating and attributing income of specified family
+    members for JSA(IB) or IS, while distinguishing joint claims and special rules involving an
+    under-18 partner.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Family income attribution for JSA(IB) and Income Support
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured chapter describes calculating and attributing income of specified family
+      members for JSA(IB) or IS, while distinguishing joint claims and special rules involving an
+      under-18 partner.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Do not apply this as a current rule for all children or all households. DMG 25007
+      carries a JSA/IS 64 memo call-out and a child-income cross-reference. JSA(Cont) is explicitly
+      treated differently; polygamous-family provisions, chapter 30, transitional circumstances and
+      current legal effects remain dependencies.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol5-ch25/0004
+  - page/dmg-vol5-ch25/0005
+  - page/dmg-vol5-ch25/0007
+  source: https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf#page=4
+  resource:
+    https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf#page=4
+  sources:
+  - id: dmg-vol5-ch25
+    title: 'DMG Vol 5 Ch 25: General rules on income'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf
+    retrieved_at: '2026-09-15T19:45:25.058286Z'
+    sha256: 39edc3ed8ee9c875eb68ce4cd4148194b23dbd23bb6444883a2f2cae90a75337
+  body: "# Family income attribution for JSA(IB) and Income Support\n\n## Authored interpretation\n\n\
+    The captured chapter describes calculating and attributing income of specified family members for
+    JSA(IB) or IS, while distinguishing joint claims and special rules involving an under-18 partner.\n\
+    \n## Scope and exceptions\n\nDo not apply this as a current rule for all children or all households.
+    DMG 25007 carries a JSA/IS 64 memo call-out and a child-income cross-reference. JSA(Cont) is explicitly
+    treated differently; polygamous-family provisions, chapter 30, transitional circumstances and current
+    legal effects remain dependencies.\n\n## Inspected source passages\n\n- [DMG 25007, PDF page 4](https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf#page=4)
+    — DMG Vol 5 Ch 25: General rules on income.\n- [DMG 25008, PDF page 5](https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf#page=5)
+    — DMG Vol 5 Ch 25: General rules on income.\n- [DMG 25009, PDF page 5](https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf#page=5)
+    — DMG Vol 5 Ch 25: General rules on income.\n- [DMG 25004, PDF page 4](https://assets.publishing.service.gov.uk/media/5a800918ed915d74e622c16a/dmgch25.pdf#page=4)
+    — DMG Vol 5 Ch 25: General rules on income.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol5-ch25`: PDF SHA-256 `39edc3ed8ee9c875eb68ce4cd4148194b23dbd23bb6444883a2f2cae90a75337`;
+    extracted pages SHA-256 `db488637a179cc93910c4e243381b5c961d6959ce72cd1d34aff14e403517e73`.\n"
+  semantic_relations:
+  - target: term/jsa-personal-rate
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The income chapter explicitly restricts its JSA(Cont) guidance to the claimant’s own
+      earnings and excludes the family-income treatment used in JSA(IB)/IS.
+    evidence:
+    - page: page/dmg-vol5-ch25/0004
+      quote: "25004   The DM should follow the guidance in this Chapter when determining the amount of\n\
+        \        a claimant's own earnings in a claim for JSA(Cont). The guidance on other income,\n \
+        \       and the treatment of income of the members of the claimant's family does not apply\n \
+        \       to a claim for JSA(Cont).\n\n        Note: For guidance on the treatment of occupational
+        and personal pensions in\n        JSA(Cont) see DMG Chapter 23."
+      locator: DMG 25004
+  - target: term/jsais-income-assessment-period
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Attribution identifies whose income is considered; the period passage then identifies
+      the separate dates and payment period needed to assess that income.
+    evidence:
+    - page: page/dmg-vol5-ch25/0004
+      quote: "25007   [See DMG Memo JSA/IS 64] In a claim for JSA(IB) or IS, the DM should calculate\n\
+        \        the income of\n\n        1.    the claimant's partner and\n\n        2.    a child or
+        young person who is a member of the claimant's family\n\n        in the same way as for the claimant1.
+        This income should then be treated as the\n        claimant's income2. However DMs should consider
+        if the circumstances in DMG"
+      locator: DMG 25007
+    - page: page/dmg-vol5-ch25/0007
+      quote: "25031   To determine the period over which any income other than income from self-\n   \
+        \     employment is taken into account the DM needs to establish\n\n        1.    the date of
+        claim\n\n        2.    the first day of the claimant's benefit week (see DMG 25052 - 25054)\n\n\
+        \        3.    the date on which the income is due to be paid (see DMG 25034 et seq)\n\n     \
+        \   4.    the date on which the income is treated as paid (see DMG 25043 et seq) and\n\n     \
+        \   5.    either1\n\n              5.1   the period for which the payment is made or\n\n     \
+        \         5.2   the amount of\n\n                    5.2.a    JSA or IS that would be payable
+        without the income and\n\n                    5.2.b    any disregard the DM would normally make
+        on the weekly\n                             amount of the income.\n\n        See DMG Chapter 26
+        on earnings disregards and DMG Chapter 28 on other\n        income with partial disregards.\n\n\
+        \        Note 1: If the income is a payment of earnings when employment ends see DMG"
+      locator: DMG 25031

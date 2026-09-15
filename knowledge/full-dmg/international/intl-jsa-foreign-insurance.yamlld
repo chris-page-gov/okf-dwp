@@ -1,0 +1,73 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-jsa-foreign-insurance
+  '@type': skos:Concept
+  route: term/intl-jsa-foreign-insurance
+  title: Foreign insurance in the source’s contribution-based JSA scope
+  type: Concept
+  description: The source distinguishes using insurance from another country for contribution-based JSA from the residence restrictions attached to income-based JSA.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-international-research
+    at: '2026-09-15T20:19:49.223063Z'
+  observedAt: '2026-09-15T20:19:49.223063Z'
+  skos:prefLabel:
+    '@value': Foreign insurance in the source’s contribution-based JSA scope
+    '@language': en-GB
+  skos:definition:
+    '@value': The source distinguishes using insurance from another country for contribution-based JSA from the residence restrictions attached to income-based JSA.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 075330–075331 retain the older JSA terminology and the distinction between UK JSA and the broader abbreviation UB. The page bears an amendment label of June 2007; this is not a New Style JSA rule.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - international subjects
+  - chapter 7 part 5
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol2-ch7-part5/0015
+  source: https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf#page=15
+  resource: https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf#page=15
+  sources:
+  - id: dmg-vol2-ch7-part5
+    title: 'DMG Vol 2 Ch 7 Part 5: JSA to Retirement Pension [075330 to 076959]'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf
+    retrieved_at: '2026-09-15T19:45:20.299037Z'
+    sha256: ff92b6dba9bf7fe9f7be115cd203593e5a65979a569892d625bb3ae5395418c9
+  body: |
+    # Foreign insurance in the source’s contribution-based JSA scope
+
+    ## Authored interpretation
+
+    The source distinguishes using insurance from another country for contribution-based JSA from the residence restrictions attached to income-based JSA.
+
+    ## Scope and boundaries
+
+    DMG 075330–075331 retain the older JSA terminology and the distinction between UK JSA and the broader abbreviation UB. The page bears an amendment label of June 2007; this is not a New Style JSA rule.
+
+    ## Inspected source passages
+
+    - [DMG 075330, PDF page 15](https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf#page=15)
+    - [DMG 075331, PDF page 15](https://assets.publishing.service.gov.uk/media/5a814b6a40f0b62305b8e2a8/dmgch0705.pdf#page=15)
+
+    ## Evidence and review status
+
+    This is a model-assisted, unreviewed interpretation of selected passages in the frozen DWP source. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable rule. No specialist acceptance, current-law reconciliation or complete coverage of this chapter part is claimed. References to EU law, countries and benefits retain the scope and date context of the cited text; they do not establish applicability to a person or a later regime. Machine extraction may alter reading order and characters; no visual PDF review is claimed.
+
+    Source captured: 2026-09-15T19:45:20.299037Z. This is an acquisition time, not a publication or legal commencement date. The attachment publication date is not established by the frozen metadata. Source-stated dates require their own role and precision.
+
+    PDF SHA-256: `ff92b6dba9bf7fe9f7be115cd203593e5a65979a569892d625bb3ae5395418c9`. Extracted pages SHA-256: `adde790b1114f9bbe6eea3da605de6d911d40342a4d0ce73e7f450f9f2f4eb6f`.
+  semantic_relations:
+  - target: term/intl-income-jsa-international-residence
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source lists contribution-based insurance and income-based residence restrictions as distinct international questions.
+    evidence:
+    - page: page/dmg-vol2-ch7-part5/0015
+      quote: "075330 [See Memo DMG 32/10] This section contains guidance on\n\n         1.     entitlement to JSA when a person is outside GB (see DMG 075332)\n\n         2.     the restrictions on entitlement to income based JSA when a person has come\n                from abroad (see DMG 075550)\n\n         3.     the use of insurance paid in another country to satisfy the contribution conditions\n                for entitlement to contribution based JSA (see DMG 075520) and\n\n         4.     who pays UB (see DMG 075530).\n\n\n\n         Meaning of UB"
+      locator: DMG 075330

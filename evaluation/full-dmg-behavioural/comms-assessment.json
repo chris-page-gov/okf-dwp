@@ -1,0 +1,2238 @@
+{
+  "schema": "okf-dwp-independent-model-trial-assessment.v1",
+  "assessed_at": "2026-09-15T21:11:44.427499+00:00",
+  "assessor": "root model; separate from response author, with existing project context",
+  "method": "Read all56 fixed responses and prompts, reviewed authored rubrics and selected exact source context. Mechanically verified all52 retained page texts against their frozen page artefacts, all response hashes and cited evidence identities. This is independent-of-answerer model assessment, not a blind hold-out or specialist legal judgement.",
+  "inputs": [
+    {
+      "path": "evaluation/full-dmg-behavioural/comms-trials.json",
+      "sha256": "8625a8276fad0cb01eaa5c20c727cd598d3bf0eaa50081a2d1596070049b718e"
+    },
+    {
+      "path": "evaluation/full-dmg-behavioural/case-registry.json",
+      "sha256": "67ad6ba92f67d346542e3ea30e771c2182a7e8b1be53836c862bb0007340c20e"
+    }
+  ],
+  "counts": {
+    "cases": 56,
+    "retained_pages_verified": 52,
+    "outcomes": {
+      "prompt-supported-rubric-underspecified": 14,
+      "supported-within-selected-source-scope": 38,
+      "partial-authored-rubric-coverage": 4
+    },
+    "specialist_accepted": 0
+  },
+  "cases": [
+    {
+      "case_id": "pension-credit/eval-positive-77",
+      "response_sha256": "dae676b777c36cb28eef358ad0751d034a717bffd3de02c4f47c671815987666",
+      "outcome": "prompt-supported-rubric-underspecified",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Correctly scopes the couple/partner definition to SPC and leaves publication/applicability unresolved.",
+          "evidence_ids": [
+            "evidence/b41901e2a63950ddf587",
+            "evidence/480c6793ca54551fb70e"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "This source gives Pension Credit-specific meanings:77013 distinguishes spouses/civil partners in the same household from people living together as such a couple, and 77015 calls each member a partner. These are departmental staff-guidance passages, reproduced through unreviewed machine extraction. The PDF was captured on 15 September 2026; its document publication date is not established by the frozen attachment metadata. This broad question supports a bounded definition example, not complete eligibility."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Correctly scopes the couple/partner definition to SPC and leaves publication/applicability unresolved."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "underspecified",
+          "rationale": "No specific positive behavioural rubric was supplied."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "pension-credit/eval-negative-77",
+      "response_sha256": "4de5187ce132c0e179fa453d6c94b3bdec88b517360ff77e4c0efc84c38cfa26",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Correctly scopes the couple/partner definition to SPC and leaves publication/applicability unresolved.",
+          "evidence_ids": [
+            "evidence/b41901e2a63950ddf587",
+            "evidence/480c6793ca54551fb70e"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. The retrieved definitions expressly concern SPC/Pension Credit, and a capture date is not a legal effective date. A heading or isolated definition cannot establish another benefit’s rule or a rule for a different period. The full conditions, exceptions and applicable legal version must be checked."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Correctly scopes the couple/partner definition to SPC and leaves publication/applicability unresolved."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Correctly scopes the couple/partner definition to SPC and leaves publication/applicability unresolved."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. The retrieved definitions expressly concern SPC/Pension Credit, and a capture date is not a legal effective date. A heading or isolated definition cannot establish another benefit’s rule or a rule for a different period. The full conditions, exceptions and applicable legal version must be checked."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "pension-credit/eval-positive-78",
+      "response_sha256": "889c97ba87ee941040fa12d9d77ad3adc72821a7225b5051ab8111720d7e2677",
+      "outcome": "prompt-supported-rubric-underspecified",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Preserves the conditional carer amount, exclusions, partner treatment and memo dependencies.",
+          "evidence_ids": [
+            "evidence/ea13d37c707fc9260da9"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "Paragraph 78100 describes a possible Pension Credit carer additional amount and excludes prisoners and religious-order members fully maintained by their order. Paragraph 78101 distinguishes the amount for each qualifying partner;78105 links it to CA entitlement or specified continued qualifying treatment. This is captured DWP guidance with memo dependencies. Acquisition was 15 September 2026, not an established publication/effective date. It does not decide any award."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Preserves the conditional carer amount, exclusions, partner treatment and memo dependencies."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "underspecified",
+          "rationale": "No specific positive behavioural rubric was supplied."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "pension-credit/eval-negative-78",
+      "response_sha256": "bd48bee945920c51ce3ac10a934de7f18736fe75c4721970c2013615a94c3b5e",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Preserves the conditional carer amount, exclusions, partner treatment and memo dependencies.",
+          "evidence_ids": [
+            "evidence/ea13d37c707fc9260da9"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. This is a conditional SPC additional amount, not a universal carer payment. Its exclusions, qualifying conditions and signposted memos prevent transferring an isolated statement to another benefit or date. The frozen capture time does not establish when the law took effect or that it still applies unchanged."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Preserves the conditional carer amount, exclusions, partner treatment and memo dependencies."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Preserves the conditional carer amount, exclusions, partner treatment and memo dependencies."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. This is a conditional SPC additional amount, not a universal carer payment. Its exclusions, qualifying conditions and signposted memos prevent transferring an isolated statement to another benefit or date. The frozen capture time does not establish when the law took effect or that it still applies unchanged."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "pension-credit/eval-positive-79",
+      "response_sha256": "1239c099b408dea507956d30770b066e966b2e2db96ebac1f3ca270d66de17ae",
+      "outcome": "prompt-supported-rubric-underspecified",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Preserves the advance/arrears benefit-week distinction without deriving an award.",
+          "evidence_ids": [
+            "evidence/b81b8024acc413a26595"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "For Pension Credit payment,79009 describes a weekly benefit normally paid for complete weeks. Under 79010 the benefit week starts on the pay day when paid in advance; under 79011 it ends on that day when paid in arrears. These are DWP staff-guidance statements, not an award calculation. The source was captured 15 September 2026; document publication and present legal applicability are not established by the acquisition metadata."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Preserves the advance/arrears benefit-week distinction without deriving an award."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "underspecified",
+          "rationale": "No specific positive behavioural rubric was supplied."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "pension-credit/eval-negative-79",
+      "response_sha256": "5d9ad1270db3d5f91d46cc76c079a113b5b6f0a360fffc4d6dfa87767739fdd1",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Preserves the advance/arrears benefit-week distinction without deriving an award.",
+          "evidence_ids": [
+            "evidence/b81b8024acc413a26595"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. The passage already distinguishes advance and arrears payment and says payment is normally for complete weeks. It cannot establish every exception, another benefit’s payment rules or a different period’s law. Benefit week, acquisition time and legal effective date are distinct concepts."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Preserves the advance/arrears benefit-week distinction without deriving an award."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Preserves the advance/arrears benefit-week distinction without deriving an award."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. The passage already distinguishes advance and arrears payment and says payment is normally for complete weeks. It cannot establish every exception, another benefit’s payment rules or a different period’s law. Benefit week, acquisition time and legal effective date are distinct concepts."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "pension-credit/eval-positive-83",
+      "response_sha256": "ef1ccde65680aa8afc2b6f69b64447c7ce2b33ed4e5d8af40dfde95ad27d528e",
+      "outcome": "prompt-supported-rubric-underspecified",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Retains the no-new-AIP date and separates the printed revision from acquisition and legal applicability.",
+          "evidence_ids": [
+            "evidence/7b0d6e23ce46b3e68b9d"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "DMG 83000 defines an assessed income period as a DM-specified period fixing retirement provision subject to deemed increases. Its note says no new AIPs will be set from 6 April 2016 and points to changes affecting existing periods. The page’s printed revision is June 2016; acquisition was 15 September 2026. Neither is silently treated as the document’s publication date. This is historical/transitional Pension Credit guidance, not a present reporting exemption."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Retains the no-new-AIP date and separates the printed revision from acquisition and legal applicability."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "underspecified",
+          "rationale": "No specific positive behavioural rubric was supplied."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "pension-credit/eval-negative-83",
+      "response_sha256": "b9a4b699c4d810b08293ded5da9914731353c2d8c422953614303d24d2397074",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Retains the no-new-AIP date and separates the printed revision from acquisition and legal applicability.",
+          "evidence_ids": [
+            "evidence/7b0d6e23ce46b3e68b9d"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. Omitting the note in 83000 would hide the source’s 6 April 2016 no-new-AIP boundary and changes to existing periods. A heading cannot extend an older arrangement to another benefit or date. The actual award history and applicable legal provisions would be needed; no reporting exemption is decided here."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Retains the no-new-AIP date and separates the printed revision from acquisition and legal applicability."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Retains the no-new-AIP date and separates the printed revision from acquisition and legal applicability."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. Omitting the note in 83000 would hide the source’s 6 April 2016 no-new-AIP boundary and changes to existing periods. A heading cannot extend an older arrangement to another benefit or date. The actual award history and applicable legal provisions would be needed; no reporting exemption is decided here."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "pension-credit/eval-positive-84",
+      "response_sha256": "9c52e1a223d8bc711f43779ec60b2d76e573f870bf088abb96ba807c8a1b5585",
+      "outcome": "prompt-supported-rubric-underspecified",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Distinguishes disregard purposes and retains the particular reassessment/other-arrears boundary; the payment date is not relabelled publication.",
+          "evidence_ids": [
+            "evidence/20e7a677460fac211215",
+            "evidence/6fdda86845a3aad2c66f"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "The Pension Credit source distinguishes which capital is disregarded, for how long, and for what calculation purpose (84351–84352). A specific later example at 84365 concerns payments received from 16 July 2026 following the defined CA reassessment exercise; it expressly excludes unrelated CA arrears. These are DWP guidance statements requiring their stated conditions. Capture was 15 September 2026, while 16 July 2026 is a source-stated payment boundary, not publication. Current legal effect has not been independently verified."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Distinguishes disregard purposes and retains the particular reassessment/other-arrears boundary; the payment date is not relabelled publication."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "underspecified",
+          "rationale": "No specific positive behavioural rubric was supplied."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "pension-credit/eval-negative-84",
+      "response_sha256": "376f4c662d1a5b1ae2ff2cfe4feb97717418626560b541a7287a0b0e16bed161",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Distinguishes disregard purposes and retains the particular reassessment/other-arrears boundary; the payment date is not relabelled publication.",
+          "evidence_ids": [
+            "evidence/20e7a677460fac211215",
+            "evidence/6fdda86845a3aad2c66f"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. The same chapter differentiates disregard purpose, duration and qualifying events. For example,84365 includes particular reassessment conditions and excludes unrelated arrears. An isolated heading cannot turn that into a general rule for another payment, benefit or date; statutory versions and the source’s dependencies remain to be checked."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Distinguishes disregard purposes and retains the particular reassessment/other-arrears boundary; the payment date is not relabelled publication."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Distinguishes disregard purposes and retains the particular reassessment/other-arrears boundary; the payment date is not relabelled publication."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. The same chapter differentiates disregard purpose, duration and qualifying events. For example,84365 includes particular reassessment conditions and excludes unrelated arrears. An isolated heading cannot turn that into a general rule for another payment, benefit or date; statutory versions and the source’s dependencies remain to be checked."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "pension-credit/eval-positive-85",
+      "response_sha256": "ce7840dc7528213fec6f986374df540e7d35db19f75141cf56dbe5b0bc643d47",
+      "outcome": "prompt-supported-rubric-underspecified",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Preserves the partner subject-to-immigration-control exclusion and disregard dependencies.",
+          "evidence_ids": [
+            "evidence/183eb5f96593116edb85"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "For SPC,85016 generally calculates the partner’s income in the same way and treats it as the claimant’s income, but its note excludes the income of a partner subject to immigration control under the stated household rule. Paragraph 85015 also makes gross-income treatment subject to specified disregards. This is captured departmental guidance with unreviewed extraction. Acquisition was 15 September 2026; publication date and current legal applicability are not established."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Preserves the partner subject-to-immigration-control exclusion and disregard dependencies."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "underspecified",
+          "rationale": "No specific positive behavioural rubric was supplied."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "pension-credit/eval-negative-85",
+      "response_sha256": "adf712d6df2f32da5fa46653a021a0aaf3b1b6c5714e9fdd866e85796922d836",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Preserves the partner subject-to-immigration-control exclusion and disregard dependencies.",
+          "evidence_ids": [
+            "evidence/183eb5f96593116edb85"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. The retrieved passage contains a material household/immigration exception and specified disregard dependencies. It cannot be converted into an unconditional “all partner income” rule or exported to another benefit or period. Capture, source role and legal applicability must remain separate."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Preserves the partner subject-to-immigration-control exclusion and disregard dependencies."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Preserves the partner subject-to-immigration-control exclusion and disregard dependencies."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. The retrieved passage contains a material household/immigration exception and specified disregard dependencies. It cannot be converted into an unconditional “all partner income” rule or exported to another benefit or period. Capture, source role and legal applicability must remain separate."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "pension-credit/eval-positive-86",
+      "response_sha256": "081eb2a56f9db29e0b47b59f4c02a9d14ffd92c685502796f44894bdae27f68f",
+      "outcome": "prompt-supported-rubric-underspecified",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Keeps the SPC hours/earnings distinction separate from other benefit work rules.",
+          "evidence_ids": [
+            "evidence/687f7ec2e9da58df27eb",
+            "evidence/c77daece07d90c713c13"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "The source says SPC earnings include employed and self-employed earnings (86000). Paragraph 86001 distinguishes number of working hours from the effect of earnings on amount. Paragraph 86201 defines self-employment and says a person may also have employed-earner work. These are Pension Credit guidance distinctions, not a calculation. The PDF was captured 15 September 2026; no document publication or current legal effective date is established by that capture."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Keeps the SPC hours/earnings distinction separate from other benefit work rules."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "underspecified",
+          "rationale": "No specific positive behavioural rubric was supplied."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "pension-credit/eval-negative-86",
+      "response_sha256": "c8860491c4abff1686c73ea246ed5c7cca1b13a05a22273bcf9234126362da49",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Keeps the SPC hours/earnings distinction separate from other benefit work rules.",
+          "evidence_ids": [
+            "evidence/687f7ec2e9da58df27eb",
+            "evidence/c77daece07d90c713c13"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. The hours/earnings distinction is expressly scoped to SPC and cannot be transferred to JSA or ESA working rules. Nor does one self-employment definition settle every income-assessment or payment period. The relevant benefit, work arrangement, period and legal version need separate evidence."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Keeps the SPC hours/earnings distinction separate from other benefit work rules."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Keeps the SPC hours/earnings distinction separate from other benefit work rules."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. The hours/earnings distinction is expressly scoped to SPC and cannot be transferred to JSA or ESA working rules. Nor does one self-employment definition settle every income-assessment or payment period. The relevant benefit, work arrangement, period and legal version need separate evidence."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "international/eval-positive-07-part-1",
+      "response_sha256": "ce4a20d056c71863c15c50e9d70009f6d7f9718d0554caba53af9235f0ae7238",
+      "outcome": "prompt-supported-rubric-underspecified",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "The explicit Pension Credit exclusion qualifies the broader GB/NI statement.",
+          "evidence_ids": [
+            "evidence/0d2dc2454c2d9934b6bc"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "DMG 070530 gives a general route for revision, supersession or appeal in the GB/NI country where the claimant is. Paragraph 070531 says casual presence is insufficient. But 070533 expressly excludes Pension Credit reviews or appeals, alongside several other named benefits. The broad opening sentence therefore does not include a Pension Credit appeal in this agreement. The memo reference and present procedural position still need checking."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "The explicit Pension Credit exclusion qualifies the broader GB/NI statement."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "underspecified",
+          "rationale": "No specific positive behavioural rubric was supplied."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "international/eval-negative-07-part-1",
+      "response_sha256": "6d794f3bdfd223c717fa11e7070d6fca595840d4544c1b67a934c76a658941ef",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "The explicit Pension Credit exclusion qualifies the broader GB/NI statement.",
+          "evidence_ids": [
+            "evidence/0d2dc2454c2d9934b6bc"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. The same source page expressly excludes Pension Credit reviews and appeals at 070533. Reading 070530 alone would omit that limitation and the requirement about being in the other country at 070531. This evidence does not establish an alternative appeal route or a currently applicable individual procedure."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "The explicit Pension Credit exclusion qualifies the broader GB/NI statement."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "The explicit Pension Credit exclusion qualifies the broader GB/NI statement."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. The same source page expressly excludes Pension Credit reviews and appeals at 070533. Reading 070530 alone would omit that limitation and the requirement about being in the other country at 070531. This evidence does not establish an alternative appeal route or a currently applicable individual procedure."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "international/eval-positive-07-part-2",
+      "response_sha256": "d01d56a285633ed7f2f53437bb052acc73390259261d7d78ac382594e20b827d",
+      "outcome": "prompt-supported-rubric-underspecified",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Care/mobility classifications and the regulation/version/transitional boundaries remain separate.",
+          "evidence_ids": [
+            "evidence/10cf55e80d23f1fd2574",
+            "evidence/4a1d4ba720d16f161c77"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "The source classifies DLA care as a cash sickness benefit for long-term care, while DLA mobility is a special non-contributory benefit (071752). Paragraph 071751 identifies Regulations 883/2004 and 987/2009, replacing earlier regulations for EU states from 1 May 2010, with different Swiss/EEA dates and retained transitional cases. Paragraphs 071744–071745 also preserve component-specific historical export protection. These are versioned source statements, not a complete current export decision."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Care/mobility classifications and the regulation/version/transitional boundaries remain separate."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "underspecified",
+          "rationale": "No specific positive behavioural rubric was supplied."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "international/eval-negative-07-part-2",
+      "response_sha256": "fdf301f423c50e0e2477d09941c45dc771336a28ff8bd21adaa594055b1f2c55",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Care/mobility classifications and the regulation/version/transitional boundaries remain separate.",
+          "evidence_ids": [
+            "evidence/10cf55e80d23f1fd2574",
+            "evidence/4a1d4ba720d16f161c77"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. The source separates DLA care and mobility, and even the mobility export position has historical transitional qualifications. It does not make every ESA component equivalent to DLA care. Personal scope, competent state, component, period and the memos signposted by 071753 need examination. The captured wording does not by itself settle a 2026 claim."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Care/mobility classifications and the regulation/version/transitional boundaries remain separate."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Care/mobility classifications and the regulation/version/transitional boundaries remain separate."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. The source separates DLA care and mobility, and even the mobility export position has historical transitional qualifications. It does not make every ESA component equivalent to DLA care. Personal scope, competent state, component, period and the memos signposted by 071753 need examination. The captured wording does not by itself settle a 2026 claim."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "international/eval-positive-07-part-3",
+      "response_sha256": "23c03c649fef6e1b730cfec87a7448c9a238b6a41eca99b232f64a473add42ba",
+      "outcome": "prompt-supported-rubric-underspecified",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Retains right-to-reside versus actual habitual residence, EUSS differences, and the UC/SPC AT context gap; no categorical entitlement or refusal.",
+          "evidence_ids": [
+            "evidence/641d921bb9d341dce499",
+            "evidence/e8b9a556e19a8100dac8",
+            "evidence/a218ed4a4561607c8d56",
+            "evidence/dc069c4e89e78fc05103"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "Paragraphs 072791–072792 separate a qualifying right to reside from the factual habitual-residence assessment. EUSS settled status satisfies the right-to-reside element for the named benefits under 073491; it is not the whole entitlement test. Pre-settled status does not automatically supply a qualifying right under 073492. The same acquired source then contains the AT assessment at 073496–073499: its prose discusses UC, but the following page gives an SPC example. That cross-benefit wording and the cited memos require reconciliation."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Retains right-to-reside versus actual habitual residence, EUSS differences, and the UC/SPC AT context gap; no categorical entitlement or refusal."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "underspecified",
+          "rationale": "No specific positive behavioural rubric was supplied."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "international/eval-negative-07-part-3",
+      "response_sha256": "1302515ef2137d305c1444a76c8ca40037bfde55c3791a696bde17b4aacb3cfb",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Retains right-to-reside versus actual habitual residence, EUSS differences, and the UC/SPC AT context gap; no categorical entitlement or refusal.",
+          "evidence_ids": [
+            "evidence/641d921bb9d341dce499",
+            "evidence/e8b9a556e19a8100dac8",
+            "evidence/a218ed4a4561607c8d56",
+            "evidence/dc069c4e89e78fc05103"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "Neither conclusion follows. Settled status addresses the right-to-reside element, leaving actual habitual residence and other conditions. Nor does pre-settled status justify categorical refusal: 073492 requires examination of a qualifying right, and 073496–073499 introduce an AT assessment for specified circumstances. The UC wording beside an SPC example is an unresolved source-scope issue, not a basis for this project to decide someone’s Pension Credit entitlement."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Retains right-to-reside versus actual habitual residence, EUSS differences, and the UC/SPC AT context gap; no categorical entitlement or refusal."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Retains right-to-reside versus actual habitual residence, EUSS differences, and the UC/SPC AT context gap; no categorical entitlement or refusal."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "Neither conclusion follows. Settled status addresses the right-to-reside element, leaving actual habitual residence and other conditions. Nor does pre-settled status justify categorical refusal: 073492 requires examination of a qualifying right, and 073496–073499 introduce an AT assessment for specified circumstances. The UC wording beside an SPC example is an unresolved source-scope issue, not a basis for this project to decide someone’s Pension Credit entitlement."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "international/eval-positive-07-part-4",
+      "response_sha256": "62a2be4a0088e7f1e14dfc16c9b714e88075dc457e2929c241f41350ba7e8662",
+      "outcome": "prompt-supported-rubric-underspecified",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Limits Type A/B to the cited historical invalidity/IB coordination provisions.",
+          "evidence_ids": [
+            "evidence/159da2219e58cba3ee49"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "In this source section, Type A means the invalidity-benefit rate does not depend on the length of insurance, while Type B means that it does (074081). The context is invalidity benefit or long-term Incapacity Benefit under Regulation 1408/71, identified in 074080. Paragraphs 074083–074084 add conditions about applicable systems and the fixed-rate Type A outcome. This is a classification within that historical coordination context."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Limits Type A/B to the cited historical invalidity/IB coordination provisions."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "underspecified",
+          "rationale": "No specific positive behavioural rubric was supplied."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "international/eval-negative-07-part-4",
+      "response_sha256": "8e51ff4a547acee0e4ee1960abeb0f6fb7e41aa9063463795c3751f60378e619",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Limits Type A/B to the cited historical invalidity/IB coordination provisions.",
+          "evidence_ids": [
+            "evidence/159da2219e58cba3ee49"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. These passages concern invalidity benefit/long-term Incapacity Benefit and a specified regulation. They provide no evidence sufficient to classify current New Style ESA or establish universal exportability for Industrial Injuries benefits. Those are separate benefit, version and territorial questions; this retrieved section does not resolve them."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Limits Type A/B to the cited historical invalidity/IB coordination provisions."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Limits Type A/B to the cited historical invalidity/IB coordination provisions."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. These passages concern invalidity benefit/long-term Incapacity Benefit and a specified regulation. They provide no evidence sufficient to classify current New Style ESA or establish universal exportability for Industrial Injuries benefits. Those are separate benefit, version and territorial questions; this retrieved section does not resolve them."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "international/eval-positive-07-part-5",
+      "response_sha256": "0cec2623182f7fe56789bbe90c1f8035fecc06508f7f767af2fbb280f9f730cc",
+      "outcome": "prompt-supported-rubric-underspecified",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Correctly distinguishes retained entitlement abroad from initial residence conditions and does not import new State Pension rules.",
+          "evidence_ids": [
+            "evidence/78eecd4796feb4d259f7"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "DMG 075772 says explicitly that provisions allowing somebody already entitled to Category C or D Retirement Pension to retain it in another EEA country do not help satisfy the residence conditions for becoming entitled. Retention of an existing award and initial entitlement are therefore distinct questions. The paragraph points elsewhere for the initial residence conditions and cites Regulation 1408/71 and decisions."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Correctly distinguishes retained entitlement abroad from initial residence conditions and does not import new State Pension rules."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "underspecified",
+          "rationale": "No specific positive behavioural rubric was supplied."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "international/eval-negative-07-part-5",
+      "response_sha256": "92225e0db6c306d5a939c3b61aeb9d5b56fc65fa049d1dd8216549f75f6fc891",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Correctly distinguishes retained entitlement abroad from initial residence conditions and does not import new State Pension rules.",
+          "evidence_ids": [
+            "evidence/78eecd4796feb4d259f7"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. Paragraph 075772 explicitly rejects that inference for Category C/D Retirement Pension. It concerns an already-entitled person retaining an award, and does not establish initial residence conditions. It also supplies no new State Pension rule. The benefit category, relevant period and legal version must be established separately."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Correctly distinguishes retained entitlement abroad from initial residence conditions and does not import new State Pension rules."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Correctly distinguishes retained entitlement abroad from initial residence conditions and does not import new State Pension rules."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. Paragraph 075772 explicitly rejects that inference for Category C/D Retirement Pension. It concerns an already-entitled person retaining an award, and does not establish initial residence conditions. It also supplies no new State Pension rule. The benefit category, relevant period and legal version must be established separately."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "international/eval-positive-07-part-6",
+      "response_sha256": "89a0b72773a0d3edd0408411d30ba80f373fa27d922ece235d5ba9e06d870032",
+      "outcome": "prompt-supported-rubric-underspecified",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Preserves conditional absence durations, separate household/non-export tests and the28 July2016 transition; no publication-date substitution.",
+          "evidence_ids": [
+            "evidence/84e7046bb833651f56c6",
+            "evidence/c1ddebe99b7d71ce5fe2",
+            "evidence/5f98a03d20873147395a",
+            "evidence/2cdeb811ddafb1f944fe",
+            "evidence/8f85c78f3cb474c83f9d"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "Paragraph 077001 describes conditional 4-,8- and 26-week temporary-absence routes for the SPC claimant. Paragraph 077005 separately addresses membership of the claimant’s household. The longer routes have their own death/treatment conditions; the medical examples reject treating an ordinary holiday as a treatment trip. Paragraph 077025 separately states the non-export position. Paragraph 077015 preserves the previous rules for somebody temporarily absent on 28 July 2016 until return, then applies the new rules to further absences."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Preserves conditional absence durations, separate household/non-export tests and the28 July2016 transition; no publication-date substitution."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "underspecified",
+          "rationale": "No specific positive behavioural rubric was supplied."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "international/eval-negative-07-part-6",
+      "response_sha256": "a955fe8c6649e3c278c1df88f3a9359b92317c9b1bd170a6a895a3326e234f54",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Preserves conditional absence durations, separate household/non-export tests and the28 July2016 transition; no publication-date substitution.",
+          "evidence_ids": [
+            "evidence/84e7046bb833651f56c6",
+            "evidence/c1ddebe99b7d71ce5fe2",
+            "evidence/5f98a03d20873147395a",
+            "evidence/2cdeb811ddafb1f944fe",
+            "evidence/8f85c78f3cb474c83f9d"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. Twenty-six weeks is a conditional route, not a universal overseas allowance: the source requires an expected maximum and the specified treatment or accompanying-person circumstances. Other entitlement conditions remain relevant, and household membership is a separate test. The 28 July 2016 date is a source-stated transition boundary for absences already under way, not a publication or capture date. Present applicability and an individual outcome remain unverified."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Preserves conditional absence durations, separate household/non-export tests and the28 July2016 transition; no publication-date substitution."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Preserves conditional absence durations, separate household/non-export tests and the28 July2016 transition; no publication-date substitution."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. Twenty-six weeks is a conditional route, not a universal overseas allowance: the source requires an expected maximum and the specified treatment or accompanying-person circumstances. Other entitlement conditions remain relevant, and household membership is a separate test. The 28 July 2016 date is a source-stated transition boundary for absences already under way, not a publication or capture date. Present applicability and an individual outcome remain unverified."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "international/eval-positive-07-part-7",
+      "response_sha256": "b80ae6dd980218f52cf8d72a823d5e8c22631d3d9b08814e1230a00c25694a18",
+      "outcome": "prompt-supported-rubric-underspecified",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Keeps the benefit-specific mariner definitions and reasonably-practicable late-claim condition.",
+          "evidence_ids": [
+            "evidence/36d09b33c15adbb12b27",
+            "evidence/0226f5758a4b97bb2853"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "Paragraph 078070 defines a mariner for Industrial Injuries benefits using a contract of service on board and employed-earner treatment. Paragraph 078071 gives a different definition for other benefits, including conditions on other on-board capacity and the contract/voyage;078072 adds a forces exclusion. Under 078100, the late-claim provision requires absence from the UK because of the specified employment, inability to claim in time, and a claim as soon as reasonably practicable."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Keeps the benefit-specific mariner definitions and reasonably-practicable late-claim condition."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "underspecified",
+          "rationale": "No specific positive behavioural rubric was supplied."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "international/eval-negative-07-part-7",
+      "response_sha256": "2f6693bd7dd6a5820fdca0f105ccefa0eb94ed43f5bc80cc2aa6e3fc30d773dd",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Keeps the benefit-specific mariner definitions and reasonably-practicable late-claim condition.",
+          "evidence_ids": [
+            "evidence/36d09b33c15adbb12b27",
+            "evidence/0226f5758a4b97bb2853"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. A job on a ship does not remove the different definition requirements in 078070–078072. Nor does 078100 allow unlimited delay: the person must be abroad because of the specified employment, unable to claim within time, and claim as soon as reasonably practicable. These captured provisions cannot establish every benefit’s present conditions or an individual claim outcome."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Keeps the benefit-specific mariner definitions and reasonably-practicable late-claim condition."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Keeps the benefit-specific mariner definitions and reasonably-practicable late-claim condition."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. A job on a ship does not remove the different definition requirements in 078070–078072. Nor does 078100 allow unlimited delay: the person must be abroad because of the specified employment, unable to claim within time, and claim as soon as reasonably practicable. These captured provisions cannot establish every benefit’s present conditions or an individual claim outcome."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-positive-05",
+      "response_sha256": "87cee3c1a14404e314de83ff7101a68d77222fcd82b5e393dc308f8cddef433d",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Preserves the April2014 IS-solely-as-lone-parent scope and waiver/deferral distinction.",
+          "evidence_ids": [
+            "evidence/859267c9da6bf10ecbf8"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "The April 2014 passage concerns lone parents over 18 with a child aged 1–4 who receive IS solely as a lone parent. For that stated group,05104 removes waiver but still allows an interview to be deferred to a specified date. Paragraph 05103 allows discretion about when the interview happens. Removal of waiver and postponement of timing are different decisions in this bounded source regime."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Preserves the April2014 IS-solely-as-lone-parent scope and waiver/deferral distinction."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Preserves the April2014 IS-solely-as-lone-parent scope and waiver/deferral distinction."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-negative-05",
+      "response_sha256": "b9d49e23881905f5a1d1f5eb71e6ee3deaa5a55e987909917e1e4d678be6be1a",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Preserves the April2014 IS-solely-as-lone-parent scope and waiver/deferral distinction.",
+          "evidence_ids": [
+            "evidence/859267c9da6bf10ecbf8"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. The April 2014 paragraph expressly limits removal of waiver to IS lone parents claiming solely on that basis. An older or broader waiver sentence cannot be carried over to every claimant, benefit or date. The applicable scheme, period and later changes must be checked before giving attendance or sanction advice."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Preserves the April2014 IS-solely-as-lone-parent scope and waiver/deferral distinction."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Preserves the April2014 IS-solely-as-lone-parent scope and waiver/deferral distinction."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. The April 2014 paragraph expressly limits removal of waiver to IS lone parents claiming solely on that basis. An older or broader waiver sentence cannot be carried over to every claimant, benefit or date. The applicable scheme, period and later changes must be checked before giving attendance or sanction advice."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-positive-12",
+      "response_sha256": "8a8f45036efbe72fb7922dea93f44ef937c1bbb8a7504d1455ab9d53f5a58850",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Includes both remand payability and pending-outcome suspension with later-sentence qualifications.",
+          "evidence_ids": [
+            "evidence/f062805930a61cb94d03"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "For State Pension,12020 says a person remanded in custody is not a prisoner under the cited definition and can be paid, but qualifies this where a specified sentence is later imposed. It therefore directs suspension of SP while proceedings are pending. Paragraph 12021 gives a further qualification for a sentence imposed abroad. Reading only “can be paid” would omit the practical instruction and conditions."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Includes both remand payability and pending-outcome suspension with later-sentence qualifications."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Includes both remand payability and pending-outcome suspension with later-sentence qualifications."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-negative-12",
+      "response_sha256": "29ff7dc4bc6744f182c3f3484d2bc44556dbe501c25f872b4aeb37e55ae76315",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Includes both remand payability and pending-outcome suspension with later-sentence qualifications.",
+          "evidence_ids": [
+            "evidence/f062805930a61cb94d03"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. Paragraph 12020 is an SP-specific conditional rule with suspension pending proceedings and specified later-sentence consequences. Paragraph 12021 adds a foreign-sentence qualification. That does not prove a universal entitlement or loss of entitlement for all detained people or all benefits, and the project has not determined any person’s proceedings or current legal position."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Includes both remand payability and pending-outcome suspension with later-sentence qualifications."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Includes both remand payability and pending-outcome suspension with later-sentence qualifications."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. Paragraph 12020 is an SP-specific conditional rule with suspension pending proceedings and specified later-sentence consequences. Paragraph 12021 adds a foreign-sentence qualification. That does not prove a universal entitlement or loss of entitlement for all detained people or all benefits, and the project has not determined any person’s proceedings or current legal position."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-positive-13",
+      "response_sha256": "eb51fb6882dc29e92c949cf7acb93ab07d8df06006c432648067adcf9facfa31",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Separates a medical-evidence gap and payment suspension from the PCA determination and supersession; lost contact remains distinct.",
+          "evidence_ids": [
+            "evidence/e5eb28e7fb589f15ef35"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "Where contact is not lost,13182 allows payment suspension for a gap in medical evidence. Paragraphs 13183–13184 still require the Personal Capability Assessment, using available evidence where appropriate. The gap itself is not the change of circumstances grounding supersession of IB entitlement; the incapacity determination is. Lost contact is separately signposted by 13185."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Separates a medical-evidence gap and payment suspension from the PCA determination and supersession; lost contact remains distinct."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Separates a medical-evidence gap and payment suspension from the PCA determination and supersession; lost contact remains distinct."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-negative-13",
+      "response_sha256": "3a5f548aebe357cdf3edd4be08981c825583296703a184635be74388ca7a434f",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Separates a medical-evidence gap and payment suspension from the PCA determination and supersession; lost contact remains distinct.",
+          "evidence_ids": [
+            "evidence/e5eb28e7fb589f15ef35"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. The source explicitly says the DM cannot conclude that IB entitlement has ended merely from the gap without the PCA. It distinguishes payment suspension from the entitlement determination and separately identifies lost-contact cases. This IB/PCA passage does not establish ESA or UC rules; those require their own sources and regime checks."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Separates a medical-evidence gap and payment suspension from the PCA determination and supersession; lost contact remains distinct."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Separates a medical-evidence gap and payment suspension from the PCA determination and supersession; lost contact remains distinct."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. The source explicitly says the DM cannot conclude that IB entitlement has ended merely from the gap without the PCA. It distinguishes payment suspension from the entitlement determination and separately identifies lost-contact cases. This IB/PCA passage does not establish ESA or UC rules; those require their own sources and regime checks."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-positive-15",
+      "response_sha256": "607ec56a9e0e1c233b9c2bdc7427857c124de29c1860f9d17d76e5b47871b39e",
+      "outcome": "partial-authored-rubric-coverage",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Answers unknown amount versus unreceived earnings using the identified ruling, but does not give the authored rubric’s excluded-benefit list.",
+          "evidence_ids": [
+            "evidence/2c647b3aab2e1cb21d6d"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "Paragraph 15014 concerns an amount that cannot be found out at decision time: a reasonable amount is inferred using hours and comparable local employment. Paragraphs 15015–15016 concern work for nothing or below comparable pay; they record a 11 November 2002 decision that the specified notional-earnings regulation was ultra vires and say earnings not actually possessed cannot be attributed under it. Unknown amount and unreceived earnings are therefore different cases."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "partial-authored-rubric-coverage",
+          "rationale": "Answers unknown amount versus unreceived earnings using the identified ruling, but does not give the authored rubric’s excluded-benefit list."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "partial",
+          "rationale": "Answers unknown amount versus unreceived earnings using the identified ruling, but does not give the authored rubric’s excluded-benefit list."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-negative-15",
+      "response_sha256": "916087eecb4cd89fb722c5fb37290bd082cd44a34f315909b177d12de6fa617f",
+      "outcome": "partial-authored-rubric-coverage",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Answers unknown amount versus unreceived earnings using the identified ruling, but does not give the authored rubric’s excluded-benefit list.",
+          "evidence_ids": [
+            "evidence/2c647b3aab2e1cb21d6d"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. This source identifies a specific unavailable notional-earnings provision and signposts the minimum-wage provisions instead. Importing a JSA notional-earnings rule would bypass the chapter’s own legal context and distinction between unknown and unreceived earnings. No current minimum-wage rate, enforcement route or benefit award is established here."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "partial-authored-rubric-coverage",
+          "rationale": "Answers unknown amount versus unreceived earnings using the identified ruling, but does not give the authored rubric’s excluded-benefit list."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "partial",
+          "rationale": "Answers unknown amount versus unreceived earnings using the identified ruling, but does not give the authored rubric’s excluded-benefit list."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. This source identifies a specific unavailable notional-earnings provision and signposts the minimum-wage provisions instead. Importing a JSA notional-earnings rule would bypass the chapter’s own legal context and distinction between unknown and unreceived earnings. No current minimum-wage rate, enforcement route or benefit award is established here."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-positive-16",
+      "response_sha256": "bf7a93ce5843496264a4e2bc7feafa25eb7891465211f9f0e754e0e5f908c60e",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Keeps2003 savings, parent-benefit, continuity and non-payability distinctions without creating an unrestricted new-claim route.",
+          "evidence_ids": [
+            "evidence/ff3596ee1315ce35b9d8",
+            "evidence/9986e94dfdc2779f614a",
+            "evidence/b5c00bd609a32a78bb29"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "The chapter distinguishes abolished child dependency increases from unaffected benefits and saved cases. Paragraph 16010 preserves an award entitled and paid on 5 April 2003 subject to continuing conditions. Paragraph 16003 specifies the conditions for a later claim spanning that date. Paragraphs 16011–16013 add termination, re-award and non-payability qualifications. This is retained/transitional guidance, not an unrestricted new-claim route."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Keeps2003 savings, parent-benefit, continuity and non-payability distinctions without creating an unrestricted new-claim route."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Keeps2003 savings, parent-benefit, continuity and non-payability distinctions without creating an unrestricted new-claim route."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-negative-16",
+      "response_sha256": "27e63d727206cc1c92ccdba7dd2a8d489872ae34d327d82894c5536c1fbc8c38",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Keeps2003 savings, parent-benefit, continuity and non-payability distinctions without creating an unrestricted new-claim route.",
+          "evidence_ids": [
+            "evidence/ff3596ee1315ce35b9d8",
+            "evidence/9986e94dfdc2779f614a",
+            "evidence/b5c00bd609a32a78bb29"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. Child Benefit today does not itself establish a new child dependency increase. The source requires the correct parent benefit and saved or unaffected regime, with specific historic entitlement, period and continuity conditions. The 57/58-day and re-award provisions are additional qualifications, not a basis to calculate or grant an award here."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Keeps2003 savings, parent-benefit, continuity and non-payability distinctions without creating an unrestricted new-claim route."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Keeps2003 savings, parent-benefit, continuity and non-payability distinctions without creating an unrestricted new-claim route."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. Child Benefit today does not itself establish a new child dependency increase. The source requires the correct parent benefit and saved or unaffected regime, with specific historic entitlement, period and continuity conditions. The 57/58-day and re-award provisions are additional qualifications, not a basis to calculate or grant an award here."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-positive-18",
+      "response_sha256": "cf86083c40d56d338a31c6ca165956a0487e85149c4ad2fd99e07a1a86bd0fa7",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Separates the2006 policy boundary from individual treatment, facility and benefit facts.",
+          "evidence_ids": [
+            "evidence/65be8ebb52c3d80c95b3",
+            "evidence/fc06b2b37ba4969c2241"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "Paragraph 18000 says the old hospital-downrating regulations were revoked from 10 April 2006 for the benefits they covered, and points IS/JSA and SPC to other chapters. Paragraph 18001 narrows this chapter’s remaining scope. Separately,18024–18025 require medical or specified other treatment and a factual assessment; straightforward care by unqualified staff is excluded. The policy-date boundary does not answer the individual treatment question."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Separates the2006 policy boundary from individual treatment, facility and benefit facts."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Separates the2006 policy boundary from individual treatment, facility and benefit facts."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-negative-18",
+      "response_sha256": "96ce1181874a0e68ae3beadd6b4c9fee49e73c623e9ac567db84fbe077723503",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Separates the2006 policy boundary from individual treatment, facility and benefit facts.",
+          "evidence_ids": [
+            "evidence/65be8ebb52c3d80c95b3",
+            "evidence/fc06b2b37ba4969c2241"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. The chapter separates benefits and dates, and 18025 says treatment for one person in an establishment cannot simply be assumed for another. Residence in a hospital or care setting therefore cannot establish a universal benefit reduction. The treatment, funding, benefit and period conditions still need the appropriate evidence and law."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Separates the2006 policy boundary from individual treatment, facility and benefit facts."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Separates the2006 policy boundary from individual treatment, facility and benefit facts."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. The chapter separates benefits and dates, and 18025 says treatment for one person in an establishment cannot simply be assumed for another. Residence in a hospital or care setting therefore cannot establish a universal benefit reduction. The treatment, funding, benefit and period conditions still need the appropriate evidence and law."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-positive-20",
+      "response_sha256": "b70b0d6beb48250c8aeea11cb821232cfdbde52b84e37ba50bb90e0e18497a5a",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Establishes continuing work before hours and distinguishes whose work matters by benefit; detailed treated-work exceptions remain signposted rather than modelled.",
+          "evidence_ids": [
+            "evidence/7ac3e38fb732477a7347",
+            "evidence/a10c8027601923cb2b36"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "The DM must first decide whether work is continuing before applying working-hours law (20200). JSA(Cont)’s exclusion concerns the claimant; JSA(IB)/IS can concern the claimant or partner (20201–20202). A genuine absence of employment between jobs differs from a continuing contract or expected return. Paragraphs 20206–20207 require a factual assessment of the relationship, contracts and mutual expectation, beyond a mere hope of work."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Establishes continuing work before hours and distinguishes whose work matters by benefit; detailed treated-work exceptions remain signposted rather than modelled."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Establishes continuing work before hours and distinguishes whose work matters by benefit; detailed treated-work exceptions remain signposted rather than modelled."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-negative-20",
+      "response_sha256": "9887f5596644871bbafa6c4f1b20ac35f40799a7b554699f9b658557949f208d",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Establishes continuing work before hours and distinguishes whose work matters by benefit; detailed treated-work exceptions remain signposted rather than modelled.",
+          "evidence_ids": [
+            "evidence/7ac3e38fb732477a7347",
+            "evidence/a10c8027601923cb2b36"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. A gap in paid activity can occur within continuing employment; the source gives an offshore-work example and calls for factual examination. It also distinguishes whose work matters by benefit. One hours threshold or the label “between jobs” cannot settle every claimant/partner case, and no current threshold or personal outcome is derived here."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Establishes continuing work before hours and distinguishes whose work matters by benefit; detailed treated-work exceptions remain signposted rather than modelled."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Establishes continuing work before hours and distinguishes whose work matters by benefit; detailed treated-work exceptions remain signposted rather than modelled."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. A gap in paid activity can occur within continuing employment; the source gives an offshore-work example and calls for factual examination. It also distinguishes whose work matters by benefit. One hours threshold or the label “between jobs” cannot settle every claimant/partner case, and no current threshold or personal outcome is derived here."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-positive-21",
+      "response_sha256": "56454f1980b007a614539df5adaf16d609f5d6c72288e449ce38a8bf4a53921f",
+      "outcome": "partial-authored-rubric-coverage",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Correctly separates weekly actively-seeking conduct from agreement evidence and retains the legacy/ADM distinction, but does not explicitly explain the separately required availability test.",
+          "evidence_ids": [
+            "evidence/5a0b915b678dbf13f8d6",
+            "evidence/576065a203843c4ac6f9"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "Paragraphs 21571–21573 address actively seeking employment in each week, including reasonable steps offering the best chance of work and specified exceptions. The steps may differ from those recorded in the jobseeker’s agreement. Paragraph 21811 says that the legacy JSA “Claimant Commitment” is legally a JSAg, whereas UC and New Style JSA require ADM guidance. An agreement and weekly conduct are different evidence questions."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "partial-authored-rubric-coverage",
+          "rationale": "Correctly separates weekly actively-seeking conduct from agreement evidence and retains the legacy/ADM distinction, but does not explicitly explain the separately required availability test."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "partial",
+          "rationale": "Correctly separates weekly actively-seeking conduct from agreement evidence and retains the legacy/ADM distinction, but does not explicitly explain the separately required availability test."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-negative-21",
+      "response_sha256": "94b17e705b0325961b94608c832935b8e5c6521d28ae7ccaf798fde056ff161f",
+      "outcome": "partial-authored-rubric-coverage",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Correctly separates weekly actively-seeking conduct from agreement evidence and retains the legacy/ADM distinction, but does not explicitly explain the separately required availability test.",
+          "evidence_ids": [
+            "evidence/5a0b915b678dbf13f8d6",
+            "evidence/576065a203843c4ac6f9"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. Signing an agreement does not establish that the necessary weekly steps were taken or that an exception applies. Paragraph 21811 also explicitly separates legacy JSA from UC and New Style JSA. The same product label therefore cannot justify transferring conditions between those regimes or deciding an individual’s compliance."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "partial-authored-rubric-coverage",
+          "rationale": "Correctly separates weekly actively-seeking conduct from agreement evidence and retains the legacy/ADM distinction, but does not explicitly explain the separately required availability test."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "partial",
+          "rationale": "Correctly separates weekly actively-seeking conduct from agreement evidence and retains the legacy/ADM distinction, but does not explicitly explain the separately required availability test."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. Signing an agreement does not establish that the necessary weekly steps were taken or that an exception applies. Paragraph 21811 also explicitly separates legacy JSA from UC and New Style JSA. The same product label therefore cannot justify transferring conditions between those regimes or deciding an individual’s compliance."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-positive-22",
+      "response_sha256": "16ddf38a1046fdf82e3e0966931130bd008e52cfee8305f05a234fbdefa2a04e",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Retains the dated existing-JSA-child-allowance condition, substantial minority care and distinct IS rule.",
+          "evidence_ids": [
+            "evidence/43a7ac678400e816e311",
+            "evidence/bf967485d174843c2afe"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "Paragraph 22033 gives a dated exception from 8 September 2005 for someone already receiving JSA including child allowances who has minority but substantial care of another child. The note sends IS claimants back to 22032, which uses Child Benefit payment/claim and usual residence in specified branches. Paragraph 22034 requires more than occasional contact. This JSA exception is not a general shared-care rule."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Retains the dated existing-JSA-child-allowance condition, substantial minority care and distinct IS rule."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Retains the dated existing-JSA-child-allowance condition, substantial minority care and distinct IS rule."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-negative-22",
+      "response_sha256": "326042e658f12f6ac066ca3bf16c40de386e4ac0f4145aa4e0f934eac5fdec61",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Retains the dated existing-JSA-child-allowance condition, substantial minority care and distinct IS rule.",
+          "evidence_ids": [
+            "evidence/43a7ac678400e816e311",
+            "evidence/bf967485d174843c2afe"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. The source has a specific historical JSA exception and a separate IS responsibility rule. Substantial minority care is more than visiting, and the Child Benefit rules themselves have branches where payment goes to a child or no payment is made. These passages do not settle all household membership, income or current entitlement questions."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Retains the dated existing-JSA-child-allowance condition, substantial minority care and distinct IS rule."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Retains the dated existing-JSA-child-allowance condition, substantial minority care and distinct IS rule."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. The source has a specific historical JSA exception and a separate IS responsibility rule. Substantial minority care is more than visiting, and the Child Benefit rules themselves have branches where payment goes to a child or no payment is made. These passages do not settle all household membership, income or current entitlement questions."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-positive-30",
+      "response_sha256": "98cec63215994bef2df9abdb8ab2b9353cf6a973001a6b297a0ea3171bfc5425",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Preserves the eligibility-only purpose and benefit-specific study-period definitions; income provisions remain unresolved.",
+          "evidence_ids": [
+            "evidence/7ea153637800eb7d98e1"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "The source defines the study period separately for eligibility: IS starts with attendance/undertaking and ends at course completion or earlier abandonment/dismissal; JSA also covers specified connected study or attendance before or after the course. The note explicitly prohibits using these definitions for other purposes. Vacations and the freshers-week qualification are separately stated. Income assessment therefore needs its own provisions."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Preserves the eligibility-only purpose and benefit-specific study-period definitions; income provisions remain unresolved."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Preserves the eligibility-only purpose and benefit-specific study-period definitions; income provisions remain unresolved."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-negative-30",
+      "response_sha256": "01ef8379889613857b72de75af4a09ced8ba8777a0be6fd3ac533d632472bbb2",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Preserves the eligibility-only purpose and benefit-specific study-period definitions; income provisions remain unresolved.",
+          "evidence_ids": [
+            "evidence/7ea153637800eb7d98e1"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. Paragraphs 30218–30219 expressly limit their definitions to eligibility and give different IS/JSA wording. The source also adds vacation and course-start qualifications. A single institutional calendar does not resolve every entitlement or income-assessment period; the benefit, purpose and relevant provisions must be identified."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Preserves the eligibility-only purpose and benefit-specific study-period definitions; income provisions remain unresolved."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Preserves the eligibility-only purpose and benefit-specific study-period definitions; income provisions remain unresolved."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. Paragraphs 30218–30219 expressly limit their definitions to eligibility and give different IS/JSA wording. The source also adds vacation and course-start qualifications. A single institutional calendar does not resolve every entitlement or income-assessment period; the benefit, purpose and relevant provisions must be identified."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-positive-32",
+      "response_sha256": "9686da8dd203a94d6aefb897fefff33379d25c28eb3fcccb1c8a441141675794",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Preserves causal evidence, exceptions and the warning against unchallenged newspaper reports, without deciding the dispute’s merits.",
+          "evidence_ids": [
+            "evidence/cbf2e402866504fc3f7f",
+            "evidence/cdc43c567de721028b86",
+            "evidence/e3f3d8de884c7193515f"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "The source requires more than simultaneous unemployment and a dispute. It asks whether there is a stoppage at the place of work and whether it was due to the trade dispute (32109,32114–32115);32003 identifies separate statutory routes and 32006 exceptions. Paragraph 32015 describes claimant/employer evidence and says not to rely on unchallenged newspaper reports. The merits or reasonableness of the dispute are not the DM’s question (32007)."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Preserves causal evidence, exceptions and the warning against unchallenged newspaper reports, without deciding the dispute’s merits."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Preserves causal evidence, exceptions and the warning against unchallenged newspaper reports, without deciding the dispute’s merits."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-negative-32",
+      "response_sha256": "4fa1159f1e0b8d5935a320efa8ef8e1b444f0bb8b01e5be3b411d32445960015",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Preserves causal evidence, exceptions and the warning against unchallenged newspaper reports, without deciding the dispute’s merits.",
+          "evidence_ids": [
+            "evidence/cbf2e402866504fc3f7f",
+            "evidence/cdc43c567de721028b86",
+            "evidence/e3f3d8de884c7193515f"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. An unchallenged newspaper report is specifically insufficient as the evidence basis, and disagreement with a strike does not establish the statutory causal route or remove exceptions. The source also separates the merits of a dispute from the benefit question. These passages do not authorise an automatic exclusion or sanction."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Preserves causal evidence, exceptions and the warning against unchallenged newspaper reports, without deciding the dispute’s merits."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Preserves causal evidence, exceptions and the warning against unchallenged newspaper reports, without deciding the dispute’s merits."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. An unchallenged newspaper report is specifically insufficient as the evidence basis, and disagreement with a strike does not establish the statutory causal route or remove exceptions. The source also separates the merits of a dispute from the benefit question. These passages do not authorise an automatic exclusion or sanction."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-positive-33",
+      "response_sha256": "c7d05cafda48f39c9ffae6d307e2cc5f31f9bcda319213f6bcd21aae3abb0b35",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Retains the local notional-entitlement meaning and share-fisherman component difference.",
+          "evidence_ids": [
+            "evidence/09f8369fe9eca76b41b6",
+            "evidence/315175acf1cad30e6a02"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "In this part-week context,33101 defines notional entitlement as the personal rate for JSA(Cont), and applicable amount less income for JSA(IB)/IS. The relevant week depends on the trigger listed in 33102. Paragraph 33103 says share fishermen receive JSA(Cont) for whole weeks only, while normal part-week rules apply to their JSA(IB) or IS claims. This is a calculation-specific definition."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Retains the local notional-entitlement meaning and share-fisherman component difference."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Retains the local notional-entitlement meaning and share-fisherman component difference."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-negative-33",
+      "response_sha256": "31f6ba6873b447c4a92cc61f65627601c7115a255f34cd6503f8101deb2ed96e",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Retains the local notional-entitlement meaning and share-fisherman component difference.",
+          "evidence_ids": [
+            "evidence/09f8369fe9eca76b41b6",
+            "evidence/315175acf1cad30e6a02"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. “Notional entitlement” here describes a benefit amount used in part-week calculations, not income someone is treated as possessing. The source distinguishes benefit types, relevant-week triggers and share fishermen. It provides no basis for identical treatment across all benefits or for an award calculation in this trial."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Retains the local notional-entitlement meaning and share-fisherman component difference."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Retains the local notional-entitlement meaning and share-fisherman component difference."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. “Notional entitlement” here describes a benefit amount used in part-week calculations, not income someone is treated as possessing. The source distinguishes benefit types, relevant-week triggers and share fishermen. It provides no basis for identical treatment across all benefits or for an award calculation in this trial."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-positive-34",
+      "response_sha256": "96aeef3f80ffdd5bae7f1eef5cd612df90ac60eba8efe189c7f6e7ea1cffd5b2",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Preserves initial failure evidence, representations/notification and misconduct/intermediate distinctions; no automatic sanction.",
+          "evidence_ids": [
+            "evidence/54acdc8e4a1b1667352c",
+            "evidence/e4e3011c9f41eeb0a3e8",
+            "evidence/4ed0d4e2538e3613d987"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "Paragraphs 34034–34036 require clear information about responsibilities and consequences, a meaningful chance to make representations and documentary notification evidence. Under 34205, the Secretary of State must show a sanctionable failure; the good-reason burden then differs, with misconduct expressly excepted. Paragraph 34201 separately addresses intermediate sanctions. The evidence and burdens are qualified by sanction type and individual circumstances, not one automatic rule."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Preserves initial failure evidence, representations/notification and misconduct/intermediate distinctions; no automatic sanction."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Preserves initial failure evidence, representations/notification and misconduct/intermediate distinctions; no automatic sanction."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-negative-34",
+      "response_sha256": "64c00ec5429c26f22ae1662fca1e9a340f8095b18b80b53ec08256db239554d8",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Preserves initial failure evidence, representations/notification and misconduct/intermediate distinctions; no automatic sanction.",
+          "evidence_ids": [
+            "evidence/54acdc8e4a1b1667352c",
+            "evidence/e4e3011c9f41eeb0a3e8",
+            "evidence/4ed0d4e2538e3613d987"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. The source places the initial sanctionable-failure burden on the Secretary of State and requires communication/notification evidence. It distinguishes misconduct, intermediate sanctions and good-reason cases, with a factual opportunity to explain where applicable. A missed action alone does not allow this project to impose a sanction or assign every burden to the claimant."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Preserves initial failure evidence, representations/notification and misconduct/intermediate distinctions; no automatic sanction."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Preserves initial failure evidence, representations/notification and misconduct/intermediate distinctions; no automatic sanction."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. The source places the initial sanctionable-failure burden on the Secretary of State and requires communication/notification evidence. It distinguishes misconduct, intermediate sanctions and good-reason cases, with a factual opportunity to explain where applicable. A missed action alone does not allow this project to impose a sanction or assign every burden to the claimant."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-positive-35",
+      "response_sha256": "f30775f9e74c6990e875079dd3eeef5b9f426492224b7b80a6043b9e7b128ca0",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Retains the prohibition on expected food-bank/new-credit reliance and distinguishes hardship groups from wider vulnerability.",
+          "evidence_ids": [
+            "evidence/c8ba1c75b7b16fb42cd1",
+            "evidence/dcf960e1a4da76b1d603"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "Paragraph 35177 excludes expected reliance on charities/food banks, increased borrowing or overdrafts, sale or pawning, cheaper housing and asking friends/family from available resources. People should not be denied access because they have not sought these. Paragraph 35055 separately says hardship is about missing basic necessities; its defined vulnerable groups concern specific JSA hardship access/timing and differ from wider DWP vulnerability."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Retains the prohibition on expected food-bank/new-credit reliance and distinguishes hardship groups from wider vulnerability."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Retains the prohibition on expected food-bank/new-credit reliance and distinguishes hardship groups from wider vulnerability."
+        }
+      ],
+      "specialist_acceptance": false
+    },
+    {
+      "case_id": "common-and-jsa-extension/eval-negative-35",
+      "response_sha256": "1d98f84e4519b2b75669cdf6368de9931f4674f928f83640e6b21edabcbf926e",
+      "outcome": "supported-within-selected-source-scope",
+      "criteria": [
+        {
+          "criterion": "source-grounding",
+          "outcome": "supported-in-returned-source-context",
+          "rationale": "Retains the prohibition on expected food-bank/new-credit reliance and distinguishes hardship groups from wider vulnerability.",
+          "evidence_ids": [
+            "evidence/c8ba1c75b7b16fb42cd1",
+            "evidence/dcf960e1a4da76b1d603"
+          ]
+        },
+        {
+          "criterion": "requested-distinction",
+          "outcome": "addresses-prompt",
+          "response_excerpt": "No. Paragraph 35177 expressly rejects requiring food-bank help or new debt and says lack of such requests should not deny access. Absence of a wider vulnerability label is not the hardship test:35055 distinguishes that label from the defined hardship groups and basic-needs assessment. Other qualifying conditions and start-date provisions still require examination; this is not an award decision."
+        },
+        {
+          "criterion": "scope-and-exceptions",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Retains the prohibition on expected food-bank/new-credit reliance and distinguishes hardship groups from wider vulnerability."
+        },
+        {
+          "criterion": "authority-dates-individual-outcomes",
+          "outcome": "no-material-overclaim-identified",
+          "rationale": "Read as a response describing frozen departmental guidance and source gaps; it neither determines individual entitlement nor upgrades capture/interpretation to current-law or specialist acceptance."
+        },
+        {
+          "criterion": "authored-rubric",
+          "outcome": "covered-at-prompt-level",
+          "rationale": "Retains the prohibition on expected food-bank/new-credit reliance and distinguishes hardship groups from wider vulnerability."
+        },
+        {
+          "criterion": "boundary-proposition",
+          "outcome": "rejected-or-qualified",
+          "response_excerpt": "No. Paragraph 35177 expressly rejects requiring food-bank help or new debt and says lack of such requests should not deny access. Absence of a wider vulnerability label is not the hardship test:35055 distinguishes that label from the defined hardship groups and basic-needs assessment. Other qualifying conditions and start-date provisions still require examination; this is not an award decision."
+        }
+      ],
+      "specialist_acceptance": false
+    }
+  ],
+  "limitations": [
+    "Source-guided synthesis is not an end-to-end runtime retrieval test or evidence that an affordable model performs equivalently.",
+    "Four cases omit parts of the wider authored rubric; retain those results for follow-up rather than editing them into passes.",
+    "Fourteen positive cases have underspecified rubrics; the prompt can be checked, but a precise behavioural pass is not claimed.",
+    "Assessment is bounded to the cited source context; present law, full chapter completeness and operational fitness remain unverified."
+  ]
+}

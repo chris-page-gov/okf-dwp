@@ -1,0 +1,83 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-work-meaning
+  '@type': skos:Concept
+  route: term/esa-work-meaning
+  title: Work in the source’s ESA general rule
+  type: Concept
+  description: For this ESA rule, work can be undertaken with or without expected payment. The source explicitly distinguishes that meaning from remunerative work and qualifies its general exclusion by exceptions.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Work in the source’s ESA general rule
+    '@language': en-GB
+  skos:definition:
+    '@value': For this ESA rule, work can be undertaken with or without expected payment. The source explicitly distinguishes that meaning from remunerative work and qualifies its general exclusion by exceptions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': 'DMG 41121–41124 and 41132 separate claimant work, partner work and ESA(Cont)/ESA(IR). Unpaid activity is not automatically ignored, and all activity is not automatically disqualifying: exempt and negligible work need separate consideration.'
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 41
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol8-ch41/0034
+  - page/dmg-vol8-ch41/0035
+  - page/dmg-vol8-ch41/0038
+  source: https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=34
+  resource: https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=34
+  sources:
+  - id: dmg-vol8-ch41
+    title: 'DMG Vol 8 Ch 41: ESA conditions of entitlement '
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf
+    retrieved_at: '2026-09-15T19:45:28.939434Z'
+    sha256: bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418
+  body: |
+    # Work in the source’s ESA general rule
+
+    ## Authored interpretation
+
+    For this ESA rule, work can be undertaken with or without expected payment. The source explicitly distinguishes that meaning from remunerative work and qualifies its general exclusion by exceptions.
+
+    ## Scope and boundaries
+
+    DMG 41121–41124 and 41132 separate claimant work, partner work and ESA(Cont)/ESA(IR). Unpaid activity is not automatically ignored, and all activity is not automatically disqualifying: exempt and negligible work need separate consideration.
+
+    ## Inspected source passages
+
+    - [DMG 41121, PDF page 34](https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=34)
+    - [DMG 41122, PDF page 34](https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=34)
+    - [DMG 41124, PDF page 34](https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=34)
+    - [DMG 41132, PDF page 35](https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=35)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:28.939434Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418`. Extracted pages SHA-256: `039044b6fddda8d3476d3fa9fce766d7da6b12508704fc4fd2a1b97dd870a227`.
+  semantic_relations:
+  - target: term/esa-negligible-work
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source assesses negligible work before its specific work rules and retains factual qualifications.
+    evidence:
+    - page: page/dmg-vol8-ch41/0038
+      quote: "41145 Negligible work is considered under a general principle that the law is not concerned with\ntrivialities. This principle is called “de minimis”. Negligible amounts of work can be disregarded before the\nspecific rules are applied so that the claimant is not regarded as working on the day or days in question."
+      locator: DMG 41145
+    - page: page/dmg-vol8-ch41/0038
+      quote: "41146 Whether work on part of a day is negligible depends on its proportion to the normal working hours,\n\nthe type of work and the effort required in relation to full normal duties 1. When deciding if work is “de\nminimis”, the DM should consider the relevant case law.\n\n\n                                                                                                   1 R(S) 2/61"
+      locator: DMG 41146
+    - page: page/dmg-vol8-ch41/0038
+      quote: "41147 The question of negligible work can arise in self-employment when a sick person can still attend to\nsome aspects of a business. Work cannot be considered negligible if it contributes materially to the\nrunning of the business or involves a significant amount of supervisory or administrative work. For\nexample if the person occasionally does small jobs such as signing cheques, the contribution to the\n\nbusiness can be disregarded as negligible1.\n\n\n                                      1 R(S) 5/51; R(S) 13/52; R(S) 24/52; R(S) 34/52; R(S) 37/52; R(S) 8/55;\n                                                                              R(S) 2/61; R(S) 2/74; R(S) 10/79\n\n\nCommunity service"
+      locator: DMG 41147

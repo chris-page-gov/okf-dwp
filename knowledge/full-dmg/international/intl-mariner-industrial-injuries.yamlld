@@ -1,0 +1,77 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-mariner-industrial-injuries
+  '@type': skos:Concept
+  route: term/intl-mariner-industrial-injuries
+  title: Mariner definition for Industrial Injuries in the source
+  type: Concept
+  description: For Industrial Injuries benefits, the source’s mariner definition requires the specified shipboard contract-of-service employment to be treated as employed earner’s employment.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-international-research
+    at: '2026-09-15T20:19:49.223063Z'
+  observedAt: '2026-09-15T20:19:49.223063Z'
+  skos:prefLabel:
+    '@value': Mariner definition for Industrial Injuries in the source
+    '@language': en-GB
+  skos:definition:
+    '@value': For Industrial Injuries benefits, the source’s mariner definition requires the specified shipboard contract-of-service employment to be treated as employed earner’s employment.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 078070 is deliberately separate from the other-benefits definition at 078071. The statutory versions and the special forces exclusion at 078072 remain relevant; the definitions are not equated.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - international subjects
+  - chapter 7 part 7
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol2-ch7-part7/0005
+  source: https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=5
+  resource: https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=5
+  sources:
+  - id: dmg-vol2-ch7-part7
+    title: "DMG Vol 2 Ch 7 Part 7: Offshore workers and Her Majesty's forces [078060 to 079999]"
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf
+    retrieved_at: '2026-09-15T19:45:20.233458Z'
+    sha256: 0ca8d6f5ffc6a7c24b630b8ac219371f5e8b29c12b247ee9b18c8e27203eb532
+  body: |
+    # Mariner definition for Industrial Injuries in the source
+
+    ## Authored interpretation
+
+    For Industrial Injuries benefits, the source’s mariner definition requires the specified shipboard contract-of-service employment to be treated as employed earner’s employment.
+
+    ## Scope and boundaries
+
+    DMG 078070 is deliberately separate from the other-benefits definition at 078071. The statutory versions and the special forces exclusion at 078072 remain relevant; the definitions are not equated.
+
+    ## Inspected source passages
+
+    - [DMG 078070, PDF page 5](https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=5)
+    - [DMG 078071, PDF page 5](https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=5)
+    - [DMG 078072, PDF page 5](https://assets.publishing.service.gov.uk/media/5a7f779940f0b6230268fabd/dmgch0707.pdf#page=5)
+
+    ## Evidence and review status
+
+    This is a model-assisted, unreviewed interpretation of selected passages in the frozen DWP source. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable rule. No specialist acceptance, current-law reconciliation or complete coverage of this chapter part is claimed. References to EU law, countries and benefits retain the scope and date context of the cited text; they do not establish applicability to a person or a later regime. Machine extraction may alter reading order and characters; no visual PDF review is claimed.
+
+    Source captured: 2026-09-15T19:45:20.233458Z. This is an acquisition time, not a publication or legal commencement date. The attachment publication date is not established by the frozen metadata. Source-stated dates require their own role and precision.
+
+    PDF SHA-256: `0ca8d6f5ffc6a7c24b630b8ac219371f5e8b29c12b247ee9b18c8e27203eb532`. Extracted pages SHA-256: `7375d9e98727f909c1efe0321340b929a153a64466d6d7161d6e1f6d86515424`.
+  semantic_relations:
+  - target: term/intl-mariner-other-benefits
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Adjacent substantive definitions distinguish Industrial Injuries from other-benefit conditions; they are associated without equivalence.
+    evidence:
+    - page: page/dmg-vol2-ch7-part7/0005
+      quote: "078070   For Industrial Injuries benefits a mariner is a person employed under a contract of\n         service\n\n         1.    on board any ship or vessel as a master or as a crew member or as a pilot on\n               board or in any other capacity on board and\n                                                                  1\n         2.    treated as employed earner's employment .\n                                                                           1 SS (II) (Mariners’ Ben) Regs, reg 1(2)"
+      locator: DMG 078070
+    - page: page/dmg-vol2-ch7-part7/0005
+      quote: "078071   For other benefits a mariner is a person employed under a contract of service on\n         board any ship or vessel\n\n         1.    as a master or\n\n         2.    as a crew member or\n\n         3.    in any other capacity on board when the employment in that other capacity is\n               with the ship or vessel or the crew or any passengers or cargo or mail carried\n               and the contract is entered into in the UK with a view to its performance (in\n               whole or in part) while the ship or vessel is on its voyage."
+      locator: DMG 078071

@@ -1,0 +1,90 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-supersession
+  '@type': skos:Concept
+  route: term/dmg-supersession
+  title: Supersession in the DMG
+  type: Concept
+  description: The DMG describes supersession as replacing a decision from a later date, subject to grounds,
+    and separates deciding whether an award changes from deciding the effective date and any overpayment.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': Supersession in the DMG
+    '@language': en-GB
+  skos:definition:
+    '@value': The DMG describes supersession as replacing a decision from a later date, subject to grounds,
+      and separates deciding whether an award changes from deciding the effective date and any overpayment.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': The chapter covers decisions of DMs and tribunals within specified conditions. The introductory
+      description does not supply all benefit-specific effective-date rules; decisions that can be revised are
+      treated separately.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol1-ch4/0003
+  - page/dmg-vol1-ch4/0007
+  - page/dmg-vol1-ch4/0015
+  source: https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=3
+  resource: https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=3
+  sources:
+  - id: dmg-vol1-ch4
+    title: 'DMG Vol 1 Ch 4: Supersession, suspension and termination '
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=3
+    retrieved_at: '2026-09-15T19:45:18.361556Z'
+    sha256: 9c96b49a78aa4dc40df8594cf65cbd435a681d0be3737729cd87882542d0e2ea
+  body: "# Supersession in the DMG\n\n## Authored interpretation\n\nThe DMG describes supersession as replacing
+    a decision from a later date, subject to grounds, and separates deciding whether an award changes from deciding
+    the effective date and any overpayment.\n\n## Scope and exceptions\n\nThe chapter covers decisions of DMs and
+    tribunals within specified conditions. The introductory description does not supply all benefit-specific effective-date
+    rules; decisions that can be revised are treated separately.\n\n## Inspected source passages\n\n- [DMG 04000,
+    PDF page 3](https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=3) —
+    DMG Vol 1 Ch 4: Supersession, suspension and termination .\n- [DMG 04009, PDF page 7](https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=7)
+    — DMG Vol 1 Ch 4: Supersession, suspension and termination .\n- [DMG 04050, PDF page 15](https://assets.publishing.service.gov.uk/media/6a105e7a1eb143220d8d27f1/dmg-ch-04.pdf#page=15)
+    — DMG Vol 1 Ch 4: Supersession, suspension and termination .\n\n## Evidence and review status\n\nModel-assisted
+    interpretation of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source
+    is DWP guidance, not a consolidated statement of legislation. This is an independent experimental publication,
+    not an official DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are
+    one-based file positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships
+    preserve extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current
+    applicability remain separate review tasks.\n\n- `dmg-vol1-ch4` PDF SHA-256: `9c96b49a78aa4dc40df8594cf65cbd435a681d0be3737729cd87882542d0e2ea`;
+    extracted pages SHA-256: `bef5fc9f04b2a78c5bb5dc99468f94a1841f1ef4afa117d47aa9c1e5040f3752`.\n"
+  semantic_relations:
+  - target: term/dmg-supersession-effective-date
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Determining when a supersession takes effect is an explicit task within the described process.
+    evidence:
+    - page: page/dmg-vol1-ch4/0015
+      quote: "04050 Once it has been decided that there are grounds for supersession, the DM should\n\n\n1. identify
+        the decision to be superseded\n\n\n2. investigate and determine the relevant facts\n\n\n3. decide whether
+        the facts mean that the terms of the award should change\n\n\n4. make a decision accordingly. That may be
+        either a decision which is different from the decision\nsuperseded or a decision not to supersede\n\n\n\
+        5. determine the date from which the supersession decision should take effect\n\n\n6. decide what, if any,
+        overpayment has occurred."
+      locator: DMG 04050
+  - target: term/dmg-overpayment-recoverability
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The supersession process includes considering whether an overpayment occurred; occurrence alone
+      does not establish recoverability.
+    evidence:
+    - page: page/dmg-vol1-ch4/0015
+      quote: "04050 Once it has been decided that there are grounds for supersession, the DM should\n\n\n1. identify
+        the decision to be superseded\n\n\n2. investigate and determine the relevant facts\n\n\n3. decide whether
+        the facts mean that the terms of the award should change\n\n\n4. make a decision accordingly. That may be
+        either a decision which is different from the decision\nsuperseded or a decision not to supersede\n\n\n\
+        5. determine the date from which the supersession decision should take effect\n\n\n6. decide what, if any,
+        overpayment has occurred."
+      locator: DMG 04050

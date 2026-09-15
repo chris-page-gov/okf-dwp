@@ -1,0 +1,87 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/dmg-first-tier-appeal
+  '@type': skos:Concept
+  route: term/dmg-first-tier-appeal
+  title: First-tier Tribunal appeal in the DMG
+  type: Concept
+  description: The appeals chapter distinguishes appealable decisions on claims and supersessions from
+    administrative decisions and subsidiary determinations, and describes how the post-2013 route reaches
+    HMCTS.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-decision
+    at: '2026-09-15T19:59:30Z'
+  observedAt: '2026-09-15T19:59:30Z'
+  skos:prefLabel:
+    '@value': First-tier Tribunal appeal in the DMG
+    '@language': en-GB
+  skos:definition:
+    '@value': The appeals chapter distinguishes appealable decisions on claims and supersessions from
+      administrative decisions and subsidiary determinations, and describes how the post-2013 route reaches
+      HMCTS.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Annexes, notice dates, reconsideration exceptions, jurisdiction and time limits remain necessary
+      dependencies. The source footer says Official - DWP Use Only although the PDF was acquired from a public
+      GOV.UK attachment; no inference about hidden material is made.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common decision making
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol1-ch6/0011
+  - page/dmg-vol1-ch6/0004
+  source: https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=11
+  resource: https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=11
+  sources:
+  - id: dmg-vol1-ch6
+    title: 'DMG Vol 1 Ch 6: Making appeals and staying'
+    author: organisation:dwp
+    resource:
+      https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=11
+    retrieved_at: '2026-09-15T19:45:18.546591Z'
+    sha256: dcd2a7ede4499792d9bc6762c94a2d6c0ca6e811cb077abbbd4e41e4d405a4e4
+  body: "# First-tier Tribunal appeal in the DMG\n\n## Authored interpretation\n\nThe appeals chapter distinguishes
+    appealable decisions on claims and supersessions from administrative decisions and subsidiary determinations,
+    and describes how the post-2013 route reaches HMCTS.\n\n## Scope and exceptions\n\nAnnexes, notice dates, reconsideration
+    exceptions, jurisdiction and time limits remain necessary dependencies. The source footer says Official - DWP
+    Use Only although the PDF was acquired from a public GOV.UK attachment; no inference about hidden material is
+    made.\n\n## Inspected source passages\n\n- [DMG 06040, PDF page 11](https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=11)
+    — DMG Vol 1 Ch 6: Making appeals and staying.\n- [DMG 06041, PDF page 11](https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=11)
+    — DMG Vol 1 Ch 6: Making appeals and staying.\n- [DMG 06007, PDF page 4](https://assets.publishing.service.gov.uk/media/6a212d4adbcb60fc6ccb2a0c/dmg-vol-1-ch-6.pdf#page=4)
+    — DMG Vol 1 Ch 6: Making appeals and staying.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of the 15 September 2026 source snapshot; unreviewed and requiring specialist review. The source is DWP guidance,
+    not a consolidated statement of legislation. This is an independent experimental publication, not an official
+    DWP document, an entitlement decision or an executable benefits rule.\n\nPDF page numbers are one-based file
+    positions. Machine extraction can alter reading order, footnotes and characters. Quoted relationships preserve
+    extracted text; no visual or specialist acceptance is claimed. Source dates, legal effects and current applicability
+    remain separate review tasks.\n\n- `dmg-vol1-ch6` PDF SHA-256: `dcd2a7ede4499792d9bc6762c94a2d6c0ca6e811cb077abbbd4e41e4d405a4e4`;
+    extracted pages SHA-256: `e95434f7e856adbd1c8550b369066644a6bf6aa7567af05a1d41768d3dae0c3e`.\n\nThe publicly
+    acquired chapter 6 PDF carries the printed footer “Official - DWP Use Only”. This observation is preserved alongside
+    its public acquisition URL; the source owner should clarify any conflict with intended reuse. It is not evidence
+    of access to unpublished material.\n"
+  semantic_relations:
+  - target: term/dmg-outcome-decision
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Appealable decisions are described by category and distinguished from administrative decisions
+      and component determinations.
+    evidence:
+    - page: page/dmg-vol1-ch6/0011
+      quote: "06040 Decisions which can be appealed are listed in Annex D to this Volume. They include decisions
+        on\n\nclaims and supersession whether as originally made or as revised 1.\n\n\n                        \
+        \                             1 SS Act 98 s 12(1) & Sch 3, SS CS (D&A) Regs, reg 26"
+      locator: DMG 06040
+    - page: page/dmg-vol1-ch6/0011
+      quote: "06041 Claimants might make an appeal against decisions which do not carry the right of appeal (see\n\
+        Annex E to this Volume). These are\n\n\n1. administrative decisions1\n\n\n2. determinations necessary to
+        an outcome decision2.\n\n\nWhere the FtT has no jurisdiction to hear the appeal, it will be struck out (see
+        DMG 06150 - 06153 and\nDMG 06230 - 06243).\n\n\n                                                       \
+        \                         1 SS Act 98, Sch 2; 2 s 12(2)"
+      locator: DMG 06041

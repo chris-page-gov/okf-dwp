@@ -1,0 +1,151 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsais-family-composition
+  '@type': skos:Concept
+  route: term/legacy-jsais-family-composition
+  title: Family composition for JSA(IB) and Income Support
+  type: Concept
+  description: The captured family chapter defines family composition for JSA(IB) and IS through
+    specified couple, lone-parent and child or young-person relationships, responsibility and
+    household membership.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-common-and-jsa-extension
+    at: '2026-09-15T20:42:53.696061Z'
+  observedAt: '2026-09-15T20:42:53.696061Z'
+  skos:prefLabel:
+    '@value': Family composition for JSA(IB) and Income Support
+    '@language': en-GB
+  skos:definition:
+    '@value': The captured family chapter defines family composition for JSA(IB) and IS through
+      specified couple, lone-parent and child or young-person relationships, responsibility and
+      household membership.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': This is a benefit-specific definition, not the ordinary meaning of family or a rule
+      for JSA(Cont), UC or Pension Credit. The source includes a particular deceased-child and
+      extended Child Benefit provision; current application and all family variants require separate
+      review.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - common and legacy JSA research
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol4-ch22/0003
+  - page/dmg-vol4-ch22/0011
+  - page/dmg-vol4-ch22/0015
+  source: https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf#page=3
+  resource:
+    https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf#page=3
+  sources:
+  - id: dmg-vol4-ch22
+    title: 'DMG Vol 4 Ch 22: Membership of the family'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf
+    retrieved_at: '2026-09-15T19:45:23.421750Z'
+    sha256: f8545cc90dbcffa59e0255fcf5a9335d94c0e29ee7e8a714385a146121959c0d
+  body: "# Family composition for JSA(IB) and Income Support\n\n## Authored interpretation\n\nThe captured
+    family chapter defines family composition for JSA(IB) and IS through specified couple, lone-parent
+    and child or young-person relationships, responsibility and household membership.\n\n## Scope and
+    exceptions\n\nThis is a benefit-specific definition, not the ordinary meaning of family or a rule
+    for JSA(Cont), UC or Pension Credit. The source includes a particular deceased-child and extended
+    Child Benefit provision; current application and all family variants require separate review.\n\n\
+    ## Inspected source passages\n\n- [DMG 22001, PDF page 3](https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf#page=3)
+    — DMG Vol 4 Ch 22: Membership of the family.\n- [DMG 22003, PDF page 3](https://assets.publishing.service.gov.uk/media/5eda59bc86650c4ab7bb11ee/dmgch22.pdf#page=3)
+    — DMG Vol 4 Ch 22: Membership of the family.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol4-ch22`: PDF SHA-256 `f8545cc90dbcffa59e0255fcf5a9335d94c0e29ee7e8a714385a146121959c0d`;
+    extracted pages SHA-256 `336e01c44bf057e8c30ad34752a8ea72e08961d201c6f61c71a3b897890d2c1e`.\n"
+  semantic_relations:
+  - target: term/legacy-jsais-child-responsibility
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The family definition depends on responsibility for a child or young person, which
+      has its own weekly and shared-care provisions.
+    evidence:
+    - page: page/dmg-vol4-ch22/0003
+      quote: "22003   A family is1\n\n        1.    a couple or\n\n        2.    a couple and any child
+        or young person who is\n\n              2.1      a member of the same household and\n\n      \
+        \        2.2      the responsibility of either or both members of the couple or\n\n        3.\
+        \    a person who is not a member of a couple (this will usually be a lone parent)\n         \
+        \     and any child or young person who is\n\n              3.1      a member of the same household
+        and\n\n              3.2      the responsibility of that person.\n\n        4.    a couple and
+        any child or young person who has\n\n              4.1      died and\n\n              4.2    \
+        \  CHB in respect of them is extended following their death2.\n\n        Note: The child or young
+        person stops being a member of the family when\n        entitlement to CHB ends.\n           \
+        \               1 JS Act 95, s 35(1); SS CB Act 92, s 137(1); 2 IS (Gen) Regs, reg 14(3), JSA
+        Regs, reg 76(3)\n\n\n\n\nVol 4 Amendment 61 June 2020"
+      locator: DMG 22003
+    - page: page/dmg-vol4-ch22/0011
+      quote: "22031   In any benefit week1 a child or young person can be treated as the responsibility
+        of\n        only one person2, except where3 the child or young person\n\n        1.     is\n\n\
+        \               1.1      being looked after by a LA under specified legislation or\n\n       \
+        \        1.2      being held in custody pending trial or sentencing or\n\n               1.3 \
+        \     in custody serving a sentence imposed by a court and\n\n        2.     is at home for only
+        part of the benefit week.\n\n        Responsibility cannot otherwise be shared by people who the
+        child or young person\n        spends part weeks with, for example weekdays with one parent and
+        weekends with\n        the other (but see DMG 22033).\n                          1 JSA Regs, reg
+        1(3); IS (Gen) Regs, reg 2(1); 2 JSA Regs, reg 77(5); IS (Gen) Regs, reg 15(4);\n            \
+        \                                                              3 JSA Regs, reg 77(4); IS (Gen)
+        Regs, reg 15(3)\n\n        Who is the responsible person"
+      locator: DMG 22031
+  - target: term/legacy-jsais-temporary-absence
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: Household membership is a separate part of the family definition and may continue
+      during a qualifying absence.
+    evidence:
+    - page: page/dmg-vol4-ch22/0003
+      quote: "22003   A family is1\n\n        1.    a couple or\n\n        2.    a couple and any child
+        or young person who is\n\n              2.1      a member of the same household and\n\n      \
+        \        2.2      the responsibility of either or both members of the couple or\n\n        3.\
+        \    a person who is not a member of a couple (this will usually be a lone parent)\n         \
+        \     and any child or young person who is\n\n              3.1      a member of the same household
+        and\n\n              3.2      the responsibility of that person.\n\n        4.    a couple and
+        any child or young person who has\n\n              4.1      died and\n\n              4.2    \
+        \  CHB in respect of them is extended following their death2.\n\n        Note: The child or young
+        person stops being a member of the family when\n        entitlement to CHB ends.\n           \
+        \               1 JS Act 95, s 35(1); SS CB Act 92, s 137(1); 2 IS (Gen) Regs, reg 14(3), JSA
+        Regs, reg 76(3)\n\n\n\n\nVol 4 Amendment 61 June 2020"
+      locator: DMG 22003
+    - page: page/dmg-vol4-ch22/0015
+      quote: "22041   The claimant’s household may include\n\n        1.     the claimant\n\n        2.\
+        \     the claimant’s partner or partners\n\n        3.     the members of a joint-claim couple\n\
+        \n        4.     any child or young person who is the responsibility of anyone in 1. or 2.\n\n\
+        \        This applies even if any of these people are temporarily living away from the other\n\
+        \        members of the family1, for example to work or visit relatives.\n\n        Note: The
+        definition of a claimant for JSA(IB) in DMG 22002\n                                          \
+        \                         1 JSA Regs, reg 78(1), (1A); IS (Gen) Regs, reg 16(1)\n\n\n\n      \
+        \  When can they not be treated as members of the\n        claimant’s household"
+      locator: DMG 22041
+  - target: term/jsais-family-income-attribution
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The family definition identifies the relevant relationship and responsibility context
+      for later family-income questions; it does not itself decide which income counts.
+    evidence:
+    - page: page/dmg-vol4-ch22/0003
+      quote: "22001   This Chapter gives guidance on how to establish membership of a family and\n   \
+        \     membership of the claimant's household for JSA(IB) and IS. The guidance relates to\n   \
+        \     both benefits, unless the text states otherwise.\n\n\n        Meaning of claimant"
+      locator: DMG 22001
+    - page: page/dmg-vol4-ch22/0003
+      quote: "22003   A family is1\n\n        1.    a couple or\n\n        2.    a couple and any child
+        or young person who is\n\n              2.1      a member of the same household and\n\n      \
+        \        2.2      the responsibility of either or both members of the couple or\n\n        3.\
+        \    a person who is not a member of a couple (this will usually be a lone parent)\n         \
+        \     and any child or young person who is\n\n              3.1      a member of the same household
+        and\n\n              3.2      the responsibility of that person.\n\n        4.    a couple and
+        any child or young person who has\n\n              4.1      died and\n\n              4.2    \
+        \  CHB in respect of them is extended following their death2.\n\n        Note: The child or young
+        person stops being a member of the family when\n        entitlement to CHB ends.\n           \
+        \               1 JS Act 95, s 35(1); SS CB Act 92, s 137(1); 2 IS (Gen) Regs, reg 14(3), JSA
+        Regs, reg 76(3)\n\n\n\n\nVol 4 Amendment 61 June 2020"
+      locator: DMG 22003

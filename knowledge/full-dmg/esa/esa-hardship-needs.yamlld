@@ -1,0 +1,87 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-hardship-needs
+  '@type': skos:Concept
+  route: term/esa-hardship-needs
+  title: Hardship needs and evidence in the ESA source
+  type: Concept
+  description: The source separates hardship about immediate basic necessities from the work capability assessment and requires reasons and evidence for the hardship decision.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': Hardship needs and evidence in the ESA source
+    '@language': en-GB
+  skos:definition:
+    '@value': The source separates hardship about immediate basic necessities from the work capability assessment and requires reasons and evidence for the hardship decision.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 53140–53152 describe reduced-rate ESA(IR) hardship payments with conditions, claim and evidence requirements. Financial hardship is not LCW/LCWRA, and a WCA finding alone does not establish hardship payment entitlement.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 53
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol9-ch53/0031
+  - page/dmg-vol9-ch53/0032
+  source: https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=31
+  resource: https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=31
+  sources:
+  - id: dmg-vol9-ch53
+    title: 'DMG Vol 9 Ch 53: ESA –  WfI, WRA, sanctions and hardship, disqualification and advance awards'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf
+    retrieved_at: '2026-09-15T19:45:30.951851Z'
+    sha256: 4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8
+  body: |
+    # Hardship needs and evidence in the ESA source
+
+    ## Authored interpretation
+
+    The source separates hardship about immediate basic necessities from the work capability assessment and requires reasons and evidence for the hardship decision.
+
+    ## Scope and boundaries
+
+    DMG 53140–53152 describe reduced-rate ESA(IR) hardship payments with conditions, claim and evidence requirements. Financial hardship is not LCW/LCWRA, and a WCA finding alone does not establish hardship payment entitlement.
+
+    ## Inspected source passages
+
+    - [DMG 53140, PDF page 31](https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=31)
+    - [DMG 53141, PDF page 31](https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=31)
+    - [DMG 53150, PDF page 32](https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=32)
+    - [DMG 53151, PDF page 32](https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=32)
+    - [DMG 53152, PDF page 32](https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=32)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:30.951851Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8`. Extracted pages SHA-256: `739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1`.
+  semantic_relations:
+  - target: term/esa-limited-capability-work
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source explicitly separates the hardship test from the WCA rather than treating one finding as evidence of the other.
+    evidence:
+    - page: page/dmg-vol9-ch53/0031
+      quote: "53141 Hardship is not defined in the law. It should therefore be given its normal everyday meaning 1 of\n“severe suffering or privation”. Privation means a lack of the necessities of life.\n\n\nNote: The test for hardship is not related to the WCA which is the functional assessment to determine\neligibility for ESA. A claimant is judged to be in hardship if they have insufficient funds to meet their\nimmediate, essential and basic necessities of life, i.e. accommodation, food, heating and lighting, clothing\nand hygiene requirements.\n\n\n                                                                                                 1 R(SB) 19/82"
+      locator: DMG 53141
+  - target: term/dmg-evidence-assessment
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source requires the reasons, factors and evidence, including reasons for accepting or rejecting evidence, to be recorded.
+    evidence:
+    - page: page/dmg-vol9-ch53/0032
+      quote: "53150 DMs should record\n\n\n1. the reasons why hardship will or will not occur and\n\n\n2. the factors and evidence considered\n\n\nas part of the decision on hardship payments."
+      locator: DMG 53150
+    - page: page/dmg-vol9-ch53/0032
+      quote: "53151 DMs must record their reasons for\n\n\n1. rejecting any evidence or\n\n\n2. deciding what evidence to accept if faced with conflicting evidence.\n\n\n\nWhen a hardship payment is made"
+      locator: DMG 53151

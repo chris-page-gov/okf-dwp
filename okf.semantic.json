@@ -16,7 +16,9 @@
     "authoritative_inputs": [
       "knowledge/**/*.yamlld",
       "source/inventory.json",
-      "source/pages/*.json"
+      "source/pages/*.json",
+      "source/full-dmg-2026-09-15/inventory.json",
+      "source/full-dmg-2026-09-15/pages/*.json"
     ],
     "outputs": [
       {
@@ -38,6 +40,11 @@
         "path": "bundle/relationships.json",
         "role": "relationship-runtime",
         "generated": true
+      },
+      {
+        "path": "full-dmg/**",
+        "role": "indexed-runtime-and-sharded-semantic-projections",
+        "generated": true
       }
     ],
     "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
@@ -45,7 +52,22 @@
     "limitations": [
       "Independent experimental source discovery; no specialist legal review or full Foundry production assurance.",
       "Authored references are navigation; explicit semantic relations are source-backed model proposals awaiting specialist review. PDF page containment is deterministically derived.",
-      "Chapter 83 extraction quality varies. Historical amendments are retained outside default page search."
+      "Machine extraction has known defects. Full-DMG search includes clearly labelled historical amendments; the preserved Pension Credit pilot keeps them outside its default page search."
+    ],
+    "deliveries": [
+      {
+        "id": "pension-credit-pilot",
+        "state": "generated-yaml-ld-assertion-graph",
+        "path": "bundle/okf-bundle.yamlld",
+        "authored_scope": "knowledge/**/*.yamlld excluding knowledge/full-dmg/**"
+      },
+      {
+        "id": "full-dmg",
+        "state": "generated-yaml-ld-sharded-graph",
+        "path": "full-dmg/okf-explorer.json",
+        "authored_scope": "existing pilot plus knowledge/full-dmg/**/*.yamlld",
+        "status": "published-research-candidate; recorded-public-browser-journeys-passed"
+      }
     ]
   },
   "relationship_contract": {
@@ -79,11 +101,19 @@
       "uv sync --locked"
     ],
     "build": [
-      "uv run --locked python scripts/build_bundle.py"
+      "uv run --locked python scripts/build_bundle.py",
+      "uv run --locked python scripts/build_full_dmg.py"
     ],
     "check": [
       "uv run --locked python scripts/build_bundle.py --check",
-      "uv run --locked python scripts/validate_bundle.py"
+      "uv run --locked python scripts/validate_bundle.py",
+      "uv run --locked python scripts/build_full_dmg.py --check",
+      "uv run --locked python scripts/validate_full_dmg.py",
+      "uv run --locked python scripts/report_full_dmg_coverage.py --check",
+      "node --experimental-strip-types scripts/check_full_dmg_consumer.mjs",
+      "uv run --locked python scripts/evaluate_full_dmg.py --check",
+      "uv run --locked python scripts/reconcile_full_dmg_references.py --check",
+      "uv run --locked python scripts/verify_full_dmg_trials.py --check"
     ]
   },
   "reader": {
@@ -106,6 +136,16 @@
       "rights",
       "freshness",
       "lifecycle"
+    ],
+    "additional_deliveries": [
+      {
+        "scope": "full-dmg",
+        "delivery": "indexed-large-corpus",
+        "descriptor": "full-dmg/okf-explorer.json",
+        "consumer_commit": "8e01dfe16538c6045ee1d55b64c3f6e24bada9f7",
+        "verification_status": "passed-for-recorded-public-journeys",
+        "browser_receipt": "validation/full-dmg-browser.json"
+      }
     ]
   }
 }

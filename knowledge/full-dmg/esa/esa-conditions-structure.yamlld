@@ -1,0 +1,78 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-conditions-structure
+  '@type': skos:Concept
+  route: term/esa-conditions-structure
+  title: ESA basic and additional conditions in the source
+  type: Concept
+  description: The source distinguishes basic conditions from additional ESA(Cont) or ESA(IR) conditions, the claim requirement and National Insurance number provisions.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-esa-research
+    at: '2026-09-15T20:32:30.203238Z'
+  observedAt: '2026-09-15T20:32:30.203238Z'
+  skos:prefLabel:
+    '@value': ESA basic and additional conditions in the source
+    '@language': en-GB
+  skos:definition:
+    '@value': The source distinguishes basic conditions from additional ESA(Cont) or ESA(IR) conditions, the claim requirement and National Insurance number provisions.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': DMG 41011–41013 must be read together with exceptions, mixed-age provisions and duration rules. LCW is one basic condition, not a sufficient entitlement decision. No current New Style ESA or UC test is inferred.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - ESA
+  - chapter 41
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol8-ch41/0005
+  - page/dmg-vol8-ch41/0006
+  source: https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=5
+  resource: https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=5
+  sources:
+  - id: dmg-vol8-ch41
+    title: 'DMG Vol 8 Ch 41: ESA conditions of entitlement '
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf
+    retrieved_at: '2026-09-15T19:45:28.939434Z'
+    sha256: bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418
+  body: |
+    # ESA basic and additional conditions in the source
+
+    ## Authored interpretation
+
+    The source distinguishes basic conditions from additional ESA(Cont) or ESA(IR) conditions, the claim requirement and National Insurance number provisions.
+
+    ## Scope and boundaries
+
+    DMG 41011–41013 must be read together with exceptions, mixed-age provisions and duration rules. LCW is one basic condition, not a sufficient entitlement decision. No current New Style ESA or UC test is inferred.
+
+    ## Inspected source passages
+
+    - [DMG 41011, PDF page 5](https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=5)
+    - [DMG 41012, PDF page 6](https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=6)
+    - [DMG 41013, PDF page 6](https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=6)
+
+    ## Evidence and review status
+
+    This is an unreviewed, model-assisted interpretation of selected passages in the frozen DWP guidance. It is an independent experimental publication, not an official DWP document, an entitlement decision or an executable benefits rule. ESA(Cont), ESA(IR), New Style ESA, UC and Pension Credit are not equated. The captured source contains historical, transitional and potentially superseded provisions; no complete or current legal rule set is claimed. Machine extraction can affect reading order, footnotes and characters. No visual PDF review or specialist acceptance is claimed.
+
+    Source captured: 2026-09-15T19:45:28.939434Z. This is an acquisition time, not a publication, revision or commencement date. Source-stated dates retain their own role and precision.
+
+    PDF SHA-256: `bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418`. Extracted pages SHA-256: `039044b6fddda8d3476d3fa9fce766d7da6b12508704fc4fd2a1b97dd870a227`.
+  semantic_relations:
+  - target: term/esa-limited-capability-work
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: LCW is explicitly one of the basic conditions; the source separately requires additional conditions, a claim and NINO provisions.
+    evidence:
+    - page: page/dmg-vol8-ch41/0005
+      quote: "41011 Claimants are entitled to ESA if they\n\n\n1. satisfy the basic conditions1 (see DMG 41012) and\n\n\n2. satisfy the additional conditions for\n\n\n      2.1 ESA(Cont)2 (see DMG 41020 et seq) or\n\n\n      2.2 ESA(IR)3 (see DMG 41091) and\n\n\n3. make a claim4 (see DMG Chapter 02) and\n\n\n4. satisfy the NINO provisions5 (see DMG Chapter 02).\n\n\nNote 1: When people claim ESA(IR) for a partner, their partner will also have to satisfy 4..\n\n\nNote 2: See DMG 41800 et seq for guidance on where entitlement to ESA(Cont) is limited to the\nmaximum number of days.\n\n\n                                1 WR Act 07, s 1(2) & (3); 2 s 1(2)(a) & Sch 1, Part 1; 3 s 1(2)(b) & Sch 1, Part 2;\n                                                                             4 SS A Act 92, s 1(1) & (4); 5 s 1(1A)"
+      locator: DMG 41011
+    - page: page/dmg-vol8-ch41/0006
+      quote: "41012 Claimants are entitled to ESA1 if they\n\n\n1. have LCW (see DMG Chapter 42) and\n\n\n2. are aged 16 or over and\n\n\n3. have not reached pensionable age (see DMG 41014) and\n\n\n4. are in GB (except for certain temporary absences abroad) (see DMG Chapter 07 Part 2) and\n\n\n5. are not entitled to IS and\n\n\n6. are not\n\n\n      6.1 entitled to JSA or\n\n\n      6.2 a member of a couple entitled to joint-claim JSA excluding a couple as in DMG 20023 et seq 2.\n\n\n                                     1 WR Act 07, s 1(3); 2 s 1(6) & (6A); JS Act 95, s 1(2B) & Sch 1, para 8A\n\n\nNote 1: See DMG 41800 et seq for guidance on where entitlement to ESA(Cont) is limited to the\nmaximum number of days.\n\n\nNote 2: See DMG 41015 et seq for guidance on exceptions to the requirement not to have reached\npensionable age for mixed-age couples."
+      locator: DMG 41012

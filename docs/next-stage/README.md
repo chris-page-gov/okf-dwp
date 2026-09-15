@@ -2,7 +2,15 @@
 
 **Started 15 September 2026. Content freeze: 24 September. Seminar: 30 September.**
 
+The owner has now authorised [unattended full-DMG completion](unattended-completion.md). Follow the [durable checkpoint](../../evaluation/full-dmg-progress.json) and [finite semantic worklist](full-dmg-semantic-workplan.md) for current work; the table below describes the established pilot baseline.
+
 This is an independent public research project. A source capture, a model proposal and a specialist-approved rule are different deliverables. No individual entitlement or payment decision is implemented.
+
+## Full-DMG research update
+
+All 331 frozen DMG PDFs are acquired: 14,743 measured pages. Bounded proposals now cover all 78 substantive PDF units, with 271 concepts and 343 proposals including the preserved pilot. The remaining 253 units have recorded research outcomes and gaps. The [160 observed source-guided trials](../../evaluation/full-dmg-behavioural/summary.json) preserve partial answers and underspecified rubrics; no specialist or live-runtime acceptance is implied. The [current checkpoint](../../evaluation/full-dmg-progress.json) records final consumer and publication gates.
+
+The table and sequence below preserve the initial pilot assessment. Consult the [research gap register](full-dmg-research-gaps.md) for remaining interpretation, extraction and operational work.
 
 ## Where we are
 

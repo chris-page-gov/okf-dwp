@@ -1,0 +1,92 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/jsais-gross-employed-earnings
+  '@type': skos:Concept
+  route: term/jsais-gross-employed-earnings
+  title: Gross employed earnings for JSA and Income Support
+  type: Concept
+  description: The source describes gross earnings after qualifying employment expenses and before
+    authorised employer deductions, with a specific qualification for recovery of overpaid wages.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-full-dmg-jsa-income-support
+    at: '2026-09-15T20:19:08.289888Z'
+  observedAt: '2026-09-15T20:19:08.289888Z'
+  skos:prefLabel:
+    '@value': Gross employed earnings for JSA and Income Support
+    '@language': en-GB
+  skos:definition:
+    '@value': The source describes gross earnings after qualifying employment expenses and before
+      authorised employer deductions, with a specific qualification for recovery of overpaid wages.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Gross earnings in this guidance should not be equated automatically with a payslip
+      label or a bank deposit. Whether a payment is earnings, the period it covers and statutory
+      exclusions require separate review. Payments derived from employment can relate to past work;
+      employment ending has distinct provisions.
+    '@language': en-GB
+  tags:
+  - full DMG
+  - JSA
+  - Income Support
+  - concept
+  - unofficial
+  - unreviewed
+  references:
+  - page/dmg-vol5-ch26/0007
+  - page/dmg-vol5-ch26/0010
+  - page/dmg-vol5-ch26/0009
+  source:
+    https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf#page=7
+  resource:
+    https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf#page=7
+  sources:
+  - id: dmg-vol5-ch26
+    title: 'DMG Vol 5 Ch 26: Employed earners'
+    author: organisation:dwp
+    resource: https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf
+    retrieved_at: '2026-09-15T19:45:25.089797Z'
+    sha256: fe619693d2f8cc78cac3786dadab88e81467ec56d38f00727285612af92b80c9
+  body: "# Gross employed earnings for JSA and Income Support\n\n## Authored interpretation\n\nThe source
+    describes gross earnings after qualifying employment expenses and before authorised employer deductions,
+    with a specific qualification for recovery of overpaid wages.\n\n## Scope and exceptions\n\nGross
+    earnings in this guidance should not be equated automatically with a payslip label or a bank deposit.
+    Whether a payment is earnings, the period it covers and statutory exclusions require separate review.
+    Payments derived from employment can relate to past work; employment ending has distinct provisions.\n\
+    \n## Inspected source passages\n\n- [DMG 26016, PDF page 7](https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf#page=7)
+    — DMG Vol 5 Ch 26: Employed earners.\n- [DMG 26015, PDF page 7](https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf#page=7)
+    — DMG Vol 5 Ch 26: Employed earners.\n- [DMG 26027, PDF page 10](https://assets.publishing.service.gov.uk/media/69e0f9ba20b52e4144868938/dmg-Ch-26.pdf#page=10)
+    — DMG Vol 5 Ch 26: Employed earners.\n\n## Evidence and review status\n\nModel-assisted interpretation
+    of selected passages in the 15 September 2026 frozen source snapshot. Specialist review is required.
+    Source acquisition, source revision, legal effective dates and this record’s authoring time are separate.\n\
+    \nThis is an independent experimental publication, not an official DWP document, individual advice,
+    an entitlement decision or an executable rule. Machine-extracted text may alter reading order, footnotes
+    and characters. No PDF visual inspection, whole-chapter coverage or behavioural evaluation pass is
+    claimed by this record.\n\n- `dmg-vol5-ch26`: PDF SHA-256 `fe619693d2f8cc78cac3786dadab88e81467ec56d38f00727285612af92b80c9`;
+    extracted pages SHA-256 `f4089f7088e6a987d028072f4968eb39f2686b7a588e2c38f8ebc1cb3042102a`.\n"
+  semantic_relations:
+  - target: term/jsais-net-employed-earnings
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source defines net earnings by specified deductions from gross earnings.
+    evidence:
+    - page: page/dmg-vol5-ch26/0009
+      quote: "26020 Net earnings are gross earnings less1\n\n\n1. income tax and\n\n\n2. Class 1 SS contributions
+        and\n\n\n3. half of any sum paid by the employee, towards an occupational or personal pension
+        scheme.\n\n\n                                                          1 JSA Regs, reg 99(4);
+        IS (Gen) Regs, reg 36(3)"
+      locator: DMG 26020
+  - target: term/jsais-income-assessment-period
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The source routes the period over which earnings are taken into account to chapter 25
+      before deciding the claim.
+    evidence:
+    - page: page/dmg-vol5-ch26/0007
+      quote: "26015 The words “derived from” mean having their origins in1. Payments made for past or
+        present\nemployment should be treated as earnings, unless they are excluded under DMG 26014. Work
+        out the\nperiod for which earnings are to be taken into account before deciding the claim (see
+        DMG Chapter 25).\n\n\n                                                                       \
+        \                        1 R(SB) 21/86\n\n\n\nMeaning of gross earnings"
+      locator: DMG 26015
