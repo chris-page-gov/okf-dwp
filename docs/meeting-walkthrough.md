@@ -4,6 +4,8 @@
 an inspectable, source-linked knowledge bundle. This is an independent
 experimental exemplar, not an official DWP publication.
 
+[Open the prepared demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.yamlld&q=84351#question/pc001).
+
 ## 1. Start with a question — two minutes
 
 Open the bundle in OKF Explorer, then choose **Where does the guide explain

@@ -4,7 +4,7 @@
 
 This repository turns the public [DWP Decision makers’ guide, volumes 13 and 14](https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide) into source-linked Markdown, a YAML-LD semantic graph and an OKF Explorer bundle. It demonstrates how a pensions specialist or an AI can find source evidence, inspect relationships and see what remains uncertain.
 
-[Read the bundle](bundle/index.md) · [Ten-minute meeting walkthrough](docs/meeting-walkthrough.md) · [Discovery findings](docs/discovery.md) · [AI interrogation guide](AI_USAGE.md) · [Public notice and rights](NOTICE.md)
+[Open the live YAML-LD demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.yamlld&q=84351#question/pc001) · [Read the bundle](bundle/index.md) · [Ten-minute meeting walkthrough](docs/meeting-walkthrough.md) · [Discovery findings](docs/discovery.md) · [AI interrogation guide](AI_USAGE.md) · [Public notice and rights](NOTICE.md)
 
 ## What is here
 
@@ -21,7 +21,7 @@ The capture date is **15 September 2026**. The source landing page reported its 
 
 ## Try it
 
-The exact public Explorer launch link and browser verification are recorded in `validation/browser.json` after publication. You can also open OKF Explorer and load `bundle/okf-bundle.json` as a local file.
+[Launch the browser-verified demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.yamlld&q=84351#question/pc001). It uses the immutable captured bundle and starts with the capital-disregard question and matching evidence. [Browser verification](validation/browser.json) records the exact snapshot and journeys. You can also load `bundle/okf-bundle.json` as a local file in Explorer.
 
 Start with **Where does the guide explain capital disregards?** (`question/pc001`). Follow the question to chapter 84, PDF page 35, inspect the original source and its hash, then explore the relationships. Use `question/pc003` to examine historical context and extraction limits, and `question/pc008` for the scope boundary.
 

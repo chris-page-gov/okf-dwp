@@ -1,0 +1,63 @@
+{
+  "schema": "okf-dwp-browser-acceptance.v1",
+  "status": "passed",
+  "checked_at": "2026-09-15T14:41:27.631944+00:00",
+  "browser": "Microsoft Edge via installed browser extension",
+  "content_commit": "79d21c758e37948fd6d4bde0f1b4d97b266e2e4f",
+  "snapshot_id": "dwp-pension-credit-2026-09-15-bdee692f1126",
+  "launch_url": "https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.yamlld&q=84351#question/pc001",
+  "verified_urls": [
+    "https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.yamlld&q=84351#question/pc001",
+    "https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.json&q=84351#page/84/0035",
+    "https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.yamlld&view=graph&q=84351#question/pc001"
+  ],
+  "artefacts": {
+    "okf-bundle.json": "98f87f4237e5b9cbc326c70ed59b2e408abde9613fb7ffb8765b02fecd07991a",
+    "okf-bundle.yamlld": "fe8230325a10bc72e4a76d33684ba7586e7d9d2d2ead02c459bf3b51328a14ef",
+    "okf-bundle.jsonld": "a37d62797c19ec149ffe70ae2ca5d4151825e2b884d428ea76945c6155c48433"
+  },
+  "checks": [
+    {
+      "id": "json-import",
+      "status": "passed",
+      "observed": "Expected Pension Credit bundle identity, page/84/0035 and query84351 restored."
+    },
+    {
+      "id": "yaml-ld-direct-import",
+      "status": "passed",
+      "observed": "Expected bundle identity, question/pc001, references and matching page results restored directly from YAML-LD."
+    },
+    {
+      "id": "snapshot-boundary",
+      "status": "passed",
+      "observed": "Review boundaries displayed exact bdee692f1126 snapshot, independent publisher and limitations."
+    },
+    {
+      "id": "source-text-rendering",
+      "status": "passed",
+      "observed": "Chapter84page35 shows literal original1/2/3/4 numbering, paragraph84351, footnotes and official PDF#page=35 link."
+    },
+    {
+      "id": "search",
+      "status": "passed",
+      "observed": "84351 returns three records: chapter84pages1/35 and questionpc001."
+    },
+    {
+      "id": "graph",
+      "status": "passed",
+      "observed": "Filtered graph displays two connected nodes and one references relationship."
+    },
+    {
+      "id": "relationship-evidence",
+      "status": "passed",
+      "observed": "Inspected page84/0035→chapter84 containment with predicate, direction, evidence locator and source PDF SHA256; verified before the presentation-only correction."
+    },
+    {
+      "id": "console",
+      "status": "passed",
+      "observed": "No captured errors or warnings in final JSON and YAML-LD tabs."
+    }
+  ],
+  "scope": "Installed Edge smoke journeys and visual inspection; not exhaustive accessibility, cross-browser or specialist legal assurance. The inspected Explorer source pin is recorded separately; live deployed app byte identity was not independently attested.",
+  "corrected_finding": "Initial candidate Markdown renumbered source lists. Corrected literal text display was then verified with the actual renderer over all744 pages and in the live browser."
+}
