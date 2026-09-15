@@ -5,7 +5,7 @@
 - Keep the authoritative GOV.UK source, extracted text and project-authored interpretation distinct.
 - Do not give individual entitlement decisions, calculate awards or request claimant personal data.
 - Read `okf.semantic.json` and `okf.publication.json` before changing the publication.
-- Authored semantic inputs are `knowledge/*.yamlld`; immutable acquisition evidence is under `source/`.
+- Authored semantic inputs are `knowledge/**/*.yamlld`; immutable acquisition evidence is under `source/`.
 - Generate bundle projections and record pages through the build script; never hand-edit them.
 - Preserve source file hashes, page locators, extraction limitations and historical classifications.
 - Use standard Markdown links, stable absolute semantic identifiers and explicit local routes.

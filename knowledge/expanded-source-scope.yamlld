@@ -1,0 +1,125 @@
+'@context': https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/resource/full-dmg-collection
+  route: resource/full-dmg-collection
+  title: Full Decision makers guide collection
+  type: External reference
+  description: Metadata census of 331 linked PDFs across volumes 1–14, memos and references. Only
+    the existing 36 Pension Credit PDFs have been acquired for full-text search.
+  generated:
+    by: process:codex-stage-two-source-discovery
+    at: '2026-09-15T16:55:18.464057Z'
+  observedAt: '2026-09-15T16:55:18.464057Z'
+  status: draft
+  authority: project-authored reference to official source metadata
+  source: https://www.gov.uk/government/collections/decision-makers-guide-staff-guide
+  resource: https://www.gov.uk/government/collections/decision-makers-guide-staff-guide
+  tags:
+  - source discovery
+  - DMG
+  dcterms:extent: Metadata and applicability discovery; no additional PDF source pages included in
+    this bundle.
+  references:
+  - guide/semantic-stage-two
+  body: "# Full Decision makers guide collection\n\nMetadata census of 331 linked PDFs across volumes
+    1–14, memos and references. Only the existing 36 Pension Credit PDFs have been acquired for full-text
+    search.\n\n[Official publication](https://www.gov.uk/government/collections/decision-makers-guide-staff-guide).
+    [Frozen census and receipts](https://github.com/chris-page-gov/okf-dwp/tree/main/source/discovery-2026-09-15).
+    DWP distinguishes DMG and ADM applicability; similar terms do not establish identical conditions across
+    benefits. The metadata observation date does not establish current legal applicability."
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/resource/advice-for-decision-making
+  route: resource/advice-for-decision-making
+  title: 'Advice for decision making: staff guide'
+  type: External reference
+  description: 'Separate guidance family identified by DWP for Universal Credit, PIP and contribution-based
+    JSA/ESA for people eligible for Universal Credit. Metadata census only: 182 PDFs, no ADM chapter text
+    acquired here.'
+  generated:
+    by: process:codex-stage-two-source-discovery
+    at: '2026-09-15T16:55:18.464057Z'
+  observedAt: '2026-09-15T16:55:18.464057Z'
+  status: draft
+  authority: project-authored reference to official source metadata
+  source: https://www.gov.uk/government/publications/advice-for-decision-making-staff-guide
+  resource: https://www.gov.uk/government/publications/advice-for-decision-making-staff-guide
+  tags:
+  - source discovery
+  - ADM
+  dcterms:extent: Metadata and applicability discovery; no additional PDF source pages included in
+    this bundle.
+  references:
+  - guide/semantic-stage-two
+  body: "# Advice for decision making: staff guide\n\nSeparate guidance family identified by DWP for Universal
+    Credit, PIP and contribution-based JSA/ESA for people eligible for Universal Credit. Metadata census
+    only: 182 PDFs, no ADM chapter text acquired here.\n\n[Official publication](https://www.gov.uk/government/publications/advice-for-decision-making-staff-guide).
+    [Frozen census and receipts](https://github.com/chris-page-gov/okf-dwp/tree/main/source/discovery-2026-09-15).
+    DWP distinguishes DMG and ADM applicability; similar terms do not establish identical conditions across
+    benefits. The metadata observation date does not establish current legal applicability."
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/resource/universal-credit-eligibility
+  route: resource/universal-credit-eligibility
+  title: 'Universal Credit: eligibility'
+  type: External reference
+  description: Claimant-facing official information recorded for journey and applicability
+    discovery. It is not a complete benefits decision specification.
+  generated:
+    by: process:codex-stage-two-source-discovery
+    at: '2026-09-15T16:55:18.464057Z'
+  observedAt: '2026-09-15T16:55:18.464057Z'
+  status: draft
+  authority: project-authored reference to official source metadata
+  source: https://www.gov.uk/universal-credit/eligibility
+  resource: https://www.gov.uk/universal-credit/eligibility
+  tags:
+  - source discovery
+  - Universal Credit
+  dcterms:extent: Metadata and applicability discovery; no additional PDF source pages included in
+    this bundle.
+  references:
+  - guide/semantic-stage-two
+  body: "# Universal Credit: eligibility\n\nClaimant-facing official information recorded for journey
+    and applicability discovery. It is not a complete benefits decision specification.\n\n[Official publication](https://www.gov.uk/universal-credit/eligibility).
+    [Frozen census and receipts](https://github.com/chris-page-gov/okf-dwp/tree/main/source/discovery-2026-09-15).
+    DWP distinguishes DMG and ADM applicability; similar terms do not establish identical conditions across
+    benefits. The metadata observation date does not establish current legal applicability."
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/guide/semantic-stage-two
+  route: guide/semantic-stage-two
+  title: 'Next stage: semantic map and reviewed journeys'
+  type: Research navigation
+  description: 26 individually authored concepts, 15 source-backed semantic proposals, a
+    capital-disregard review candidate and expanded staff/persona journeys. Content freeze 24
+    September; seminar 30 September.
+  generated:
+    by: process:codex-semantic-stage-two
+    at: '2026-09-15T16:55:18.464057Z'
+  observedAt: '2026-09-15T16:55:18.464057Z'
+  status: draft
+  authority: project-authored next-stage research
+  tags:
+  - start here
+  - semantic map
+  - next stage
+  - seminar
+  references:
+  - term/capital-disregards
+  - rule-candidate/capital-disregard-sequence
+  - question/stage2-001
+  - question/stage2-002
+  - question/stage2-003
+  - question/stage2-004
+  - question/stage2-005
+  - question/stage2-006
+  - resource/okf-uk-legislation
+  - resource/cpag-welfare-benefits-handbook
+  - resource/full-dmg-collection
+  - resource/advice-for-decision-making
+  - resource/universal-credit-eligibility
+  body: "# Next stage: semantic map and reviewed journeys\n\nThe first semantic pilot adds explicit relationships
+    to individual concept files. All are unreviewed proposals supported by exact captured DWP passages.
+    No rule is executable and no staff approval is implied.\n\n[Read the semantic map and evidence register](https://github.com/chris-page-gov/okf-dwp/blob/main/bundle/semantic-map.md).
+    [Inspect the status, gaps and delivery plan](https://github.com/chris-page-gov/okf-dwp/blob/main/docs/next-stage/README.md).\n\
+    \nStart with the capital-disregard candidate and its evidence, duration and assessment-sequence links.
+    Compare the projected user questions with the missing evidence and review requirements. CPAG contents
+    widen topic discovery only; the handbook text and its legal analysis are not present.\n\nFull DMG
+    is a separate acquisition target: 331 PDFs in the metadata census, of which 36 are currently acquired.
+    ADM has a separate 182-PDF census. The seminar website and personal-AI/audio connection remain feasibility
+    work until actual tool calls and room rehearsal pass."

@@ -1,0 +1,54 @@
+---
+'@id': https://chris-page-gov.github.io/okf-dwp/id/term/capital-disregard-evidence
+'@type': skos:Concept
+route: term/capital-disregard-evidence
+title: Evidence for a capital disregard
+type: Concept
+description: The evidence question described in the captured guidance when considering whether
+  capital can be disregarded. This does not specify an approved list of documents, a fraud rule or
+  an automated rejection.
+status: draft
+authority: model-assisted source interpretation; unreviewed
+generated:
+  by: process:codex-semantic-stage-two
+  at: '2026-09-15T16:57:46Z'
+observedAt: '2026-09-15T16:57:46Z'
+skos:prefLabel:
+  '@value': Evidence for a capital disregard
+  '@language': en-GB
+skos:definition:
+  '@value': The evidence question described in the captured guidance when considering whether
+    capital can be disregarded. This does not specify an approved list of documents, a fraud rule or
+    an automated rejection.
+  '@language': en-GB
+skos:scopeNote:
+  '@value': Pension Credit; captured DMG guidance, not a finding about current law or a claimant.
+    Specialist review required.
+  '@language': en-GB
+tags:
+- Pension Credit
+- semantic pilot
+- unreviewed
+source: https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=36
+resource:
+  https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=36
+sources:
+- author: process:dwp-source-publication
+  id: dmg-vol14-ch84
+  resource:
+    https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=36
+  retrieved_at: '2026-09-15T14:21:03Z'
+  sha256: f5c610b29bdb81e11736409b7f33ccf7917a4d8945f2821802801073e0d753ee
+  title: 'DMG Vol 14 Ch 84: Deemed weekly income from capital'
+id: term/capital-disregard-evidence
+dcterms:references:
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/page/84/0036
+---
+
+# Evidence for a capital disregard
+
+The evidence question described in the captured guidance when considering whether capital can be disregarded. This does not specify an approved list of documents, a fraud rule or an automated rejection.
+
+Project-authored interpretation awaiting specialist review. Evidence: [DMG 84354, PDF page 36](https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=36); source SHA-256 `f5c610b29bdb81e11736409b7f33ccf7917a4d8945f2821802801073e0d753ee`. The date records this capture, not legal currency.
+
+[Research reference: Chapter 84 — PDF page 36](https://github.com/chris-page-gov/okf-dwp/blob/main/bundle/records/page/84/0036.md).

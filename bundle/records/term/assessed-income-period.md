@@ -17,6 +17,14 @@ sources:
     https://assets.publishing.service.gov.uk/media/5aa9038ee5274a3e391e3e7c/dmgch83.pdf#page=3
   title: 'DMG Vol 14 Ch 83: Assessed income periods'
   author: organisation:dwp
+skos:prefLabel:
+  '@value': Assessed income period
+  '@language': en-GB
+skos:scopeNote:
+  '@value': Pension Credit source-discovery concept in the 15 September 2026 DMG snapshot. The entry
+    point is not a complete legal definition; applicability, exceptions and current law require
+    separate review.
+  '@language': en-GB
 id: term/assessed-income-period
 '@type': skos:Concept
 generated:

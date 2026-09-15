@@ -84,3 +84,29 @@ snapshot; the CPAG reference requires the updated bundle.
 Contains public sector information licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Original project code and original material use the [MIT licence](LICENSE); source extracts retain Crown copyright, attribution and applicable exceptions. See [NOTICE.md](NOTICE.md).
 
 The [later-source log](docs/future-sources.md) records tribunal decisions, benefits calculators and CASA for later assessment. They are not incorporated into this snapshot. The [product backlog](docs/backlog.md) records extensive persona/journey evaluation, a benefits engine and application/change-of-circumstances journeys for later work.
+
+## Semantic stage two and seminar preparation
+
+[Read the next-stage assessment and delivery plan](docs/next-stage/README.md).
+The authored layer now has **26 individual concept files**, **15 source-backed
+semantic proposals**, a non-executable capital-disregard review candidate,
+**8 personas, 10 stories and 14 questions**. All new interpretations and
+behavioural cases remain unreviewed. [Inspect the semantic map](bundle/semantic-map.md)
+and its evidence register.
+
+The wider source census identifies **331 DMG PDFs** and a separate **182 ADM
+PDFs**. This is metadata discovery: only the existing 36 Pension Credit PDFs
+are acquired for full-text search. [The 24 September plan](docs/next-stage/full-dmg-by-24-september.md)
+separates source acquisition, semantic coverage and expert review. Content
+freezes on 24 September for the 30 September seminar; website, WebMCP and Mac
+voice/audio feasibility are [tracked separately](docs/next-stage/seminar-webmcp-and-audio.md).
+
+Concept authoring now uses `knowledge/**/*.yamlld`. Additional checks:
+
+```sh
+uv run --locked python scripts/evaluate_semantics.py
+python3 source/discovery-2026-09-15/acquire_metadata.py --check
+```
+
+The earlier Explorer links remain pinned to their original snapshots. Stage-two
+browser verification and publication state are recorded in [repository status](REPOSITORY_STATUS.md).

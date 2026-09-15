@@ -1,0 +1,26 @@
+{
+  "schema": "okf-dwp-semantic-review.v1",
+  "status": "structural-review-completed; domain-review-pending",
+  "date": "2026-09-15",
+  "review_method": "independent Codex sub-agent read-only review, followed by main-agent fixes and executable negative controls",
+  "findings_addressed": [
+    "Reject invented paragraph and subparagraph locators",
+    "Distinguish paragraph anchors from cross-references",
+    "Match RDF relationship triples at N-Quads line boundaries instead of within literals"
+  ],
+  "reviewed_scope": [
+    "15 proposed relationship labels, rationales and source quotations",
+    "Preservation of original authored routes and IRIs",
+    "Compiler evidence and validation failure modes"
+  ],
+  "human_specialist_review": false,
+  "evidence": [
+    "validation/semantics.json",
+    "validation/bundle.json"
+  ],
+  "files": {
+    "scripts/semantic_authoring.py": "c4fb1ed81f30d7d10b3e9d89b80f6ca0a99f7f4cf0e68e4cd523828871d799c9",
+    "scripts/validate_bundle.py": "efd68d7c6745c96ceac9abadc1ab44868a3a53c9c70b573bfcfe056286e2ead5",
+    "scripts/evaluate_semantics.py": "df53cc94c3663ced77dff81502cd7d233b6368ad969257eaa05dd738de10e455"
+  }
+}

@@ -17,6 +17,14 @@ sources:
     https://assets.publishing.service.gov.uk/media/690b7db588a98da87e292365/dmg-ch-85.pdf#page=4
   title: 'DMG Vol 14 Ch 85: Income other than earnings '
   author: organisation:dwp
+skos:prefLabel:
+  '@value': Income other than earnings
+  '@language': en-GB
+skos:scopeNote:
+  '@value': Pension Credit source-discovery concept in the 15 September 2026 DMG snapshot. The entry
+    point is not a complete legal definition; applicability, exceptions and current law require
+    separate review.
+  '@language': en-GB
 id: term/income-other-than-earnings
 '@type': skos:Concept
 generated:

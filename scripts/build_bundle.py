@@ -40,7 +40,7 @@ LIMITATIONS = [
     "PDF extraction preserves page boundaries but may lose tables, footnotes, reading order and formatting. Check the linked source PDF page.",
     "Chapter 83 has letter-spaced PDF text that reduces search quality. Some pages have no extracted text and may contain blank space or images; inspect their PDFs.",
     "Seven substantive chapters form the default searchable corpus. Transitional, spare and amendment documents remain separately identified in the source inventory.",
-    "Authored terminology and research journeys are AI-assisted navigation aids awaiting pensions specialist review. They do not establish legal relationships or decisions.",
+    "Authored concepts, semantic relationships and research journeys are model-assisted proposals awaiting specialist review. Source-backed associations do not establish legal applicability or executable decisions.",
     "External-reference records contain project-authored metadata and links only. CPAG handbook text is not included; its subscription and reuse restrictions remain applicable.",
 ]
 
@@ -198,7 +198,7 @@ def compile_bundle() -> dict[str, bytes]:
     nodes["guide/source-scope"] = node("guide/source-scope", "Transitional, spare and amendment documents", "Scope note", "Historical amendments and transitional material are separated from the seven substantive chapter records.", "\n".join(excluded_lines), observed, source=LANDING, tags=["scope", "historical", "amendments", "transitional"])
     authored_inputs = []
     authored_rows: list[tuple[dict[str, Any], Path, str]] = []
-    for path in sorted((ROOT / "knowledge").glob("*.yamlld")):
+    for path in sorted((ROOT / "knowledge").rglob("*.yamlld")):
         document = load_yaml(path)
         declared_context = document.get("@context")
         for item in declared_context if isinstance(declared_context, list) else [declared_context]:
@@ -233,6 +233,10 @@ def compile_bundle() -> dict[str, bytes]:
         overview["body"] += "\n## Start with a research question\n\n" + "\n".join(f"- [{nodes[route]['title']}]({READ}bundle/records/{route}.md)" for route in start_questions)
         overview["references"] = start_questions
         authored_rows.append((overview, Path(__file__), digest(Path(__file__).read_bytes())))
+    if "guide/semantic-stage-two" in nodes:
+        overview = nodes["guide/overview"]
+        overview.setdefault("references", []).append("guide/semantic-stage-two")
+        overview["body"] += "\n\n## Explore the semantic pilot\n\n[Concept relationships, review candidate and expanded journeys](" + READ + "bundle/records/guide/semantic-stage-two.md)."
     for row, path, file_hash in authored_rows:
         reference_observed = str(row.get("observedAt") or row["generated"]["at"])
         for target_route in row.pop("references", []):
@@ -247,12 +251,17 @@ def compile_bundle() -> dict[str, bytes]:
             assertions.append(make_assertion(row, target, "http://purl.org/dc/terms/references", "references for research", "referenced by research aid", reference_observed, evidence, True))
             row.setdefault("dcterms:references", []).append({"@id": target["@id"]})
             row["body"] += f"\n\n[Research reference: {target['title']}]({READ}bundle/records/{target_route}.md)."
+    # Semantic proposals are separate from ordinary navigation and carry
+    # exact source passages as well as their authored rationale.
+    from semantic_authoring import compile_relations
+    assertions.extend(compile_relations(nodes, authored_rows, ROOT, BASE, REPO, READ))
     input_times = [observed] + [str(value) for row, _, _ in authored_rows
         for value in (row.get("observedAt"), row["generated"]["at"]) if value]
     publication_observed = max(input_times, key=lambda value: datetime.fromisoformat(value.replace("Z", "+00:00")))
     build_inputs = {"source_snapshot_id": source_snapshot, "publication_observed_at": publication_observed, "inventory_sha256": digest(inventory_bytes), "knowledge": authored_inputs,
         "builder_sha256": digest(Path(__file__).read_bytes()), "profile_lock_sha256": digest((ROOT / "profiles/bundle-wiki/v1.vendor-lock.json").read_bytes()),
         "dependency_lock_sha256": digest((ROOT / "uv.lock").read_bytes()),
+        "semantic_compiler_sha256": digest((ROOT / "scripts/semantic_authoring.py").read_bytes()),
         "consumer": {"repository": "https://github.com/chris-page-gov/okf-explorer", "commit": "167d54dd924ce496f173105a8b390744b3b2a311"}}
     snapshot = "dwp-pension-credit-" + observed[:10] + "-" + digest(canonical(build_inputs))[:12]
     nodes = dict(sorted(nodes.items()))
@@ -283,6 +292,8 @@ def compile_bundle() -> dict[str, bytes]:
         "pages_without_extracted_text": page_count - populated_pages, "nodes": len(nodes), "relationships": len(relationships),
         "node_types": dict(sorted(Counter(row["type"] for row in nodes.values()).items())),
         "source_roles": dict(sorted(Counter(doc["role"] for doc in documents).items())), "limitations": LIMITATIONS,
+        "relationship_predicates": dict(sorted(Counter(row["predicate"] for row in relationships).items())),
+        "relationship_statuses": dict(sorted(Counter(row["assertion_status"] for row in relationships).items())),
         "excluded_from_default_page_search": [{"id": doc["id"], "role": doc["role"], "pages": doc.get("pages"), "url": doc["url"]} for doc in documents if doc not in current]}
     bundle = {"schema": "okf-explorer-bundle.v0", "kind": "okf-bundle", "id": "okf-dwp-pension-credit", "version": VERSION,
         "okf_version": "0.2", "title": TITLE, "description": LIMITATIONS[0], "status": "experimental",
@@ -296,6 +307,23 @@ def compile_bundle() -> dict[str, bytes]:
         "bundle/okf-bundle.jsonld": canonical(graph), "bundle/okf-bundle.nq": rdf.encode(),
         "bundle/relationships.json": pretty(relationships), "bundle/coverage.json": pretty(coverage),
         "bundle/plane-roots.json": pretty(roots), "bundle/build-inputs.json": pretty(build_inputs)}
+    concepts = [row for row in nodes.values() if row["type"] == "Concept"]
+    proposals = [row for row in relationships if row["assertion_status"] == "model-derived"]
+    concept_ids = {row["route"]: f"c{index}" for index, row in enumerate(concepts)}
+    diagram = ["flowchart LR"]
+    diagram.extend(f'  {concept_ids[row["route"]]}[{json.dumps(row["title"], ensure_ascii=False)}]' for row in concepts)
+    diagram.extend(f'  {concept_ids[row["source"]]} -->|{row["label"]}| {concept_ids[row["target"]]}' for row in proposals)
+    map_body = ("# Pension Credit semantic map\n\nModel-assisted proposals from the frozen DWP guidance; all require specialist review. "
+        "This map covers the authored concept set, not every concept or rule in the corpus. "
+        "Disconnected concepts retain source navigation while relationship discovery remains open.\n\n"
+        + f"{len(concepts)} concepts; {len(proposals)} proposed semantic relationships. Ordinary navigation and page containment are counted separately in coverage.json.\n\n"
+        + "```mermaid\n" + "\n".join(diagram) + "\n```\n\n## Evidence register\n\n"
+        + "| Source concept | Proposed relationship | Target concept | Evidence |\n|---|---|---|---|\n")
+    for row in proposals:
+        evidence_links = "; ".join(f'[{e["locator"]}]({e["url"]})' for e in row["evidence"] if e["type"] == "source-passage-for-model-proposal")
+        map_body += f'| [{nodes[row["source"]]["title"]}](records/{row["source"]}.md) | {row["label"]} | [{nodes[row["target"]]["title"]}](records/{row["target"]}.md) | {evidence_links} |\n'
+    outputs["bundle/semantic-map.md"] = map_body.encode()
+    outputs["bundle/semantic-map.json"] = pretty({"snapshot_id": snapshot, "status": "unreviewed-semantic-pilot", "concepts": [{"route": row["route"], "iri": row["@id"], "title": row["title"]} for row in concepts], "relationships": proposals})
     for route, row in nodes.items():
         metadata = {key: value for key, value in row.items() if key != "body"}
         outputs[f"bundle/records/{route}.md"] = b"---\n" + yaml_bytes(metadata) + b"---\n\n" + row["body"].encode() + b"\n"

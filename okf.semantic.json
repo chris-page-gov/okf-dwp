@@ -14,7 +14,7 @@
     "profile": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/",
     "state": "generated-yaml-ld-assertion-graph",
     "authoritative_inputs": [
-      "knowledge/*.yamlld",
+      "knowledge/**/*.yamlld",
       "source/inventory.json",
       "source/pages/*.json"
     ],
@@ -44,7 +44,7 @@
     "identity_policy": "absolute-semantic-iri-plus-validated-local-route",
     "limitations": [
       "Independent experimental source discovery; no specialist legal review or full Foundry production assurance.",
-      "Authored YAML-LD references are project navigation; PDF page containment is deterministically derived.",
+      "Authored references are navigation; explicit semantic relations are source-backed model proposals awaiting specialist review. PDF page containment is deterministically derived.",
       "Chapter 83 extraction quality varies. Historical amendments are retained outside default page search."
     ]
   },
@@ -70,7 +70,9 @@
       "observed_at",
       "evidence",
       "rights"
-    ]
+    ],
+    "pilot_vocabulary": "docs/next-stage/semantic-contract.md",
+    "proposal_input": "semantic_relations"
   },
   "tooling": {
     "setup": [

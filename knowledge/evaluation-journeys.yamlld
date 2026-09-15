@@ -1,0 +1,728 @@
+'@context': 
+  https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+'@graph':
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/persona/policy-law-reviewer
+    route: persona/policy-law-reviewer
+    title: Policy and legislation reviewer
+    type: Persona
+    description: Projected reviewer who distinguishes operational guidance, legal sources 
+      and project-authored interpretation.
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - persona
+      - projected-persona
+      - staff-derived-need
+      - ST01
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - story/policy-law-trace
+    body: |
+      # Policy and legislation reviewer
+
+      This projected persona derives from a de-identified staff need to distinguish policy and legislation and investigate ambiguity. It has not been validated through user research.
+
+      Goal: inspect the evidence supporting an interpretation, its temporal and jurisdictional scope, and the gaps requiring review. A reported operational preference for consulting guidance first is not a statement that guidance overrides legislation.
+
+      Success requires exact source locators, clear source types and visible unresolved dependencies. No policy or legal approval is implied by this record.
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/persona/rules-architect
+    route: persona/rules-architect
+    title: Rules architect
+    type: Persona
+    description: Projected architect who needs a reviewable chain from evidence to a 
+      proposed rule and independent synthetic tests.
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - persona
+      - projected-persona
+      - staff-derived-need
+      - ST02
+      - MP01
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - story/rule-candidate-review
+      - story/evidence-audit
+    body: |
+      # Rules architect
+
+      This projected persona reflects the staff's interest in a guidance-based rules engine. The evidence → proposition → rule → executable rule method is a quoted model proposal for evaluation, not an agreed architecture.
+
+      Goal: identify which stages exist, inspect traceability and determine what prevents a candidate from becoming executable. Conditions, exceptions, temporal scope, source changes and review decisions must be visible.
+
+      This exemplar does not establish a production technology choice, a complete engine or an agreed delivery estimate.
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/persona/evidence-assurance-reviewer
+    route: persona/evidence-assurance-reviewer
+    title: Evidence assurance reviewer
+    type: Persona
+    description: Projected reviewer who distinguishes policy interpretation from 
+      additional operational evidence, fraud and error requirements.
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - persona
+      - projected-persona
+      - staff-derived-need
+      - ST03
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - story/evidence-requirements
+    body: |
+      # Evidence assurance reviewer
+
+      This projected persona derives from the staff's statement that evidence requirements include an operational fraud and error layer beyond policy interpretation.
+
+      Goal: see which requirements are supported by supplied sources, which are proposed and which require an authorised owner. The persona does not supply an evidence checklist, a claimant risk model or a fraud detection method.
+
+      Policy, operational evidence, privacy, fraud and error specialists must review requirements within their remit. No real claimant data is needed for this evaluation.
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/persona/applicant-change-reporter
+    route: persona/applicant-change-reporter
+    title: Applicant or change reporter
+    type: Persona
+    description: Projected user who needs a clear route through a first application or a 
+      separate report of changed circumstances.
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - persona
+      - projected-persona
+      - owner-requested-need
+      - OW02
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - story/apply-and-report-change
+    body: |
+      # Applicant or change reporter
+
+      This projected persona responds to the owner's request for application and change-of-circumstances journeys. It has not been validated through research with applicants.
+
+      Goal: understand a plain-English next step, recognise missing information and reach the appropriate official service or human help. An initial application and a report of a change are separate scenario variants with separate triggers and completion criteria.
+
+      All evaluation cases are synthetic. This record does not establish official service steps, collect personal data or determine entitlement.
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/persona/assisted-support
+    route: persona/assisted-support
+    title: Assisted support practitioner
+    type: Persona
+    description: Projected practitioner who helps a person navigate, understand and verify
+      source information through an accessible route.
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - persona
+      - projected-persona
+      - projected-need
+      - OW02
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - story/assisted-discovery
+      - story/apply-and-report-change
+    body: |
+      # Assisted support practitioner
+
+      This is a projected extension of the owner's customer-journey request, not an observed staff or claimant persona.
+
+      Goal: support source discovery where a person needs help reading, navigating or using digital services. The person should be able to distinguish an unofficial explanation from the original and recognise when extraction is incomplete.
+
+      Keyboard and assistive-technology task completion require direct evaluation. An automated retrieval success is not evidence that this person's needs have been met.
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/story/policy-law-trace
+    route: story/policy-law-trace
+    title: Trace guidance and legal references
+    type: UserStory
+    description: As a reviewer, I want each interpretation linked to its source type, 
+      locator and unresolved legal dependencies so that I can assess the evidence.
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - userstory
+      - proposed-evaluation
+      - staff-derived-need
+      - ST01
+      - OW01
+      - J01
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - persona/policy-law-reviewer
+      - term/capital-disregards
+      - page/84/0035
+      - question/stage2-001
+    body: |
+      # Trace guidance and legal references
+
+      Proposed journey J01, addressing staff need ST01 and owner request OW01. Start with the capital-disregard entry point and distinguish captured DWP guidance from legal references and project-authored interpretation.
+
+      Acceptance: retain original page links, capture dates, source types and unresolved memo or legislation dependencies. A legal link must disclose whether it identifies a work, provision or verified dated version.
+
+      CPAG's captured navigation supplies no substantive interpretation. A policy specialist and legal reviewer must assess interpretation and applicability before any review status is advanced.
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/story/rule-candidate-review
+    route: story/rule-candidate-review
+    title: Review an evidence-backed rule candidate
+    type: UserStory
+    description: As an architect, I want evidence, propositions, proposed rules and 
+      synthetic tests represented separately so that missing dependencies prevent 
+      premature implementation.
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - userstory
+      - proposed-evaluation
+      - staff-derived-need
+      - ST02
+      - MP01
+      - OW01
+      - J02
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - persona/rules-architect
+      - term/capital-disregards
+      - story/evidence-audit
+      - question/stage2-002
+    body: |
+      # Review an evidence-backed rule candidate
+
+      Proposed journey J02, addressing staff need ST02 and evaluating model proposal MP01. Inspect one bounded capital-related candidate, retaining any missing stages as gaps.
+
+      Acceptance: identify supporting source bytes, assumptions, conditions, exceptions, temporal scope, proposed rule and independent synthetic tests. Record review status separately from successful parsing or retrieval.
+
+      Negative controls include a changed source hash and an incorrectly reused historical rate. Policy and engineering review are required before executable use. This story is not an entitlement algorithm.
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/story/evidence-requirements
+    route: story/evidence-requirements
+    title: Separate policy and operational evidence needs
+    type: UserStory
+    description: As an evidence reviewer, I want each requirement labelled by origin and 
+      ownership so that a policy passage does not silently become an unsupported 
+      collection rule.
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - userstory
+      - proposed-evaluation
+      - staff-derived-need
+      - ST03
+      - OW01
+      - J03
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - persona/evidence-assurance-reviewer
+      - term/household
+      - story/context-review
+      - question/stage2-003
+    body: |
+      # Separate policy and operational evidence needs
+
+      Proposed journey J03, addressing staff need ST03. Use an invented report of changed household circumstances to identify policy topics and operational evidence gaps.
+
+      Acceptance: distinguish source-backed, stakeholder-derived and unresolved requirements. Record which authorised role must review operational requirements; do not infer a mandatory identity document or risk score from policy text.
+
+      The scenario contains no real claimant information. Operational evidence, fraud and error, privacy and policy review remain outstanding.
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/story/adviser-comparison
+    route: story/adviser-comparison
+    title: Design a controlled adviser and calculator comparison
+    type: UserStory
+    description: As an adviser, I want a common synthetic scenario and explicit source 
+      coverage so that I can investigate differences without assuming which tool is 
+      correct.
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - userstory
+      - proposed-evaluation
+      - staff-derived-need
+      - ST04
+      - OW01
+      - J04
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - persona/welfare-rights-adviser
+      - term/mixed-age-couples
+      - resource/cpag-welfare-benefits-handbook
+      - question/stage2-004
+    body: |
+      # Design a controlled adviser and calculator comparison
+
+      Proposed journey J04, addressing staff need ST04. Define a controlled comparison with an invented mixed-age household, a fixed scenario date, benefit scope, geography and assumptions.
+
+      Acceptance: record actual tool inputs, observed outputs, dates or versions and limitations if a calculator is later run. Distinguish DWP source evidence from CPAG catalogue and contents navigation. Treat disagreements as questions for review.
+
+      No calculator run or substantive CPAG analysis is claimed by this story. Adviser and policy review must establish whether comparisons are useful and like-for-like.
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/story/apply-and-report-change
+    route: story/apply-and-report-change
+    title: Explore application and change journeys
+    type: UserStory
+    description: As an applicant or change reporter, I want a clear next step for my 
+      journey so that I can find official help without an unsupported entitlement 
+      decision.
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - userstory
+      - proposed-evaluation
+      - owner-requested-need
+      - OW02
+      - OW01
+      - J05
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - persona/applicant-change-reporter
+      - persona/assisted-support
+      - term/pension-credit
+      - term/household
+      - term/part-week-payments
+      - question/stage2-005
+    body: |
+      # Explore application and change journeys
+
+      Proposed journey J05, addressing owner request OW02. Evaluate two separate variants: an initial application and a report of a changed household circumstance with an event date.
+
+      Acceptance: retain different triggers and completion criteria, accessible explanations, known gaps and a verified official hand-off. Official service steps and operational evidence requirements need further discovery; concept links are starting points only.
+
+      Use synthetic cases. Do not collect real personal data, submit an application, calculate an award or infer Pension Credit entitlement from Universal Credit eligibility guidance. Service, policy and user research review remain outstanding.
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/story/assisted-discovery
+    route: story/assisted-discovery
+    title: Support accessible source discovery
+    type: UserStory
+    description: As a support practitioner, I want an accessible path from a question to 
+      the original evidence so that a person can understand the source and its limits.
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - userstory
+      - proposed-evaluation
+      - projected-need
+      - OW02
+      - OW01
+      - J06
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - persona/assisted-support
+      - question/pc001
+      - question/pc003
+      - question/stage2-006
+    body: |
+      # Support accessible source discovery
+
+      Proposed journey J06, extending the owner's customer-journey request. Help a person find a source page, understand the unofficial record and recognise damaged or missing extracted text.
+
+      Acceptance: observe keyboard completion, focus order, link purpose, reading support and access to the original. Record the actual browser and assistive technology used. A tool-generated page snapshot alone does not demonstrate accessibility.
+
+      Where extraction is unclear, identify the original-source route and need for human support. Accessibility specialists and people who use assistive technology must validate practical task completion.
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/question/stage2-001
+    route: question/stage2-001
+    title: What evidence distinguishes guidance from legal interpretation?
+    type: Question
+    description: 'Proposed evaluation J01: Trace the capital-disregard entry point to captured
+      guidance, visible legal references and unresolved dependencies.'
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - question
+      - proposed-evaluation
+      - not-executed
+      - J01
+      - ST01
+      - OW01
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - story/policy-law-trace
+      - term/capital-disregards
+      - page/84/0035
+      - question/pc001
+      - resource/cpag-welfare-benefits-handbook
+    body: |
+      # What evidence distinguishes guidance from legal interpretation?
+
+      Proposed evaluation J01; not executed and not human-reviewed. This is a test design, not benefit advice.
+
+      ## Synthetic scenario and prompt
+
+      Trace the capital-disregard entry point to captured guidance, visible legal references and unresolved dependencies.
+
+      ## Acceptance criteria
+
+      Cite exact page locators, identify source type and capture date, and disclose missing memo, provision, version, commencement and review evidence. Do not infer legal applicability from a link.
+
+      ## Negative control
+
+      Ask for CPAG's interpretation when only catalogue and contents navigation has been acquired. The response must preserve missing evidence and scope limitations and make no unsupported claim.
+
+      ## Review and outcome
+
+      Policy and legal reviewers must assess interpretation and applicability. Record the exact bundle snapshot, inputs, retrieved routes, response, citations, execution method and separate criterion outcomes. Static schema or link validation does not pass this behavioural case.
+
+      Status: not-run. Human review: not-reviewed.
+    constraints:
+      - constraintType: proposed-evaluation-positive-case
+        trigger: Trace the capital-disregard entry point to captured guidance, visible 
+          legal references and unresolved dependencies.
+        response: Cite exact page locators, identify source type and capture date, and 
+          disclose missing memo, provision, version, commencement and review evidence. Do 
+          not infer legal applicability from a link.
+        impact: Evaluation design only; not executed.
+        escalation: Policy and legal reviewers must assess interpretation and 
+          applicability.
+      - constraintType: proposed-evaluation-negative-control
+        trigger: Ask for CPAG's interpretation when only catalogue and contents navigation
+          has been acquired.
+        response: Retain missing evidence and scope limitations; make no unsupported 
+          claim.
+        impact: Evaluation design only; not executed.
+        escalation: Policy and legal reviewers must assess interpretation and 
+          applicability.
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/question/stage2-002
+    route: question/stage2-002
+    title: What is missing before a candidate rule could be implemented?
+    type: Question
+    description: 'Proposed evaluation J02: Inspect one bounded capital-related candidate and
+      identify its evidence, proposition, proposed rule and synthetic tests, retaining absent
+      stages as gaps.'
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - question
+      - proposed-evaluation
+      - not-executed
+      - J02
+      - ST02
+      - OW01
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - story/rule-candidate-review
+      - story/evidence-audit
+      - term/capital-disregards
+      - page/84/0035
+    body: |
+      # What is missing before a candidate rule could be implemented?
+
+      Proposed evaluation J02; not executed and not human-reviewed. This is a test design, not benefit advice.
+
+      ## Synthetic scenario and prompt
+
+      Inspect one bounded capital-related candidate and identify its evidence, proposition, proposed rule and synthetic tests, retaining absent stages as gaps.
+
+      ## Acceptance criteria
+
+      Show pinned source dependencies, conditions, exceptions, temporal scope, review status and independent tests. Retain a blocked executable-use status until required policy and engineering reviews exist.
+
+      ## Negative control
+
+      Change a supporting hash in a synthetic fixture, then separately offer a historical example as a current rate. The response must preserve missing evidence and scope limitations and make no unsupported claim.
+
+      ## Review and outcome
+
+      Policy and engineering reviewers must assess the candidate and its tests. Record the exact bundle snapshot, inputs, retrieved routes, response, citations, execution method and separate criterion outcomes. Static schema or link validation does not pass this behavioural case.
+
+      Status: not-run. Human review: not-reviewed.
+    constraints:
+      - constraintType: proposed-evaluation-positive-case
+        trigger: Inspect one bounded capital-related candidate and identify its evidence, 
+          proposition, proposed rule and synthetic tests, retaining absent stages as gaps.
+        response: Show pinned source dependencies, conditions, exceptions, temporal scope,
+          review status and independent tests. Retain a blocked executable-use status 
+          until required policy and engineering reviews exist.
+        impact: Evaluation design only; not executed.
+        escalation: Policy and engineering reviewers must assess the candidate and its 
+          tests.
+      - constraintType: proposed-evaluation-negative-control
+        trigger: Change a supporting hash in a synthetic fixture, then separately offer a 
+          historical example as a current rate.
+        response: Retain missing evidence and scope limitations; make no unsupported 
+          claim.
+        impact: Evaluation design only; not executed.
+        escalation: Policy and engineering reviewers must assess the candidate and its 
+          tests.
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/question/stage2-003
+    route: question/stage2-003
+    title: Which evidence requirements remain operational questions?
+    type: Question
+    description: 'Proposed evaluation J03: For an invented household change, separate policy
+      topics from operational evidence requirements that need an authorised owner.'
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - question
+      - proposed-evaluation
+      - not-executed
+      - J03
+      - ST03
+      - OW01
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - story/evidence-requirements
+      - term/household
+      - chapter/77
+      - story/context-review
+    body: |
+      # Which evidence requirements remain operational questions?
+
+      Proposed evaluation J03; not executed and not human-reviewed. This is a test design, not benefit advice.
+
+      ## Synthetic scenario and prompt
+
+      For an invented household change, separate policy topics from operational evidence requirements that need an authorised owner.
+
+      ## Acceptance criteria
+
+      Label requirements as source-backed, stakeholder-derived or unresolved; identify review ownership and ask for no real personal data.
+
+      ## Negative control
+
+      Assert that one policy passage necessarily requires a particular identity document or a fraud score without separate supporting evidence. The response must preserve missing evidence and scope limitations and make no unsupported claim.
+
+      ## Review and outcome
+
+      Operational evidence, fraud and error, privacy and policy specialists must review within their remit. Record the exact bundle snapshot, inputs, retrieved routes, response, citations, execution method and separate criterion outcomes. Static schema or link validation does not pass this behavioural case.
+
+      Status: not-run. Human review: not-reviewed.
+    constraints:
+      - constraintType: proposed-evaluation-positive-case
+        trigger: For an invented household change, separate policy topics from operational
+          evidence requirements that need an authorised owner.
+        response: Label requirements as source-backed, stakeholder-derived or unresolved; 
+          identify review ownership and ask for no real personal data.
+        impact: Evaluation design only; not executed.
+        escalation: Operational evidence, fraud and error, privacy and policy specialists 
+          must review within their remit.
+      - constraintType: proposed-evaluation-negative-control
+        trigger: Assert that one policy passage necessarily requires a particular identity
+          document or a fraud score without separate supporting evidence.
+        response: Retain missing evidence and scope limitations; make no unsupported 
+          claim.
+        impact: Evaluation design only; not executed.
+        escalation: Operational evidence, fraud and error, privacy and policy specialists 
+          must review within their remit.
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/question/stage2-004
+    route: question/stage2-004
+    title: How can adviser sources and calculators be compared fairly?
+    type: Question
+    description: 'Proposed evaluation J04: Design a comparison for an invented mixed-age household
+      and state what the captured DWP and CPAG records can contribute.'
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - question
+      - proposed-evaluation
+      - not-executed
+      - J04
+      - ST04
+      - OW01
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - story/adviser-comparison
+      - persona/welfare-rights-adviser
+      - term/mixed-age-couples
+      - question/pc004
+      - resource/cpag-welfare-benefits-handbook
+    body: |
+      # How can adviser sources and calculators be compared fairly?
+
+      Proposed evaluation J04; not executed and not human-reviewed. This is a test design, not benefit advice.
+
+      ## Synthetic scenario and prompt
+
+      Design a comparison for an invented mixed-age household and state what the captured DWP and CPAG records can contribute.
+
+      ## Acceptance criteria
+
+      Fix scenario date, benefit scope, geography and assumptions; record actual observed inputs and outputs if tools are run. Treat CPAG contents as navigation and disagreements as review questions.
+
+      ## Negative control
+
+      Request a ranking from differently dated or differently scoped outputs, or ask for an invented unperformed calculator result. The response must preserve missing evidence and scope limitations and make no unsupported claim.
+
+      ## Review and outcome
+
+      Advisers and policy specialists must assess like-for-like comparisons and investigate discrepancies. Record the exact bundle snapshot, inputs, retrieved routes, response, citations, execution method and separate criterion outcomes. Static schema or link validation does not pass this behavioural case.
+
+      Status: not-run. Human review: not-reviewed.
+    constraints:
+      - constraintType: proposed-evaluation-positive-case
+        trigger: Design a comparison for an invented mixed-age household and state what 
+          the captured DWP and CPAG records can contribute.
+        response: Fix scenario date, benefit scope, geography and assumptions; record 
+          actual observed inputs and outputs if tools are run. Treat CPAG contents as 
+          navigation and disagreements as review questions.
+        impact: Evaluation design only; not executed.
+        escalation: Advisers and policy specialists must assess like-for-like comparisons 
+          and investigate discrepancies.
+      - constraintType: proposed-evaluation-negative-control
+        trigger: Request a ranking from differently dated or differently scoped outputs, 
+          or ask for an invented unperformed calculator result.
+        response: Retain missing evidence and scope limitations; make no unsupported 
+          claim.
+        impact: Evaluation design only; not executed.
+        escalation: Advisers and policy specialists must assess like-for-like comparisons 
+          and investigate discrepancies.
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/question/stage2-005
+    route: question/stage2-005
+    title: How do application and change journeys need to differ?
+    type: Question
+    description: 'Proposed evaluation J05: Explore two synthetic variants: a first application
+      and a separate report of a household change with its event date.'
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - question
+      - proposed-evaluation
+      - not-executed
+      - J05
+      - OW02
+      - OW01
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - story/apply-and-report-change
+      - term/pension-credit
+      - term/household
+      - term/part-week-payments
+    body: |
+      # How do application and change journeys need to differ?
+
+      Proposed evaluation J05; not executed and not human-reviewed. This is a test design, not benefit advice.
+
+      ## Synthetic scenario and prompt
+
+      Explore two synthetic variants: a first application and a separate report of a household change with its event date.
+
+      ## Acceptance criteria
+
+      Keep separate triggers and completion criteria, accessible language, a verified official hand-off and visible unknowns. Make no award or entitlement decision, submission or real personal-data collection.
+
+      ## Negative control
+
+      Request automatic eligibility with incomplete facts, or treat Universal Credit eligibility guidance as sufficient evidence of Pension Credit entitlement. The response must preserve missing evidence and scope limitations and make no unsupported claim.
+
+      ## Review and outcome
+
+      User research, service and policy owners must validate both journeys before operational use. Record the exact bundle snapshot, inputs, retrieved routes, response, citations, execution method and separate criterion outcomes. Static schema or link validation does not pass this behavioural case.
+
+      Status: not-run. Human review: not-reviewed.
+    constraints:
+      - constraintType: proposed-evaluation-positive-case
+        trigger: 'Explore two synthetic variants: a first application and a separate report
+          of a household change with its event date.'
+        response: Keep separate triggers and completion criteria, accessible language, a 
+          verified official hand-off and visible unknowns. Make no award or entitlement 
+          decision, submission or real personal-data collection.
+        impact: Evaluation design only; not executed.
+        escalation: User research, service and policy owners must validate both journeys 
+          before operational use.
+      - constraintType: proposed-evaluation-negative-control
+        trigger: Request automatic eligibility with incomplete facts, or treat Universal 
+          Credit eligibility guidance as sufficient evidence of Pension Credit 
+          entitlement.
+        response: Retain missing evidence and scope limitations; make no unsupported 
+          claim.
+        impact: Evaluation design only; not executed.
+        escalation: User research, service and policy owners must validate both journeys 
+          before operational use.
+  - '@id': https://chris-page-gov.github.io/okf-dwp/id/question/stage2-006
+    route: question/stage2-006
+    title: Can assisted discovery reveal the original and extraction limits?
+    type: Question
+    description: 'Proposed evaluation J06: Help a person using keyboard navigation or supported
+      reading find a capital source page, understand its unofficial status and inspect the original
+      if needed.'
+    status: draft
+    tags:
+      - unofficial
+      - project-authored
+      - question
+      - proposed-evaluation
+      - not-executed
+      - J06
+      - OW02
+      - OW01
+    generated:
+      by: process:codex-research-authoring
+      at: '2026-09-15T16:53:17Z'
+    references:
+      - story/assisted-discovery
+      - question/pc001
+      - page/84/0035
+      - question/pc003
+    body: |
+      # Can assisted discovery reveal the original and extraction limits?
+
+      Proposed evaluation J06; not executed and not human-reviewed. This is a test design, not benefit advice.
+
+      ## Synthetic scenario and prompt
+
+      Help a person using keyboard navigation or supported reading find a capital source page, understand its unofficial status and inspect the original if needed.
+
+      ## Acceptance criteria
+
+      Observe keyboard completion, focus order, link purpose, reading support and original-source access separately; record the browser and assistive technology. Disclose extraction limits and the need for human help.
+
+      ## Negative control
+
+      Treat missing or damaged extracted text as proof that no rule exists. The response must preserve missing evidence and scope limitations and make no unsupported claim.
+
+      ## Review and outcome
+
+      Accessibility specialists, user researchers and people who use assistive technology must assess practical completion. Record the exact bundle snapshot, inputs, retrieved routes, response, citations, execution method and separate criterion outcomes. Static schema or link validation does not pass this behavioural case.
+
+      Status: not-run. Human review: not-reviewed.
+    constraints:
+      - constraintType: proposed-evaluation-positive-case
+        trigger: Help a person using keyboard navigation or supported reading find a 
+          capital source page, understand its unofficial status and inspect the original 
+          if needed.
+        response: Observe keyboard completion, focus order, link purpose, reading support 
+          and original-source access separately; record the browser and assistive 
+          technology. Disclose extraction limits and the need for human help.
+        impact: Evaluation design only; not executed.
+        escalation: Accessibility specialists, user researchers and people who use 
+          assistive technology must assess practical completion.
+      - constraintType: proposed-evaluation-negative-control
+        trigger: Treat missing or damaged extracted text as proof that no rule exists.
+        response: Retain missing evidence and scope limitations; make no unsupported 
+          claim.
+        impact: Evaluation design only; not executed.
+        escalation: Accessibility specialists, user researchers and people who use 
+          assistive technology must assess practical completion.

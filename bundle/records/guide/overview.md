@@ -26,6 +26,7 @@ dcterms:references:
 - '@id': https://chris-page-gov.github.io/okf-dwp/id/question/pc003
 - '@id': https://chris-page-gov.github.io/okf-dwp/id/question/pc007
 - '@id': https://chris-page-gov.github.io/okf-dwp/id/question/pc008
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/guide/semantic-stage-two
 ---
 
 # Independent Pension Credit exploration
@@ -40,7 +41,7 @@ Chapter 83 has letter-spaced PDF text that reduces search quality. Some pages ha
 
 Seven substantive chapters form the default searchable corpus. Transitional, spare and amendment documents remain separately identified in the source inventory.
 
-Authored terminology and research journeys are AI-assisted navigation aids awaiting pensions specialist review. They do not establish legal relationships or decisions.
+Authored concepts, semantic relationships and research journeys are model-assisted proposals awaiting specialist review. Source-backed associations do not establish legal applicability or executable decisions.
 
 External-reference records contain project-authored metadata and links only. CPAG handbook text is not included; its subscription and reuse restrictions remain applicable.
 
@@ -62,6 +63,10 @@ External-reference records contain project-authored metadata and links only. CPA
 - [How can I trace an extract back to the original?](https://github.com/chris-page-gov/okf-dwp/blob/main/bundle/records/question/pc007.md)
 - [Can this bundle tell me what I am entitled to?](https://github.com/chris-page-gov/okf-dwp/blob/main/bundle/records/question/pc008.md)
 
+## Explore the semantic pilot
+
+[Concept relationships, review candidate and expanded journeys](https://github.com/chris-page-gov/okf-dwp/blob/main/bundle/records/guide/semantic-stage-two.md).
+
 [Research reference: Where does the guide explain capital disregards?](https://github.com/chris-page-gov/okf-dwp/blob/main/bundle/records/question/pc001.md).
 
 [Research reference: Where are earnings and other income distinguished?](https://github.com/chris-page-gov/okf-dwp/blob/main/bundle/records/question/pc002.md).
@@ -71,3 +76,5 @@ External-reference records contain project-authored metadata and links only. CPA
 [Research reference: How can I trace an extract back to the original?](https://github.com/chris-page-gov/okf-dwp/blob/main/bundle/records/question/pc007.md).
 
 [Research reference: Can this bundle tell me what I am entitled to?](https://github.com/chris-page-gov/okf-dwp/blob/main/bundle/records/question/pc008.md).
+
+[Research reference: Next stage: semantic map and reviewed journeys](https://github.com/chris-page-gov/okf-dwp/blob/main/bundle/records/guide/semantic-stage-two.md).

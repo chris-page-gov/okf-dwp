@@ -21,7 +21,12 @@
       "description": "36 PDFs linked by the declared GOV.UK publication on 15 September 2026.",
       "kind": "public-document-snapshot",
       "paths": [
-        "source/**",
+        "source/inventory.json",
+        "source/pdf/**",
+        "source/pages/**",
+        "source/text/**",
+        "source/extraction-quality.json",
+        "source/review-samples.json",
         "knowledge/guided-discovery.yamlld",
         "knowledge/source-navigation.yamlld",
         "domain-profile/**"
@@ -105,6 +110,71 @@
         "CPAG subscription terms require prior written consent for subscription content in AI tools or automated processes.",
         "This reference is outside the DWP PDF census and the domain profile initial-source denominator."
       ]
+    },
+    {
+      "id": "stage-two-source-discovery",
+      "label": "Full DMG, ADM and UC metadata discovery",
+      "kind": "public-metadata-snapshot",
+      "paths": [
+        "source/discovery-2026-09-15/**",
+        "knowledge/expanded-source-scope.yamlld"
+      ],
+      "authority": "official-publication-metadata-with-project-classification",
+      "rights": {
+        "status": "OGL-v3-with-attribution-and-exceptions",
+        "evidence": [
+          "source/discovery-2026-09-15/README.md",
+          "NOTICE.md"
+        ]
+      },
+      "limitations": [
+        "Metadata counts are not PDF acquisition or measured pages.",
+        "ADM is a separate source family; UC eligibility is claimant-facing information."
+      ]
+    },
+    {
+      "id": "stage-two-semantic-proposals",
+      "label": "Source-backed semantic pilot and evaluation design",
+      "kind": "project-authored-unreviewed-interpretation",
+      "paths": [
+        "knowledge/concepts/**",
+        "knowledge/rule-candidates.yamlld",
+        "knowledge/evaluation-journeys.yamlld",
+        "docs/next-stage/**",
+        "evaluation/**"
+      ],
+      "authority": "model-assisted; specialist review pending",
+      "rights": {
+        "status": "MIT-original-material; OGL-source-passages",
+        "evidence": [
+          "NOTICE.md",
+          "LICENSE"
+        ]
+      },
+      "limitations": [
+        "No executable rules or human-approved interpretations.",
+        "Projected personas and behavioural evaluations remain unvalidated."
+      ]
+    },
+    {
+      "id": "legislation-catalogue-references",
+      "label": "Pinned UK legislation catalogue references",
+      "kind": "external-resource-metadata",
+      "paths": [
+        "knowledge/legislation-resources.yamlld"
+      ],
+      "authority": "project-authored reference to pinned published catalogue",
+      "rights": {
+        "status": "MIT-original-references; source-level rights apply to linked materials",
+        "evidence": [
+          "NOTICE.md",
+          "docs/next-stage/legislation-integration.md"
+        ]
+      },
+      "limitations": [
+        "No statutory provision text or effects acquired here.",
+        "Sibling local changes are not an integrated published dependency."
+      ]
     }
   ],
   "boundaries": {
@@ -152,6 +222,10 @@
       {
         "path": "docs/**",
         "role": "documentation-and-external-source-review"
+      },
+      {
+        "path": "evaluation/**",
+        "role": "evaluation-design"
       }
     ],
     "generated": [
@@ -180,7 +254,9 @@
       "paths": [
         "knowledge/**",
         "bundle/**",
-        "docs/evidence/cpag-access-review.json"
+        "docs/evidence/cpag-access-review.json",
+        "scripts/semantic_authoring.py",
+        "evaluation/**"
       ],
       "command_ids": [
         "build-check",
@@ -270,7 +346,8 @@
       ".github/workflows/**",
       "okf.semantic.json",
       "okf.publication.json",
-      "docs/evidence/cpag-access-review.json"
+      "docs/evidence/cpag-access-review.json",
+      "evaluation/**"
     ],
     "documentation_paths": [
       "README.md",
@@ -311,7 +388,7 @@
     "mode": "github-repository",
     "scope": "experimental-preview",
     "authority": {
-      "decision": "Owner explicitly requested a public chris-page-gov repository and an unofficial meeting exemplar on 15 September 2026.",
+      "decision": "Owner explicitly requested a public chris-page-gov repository and an unofficial meeting exemplar on 15 September 2026. The owner requested the next semantic stage, full DMG target by 24 September and seminar exploration for 30 September.",
       "evidence_paths": [
         "REPOSITORY_STATUS.md"
       ]

@@ -49,3 +49,33 @@ The CPAG reference passed live Explorer checks in Edge using both YAML-LD and
 JSON. Search, access wording, publisher links, Graph and the exact snapshot
 notice were checked; neither tab captured warning or error logs. See
 `validation/cpag-browser.json` for the immutable content commit and hashes.
+
+## Semantic stage two
+
+Started following the owner's request to move beyond the meeting preview and
+prepare a wider exemplar. The working candidate adds individual concepts,
+source-backed semantic proposals, a non-executable rule review packet,
+legislation catalogue references and expanded evaluation journeys. The new
+full-DMG/ADM census contains publication metadata only. No additional PDF
+content is claimed as acquired.
+
+The original domain profile and earlier browser receipts remain frozen. New
+behavioural cases are designed but not run, and no specialist approval is
+recorded. The CPAG public contents harvest remains a separate local research
+artefact; this change does not publish its 90-entry outline or incorporate
+handbook text. The semantic pilot does not depend on those local files.
+
+Content freeze is 24 September 2026; the seminar is 30 September. WebMCP and
+MacBook/PA integration are at feasibility stage, with the personal-AI product
+awaiting clarification. No new website, audio configuration or voice-tool
+integration is delivered by this candidate.
+
+The stage-two candidate snapshot is
+`dwp-pension-credit-2026-09-15-42c0a30e120c`: **821 records and 964 assertions**
+(744 page-containment, 205 navigation and 15 model-derived semantic proposals).
+All 744 source-page runtime records are unchanged from the previous public
+baseline. Local deterministic generation, all-assertion/RDF validation,
+12 semantic negative controls, eight retrieval controls and the frozen wider
+metadata census pass. Independent agent review covered semantic wording and
+validation failure modes; this is not human domain review. See
+`validation/semantics.json` and `validation/semantic-review.json`.

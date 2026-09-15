@@ -1,0 +1,56 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/capital
+  route: term/capital
+  title: Capital
+  type: Concept
+  description: Navigate resources, ownership, disregards, valuation and notional capital.
+  status: draft
+  tags:
+  - unofficial
+  - project-authored
+  - concept
+  references:
+  - chapter/84
+  - page/84/0002
+  resource:
+    https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=2
+  sources:
+  - id: dmg-vol14-ch84
+    resource:
+      https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=2
+    title: 'DMG Vol 14 Ch 84: Deemed weekly income from capital'
+    author: organisation:dwp
+  body: "# Capital\n\nIndependent project-authored discovery aid; not an official interpretation or entitlement
+    decision.\n\nNavigate resources, ownership, disregards, valuation and notional capital.\n\nSource:
+    [DMG Vol 14 Ch 84: Deemed weekly income from capital, PDF page 2](https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=2).\n\
+    \nInspect the original and adjacent pages, footnotes, effective dates and cross-referenced memos.
+    Source SHA-256: `f5c610b29bdb81e11736409b7f33ccf7917a4d8945f2821802801073e0d753ee`.\n"
+  skos:prefLabel:
+    '@value': Capital
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': Pension Credit source-discovery concept in the 15 September 2026 DMG snapshot. The
+      entry point is not a complete legal definition; applicability, exceptions and current law
+      require separate review.
+    '@language': en-GB
+  generated:
+    by: process:codex-semantic-stage-two
+    at: '2026-09-15T16:57:46Z'
+  observedAt: '2026-09-15T16:57:46Z'
+  semantic_relations:
+  - target: term/beneficial-ownership
+    predicate: http://www.w3.org/2004/02/skos/core#related
+    rationale: The chapter distinguishes beneficial ownership from legal ownership when examining
+      capital.
+    evidence:
+    - page: page/84/0008
+      quote: "84071 Only the capital which people are the beneficial owners of is included when working
+        out what\ncapital they have.\n\n\n84072 People are beneficial owners of capital if they have a
+        beneficial interest in it. A person is the joint\nbeneficial owner of capital if more than one
+        person has a beneficial interest in the same capital.\n\n\n84073 A person whose name the capital
+        is in is called the legal owner. A person is the joint legal owner of\ncapital if more than one
+        person is the legal owner of the same capital."
+      locator: DMG 84071–84073
