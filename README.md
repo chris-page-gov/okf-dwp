@@ -10,7 +10,7 @@ This repository turns the public [DWP Decision makers’ guide](https://www.gov.
 
 ## What is here
 
-**The full-DMG research candidate is prepared; final browser verification and publication are pending.** The owner authorised unattended processing against the frozen 331-PDF census, with a 24 September content freeze for the 30 September seminar. The [completion plan](docs/next-stage/unattended-completion.md) and [current checkpoint](evaluation/full-dmg-progress.json) record the acceptance gates. The links above remain the verified Pension Credit demonstrations.
+**The full-DMG research candidate is publicly available at an immutable, browser-checked content commit.** [Try the full corpus](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F80b6f08426aea39dd2934fb8795b61215e2cc0ad%2Ffull-dmg%2Fokf-explorer.json&q=84351&view=narrative#page/84/0035) or follow the [full-DMG walkthrough](docs/full-dmg-walkthrough.md). Publication and canonical CI history are tracked in [PR 5](https://github.com/chris-page-gov/okf-dwp/pull/5); the immutable browser receipt applies to the content commit named below. The owner authorised unattended processing against the frozen 331-PDF census, with a 24 September content freeze for the 30 September seminar. The [completion plan](docs/next-stage/unattended-completion.md) and [current checkpoint](evaluation/full-dmg-progress.json) record the acceptance gates. The earlier links retain their original Pension Credit scope.
 
 The [full-DMG acquisition](docs/next-stage/full-dmg-acquisition.md) contains **331 PDFs and 14,743 measured pages**, with original bytes, source hashes and extraction-quality flags. Eight wider authoring batches add **245 concepts and 328 source-backed proposals** across **78 of 78 substantive PDF units**. Including the pilot, the candidate has **271 concepts and 343 semantic proposals**, within **15,390 entities, 16,210 assertions and 15,363 resource records**. [Measured coverage](evaluation/full-dmg-coverage.json) distinguishes selected-passage research from complete policy modelling. Specialist acceptance remains **zero**.
 
@@ -30,6 +30,17 @@ The **160 observed, context-aware, source-guided answer trials** have separate m
 The capture date is **15 September 2026**. The original Pension Credit landing page reported **20 July 2026** as its latest update. Neither capture nor listing dates establish a provision’s current applicability. The [original pilot coverage](bundle/coverage.json) and [original extraction report](source/extraction-quality.json) retain their 36-PDF scope; [full-DMG coverage](full-dmg/coverage.json) describes the larger candidate.
 
 ## Try it
+
+Open the full-DMG candidate at content commit `80b6f08426aea39dd2934fb8795b61215e2cc0ad`, snapshot `dwp-full-dmg-2026-09-15-2dd78242297c`:
+
+- [JSON entry: find paragraph 84351](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F80b6f08426aea39dd2934fb8795b61215e2cc0ad%2Ffull-dmg%2Fokf-explorer.json&q=84351&view=narrative#page/84/0035).
+- [YAML-LD entry: read chapter 84, PDF page 35](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F80b6f08426aea39dd2934fb8795b61215e2cc0ad%2Ffull-dmg%2Fokf-explorer.yamlld&view=narrative#page/84/0035).
+- [ESA Graph: exceptional limited capability for work risk](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F80b6f08426aea39dd2934fb8795b61215e2cc0ad%2Ffull-dmg%2Fokf-explorer.json&view=graph#term/esa-exceptional-lcw-risk).
+- [CPAG Timeline: April 2026 publication month](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F80b6f08426aea39dd2934fb8795b61215e2cc0ad%2Ffull-dmg%2Fokf-explorer.json&view=timeline&q=CPAG#resource/cpag-welfare-benefits-handbook).
+
+The [public browser receipt](validation/full-dmg-browser.json) records the exact content and consumer identities. Checked journeys include both entry formats, source text and a direct PDF link, labelled Graph relationships, PDF resource cards, CPAG's month-precision Timeline and bounded search controls. The observed ESA Graph had 11 nodes and 10 edges with no missing labels; `84351` returned six labelled PDF resources. These checks establish those interactions, not every route or policy interpretation. See the [ten-minute full-DMG walkthrough](docs/full-dmg-walkthrough.md).
+
+Explorer can expand an unmatched search string into an indexed term: `unavailableclaimantdetails` returned seven results for `unavailable` in the public check. Inspect the displayed query interpretation and the source evidence. The nonsense control `zzzxqvnomatch` returned an unmatched term and no results; the exact Python retrieval controls test a separate path.
 
 [Launch the original meeting demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.yamlld&q=84351#question/pc001). It uses the immutable captured bundle and starts with the capital-disregard question and matching evidence. [Browser verification](validation/browser.json) records the exact snapshot and journeys. You can also load `bundle/okf-bundle.json` as a local file in Explorer.
 
@@ -63,7 +74,7 @@ uv run --locked python scripts/reconcile_full_dmg_references.py --check
 uv run --locked python scripts/verify_full_dmg_trials.py --check
 ```
 
-Its Explorer entry point is `full-dmg/okf-explorer.json` (or `full-dmg/okf-explorer.yamlld`). `full-dmg/okf-bundle.yamlld` is a semantic control document pointing to bounded graph shards; it is not a small-bundle import. Final launch links will name the immutable candidate actually checked in the browser. The trial verifier checks retained evidence and reproduces the assessment summary; it does not run new model answers or assign grades.
+Its Explorer entry point is `full-dmg/okf-explorer.json` (or `full-dmg/okf-explorer.yamlld`). `full-dmg/okf-bundle.yamlld` is a semantic control document pointing to bounded graph shards; it is not a small-bundle import. The launch links above name the immutable candidate checked in the browser. The local repository suite passed 43 tests. The trial verifier checks retained evidence and reproduces the assessment summary; it does not run new model answers or assign grades.
 
 The consumer check uses Node 26.7.0 in CI and unmodified, hash-pinned Explorer validation code under `profiles/explorer-runtime/`. It verifies the research notice and every route label against the actual consumer contract. Publisher titles retain their original bytes; display labels normalise whitespace only.
 
@@ -98,7 +109,7 @@ OKF 0.2 is the Markdown core. “OKF+” here means that core plus the additive 
 
 The source PDFs contain historical examples, dates, scenario-specific treatments and references to memos, legislation and case law. These have not been exhaustively consolidated or legally reviewed. Machine extraction has known defects, particularly letter spacing in chapter 83. Across the **331-PDF capture, 802 pages have no extracted text**; no exhaustive visual review or OCR has established whether those pages are blank or image-only. The original 36-PDF pilot had 85 such pages, including ten within its default 744 page records.
 
-Source acquisition and bounded research attempts are complete for the declared full-DMG scope. The final browser/publication gate, full Foundry production gate sequence, comprehensive accessibility assurance, expert legal review and automatic legal rule modelling are **not complete**. [Repository status](REPOSITORY_STATUS.md) records the candidate boundary and validation evidence. No claimant case data was acquired.
+Source acquisition and bounded research attempts are complete for the declared full-DMG scope. The public browser receipt covers its named interactions. The full Foundry production gate sequence, comprehensive accessibility assurance, expert legal review and automatic legal rule modelling are **not complete**. [Repository status](REPOSITORY_STATUS.md) records the candidate boundary and validation evidence. No claimant case data was acquired.
 
 ## Reuse and next steps
 
@@ -141,4 +152,4 @@ python3 source/discovery-2026-09-15/acquire_metadata.py --check
 The earlier Explorer links remain pinned to their original snapshots. Stage-two
 browser verification and publication state are recorded in [repository status](REPOSITORY_STATUS.md).
 
-[Open the stage-two semantic graph in Explorer](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7d3c69df0571b8d5206c8edce92963d99979cb5c%2Fbundle%2Fokf-bundle.yamlld&view=graph#term/capital-disregards). The [current browser receipt](validation/cpag-timeline-browser.json) binds this graph and the corrected CPAG Timeline to the checked content commit; the [earlier semantic receipt](validation/stage-two-browser.json) records the detailed relationship journeys.
+[Open the stage-two semantic graph in Explorer](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7d3c69df0571b8d5206c8edce92963d99979cb5c%2Fbundle%2Fokf-bundle.yamlld&view=graph#term/capital-disregards). The [pilot browser receipt](validation/cpag-timeline-browser.json) binds this graph and the corrected CPAG Timeline to the checked content commit; the [earlier semantic receipt](validation/stage-two-browser.json) records the detailed relationship journeys.

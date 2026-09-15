@@ -10,7 +10,13 @@ Research attempts for the other **253 source-family units** have terminal outcom
 
 All **160 context-aware, source-guided answer trials** have observed responses and separate model assessments: **90 supported, 56 partial and 14 rubric-underspecified**. These are assessor categories rather than a calibrated accuracy measure. The [summary](evaluation/full-dmg-behavioural/summary.json) binds the unchanged answers, source reads and per-case findings. This is not a blind or end-to-end retrieval benchmark. Specialist acceptance remains **zero**.
 
-**Final browser verification and publication of the full-DMG candidate are pending.** Earlier browser checks belong to their named immutable snapshots and do not close this final gate. The previously verified Pension Credit publication remains available, with its original 36-PDF inventory, 744 default page records and frozen domain profile.
+**The full-DMG candidate is publicly available at browser-checked content commit `80b6f08426aea39dd2934fb8795b61215e2cc0ad`, snapshot `dwp-full-dmg-2026-09-15-2dd78242297c`.** [Open the JSON candidate](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F80b6f08426aea39dd2934fb8795b61215e2cc0ad%2Ffull-dmg%2Fokf-explorer.json&q=84351&view=narrative#page/84/0035) or follow the [walkthrough](docs/full-dmg-walkthrough.md). Publication and canonical CI history are tracked in [PR 5](https://github.com/chris-page-gov/okf-dwp/pull/5); the immutable browser receipt applies to this content commit. Earlier browser checks retain their named immutable scope. The Pension Credit publication remains available with its original 36-PDF inventory, 744 default page records and frozen domain profile.
+
+The [full-DMG browser receipt](validation/full-dmg-browser.json) records public Edge observations against that content: JSON and YAML-LD loading; an ESA Graph with 11 nodes and 10 edges and no missing labels; the exact DMG 42320 relationship evidence and hashes; six labelled PDF resource results for `84351`; the CPAG Timeline's April 2026 publication month; and bounded source, search and lazy-record checks. YAML-LD Narrative retained paragraphs 84351–84353 and the direct chapter 84 PDF-page-35 link. The `073499` search returned six results and loaded the split chapter's six-digit passage; a term in the final record chunk also loaded. No warning or error logs were captured in the checked browser session. The local repository suite passed 43 tests. These results do not establish every route, comprehensive accessibility or policy correctness.
+
+One search limitation is explicit: `unavailableclaimantdetails` expanded to the indexed term `unavailable` and returned seven results. The nonsense control `zzzxqvnomatch` produced an unmatched term and no results. Browser query interpretation and the exact Python retrieval controls are different evidence paths.
+
+The generic Concept facet also passed its public Graph check, with an explicit bound of 200 loaded records out of 271 exact index matches. Targeted resource loading can initially show zero in Evidence Sources while Narrative retains the direct original PDF link. The exact content commit's [CI run 35028883819](https://github.com/chris-page-gov/okf-dwp/actions/runs/35028883819) and [CI run 35028878408](https://github.com/chris-page-gov/okf-dwp/actions/runs/35028878408) passed. These candidate results remain distinct from subsequent canonical branch checks.
 
 CPAG substantive reuse and specialist acceptance are separate external decisions. Neither is required to complete an explicitly unreviewed research bundle from public GOV.UK sources. No handbook body acquisition or specialist acceptance is authorised or asserted by the unattended instruction.
 
@@ -29,6 +35,7 @@ Full-DMG candidate:
 - `evaluation/full-dmg-dependencies/index.json`: located, ambiguous and unresolved source-reference candidates.
 - `evaluation/full-dmg-retrieval.json`: executed indexed locator, no-result and navigation controls.
 - `evaluation/full-dmg-behavioural/summary.json`: the 160 observed source-guided responses and independent-of-answerer model assessments.
+- [validation/full-dmg-browser.json](validation/full-dmg-browser.json): exact immutable producer and consumer identities, observed public-browser journeys and their limitations.
 
 Verify the retained trial evidence with `uv run --locked python scripts/verify_full_dmg_trials.py --check`. This replays integrity checks and reproduces recorded assessment categories; it does not run or grade new answers.
 
@@ -144,5 +151,6 @@ application, cross-browser and exact deployed-identity checks. The preserved
 [deployment receipt](validation/explorer-timeline-deployment.json) records the
 Explorer host check; it does not establish DWP policy correctness or bind the
 later full-DMG candidate. The latter's reviewed consumer source pin is recorded
-in `profiles/explorer-runtime/vendor-lock.json`; final deployed-host identity
-and browser verification remain separate release evidence.
+in `profiles/explorer-runtime/vendor-lock.json`; its deployed-host identity
+and checked public interactions are recorded separately in
+[the full-DMG browser receipt](validation/full-dmg-browser.json).

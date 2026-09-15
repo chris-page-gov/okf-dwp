@@ -1,7 +1,7 @@
 {
   "schema": "okf-dwp-unattended-progress.v1",
   "updated": "2026-09-15",
-  "status": "final-publication-assurance",
+  "status": "published-immutable-research-candidate",
   "authorisation": "Owner requested unattended completion of the public unofficial bundle on 15 September 2026.",
   "branch": "codex/full-dmg-completion",
   "base_commit": "82ffb603842d48d3ad71a661297ffcd85f4929e7",
@@ -26,7 +26,7 @@
     },
     {
       "id": "indexed-compiler",
-      "status": "all78-units-integrated; deterministic-validation-and-pinned-consumer-check-passed; final-browser-check-pending",
+      "status": "complete-and-public-browser-verified-for-recorded-journeys",
       "owner": "comms_implications",
       "output": "full-dmg/okf-explorer.json"
     },
@@ -71,28 +71,29 @@
     },
     {
       "id": "contracts-and-documents",
-      "status": "in-progress",
+      "status": "complete-for-research-release",
       "owner": "root"
     },
     {
       "id": "independent-review-and-ci",
-      "status": "cross-agent-review-and-both-candidate-ci-runs-passed"
+      "status": "cross-agent-review-and-exact-content-candidate-ci-passed"
     },
     {
       "id": "immutable-browser-verification",
-      "status": "actual-final-candidate-passed-local-consumer-preflight; public-consumer-deployment-pending"
+      "status": "passed-for-recorded-public-journeys"
     },
     {
       "id": "publication-and-freeze",
-      "status": "pending"
+      "status": "immutable-research-candidate-published;24September-freeze-retained"
     }
   ],
   "continuation": {
-    "status": "active",
+    "status": "pause-on-completion",
     "automation_id": "complete-the-full-dmg-research-bundle",
     "kind": "thread-heartbeat",
     "interval": "hourly",
-    "stop_policy": "pause on completion, external-only blockage or 24 September content freeze"
+    "stop_policy": "pause on completion, external-only blockage or 24 September content freeze",
+    "completion_action": "Pause the heartbeat after canonical-main CI is verified; do not run further corpus expansion."
   },
   "external_decisions": [
     {
@@ -163,8 +164,8 @@
     "substantive_units_pending_proposals": 0,
     "status": "bounded-proposals-complete-and-cross-reviewed; specialist-acceptance-not-claimed",
     "next_priority": [
-      "Verify immutable consumer candidate",
-      "Publish checked research release"
+      "Specialist review of selected interpretations and partial trials",
+      "Separate seminar website, WebMCP and voice/audio rehearsal"
     ],
     "review_packets": [
       "evaluation/full-dmg-common-and-jsa-extension-review.json",
@@ -182,7 +183,7 @@
     "snapshot": "dwp-full-dmg-2026-09-15-2dd78242297c",
     "records": 15390,
     "assertions": 16210,
-    "status": "complete-source-semantic-search-and-consumer-checks-passed; final-public-browser-pending"
+    "status": "complete-source-semantic-search-consumer-and-recorded-public-browser-checks-passed"
   },
   "independent_review": "validation/full-dmg-independent-review.json",
   "open_consumer_findings": [
@@ -193,8 +194,13 @@
     },
     {
       "id": "source-labels-and-indexed-timeline",
-      "status": "fixes-reviewed; final-candidate-browser-pending",
-      "detail": "Source/publisher labels and resource hosts repaired. Separate Explorer fix hydrates selected Timeline and honours explicitly declared source-release dates; original capture dates remain separate."
+      "status": "resolved-and-public-browser-verified",
+      "detail": "Source/publisher/format/topic/tag/licence/facet labels verified against the consumer. Direct selected-record CPAG Timeline shows Apr2026, while catalogue fallbacks are labelled."
+    },
+    {
+      "id": "search-term-expansion",
+      "status": "documented-consumer-behaviour",
+      "detail": "Explorer can expand unavailableclaimantdetails to visible indexed term unavailable and7results. Its term explanation must be read; Python exact-match no-result checks are not equivalent to this UI behaviour."
     }
   ],
   "indexed_retrieval": "evaluation/full-dmg-retrieval.json",
@@ -210,14 +216,14 @@
   },
   "source_family_review": "evaluation/full-dmg-source-family-review.json",
   "remaining_research_gaps": "docs/next-stage/full-dmg-research-gaps.md",
-  "candidate_commit": "29c3ced8da385167044c8718bc08dd50c5397f73",
+  "candidate_commit": "80b6f08426aea39dd2934fb8795b61215e2cc0ad",
   "candidate_ci": {
     "status": "passed",
     "runs": [
-      35026148751,
-      35026153123
+      35028883819,
+      35028878408
     ],
-    "scope": "preceding098a43318cca candidate; finalresourceformatcorrectionneedsnewCI"
+    "scope": "exact immutable content candidate80b6f08426aea39dd2934fb8795b61215e2cc0ad"
   },
   "consumer_pull_request": "https://github.com/chris-page-gov/okf-explorer/pull/121",
   "consumer_source_commit": "8e01dfe16538c6045ee1d55b64c3f6e24bada9f7",
@@ -228,7 +234,15 @@
     "pr_ci_run": 35025588136,
     "pr_ci": "passed",
     "canonical_ci_run": 35027364360,
-    "canonical_ci": "in-progress",
-    "pages": "in-progress"
+    "canonical_ci": "passed",
+    "pages": "passed",
+    "pages_run": 35027352490,
+    "evidence": "validation/explorer-pr121-publication/evidence-index.json"
+  },
+  "updated_at": "2026-09-15T22:08:56.162997+00:00",
+  "browser_receipt": "validation/full-dmg-browser.json",
+  "canonical_promotion": {
+    "pull_request": "https://github.com/chris-page-gov/okf-dwp/pull/5",
+    "policy": "Promote the reviewed assurance commit only after required checks pass, then verify canonical-main CI. GitHub PR and Actions history record this subsequent promotion without rewriting the frozen content or browser receipt."
   }
 }

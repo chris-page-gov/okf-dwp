@@ -19,8 +19,10 @@
 - Correct 278 PDF source links from authored records that were labelled as HTML; keep authorship, source-file format and media type independently accurate. Add an isolated compiler regression and negative metadata controls.
 - Add publisher/resource endpoint labels and source hosts, reconcile per-publisher resource counts, and preserve CPAG's typed April 2026 publication month separately from capture and observation dates. CPAG remains metadata and links only.
 - Reconcile literal paragraph and memo references to acquired location candidates, preserving ambiguous matches and unresolved legal identifiers across all 331 source documents.
-- Supply all420 Graph metadata/facet labels, with exact consumer route encoding and deletion controls.
-- Keep final full-DMG browser verification and publication pending; earlier consumer receipts retain their original snapshot scope.
+- Supply all 420 Graph metadata/facet labels, with exact consumer route encoding and deletion controls.
+- Pass 43 local repository tests. Verify public JSON/YAML-LD loading, source navigation, the selected ESA Graph and DMG 42320 relationship, six labelled PDF resources for `84351`, CPAG's April 2026 Timeline and bounded search controls at content commit `80b6f08426aea39dd2934fb8795b61215e2cc0ad`, snapshot `dwp-full-dmg-2026-09-15-2dd78242297c`. Retain exact scope in `validation/full-dmg-browser.json`.
+- Add immutable full-DMG launch links and a ten-minute walkthrough. Record Explorer's observed search-term expansion separately from exact Python retrieval controls. Preserve original Pension Credit links and earlier receipt scope.
+- Track publication and canonical CI history in PR 5 separately from the immutable content's browser receipt. Specialist acceptance and production assurance remain incomplete.
 
 ## CPAG external reference — 15 September 2026
 

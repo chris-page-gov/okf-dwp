@@ -60,6 +60,7 @@ classified those pages, so an empty text result is not evidence of a blank PDF.
 
 For the full-DMG candidate:
 
+- Immutable checked entry points: [JSON](https://raw.githubusercontent.com/chris-page-gov/okf-dwp/80b6f08426aea39dd2934fb8795b61215e2cc0ad/full-dmg/okf-explorer.json) and [YAML-LD](https://raw.githubusercontent.com/chris-page-gov/okf-dwp/80b6f08426aea39dd2934fb8795b61215e2cc0ad/full-dmg/okf-explorer.yamlld), snapshot `dwp-full-dmg-2026-09-15-2dd78242297c`.
 - `full-dmg/okf-explorer.json` or `full-dmg/okf-explorer.yamlld`: indexed Explorer entry point.
 - `full-dmg/okf-bundle.yamlld`: compact semantic control; follow its manifest to bounded JSON-LD and RDF shards.
 - `full-dmg/data/manifest.json`: lazy record, resource and relationship projections.
@@ -81,6 +82,13 @@ uv run --locked python scripts/query.py '84351' --scope full-dmg --include-histo
 
 Report whether a result is a listed chapter, memo, amendment or another source role. Check its original PDF and neighbouring pages. Neither a later observation time nor an old-looking filename establishes whether the rule applies. Treat extracted legal-reference lines as dependencies until the authoritative instrument, version and applicability are reconciled.
 
+The public Explorer search can expand an unmatched string into an indexed
+term. In the recorded browser check, `unavailableclaimantdetails` expanded to
+`unavailable` and returned seven results; `zzzxqvnomatch` returned an unmatched
+term and no results. Check the displayed query interpretation. Do not treat
+the exact Python evaluator's no-result controls as proof of identical UI
+behaviour, or a search hit as an answer to the original question.
+
 ## What the answer trials establish
 
 The 160 trials are context-aware and source-guided. Assessments record
@@ -93,8 +101,15 @@ boundaries. Do not count a partial or underspecified result as a passed case.
 The answerers had prior source/review context and used guided raw-source reads.
 These trials are not blind hold-outs or an end-to-end indexed-retrieval
 benchmark. They do not prove Explorer, WebMCP or live-voice behaviour.
-Final browser verification and publication of the full-DMG candidate remain
-pending. The earlier pilot browser receipts retain their named snapshot scope.
+The separate [public browser receipt](validation/full-dmg-browser.json) binds
+content commit `80b6f08426aea39dd2934fb8795b61215e2cc0ad` to its checked
+consumer and interactions: JSON/YAML-LD loading, source navigation, selected
+Graph relationships and resource labels, CPAG's publication-month Timeline,
+and bounded search controls. The [walkthrough](docs/full-dmg-walkthrough.md)
+provides those routes. Publication and canonical CI history are tracked in
+[PR 5](https://github.com/chris-page-gov/okf-dwp/pull/5); the immutable browser
+receipt applies to the named content commit. The earlier pilot browser
+receipts retain their named snapshot scope.
 
 Replay the retained evidence checks without making new model calls:
 
