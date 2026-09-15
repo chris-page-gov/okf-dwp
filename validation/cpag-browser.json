@@ -1,0 +1,52 @@
+{
+  "schema": "okf-dwp-browser-acceptance.v1",
+  "status": "passed",
+  "checked_at": "2026-09-15T16:23:49.704583+00:00",
+  "browser": "Microsoft Edge via installed browser extension",
+  "content_commit": "a29749eb79565d7aa595cf78b9964e5ee1f19cf3",
+  "snapshot_id": "dwp-pension-credit-2026-09-15-e49131bd7ef0",
+  "launch_url": "https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fa29749eb79565d7aa595cf78b9964e5ee1f19cf3%2Fbundle%2Fokf-bundle.yamlld&q=CPAG#resource/cpag-welfare-benefits-handbook",
+  "verified_urls": [
+    "https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fa29749eb79565d7aa595cf78b9964e5ee1f19cf3%2Fbundle%2Fokf-bundle.yamlld&q=CPAG#resource/cpag-welfare-benefits-handbook",
+    "https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fa29749eb79565d7aa595cf78b9964e5ee1f19cf3%2Fbundle%2Fokf-bundle.json&q=CPAG#resource/cpag-welfare-benefits-handbook",
+    "https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fa29749eb79565d7aa595cf78b9964e5ee1f19cf3%2Fbundle%2Fokf-bundle.yamlld&view=graph&q=CPAG#resource/cpag-welfare-benefits-handbook"
+  ],
+  "artefacts": {
+    "okf-bundle.json": "e8c472cba0356a938dca93a2e054ffb2db92588475963d3a09a3fa36af0aba8c",
+    "okf-bundle.yamlld": "4fa3f7166342cdb181e9d11c1bd333079cbb7082f94346da674c24f6d2870891",
+    "okf-bundle.jsonld": "0e63cae930ba6ab3ee99a2315236b81189a51d5e2df2d3f402153c25078eefff"
+  },
+  "checks": [
+    {
+      "id": "direct-yaml-ld-and-json-import",
+      "status": "passed",
+      "observed": "Both imports restored the CPAG external-reference record, query CPAG and its explicit metadata-only access notice."
+    },
+    {
+      "id": "search-and-navigation",
+      "status": "passed",
+      "observed": "CPAG returned three records: the external reference, welfare rights adviser persona and collection overview. Record details showed incoming adviser and outgoing Pension Credit navigation relationships."
+    },
+    {
+      "id": "snapshot-boundary",
+      "status": "passed",
+      "observed": "Review boundaries displayed dwp-pension-credit-2026-09-15-e49131bd7ef0 with independent publisher and CPAG content exclusion."
+    },
+    {
+      "id": "graph",
+      "status": "passed",
+      "observed": "CPAG-filtered Graph displayed two connected nodes and one adviser-to-reference relationship."
+    },
+    {
+      "id": "publisher-links-and-rights",
+      "status": "passed",
+      "observed": "Reader rendered the public CPAG catalogue, AskCPAG link, terms link and consent boundary. Publisher book contents were not accessed during this check."
+    },
+    {
+      "id": "console",
+      "status": "passed",
+      "observed": "No captured error or warning logs in either import tab."
+    }
+  ],
+  "scope": "Focused installed Edge smoke check of CPAG metadata, display, search and navigation. No CPAG book content review, full accessibility audit or cross-browser claim."
+}

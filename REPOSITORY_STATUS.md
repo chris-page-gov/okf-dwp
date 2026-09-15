@@ -12,7 +12,8 @@ The initial repository scaffold was committed separately before feature work. So
 - `domain-profile/check.json`: schema, evidence and snapshot binding checks.
 - `validation/bundle.json`: all-assertion, projection, hash and source-coverage checks.
 - `validation/retrieval.json`: six positive and two negative retrieval controls.
-- `validation/browser.json`: actual consumer identity and journey evidence recorded against the immutable candidate.
+- `validation/browser.json`: initial meeting consumer evidence against its immutable candidate.
+- `validation/cpag-browser.json`: CPAG reference checks in both YAML-LD and JSON imports against the updated immutable candidate.
 - GitHub Actions: canonical branch validation status.
 
 ## Foundry boundary
@@ -43,3 +44,8 @@ observation. YAML whitespace is normalised only when decoding proves that
 the data is unchanged. Existing source-rendering and initial browser receipts
 remain scoped to their named snapshot; the CPAG browser check is recorded
 separately.
+
+The CPAG reference passed live Explorer checks in Edge using both YAML-LD and
+JSON. Search, access wording, publisher links, Graph and the exact snapshot
+notice were checked; neither tab captured warning or error logs. See
+`validation/cpag-browser.json` for the immutable content commit and hashes.
