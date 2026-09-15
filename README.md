@@ -8,6 +8,10 @@ This repository turns the public [DWP Decision makers’ guide, volumes 13 and 1
 
 ## What is here
 
+**Full-DMG completion is now under way.** The owner has authorised unattended processing and publication against the frozen 331-PDF census, with content frozen by 24 September. The [completion plan](docs/next-stage/unattended-completion.md) and [current checkpoint](evaluation/full-dmg-progress.json) distinguish work in progress from delivered coverage. The existing links above remain the verified Pension Credit demonstration.
+
+The [full-DMG acquisition](docs/next-stage/full-dmg-acquisition.md) is complete: **331 PDFs and 14,743 measured pages**, with source hashes and extraction-quality flags. The indexed consumer and wider semantic coverage are still being built.
+
 | Layer | Delivered scope |
 | --- | --- |
 | Frozen source collection | All 36 linked PDFs, 1,524 pages, original bytes, source URLs and SHA-256 hashes |
@@ -50,7 +54,7 @@ uv run --locked python scripts/query.py '84351' --limit 5
 uv run --locked python scripts/query.py 'part-week payments' --limit 5
 ```
 
-`--include-history` explicitly includes all acquired documents in CLI search. Broad terms can rank scenario-specific examples above general rules; the CLI is retrieval, not legal reasoning. No-result queries return no invented evidence.
+`--include-history` explicitly includes all acquired document roles within the selected inventory. Once the full-DMG inventory exists, `--scope full-dmg` selects it; the default remains the original Pension Credit inventory. Results identify the exact inventory hash and source role. Broad terms can rank scenario-specific examples above general rules; the CLI is retrieval, not legal reasoning. No-result queries return no invented evidence.
 
 A deliberate source refresh is separate: inspect `scripts/acquire_sources.py --help` and [source instructions](source/README.md), acquire a new snapshot, review changes and repeat discovery and assurance. Do not silently overwrite the meaning of an existing release.
 

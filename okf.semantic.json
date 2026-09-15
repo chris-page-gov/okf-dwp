@@ -16,7 +16,9 @@
     "authoritative_inputs": [
       "knowledge/**/*.yamlld",
       "source/inventory.json",
-      "source/pages/*.json"
+      "source/pages/*.json",
+      "source/full-dmg-2026-09-15/inventory.json",
+      "source/full-dmg-2026-09-15/pages/*.json"
     ],
     "outputs": [
       {
@@ -38,6 +40,11 @@
         "path": "bundle/relationships.json",
         "role": "relationship-runtime",
         "generated": true
+      },
+      {
+        "path": "full-dmg/**",
+        "role": "indexed-runtime-and-sharded-semantic-projections",
+        "generated": true
       }
     ],
     "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
@@ -46,6 +53,21 @@
       "Independent experimental source discovery; no specialist legal review or full Foundry production assurance.",
       "Authored references are navigation; explicit semantic relations are source-backed model proposals awaiting specialist review. PDF page containment is deterministically derived.",
       "Chapter 83 extraction quality varies. Historical amendments are retained outside default page search."
+    ],
+    "deliveries": [
+      {
+        "id": "pension-credit-pilot",
+        "state": "generated-yaml-ld-assertion-graph",
+        "path": "bundle/okf-bundle.yamlld",
+        "authored_scope": "knowledge/**/*.yamlld excluding knowledge/full-dmg/**"
+      },
+      {
+        "id": "full-dmg",
+        "state": "generated-yaml-ld-sharded-graph",
+        "path": "full-dmg/okf-explorer.json",
+        "authored_scope": "existing pilot plus knowledge/full-dmg/**/*.yamlld",
+        "status": "implementation-in-progress"
+      }
     ]
   },
   "relationship_contract": {
@@ -106,6 +128,15 @@
       "rights",
       "freshness",
       "lifecycle"
+    ],
+    "additional_deliveries": [
+      {
+        "scope": "full-dmg",
+        "delivery": "indexed-large-corpus",
+        "descriptor": "full-dmg/okf-explorer.json",
+        "consumer_commit": "51601b5d94ac33ce5be654e81943ca2e049743d8",
+        "verification_status": "pending"
+      }
     ]
   }
 }

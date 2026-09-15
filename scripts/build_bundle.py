@@ -199,6 +199,9 @@ def compile_bundle() -> dict[str, bytes]:
     authored_inputs = []
     authored_rows: list[tuple[dict[str, Any], Path, str]] = []
     for path in sorted((ROOT / "knowledge").rglob("*.yamlld")):
+        # Full-DMG inputs belong to the indexed compiler, not the frozen pilot.
+        if path.is_relative_to(ROOT / "knowledge/full-dmg"):
+            continue
         document = load_yaml(path)
         declared_context = document.get("@context")
         for item in declared_context if isinstance(declared_context, list) else [declared_context]:

@@ -176,6 +176,32 @@
         "No statutory provision text or effects acquired here.",
         "Sibling local changes are not an integrated published dependency."
       ]
+    },
+    {
+      "id": "full-dmg-public-guidance",
+      "label": "Full DMG public guidance snapshot",
+      "kind": "public-document-snapshot",
+      "paths": [
+        "source/full-dmg-2026-09-15/**",
+        "knowledge/full-dmg/**"
+      ],
+      "authority": "official-source-with-derived-extraction-and-unreviewed-project-interpretation",
+      "inventory": {
+        "manifest_path": "source/full-dmg-2026-09-15/inventory.json",
+        "denominator": 331,
+        "census_path": "source/discovery-2026-09-15/census.json"
+      },
+      "rights": {
+        "status": "OGL-v3-with-attribution-and-exceptions",
+        "evidence": [
+          "NOTICE.md"
+        ]
+      },
+      "limitations": [
+        "Acquisition and semantic completion are separate gates; see evaluation/full-dmg-progress.json.",
+        "Source publication, observation and legal applicability dates remain distinct.",
+        "ADM is separately scoped; no CPAG handbook body content is included."
+      ]
     }
   ],
   "boundaries": {
@@ -233,6 +259,10 @@
       {
         "path": "bundle/**",
         "role": "semantic-and-reader-projections"
+      },
+      {
+        "path": "full-dmg/**",
+        "role": "indexed-full-dmg-and-sharded-semantic-projections"
       }
     ]
   },
@@ -244,7 +274,8 @@
         "source/**"
       ],
       "command_ids": [
-        "validate"
+        "validate",
+        "full-dmg-source-check"
       ]
     },
     {
@@ -258,11 +289,13 @@
         "docs/evidence/cpag-access-review.json",
         "scripts/semantic_authoring.py",
         "evaluation/**",
-        "docs/evidence/cpag-publication-date-review.json"
+        "docs/evidence/cpag-publication-date-review.json",
+        "full-dmg/**"
       ],
       "command_ids": [
         "build-check",
-        "validate"
+        "validate",
+        "full-dmg-evidence-check"
       ]
     },
     {
@@ -335,6 +368,33 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 10
+      },
+      {
+        "id": "full-dmg-source-check",
+        "kind": "check",
+        "planes": [
+          "source"
+        ],
+        "command": "uv run --locked python scripts/acquire_full_dmg.py --check",
+        "source": "docs/next-stage/unattended-completion.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "full-dmg-evidence-check",
+        "kind": "check",
+        "planes": [
+          "source",
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/discover_full_dmg_evidence.py --check",
+        "source": "docs/next-stage/unattended-completion.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
       }
     ]
   },
@@ -350,7 +410,8 @@
       "okf.publication.json",
       "docs/evidence/cpag-access-review.json",
       "evaluation/**",
-      "docs/evidence/cpag-publication-date-review.json"
+      "docs/evidence/cpag-publication-date-review.json",
+      "full-dmg/**"
     ],
     "documentation_paths": [
       "README.md",
@@ -391,7 +452,7 @@
     "mode": "github-repository",
     "scope": "experimental-preview",
     "authority": {
-      "decision": "Owner explicitly requested a public chris-page-gov repository and an unofficial meeting exemplar on 15 September 2026. The owner requested the next semantic stage, full DMG target by 24 September and seminar exploration for 30 September.",
+      "decision": "Owner explicitly requested a public chris-page-gov repository and an unofficial meeting exemplar on 15 September 2026. The owner requested the next semantic stage, full DMG target by 24 September and seminar exploration for 30 September. The owner then requested unattended bundle completion; normal reviewed PR publication is authorised.",
       "evidence_paths": [
         "REPOSITORY_STATUS.md"
       ]

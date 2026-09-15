@@ -2,6 +2,8 @@
 
 **Started 15 September 2026. Content freeze: 24 September. Seminar: 30 September.**
 
+The owner has now authorised [unattended full-DMG completion](unattended-completion.md). Follow the [durable checkpoint](../../evaluation/full-dmg-progress.json) and [finite semantic worklist](full-dmg-semantic-workplan.md) for current work; the table below describes the established pilot baseline.
+
 This is an independent public research project. A source capture, a model proposal and a specialist-approved rule are different deliverables. No individual entitlement or payment decision is implemented.
 
 ## Where we are

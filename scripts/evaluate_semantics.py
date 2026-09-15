@@ -10,7 +10,9 @@ from semantic_authoring import check_relation
 def main():
     bundle = json.loads((ROOT / 'bundle/okf-bundle.json').read_text())
     nodes = bundle['nodes']
-    authored = [row for path in sorted((ROOT/'knowledge').rglob('*.yamlld')) for row in load_yaml(path).get('@graph', [])]
+    authored = [row for path in sorted((ROOT/'knowledge').rglob('*.yamlld'))
+                if not path.is_relative_to(ROOT/'knowledge/full-dmg')
+                for row in load_yaml(path).get('@graph', [])]
     proposals = [(row, spec) for row in authored for spec in row.get('semantic_relations', [])]
     for row, spec in proposals:
         check_relation(spec, row, nodes)

@@ -1,5 +1,11 @@
 # Changelog
 
+## Full-DMG completion in progress — 15 September 2026
+
+- Record the owner's unattended completion authority, finite acceptance gates and an hourly task continuation with durable checkpoints.
+- Begin acquisition against all 331 DMG URLs and a separate indexed Explorer projection, preserving the existing Pension Credit demonstration.
+- Add a finite semantic/evaluation worklist and make CLI retrieval scope explicit. Keep CPAG body reuse, specialist acceptance and full ADM outside this research-bundle completion claim.
+
 ## CPAG external reference — 15 September 2026
 
 - Added a searchable CPAG Welfare Benefits Handbook reference with publisher links and explicit subscription, rights and AI-processing boundaries.

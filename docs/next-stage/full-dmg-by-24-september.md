@@ -18,6 +18,8 @@ These are relationships stated by the official publication pages. They do not es
 
 ## Measured metadata scope
 
+**Acquisition update, 15 September 2026:** all 331 DMG PDFs have now been acquired and verified, measuring 14,743 pages. [Acquisition evidence and extraction gaps](full-dmg-acquisition.md) supersede the acquisition status in the original census planning text below. The source denominator and the original metadata receipts are unchanged.
+
 The [frozen census](../../source/discovery-2026-09-15/census.json) records all direct members of the DMG collection at `2026-09-15T16:55:17.923154Z` to `2026-09-15T16:55:18.464057Z`: **11 publication pages, 14 volumes and 331 unique PDF URLs**. GOV.UK declares **14,743 PDF pages**. These are publisher metadata counts; the new PDFs have not been acquired or measured. Each of the 14 API responses, including the collection and the two contextual sources, has a URL, timestamp and SHA-256 in the [receipts](../../source/discovery-2026-09-15/receipts.json).
 
 | Publication grouping | PDFs | Declared pages |

@@ -1,5 +1,11 @@
 # Repository status
 
+## Unattended full-DMG work in progress
+
+On 15 September 2026 the owner instructed completion of the bundle unattended. This authorises the public-source processing, semantic drafting, verification and normal reviewed PR publication in [the completion plan](docs/next-stage/unattended-completion.md). The [checkpoint](evaluation/full-dmg-progress.json) records actual task state. Full-DMG acquisition and an indexed consumer projection are in progress; this statement does not promote their acceptance gates. The previously verified Pension Credit publication remains available.
+
+CPAG substantive reuse and specialist acceptance are separate external decisions. Neither is required to complete an explicitly unreviewed research bundle from public GOV.UK sources. No handbook body acquisition or specialist acceptance is authorised or asserted by the unattended instruction.
+
 **Lifecycle: experimental public preview.** The owner explicitly authorised a public `chris-page-gov/okf-dwp` repository, an OKF+ YAML-LD exemplar and a demonstration for a pensions representative on 15 September 2026. The owner later supplied three links with an instruction to log them without changing the 4pm workstream.
 
 The initial repository scaffold was committed separately before feature work. Source acquisition, discovery, build and independent review ran in parallel; publication proceeds through a feature pull request. Source and generated artefacts remain distinct.
