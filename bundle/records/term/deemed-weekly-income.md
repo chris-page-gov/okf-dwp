@@ -3,18 +3,18 @@
 route: term/deemed-weekly-income
 title: Deemed weekly income from capital
 type: Concept
-description: Locate the source calculation section and appendix; no executable award calculator is 
+description: Locate the source calculation section and appendix; no executable award calculator is
   provided.
 status: draft
 tags:
 - unofficial
 - project-authored
 - concept
-resource: 
+resource:
   https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=128
 sources:
 - id: dmg-vol14-ch84
-  resource: 
+  resource:
     https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=128
   title: 'DMG Vol 14 Ch 84: Deemed weekly income from capital'
   author: organisation:dwp

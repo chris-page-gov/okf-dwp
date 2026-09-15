@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 from copy import deepcopy
+from datetime import datetime
 import json
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -48,6 +49,14 @@ def main() -> None:
     require(len(iris) == len(entities), "Duplicate semantic entity IRI")
     require(len({row["@id"] for row in assertions}) == len(assertions), "Duplicate assertion IRI")
     require(len({row["route"] for row in entities}) == len(entities), "Duplicate entity route")
+    publication_time = datetime.fromisoformat(bundle["generated_at"].replace("Z", "+00:00"))
+    for row in entities:
+        for value in (row.get("observedAt"), row.get("generated", {}).get("at")):
+            if value:
+                require(publication_time >= datetime.fromisoformat(str(value).replace("Z", "+00:00")),
+                        f"Publication predates an input observation: {row['route']}")
+    require(bundle["exploratory_publication"]["generated_at"] == bundle["generated_at"], "Publication timestamps disagree")
+    checks["publication_timestamp_covers_inputs"] = {"status": "passed", "generated_at": bundle["generated_at"]}
     for row in entities:
         require(bool(ROUTE.fullmatch(row["route"])), f"Unsafe route {row['route']}")
         require(bool(row.get("title", "").strip()), f"Missing human-readable label: {row['route']}")

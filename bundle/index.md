@@ -27,6 +27,7 @@ Independent, unofficial demonstration. It is not a DWP publication, benefits adv
 - [Where does the guide cover part-week payments?](records/question/pc006.md)
 - [How can I trace an extract back to the original?](records/question/pc007.md)
 - [Can this bundle tell me what I am entitled to?](records/question/pc008.md)
+- [CPAG Welfare Benefits Handbook — external reference](records/resource/cpag-welfare-benefits-handbook.md)
 - [Find capital guidance](records/story/capital-review.md)
 - [Spot historical and missing context](records/story/context-review.md)
 - [Audit a source transformation](records/story/evidence-audit.md)

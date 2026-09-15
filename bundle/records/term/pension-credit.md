@@ -3,7 +3,7 @@
 route: term/pension-credit
 title: State Pension Credit
 type: Concept
-description: An entry point to the chapter structure, source terminology and scope of the published 
+description: An entry point to the chapter structure, source terminology and scope of the published
   staff guidance.
 status: draft
 tags:
@@ -13,7 +13,7 @@ tags:
 resource: https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=3
 sources:
 - id: dmg-vol13-ch77
-  resource: 
+  resource:
     https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=3
   title: 'DMG Vol 13 Ch 77: Conditions of entitlement, membership of the household and normal amount payable'
   author: organisation:dwp

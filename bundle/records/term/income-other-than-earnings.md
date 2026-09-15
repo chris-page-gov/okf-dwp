@@ -9,11 +9,11 @@ tags:
 - unofficial
 - project-authored
 - concept
-resource: 
+resource:
   https://assets.publishing.service.gov.uk/media/690b7db588a98da87e292365/dmg-ch-85.pdf#page=4
 sources:
 - id: dmg-vol14-ch85
-  resource: 
+  resource:
     https://assets.publishing.service.gov.uk/media/690b7db588a98da87e292365/dmg-ch-85.pdf#page=4
   title: 'DMG Vol 14 Ch 85: Income other than earnings '
   author: organisation:dwp

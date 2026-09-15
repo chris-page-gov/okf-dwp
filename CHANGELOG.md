@@ -1,5 +1,13 @@
 # Changelog
 
+## CPAG external reference — 15 September 2026
+
+- Added a searchable CPAG Welfare Benefits Handbook reference with publisher links and explicit subscription, rights and AI-processing boundaries.
+- Connected the reference to the welfare rights adviser persona and Pension Credit topic without inferring substantive policy agreement.
+- Recorded the public access review. No CPAG handbook text was acquired; the DWP source inventory and page counts remain unchanged.
+- Regenerated YAML-LD, JSON-LD, RDF, Explorer and Markdown projections with mixed-rights attribution.
+- Verified the CPAG record, search, rights notice and Graph in the live Explorer using both import formats.
+
 ## 0.1.0 — 15 September 2026
 
 - Created an independent experimental Pension Credit OKF+ exemplar from all 36 PDFs linked by the declared GOV.UK publication.

@@ -3,7 +3,7 @@
 route: term/assessed-income-period
 title: Assessed income period
 type: Concept
-description: Find assessed income period guidance and its explicit historical context. Text 
+description: Find assessed income period guidance and its explicit historical context. Text
   extraction quality varies in this PDF.
 status: draft
 tags:
@@ -13,7 +13,7 @@ tags:
 resource: https://assets.publishing.service.gov.uk/media/5aa9038ee5274a3e391e3e7c/dmgch83.pdf#page=3
 sources:
 - id: dmg-vol14-ch83
-  resource: 
+  resource:
     https://assets.publishing.service.gov.uk/media/5aa9038ee5274a3e391e3e7c/dmgch83.pdf#page=3
   title: 'DMG Vol 14 Ch 83: Assessed income periods'
   author: organisation:dwp

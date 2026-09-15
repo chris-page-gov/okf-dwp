@@ -9,11 +9,11 @@ tags:
 - unofficial
 - project-authored
 - concept
-resource: 
+resource:
   https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=35
 sources:
 - id: dmg-vol14-ch84
-  resource: 
+  resource:
     https://assets.publishing.service.gov.uk/media/6a5e38bb8b7e4fa537e693d5/dmg-ch84.pdf#page=35
   title: 'DMG Vol 14 Ch 84: Deemed weekly income from capital'
   author: organisation:dwp

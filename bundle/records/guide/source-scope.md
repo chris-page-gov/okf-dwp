@@ -5,7 +5,7 @@ id: guide/source-scope
 route: guide/source-scope
 title: Transitional, spare and amendment documents
 type: Scope note
-description: Historical amendments and transitional material are separated from the seven 
+description: Historical amendments and transitional material are separated from the seven
   substantive chapter records.
 generated:
   by: process:okf-dwp-build/0.1.0
@@ -13,7 +13,7 @@ generated:
 status: draft
 publisher:
   '@id': https://github.com/chris-page-gov
-source: 
+source:
   https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide
 tags:
 - scope

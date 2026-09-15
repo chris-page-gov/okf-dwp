@@ -3,7 +3,7 @@
 route: story/context-review
 title: Spot historical and missing context
 type: UserStory
-description: As a specialist, I want historical provisions and missing memos to remain visible, so 
+description: As a specialist, I want historical provisions and missing memos to remain visible, so
   that an orderly graph does not conceal uncertainty.
 status: draft
 tags:

@@ -17,6 +17,15 @@ not claim rights in them. The project's MIT licence applies only to its own
 code and original material. Vendored Explorer profile material retains its
 upstream licence and identity; the [preserved upstream notices](profiles/README.md) distinguish MIT code from CC BY-NC 4.0 documentation.
 
+## External reference rights
+
+The [CPAG Welfare Benefits Handbook reference](docs/cpag-handbook.md) contains
+original catalogue commentary and publisher links only. No CPAG handbook text
+is reproduced. CPAG material retains its own rights and is not licensed under
+the project's MIT licence or the Open Government Licence. Neither CPAG nor DWP
+has endorsed this independent reference. Its access and reuse restrictions
+remain visible in the bundle.
+
 ## How to use the exemplar
 
 - Follow the original PDF link and page locator before relying on an extract.

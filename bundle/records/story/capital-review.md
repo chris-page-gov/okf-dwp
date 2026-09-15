@@ -3,7 +3,7 @@
 route: story/capital-review
 title: Find capital guidance
 type: UserStory
-description: As an adviser, I want capital disregard guidance with its original page, so that I can 
+description: As an adviser, I want capital disregard guidance with its original page, so that I can
   check the source and its cross-references.
 status: draft
 tags:

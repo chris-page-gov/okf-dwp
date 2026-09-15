@@ -1,0 +1,44 @@
+{
+  "review_kind": "project-authored public source access and rights review",
+  "observed_at": "2026-09-15T16:13:11Z",
+  "reviewer": "Codex parallel source reviewer",
+  "scope": "Public catalogue and terms review only. No subscriber login, book text acquisition, full-book copying, or publisher contact.",
+  "transport": "web.run open, find and search tools",
+  "http_status": null,
+  "http_status_note": "The browsing tool returned parsed page content but did not expose raw HTTP status or response headers. Its displayed crawl dates are separate from this review observation time.",
+  "findings": [
+    {
+      "url": "https://cpag.org.uk/welfare-rights/online-handbooks",
+      "locator": "UK-wide handbooks",
+      "finding": "The public catalogue lists the Welfare Benefits Handbook as a subscriber resource and links readers to AskCPAG.",
+      "retrieval": "web.run open returned parsed page content; tool reported crawl age six days"
+    },
+    {
+      "url": "https://cpag.org.uk/welfare-rights/key-topics/housing-costs",
+      "locator": "Online handbooks",
+      "finding": "The public topic index links a Pension Credit housing-costs chapter within the Welfare Benefits Handbook, supporting its relevance to this project without inspecting the chapter text.",
+      "retrieval": "web.run open and find returned parsed page content; tool reported crawled yesterday"
+    },
+    {
+      "url": "https://cpag.org.uk/terms-conditions",
+      "requested_url": "https://cpag.org.uk/terms-and-conditions",
+      "locator": "Website terms 6.2, 11.2 and 12.1-12.4; subscription terms 9.2-9.3",
+      "finding": "CPAG reserves reproduction and republication rights. Content reuse requests go through PLSclear. Website terms restrict scraping, text/data mining and AI development uses, subject to stated legal limitations. Subscription terms require prior written CPAG consent for incorporating subscription content into AI tools, machine-learning systems or automated processes.",
+      "retrieval": "Opening the requested_url succeeded and the browsing tool reported a redirect to url. Direct opening of url failed on one attempt. Follow-up open through the requested_url returned the subscription clauses. Tool reported crawl age two weeks.",
+      "terms_displayed_last_updated": "2025-04-09"
+    },
+    {
+      "url": "https://cpag.org.uk/shop/subscription/welfare-benefits-handbook-online-subscription",
+      "locator": "Product description",
+      "finding": "The public product search result describes an annually charged per-person subscription and updates throughout the year. This does not establish public redistribution or AI processing permission.",
+      "retrieval": "Official-domain web search result returned product text; direct open returned an internal tool error. Do not describe this as a successful direct page fetch."
+    }
+  ],
+  "project_decision": "Add only a project-authored external resource record containing factual identification, publisher links, relevance and an explicit rights/access boundary. Do not ingest handbook text into this public bundle unless written permission covers the intended processing and public redistribution.",
+  "uncertainties": [
+    "No contract held by the user or written permission from CPAG has been examined.",
+    "No subscriber book contents or exact current online edition have been inspected.",
+    "No definitive legal conclusion is made about statutory exceptions or contractual enforceability.",
+    "No general open licence for handbook ingestion or public distribution was established."
+  ]
+}

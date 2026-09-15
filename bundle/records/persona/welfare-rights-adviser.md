@@ -9,12 +9,14 @@ tags:
 - unofficial
 - project-authored
 - persona
-id: persona/welfare-rights-adviser
-'@type': schema:Role
 generated:
   by: process:codex-research-authoring
-  at: '2026-09-15T14:21:03Z'
+  at: '2026-09-15T16:14:01Z'
+id: persona/welfare-rights-adviser
+'@type': schema:Role
 authority: model-assisted research navigation; unreviewed
+dcterms:references:
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/resource/cpag-welfare-benefits-handbook
 ---
 
 # Welfare rights adviser
@@ -22,3 +24,5 @@ authority: model-assisted research navigation; unreviewed
 Independent project-authored discovery aid; not an official interpretation or entitlement decision.
 
 Find the correct chapter, read the original and identify further evidence to check.
+
+[Research reference: CPAG Welfare Benefits Handbook — external reference](https://github.com/chris-page-gov/okf-dwp/blob/main/bundle/records/resource/cpag-welfare-benefits-handbook.md).
