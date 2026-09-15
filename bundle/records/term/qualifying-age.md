@@ -3,18 +3,18 @@
 route: term/qualifying-age
 title: Qualifying age
 type: Concept
-description: Find guidance and references concerning qualifying age; no fixed current age is 
+description: Find guidance and references concerning qualifying age; no fixed current age is
   inferred by this bundle.
 status: draft
 tags:
 - unofficial
 - project-authored
 - concept
-resource: 
+resource:
   https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=14
 sources:
 - id: dmg-vol13-ch77
-  resource: 
+  resource:
     https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=14
   title: 'DMG Vol 13 Ch 77: Conditions of entitlement, membership of the household and normal amount payable'
   author: organisation:dwp

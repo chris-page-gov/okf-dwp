@@ -14,6 +14,7 @@ This repository turns the public [DWP Decision makers’ guide, volumes 13 and 1
 | Default Explorer content | Seven substantive chapters, 744 page records with complete machine-extracted text |
 | Additional captured material | Transitional chapter 80, spare chapters 81–82, two change summaries and 24 historical amendments; outside default page search |
 | Authored discovery | 22 concepts, three personas, four user stories, eight questions and a cross-chapter navigation aid |
+| External adviser reference | CPAG Welfare Benefits Handbook metadata and publisher links; subscription text is not included |
 | Semantics | YAML-LD and JSON-LD, directed evidence-bearing containment and navigation relationships, stable identities and local routes |
 | Reproducibility | Locked dependencies, offline build from frozen inputs, source and output hashes, all-assertion validation and retrieval controls |
 
@@ -71,6 +72,12 @@ The source PDFs may contain historical examples, dates, scenario-specific treatm
 The complete source has been captured, but the full Foundry production gate sequence, comprehensive accessibility assurance, expert legal review and automatic legal rule modelling are **not complete**. [Repository status](REPOSITORY_STATUS.md) records the preview boundary and validation evidence. No claimant case data was acquired.
 
 ## Reuse and next steps
+
+The [CPAG handbook access review](docs/cpag-handbook.md) explains the new
+searchable external reference and the permission required before handbook
+content could be processed or redistributed. Search **CPAG** in the updated
+bundle to inspect it. The original meeting link above preserves its earlier
+snapshot; the CPAG reference requires the updated bundle.
 
 Contains public sector information licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Original project code and original material use the [MIT licence](LICENSE); source extracts retain Crown copyright, attribution and applicable exceptions. See [NOTICE.md](NOTICE.md).
 

@@ -12,9 +12,9 @@ generated:
 status: draft
 publisher:
   '@id': https://github.com/chris-page-gov
-source: 
+source:
   https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide
-resource: 
+resource:
   https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide
 tags:
 - start here
@@ -41,6 +41,8 @@ Chapter 83 has letter-spaced PDF text that reduces search quality. Some pages ha
 Seven substantive chapters form the default searchable corpus. Transitional, spare and amendment documents remain separately identified in the source inventory.
 
 Authored terminology and research journeys are AI-assisted navigation aids awaiting pensions specialist review. They do not establish legal relationships or decisions.
+
+External-reference records contain project-authored metadata and links only. CPAG handbook text is not included; its subscription and reuse restrictions remain applicable.
 
 ## Chapters
 

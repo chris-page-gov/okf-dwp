@@ -22,7 +22,8 @@
       "kind": "public-document-snapshot",
       "paths": [
         "source/**",
-        "knowledge/**",
+        "knowledge/guided-discovery.yamlld",
+        "knowledge/source-navigation.yamlld",
         "domain-profile/**"
       ],
       "formats": [
@@ -73,6 +74,37 @@
       "limitations": [
         "Snapshot bounded; not a consolidated legal rule set."
       ]
+    },
+    {
+      "id": "cpag-external-reference",
+      "label": "CPAG Welfare Benefits Handbook reference",
+      "kind": "external-resource-metadata",
+      "paths": [
+        "knowledge/external-resources.yamlld",
+        "docs/cpag-handbook.md",
+        "docs/evidence/cpag-access-review.json"
+      ],
+      "formats": [
+        "application/ld+yaml",
+        "application/json",
+        "text/markdown"
+      ],
+      "origin": "project-authored-reference-to-public-cpag-catalogue",
+      "authority": "independent-adviser-publication-reference; no-substantive-content-inspected",
+      "snapshot_policy": "dated-public-metadata-review",
+      "rights": {
+        "status": "metadata-and-links-only; no-handbook-reuse-permission-established",
+        "evidence": [
+          "docs/cpag-handbook.md",
+          "docs/evidence/cpag-access-review.json",
+          "NOTICE.md"
+        ]
+      },
+      "limitations": [
+        "No CPAG handbook text, pages, rules or tables acquired.",
+        "CPAG subscription terms require prior written consent for subscription content in AI tools or automated processes.",
+        "This reference is outside the DWP PDF census and the domain profile initial-source denominator."
+      ]
     }
   ],
   "boundaries": {
@@ -116,6 +148,10 @@
       {
         "path": ".github/workflows/**",
         "role": "workflow"
+      },
+      {
+        "path": "docs/**",
+        "role": "documentation-and-external-source-review"
       }
     ],
     "generated": [
@@ -143,7 +179,8 @@
       ],
       "paths": [
         "knowledge/**",
-        "bundle/**"
+        "bundle/**",
+        "docs/evidence/cpag-access-review.json"
       ],
       "command_ids": [
         "build-check",
@@ -232,7 +269,8 @@
       "bundle/**",
       ".github/workflows/**",
       "okf.semantic.json",
-      "okf.publication.json"
+      "okf.publication.json",
+      "docs/evidence/cpag-access-review.json"
     ],
     "documentation_paths": [
       "README.md",

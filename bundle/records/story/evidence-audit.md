@@ -3,7 +3,7 @@
 route: story/evidence-audit
 title: Audit a source transformation
 type: UserStory
-description: As a knowledge engineer, I want an extract, original PDF hash and relationship 
+description: As a knowledge engineer, I want an extract, original PDF hash and relationship
   evidence, so that I can reproduce and inspect the transformation.
 status: draft
 tags:

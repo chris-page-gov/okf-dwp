@@ -4,7 +4,7 @@
 route: journey/chapter-navigation
 title: Follow the guide across chapters
 type: Research navigation
-description: A source-backed route from chapter 77 to connected guidance on additional amounts, 
+description: A source-backed route from chapter 77 to connected guidance on additional amounts,
   payments, income and capital. Authored navigation awaiting specialist review.
 tags:
 - research journey
@@ -13,13 +13,13 @@ tags:
 - scope
 sources:
 - id: dmg-vol13-ch77-page-3
-  resource: 
+  resource:
     https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=3
   title: DMG chapter 77, PDF page 3
   sha256: 0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708
   retrieved_at: '2026-09-15T14:21:01Z'
 - id: dmg-vol13-ch77-page-4
-  resource: 
+  resource:
     https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=4
   title: DMG chapter 77, PDF page 4
   sha256: 0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708

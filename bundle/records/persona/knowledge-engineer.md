@@ -3,7 +3,7 @@
 route: persona/knowledge-engineer
 title: Knowledge engineer
 type: Persona
-description: Inspect identities, extraction boundaries, relationships, provenance and 
+description: Inspect identities, extraction boundaries, relationships, provenance and
   reproducibility.
 status: draft
 tags:

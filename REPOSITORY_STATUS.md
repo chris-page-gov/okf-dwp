@@ -25,6 +25,21 @@ The draft domain profile's `blocking_for_build` entries describe blockers for a 
 
 Original project material uses British English and sentence case. Official titles, exact source extracts, schema/API fields, code identifiers, URLs and unmodified vendored profile bytes retain upstream wording intentionally. Source text is not silently edited for spelling, contemporary rates or apparent inconsistencies.
 
-The final browser-verified snapshot is `dwp-pension-credit-2026-09-15-bdee692f1126`: 791 nodes and 850 evidence-bearing assertions. Direct JSON and YAML-LD imports both passed in the live Explorer. All 744 source pages also passed literal-text rendering checks after a numbering defect was found and corrected.
+The initial meeting browser-verified snapshot is `dwp-pension-credit-2026-09-15-bdee692f1126`: 791 nodes and 850 evidence-bearing assertions. Direct JSON and YAML-LD imports both passed in the live Explorer. All 744 source pages also passed literal-text rendering checks after a numbering defect was found and corrected.
 
 Publication consists of the public GitHub repository, immutable commit URLs and the verified Explorer demonstration. No separate GitHub prerelease or uploaded release assets have been created.
+
+## CPAG external reference addition
+
+The owner subsequently requested a CPAG handbook assessment and bundle addition.
+The updated snapshot `dwp-pension-credit-2026-09-15-e49131bd7ef0` contains 792 records and
+852 navigation/containment assertions, including one metadata-only external
+reference. The 744 DWP source-page records are data-equivalent to the initial
+meeting snapshot. The original domain-profile handoff remains frozen; the
+CPAG access review is separate under `docs/cpag-handbook.md`.
+
+Publication timestamps now follow the latest recorded source or authoring
+observation. YAML whitespace is normalised only when decoding proves that
+the data is unchanged. Existing source-rendering and initial browser receipts
+remain scoped to their named snapshot; the CPAG browser check is recorded
+separately.

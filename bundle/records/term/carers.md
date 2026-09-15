@@ -3,18 +3,18 @@
 route: term/carers
 title: Carers
 type: Concept
-description: Find the carer-related additional amount guidance and the memos referenced on that 
+description: Find the carer-related additional amount guidance and the memos referenced on that
   page.
 status: draft
 tags:
 - unofficial
 - project-authored
 - concept
-resource: 
+resource:
   https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=27
 sources:
 - id: dmg-vol13-ch78
-  resource: 
+  resource:
     https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=27
   title: 'DMG Vol 13 Ch 78: State Pension Credit: additional amounts and special groups '
   author: organisation:dwp

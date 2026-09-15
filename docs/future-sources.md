@@ -13,3 +13,12 @@ into this snapshot, semantic graph, coverage denominator or conformance claims.
 
 Logging a candidate does not endorse it or establish that it is authoritative,
 current, compatible or suitable for any particular use.
+
+## CPAG handbook follow-up
+
+On 15 September 2026 the owner separately requested assessment of the
+[CPAG online handbooks](https://cpag.org.uk/welfare-rights/online-handbooks).
+That assessment is complete for a metadata-only addition: see the
+[CPAG access review](cpag-handbook.md). The handbook reference is included
+in the updated bundle; subscriber content remains outside the corpus.
+The three original candidate links above remain logged-only.

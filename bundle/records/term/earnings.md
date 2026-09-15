@@ -12,7 +12,7 @@ tags:
 resource: https://assets.publishing.service.gov.uk/media/698462dd468d351e1406b4a7/dmgch86.pdf#page=2
 sources:
 - id: dmg-vol14-ch86
-  resource: 
+  resource:
     https://assets.publishing.service.gov.uk/media/698462dd468d351e1406b4a7/dmgch86.pdf#page=2
   title: 'DMG Vol 14 Ch 86: Earnings '
   author: organisation:dwp

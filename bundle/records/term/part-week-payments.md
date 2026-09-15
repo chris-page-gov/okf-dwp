@@ -3,18 +3,18 @@
 route: term/part-week-payments
 title: Part-week payments
 type: Concept
-description: Locate the definition, conditions and calculations for part-week payments in the 
+description: Locate the definition, conditions and calculations for part-week payments in the
   source.
 status: draft
 tags:
 - unofficial
 - project-authored
 - concept
-resource: 
+resource:
   https://assets.publishing.service.gov.uk/media/69e1035298c6c9802f7ed9e0/dmg-Chap-79.pdf#page=8
 sources:
 - id: dmg-vol13-ch79
-  resource: 
+  resource:
     https://assets.publishing.service.gov.uk/media/69e1035298c6c9802f7ed9e0/dmg-Chap-79.pdf#page=8
   title: 'DMG Vol 13 Ch 79: Payment questions '
   author: organisation:dwp
