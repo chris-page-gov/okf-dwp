@@ -15,7 +15,7 @@ Retain this attribution when reusing the extracts. Third-party material,
 logos, crests and other exclusions retain their own rights. The project does
 not claim rights in them. The project's MIT licence applies only to its own
 code and original material. Vendored Explorer profile material retains its
-upstream licence and identity.
+upstream licence and identity; the [preserved upstream notices](profiles/README.md) distinguish MIT code from CC BY-NC 4.0 documentation.
 
 ## How to use the exemplar
 

@@ -10,3 +10,4 @@
 - Logged owner-supplied tribunal, calculator and CASA links outside the demonstration snapshot.
 - Logged future extensive evaluation, benefits-engine and customer-journey ideas without expanding the first exemplar.
 - Corrected Markdown display of source numbering after live-browser inspection; extracted source text remains unchanged.
+- Preserved upstream Explorer licence notices alongside the unchanged profile mirror.
