@@ -89,9 +89,11 @@ full-DMG/ADM census initially contained publication metadata only. The later
 full-DMG candidate described above acquires all 331 DMG PDFs; the separate
 182-PDF ADM census remains metadata-only.
 
-The original domain profile and earlier browser receipts remain frozen. The
-initial behavioural designs now have the separate observed trials and model
-assessments described above; specialist approval remains zero. The CPAG public contents harvest remains a separate local research
+The original domain profile, initial behavioural designs and earlier browser
+receipts remain frozen. The full-DMG stage adds the separate 160 observed
+source-guided trials and model assessments described above; the 14 baseline
+journey checks establish route preservation, not observed answers to every
+original question. Specialist approval remains zero. The CPAG public contents harvest remains a separate local research
 artefact; this change does not publish its 90-entry outline or incorporate
 handbook text. The semantic pilot does not depend on those local files.
 

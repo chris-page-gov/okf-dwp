@@ -16,6 +16,7 @@
 - Record 160 context-aware, source-guided observed answers and separate model assessments: 90 supported, 56 partial and 14 with underspecified rubrics. Preserve original responses and omissions; these are assessor categories, not an accuracy score, blind benchmark or end-to-end retrieval evaluation. Specialist acceptance remains zero.
 - Add `scripts/verify_full_dmg_trials.py --check` to replay evidence integrity and reproduce the retained trial summary without model calls or automatic grading.
 - Run unmodified, pinned Explorer acceptance functions in CI; retain its exact warning and normalise label whitespace without changing source titles.
+- Correct 278 PDF source links from authored records that were labelled as HTML; keep authorship, source-file format and media type independently accurate. Add an isolated compiler regression and negative metadata controls.
 - Add publisher/resource endpoint labels and source hosts, reconcile per-publisher resource counts, and preserve CPAG's typed April 2026 publication month separately from capture and observation dates. CPAG remains metadata and links only.
 - Reconcile literal paragraph and memo references to acquired location candidates, preserving ambiguous matches and unresolved legal identifiers across all 331 source documents.
 - Keep final full-DMG browser verification and publication pending; earlier consumer receipts retain their original snapshot scope.

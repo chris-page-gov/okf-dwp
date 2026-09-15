@@ -29,6 +29,13 @@ def read_json(path: Path):
     return json.loads(gzip.decompress(raw) if path.suffix == ".gz" else raw)
 
 
+def validate_resource_format(resource: dict, *, source_document: bool = False) -> None:
+    """A linked file's format does not inherit its referring record's authorship."""
+    is_pdf = source_document or urlsplit(resource['url']).path.lower().endswith('.pdf')
+    require(resource['format'] == ('PDF' if is_pdf else 'HTML'), 'Resource format differs from linked source')
+    require(resource['source_access']['media_type'] == ('application/pdf' if is_pdf else 'text/html'), 'Resource media type differs from linked source')
+
+
 def validate(root: Path = ROOT, output: str = OUTPUT, inventory_path: str = INPUT, *, verify_rdf: bool = True) -> dict:
     out = safe_path(root, output)
     inventory = read_json(safe_path(root, inventory_path))
@@ -84,6 +91,7 @@ def validate(root: Path = ROOT, output: str = OUTPUT, inventory_path: str = INPU
     for resource in resources:
         require(label_map['resource/' + resource['id']]['iri'] == BASE + 'id/' + resource['id'], 'Resource label route mismatch')
         require(resource['host'] == urlsplit(resource['url']).hostname, 'Resource host missing or changed')
+        validate_resource_format(resource, source_document=routes[resource['dataset']]['source_adapter'] == 'frozen-dwp-pdf-page-text')
     locator = read_json(out / "data/locator/manifest.json")
     locator_buckets = {key: read_json(out / ref["path"]) for key, ref in locator["buckets"].items()}
     for ordinal, record in enumerate(records):

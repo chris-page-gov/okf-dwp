@@ -76,11 +76,11 @@
     },
     {
       "id": "independent-review-and-ci",
-      "status": "independent-review-and-local-checks-passed; final-candidate-ci-pending"
+      "status": "cross-agent-review-and-both-candidate-ci-runs-passed"
     },
     {
       "id": "immutable-browser-verification",
-      "status": "pending"
+      "status": "actual-final-candidate-passed-local-consumer-preflight; public-consumer-deployment-pending"
     },
     {
       "id": "publication-and-freeze",
@@ -179,10 +179,10 @@
     "in_progress_next_batches": []
   },
   "indexed_checkpoint": {
-    "snapshot": "dwp-full-dmg-2026-09-15-098a43318cca",
+    "snapshot": "dwp-full-dmg-2026-09-15-333807d9b851",
     "records": 15390,
     "assertions": 16210,
-    "status": "all78-units-integrated-and-consumer-functions-passed; immutable-browser-check-pending"
+    "status": "final-source-format-correction-built; validation-running"
   },
   "independent_review": "validation/full-dmg-independent-review.json",
   "open_consumer_findings": [
@@ -209,5 +209,26 @@
     "interpretation": "Recorded independent-model categories, not an accuracy score. Source-guided, context-aware trials; no live runtime or specialist acceptance."
   },
   "source_family_review": "evaluation/full-dmg-source-family-review.json",
-  "remaining_research_gaps": "docs/next-stage/full-dmg-research-gaps.md"
+  "remaining_research_gaps": "docs/next-stage/full-dmg-research-gaps.md",
+  "candidate_commit": "29c3ced8da385167044c8718bc08dd50c5397f73",
+  "candidate_ci": {
+    "status": "passed",
+    "runs": [
+      35026148751,
+      35026153123
+    ],
+    "scope": "preceding098a43318cca candidate; finalresourceformatcorrectionneedsnewCI"
+  },
+  "consumer_pull_request": "https://github.com/chris-page-gov/okf-explorer/pull/121",
+  "consumer_source_commit": "8e01dfe16538c6045ee1d55b64c3f6e24bada9f7",
+  "consumer_publication": {
+    "reviewed_source_commit": "8e01dfe16538c6045ee1d55b64c3f6e24bada9f7",
+    "main_commit": "ab2e863bd6707474e01a054f065f7da5fa2d7ff4",
+    "pull_request": 121,
+    "pr_ci_run": 35025588136,
+    "pr_ci": "passed",
+    "canonical_ci_run": 35027364360,
+    "canonical_ci": "in-progress",
+    "pages": "in-progress"
+  }
 }

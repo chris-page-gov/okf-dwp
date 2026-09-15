@@ -512,10 +512,12 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
         source_link = f"[Verify the original PDF{' page ' + str(row['page_number']) if row.get('page_number') else ''}]({source_url})\n\n" if doc and source_url else ""
         resource_ids = []
         if isinstance(source_url, str) and source_url.startswith("https://"):
+            source_parts = urlsplit(source_url)
+            is_pdf = bool(doc) or source_parts.path.lower().endswith('.pdf')
             resource_id = "resource/source-" + digest(route.encode())[:24]
             resource_ids.append(resource_id)
-            resources.append({"id": resource_id, "route": resource_id, "dataset": route, "name": "Official source PDF page" if doc else "Referenced external resource",
-                              "url": source_url, "host": urlsplit(source_url).hostname, "format": "PDF" if doc else "HTML", "source_access": {"url": source_url, "label": "Verify the official PDF" if doc else "Open referenced resource", "media_type": "application/pdf" if doc else "text/html", "display_mode": "link"},
+            resources.append({"id": resource_id, "route": resource_id, "dataset": route, "name": "Official source PDF page" if doc else "Referenced source PDF" if is_pdf else "Referenced external resource",
+                              "url": source_url, "host": source_parts.hostname, "format": "PDF" if is_pdf else "HTML", "source_access": {"url": source_url, "label": "Verify the official PDF" if doc else "Verify the linked PDF" if is_pdf else "Open referenced resource", "media_type": "application/pdf" if is_pdf else "text/html", "display_mode": "link"},
                               "provenance": provenance})
         record = {"id": row["@id"], "name": route, "route": route, "title": row["title"], "type": row["type"], "record_type": row["type"],
                   "notes": source_role + ". " + re.sub(r"\s+", " ", full_text[route]).strip()[:360],

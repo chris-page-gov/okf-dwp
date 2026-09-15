@@ -8,8 +8,8 @@ import unittest
 from unittest.mock import patch
 
 from build_full_dmg import (ROOT, build_search, canonical, check_full_relation, deterministic_gzip,
-                            compile_full, digest, page_routes, referenced_publication_date, source_dates, tokens)
-from validate_full_dmg import validate
+                            compile_full, digest, new_node, page_routes, referenced_publication_date, source_dates, tokens)
+from validate_full_dmg import validate, validate_resource_format
 from evaluate_full_dmg import IndexedEvidence
 
 
@@ -45,11 +45,31 @@ class FullDmgTests(unittest.TestCase):
                    "pdf_path": "source/fixture.pdf", "text_path": "source/fixture.txt", "pages_path": "source/fixture.json",
                    "sha256": digest(pdf), "text_sha256": digest(text.encode()), "pages_sha256": digest(canonical(pages))}
             (source / "inventory.json").write_bytes(canonical({"documents": [doc], "generated_at": "2026-09-15T19:00:02Z"}))
+            knowledge = root / 'knowledge/full-dmg'
+            knowledge.mkdir(parents=True)
+            (knowledge / 'fixture.yamlld').write_bytes(canonical({'@graph': [
+                new_node('question/fixture-pdf', 'Question linking to a PDF', 'Question', 'Project research question.', when,
+                         source='https://example.test/linked.PDF?download=1#page=3'),
+                new_node('question/fixture-html', 'Question linking to a catalogue', 'Question', 'Project research question.', when,
+                         source='https://example.test/catalogue?file=guide.pdf#guide.pdf'),
+            ]}))
             profiles = root / "profiles/bundle-wiki/v1"
             profiles.mkdir(parents=True)
             for name in ("bundle.schema.json", "semantic-assertion.schema.json"):
                 (profiles / name).write_bytes((ROOT / "profiles/bundle-wiki/v1" / name).read_bytes())
             outputs = compile_full(root, "source/inventory.json", include_pilot=False)
+            manifest = json.loads(outputs['data/manifest.json'])
+            records = {row['route']: row for path in manifest['chunks']['datasets'] for row in json.loads(gzip.decompress(outputs[path]))}
+            resources = {row['dataset']: row for path in manifest['chunks']['resources'] for row in json.loads(gzip.decompress(outputs[path]))}
+            linked_pdf = resources['question/fixture-pdf']
+            self.assertEqual(linked_pdf['format'], 'PDF')
+            self.assertEqual(linked_pdf['name'], 'Referenced source PDF')
+            self.assertEqual(linked_pdf['source_access']['media_type'], 'application/pdf')
+            self.assertEqual(linked_pdf['source_access']['label'], 'Verify the linked PDF')
+            self.assertEqual(resources['question/fixture-html']['format'], 'HTML')
+            for route in ('question/fixture-pdf', 'question/fixture-html'):
+                self.assertEqual(records[route]['publisher'], 'independent-project')
+                self.assertEqual(records[route]['formats'], ['Markdown'])
             self.assertEqual(json.loads(outputs['okf-explorer.json'])['source']['observed_at'], when)
             self.assertEqual(outputs, compile_full(root, "source/inventory.json", include_pilot=False))
             for path, data in outputs.items():
@@ -75,6 +95,16 @@ class FullDmgTests(unittest.TestCase):
             (source / "fixture.pdf").write_bytes(pdf + b"changed")
             with self.assertRaisesRegex(ValueError, "PDF byte count"):
                 validate(root, inventory_path="source/inventory.json")
+
+    def test_pdf_resource_format_and_media_type_cannot_be_html(self):
+        resource = {'url': 'https://example.test/source.PDF?download=1#page=2',
+                    'format': 'PDF', 'source_access': {'media_type': 'application/pdf'}}
+        validate_resource_format(resource)
+        with self.assertRaisesRegex(ValueError, 'Resource format'):
+            validate_resource_format({**resource, 'format': 'HTML'})
+        with self.assertRaisesRegex(ValueError, 'Resource media type'):
+            validate_resource_format({**resource, 'source_access': {'media_type': 'text/html'}})
+        validate_resource_format({**resource, 'url': 'https://example.test/document/123'}, source_document=True)
 
     def test_search_indexes_late_source_text_without_capping_postings(self):
         rows = [record(f"page/memo-{i}/0001") for i in range(2050)]

@@ -86,6 +86,10 @@
       "commit": "8e01dfe16538c6045ee1d55b64c3f6e24bada9f7",
       "reviewer": "root",
       "result": "Read Timeline hydration, strict partial-date validation and UI tests; no material finding. Byte-compared vendored acceptance functions and licences with this exact source commit. Deployed application identity remains a separate browser gate."
+    },
+    "linked_pdf_resource_formats": {
+      "reviewer": "root, separate from correction author",
+      "result": "Reviewed compiler, Python validator, Node consumer check and isolated fixture. All43 repository tests pass, including URL path versus query/fragment format classification and negative media-type controls. All278 previously HTML-labelled linked PDFs now report PDF/application/pdf; referring records retain their project authorship and Markdown format."
     }
   },
   "resolved_findings": [
@@ -169,7 +173,7 @@
     },
     {
       "path": "scripts/build_full_dmg.py",
-      "sha256": "baa6c49ba9c5ca2c1221e8a1624a42e7e918be0cff44000d2ddad0447a4a7d7a"
+      "sha256": "c5d17ab348e0772725ffa2049890fb46d780b5316d491ba546d54764030f627f"
     },
     {
       "path": "scripts/evaluate_full_dmg.py",
@@ -181,11 +185,11 @@
     },
     {
       "path": "scripts/check_full_dmg_consumer.mjs",
-      "sha256": "a963e80a305348c2cd30d8db112832cdbe472a0d1fedff28512d5b28035bcb32"
+      "sha256": "6a14f27a13d5092eb826cc05b438ea4db3610b430fe6e9a092bbec0c94f5bb21"
     },
     {
       "path": "scripts/validate_full_dmg.py",
-      "sha256": "b121859b8ac4b0429254b60841131f5012beff674836ce487c43b703602d5344"
+      "sha256": "5e5593ece20d33b8477a9e88a2b7f8a40037843e9f44fd89f5e41a4731bdb9d7"
     },
     {
       "path": "scripts/verify_full_dmg_trials.py",

@@ -26,6 +26,9 @@ for (const part of json('full-dmg/data/manifest.json').chunks.resources) {
   for (const resource of JSON.parse(gunzipSync(read('full-dmg/' + part)))) {
     assert.ok(registry.byRoute.get('resource/' + resource.id)?.label);
     assert.equal(resource.host, new URL(resource.url).hostname);
+    const isPdf = Boolean(resource.provenance.source_artifact) || new URL(resource.url).pathname.toLowerCase().endsWith('.pdf');
+    assert.equal(resource.format, isPdf ? 'PDF' : 'HTML', `Resource format: ${resource.dataset}`);
+    assert.equal(resource.source_access.media_type, isPdf ? 'application/pdf' : 'text/html', `Resource media type: ${resource.dataset}`);
   }
 }
 // These are actual browser failures retained as consumer-level controls.
