@@ -19,6 +19,7 @@
 - Correct 278 PDF source links from authored records that were labelled as HTML; keep authorship, source-file format and media type independently accurate. Add an isolated compiler regression and negative metadata controls.
 - Add publisher/resource endpoint labels and source hosts, reconcile per-publisher resource counts, and preserve CPAG's typed April 2026 publication month separately from capture and observation dates. CPAG remains metadata and links only.
 - Reconcile literal paragraph and memo references to acquired location candidates, preserving ambiguous matches and unresolved legal identifiers across all 331 source documents.
+- Supply all420 Graph metadata/facet labels, with exact consumer route encoding and deletion controls.
 - Keep final full-DMG browser verification and publication pending; earlier consumer receipts retain their original snapshot scope.
 
 ## CPAG external reference — 15 September 2026

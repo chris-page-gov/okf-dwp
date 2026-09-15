@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 from build_full_dmg import (ROOT, build_search, canonical, check_full_relation, deterministic_gzip,
                             compile_full, digest, new_node, page_routes, referenced_publication_date, source_dates, tokens)
-from validate_full_dmg import validate, validate_resource_format
+from validate_full_dmg import validate, validate_metadata_labels, validate_resource_format
 from evaluate_full_dmg import IndexedEvidence
 
 
@@ -70,6 +70,13 @@ class FullDmgTests(unittest.TestCase):
             for route in ('question/fixture-pdf', 'question/fixture-html'):
                 self.assertEqual(records[route]['publisher'], 'independent-project')
                 self.assertEqual(records[route]['formats'], ['Markdown'])
+            label_map = {row['route']: row for row in json.loads(gzip.decompress(outputs['data/endpoint-labels.json.gz']))['entries']}
+            facets = json.loads(outputs['data/facets.json'])
+            metadata_routes = validate_metadata_labels(list(records.values()), label_map, facets)
+            for kind in ('format', 'topic', 'tag', 'license', 'facet'):
+                route = next(route for route in metadata_routes if route.startswith(kind + '/'))
+                with self.assertRaisesRegex(ValueError, 'Graph (metadata|facet) label'):
+                    validate_metadata_labels(list(records.values()), {key: value for key, value in label_map.items() if key != route}, facets)
             self.assertEqual(json.loads(outputs['okf-explorer.json'])['source']['observed_at'], when)
             self.assertEqual(outputs, compile_full(root, "source/inventory.json", include_pilot=False))
             for path, data in outputs.items():

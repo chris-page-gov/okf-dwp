@@ -17,7 +17,7 @@ import json
 from pathlib import Path
 import re
 import unicodedata
-from urllib.parse import urlsplit
+from urllib.parse import quote, urlsplit
 
 from pyld import jsonld
 from build_bundle import (BASE, OGL, PROFILE, REPO, ROOT, ROUTE, canonical,
@@ -641,6 +641,29 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
                             "language": "en-GB", "type": "Source resource",
                             "label_authority": {"class": "editorial", "source": REPO + "/blob/main/scripts/build_full_dmg.py"}}
                            for row in resources)
+    # Graph creates these metadata endpoints in both targeted and fully hydrated
+    # modes. Match Explorer's RFC 3986 route-segment encoding, including slashes.
+    metadata_labels = {}
+    for record in records:
+        for kind, values in [('format', record['formats']), ('topic', record['topics']),
+                             ('tag', record['tags']), ('license', [record['license_id']])]:
+            for value in values:
+                route = kind + '/' + quote(value, safe='-._~')
+                label = record['license_title'] if kind == 'license' else value
+                entry = {'route': route, 'iri': BASE + 'id/' + route,
+                         'label': label, 'language': 'en-GB',
+                         'type': {'format': 'Format', 'topic': 'Topic', 'tag': 'Tag', 'license': 'Licence'}[kind],
+                         'label_authority': {'class': 'editorial', 'source': REPO + '/blob/main/scripts/build_full_dmg.py'}}
+                if route in metadata_labels and metadata_labels[route] != entry:
+                    raise ValueError('Conflicting metadata endpoint labels: ' + route)
+                metadata_labels[route] = entry
+    for key, values in search['facets'].items():
+        for item in values:
+            route = 'facet/' + quote(key, safe='-._~') + '/' + quote(item['value'], safe='-._~')
+            metadata_labels[route] = {'route': route, 'iri': BASE + 'id/' + route,
+                                      'label': item['value'], 'language': 'en-GB', 'type': 'Facet value',
+                                      'label_authority': {'class': 'editorial', 'source': REPO + '/blob/main/scripts/build_full_dmg.py'}}
+    endpoint_labels.extend(metadata_labels[key] for key in sorted(metadata_labels))
     if any(not row["label"].strip() or len(row["label"]) > 512 for row in endpoint_labels):
         raise ValueError("Endpoint label is missing or exceeds the consumer limit")
     put("data/endpoint-labels.json.gz", {"schema": "okf-explorer-endpoint-label-index.v1", "snapshot": snapshot,

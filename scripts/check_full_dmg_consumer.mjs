@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { gunzipSync } from 'node:zlib';
-import { normaliseEndpointLabelIndex } from '../profiles/explorer-runtime/endpointLabels.ts';
+import { encodeEndpointRouteSegment, metadataEndpointRoute, normaliseEndpointLabelIndex } from '../profiles/explorer-runtime/endpointLabels.ts';
 import { parseExploratoryPublication } from '../profiles/explorer-runtime/exploratoryPublication.ts';
 
 const read = (path) => readFileSync(new URL('../' + path, import.meta.url));
@@ -18,7 +18,27 @@ const publication = parseExploratoryPublication(descriptor);
 assert.equal(publication.state, 'valid', publication.warning);
 const labels = JSON.parse(gunzipSync(read('full-dmg/data/endpoint-labels.json.gz')));
 const registry = normaliseEndpointLabelIndex(labels, descriptor.snapshot);
-assert.equal(registry.byRoute.size, descriptor.counts.records + descriptor.counts.resources + descriptor.counts.publishers);
+const manifest = json('full-dmg/data/manifest.json');
+const metadataRoutes = new Set();
+for (const part of manifest.chunks.datasets) {
+  for (const record of JSON.parse(gunzipSync(read('full-dmg/' + part)))) {
+    for (const [kind, values] of [['format', record.formats], ['topic', record.topics], ['tag', record.tags], ['license', [record.license_id]]]) {
+      for (const value of values) {
+        const route = metadataEndpointRoute(kind, value);
+        metadataRoutes.add(route);
+        assert.equal(registry.byRoute.get(route)?.label, kind === 'license' ? record.license_title : value, `Graph metadata endpoint: ${route}`);
+      }
+    }
+  }
+}
+for (const [key, values] of Object.entries(json('full-dmg/data/facets.json'))) {
+  for (const {value} of values) {
+    const route = `facet/${encodeEndpointRouteSegment(key)}/${encodeEndpointRouteSegment(value)}`;
+    metadataRoutes.add(route);
+    assert.equal(registry.byRoute.get(route)?.label, value, `Graph facet endpoint: ${route}`);
+  }
+}
+assert.equal(registry.byRoute.size, descriptor.counts.records + descriptor.counts.resources + descriptor.counts.publishers + metadataRoutes.size);
 for (const publisher of json('full-dmg/data/publishers.json')) {
   assert.equal(registry.byRoute.get('publisher/' + publisher.name)?.label, publisher.title);
 }
@@ -39,4 +59,4 @@ const badLabels = structuredClone(labels);
 badLabels.entries[0].label += ' ';
 assert.throws(() => normaliseEndpointLabelIndex(badLabels, descriptor.snapshot), /malformed/);
 console.log(JSON.stringify({status: 'passed', snapshot: descriptor.snapshot, consumer_commit: lock.commit,
-  exploratory_notice: publication.state, endpoint_labels: registry.byRoute.size, regression_controls: 2}));
+  exploratory_notice: publication.state, endpoint_labels: registry.byRoute.size, graph_metadata_endpoints: metadataRoutes.size, regression_controls: 2}));

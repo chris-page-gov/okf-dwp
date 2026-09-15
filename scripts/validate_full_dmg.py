@@ -10,7 +10,7 @@ import json
 import re
 from pathlib import Path
 from datetime import datetime
-from urllib.parse import urlsplit
+from urllib.parse import quote, urlsplit
 
 from jsonschema import Draft202012Validator, FormatChecker
 from pyld import jsonld
@@ -34,6 +34,26 @@ def validate_resource_format(resource: dict, *, source_document: bool = False) -
     is_pdf = source_document or urlsplit(resource['url']).path.lower().endswith('.pdf')
     require(resource['format'] == ('PDF' if is_pdf else 'HTML'), 'Resource format differs from linked source')
     require(resource['source_access']['media_type'] == ('application/pdf' if is_pdf else 'text/html'), 'Resource media type differs from linked source')
+
+
+def validate_metadata_labels(records: list, label_map: dict, facets: dict | None = None) -> set[str]:
+    routes = set()
+    for record in records:
+        for kind, field in [('format', 'formats'), ('topic', 'topics'), ('tag', 'tags'), ('license', 'license_id')]:
+            values = [record[field]] if kind == 'license' else record[field]
+            for value in values:
+                route = kind + '/' + quote(value, safe='-._~')
+                expected = record['license_title'] if kind == 'license' else value
+                require(label_map.get(route, {}).get('label') == expected, 'Graph metadata label missing or changed: ' + route)
+                require(label_map[route]['iri'] == BASE + 'id/' + route, 'Graph metadata IRI differs: ' + route)
+                routes.add(route)
+    for key, values in (facets or {}).items():
+        for item in values:
+            route = 'facet/' + quote(key, safe='-._~') + '/' + quote(item['value'], safe='-._~')
+            require(label_map.get(route, {}).get('label') == item['value'], 'Graph facet label missing or changed: ' + route)
+            require(label_map[route]['iri'] == BASE + 'id/' + route, 'Graph facet IRI differs: ' + route)
+            routes.add(route)
+    return routes
 
 
 def validate(root: Path = ROOT, output: str = OUTPUT, inventory_path: str = INPUT, *, verify_rdf: bool = True) -> dict:
@@ -82,7 +102,8 @@ def validate(root: Path = ROOT, output: str = OUTPUT, inventory_path: str = INPU
     label_map = {row['route']:row for row in labels['entries']}
     resources = [row for part in manifest['chunks']['resources'] for row in read_json(out / part)]
     publishers = read_json(out / 'data/publishers.json')
-    require(labels["snapshot"] == snapshot and labels["counts"]["entries"] == len(label_map) == len(records) + len(resources) + len(publishers), "Endpoint label snapshot or denominator differs")
+    metadata_routes = validate_metadata_labels(records, label_map, read_json(out / 'data/facets.json'))
+    require(labels["snapshot"] == snapshot and labels["counts"]["entries"] == len(labels['entries']) == len(label_map) == len(records) + len(resources) + len(publishers) + len(metadata_routes), "Endpoint label snapshot or denominator differs")
     require({route: (label_map[route]["iri"], label_map[route]["label"], label_map[route]["type"]) for route in routes} ==
             {row["route"]: (row["id"], re.sub(r"\s+", " ", row["title"]).strip(), row["record_type"]) for row in records}, "Endpoint labels lose a semantic route or source title")
     for publisher in publishers:
