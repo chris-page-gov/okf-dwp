@@ -74,4 +74,4 @@ The complete source has been captured, but the full Foundry production gate sequ
 
 Contains public sector information licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Original project code and original material use the [MIT licence](LICENSE); source extracts retain Crown copyright, attribution and applicable exceptions. See [NOTICE.md](NOTICE.md).
 
-The [later-source log](docs/future-sources.md) records tribunal decisions, benefits calculators and CASA for later assessment. They are not incorporated into this snapshot.
+The [later-source log](docs/future-sources.md) records tribunal decisions, benefits calculators and CASA for later assessment. They are not incorporated into this snapshot. The [product backlog](docs/backlog.md) records extensive persona/journey evaluation, a benefits engine and application/change-of-circumstances journeys for later work.

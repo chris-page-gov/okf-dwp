@@ -102,11 +102,18 @@ def source_ref(doc: dict[str, Any], observed: str, page: dict[str, Any] | None =
             "author": "process:dwp-source-publication", "retrieved_at": observed, "sha256": doc["sha256"]}
 
 
+def source_text_block(text: str) -> str:
+    """Keep PDF numbering literal, with a fence the source cannot terminate."""
+    longest_run = max((len(match.group()) for match in re.finditer(r"`+", text)), default=0)
+    fence = "`" * max(3, longest_run + 1)
+    return f"{fence}text\n{text}\n{fence}\n"
+
+
 def node(route: str, title: str, kind: str, description: str, body: str, observed: str, **extra: Any) -> dict[str, Any]:
     return {"@id": BASE + "id/" + route, "@type": "schema:DigitalDocument", "id": route,
             "route": route, "title": title, "type": kind, "description": description, "body": body,
             "generated": {"by": "process:okf-dwp-build/0.1.0", "at": observed},
-            "status": "experimental", "publisher": {"@id": "https://github.com/chris-page-gov"}, **extra}
+            "status": "draft", "publisher": {"@id": "https://github.com/chris-page-gov"}, **extra}
 
 
 def make_assertion(source: dict[str, Any], target: dict[str, Any], predicate: str, label: str,
@@ -160,7 +167,7 @@ def compile_bundle() -> dict[str, bytes]:
             text = page["text"]
             page_count += 1
             populated_pages += bool(text.strip())
-            body = f"# {doc['title']} — PDF page {number}\n\n[Verify the official PDF page]({page['url']}).\n\n> Extracted source text. Layout and reading order may differ from the PDF. This project does not establish current entitlement or law.\n\n{text}\n"
+            body = f"# {doc['title']} — PDF page {number}\n\n[Verify the official PDF page]({page['url']}).\n\n> Extracted source text. Layout and reading order may differ from the PDF. This project does not establish current entitlement or law.\n\n" + source_text_block(text)
             page_node = node(route_page, f"Chapter {chapter} — PDF page {number}", "Source PDF page", re.sub(r"\s+", " ", text.strip())[:240] or "No text extracted from this page; inspect the source PDF.", body, observed,
                 source=page["url"], resource=page["url"], sources=[source_ref(doc, observed, page)], chapter=chapter,
                 volume=doc["volume"], page_number=number, source_sha256=doc["sha256"], text_sha256=digest(text.encode()),

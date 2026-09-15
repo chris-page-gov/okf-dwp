@@ -9,7 +9,7 @@ description: Seven substantive chapters, source pages and clearly labelled resea
 generated:
   by: process:okf-dwp-build/0.1.0
   at: '2026-09-15T14:21:03Z'
-status: experimental
+status: draft
 publisher:
   '@id': https://github.com/chris-page-gov
 source: 

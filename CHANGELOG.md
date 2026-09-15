@@ -8,3 +8,5 @@
 - Added a researched, schema-validated discovery handoff, pinned consumer/profile files, deterministic build, validation and retrieval controls.
 - Documented unofficial status, OGL attribution, extraction limits, historical context, missing external evidence and deferred production assurance.
 - Logged owner-supplied tribunal, calculator and CASA links outside the demonstration snapshot.
+- Logged future extensive evaluation, benefits-engine and customer-journey ideas without expanding the first exemplar.
+- Corrected Markdown display of source numbering after live-browser inspection; extracted source text remains unchanged.
