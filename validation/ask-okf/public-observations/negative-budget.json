@@ -1,0 +1,31 @@
+{
+  "observed_at": "2026-09-16T02:27:01.697Z",
+  "evidence_status": "insufficient",
+  "budget": {
+    "max_nodes": 64,
+    "max_relationships": 128,
+    "max_depth": 6,
+    "max_bytes": 8192,
+    "used_nodes": 0,
+    "used_relationships": 0,
+    "used_bytes": 1609,
+    "reached_depth": 2,
+    "truncated": true,
+    "omissions": [
+      {
+        "code": "byte_budget",
+        "message": "The full result could not be represented within this budget.",
+        "ids": []
+      }
+    ]
+  },
+  "selected": 0,
+  "missing": [
+    {
+      "code": "metadata_budget",
+      "message": "Question interpretation and evidence diagnostics exceeded the byte budget.",
+      "ids": []
+    }
+  ],
+  "ai_answer": null
+}

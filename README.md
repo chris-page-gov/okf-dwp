@@ -8,16 +8,26 @@ This repository turns the public [DWP Decision makers’ guide](https://www.gov.
 
 [Verified Pension Credit semantic exemplar](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7d3c69df0571b8d5206c8edce92963d99979cb5c%2Fbundle%2Fokf-bundle.yamlld&view=graph#term/capital-disregards) · [Original meeting demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.yamlld&q=84351#question/pc001) · [Read the pilot bundle](bundle/index.md) · [Ten-minute meeting walkthrough](docs/meeting-walkthrough.md) · [Discovery findings](docs/discovery.md) · [AI interrogation guide](AI_USAGE.md) · [Public notice and rights](NOTICE.md)
 
-## Governed context assembly development candidate
+## Ask OKF: governed context assembly
 
-The new [imprisonment demonstration](docs/context-assembly-demo.md) assembles a
+[Open the public Ask OKF demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fefb05c66616a9cd4328a86cf412780fe7bc7cf0b%2Ffull-dmg%2Fokf-explorer.json&q=imprisonment#overview),
+then select **Ask OKF** and use the exact question in the
+[five-minute demonstration script](docs/context-assembly-demo.md). It assembles a
 traceable evidence package for JSA, Income Support, State Pension Credit and ESA.
 It resolves declared concepts, traverses directed source relationships and checks
 whole evidence, provenance, scope and budgets before reporting scoped sufficiency.
 The [independent A–H acceptance case](evaluation/context-assembly/imprisonment-case.json)
 checks source and graph identities rather than keyword overlap. It is separate
 from the earlier 160 model answer trials. No AI answer or individual entitlement
-decision is generated; specialist and live-host acceptance remain separate gates.
+decision is generated; specialist and native tool-host acceptance remain separate gates.
+
+The [public browser check](validation/ask-okf/public-browser.json) verified
+52 context records, 127 relationships, chapter routing, source provenance,
+inspectable JSON and an insufficient result under a constrained byte budget.
+The package matched a fresh direct engine run. DWP's 56 unit tests and all
+context controls passed; the unchanged earlier answer trials remain separate.
+This context release uses content commit `efb05c66616a9cd4328a86cf412780fe7bc7cf0b`;
+the full-corpus and pilot links below preserve their earlier release scopes.
 
 ## What is here
 

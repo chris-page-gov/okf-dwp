@@ -1,0 +1,389 @@
+{
+  "schema": "okf-dwp-ask-browser-observation.v1",
+  "observed_from": "2026-09-16T02:23:58.762Z",
+  "observed_to": "2026-09-16T02:34:56.785Z",
+  "recorded_at": "2026-09-16T02:34:57.380Z",
+  "environment": "Public GitHub Pages application and immutable public DWP descriptor, exercised through the installed Chrome browser",
+  "browser": {
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+    "console_errors": [],
+    "console_warnings": []
+  },
+  "bundle_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/efb05c66616a9cd4328a86cf412780fe7bc7cf0b/full-dmg/okf-explorer.json",
+  "bundle_content_commit": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+  "descriptor_sha256": "9881779ab550efe9f73da1e16acd8c8dcb64933c9981bb290b66ff51572853f3",
+  "launch_urls": {
+    "search": "https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fefb05c66616a9cd4328a86cf412780fe7bc7cf0b%2Ffull-dmg%2Fokf-explorer.json&q=imprisonment#overview",
+    "graph": "https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fefb05c66616a9cd4328a86cf412780fe7bc7cf0b%2Ffull-dmg%2Fokf-explorer.json&view=graph#page/dmg-vol3-ch12/0003"
+  },
+  "app": {
+    "commit": "905e680f6d3ad385de9b8effc351566eba0ab2b3",
+    "reviewed_commit": "97f13d22b689d92cd785de04758fe932d4a4d369",
+    "identical_git_tree": "dc0c7a6aaf9001f2a832bdb5f99ce5d7da9f90f4",
+    "tree_sha256": "f449bdf90c3ec5f567094c30bd0778a5d1ed4b01fe9239de52d28acc13cd3fcf",
+    "manifest_sha256": "add0678f94f1c4f1a0fdc7b7d683c22d126c453f50f988556d7fd8ec4cf007c0",
+    "observed_modules": [
+      "https://chris-page-gov.github.io/okf-explorer/_app/immutable/entry/start.B6BD5dbm.js",
+      "https://chris-page-gov.github.io/okf-explorer/_app/immutable/chunks/DYiYkhkb.js",
+      "https://chris-page-gov.github.io/okf-explorer/_app/immutable/entry/app.DGbliXXd.js",
+      "https://chris-page-gov.github.io/okf-explorer/_app/immutable/chunks/DkBlEjH2.js",
+      "https://chris-page-gov.github.io/okf-explorer/_app/immutable/nodes/0.9LfW_Nt6.js",
+      "https://chris-page-gov.github.io/okf-explorer/_app/immutable/chunks/CoIlbFU6.js",
+      "https://chris-page-gov.github.io/okf-explorer/_app/immutable/chunks/xihTtKlq.js",
+      "https://chris-page-gov.github.io/okf-explorer/_app/immutable/assets/4.DLXJDH4_.css",
+      "https://chris-page-gov.github.io/okf-explorer/_app/immutable/nodes/2.vfFq2Ruc.js",
+      "https://chris-page-gov.github.io/okf-explorer/_app/immutable/nodes/4.C1JXyeS-.js",
+      "https://chris-page-gov.github.io/okf-explorer/_app/immutable/nodes/1.CQnzQpEa.js",
+      "https://chris-page-gov.github.io/okf-explorer/_app/immutable/workers/largeSearch.worker-CzgrrL90.js"
+    ],
+    "all_observed_modules_match_manifest": true,
+    "independent_public_materials": 21,
+    "byte_review": "public-observations/app-byte-review.json"
+  },
+  "publication": {
+    "pr_ci": {
+      "run_id": 35045856707,
+      "url": "https://github.com/chris-page-gov/okf-explorer/actions/runs/35045856707",
+      "result": "success",
+      "python_tests": 488,
+      "ui_browser_tests": 333,
+      "foundry_browser_tests": 78
+    },
+    "main_ci": {
+      "run_id": 35047266264,
+      "url": "https://github.com/chris-page-gov/okf-explorer/actions/runs/35047266264",
+      "result": "success",
+      "scope": "Impact-aware workflow dispatch compares main with origin/main; not a full-suite rerun. Full PR suite passed on the identical merged source tree.",
+      "jobs": [
+        {
+          "name": "adversarial-gate",
+          "conclusion": "success"
+        },
+        {
+          "name": "impact-plan",
+          "conclusion": "success"
+        },
+        {
+          "name": "context-assembly",
+          "conclusion": "success"
+        },
+        {
+          "name": "app",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "foundry",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "release-policy",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "python-contracts",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "browser-full",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "documentation",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "browser-targeted",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "site",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "okf-explorer-ci",
+          "conclusion": "success"
+        }
+      ]
+    },
+    "pages": {
+      "run_id": 35047222757,
+      "url": "https://github.com/chris-page-gov/okf-explorer/actions/runs/35047222757",
+      "result": "success",
+      "candidate": {
+        "algorithm": "deterministic-pre-deploy-identity-without-observations-v1",
+        "explorer": {
+          "manifest_sha256": "add0678f94f1c4f1a0fdc7b7d683c22d126c453f50f988556d7fd8ec4cf007c0",
+          "tree_sha256": "f449bdf90c3ec5f567094c30bd0778a5d1ed4b01fe9239de52d28acc13cd3fcf"
+        },
+        "publication_identity": {
+          "bytes": 1138,
+          "commit": "905e680f6d3ad385de9b8effc351566eba0ab2b3",
+          "path": "okf-publication-identity.json",
+          "sha256": "f66840f3c7858beeac5e86521420512c42cff3b78f06c9c62289f216c960f30d"
+        },
+        "schema": "okf-site-candidate-receipt.v1",
+        "site": {
+          "file_count": 10493,
+          "internal_references": 7305,
+          "reading_pages": 331,
+          "size_gate": {
+            "headroom_bytes": 181759513,
+            "limit_bytes": 1000000000,
+            "site_bytes": 818240487,
+            "status": "passed"
+          },
+          "tree_algorithm": "sha256-over-canonical-json-path-bytes-digest-list-excluding-receipt-v1",
+          "tree_sha256": "54f22de9adc930566ca9cf95a47a51b4f0adc81fbd1dd3f5ae56f8fb7b8a39ea"
+        }
+      },
+      "live_browser": {
+        "schema": "okf-live-deployment-verification-receipt.v1",
+        "observed_at": "2026-09-16T02:22:39.154Z",
+        "repository": {
+          "name": "okf-explorer",
+          "url": "https://github.com/chris-page-gov/okf-explorer",
+          "role": "profile-and-consumer",
+          "root_index": "index.md",
+          "lifecycle": "active"
+        },
+        "expected_commit": "905e680f6d3ad385de9b8effc351566eba0ab2b3",
+        "candidate_identity": {
+          "bytes": 1138,
+          "commit": "905e680f6d3ad385de9b8effc351566eba0ab2b3",
+          "path": "okf-publication-identity.json",
+          "sha256": "f66840f3c7858beeac5e86521420512c42cff3b78f06c9c62289f216c960f30d"
+        },
+        "deployed_identity": {
+          "url": "https://chris-page-gov.github.io/okf-explorer/okf-publication-identity.json",
+          "sha256": "f66840f3c7858beeac5e86521420512c42cff3b78f06c9c62289f216c960f30d",
+          "commit": "905e680f6d3ad385de9b8effc351566eba0ab2b3"
+        },
+        "deployed_contract": {
+          "url": "https://chris-page-gov.github.io/okf-explorer/okf.publication.json",
+          "sha256": "cd3a59fcbb2eecc148041a2132107225f046c2cf86f29b6646c16b21bf07dcf5"
+        },
+        "browser": {
+          "channel": "chrome",
+          "version": "152.0.7977.82",
+          "console_policy": "no-errors",
+          "console_errors": [],
+          "page_errors": []
+        },
+        "journey": {
+          "id": "estate-registry",
+          "url": "https://chris-page-gov.github.io/okf-explorer/registry/estate/index.html",
+          "title": "OKF estate registry",
+          "status": 200,
+          "expected_identity": "OKF estate registry",
+          "identity_matched": true,
+          "checks": [
+            {
+              "id": "machine-registry",
+              "kind": "linked-json",
+              "href": "https://chris-page-gov.github.io/okf-explorer/okf-estate-registry.json",
+              "status": "passed",
+              "schema": "okf-estate-registry.v1",
+              "sha256": "fa9de8396731206a0005b0c4acf6de4e2403dce6cf94a267ed6203ad8936e742"
+            },
+            {
+              "id": "publication-profile",
+              "kind": "link",
+              "href": "https://chris-page-gov.github.io/okf-explorer/profile/publication-method/v1/",
+              "status": "passed"
+            }
+          ]
+        },
+        "result": "passed"
+      }
+    }
+  },
+  "search": {
+    "query": "imprisonment",
+    "matched": 219,
+    "displayed": 200,
+    "display_limit_explicit": true
+  },
+  "context": {
+    "context_id": "urn:sha256:283cddceca09958b96949527280ea14775de5f26d092c939cacfaa545500e80e",
+    "bundle": {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/bundle/full-dmg",
+      "snapshot": "dwp-full-dmg-2026-09-16-a26a93daa9f5",
+      "source_url": "https://github.com/chris-page-gov/okf-dwp"
+    },
+    "evidence_status": "sufficient",
+    "binding": {
+      "index_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/efb05c66616a9cd4328a86cf412780fe7bc7cf0b/full-dmg/context/assembly-index.json",
+      "index_sha256": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54"
+    },
+    "records": 52,
+    "relationships": 127,
+    "resolved_concepts": 9,
+    "requirements": 4,
+    "budget": {
+      "max_nodes": 64,
+      "max_relationships": 128,
+      "max_depth": 6,
+      "max_bytes": 524288,
+      "used_nodes": 52,
+      "used_relationships": 127,
+      "used_bytes": 487506,
+      "reached_depth": 2,
+      "truncated": false,
+      "omissions": []
+    },
+    "missing_evidence": [],
+    "ambiguities": [],
+    "unresolved_terms": [],
+    "export": "pinned-context.json",
+    "export_sha256": "daab9c438f1b70154b72e0d4d6b00bd9c5f0449630607ea9e0bfc7e846697fca",
+    "canonical_matches_retained_export": true,
+    "canonical_matches_direct_engine": true,
+    "json_inspection_opened": true,
+    "ai_answer": null
+  },
+  "graph": {
+    "url": "https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fefb05c66616a9cd4328a86cf412780fe7bc7cf0b%2Ffull-dmg%2Fokf-explorer.json&view=graph#page/dmg-vol3-ch12/0003",
+    "nodes": 28,
+    "edges": 28,
+    "chapter_routes": [
+      24,
+      53,
+      54,
+      78
+    ],
+    "chapter_routes_visible": true
+  },
+  "source": {
+    "record": "page/dmg-vol3-ch12/0003",
+    "opened_from_context_in_new_tab": true,
+    "original_search_retained": true,
+    "whole_passage_and_provenance_expanded": true,
+    "original_pdf_url": "https://assets.publishing.service.gov.uk/media/651bcf2e6dfda6000d8e39d2/dmgch12.pdf#page=3"
+  },
+  "negative_budget": {
+    "observed_at": "2026-09-16T02:27:01.697Z",
+    "evidence_status": "insufficient",
+    "budget": {
+      "max_nodes": 64,
+      "max_relationships": 128,
+      "max_depth": 6,
+      "max_bytes": 8192,
+      "used_nodes": 0,
+      "used_relationships": 0,
+      "used_bytes": 1609,
+      "reached_depth": 2,
+      "truncated": true,
+      "omissions": [
+        {
+          "code": "byte_budget",
+          "message": "The full result could not be represented within this budget.",
+          "ids": []
+        }
+      ]
+    },
+    "selected": 0,
+    "missing": [
+      {
+        "code": "metadata_budget",
+        "message": "Question interpretation and evidence diagnostics exceeded the byte budget.",
+        "ids": []
+      }
+    ],
+    "ai_answer": null
+  },
+  "webmcp": {
+    "document_modelContext": "undefined",
+    "navigator_modelContext": "undefined",
+    "registered_tools": [],
+    "genuine_tool_call": false
+  },
+  "interaction_notes": [
+    "The first automation attempt addressed the collapsed Evidence limits field and was rejected as hidden. Expanding Evidence limits enabled the successful bounded-failure check recorded here.",
+    "Restored the default byte budget and verified the complete package after the negative control."
+  ],
+  "screenshots": [
+    {
+      "path": "screenshots/10-public-ask.png",
+      "bytes": 165570,
+      "sha256": "7529a2fa1b7bdfc302df3d68645d88f262765018047a43f8f07d73eb7625b6eb"
+    },
+    {
+      "path": "screenshots/11-public-insufficient-budget.png",
+      "bytes": 170239,
+      "sha256": "431a14a0fd431e63e6f5636d10aa859d28ce53ef5d00f589b3efce29b4ccbf86"
+    },
+    {
+      "path": "screenshots/12-public-graph.png",
+      "bytes": 273710,
+      "sha256": "9a47787257412c4d915ba13fe631150576341b86d23ae1bae4a3059811f360c0"
+    },
+    {
+      "path": "screenshots/13-public-provenance.png",
+      "bytes": 185710,
+      "sha256": "de9c1a4063f366b8fafd0307ce83665908ba72cf885ae6ca602f02fe54c559d8"
+    },
+    {
+      "path": "screenshots/14-public-context-summary.png",
+      "bytes": 194203,
+      "sha256": "4bd676c067963d1be08c9403c6b8f216e8e6a186f6ca1382aa34bb77ef1cfce3"
+    }
+  ],
+  "materials": [
+    {
+      "path": "public-observations/app-identity.json",
+      "bytes": 14191,
+      "sha256": "a078cd3887612bc8eae318eba69b3b20cbde3b35c12697649e16ae66292c731b"
+    },
+    {
+      "path": "public-observations/relationships.json",
+      "bytes": 52105,
+      "sha256": "19bd7c8160799a51ad562464bfca72956b54bd6ba3897bebcb30a3da3ea100f0"
+    },
+    {
+      "path": "public-observations/source-view.json",
+      "bytes": 4227,
+      "sha256": "d42ec49d9732cac27e4510061cbab9530a304e6f321ccd3b3217695bc3349f20"
+    },
+    {
+      "path": "public-observations/graph.json",
+      "bytes": 6052,
+      "sha256": "7aea949befa5370014768bee4f0160bf476b2fb826aca9da2d3a9479ae21f3cb"
+    },
+    {
+      "path": "public-observations/negative-budget.json",
+      "bytes": 705,
+      "sha256": "949ac30a3463d4bbfae71cabc61b2ed84049a76ff673d64acc4f5fbc079fdc55"
+    },
+    {
+      "path": "public-observations/passage.json",
+      "bytes": 4620,
+      "sha256": "a9fb353ec90efef3158803155fb5ff679bcc006930a1fcb50a736449e8cfd034"
+    },
+    {
+      "path": "public-observations/app-byte-review.json",
+      "bytes": 16060,
+      "sha256": "4edb184bc2afd253aef8d792992b268d76c53da9bd73e51d7ea0d47f8c9dbdf6"
+    },
+    {
+      "path": "public-observations/final-state.json",
+      "bytes": 511,
+      "sha256": "90bc262a82186546351d62ef3cb8a8c22a967759be0b9cb614edf57a463b9eb0"
+    },
+    {
+      "path": "public-observations/pages-candidate/site-candidate-receipt.json",
+      "bytes": 991,
+      "sha256": "c1ed5273291e41b165b7467ab7bb1d6b71d0fd4c66458ce6ded00739352308bc"
+    },
+    {
+      "path": "public-observations/pages-live/live-deployment-receipt.json",
+      "bytes": 2063,
+      "sha256": "f7dd3f9c1a142da1ffce90d57fefef207c8deb63c897b62dc5bd4729a86a7a93"
+    }
+  ],
+  "limitations": [
+    "Engineering acceptance within the frozen DMG scope; not a current-law check, specialist legal review or individual entitlement decision.",
+    "ADM bodies remain outside the snapshot; regime and applicability limitations are retained in the package.",
+    "No AI answer, native WebMCP invocation or ChatGPT voice integration was evaluated.",
+    "The full PR suite passed on the identical merged source tree. Canonical Explorer main CI has the narrower scope recorded above."
+  ]
+}
