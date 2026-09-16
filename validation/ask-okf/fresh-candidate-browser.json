@@ -1,0 +1,58 @@
+{
+  "schema": "okf-dwp-ask-browser-observation.v1",
+  "observed_at": "2026-09-16T01:52:10.741Z",
+  "environment": "Local compiled application with actual immutable public DWP source; deployed application verification is separate",
+  "bundle_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/efb05c66616a9cd4328a86cf412780fe7bc7cf0b/full-dmg/okf-explorer.json",
+  "app": {
+    "tree_sha256": "f449bdf90c3ec5f567094c30bd0778a5d1ed4b01fe9239de52d28acc13cd3fcf",
+    "manifest_sha256": "add0678f94f1c4f1a0fdc7b7d683c22d126c453f50f988556d7fd8ec4cf007c0",
+    "observed_modules": [
+      "http://127.0.0.1:8002/_app/immutable/entry/start.B6BD5dbm.js",
+      "http://127.0.0.1:8002/_app/immutable/entry/app.DGbliXXd.js",
+      "http://127.0.0.1:8002/_app/immutable/chunks/DYiYkhkb.js",
+      "http://127.0.0.1:8002/_app/immutable/chunks/DkBlEjH2.js",
+      "http://127.0.0.1:8002/_app/immutable/chunks/xihTtKlq.js",
+      "http://127.0.0.1:8002/_app/immutable/nodes/0.9LfW_Nt6.js",
+      "http://127.0.0.1:8002/_app/immutable/nodes/2.vfFq2Ruc.js",
+      "http://127.0.0.1:8002/_app/immutable/assets/4.DLXJDH4_.css",
+      "http://127.0.0.1:8002/_app/immutable/chunks/CoIlbFU6.js",
+      "http://127.0.0.1:8002/_app/immutable/nodes/4.C1JXyeS-.js",
+      "http://127.0.0.1:8002/_app/immutable/nodes/1.CQnzQpEa.js",
+      "http://127.0.0.1:8002/_app/immutable/workers/largeSearch.worker-CzgrrL90.js"
+    ],
+    "all_observed_modules_match_manifest": true
+  },
+  "context": {
+    "context_id": "urn:sha256:283cddceca09958b96949527280ea14775de5f26d092c939cacfaa545500e80e",
+    "evidence_status": "sufficient",
+    "binding": {
+      "index_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/efb05c66616a9cd4328a86cf412780fe7bc7cf0b/full-dmg/context/assembly-index.json",
+      "index_sha256": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54"
+    },
+    "records": 52,
+    "relationships": 127,
+    "used_bytes": 487506,
+    "export": "pinned-context.json",
+    "export_sha256": "daab9c438f1b70154b72e0d4d6b00bd9c5f0449630607ea9e0bfc7e846697fca",
+    "canonical_matches_direct_engine": true
+  },
+  "search": {
+    "query": "imprisonment",
+    "matched": 219,
+    "displayed": 200
+  },
+  "negative_budget": {
+    "max_bytes": 8192,
+    "used_bytes": 1609,
+    "evidence_status": "insufficient",
+    "truncated": true,
+    "selected": 0,
+    "missing": "metadata_budget",
+    "omission": "byte_budget"
+  },
+  "screenshot": {
+    "path": "screenshots/09-fresh-candidate.png",
+    "sha256": "a76a0fb6350f8c490fd3e7441d409029e6f2d3ee987b7efde48f1eeecf800625"
+  },
+  "boundary": "Fresh app check after optional-metadata rejection fix. Earlier local-browser.json and screenshots remain observations of their original app identity."
+}

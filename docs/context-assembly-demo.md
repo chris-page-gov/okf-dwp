@@ -138,6 +138,10 @@ budget. A passing negative control means the expected failure was observed.
 - [Frozen source selectors](../evaluation/context-assembly/source-selectors.json)
   and [source verification](../evaluation/context-assembly/source-check.json).
 - [Actual positive execution](../evaluation/context-assembly/imprisonment-execution.json).
+- [Fresh application check with immutable public DWP content](../validation/ask-okf/fresh-candidate-browser.json)
+  and [its exported context](../validation/ask-okf/pinned-context.json) verify the
+  application after the optional-metadata validation fix. The public application
+  deployment is checked separately; this observation uses the local application.
 - [Local browser observations](../validation/ask-okf/local-browser.json) and
   [the browser-exported package](../validation/ask-okf/browser-context.json).
   These record the checked local app and package identity, not a deployed
