@@ -1,0 +1,896 @@
+{
+  "schema": "okf-context-evaluation-case.v1",
+  "id": "dwp/imprisonment-four-benefit-comparison",
+  "title": "Captured imprisonment guidance across JSA, IS, SPC and both ESA components",
+  "question": "A claimant is imprisoned. Explain the effect on JSA, IS, State Pension Credit and ESA, distinguishing loss of payment from loss of entitlement, and trace each conclusion to the relevant DMG guidance.",
+  "description": "Independent agent-authored acceptance case based on the frozen passages. Exact source identities and directed paths are checked; no model answer, legal conclusion or specialist acceptance is scored. Assessor expectations are not engine inputs.",
+  "scope": "Explanation of the captured legacy DMG material only; no current individual entitlement decision, New Style regime body or acquired ADM body.",
+  "fixture_kind": "source-backed",
+  "limitations": [
+    "The question and selected source passages were exposed during development; this is an acceptance case, not an independent hold-out benchmark.",
+    "The source qualifications at DMG 12002/12003, 24187, 24214, 41823/41832, 42580\u201342582, 53259\u201353287 and 78667\u201378676 must remain available. Whole-page presence does not establish correct interpretation.",
+    "Preserve nil credit/award wording for SPC and the ESA over-six-week entitlement qualification. No universal survival of entitlement is supported.",
+    "Memo 07/20 removal and the ADM M1-spare catalogue statement are exact captured metadata; neither supplies the absent document bodies.",
+    "Specialist acceptance remains zero."
+  ],
+  "expected": {
+    "resolved_concepts": [
+      "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/esa-custody-regimes",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/benefit-payability",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/benefit-entitlement",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/custody-benefit-claimant",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/dmg-imprisonment-guidance"
+    ],
+    "selected_concepts": [
+      "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/esa-custody-regimes",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/benefit-payability",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/benefit-entitlement",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/custody-benefit-claimant",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/dmg-imprisonment-guidance",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/benefit-disqualification"
+    ],
+    "sources": [
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0002",
+        "route": "page/dmg-vol3-ch12/0002",
+        "source_sha256": "be79f9d6f8baf23290b8d6af5f384d31c2435b960fe3a59c14febd510fbaa9fe",
+        "locator": "DMG chapter 12, PDF page 2; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "465e5bdf836f79f91173c943b9456dd72fab55b16f40da488d9e63ae0d5a195e",
+        "url": "https://assets.publishing.service.gov.uk/media/651bcf2e6dfda6000d8e39d2/dmgch12.pdf#page=2",
+        "captured_at": "2026-09-15T19:45:22.073369Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+        "route": "page/dmg-vol3-ch12/0003",
+        "source_sha256": "be79f9d6f8baf23290b8d6af5f384d31c2435b960fe3a59c14febd510fbaa9fe",
+        "locator": "DMG chapter 12, PDF page 3; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "efad9105dc1ffba4f4e2f2e60e8c675c185cef41c6299f90d9a32c746a2ec014",
+        "url": "https://assets.publishing.service.gov.uk/media/651bcf2e6dfda6000d8e39d2/dmgch12.pdf#page=3",
+        "captured_at": "2026-09-15T19:45:22.073369Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0037",
+        "route": "page/dmg-vol4-ch24/0037",
+        "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+        "locator": "DMG chapter 24, PDF page 37; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "90fc4f02c48b03b40cf34d460eb6599dc4b1dfe0b9ad0f652b6b472d410e1a2d",
+        "url": "https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf#page=37",
+        "captured_at": "2026-09-15T19:45:23.687172Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0039",
+        "route": "page/dmg-vol4-ch24/0039",
+        "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+        "locator": "DMG chapter 24, PDF page 39; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "7ccffcf7612a570d345d269849b374ff1b32b35a4fbb5a777ded3d1248648f08",
+        "url": "https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf#page=39",
+        "captured_at": "2026-09-15T19:45:23.687172Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0040",
+        "route": "page/dmg-vol4-ch24/0040",
+        "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+        "locator": "DMG chapter 24, PDF page 40; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "e964ed24deb7d35015da082315468cd3eb5a38769b452d5c903e7f90806b6823",
+        "url": "https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf#page=40",
+        "captured_at": "2026-09-15T19:45:23.687172Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0041",
+        "route": "page/dmg-vol4-ch24/0041",
+        "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+        "locator": "DMG chapter 24, PDF page 41; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "412d2593de1158a778a5a24af8cfd8dea941447563bcd5e55adb89205568c111",
+        "url": "https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf#page=41",
+        "captured_at": "2026-09-15T19:45:23.687172Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0042",
+        "route": "page/dmg-vol4-ch24/0042",
+        "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+        "locator": "DMG chapter 24, PDF page 42; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "7a6cce18c59907c6993b9dee37c27624208f3861a829a9456e9ea7a87513cfe7",
+        "url": "https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf#page=42",
+        "captured_at": "2026-09-15T19:45:23.687172Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0043",
+        "route": "page/dmg-vol4-ch24/0043",
+        "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+        "locator": "DMG chapter 24, PDF page 43; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "857830bfef89f163daa68983e917123f1179619b65de39a984c6d8866ad90ecb",
+        "url": "https://assets.publishing.service.gov.uk/media/5e9f006886650c031ce2c41b/dmgch24.pdf#page=43",
+        "captured_at": "2026-09-15T19:45:23.687172Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0129",
+        "route": "page/dmg-vol8-ch41/0129",
+        "source_sha256": "bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418",
+        "locator": "DMG chapter 41, PDF page 129; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "0fae22080ddb2a9c1075c2f4a8c6ab070f466041ac41b3e8a7e8df843f2faeb9",
+        "url": "https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=129",
+        "captured_at": "2026-09-15T19:45:28.939434Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0131",
+        "route": "page/dmg-vol8-ch41/0131",
+        "source_sha256": "bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418",
+        "locator": "DMG chapter 41, PDF page 131; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "854407c86c776e99000c2836c6f3ef4161bf1a7468494c5a520a679aa08f5b98",
+        "url": "https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=131",
+        "captured_at": "2026-09-15T19:45:28.939434Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0077",
+        "route": "page/dmg-vol8-ch42/0077",
+        "source_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110",
+        "locator": "DMG chapter 42, PDF page 77; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "005f49cafe59bf7840dd8340f0c4dbf6edb2e49c5af2de56e9322706a3e99de9",
+        "url": "https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=77",
+        "captured_at": "2026-09-15T19:45:28.980458Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0078",
+        "route": "page/dmg-vol8-ch42/0078",
+        "source_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110",
+        "locator": "DMG chapter 42, PDF page 78; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "fb8b55c7cb681a2509199dcde0b81290a8740ef5dbecbfa6f1ba942651beca7b",
+        "url": "https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=78",
+        "captured_at": "2026-09-15T19:45:28.980458Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0079",
+        "route": "page/dmg-vol8-ch42/0079",
+        "source_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110",
+        "locator": "DMG chapter 42, PDF page 79; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "ca0078af35b1b13139bd23614d0764d605c7aa6823ebe0c6977ddb8cb601453d",
+        "url": "https://assets.publishing.service.gov.uk/media/69e5ff8a8c9f882ae5997f4c/dmgch42.pdf#page=79",
+        "captured_at": "2026-09-15T19:45:28.980458Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0053",
+        "route": "page/dmg-vol9-ch53/0053",
+        "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+        "locator": "DMG chapter 53, PDF page 53; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "3010d7b21816d1dc4c2cb259ea03aff996e8e5002057b4ba6bda74b90feededa",
+        "url": "https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=53",
+        "captured_at": "2026-09-15T19:45:30.951851Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0054",
+        "route": "page/dmg-vol9-ch53/0054",
+        "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+        "locator": "DMG chapter 53, PDF page 54; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "0e0ca65bd114cf6796df5e774023cd636182e76e1b4a20f973a1e6ed45d7ccf2",
+        "url": "https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=54",
+        "captured_at": "2026-09-15T19:45:30.951851Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0055",
+        "route": "page/dmg-vol9-ch53/0055",
+        "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+        "locator": "DMG chapter 53, PDF page 55; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "cd39c6483e8479225fff37da28559fd557fa464d779a031163787fb532033af3",
+        "url": "https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=55",
+        "captured_at": "2026-09-15T19:45:30.951851Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0056",
+        "route": "page/dmg-vol9-ch53/0056",
+        "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+        "locator": "DMG chapter 53, PDF page 56; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "2f4f1e1c38a9f5f1687a94bf522027209aee24c5bd6b41b23289cfbfed727d3a",
+        "url": "https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=56",
+        "captured_at": "2026-09-15T19:45:30.951851Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0057",
+        "route": "page/dmg-vol9-ch53/0057",
+        "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+        "locator": "DMG chapter 53, PDF page 57; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "120c1f403aa29a47ffab3208837fb79124a87b0cd19e4aa4cfef48cb251f8b44",
+        "url": "https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=57",
+        "captured_at": "2026-09-15T19:45:30.951851Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0058",
+        "route": "page/dmg-vol9-ch53/0058",
+        "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+        "locator": "DMG chapter 53, PDF page 58; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "0d6ac81e876d562b01c186cec3c8abb62d7fc20cd3cc2d069f231de67e4234c9",
+        "url": "https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=58",
+        "captured_at": "2026-09-15T19:45:30.951851Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0059",
+        "route": "page/dmg-vol9-ch53/0059",
+        "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+        "locator": "DMG chapter 53, PDF page 59; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "47c39f82e1a13fadfd75cc1db3dff282b55264fdeb0a81bda5a4b448085991ce",
+        "url": "https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=59",
+        "captured_at": "2026-09-15T19:45:30.951851Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0060",
+        "route": "page/dmg-vol9-ch53/0060",
+        "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+        "locator": "DMG chapter 53, PDF page 60; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "b214041e5883a83da0f16c8d69c592201e63fa75b1ee53363c92264859f5ea5b",
+        "url": "https://assets.publishing.service.gov.uk/media/6895ca2fa6eb81a3f9b2e29b/dmg-ch-53.pdf#page=60",
+        "captured_at": "2026-09-15T19:45:30.951851Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0031",
+        "route": "page/dmg-vol9-ch54/0031",
+        "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+        "locator": "DMG chapter 54, PDF page 31; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "76958e7b78c972c55b50b7184b22527dc7d14abc530e511379380c024a64bee2",
+        "url": "https://assets.publishing.service.gov.uk/media/5e9f025dd3bf7f031b0cc9e6/dmgch54.pdf#page=31",
+        "captured_at": "2026-09-15T19:45:31.021976Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0032",
+        "route": "page/dmg-vol9-ch54/0032",
+        "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+        "locator": "DMG chapter 54, PDF page 32; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "f791b1eae545ae67b37f534fb2544d67c404e5d87bfc7d3f6dfbc7a28ef09621",
+        "url": "https://assets.publishing.service.gov.uk/media/5e9f025dd3bf7f031b0cc9e6/dmgch54.pdf#page=32",
+        "captured_at": "2026-09-15T19:45:31.021976Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0033",
+        "route": "page/dmg-vol9-ch54/0033",
+        "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+        "locator": "DMG chapter 54, PDF page 33; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "db762e8c4a86c984fe99ee63fc97c69de95e56cb9c79b7ffad499615486fec95",
+        "url": "https://assets.publishing.service.gov.uk/media/5e9f025dd3bf7f031b0cc9e6/dmgch54.pdf#page=33",
+        "captured_at": "2026-09-15T19:45:31.021976Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0035",
+        "route": "page/dmg-vol9-ch54/0035",
+        "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+        "locator": "DMG chapter 54, PDF page 35; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "2cc8367450bc588ac72a5323cad6810f154f4054c9a2c5d5c1e82e29f1994c0d",
+        "url": "https://assets.publishing.service.gov.uk/media/5e9f025dd3bf7f031b0cc9e6/dmgch54.pdf#page=35",
+        "captured_at": "2026-09-15T19:45:31.021976Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0100",
+        "route": "page/78/0100",
+        "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+        "locator": "DMG chapter 78, PDF page 100; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "b56b29e3617c6917bad9485e3e7d530b05e720d376941884e1b287d860a18151",
+        "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=100",
+        "captured_at": "2026-09-15T14:21:01Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0101",
+        "route": "page/78/0101",
+        "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+        "locator": "DMG chapter 78, PDF page 101; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "b0fc596c9dbfa298bd7b4b9969880177e1ec1c4eecbec6f2d69b788c092e2b13",
+        "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=101",
+        "captured_at": "2026-09-15T14:21:01Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0102",
+        "route": "page/78/0102",
+        "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+        "locator": "DMG chapter 78, PDF page 102; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "04173c737a7a0f6191a685be5819a9015fbe3bdce4b7fa4353b16a750a7f9429",
+        "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=102",
+        "captured_at": "2026-09-15T14:21:01Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0103",
+        "route": "page/78/0103",
+        "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+        "locator": "DMG chapter 78, PDF page 103; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "41aac82f1b0368c7a387cdac50d7e6c07907f096d4b5a9f80278977499611b78",
+        "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=103",
+        "captured_at": "2026-09-15T14:21:01Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0104",
+        "route": "page/78/0104",
+        "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+        "locator": "DMG chapter 78, PDF page 104; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "b89a91b856535ce9298399cd55e38000ef03e853114a4b867022755e14f99ae8",
+        "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=104",
+        "captured_at": "2026-09-15T14:21:01Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0105",
+        "route": "page/78/0105",
+        "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+        "locator": "DMG chapter 78, PDF page 105; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "f2dea1ea9312c0b21da20d757eaf3b43878948ff35fc42748ff5b951c47d1a42",
+        "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=105",
+        "captured_at": "2026-09-15T14:21:01Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0106",
+        "route": "page/78/0106",
+        "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+        "locator": "DMG chapter 78, PDF page 106; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "ecdccb38ef661980f07a7f1cc937566f6aff2393332db08be08f0cb4aaf14a6c",
+        "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=106",
+        "captured_at": "2026-09-15T14:21:01Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0107",
+        "route": "page/78/0107",
+        "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+        "locator": "DMG chapter 78, PDF page 107; exact whole extracted page; imprisonment passages and continuation context",
+        "literal_sha256": "142e5cdb139c8bc7fe26d8e5e92d9090314f5186285d3e942d51faac956474d5",
+        "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=107",
+        "captured_at": "2026-09-15T14:21:01Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-memo-07-20-removal",
+        "route": "evidence/imprisonment-memo-07-20-removal",
+        "source_sha256": "9cd1f44693873e73014073e8c82d2329e19f41949eedbca99d583480855b5242",
+        "locator": "/details/change_history/78/note",
+        "literal_sha256": "ec292aa1c69fe35883c2614aceaac048eb64bebafa74d424a794652249793b7f",
+        "url": "https://www.gov.uk/government/publications/decision-makers-guide-memos-staff-guide",
+        "captured_at": "2026-09-15T16:55:18.464057Z",
+        "source_date": "2022-04-25T10:23:01Z",
+        "source_date_kind": "catalogue change-history event; not inferred legal commencement"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-adm-m1-spare",
+        "route": "evidence/imprisonment-adm-m1-spare",
+        "source_sha256": "86fdc3200e4207294e45efdc08a424f3118869fb4be0fd13b7554ac8d039c034",
+        "locator": "/details/attachments/141/title",
+        "literal_sha256": "114d9d19ba75f890b4acf9ec168746566fe209373df97930a19a032bc8522d18",
+        "url": "https://www.gov.uk/government/publications/advice-for-decision-making-staff-guide",
+        "captured_at": "2026-09-15T16:55:18.464057Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/chapter/78",
+        "route": "chapter/78",
+        "source_sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a",
+        "locator": "/documents/296/title",
+        "literal_sha256": "b67302077979ad2f65ea0b4ba972525d09f4c51352c4c572f82bc75a1ebb212c",
+        "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/full-dmg-2026-09-15/inventory.json",
+        "captured_at": "2026-09-15T14:21:01Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+        "route": "document/dmg-vol4-ch24",
+        "source_sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a",
+        "locator": "/documents/140/title",
+        "literal_sha256": "5947aee83030c459d471373d85604fc4a1df09b2f4b6af68c82630a4794d8b44",
+        "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/full-dmg-2026-09-15/inventory.json",
+        "captured_at": "2026-09-15T19:45:23.687172Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53",
+        "route": "document/dmg-vol9-ch53",
+        "source_sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a",
+        "locator": "/documents/229/title",
+        "literal_sha256": "0e737ff5d25bd4bd2276d8e9cfdba72617f7ac6483cb6512252793c510e82b81",
+        "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/full-dmg-2026-09-15/inventory.json",
+        "captured_at": "2026-09-15T19:45:30.951851Z"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54",
+        "route": "document/dmg-vol9-ch54",
+        "source_sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a",
+        "locator": "/documents/230/title",
+        "literal_sha256": "f20e78398da25fbc46b9943dfbaaf774b5885734ba4cb248584ffb5f0f2b3653",
+        "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/full-dmg-2026-09-15/inventory.json",
+        "captured_at": "2026-09-15T19:45:31.021976Z"
+      }
+    ],
+    "assertions": [
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/88844413a262da0ee4630897336ef66fafd8b3a8162c3f985ab3f33e801c5ad1",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0002",
+        "predicate": "http://purl.org/dc/terms/requires",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/3b59e81893ef61cfe2fee5d0e3512032315eb249680bac5c9f6747559d540db6",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0002",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+        "predicate": "http://purl.org/dc/terms/requires",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/7267519e0411ebdfadf91ba9490157c500e9347e3ca0f0b42e93c75773597c49",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0037",
+        "predicate": "http://purl.org/dc/terms/references",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/bbd768125d62de1c00d09c67e125a4b92dfbdee0a19fcd3aad67201510e7c99e",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0041",
+        "predicate": "http://purl.org/dc/terms/references",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/d57a6df1075e97c1be93543b00cd13c0082a062a9cce21f59af8e638532d89e8",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0104",
+        "predicate": "http://purl.org/dc/terms/references",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/cbb3c7d56374d6e77f685c75cd4de668262313d029f91bee74c006e0d03eeb01",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0053",
+        "predicate": "http://purl.org/dc/terms/references",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/e0a2702d68bb22d67ec3d50d4334ac857128fe49c75b7e2620795e9e687d5546",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0035",
+        "predicate": "http://purl.org/dc/terms/references",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/07965c793d02a3e0c78ab8b4ba9e16ab7fd2b5437764e9df35eee3d1e4ba5f6f",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0129",
+        "predicate": "http://purl.org/dc/terms/references",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/93d3351f35377948dc881009bb453661c4d591972e2755b57c059ac98f921314",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0077",
+        "predicate": "http://purl.org/dc/terms/references",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/81fe414ff82ace87fe26fc7ec78c28344b1a9773b9cc6b06f43bf9c29f7c5bc0",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0037",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-memo-07-20-removal",
+        "predicate": "http://purl.org/dc/terms/requires",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/68c533a61138804d41b9659ec1dd3d95ec3a4f5cdcb02015dc8420555514b14b",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-adm-m1-spare",
+        "predicate": "http://purl.org/dc/terms/requires",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/fe4f8da55166f4db8a8fc51e7ae7cf1cd7f62cfeb1948fb8cac8fd9087c1c73b",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability",
+        "predicate": "http://www.w3.org/2004/02/skos/core#related",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/2e9b62d19890720ae6c1b63b30366832a352335cc5dbc8fddaee00aeead20044",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount",
+        "predicate": "http://www.w3.org/2004/02/skos/core#related",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/5ffb3453b3ed6ac160e3e465a4ba539ad2df4db1948670126e755f8ea3d749f6",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates",
+        "predicate": "http://www.w3.org/2004/02/skos/core#related",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/0152328a8d8c7b21f2493a5b97bbc68ae0328a00f31a8857af52d928b4b525ea",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody",
+        "predicate": "http://www.w3.org/2004/02/skos/core#related",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/03f7888e938c7f851cd10cfe82f512fff2ed468781b8405c21ca34dbc8819219",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody",
+        "predicate": "http://www.w3.org/2004/02/skos/core#related",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/519c40688819ea4e3d880dcd7a0b0b2a471d4e5ccb0f696edc4c7e2f790a0391",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-custody-regimes",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody",
+        "predicate": "http://purl.org/dc/terms/requires",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/43638fdbb111467d1f55773da711f5894beb8063f1759cb3598818daf463c6f7",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-custody-regimes",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody",
+        "predicate": "http://purl.org/dc/terms/requires",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+        "predicate": "http://purl.org/dc/terms/references",
+        "assertion_status": "normalized",
+        "authority_class": "derived"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/ebca411b85ee2cb32eda305107aa7eb589161134dc1cb9a660cffb83a23de46f",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability",
+        "predicate": "http://purl.org/dc/terms/references",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/cba4ef309fc53d366fe9a4e0326f145b3db2140c18100e258b8838572310083d",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount",
+        "predicate": "http://purl.org/dc/terms/references",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/10a3cdb0a56d15d8a3953d914e17ce53010f4924c58aca4d44876495c23133a6",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53",
+        "predicate": "http://purl.org/dc/terms/references",
+        "assertion_status": "normalized",
+        "authority_class": "derived"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/6f5e06b6f927d077949cbba6674773446d6d76043c7503fd81c01d48323e97f9",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody",
+        "predicate": "http://purl.org/dc/terms/references",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/2df2b62054c06896e19dc0fb46b5ed04c6918cb8c9416e991397d63d6fc9472b",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54",
+        "predicate": "http://purl.org/dc/terms/references",
+        "assertion_status": "normalized",
+        "authority_class": "derived"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/edcfd7662c5b15a83bffbb0760f5145f322851b1ddc4734a73fcd0b62effb2d3",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody",
+        "predicate": "http://purl.org/dc/terms/references",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/a181621cec3dcfd62a3ed6dd4c18d568827816a5b80814feaf1f629907e1fedb",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/chapter/78",
+        "predicate": "http://purl.org/dc/terms/references",
+        "assertion_status": "normalized",
+        "authority_class": "derived"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/1f8083c1e10acfbe9aeaf3d2a70f9e72d617732f0b4dab3089938035ffdbe4d1",
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/chapter/78",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates",
+        "predicate": "http://purl.org/dc/terms/references",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted"
+      }
+    ],
+    "paths": [
+      {
+        "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+        "records": [
+          "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0002"
+        ],
+        "assertions": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/88844413a262da0ee4630897336ef66fafd8b3a8162c3f985ab3f33e801c5ad1"
+        ]
+      },
+      {
+        "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability",
+        "records": [
+          "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0037"
+        ],
+        "assertions": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/7267519e0411ebdfadf91ba9490157c500e9347e3ca0f0b42e93c75773597c49"
+        ]
+      },
+      {
+        "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount",
+        "records": [
+          "https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0041"
+        ],
+        "assertions": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/bbd768125d62de1c00d09c67e125a4b92dfbdee0a19fcd3aad67201510e7c99e"
+        ]
+      },
+      {
+        "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates",
+        "records": [
+          "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0104"
+        ],
+        "assertions": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/d57a6df1075e97c1be93543b00cd13c0082a062a9cce21f59af8e638532d89e8"
+        ]
+      },
+      {
+        "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+        "records": [
+          "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+          "https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0053"
+        ],
+        "assertions": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/0152328a8d8c7b21f2493a5b97bbc68ae0328a00f31a8857af52d928b4b525ea",
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/cbb3c7d56374d6e77f685c75cd4de668262313d029f91bee74c006e0d03eeb01"
+        ]
+      },
+      {
+        "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+        "records": [
+          "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+          "https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0035"
+        ],
+        "assertions": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/03f7888e938c7f851cd10cfe82f512fff2ed468781b8405c21ca34dbc8819219",
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/e0a2702d68bb22d67ec3d50d4334ac857128fe49c75b7e2620795e9e687d5546"
+        ]
+      }
+    ],
+    "evidence": [
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0002",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0037",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0039",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0040",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0041",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0042",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0043",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0129",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0131",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0077",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0078",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0079",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0053",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0054",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0055",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0056",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0057",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0058",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0059",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0060",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0031",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0032",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0033",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0035",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/78/0100",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/78/0101",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/78/0102",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/78/0103",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/78/0104",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/78/0105",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/78/0106",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/78/0107",
+      "https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-memo-07-20-removal",
+      "https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-adm-m1-spare"
+    ],
+    "forbidden_records": [
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0034"
+    ],
+    "requirements": [
+      "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/legacy-jsa-custody-availability-v1",
+      "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/is-prisoner-applicable-amount-v1",
+      "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/pc-prisoner-credit-rates-v1",
+      "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/esa-custody-regimes-v1"
+    ],
+    "issues": [],
+    "boundaries": [
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted",
+        "review_status": "unreviewed-specialist-review-required"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted",
+        "review_status": "unreviewed-specialist-review-required"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted",
+        "review_status": "unreviewed-specialist-review-required"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted",
+        "review_status": "unreviewed-specialist-review-required"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-custody-regimes",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted",
+        "review_status": "unreviewed-specialist-review-required"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted",
+        "review_status": "unreviewed-specialist-review-required"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted",
+        "review_status": "unreviewed-specialist-review-required"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/term/benefit-payability",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted",
+        "review_status": "unreviewed-specialist-review-required"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/term/benefit-entitlement",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted",
+        "review_status": "unreviewed-specialist-review-required"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/term/custody-benefit-claimant",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted",
+        "review_status": "unreviewed-specialist-review-required"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/term/dmg-imprisonment-guidance",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted",
+        "review_status": "unreviewed-specialist-review-required"
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/chapter/78",
+        "assertion_status": "normalized",
+        "authority_class": "derived",
+        "review_status": "unreviewed-specialist-review-required",
+        "scope": "Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination of contemporary individual eligibility. This record identifies the chapter named by 12015; outgoing selections are authored research navigation."
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+        "assertion_status": "normalized",
+        "authority_class": "derived",
+        "review_status": "unreviewed-specialist-review-required",
+        "scope": "Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination of contemporary individual eligibility. This record identifies the chapter named by 12015; outgoing selections are authored research navigation."
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53",
+        "assertion_status": "normalized",
+        "authority_class": "derived",
+        "review_status": "unreviewed-specialist-review-required",
+        "scope": "Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination of contemporary individual eligibility. This record identifies the chapter named by 12015; outgoing selections are authored research navigation."
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54",
+        "assertion_status": "normalized",
+        "authority_class": "derived",
+        "review_status": "unreviewed-specialist-review-required",
+        "scope": "Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination of contemporary individual eligibility. This record identifies the chapter named by 12015; outgoing selections are authored research navigation."
+      },
+      {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/term/benefit-disqualification",
+        "assertion_status": "model-derived",
+        "authority_class": "model-assisted",
+        "review_status": "unreviewed-specialist-review-required",
+        "scope": "Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination of contemporary individual eligibility."
+      }
+    ],
+    "evidence_status": "sufficient",
+    "budget_truncated": false,
+    "assertion_paths": [
+      {
+        "seed": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+        "records": [
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+          "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+          "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability"
+        ],
+        "assertions": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a",
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/ebca411b85ee2cb32eda305107aa7eb589161134dc1cb9a660cffb83a23de46f"
+        ]
+      },
+      {
+        "seed": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+        "records": [
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+          "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+          "https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount"
+        ],
+        "assertions": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a",
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/cba4ef309fc53d366fe9a4e0326f145b3db2140c18100e258b8838572310083d"
+        ]
+      },
+      {
+        "seed": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+        "records": [
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+          "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53",
+          "https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody"
+        ],
+        "assertions": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/10a3cdb0a56d15d8a3953d914e17ce53010f4924c58aca4d44876495c23133a6",
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/6f5e06b6f927d077949cbba6674773446d6d76043c7503fd81c01d48323e97f9"
+        ]
+      },
+      {
+        "seed": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+        "records": [
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+          "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54",
+          "https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody"
+        ],
+        "assertions": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/2df2b62054c06896e19dc0fb46b5ed04c6918cb8c9416e991397d63d6fc9472b",
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/edcfd7662c5b15a83bffbb0760f5145f322851b1ddc4734a73fcd0b62effb2d3"
+        ]
+      },
+      {
+        "seed": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+        "records": [
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+          "https://chris-page-gov.github.io/okf-dwp/id/chapter/78",
+          "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+        ],
+        "assertions": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/a181621cec3dcfd62a3ed6dd4c18d568827816a5b80814feaf1f629907e1fedb",
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/1f8083c1e10acfbe9aeaf3d2a70f9e72d617732f0b4dab3089938035ffdbe4d1"
+        ]
+      }
+    ]
+  }
+}

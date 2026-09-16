@@ -1,0 +1,103 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/benefit-disqualification
+  '@type': skos:Concept
+  route: term/benefit-disqualification
+  title: Benefit disqualification in the captured custody guidance
+  type: Concept
+  description: Disqualification from receiving benefit is distinct from the fact of imprisonment and
+    from the initial suspension of payment. This profile covers only the captured imprisonment
+    ground, not every ground of benefit disqualification. DMG 12003 describes the payability effect
+    for its listed benefits; ESA(Cont) 53258–53260 supplies a separate more-than-six-week LCW
+    qualification and no-penalty exception. The term alone does not establish a benefit, a ground, a
+    current regime or an entitlement outcome.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-imprisonment-context-authoring
+    at: '2026-09-16T00:48:43.670101Z'
+  observedAt: '2026-09-16T00:48:43.670101Z'
+  context_assembly:
+    kind: concept
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    text: Disqualification from receiving benefit is distinct from the fact of imprisonment and from
+      the initial suspension of payment. This profile covers only the captured imprisonment ground,
+      not every ground of benefit disqualification. DMG 12003 describes the payability effect for
+      its listed benefits; ESA(Cont) 53258–53260 supplies a separate more-than-six-week LCW
+      qualification and no-penalty exception. The term alone does not establish a benefit, a ground,
+      a current regime or an entitlement outcome.
+    relations:
+    - target: page/dmg-vol3-ch12/0003
+      predicate: http://purl.org/dc/terms/references
+      rationale: The source distinguishes disqualification, payment, entitlement and
+        benefit-specific exceptions.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+    - target: page/dmg-vol9-ch53/0054
+      predicate: http://purl.org/dc/terms/references
+      rationale: The source distinguishes disqualification, payment, entitlement and
+        benefit-specific exceptions.
+      evidence:
+      - page/dmg-vol9-ch53/0054
+    - target: scope/legacy-imprisonment-guidance
+      predicate: http://purl.org/dc/terms/requires
+      rationale: This selected ground is not a complete catalogue of benefit disqualification or a
+        current-law decision.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+    aliases:
+    - disqualification
+    - disqualified
+    - disqualification from receiving benefit
+  body: "# Benefit disqualification in the captured custody guidance\n\nDisqualification from receiving
+    benefit is distinct from the fact of imprisonment and from the initial suspension of payment. This
+    profile covers only the captured imprisonment ground, not every ground of benefit disqualification.
+    DMG 12003 describes the payability effect for its listed benefits; ESA(Cont) 53258–53260 supplies
+    a separate more-than-six-week LCW qualification and no-penalty exception. The term alone does not
+    establish a benefit, a ground, a current regime or an entitlement outcome.\n\n## Scope and limitations\n\
+    \nFrozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+    guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+    of contemporary individual eligibility.\n\nIndependent experimental research, not an official DWP
+    document, benefits advice, a calculation or an individual entitlement decision. All authored meanings
+    and dependencies require specialist review.\n\nThe broad labels JSA and ESA do not establish a claimant’s
+    regime. This profile explains the listed DMG legacy regimes; New Style JSA/ESA, UC and PIP are routed
+    to ADM by 12016. Those ADM bodies are not acquired. Ask for regime/date and fresh authoritative checks
+    before applying guidance to a person.\n\nThe payability statement at 12003 is scoped by the list in
+    12002. It cannot replace benefit-specific rules or establish that entitlement always survives imprisonment.\n\
+    \nMachine-extracted whole pages retain neighbouring text, partial unrelated paragraphs, footnotes,
+    historical examples and possible reading-order errors. Use the stated locators; page presence is not
+    full legal interpretation or PDF visual review.\n\nCapture date is not publication, revision or commencement.
+    Old amendment footers and example dates remain literal source text. The currently linked catalogue
+    is not current-law assurance; legislation and case law have not been consolidated or reconciled.\n\
+    \nThe frozen PDFs still refer to Memo 07/20. Official catalogue history says it was removed because
+    the regulations ceased to have effect from 31 August 2021. The memo body is absent; do not revive
+    that temporary exception.\n\n12016’s ADM M1 reference conflicts with the frozen catalogue title marking
+    M1 spare. S1/U6 are identified routes, not acquired evidence. Internal Chapter 41 references to 53112
+    and 53071 and the printed Chapter 53 number 531261 remain unresolved version/typographic observations.\n\
+    \nPrisoner definitions differ by benefit: do not transfer the general criminal/civil distinction indiscriminately.
+    Remand, bail hostel, sentence, release, hospital legislation, fine default, overseas detention, time
+    limits and partner circumstances require the relevant branch. Housing-cost passages do not establish
+    a current housing award."
+  skos:prefLabel:
+    '@value': Benefit disqualification in the captured custody guidance
+    '@language': en-GB
+  skos:definition:
+    '@value': Disqualification from receiving benefit is distinct from the fact of imprisonment and
+      from the initial suspension of payment. This profile covers only the captured imprisonment
+      ground, not every ground of benefit disqualification. DMG 12003 describes the payability
+      effect for its listed benefits; ESA(Cont) 53258–53260 supplies a separate more-than-six-week
+      LCW qualification and no-penalty exception. The term alone does not establish a benefit, a
+      ground, a current regime or an entitlement outcome.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility. The broad labels JSA and ESA do not establish a claimant’s
+      regime. This profile explains the listed DMG legacy regimes; New Style JSA/ESA, UC and PIP are routed
+      to ADM by 12016. Those ADM bodies are not acquired. Ask for regime/date and fresh authoritative
+      checks before applying guidance to a person.'
+    '@language': en-GB

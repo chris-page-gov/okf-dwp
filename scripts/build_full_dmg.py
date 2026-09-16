@@ -23,6 +23,7 @@ from pyld import jsonld
 from build_bundle import (BASE, OGL, PROFILE, REPO, ROOT, ROUTE, canonical,
                           context, digest, load_yaml, make_assertion,
                           pinned_loader, source_text_block, yaml_bytes)
+from context_assembly import augment_context_graph, project_context_index
 
 CONSUMER_COMMIT = "8e01dfe16538c6045ee1d55b64c3f6e24bada9f7"
 INPUT = "source/full-dmg-2026-09-15/inventory.json"
@@ -469,14 +470,19 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
             routes.append(page_route)
         doc_rows.append({"id": doc["id"], "route": doc_route, "page_routes": routes, "pages": len(pages), "role": role(doc), "url": doc["url"], "sha256": doc["sha256"], "pages_path": doc["pages_path"]})
     extra_inputs, extra_contexts = load_extra_knowledge(root, nodes, assertions, docs)
+    context_plan = augment_context_graph(root, nodes, assertions, docs, inventory_path)
     times = [when] + [str(value) for row in nodes.values() for value in (row.get("observedAt"), row.get("generated", {}).get("at")) if value]
+    if context_plan:
+        times.append(context_plan["profile"]["authored_at"])
     when = max(times, key=utc_key)
     for route, row in nodes.items():
         full_text.setdefault(route, row.get("body", ""))
     assertions.sort(key=lambda row: row["@id"])
     if len({row["@id"] for row in assertions}) != len(assertions):
         raise ValueError("Duplicate semantic assertion identity")
-    input_files = [inventory_path, "scripts/build_full_dmg.py", "scripts/build_bundle.py", "scripts/semantic_authoring.py", "uv.lock", "profiles/bundle-wiki/v1.vendor-lock.json"]
+    input_files = [inventory_path, "scripts/build_full_dmg.py", "scripts/build_bundle.py", "scripts/semantic_authoring.py", "scripts/context_assembly.py", "uv.lock", "profiles/bundle-wiki/v1.vendor-lock.json"]
+    if context_plan:
+        input_files += context_plan["inputs"]
     if include_pilot:
         input_files += ["bundle/okf-bundle.jsonld", "source/inventory.json"]
     if evidence_index_path.is_file():
@@ -494,6 +500,8 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
         return {"path": path, "bytes": len(outputs[path]), "sha256": digest(outputs[path]), "decoded_bytes": len(raw), "decoded_sha256": digest(raw), "snapshot": snapshot}
     def binding(path):
         return {"path": path, "bytes": len(outputs[path]), "sha256": digest(outputs[path])}
+    if context_plan:
+        put("context/assembly-index.json", project_context_index(context_plan, assertions, snapshot))
     records, resources = [], []
     for route, row in sorted(nodes.items()):
         doc = source_by_route.get(route)
@@ -687,6 +695,9 @@ def compile_full(root: Path = ROOT, inventory_path: str = INPUT, include_pilot: 
                   "vocabulary": {"record_singular": "guidance record", "record_plural": "guidance records", "publisher_singular": "source organisation", "publisher_plural": "source organisations", "resource_singular": "source", "resource_plural": "sources", "search_placeholder": "Search all extracted DMG pages, including labelled memos and history"},
                   "exploratory_publication": publication, "source": {"url": COLLECTION, "inventory": inventory_path, "sha256": digest(inventory_bytes), "observed_at": max((observed(doc) for doc in docs), key=utc_key)},
                   "consumer": inputs["consumer"]}
+    if context_plan:
+        descriptor["entrypoints"]["context_assembly"] = binding("context/assembly-index.json")
+        descriptor["entrypoint_integrity"]["context_assembly"] = binding("context/assembly-index.json")
     put("okf-explorer.json", descriptor)
     outputs["okf-explorer.yamlld"] = yaml_bytes({"@context": context(), **descriptor})
     control = {"@context": context(), "@id": BASE + "id/bundle/full-dmg", "@type": "okf:Bundle", "title": TITLE, "description": NOTICE, "version": "0.1.0", "status": "experimental",

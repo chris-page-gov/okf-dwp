@@ -1,5 +1,15 @@
 # Changelog
 
+## Governed context assembly development candidate — 16 September 2026
+
+- Add an imprisonment case spanning legacy JSA, Income Support, State Pension Credit and the two ESA components, with exact whole-page evidence and explicit regime boundaries.
+- Project governed context records and directed relationships from authored YAML-LD. Preserve the distinction between source chapter routing and model-derived paragraph selection; do not change the frozen Bundle Wiki profile.
+- Add a separate assessor case, frozen-source preflight and real-engine A–H acceptance. Verify exact identities, directed paths, provenance, budgets and scoped answerability without generating a model answer.
+- Bind source URLs and capture timestamps to frozen inventory/API/census evidence, including catalogue event-date roles. Reject corruption that preserves text and digests but substitutes source identity.
+- Replay context acceptance and actual-index controls in CI against an explicitly pinned Explorer commit with locked dependencies; reject provisional branch names or unresolved pins.
+- Execute declared synthetic missing-evidence, direction, integrity, access, ambiguity, conflict and budget controls on copies of the actual index. Bind input, implementation and observed output hashes; preserve real execution timestamps on replay.
+- Add a demonstration and reproduction guide. Keep these engineering checks separate from current-law assurance, specialist acceptance, browser/host verification and the unchanged 160 source-guided answer trials.
+
 <a id="full-dmg-completion-in-progress--15-september-2026"></a>
 
 ## Full-DMG research candidate — 15 September 2026

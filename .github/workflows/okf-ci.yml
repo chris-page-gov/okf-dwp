@@ -13,6 +13,9 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      # Reviewed immutable consumer source; execution receipts bind its bytes too.
+      EXPLORER_CONTEXT_COMMIT: 98d2e6a7c78f323391412dad8ceffe0ae4deca8b
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
@@ -25,6 +28,21 @@ jobs:
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: '26.7.0'
+      - name: Require an immutable context consumer commit
+        run: >-
+          uv run --locked python -c
+          'import os,re; value=os.environ["EXPLORER_CONTEXT_COMMIT"]; assert re.fullmatch(r"[0-9a-f]{40}", value), "Set EXPLORER_CONTEXT_COMMIT to a reviewed immutable Explorer commit before publication"'
+      - name: Check out the pinned context consumer
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: chris-page-gov/okf-explorer
+          ref: ${{ env.EXPLORER_CONTEXT_COMMIT }}
+          path: .ci/okf-explorer
+          persist-credentials: false
+      - name: Verify the consumer checkout identity
+        run: test "$(git -C .ci/okf-explorer rev-parse HEAD)" = "$EXPLORER_CONTEXT_COMMIT"
+      - name: Install locked context evaluator dependencies
+        run: uv sync --locked --project .ci/okf-explorer
       - name: Install source verification tools
         run: sudo apt-get update && sudo apt-get install --yes poppler-utils
       - name: Check acquisition and evidence boundaries
@@ -41,6 +59,16 @@ jobs:
         run: uv run --locked python scripts/validate_full_dmg.py
       - name: Run pinned Explorer acceptance functions
         run: node --experimental-strip-types scripts/check_full_dmg_consumer.mjs
+      - name: Replay exact source and context acceptance
+        run: node scripts/evaluate_context_assembly.mjs --explorer-root .ci/okf-explorer --check
+      - name: Replay actual-index context failure controls
+        run: >-
+          node --experimental-strip-types .ci/okf-explorer/scripts/run_context_controls.mjs
+          --index full-dmg/context/assembly-index.json
+          --case evaluation/context-assembly/imprisonment-case.json
+          --controls evaluation/context-assembly/imprisonment-controls.json
+          --output evaluation/context-assembly/imprisonment-controls-execution.json
+          --check
       - name: Reconcile source and semantic coverage
         run: uv run --locked python scripts/report_full_dmg_coverage.py --check
       - name: Replay indexed evidence and no-result controls

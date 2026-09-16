@@ -93,6 +93,10 @@ def evaluate(root: Path = ROOT) -> dict:
             if relation.get('assertion_status') != 'model-derived':
                 continue
             for evidence in relation.get('evidence', []):
+                # Whole-page context routing has its own acceptance suite. It
+                # must not displace the established authored-passage probes.
+                if evidence.get('type') == 'source-page-for-context':
+                    continue
                 route = evidence.get('source_page_route')
                 row = corpus.routes.get(route)
                 if row:
