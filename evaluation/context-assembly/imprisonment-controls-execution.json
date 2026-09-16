@@ -1,0 +1,1121 @@
+{
+  "schema": "okf-context-controls-receipt.v1",
+  "started_at": "2026-09-16T01:51:10.646Z",
+  "observed_at": "2026-09-16T01:51:12.104Z",
+  "execution": {
+    "schema": "okf-context-controls-execution.v1",
+    "method": "Actual engine runs on explicitly mutated copies of frozen index bytes; no mutation of the original index, no model calls, no network acquisition. Expected diagnostics and failing A–H stages were declared before each run.",
+    "inputs": {
+      "index_sha256": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54",
+      "case_sha256": "9eab17eb3a01fb8e3e7137d4440386da752d31e1f6a746713a02cd1ebe9108fd",
+      "controls_sha256": "b86b1fe53b2eb47e9e5699282b8101968284000fd8fe434893cdf59e03920142",
+      "implementation": [
+        {
+          "path": "apps/okf-explorer/src/lib/context/index.ts",
+          "sha256": "4be756c3695d63ef05ec8073fede8833919d73cbb3ca7d0473fc2ac65bafb714"
+        },
+        {
+          "path": "apps/okf-explorer/src/lib/context/types.ts",
+          "sha256": "ebffa16b3f69852557b6631a8d00bfdf2e30e237b2ff24ce7fd3511e3e12211e"
+        },
+        {
+          "path": "apps/okf-explorer/src/lib/context/webmcp.ts",
+          "sha256": "6f2ab1badb66f5f8dd87bffaf3c44bf1bb8c3242ed2b1547d4f0fa1b3a1b98cc"
+        },
+        {
+          "path": "profiles/context-assembly/v1/common.schema.json",
+          "sha256": "346f86667daec3ab9d6f21d007d7c7c948c04de8f4439818d8185a13e6267a2b"
+        },
+        {
+          "path": "profiles/context-assembly/v1/evaluation-case.schema.json",
+          "sha256": "33e7762c57e5926ece25ed9555f347e6812b6a7fa99446fba0ad24e350b1e585"
+        },
+        {
+          "path": "profiles/context-assembly/v1/evaluation-controls.schema.json",
+          "sha256": "33aec80def165fef197f8cc742da464ff11da77aeb47640603189ecb4a28a751"
+        },
+        {
+          "path": "profiles/context-assembly/v1/index.schema.json",
+          "sha256": "4bc2e83c1243a1e4b89b6d1a41deca7549f14afa44e854750717a7d4908fb93e"
+        },
+        {
+          "path": "profiles/context-assembly/v1/package.schema.json",
+          "sha256": "9cc5598a0a09221af415f8907312d593a5ed3272b0435b7f3719b59c67b055c9"
+        },
+        {
+          "path": "scripts/check_context_assembly.py",
+          "sha256": "48f3c37a6e8dbeb8d3ac25cba12e626667fd4528dcdcdaf2b8747f0a93efddec"
+        },
+        {
+          "path": "scripts/context_control_archive.mjs",
+          "sha256": "a2a00e7dce0fd4d1c106b12dc71611fae1d240ac3399a5c01d62fff29b68cee4"
+        },
+        {
+          "path": "scripts/evaluate_context_package.mjs",
+          "sha256": "e5530e231ec9757644a87fbec3490b757282474dcb7b9ca7f2a97dced822bc11"
+        },
+        {
+          "path": "scripts/run_context_controls.mjs",
+          "sha256": "b442755736f804ad644dba622e9a237cb6b08c20e2f4b99c2b56b3e6c559bdc5"
+        }
+      ]
+    },
+    "status": "passed",
+    "controls": [
+      {
+        "id": "missing-routing-page",
+        "description": "Remove the actual 12015 routing page while keeping references and requirements intact.",
+        "status": "passed",
+        "mutant_index_sha256": "14cb33b5123ce1db1fd590e818595683ac4c7225a8d022b2f8c2fb1653ab6163",
+        "context_id": "urn:sha256:e1d3d85c53d649c8ef7e46e6c58b2aeaf1aeefb7479f8836bc122b2ee7b7d76f",
+        "evidence_status": "insufficient",
+        "output": {
+          "path": "control-outputs/missing-routing-page.json.gz",
+          "sha256": "fe779fd308b501a7d6973c1a404b458df4a01f0a12fdde5eeb1a13c1615d3d3c",
+          "bytes": 88686,
+          "uncompressed_sha256": "4c8b501b38193b5586baacad02c9c52f1297ddd0dbdd285917f0280dce0122a9",
+          "uncompressed_bytes": 868031
+        },
+        "checks": [
+          {
+            "id": "evidence-status",
+            "status": "passed",
+            "expected": [
+              "insufficient"
+            ],
+            "actual": "insufficient"
+          },
+          {
+            "id": "no-model-answer",
+            "status": "passed",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "id": "positive-acceptance-rejected",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:A",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:E",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:H",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "diagnostic:missing_record",
+            "status": "passed",
+            "expected": {
+              "area": "missing_evidence",
+              "code": "missing_record",
+              "ids": [
+                "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+              ]
+            },
+            "actual": [
+              {
+                "code": "missing_record",
+                "message": "A traversed destination is absent from this index.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_dependency",
+                "message": "An explicitly required context dependency was not included.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_dependency",
+                "message": "An explicitly required context dependency was not included.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_dependency",
+                "message": "An explicitly required context dependency was not included.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_dependency",
+                "message": "An explicitly required context dependency was not included.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0002",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_dependency",
+                "message": "An explicitly required context dependency was not included.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_dependency",
+                "message": "An explicitly required context dependency was not included.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_required_evidence",
+                "message": "Evidence required by Both captured ESA components evidence profile v1 was absent, omitted or lacked governance.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/10a3cdb0a56d15d8a3953d914e17ce53010f4924c58aca4d44876495c23133a6",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/2df2b62054c06896e19dc0fb46b5ed04c6918cb8c9416e991397d63d6fc9472b",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/6f5e06b6f927d077949cbba6674773446d6d76043c7503fd81c01d48323e97f9",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/edcfd7662c5b15a83bffbb0760f5145f322851b1ddc4734a73fcd0b62effb2d3",
+                  "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53",
+                  "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_required_evidence",
+                "message": "Evidence required by Income Support prisoner applicable amount evidence profile v1 was absent, omitted or lacked governance.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/cba4ef309fc53d366fe9a4e0326f145b3db2140c18100e258b8838572310083d",
+                  "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_required_evidence",
+                "message": "Evidence required by Legacy JSA availability during custody evidence profile v1 was absent, omitted or lacked governance.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/ebca411b85ee2cb32eda305107aa7eb589161134dc1cb9a660cffb83a23de46f",
+                  "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_required_evidence",
+                "message": "Evidence required by State Pension Credit prisoner credit rates evidence profile v1 was absent, omitted or lacked governance.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/1f8083c1e10acfbe9aeaf3d2a70f9e72d617732f0b4dab3089938035ffdbe4d1",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/a181621cec3dcfd62a3ed6dd4c18d568827816a5b80814feaf1f629907e1fedb",
+                  "https://chris-page-gov.github.io/okf-dwp/id/chapter/78",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "absent-record:https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+            "status": "passed",
+            "expected": "absent",
+            "actual": false
+          },
+          {
+            "id": "package-byte-bound",
+            "status": "passed",
+            "expected": 524288,
+            "actual": 452666
+          }
+        ]
+      },
+      {
+        "id": "reverse-page-direction",
+        "description": "Reverse every incoming relationship to the routing page; matching vocabulary does not replace directed reachability.",
+        "status": "passed",
+        "mutant_index_sha256": "d318df4a81a8eda1ada29d97a437e83387622facdf6dbbd9fcaca13b46fa55d4",
+        "context_id": "urn:sha256:e013135631f11ba1a1ef790b9c90f58168c1d55566cc242bed7465079a277999",
+        "evidence_status": "insufficient",
+        "output": {
+          "path": "control-outputs/reverse-page-direction.json.gz",
+          "sha256": "5278dc6ee0f54bd2e56684ef08c8813608045af5299773c4be1fd06a6b97aec3",
+          "bytes": 86407,
+          "uncompressed_sha256": "ddf27230d914093cfaa386797c063e2c8f9077d8206eb898f94498fdba7782b2",
+          "uncompressed_bytes": 838587
+        },
+        "checks": [
+          {
+            "id": "evidence-status",
+            "status": "passed",
+            "expected": [
+              "insufficient"
+            ],
+            "actual": "insufficient"
+          },
+          {
+            "id": "no-model-answer",
+            "status": "passed",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "id": "positive-acceptance-rejected",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:A",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:E",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:H",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "diagnostic:missing_required_evidence",
+            "status": "passed",
+            "expected": {
+              "area": "missing_evidence",
+              "code": "missing_required_evidence",
+              "ids": [
+                "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+              ]
+            },
+            "actual": [
+              {
+                "code": "missing_required_evidence",
+                "message": "Evidence required by Both captured ESA components evidence profile v1 was absent, omitted or lacked governance.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/10a3cdb0a56d15d8a3953d914e17ce53010f4924c58aca4d44876495c23133a6",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/2df2b62054c06896e19dc0fb46b5ed04c6918cb8c9416e991397d63d6fc9472b",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/6f5e06b6f927d077949cbba6674773446d6d76043c7503fd81c01d48323e97f9",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/edcfd7662c5b15a83bffbb0760f5145f322851b1ddc4734a73fcd0b62effb2d3",
+                  "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53",
+                  "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_required_evidence",
+                "message": "Evidence required by Income Support prisoner applicable amount evidence profile v1 was absent, omitted or lacked governance.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/cba4ef309fc53d366fe9a4e0326f145b3db2140c18100e258b8838572310083d",
+                  "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_required_evidence",
+                "message": "Evidence required by Legacy JSA availability during custody evidence profile v1 was absent, omitted or lacked governance.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/ebca411b85ee2cb32eda305107aa7eb589161134dc1cb9a660cffb83a23de46f",
+                  "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_required_evidence",
+                "message": "Evidence required by State Pension Credit prisoner credit rates evidence profile v1 was absent, omitted or lacked governance.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/1f8083c1e10acfbe9aeaf3d2a70f9e72d617732f0b4dab3089938035ffdbe4d1",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/a181621cec3dcfd62a3ed6dd4c18d568827816a5b80814feaf1f629907e1fedb",
+                  "https://chris-page-gov.github.io/okf-dwp/id/chapter/78",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "absent-record:https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+            "status": "passed",
+            "expected": "absent",
+            "actual": false
+          },
+          {
+            "id": "package-byte-bound",
+            "status": "passed",
+            "expected": 524288,
+            "actual": 427972
+          }
+        ]
+      },
+      {
+        "id": "corrupt-whole-passage",
+        "description": "Change whole-page text without changing its declared literal digest.",
+        "status": "passed",
+        "mutant_index_sha256": "3930de56d686a5b14a3a929a89bb48d7eb63fc770678877a577d677775d464bf",
+        "context_id": "urn:sha256:72bd2b674ec294ac0356fd4abdb313f155cf4d9e4314b5d34c0703003602d3f0",
+        "evidence_status": "insufficient",
+        "output": {
+          "path": "control-outputs/corrupt-whole-passage.json.gz",
+          "sha256": "3beff1753e4164e9d017da7118351325171c0c73320df3e8581065ea2a8fdbd2",
+          "bytes": 96433,
+          "uncompressed_sha256": "410180122d1bdded6bad5af72374e2204766753424134fdbd552c189aba0c405",
+          "uncompressed_bytes": 941261
+        },
+        "checks": [
+          {
+            "id": "evidence-status",
+            "status": "passed",
+            "expected": [
+              "insufficient"
+            ],
+            "actual": "insufficient"
+          },
+          {
+            "id": "no-model-answer",
+            "status": "passed",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "id": "positive-acceptance-rejected",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:F",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:H",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "diagnostic:evidence_digest_mismatch",
+            "status": "passed",
+            "expected": {
+              "area": "missing_evidence",
+              "code": "evidence_digest_mismatch",
+              "ids": [
+                "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+              ]
+            },
+            "actual": [
+              {
+                "code": "evidence_digest_mismatch",
+                "message": "The passage does not match its declared literal digest.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_required_evidence",
+                "message": "Evidence required by Both captured ESA components evidence profile v1 was absent, omitted or lacked governance.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "package-byte-bound",
+            "status": "passed",
+            "expected": 524288,
+            "actual": 488115
+          }
+        ]
+      },
+      {
+        "id": "restricted-source",
+        "description": "Make a mandatory source restricted; its text must not enter selected evidence.",
+        "status": "passed",
+        "mutant_index_sha256": "5111d857e08d955013900e6ef21b389cd5f15600057a6214e2d7a85ba6f88343",
+        "context_id": "urn:sha256:578b704914dfc6035735cb437ec1985cfec9b323941654aafe2836d3a6829ce5",
+        "evidence_status": "insufficient",
+        "output": {
+          "path": "control-outputs/restricted-source.json.gz",
+          "sha256": "c31cf3c5359e9aaffee124d3a0983bf19838c6141932f76c864253212999e1e9",
+          "bytes": 88699,
+          "uncompressed_sha256": "8d10844b07019080f65cfaf0de9e6f5b2db00376f7700a492dde68be5eb85cd3",
+          "uncompressed_bytes": 868081
+        },
+        "checks": [
+          {
+            "id": "evidence-status",
+            "status": "passed",
+            "expected": [
+              "insufficient"
+            ],
+            "actual": "insufficient"
+          },
+          {
+            "id": "no-model-answer",
+            "status": "passed",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "id": "positive-acceptance-rejected",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:A",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:E",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:H",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "diagnostic:restricted_evidence",
+            "status": "passed",
+            "expected": {
+              "area": "missing_evidence",
+              "code": "restricted_evidence",
+              "ids": [
+                "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+              ]
+            },
+            "actual": [
+              {
+                "code": "restricted_evidence",
+                "message": "A required or reached item is not available for public context assembly.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_dependency",
+                "message": "An explicitly required context dependency was not included.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_dependency",
+                "message": "An explicitly required context dependency was not included.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_dependency",
+                "message": "An explicitly required context dependency was not included.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_dependency",
+                "message": "An explicitly required context dependency was not included.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0002",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_dependency",
+                "message": "An explicitly required context dependency was not included.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_dependency",
+                "message": "An explicitly required context dependency was not included.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_required_evidence",
+                "message": "Evidence required by Both captured ESA components evidence profile v1 was absent, omitted or lacked governance.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/10a3cdb0a56d15d8a3953d914e17ce53010f4924c58aca4d44876495c23133a6",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/2df2b62054c06896e19dc0fb46b5ed04c6918cb8c9416e991397d63d6fc9472b",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/6f5e06b6f927d077949cbba6674773446d6d76043c7503fd81c01d48323e97f9",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/edcfd7662c5b15a83bffbb0760f5145f322851b1ddc4734a73fcd0b62effb2d3",
+                  "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53",
+                  "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_required_evidence",
+                "message": "Evidence required by Income Support prisoner applicable amount evidence profile v1 was absent, omitted or lacked governance.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/cba4ef309fc53d366fe9a4e0326f145b3db2140c18100e258b8838572310083d",
+                  "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_required_evidence",
+                "message": "Evidence required by Legacy JSA availability during custody evidence profile v1 was absent, omitted or lacked governance.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/ebca411b85ee2cb32eda305107aa7eb589161134dc1cb9a660cffb83a23de46f",
+                  "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_required_evidence",
+                "message": "Evidence required by State Pension Credit prisoner credit rates evidence profile v1 was absent, omitted or lacked governance.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/1f8083c1e10acfbe9aeaf3d2a70f9e72d617732f0b4dab3089938035ffdbe4d1",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/a181621cec3dcfd62a3ed6dd4c18d568827816a5b80814feaf1f629907e1fedb",
+                  "https://chris-page-gov.github.io/okf-dwp/id/chapter/78",
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "absent-record:https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+            "status": "passed",
+            "expected": "absent",
+            "actual": false
+          },
+          {
+            "id": "package-byte-bound",
+            "status": "passed",
+            "expected": 524288,
+            "actual": 452690
+          }
+        ]
+      },
+      {
+        "id": "missing-provenance",
+        "description": "Remove source provenance while keeping the same title and passage.",
+        "status": "passed",
+        "mutant_index_sha256": "a25b8ae04d23c3520ede18b93649a1a34467d44514d7b048accc420141c70b34",
+        "context_id": "urn:sha256:baea7fa68ec91c9b2a6a37b549cfa737f5aff725dc2109770927247c0b4da974",
+        "evidence_status": "insufficient",
+        "output": {
+          "path": "control-outputs/missing-provenance.json.gz",
+          "sha256": "5e9a700cc57e3c857cfa5b525ed749674a52cf8df3dd29ffead075c55db552e5",
+          "bytes": 96221,
+          "uncompressed_sha256": "2181b6face14fe6fe3a809a29f8628527640d2fbc519fb8a651bc7f338b5ddad",
+          "uncompressed_bytes": 939663
+        },
+        "checks": [
+          {
+            "id": "evidence-status",
+            "status": "passed",
+            "expected": [
+              "insufficient"
+            ],
+            "actual": "insufficient"
+          },
+          {
+            "id": "no-model-answer",
+            "status": "passed",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "id": "positive-acceptance-rejected",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:A",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:F",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:H",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "diagnostic:missing_provenance",
+            "status": "passed",
+            "expected": {
+              "area": "missing_evidence",
+              "code": "missing_provenance",
+              "ids": [
+                "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+              ]
+            },
+            "actual": [
+              {
+                "code": "missing_provenance",
+                "message": "A source URL, digest, locator or capture date is missing or invalid.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_evidence",
+                "message": "Evidence requires a complete passage and a literal digest.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              },
+              {
+                "code": "missing_required_evidence",
+                "message": "Evidence required by Both captured ESA components evidence profile v1 was absent, omitted or lacked governance.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "package-byte-bound",
+            "status": "passed",
+            "expected": 524288,
+            "actual": 487480
+          }
+        ]
+      },
+      {
+        "id": "ambiguous-benefit",
+        "description": "Add an explicit synthetic JSA alias to the Pension Credit concept; do not choose silently.",
+        "status": "passed",
+        "mutant_index_sha256": "0b4b4dfe187ef0025327fdd820aae1606eed151739faa7b8475e593da1a41da3",
+        "context_id": "urn:sha256:cb22085c04adc0e764bf8183cefc50a084cdbb4ae7015483e7a34a5f94cd1818",
+        "evidence_status": "insufficient",
+        "output": {
+          "path": "control-outputs/ambiguous-benefit.json.gz",
+          "sha256": "02d9a878242527b4199030d46b60318dd261ee6447a53fc60eb51535f80e026a",
+          "bytes": 15550,
+          "uncompressed_sha256": "a603df1c13d186dbf2ac9a11c905e296ad1bf95b3e87e11e4e42f0e9f96d9f2a",
+          "uncompressed_bytes": 120802
+        },
+        "checks": [
+          {
+            "id": "evidence-status",
+            "status": "passed",
+            "expected": [
+              "insufficient"
+            ],
+            "actual": "insufficient"
+          },
+          {
+            "id": "no-model-answer",
+            "status": "passed",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "id": "positive-acceptance-rejected",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:C",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:H",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "diagnostic:ambiguous_concepts",
+            "status": "passed",
+            "expected": {
+              "area": "missing_evidence",
+              "code": "ambiguous_concepts",
+              "ids": []
+            },
+            "actual": [
+              {
+                "code": "no_evidence_requirements",
+                "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+                "ids": []
+              },
+              {
+                "code": "unresolved_task",
+                "message": "No public concept alias resolves this task.",
+                "ids": []
+              },
+              {
+                "code": "ambiguous_concepts",
+                "message": "At least one phrase has multiple candidate concepts; no candidate was chosen silently.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability",
+                  "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "package-byte-bound",
+            "status": "passed",
+            "expected": 524288,
+            "actual": 4438
+          }
+        ]
+      },
+      {
+        "id": "declared-conflict",
+        "description": "Declare a synthetic conflict between two retained concepts; no automatic resolution.",
+        "status": "passed",
+        "mutant_index_sha256": "b6b11f0eff48f093a9bccdab5dedf811f3068222262fcb05f6d1aa0a5afbf0c6",
+        "context_id": "urn:sha256:778780fa9ad23a0260364aa7018d5ba71e476ed304030f277ceea9731ecdb0dd",
+        "evidence_status": "conflicting",
+        "output": {
+          "path": "control-outputs/declared-conflict.json.gz",
+          "sha256": "8c59f834a9b84c7aa9c3c33b8d4bf3caec03d08d4faf580288bed5a2e3fbd267",
+          "bytes": 96264,
+          "uncompressed_sha256": "f42725d93314228f88dc83e0c00f75d2ef903071a7d8585ec323231ca62b4807",
+          "uncompressed_bytes": 940822
+        },
+        "checks": [
+          {
+            "id": "evidence-status",
+            "status": "passed",
+            "expected": [
+              "conflicting"
+            ],
+            "actual": "conflicting"
+          },
+          {
+            "id": "no-model-answer",
+            "status": "passed",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "id": "positive-acceptance-rejected",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:H",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "diagnostic:declared_conflict",
+            "status": "passed",
+            "expected": {
+              "area": "conflicts",
+              "code": "declared_conflict",
+              "ids": [
+                "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates",
+                "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability"
+              ]
+            },
+            "actual": [
+              {
+                "code": "declared_conflict",
+                "message": "The bundle declares conflicting evidence; resolve scope before drawing a conclusion.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability",
+                  "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "package-byte-bound",
+            "status": "passed",
+            "expected": 524288,
+            "actual": 487845
+          }
+        ]
+      },
+      {
+        "id": "byte-budget",
+        "description": "Request 8,192 bytes; whole items and diagnostics must be omitted explicitly instead of truncating evidence.",
+        "status": "passed",
+        "mutant_index_sha256": "1cb75eac58f567b7c6437b23eda080c11d40f9d40922ff2d7e87d3a3207d7651",
+        "context_id": "urn:sha256:e0261b6b3a80f44f8a8f9907785e14449e7bb643b2aea94dbaf89a0991e0df54",
+        "evidence_status": "insufficient",
+        "output": {
+          "path": "control-outputs/byte-budget.json.gz",
+          "sha256": "809d02cadf62b3c09bcff7054a18134d06f14c8b05fecca8ede356947739b0b7",
+          "bytes": 13792,
+          "uncompressed_sha256": "cbd747c0d8f3ecc74f1aaec7902cf6efbf18724ce418eca90bdb45e7e5c751ca",
+          "uncompressed_bytes": 114748
+        },
+        "checks": [
+          {
+            "id": "evidence-status",
+            "status": "passed",
+            "expected": [
+              "insufficient"
+            ],
+            "actual": "insufficient"
+          },
+          {
+            "id": "no-model-answer",
+            "status": "passed",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "id": "positive-acceptance-rejected",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:E",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:H",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "truncation",
+            "status": "passed",
+            "expected": true,
+            "actual": true
+          },
+          {
+            "id": "package-byte-bound",
+            "status": "passed",
+            "expected": 8192,
+            "actual": 1547
+          }
+        ]
+      },
+      {
+        "id": "unresolved-question",
+        "description": "Ask a term absent from the declared vocabulary; return no invented evidence.",
+        "status": "passed",
+        "mutant_index_sha256": "be54d01ce6bd92ed048d6d0bc019cdf5541202ae7eeaa5d153aabaa71e22f48a",
+        "context_id": "urn:sha256:4d05c30cdb59222682465d40e808e9060abbcfed160071244c296cd3c4b6c075",
+        "evidence_status": "insufficient",
+        "output": {
+          "path": "control-outputs/unresolved-question.json.gz",
+          "sha256": "533344d236781c4c8d0918457fcc99790a4db4c7724595092d5126dcd4b76512",
+          "bytes": 15445,
+          "uncompressed_sha256": "7874181c584b0fae3d24018e82e4b3d0adca3d41750515ffe4ad66b6aad8c414",
+          "uncompressed_bytes": 120283
+        },
+        "checks": [
+          {
+            "id": "evidence-status",
+            "status": "passed",
+            "expected": [
+              "insufficient"
+            ],
+            "actual": "insufficient"
+          },
+          {
+            "id": "no-model-answer",
+            "status": "passed",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "id": "positive-acceptance-rejected",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:C",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:H",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "diagnostic:unresolved_task",
+            "status": "passed",
+            "expected": {
+              "area": "missing_evidence",
+              "code": "unresolved_task",
+              "ids": []
+            },
+            "actual": [
+              {
+                "code": "no_evidence_requirements",
+                "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+                "ids": []
+              },
+              {
+                "code": "unresolved_task",
+                "message": "No public concept alias resolves this task.",
+                "ids": []
+              },
+              {
+                "code": "unresolved_terms",
+                "message": "The question contains terms outside the declared concept vocabulary.",
+                "ids": []
+              }
+            ]
+          },
+          {
+            "id": "selected-bound",
+            "status": "passed",
+            "expected": 0,
+            "actual": 0
+          },
+          {
+            "id": "package-byte-bound",
+            "status": "passed",
+            "expected": 524288,
+            "actual": 4113
+          }
+        ]
+      },
+      {
+        "id": "missing-chapter-routing",
+        "description": "Remove only the 12015 reference to chapter 24. Alternative benefit seeds can still retrieve all pages; exact required routing must fail.",
+        "status": "passed",
+        "mutant_index_sha256": "2d6768db94ab4fc2501ca62b7949d36e38ae090bfa7320dc6d48ce96ac3232e3",
+        "context_id": "urn:sha256:653acfa88b60e901aabdd6dad7b8e78ab6d5cc394d8c3f44d78d3ab3cc161a67",
+        "evidence_status": "insufficient",
+        "output": {
+          "path": "control-outputs/missing-chapter-routing.json.gz",
+          "sha256": "b4b535e66d2164b517ff195557e69f06c1f629a2b8d177a321b52f0523e4f6a9",
+          "bytes": 95011,
+          "uncompressed_sha256": "d037e7965ac29cb638474a2630a0393307733747acd7da4e1a348f061d63ea54",
+          "uncompressed_bytes": 920739
+        },
+        "checks": [
+          {
+            "id": "evidence-status",
+            "status": "passed",
+            "expected": [
+              "insufficient"
+            ],
+            "actual": "insufficient"
+          },
+          {
+            "id": "no-model-answer",
+            "status": "passed",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "id": "positive-acceptance-rejected",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:B",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:D",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "failed-stage:H",
+            "status": "passed",
+            "expected": "failed",
+            "actual": "failed"
+          },
+          {
+            "id": "diagnostic:missing_required_evidence",
+            "status": "passed",
+            "expected": {
+              "area": "missing_evidence",
+              "code": "missing_required_evidence",
+              "ids": [
+                "https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a"
+              ]
+            },
+            "actual": [
+              {
+                "code": "missing_required_evidence",
+                "message": "Evidence required by Income Support prisoner applicable amount evidence profile v1 was absent, omitted or lacked governance.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/cba4ef309fc53d366fe9a4e0326f145b3db2140c18100e258b8838572310083d",
+                  "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24"
+                ]
+              },
+              {
+                "code": "missing_required_evidence",
+                "message": "Evidence required by Legacy JSA availability during custody evidence profile v1 was absent, omitted or lacked governance.",
+                "ids": [
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a",
+                  "https://chris-page-gov.github.io/okf-dwp/id/assertion/ebca411b85ee2cb32eda305107aa7eb589161134dc1cb9a660cffb83a23de46f",
+                  "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "package-byte-bound",
+            "status": "passed",
+            "expected": 524288,
+            "actual": 479359
+          }
+        ]
+      }
+    ],
+    "limitations": [
+      "Synthetic controls establish the stated failure handling only; they are not real source defects or proof of legal correctness."
+    ]
+  }
+}

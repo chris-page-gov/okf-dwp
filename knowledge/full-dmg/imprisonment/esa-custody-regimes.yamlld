@@ -1,0 +1,93 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/esa-custody-regimes
+  '@type': skos:Concept
+  route: term/esa-custody-regimes
+  title: ESA custody regime distinction
+  type: Concept
+  description: The unqualified label ESA does not choose a component or contemporary regime. For the
+    captured DMG legacy comparison, 12015 routes ESA(Cont) to Chapter 53 and ESA(IR) to Chapter 54;
+    both must be considered where both apply (54215/42582). New Style ESA instead routes to ADM U6
+    under 12016, whose body is outside this profile.
+  status: draft
+  authority: model-assisted source interpretation; unreviewed-specialist-review-required
+  generated:
+    by: process:codex-imprisonment-context-authoring
+    at: '2026-09-16T00:48:43.670101Z'
+  observedAt: '2026-09-16T00:48:43.670101Z'
+  context_assembly:
+    kind: concept
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    text: The unqualified label ESA does not choose a component or contemporary regime. For the
+      captured DMG legacy comparison, 12015 routes ESA(Cont) to Chapter 53 and ESA(IR) to Chapter
+      54; both must be considered where both apply (54215/42582). New Style ESA instead routes to
+      ADM U6 under 12016, whose body is outside this profile.
+    relations:
+    - target: term/esa-contributory-custody
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The broad ESA label needs the contributory branch.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+      - page/dmg-vol9-ch54/0035
+    - target: term/esa-income-related-custody
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The broad ESA label needs the income-related branch.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+      - page/dmg-vol9-ch54/0035
+    - target: scope/legacy-imprisonment-guidance
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The label does not resolve legacy versus New Style applicability.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+    aliases:
+    - ESA
+    - Employment and Support Allowance
+  body: "# ESA custody regime distinction\n\nThe unqualified label ESA does not choose a component or
+    contemporary regime. For the captured DMG legacy comparison, 12015 routes ESA(Cont) to Chapter 53
+    and ESA(IR) to Chapter 54; both must be considered where both apply (54215/42582). New Style ESA instead
+    routes to ADM U6 under 12016, whose body is outside this profile.\n\n## Scope and limitations\n\n\
+    Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+    guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+    of contemporary individual eligibility.\n\nIndependent experimental research, not an official DWP
+    document, benefits advice, a calculation or an individual entitlement decision. All authored meanings
+    and dependencies require specialist review.\n\nThe broad labels JSA and ESA do not establish a claimant’s
+    regime. This profile explains the listed DMG legacy regimes; New Style JSA/ESA, UC and PIP are routed
+    to ADM by 12016. Those ADM bodies are not acquired. Ask for regime/date and fresh authoritative checks
+    before applying guidance to a person.\n\nThe payability statement at 12003 is scoped by the list in
+    12002. It cannot replace benefit-specific rules or establish that entitlement always survives imprisonment.\n\
+    \nMachine-extracted whole pages retain neighbouring text, partial unrelated paragraphs, footnotes,
+    historical examples and possible reading-order errors. Use the stated locators; page presence is not
+    full legal interpretation or PDF visual review.\n\nCapture date is not publication, revision or commencement.
+    Old amendment footers and example dates remain literal source text. The currently linked catalogue
+    is not current-law assurance; legislation and case law have not been consolidated or reconciled.\n\
+    \nThe frozen PDFs still refer to Memo 07/20. Official catalogue history says it was removed because
+    the regulations ceased to have effect from 31 August 2021. The memo body is absent; do not revive
+    that temporary exception.\n\n12016’s ADM M1 reference conflicts with the frozen catalogue title marking
+    M1 spare. S1/U6 are identified routes, not acquired evidence. Internal Chapter 41 references to 53112
+    and 53071 and the printed Chapter 53 number 531261 remain unresolved version/typographic observations.\n\
+    \nPrisoner definitions differ by benefit: do not transfer the general criminal/civil distinction indiscriminately.
+    Remand, bail hostel, sentence, release, hospital legislation, fine default, overseas detention, time
+    limits and partner circumstances require the relevant branch. Housing-cost passages do not establish
+    a current housing award."
+  skos:prefLabel:
+    '@value': ESA custody regime distinction
+    '@language': en-GB
+  skos:definition:
+    '@value': The unqualified label ESA does not choose a component or contemporary regime. For the
+      captured DMG legacy comparison, 12015 routes ESA(Cont) to Chapter 53 and ESA(IR) to Chapter
+      54; both must be considered where both apply (54215/42582). New Style ESA instead routes to
+      ADM U6 under 12016, whose body is outside this profile.
+    '@language': en-GB
+  skos:scopeNote:
+    '@value': 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility. The broad labels JSA and ESA do not establish a claimant’s
+      regime. This profile explains the listed DMG legacy regimes; New Style JSA/ESA, UC and PIP are routed
+      to ADM by 12016. Those ADM bodies are not acquired. Ask for regime/date and fresh authoritative
+      checks before applying guidance to a person.'
+    '@language': en-GB

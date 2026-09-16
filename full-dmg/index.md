@@ -20,7 +20,7 @@ ADM, statutory provision text, tribunal judgments and subscriber handbook conten
 
 Search indexes complete extracted page text with exact normalised tokens. It does not perform legal reasoning, OCR repair, stemming or synonym expansion; result display is bounded.
 
-331 acquired PDFs; 14,743 measured pages; 15,390 records.
+331 acquired PDFs; 14,743 measured pages; 15,404 records.
 
 Use [the indexed descriptor](okf-explorer.json) or [YAML-LD indexed descriptor](okf-explorer.yamlld) with Explorer. The [semantic control document](okf-bundle.yamlld) points to hash-bound semantic shards; it is not a small-graph import.
 

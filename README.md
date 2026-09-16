@@ -8,6 +8,17 @@ This repository turns the public [DWP Decision makers’ guide](https://www.gov.
 
 [Verified Pension Credit semantic exemplar](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7d3c69df0571b8d5206c8edce92963d99979cb5c%2Fbundle%2Fokf-bundle.yamlld&view=graph#term/capital-disregards) · [Original meeting demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.yamlld&q=84351#question/pc001) · [Read the pilot bundle](bundle/index.md) · [Ten-minute meeting walkthrough](docs/meeting-walkthrough.md) · [Discovery findings](docs/discovery.md) · [AI interrogation guide](AI_USAGE.md) · [Public notice and rights](NOTICE.md)
 
+## Governed context assembly development candidate
+
+The new [imprisonment demonstration](docs/context-assembly-demo.md) assembles a
+traceable evidence package for JSA, Income Support, State Pension Credit and ESA.
+It resolves declared concepts, traverses directed source relationships and checks
+whole evidence, provenance, scope and budgets before reporting scoped sufficiency.
+The [independent A–H acceptance case](evaluation/context-assembly/imprisonment-case.json)
+checks source and graph identities rather than keyword overlap. It is separate
+from the earlier 160 model answer trials. No AI answer or individual entitlement
+decision is generated; specialist and live-host acceptance remain separate gates.
+
 ## What is here
 
 **The full-DMG research candidate is publicly available at an immutable, browser-checked content commit.** [Try the full corpus](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F80b6f08426aea39dd2934fb8795b61215e2cc0ad%2Ffull-dmg%2Fokf-explorer.json&q=84351&view=narrative#page/84/0035) or follow the [full-DMG walkthrough](docs/full-dmg-walkthrough.md). Publication and canonical CI history are tracked in [PR 5](https://github.com/chris-page-gov/okf-dwp/pull/5); the immutable browser receipt applies to the content commit named below. The owner authorised unattended processing against the frozen 331-PDF census, with a 24 September content freeze for the 30 September seminar. The [completion plan](docs/next-stage/unattended-completion.md) and [current checkpoint](evaluation/full-dmg-progress.json) record the acceptance gates. The earlier links retain their original Pension Credit scope.

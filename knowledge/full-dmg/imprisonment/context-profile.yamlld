@@ -1,0 +1,1290 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph': []
+context_profile:
+  schema: okf-dwp-context-authoring.v1
+  scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+    guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+    of contemporary individual eligibility.'
+  limitations:
+  - Independent experimental research, not an official DWP document, benefits advice, a calculation
+    or an individual entitlement decision. All authored meanings and dependencies require specialist
+    review.
+  - The broad labels JSA and ESA do not establish a claimant’s regime. This profile explains the
+    listed DMG legacy regimes; New Style JSA/ESA, UC and PIP are routed to ADM by 12016. Those ADM
+    bodies are not acquired. Ask for regime/date and fresh authoritative checks before applying
+    guidance to a person.
+  - The payability statement at 12003 is scoped by the list in 12002. It cannot replace
+    benefit-specific rules or establish that entitlement always survives imprisonment.
+  - Machine-extracted whole pages retain neighbouring text, partial unrelated paragraphs, footnotes,
+    historical examples and possible reading-order errors. Use the stated locators; page presence is
+    not full legal interpretation or PDF visual review.
+  - Capture date is not publication, revision or commencement. Old amendment footers and example
+    dates remain literal source text. The currently linked catalogue is not current-law assurance;
+    legislation and case law have not been consolidated or reconciled.
+  - The frozen PDFs still refer to Memo 07/20. Official catalogue history says it was removed
+    because the regulations ceased to have effect from 31 August 2021. The memo body is absent; do
+    not revive that temporary exception.
+  - 12016’s ADM M1 reference conflicts with the frozen catalogue title marking M1 spare. S1/U6 are
+    identified routes, not acquired evidence. Internal Chapter 41 references to 53112 and 53071 and
+    the printed Chapter 53 number 531261 remain unresolved version/typographic observations.
+  - 'Prisoner definitions differ by benefit: do not transfer the general criminal/civil distinction indiscriminately.
+    Remand, bail hostel, sentence, release, hospital legislation, fine default, overseas detention, time
+    limits and partner circumstances require the relevant branch. Housing-cost passages do not establish
+    a current housing award.'
+  authored_at: '2026-09-16T00:48:43.670101Z'
+context_overlays:
+- route: page/dmg-vol3-ch12/0002
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol3-ch12/0002
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 12, PDF page 2; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '12001'
+    - '12002'
+    relations:
+    - target: page/dmg-vol3-ch12/0003
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The 12002 list continues onto the following page, followed by scoped 12003 and
+        routing 12015/12016.
+      evidence:
+      - page/dmg-vol3-ch12/0002
+      - page/dmg-vol3-ch12/0003
+- route: page/dmg-vol3-ch12/0003
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol3-ch12/0003
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 12, PDF page 3; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '12003'
+    - '12015'
+    - '12016'
+    relations:
+    - target: page/dmg-vol3-ch12/0002
+      predicate: http://purl.org/dc/terms/requires
+      rationale: '12003 says these benefits: the list starts at 12002 on the preceding page.'
+      evidence:
+      - page/dmg-vol3-ch12/0003
+      - page/dmg-vol3-ch12/0002
+    - target: evidence/imprisonment-adm-m1-spare
+      predicate: http://purl.org/dc/terms/requires
+      rationale: 12016 points to ADM M1; the frozen official catalogue calls that chapter spare.
+        Preserve the unresolved route instead of claiming its body was acquired.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+      - evidence/imprisonment-adm-m1-spare
+    - target: document/dmg-vol4-ch24
+      predicate: http://purl.org/dc/terms/references
+      rationale: 12015 explicitly names DMG Chapter 24; resolve that literal chapter reference to
+        its frozen document identity. It does not name the destination paragraph or establish a
+        legal outcome.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+      literal_chapter_route:
+        quote: "12015 For benefit specific guidance on the effect of imprisonment or detention in legal
+          custody on JSA\nand IS see DMG Chapter 24, on SPC see DMG Chapter 78, on ESA(Cont) see DMG Chapter
+          53 and on\nESA(IR) see DMG Chapter 54."
+    - target: document/dmg-vol9-ch53
+      predicate: http://purl.org/dc/terms/references
+      rationale: 12015 explicitly names DMG Chapter 53; resolve that literal chapter reference to
+        its frozen document identity. It does not name the destination paragraph or establish a
+        legal outcome.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+      literal_chapter_route:
+        quote: "12015 For benefit specific guidance on the effect of imprisonment or detention in legal
+          custody on JSA\nand IS see DMG Chapter 24, on SPC see DMG Chapter 78, on ESA(Cont) see DMG Chapter
+          53 and on\nESA(IR) see DMG Chapter 54."
+    - target: document/dmg-vol9-ch54
+      predicate: http://purl.org/dc/terms/references
+      rationale: 12015 explicitly names DMG Chapter 54; resolve that literal chapter reference to
+        its frozen document identity. It does not name the destination paragraph or establish a
+        legal outcome.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+      literal_chapter_route:
+        quote: "12015 For benefit specific guidance on the effect of imprisonment or detention in legal
+          custody on JSA\nand IS see DMG Chapter 24, on SPC see DMG Chapter 78, on ESA(Cont) see DMG Chapter
+          53 and on\nESA(IR) see DMG Chapter 54."
+    - target: chapter/78
+      predicate: http://purl.org/dc/terms/references
+      rationale: 12015 explicitly names DMG Chapter 78; resolve that literal chapter reference to
+        its frozen document identity. It does not name the destination paragraph or establish a
+        legal outcome.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+      literal_chapter_route:
+        quote: "12015 For benefit specific guidance on the effect of imprisonment or detention in legal
+          custody on JSA\nand IS see DMG Chapter 24, on SPC see DMG Chapter 78, on ESA(Cont) see DMG Chapter
+          53 and on\nESA(IR) see DMG Chapter 54."
+- route: page/dmg-vol4-ch24/0037
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol4-ch24/0037
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 24, PDF page 37; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '24185'
+    - '24186'
+    - '24187'
+    - '24192'
+    relations:
+    - target: evidence/imprisonment-memo-07-20-removal
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The page refers to Memo 07/20; its removal and ended temporary regulations must
+        accompany that reference.
+      evidence:
+      - page/dmg-vol4-ch24/0037
+      - evidence/imprisonment-memo-07-20-removal
+- route: page/dmg-vol4-ch24/0039
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol4-ch24/0039
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 24, PDF page 39; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '24198'
+    relations:
+    - target: page/dmg-vol4-ch24/0040
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/dmg-vol4-ch24/0039
+      - page/dmg-vol4-ch24/0040
+    - target: evidence/imprisonment-memo-07-20-removal
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The page refers to Memo 07/20; its removal and ended temporary regulations must
+        accompany that reference.
+      evidence:
+      - page/dmg-vol4-ch24/0039
+      - evidence/imprisonment-memo-07-20-removal
+- route: page/dmg-vol4-ch24/0040
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol4-ch24/0040
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 24, PDF page 40; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '24199'
+    - '24200'
+    - '24201'
+    - '24202'
+    - '24203'
+    relations:
+    - target: page/dmg-vol4-ch24/0041
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/dmg-vol4-ch24/0040
+      - page/dmg-vol4-ch24/0041
+- route: page/dmg-vol4-ch24/0041
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol4-ch24/0041
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 24, PDF page 41; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '24204'
+    - '24210'
+    - '24211'
+    - '24212'
+    - '24213'
+    - '24214'
+    relations:
+    - target: page/dmg-vol4-ch24/0042
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/dmg-vol4-ch24/0041
+      - page/dmg-vol4-ch24/0042
+    - target: page/dmg-vol4-ch24/0039
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The outcome must be read with its benefit-specific definitions, exceptions or
+        distinct credit/payment mechanism.
+      evidence:
+      - page/dmg-vol4-ch24/0041
+      - page/dmg-vol4-ch24/0039
+    - target: page/dmg-vol4-ch24/0040
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The outcome must be read with its benefit-specific definitions, exceptions or
+        distinct credit/payment mechanism.
+      evidence:
+      - page/dmg-vol4-ch24/0041
+      - page/dmg-vol4-ch24/0040
+- route: page/dmg-vol4-ch24/0042
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol4-ch24/0042
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 24, PDF page 42; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '24215'
+    - '24216'
+    - '24217'
+    - '24225'
+    relations:
+    - target: page/dmg-vol4-ch24/0043
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/dmg-vol4-ch24/0042
+      - page/dmg-vol4-ch24/0043
+- route: page/dmg-vol4-ch24/0043
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol4-ch24/0043
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 24, PDF page 43; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '24226'
+    - '24227'
+    - '24228'
+    relations: []
+- route: page/dmg-vol8-ch41/0129
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol8-ch41/0129
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 41, PDF page 129; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '41822'
+    - '41823'
+    relations:
+    - target: page/dmg-vol8-ch42/0077
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read 41823’s entitlement-day qualification alongside 42580’s more-than-six-week LCW
+        treatment; do not treat the stale 53112 pointer as a verified current paragraph match.
+      evidence:
+      - page/dmg-vol8-ch41/0129
+      - page/dmg-vol8-ch42/0077
+- route: page/dmg-vol8-ch41/0131
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol8-ch41/0131
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 41, PDF page 131; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '41832'
+    - '44561'
+    relations:
+    - target: page/dmg-vol8-ch41/0129
+      predicate: http://purl.org/dc/terms/requires
+      rationale: 41832 explicitly refers back to 41823 for imprisonment disqualification exceeding
+        six weeks.
+      evidence:
+      - page/dmg-vol8-ch41/0131
+      - page/dmg-vol8-ch41/0129
+- route: page/dmg-vol8-ch42/0077
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol8-ch42/0077
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 42, PDF page 77; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '42576'
+    - '42577'
+    - '42867'
+    - '42578'
+    - '42579'
+    - '42580'
+    relations:
+    - target: page/dmg-vol8-ch42/0078
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/dmg-vol8-ch42/0077
+      - page/dmg-vol8-ch42/0078
+- route: page/dmg-vol8-ch42/0078
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol8-ch42/0078
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 42, PDF page 78; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '42581'
+    - '42582'
+    relations:
+    - target: page/dmg-vol8-ch42/0079
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/dmg-vol8-ch42/0078
+      - page/dmg-vol8-ch42/0079
+- route: page/dmg-vol8-ch42/0079
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol8-ch42/0079
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 42, PDF page 79; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '42600'
+    - '42601'
+    - '42602'
+    - '42603'
+    relations: []
+- route: page/dmg-vol9-ch53/0053
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol9-ch53/0053
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 53, PDF page 53; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '53256'
+    - '53257'
+    relations:
+    - target: page/dmg-vol9-ch53/0054
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/dmg-vol9-ch53/0053
+      - page/dmg-vol9-ch53/0054
+    - target: page/dmg-vol9-ch53/0059
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The outcome must be read with its benefit-specific definitions, exceptions or
+        distinct credit/payment mechanism.
+      evidence:
+      - page/dmg-vol9-ch53/0053
+      - page/dmg-vol9-ch53/0059
+    - target: evidence/imprisonment-memo-07-20-removal
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The page refers to Memo 07/20; its removal and ended temporary regulations must
+        accompany that reference.
+      evidence:
+      - page/dmg-vol9-ch53/0053
+      - evidence/imprisonment-memo-07-20-removal
+- route: page/dmg-vol9-ch53/0054
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol9-ch53/0054
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 53, PDF page 54; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '53258'
+    - '53259'
+    - '53260'
+    relations:
+    - target: page/dmg-vol9-ch53/0055
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/dmg-vol9-ch53/0054
+      - page/dmg-vol9-ch53/0055
+    - target: page/dmg-vol8-ch42/0077
+      predicate: http://purl.org/dc/terms/requires
+      rationale: 53258 sends the more-than-six-week LCW qualification to Chapter 42.
+      evidence:
+      - page/dmg-vol9-ch53/0054
+      - page/dmg-vol8-ch42/0077
+- route: page/dmg-vol9-ch53/0055
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol9-ch53/0055
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 53, PDF page 55; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '53262'
+    - '53263'
+    - '53264'
+    relations:
+    - target: page/dmg-vol9-ch53/0056
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/dmg-vol9-ch53/0055
+      - page/dmg-vol9-ch53/0056
+- route: page/dmg-vol9-ch53/0056
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol9-ch53/0056
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 53, PDF page 56; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '53265'
+    - '53266'
+    - '53267'
+    - '53268'
+    - '53269'
+    relations:
+    - target: page/dmg-vol9-ch53/0057
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/dmg-vol9-ch53/0056
+      - page/dmg-vol9-ch53/0057
+- route: page/dmg-vol9-ch53/0057
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol9-ch53/0057
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 53, PDF page 57; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '53270'
+    - '53271'
+    - '53272'
+    - '53273'
+    - '53274'
+    - '53275'
+    relations:
+    - target: page/dmg-vol9-ch53/0058
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/dmg-vol9-ch53/0057
+      - page/dmg-vol9-ch53/0058
+- route: page/dmg-vol9-ch53/0058
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol9-ch53/0058
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 53, PDF page 58; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '53276'
+    - '53277'
+    - '53278'
+    - '53279'
+    - '53280'
+    - '53281'
+    - '53282'
+    relations:
+    - target: page/dmg-vol9-ch53/0059
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/dmg-vol9-ch53/0058
+      - page/dmg-vol9-ch53/0059
+- route: page/dmg-vol9-ch53/0059
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol9-ch53/0059
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 53, PDF page 59; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '53283'
+    - '53284'
+    - '53285'
+    - '53286'
+    - '53287'
+    relations:
+    - target: page/dmg-vol9-ch53/0060
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/dmg-vol9-ch53/0059
+      - page/dmg-vol9-ch53/0060
+- route: page/dmg-vol9-ch53/0060
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol9-ch53/0060
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 53, PDF page 60; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs: []
+    relations: []
+- route: page/dmg-vol9-ch54/0031
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol9-ch54/0031
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 54, PDF page 31; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '54197'
+    - '54198'
+    relations:
+    - target: evidence/imprisonment-memo-07-20-removal
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The page refers to Memo 07/20; its removal and ended temporary regulations must
+        accompany that reference.
+      evidence:
+      - page/dmg-vol9-ch54/0031
+      - evidence/imprisonment-memo-07-20-removal
+- route: page/dmg-vol9-ch54/0032
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol9-ch54/0032
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 54, PDF page 32; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '54199'
+    - '54200'
+    - '54201'
+    - '54210'
+    - '54211'
+    relations: []
+- route: page/dmg-vol9-ch54/0033
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol9-ch54/0033
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 54, PDF page 33; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '54212'
+    relations: []
+- route: page/dmg-vol9-ch54/0035
+  context_assembly:
+    kind: evidence
+    source_page: page/dmg-vol9-ch54/0035
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 54, PDF page 35; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '54213'
+    - '54214'
+    - '54215'
+    relations:
+    - target: page/dmg-vol9-ch54/0031
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The outcome must be read with its benefit-specific definitions, exceptions or
+        distinct credit/payment mechanism.
+      evidence:
+      - page/dmg-vol9-ch54/0035
+      - page/dmg-vol9-ch54/0031
+    - target: page/dmg-vol9-ch54/0032
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The outcome must be read with its benefit-specific definitions, exceptions or
+        distinct credit/payment mechanism.
+      evidence:
+      - page/dmg-vol9-ch54/0035
+      - page/dmg-vol9-ch54/0032
+    - target: page/dmg-vol9-ch54/0033
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The outcome must be read with its benefit-specific definitions, exceptions or
+        distinct credit/payment mechanism.
+      evidence:
+      - page/dmg-vol9-ch54/0035
+      - page/dmg-vol9-ch54/0033
+    - target: page/dmg-vol8-ch42/0078
+      predicate: http://purl.org/dc/terms/requires
+      rationale: 54214/54215 examples must retain the distinct 42581/42582 LCW timing and
+        both-component treatment.
+      evidence:
+      - page/dmg-vol9-ch54/0035
+      - page/dmg-vol8-ch42/0078
+- route: page/78/0100
+  context_assembly:
+    kind: evidence
+    source_page: page/78/0100
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 78, PDF page 100; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '78650'
+    - '78651'
+    relations:
+    - target: page/78/0101
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/78/0100
+      - page/78/0101
+- route: page/78/0101
+  context_assembly:
+    kind: evidence
+    source_page: page/78/0101
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 78, PDF page 101; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '78652'
+    - '78653'
+    relations:
+    - target: page/78/0102
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/78/0101
+      - page/78/0102
+- route: page/78/0102
+  context_assembly:
+    kind: evidence
+    source_page: page/78/0102
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 78, PDF page 102; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '78654'
+    - '78655'
+    - '78656'
+    - '78657'
+    - '78658'
+    - '78659'
+    relations:
+    - target: page/78/0103
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/78/0102
+      - page/78/0103
+- route: page/78/0103
+  context_assembly:
+    kind: evidence
+    source_page: page/78/0103
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 78, PDF page 103; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '78660'
+    - '78661'
+    - '78662'
+    - '78663'
+    - '78664'
+    relations:
+    - target: page/78/0104
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/78/0103
+      - page/78/0104
+- route: page/78/0104
+  context_assembly:
+    kind: evidence
+    source_page: page/78/0104
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 78, PDF page 104; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '78665'
+    - '78666'
+    - '78667'
+    - '78668'
+    relations:
+    - target: page/78/0105
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/78/0104
+      - page/78/0105
+    - target: page/78/0100
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The outcome must be read with its benefit-specific definitions, exceptions or
+        distinct credit/payment mechanism.
+      evidence:
+      - page/78/0104
+      - page/78/0100
+    - target: page/78/0106
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The outcome must be read with its benefit-specific definitions, exceptions or
+        distinct credit/payment mechanism.
+      evidence:
+      - page/78/0104
+      - page/78/0106
+- route: page/78/0105
+  context_assembly:
+    kind: evidence
+    source_page: page/78/0105
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 78, PDF page 105; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '78669'
+    - '78670'
+    - '78030'
+    - '78671'
+    relations:
+    - target: page/78/0106
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/78/0105
+      - page/78/0106
+- route: page/78/0106
+  context_assembly:
+    kind: evidence
+    source_page: page/78/0106
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 78, PDF page 106; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '78672'
+    - '78673'
+    - '78674'
+    - '78675'
+    - '78676'
+    relations:
+    - target: page/78/0107
+      predicate: http://purl.org/dc/terms/requires
+      rationale: Read the following source page for continuation and the adjacent qualifications in
+        this benefit-specific imprisonment section.
+      evidence:
+      - page/78/0106
+      - page/78/0107
+- route: page/78/0107
+  context_assembly:
+    kind: evidence
+    source_page: page/78/0107
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    locator: DMG chapter 78, PDF page 107; exact whole extracted page; imprisonment passages and
+      continuation context
+    paragraphs:
+    - '78677'
+    - '78678'
+    - '78679'
+    relations: []
+- route: term/common-imprisonment-payability
+  context_assembly:
+    kind: concept
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility.'
+    aliases:
+    - imprisoned
+    - imprisonment
+    - prisoner
+    - prisoners
+    - custody
+    - detained
+    - detention in legal custody
+    - detained in legal custody
+    text: The general 12003 payability statement applies to the benefits listed in 12002; 12015
+      separately routes JSA, IS, SPC and the two ESA components to their own chapters. It is not a
+      universal claim that custody leaves entitlement intact. Prisoner/custody meanings vary by
+      benefit and status. The broad labels JSA and ESA do not establish a claimant’s regime. This
+      profile explains the listed DMG legacy regimes; New Style JSA/ESA, UC and PIP are routed to
+      ADM by 12016. Those ADM bodies are not acquired. Ask for regime/date and fresh authoritative
+      checks before applying guidance to a person.
+    relations:
+    - target: page/dmg-vol3-ch12/0002
+      predicate: http://purl.org/dc/terms/requires
+      rationale: The expression these benefits in 12003 requires the start of the 12002 list.
+      evidence:
+      - page/dmg-vol3-ch12/0002
+      - page/dmg-vol3-ch12/0003
+    - target: scope/legacy-imprisonment-guidance
+      predicate: http://purl.org/dc/terms/requires
+      rationale: All use of the general imprisonment concept needs its regime and authority
+        boundary.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+    - target: term/legacy-jsa-custody-availability
+      predicate: http://www.w3.org/2004/02/skos/core#related
+      rationale: 12015 expressly routes this imprisonment issue to the benefit-specific chapter;
+        this is related context, not a shared legal outcome.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+    - target: term/is-prisoner-applicable-amount
+      predicate: http://www.w3.org/2004/02/skos/core#related
+      rationale: 12015 expressly routes this imprisonment issue to the benefit-specific chapter;
+        this is related context, not a shared legal outcome.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+    - target: term/pc-prisoner-credit-rates
+      predicate: http://www.w3.org/2004/02/skos/core#related
+      rationale: 12015 expressly routes this imprisonment issue to the benefit-specific chapter;
+        this is related context, not a shared legal outcome.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+    - target: term/esa-contributory-custody
+      predicate: http://www.w3.org/2004/02/skos/core#related
+      rationale: 12015 expressly routes this imprisonment issue to the benefit-specific chapter;
+        this is related context, not a shared legal outcome.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+    - target: term/esa-income-related-custody
+      predicate: http://www.w3.org/2004/02/skos/core#related
+      rationale: 12015 expressly routes this imprisonment issue to the benefit-specific chapter;
+        this is related context, not a shared legal outcome.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+    - target: term/benefit-disqualification
+      predicate: http://www.w3.org/2004/02/skos/core#related
+      rationale: The custody guidance discusses disqualification as a separate benefit mechanism,
+        not as a synonym for imprisonment.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+      - page/dmg-vol9-ch53/0054
+- route: document/dmg-vol4-ch24
+  context_assembly:
+    kind: scope
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility. This record identifies the chapter named by 12015; outgoing
+      selections are authored research navigation.'
+    source_document: dmg-vol4-ch24
+    relations:
+    - target: term/legacy-jsa-custody-availability
+      predicate: http://purl.org/dc/terms/references
+      rationale: Project-authored selection of the scoped imprisonment concept and its supporting
+        passages inside this named chapter; the paragraph selection is not itself literal text of
+        12015.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+    - target: term/is-prisoner-applicable-amount
+      predicate: http://purl.org/dc/terms/references
+      rationale: Project-authored selection of the scoped imprisonment concept and its supporting
+        passages inside this named chapter; the paragraph selection is not itself literal text of
+        12015.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+- route: document/dmg-vol9-ch53
+  context_assembly:
+    kind: scope
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility. This record identifies the chapter named by 12015; outgoing
+      selections are authored research navigation.'
+    source_document: dmg-vol9-ch53
+    relations:
+    - target: term/esa-contributory-custody
+      predicate: http://purl.org/dc/terms/references
+      rationale: Project-authored selection of the scoped imprisonment concept and its supporting
+        passages inside this named chapter; the paragraph selection is not itself literal text of
+        12015.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+- route: document/dmg-vol9-ch54
+  context_assembly:
+    kind: scope
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility. This record identifies the chapter named by 12015; outgoing
+      selections are authored research navigation.'
+    source_document: dmg-vol9-ch54
+    relations:
+    - target: term/esa-income-related-custody
+      predicate: http://purl.org/dc/terms/references
+      rationale: Project-authored selection of the scoped imprisonment concept and its supporting
+        passages inside this named chapter; the paragraph selection is not itself literal text of
+        12015.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+- route: chapter/78
+  context_assembly:
+    kind: scope
+    scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+      guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+      of contemporary individual eligibility. This record identifies the chapter named by 12015; outgoing
+      selections are authored research navigation.'
+    source_document: dmg-vol13-ch78
+    relations:
+    - target: term/pc-prisoner-credit-rates
+      predicate: http://purl.org/dc/terms/references
+      rationale: Project-authored selection of the scoped imprisonment concept and its supporting
+        passages inside this named chapter; the paragraph selection is not itself literal text of
+        12015.
+      evidence:
+      - page/dmg-vol3-ch12/0003
+context_requirements:
+- id:
+    https://chris-page-gov.github.io/okf-dwp/id/context-requirement/legacy-jsa-custody-availability-v1
+  label: Legacy JSA availability during custody evidence profile v1
+  when_all:
+  - https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability
+  required:
+  - https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24
+  - https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-adm-m1-spare
+  - https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-memo-07-20-removal
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0002
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0037
+  - https://chris-page-gov.github.io/okf-dwp/id/scope/legacy-imprisonment-guidance
+  scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+    guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+    of contemporary individual eligibility.'
+  limitations:
+  - Independent experimental research, not an official DWP document, benefits advice, a calculation
+    or an individual entitlement decision. All authored meanings and dependencies require specialist
+    review.
+  - The broad labels JSA and ESA do not establish a claimant’s regime. This profile explains the
+    listed DMG legacy regimes; New Style JSA/ESA, UC and PIP are routed to ADM by 12016. Those ADM
+    bodies are not acquired. Ask for regime/date and fresh authoritative checks before applying
+    guidance to a person.
+  - The payability statement at 12003 is scoped by the list in 12002. It cannot replace
+    benefit-specific rules or establish that entitlement always survives imprisonment.
+  covers:
+  - https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/custody-benefit-claimant
+  - https://chris-page-gov.github.io/okf-dwp/id/term/dmg-imprisonment-guidance
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-entitlement
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-disqualification
+  required_paths:
+  - seed: https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+    records:
+    - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+    - https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24
+    - https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability
+    assertions:
+    - https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a
+    - https://chris-page-gov.github.io/okf-dwp/id/assertion/ebca411b85ee2cb32eda305107aa7eb589161134dc1cb9a660cffb83a23de46f
+- id:
+    https://chris-page-gov.github.io/okf-dwp/id/context-requirement/is-prisoner-applicable-amount-v1
+  label: Income Support prisoner applicable amount evidence profile v1
+  when_all:
+  - https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount
+  required:
+  - https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24
+  - https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-adm-m1-spare
+  - https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-memo-07-20-removal
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0002
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0039
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0040
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0041
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0042
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0043
+  - https://chris-page-gov.github.io/okf-dwp/id/scope/legacy-imprisonment-guidance
+  scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+    guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+    of contemporary individual eligibility.'
+  limitations:
+  - Independent experimental research, not an official DWP document, benefits advice, a calculation
+    or an individual entitlement decision. All authored meanings and dependencies require specialist
+    review.
+  - The broad labels JSA and ESA do not establish a claimant’s regime. This profile explains the
+    listed DMG legacy regimes; New Style JSA/ESA, UC and PIP are routed to ADM by 12016. Those ADM
+    bodies are not acquired. Ask for regime/date and fresh authoritative checks before applying
+    guidance to a person.
+  - The payability statement at 12003 is scoped by the list in 12002. It cannot replace
+    benefit-specific rules or establish that entitlement always survives imprisonment.
+  covers:
+  - https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount
+  - https://chris-page-gov.github.io/okf-dwp/id/term/custody-benefit-claimant
+  - https://chris-page-gov.github.io/okf-dwp/id/term/dmg-imprisonment-guidance
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-entitlement
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-disqualification
+  required_paths:
+  - seed: https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+    records:
+    - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+    - https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24
+    - https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount
+    assertions:
+    - https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a
+    - https://chris-page-gov.github.io/okf-dwp/id/assertion/cba4ef309fc53d366fe9a4e0326f145b3db2140c18100e258b8838572310083d
+- id: https://chris-page-gov.github.io/okf-dwp/id/context-requirement/pc-prisoner-credit-rates-v1
+  label: State Pension Credit prisoner credit rates evidence profile v1
+  when_all:
+  - https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates
+  required:
+  - https://chris-page-gov.github.io/okf-dwp/id/chapter/78
+  - https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-adm-m1-spare
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0100
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0101
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0102
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0103
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0104
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0105
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0106
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0107
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0002
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+  - https://chris-page-gov.github.io/okf-dwp/id/scope/legacy-imprisonment-guidance
+  scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+    guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+    of contemporary individual eligibility.'
+  limitations:
+  - Independent experimental research, not an official DWP document, benefits advice, a calculation
+    or an individual entitlement decision. All authored meanings and dependencies require specialist
+    review.
+  - The broad labels JSA and ESA do not establish a claimant’s regime. This profile explains the
+    listed DMG legacy regimes; New Style JSA/ESA, UC and PIP are routed to ADM by 12016. Those ADM
+    bodies are not acquired. Ask for regime/date and fresh authoritative checks before applying
+    guidance to a person.
+  - The payability statement at 12003 is scoped by the list in 12002. It cannot replace
+    benefit-specific rules or establish that entitlement always survives imprisonment.
+  covers:
+  - https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates
+  - https://chris-page-gov.github.io/okf-dwp/id/term/custody-benefit-claimant
+  - https://chris-page-gov.github.io/okf-dwp/id/term/dmg-imprisonment-guidance
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-entitlement
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-disqualification
+  required_paths:
+  - seed: https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+    records:
+    - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+    - https://chris-page-gov.github.io/okf-dwp/id/chapter/78
+    - https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates
+    assertions:
+    - https://chris-page-gov.github.io/okf-dwp/id/assertion/a181621cec3dcfd62a3ed6dd4c18d568827816a5b80814feaf1f629907e1fedb
+    - https://chris-page-gov.github.io/okf-dwp/id/assertion/1f8083c1e10acfbe9aeaf3d2a70f9e72d617732f0b4dab3089938035ffdbe4d1
+- id: https://chris-page-gov.github.io/okf-dwp/id/context-requirement/esa-contributory-custody-v1
+  label: Contributory ESA disqualification and custody evidence profile v1
+  when_all:
+  - https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody
+  required:
+  - https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53
+  - https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-adm-m1-spare
+  - https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-memo-07-20-removal
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0002
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0129
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0131
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0077
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0078
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0079
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0053
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0054
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0055
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0056
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0057
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0058
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0059
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0060
+  - https://chris-page-gov.github.io/okf-dwp/id/scope/legacy-imprisonment-guidance
+  scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+    guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+    of contemporary individual eligibility.'
+  limitations:
+  - Independent experimental research, not an official DWP document, benefits advice, a calculation
+    or an individual entitlement decision. All authored meanings and dependencies require specialist
+    review.
+  - The broad labels JSA and ESA do not establish a claimant’s regime. This profile explains the
+    listed DMG legacy regimes; New Style JSA/ESA, UC and PIP are routed to ADM by 12016. Those ADM
+    bodies are not acquired. Ask for regime/date and fresh authoritative checks before applying
+    guidance to a person.
+  - The payability statement at 12003 is scoped by the list in 12002. It cannot replace
+    benefit-specific rules or establish that entitlement always survives imprisonment.
+  covers:
+  - https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody
+  - https://chris-page-gov.github.io/okf-dwp/id/term/custody-benefit-claimant
+  - https://chris-page-gov.github.io/okf-dwp/id/term/dmg-imprisonment-guidance
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-entitlement
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-disqualification
+  required_paths:
+  - seed: https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+    records:
+    - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+    - https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53
+    - https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody
+    assertions:
+    - https://chris-page-gov.github.io/okf-dwp/id/assertion/10a3cdb0a56d15d8a3953d914e17ce53010f4924c58aca4d44876495c23133a6
+    - https://chris-page-gov.github.io/okf-dwp/id/assertion/6f5e06b6f927d077949cbba6674773446d6d76043c7503fd81c01d48323e97f9
+- id: https://chris-page-gov.github.io/okf-dwp/id/context-requirement/esa-income-related-custody-v1
+  label: Income-related ESA prisoner applicable amount evidence profile v1
+  when_all:
+  - https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody
+  required:
+  - https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54
+  - https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-adm-m1-spare
+  - https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-memo-07-20-removal
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0002
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0078
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0079
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0031
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0032
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0033
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0035
+  - https://chris-page-gov.github.io/okf-dwp/id/scope/legacy-imprisonment-guidance
+  scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+    guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+    of contemporary individual eligibility.'
+  limitations:
+  - Independent experimental research, not an official DWP document, benefits advice, a calculation
+    or an individual entitlement decision. All authored meanings and dependencies require specialist
+    review.
+  - The broad labels JSA and ESA do not establish a claimant’s regime. This profile explains the
+    listed DMG legacy regimes; New Style JSA/ESA, UC and PIP are routed to ADM by 12016. Those ADM
+    bodies are not acquired. Ask for regime/date and fresh authoritative checks before applying
+    guidance to a person.
+  - The payability statement at 12003 is scoped by the list in 12002. It cannot replace
+    benefit-specific rules or establish that entitlement always survives imprisonment.
+  covers:
+  - https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody
+  - https://chris-page-gov.github.io/okf-dwp/id/term/custody-benefit-claimant
+  - https://chris-page-gov.github.io/okf-dwp/id/term/dmg-imprisonment-guidance
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-entitlement
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-disqualification
+  required_paths:
+  - seed: https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+    records:
+    - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+    - https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54
+    - https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody
+    assertions:
+    - https://chris-page-gov.github.io/okf-dwp/id/assertion/2df2b62054c06896e19dc0fb46b5ed04c6918cb8c9416e991397d63d6fc9472b
+    - https://chris-page-gov.github.io/okf-dwp/id/assertion/edcfd7662c5b15a83bffbb0760f5145f322851b1ddc4734a73fcd0b62effb2d3
+- id: https://chris-page-gov.github.io/okf-dwp/id/context-requirement/esa-custody-regimes-v1
+  label: Both captured ESA components evidence profile v1
+  when_all:
+  - https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/esa-custody-regimes
+  required:
+  - https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53
+  - https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54
+  - https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-adm-m1-spare
+  - https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-memo-07-20-removal
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0002
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0129
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0131
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0077
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0078
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0079
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0053
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0054
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0055
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0056
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0057
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0058
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0059
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0060
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0031
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0032
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0033
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0035
+  - https://chris-page-gov.github.io/okf-dwp/id/scope/legacy-imprisonment-guidance
+  - https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody
+  - https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody
+  scope: 'Frozen DMG research: listed legacy JSA(Cont), JSA(IB), IS, SPC and ESA(Cont)/ESA(IR) imprisonment
+    guidance captured on 15 September 2026. This is an explanation of the captured text, not a determination
+    of contemporary individual eligibility.'
+  limitations:
+  - Independent experimental research, not an official DWP document, benefits advice, a calculation
+    or an individual entitlement decision. All authored meanings and dependencies require specialist
+    review.
+  - The broad labels JSA and ESA do not establish a claimant’s regime. This profile explains the
+    listed DMG legacy regimes; New Style JSA/ESA, UC and PIP are routed to ADM by 12016. Those ADM
+    bodies are not acquired. Ask for regime/date and fresh authoritative checks before applying
+    guidance to a person.
+  - The payability statement at 12003 is scoped by the list in 12002. It cannot replace
+    benefit-specific rules or establish that entitlement always survives imprisonment.
+  covers:
+  - https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/esa-custody-regimes
+  - https://chris-page-gov.github.io/okf-dwp/id/term/custody-benefit-claimant
+  - https://chris-page-gov.github.io/okf-dwp/id/term/dmg-imprisonment-guidance
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-payability
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-entitlement
+  - https://chris-page-gov.github.io/okf-dwp/id/term/benefit-disqualification
+  required_paths:
+  - seed: https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+    records:
+    - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+    - https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53
+    - https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody
+    assertions:
+    - https://chris-page-gov.github.io/okf-dwp/id/assertion/10a3cdb0a56d15d8a3953d914e17ce53010f4924c58aca4d44876495c23133a6
+    - https://chris-page-gov.github.io/okf-dwp/id/assertion/6f5e06b6f927d077949cbba6674773446d6d76043c7503fd81c01d48323e97f9
+  - seed: https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+    records:
+    - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003
+    - https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54
+    - https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody
+    assertions:
+    - https://chris-page-gov.github.io/okf-dwp/id/assertion/2df2b62054c06896e19dc0fb46b5ed04c6918cb8c9416e991397d63d6fc9472b
+    - https://chris-page-gov.github.io/okf-dwp/id/assertion/edcfd7662c5b15a83bffbb0760f5145f322851b1ddc4734a73fcd0b62effb2d3

@@ -1,0 +1,110 @@
+{
+  "schema": "okf-dwp-ask-browser-observation.v1",
+  "observed_at": "2026-09-16T01:21:07.695Z",
+  "environment": "Local compiled production application served on loopback; public deployment verification is separate",
+  "url": "http://127.0.0.1:8002/explore/?bundle=http%3A%2F%2F127.0.0.1%3A8002%2Fdwp-full%2Fokf-explorer.json&q=imprisonment#overview",
+  "app": {
+    "tree_sha256": "a6fc13a3e6799c21b0b2472c77f9642fa1f3c8149d57132ff8aead4680161f6c",
+    "manifest_sha256": "fe2fdb41f5bf2b7a245a84162e55ae1de8481ff3d5a60d10f2b53ee1b012c69f"
+  },
+  "bundle": {
+    "snapshot": "dwp-full-dmg-2026-09-16-a26a93daa9f5",
+    "index_sha256": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54",
+    "descriptor_sha256": "9881779ab550efe9f73da1e16acd8c8dcb64933c9981bb290b66ff51572853f3"
+  },
+  "search": {
+    "query": "imprisonment",
+    "matched_records": 219,
+    "displayed_records": 200
+  },
+  "context": {
+    "context_id": "urn:sha256:9229e735e2fa1deed8c45a71bce0e8e556ea9330d06c2971d71e90e5d37b6dda",
+    "evidence_status": "sufficient",
+    "selected": 52,
+    "relationships": 127,
+    "budget": {
+      "max_nodes": 64,
+      "max_relationships": 128,
+      "max_depth": 6,
+      "max_bytes": 524288,
+      "used_nodes": 52,
+      "used_relationships": 127,
+      "used_bytes": 487430,
+      "reached_depth": 2,
+      "truncated": false,
+      "omissions": []
+    },
+    "export": "browser-context.json",
+    "export_sha256": "df36ebbff9df0cbd257d5f8760fec9bd87f6460b3c836cd0412f45245420a938",
+    "canonical_matches_direct_engine": true
+  },
+  "negative_budget": {
+    "max_bytes": 8192,
+    "evidence_status": "insufficient",
+    "used_bytes": 1533,
+    "selected": 0,
+    "truncated": true,
+    "omission": "byte_budget",
+    "missing_evidence": "metadata_budget"
+  },
+  "record_navigation": {
+    "route": "page/dmg-vol3-ch12/0003",
+    "opened_separate_tab": true,
+    "original_search_and_question_retained": true,
+    "graph_nodes": 28,
+    "graph_edges": 28,
+    "chapter_labels_observed": [
+      24,
+      53,
+      54,
+      78
+    ],
+    "source_url": "https://assets.publishing.service.gov.uk/media/651bcf2e6dfda6000d8e39d2/dmgch12.pdf#page=3"
+  },
+  "webmcp": {
+    "user_agent": "Chrome/153.0.0.0 on macOS",
+    "document_modelContext": "undefined",
+    "navigator_modelContext": "undefined",
+    "registered_tools": 0,
+    "result": "Native page tools unavailable; no shim or tool-call claim. The UI invoked the same deterministic library."
+  },
+  "screenshots": [
+    {
+      "path": "screenshots/01-search.png",
+      "sha256": "40de9705dc00f39d64617a26ab9c814625e16cd73cc029543a4d600a74e74546"
+    },
+    {
+      "path": "screenshots/02-ask.png",
+      "sha256": "e5c639d7577e89a58252304ae905c941f888e9438fceecfe794360ed1593bfba"
+    },
+    {
+      "path": "screenshots/03-relationships.png",
+      "sha256": "b7e542885f28378a47c1053ebd9b68eee87a79fc0d8677fdc7b7369776af571e"
+    },
+    {
+      "path": "screenshots/04-chapter-routing.png",
+      "sha256": "f27d6a5a4df492db561bd6849023d7a894edd4e74dd34bde5150b2ba3f3a8f7c"
+    },
+    {
+      "path": "screenshots/05-source-passage.png",
+      "sha256": "5882f9e13f924f71c28977074ca36bae6b8e86a68f156d663d1c6a303e495002"
+    },
+    {
+      "path": "screenshots/06-package-json.png",
+      "sha256": "5c711e753582c314cac37b410cf1821077036d01bd91374b4e6a3793570cd654"
+    },
+    {
+      "path": "screenshots/07-insufficient-budget.png",
+      "sha256": "472cff29291f62f586afe0c323b4bb8525351b85c5d7815535830576a77781c4"
+    },
+    {
+      "path": "screenshots/08-record-graph.png",
+      "sha256": "4b81ca28106b744459973f119cf7c3988799ff093ecd653f8950118c598fce2a"
+    }
+  ],
+  "limits": [
+    "This observation checks these journeys, not every source record or interpretation.",
+    "Declared scope sufficiency is not specialist approval, current legal applicability or an individual entitlement decision.",
+    "No model answer was generated."
+  ]
+}

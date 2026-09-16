@@ -1,0 +1,295 @@
+{
+  "schema": "okf-context-evaluation-controls.v1",
+  "id": "dwp/imprisonment-negative-controls",
+  "description": "Synthetic mutations of the frozen DWP context index. Expectations are authored before execution, separate from producer requirements. These are failure controls, not source defects or legal assessments.",
+  "controls": [
+    {
+      "id": "missing-routing-page",
+      "description": "Remove the actual 12015 routing page while keeping references and requirements intact.",
+      "mutations": [
+        {
+          "op": "drop_record",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+        }
+      ],
+      "expected": {
+        "evidence_status": [
+          "insufficient"
+        ],
+        "failed_stages": [
+          "A",
+          "E",
+          "H"
+        ],
+        "issues": [
+          {
+            "area": "missing_evidence",
+            "code": "missing_record",
+            "ids": [
+              "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+            ]
+          }
+        ],
+        "absent_records": [
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+        ]
+      }
+    },
+    {
+      "id": "reverse-page-direction",
+      "description": "Reverse every incoming relationship to the routing page; matching vocabulary does not replace directed reachability.",
+      "mutations": [
+        {
+          "op": "reverse_incoming",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+        }
+      ],
+      "expected": {
+        "evidence_status": [
+          "insufficient"
+        ],
+        "failed_stages": [
+          "A",
+          "E",
+          "H"
+        ],
+        "issues": [
+          {
+            "area": "missing_evidence",
+            "code": "missing_required_evidence",
+            "ids": [
+              "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+            ]
+          }
+        ],
+        "absent_records": [
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+        ]
+      }
+    },
+    {
+      "id": "corrupt-whole-passage",
+      "description": "Change whole-page text without changing its declared literal digest.",
+      "mutations": [
+        {
+          "op": "corrupt_text",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+        }
+      ],
+      "expected": {
+        "evidence_status": [
+          "insufficient"
+        ],
+        "failed_stages": [
+          "F",
+          "H"
+        ],
+        "issues": [
+          {
+            "area": "missing_evidence",
+            "code": "evidence_digest_mismatch",
+            "ids": [
+              "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+            ]
+          }
+        ],
+        "absent_records": []
+      }
+    },
+    {
+      "id": "restricted-source",
+      "description": "Make a mandatory source restricted; its text must not enter selected evidence.",
+      "mutations": [
+        {
+          "op": "restrict_record",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+        }
+      ],
+      "expected": {
+        "evidence_status": [
+          "insufficient"
+        ],
+        "failed_stages": [
+          "A",
+          "E",
+          "H"
+        ],
+        "issues": [
+          {
+            "area": "missing_evidence",
+            "code": "restricted_evidence",
+            "ids": [
+              "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+            ]
+          }
+        ],
+        "absent_records": [
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+        ]
+      }
+    },
+    {
+      "id": "missing-provenance",
+      "description": "Remove source provenance while keeping the same title and passage.",
+      "mutations": [
+        {
+          "op": "clear_provenance",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+        }
+      ],
+      "expected": {
+        "evidence_status": [
+          "insufficient"
+        ],
+        "failed_stages": [
+          "A",
+          "F",
+          "H"
+        ],
+        "issues": [
+          {
+            "area": "missing_evidence",
+            "code": "missing_provenance",
+            "ids": [
+              "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003"
+            ]
+          }
+        ],
+        "absent_records": []
+      }
+    },
+    {
+      "id": "ambiguous-benefit",
+      "description": "Add an explicit synthetic JSA alias to the Pension Credit concept; do not choose silently.",
+      "mutations": [
+        {
+          "op": "add_alias",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates",
+          "alias": "JSA"
+        }
+      ],
+      "expected": {
+        "evidence_status": [
+          "insufficient"
+        ],
+        "failed_stages": [
+          "C",
+          "H"
+        ],
+        "issues": [
+          {
+            "area": "missing_evidence",
+            "code": "ambiguous_concepts",
+            "ids": []
+          }
+        ],
+        "absent_records": []
+      },
+      "question": "JSA"
+    },
+    {
+      "id": "declared-conflict",
+      "description": "Declare a synthetic conflict between two retained concepts; no automatic resolution.",
+      "mutations": [
+        {
+          "op": "declare_conflict",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates",
+          "other_id": "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability"
+        }
+      ],
+      "expected": {
+        "evidence_status": [
+          "conflicting"
+        ],
+        "failed_stages": [
+          "H"
+        ],
+        "issues": [
+          {
+            "area": "conflicts",
+            "code": "declared_conflict",
+            "ids": [
+              "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates",
+              "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability"
+            ]
+          }
+        ],
+        "absent_records": []
+      }
+    },
+    {
+      "id": "byte-budget",
+      "description": "Request 8,192 bytes; whole items and diagnostics must be omitted explicitly instead of truncating evidence.",
+      "mutations": [],
+      "expected": {
+        "evidence_status": [
+          "insufficient"
+        ],
+        "failed_stages": [
+          "E",
+          "H"
+        ],
+        "issues": [],
+        "absent_records": [],
+        "truncated": true
+      },
+      "budget": {
+        "max_bytes": 8192
+      }
+    },
+    {
+      "id": "unresolved-question",
+      "description": "Ask a term absent from the declared vocabulary; return no invented evidence.",
+      "mutations": [],
+      "expected": {
+        "evidence_status": [
+          "insufficient"
+        ],
+        "failed_stages": [
+          "C",
+          "H"
+        ],
+        "issues": [
+          {
+            "area": "missing_evidence",
+            "code": "unresolved_task",
+            "ids": []
+          }
+        ],
+        "absent_records": [],
+        "max_selected": 0
+      },
+      "question": "zyxwvunrecognisedterm"
+    },
+    {
+      "id": "missing-chapter-routing",
+      "description": "Remove only the 12015 reference to chapter 24. Alternative benefit seeds can still retrieve all pages; exact required routing must fail.",
+      "mutations": [
+        {
+          "op": "remove_assertion",
+          "assertion_id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a"
+        }
+      ],
+      "expected": {
+        "evidence_status": [
+          "insufficient"
+        ],
+        "failed_stages": [
+          "B",
+          "D",
+          "H"
+        ],
+        "issues": [
+          {
+            "area": "missing_evidence",
+            "code": "missing_required_evidence",
+            "ids": [
+              "https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a"
+            ]
+          }
+        ],
+        "absent_records": []
+      }
+    }
+  ]
+}
