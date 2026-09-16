@@ -1,6 +1,6 @@
 # Changelog
 
-## Governed context assembly development candidate — 16 September 2026
+## Governed context assembly public experimental candidate — 16 September 2026
 
 - Add an imprisonment case spanning legacy JSA, Income Support, State Pension Credit and the two ESA components, with exact whole-page evidence and explicit regime boundaries.
 - Project governed context records and directed relationships from authored YAML-LD. Preserve the distinction between source chapter routing and model-derived paragraph selection; do not change the frozen Bundle Wiki profile.
@@ -9,6 +9,8 @@
 - Replay context acceptance and actual-index controls in CI against an explicitly pinned Explorer commit with locked dependencies; reject provisional branch names or unresolved pins.
 - Execute declared synthetic missing-evidence, direction, integrity, access, ambiguity, conflict and budget controls on copies of the actual index. Bind input, implementation and observed output hashes; preserve real execution timestamps on replay.
 - Add a demonstration and reproduction guide. Keep these engineering checks separate from current-law assurance, specialist acceptance, browser/host verification and the unchanged 160 source-guided answer trials.
+- Publish immutable demonstration links after checking Explorer `905e680f6d3ad385de9b8effc351566eba0ab2b3` with DWP content `efb05c66616a9cd4328a86cf412780fe7bc7cf0b` in the public browser. Record the 52-record, 127-relationship package, exact engine equality, source and graph navigation, JSON inspection and bounded failure; retain screenshots and app-byte verification.
+- Add the Search-to-Ask demonstration sequence and an explicit evidence-only handover prompt for a separate AI answerer. The observed Chrome host has no native WebMCP tools; no AI answer or voice integration is claimed.
 
 <a id="full-dmg-completion-in-progress--15-september-2026"></a>
 
