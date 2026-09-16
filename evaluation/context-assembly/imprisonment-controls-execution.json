@@ -1,7 +1,7 @@
 {
   "schema": "okf-context-controls-receipt.v1",
-  "started_at": "2026-09-16T01:23:03.404Z",
-  "observed_at": "2026-09-16T01:23:04.949Z",
+  "started_at": "2026-09-16T01:35:55.844Z",
+  "observed_at": "2026-09-16T01:35:57.307Z",
   "execution": {
     "schema": "okf-context-controls-execution.v1",
     "method": "Actual engine runs on explicitly mutated copies of frozen index bytes; no mutation of the original index, no model calls, no network acquisition. Expected diagnostics and failing A–H stages were declared before each run.",
@@ -47,12 +47,16 @@
           "sha256": "48f3c37a6e8dbeb8d3ac25cba12e626667fd4528dcdcdaf2b8747f0a93efddec"
         },
         {
+          "path": "scripts/context_control_archive.mjs",
+          "sha256": "a2a00e7dce0fd4d1c106b12dc71611fae1d240ac3399a5c01d62fff29b68cee4"
+        },
+        {
           "path": "scripts/evaluate_context_package.mjs",
           "sha256": "e5530e231ec9757644a87fbec3490b757282474dcb7b9ca7f2a97dced822bc11"
         },
         {
           "path": "scripts/run_context_controls.mjs",
-          "sha256": "f9f8520b61d39937f7a58ff6291b3a60d7de37d9c01a3bef6db4ba2bb1888c45"
+          "sha256": "b442755736f804ad644dba622e9a237cb6b08c20e2f4b99c2b56b3e6c559bdc5"
         }
       ]
     },
@@ -67,7 +71,10 @@
         "evidence_status": "insufficient",
         "output": {
           "path": "control-outputs/missing-routing-page.json.gz",
-          "sha256": "fe779fd308b501a7d6973c1a404b458df4a01f0a12fdde5eeb1a13c1615d3d3c"
+          "sha256": "fe779fd308b501a7d6973c1a404b458df4a01f0a12fdde5eeb1a13c1615d3d3c",
+          "bytes": 88686,
+          "uncompressed_sha256": "4c8b501b38193b5586baacad02c9c52f1297ddd0dbdd285917f0280dce0122a9",
+          "uncompressed_bytes": 868031
         },
         "checks": [
           {
@@ -242,7 +249,10 @@
         "evidence_status": "insufficient",
         "output": {
           "path": "control-outputs/reverse-page-direction.json.gz",
-          "sha256": "5278dc6ee0f54bd2e56684ef08c8813608045af5299773c4be1fd06a6b97aec3"
+          "sha256": "5278dc6ee0f54bd2e56684ef08c8813608045af5299773c4be1fd06a6b97aec3",
+          "bytes": 86407,
+          "uncompressed_sha256": "ddf27230d914093cfaa386797c063e2c8f9077d8206eb898f94498fdba7782b2",
+          "uncompressed_bytes": 838587
         },
         "checks": [
           {
@@ -362,7 +372,10 @@
         "evidence_status": "insufficient",
         "output": {
           "path": "control-outputs/corrupt-whole-passage.json.gz",
-          "sha256": "3beff1753e4164e9d017da7118351325171c0c73320df3e8581065ea2a8fdbd2"
+          "sha256": "3beff1753e4164e9d017da7118351325171c0c73320df3e8581065ea2a8fdbd2",
+          "bytes": 96433,
+          "uncompressed_sha256": "410180122d1bdded6bad5af72374e2204766753424134fdbd552c189aba0c405",
+          "uncompressed_bytes": 941261
         },
         "checks": [
           {
@@ -441,7 +454,10 @@
         "evidence_status": "insufficient",
         "output": {
           "path": "control-outputs/restricted-source.json.gz",
-          "sha256": "c31cf3c5359e9aaffee124d3a0983bf19838c6141932f76c864253212999e1e9"
+          "sha256": "c31cf3c5359e9aaffee124d3a0983bf19838c6141932f76c864253212999e1e9",
+          "bytes": 88699,
+          "uncompressed_sha256": "8d10844b07019080f65cfaf0de9e6f5b2db00376f7700a492dde68be5eb85cd3",
+          "uncompressed_bytes": 868081
         },
         "checks": [
           {
@@ -616,7 +632,10 @@
         "evidence_status": "insufficient",
         "output": {
           "path": "control-outputs/missing-provenance.json.gz",
-          "sha256": "5e9a700cc57e3c857cfa5b525ed749674a52cf8df3dd29ffead075c55db552e5"
+          "sha256": "5e9a700cc57e3c857cfa5b525ed749674a52cf8df3dd29ffead075c55db552e5",
+          "bytes": 96221,
+          "uncompressed_sha256": "2181b6face14fe6fe3a809a29f8628527640d2fbc519fb8a651bc7f338b5ddad",
+          "uncompressed_bytes": 939663
         },
         "checks": [
           {
@@ -708,7 +727,10 @@
         "evidence_status": "insufficient",
         "output": {
           "path": "control-outputs/ambiguous-benefit.json.gz",
-          "sha256": "02d9a878242527b4199030d46b60318dd261ee6447a53fc60eb51535f80e026a"
+          "sha256": "02d9a878242527b4199030d46b60318dd261ee6447a53fc60eb51535f80e026a",
+          "bytes": 15550,
+          "uncompressed_sha256": "a603df1c13d186dbf2ac9a11c905e296ad1bf95b3e87e11e4e42f0e9f96d9f2a",
+          "uncompressed_bytes": 120802
         },
         "checks": [
           {
@@ -789,7 +811,10 @@
         "evidence_status": "conflicting",
         "output": {
           "path": "control-outputs/declared-conflict.json.gz",
-          "sha256": "8c59f834a9b84c7aa9c3c33b8d4bf3caec03d08d4faf580288bed5a2e3fbd267"
+          "sha256": "8c59f834a9b84c7aa9c3c33b8d4bf3caec03d08d4faf580288bed5a2e3fbd267",
+          "bytes": 96264,
+          "uncompressed_sha256": "f42725d93314228f88dc83e0c00f75d2ef903071a7d8585ec323231ca62b4807",
+          "uncompressed_bytes": 940822
         },
         "checks": [
           {
@@ -857,7 +882,10 @@
         "evidence_status": "insufficient",
         "output": {
           "path": "control-outputs/byte-budget.json.gz",
-          "sha256": "809d02cadf62b3c09bcff7054a18134d06f14c8b05fecca8ede356947739b0b7"
+          "sha256": "809d02cadf62b3c09bcff7054a18134d06f14c8b05fecca8ede356947739b0b7",
+          "bytes": 13792,
+          "uncompressed_sha256": "cbd747c0d8f3ecc74f1aaec7902cf6efbf18724ce418eca90bdb45e7e5c751ca",
+          "uncompressed_bytes": 114748
         },
         "checks": [
           {
@@ -915,7 +943,10 @@
         "evidence_status": "insufficient",
         "output": {
           "path": "control-outputs/unresolved-question.json.gz",
-          "sha256": "533344d236781c4c8d0918457fcc99790a4db4c7724595092d5126dcd4b76512"
+          "sha256": "533344d236781c4c8d0918457fcc99790a4db4c7724595092d5126dcd4b76512",
+          "bytes": 15445,
+          "uncompressed_sha256": "7874181c584b0fae3d24018e82e4b3d0adca3d41750515ffe4ad66b6aad8c414",
+          "uncompressed_bytes": 120283
         },
         "checks": [
           {
@@ -999,7 +1030,10 @@
         "evidence_status": "insufficient",
         "output": {
           "path": "control-outputs/missing-chapter-routing.json.gz",
-          "sha256": "b4b535e66d2164b517ff195557e69f06c1f629a2b8d177a321b52f0523e4f6a9"
+          "sha256": "b4b535e66d2164b517ff195557e69f06c1f629a2b8d177a321b52f0523e4f6a9",
+          "bytes": 95011,
+          "uncompressed_sha256": "d037e7965ac29cb638474a2630a0393307733747acd7da4e1a348f061d63ea54",
+          "uncompressed_bytes": 920739
         },
         "checks": [
           {
