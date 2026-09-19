@@ -1,5 +1,88 @@
 # Changelog
 
+## Staff questions, ADM acquisition and repository governance — 19 September 2026
+
+- Repair inherited repository semantic and publication contract drift against
+  unchanged canonical schemas. Preserve per-delivery scope, status, authoring notes and
+  output descriptions in separate `okf.delivery.json`; declare concrete outputs
+  using governed roles and add the root OKF version declaration. Canonical
+  reconciliation passes without warnings. Add an offline CI gate and regression
+  controls for unsupported fields, unknown roles, unsafe/missing output paths,
+  altered schema bytes, broken references and dependency cycles. Preserve the
+  original publication classifications and source denominators separately;
+  canonical fields do not upgrade extraction or interpretation authority.
+  Keep real-browser journeys required and add a clearly labelled offline check
+  of retained public-browser identity and context evidence.
+- Add a public register of 40 question occurrences and 39 distinct wordings,
+  preserving ambiguity and recording 42 verified source candidates without
+  publishing private correspondence, contacts or collaboration links.
+- Run all 40 questions through the remote MCP service against the preserved
+  custody profile. Retain exact HTTP response bodies, source/core hashes and
+  offline replay. All 40 packages match the shared engine and remain insufficient;
+  no substantive or specialist-approved answers, token savings or cost savings
+  are claimed. Eight mutation controls reject altered provenance, transport
+  accounting, parity claims and forged sufficiency.
+- Acquire all 182 PDFs and 4,347 pages in a separately frozen ADM publication
+  census. Preserve original PDFs, page text, acquisition receipts and date
+  distinctions without changing DMG evidence. Verify every file and page locator;
+  retain 91 pages without extracted text and other extraction-quality flags.
+- Record combined acquisition coverage of 513 PDFs, 19,090 measured pages,
+  18,197 pages with nonempty extracted text and 893 without. A live remote
+  full-corpus run covers 40 staff questions and three boundary controls: all 43
+  complete packages match the shared engine, and all 40
+  questions return candidate evidence, 12 retain a separately located page and
+  21 retain a page from a candidate document. All 43 packages remain insufficient;
+  no answer-quality, AI-answer or specialist-acceptance claim follows. Retain
+  published-browser acceptance as separate evidence.
+- Add eight ADM acquisition controls for frozen census identity, classification,
+  bounded metadata, source paths, PDF integrity, page locators and unreviewed
+  extraction authority. Existing DMG acquisition helpers remain unchanged.
+- Audit authored relationships through semantic and runtime projections,
+  endpoint identities and bidirectional adjacency. Document sparse semantic
+  coverage separately from the Explorer display defects; data preservation does
+  not establish complete policy modelling or certify browser behaviour.
+- Enable and independently verify classic `main` protection: reviewed pull
+  request workflow, strict GitHub Actions `validate` requirement, administrator
+  enforcement, resolved conversations and no force pushes or deletion. Record
+  zero required formal approvals explicitly; configuration is not perpetual
+  assurance or evidence that substantive independent review occurred.
+- Add a private-input filename guard and seven temporary-repository tests.
+  Tracked or staged `.email.md` files are rejected without reading their contents.
+- Add a task-led beginner learning path and linked glossary, with official
+  references, benefit-variant explanations and distinct Search, Ask and AI roles.
+  Explain provenance, date meanings, full capture versus evidence profiles,
+  remote MCP, browser WebMCP, HTTP 405 and unverified Voice access.
+- Lead the meeting guide with the combined-corpus candidate, an explicit version
+  and a bounded ChatGPT rehearsal prompt. Record the completed published-browser
+  journeys and retain the earlier custody observations under their original
+  version. Document separate consumer pins for replaying the two generations.
+- Verify deployment 5 through the official MCP SDK: current imprisonment and
+  hospital packages and the explicitly selected historical imprisonment package
+  exactly match the shared engine. Preserve the earlier failed hosting attempt;
+  distinguish these transport checks and the wider remote evaluation
+  from the separate published-browser observations.
+- Independently replay all 43 complete corpus packages, reverify 42 source
+  candidates and reject all 21 corruption controls. Update only the delivery
+  verification status; retain source snapshots and evidence authority unchanged.
+- Verify the published Explorer at commit `a8628fdb77c1c03a5d99b6d105d9e4b8722088d7`,
+  including downloaded app-file identities, Search, Ask, provenance, directed
+  chapter routing and machine-readable context. Native WebMCP build and explain
+  calls in the Codex browser match the UI and remote bounded abroad package:
+  six source pages, 31,312 bytes, context `2cdfa5fe…`, insufficient and truncated.
+  Default imprisonment exposes eight resolved concepts, 64 records, 127
+  relationships and chapter 24/53/54/78 routing, while remaining insufficient.
+  ChatGPT Voice and room audio are not verified by these checks.
+- Record ChatGPT's cached older tool schema rejecting the new corpus version
+  before any MCP request. Document the observed existing-connection Refresh
+  route and keep the post-refresh invocation separate from service acceptance.
+- Retain the actual ChatGPT retrieval failure and its corrected rerun: the same
+  bounded abroad question now returns six source pages and 31,312 bytes, without
+  reported host truncation. Keep insufficiency and both retrieval/assembly limits
+  visible. Bind the earlier and corrected 43-case runs in a comparison: exact-page
+  overlap increases from 10 to 12 cases and document overlap from 19 to 21, with
+  two gains and no lost overlaps. These are retrieval diagnostics, not answer
+  quality, complete legal advice, specialist acceptance or Voice verification.
+
 ## Remote Ask OKF acceptance — 19 September 2026
 
 - Add an independent HTTP MCP acceptance client for the imprisonment and hospital questions, comparing complete returned packages with the existing Explorer engine and evidence assessor.

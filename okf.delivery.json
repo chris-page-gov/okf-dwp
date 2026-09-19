@@ -1,0 +1,87 @@
+{
+  "schema": "okf-dwp-delivery-description.v1",
+  "semantic_contract": "okf.semantic.json",
+  "status": "repository-specific-descriptive-metadata",
+  "purpose": "Preserve per-delivery scope, observation status and authoring notes without extending the closed canonical repository semantic contract. This file is descriptive metadata; it is not a Reader input, semantic assertion source or executable command source.",
+  "semantic_deliveries": [
+    {
+      "id": "pension-credit-pilot",
+      "state": "generated-yaml-ld-assertion-graph",
+      "path": "bundle/okf-bundle.yamlld",
+      "authored_scope": "knowledge/**/*.yamlld excluding knowledge/full-dmg/**"
+    },
+    {
+      "id": "full-dmg",
+      "state": "generated-yaml-ld-sharded-graph",
+      "path": "full-dmg/okf-explorer.json",
+      "authored_scope": "existing pilot plus knowledge/full-dmg/**/*.yamlld",
+      "status": "published-research-candidate; recorded-public-browser-journeys-passed"
+    },
+    {
+      "id": "full-dmg-and-adm-context",
+      "state": "generated-bounded-context-corpus",
+      "path": "context/corpus/manifest.json",
+      "authored_scope": "existing semantic assertions plus explicitly configured frozen DMG and ADM sources",
+      "status": "research-candidate; remote-evaluation-verified; bounded-chatgpt-source-access-observed; recorded-published-explorer-and-native-webmcp-journeys-passed",
+      "browser_receipt": "validation/corpus-questions/public-explorer-observation.json"
+    }
+  ],
+  "reader_deliveries": [
+    {
+      "scope": "full-dmg",
+      "delivery": "indexed-large-corpus",
+      "descriptor": "full-dmg/okf-explorer.json",
+      "consumer_commit": "8e01dfe16538c6045ee1d55b64c3f6e24bada9f7",
+      "verification_status": "passed-for-recorded-public-journeys",
+      "browser_receipt": "validation/full-dmg-browser.json"
+    },
+    {
+      "scope": "full-dmg-and-adm-context",
+      "delivery": "bounded-context-corpus",
+      "descriptor": "full-dmg/okf-corpus-context.json",
+      "verification_status": "remote-evaluation-verified; bounded-chatgpt-source-access-observed; recorded-published-explorer-and-native-webmcp-journeys-passed",
+      "source_manifest": "context/corpus/manifest.json",
+      "consumer_commit": "a8628fdb77c1c03a5d99b6d105d9e4b8722088d7",
+      "browser_receipt": "validation/corpus-questions/public-explorer-observation.json",
+      "app_bytes_receipt": "validation/corpus-questions/public-explorer-build-verification.json"
+    }
+  ],
+  "authoring": {
+    "pilot_vocabulary": "docs/next-stage/semantic-contract.md",
+    "proposal_input": "semantic_relations"
+  },
+  "output_groups": [
+    {
+      "path": "full-dmg/**",
+      "description": "indexed-runtime-and-sharded-semantic-projections",
+      "generated": true,
+      "canonical_output_paths": [
+        "full-dmg/okf-explorer.json",
+        "full-dmg/okf-corpus-context.json",
+        "full-dmg/okf-bundle.yamlld",
+        "full-dmg/okf-bundle.jsonld",
+        "full-dmg/data/semantic/manifest.json",
+        "full-dmg/data/semantic/*.jsonld.gz",
+        "full-dmg/data/relationships-*.json.gz"
+      ]
+    },
+    {
+      "path": "context/discovery/**",
+      "description": "derived-existing-semantic-context-discovery",
+      "generated": true,
+      "canonical_output_paths": [
+        "context/discovery/assembly-index.json",
+        "context/discovery/manifest.json"
+      ]
+    },
+    {
+      "path": "context/corpus/**",
+      "description": "hash-bound-full-dmg-and-adm-context-corpus",
+      "generated": true,
+      "canonical_output_paths": [
+        "context/corpus/manifest.json",
+        "context/corpus/base-index.json"
+      ]
+    }
+  ]
+}

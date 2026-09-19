@@ -205,11 +205,12 @@ before checkout. This test dependency pin is separate from the content commit
 in the public demonstration links. Updating either must preserve the exact
 source and execution bindings.
 
-## Existing repository-contract limitation
+<a id="existing-repository-contract-limitation"></a>
 
-The additional strict repository reconciliation audit reports seven metadata
-errors that are already present on `main`. The semantic contract is unchanged
-from `main`, and its README also lacks the required version declaration:
+## Repository-contract repair, 19 September 2026
+
+The earlier strict repository reconciliation audit recorded seven metadata
+errors inherited from the 16 September baseline:
 
 - `README.md` does not declare `okf_version: 0.2`.
 - The declared required output `full-dmg/**` is reported as absent.
@@ -220,8 +221,26 @@ from `main`, and its README also lacks the required version declaration:
 - The output role `indexed-runtime-and-sharded-semantic-projections` is not
   governed by the contract.
 
-This feature does not migrate that existing contract. Passing the repository CI
-gates and the context acceptance checks does not mean that this separate strict
-audit passes. These findings concern repository declarations; they do not remove
-the independently checked source hashes, directed graph paths or recorded
-evidence boundaries.
+These findings have now been repaired. The semantic contract uses the unchanged
+canonical schema and declared output roles, with concrete entrypoints and shard
+patterns. README declares `okf_version: 0.2`. The unsupported descriptive fields
+are preserved in [okf.delivery.json](../okf.delivery.json), including delivery
+scopes, observations and authoring notes. No reader or engine consumed those
+unsupported fields, and no source bytes or semantic assertions were changed.
+
+The canonical reconciliation now reports no errors or warnings. CI also runs
+`scripts/check_semantic_contract.py`, which pins the vendored canonical schemas,
+rejects unsupported fields and roles, checks output presence and verifies the
+separate description's output references. The publication contract now also
+conforms to the unchanged publication and source-family schemas; original
+classifications and source denominators are preserved in
+[publication contract details](publication-contract-details.json). Command
+references and dependency cycles are checked. Negative controls include the
+original unsupported fields and weakened schemas. Contract conformance remains distinct
+from the independent all-assertion checks, exact context receipts and specialist
+review; it does not establish legal correctness.
+
+Real-browser journeys remain required. `scripts/check_browser_evidence.py`
+checks the retained public observation, downloaded application identity and
+bounded context package offline. It does not launch a browser or replace those
+journeys; a missing observation fails the check.

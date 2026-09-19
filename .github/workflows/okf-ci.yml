@@ -16,6 +16,7 @@ jobs:
     env:
       # Reviewed immutable consumer source; execution receipts bind its bytes too.
       EXPLORER_CONTEXT_COMMIT: 97f13d22b689d92cd785de04758fe932d4a4d369
+      EXPLORER_CORPUS_COMMIT: 31ee08ec259e165a478e9c36826fe3721643631d
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
@@ -25,6 +26,12 @@ jobs:
         with:
           version: '0.12.2'
       - run: uv sync --locked
+      - name: Keep private correspondence outside Git
+        run: uv run --locked python scripts/check_private_inputs.py
+      - name: Validate the canonical repository contracts
+        run: uv run --locked python scripts/check_semantic_contract.py
+      - name: Verify retained public-browser evidence offline
+        run: uv run --locked python scripts/check_browser_evidence.py
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: '26.7.0'
@@ -41,6 +48,15 @@ jobs:
           persist-credentials: false
       - name: Verify the consumer checkout identity
         run: test "$(git -C .ci/okf-explorer rev-parse HEAD)" = "$EXPLORER_CONTEXT_COMMIT"
+      - name: Check out the independently pinned full-corpus consumer
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: chris-page-gov/okf-explorer
+          ref: ${{ env.EXPLORER_CORPUS_COMMIT }}
+          path: .ci/okf-explorer-corpus
+          persist-credentials: false
+      - name: Verify the full-corpus consumer checkout identity
+        run: test "$(git -C .ci/okf-explorer-corpus rev-parse HEAD)" = "$EXPLORER_CORPUS_COMMIT"
       - name: Install locked context evaluator dependencies
         run: uv sync --locked --project .ci/okf-explorer
       - name: Install source verification tools
@@ -49,6 +65,15 @@ jobs:
         run: uv run --locked python -m unittest discover -s scripts -p 'test_*.py'
       - name: Verify all full-DMG source identities and measured pages
         run: uv run --locked python scripts/acquire_full_dmg.py --check
+      - name: Verify frozen ADM source identities and measured pages
+        run: uv run --locked python scripts/acquire_adm.py --check
+      - name: Verify all authored and indexed relationships
+        run: uv run --locked python scripts/audit_relationships.py --check
+      - name: Verify the full-source context projections
+        run: |
+          uv run --locked python scripts/build_context_discovery.py --check
+          uv run --locked python scripts/build_context_corpus.py --check
+          uv run --locked python scripts/build_context_corpus_explorer.py --check
       - name: Verify source date and reference discovery
         run: uv run --locked python scripts/discover_full_dmg_evidence.py --check
       - name: Verify literal reference location reconciliation
@@ -65,6 +90,16 @@ jobs:
         run: node --experimental-strip-types scripts/test_remote_mcp.mjs --explorer-root .ci/okf-explorer --check
       - name: Replay explicitly bounded remote MCP packages
         run: node --experimental-strip-types scripts/check_bounded_remote_mcp.mjs --explorer-root .ci/okf-explorer
+      - name: Replay all supplied staff questions and source candidates
+        run: node --experimental-strip-types scripts/evaluate_staff_questions.mjs --check --explorer-root .ci/okf-explorer
+      - name: Reject altered staff evaluation evidence
+        run: node --experimental-strip-types scripts/test_staff_questions.mjs --explorer-root .ci/okf-explorer
+      - name: Replay full-corpus staff questions and scope controls
+        run: node --experimental-strip-types scripts/evaluate_corpus_questions.mjs --check --explorer-root .ci/okf-explorer-corpus
+      - name: Replay the bounded full-corpus ChatGPT demonstration package
+        run: node --experimental-strip-types validation/corpus-questions/bounded-abroad/verify.mjs --check --explorer-root .ci/okf-explorer-corpus
+      - name: Reject altered full-corpus evaluation evidence
+        run: node --experimental-strip-types scripts/test_corpus_questions.mjs --explorer-root .ci/okf-explorer-corpus
       - name: Replay actual-index context failure controls
         run: >-
           node --experimental-strip-types .ci/okf-explorer/scripts/run_context_controls.mjs

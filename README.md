@@ -1,14 +1,118 @@
+---
+okf_version: "0.2"
+---
+
 <a id="pension-credit-guidance-as-an-okf-bundle"></a>
 
 # DWP guidance as an OKF+ bundle
 
 **An independent, unofficial experimental exemplar. Not an official DWP document, benefits advice or an entitlement calculator.**
 
-This repository turns the public [DWP Decision makers’ guide](https://www.gov.uk/government/collections/decision-makers-guide-staff-guide) into source-linked records, a YAML-LD semantic graph and an indexed OKF Explorer research candidate. It began with a [Pension Credit pilot covering volumes 13 and 14](https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide). It demonstrates how a specialist or an AI can find evidence, inspect relationships and see what remains uncertain.
+This repository turns public Department for Work and Pensions (DWP) guidance into source-linked records, a YAML-LD semantic graph and an indexed OKF Explorer research candidate. It began with a [Pension Credit pilot covering volumes 13 and 14](https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide), expanded to the [full Decision makers’ guide (DMG)](https://www.gov.uk/government/collections/decision-makers-guide-staff-guide), and now also preserves the separate [Advice for decision making (ADM) manual](docs/adm-acquisition.md). It demonstrates how a specialist or an AI can find evidence, inspect relationships and see what remains uncertain.
+
+**New to the project?** Follow the [practical learning path](docs/learning-path.md),
+then use the [plain-English glossary](docs/glossary.md) when a benefit name or
+technical term appears. It explains Search, Ask OKF and AI answering through
+short tasks, including how to connect and why a browser can show HTTP 405.
 
 [Verified Pension Credit semantic exemplar](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7d3c69df0571b8d5206c8edce92963d99979cb5c%2Fbundle%2Fokf-bundle.yamlld&view=graph#term/capital-disregards) · [Original meeting demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.yamlld&q=84351#question/pc001) · [Read the pilot bundle](bundle/index.md) · [Ten-minute meeting walkthrough](docs/meeting-walkthrough.md) · [Discovery findings](docs/discovery.md) · [AI interrogation guide](AI_USAGE.md) · [Public notice and rights](NOTICE.md)
 
+## Current source and question coverage
+
+**The two acquired manuals contain 513 PDFs and 19,090 measured pages.**
+Acquisition preserves documents; it does not establish complete policy modelling
+or specialist acceptance.
+
+| Source family | Captured | PDFs | Measured pages | Pages with nonempty extracted text | Pages with no extracted text |
+| --- | --- | ---: | ---: | ---: | ---: |
+| [DMG](source/full-dmg-2026-09-15/inventory.json) | 15 September 2026 | 331 | 14,743 | 13,941 | 802 |
+| [ADM](source/adm-2026-09-19/inventory.json) | 19 September 2026 | 182 | 4,347 | 4,256 | 91 |
+| Total | Separate frozen observations | 513 | 19,090 | 18,197 | 893 |
+
+Every page remains represented, including the 893 pages with no extracted text.
+Those pages retain original PDF links; no OCR or whole-corpus visual review has
+established whether they are blank or image-only. Nonempty text can still contain
+extraction defects. Original capture dates and source publication dates remain
+separate.
+
+The [staff-question registry](evaluation/staff-questions/cases.json) contains
+**40 occurrences and 39 distinct questions**. The [recorded remote baseline](validation/staff-questions/receipt.json)
+tested every occurrence against the preserved 52-record custody profile: all
+40 packages matched the Explorer engine, and all 40 were **insufficient**, without
+assembly-budget truncation. Forty-two source candidates were separately verified.
+These are honest coverage gaps, not 40 answered questions or expert-approved
+benefits conclusions. No token or monetary saving has been established.
+
+The [full-corpus remote run](validation/corpus-questions/receipt.json) now
+tests all 40 questions and three boundary controls against the combined manuals.
+All 40 staff questions return candidate evidence, including ADM pages. Twelve retain
+an independently located candidate page and 21 retain a page from a candidate
+document. These measures show where retrieval helps and where it needs work;
+they are not answer-quality scores. All 43 results remain **insufficient**, with
+no AI answers or specialist acceptance. All 43 complete remote packages match the
+shared Explorer engine. Separately, [official SDK calls to the deployed service](validation/corpus-questions/sdk-receipt.json)
+match the shared engine for current imprisonment, current hospital and the
+explicitly selected historical imprisonment case. An [actual bounded ChatGPT call](validation/corpus-questions/chatgpt-observation.json)
+inspected six source pages about international issues: 31,312 bytes, no reported
+host truncation, still insufficient. The [published Explorer and native WebMCP check](validation/corpus-questions/public-explorer-observation.json)
+also passed: its UI, browser tools and remote service returned the same complete
+bounded package. This does not establish complete answerability or Voice support.
+Independent replay verified all 43 packages and 42 source candidates; all 21
+corruption controls were rejected. The [before-and-after comparison](validation/corpus-questions/retrieval-comparison.json)
+preserves the initial retrieval flaw and the improvement from 10 to 12 exact-page
+overlaps and 19 to 21 document overlaps; neither is an answer-quality score.
+The [staff-question results and Monday walkthrough](evaluation/staff-questions/results.md)
+compare the two runs and explain the remaining work.
+
+Full-corpus retrieval ranks literal question terms and takes bounded whole-page
+candidates. Existing concept aliases and relationships keep their original
+scopes, including custody-specific concepts. A lexical match does not establish
+which rules apply or that every necessary exception is represented. The
+immutable baseline receipts below retain their original scope. CPAG remains an
+external reference, with no handbook-body acquisition or reuse permission
+established.
+
+The [relationship audit](docs/relationship-audit.md) separately distinguishes
+authored links preserved in the data, sparse domain modelling and Explorer
+display defects. The [repository governance record](docs/repository-governance.md)
+records required pull requests, the `validate` merge check and private-input
+protections.
+
 ## Ask OKF: governed context assembly
+
+The current candidate uses both captured manuals through the additive
+[corpus descriptor](full-dmg/okf-corpus-context.json), at explicit content version
+`bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752`. Follow the
+[new five-minute presentation and bounded ChatGPT rehearsal](docs/remote-mcp-demo.md#five-minute-full-corpus-presentation).
+Its 43-case remote evaluation, three-case live SDK verification, bounded ChatGPT
+observation and published-browser journeys are recorded.
+The general corpus returns
+candidate evidence and explicit insufficiency, including for imprisonment; it
+does not inherit a completeness claim from the older custody profile.
+
+### Published Explorer and browser tools
+
+[Open the verified full-corpus demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fbf50ef8d91b9f1ccc2cbdb354198eae74c9ed752%2Ffull-dmg%2Fokf-corpus-context.json&q=imprisonment#overview).
+On 19 September, Explorer commit `a8628fdb77c1c03a5d99b6d105d9e4b8722088d7`
+passed the [recorded public journeys](validation/corpus-questions/public-explorer-observation.json);
+[downloaded application files](validation/corpus-questions/public-explorer-build-verification.json)
+matched the tested build. Search showed 219 imprisonment matches, with 200 displayed.
+The default imprisonment task resolved eight concepts and assembled 64 records,
+127 relationships and 516,146 bytes. Chapter 12 routing to chapters 24, 53, 54
+and 78 was visible; the package remained insufficient and truncated.
+
+For “What happens to your benefits if you go abroad?”, set Ask's **Package bytes**
+to **32768**. The six-source-page, 31,312-byte package matched native WebMCP build
+and explain calls and the retained remote package by complete canonical content.
+Its context identifier starts `2cdfa5fe`; the [guide](docs/remote-mcp-demo.md#published-explorer-and-native-webmcp)
+records the full identifier and comparison. Native WebMCP was verified in the
+Codex in-app browser; ChatGPT Voice and room audio remain untested.
+
+### Preserved custody acceptance case
+
+The following checks use their immutable earlier version. Its 52-record evidence
+profile is narrower than the acquired manuals, and its scoped sufficiency does
+not describe the new default corpus.
 
 [Open the public Ask OKF demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fefb05c66616a9cd4328a86cf412780fe7bc7cf0b%2Ffull-dmg%2Fokf-explorer.json&q=imprisonment#overview),
 then select **Ask OKF** and use the exact question in the
@@ -35,8 +139,8 @@ The remote MCP adapter lives in OKF Explorer and imports its existing context
 engine. This repository supplies the [remote acceptance cases and replay
 instructions](evaluation/remote-mcp/README.md), including the hospital question.
 The [hospital coverage review](docs/remote-mcp-hospital-coverage.md) distinguishes
-material acquired in the wider corpus from evidence governed by the current Ask
-index. Hospital evidence is currently insufficient; retrieved custody records
+material acquired in the wider corpus from evidence governed by the pinned Ask
+custody index. Hospital evidence in that profile is insufficient; retrieved custody records
 must not be presented as hospital guidance. Deployment and actual ChatGPT
 invocation are separate gates recorded in the [remote demonstration guide](docs/remote-mcp-demo.md).
 
@@ -86,6 +190,7 @@ Install [uv](https://docs.astral.sh/uv/) and run:
 
 ```sh
 uv sync --locked
+uv run --locked python scripts/check_semantic_contract.py
 uv run --locked python scripts/build_bundle.py
 uv run --locked python scripts/build_bundle.py --check
 uv run --locked python scripts/validate_bundle.py
@@ -106,7 +211,35 @@ uv run --locked python scripts/reconcile_full_dmg_references.py --check
 uv run --locked python scripts/verify_full_dmg_trials.py --check
 ```
 
-Its Explorer entry point is `full-dmg/okf-explorer.json` (or `full-dmg/okf-explorer.yamlld`). `full-dmg/okf-bundle.yamlld` is a semantic control document pointing to bounded graph shards; it is not a small-bundle import. The launch links above name the immutable candidate checked in the browser. The local repository suite passed 43 tests. The trial verifier checks retained evidence and reproduces the assessment summary; it does not run new model answers or assign grades.
+Its Explorer entry point is `full-dmg/okf-explorer.json` (or `full-dmg/okf-explorer.yamlld`). `full-dmg/okf-bundle.yamlld` is a semantic control document pointing to bounded graph shards; it is not a small-bundle import. The launch links above name the immutable candidate checked in the browser. The original 15 September release recorded 43 passing local tests. The trial verifier checks retained evidence and reproduces the assessment summary; it does not run new model answers or assign grades.
+
+For the separately acquired ADM manual, staff-question baseline and publication
+guards:
+
+```sh
+uv run --locked python scripts/acquire_adm.py --check
+uv run --locked python scripts/test_acquire_adm.py
+uv run --locked python scripts/build_context_discovery.py --check
+uv run --locked python scripts/build_context_corpus.py --check
+uv run --locked python scripts/audit_relationships.py --check
+uv run --locked python scripts/check_private_inputs.py
+uv run --locked python scripts/test_private_inputs.py
+uv run --locked python scripts/check_browser_evidence.py
+node --experimental-strip-types scripts/evaluate_staff_questions.mjs --check --explorer-root ../okf-explorer
+node --experimental-strip-types scripts/test_staff_questions.mjs --explorer-root ../okf-explorer
+```
+
+The staff-question replay needs the matching Explorer context implementation;
+the retained receipt binds its exact file hash. It replays saved remote responses
+without calling a model or a live endpoint. The private-input check rejects
+tracked or staged `.email.md` files without reading their contents; run it before
+committing or pushing, not only in CI. The [governance guide](docs/repository-governance.md)
+explains these boundaries.
+
+The browser-evidence check validates the retained public observation against
+the deployed application identity and the bounded MCP package. It runs offline:
+it does not open a browser, repeat the journeys or certify a later deployment.
+Actual browser journeys remain a separate required publication check.
 
 The consumer check uses Node 26.7.0 in CI and unmodified, hash-pinned Explorer validation code under `profiles/explorer-runtime/`. It verifies the research notice and every route label against the actual consumer contract. Publisher titles retain their original bytes; display labels normalise whitespace only.
 
@@ -134,6 +267,13 @@ A deliberate source refresh is separate: inspect `scripts/acquire_sources.py --h
 - `full-dmg/` is the generated indexed corpus and sharded semantic delivery.
 - `profiles/bundle-wiki/` vendors the 16 canonical Explorer profile files with an unchanged vendor lock.
 - `okf.semantic.json` and `okf.publication.json` declare the semantic and publication boundaries.
+  Both contracts use unchanged, locally pinned canonical schemas, checked without
+  network access. Repository-specific
+  delivery scopes, observed status and authoring notes live separately in
+  [okf.delivery.json](okf.delivery.json); they do not extend the Reader format or
+  grant evidence authority. The original publication classifications and their
+  canonical mappings are preserved in
+  [publication contract details](docs/publication-contract-details.json).
 
 OKF 0.2 is the Markdown core. “OKF+” here means that core plus the additive Explorer Bundle Wiki semantic profile; it is not a separate universal OKF standard. YAML-LD 1.0 remains a W3C Working Draft. The build uses pinned local contexts and URDNA2015 RDF normalisation; it does not claim RDFC-1.0 or SHACL conformance.
 
@@ -167,8 +307,13 @@ review candidate, **eight personas, ten stories and 14 questions**.
 full-DMG candidate adds the wider concepts and observed trials described
 above. Model assessment does not make either layer specialist-reviewed.
 
-All **331 DMG PDFs** are now acquired and indexed. The separate **182 ADM
-PDFs** remain metadata discovery and are not part of this full-text corpus.
+All **331 DMG PDFs** are acquired and indexed. The separate **182 ADM PDFs**
+have now also been [acquired with original bytes and page text](docs/adm-acquisition.md),
+giving 513 documents and 19,090 measured pages across the two source families.
+The 43-case combined-corpus remote evaluation and three live SDK cases pass;
+ChatGPT inspected the bounded abroad package. Published Explorer and native
+WebMCP journeys also passed for the recorded version and application commit.
+The earlier custody profile and its receipts have not been rewritten.
 [The 24 September plan](docs/next-stage/full-dmg-by-24-september.md)
 separates source acquisition, semantic coverage and expert review. Content
 freezes on 24 September for the 30 September seminar; website, WebMCP and Mac
