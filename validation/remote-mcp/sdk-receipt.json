@@ -1,0 +1,111 @@
+{
+  "schema": "okf-remote-mcp-sdk-verification.v1",
+  "endpoint": "https://ask-okf.crpage.chatgpt.site/okf/mcp",
+  "started_at": "2026-09-19T15:19:23.464Z",
+  "completed_at": "2026-09-19T15:19:24.471Z",
+  "client": {
+    "name": "@modelcontextprotocol/client",
+    "version": "2.0.0",
+    "protocol": "2026-07-28"
+  },
+  "comparison_source_commit": "9ee4da64283e119aadde457128ced6291c30bcb9",
+  "comparison_source_assurance": {
+    "classification": "exact-runtime-inputs-match-commit",
+    "inputs_sha256": {
+      "apps/okf-explorer/src/lib/context/index.ts": "4be756c3695d63ef05ec8073fede8833919d73cbb3ca7d0473fc2ac65bafb714",
+      "profiles/context-assembly/v1/common.schema.json": "346f86667daec3ab9d6f21d007d7c7c948c04de8f4439818d8185a13e6267a2b",
+      "profiles/context-assembly/v1/package.schema.json": "9cc5598a0a09221af415f8907312d593a5ed3272b0435b7f3719b59c67b055c9",
+      "services/ask-okf-mcp/package-lock.json": "c1f60d944de6620c438ff470accd0ee69b7460a29c299c20f20d02c313aeef0b",
+      "services/ask-okf-mcp/package.json": "5444853e2d6bb54cb8e19a50de84eb85381d1bcc1916d30df28923b74f6ec6d7",
+      "services/ask-okf-mcp/vendor/okf-dwp-assembly-index.json": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54",
+      "services/ask-okf-mcp/vendor/okf-dwp-descriptor.json": "9881779ab550efe9f73da1e16acd8c8dcb64933c9981bb290b66ff51572853f3",
+      "services/ask-okf-mcp/src/contracts.ts": "f925b2b363bc5c460cc509103101645614c2fb1b2a827be8fbe12a5012f79f63",
+      "services/ask-okf-mcp/src/registry.ts": "18792e5cdbb0f1d9ddc39547e05e96838e593ac9bea123df293439600bda892e",
+      "services/ask-okf-mcp/src/service.ts": "09a26b6bce0f0b55391e105fabc8f8970a04c949e85d84c7fb3f03942e3f6553",
+      "services/ask-okf-mcp/src/worker.ts": "a47d188b6dd40ec3d27b40ee6ef88392509841d3f3bd28428e679ba890834041",
+      "services/ask-okf-mcp/scripts/build.mjs": "8781faca3b98de2bcc4db460fce561d26b8859064a97454e7c2c13b58f03b7ba",
+      "services/ask-okf-mcp/src/node.ts": "8648f84df8b8c89ec1a8819e03c332e984d0173b185ab237c7d4490114e8f4a9",
+      "apps/okf-explorer/src/lib/context/types.ts": "ebffa16b3f69852557b6631a8d00bfdf2e30e237b2ff24ce7fd3511e3e12211e"
+    },
+    "build_receipt_inputs_and_outputs_checked": true,
+    "local_build_reproduced": true,
+    "verifier": {
+      "path": "services/ask-okf-mcp/scripts/verify-remote.mjs",
+      "sha256": "b275c6cb9eafa710010189778657b07196d3b82a41428ac7067f884595991400",
+      "matches_comparison_commit": false,
+      "classification": "working-tree-verifier"
+    }
+  },
+  "comparison_worker_sha256": "9bba73f65de283b60a73f5f7531746af585085e8c6ef32ddd411b0b788cd48f7",
+  "deployment_identity_note": "The remote health endpoint confirms the immutable bundle identity. The comparator Worker digest is not itself proof of the deployed Worker bytes; retain the hosting deployment receipt separately.",
+  "bundle_version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+  "binding": {
+    "index_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/efb05c66616a9cd4328a86cf412780fe7bc7cf0b/full-dmg/context/assembly-index.json",
+    "index_sha256": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54"
+  },
+  "snapshot": "dwp-full-dmg-2026-09-16-a26a93daa9f5",
+  "tool": "ask_okf",
+  "tool_discovery_canonical_sha256": "7e25b083110e8a52e99be8071182b59cd171cd3d9a601aef67884107d0b9f7ea",
+  "input_schema_matches": true,
+  "output_schema_matches": true,
+  "annotations": {
+    "readOnlyHint": true,
+    "destructiveHint": false,
+    "idempotentHint": true,
+    "openWorldHint": false
+  },
+  "health": {
+    "service": "ask-okf",
+    "version": "0.1.0",
+    "ready": true,
+    "bundle": "okf-dwp",
+    "bundle_version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+    "snapshot": "dwp-full-dmg-2026-09-16-a26a93daa9f5",
+    "index_sha256": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54",
+    "engine": "okf-context-assembly.v1"
+  },
+  "cases": [
+    {
+      "id": "imprisonment",
+      "question_sha256": "59fc2d44d13d10dea1d4438623af9170543eb5de8c428b995a78b520b889c8d9",
+      "context_id": "urn:sha256:283cddceca09958b96949527280ea14775de5f26d092c939cacfaa545500e80e",
+      "package_canonical_sha256": "a21f10e374f32a63a541af9050aeeab15f3ca62689e2c6e3a746424e70a2c9ee",
+      "package_json_sha256": "fa7c54306c5ab43cdd70539c49277e5d5a3ed3a1ac321f2df742e3da22b24280",
+      "package_bytes": 487506,
+      "evidence_status": "sufficient",
+      "selected_records": 52,
+      "selected_relationships": 127,
+      "missing_evidence_codes": [],
+      "truncated": false,
+      "duration_ms": 396,
+      "full_package_matches_direct_engine": true,
+      "text_matches_structured_content": true,
+      "model_answer_present": false
+    },
+    {
+      "id": "hospital",
+      "question_sha256": "17bdb138cd3f0640fc5add36eb1ebd2282c35a2b88d0d79d3775a2c597f4be29",
+      "context_id": "urn:sha256:8908ea39720333dd8b580efd48c0f3d6d7892d7f64d0ead2a815e3ab3b9770ac",
+      "package_canonical_sha256": "c740fac7e883ddd7383833a02b23a30b3134321cbcf18ce3256b40cfb1de2153",
+      "package_json_sha256": "509523ccc497b03a008b6f57461f310b02452cd5a141d634e6386441007d1bef",
+      "package_bytes": 444815,
+      "evidence_status": "insufficient",
+      "selected_records": 50,
+      "selected_relationships": 115,
+      "missing_evidence_codes": [
+        "no_evidence_requirements",
+        "uncovered_resolved_concept",
+        "unresolved_terms"
+      ],
+      "truncated": false,
+      "duration_ms": 181,
+      "full_package_matches_direct_engine": true,
+      "text_matches_structured_content": true,
+      "model_answer_present": false
+    }
+  ],
+  "passed": true,
+  "limitations": [
+    "This official SDK client verification does not prove ChatGPT or Voice integration."
+  ]
+}

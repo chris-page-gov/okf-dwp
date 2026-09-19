@@ -1,0 +1,357 @@
+{
+  "schema": "okf-bounded-remote-mcp-verification.v1",
+  "captured_at": "2026-09-19T15:26:16.593Z",
+  "endpoint": "https://ask-okf.crpage.chatgpt.site/okf/mcp",
+  "client": {
+    "name": "@modelcontextprotocol/client",
+    "version": "2.0.0",
+    "protocol": "2026-07-28"
+  },
+  "comparison_source_commit": "9ee4da64283e119aadde457128ced6291c30bcb9",
+  "comparison_assurance_receipt_sha256": "ba229f354fcf9200d3542c4b02c6fe70a90ed6746ab199973f3b69994c035299",
+  "bundle_version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+  "binding": {
+    "index_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/efb05c66616a9cd4328a86cf412780fe7bc7cf0b/full-dmg/context/assembly-index.json",
+    "index_sha256": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54"
+  },
+  "other_budget_values": {
+    "max_nodes": 64,
+    "max_relationships": 128,
+    "max_depth": 6
+  },
+  "default_service_budget_unchanged": true,
+  "adapter_summary": false,
+  "observations": [
+    "At 32768 bytes imprisonment returns an empty metadata_budget failure; hospital retains concepts but no evidence pages.",
+    "At 85000 bytes both retain whole evidence pages; both remain insufficient and truncated.",
+    "At 98304 bytes both retain evidence; imprisonment package remains insufficient and hospital does not gain hospital-specific coverage.",
+    "Transport parity does not prove ChatGPT ingestion. Smaller packages are demonstrative boundaries, not complete answers.",
+    "Local probe at 131072 bytes returned empty imprisonment metadata_budget failure; budget behaviour is not monotonic. No engine changes were made."
+  ],
+  "results": [
+    {
+      "id": "imprisonment",
+      "budget": {
+        "max_bytes": 32768
+      },
+      "context_id": "urn:sha256:118c29e614463b2460d4f334022110e62868ccb1d61f176c8ac752310c67d625",
+      "evidence_status": "insufficient",
+      "package_bytes": 1610,
+      "mcp_response_bytes": 3534,
+      "records": 0,
+      "relationships": 0,
+      "evidence_records": [],
+      "truncated": true,
+      "missing_evidence_codes": [
+        "metadata_budget"
+      ],
+      "unresolved_terms": [],
+      "full_package_matches_direct_engine": true,
+      "text_matches_structured_content": true,
+      "package_canonical_sha256": "865a90de83d998616d6e5cb1abe538e985222b89fa5a05e14f87d157ff279c65",
+      "files": {
+        "input": {
+          "path": "budget-32768/imprisonment.input.json",
+          "sha256": "3186b5264b6ee6de05a06e6b5488a7ea6e2793274a549250ffe6a703b3582467",
+          "bytes": 316
+        },
+        "package": {
+          "path": "budget-32768/imprisonment.context.json",
+          "sha256": "616981ebd62b287348d04fe5e22bec4bcc20fbe2c643652f19dc001cd35002e5",
+          "bytes": 1611
+        },
+        "response": {
+          "path": "budget-32768/imprisonment.mcp-response.json",
+          "sha256": "746c3ff07de0daa9f475e3bc589feef6a91cc8fa44e2694beaabfec00ce85f08",
+          "bytes": 3534
+        }
+      }
+    },
+    {
+      "id": "hospital",
+      "budget": {
+        "max_bytes": 32768
+      },
+      "context_id": "urn:sha256:9fd8b81a090b97977a34558c6fda5154457123ccea1b8e818c2a26b93faa05d3",
+      "evidence_status": "insufficient",
+      "package_bytes": 31017,
+      "mcp_response_bytes": 63978,
+      "records": 8,
+      "relationships": 0,
+      "evidence_records": [],
+      "truncated": true,
+      "missing_evidence_codes": [
+        "no_evidence_requirements",
+        "uncovered_resolved_concept",
+        "unresolved_terms"
+      ],
+      "unresolved_terms": [
+        "admitted",
+        "amount",
+        "applicable",
+        "changes",
+        "dwp",
+        "hospital"
+      ],
+      "full_package_matches_direct_engine": true,
+      "text_matches_structured_content": true,
+      "package_canonical_sha256": "f8a76edb1f7396e76d2a87ca155684486feea46e24f6c0d31d7fdacb819d9c73",
+      "files": {
+        "input": {
+          "path": "budget-32768/hospital.input.json",
+          "sha256": "f188ddf816a636e84dd80c82033371d3a16ddcd175568254d7994d5261006497",
+          "bytes": 342
+        },
+        "package": {
+          "path": "budget-32768/hospital.context.json",
+          "sha256": "92314989e0c7c7084d06d6440cf11586e4abc982e23c95af7133889f6ecd1168",
+          "bytes": 31018
+        },
+        "response": {
+          "path": "budget-32768/hospital.mcp-response.json",
+          "sha256": "8280764093e1750e99ee9cc53afc0c2a0925930c58e40914b89e715bd9d6c0b0",
+          "bytes": 63978
+        }
+      }
+    },
+    {
+      "id": "imprisonment",
+      "budget": {
+        "max_bytes": 85000
+      },
+      "context_id": "urn:sha256:ce62004e745a5df68dec17666d7ab8f8dfa44a0acd97e5ce89d8434511c6cd79",
+      "evidence_status": "insufficient",
+      "package_bytes": 82299,
+      "mcp_response_bytes": 168476,
+      "records": 10,
+      "relationships": 11,
+      "evidence_records": [
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+          "label": "DMG Vol 3 Ch 12: Imprisonment — PDF page 3"
+        }
+      ],
+      "truncated": true,
+      "missing_evidence_codes": [
+        "missing_required_evidence"
+      ],
+      "unresolved_terms": [],
+      "full_package_matches_direct_engine": true,
+      "text_matches_structured_content": true,
+      "package_canonical_sha256": "5c29737bdb4ca0447e9819f5f7e77f35e625df1533ab59c1aa6b839416d15e27",
+      "files": {
+        "input": {
+          "path": "budget-85000/imprisonment.input.json",
+          "sha256": "99e35fd552a805818971d7aa8322fdda00c6e15f9cdc51a7d10b3fcdcf12132e",
+          "bytes": 316
+        },
+        "package": {
+          "path": "budget-85000/imprisonment.context.json",
+          "sha256": "bbfb376d9c6bd7341b1b3262d66a8b191c79b9ba63dc05a90fbaaf04ed7fc554",
+          "bytes": 82300
+        },
+        "response": {
+          "path": "budget-85000/imprisonment.mcp-response.json",
+          "sha256": "a1424d59e2eb2691b63af6e61cf03273df0b2f9040fe28f98ac8309257794369",
+          "bytes": 168476
+        }
+      }
+    },
+    {
+      "id": "hospital",
+      "budget": {
+        "max_bytes": 85000
+      },
+      "context_id": "urn:sha256:44e324d0d01f00957d35251674268fee611157a36052be568d949336348fa0cf",
+      "evidence_status": "insufficient",
+      "package_bytes": 83309,
+      "mcp_response_bytes": 170913,
+      "records": 12,
+      "relationships": 19,
+      "evidence_records": [
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+          "label": "DMG Vol 3 Ch 12: Imprisonment — PDF page 3"
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0037",
+          "label": "DMG Vol 4 Ch 24: Special cases — PDF page 37"
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0129",
+          "label": "DMG Vol 8 Ch 41: ESA conditions of entitlement  — PDF page 129"
+        }
+      ],
+      "truncated": true,
+      "missing_evidence_codes": [
+        "no_evidence_requirements",
+        "uncovered_resolved_concept",
+        "unresolved_terms"
+      ],
+      "unresolved_terms": [
+        "admitted",
+        "amount",
+        "applicable",
+        "changes",
+        "dwp",
+        "hospital"
+      ],
+      "full_package_matches_direct_engine": true,
+      "text_matches_structured_content": true,
+      "package_canonical_sha256": "953130331c5d86bd8577a79d96096acf994b1bba2c504dcabc4559100656b212",
+      "files": {
+        "input": {
+          "path": "budget-85000/hospital.input.json",
+          "sha256": "134c2c7f4c6b2ecb88c6e8fd0e714d5b8cc4f79b802b2df192e2203c00d40177",
+          "bytes": 342
+        },
+        "package": {
+          "path": "budget-85000/hospital.context.json",
+          "sha256": "a735139f78bd7db5119a331f632d1de9835628fc5000e770eb562c543b07a675",
+          "bytes": 83310
+        },
+        "response": {
+          "path": "budget-85000/hospital.mcp-response.json",
+          "sha256": "ef327e45f874b8079e714d0bdc387d920d746cfa248450864037ca84480a76c4",
+          "bytes": 170913
+        }
+      }
+    },
+    {
+      "id": "imprisonment",
+      "budget": {
+        "max_bytes": 98304
+      },
+      "context_id": "urn:sha256:269eb8a525f4fa2df34bc79df9024ba0e2a91a6da2a1081d5d29429a44005017",
+      "evidence_status": "insufficient",
+      "package_bytes": 82299,
+      "mcp_response_bytes": 168476,
+      "records": 10,
+      "relationships": 11,
+      "evidence_records": [
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+          "label": "DMG Vol 3 Ch 12: Imprisonment — PDF page 3"
+        }
+      ],
+      "truncated": true,
+      "missing_evidence_codes": [
+        "missing_required_evidence"
+      ],
+      "unresolved_terms": [],
+      "full_package_matches_direct_engine": true,
+      "text_matches_structured_content": true,
+      "package_canonical_sha256": "fbf290409846e1890946db5a29baddf3f4f33488aff34e6816a4c4a5f2b82fc7",
+      "files": {
+        "input": {
+          "path": "budget-98304/imprisonment.input.json",
+          "sha256": "a32d4d3c8ce7100651bb0a7f8ebf6027ea5a5767f19060a56408768f9d481b20",
+          "bytes": 316
+        },
+        "package": {
+          "path": "budget-98304/imprisonment.context.json",
+          "sha256": "2927f863e0099d88f9b5530c10022d8bfe350c175add8547c1751931e24c4d29",
+          "bytes": 82300
+        },
+        "response": {
+          "path": "budget-98304/imprisonment.mcp-response.json",
+          "sha256": "cea60f887847fcee28e94f7828e420ca2e4b1d82ce8de24e2cd0663f0857e592",
+          "bytes": 168476
+        }
+      }
+    },
+    {
+      "id": "hospital",
+      "budget": {
+        "max_bytes": 98304
+      },
+      "context_id": "urn:sha256:f9de2862a0140fb713513864e0a4eae3de47da612144f4cd0516c54e03113f08",
+      "evidence_status": "insufficient",
+      "package_bytes": 97949,
+      "mcp_response_bytes": 200798,
+      "records": 14,
+      "relationships": 22,
+      "evidence_records": [
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+          "label": "DMG Vol 3 Ch 12: Imprisonment — PDF page 3"
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0037",
+          "label": "DMG Vol 4 Ch 24: Special cases — PDF page 37"
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0129",
+          "label": "DMG Vol 8 Ch 41: ESA conditions of entitlement  — PDF page 129"
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0035",
+          "label": "DMG Vol 9 Ch 54: Special cases — PDF page 35"
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0041",
+          "label": "DMG Vol 4 Ch 24: Special cases — PDF page 41"
+        }
+      ],
+      "truncated": true,
+      "missing_evidence_codes": [
+        "no_evidence_requirements",
+        "uncovered_resolved_concept",
+        "unresolved_terms"
+      ],
+      "unresolved_terms": [
+        "admitted",
+        "amount",
+        "applicable",
+        "changes",
+        "dwp",
+        "hospital"
+      ],
+      "full_package_matches_direct_engine": true,
+      "text_matches_structured_content": true,
+      "package_canonical_sha256": "a26860b8df3fcfaa019483bd8773c6425cff775343a70f5b2bb2165daeb2943f",
+      "files": {
+        "input": {
+          "path": "budget-98304/hospital.input.json",
+          "sha256": "103e1f1745c98619ace254d13997ca2c07cfdd6b7c866b5254498a47afa3c2fe",
+          "bytes": 342
+        },
+        "package": {
+          "path": "budget-98304/hospital.context.json",
+          "sha256": "0c1b8e3b4d7025b1c1d8dcd72818b9f71d7c6dd833e71e1dab8bd2afe8cb2da8",
+          "bytes": 97950
+        },
+        "response": {
+          "path": "budget-98304/hospital.mcp-response.json",
+          "sha256": "4bb94b4f97ac7fe6ceb44b52f49357be652a8a5dae7e93d67d8219c76603f688",
+          "bytes": 200798
+        }
+      }
+    }
+  ],
+  "passed": true,
+  "inputs": {
+    "core_sha256": "4be756c3695d63ef05ec8073fede8833919d73cbb3ca7d0473fc2ac65bafb714",
+    "offline_checker_sha256": "46b02730930681d069dfbac03141868199f05190cc7065adef898023b491f6a8",
+    "cases": {
+      "imprisonment": {
+        "path": "evaluation/context-assembly/imprisonment-case.json",
+        "sha256": "9eab17eb3a01fb8e3e7137d4440386da752d31e1f6a746713a02cd1ebe9108fd"
+      },
+      "hospital": {
+        "path": "evaluation/remote-mcp/hospital-case.json",
+        "sha256": "73e64cc295735bce164ea3d7c2dd6c69579d9fed09da9420d2ce2d1cd48dd2f5"
+      }
+    }
+  },
+  "replay_command": "node --experimental-strip-types scripts/check_bounded_remote_mcp.mjs --explorer-root ../okf-explorer",
+  "capture": {
+    "response_representation": "fetch-decoded-http-response-text",
+    "method": "The SDK fetch hook saved await response.clone().text() from the actual HTTPS Response before returning that Response to the SDK.",
+    "reconstructed_jsonrpc_envelope": false,
+    "limitations": [
+      "Fetch may decode HTTP compression; these files are decoded HTTP response bodies, not compressed TCP wire bytes.",
+      "Input files contain the supplied tool arguments, not a raw HTTP request. Context files are the unmodified structured package serialised as JSON."
+    ]
+  }
+}

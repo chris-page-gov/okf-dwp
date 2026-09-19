@@ -1,0 +1,49 @@
+{
+  "schema": "okf-dwp-remote-mcp-deployment.v1",
+  "recorded_at": "2026-09-19T15:19:38.113Z",
+  "status": "public-test-deployment-with-https-protocol-acceptance",
+  "endpoint": "https://ask-okf.crpage.chatgpt.site/okf/mcp",
+  "transport": "MCP over HTTPS",
+  "authentication": "anonymous-read-only-public-bundle",
+  "hosting": {
+    "provider": "OpenAI Sites",
+    "project_id": "appgprj_6aaa652874f48191a8281478fe48e936",
+    "deployment_id": "appgdep_6aaea5a30a4081918f4093d11a7743e9",
+    "version_id": "appgprj_6aaa652874f48191a8281478fe48e936~appgver_71a73439e62881918bac32b4e66d35a3"
+  },
+  "implementation": {
+    "hosting_source_commit": "623985aa372a797ff9eb618e78cb810b2de0ba23",
+    "upstream_explorer_commit": "9ee4da64283e119aadde457128ced6291c30bcb9",
+    "worker_sha256": "9bba73f65de283b60a73f5f7531746af585085e8c6ef32ddd411b0b788cd48f7",
+    "core_sha256": "4be756c3695d63ef05ec8073fede8833919d73cbb3ca7d0473fc2ac65bafb714"
+  },
+  "approved_bundle": {
+    "id": "okf-dwp",
+    "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+    "binding": {
+      "index_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/efb05c66616a9cd4328a86cf412780fe7bc7cf0b/full-dmg/context/assembly-index.json",
+      "index_sha256": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54"
+    }
+  },
+  "acceptance": {
+    "raw_http_receipt": "validation/remote-mcp/receipt.json",
+    "raw_http_receipt_sha256": "36fa23829b5be906a1517f0d93d905673ce7f710e617660d4d0aa482878b09b3",
+    "chatgpt_status": "tests-closed; actual-pro-connection-and-bounded-source-access-succeeded; full-default-model-access-and-full-answer-acceptance-not-established",
+    "voice_status": "button-present; no-voice-tool-call-tested",
+    "sdk_receipt": "validation/remote-mcp/sdk-receipt.json",
+    "sdk_receipt_sha256": "ba229f354fcf9200d3542c4b02c6fe70a90ed6746ab199973f3b69994c035299",
+    "sdk_result": "both-cases-passed-exact-core-parity",
+    "chatgpt_observation": "validation/remote-mcp/chatgpt-observation.json",
+    "bounded_receipt": "validation/remote-mcp/bounded/receipt.json",
+    "bounded_receipt_sha256": "301a0b2fda9a20ec6ca355236b99e68a0e3bc754ef4900fa5de223f0778b6cae",
+    "bounded_result": "six-https-packages-match-unchanged-core; all-insufficient-and-truncated",
+    "chatgpt_observation_sha256": "8c5a0c4cbd0d7d9598dd995f8419cb689827c2961da2b1a86ed7ac81569b24c7"
+  },
+  "limitations": [
+    "Independent experimental publication; not an official DWP service.",
+    "Deployment identifiers record the Sites release created during this task; acceptance is separately bound to the actual HTTPS calls.",
+    "Protocol-client acceptance alone does not establish ChatGPT or Voice invocation.",
+    "No current entitlement decision, specialist legal review or production service-level promise.",
+    "The complete default imprisonment tool result was truncated for the ChatGPT model despite the service package reporting no assembly-budget truncation."
+  ]
+}

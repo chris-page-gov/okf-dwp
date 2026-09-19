@@ -1,0 +1,35 @@
+{
+  "schema": "okf-context-evaluation-case.v1",
+  "id": "dwp/hospital-four-benefit-evidence-gap",
+  "title": "Hospital admission exposes missing governed context",
+  "question": "A claimant is admitted to hospital. Explain the effect on JSA, Income Support, State Pension Credit and ESA, distinguishing entitlement, payment and changes in amount, and trace each conclusion to the applicable DWP guidance.",
+  "description": "A source-coverage failure case for the immutable imprisonment context index. Passing means the tool exposes its lack of a hospital evidence profile and leaves answer generation to the client. It does not establish a hospital answer.",
+  "scope": "Frozen OKF-DWP context index 38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54, whose declared profiles concern legacy DMG custody. The wider acquired corpus is not automatically Ask context.",
+  "fixture_kind": "source-backed",
+  "expected": {
+    "resolved_concepts": [],
+    "selected_concepts": [],
+    "sources": [],
+    "assertions": [],
+    "paths": [],
+    "evidence": [],
+    "forbidden_records": [],
+    "requirements": [],
+    "issues": [
+      { "area": "missing_evidence", "code": "no_evidence_requirements", "ids": [] },
+      { "area": "missing_evidence", "code": "uncovered_resolved_concept", "ids": ["https://chris-page-gov.github.io/okf-dwp/id/term/benefit-entitlement"] },
+      { "area": "missing_evidence", "code": "unresolved_terms", "ids": [] }
+    ],
+    "boundaries": [],
+    "evidence_status": "insufficient",
+    "budget_truncated": false,
+    "unresolved_terms": ["admitted", "amount", "applicable", "changes", "dwp", "hospital"]
+  },
+  "limitations": [
+    "The selected custody records do not support ordinary hospital-admission conclusions. Their presence is not source coverage for this question.",
+    "Existing hospital concepts in the broader bundle are outside the current context index. A separate evidence modelling and source reconciliation stage is needed.",
+    "The evaluator additionally requires zero applicable requirements, ten missing-evidence entries, unchanged scope and limitations, no model answer, and exact equality with the reusable core.",
+    "Expected counts and unresolved terms describe this exact snapshot, not all future OKF-DWP versions.",
+    "No specialist legal review, current entitlement decision or ChatGPT/Voice success is established by this case alone."
+  ]
+}
