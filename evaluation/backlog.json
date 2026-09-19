@@ -140,36 +140,42 @@
     {
       "id": "DWP-BL-008",
       "title": "Progressive evidence manifests and exact reads",
-      "status": "in_progress",
+      "status": "recorded_complete",
       "priority": "P0",
       "depends_on": [
         "DWP-BL-004"
       ],
       "owner_role": "Reusable Explorer and MCP maintainer",
       "evidence": [
-        "docs/methodology.md"
+        "docs/compact-evidence-demo.md",
+        "validation/compact-delivery/deployment.json",
+        "validation/compact-delivery/sdk-receipt.json",
+        "validation/compact-client/verification.json"
       ],
       "acceptance_checks": [
         "Unchanged ask_okf preserved; small manifest plus paginated exact reads; original version/question/budget/context identity replayed; stale/unknown IDs rejected; all slices reconstruct exactly; actual host check."
       ],
-      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+      "scope_note": "Public service 0.3.0 and official SDK verification establish bounded delivery and reconstruction at the recorded runtime commit. Local Claude client verified separately; public review-browser and ChatGPT/Voice journeys retain their own gates."
     },
     {
       "id": "DWP-BL-009",
       "title": "Whole-corpus conceptual navigation",
-      "status": "in_progress",
+      "status": "recorded_complete",
       "priority": "P0",
       "depends_on": [
         "DWP-BL-004"
       ],
       "owner_role": "Navigation producer and Explorer maintainer",
       "evidence": [
-        "docs/ontology-use.md"
+        "full-dmg/okf-review-context.json",
+        "validation/navigation/build.json",
+        "validation/navigation/browser/README.md",
+        "evaluation/staff-review/manifest.json"
       ],
       "acceptance_checks": [
         "All 19,090 pages accounted for by source/benefit/circumstance/topic facets with unknown explicit; authored concepts and literal classifications distinguished; actual Reader/Ask journeys checked."
       ],
-      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+      "scope_note": "Producer accounting and the exact local Explorer candidate are verified. Literal classifications are discovery-only; this does not claim public Explorer deployment or complete domain semantics."
     },
     {
       "id": "DWP-BL-010",
@@ -292,7 +298,7 @@
     {
       "id": "DWP-BL-017",
       "title": "Portable discovery-first departmental workflow",
-      "status": "in_progress",
+      "status": "recorded_complete",
       "priority": "P1",
       "depends_on": [],
       "owner_role": "Methodology author",
@@ -303,7 +309,7 @@
       "acceptance_checks": [
         "Template researches departmental terms, ontology and legislation before assertions; pinned consumer/profile and fixture gates; no HMRC acquisition or tax-answer claim."
       ],
-      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+      "scope_note": "The documented method and reusable HMRC discovery brief are complete for this handover. No HMRC source acquisition or completed HMRC domain profile is claimed."
     },
     {
       "id": "DWP-BL-018",
@@ -378,7 +384,7 @@
     {
       "id": "DWP-BL-022",
       "title": "Retrospective and visible multi-agent change history",
-      "status": "in_progress",
+      "status": "recorded_complete",
       "priority": "P1",
       "depends_on": [],
       "owner_role": "Integration and documentation owners",
@@ -390,7 +396,7 @@
       "acceptance_checks": [
         "Visible changelog separates released/in progress; task ledger states ownership/files/dependencies/decisions/test evidence/handover; factual retrospective links receipts."
       ],
-      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+      "scope_note": "The dated retrospective, visible changelog and scoped multi-agent ledger are recorded. Subsequent integration/publication observations must still be appended; this is not perpetual release assurance."
     }
   ]
 }

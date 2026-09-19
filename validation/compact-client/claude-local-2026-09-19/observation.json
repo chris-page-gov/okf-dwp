@@ -1,0 +1,56 @@
+{
+  "schema": "okf-compact-client-observation.v1",
+  "started_at": "2026-09-19T20:15:07.234584+00:00",
+  "finished_at": "2026-09-19T20:15:20.286288+00:00",
+  "elapsed_seconds": 13.052,
+  "cli_version": "2.1.245",
+  "provider_surface": "existing Claude Code subscription",
+  "model_override": null,
+  "reported_model_usage_entries": [
+    "claude-haiku-4-5-20251001",
+    "claude-opus-5"
+  ],
+  "builtin_tools": [],
+  "allowed_mcp_tools": [
+    "ask_okf_manifest",
+    "read_okf_evidence"
+  ],
+  "session_persistence": false,
+  "customisations": "disabled-safe-mode",
+  "endpoint": "http://127.0.0.1:8787/okf/mcp",
+  "capture": "Actual local HTTP request/response bytes through a fixed loopback proxy; no reconstructed envelopes.",
+  "local_only": true,
+  "exit_code": 0,
+  "model_is_error": false,
+  "question": "What happens to your benefits if you go abroad?",
+  "files": {
+    "system-prompt.txt": {
+      "sha256": "6a16f94c4f6bd7a8835478992dda3745d81de001eb5a772f97ced6d254b81625",
+      "bytes": 399
+    },
+    "prompt.txt": {
+      "sha256": "84ebc1187c3d2724111d5f1067958956efc46ba0be55ec02df2217e6595d4b92",
+      "bytes": 1308
+    },
+    "model-output.json": {
+      "sha256": "498649193372185ab5fb170946bf0214eaff783d96218658dacd2a13e36911dc",
+      "bytes": 3705
+    }
+  },
+  "calls": [],
+  "human_review": "pending",
+  "parity_verification": "not-applicable-no-tool-response",
+  "limitations": [
+    "Local client observation only; no claim of public deployment, legal correctness, Voice support or a fair comparative model benchmark.",
+    "Only two selected source records requested; this is not a complete benefits answer.",
+    "Provider cost fields are not verified subscription charges or savings."
+  ],
+  "status": "failed-no-real-tool-call",
+  "observed_failure": {
+    "http_requests": 0,
+    "model_fabricated_context_id": "ctx_01JD7KQW9X2M4NPVR8T3YHZB6E",
+    "model_fabricated_status": "PARTIAL_EVIDENCE",
+    "assessment": "The model narrated a tool call and generated a catalogue with no actual MCP traffic. Those values are model output, not returned evidence.",
+    "configuration_cause": "Claude safe mode disables MCP servers, including this explicitly supplied configuration."
+  }
+}

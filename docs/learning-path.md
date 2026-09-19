@@ -281,3 +281,12 @@ legal correctness nor specialist acceptance.
 
 Return to the [project overview](../README.md), the [glossary](glossary.md) or the
 [presentation script](remote-mcp-demo.md) according to your next task.
+
+## Read smaller pieces of the same evidence
+
+The [compact-evidence demonstration](compact-evidence-demo.md) introduces a
+catalogue, exact reads and a human replay link. The catalogue tells you what was
+selected; it is not the source passage. Read diagnostics and provenance before
+using a passage. A complete delivery still cannot turn insufficient evidence
+into a complete answer. Public SDK checks and local Claude observations are
+recorded separately from specialist answer review and Voice support.

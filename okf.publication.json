@@ -953,7 +953,9 @@
         "evaluation/answer-review/**",
         "scripts/evaluate_fixed_answers.py",
         "scripts/check_answer_review.py",
-        "scripts/test_fixed_answers.py"
+        "scripts/test_fixed_answers.py",
+        "scripts/check_compact_client.py",
+        "scripts/test_compact_client.py"
       ],
       "command_ids": [
         "private-input-check",
@@ -962,7 +964,9 @@
         "contract-controls",
         "answer-review-replay",
         "answer-review-integrity",
-        "answer-review-controls"
+        "answer-review-controls",
+        "compact-client-check",
+        "compact-client-controls"
       ]
     },
     {
@@ -1480,6 +1484,32 @@
         ],
         "command": "uv run --locked python scripts/test_fixed_answers.py",
         "source": "evaluation/answer-review/README.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "compact-client-check",
+        "kind": "check",
+        "planes": [
+          "release"
+        ],
+        "command": "uv run --locked python scripts/check_compact_client.py",
+        "source": "validation/compact-client/README.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "compact-client-controls",
+        "kind": "test",
+        "planes": [
+          "release"
+        ],
+        "command": "uv run --locked python scripts/test_compact_client.py",
+        "source": "validation/compact-client/README.md",
         "review_status": "unreviewed",
         "network": "none",
         "mutates": "none",

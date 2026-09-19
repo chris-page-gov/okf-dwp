@@ -10,8 +10,10 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased — in progress
 
-Work on `codex/evidence-review-navigation` is not yet a new published acceptance
-result. The dated observations below keep their original scope.
+The repository candidate on `codex/evidence-review-navigation` is still being
+integrated. Public service 0.3.0 has its own hosting and SDK observations below;
+this does not claim the new Explorer navigation is publicly deployed. Earlier
+dated observations keep their original scope.
 
 ### Added
 
@@ -33,12 +35,21 @@ result. The dated observations below keep their original scope.
   quotation failures, the custody citation checks and the no-evidence abstention.
   Human claim review remains pending; these are not engineering or legal passes.
 
+- A separate actual Claude local MCP observation: seven compact-tool calls,
+  exact replay of diagnostics and two source records, and offline corruption
+  controls. Preserve the preceding zero-call attempt and fabricated model
+  catalogue as a failure; do not conflate transport with answer quality.
+
 ### Changed
 
 - Make this changelog directly visible from the main and beginner guides.
-- Progressive evidence manifests/reads, a human review route and conceptual
-  navigation are being integrated. Their source, consumer and client acceptance
-  must be recorded before this section claims deployment or completion.
+- Public service 0.3.0 exposes the unchanged `ask_okf` plus an evidence catalogue,
+  exact bounded reads and a human replay route. The official SDK verifies three
+  unchanged full packages, all five read sections, exact reconstruction of the
+  31,312-byte abroad package and three fail-closed controls. Hosting and SDK
+  receipts are separate from browser, AI-answer and public Explorer acceptance.
+- The exact local Explorer navigation candidate passed its recorded browser
+  journeys. The new public Explorer deployment remains a separate gate.
 
 ## Staff questions, ADM acquisition and repository governance — 19 September 2026
 

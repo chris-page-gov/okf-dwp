@@ -83,6 +83,7 @@ jobs:
           uv run --locked python scripts/check_backlog.py
           uv run --locked python scripts/evaluate_fixed_answers.py
           uv run --locked python scripts/check_answer_review.py
+          uv run --locked python scripts/check_compact_client.py
       - name: Verify source date and reference discovery
         run: uv run --locked python scripts/discover_full_dmg_evidence.py --check
       - name: Verify literal reference location reconciliation

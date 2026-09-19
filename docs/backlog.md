@@ -24,8 +24,8 @@ to bypass source, rights or review boundaries.
 | DWP-BL-005 | P0 | Neutral domain concepts and meaning review | `needs_domain_review` | DWP-BL-001, DWP-BL-004 |
 | DWP-BL-006 | P0 | Legislation, regulations and case-law reconciliation | `not_started` | DWP-BL-001 |
 | DWP-BL-007 | P0 | Task-specific evidence completeness profiles | `needs_domain_review` | DWP-BL-001, DWP-BL-005, DWP-BL-006 |
-| DWP-BL-008 | P0 | Progressive evidence manifests and exact reads | `in_progress` | DWP-BL-004 |
-| DWP-BL-009 | P0 | Whole-corpus conceptual navigation | `in_progress` | DWP-BL-004 |
+| DWP-BL-008 | P0 | Progressive evidence manifests and exact reads | `recorded_complete` | DWP-BL-004 |
+| DWP-BL-009 | P0 | Whole-corpus conceptual navigation | `recorded_complete` | DWP-BL-004 |
 | DWP-BL-010 | P0 | Fixed-evidence claim-level model trials | `needs_domain_review` | DWP-BL-004 |
 | DWP-BL-011 | P1 | Source dates and provenance presentation | `recorded_complete` | — |
 | DWP-BL-012 | P1 | CPAG substantive content access | `needs_external_permission` | — |
@@ -33,12 +33,12 @@ to bypass source, rights or review boundaries.
 | DWP-BL-014 | P2 | Calculator comparison | `not_started` | DWP-BL-001, DWP-BL-007 |
 | DWP-BL-015 | P2 | CASA framework assessment | `not_started` | DWP-BL-003 |
 | DWP-BL-016 | P0 | ChatGPT Voice and room audio rehearsal | `not_started` | — |
-| DWP-BL-017 | P1 | Portable discovery-first departmental workflow | `in_progress` | — |
+| DWP-BL-017 | P1 | Portable discovery-first departmental workflow | `recorded_complete` | — |
 | DWP-BL-018 | P1 | Fair model and affordability benchmark | `not_started` | DWP-BL-007, DWP-BL-010 |
 | DWP-BL-019 | P1 | Broader accessibility and cross-browser review | `not_started` | DWP-BL-009 |
 | DWP-BL-020 | P1 | Source refresh and drift process | `not_started` | DWP-BL-004, DWP-BL-006 |
 | DWP-BL-021 | P0 | Canonical contracts and protected publication | `recorded_complete` | — |
-| DWP-BL-022 | P1 | Retrospective and visible multi-agent change history | `in_progress` | — |
+| DWP-BL-022 | P1 | Retrospective and visible multi-agent change history | `recorded_complete` | — |
 
 ## Acceptance before closure
 
@@ -48,8 +48,9 @@ Each item has an owner role, explicit acceptance checks and evidence paths in
 and consumer versions, and any remaining limits. Model agreement does not close
 a domain-review gate. Keep partial results and failed attempts.
 
-The current engineering sequence is progressive evidence delivery and conceptual
-navigation, followed by actual consumer/client verification. Independent answer
+The recorded delivery and navigation milestones have scoped receipts: public
+service/SDK, local Claude, and exact local Explorer. Public-browser deployment
+checks remain separately recorded; those milestones do not close domain review. Independent answer
 and applicability review remain separate. Legislation integration must research
 provision/version identities before adding legal implications. A benefits engine
 and operational application/change journeys depend on those reviews.

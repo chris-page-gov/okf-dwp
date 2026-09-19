@@ -1,0 +1,281 @@
+{
+  "schema": "okf-compact-client-observation.v1",
+  "started_at": "2026-09-19T20:17:39.045716+00:00",
+  "finished_at": "2026-09-19T20:18:19.192939+00:00",
+  "elapsed_seconds": 40.147,
+  "cli_version": "2.1.245",
+  "provider_surface": "existing Claude Code subscription",
+  "model_override": null,
+  "reported_model_usage_entries": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-5"
+  ],
+  "builtin_tools": [],
+  "allowed_mcp_tools": [
+    "ask_okf_manifest",
+    "read_okf_evidence"
+  ],
+  "session_persistence": false,
+  "customisations": {
+    "settings_sources": [],
+    "disableAllHooks": true,
+    "autoMemoryEnabled": false,
+    "claudeMdExcludes": [
+      "**"
+    ],
+    "enabledPlugins": {},
+    "skills_disabled": true,
+    "managed_policy_unchanged": true
+  },
+  "endpoint": "http://127.0.0.1:8787/okf/mcp",
+  "capture": "Actual local HTTP request/response bytes through a fixed loopback proxy; no reconstructed envelopes.",
+  "local_only": true,
+  "exit_code": 0,
+  "model_is_error": false,
+  "question": "What happens to your benefits if you go abroad?",
+  "files": {
+    "system-prompt.txt": {
+      "sha256": "6a16f94c4f6bd7a8835478992dda3745d81de001eb5a772f97ced6d254b81625",
+      "bytes": 399
+    },
+    "prompt.txt": {
+      "sha256": "84ebc1187c3d2724111d5f1067958956efc46ba0be55ec02df2217e6595d4b92",
+      "bytes": 1308
+    },
+    "model-output.json": {
+      "sha256": "a1e258201019fceb794c061d70d8c10a0331b5e68ed679e86777b16c6e5a24ea",
+      "bytes": 6471
+    }
+  },
+  "calls": [
+    {
+      "sequence": 1,
+      "method": "server/discover",
+      "tool": null,
+      "request": {
+        "path": "01.request.json",
+        "sha256": "e1b7bc8140fcdd7893dd8d52f1a035ba6379725abd98ad51e260834111adc37b",
+        "bytes": 440
+      },
+      "response": {
+        "path": "01.response.txt",
+        "sha256": "13dee7e070c6d90967aaff927d9a22047bd8e600c3bfc50a865b98134ca3dfb6",
+        "bytes": 511,
+        "http_status": 200,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "sequence": 2,
+      "method": "subscriptions/listen",
+      "tool": null,
+      "request": {
+        "path": "02.request.json",
+        "sha256": "2577aae8c8c285f88f0eaa9713493419d9a15fd3ca69bad585ab72270d7b0c6e",
+        "bytes": 472
+      },
+      "response": {
+        "path": "02.response.txt",
+        "sha256": "782a4c9a0738ac1f15560b88735d40b9b9a14579025bf9043b49f8b59c0ff31a",
+        "bytes": 81,
+        "http_status": 400,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "sequence": 3,
+      "method": "tools/list",
+      "tool": null,
+      "request": {
+        "path": "03.request.json",
+        "sha256": "5e1d1d023f6bdffd7b4ea45ef8c4e8e23bd0d720ff27a44989e0b7713fac20c4",
+        "bytes": 411
+      },
+      "response": {
+        "path": "03.response.txt",
+        "sha256": "72cb0a8a3347a379924f67dc9ad32506ad4e00617113d3f7d027259c8a2d803b",
+        "bytes": 22034,
+        "http_status": 200,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "sequence": 4,
+      "method": "subscriptions/listen",
+      "tool": null,
+      "request": {
+        "path": "04.request.json",
+        "sha256": "956f080b1ba0b4f30e69b6b4378f7807b50d17f871d053320bb674608d31e481",
+        "bytes": 472
+      },
+      "response": {
+        "path": "04.response.txt",
+        "sha256": "782a4c9a0738ac1f15560b88735d40b9b9a14579025bf9043b49f8b59c0ff31a",
+        "bytes": 81,
+        "http_status": 400,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "sequence": 5,
+      "method": "tools/call",
+      "tool": "ask_okf_manifest",
+      "request": {
+        "path": "05.request.json",
+        "sha256": "b2283a854a6ed7a9ed1d36a8279c1ac15ffc0c0dae43b0eda46c56c183b85e25",
+        "bytes": 710
+      },
+      "response": {
+        "path": "05.response.txt",
+        "sha256": "1952308e378533d7e33bcf2ed8e1c5d3d6ae873c986cb34d4085d084b356110c",
+        "bytes": 12629,
+        "http_status": 200,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "sequence": 6,
+      "method": "subscriptions/listen",
+      "tool": null,
+      "request": {
+        "path": "06.request.json",
+        "sha256": "6235fe84ac0240661892514c4701c19ecda71c713b74a39a9018d48b78fe9dae",
+        "bytes": 472
+      },
+      "response": {
+        "path": "06.response.txt",
+        "sha256": "782a4c9a0738ac1f15560b88735d40b9b9a14579025bf9043b49f8b59c0ff31a",
+        "bytes": 81,
+        "http_status": 400,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "sequence": 7,
+      "method": "tools/call",
+      "tool": "read_okf_evidence",
+      "request": {
+        "path": "07.request.json",
+        "sha256": "663eb68fde8ee015c20c04f5dab827a7b1a88a0d69f25e4a9c4139eb2e4baa9e",
+        "bytes": 889
+      },
+      "response": {
+        "path": "07.response.txt",
+        "sha256": "7f65ff75f7a4919525fc3cfdf09fdfcf2bac41a79836f7948a31930766cb8f73",
+        "bytes": 17488,
+        "http_status": 200,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "sequence": 8,
+      "method": "subscriptions/listen",
+      "tool": null,
+      "request": {
+        "path": "08.request.json",
+        "sha256": "358bdf3cac861946329a99eefa372a578d94edfb261da614e8d91e16634641d0",
+        "bytes": 472
+      },
+      "response": {
+        "path": "08.response.txt",
+        "sha256": "782a4c9a0738ac1f15560b88735d40b9b9a14579025bf9043b49f8b59c0ff31a",
+        "bytes": 81,
+        "http_status": 400,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "sequence": 9,
+      "method": "tools/call",
+      "tool": "read_okf_evidence",
+      "request": {
+        "path": "09.request.json",
+        "sha256": "037c0ed560116663a1ebae9af7a2a7530f86ad9854400a32aaa097bb267b5913",
+        "bytes": 892
+      },
+      "response": {
+        "path": "09.response.txt",
+        "sha256": "ecf83a207189efeaa9db2616162ae76202636c53510bd9ee710fadd005c19a1c",
+        "bytes": 4646,
+        "http_status": 200,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "sequence": 10,
+      "method": "tools/call",
+      "tool": "read_okf_evidence",
+      "request": {
+        "path": "10.request.json",
+        "sha256": "7473d6155229eb5968ef4d1e063c5a65dc12023e999b3936bb64172a853fd0e9",
+        "bytes": 976
+      },
+      "response": {
+        "path": "10.response.txt",
+        "sha256": "a37d63d014d001018142cc6024a674bd637105d8caa0da9e32ae1fd67b8537ad",
+        "bytes": 5344,
+        "http_status": 200,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "sequence": 11,
+      "method": "tools/call",
+      "tool": "read_okf_evidence",
+      "request": {
+        "path": "11.request.json",
+        "sha256": "c1f0e94a6ca2c9294821f8f76406fca1877e392012c816cd30378e6ecad3c44b",
+        "bytes": 980
+      },
+      "response": {
+        "path": "11.response.txt",
+        "sha256": "457464024eb6d275716eb96fa158d060f7ce7e6aa7d41a575d6326792396aaa7",
+        "bytes": 6132,
+        "http_status": 200,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "sequence": 12,
+      "method": "tools/call",
+      "tool": "read_okf_evidence",
+      "request": {
+        "path": "12.request.json",
+        "sha256": "91a9a2917bea1934878ca5d9458514bf28332697f4b15747aa7db2ad97302614",
+        "bytes": 976
+      },
+      "response": {
+        "path": "12.response.txt",
+        "sha256": "1d73b32e92a745eb4e0ec2ff1005a3688718bfab4c13ee2dfa596f1af40353c7",
+        "bytes": 4094,
+        "http_status": 200,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "sequence": 13,
+      "method": "tools/call",
+      "tool": "read_okf_evidence",
+      "request": {
+        "path": "13.request.json",
+        "sha256": "4bf356314310ec46f165dd8e0a59cf811d17ae4ca4b109b11d37f33ee488b7e7",
+        "bytes": 980
+      },
+      "response": {
+        "path": "13.response.txt",
+        "sha256": "1d697cde769c5bc6790132159a661df8375db4573d5b7f52cb13d6a989161309",
+        "bytes": 6116,
+        "http_status": 200,
+        "content_type": "application/json"
+      }
+    }
+  ],
+  "human_review": "pending",
+  "parity_verification": "offline-exact-frozen-context-check-in-../verification.json",
+  "limitations": [
+    "Local client observation only; no claim of public deployment, legal correctness, Voice support or a fair comparative model benchmark.",
+    "Only two selected source records requested; this is not a complete benefits answer.",
+    "Provider cost fields are not verified subscription charges or savings."
+  ],
+  "status": "actual-local-tool-calls-observed"
+}

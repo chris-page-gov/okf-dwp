@@ -1,0 +1,69 @@
+{
+  "result": "## Evidence-Only Account: \"What happens to your benefits if you go abroad?\"\n\n**Context ID:** `urn:sha256:2cdfa5feb6310f58166d66e814bd3b2fbe2e9e146e25b25a65453b48e3dffabd`\n**Evidence status:** `insufficient` (declared by the service itself — no evidence requirements resolve this task; unresolved terms: \"abroad\", \"benefits\", \"go\", \"your\")\n**Review URL:** https://ask-okf.crpage.chatgpt.site/review/#eyJidW5kbGUiOiJva2YtZHdwIiwidmVyc2lvbiI6ImJmNTBlZjhkOTFiOWYxY2NjMmNiZGIzNTQxOThlYWU3NGM5ZWQ3NTIiLCJxdWVzdGlvbiI6IldoYXQgaGFwcGVucyB0byB5b3VyIGJlbmVmaXRzIGlmIHlvdSBnbyBhYnJvYWQ_IiwiYnVkZ2V0Ijp7Im1heF9ub2RlcyI6NjQsIm1heF9yZWxhdGlvbnNoaXBzIjoxMjgsIm1heF9kZXB0aCI6NiwibWF4X2J5dGVzIjozMjc2OH0sImNvbnRleHRfaWQiOiJ1cm46c2hhMjU2OjJjZGZhNWZlYjYzMTBmNTgxNjZkNjZlODE0YmQzYjJmYmUyZTllMTQ2ZTI1YjI1YTY1NDUzYjQ4ZTNkZmZhYmQifQ\n\n**Truncation limits:** Manifest budget `max_nodes:64, max_relationships:128, max_depth:6, max_bytes:32768`; package was truncated (`used_bytes:31312`) with 11 candidate items omitted by byte budget (e.g. DMG memo M-17-20, M-16-20, ADM memo 17-20, 08-26 further pages). Retrieval was itself truncated: only 16 of 2,452 lexically-matched candidates fit the fixed candidate limit.\n\n**Missing evidence:** `no_evidence_requirements`, `unresolved_task`, `unresolved_terms` — the service states \"No declared evidence requirements cover the resolved task. Completeness cannot be established\" and \"No public concept alias resolves this task.\"\n\nI inspected **only two selected records** (the first two of six returned in the catalogue), both marked `authority_class: derived`, `assertion_status: normalized`, and `review_status: unreviewed-specialist-review-required`.\n\n### Record 1 — ADM Chapter C2, PDF page 18 (PIP: International issues)\n- ID: `https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c2/0018`\n- Source: https://assets.publishing.service.gov.uk/media/6a16d30d1eb143220d8d28e6/admc2.pdf#page=18\n- Quote: *\"that claimant is to be treated as present in GB\"* when abroad \"1.1 a member of Her Majesty's forces or 1.2 an aircraft worker or 1.3. a mariner or 2. in employment prescribed for the purposes of specific legislation 2 in connection with continental shelf operations\"\n- Also: *\"Persons resident outside GB in their capacity as members of Her Majesty's Forces are also treated as habitually resident in the CTA (See C2052)\"*\n\n### Record 2 — ADM Chapter C3, PDF page 24 (JSA: International issues)\n- ID: `https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c3/0024`\n- Source: https://assets.publishing.service.gov.uk/media/679cd0663f28b7444270a316/admc3.pdf#page=24\n- Quote: *\"Where persons whose employer normally carries out its activities in the UK are posted by that employer to another EEA state, the legislation of the UK will continue to apply provided 1. they are not sent to replace another person and 2. the posting is not expected to last more than 24 months\"*\n- Also: *\"For JSA the rules relating to 'unemployment benefits' apply\"* under the EU Social Security Co‑ordination Regulations.\n\n### At most three claims these two records establish\n1. Record 1 (ADM C2, page 18) states that, for Personal Independence Payment, specific categories of person abroad (HM forces members, aircraft workers, mariners, and certain continental-shelf workers) are \"treated as present in GB\" under `SS (PIP) Regs, reg 19(1)`.\n2. Record 1 also states HM forces members resident outside GB are \"treated as habitually resident in the CTA.\"\n3. Record 2 (ADM C3, page 24) states that for Jobseeker's Allowance, a worker posted by a UK employer to another EEA state remains under UK legislation if not replacing another posted worker and the posting is not expected to exceed 24 months (`Reg (EC) 883/04, Art 12(1)`), and that JSA is treated as an \"unemployment benefit\" under the EU co-ordination rules.\n\n**Limitations, stated plainly:** These are frozen, unreviewed machine extractions of two ADM pages only, covering narrow PIP and JSA \"international issues\" provisions (specific occupational categories and posted-worker rules). I have not read the other four catalogue records, the omitted DMG/ADM memo pages, or any diagnostics-listed \"unresolved terms.\" This does not establish a complete answer to \"what happens to your benefits if you go abroad,\" does not cover other benefits, general rules for claimants (not posted workers/forces/mariners), current law, or any individual's entitlement. No human or specialist review has confirmed applicability; the service explicitly flags `unreviewed-specialist-review-required` and `evidence_status: insufficient`.",
+  "is_error": false,
+  "subtype": "success",
+  "usage": {
+    "input_tokens": 10,
+    "cache_creation_input_tokens": 19073,
+    "cache_read_input_tokens": 33359,
+    "output_tokens": 4750,
+    "output_tokens_details": {
+      "thinking_tokens": 84
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 19073,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2055,
+        "cache_read_input_tokens": 12487,
+        "cache_creation_input_tokens": 6586,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 6586
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 1200,
+      "outputTokens": 12,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0012599999999999998,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty"
+    },
+    "claude-sonnet-5": {
+      "inputTokens": 10,
+      "outputTokens": 4750,
+      "cacheReadInputTokens": 33359,
+      "cacheCreationInputTokens": 19073,
+      "webSearchRequests": 0,
+      "costUSD": 0.1304838,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "duration_ms": 39070,
+  "duration_api_ms": 37538,
+  "num_turns": 8,
+  "stop_reason": "end_turn",
+  "total_cost_usd": 0.1317438
+}

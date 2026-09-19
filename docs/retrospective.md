@@ -56,8 +56,12 @@ Both attempts remain in the [comparison evidence](../validation/corpus-questions
 The service could deliver a complete large package while ChatGPT reported host
 truncation. A 32,768-byte request produced a 31,312-byte abroad package which the
 model could inspect. The same complete bounded content was checked in the public
-UI and native WebMCP. Progressive manifests and exact evidence reads are now
-being implemented under **DWP-BL-008**; their results require new receipts.
+UI and native WebMCP. Public service 0.3.0 now adds progressive manifests and
+exact evidence reads under **DWP-BL-008**. Its [SDK receipt](../validation/compact-delivery/sdk-receipt.json)
+reconstructs that same package and rejects stale or invalid reads. The
+[local Claude observation](../validation/compact-client/README.md) distinguishes
+seven real calls from an earlier zero-call model fabrication. Actual tool-call
+receipts matter more than a model's claim that it used a tool.
 
 ### 5. Declaring a contract is not validating it
 
@@ -82,8 +86,9 @@ their first tiny fixture, rather than discovering drift near publication.
 ## What still needs work
 
 The [backlog](backlog.md) keeps stable identifiers, dependencies and acceptance
-checks. Priority gaps are semantic navigation across the whole corpus, smaller
-reconstructable delivery, independent claim-level answer review, complete
+checks. Literal navigation and smaller reconstructable delivery now have scoped
+producer/local-client or public-service receipts. Priority gaps remain independent
+claim-level answer review, complete
 benefit/time/territory profiles and provision-level legal reconciliation.
 Projected personas still need user research. CPAG body access, calculators,
 tribunal decisions, operational journeys, a benefits engine and Voice/audio

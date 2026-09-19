@@ -28,6 +28,11 @@ receipts below.
 
 ## Current work: review and navigation candidate
 
+The [compact-delivery guide](docs/compact-evidence-demo.md) now records public
+service 0.3.0 and its official SDK acceptance: a small catalogue, exact bounded
+reads and a replay link, while preserving the original full-package tool. The
+31,312-byte abroad package reconstructs exactly and stays insufficient.
+
 The new [review descriptor](full-dmg/okf-review-context.json) adds benefit,
 circumstance, topic and existing-concept navigation to the Reader. Its
 [classification manifest](full-dmg/context/navigation/manifest.json) accounts for
@@ -41,6 +46,12 @@ source-linked starting points: 3,795–12,062 bytes per machine-readable pack,
 42 shared evidence resources and exact bounded source excerpts. They distinguish
 independently located candidates from pages retained by the recorded retrieval
 run. All questions remain insufficient and await specialist review.
+
+A separate [actual Claude client observation](validation/compact-client/README.md)
+records seven local compact-tool calls and exact replay of diagnostics plus two
+source records. It also preserves the earlier no-call failure, where the model
+invented a catalogue while tools were disabled. Neither is an answer-quality or
+public-deployment claim.
 
 These are additive candidate artefacts. Their build receipts and checks do not
 by themselves establish a new public deployment. The existing demonstrations
