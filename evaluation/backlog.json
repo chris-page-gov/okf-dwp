@@ -151,6 +151,7 @@
         "validation/compact-delivery/v0.3.1/deployment.json",
         "validation/compact-delivery/v0.3.1/sdk-receipt.json",
         "validation/compact-delivery/v0.3.1/browser/full-corpus/chrome-receipt.json",
+        "validation/compact-delivery/v0.3.1/browser/historical/run-summary.json",
         "validation/compact-delivery/deployment.json",
         "validation/compact-delivery/sdk-receipt.json",
         "validation/compact-client/verification.json"
@@ -162,7 +163,7 @@
     },
     {
       "id": "DWP-BL-009",
-      "title": "Whole-corpus conceptual navigation",
+      "title": "Conceptual classification and DMG Reader navigation",
       "status": "recorded_complete",
       "priority": "P0",
       "depends_on": [
@@ -173,12 +174,15 @@
         "full-dmg/okf-review-context.json",
         "validation/navigation/build.json",
         "validation/navigation/browser/README.md",
+        "validation/navigation/browser/public/README.md",
+        "validation/navigation/browser/public/observation.json",
+        "validation/navigation/browser/public/deployment.json",
         "evaluation/staff-review/manifest.json"
       ],
       "acceptance_checks": [
-        "All 19,090 pages accounted for by source/benefit/circumstance/topic facets with unknown explicit; authored concepts and literal classifications distinguished; actual Reader/Ask journeys checked."
+        "All 19,090 DMG and ADM pages accounted for by conceptual classification with unknown explicit; authored concepts and literal classifications distinguished; actual DMG Reader and combined-corpus Ask journeys checked within their separate scopes."
       ],
-      "scope_note": "Producer accounting and the exact local Explorer candidate are verified. Literal classifications are discovery-only; this does not claim public Explorer deployment or complete domain semantics."
+      "scope_note": "Producer accounting covers both captured manuals; exact local and public Chrome observations verify the DMG Reader navigation. The published check binds Explorer 8a38d4bfe07a6797deacc148a2859911d8e2a68e and DWP 0c59f476602a49d4293e46112a0ca1ebf1486ff0, with 21 app and 188 observed corpus files verified. Ask OKF already retrieves from both DMG and ADM. The Reader projection remains DMG-only; ADM and cross-manual Reader navigation are unfinished work in DWP-BL-024. Literal classifications are discovery-only, not complete domain semantics or legal applicability."
     },
     {
       "id": "DWP-BL-010",
@@ -411,6 +415,8 @@
       ],
       "owner_role": "Hosting and service maintainers",
       "evidence": [
+        "validation/compact-delivery/v0.3.1/browser/historical/run-summary.json",
+        "validation/compact-delivery/v0.3.1/browser/full-corpus/chrome-receipt.json",
         "validation/compact-delivery/browser/public/run-summary.json",
         "validation/compact-delivery/browser/public/chrome-receipt.json",
         "validation/compact-delivery/browser/public/firefox-receipt.json",
@@ -422,7 +428,30 @@
         "Rerun the same exact-version historical-profile journeys in Chrome, Firefox and WebKit; require both functional and strict console gates to pass and preserve source/context hashes.",
         "Record any full-corpus public-browser or AI-client check separately; a hosting fix does not establish model-answer quality or legal applicability."
       ],
-      "scope_note": "At the recorded public deployment, functional assertions passed in all nine browser cases but the strict console gate failed in all nine. The service blocked an injected Cloudflare inline challenge loader; Firefox also reported invalid-domain __cf_bm cookies. SDK package integrity remains separately verified; no remediation or browser acceptance is yet claimed."
+      "scope_note": "The original v6 nine-case suite and corrected v7 twelve-case suite passed their functional assertions but failed every strict console gate. Separate full-corpus Chrome journeys also retained the host CSP error. The service blocked an injected Cloudflare inline challenge loader; Firefox also reported invalid-domain __cf_bm cookies. SDK package integrity remains separately verified; no hosting remediation or clean browser acceptance is claimed."
+    },
+    {
+      "id": "DWP-BL-024",
+      "title": "ADM Reader and cross-manual navigation",
+      "status": "not_started",
+      "priority": "P1",
+      "depends_on": [
+        "DWP-BL-004",
+        "DWP-BL-009"
+      ],
+      "owner_role": "Navigation producer and Explorer maintainer",
+      "evidence": [
+        "full-dmg/okf-review-context.json",
+        "full-dmg/context/navigation/manifest.json",
+        "docs/backlog.md"
+      ],
+      "acceptance_checks": [
+        "Add an ADM or combined-manual Reader projection while preserving frozen DMG outputs, existing source provenance, document dates, capture dates and source-family distinctions.",
+        "Verify conceptual-filter count and record parity across Reader, Graph and Timeline for the declared ADM and cross-manual scope, retaining explicit unclassified records.",
+        "Verify the exact published projection and deployed consumer in a real browser, retaining immutable source, application and journey evidence.",
+        "Keep literal mentions distinct from reviewed concepts and legal applicability; generate no legal assertions from navigation matches."
+      ],
+      "scope_note": "Ask OKF and the classification audit already include both DMG and ADM. This item concerns the unfinished human Reader and cross-manual navigation projection, not source acquisition or expansion of the existing Ask corpus. No implementation or public acceptance is claimed."
     }
   ]
 }

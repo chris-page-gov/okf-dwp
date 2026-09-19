@@ -49,7 +49,7 @@ compatibility issue.
   journey, calls, selected record hash and limitations.
 - Source-text screenshots: [Chrome](chrome-source-evidence.png),
   [Firefox](firefox-source-evidence.png), [WebKit](webkit-source-evidence.png).
-- [Artifact hashes](artifacts.json) bind these retained files to their bytes.
+- [Artefact hashes](artifacts.json) bind these retained files to their bytes.
 - [Deployment receipt](../../deployment.json) identifies Sites version 7,
   service 0.3.1 and runtime commit
   `8493b323ca664e645a2548ebb48bf7917d7f6eb1`.

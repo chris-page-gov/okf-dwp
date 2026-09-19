@@ -25,7 +25,7 @@ to bypass source, rights or review boundaries.
 | DWP-BL-006 | P0 | Legislation, regulations and case-law reconciliation | `not_started` | DWP-BL-001 |
 | DWP-BL-007 | P0 | Task-specific evidence completeness profiles | `needs_domain_review` | DWP-BL-001, DWP-BL-005, DWP-BL-006 |
 | DWP-BL-008 | P0 | Progressive evidence manifests and exact reads | `recorded_complete` | DWP-BL-004 |
-| DWP-BL-009 | P0 | Whole-corpus conceptual navigation | `recorded_complete` | DWP-BL-004 |
+| DWP-BL-009 | P0 | Conceptual classification and DMG Reader navigation | `recorded_complete` | DWP-BL-004 |
 | DWP-BL-010 | P0 | Fixed-evidence claim-level model trials | `needs_domain_review` | DWP-BL-004 |
 | DWP-BL-011 | P1 | Source dates and provenance presentation | `recorded_complete` | — |
 | DWP-BL-012 | P1 | CPAG substantive content access | `needs_external_permission` | — |
@@ -40,6 +40,7 @@ to bypass source, rights or review boundaries.
 | DWP-BL-021 | P0 | Canonical contracts and protected publication | `recorded_complete` | — |
 | DWP-BL-022 | P1 | Retrospective and visible multi-agent change history | `recorded_complete` | — |
 | DWP-BL-023 | P1 | Hosting and Content Security Policy integration | `in_progress` | DWP-BL-008 |
+| DWP-BL-024 | P1 | ADM Reader and cross-manual navigation | `not_started` | DWP-BL-004, DWP-BL-009 |
 
 ## Acceptance before closure
 
@@ -50,14 +51,26 @@ and consumer versions, and any remaining limits. Model agreement does not close
 a domain-review gate. Keep partial results and failed attempts.
 
 The recorded delivery and navigation milestones have scoped receipts: public
-service/SDK, local Claude, and exact local Explorer. Public-browser deployment
-checks remain separately recorded: the historical-profile functional assertions
-passed, while all nine strict console gates failed because of host-injected
-code. **DWP-BL-023** records the unresolved integration; those milestones do not
+service/SDK, local Claude, and exact local and published DMG Explorer.
+Service-browser deployment checks remain separately recorded: the historical-profile
+functional assertions passed, while all nine version 6 tests and all twelve
+version 7 tests failed their strict console gates because of hosting errors.
+See the [earlier result](../validation/compact-delivery/browser/public/run-summary.json)
+and [corrected-service result](../validation/compact-delivery/v0.3.1/browser/historical/run-summary.json).
+**DWP-BL-023** records the unresolved integration; those milestones do not
 close domain review. Independent answer
 and applicability review remain separate. Legislation integration must research
 provision/version identities before adding legal implications. A benefits engine
 and operational application/change journeys depend on those reviews.
+
+**DWP-BL-009 has a deliberately narrower Reader scope.** Its classification audit
+accounts for both captured manuals, and Ask OKF already retrieves from both DMG
+and ADM. The current human Reader projection contains DMG records. **DWP-BL-024**
+tracks an additive ADM or combined Reader, with source-family and date distinctions,
+filter parity across Reader/Graph/Timeline and exact public-browser verification.
+This remains unfinished; literal mentions must not become legal assertions.
+The [published DMG navigation check](../validation/navigation/browser/public/README.md)
+is separate from the unresolved service hosting-console issue.
 
 The [logged sources](future-sources.md) retain the tribunal, calculators and
 CASA requests. CPAG remains separately constrained. The 24 September content

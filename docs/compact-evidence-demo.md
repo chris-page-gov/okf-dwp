@@ -48,10 +48,9 @@ matched the SDK evidence. Its functional checks passed; its strict console gate
 still failed on the host-injected script. This observation binds hosting version
 6 and runtime `169b8c387a29435d39dc31cbb2066376d84b39a6`, before the
 0.3.1 replay-link correction. It establishes neither an AI answer nor an overall
-browser pass. The new conceptual-navigation
-Explorer deployment is also separate: its [browser receipt](../validation/navigation/browser/README.md)
-currently proves the exact local candidate. Earlier public Explorer observations
-retain their own recorded versions and scope.
+browser pass. The conceptual-navigation Explorer deployment is a separate
+publication, described below. Earlier observations retain their recorded
+versions and scope.
 
 **Current public reader (0.3.1): functional checks passed; strict console gates
 failed.** The [corrected historical-profile suite](../validation/compact-delivery/v0.3.1/browser/historical/run-summary.json)
@@ -65,6 +64,24 @@ rendered source, provenance and complete diagnostics against the SDK. Its strict
 console gate also failed. These observations bind version 7; they do not claim
 an overall clean browser result or an AI answer. DWP-BL-023 remains open.
 
+### Published Explorer navigation
+
+[Open the verified DMG Reader](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F0c59f476602a49d4293e46112a0ca1ebf1486ff0%2Ffull-dmg%2Fokf-review-context.json#overview).
+The [public Chrome check](../validation/navigation/browser/public/README.md)
+passed at 21:16 UTC on 19 September against Explorer
+`8a38d4bfe07a6797deacc148a2859911d8e2a68e` and the pinned DWP projection.
+Benefit, circumstance, topic and authored-concept filters had matching counts
+of 74, 343, 268 and 1 across Reader, Graph and Timeline. It verified 21 app files
+and 188 observed corpus files, date roles and the visible Timeline limit, with
+no console errors or targeted accessibility violations.
+
+This Reader covers DMG. Ask OKF and the classification audit cover both captured
+manuals; ADM Reader and cross-manual navigation remain DWP-BL-024. Literal
+categories do not establish legal applicability. The separate evidence service's
+host-console failure remains open, and all 40 staff questions plus three controls
+remain insufficient in the full-corpus evaluation. No AI-answer acceptance follows
+from the public navigation check.
+
 ## Demonstration
 
 1. Open the replay link above. Its fragment contains the general question and
@@ -75,7 +92,7 @@ an overall clean browser result or an AI answer. DWP-BL-023 remains open.
    The original question is “What happens to your benefits if you go abroad?”.
    Its original context budget is 32,768 bytes. Smaller tool deliveries do not
    make the evidence complete or change that selection budget.
-3. Select **Read gaps, scope and budgets**. Read both parts. The result has no
+3. Select **Read gaps, scope and budgets**. Read every part offered. The result has no
    declared evidence-completeness requirement for this broad task. Show the
    unresolved terms and omitted candidates before discussing any passage.
 4. For a source record, use **Read exact text** and **Inspect provenance and

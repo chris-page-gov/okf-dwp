@@ -8,12 +8,14 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-19.md), with stable work items in the
 [backlog](docs/backlog.md).
 
-## Unreleased — in progress
+## Evidence review and navigation — 19 September 2026
 
-The repository candidate on `codex/evidence-review-navigation` is still being
-integrated. Public service 0.3.1 has its own hosting and SDK observations below;
-this does not claim the new Explorer navigation is publicly deployed. Earlier
-dated observations keep their original scope.
+This dated entry records the evidence-review and navigation work.
+[DWP PR 10](https://github.com/chris-page-gov/okf-dwp/pull/10) records its integration
+and exact check/merge status. Explorer PR 125 is merged and its published DMG navigation
+has a passing scoped Chrome observation. Public service 0.3.1 has separate
+hosting, SDK and browser observations below, including its unresolved host-console
+failures. Earlier dated observations keep their original scope.
 
 ### Added
 
@@ -22,6 +24,9 @@ dated observations keep their original scope.
   proposed standards and domain concepts made explicit.
 - Stable backlog IDs, dependencies and acceptance checks, plus a separate
   multi-agent work log with ownership and handover boundaries.
+- Separate the completed classification/DMG Reader milestone from unfinished
+  ADM Reader and cross-manual navigation (DWP-BL-024). Ask OKF already includes
+  both manuals; this remaining gap concerns the human Reader projection.
 - An additive review descriptor with 44 navigation labels and an explicit
   classified/unclassified accounting of all 19,090 DMG/ADM pages. Literal facet
   assignment does not assert legal applicability; the Reader keeps its DMG scope.
@@ -69,8 +74,13 @@ dated observations keep their original scope.
   provenance and diagnostic hashes matching the SDK. Functional checks passed;
   the strict host-console gate still failed. Preserve this observation before
   the 0.3.1 replay-link correction.
-- The exact local Explorer navigation candidate passed its recorded browser
-  journeys. The new public Explorer deployment remains a separate gate.
+- Verify published Explorer navigation after PR 125 and Pages deployment: all
+  21 app files and 188 observed corpus files matched the expected bytes, and
+  benefit/circumstance/topic/authored-concept filters matched across Reader,
+  Graph and Timeline (74/343/268/1 records). The scoped Chrome check found no
+  console errors or targeted accessibility violations. The Reader remains
+  DMG-only; all full-corpus questions remain insufficient pending specialist
+  evidence profiles. Preserve the earlier local observation separately.
 
 ## Staff questions, ADM acquisition and repository governance — 19 September 2026
 

@@ -37,7 +37,7 @@ does not establish that a legal rule applies to it.
 - [Machine-readable browser observation](observation.json) contains the
   selected values, counts, date-role observations, limitations and hashes
   of the 188 corpus files served during the test.
-- [Artifact manifest](artifacts.json) binds this observation and the two
+- [Artefact manifest](artifacts.json) binds this observation and the two
   retained screenshots to their exact bytes.
 - [Reader with a benefit selected](benefit-reader.png) shows the selection
   count and the classification disclosure.
