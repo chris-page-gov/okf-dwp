@@ -32,6 +32,14 @@ The [compact-delivery guide](docs/compact-evidence-demo.md) now records public
 service 0.3.0 and its official SDK acceptance: a small catalogue, exact bounded
 reads and a replay link, while preserving the original full-package tool. The
 31,312-byte abroad package reconstructs exactly and stays insufficient.
+The public reader's historical-profile suite and a separate
+[full-corpus Chrome journey](validation/compact-delivery/browser/public-full-corpus/chrome-receipt.json)
+passed their functional checks, but their strict console gates failed because
+CSP blocked a host-injected script. The latter made four real tool calls and
+verified rendered source and diagnostic hashes on hosting version 6; it does not
+cover the pending 0.3.1 correction. The
+[recorded browser limitation](docs/compact-evidence-demo.md#what-is-usable-now)
+and DWP-BL-023 remain open; this is not an overall public-browser pass.
 
 The new [review descriptor](full-dmg/okf-review-context.json) adds benefit,
 circumstance, topic and existing-concept navigation to the Reader. Its

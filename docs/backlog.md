@@ -39,6 +39,7 @@ to bypass source, rights or review boundaries.
 | DWP-BL-020 | P1 | Source refresh and drift process | `not_started` | DWP-BL-004, DWP-BL-006 |
 | DWP-BL-021 | P0 | Canonical contracts and protected publication | `recorded_complete` | — |
 | DWP-BL-022 | P1 | Retrospective and visible multi-agent change history | `recorded_complete` | — |
+| DWP-BL-023 | P1 | Hosting and Content Security Policy integration | `in_progress` | DWP-BL-008 |
 
 ## Acceptance before closure
 
@@ -50,7 +51,10 @@ a domain-review gate. Keep partial results and failed attempts.
 
 The recorded delivery and navigation milestones have scoped receipts: public
 service/SDK, local Claude, and exact local Explorer. Public-browser deployment
-checks remain separately recorded; those milestones do not close domain review. Independent answer
+checks remain separately recorded: the historical-profile functional assertions
+passed, while all nine strict console gates failed because of host-injected
+code. **DWP-BL-023** records the unresolved integration; those milestones do not
+close domain review. Independent answer
 and applicability review remain separate. Legislation integration must research
 provision/version identities before adding legal implications. A benefits engine
 and operational application/change journeys depend on those reviews.
@@ -59,6 +63,18 @@ The [logged sources](future-sources.md) retain the tribunal, calculators and
 CASA requests. CPAG remains separately constrained. The 24 September content
 freeze and 30 September seminar do not authorise an unsupported completeness or
 Voice claim.
+
+### DWP-BL-023: supported hosting follow-up
+
+Cloudflare documents [`Cache-Control: no-transform`](https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/#if-your-origin-sends-a-no-transform-header)
+as preventing JavaScript Detections injection; its detection result then becomes
+`missing`. Assess a narrow HTML-response experiment with the host maintainer,
+preserving the existing `no-store` policy and Content Security Policy. This
+candidate is untested: verify both functional behaviour and the strict console
+gate against the exact deployment before claiming a fix. The Firefox cookie
+domain error needs separate hosting assessment. Keep the
+[recorded public-browser failure](../validation/compact-delivery/browser/README.md)
+open until both issues are resolved and checked.
 
 ## Recheck the register
 

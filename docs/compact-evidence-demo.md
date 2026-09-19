@@ -20,11 +20,30 @@ behaviour. `ask_okf_manifest` returns a small catalogue and completeness/gap
 counts. `read_okf_evidence` returns exact bounded passages, provenance,
 relationships, diagnostics or package slices. No tool supplies an AI answer.
 
-The public human-reader/browser journey and the new conceptual-navigation
-Explorer deployment are separate acceptance gates. This guide records the live
-SDK result; the [navigation browser receipt](../validation/navigation/browser/README.md)
-currently proves its exact local candidate. Earlier public Explorer observations
-remain valid only within their own recorded versions.
+**Public reader status: functional checks passed; strict no-console acceptance
+failed.** The [public browser report](../validation/compact-delivery/browser/public/run-summary.json)
+records three journeys in each of Chrome, Firefox and WebKit using the explicitly
+historical custody profile. Every functional assertion before the final console
+check passed. All nine overall tests nevertheless failed their strict console
+gate: the hosting platform injected a Cloudflare inline challenge loader which
+the service's Content Security Policy (CSP) blocked. Firefox also reported
+invalid-domain `__cf_bm` cookies. CSP restricts which code a page may execute;
+it has not been weakened to conceal the hosting conflict.
+
+The issue is tracked as **DWP-BL-023** in the [backlog](backlog.md). It does not
+invalidate the separately verified SDK evidence or establish an AI-answer
+failure. That nine-test suite uses the historical profile. A separate
+[public full-corpus Chrome journey](../validation/compact-delivery/browser/public-full-corpus/chrome-receipt.json)
+made four real tool calls and displayed the same six-record, insufficient abroad
+context. Rendered ADM C2 page 18 text, provenance and complete diagnostic hashes
+matched the SDK evidence. Its functional checks passed; its strict console gate
+still failed on the host-injected script. This observation binds hosting version
+6 and runtime `169b8c387a29435d39dc31cbb2066376d84b39a6`, before the pending
+0.3.1 replay-link correction. It establishes neither an AI answer nor an overall
+browser pass. The new conceptual-navigation
+Explorer deployment is also separate: its [browser receipt](../validation/navigation/browser/README.md)
+currently proves the exact local candidate. Earlier public Explorer observations
+retain their own recorded versions and scope.
 
 ## Demonstration
 

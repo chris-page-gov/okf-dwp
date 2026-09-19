@@ -48,6 +48,16 @@ dated observations keep their original scope.
   unchanged full packages, all five read sections, exact reconstruction of the
   31,312-byte abroad package and three fail-closed controls. Hosting and SDK
   receipts are separate from browser, AI-answer and public Explorer acceptance.
+- Preserve the public service reader's failed strict console gate: all nine
+  historical-profile browser cases reached their final console check with
+  functional assertions satisfied, then failed on host-injected Cloudflare code
+  blocked by CSP (plus Firefox cookie-domain errors). Record DWP-BL-023 for
+  hosting integration; keep CSP and fail-closed controls unchanged.
+- Record a separate public full-corpus Chrome journey on hosting version 6:
+  four real tool calls, six insufficient-context records, and rendered source,
+  provenance and diagnostic hashes matching the SDK. Functional checks passed;
+  the strict host-console gate still failed. Preserve this observation before
+  the pending 0.3.1 replay-link correction.
 - The exact local Explorer navigation candidate passed its recorded browser
   journeys. The new public Explorer deployment remains a separate gate.
 

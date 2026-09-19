@@ -155,7 +155,7 @@
       "acceptance_checks": [
         "Unchanged ask_okf preserved; small manifest plus paginated exact reads; original version/question/budget/context identity replayed; stale/unknown IDs rejected; all slices reconstruct exactly; actual host check."
       ],
-      "scope_note": "Public service 0.3.0 and official SDK verification establish bounded delivery and reconstruction at the recorded runtime commit. Local Claude client verified separately; public review-browser and ChatGPT/Voice journeys retain their own gates."
+      "scope_note": "Public service 0.3.0 and official SDK verification establish bounded delivery and reconstruction at the recorded runtime commit. Local Claude client verified separately. Public historical-profile browser functional assertions passed, but strict console acceptance failed because of hosting integration (DWP-BL-023); ChatGPT and Voice retain their separate gates."
     },
     {
       "id": "DWP-BL-009",
@@ -397,6 +397,29 @@
         "Visible changelog separates released/in progress; task ledger states ownership/files/dependencies/decisions/test evidence/handover; factual retrospective links receipts."
       ],
       "scope_note": "The dated retrospective, visible changelog and scoped multi-agent ledger are recorded. Subsequent integration/publication observations must still be appended; this is not perpetual release assurance."
+    },
+    {
+      "id": "DWP-BL-023",
+      "title": "Hosting and Content Security Policy integration",
+      "status": "in_progress",
+      "priority": "P1",
+      "depends_on": [
+        "DWP-BL-008"
+      ],
+      "owner_role": "Hosting and service maintainers",
+      "evidence": [
+        "validation/compact-delivery/browser/public/run-summary.json",
+        "validation/compact-delivery/browser/public/chrome-receipt.json",
+        "validation/compact-delivery/browser/public/firefox-receipt.json",
+        "validation/compact-delivery/deployment.json"
+      ],
+      "acceptance_checks": [
+        "Preserve the failed public-browser observations and distinguish the functional checks from the strict no-console gate; identify the exact injected host script and affected deployment.",
+        "Resolve hosting integration through supported controls without weakening Content Security Policy, allowing arbitrary inline scripts, bypassing hosting controls or hiding console failures.",
+        "Rerun the same exact-version historical-profile journeys in Chrome, Firefox and WebKit; require both functional and strict console gates to pass and preserve source/context hashes.",
+        "Record any full-corpus public-browser or AI-client check separately; a hosting fix does not establish model-answer quality or legal applicability."
+      ],
+      "scope_note": "At the recorded public deployment, functional assertions passed in all nine browser cases but the strict console gate failed in all nine. The service blocked an injected Cloudflare inline challenge loader; Firefox also reported invalid-domain __cf_bm cookies. SDK package integrity remains separately verified; no remediation or browser acceptance is yet claimed."
     }
   ]
 }

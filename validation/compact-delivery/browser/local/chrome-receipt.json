@@ -1,0 +1,65 @@
+{
+  "schema": "okf-service-review-browser-observation.v1",
+  "observed_at": "2026-09-19T20:17:34.866Z",
+  "browser": "chrome",
+  "base_url": "http://127.0.0.1:8787",
+  "built_service_receipt_sha256": "5e348461b1551d51fbf047e83fdb9ecaa88a77ac5e32b4aefa460ba7b9849afd",
+  "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+  "context_id": "urn:sha256:283cddceca09958b96949527280ea14775de5f26d092c939cacfaa545500e80e",
+  "selected_records": 52,
+  "first_catalogue_count": 22,
+  "record_text_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+  "record_text_sha256": "efad9105dc1ffba4f4e2f2e60e8c675c185cef41c6299f90d9a32c746a2ec014",
+  "package_sha256": "a21f10e374f32a63a541af9050aeeab15f3ca62689e2c6e3a746424e70a2c9ee",
+  "assertions": [
+    "inert-fragment",
+    "explicit-submit",
+    "catalogue-pagination",
+    "exact-source-text-hash",
+    "selected-record-title-identity-and-source",
+    "provenance-and-inclusion-reasons",
+    "diagnostics",
+    "bounded-next-part",
+    "replay-link",
+    "stale-question-invalidated"
+  ],
+  "calls": [
+    {
+      "name": "ask_okf_manifest"
+    },
+    {
+      "name": "ask_okf_manifest",
+      "offset": 22
+    },
+    {
+      "name": "read_okf_evidence",
+      "section": "record_text",
+      "offset": 0
+    },
+    {
+      "name": "read_okf_evidence",
+      "section": "record_metadata",
+      "offset": 0
+    },
+    {
+      "name": "read_okf_evidence",
+      "section": "diagnostics",
+      "offset": 0
+    },
+    {
+      "name": "read_okf_evidence",
+      "section": "package",
+      "offset": 0
+    },
+    {
+      "name": "read_okf_evidence",
+      "section": "package",
+      "offset": 15133
+    }
+  ],
+  "console_errors": [],
+  "limitations": [
+    "Local built service with historical vendored source; no live deployment, full-corpus network or AI-answer verification.",
+    "Sufficient is the preserved historical research profile status, not current legal or individual entitlement assurance."
+  ]
+}
