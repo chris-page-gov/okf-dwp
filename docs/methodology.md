@@ -101,7 +101,8 @@ declared relationships and returns a bounded package. An AI may interpret that
 evidence; it must not choose authority silently or fill gaps from general
 knowledge. Human reviewers need the same sources, scope and missing evidence.
 
-The next interface increment is tracked as **DWP-BL-008** in the [backlog](backlog.md):
+The implemented delivery interface is recorded as **DWP-BL-008** in the
+[backlog](backlog.md) and the [compact evidence demonstration](compact-evidence-demo.md):
 a small read-only manifest followed by exact evidence reads, each bound to the
 original source version, question, budget and context identifier. This is a
 delivery improvement, not a new completeness claim. Stateless replay must reject
