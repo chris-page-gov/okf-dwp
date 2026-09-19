@@ -1,0 +1,234 @@
+{
+  "schema": "okf-corpus-retrieval-comparison.v1",
+  "comparison": "Exact independently located page and source-document overlap before and after a generic query-word filter change. No model answers or answer-quality grading.",
+  "before": {
+    "receipt_path": "validation/corpus-questions/receipt.json",
+    "receipt_commit": "697dd85c1cd5ea5191a77124de5a868d06d1652c",
+    "receipt_sha256": "ad962741a33313898835b485f378918463355b1da6b049f80a734240c1c9827c",
+    "observed_at": "2026-09-19T17:19:46.543Z",
+    "mode": "remote-mcp-exact-core-parity",
+    "endpoint": "https://ask-okf.crpage.chatgpt.site/okf/mcp",
+    "protocol": "2025-11-25",
+    "bundle_version": "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752",
+    "binding": {
+      "index_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752/full-dmg/context/corpus/manifest.json",
+      "index_sha256": "aa9726ba72b7495323b031f149fa13cffeae0aa8fc868af63b7af3cac0e6be95"
+    },
+    "inputs": {
+      "registry_sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a",
+      "manifest_sha256": "aa9726ba72b7495323b031f149fa13cffeae0aa8fc868af63b7af3cac0e6be95",
+      "runner_sha256": "9058d575d7832ec5751507df260056f65ea623676ecc50686e08e81aa21addfe",
+      "engine": {
+        "index.ts": "846b551d2e209f820127001bdb9c1145b743b6466bf650d0c6d060ec63f4be7f",
+        "corpus.ts": "565b1ee842b03ecba2d27657599cedff10742d3a27e312d75bb8b7432d487708",
+        "types.ts": "248b7db16fa1faf2cb6c5c07c8347b926ae649a528b79e92bca3816829938b65"
+      }
+    },
+    "summary": {
+      "staff_questions": 40,
+      "unique_staff_questions": 39,
+      "scope_controls": 3,
+      "exact_package_parity": 43,
+      "fail_closed": 43,
+      "staff_questions_with_evidence": 40,
+      "staff_questions_with_ADM_evidence": 40,
+      "staff_questions_with_independently_located_page": 10,
+      "staff_questions_with_independently_located_document": 19,
+      "sufficient_contexts": 0,
+      "substantive_answers_generated": 0,
+      "specialist_accepted": 0,
+      "minimum_package_bytes": 4383,
+      "maximum_package_bytes": 493943
+    }
+  },
+  "after": {
+    "receipt_path": "validation/corpus-questions/receipt.json",
+    "receipt_commit": null,
+    "receipt_sha256": "69069770f31f9ad5d93ee4a915529fdf6860ef6a9dc6aabb4b61d8aec95fb014",
+    "observed_at": "2026-09-19T17:31:33.855Z",
+    "mode": "remote-mcp-exact-core-parity",
+    "endpoint": "https://ask-okf.crpage.chatgpt.site/okf/mcp",
+    "protocol": "2025-11-25",
+    "bundle_version": "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752",
+    "binding": {
+      "index_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752/full-dmg/context/corpus/manifest.json",
+      "index_sha256": "aa9726ba72b7495323b031f149fa13cffeae0aa8fc868af63b7af3cac0e6be95"
+    },
+    "inputs": {
+      "registry_sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a",
+      "manifest_sha256": "aa9726ba72b7495323b031f149fa13cffeae0aa8fc868af63b7af3cac0e6be95",
+      "runner_sha256": "9058d575d7832ec5751507df260056f65ea623676ecc50686e08e81aa21addfe",
+      "engine": {
+        "index.ts": "846b551d2e209f820127001bdb9c1145b743b6466bf650d0c6d060ec63f4be7f",
+        "corpus.ts": "7f0ffe7cb2627be1d83ab5d3efecc0f99c0be967ea876dbfa73410280bda1d14",
+        "types.ts": "248b7db16fa1faf2cb6c5c07c8347b926ae649a528b79e92bca3816829938b65"
+      }
+    },
+    "summary": {
+      "staff_questions": 40,
+      "unique_staff_questions": 39,
+      "scope_controls": 3,
+      "exact_package_parity": 43,
+      "fail_closed": 43,
+      "staff_questions_with_evidence": 40,
+      "staff_questions_with_ADM_evidence": 40,
+      "staff_questions_with_independently_located_page": 12,
+      "staff_questions_with_independently_located_document": 21,
+      "sufficient_contexts": 0,
+      "substantive_answers_generated": 0,
+      "specialist_accepted": 0,
+      "minimum_package_bytes": 4383,
+      "maximum_package_bytes": 492174
+    }
+  },
+  "after_receipt_commit_note": "The after receipt is bound by its exact SHA-256 in this change; no future publication commit is invented.",
+  "question_registry_path": "evaluation/staff-questions/cases.json",
+  "staff_question_occurrences": 40,
+  "unique_staff_questions": 39,
+  "same_question_registry": true,
+  "same_source_version_and_manifest_binding": true,
+  "same_evaluation_runner": true,
+  "metric_definitions": {
+    "page_overlap": "At least one independently located source candidate has its exact record_id among selected evidence records.",
+    "document_overlap": "At least one selected evidence record retains the source SHA-256 of an independently located candidate PDF.",
+    "case_changes": "Only cases with page-candidate or document-overlap changes are expanded; every other staff case is listed explicitly as unchanged."
+  },
+  "summary_delta": {
+    "staff_questions_with_independently_located_page": {
+      "before": 10,
+      "after": 12,
+      "delta": 2
+    },
+    "staff_questions_with_independently_located_document": {
+      "before": 19,
+      "after": 21,
+      "delta": 2
+    },
+    "staff_questions_with_evidence": {
+      "before": 40,
+      "after": 40,
+      "delta": 0
+    },
+    "staff_questions_with_ADM_evidence": {
+      "before": 40,
+      "after": 40,
+      "delta": 0
+    },
+    "sufficient_contexts": {
+      "before": 0,
+      "after": 0,
+      "delta": 0
+    },
+    "substantive_answers_generated": {
+      "before": 0,
+      "after": 0,
+      "delta": 0
+    },
+    "specialist_accepted": {
+      "before": 0,
+      "after": 0,
+      "delta": 0
+    }
+  },
+  "case_overlap_changes": [
+    {
+      "case_id": "staff-004",
+      "question_sha256": "1010557c1a690f0b438ce648e8ffac416204bce826bb146c7ec0a1b5721bd963",
+      "exact_page_candidate_ids": {
+        "before": [],
+        "after": [
+          "source-c003"
+        ],
+        "gained": [
+          "source-c003"
+        ],
+        "lost": []
+      },
+      "source_document_ids": {
+        "before": [],
+        "after": [
+          "dmg-vol12-ch74"
+        ],
+        "gained": [
+          "dmg-vol12-ch74"
+        ],
+        "lost": []
+      }
+    },
+    {
+      "case_id": "staff-037",
+      "question_sha256": "bcf412999ba0a3e613fe4cf2ef1be7dc0bfb9ced784df2659e1b1f6b54ab6eba",
+      "exact_page_candidate_ids": {
+        "before": [],
+        "after": [
+          "source-c034"
+        ],
+        "gained": [
+          "source-c034"
+        ],
+        "lost": []
+      },
+      "source_document_ids": {
+        "before": [],
+        "after": [
+          "dmg-vol3-ch17"
+        ],
+        "gained": [
+          "dmg-vol3-ch17"
+        ],
+        "lost": []
+      }
+    }
+  ],
+  "unchanged_staff_case_ids": [
+    "staff-001",
+    "staff-002",
+    "staff-003",
+    "staff-005",
+    "staff-006",
+    "staff-007",
+    "staff-008",
+    "staff-009",
+    "staff-010",
+    "staff-011",
+    "staff-012",
+    "staff-013",
+    "staff-014",
+    "staff-015",
+    "staff-016",
+    "staff-017",
+    "staff-018",
+    "staff-019",
+    "staff-020",
+    "staff-021",
+    "staff-022",
+    "staff-023",
+    "staff-024",
+    "staff-025",
+    "staff-026",
+    "staff-027",
+    "staff-028",
+    "staff-029",
+    "staff-030",
+    "staff-031",
+    "staff-032",
+    "staff-033",
+    "staff-034",
+    "staff-035",
+    "staff-036",
+    "staff-038",
+    "staff-039",
+    "staff-040"
+  ],
+  "excluded_scope_control_ids": [
+    "control-hospital",
+    "control-adm",
+    "control-unknown"
+  ],
+  "limitations": [
+    "These research source candidates are not complete expert-approved answer rubrics.",
+    "A gain in overlap does not establish relevance of every returned page, legal applicability, an answer-quality score, recall or token/cost savings.",
+    "The before deployment and client observations remain retained in Git history; this comparison does not erase the initial ranking failure.",
+    "Both complete remote runs returned insufficient contexts for all 43 staff/control cases."
+  ]
+}

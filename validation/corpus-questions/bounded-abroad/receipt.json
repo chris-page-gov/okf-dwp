@@ -1,0 +1,163 @@
+{
+  "schema": "okf-dwp-bounded-abroad-verification.v1",
+  "endpoint": "https://ask-okf.crpage.chatgpt.site/okf/mcp",
+  "protocol": "2025-11-25",
+  "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "tools/call",
+    "params": {
+      "name": "ask_okf",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752",
+        "question": "What happens to your benefits if you go abroad?",
+        "budget": {
+          "max_bytes": 32768
+        }
+      }
+    }
+  },
+  "request_sha256": "5eb6386b2aba3956b9f3db13c81f9a0457c1eba2c18be403619a9fcffe17cd4e",
+  "comparison_source_commit": "31ee08ec259e165a478e9c36826fe3721643631d",
+  "comparison_source_assurance": "exact-engine-inputs-match-commit",
+  "engine_inputs_sha256": {
+    "apps/okf-explorer/src/lib/context/index.ts": "846b551d2e209f820127001bdb9c1145b743b6466bf650d0c6d060ec63f4be7f",
+    "apps/okf-explorer/src/lib/context/corpus.ts": "7f0ffe7cb2627be1d83ab5d3efecc0f99c0be967ea876dbfa73410280bda1d14",
+    "apps/okf-explorer/src/lib/context/types.ts": "248b7db16fa1faf2cb6c5c07c8347b926ae649a528b79e92bca3816829938b65"
+  },
+  "verifier_sha256": "4a15e9e1f6d1035305437c05588b39e5e6f8ff0b66e4abe67c0b7ccbde619373",
+  "comparison_assurance_receipt": "../sdk-receipt.json",
+  "comparison_assurance_receipt_sha256": "24859b764265f6791d8cb2dc0c5cb0aba4293541de6ec9fa25531b09209ce517",
+  "deployment_receipt": "../deployment.json",
+  "deployment_receipt_sha256": "e5920a1b5bad5da09b046d79d62df1aeb323e00d9690737bdef8562e18c0dcc1",
+  "deployment_id": "appgdep_6aaec6823dac81919e63c724f288cd08",
+  "worker_sha256": "2d145da7d545fa0e5f778aca81785c6161c62fa724558924bc22230734c58990",
+  "bundle_version": "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752",
+  "binding": {
+    "index_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752/full-dmg/context/corpus/manifest.json",
+    "index_sha256": "aa9726ba72b7495323b031f149fa13cffeae0aa8fc868af63b7af3cac0e6be95"
+  },
+  "transport": {
+    "status": 200,
+    "content_type": "text/event-stream",
+    "bytes": 64261,
+    "sha256": "e61017340c06564a5bb0c2f98286aa20d5fa884e90cf635224c56996c92ebac7"
+  },
+  "capture_classification": "Exact HTTP response body bytes, gzip-compressed without JSON reserialisation; no constructed protocol wrapper.",
+  "context": {
+    "path": "context.json",
+    "bytes": 31312,
+    "sha256": "f997c8147987c69960030e2cba717b7d9106b301c749fdb22b07ee1d75f8a932",
+    "canonical_sha256": "b119b6c4e4e4952691aec3926f54434e3531cc354226f2c4296a2a30052c427d",
+    "id": "urn:sha256:2cdfa5feb6310f58166d66e814bd3b2fbe2e9e146e25b25a65453b48e3dffabd",
+    "records": 6,
+    "relationships": 0,
+    "evidence_status": "insufficient",
+    "truncated": true,
+    "applied_budget": {
+      "max_nodes": 64,
+      "max_relationships": 128,
+      "max_depth": 6,
+      "max_bytes": 32768,
+      "used_nodes": 6,
+      "used_relationships": 0,
+      "used_bytes": 31312,
+      "reached_depth": 0,
+      "truncated": true,
+      "omissions": [
+        {
+          "code": "retrieval_candidate_budget",
+          "message": "Only the highest-ranked whole pages fit the fixed lexical candidate limit; other matching pages remain outside this context.",
+          "ids": []
+        },
+        {
+          "code": "byte_budget",
+          "message": "A whole item was omitted to meet the package byte budget.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-m-17-20-54250fe41c/0006"
+          ]
+        },
+        {
+          "code": "byte_budget",
+          "message": "A whole item was omitted to meet the package byte budget.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-m-16-20-cf9c8b3f64/0009"
+          ]
+        },
+        {
+          "code": "byte_budget",
+          "message": "A whole item was omitted to meet the package byte budget.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-m-16-20-cf9c8b3f64/0004"
+          ]
+        },
+        {
+          "code": "byte_budget",
+          "message": "A whole item was omitted to meet the package byte budget.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-m-16-20-cf9c8b3f64/0003"
+          ]
+        },
+        {
+          "code": "byte_budget",
+          "message": "A whole item was omitted to meet the package byte budget.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-dmg11-21-5d746856e8/0002"
+          ]
+        },
+        {
+          "code": "byte_budget",
+          "message": "A whole item was omitted to meet the package byte budget.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-1-23-1e13261274/0001"
+          ]
+        },
+        {
+          "code": "byte_budget",
+          "message": "A whole item was omitted to meet the package byte budget.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-17-20/0004"
+          ]
+        },
+        {
+          "code": "byte_budget",
+          "message": "A whole item was omitted to meet the package byte budget.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-17-20/0003"
+          ]
+        },
+        {
+          "code": "byte_budget",
+          "message": "A whole item was omitted to meet the package byte budget.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-08-26/0006"
+          ]
+        },
+        {
+          "code": "byte_budget",
+          "message": "A whole item was omitted to meet the package byte budget.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-08-26/0005"
+          ]
+        }
+      ]
+    },
+    "query_tokens": [
+      "benefits",
+      "abroad"
+    ],
+    "model_answer_present": false
+  },
+  "full_package_matches_direct_engine": true,
+  "text_matches_structured_content": true,
+  "limitations": [
+    "This verifies machine delivery and provenance parity; ChatGPT model access and relevance review are separate observations.",
+    "Lexical candidate evidence does not establish contemporary applicability, completeness or an individual benefits decision."
+  ],
+  "observed_at": "2026-09-19T17:34:54.545Z",
+  "response_archive": {
+    "path": "response.http-body.gz",
+    "sha256": "39e685f59f95d2175f6e41fc909b17d91b2ad213dbc4a6971e414d5467565dfc"
+  }
+}

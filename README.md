@@ -41,17 +41,20 @@ benefits conclusions. No token or monetary saving has been established.
 
 The [full-corpus remote run](validation/corpus-questions/receipt.json) now
 tests all 40 questions and three boundary controls against the combined manuals.
-All 40 staff questions return candidate evidence, including ADM pages. Ten retain
-an independently located candidate page and 19 retain a page from a candidate
+All 40 staff questions return candidate evidence, including ADM pages. Twelve retain
+an independently located candidate page and 21 retain a page from a candidate
 document. These measures show where retrieval helps and where it needs work;
 they are not answer-quality scores. All 43 results remain **insufficient**, with
 no AI answers or specialist acceptance. All 43 complete remote packages match the
 shared Explorer engine. Separately, [official SDK calls to the deployed service](validation/corpus-questions/sdk-receipt.json)
 match the shared engine for current imprisonment, current hospital and the
-explicitly selected historical imprisonment case. Published-browser and actual
-ChatGPT acceptance for the new corpus remain separate, pending gates.
+explicitly selected historical imprisonment case. An [actual bounded ChatGPT call](validation/corpus-questions/chatgpt-observation.json)
+inspected six source pages about international issues: 31,312 bytes, no reported
+host truncation, still insufficient. Published-browser acceptance remains pending.
 Independent replay verified all 43 packages and 42 source candidates; all 21
-corruption controls were rejected.
+corruption controls were rejected. The [before-and-after comparison](validation/corpus-questions/retrieval-comparison.json)
+preserves the initial retrieval flaw and the improvement from 10 to 12 exact-page
+overlaps and 19 to 21 document overlaps; neither is an answer-quality score.
 The [staff-question results and Monday walkthrough](evaluation/staff-questions/results.md)
 compare the two runs and explain the remaining work.
 
@@ -75,8 +78,9 @@ The current candidate uses both captured manuals through the additive
 [corpus descriptor](full-dmg/okf-corpus-context.json), at explicit content version
 `bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752`. Follow the
 [new five-minute presentation and bounded ChatGPT rehearsal](docs/remote-mcp-demo.md#five-minute-full-corpus-presentation).
-Its 43-case remote evaluation and three-case live SDK verification are recorded;
-published-browser and actual ChatGPT acceptance remain pending. The general corpus returns
+Its 43-case remote evaluation, three-case live SDK verification and bounded
+ChatGPT observation are recorded; published-browser acceptance remains pending.
+The general corpus returns
 candidate evidence and explicit insufficiency, including for imprisonment; it
 does not inherit a completeness claim from the older custody profile.
 
@@ -268,8 +272,9 @@ above. Model assessment does not make either layer specialist-reviewed.
 All **331 DMG PDFs** are acquired and indexed. The separate **182 ADM PDFs**
 have now also been [acquired with original bytes and page text](docs/adm-acquisition.md),
 giving 513 documents and 19,090 measured pages across the two source families.
-The 43-case combined-corpus remote evaluation and three live SDK cases pass.
-Published browser and actual ChatGPT acceptance remain separate delivery gates.
+The 43-case combined-corpus remote evaluation and three live SDK cases pass;
+ChatGPT inspected the bounded abroad package. Published-browser acceptance
+remains a separate delivery gate.
 The earlier custody profile and its receipts have not been rewritten.
 [The 24 September plan](docs/next-stage/full-dmg-by-24-september.md)
 separates source acquisition, semantic coverage and expert review. Content

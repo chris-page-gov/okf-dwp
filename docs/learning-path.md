@@ -96,7 +96,8 @@ The new full-corpus candidate uses version
 [five-minute walkthrough](remote-mcp-demo.md#five-minute-full-corpus-presentation)
 starts with a staff question and inspects whole pages from both manuals. The
 43-case remote evaluation and [three live SDK cases](remote-mcp-demo.md#live-sdk-verification-19-september)
-are recorded. Published-browser and actual ChatGPT acceptance remain pending.
+are recorded. ChatGPT also inspected a bounded abroad package; published-browser
+acceptance remains pending.
 The broad corpus does not yet have complete
 task-specific evidence profiles, so candidate evidence remains `insufficient`.
 
@@ -214,8 +215,8 @@ ChatGPT's handling of tool output has its [separate observed tests](remote-mcp-d
 
 The [full-corpus remote run](../validation/corpus-questions/receipt.json)
 uses those same 40 questions plus three boundary controls. All 40 staff questions
-return candidate evidence, including ADM pages. Ten packages retain an
-independently located candidate page; 19 retain a page from a candidate PDF.
+return candidate evidence, including ADM pages. Twelve packages retain an
+independently located candidate page; 21 retain a page from a candidate PDF.
 This measures retrieval against known research starting points. It does not
 score answers or establish that every selected page is relevant.
 
@@ -223,10 +224,19 @@ All 43 results remain `insufficient`; none produces an AI answer or has speciali
 acceptance. The broad questions lack complete task-specific evidence profiles.
 The whole-page candidate limit can omit other matches, and the package reports
 that truncation. All 43 complete remote packages match the shared engine.
-Published-browser and actual ChatGPT checks remain separate gates. Three live
+Published-browser and actual ChatGPT checks have separate evidence. Three live
 SDK checks have separately confirmed exact engine agreement for current
 imprisonment and hospital queries and the explicitly selected historical
 imprisonment profile.
+
+The [actual full-corpus ChatGPT rehearsal](remote-mcp-demo.md#actual-full-corpus-chatgpt-observation)
+first exposed irrelevant page selection. A general filter for ordinary question
+wording was corrected; the same bounded question then returned six source pages
+about international issues. ChatGPT inspected those pages without reporting host
+truncation and kept the result insufficient. The repeat staff-question run changed
+the known-page overlap from 10 to 12 cases and document overlap from 19 to 21.
+That is a measured retrieval improvement, not a complete benefits answer or an
+answer-quality score.
 See the [before-and-after results and Monday steps](../evaluation/staff-questions/results.md)
 for a concise demonstration sequence.
 

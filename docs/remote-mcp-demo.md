@@ -3,9 +3,10 @@
 **The current candidate extends Ask OKF to both captured DWP manuals: 513 PDFs,
 19,090 pages and 18,197 pages with nonempty extracted text.** The deployed service
 has passed the official SDK checks and all 43 remote evaluation cases against the
-shared engine. The published Explorer check and actual ChatGPT rehearsal are
-separate gates still in progress. Earlier verified ChatGPT observations below used the
-narrower custody version.
+shared engine. ChatGPT also inspected the bounded abroad result: six source
+pages, 31,312 bytes, with no host truncation reported. The result remains
+`insufficient`. Published Explorer acceptance is still pending. Earlier custody
+observations are preserved separately below.
 
 The public test endpoint is:
 
@@ -29,9 +30,10 @@ different descriptor is not the same demonstration.
 | Manifest | `full-dmg/context/corpus/manifest.json` at the explicit version above |
 | Manifest SHA-256 | `aa9726ba72b7495323b031f149fa13cffeae0aa8fc868af63b7af3cac0e6be95` |
 | Remote evaluation | 40 staff questions plus three controls; all 43 return `insufficient` and match the complete shared-engine package |
-| Candidate evidence | All 40 staff questions retrieve evidence, including ADM pages; ten retain an independently located page, 19 a page from a candidate PDF |
+| Candidate evidence | All 40 staff questions retrieve evidence, including ADM pages; 12 retain an independently located page, 21 a page from a candidate PDF |
 | Live service | Official SDK checks passed for current imprisonment, current hospital and explicitly selected historical imprisonment |
-| Published Explorer and actual ChatGPT | Acceptance pending for this corpus version |
+| Actual ChatGPT | Bounded abroad call inspected: six source pages, 31,312 bytes; no host truncation reported; still insufficient |
+| Published Explorer | Acceptance pending for this corpus version |
 
 See the [before-and-after results](../evaluation/staff-questions/results.md),
 [exact questions](../evaluation/staff-questions/cases.json) and
@@ -41,9 +43,9 @@ corpus has no complete task-specific evidence profiles. **Do not expect the new
 default imprisonment question to be sufficient.** The preserved, narrower
 version below has a separate declared imprisonment profile.
 
-The 43-case raw HTTP run completed at 17:19:46 UTC on 19 September using MCP
+The 43-case raw HTTP run completed at 17:31:33 UTC on 19 September using MCP
 `2025-11-25`. It retains actual response bodies and confirms complete package
-equality with the shared engine. Packages range from 4,383 to 493,943 bytes;
+equality with the shared engine. Packages range from 4,383 to 492,174 bytes;
 42 report truncation, including all 40 staff questions. The nonsense control
 returns no evidence or lexical candidates. These checks establish transport,
 source integrity and visible boundaries, not complete benefits answers.
@@ -53,8 +55,9 @@ controls were rejected, and all 42 source candidates were reverified.
 ### Live SDK verification, 19 September
 
 The [deployment receipt](../validation/corpus-questions/deployment.json) records
-service deployment 4 at 17:17:40 UTC. The [official SDK receipt](../validation/corpus-questions/sdk-receipt.json)
-records completed calls at 17:18:21 UTC using MCP `2026-07-28`.
+service deployment 5 at 17:29:51 UTC. The [official SDK receipt](../validation/corpus-questions/sdk-receipt.json)
+records completed calls at 17:30:33 UTC using MCP `2026-07-28` and Explorer
+implementation `31ee08ec259e165a478e9c36826fe3721643631d`.
 
 | Explicit source version and question | Live result | Evidence package |
 | --- | --- | --- |
@@ -67,8 +70,43 @@ tool results agree; no model answer is present. Tool discovery verified the
 read-only annotations and schemas. This establishes transport and exact evidence
 delivery to the SDK client, not delivery into ChatGPT's model context or Voice.
 The broader corpus's extra evidence does not supply the missing completeness
-profile. The earlier hosting attempt and its failed tool acceptance remain in the
-deployment history rather than being presented as successful calls.
+profile. Earlier hosting and retrieval failures remain in the deployment and
+client history rather than being presented as successful answers.
+
+### Actual full-corpus ChatGPT observation
+
+The [de-identified client observation](../validation/corpus-questions/chatgpt-observation.json)
+retains all three stages of the real Pro-account rehearsal using 5.6 Extra High:
+
+1. The cached older tool schema rejected the new version before an MCP request.
+   Refreshing the existing connection exposed both supported versions.
+2. The first successful call returned five source pages and 30,097 bytes, without
+   reported host truncation. ChatGPT correctly reported that the pages did not
+   answer the abroad question: ordinary words such as “your” and “go” had
+   dominated candidate selection.
+3. A general query-word filter was corrected and the same question and 32,768-byte
+   budget were rerun. The result retained the terms `benefits` and `abroad` and
+   six source pages, totalling 31,312 bytes. The actual tool panel was inspected;
+   ChatGPT read and cited all six pages and reported no host truncation.
+
+The final context ID is
+`urn:sha256:2cdfa5feb6310f58166d66e814bd3b2fbe2e9e146e25b25a65453b48e3dffabd`.
+It contains ADM C2 page 18, C3 page 24, C4 page 4, memo 6/21 page 4, memo 7/21
+page 13 and memo 08/26 page 1. These are international-issues sources, with
+different dates and scopes. The result has zero relationships and remains
+`insufficient`, with retrieval and assembly truncation. No complete benefits
+answer, individual decision, specialist approval or Voice invocation is claimed.
+
+The [before-and-after retrieval comparison](../validation/corpus-questions/retrieval-comparison.json)
+binds both remote runs and their engine hashes. Exact research-page overlap rose
+from 10 to 12 staff cases; research-document overlap rose from 19 to 21. Two cases
+gained a matching candidate, 38 were unchanged on those measures and none lost
+one. These are narrow retrieval diagnostics, not answer-quality scores. The
+initial failure remains recorded.
+The [exact bounded package](../validation/corpus-questions/bounded-abroad/context.json),
+[HTTP receipt](../validation/corpus-questions/bounded-abroad/receipt.json) and
+[portable offline verifier](../validation/corpus-questions/bounded-abroad/verify.mjs)
+let another reader check that same response without a live service or model call.
 
 Ask selects bounded whole pages using the question's literal terms and separately
 resolves declared concepts. Existing concept aliases and relationships keep their
@@ -101,8 +139,8 @@ visible in source accounting but cannot supply a text match.
 
 ### Full-corpus ChatGPT rehearsal prompt
 
-This prompt targets the new corpus. Its actual ChatGPT invocation is **pending**;
-the earlier tested bounded prompts remain in the preserved section below.
+This prompt targets the new corpus and the observed bounded abroad case above.
+The earlier tested custody prompts remain in the preserved section below.
 
 ```text
 Use the Ask OKF connection. Call ask_okf once with bundle "okf-dwp", version "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752", budget {"max_bytes":32768}, and this exact question:
@@ -185,8 +223,9 @@ In the observed interface, use **Plugins → Ask OKF → Plugin actions → Mana
 Information → Refresh**. Keep the existing connection's No Auth, read-only
 configuration. Check that its refreshed supported-version list includes
 `bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752`, then repeat the bounded prompt and
-inspect the actual tool invocation. Refreshing the connection is not proof that
-the next call succeeded; that post-refresh result is still pending here.
+inspect the actual tool invocation. The post-refresh calls and subsequent
+retrieval correction are recorded in the full-corpus observation above.
+Refreshing a connection alone is not proof that its next tool call succeeded.
 
 ### A browser shows 405
 
@@ -278,7 +317,7 @@ For Monday, use a text conversation that passes the tool-call rehearsal if Voice
 
 The workflow pins two different Explorer revisions. The historical custody
 receipts require `97f13d22b689d92cd785de04758fe932d4a4d369`; the combined-corpus
-receipt requires `d4f46db802791184af28a2ac0694ef5a95ac1e92`. The receipt also checks
+receipt requires `31ee08ec259e165a478e9c36826fe3721643631d`. The receipt also checks
 the relevant implementation hashes. Use separate checkouts so that replaying
 one version does not silently change another.
 
@@ -290,6 +329,7 @@ node --experimental-strip-types scripts/evaluate_corpus_questions.mjs \
   --check --explorer-root .ci/okf-explorer-corpus
 node --experimental-strip-types scripts/test_corpus_questions.mjs \
   --explorer-root .ci/okf-explorer-corpus
+node validation/corpus-questions/bounded-abroad/verify.mjs
 ```
 
 For a local checkout outside CI, replace `.ci/okf-explorer-corpus` with a checkout

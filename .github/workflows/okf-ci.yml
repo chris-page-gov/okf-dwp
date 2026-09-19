@@ -16,7 +16,7 @@ jobs:
     env:
       # Reviewed immutable consumer source; execution receipts bind its bytes too.
       EXPLORER_CONTEXT_COMMIT: 97f13d22b689d92cd785de04758fe932d4a4d369
-      EXPLORER_CORPUS_COMMIT: d4f46db802791184af28a2ac0694ef5a95ac1e92
+      EXPLORER_CORPUS_COMMIT: 31ee08ec259e165a478e9c36826fe3721643631d
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
@@ -92,6 +92,8 @@ jobs:
         run: node --experimental-strip-types scripts/test_staff_questions.mjs --explorer-root .ci/okf-explorer
       - name: Replay full-corpus staff questions and scope controls
         run: node --experimental-strip-types scripts/evaluate_corpus_questions.mjs --check --explorer-root .ci/okf-explorer-corpus
+      - name: Replay the bounded full-corpus ChatGPT demonstration package
+        run: node --experimental-strip-types validation/corpus-questions/bounded-abroad/verify.mjs --check --explorer-root .ci/okf-explorer-corpus
       - name: Reject altered full-corpus evaluation evidence
         run: node --experimental-strip-types scripts/test_corpus_questions.mjs --explorer-root .ci/okf-explorer-corpus
       - name: Replay actual-index context failure controls

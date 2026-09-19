@@ -15,13 +15,13 @@ Pensions wording, remain unresolved rather than being silently rewritten.
 
 | Measure | Preserved custody baseline | Combined DMG and ADM candidate |
 | --- | --- | --- |
-| Observation | Actual remote MCP calls, 19 September 2026 | Actual remote MCP calls, 19 September 2026, completed at 17:19:46 UTC |
+| Observation | Actual remote MCP calls, 19 September 2026 | Actual remote MCP calls, 19 September 2026, completed at 17:31:33 UTC |
 | Source available to Ask | 52 governed context records | 18,197 nonempty extracted pages across 513 PDFs |
 | Questions | All 40 occurrences | Same 40 occurrences, plus three boundary controls |
 | Transport comparison | All 40 complete remote packages match the shared Explorer engine | All 43 complete remote packages match the shared Explorer engine |
 | Candidate evidence returned | Earlier receipt preserves the selected custody evidence | All 40 staff questions; each also returns at least one ADM page |
-| Independent research-page overlap | Not scored in the baseline | 10 of 40 packages include an independently located candidate page |
-| Independent research-document overlap | Not scored in the baseline | 19 of 40 include a page from an independently located candidate PDF |
+| Independent research-page overlap | Not scored in the baseline | 12 of 40 packages include an independently located candidate page |
+| Independent research-document overlap | Not scored in the baseline | 21 of 40 include a page from an independently located candidate PDF |
 | Declared sufficient packages | 0 | 0 |
 | AI answers generated | 0 | 0 |
 | Specialist-accepted answers | 0 | 0 |
@@ -32,8 +32,8 @@ with per-question compressed responses, exact question text, hashes, scope,
 missing evidence and implementation identity. The original baseline uses
 immutable DWP revision `efb05c66616a9cd4328a86cf412780fe7bc7cf0b`. The wider run
 names its own corpus version and manifest binding; it does not replace that
-baseline. Its published-browser check and actual ChatGPT rehearsal remain
-separate delivery gates.
+baseline. Its published-browser check remains pending. The actual bounded
+ChatGPT rehearsal has its own observation below.
 The new [full-corpus demonstration guide](../../docs/remote-mcp-demo.md#five-minute-full-corpus-presentation)
 uses explicit version `bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752`. The older
 imprisonment sufficiency result must not be presented as a result of this broader
@@ -51,6 +51,33 @@ controls were rejected, covering receipt identity, source and transport bindings
 and altered results. The 42 independently located source candidates were also
 reverified. These checks protect the integrity of the evaluation; they do not
 convert its research starting points into complete answer rubrics.
+
+### What the real client test changed
+
+The [actual ChatGPT observation](../../validation/corpus-questions/chatgpt-observation.json)
+first exposed a cached tool schema, then an evidence-ranking defect. After the
+connection was refreshed, the first bounded call succeeded, but ordinary query
+words such as “your” and “go” selected five irrelevant source pages. ChatGPT
+correctly declined to turn them into an abroad answer. That is a successful
+transport test and an unsuccessful retrieval result.
+
+A general query-word filter was corrected and the same sources, question and
+32,768-byte budget were tested again. ChatGPT inspected six international-issues
+source pages, totalling 31,312 bytes, without reporting host truncation. The
+[exact bounded package](../../validation/corpus-questions/bounded-abroad/context.json)
+and [HTTP receipt](../../validation/corpus-questions/bounded-abroad/receipt.json)
+remain inspectable. The context is insufficient and truncated; no complete
+benefits answer or specialist acceptance is claimed.
+
+The [machine-readable comparison](../../validation/corpus-questions/retrieval-comparison.json)
+binds the earlier remote receipt at commit
+`697dd85c1cd5ea5191a77124de5a868d06d1652c` and the current receipt by exact hashes,
+including both engines. Exact-page overlap rose from 10 to 12 cases and document
+overlap from 19 to 21. `staff-004` and `staff-037` each gained a candidate;
+38 other staff cases were unchanged on these measures, with no lost candidate
+overlaps. The source corpus and question registry were unchanged. This is a narrow
+retrieval comparison, not an answer-quality score or a claim that every selected
+page is relevant.
 
 The wider collection contains 19,090 measured pages. The 893 pages without
 machine-extracted text retain their original source links and page locators,
@@ -111,8 +138,8 @@ confused.
    evidence profile.
 2. Follow the [full-corpus presentation and connection guide](../../docs/remote-mcp-demo.md#five-minute-full-corpus-presentation).
    Use the exact version named there. Distinguish the completed remote-service
-   checks from the pending published-browser and actual ChatGPT checks. The new
-   bounded ChatGPT prompt needs its own account rehearsal.
+   and bounded ChatGPT checks from the pending published-browser check. Repeat
+   the tested bounded prompt in the intended account before the meeting.
 3. Show the [public question registry](cases.json). Select one question and keep
    its original wording and ambiguity notes visible.
 4. Compare the preserved baseline result with its full-corpus result. Show the
