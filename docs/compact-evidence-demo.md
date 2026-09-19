@@ -2,11 +2,19 @@
 
 [Changelog](../CHANGELOG.md) · [Backlog](backlog.md) · [Work log](work-log-2026-09-19.md)
 
-**Recorded public service: version 0.3.0, deployed on 19 September 2026.**
-The [hosting receipt](../validation/compact-delivery/deployment.json) and
-[official SDK check](../validation/compact-delivery/sdk-receipt.json) bind Explorer
-runtime `169b8c387a29435d39dc31cbb2066376d84b39a6`. This is an independent
+**Recorded public service: version 0.3.1, deployed on 19 September 2026.**
+The [hosting receipt](../validation/compact-delivery/v0.3.1/deployment.json) and
+[official SDK check](../validation/compact-delivery/v0.3.1/sdk-receipt.json) bind Explorer
+runtime `8493b323ca664e645a2548ebb48bf7917d7f6eb1`, hosting version 7. This is an independent
 research service, not DWP advice or a decision about entitlement.
+
+Independent final review found that changing or resubmitting a question could
+leave the previous replay link visible. Version 0.3.1 clears that link on question
+or source changes and on resubmission. Twelve local regression journeys passed
+across Chrome, Firefox and WebKit. The live SDK again verified the unchanged
+evidence packages; corrected public-browser acceptance is recorded separately.
+The [0.3.0 hosting](../validation/compact-delivery/deployment.json) and
+[SDK observations](../validation/compact-delivery/sdk-receipt.json) remain intact.
 
 ## What is usable now
 
@@ -20,7 +28,7 @@ behaviour. `ask_okf_manifest` returns a small catalogue and completeness/gap
 counts. `read_okf_evidence` returns exact bounded passages, provenance,
 relationships, diagnostics or package slices. No tool supplies an AI answer.
 
-**Public reader status: functional checks passed; strict no-console acceptance
+**Earlier public reader observations (0.3.0): functional checks passed; strict no-console acceptance
 failed.** The [public browser report](../validation/compact-delivery/browser/public/run-summary.json)
 records three journeys in each of Chrome, Firefox and WebKit using the explicitly
 historical custody profile. Every functional assertion before the final console
@@ -38,12 +46,24 @@ made four real tool calls and displayed the same six-record, insufficient abroad
 context. Rendered ADM C2 page 18 text, provenance and complete diagnostic hashes
 matched the SDK evidence. Its functional checks passed; its strict console gate
 still failed on the host-injected script. This observation binds hosting version
-6 and runtime `169b8c387a29435d39dc31cbb2066376d84b39a6`, before the pending
+6 and runtime `169b8c387a29435d39dc31cbb2066376d84b39a6`, before the
 0.3.1 replay-link correction. It establishes neither an AI answer nor an overall
 browser pass. The new conceptual-navigation
 Explorer deployment is also separate: its [browser receipt](../validation/navigation/browser/README.md)
 currently proves the exact local candidate. Earlier public Explorer observations
 retain their own recorded versions and scope.
+
+**Current public reader (0.3.1): functional checks passed; strict console gates
+failed.** The [corrected historical-profile suite](../validation/compact-delivery/v0.3.1/browser/historical/run-summary.json)
+ran four journeys in each of Chrome, Firefox and WebKit, including changing from
+question A to B and verifying the new replay-link identity. All twelve reached
+the final console check with functional assertions satisfied, then failed on
+the unchanged hosting errors. The separate
+[full-corpus Chrome journey](../validation/compact-delivery/v0.3.1/browser/full-corpus/chrome-receipt.json)
+made four actual calls and verified the same six-record insufficient context,
+rendered source, provenance and complete diagnostics against the SDK. Its strict
+console gate also failed. These observations bind version 7; they do not claim
+an overall clean browser result or an AI answer. DWP-BL-023 remains open.
 
 ## Demonstration
 

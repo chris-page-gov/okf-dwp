@@ -1,0 +1,156 @@
+{
+  "schema": "okf-service-review-browser-run-summary.v1",
+  "observed_at": "2026-09-19T20:50:28.584Z",
+  "service_version": "0.3.1",
+  "base_url": "https://ask-okf.crpage.chatgpt.site",
+  "deployment_receipt": {
+    "path": "../../deployment.json",
+    "sha256": "b837b3ccba3ac52cf218815bfd76c1ee182c534f7bf97d7452cc3652c9f948be",
+    "runtime_commit": "8493b323ca664e645a2548ebb48bf7917d7f6eb1",
+    "runtime_worker_sha256": "84ce2cb7da76c1483617391f1518504a913ff868d0b096c14807262850324a51",
+    "site_version_number": 7
+  },
+  "harness": {
+    "repository": "https://github.com/chris-page-gov/okf-explorer",
+    "commit": "8493b323ca664e645a2548ebb48bf7917d7f6eb1",
+    "path": "apps/okf-explorer/tests/service-review/evidence-review.spec.ts",
+    "sha256": "229e6dbd9912b1dc0b642c4bcfecc9e9348e674ccf7a27d2d06c080bfc324837"
+  },
+  "stats": {
+    "startTime": "2026-09-19T20:50:07.339Z",
+    "duration": 21243.376,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 12,
+    "flaky": 0
+  },
+  "functional_tests_passed_before_console_gate": 12,
+  "strict_tests_passed": 0,
+  "strict_tests_failed": 12,
+  "strict_status": "failed",
+  "console_failures": [
+    "All three browser engines reported a host-injected inline script blocked by the application Content Security Policy.",
+    "Firefox additionally reported a rejected __cf_bm cookie with an invalid domain."
+  ],
+  "suppressed_errors": [],
+  "tests": [
+    {
+      "browser": "chrome",
+      "title": "built script loads inert replay, exact source evidence, metadata, diagnostics and bounded parts",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 162,
+      "strict_status": "failed",
+      "duration_ms": 1411
+    },
+    {
+      "browser": "chrome",
+      "title": "replay links are removed when changing or recreating a context and regenerated for the new identity",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 196,
+      "strict_status": "failed",
+      "duration_ms": 1152
+    },
+    {
+      "browser": "chrome",
+      "title": "question change discards a late replay response",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 222,
+      "strict_status": "failed",
+      "duration_ms": 583
+    },
+    {
+      "browser": "chrome",
+      "title": "invalid fragment is inert and synthetic returned markup renders as text",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 253,
+      "strict_status": "failed",
+      "duration_ms": 1103
+    },
+    {
+      "browser": "firefox",
+      "title": "built script loads inert replay, exact source evidence, metadata, diagnostics and bounded parts",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 162,
+      "strict_status": "failed",
+      "duration_ms": 2066
+    },
+    {
+      "browser": "firefox",
+      "title": "replay links are removed when changing or recreating a context and regenerated for the new identity",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 196,
+      "strict_status": "failed",
+      "duration_ms": 1204
+    },
+    {
+      "browser": "firefox",
+      "title": "question change discards a late replay response",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 222,
+      "strict_status": "failed",
+      "duration_ms": 763
+    },
+    {
+      "browser": "firefox",
+      "title": "invalid fragment is inert and synthetic returned markup renders as text",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 253,
+      "strict_status": "failed",
+      "duration_ms": 1046
+    },
+    {
+      "browser": "webkit",
+      "title": "built script loads inert replay, exact source evidence, metadata, diagnostics and bounded parts",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 162,
+      "strict_status": "failed",
+      "duration_ms": 1698
+    },
+    {
+      "browser": "webkit",
+      "title": "replay links are removed when changing or recreating a context and regenerated for the new identity",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 196,
+      "strict_status": "failed",
+      "duration_ms": 1028
+    },
+    {
+      "browser": "webkit",
+      "title": "question change discards a late replay response",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 222,
+      "strict_status": "failed",
+      "duration_ms": 2174
+    },
+    {
+      "browser": "webkit",
+      "title": "invalid fragment is inert and synthetic returned markup renders as text",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 253,
+      "strict_status": "failed",
+      "duration_ms": 1018
+    }
+  ],
+  "method": "Temporary reporter records reaching each unchanged final empty-console assertion. All prior functional assertions must have completed. Original assertions and outcomes remain unchanged; no console errors are suppressed.",
+  "observation_reporter_sha256": "88e1f98e37a808f7b497ac105f5d3d68d574dcda1561088382dbf793b7ce3d54",
+  "original_playwright_report_sha256": "ba68c3f8f61cd0682256238bcc2890ab94f11aad09089164dc940c8bf01892cc",
+  "raw_trace_retention": "Raw Playwright traces, browser metadata and the full reporter output remain outside the repository; safe observations and source-only screenshots are retained here.",
+  "limitations": [
+    "The source evidence journey and replay-link identity regression use real public service responses. The late-response and hostile-markup controls deliberately hold or alter responses in the test browser.",
+    "This historical profile check is separate from the full-corpus observation. It does not establish current legal correctness, answer quality, or human review.",
+    "Deployment identity is bound through the separate deployment receipt, not established by the browser test alone.",
+    "Functional completion does not change the strict failed result."
+  ]
+}

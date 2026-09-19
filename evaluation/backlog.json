@@ -148,6 +148,9 @@
       "owner_role": "Reusable Explorer and MCP maintainer",
       "evidence": [
         "docs/compact-evidence-demo.md",
+        "validation/compact-delivery/v0.3.1/deployment.json",
+        "validation/compact-delivery/v0.3.1/sdk-receipt.json",
+        "validation/compact-delivery/v0.3.1/browser/full-corpus/chrome-receipt.json",
         "validation/compact-delivery/deployment.json",
         "validation/compact-delivery/sdk-receipt.json",
         "validation/compact-client/verification.json"
@@ -155,7 +158,7 @@
       "acceptance_checks": [
         "Unchanged ask_okf preserved; small manifest plus paginated exact reads; original version/question/budget/context identity replayed; stale/unknown IDs rejected; all slices reconstruct exactly; actual host check."
       ],
-      "scope_note": "Public service 0.3.0 and official SDK verification establish bounded delivery and reconstruction at the recorded runtime commit. Local Claude client verified separately. Public historical-profile browser functional assertions passed, but strict console acceptance failed because of hosting integration (DWP-BL-023); ChatGPT and Voice retain their separate gates."
+      "scope_note": "Public service 0.3.1 and official SDK verification establish bounded delivery and reconstruction at runtime 8493b323ca664e645a2548ebb48bf7917d7f6eb1. The stale replay-link correction passed twelve local browser journeys. Twelve public v7 historical-profile functional sequences and a separate full-corpus Chrome journey passed their functional checks, but strict console gates failed because of hosting integration (DWP-BL-023). Earlier v6 observations and failures are preserved. Local Claude, ChatGPT and Voice retain their separate gates."
     },
     {
       "id": "DWP-BL-009",

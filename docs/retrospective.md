@@ -56,8 +56,9 @@ Both attempts remain in the [comparison evidence](../validation/corpus-questions
 The service could deliver a complete large package while ChatGPT reported host
 truncation. A 32,768-byte request produced a 31,312-byte abroad package which the
 model could inspect. The same complete bounded content was checked in the public
-UI and native WebMCP. Public service 0.3.0 now adds progressive manifests and
-exact evidence reads under **DWP-BL-008**. Its [SDK receipt](../validation/compact-delivery/sdk-receipt.json)
+UI and native WebMCP. Public service 0.3.0 introduced progressive manifests and
+exact evidence reads under **DWP-BL-008**; corrected version 0.3.1 retains them.
+Its [SDK receipt](../validation/compact-delivery/v0.3.1/sdk-receipt.json)
 reconstructs that same package and rejects stale or invalid reads. The
 [local Claude observation](../validation/compact-client/README.md) distinguishes
 seven real calls from an earlier zero-call model fabrication. Actual tool-call
@@ -70,6 +71,22 @@ They were mapped to supported fields or preserved in descriptive sidecars,
 without modifying canonical schemas or source evidence. Canonical schema and
 reference checks now run early. Future departmental projects should do this on
 their first tiny fixture, rather than discovering drift near publication.
+
+### 6. Final review needs to test state changes and dependency boundaries
+
+Independent review caught a stale replay link after changing or resubmitting a
+question. The [new browser regression](https://github.com/chris-page-gov/okf-explorer/blob/8493b323ca664e645a2548ebb48bf7917d7f6eb1/apps/okf-explorer/tests/service-review/evidence-review.spec.ts)
+checks question A → B and the replacement context identity. Test transitions,
+not just a successful first display. The correction is deployed as 0.3.1;
+separate hosting-console failures remain open.
+
+The assembled documentation also reused a cache that omitted transitive service
+Markdown. Its renderer knew about a newly linked changelog but its cache did
+not. The [cache regression](https://github.com/chris-page-gov/okf-explorer/blob/8493b323ca664e645a2548ebb48bf7917d7f6eb1/tests/test_build_site.py)
+now proves linked changes invalidate the cache while unrelated files do not.
+Portable lesson: derive cache inputs from the renderer's bounded dependency
+closure, including exact-source alternates. Independent integration checks must
+cover the interfaces between workstreams as well as each agent's own files.
 
 ## What to repeat
 

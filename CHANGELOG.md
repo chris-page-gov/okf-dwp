@@ -11,7 +11,7 @@ Implementation ownership and handovers belong in the
 ## Unreleased — in progress
 
 The repository candidate on `codex/evidence-review-navigation` is still being
-integrated. Public service 0.3.0 has its own hosting and SDK observations below;
+integrated. Public service 0.3.1 has its own hosting and SDK observations below;
 this does not claim the new Explorer navigation is publicly deployed. Earlier
 dated observations keep their original scope.
 
@@ -42,6 +42,17 @@ dated observations keep their original scope.
 
 ### Changed
 
+- Deploy service 0.3.1 after independent final review found a stale replay link:
+  clear it when the question or source changes and on resubmission. Twelve local
+  browser journeys passed across three engines, and the live SDK retained exact
+  package parity. Preserve all 0.3.0/v6 receipts and hosting failures. The
+  corrected public reader's twelve historical-profile journeys passed their
+  functional assertions, including the changed replay identity, then failed
+  strict console checks on host errors. A separate v7 full-corpus Chrome journey
+  verified exact displayed evidence and also retained the host-console failure.
+- Correct the reusable Explorer documentation cache to include transitive linked
+  Markdown and its exact-source alternates. Forty focused tests and the assembled
+  site check passed; no evidence or application-runtime change was needed.
 - Make this changelog directly visible from the main and beginner guides.
 - Public service 0.3.0 exposes the unchanged `ask_okf` plus an evidence catalogue,
   exact bounded reads and a human replay route. The official SDK verifies three
@@ -57,7 +68,7 @@ dated observations keep their original scope.
   four real tool calls, six insufficient-context records, and rendered source,
   provenance and diagnostic hashes matching the SDK. Functional checks passed;
   the strict host-console gate still failed. Preserve this observation before
-  the pending 0.3.1 replay-link correction.
+  the 0.3.1 replay-link correction.
 - The exact local Explorer navigation candidate passed its recorded browser
   journeys. The new public Explorer deployment remains a separate gate.
 
