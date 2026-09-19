@@ -1,5 +1,87 @@
 # Changelog
 
+Notable changes for readers, in reverse date order. We use the
+[Keep a Changelog](https://keepachangelog.com/en/1.1.0/) distinction between
+unreleased work and dated changes; this repository currently uses dated research
+deliveries rather than claiming a Semantic Versioning release series.
+Implementation ownership and handovers belong in the
+[multi-agent work log](docs/work-log-2026-09-19.md), with stable work items in the
+[backlog](docs/backlog.md).
+
+## Evidence review and navigation — 19 September 2026
+
+This dated entry records the evidence-review and navigation work.
+[DWP PR 10](https://github.com/chris-page-gov/okf-dwp/pull/10) records its integration
+and exact check/merge status. Explorer PR 125 is merged and its published DMG navigation
+has a passing scoped Chrome observation. Public service 0.3.1 has separate
+hosting, SDK and browser observations below, including its unresolved host-console
+failures. Earlier dated observations keep their original scope.
+
+### Added
+
+- A discovery-first departmental method, HMRC discovery brief, actual namespace
+  map and factual retrospective, with the difference between adopted vocabulary,
+  proposed standards and domain concepts made explicit.
+- Stable backlog IDs, dependencies and acceptance checks, plus a separate
+  multi-agent work log with ownership and handover boundaries.
+- Separate the completed classification/DMG Reader milestone from unfinished
+  ADM Reader and cross-manual navigation (DWP-BL-024). Ask OKF already includes
+  both manuals; this remaining gap concerns the human Reader projection.
+- An additive review descriptor with 44 navigation labels and an explicit
+  classified/unclassified accounting of all 19,090 DMG/ADM pages. Literal facet
+  assignment does not assert legal applicability; the Reader keeps its DMG scope.
+- Forty human-readable staff review packs, with 42 shared source-evidence
+  resources and machine-readable packs of 3,795–12,062 bytes. Source candidates
+  remain distinct from retrieved pages; every case awaits specialist review.
+- Offline CI checks for backlog identities, dependencies and prose consistency,
+  and retained answer-trial input/output integrity. No model calls run in CI.
+- Three actual, fixed-public-evidence Claude subscription trials, with tools
+  disabled and no model override. Preserve the abroad trial's strict verbatim
+  quotation failures, the custody citation checks and the no-evidence abstention.
+  Human claim review remains pending; these are not engineering or legal passes.
+
+- A separate actual Claude local MCP observation: seven compact-tool calls,
+  exact replay of diagnostics and two source records, and offline corruption
+  controls. Preserve the preceding zero-call attempt and fabricated model
+  catalogue as a failure; do not conflate transport with answer quality.
+
+### Changed
+
+- Deploy service 0.3.1 after independent final review found a stale replay link:
+  clear it when the question or source changes and on resubmission. Twelve local
+  browser journeys passed across three engines, and the live SDK retained exact
+  package parity. Preserve all 0.3.0/v6 receipts and hosting failures. The
+  corrected public reader's twelve historical-profile journeys passed their
+  functional assertions, including the changed replay identity, then failed
+  strict console checks on host errors. A separate v7 full-corpus Chrome journey
+  verified exact displayed evidence and also retained the host-console failure.
+- Correct the reusable Explorer documentation cache to include transitive linked
+  Markdown and its exact-source alternates. Forty focused tests and the assembled
+  site check passed; no evidence or application-runtime change was needed.
+- Make this changelog directly visible from the main and beginner guides.
+- Public service 0.3.0 exposes the unchanged `ask_okf` plus an evidence catalogue,
+  exact bounded reads and a human replay route. The official SDK verifies three
+  unchanged full packages, all five read sections, exact reconstruction of the
+  31,312-byte abroad package and three fail-closed controls. Hosting and SDK
+  receipts are separate from browser, AI-answer and public Explorer acceptance.
+- Preserve the public service reader's failed strict console gate: all nine
+  historical-profile browser cases reached their final console check with
+  functional assertions satisfied, then failed on host-injected Cloudflare code
+  blocked by CSP (plus Firefox cookie-domain errors). Record DWP-BL-023 for
+  hosting integration; keep CSP and fail-closed controls unchanged.
+- Record a separate public full-corpus Chrome journey on hosting version 6:
+  four real tool calls, six insufficient-context records, and rendered source,
+  provenance and diagnostic hashes matching the SDK. Functional checks passed;
+  the strict host-console gate still failed. Preserve this observation before
+  the 0.3.1 replay-link correction.
+- Verify published Explorer navigation after PR 125 and Pages deployment: all
+  21 app files and 188 observed corpus files matched the expected bytes, and
+  benefit/circumstance/topic/authored-concept filters matched across Reader,
+  Graph and Timeline (74/343/268/1 records). The scoped Chrome check found no
+  console errors or targeted accessibility violations. The Reader remains
+  DMG-only; all full-corpus questions remain insufficient pending specialist
+  evidence profiles. Preserve the earlier local observation separately.
+
 ## Staff questions, ADM acquisition and repository governance — 19 September 2026
 
 - Repair inherited repository semantic and publication contract drift against

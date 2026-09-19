@@ -1,0 +1,103 @@
+{
+  "ai_answer": null,
+  "ambiguities": [
+    "The requested relationship could mean eligibility, transitions, income treatment or overlapping payment.",
+    "PIP/DLA components, age, jurisdiction and IIDB additions are unspecified."
+  ],
+  "candidate_evidence": [
+    {
+      "bytes": 4067,
+      "id": "source-c040",
+      "page": 3,
+      "path": "../evidence/source-c040.json",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0003",
+      "review_note": "IIDB conditions and historical claim-date distinctions; not a whole interoperability rule set.",
+      "selection_status": "source-candidate-only-not-complete-answer",
+      "sha256": "15deee73b19a8f87d01cd98cfd34524918021d4e735e9aafdff1794493440af2",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=3"
+    },
+    {
+      "bytes": 4507,
+      "id": "source-c041",
+      "page": 42,
+      "path": "../evidence/source-c041.json",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0042",
+      "review_note": "Industrial Injuries CAA candidate; must not be silently equated with a war-pension allowance.",
+      "selection_status": "source-candidate-only-not-complete-answer",
+      "sha256": "7b6ed5819fc19b1e160b9e6e5d5d9a276ace271477bd1e1608fffe11a5d98257",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=42"
+    },
+    {
+      "bytes": 4057,
+      "id": "source-c039",
+      "page": 5,
+      "path": "../evidence/source-c039.json",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+      "review_note": "AA/DLA age conditions and PIP references; not a complete PIP transition or continuation rule.",
+      "selection_status": "source-candidate-only-not-complete-answer",
+      "sha256": "9f3b358103a64af43bb4359362521ed0e2738066f4ba9fc8d61d7081019e1c30",
+      "source_url": "https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=5"
+    },
+    {
+      "bytes": 3630,
+      "id": "source-c034",
+      "page": 11,
+      "path": "../evidence/source-c034.json",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011",
+      "review_note": "Overlapping-benefit table continuation includes PIP daily living and attendance-related benefits; preceding definitions and exact scheme must be retained.",
+      "selection_status": "source-candidate-only-not-complete-answer",
+      "sha256": "ce39afe68430c289a682a34a86ff5e3ec339ba88773b124226c94a95b0c59206",
+      "source_url": "https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=11"
+    }
+  ],
+  "duplicate_of": null,
+  "evidence_status": "insufficient",
+  "id": "staff-029",
+  "limitations": [
+    "Research review pack, not an answer, an entitlement decision or a complete legal evidence bundle.",
+    "Candidate selection is project-authored and unreviewed. It is independent of the retained retrieval run and is not injected into search or Ask OKF.",
+    "Each excerpt is an exact bounded substring of frozen machine text, with offsets, a literal hash and a whole-page link. Its surrounding qualifications may be outside the excerpt or on adjacent pages.",
+    "Machine extraction can damage tables, footnotes, spacing and reading order. Compare each material proposition with the original PDF, adjacent text and cited legislation.",
+    "Original source roles, capture dates and historical limitations remain unchanged. Current applicability and specialist acceptance are not established."
+  ],
+  "observed_retrieval": {
+    "candidate_documents_retained": [
+      "dmg-vol3-ch17"
+    ],
+    "candidate_ids_retained": [
+      "source-c034"
+    ],
+    "context_id": "urn:sha256:b7cfd8ad9932740bb27403483df7571a15e848ea0d23a0cf10b8bf7a37455267",
+    "evidence_status": "insufficient",
+    "note": "Historical observed retrieval, not a new evaluation or an answer-quality grade.",
+    "package_bytes": 70017,
+    "receipt_path": "validation/corpus-questions/receipt.json",
+    "receipt_sha256": "69069770f31f9ad5d93ee4a915529fdf6860ef6a9dc6aabb4b61d8aec95fb014",
+    "selected_records": 16,
+    "truncated": true,
+    "version": "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752"
+  },
+  "question": "What is the relationship between IIDB, PIP, Attendance Allowance and DLA?",
+  "required_evidence": [
+    {
+      "requirement": "A bounded typed relationship matrix with each component/benefit interaction and its source-dependent qualifications.",
+      "status": "not-yet-established"
+    }
+  ],
+  "review_checklist": [
+    "Resolve benefit, variant, time period and claimant circumstances without inventing missing facts.",
+    "Check each exact source passage and its adjacent pages against the official PDF.",
+    "Locate every condition, exception, qualification and cross-reference needed for the declared question.",
+    "Reconcile relevant legislation, amendments, ADM/DMG regime and effective dates.",
+    "Record each supported claim against exact evidence IDs, with contradicting or missing evidence separately.",
+    "Keep the answer insufficient until evidence requirements and claim-level assessment justify a bounded conclusion."
+  ],
+  "review_status": "awaiting-specialist-review",
+  "schema": "okf-staff-evidence-review.v1",
+  "scope_gaps": [
+    "No governed topic-specific context profile or independently complete evidence requirement in the approved immutable Ask index.",
+    "Relevant PIP/ADM source bodies and territorial/transition dependencies are not acquired as a complete profile; incidental PIP mentions in DMG do not close this gap.",
+    "The universe of other benefits, relationships or all scenarios has not been bounded."
+  ],
+  "section": "Industrial Injuries Benefits"
+}

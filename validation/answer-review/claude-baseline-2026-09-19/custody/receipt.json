@@ -1,0 +1,45 @@
+{
+  "schema": "okf-fixed-model-answer-trial.v1",
+  "id": "custody",
+  "started_at": "2026-09-19T19:52:24.771888+00:00",
+  "finished_at": "2026-09-19T19:55:08.381388+00:00",
+  "elapsed_seconds": 163.608,
+  "provider_surface": "existing Claude Code subscription",
+  "cli_version": "2.1.245 (Claude Code)",
+  "model_override": null,
+  "reported_model_usage_entries": [
+    "claude-haiku-4-5-20251001",
+    "claude-opus-5"
+  ],
+  "tools_enabled": [],
+  "mcp_servers": [],
+  "customisations": "disabled-safe-mode",
+  "session_persistence": false,
+  "inputs": {
+    "source_path": "validation/remote-mcp/imprisonment-tool-result.json.gz",
+    "source_sha256": "b0b693dabd8bc8c5dc6c0b212da400f69278812688b2252691246e98c007718e",
+    "context_sha256": "fa7c54306c5ab43cdd70539c49277e5d5a3ed3a1ac321f2df742e3da22b24280",
+    "context_bytes": 487506,
+    "context_id": "urn:sha256:283cddceca09958b96949527280ea14775de5f26d092c939cacfaa545500e80e",
+    "system_prompt_sha256": "e06f6546c5595a9c63b8ee8bfdee3d40710c184f9c8830c7ccf37d6c8af49d32",
+    "prompt_sha256": "c10e1ba92ccc04c0e451768e04ecbc92b1f16d872b77d9d626b9a0fd02cf70a1",
+    "schema_sha256": "5c83e0ffdfeed95fd0feb59ae2a7fc3e65c35608843c1a5254348632a3e3d06f",
+    "harness_sha256": "e9feefe43bbd2ded8419e84374421b05bc8b686130a830316ae6d9fd90779be1"
+  },
+  "answer_sha256": "b80fa39dfecd7202849883230649d4e62582628218d20a3e57919317f9a20849",
+  "model_output_sha256": "c11150ddc39b8e364e1a76b921a6ae07f758401f5655addca0c4a17a316863d9",
+  "mechanical_assessment": {
+    "status": "passed-mechanical-controls",
+    "failures": [],
+    "claims": 12,
+    "citations_checked": 31,
+    "entailment_review": "pending-independent-human-review",
+    "unsupported_claim_rate": null,
+    "answer_quality_score": null,
+    "specialist_accepted": false,
+    "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete."
+  },
+  "human_review": "pending",
+  "comparative_benchmark": false,
+  "cost_boundary": "Any CLI cost field is provider-reported accounting, not a verified subscription charge or saving. No price or model configuration was changed."
+}

@@ -1,0 +1,238 @@
+{
+  "schema": "okf-service-review-functional-gates.v1",
+  "observed_at": "2026-09-19T20:50:28.584Z",
+  "base_url": "https://ask-okf.crpage.chatgpt.site",
+  "harness_sha256": "229e6dbd9912b1dc0b642c4bcfecc9e9348e674ccf7a27d2d06c080bfc324837",
+  "strict_run_status": "failed",
+  "method": "Temporary reporter records reaching each unchanged final empty-console assertion. All prior functional assertions must have completed. Original assertions and outcomes remain unchanged; no console errors are suppressed.",
+  "tests": [
+    {
+      "browser": "chrome",
+      "title": "built script loads inert replay, exact source evidence, metadata, diagnostics and bounded parts",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 162,
+      "strict_status": "failed",
+      "duration_ms": 1411,
+      "errors": [
+        {
+          "message": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 3\n\n- Array []\n+ Array [\n+   \"Executing inline script violates the following Content Security Policy directive 'script-src 'self''. Either the 'unsafe-inline' keyword, a hash ('sha256-vw5FnjEfYDH9oycOXNRg2QmwxTP728tihSjenz5dkoI='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.\",\n+ ]",
+          "location": {
+            "file": "/Users/crpage/tmp/okf-explorer-evidence-review/apps/okf-explorer/tests/service-review/evidence-review.spec.ts",
+            "column": 18,
+            "line": 162
+          }
+        }
+      ]
+    },
+    {
+      "browser": "chrome",
+      "title": "replay links are removed when changing or recreating a context and regenerated for the new identity",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 196,
+      "strict_status": "failed",
+      "duration_ms": 1152,
+      "errors": [
+        {
+          "message": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 3\n\n- Array []\n+ Array [\n+   \"Executing inline script violates the following Content Security Policy directive 'script-src 'self''. Either the 'unsafe-inline' keyword, a hash ('sha256-vWPH35gBaND3U7PzyHKvxvsK//Xsh1TpVyV5pNyQfws='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.\",\n+ ]",
+          "location": {
+            "file": "/Users/crpage/tmp/okf-explorer-evidence-review/apps/okf-explorer/tests/service-review/evidence-review.spec.ts",
+            "column": 18,
+            "line": 196
+          }
+        }
+      ]
+    },
+    {
+      "browser": "chrome",
+      "title": "question change discards a late replay response",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 222,
+      "strict_status": "failed",
+      "duration_ms": 583,
+      "errors": [
+        {
+          "message": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 3\n\n- Array []\n+ Array [\n+   \"Executing inline script violates the following Content Security Policy directive 'script-src 'self''. Either the 'unsafe-inline' keyword, a hash ('sha256-Qt4bqiFMrdO1Z1YsXBmOEngkNR9qZUF97168gJwzTAg='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.\",\n+ ]",
+          "location": {
+            "file": "/Users/crpage/tmp/okf-explorer-evidence-review/apps/okf-explorer/tests/service-review/evidence-review.spec.ts",
+            "column": 18,
+            "line": 222
+          }
+        }
+      ]
+    },
+    {
+      "browser": "chrome",
+      "title": "invalid fragment is inert and synthetic returned markup renders as text",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 253,
+      "strict_status": "failed",
+      "duration_ms": 1103,
+      "errors": [
+        {
+          "message": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 3\n\n- Array []\n+ Array [\n+   \"Executing inline script violates the following Content Security Policy directive 'script-src 'self''. Either the 'unsafe-inline' keyword, a hash ('sha256-PpAPHpdci/1lais67seCEN0y8lpx6Gh5BXCUj98Tu9Q='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.\",\n+ ]",
+          "location": {
+            "file": "/Users/crpage/tmp/okf-explorer-evidence-review/apps/okf-explorer/tests/service-review/evidence-review.spec.ts",
+            "column": 18,
+            "line": 253
+          }
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "title": "built script loads inert replay, exact source evidence, metadata, diagnostics and bounded parts",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 162,
+      "strict_status": "failed",
+      "duration_ms": 2066,
+      "errors": [
+        {
+          "message": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 5\n\n- Array []\n+ Array [\n+   \"[JavaScript Error: \\\"Cookie “__cf_bm” has been rejected for invalid domain.\\\" {file: \\\"https://ask-okf.crpage.chatgpt.site/review/#eyJidW5kbGUiOiJva2YtZHdwIiwicXVlc3Rpb24iOiJBIGNsYWltYW50IGlzIGltcHJpc29uZWQuIEV4cGxhaW4gdGhlIGVmZmVjdCBvbiBKU0EsIElTLCBTdGF0ZSBQZW5zaW9uIENyZWRpdCBhbmQgRVNBLCBkaXN0aW5ndWlzaGluZyBsb3NzIG9mIHBheW1lbnQgZnJvbSBsb3NzIG9mIGVudGl0bGVtZW50LCBhbmQgdHJhY2UgZWFjaCBjb25jbHVzaW9uIHRvIHRoZSByZWxldmFudCBETUcgZ3VpZGFuY2UuIiwidmVyc2lvbiI6ImVmYjA1YzY2NjE2YTljZDQzMjhhODZjZjQxMjc4MGZlN2JjN2NmMGIiLCJjb250ZXh0X2lkIjoidXJuOnNoYTI1NjoyODNjZGRjZWNhMDk5NThiOTY5NDk1MjcyODBlYTE0Nzc1ZGU1ZjI2\\\" line: 0}]\",\n+   \"[JavaScript Error: \\\"Content-Security-Policy: The page’s settings blocked an inline script (script-src-elem) from being executed because it violates the following directive: “script-src 'self'”. Consider using a hash ('sha256-nKxyWEPTcLHZeLcUqLZ2BZzD4tV+VgKc7TKoIiv0sg4=') or a nonce.\\\" {file: \\\"https://ask-okf.crpage.chatgpt.site/review/#eyJidW5kbGUiOiJva2YtZHdwIiwicXVlc3Rpb24iOiJBIGNsYWltYW50IGlzIGltcHJpc29uZWQuIEV4cGxhaW4gdGhlIGVmZmVjdCBvbiBKU0EsIElTLCBTdGF0ZSBQZW5zaW9uIENyZWRpdCBhbmQgRVNBLCBkaXN0aW5ndWlzaGluZyBsb3NzIG9mIHBheW1lbnQgZnJvbSBsb3NzIG9mIGVudGl0bGVtZW50LCBhbmQgdHJhY2UgZWFjaCBjb25jbHVzaW9uIHRvIHRoZSByZWxldmFudCBETUcgZ3VpZGFuY2UuIiwidmVyc2lvbiI6ImVmYjA1YzY2NjE2YTljZDQzMjhhODZjZjQxMjc4MGZlN2JjN2NmMGIiLCJjb250ZXh0X2lkIjoidXJuOnNoYTI1NjoyODNjZGRjZWNhMDk5NThiOTY5NDk1MjcyODBlYTE0Nzc1ZGU1ZjI2\\\" line: 20}]\",\n+   \"[JavaScript Error: \\\"Cookie “__cf_bm” has been rejected for invalid domain.\\\" {file: \\\"https://ask-okf.crpage.chatgpt.site/review.js\\\" line: 0}]\",\n+ ]",
+          "location": {
+            "file": "/Users/crpage/tmp/okf-explorer-evidence-review/apps/okf-explorer/tests/service-review/evidence-review.spec.ts",
+            "column": 18,
+            "line": 162
+          }
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "title": "replay links are removed when changing or recreating a context and regenerated for the new identity",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 196,
+      "strict_status": "failed",
+      "duration_ms": 1204,
+      "errors": [
+        {
+          "message": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 5\n\n- Array []\n+ Array [\n+   \"[JavaScript Error: \\\"Cookie “__cf_bm” has been rejected for invalid domain.\\\" {file: \\\"https://ask-okf.crpage.chatgpt.site/review/#eyJidW5kbGUiOiJva2YtZHdwIiwicXVlc3Rpb24iOiJBIGNsYWltYW50IGlzIGltcHJpc29uZWQuIEV4cGxhaW4gdGhlIGVmZmVjdCBvbiBKU0EsIElTLCBTdGF0ZSBQZW5zaW9uIENyZWRpdCBhbmQgRVNBLCBkaXN0aW5ndWlzaGluZyBsb3NzIG9mIHBheW1lbnQgZnJvbSBsb3NzIG9mIGVudGl0bGVtZW50LCBhbmQgdHJhY2UgZWFjaCBjb25jbHVzaW9uIHRvIHRoZSByZWxldmFudCBETUcgZ3VpZGFuY2UuIiwidmVyc2lvbiI6ImVmYjA1YzY2NjE2YTljZDQzMjhhODZjZjQxMjc4MGZlN2JjN2NmMGIiLCJjb250ZXh0X2lkIjoidXJuOnNoYTI1NjoyODNjZGRjZWNhMDk5NThiOTY5NDk1MjcyODBlYTE0Nzc1ZGU1ZjI2\\\" line: 0}]\",\n+   \"[JavaScript Error: \\\"Content-Security-Policy: The page’s settings blocked an inline script (script-src-elem) from being executed because it violates the following directive: “script-src 'self'”. Consider using a hash ('sha256-VdFSFcLZ3egMA7fdk/qk/RoNtnidUrgQpiuJ2Dht/HE=') or a nonce.\\\" {file: \\\"https://ask-okf.crpage.chatgpt.site/review/#eyJidW5kbGUiOiJva2YtZHdwIiwicXVlc3Rpb24iOiJBIGNsYWltYW50IGlzIGltcHJpc29uZWQuIEV4cGxhaW4gdGhlIGVmZmVjdCBvbiBKU0EsIElTLCBTdGF0ZSBQZW5zaW9uIENyZWRpdCBhbmQgRVNBLCBkaXN0aW5ndWlzaGluZyBsb3NzIG9mIHBheW1lbnQgZnJvbSBsb3NzIG9mIGVudGl0bGVtZW50LCBhbmQgdHJhY2UgZWFjaCBjb25jbHVzaW9uIHRvIHRoZSByZWxldmFudCBETUcgZ3VpZGFuY2UuIiwidmVyc2lvbiI6ImVmYjA1YzY2NjE2YTljZDQzMjhhODZjZjQxMjc4MGZlN2JjN2NmMGIiLCJjb250ZXh0X2lkIjoidXJuOnNoYTI1NjoyODNjZGRjZWNhMDk5NThiOTY5NDk1MjcyODBlYTE0Nzc1ZGU1ZjI2\\\" line: 20}]\",\n+   \"[JavaScript Error: \\\"Cookie “__cf_bm” has been rejected for invalid domain.\\\" {file: \\\"https://ask-okf.crpage.chatgpt.site/review.js\\\" line: 0}]\",\n+ ]",
+          "location": {
+            "file": "/Users/crpage/tmp/okf-explorer-evidence-review/apps/okf-explorer/tests/service-review/evidence-review.spec.ts",
+            "column": 18,
+            "line": 196
+          }
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "title": "question change discards a late replay response",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 222,
+      "strict_status": "failed",
+      "duration_ms": 763,
+      "errors": [
+        {
+          "message": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 6\n\n- Array []\n+ Array [\n+   \"[JavaScript Error: \\\"Cookie “__cf_bm” has been rejected for invalid domain.\\\" {file: \\\"https://ask-okf.crpage.chatgpt.site/review/#eyJidW5kbGUiOiJva2YtZHdwIiwicXVlc3Rpb24iOiJBIGNsYWltYW50IGlzIGltcHJpc29uZWQuIEV4cGxhaW4gdGhlIGVmZmVjdCBvbiBKU0EsIElTLCBTdGF0ZSBQZW5zaW9uIENyZWRpdCBhbmQgRVNBLCBkaXN0aW5ndWlzaGluZyBsb3NzIG9mIHBheW1lbnQgZnJvbSBsb3NzIG9mIGVudGl0bGVtZW50LCBhbmQgdHJhY2UgZWFjaCBjb25jbHVzaW9uIHRvIHRoZSByZWxldmFudCBETUcgZ3VpZGFuY2UuIiwidmVyc2lvbiI6ImVmYjA1YzY2NjE2YTljZDQzMjhhODZjZjQxMjc4MGZlN2JjN2NmMGIiLCJjb250ZXh0X2lkIjoidXJuOnNoYTI1NjoyODNjZGRjZWNhMDk5NThiOTY5NDk1MjcyODBlYTE0Nzc1ZGU1ZjI2\\\" line: 0}]\",\n+   \"[JavaScript Error: \\\"Content-Security-Policy: The page’s settings blocked an inline script (script-src-elem) from being executed because it violates the following directive: “script-src 'self'”. Consider using a hash ('sha256-bgHpuK1MIQMe4qqPMQTSB6a2RqWZEsZXX8TGyO5sT+I=') or a nonce.\\\" {file: \\\"https://ask-okf.crpage.chatgpt.site/review/#eyJidW5kbGUiOiJva2YtZHdwIiwicXVlc3Rpb24iOiJBIGNsYWltYW50IGlzIGltcHJpc29uZWQuIEV4cGxhaW4gdGhlIGVmZmVjdCBvbiBKU0EsIElTLCBTdGF0ZSBQZW5zaW9uIENyZWRpdCBhbmQgRVNBLCBkaXN0aW5ndWlzaGluZyBsb3NzIG9mIHBheW1lbnQgZnJvbSBsb3NzIG9mIGVudGl0bGVtZW50LCBhbmQgdHJhY2UgZWFjaCBjb25jbHVzaW9uIHRvIHRoZSByZWxldmFudCBETUcgZ3VpZGFuY2UuIiwidmVyc2lvbiI6ImVmYjA1YzY2NjE2YTljZDQzMjhhODZjZjQxMjc4MGZlN2JjN2NmMGIiLCJjb250ZXh0X2lkIjoidXJuOnNoYTI1NjoyODNjZGRjZWNhMDk5NThiOTY5NDk1MjcyODBlYTE0Nzc1ZGU1ZjI2\\\" line: 20}]\",\n+   \"[JavaScript Error: \\\"Cookie “__cf_bm” has been rejected for invalid domain.\\\" {file: \\\"https://ask-okf.crpage.chatgpt.site/review.js\\\" line: 0}]\",\n+   \"[JavaScript Error: \\\"Cookie “__cf_bm” has been rejected for invalid domain.\\\" {file: \\\"https://ask-okf.crpage.chatgpt.site/okf/mcp\\\" line: 0}]\",\n+ ]",
+          "location": {
+            "file": "/Users/crpage/tmp/okf-explorer-evidence-review/apps/okf-explorer/tests/service-review/evidence-review.spec.ts",
+            "column": 18,
+            "line": 222
+          }
+        }
+      ]
+    },
+    {
+      "browser": "firefox",
+      "title": "invalid fragment is inert and synthetic returned markup renders as text",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 253,
+      "strict_status": "failed",
+      "duration_ms": 1046,
+      "errors": [
+        {
+          "message": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 5\n\n- Array []\n+ Array [\n+   \"[JavaScript Error: \\\"Cookie “__cf_bm” has been rejected for invalid domain.\\\" {file: \\\"https://ask-okf.crpage.chatgpt.site/review/#not-a-valid-json-recipe\\\" line: 0}]\",\n+   \"[JavaScript Error: \\\"Content-Security-Policy: The page’s settings blocked an inline script (script-src-elem) from being executed because it violates the following directive: “script-src 'self'”. Consider using a hash ('sha256-JCy8c8+QXnSTu2cBxMw/F8iFCwscVDK8Wu2lvYcPE9s=') or a nonce.\\\" {file: \\\"https://ask-okf.crpage.chatgpt.site/review/#not-a-valid-json-recipe\\\" line: 20}]\",\n+   \"[JavaScript Error: \\\"Cookie “__cf_bm” has been rejected for invalid domain.\\\" {file: \\\"https://ask-okf.crpage.chatgpt.site/review.js\\\" line: 0}]\",\n+ ]",
+          "location": {
+            "file": "/Users/crpage/tmp/okf-explorer-evidence-review/apps/okf-explorer/tests/service-review/evidence-review.spec.ts",
+            "column": 18,
+            "line": 253
+          }
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "title": "built script loads inert replay, exact source evidence, metadata, diagnostics and bounded parts",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 162,
+      "strict_status": "failed",
+      "duration_ms": 1698,
+      "errors": [
+        {
+          "message": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 3\n\n- Array []\n+ Array [\n+   \"Refused to execute a script because its hash, its nonce, or 'unsafe-inline' does not appear in the script-src directive of the Content Security Policy.\",\n+ ]",
+          "location": {
+            "file": "/Users/crpage/tmp/okf-explorer-evidence-review/apps/okf-explorer/tests/service-review/evidence-review.spec.ts",
+            "column": 18,
+            "line": 162
+          }
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "title": "replay links are removed when changing or recreating a context and regenerated for the new identity",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 196,
+      "strict_status": "failed",
+      "duration_ms": 1028,
+      "errors": [
+        {
+          "message": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 3\n\n- Array []\n+ Array [\n+   \"Refused to execute a script because its hash, its nonce, or 'unsafe-inline' does not appear in the script-src directive of the Content Security Policy.\",\n+ ]",
+          "location": {
+            "file": "/Users/crpage/tmp/okf-explorer-evidence-review/apps/okf-explorer/tests/service-review/evidence-review.spec.ts",
+            "column": 18,
+            "line": 196
+          }
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "title": "question change discards a late replay response",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 222,
+      "strict_status": "failed",
+      "duration_ms": 2174,
+      "errors": [
+        {
+          "message": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 3\n\n- Array []\n+ Array [\n+   \"Refused to execute a script because its hash, its nonce, or 'unsafe-inline' does not appear in the script-src directive of the Content Security Policy.\",\n+ ]",
+          "location": {
+            "file": "/Users/crpage/tmp/okf-explorer-evidence-review/apps/okf-explorer/tests/service-review/evidence-review.spec.ts",
+            "column": 18,
+            "line": 222
+          }
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "title": "invalid fragment is inert and synthetic returned markup renders as text",
+      "reached_final_console_assertion": true,
+      "functional_assertions": "passed-before-console-gate",
+      "console_assertion_line": 253,
+      "strict_status": "failed",
+      "duration_ms": 1018,
+      "errors": [
+        {
+          "message": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 1\n+ Received  + 3\n\n- Array []\n+ Array [\n+   \"Refused to execute a script because its hash, its nonce, or 'unsafe-inline' does not appear in the script-src directive of the Content Security Policy.\",\n+ ]",
+          "location": {
+            "file": "/Users/crpage/tmp/okf-explorer-evidence-review/apps/okf-explorer/tests/service-review/evidence-review.spec.ts",
+            "column": 18,
+            "line": 253
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "limitations": [
+    "Counts are occurrences in separately canonicalised shards, not a globally deduplicated RDF dataset.",
+    "Declaring a namespace does not prove actual predicate/type use. ELI/OWL zero counts do not claim an imported legal ontology or reasoning.",
+    "XSD supplies literal datatypes and is deliberately not counted as a predicate or class vocabulary.",
+    "Older runtime Concept labels do not all have skos:Concept RDF types. This audit exposes that modelling debt without rewriting history."
+  ],
+  "method": "predicate-and-rdf-type-positions-in-hash-verified-canonical-nquads-v1",
+  "namespaces": [
+    {
+      "label": "RDF",
+      "namespace": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "predicate_uses": 97085,
+      "type_uses": 16336
+    },
+    {
+      "label": "RDFS",
+      "namespace": "http://www.w3.org/2000/01/rdf-schema#",
+      "predicate_uses": 33934,
+      "type_uses": 0
+    },
+    {
+      "label": "SKOS",
+      "namespace": "http://www.w3.org/2004/02/skos/core#",
+      "predicate_uses": 1169,
+      "type_uses": 268
+    },
+    {
+      "label": "Dublin Core terms",
+      "namespace": "http://purl.org/dc/terms/",
+      "predicate_uses": 130317,
+      "type_uses": 0
+    },
+    {
+      "label": "PROV-O",
+      "namespace": "http://www.w3.org/ns/prov#",
+      "predicate_uses": 97189,
+      "type_uses": 0
+    },
+    {
+      "label": "DCAT",
+      "namespace": "http://www.w3.org/ns/dcat#",
+      "predicate_uses": 3715,
+      "type_uses": 0
+    },
+    {
+      "label": "Schema.org",
+      "namespace": "https://schema.org/",
+      "predicate_uses": 47105,
+      "type_uses": 15137
+    },
+    {
+      "label": "OKF profile",
+      "namespace": "https://chris-page-gov.github.io/okf-explorer/ns#",
+      "predicate_uses": 342365,
+      "type_uses": 16336
+    },
+    {
+      "label": "DWP project",
+      "namespace": "https://chris-page-gov.github.io/okf-dwp/ns#",
+      "predicate_uses": 5,
+      "type_uses": 0
+    },
+    {
+      "label": "OWL",
+      "namespace": "http://www.w3.org/2002/07/owl#",
+      "predicate_uses": 0,
+      "type_uses": 0
+    },
+    {
+      "label": "ELI",
+      "namespace": "http://data.europa.eu/eli/ontology#",
+      "predicate_uses": 0,
+      "type_uses": 0
+    }
+  ],
+  "rdf_types": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement": 16336,
+    "http://www.w3.org/2004/02/skos/core#Concept": 268,
+    "https://chris-page-gov.github.io/okf-explorer/ns#RelationshipAssertion": 16336,
+    "https://schema.org/Book": 1,
+    "https://schema.org/CreativeWork": 37,
+    "https://schema.org/DigitalDocument": 15077,
+    "https://schema.org/Question": 14,
+    "https://schema.org/Role": 8
+  },
+  "relationship_predicates": {
+    "http://purl.org/dc/terms/isPartOf": 15074,
+    "http://purl.org/dc/terms/references": 854,
+    "http://purl.org/dc/terms/requires": 59,
+    "http://www.w3.org/2004/02/skos/core#related": 345,
+    "https://chris-page-gov.github.io/okf-dwp/ns#hasDisregardPeriod": 1,
+    "https://chris-page-gov.github.io/okf-dwp/ns#hasEvidenceRequirement": 1,
+    "https://chris-page-gov.github.io/okf-dwp/ns#precedesAssessmentOf": 2
+  },
+  "runtime_concept_labels": 282,
+  "schema": "okf-dwp-ontology-use-inventory.v1",
+  "source_snapshot": "dwp-full-dmg-2026-09-16-a26a93daa9f5"
+}

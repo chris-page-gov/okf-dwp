@@ -1,0 +1,20 @@
+{
+  "schema": "okf-host-script-observation.v1",
+  "url": "https://ask-okf.crpage.chatgpt.site/review/",
+  "html_sha256": "c4afb2ffb2d6cadadad510ed605970263fc10d364d752f9a366a6449793adbaa",
+  "external_script_sources": [
+    "/review.js"
+  ],
+  "inline_scripts": [
+    {
+      "sha256": "b91d399724807762adeb18907ec5edeab6977e1cc32b1f31af7c550457b3d442",
+      "observed_reference": "/cdn-cgi/challenge-platform/scripts/jsd/main.js",
+      "observed_namespace": "window.__CF$cv$params"
+    }
+  ],
+  "interpretation": "The public response contains a Cloudflare challenge-loader inline script in addition to the service external script. All three browser engines report that the service content security policy blocks inline execution.",
+  "limitations": [
+    "Read-only inspection of one public HTTP response; the injected challenge identifiers vary between requests.",
+    "This observation does not establish which hosting control can disable the injection. Raw HTML is retained outside this public repository."
+  ]
+}

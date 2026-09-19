@@ -74,6 +74,16 @@ jobs:
           uv run --locked python scripts/build_context_discovery.py --check
           uv run --locked python scripts/build_context_corpus.py --check
           uv run --locked python scripts/build_context_corpus_explorer.py --check
+      - name: Verify conceptual navigation and bounded staff review packs
+        run: |
+          uv run --locked python scripts/build_review_navigation.py --check
+          uv run --locked python scripts/build_staff_review_packs.py --check
+      - name: Check the public backlog and retained answer trials offline
+        run: |
+          uv run --locked python scripts/check_backlog.py
+          uv run --locked python scripts/evaluate_fixed_answers.py
+          uv run --locked python scripts/check_answer_review.py
+          uv run --locked python scripts/check_compact_client.py
       - name: Verify source date and reference discovery
         run: uv run --locked python scripts/discover_full_dmg_evidence.py --check
       - name: Verify literal reference location reconciliation

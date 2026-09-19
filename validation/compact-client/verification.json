@@ -1,0 +1,124 @@
+{
+  "schema": "okf-compact-client-verification.v1",
+  "comparison_context": {
+    "path": "validation/corpus-questions/bounded-abroad/context.json",
+    "sha256": "f997c8147987c69960030e2cba717b7d9106b301c749fdb22b07ee1d75f8a932",
+    "context_id": "urn:sha256:2cdfa5feb6310f58166d66e814bd3b2fbe2e9e146e25b25a65453b48e3dffabd"
+  },
+  "observations": [
+    {
+      "observation": "claude-local-2026-09-19",
+      "observation_sha256": "747960f1470e8fcc7ca72261b603656c3e80365167ad2a4fbc023feb83414762",
+      "actual_tool_calls": 0,
+      "unsupported_subscription_probes": 0,
+      "context_id": null,
+      "evidence_status": null,
+      "complete_values": [],
+      "tools": [],
+      "status": "retained-no-call-failure-verified"
+    },
+    {
+      "observation": "claude-local-explicit-mcp-2026-09-19",
+      "observation_sha256": "66963877aac7b9d6cb98a15331fb820f38fbf31f2b6c8a792df5e61fdd46fd8c",
+      "actual_tool_calls": 7,
+      "unsupported_subscription_probes": 4,
+      "context_id": "urn:sha256:2cdfa5feb6310f58166d66e814bd3b2fbe2e9e146e25b25a65453b48e3dffabd",
+      "evidence_status": "insufficient",
+      "complete_values": [
+        {
+          "section": "diagnostics",
+          "record_id": null,
+          "slices": 2,
+          "content_sha256": "32da76fa24f129e6693b6f12d4283b75895c394c392df2c8cfd7db4e57adaf6f"
+        },
+        {
+          "section": "record_text",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c2/0018",
+          "slices": 1,
+          "content_sha256": "719a0e3b14afdc4de7b6c9ec8db53ff62f01fd696fb6a51960994ac207e54993"
+        },
+        {
+          "section": "record_metadata",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c2/0018",
+          "slices": 1,
+          "content_sha256": "6e809e5b3c6c2ed53725e6fb6438427d930855824fc442df1ef69125ca164b7f"
+        },
+        {
+          "section": "record_text",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c3/0024",
+          "slices": 1,
+          "content_sha256": "01b995bb75b5d6b25c9852cb2c98c6ea39403d2303792624afb6a6aebf465074"
+        },
+        {
+          "section": "record_metadata",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c3/0024",
+          "slices": 1,
+          "content_sha256": "cf7cf073bd9fb9b88cf1052d62456bf337efca5d05148b0cd1bd10e7a7386e84"
+        }
+      ],
+      "tools": [
+        {
+          "sequence": 5,
+          "tool": "ask_okf_manifest",
+          "section": null,
+          "record_id": null,
+          "json_bytes": 5689,
+          "structured_sha256": "ac492af242bcb06fd29ae9bf6bad06d396f068d5c7c5c5fb1928c83988d3a61c"
+        },
+        {
+          "sequence": 7,
+          "tool": "read_okf_evidence",
+          "section": "diagnostics",
+          "record_id": null,
+          "json_bytes": 8192,
+          "structured_sha256": "9bed5da1c06d882fbac20d757db180f4ea3df04d5ac222c896b39b8f945d0521"
+        },
+        {
+          "sequence": 9,
+          "tool": "read_okf_evidence",
+          "section": "diagnostics",
+          "record_id": null,
+          "json_bytes": 2079,
+          "structured_sha256": "4311ba55adb1010ae3124816ee3fb7bba47f4de8e6d46cc412bc7e0df9f3cf17"
+        },
+        {
+          "sequence": 10,
+          "tool": "read_okf_evidence",
+          "section": "record_text",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c2/0018",
+          "json_bytes": 2511,
+          "structured_sha256": "ed9e8f6dc4c419a2150286824fcaac0f038f015de792247138313236a909a5d9"
+        },
+        {
+          "sequence": 11,
+          "tool": "read_okf_evidence",
+          "section": "record_metadata",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c2/0018",
+          "json_bytes": 2814,
+          "structured_sha256": "885e5c0ecf1636e7886e0354ae14ab43370e4f877b7083c2c4d81bb4b3367b83"
+        },
+        {
+          "sequence": 12,
+          "tool": "read_okf_evidence",
+          "section": "record_text",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c3/0024",
+          "json_bytes": 1896,
+          "structured_sha256": "92622ae6fef328c3f3fc3d9b388508da5cf875bfd4064ea1dd11bc375c0747f0"
+        },
+        {
+          "sequence": 13,
+          "tool": "read_okf_evidence",
+          "section": "record_metadata",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c3/0024",
+          "json_bytes": 2806,
+          "structured_sha256": "2a20dc079e16334225d005a7727905d67081d6726a7ca9117fe899a46d910dd6"
+        }
+      ],
+      "status": "captured-evidence-verified"
+    }
+  ],
+  "model_calls": 0,
+  "network_calls": 0,
+  "human_answer_review": "pending",
+  "limitation": "Exact tool delivery and failure preservation only. No legal-entailment or answer-quality score; local client observation is not a public deployment test."
+}

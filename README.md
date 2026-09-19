@@ -8,6 +8,10 @@ okf_version: "0.2"
 
 **An independent, unofficial experimental exemplar. Not an official DWP document, benefits advice or an entitlement calculator.**
 
+**[What changed: changelog](CHANGELOG.md)** · [Current work log](docs/work-log-2026-09-19.md)
+· [Backlog and acceptance checks](docs/backlog.md) · [How to repeat the method](docs/methodology.md)
+· [What we learned](docs/retrospective.md)
+
 This repository turns public Department for Work and Pensions (DWP) guidance into source-linked records, a YAML-LD semantic graph and an indexed OKF Explorer research candidate. It began with a [Pension Credit pilot covering volumes 13 and 14](https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide), expanded to the [full Decision makers’ guide (DMG)](https://www.gov.uk/government/collections/decision-makers-guide-staff-guide), and now also preserves the separate [Advice for decision making (ADM) manual](docs/adm-acquisition.md). It demonstrates how a specialist or an AI can find evidence, inspect relationships and see what remains uncertain.
 
 **New to the project?** Follow the [practical learning path](docs/learning-path.md),
@@ -15,7 +19,76 @@ then use the [plain-English glossary](docs/glossary.md) when a benefit name or
 technical term appears. It explains Search, Ask OKF and AI answering through
 short tasks, including how to connect and why a browser can show HTTP 405.
 
+For the semantic design, see [the ontologies and namespaces actually used](docs/ontology-use.md).
+For the separate model trials, see [fixed-evidence answer review](evaluation/answer-review/README.md).
+The changelog records dated deliveries; the backlog keeps unfinished work
+explicit. Neither replaces the exact receipts below.
+
 [Verified Pension Credit semantic exemplar](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7d3c69df0571b8d5206c8edce92963d99979cb5c%2Fbundle%2Fokf-bundle.yamlld&view=graph#term/capital-disregards) · [Original meeting demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.yamlld&q=84351#question/pc001) · [Read the pilot bundle](bundle/index.md) · [Ten-minute meeting walkthrough](docs/meeting-walkthrough.md) · [Discovery findings](docs/discovery.md) · [AI interrogation guide](AI_USAGE.md) · [Public notice and rights](NOTICE.md)
+
+## Current delivery: evidence review and DMG navigation
+
+[Open the verified DMG navigation](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F0c59f476602a49d4293e46112a0ca1ebf1486ff0%2Ffull-dmg%2Fokf-review-context.json#overview)
+or follow the [compact evidence demonstration](docs/compact-evidence-demo.md).
+The [public Chrome observation](validation/navigation/browser/public/README.md)
+verified benefit, circumstance, topic and authored-concept filters across Reader,
+Graph and Timeline, with matching counts of 74, 343, 268 and 1. It checked all
+21 application files and 188 observed corpus files, capture/source date roles,
+and the Timeline display limit. No console errors or targeted accessibility
+violations were found. This is a dated, scoped check, not whole-site conformance.
+
+The [compact-delivery guide](docs/compact-evidence-demo.md) now records public
+service 0.3.1 and its official SDK acceptance: a small catalogue, exact bounded
+reads and a replay link, while preserving the original full-package tool. The
+31,312-byte abroad package reconstructs exactly and stays insufficient.
+The corrected public reader's twelve historical-profile journeys and a separate
+[full-corpus Chrome journey](validation/compact-delivery/v0.3.1/browser/full-corpus/chrome-receipt.json)
+passed their functional checks, but their strict console gates failed because
+CSP blocked a host-injected script; Firefox also reported cookie-domain errors.
+The full-corpus journey made four real tool calls and verified rendered source
+and diagnostic hashes on hosting version 7. The corrected service's live
+[SDK receipt](validation/compact-delivery/v0.3.1/sdk-receipt.json) retains exact
+package parity. Earlier version 6 observations and failures remain intact. The
+[recorded browser limitation](docs/compact-evidence-demo.md#what-is-usable-now)
+and DWP-BL-023 remain open; this is not an overall public-browser pass.
+
+Independent final review caught a stale replay link after changing or resubmitting
+a question. The correction passed twelve local browser journeys across three
+engines. The final build also exposed an Explorer documentation-cache dependency
+gap: linked service pages and their exact Markdown now participate in the cache
+identity. Neither correction changes source evidence or establishes answer quality.
+
+The new [review descriptor](full-dmg/okf-review-context.json) adds benefit,
+circumstance, topic and existing-concept navigation to the Reader. Its
+[classification manifest](full-dmg/context/navigation/manifest.json) accounts for
+all 19,090 captured pages, including ADM and explicit unclassified values. The
+44 authored labels describe literal discovery categories; they do not establish
+which benefit rules apply. The Reader projection retains its DMG scope while
+the classification audit and Ask context cover both captured manuals. ADM Reader
+and cross-manual navigation remain unfinished under **DWP-BL-024** in the
+[backlog](docs/backlog.md).
+
+[Forty staff review packs](evaluation/staff-review/README.md) give readers small,
+source-linked starting points: 3,795–12,062 bytes per machine-readable pack,
+42 shared evidence resources and exact bounded source excerpts. They distinguish
+independently located candidates from pages retained by the recorded retrieval
+run. All 40 staff-question occurrences and all 43 full-corpus evaluation cases
+remain insufficient and await specialist evidence profiles; model answers also
+need independent claim-level review.
+
+A separate [actual Claude client observation](validation/compact-client/README.md)
+records seven local compact-tool calls and exact replay of diagnostics plus two
+source records. It also preserves the earlier no-call failure, where the model
+invented a catalogue while tools were disabled. Neither is an answer-quality or
+public-deployment claim.
+
+Explorer [PR 125](https://github.com/chris-page-gov/okf-explorer/pull/125) is merged
+and its published DMG navigation is verified.
+[DWP PR 10](https://github.com/chris-page-gov/okf-dwp/pull/10) records integration
+of the evidence and documentation; consult that PR for its exact validation
+and merge status. Existing demonstrations below retain
+their original source and consumer versions. The [work log](docs/work-log-2026-09-19.md)
+and [24-item backlog](docs/backlog.md) retain incomplete work explicitly.
 
 ## Current source and question coverage
 

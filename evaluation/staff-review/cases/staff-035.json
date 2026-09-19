@@ -1,0 +1,88 @@
+{
+  "ai_answer": null,
+  "ambiguities": [
+    "ESA variant, PIP component, claim date and jurisdiction are unspecified.",
+    "Concurrent eligibility, income disregards and disability additions need separate evidence."
+  ],
+  "candidate_evidence": [
+    {
+      "bytes": 4057,
+      "id": "source-c039",
+      "page": 5,
+      "path": "../evidence/source-c039.json",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+      "review_note": "AA/DLA age conditions and PIP references; not a complete PIP transition or continuation rule.",
+      "selection_status": "source-candidate-only-not-complete-answer",
+      "sha256": "9f3b358103a64af43bb4359362521ed0e2738066f4ba9fc8d61d7081019e1c30",
+      "source_url": "https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=5"
+    },
+    {
+      "bytes": 3630,
+      "id": "source-c034",
+      "page": 11,
+      "path": "../evidence/source-c034.json",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011",
+      "review_note": "Overlapping-benefit table continuation includes PIP daily living and attendance-related benefits; preceding definitions and exact scheme must be retained.",
+      "selection_status": "source-candidate-only-not-complete-answer",
+      "sha256": "ce39afe68430c289a682a34a86ff5e3ec339ba88773b124226c94a95b0c59206",
+      "source_url": "https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=11"
+    },
+    {
+      "bytes": 3464,
+      "id": "source-c037",
+      "page": 4,
+      "path": "../evidence/source-c037.json",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+      "review_note": "Qualifying disability benefits and multiple carers; preserve cited memo dependencies.",
+      "selection_status": "source-candidate-only-not-complete-answer",
+      "sha256": "600d6066453173e81e04911d1d52dc818f4e86148196b0a40be83ab4373b4a44",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=4"
+    }
+  ],
+  "duplicate_of": null,
+  "evidence_status": "insufficient",
+  "id": "staff-035",
+  "limitations": [
+    "Research review pack, not an answer, an entitlement decision or a complete legal evidence bundle.",
+    "Candidate selection is project-authored and unreviewed. It is independent of the retained retrieval run and is not injected into search or Ask OKF.",
+    "Each excerpt is an exact bounded substring of frozen machine text, with offsets, a literal hash and a whole-page link. Its surrounding qualifications may be outside the excerpt or on adjacent pages.",
+    "Machine extraction can damage tables, footnotes, spacing and reading order. Compare each material proposition with the original PDF, adjacent text and cited legislation.",
+    "Original source roles, capture dates and historical limitations remain unchanged. Current applicability and specialist acceptance are not established."
+  ],
+  "observed_retrieval": {
+    "candidate_documents_retained": [],
+    "candidate_ids_retained": [],
+    "context_id": "urn:sha256:b8bcee5e01131e021b90150d9cc7b5fe8f65031a3b6a7b75d33dec0e2579fd63",
+    "evidence_status": "insufficient",
+    "note": "Historical observed retrieval, not a new evaluation or an answer-quality grade.",
+    "package_bytes": 485253,
+    "receipt_path": "validation/corpus-questions/receipt.json",
+    "receipt_sha256": "69069770f31f9ad5d93ee4a915529fdf6860ef6a9dc6aabb4b61d8aec95fb014",
+    "selected_records": 62,
+    "truncated": true,
+    "version": "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752"
+  },
+  "question": "Can you receive both PIP and ESA?",
+  "required_evidence": [
+    {
+      "requirement": "ESA variant-specific PIP treatment and premium/addition conditions, including ADM where applicable.",
+      "status": "not-yet-established"
+    }
+  ],
+  "review_checklist": [
+    "Resolve benefit, variant, time period and claimant circumstances without inventing missing facts.",
+    "Check each exact source passage and its adjacent pages against the official PDF.",
+    "Locate every condition, exception, qualification and cross-reference needed for the declared question.",
+    "Reconcile relevant legislation, amendments, ADM/DMG regime and effective dates.",
+    "Record each supported claim against exact evidence IDs, with contradicting or missing evidence separately.",
+    "Keep the answer insufficient until evidence requirements and claim-level assessment justify a bounded conclusion."
+  ],
+  "review_status": "awaiting-specialist-review",
+  "schema": "okf-staff-evidence-review.v1",
+  "scope_gaps": [
+    "No governed topic-specific context profile or independently complete evidence requirement in the approved immutable Ask index.",
+    "Relevant PIP/ADM source bodies and territorial/transition dependencies are not acquired as a complete profile; incidental PIP mentions in DMG do not close this gap.",
+    "Legacy and New Style variants need different source regimes; absent ADM bodies cannot be replaced by generic DMG references."
+  ],
+  "section": "Personal Independence Payment"
+}

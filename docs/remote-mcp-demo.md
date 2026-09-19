@@ -1,5 +1,12 @@
 # Ask OKF demonstration: Monday 21 September 2026
 
+[What changed](../CHANGELOG.md) · [Current work log](work-log-2026-09-19.md) · [Backlog](backlog.md)
+
+For the newer small catalogue and exact-read interface, start with
+[the compact-evidence demonstration](compact-evidence-demo.md). Service 0.3.0
+is deployed and SDK-verified. The full-package, ChatGPT and published Explorer
+observations below retain their recorded versions and scope.
+
 **The current candidate extends Ask OKF to both captured DWP manuals: 513 PDFs,
 19,090 pages and 18,197 pages with nonempty extracted text.** The deployed service
 has passed the official SDK checks and all 43 remote evaluation cases against the

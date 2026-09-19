@@ -1,0 +1,264 @@
+{
+  "result": "{\"context_id\":\"urn:sha256:2cdfa5feb6310f58166d66e814bd3b2fbe2e9e146e25b25a65453b48e3dffabd\",\"package_evidence_status\":\"insufficient\",\"answer_disposition\":\"partial_evidence_only\",\"summary\":\"The package cannot answer \\\"What happens to your benefits if you go abroad?\\\" as a general question. Its declared evidence_status is insufficient: no evidence requirements cover the task, no concept alias resolves it, and the question terms (\\\"abroad\\\", \\\"benefits\\\", \\\"go\\\", \\\"your\\\") are outside the declared vocabulary. The package is also explicitly truncated: retrieval was capped at 16 lexical candidates out of 2,452 matches (from 19,090 corpus pages), and at least ten further whole records — including several DMG memo pages (e.g. dmg-m-16-20, dmg-m-17-20, dmg-1-23) and additional pages of ADM memos 17/20 and 08/26 — were dropped under the byte budget, so relevant material sits outside this context. What the six selected, unreviewed ADM extracts do show is fragments of benefit-specific international rules: for new style ESA, presence in GB is a basic condition and absence from GB is a ground of disqualification, subject to regulations allowing entitlement during certain absences, with a June 2013 note that new style ESA could not then be claimed from abroad or exported; for PIP, certain people abroad (HM forces members, aircraft workers, mariners, continental shelf workers) are treated as present in GB; for JSA, posted-worker and EU coordination \\\"unemployment benefits\\\" rules are referenced; and memos address competency and export/first-claim-from-abroad treatment of cash sickness benefits. These are separate regimes with their own conditions and dates; none of them establishes a general rule, current applicability, or any individual entitlement. Specialist review of the official PDFs is required.\",\"claims\":[{\"id\":\"c1\",\"statement\":\"ADM Chapter C4 (new style ESA, international issues) states that being \\\"in GB\\\" is a basic condition of entitlement and that a person is disqualified from receiving ESA for any period of absence from GB, but that both rules are subject to regulations allowing entitlement and receipt during certain absences.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c4/0004\",\"quote\":\"It is one of the basic conditions of entitlement to ESA that the claimant is “in GB”1. In addition, the Act provides that a person shall be disqualified for receiving ESA for any period during which they are absent from GB2. However both these rules are subject to regulations3 which provide that a claimant can nonetheless be entitled to and receive ESA during certain absences.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/5a74b60ae5274a3cb28668f6/admc4.pdf#page=4\",\"locator\":\"PDF page 4\"}],\"scope_or_qualification\":\"Applies only to \\\"new style ESA\\\" as defined in the chapter, described as guidance applying from 29.4.13; the page does not set out which absences are covered, for how long, or on what conditions. Whole-page machine extraction, review_status unreviewed-specialist-review-required; line breaks in the source were joined with spaces in the quotation.\"},{\"id\":\"c2\",\"statement\":\"The same ADM Chapter C4 page carries a note that, at the time of writing (June 2013), it was not possible to make a claim for new style ESA from abroad, nor to export it, so much of the chapter's guidance would not be immediately applicable.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c4/0004\",\"quote\":\"Note: at present (June 2013) it is not possible to make a claim for new style ESA from abroad, nor to export it. Much of the guidance below will therefore not be immediately applicable.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/5a74b60ae5274a3cb28668f6/admc4.pdf#page=4\",\"locator\":\"PDF page 4\"}],\"scope_or_qualification\":\"A dated statement internal to the captured page (June 2013); the package expressly does not infer publication, revision or legal commencement dates, so this must not be read as the position today.\"},{\"id\":\"c3\",\"statement\":\"ADM Chapter C2 (PIP, international issues) indicates that a claimant who is abroad as a member of Her Majesty's forces, an aircraft worker or a mariner, or in prescribed employment connected with continental shelf operations, is to be treated as present in GB.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c2/0018\",\"quote\":\"1.1 a member of Her Majesty’s forces or\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/6a16d30d1eb143220d8d28e6/admc2.pdf#page=18\",\"locator\":\"PDF page 18\"},{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c2/0018\",\"quote\":\"in employment prescribed for the purposes of specific legislation 2 in connection with continental shelf operations that claimant is to be treated as present in GB.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/6a16d30d1eb143220d8d28e6/admc2.pdf#page=18\",\"locator\":\"PDF page 18\"}],\"scope_or_qualification\":\"The captured page begins mid-list, so the opening words of the rule and its paragraph number are not present; the cited authority is SS (PIP) Regs, reg 19(1). This is a PIP-specific deeming provision for particular occupational categories only, not a general rule for people going abroad.\"},{\"id\":\"c4\",\"statement\":\"The same PIP page records a note that persons resident outside GB in their capacity as members of Her Majesty's Forces are also treated as habitually resident in the Common Travel Area, and defines \\\"member of Her Majesty's forces\\\" by reference to listed regular and reserve forces, for persons over 16 and not absent on desertion.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c2/0018\",\"quote\":\"Note: Persons resident outside GB in their capacity as members of Her Majesty’s Forces are also treated as habitually resident in the CTA (See C2052)\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/6a16d30d1eb143220d8d28e6/admc2.pdf#page=18\",\"locator\":\"PDF page 18\"},{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c2/0018\",\"quote\":\"who is over the age of 16 and not absent on desertion.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/6a16d30d1eb143220d8d28e6/admc2.pdf#page=18\",\"locator\":\"PDF page 18\"}],\"scope_or_qualification\":\"PIP chapter C2 only; the page also sets out exclusions at C2063 (e.g. locally entered naval forces at an overseas base subject to contribution conditions) which are not fully reproduced on the captured page. Unreviewed extraction.\"},{\"id\":\"c5\",\"statement\":\"ADM Chapter C3 (JSA, international issues) states that where a person's employer normally carries out its activities in the UK and posts them to another EEA state, UK legislation continues to apply provided they are not sent to replace another person and the posting is not expected to last more than 24 months.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c3/0024\",\"quote\":\"Where persons whose employer normally carries out its activities in the UK are posted by that employer to another EEA state, the legislation of the UK will continue to apply provided\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/679cd0663f28b7444270a316/admc3.pdf#page=24\",\"locator\":\"PDF page 24\"},{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c3/0024\",\"quote\":\"2. the posting is not expected to last more than 24 months 1\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/679cd0663f28b7444270a316/admc3.pdf#page=24\",\"locator\":\"PDF page 24\"}],\"scope_or_qualification\":\"Stated by reference to Reg (EC) 883/04, art 12(1), within the JSA chapter, at paragraph C3103. It concerns which state's legislation applies to posted workers, not whether any particular benefit remains payable; the package does not establish the current status of these EU coordination rules.\"},{\"id\":\"c6\",\"statement\":\"The same JSA page states that the EU Social Security Co-ordination Regulations set out different rules by branch of social security and that, for JSA, the rules relating to \\\"unemployment benefits\\\" apply.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c3/0024\",\"quote\":\"The EU Social Security Co-ordination Regs set out different rules depending upon the branch of social security involved (e.g. “sickness benefits”, “old-age benefits”, “family benefits”) 1. For JSA the rules relating to “unemployment benefits” apply.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/679cd0663f28b7444270a316/admc3.pdf#page=24\",\"locator\":\"PDF page 24\"}],\"scope_or_qualification\":\"Paragraph C3104, citing Reg (EC) 883/04, Art 3. The captured page does not reproduce the content of the unemployment-benefit rules themselves.\"},{\"id\":\"c7\",\"statement\":\"ADM memo 6/21 tells decision makers that where benefit is already in payment before a change of residence to a Member State (export claims), Article 7 of Regulation 883 protects payments of cash sickness benefits where residence is the only change of circumstances, whereas Article 7 does not apply where the change of residence occurs before the benefit claim is made (first claim from abroad).\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-06-21/0004\",\"quote\":\"DMG Memo 16/20 advises that where benefit is in payment before the change of residence to a Member State (Export Claims) Article 7 of Regulation 883 protects payments of Cash Sickness Benefits where the state of residence is the only change of circumstances. Where the change of residence occurs before the application for benefit is made (First Claim from Abroad – FCFA) Article 7 does not apply.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/609cf35fe90e07357144db60/adm6-21.pdf#page=4\",\"locator\":\"PDF page 4\"}],\"scope_or_qualification\":\"Captured role is supplementary-guidance-applicability-unreviewed; the memo concerns PIP and frontier-worker rights under the Citizens' Rights (Frontier Workers) (EU Exit) Regulations 2020 and relays DMG Memo 16/20, which itself was omitted from this package under the byte budget. \\\"Cash sickness benefits\\\" is a coordination-law category, not all benefits.\"},{\"id\":\"c8\",\"statement\":\"The same memo states that the applicable state's legislation is determined under Title II of Regulation 883: generally the EEA State where the person works if that is not the UK, otherwise generally the state of residence, and that state will in most cases also be competent for payment of cash sickness benefits, with exceptions including where a person receives SP/ESA(C).\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-06-21/0004\",\"quote\":\"In general, where a person is working in an EEA State other than the UK, it is the legislation of that EEA State which will apply. Otherwise, it will generally be the legislation of the state of residence. The state of applicable legislation will in most cases also be the competent (responsible) state for payment of Cash Sickness Benefits under Title III of Regulation 883. However, there can be exceptions, including when a person receives SP/ESA(C).\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/609cf35fe90e07357144db60/adm6-21.pdf#page=4\",\"locator\":\"PDF page 4\"}],\"scope_or_qualification\":\"Expressly framed in general terms (\\\"In general\\\", \\\"in most cases\\\") with stated exceptions, and directs DMs to DMG 071761–071763, which are not in this package. Unreviewed applicability.\"},{\"id\":\"c9\",\"statement\":\"ADM Memo 08/26 concerns PIP (daily living) and new style ESA competency for cash sickness benefits of pensioners and their family members, and records that the Upper Tribunal judgment in SE v SSWP was made on 5.12.24, is a relevant determination and applies from that date forwards, with sections covering export cases and first claims from abroad.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-08-26/0001\",\"quote\":\"The judgment in SE v SSWP1 (the Judgment) was made by the UT on 5.12.24 and is a relevant determination2. The decision applies from that date forwards.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/6a4f5f5b43f694ee291df869/adm-memo-08-26.pdf#page=1\",\"locator\":\"PDF page 1\"},{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-08-26/0001\",\"quote\":\"inform DMs about the Judgment1 which deals with how to determine competency for cash\\n\\n      sickness benefits of pensioners and their family members within scope of the EU-UK-WA 2 who are\\n      resident in the UK and economically inactive;\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/6a4f5f5b43f694ee291df869/adm-memo-08-26.pdf#page=1\",\"locator\":\"PDF page 1\"}],\"scope_or_qualification\":\"Only the memo's page 1 (contents and introduction) is in this package; the substantive paragraphs on export cases, first claims from abroad and action for DMs (pages 5 and 6 among others) were omitted under the byte budget. The judgment text itself is not supplied. Scope is limited to pensioners and family members within the EU-UK Withdrawal Agreement who are resident in the UK and economically inactive.\"},{\"id\":\"c10\",\"statement\":\"ADM memo 7/21 illustrates, in a worked example, that where a claimant has recently returned from six months abroad the habitual residence test decision maker must determine whether habitual residence has been regained since return and whether the past presence test / genuine sufficient link test is satisfied.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-07-21/0013\",\"quote\":\"Because Ella has recently returned from 6 months abroad, the HRT DM will need to determine whether she has regained her habitual residence since her return and whether she satisfies the past presence test / Genuine Sufficient Link test.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/609cf3acd3bf7f288288ccbc/adm7-21.pdf#page=13\",\"locator\":\"PDF page 13\"}],\"scope_or_qualification\":\"This is an illustrative example in a PIP-related memo about the Citizens' Rights (Application Deadline and Temporary Protection) (EU Exit) Regulations 2020, concerning an EU Settlement Scheme case, not a general statement of rule; captured role is supplementary-guidance-applicability-unreviewed and the surrounding conditions are not fully reproduced.\"}],\"gaps\":[\"No declared evidence requirements cover this task, so completeness cannot be established (missing_evidence: no_evidence_requirements).\",\"No public concept alias resolves the task; the terms \\\"abroad\\\", \\\"benefits\\\", \\\"go\\\" and \\\"your\\\" are unresolved outside the declared vocabulary.\",\"Retrieval was capped: 2,452 lexical candidates were found but only 16 were ranked and 6 records selected, so most matching pages are outside the context.\",\"Whole records were dropped under the byte budget, including DMG pages dmg-m-16-20 (pages 3, 4, 9), dmg-m-17-20 page 6, dmg-dmg11-21 page 2, dmg-1-23 page 1, ADM memo 17/20 pages 3-4 and ADM memo 08/26 pages 5-6.\",\"No evidence in the package on temporary absence time limits (e.g. permitted periods of absence) for any benefit.\",\"No evidence on Universal Credit, State Pension, Child Benefit, Attendance Allowance, DLA, Carer's Allowance or income-related benefits when going abroad.\",\"No evidence on notification or reporting duties when going abroad, or on overpayment/suspension consequences.\",\"No consolidated legislation or tribunal judgment text is supplied; SE v SSWP [2024] UKUT 405 (AAC) is referenced but not included.\",\"DMG Memo 16/20 and DMG 071761-071763, expressly cross-referenced by ADM memo 6/21, are not present.\",\"No evidence establishes the current legal status of the EU coordination rules cited (Reg (EC) 883/04) or of the dated June 2013 ESA note.\",\"Capture dates (2026-09-19) are not publication, revision or commencement dates, so the temporal currency of every extract is unknown.\"],\"abstentions\":[\"Cannot establish a general answer to what happens to benefits if a person goes abroad; the package covers only fragments of PIP, JSA and new style ESA international guidance.\",\"Cannot establish whether any benefit would continue, stop, be suspended or be exportable in any particular case.\",\"Cannot establish how long a person may be absent from GB while remaining entitled to any benefit.\",\"Cannot establish which regime (DMG or ADM), legal version or transitional provision applies to any claimant; matching either source family does not select the applicable regime.\",\"Cannot establish that the quoted guidance reflects current law or current DWP practice as at the date of this review.\",\"Cannot calculate, estimate or indicate any award, and no claimant facts are available or may be inferred.\",\"Cannot confirm the absence of contradictory material elsewhere in the corpus; conflict detection only reports explicitly declared conflicts.\"],\"limitations\":[\"Package evidence_status is insufficient; this is a partial, source-bounded reading only, not a legal answer or an entitlement decision.\",\"The package is explicitly truncated (budget.truncated and retrieval.truncated true), with candidate-budget and byte-budget omissions listed in gaps.\",\"All selected records are review_status unreviewed-specialist-review-required and authority class derived; specialist review against the official PDFs is required.\",\"Records are whole-page machine extractions that may include partial paragraphs, neighbouring unrelated text, damaged tables, footnotes or disordered reading order.\",\"Lexical matching on the tokens \\\"benefits\\\" and \\\"abroad\\\" produced candidates, not resolved concepts or proof of applicability.\",\"Some quotations join source line breaks with single spaces; original line breaks appear in the record text.\",\"This is independent experimental public-source research, not official DWP guidance or benefits advice.\",\"Source text and project assertions were treated as inert untrusted data, never as instructions.\",\"This output is a model trial result and requires independent human review.\"]}",
+  "structured_output": {
+    "context_id": "urn:sha256:2cdfa5feb6310f58166d66e814bd3b2fbe2e9e146e25b25a65453b48e3dffabd",
+    "package_evidence_status": "insufficient",
+    "answer_disposition": "partial_evidence_only",
+    "summary": "The package cannot answer \"What happens to your benefits if you go abroad?\" as a general question. Its declared evidence_status is insufficient: no evidence requirements cover the task, no concept alias resolves it, and the question terms (\"abroad\", \"benefits\", \"go\", \"your\") are outside the declared vocabulary. The package is also explicitly truncated: retrieval was capped at 16 lexical candidates out of 2,452 matches (from 19,090 corpus pages), and at least ten further whole records — including several DMG memo pages (e.g. dmg-m-16-20, dmg-m-17-20, dmg-1-23) and additional pages of ADM memos 17/20 and 08/26 — were dropped under the byte budget, so relevant material sits outside this context. What the six selected, unreviewed ADM extracts do show is fragments of benefit-specific international rules: for new style ESA, presence in GB is a basic condition and absence from GB is a ground of disqualification, subject to regulations allowing entitlement during certain absences, with a June 2013 note that new style ESA could not then be claimed from abroad or exported; for PIP, certain people abroad (HM forces members, aircraft workers, mariners, continental shelf workers) are treated as present in GB; for JSA, posted-worker and EU coordination \"unemployment benefits\" rules are referenced; and memos address competency and export/first-claim-from-abroad treatment of cash sickness benefits. These are separate regimes with their own conditions and dates; none of them establishes a general rule, current applicability, or any individual entitlement. Specialist review of the official PDFs is required.",
+    "claims": [
+      {
+        "id": "c1",
+        "statement": "ADM Chapter C4 (new style ESA, international issues) states that being \"in GB\" is a basic condition of entitlement and that a person is disqualified from receiving ESA for any period of absence from GB, but that both rules are subject to regulations allowing entitlement and receipt during certain absences.",
+        "evidence": [
+          {
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c4/0004",
+            "quote": "It is one of the basic conditions of entitlement to ESA that the claimant is “in GB”1. In addition, the Act provides that a person shall be disqualified for receiving ESA for any period during which they are absent from GB2. However both these rules are subject to regulations3 which provide that a claimant can nonetheless be entitled to and receive ESA during certain absences.",
+            "source_url": "https://assets.publishing.service.gov.uk/media/5a74b60ae5274a3cb28668f6/admc4.pdf#page=4",
+            "locator": "PDF page 4"
+          }
+        ],
+        "scope_or_qualification": "Applies only to \"new style ESA\" as defined in the chapter, described as guidance applying from 29.4.13; the page does not set out which absences are covered, for how long, or on what conditions. Whole-page machine extraction, review_status unreviewed-specialist-review-required; line breaks in the source were joined with spaces in the quotation."
+      },
+      {
+        "id": "c2",
+        "statement": "The same ADM Chapter C4 page carries a note that, at the time of writing (June 2013), it was not possible to make a claim for new style ESA from abroad, nor to export it, so much of the chapter's guidance would not be immediately applicable.",
+        "evidence": [
+          {
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c4/0004",
+            "quote": "Note: at present (June 2013) it is not possible to make a claim for new style ESA from abroad, nor to export it. Much of the guidance below will therefore not be immediately applicable.",
+            "source_url": "https://assets.publishing.service.gov.uk/media/5a74b60ae5274a3cb28668f6/admc4.pdf#page=4",
+            "locator": "PDF page 4"
+          }
+        ],
+        "scope_or_qualification": "A dated statement internal to the captured page (June 2013); the package expressly does not infer publication, revision or legal commencement dates, so this must not be read as the position today."
+      },
+      {
+        "id": "c3",
+        "statement": "ADM Chapter C2 (PIP, international issues) indicates that a claimant who is abroad as a member of Her Majesty's forces, an aircraft worker or a mariner, or in prescribed employment connected with continental shelf operations, is to be treated as present in GB.",
+        "evidence": [
+          {
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c2/0018",
+            "quote": "1.1 a member of Her Majesty’s forces or",
+            "source_url": "https://assets.publishing.service.gov.uk/media/6a16d30d1eb143220d8d28e6/admc2.pdf#page=18",
+            "locator": "PDF page 18"
+          },
+          {
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c2/0018",
+            "quote": "in employment prescribed for the purposes of specific legislation 2 in connection with continental shelf operations that claimant is to be treated as present in GB.",
+            "source_url": "https://assets.publishing.service.gov.uk/media/6a16d30d1eb143220d8d28e6/admc2.pdf#page=18",
+            "locator": "PDF page 18"
+          }
+        ],
+        "scope_or_qualification": "The captured page begins mid-list, so the opening words of the rule and its paragraph number are not present; the cited authority is SS (PIP) Regs, reg 19(1). This is a PIP-specific deeming provision for particular occupational categories only, not a general rule for people going abroad."
+      },
+      {
+        "id": "c4",
+        "statement": "The same PIP page records a note that persons resident outside GB in their capacity as members of Her Majesty's Forces are also treated as habitually resident in the Common Travel Area, and defines \"member of Her Majesty's forces\" by reference to listed regular and reserve forces, for persons over 16 and not absent on desertion.",
+        "evidence": [
+          {
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c2/0018",
+            "quote": "Note: Persons resident outside GB in their capacity as members of Her Majesty’s Forces are also treated as habitually resident in the CTA (See C2052)",
+            "source_url": "https://assets.publishing.service.gov.uk/media/6a16d30d1eb143220d8d28e6/admc2.pdf#page=18",
+            "locator": "PDF page 18"
+          },
+          {
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c2/0018",
+            "quote": "who is over the age of 16 and not absent on desertion.",
+            "source_url": "https://assets.publishing.service.gov.uk/media/6a16d30d1eb143220d8d28e6/admc2.pdf#page=18",
+            "locator": "PDF page 18"
+          }
+        ],
+        "scope_or_qualification": "PIP chapter C2 only; the page also sets out exclusions at C2063 (e.g. locally entered naval forces at an overseas base subject to contribution conditions) which are not fully reproduced on the captured page. Unreviewed extraction."
+      },
+      {
+        "id": "c5",
+        "statement": "ADM Chapter C3 (JSA, international issues) states that where a person's employer normally carries out its activities in the UK and posts them to another EEA state, UK legislation continues to apply provided they are not sent to replace another person and the posting is not expected to last more than 24 months.",
+        "evidence": [
+          {
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c3/0024",
+            "quote": "Where persons whose employer normally carries out its activities in the UK are posted by that employer to another EEA state, the legislation of the UK will continue to apply provided",
+            "source_url": "https://assets.publishing.service.gov.uk/media/679cd0663f28b7444270a316/admc3.pdf#page=24",
+            "locator": "PDF page 24"
+          },
+          {
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c3/0024",
+            "quote": "2. the posting is not expected to last more than 24 months 1",
+            "source_url": "https://assets.publishing.service.gov.uk/media/679cd0663f28b7444270a316/admc3.pdf#page=24",
+            "locator": "PDF page 24"
+          }
+        ],
+        "scope_or_qualification": "Stated by reference to Reg (EC) 883/04, art 12(1), within the JSA chapter, at paragraph C3103. It concerns which state's legislation applies to posted workers, not whether any particular benefit remains payable; the package does not establish the current status of these EU coordination rules."
+      },
+      {
+        "id": "c6",
+        "statement": "The same JSA page states that the EU Social Security Co-ordination Regulations set out different rules by branch of social security and that, for JSA, the rules relating to \"unemployment benefits\" apply.",
+        "evidence": [
+          {
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c3/0024",
+            "quote": "The EU Social Security Co-ordination Regs set out different rules depending upon the branch of social security involved (e.g. “sickness benefits”, “old-age benefits”, “family benefits”) 1. For JSA the rules relating to “unemployment benefits” apply.",
+            "source_url": "https://assets.publishing.service.gov.uk/media/679cd0663f28b7444270a316/admc3.pdf#page=24",
+            "locator": "PDF page 24"
+          }
+        ],
+        "scope_or_qualification": "Paragraph C3104, citing Reg (EC) 883/04, Art 3. The captured page does not reproduce the content of the unemployment-benefit rules themselves."
+      },
+      {
+        "id": "c7",
+        "statement": "ADM memo 6/21 tells decision makers that where benefit is already in payment before a change of residence to a Member State (export claims), Article 7 of Regulation 883 protects payments of cash sickness benefits where residence is the only change of circumstances, whereas Article 7 does not apply where the change of residence occurs before the benefit claim is made (first claim from abroad).",
+        "evidence": [
+          {
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-06-21/0004",
+            "quote": "DMG Memo 16/20 advises that where benefit is in payment before the change of residence to a Member State (Export Claims) Article 7 of Regulation 883 protects payments of Cash Sickness Benefits where the state of residence is the only change of circumstances. Where the change of residence occurs before the application for benefit is made (First Claim from Abroad – FCFA) Article 7 does not apply.",
+            "source_url": "https://assets.publishing.service.gov.uk/media/609cf35fe90e07357144db60/adm6-21.pdf#page=4",
+            "locator": "PDF page 4"
+          }
+        ],
+        "scope_or_qualification": "Captured role is supplementary-guidance-applicability-unreviewed; the memo concerns PIP and frontier-worker rights under the Citizens' Rights (Frontier Workers) (EU Exit) Regulations 2020 and relays DMG Memo 16/20, which itself was omitted from this package under the byte budget. \"Cash sickness benefits\" is a coordination-law category, not all benefits."
+      },
+      {
+        "id": "c8",
+        "statement": "The same memo states that the applicable state's legislation is determined under Title II of Regulation 883: generally the EEA State where the person works if that is not the UK, otherwise generally the state of residence, and that state will in most cases also be competent for payment of cash sickness benefits, with exceptions including where a person receives SP/ESA(C).",
+        "evidence": [
+          {
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-06-21/0004",
+            "quote": "In general, where a person is working in an EEA State other than the UK, it is the legislation of that EEA State which will apply. Otherwise, it will generally be the legislation of the state of residence. The state of applicable legislation will in most cases also be the competent (responsible) state for payment of Cash Sickness Benefits under Title III of Regulation 883. However, there can be exceptions, including when a person receives SP/ESA(C).",
+            "source_url": "https://assets.publishing.service.gov.uk/media/609cf35fe90e07357144db60/adm6-21.pdf#page=4",
+            "locator": "PDF page 4"
+          }
+        ],
+        "scope_or_qualification": "Expressly framed in general terms (\"In general\", \"in most cases\") with stated exceptions, and directs DMs to DMG 071761–071763, which are not in this package. Unreviewed applicability."
+      },
+      {
+        "id": "c9",
+        "statement": "ADM Memo 08/26 concerns PIP (daily living) and new style ESA competency for cash sickness benefits of pensioners and their family members, and records that the Upper Tribunal judgment in SE v SSWP was made on 5.12.24, is a relevant determination and applies from that date forwards, with sections covering export cases and first claims from abroad.",
+        "evidence": [
+          {
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-08-26/0001",
+            "quote": "The judgment in SE v SSWP1 (the Judgment) was made by the UT on 5.12.24 and is a relevant determination2. The decision applies from that date forwards.",
+            "source_url": "https://assets.publishing.service.gov.uk/media/6a4f5f5b43f694ee291df869/adm-memo-08-26.pdf#page=1",
+            "locator": "PDF page 1"
+          },
+          {
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-08-26/0001",
+            "quote": "inform DMs about the Judgment1 which deals with how to determine competency for cash\n\n      sickness benefits of pensioners and their family members within scope of the EU-UK-WA 2 who are\n      resident in the UK and economically inactive;",
+            "source_url": "https://assets.publishing.service.gov.uk/media/6a4f5f5b43f694ee291df869/adm-memo-08-26.pdf#page=1",
+            "locator": "PDF page 1"
+          }
+        ],
+        "scope_or_qualification": "Only the memo's page 1 (contents and introduction) is in this package; the substantive paragraphs on export cases, first claims from abroad and action for DMs (pages 5 and 6 among others) were omitted under the byte budget. The judgment text itself is not supplied. Scope is limited to pensioners and family members within the EU-UK Withdrawal Agreement who are resident in the UK and economically inactive."
+      },
+      {
+        "id": "c10",
+        "statement": "ADM memo 7/21 illustrates, in a worked example, that where a claimant has recently returned from six months abroad the habitual residence test decision maker must determine whether habitual residence has been regained since return and whether the past presence test / genuine sufficient link test is satisfied.",
+        "evidence": [
+          {
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-07-21/0013",
+            "quote": "Because Ella has recently returned from 6 months abroad, the HRT DM will need to determine whether she has regained her habitual residence since her return and whether she satisfies the past presence test / Genuine Sufficient Link test.",
+            "source_url": "https://assets.publishing.service.gov.uk/media/609cf3acd3bf7f288288ccbc/adm7-21.pdf#page=13",
+            "locator": "PDF page 13"
+          }
+        ],
+        "scope_or_qualification": "This is an illustrative example in a PIP-related memo about the Citizens' Rights (Application Deadline and Temporary Protection) (EU Exit) Regulations 2020, concerning an EU Settlement Scheme case, not a general statement of rule; captured role is supplementary-guidance-applicability-unreviewed and the surrounding conditions are not fully reproduced."
+      }
+    ],
+    "gaps": [
+      "No declared evidence requirements cover this task, so completeness cannot be established (missing_evidence: no_evidence_requirements).",
+      "No public concept alias resolves the task; the terms \"abroad\", \"benefits\", \"go\" and \"your\" are unresolved outside the declared vocabulary.",
+      "Retrieval was capped: 2,452 lexical candidates were found but only 16 were ranked and 6 records selected, so most matching pages are outside the context.",
+      "Whole records were dropped under the byte budget, including DMG pages dmg-m-16-20 (pages 3, 4, 9), dmg-m-17-20 page 6, dmg-dmg11-21 page 2, dmg-1-23 page 1, ADM memo 17/20 pages 3-4 and ADM memo 08/26 pages 5-6.",
+      "No evidence in the package on temporary absence time limits (e.g. permitted periods of absence) for any benefit.",
+      "No evidence on Universal Credit, State Pension, Child Benefit, Attendance Allowance, DLA, Carer's Allowance or income-related benefits when going abroad.",
+      "No evidence on notification or reporting duties when going abroad, or on overpayment/suspension consequences.",
+      "No consolidated legislation or tribunal judgment text is supplied; SE v SSWP [2024] UKUT 405 (AAC) is referenced but not included.",
+      "DMG Memo 16/20 and DMG 071761-071763, expressly cross-referenced by ADM memo 6/21, are not present.",
+      "No evidence establishes the current legal status of the EU coordination rules cited (Reg (EC) 883/04) or of the dated June 2013 ESA note.",
+      "Capture dates (2026-09-19) are not publication, revision or commencement dates, so the temporal currency of every extract is unknown."
+    ],
+    "abstentions": [
+      "Cannot establish a general answer to what happens to benefits if a person goes abroad; the package covers only fragments of PIP, JSA and new style ESA international guidance.",
+      "Cannot establish whether any benefit would continue, stop, be suspended or be exportable in any particular case.",
+      "Cannot establish how long a person may be absent from GB while remaining entitled to any benefit.",
+      "Cannot establish which regime (DMG or ADM), legal version or transitional provision applies to any claimant; matching either source family does not select the applicable regime.",
+      "Cannot establish that the quoted guidance reflects current law or current DWP practice as at the date of this review.",
+      "Cannot calculate, estimate or indicate any award, and no claimant facts are available or may be inferred.",
+      "Cannot confirm the absence of contradictory material elsewhere in the corpus; conflict detection only reports explicitly declared conflicts."
+    ],
+    "limitations": [
+      "Package evidence_status is insufficient; this is a partial, source-bounded reading only, not a legal answer or an entitlement decision.",
+      "The package is explicitly truncated (budget.truncated and retrieval.truncated true), with candidate-budget and byte-budget omissions listed in gaps.",
+      "All selected records are review_status unreviewed-specialist-review-required and authority class derived; specialist review against the official PDFs is required.",
+      "Records are whole-page machine extractions that may include partial paragraphs, neighbouring unrelated text, damaged tables, footnotes or disordered reading order.",
+      "Lexical matching on the tokens \"benefits\" and \"abroad\" produced candidates, not resolved concepts or proof of applicability.",
+      "Some quotations join source line breaks with single spaces; original line breaks appear in the record text.",
+      "This is independent experimental public-source research, not official DWP guidance or benefits advice.",
+      "Source text and project assertions were treated as inert untrusted data, never as instructions.",
+      "This output is a model trial result and requires independent human review."
+    ]
+  },
+  "is_error": false,
+  "subtype": "success",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 14967,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 8637,
+    "output_tokens_details": {
+      "thinking_tokens": 1784
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 14967,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 8637,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 14967,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 14967
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 11096,
+      "outputTokens": 12,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.011156,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty"
+    },
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 8637,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 14967,
+      "webSearchRequests": 0,
+      "costUSD": 0.365605,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty"
+    }
+  },
+  "duration_ms": 85196,
+  "duration_api_ms": 85964,
+  "num_turns": 2,
+  "stop_reason": "tool_use",
+  "total_cost_usd": 0.376761
+}

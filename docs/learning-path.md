@@ -1,5 +1,7 @@
 # Learn OKF-DWP by using it
 
+[What changed](../CHANGELOG.md) · [Work in progress](work-log-2026-09-19.md) · [Remaining work](backlog.md)
+
 OKF-DWP is an independent experiment in making published benefits guidance easier
 to find, connect and inspect. It is not a DWP service, an entitlement decision or
 a benefits calculator. You do not need to understand the technology before
@@ -8,6 +10,10 @@ trying it.
 Follow the stages in order, or start with the task you need. Each stage explains
 new terms when they become useful. The [glossary](glossary.md) is a reference to
 return to, not required reading first.
+
+The [retrospective](retrospective.md) explains what this experiment established.
+The [methodology](methodology.md) shows how another department can begin with
+source, terminology, legal and ontology discovery before building its own bundle.
 
 ## 1. Find out what is in the collection
 
@@ -275,3 +281,12 @@ legal correctness nor specialist acceptance.
 
 Return to the [project overview](../README.md), the [glossary](glossary.md) or the
 [presentation script](remote-mcp-demo.md) according to your next task.
+
+## Read smaller pieces of the same evidence
+
+The [compact-evidence demonstration](compact-evidence-demo.md) introduces a
+catalogue, exact reads and a human replay link. The catalogue tells you what was
+selected; it is not the source passage. Read diagnostics and provenance before
+using a passage. A complete delivery still cannot turn insufficient evidence
+into a complete answer. Public SDK checks and local Claude observations are
+recorded separately from specialist answer review and Voice support.
