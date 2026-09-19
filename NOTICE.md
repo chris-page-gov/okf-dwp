@@ -10,7 +10,10 @@ verified this project. No GOV.UK or DWP branding is used to imply endorsement.
 Contains public sector information licensed under the
 [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
 Source documents and their extracted text are Crown copyright material from
-the [Department for Work and Pensions publication](https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide).
+the Department for Work and Pensions: the original
+[Pension Credit publication](https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide),
+the [full Decision makers’ guide collection](https://www.gov.uk/government/collections/decision-makers-guide-staff-guide)
+and the separate [Advice for decision making publication](https://www.gov.uk/government/publications/advice-for-decision-making-staff-guide).
 Retain this attribution when reusing the extracts. Third-party material,
 logos, crests and other exclusions retain their own rights. The project does
 not claim rights in them. The project's MIT licence applies only to its own
@@ -46,7 +49,11 @@ discussion, source discovery and evaluation of evidence retrieval.
 
 ## Snapshot boundary
 
-The source inventory records exactly what was retrieved on 15 September
-2026. The landing page reported its last update as 20 July 2026. No claim is
-made that linked memos, case law or legislation outside that inventory have
-been exhaustively acquired, consolidated or checked for commencement.
+The original Pension Credit and full-DMG inventories record their observations
+on 15 September 2026. The pilot landing page then reported its last update as
+20 July 2026; this is not a publication date for every captured document. The
+separate [ADM inventory](source/adm-2026-09-19/inventory.json) records acquisition
+on 19 September, from a publication page reporting an update on 27 August 2026.
+Each inventory preserves the exact acquired scope. No claim is made that case
+law, legislation or sources outside those inventories have been exhaustively
+acquired, consolidated or checked for commencement.
