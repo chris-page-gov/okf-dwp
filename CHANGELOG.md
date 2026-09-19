@@ -16,12 +16,13 @@
   distinctions without changing DMG evidence. Verify every file and page locator;
   retain 91 pages without extracted text and other extraction-quality flags.
 - Record combined acquisition coverage of 513 PDFs, 19,090 measured pages,
-  18,197 pages with nonempty extracted text and 893 without. A first local
-  full-corpus run covers 40 staff questions and three boundary controls: all 40
+  18,197 pages with nonempty extracted text and 893 without. A live remote
+  full-corpus run covers 40 staff questions and three boundary controls: all 43
+  complete packages match the shared engine, and all 40
   questions return candidate evidence, ten retain a separately located page and
   19 retain a page from a candidate document. All 43 packages remain insufficient;
-  no answer-quality, AI-answer or specialist-acceptance claim follows. Live-service
-  and browser acceptance remain separate delivery gates.
+  no answer-quality, AI-answer or specialist-acceptance claim follows. Published
+  browser and actual ChatGPT acceptance remain separate delivery gates.
 - Add eight ADM acquisition controls for frozen census identity, classification,
   bounded metadata, source paths, PDF integrity, page locators and unreviewed
   extraction authority. Existing DMG acquisition helpers remain unchanged.
@@ -40,6 +41,21 @@
   references, benefit-variant explanations and distinct Search, Ask and AI roles.
   Explain provenance, date meanings, full capture versus evidence profiles,
   remote MCP, browser WebMCP, HTTP 405 and unverified Voice access.
+- Lead the meeting guide with the combined-corpus candidate, an explicit version
+  and a bounded ChatGPT rehearsal prompt. Keep pending browser/client gates
+  visible and retain the earlier custody observations under their original
+  version. Document separate consumer pins for replaying the two generations.
+- Verify deployment 4 through the official MCP SDK: current imprisonment and
+  hospital packages and the explicitly selected historical imprisonment package
+  exactly match the shared engine. Preserve the earlier failed hosting attempt;
+  distinguish these completed transport checks and the wider remote evaluation
+  from published-browser and actual ChatGPT gates still in progress.
+- Independently replay all 43 complete corpus packages, reverify 42 source
+  candidates and reject all 21 corruption controls. Update only the delivery
+  verification status; retain source snapshots and evidence authority unchanged.
+- Record ChatGPT's cached older tool schema rejecting the new corpus version
+  before any MCP request. Document the observed existing-connection Refresh
+  route and keep the post-refresh invocation separate from service acceptance.
 
 ## Remote Ask OKF acceptance — 19 September 2026
 

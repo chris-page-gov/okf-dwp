@@ -39,14 +39,19 @@ assembly-budget truncation. Forty-two source candidates were separately verified
 These are honest coverage gaps, not 40 answered questions or expert-approved
 benefits conclusions. No token or monetary saving has been established.
 
-The [first full-corpus local run](validation/corpus-questions/receipt.json) now
+The [full-corpus remote run](validation/corpus-questions/receipt.json) now
 tests all 40 questions and three boundary controls against the combined manuals.
 All 40 staff questions return candidate evidence, including ADM pages. Ten retain
 an independently located candidate page and 19 retain a page from a candidate
 document. These measures show where retrieval helps and where it needs work;
 they are not answer-quality scores. All 43 results remain **insufficient**, with
-no AI answers or specialist acceptance. This is a local, pre-publication result;
-live-service and browser acceptance remain separate gates.
+no AI answers or specialist acceptance. All 43 complete remote packages match the
+shared Explorer engine. Separately, [official SDK calls to the deployed service](validation/corpus-questions/sdk-receipt.json)
+match the shared engine for current imprisonment, current hospital and the
+explicitly selected historical imprisonment case. Published-browser and actual
+ChatGPT acceptance for the new corpus remain separate, pending gates.
+Independent replay verified all 43 packages and 42 source candidates; all 21
+corruption controls were rejected.
 The [staff-question results and Monday walkthrough](evaluation/staff-questions/results.md)
 compare the two runs and explain the remaining work.
 
@@ -66,8 +71,20 @@ protections.
 
 ## Ask OKF: governed context assembly
 
-This section preserves the custody acceptance case at its immutable content
-version. The 52-record evidence profile is narrower than the acquired manuals.
+The current candidate uses both captured manuals through the additive
+[corpus descriptor](full-dmg/okf-corpus-context.json), at explicit content version
+`bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752`. Follow the
+[new five-minute presentation and bounded ChatGPT rehearsal](docs/remote-mcp-demo.md#five-minute-full-corpus-presentation).
+Its 43-case remote evaluation and three-case live SDK verification are recorded;
+published-browser and actual ChatGPT acceptance remain pending. The general corpus returns
+candidate evidence and explicit insufficiency, including for imprisonment; it
+does not inherit a completeness claim from the older custody profile.
+
+### Preserved custody acceptance case
+
+The following checks use their immutable earlier version. Its 52-record evidence
+profile is narrower than the acquired manuals, and its scoped sufficiency does
+not describe the new default corpus.
 
 [Open the public Ask OKF demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fefb05c66616a9cd4328a86cf412780fe7bc7cf0b%2Ffull-dmg%2Fokf-explorer.json&q=imprisonment#overview),
 then select **Ask OKF** and use the exact question in the
@@ -251,9 +268,9 @@ above. Model assessment does not make either layer specialist-reviewed.
 All **331 DMG PDFs** are acquired and indexed. The separate **182 ADM PDFs**
 have now also been [acquired with original bytes and page text](docs/adm-acquisition.md),
 giving 513 documents and 19,090 measured pages across the two source families.
-The first combined-corpus evaluation is recorded locally; live-service and
-browser acceptance remain separate delivery gates. The earlier custody profile
-and its receipts have not been rewritten.
+The 43-case combined-corpus remote evaluation and three live SDK cases pass.
+Published browser and actual ChatGPT acceptance remain separate delivery gates.
+The earlier custody profile and its receipts have not been rewritten.
 [The 24 September plan](docs/next-stage/full-dmg-by-24-september.md)
 separates source acquisition, semantic coverage and expert review. Content
 freezes on 24 September for the 30 September seminar; website, WebMCP and Mac

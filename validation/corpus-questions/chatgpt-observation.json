@@ -1,0 +1,44 @@
+{
+  "schema": "okf-dwp-corpus-client-observation.v1",
+  "observed_on": "2026-09-19",
+  "client": "ChatGPT in Chrome, existing Pro connection",
+  "model_label": "5.6 Extra High",
+  "endpoint": "https://ask-okf.crpage.chatgpt.site/okf/mcp",
+  "source_version": "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752",
+  "question": "What happens to your benefits if you go abroad?",
+  "budget": {
+    "max_bytes": 32768
+  },
+  "private_conversation_url_retained": false,
+  "observations": [
+    {
+      "stage": "before-connection-refresh",
+      "result": "client-schema-rejected-new-version-before-MCP",
+      "cached_allowed_versions": [
+        "efb05c66616a9cd4328a86cf412780fe7bc7cf0b"
+      ],
+      "recovery": "Plugins → Ask OKF → Plugin actions → Manage → Information → Refresh; verified both approved versions in the input schema, then reloaded the conversation."
+    },
+    {
+      "stage": "after-connection-refresh-before-query-scaffolding-fix",
+      "service_source_commit": "751201168bf16ad9caec80eb4c1b9bf8514f1c71",
+      "actual_tool_panel_inspected": true,
+      "context_id": "urn:sha256:6dae31b1d95a2c6ee7a187092bf22a44a3328724b0a6a29e68f8fc1c57ad0e63",
+      "snapshot": "dwp-context-corpus-73cf69d371e212aba4e7",
+      "manifest_sha256": "aa9726ba72b7495323b031f149fa13cffeae0aa8fc868af63b7af3cac0e6be95",
+      "evidence_status": "insufficient",
+      "selected_records": 5,
+      "relationships": 0,
+      "package_bytes": 30097,
+      "retrieval_truncated": true,
+      "assembly_truncated": true,
+      "host_truncation_reported": false,
+      "observed_model_behaviour": "Inspected all five extracted source pages and correctly reported that they did not support an answer about going abroad. Ordinary words your and go dominated the selected lexical candidates. No substantive benefits answer accepted.",
+      "assessment": "Live transport and bounded source-record access established; retrieval relevance defect exposed and awaiting a generic query-scaffolding fix."
+    }
+  ],
+  "limitations": [
+    "Host truncation is the observed client report for this one bounded case, not a universal limit.",
+    "No complete legal answer, claimant decision, specialist acceptance or Voice invocation established."
+  ]
+}

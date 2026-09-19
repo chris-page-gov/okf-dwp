@@ -1,0 +1,148 @@
+{
+  "schema": "okf-remote-mcp-sdk-verification.v1",
+  "endpoint": "https://ask-okf.crpage.chatgpt.site/okf/mcp",
+  "started_at": "2026-09-19T17:18:08.248Z",
+  "completed_at": "2026-09-19T17:18:21.577Z",
+  "client": {
+    "name": "@modelcontextprotocol/client",
+    "version": "2.0.0",
+    "protocol": "2026-07-28"
+  },
+  "comparison_source_commit": "751201168bf16ad9caec80eb4c1b9bf8514f1c71",
+  "comparison_source_assurance": {
+    "classification": "exact-runtime-inputs-match-commit",
+    "inputs_sha256": {
+      "apps/okf-explorer/src/lib/context/corpus.ts": "565b1ee842b03ecba2d27657599cedff10742d3a27e312d75bb8b7432d487708",
+      "apps/okf-explorer/src/lib/context/index.ts": "846b551d2e209f820127001bdb9c1145b743b6466bf650d0c6d060ec63f4be7f",
+      "profiles/context-assembly/v1/common.schema.json": "346f86667daec3ab9d6f21d007d7c7c948c04de8f4439818d8185a13e6267a2b",
+      "profiles/context-assembly/v1/package.schema.json": "0f7f4e5b3038c27f67577cf662084125e4785c8bd072c28ea62ba4a557970280",
+      "services/ask-okf-mcp/package-lock.json": "0d10d3a8b0900f7746272abd10497623acf4fb93bd972020a1b235b7f42b470d",
+      "services/ask-okf-mcp/package.json": "d88373d9c90d81234f745cc32f11a63b090fdd6be635d718e222386063126ccb",
+      "services/ask-okf-mcp/vendor/okf-dwp-assembly-index.json": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54",
+      "services/ask-okf-mcp/vendor/okf-dwp-corpus-manifest.json": "aa9726ba72b7495323b031f149fa13cffeae0aa8fc868af63b7af3cac0e6be95",
+      "services/ask-okf-mcp/vendor/okf-dwp-descriptor.json": "9881779ab550efe9f73da1e16acd8c8dcb64933c9981bb290b66ff51572853f3",
+      "services/ask-okf-mcp/src/bundles.ts": "b5e8fef4d404a4cbe25528bcc3b56879ac14bbeb4f4ced077ba7bc93397513db",
+      "services/ask-okf-mcp/src/contracts.ts": "fd5ec574f9daf4bb4c804e982d85ea11f280c3dc16441f5eb03324d73d415159",
+      "services/ask-okf-mcp/src/corpusFetch.ts": "90fef25ec9f8cdc4cdfdf7aee1a4cc3dcd59738f4abf1624356a7a83038a85ed",
+      "services/ask-okf-mcp/src/landing.ts": "59ce87bb305268779ce56a1bd44d2d289c1bc5a6d66d4afe48dceee7005d3984",
+      "services/ask-okf-mcp/src/registry.ts": "26d46a079797e490ca0739b4ab0cc21b5a7185dd9dc3a42a19de891da1abb422",
+      "services/ask-okf-mcp/src/service.ts": "f481492934a43128a76878c37dc796053c9123e54d28ffcf16875aad88d25184",
+      "services/ask-okf-mcp/src/worker.ts": "12877bfe55094dc4843c99cd08016a48a128c39dd8b24de1997ea709e90b6fe4",
+      "services/ask-okf-mcp/vendor/okf-dwp-corpus-release.json": "ebcdf9b3b400cd9a39acff8ef969161396023b958f5b09d8b7892af4834cb08d",
+      "services/ask-okf-mcp/scripts/build.mjs": "9c2d56537926e1227b13af7111e1d284d5f70eee287cb0ae77a8b717a4f89474",
+      "services/ask-okf-mcp/src/node.ts": "acc948573787ec2c97392aba4c5b65d809cfccf13ff99688a2224860575c435f",
+      "apps/okf-explorer/src/lib/context/types.ts": "248b7db16fa1faf2cb6c5c07c8347b926ae649a528b79e92bca3816829938b65"
+    },
+    "build_receipt_inputs_and_outputs_checked": true,
+    "local_build_reproduced": true,
+    "verifier": {
+      "path": "services/ask-okf-mcp/scripts/verify-remote.mjs",
+      "sha256": "7a7d6e9597e9cfcb2767b8e5236713a5d54a8f96d8b457eff7a7055f0ec9f0bd",
+      "matches_comparison_commit": true,
+      "classification": "committed"
+    }
+  },
+  "comparison_worker_sha256": "bd14ead0a450f95ec60efc8f87def3d17b5ad071fd7c2a20f410a1347312c5af",
+  "deployment_identity_note": "The remote health endpoint confirms the immutable bundle identity. The comparator Worker digest is not itself proof of the deployed Worker bytes; retain the hosting deployment receipt separately.",
+  "bundle_version": "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752",
+  "binding": {
+    "index_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752/full-dmg/context/corpus/manifest.json",
+    "index_sha256": "aa9726ba72b7495323b031f149fa13cffeae0aa8fc868af63b7af3cac0e6be95"
+  },
+  "snapshot": "dwp-context-corpus-73cf69d371e212aba4e7",
+  "tool": "ask_okf",
+  "tool_discovery_canonical_sha256": "c121f30ac5fd7d66e70d4588146a8b180c1b37e97fd7a54347361ca20402e0f4",
+  "input_schema_matches": true,
+  "output_schema_matches": true,
+  "annotations": {
+    "readOnlyHint": true,
+    "destructiveHint": false,
+    "idempotentHint": true,
+    "openWorldHint": false
+  },
+  "health": {
+    "service": "ask-okf",
+    "version": "0.2.0",
+    "ready": true,
+    "bundle": "okf-dwp",
+    "bundle_version": "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752",
+    "snapshot": "dwp-context-corpus-73cf69d371e212aba4e7",
+    "index_sha256": "aa9726ba72b7495323b031f149fa13cffeae0aa8fc868af63b7af3cac0e6be95",
+    "approved_versions": [
+      "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752",
+      "efb05c66616a9cd4328a86cf412780fe7bc7cf0b"
+    ],
+    "engine": "okf-context-assembly.v1"
+  },
+  "cases": [
+    {
+      "id": "imprisonment",
+      "bundle_version": "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752",
+      "question_sha256": "59fc2d44d13d10dea1d4438623af9170543eb5de8c428b995a78b520b889c8d9",
+      "context_id": "urn:sha256:fbd44c332557919cc4e387a6991613c1b0a0316325a47f64143f5244e15ebea1",
+      "package_canonical_sha256": "7518a122490f1955cfb4788075adf5c8028dc4835014976a4e74c0bdc2db889c",
+      "package_json_sha256": "8a67e61da72038bc6a1cc02a6e17038a9a1ee2cb8901b786e66d36332101fdeb",
+      "package_bytes": 516146,
+      "evidence_status": "insufficient",
+      "selected_records": 64,
+      "selected_relationships": 127,
+      "missing_evidence_codes": [
+        "ambiguous_concepts",
+        "missing_dependency",
+        "no_evidence_requirements",
+        "uncovered_resolved_concept"
+      ],
+      "truncated": true,
+      "duration_ms": 4853,
+      "full_package_matches_direct_engine": true,
+      "text_matches_structured_content": true,
+      "model_answer_present": false
+    },
+    {
+      "id": "hospital",
+      "bundle_version": "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752",
+      "question_sha256": "17bdb138cd3f0640fc5add36eb1ebd2282c35a2b88d0d79d3775a2c597f4be29",
+      "context_id": "urn:sha256:429650f641cd52dfbd217b4fd5fecfc8b38ba7e1272b99a9b734688ec824d297",
+      "package_canonical_sha256": "d57620a2cfa3fbb9c15d3efec32e6587459344896c6035486f75bb10f941af94",
+      "package_json_sha256": "a95897444b8899640709f62aa63547da88f1082ed588783792f4601fc6f4d3b2",
+      "package_bytes": 501145,
+      "evidence_status": "insufficient",
+      "selected_records": 64,
+      "selected_relationships": 110,
+      "missing_evidence_codes": [
+        "ambiguous_concepts",
+        "missing_dependency",
+        "no_evidence_requirements",
+        "uncovered_resolved_concept",
+        "unresolved_terms"
+      ],
+      "truncated": true,
+      "duration_ms": 2446,
+      "full_package_matches_direct_engine": true,
+      "text_matches_structured_content": true,
+      "model_answer_present": false
+    },
+    {
+      "id": "historical-imprisonment",
+      "bundle_version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+      "question_sha256": "59fc2d44d13d10dea1d4438623af9170543eb5de8c428b995a78b520b889c8d9",
+      "context_id": "urn:sha256:283cddceca09958b96949527280ea14775de5f26d092c939cacfaa545500e80e",
+      "package_canonical_sha256": "a21f10e374f32a63a541af9050aeeab15f3ca62689e2c6e3a746424e70a2c9ee",
+      "package_json_sha256": "fa7c54306c5ab43cdd70539c49277e5d5a3ed3a1ac321f2df742e3da22b24280",
+      "package_bytes": 487506,
+      "evidence_status": "sufficient",
+      "selected_records": 52,
+      "selected_relationships": 127,
+      "missing_evidence_codes": [],
+      "truncated": false,
+      "duration_ms": 132,
+      "full_package_matches_direct_engine": true,
+      "text_matches_structured_content": true,
+      "model_answer_present": false
+    }
+  ],
+  "passed": true,
+  "limitations": [
+    "This official SDK client verification does not prove ChatGPT or Voice integration."
+  ]
+}

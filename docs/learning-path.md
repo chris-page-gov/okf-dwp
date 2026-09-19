@@ -76,7 +76,9 @@ selection process.
 flowchart TD
     A[Published documents and recorded sources] --> B[Search: find possible evidence]
     A --> C[Governed concepts, relationships and evidence requirements]
+    A --> G[Indexed words: select candidate whole pages]
     C --> D[Ask OKF: assemble bounded context]
+    G --> D
     D --> E[Human inspection: sources, paths, scope and gaps]
     D --> F[Optional AI explanation with citations]
 ```
@@ -86,9 +88,19 @@ machine-readable result: selected records, source references, relationships,
 scope, reasons and gaps. An evidence **profile** declares what evidence is
 required for a supported task. It is more than a list of documents.
 
-### Understand the baseline being demonstrated
+### Choose the version being demonstrated
 
-The pinned baseline at version `efb05c66616a9cd4328a86cf412780fe7bc7cf0b` has
+The new full-corpus candidate uses version
+`bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752` and the additive
+`full-dmg/okf-corpus-context.json` descriptor. Its
+[five-minute walkthrough](remote-mcp-demo.md#five-minute-full-corpus-presentation)
+starts with a staff question and inspects whole pages from both manuals. The
+43-case remote evaluation and [three live SDK cases](remote-mcp-demo.md#live-sdk-verification-19-september)
+are recorded. Published-browser and actual ChatGPT acceptance remain pending.
+The broad corpus does not yet have complete
+task-specific evidence profiles, so candidate evidence remains `insufficient`.
+
+The preserved baseline at version `efb05c66616a9cd4328a86cf412780fe7bc7cf0b` has
 **52 Ask context records focused on imprisonment and legal custody**. The wider
 DMG collection is available for discovery, and the separately acquired ADM
 manual supplies further source pages. This particular Ask profile does not cover
@@ -98,18 +110,19 @@ needs against that baseline. A later profile requires its own version and
 evaluation; it must not silently change what this baseline proved.
 
 The newer combined-corpus path can select whole pages from the nonempty DMG and
-ADM text. Its first evaluation is recorded locally; published-service and browser
-acceptance are separate gates. It ranks the words in the question, while concept
+ADM text. Its remote evaluation is recorded; transport, browser and actual
+AI-client acceptance have separate evidence. It ranks the words in the question, while concept
 resolution separately uses declared aliases. Existing aliases and relationships
 retain their original scopes: a custody-specific concept is not a complete model
 of every benefit. A matching page can be a useful starting point without proving
 that a rule applies to the question.
 
-**Try:** use the exact imprisonment question from the demonstration, then inspect
-the routes and the original pages. Compare it with the hospital case. Hospital
-material exists in the wider collection, but the pinned Ask profile lacks the
-required hospital evidence model. The [hospital review](remote-mcp-hospital-coverage.md)
-explains that gap.
+**Try:** use the full-corpus walkthrough with “What happens to your benefits if
+you go abroad?” and inspect its source pages and missing facts. To compare with
+the original imprisonment acceptance case, explicitly open the preserved custody
+version. That version has a bounded imprisonment profile and lacks a hospital
+evidence profile. The [historical hospital review](remote-mcp-hospital-coverage.md)
+explains that gap; it is not a claim that the wider corpus has no hospital text.
 
 ## 4. Read the result before asking an AI to explain it
 
@@ -163,7 +176,7 @@ There are also two size limits. Ask OKF can deliberately omit items to meet a
 **budget**, and reports that omission. An AI host can separately cut down the
 received tool output. In the recorded ChatGPT tests, a complete service response
 did not always remain completely accessible to the model. Use the
-[tested bounded prompts](remote-mcp-demo.md#five-minute-presentation) and keep
+[tested custody-version prompts](remote-mcp-demo.md#preserved-custody-demonstration) and keep
 their insufficient status visible.
 
 ## 6. Decide what an evaluation actually proves
@@ -199,7 +212,7 @@ packages matched the shared Explorer engine, with no assembly-budget truncation;
 reporting and source traceability. It leaves substantive answerability open.
 ChatGPT's handling of tool output has its [separate observed tests](remote-mcp-demo.md#actual-chatgpt-pro-observation-19-september).
 
-The [first full-corpus local run](../validation/corpus-questions/receipt.json)
+The [full-corpus remote run](../validation/corpus-questions/receipt.json)
 uses those same 40 questions plus three boundary controls. All 40 staff questions
 return candidate evidence, including ADM pages. Ten packages retain an
 independently located candidate page; 19 retain a page from a candidate PDF.
@@ -209,8 +222,11 @@ score answers or establish that every selected page is relevant.
 All 43 results remain `insufficient`; none produces an AI answer or has specialist
 acceptance. The broad questions lack complete task-specific evidence profiles.
 The whole-page candidate limit can omit other matches, and the package reports
-that truncation. Treat this as a local, pre-publication observation until the
-live-service and browser results are recorded separately.
+that truncation. All 43 complete remote packages match the shared engine.
+Published-browser and actual ChatGPT checks remain separate gates. Three live
+SDK checks have separately confirmed exact engine agreement for current
+imprisonment and hospital queries and the explicitly selected historical
+imprisonment profile.
 See the [before-and-after results and Monday steps](../evaluation/staff-questions/results.md)
 for a concise demonstration sequence.
 

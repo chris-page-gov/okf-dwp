@@ -15,10 +15,10 @@ Pensions wording, remain unresolved rather than being silently rewritten.
 
 | Measure | Preserved custody baseline | Combined DMG and ADM candidate |
 | --- | --- | --- |
-| Observation | Actual remote MCP calls, 19 September 2026 | Local shared-engine run, 19 September 2026; pre-publication |
+| Observation | Actual remote MCP calls, 19 September 2026 | Actual remote MCP calls, 19 September 2026, completed at 17:19:46 UTC |
 | Source available to Ask | 52 governed context records | 18,197 nonempty extracted pages across 513 PDFs |
 | Questions | All 40 occurrences | Same 40 occurrences, plus three boundary controls |
-| Transport comparison | All 40 complete remote packages match the shared Explorer engine | No live transport claim from this local run |
+| Transport comparison | All 40 complete remote packages match the shared Explorer engine | All 43 complete remote packages match the shared Explorer engine |
 | Candidate evidence returned | Earlier receipt preserves the selected custody evidence | All 40 staff questions; each also returns at least one ADM page |
 | Independent research-page overlap | Not scored in the baseline | 10 of 40 packages include an independently located candidate page |
 | Independent research-document overlap | Not scored in the baseline | 19 of 40 include a page from an independently located candidate PDF |
@@ -27,12 +27,30 @@ Pensions wording, remain unresolved rather than being silently rewritten.
 | Specialist-accepted answers | 0 | 0 |
 
 Evidence is retained in the [remote baseline receipt](../../validation/staff-questions/receipt.json)
-and the [local full-corpus receipt](../../validation/corpus-questions/receipt.json),
+and the [remote full-corpus receipt](../../validation/corpus-questions/receipt.json),
 with per-question compressed responses, exact question text, hashes, scope,
 missing evidence and implementation identity. The original baseline uses
-immutable DWP revision `efb05c66616a9cd4328a86cf412780fe7bc7cf0b`. The local run
+immutable DWP revision `efb05c66616a9cd4328a86cf412780fe7bc7cf0b`. The wider run
 names its own corpus version and manifest binding; it does not replace that
-baseline. Its live-service and browser checks remain separate delivery gates.
+baseline. Its published-browser check and actual ChatGPT rehearsal remain
+separate delivery gates.
+The new [full-corpus demonstration guide](../../docs/remote-mcp-demo.md#five-minute-full-corpus-presentation)
+uses explicit version `bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752`. The older
+imprisonment sufficiency result must not be presented as a result of this broader
+default corpus.
+
+The [official SDK verification](../../validation/corpus-questions/sdk-receipt.json)
+is a separate completed live test on 19 September: current imprisonment and
+hospital packages are insufficient and truncated; the explicitly selected older
+imprisonment package remains sufficient within its frozen profile. All three
+match the complete shared-engine output. This complements the separate 43-case
+remote run; neither proves that ChatGPT can inspect a full package.
+
+Independent offline replay verified all 43 complete packages. All 21 corruption
+controls were rejected, covering receipt identity, source and transport bindings,
+and altered results. The 42 independently located source candidates were also
+reverified. These checks protect the integrity of the evaluation; they do not
+convert its research starting points into complete answer rubrics.
 
 The wider collection contains 19,090 measured pages. The 893 pages without
 machine-extracted text retain their original source links and page locators,
@@ -68,7 +86,7 @@ profile declares no complete task-specific evidence requirements.
 - Concept resolution uses declared aliases separately. Existing concepts and
   relationships retain their original scope, including custody-specific scope;
   full source capture does not broaden those assertions automatically.
-- The local run reports truncation for 42 of its 43 packages, including all 40
+- The wider remote run reports truncation for 42 of its 43 packages, including all 40
   staff questions. The fixed candidate limit leaves other matching pages outside
   each package; output budgets can also omit whole records. The nonsense control
   has no matches to truncate. The baseline recorded no assembly-budget truncation.
@@ -91,9 +109,10 @@ confused.
 1. Start with the [learning path](../../docs/learning-path.md) and the coverage
    table above. Explain the difference between a captured manual and a complete
    evidence profile.
-2. Follow the [connection and demonstration guide](../../docs/remote-mcp-demo.md).
-   Use the exact published version named there. Describe any newer local run as
-   local until its live acceptance is recorded.
+2. Follow the [full-corpus presentation and connection guide](../../docs/remote-mcp-demo.md#five-minute-full-corpus-presentation).
+   Use the exact version named there. Distinguish the completed remote-service
+   checks from the pending published-browser and actual ChatGPT checks. The new
+   bounded ChatGPT prompt needs its own account rehearsal.
 3. Show the [public question registry](cases.json). Select one question and keep
    its original wording and ambiguity notes visible.
 4. Compare the preserved baseline result with its full-corpus result. Show the
