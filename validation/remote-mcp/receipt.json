@@ -1,0 +1,244 @@
+{
+  "schema": "okf-dwp-remote-mcp-acceptance.v1",
+  "status": "passed",
+  "observed_at": "2026-09-19T15:09:55.765Z",
+  "endpoint": "https://ask-okf.crpage.chatgpt.site/okf/mcp",
+  "scope": "remote-https-mcp",
+  "protocol": "2025-11-25",
+  "client": "independent Node.js raw HTTP MCP client",
+  "server": {
+    "name": "ask-okf",
+    "version": "0.1.0"
+  },
+  "inputs": {
+    "index_sha256": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54",
+    "core_sha256": "4be756c3695d63ef05ec8073fede8833919d73cbb3ca7d0473fc2ac65bafb714",
+    "assessor_sha256": "e5530e231ec9757644a87fbec3490b757282474dcb7b9ca7f2a97dced822bc11",
+    "client_sha256": "0986eac2147d406ae235d22bd0f6c3751181ecea78c58d478af6cd6b84d1714e"
+  },
+  "bundle_version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+  "binding": {
+    "index_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/efb05c66616a9cd4328a86cf412780fe7bc7cf0b/full-dmg/context/assembly-index.json",
+    "index_sha256": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54"
+  },
+  "cases": [
+    {
+      "name": "imprisonment",
+      "case_path": "evaluation/context-assembly/imprisonment-case.json",
+      "case_sha256": "9eab17eb3a01fb8e3e7137d4440386da752d31e1f6a746713a02cd1ebe9108fd",
+      "tool": "ask_okf",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "A claimant is imprisoned. Explain the effect on JSA, IS, State Pension Credit and ESA, distinguishing loss of payment from loss of entitlement, and trace each conclusion to the relevant DMG guidance."
+      },
+      "archive": "imprisonment-tool-result.json.gz",
+      "archive_sha256": "b0b693dabd8bc8c5dc6c0b212da400f69278812688b2252691246e98c007718e",
+      "tool_result_sha256": "1b6cad7e772478eda7f94511a2ee0e5be2adf19c7b5b7db2805c6679d1e4a62f",
+      "package_sha256": "a21f10e374f32a63a541af9050aeeab15f3ca62689e2c6e3a746424e70a2c9ee",
+      "context_id": "urn:sha256:283cddceca09958b96949527280ea14775de5f26d092c939cacfaa545500e80e",
+      "evidence_status": "sufficient",
+      "selected_records": 52,
+      "relationships": 127,
+      "context_bytes": 487506,
+      "truncated": false,
+      "missing_evidence_codes": [],
+      "unresolved_terms": [],
+      "applicable_requirements": 4,
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "evaluation": {
+        "status": "passed",
+        "stages": [
+          {
+            "id": "A",
+            "label": "source",
+            "status": "passed",
+            "checks": 93
+          },
+          {
+            "id": "B",
+            "label": "semantic",
+            "status": "passed",
+            "checks": 167
+          },
+          {
+            "id": "C",
+            "label": "retrieval",
+            "status": "passed",
+            "checks": 10
+          },
+          {
+            "id": "D",
+            "label": "traversal",
+            "status": "passed",
+            "checks": 180
+          },
+          {
+            "id": "E",
+            "label": "assembly",
+            "status": "passed",
+            "checks": 43
+          },
+          {
+            "id": "F",
+            "label": "provenance",
+            "status": "passed",
+            "checks": 81
+          },
+          {
+            "id": "G",
+            "label": "boundaries",
+            "status": "passed",
+            "checks": 162
+          },
+          {
+            "id": "H",
+            "label": "answerability",
+            "status": "passed",
+            "checks": 15
+          }
+        ]
+      }
+    },
+    {
+      "name": "hospital",
+      "case_path": "evaluation/remote-mcp/hospital-case.json",
+      "case_sha256": "73e64cc295735bce164ea3d7c2dd6c69579d9fed09da9420d2ce2d1cd48dd2f5",
+      "tool": "ask_okf",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "A claimant is admitted to hospital. Explain the effect on JSA, Income Support, State Pension Credit and ESA, distinguishing entitlement, payment and changes in amount, and trace each conclusion to the applicable DWP guidance."
+      },
+      "archive": "hospital-tool-result.json.gz",
+      "archive_sha256": "f35d8328bebe6b53e69e7d06cdfb942e215663893d0c95c6365119252c0e9149",
+      "tool_result_sha256": "29255ea2eb9204156f853c447117890bdbecff35f80648de9c48a740be64f568",
+      "package_sha256": "c740fac7e883ddd7383833a02b23a30b3134321cbcf18ce3256b40cfb1de2153",
+      "context_id": "urn:sha256:8908ea39720333dd8b580efd48c0f3d6d7892d7f64d0ead2a815e3ab3b9770ac",
+      "evidence_status": "insufficient",
+      "selected_records": 50,
+      "relationships": 115,
+      "context_bytes": 444815,
+      "truncated": false,
+      "missing_evidence_codes": [
+        "no_evidence_requirements",
+        "uncovered_resolved_concept",
+        "uncovered_resolved_concept",
+        "uncovered_resolved_concept",
+        "uncovered_resolved_concept",
+        "uncovered_resolved_concept",
+        "uncovered_resolved_concept",
+        "uncovered_resolved_concept",
+        "uncovered_resolved_concept",
+        "unresolved_terms"
+      ],
+      "unresolved_terms": [
+        "admitted",
+        "amount",
+        "applicable",
+        "changes",
+        "dwp",
+        "hospital"
+      ],
+      "applicable_requirements": 0,
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "evaluation": {
+        "status": "passed",
+        "stages": [
+          {
+            "id": "A",
+            "label": "source",
+            "status": "passed",
+            "checks": 52
+          },
+          {
+            "id": "B",
+            "label": "semantic",
+            "status": "passed",
+            "checks": 116
+          },
+          {
+            "id": "C",
+            "label": "retrieval",
+            "status": "passed",
+            "checks": 7
+          },
+          {
+            "id": "D",
+            "label": "traversal",
+            "status": "passed",
+            "checks": 159
+          },
+          {
+            "id": "E",
+            "label": "assembly",
+            "status": "passed",
+            "checks": 8
+          },
+          {
+            "id": "F",
+            "label": "provenance",
+            "status": "passed",
+            "checks": 3
+          },
+          {
+            "id": "G",
+            "label": "boundaries",
+            "status": "passed",
+            "checks": 55
+          },
+          {
+            "id": "H",
+            "label": "answerability",
+            "status": "passed",
+            "checks": 2
+          }
+        ]
+      }
+    }
+  ],
+  "calls": [
+    {
+      "method": "initialize",
+      "http_status": 200,
+      "response_bytes": 415,
+      "response_sha256": "f759bc2fcac24291cada23cacb9edc9ef37cc484b1e9317de8004a777e7ab60a",
+      "duration_ms": 1642
+    },
+    {
+      "method": "notifications/initialized",
+      "http_status": 202,
+      "response_bytes": 0,
+      "response_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "duration_ms": 1289
+    },
+    {
+      "method": "tools/list",
+      "http_status": 200,
+      "response_bytes": 9952,
+      "response_sha256": "6e5e4df24a07b308fcc12f97637c52160c6ea74beb309ed1f52b7dc5d25e1c86",
+      "duration_ms": 63
+    },
+    {
+      "method": "tools/call",
+      "http_status": 200,
+      "response_bytes": 996997,
+      "response_sha256": "485e075f2d592e2a4de553e90b6c4b0c63c8e0984f9db6683d85b4d617eeeddf",
+      "duration_ms": 278
+    },
+    {
+      "method": "tools/call",
+      "http_status": 200,
+      "response_bytes": 909921,
+      "response_sha256": "ca37315785c85719386a56a246792eb782d078cec5c8cb43e35638004326868d",
+      "duration_ms": 183
+    }
+  ],
+  "limitations": [
+    "This receipt proves real MCP calls and exact evidence parity; it does not alone prove ChatGPT or Voice invocation.",
+    "The hospital test passes by reporting insufficient evidence; custody passages must not be presented as a hospital answer.",
+    "The imprisonment result is sufficient only within the package declared frozen research scope, without specialist legal acceptance."
+  ]
+}

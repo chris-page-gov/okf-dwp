@@ -29,6 +29,17 @@ context controls passed; the unchanged earlier answer trials remain separate.
 This context release uses content commit `efb05c66616a9cd4328a86cf412780fe7bc7cf0b`;
 the full-corpus and pilot links below preserve their earlier release scopes.
 
+## Remote Ask OKF acceptance
+
+The remote MCP adapter lives in OKF Explorer and imports its existing context
+engine. This repository supplies the [remote acceptance cases and replay
+instructions](evaluation/remote-mcp/README.md), including the hospital question.
+The [hospital coverage review](docs/remote-mcp-hospital-coverage.md) distinguishes
+material acquired in the wider corpus from evidence governed by the current Ask
+index. Hospital evidence is currently insufficient; retrieved custody records
+must not be presented as hospital guidance. Deployment and actual ChatGPT
+invocation are separate gates recorded in the [remote demonstration guide](docs/remote-mcp-demo.md).
+
 ## What is here
 
 **The full-DMG research candidate is publicly available at an immutable, browser-checked content commit.** [Try the full corpus](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F80b6f08426aea39dd2934fb8795b61215e2cc0ad%2Ffull-dmg%2Fokf-explorer.json&q=84351&view=narrative#page/84/0035) or follow the [full-DMG walkthrough](docs/full-dmg-walkthrough.md). Publication and canonical CI history are tracked in [PR 5](https://github.com/chris-page-gov/okf-dwp/pull/5); the immutable browser receipt applies to the content commit named below. The owner authorised unattended processing against the frozen 331-PDF census, with a 24 September content freeze for the 30 September seminar. The [completion plan](docs/next-stage/unattended-completion.md) and [current checkpoint](evaluation/full-dmg-progress.json) record the acceptance gates. The earlier links retain their original Pension Credit scope.

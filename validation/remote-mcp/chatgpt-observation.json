@@ -1,0 +1,166 @@
+{
+  "schema": "okf-dwp-chatgpt-remote-mcp-observation.v1",
+  "recorded_at": "2026-09-19T15:36:09.995Z",
+  "observed_on": "2026-09-19",
+  "method": "Live ChatGPT UI inspection by the root task agent, including tool invocation cards and model-reported accessible output. This is a client observation, not an export of private conversation content or a substitute for raw MCP parity receipts.",
+  "account_plan": "Pro",
+  "connection": {
+    "name": "Ask OKF",
+    "endpoint": "https://ask-okf.crpage.chatgpt.site/okf/mcp",
+    "authentication": "No Auth",
+    "selection": "Add files and more → type Ask OKF → select result; connection pill displayed",
+    "tool": "ask_okf",
+    "status": "connected-and-invoked"
+  },
+  "cases": [
+    {
+      "id": "imprisonment-default",
+      "model_surface": "5.6 Extra High",
+      "tool_invoked": true,
+      "visible_context_id": "urn:sha256:283cddceca09958b96949527280ea14775de5f26d092c939cacfaa545500e80e",
+      "visible_selected_records": 52,
+      "visible_relationships": 127,
+      "server_package_bytes": 487506,
+      "assembly_budget_truncated": false,
+      "model_reported_host_truncation": true,
+      "complete_model_access_established": false,
+      "assessment": "Tool invocation worked; complete default evidence delivery to the model was not established."
+    },
+    {
+      "id": "imprisonment-default-first-attempt",
+      "model_surface": "6 Pro",
+      "tool_invoked_report": "Model reported a call but could not access the returned payload.",
+      "complete_model_access_established": false,
+      "assessment": "Not a successful evidence-consumption demonstration."
+    },
+    {
+      "id": "hospital-32768",
+      "model_surface": "5.6 Extra High",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "budget": {
+          "max_bytes": 32768
+        },
+        "question": "A claimant is admitted to hospital. Explain the effect on JSA, Income Support, State Pension Credit and ESA, distinguishing entitlement, payment and changes in amount, and trace each conclusion to the applicable DWP guidance."
+      },
+      "tool_invoked": true,
+      "context_id": "urn:sha256:9fd8b81a090b97977a34558c6fda5154457123ccea1b8e818c2a26b93faa05d3",
+      "selected_records": 8,
+      "record_kind": "model-authored custody concepts; not original hospital guidance passages",
+      "relationships": 0,
+      "package_bytes": 31017,
+      "evidence_status": "insufficient",
+      "assembly_budget_truncated": true,
+      "model_reported_host_truncation": false,
+      "ai_answer": null,
+      "missing_evidence_codes": [
+        "no_evidence_requirements",
+        "uncovered_resolved_concept (8 entries)",
+        "unresolved_terms"
+      ],
+      "model_response_assessment": {
+        "declined_hospital_answer": true,
+        "correctly_exposed_evidence_gap": true,
+        "terminology_limitation": "The response called authored concept text source passages in places. The records must retain their model-derived concept status and must not be presented as authoritative hospital passages."
+      },
+      "assessment": "Bounded remote invocation and governed insufficiency explanation succeeded; no hospital benefit conclusion was supported."
+    },
+    {
+      "id": "imprisonment-98304-first-response",
+      "model_surface": "5.6 Extra High",
+      "requested_budget": {
+        "max_bytes": 98304
+      },
+      "tool_invoked": true,
+      "assessment": "The model reported aggregate counts but initially missed the final retained evidence record. This is a client interpretation failure, not an established transport failure.",
+      "complete_source_inspection": false
+    },
+    {
+      "id": "imprisonment-98304-source-inspection",
+      "model_surface": "5.6 Extra High",
+      "requested_budget": {
+        "max_bytes": 98304
+      },
+      "tool_invoked": true,
+      "context_id": "urn:sha256:269eb8a525f4fa2df34bc79df9024ba0e2a91a6da2a1081d5d29429a44005017",
+      "selected_records": 10,
+      "relationships": 11,
+      "package_bytes": 82299,
+      "evidence_status": "insufficient",
+      "assembly_budget_truncated": true,
+      "host_truncation_marker_observed": false,
+      "source_inspection": {
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+        "kind": "evidence",
+        "assertion_status": "normalized",
+        "authority_class": "derived",
+        "authority_label": "Exact frozen machine extraction of official DWP guidance; applicability unreviewed",
+        "official_url": "https://assets.publishing.service.gov.uk/media/651bcf2e6dfda6000d8e39d2/dmgch12.pdf#page=3",
+        "locator": "DMG chapter 12, PDF page 3; exact whole extracted page; imprisonment passages and continuation context",
+        "model_recognised_scoped_payability_distinction": true,
+        "model_identified_chapter_routes": [
+          24,
+          78,
+          53,
+          54
+        ],
+        "model_retained_insufficient_status": true
+      },
+      "assessment": "Explicit inspection of the final selected record succeeded. The client accessed actual source content and provenance while declining to treat the partial package as a complete four-benefit answer."
+    },
+    {
+      "id": "imprisonment-default-targeted-source-inspection",
+      "model_surface": "5.6 Extra High",
+      "tool_invoked": true,
+      "context_id": "urn:sha256:283cddceca09958b96949527280ea14775de5f26d092c939cacfaa545500e80e",
+      "server_selected_records": 52,
+      "server_relationships": 127,
+      "server_package_bytes": 487506,
+      "assembly_budget_truncated": false,
+      "model_reported_host_truncation": true,
+      "model_reported_original_output_tokens": 19260,
+      "complete_model_access_established": false,
+      "assessment": "The tool runner received the full package, but the model-visible displayed output omitted its middle. The model declined a full answer. This is not full-package client acceptance."
+    },
+    {
+      "id": "imprisonment-default-compact-recovery",
+      "model_surface": "5.6 Extra High",
+      "attempt": "Request a higher output allowance or inspect a retained object, then extract a compact source digest.",
+      "model_reported_runner_constraints": {
+        "output_limit_control_exposed": false,
+        "objects_retained_across_executions": false,
+        "full_object_available_inside_single_execution": true,
+        "approximate_output_token_cap": 10000,
+        "scope": "Model report about the current tool runner on this date; not a documented or universal ChatGPT limit."
+      },
+      "model_reported_host_truncation": true,
+      "complete_model_access_established": false,
+      "partial_answer_observed": true,
+      "model_response_assessment": {
+        "benefit_by_benefit_legacy_dmg_explanation": true,
+        "citations_to_returned_sources_observed": true,
+        "acknowledged_missing_displayed_chapter_54_text": true,
+        "alternative_cited_for_income_related_esa": "DMG chapter 42, PDF page 78",
+        "full_four_benefit_answer_accepted": false,
+        "specialist_or_blind_answer_grading": false
+      },
+      "assessment": "Useful partial cited reasoning was observed, but even the compact extraction was truncated and the model acknowledged a source gap in its displayed evidence. No complete answer or full default model access is established."
+    }
+  ],
+  "pending_cases": [],
+  "voice": {
+    "status": "not-tested",
+    "button_present": true,
+    "tool_invocation_tested": false,
+    "text_success_does_not_establish_voice": true
+  },
+  "limitations": [
+    "Observation of one account and the named model surfaces on the recorded date; not universal compatibility.",
+    "Model-reported absence of host truncation is separate from raw package equality verified through MCP clients.",
+    "The eight small hospital records are authored concepts, not a body of authoritative hospital evidence.",
+    "No private ChatGPT conversation URL, account identifier or claimant information is retained.",
+    "The approximately 10000-token cap and tool-runner retention behaviour were model reports about the tested runner, not verified universal ChatGPT product limits."
+  ],
+  "test_series_status": "closed-with-bounded-success-and-full-default-model-access-limitation"
+}

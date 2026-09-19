@@ -1,5 +1,14 @@
 # Changelog
 
+## Remote Ask OKF acceptance — 19 September 2026
+
+- Add an independent HTTP MCP acceptance client for the imprisonment and hospital questions, comparing complete returned packages with the existing Explorer engine and evidence assessor.
+- Retain compressed raw tool results, input and output hashes, source version, protocol and observation times; replay those observations in CI without a live service dependency.
+- Document the hospital knowledge gap separately from transport success. Existing custody evidence does not answer hospital questions; no new benefit rule or specialist acceptance is inferred.
+- Add ChatGPT connection and meeting demonstration instructions, with separate gates for deployment, actual AI invocation and Voice or WebMCP host support.
+- Record actual ChatGPT Pro-account calls, full-response host limitations and successful smaller packages. Keep client-side delivery limits separate from the assembler's explicit budget truncation; preserve the failed attempts and model interpretation limitations.
+- Replay six smaller-budget HTTPS captures against the unchanged core in CI, including whole source records and explicit insufficiency.
+
 ## Governed context assembly public experimental candidate — 16 September 2026
 
 - Add an imprisonment case spanning legacy JSA, Income Support, State Pension Credit and the two ESA components, with exact whole-page evidence and explicit regime boundaries.
