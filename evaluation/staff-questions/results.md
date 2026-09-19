@@ -32,8 +32,8 @@ with per-question compressed responses, exact question text, hashes, scope,
 missing evidence and implementation identity. The original baseline uses
 immutable DWP revision `efb05c66616a9cd4328a86cf412780fe7bc7cf0b`. The wider run
 names its own corpus version and manifest binding; it does not replace that
-baseline. Its published-browser check remains pending. The actual bounded
-ChatGPT rehearsal has its own observation below.
+baseline. Its [published-browser check](../../validation/corpus-questions/public-explorer-observation.json)
+and actual bounded ChatGPT rehearsal have separate completed observations below.
 The new [full-corpus demonstration guide](../../docs/remote-mcp-demo.md#five-minute-full-corpus-presentation)
 uses explicit version `bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752`. The older
 imprisonment sufficiency result must not be presented as a result of this broader
@@ -84,6 +84,23 @@ machine-extracted text retain their original source links and page locators,
 but cannot supply a text match. Nonempty extraction can also contain defects.
 See the [ADM acquisition record](../../docs/adm-acquisition.md) and the
 [beginner learning path](../../docs/learning-path.md).
+
+### Published Explorer and browser-tool agreement
+
+The [public Explorer observation](../../validation/corpus-questions/public-explorer-observation.json)
+at app commit `a8628fdb77c1c03a5d99b6d105d9e4b8722088d7` records Search, Ask,
+source provenance, directed routing and machine-readable context. Its
+[downloaded app files](../../validation/corpus-questions/public-explorer-build-verification.json)
+matched the tested build. With **Package bytes = 32768**, the abroad question's
+six source pages and 31,312 bytes matched native WebMCP build and explain calls
+and the complete remote package by canonical content. All share context
+`urn:sha256:2cdfa5feb6310f58166d66e814bd3b2fbe2e9e146e25b25a65453b48e3dffabd`.
+
+The default imprisonment task separately showed eight resolved concepts, 64
+records, 127 relationships and 516,146 bytes, including chapter 12 routing to
+chapters 24, 53, 54 and 78. Both packages remained insufficient and truncated.
+Native WebMCP was called in the Codex in-app browser; this does not establish
+ChatGPT Voice or room-audio readiness.
 
 ## What the improvement means
 
@@ -137,9 +154,10 @@ confused.
    table above. Explain the difference between a captured manual and a complete
    evidence profile.
 2. Follow the [full-corpus presentation and connection guide](../../docs/remote-mcp-demo.md#five-minute-full-corpus-presentation).
-   Use the exact version named there. Distinguish the completed remote-service
-   and bounded ChatGPT checks from the pending published-browser check. Repeat
-   the tested bounded prompt in the intended account before the meeting.
+   Use the exact version named there and set Explorer's **Package bytes** to
+   **32768** for the abroad comparison. The published UI, browser tools and
+   remote package now match for that case. Repeat the tested bounded ChatGPT
+   prompt in the intended account before the meeting.
 3. Show the [public question registry](cases.json). Select one question and keep
    its original wording and ambiguity notes visible.
 4. Compare the preserved baseline result with its full-corpus result. Show the
@@ -147,9 +165,10 @@ confused.
    a literal match from a declared relationship.
 5. Show `insufficient`, missing evidence and truncation before handing evidence
    to an AI. Explain what specialist input is needed to define a complete rubric.
-6. Inspect the machine-readable package. If the tested remote version supports
-   the same corpus, request that same question through MCP and compare the
-   version and context identifier. Do not present a different version as parity.
+6. Inspect the machine-readable package. Request the same question through MCP
+   and compare the version, budget and context identifier. The guide provides
+   the verified bounded abroad example; a different version or budget is a
+   different package.
 7. Use the nonsense control to demonstrate a legitimate no-result outcome.
    Finish with the measured progress and the remaining review work, without
    claiming a benefits engine, an entitlement decision or proven savings.

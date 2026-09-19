@@ -1,0 +1,81 @@
+{
+  "schema": "okf-dwp-public-corpus-explorer-observation.v1",
+  "observed_at": "2026-09-19T18:09:37.089129+00:00",
+  "method": "Root task agent inspected the deployed Explorer in the Codex in-app browser. Search, UI context assembly, evidence provenance and machine-readable JSON were inspected. Native WebMCP build and explain calls were executed; the whole bounded package was compared by canonical content hash with the retained actual remote MCP package. This is a retained manual observation, separate from automated release tests.",
+  "url": "https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fbf50ef8d91b9f1ccc2cbdb354198eae74c9ed752%2Ffull-dmg%2Fokf-corpus-context.json&q=imprisonment#overview",
+  "explorer_commit": "a8628fdb77c1c03a5d99b6d105d9e4b8722088d7",
+  "pages_run_url": "https://github.com/chris-page-gov/okf-explorer/actions/runs/35459583758",
+  "identity_file": {
+    "path": "validation/corpus-questions/public-explorer-identity.json",
+    "url": "https://chris-page-gov.github.io/okf-explorer/okf-publication-identity.json",
+    "bytes": 1138,
+    "sha256": "a69f56da91f69a94585c344de20a327a162c9a7ea44ed3e69196c5fee807804c"
+  },
+  "assets_verification": "validation/corpus-questions/public-explorer-build-verification.json",
+  "source": {
+    "version": "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752",
+    "descriptor_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752/full-dmg/okf-corpus-context.json",
+    "manifest_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752/full-dmg/context/corpus/manifest.json",
+    "manifest_sha256": "aa9726ba72b7495323b031f149fa13cffeae0aa8fc868af63b7af3cac0e6be95",
+    "snapshot": "dwp-context-corpus-73cf69d371e212aba4e7"
+  },
+  "search": {
+    "query": "imprisonment",
+    "matches": 219,
+    "shown": 200
+  },
+  "ask": {
+    "question": "What happens to your benefits if you go abroad?",
+    "context_id": "urn:sha256:2cdfa5feb6310f58166d66e814bd3b2fbe2e9e146e25b25a65453b48e3dffabd",
+    "selected_records": 6,
+    "relationships": 0,
+    "package_bytes": 31312,
+    "evidence_status": "insufficient",
+    "truncated": true,
+    "max_bytes": 32768,
+    "source_urls": [
+      "https://assets.publishing.service.gov.uk/media/5a74b60ae5274a3cb28668f6/admc4.pdf#page=4"
+    ]
+  },
+  "webmcp": {
+    "build_context_id": "urn:sha256:2cdfa5feb6310f58166d66e814bd3b2fbe2e9e146e25b25a65453b48e3dffabd",
+    "build_matches_remote": true,
+    "explain_matches_build": true,
+    "read_only": true,
+    "ui_matches_build": true,
+    "canonical_content_sha256": "b119b6c4e4e4952691aec3926f54434e3531cc354226f2c4296a2a30052c427d",
+    "tools_called": [
+      "okf_build_context",
+      "okf_explain_context"
+    ],
+    "host": "Codex in-app browser"
+  },
+  "journeys": {
+    "search": true,
+    "ask": true,
+    "provenance": true,
+    "graph": true,
+    "machine_readable_context": true,
+    "native_webmcp": true
+  },
+  "imprisonment": {
+    "question": "A claimant is imprisoned. Explain the effect on JSA, IS, State Pension Credit and ESA, distinguishing loss of payment from loss of entitlement, and trace each conclusion to the relevant DMG guidance.",
+    "context_id": "urn:sha256:fbd44c332557919cc4e387a6991613c1b0a0316325a47f64143f5244e15ebea1",
+    "selected_records": 64,
+    "relationships": 127,
+    "package_bytes": 516146,
+    "evidence_status": "insufficient",
+    "truncated": true,
+    "resolved_concepts": 8,
+    "ambiguity": "State Pension Credit resolves to two declared concepts; no candidate was silently chosen.",
+    "observed_routing": "Expanded directed relationships visibly connect chapter 12 page 3 to chapters 24, 53, 54 and 78 with dcterms:references and normalised-source status."
+  },
+  "console_errors": [],
+  "limitations": [
+    "This observation covers the named immutable content, app commit and bounded journeys, not all browser states or an independent accessibility audit.",
+    "The graph journey inspected the directed relationships inside Ask: 127 for imprisonment, zero for bounded abroad. It does not claim that all source pages have semantic relationships.",
+    "The official ADM C4 PDF link was opened at #page=4. The host did not expose PDF body text to its accessibility tree; the whole frozen extraction, page locator, original hash and capture time were inspected in Explorer. No new PDF-layout review is claimed.",
+    "Full-corpus packages remain insufficient and truncated; matching source pages do not establish current legal applicability or complete answerability.",
+    "Native WebMCP was actually called in this Codex browser. ChatGPT remote MCP has its own observation; ChatGPT Voice and room audio were not tested."
+  ]
+}

@@ -5,7 +5,8 @@
 has passed the official SDK checks and all 43 remote evaluation cases against the
 shared engine. ChatGPT also inspected the bounded abroad result: six source
 pages, 31,312 bytes, with no host truncation reported. The result remains
-`insufficient`. Published Explorer acceptance is still pending. Earlier custody
+`insufficient`. Published Explorer and native WebMCP journeys also passed, with
+the same bounded package available in the UI and through both tool interfaces. Earlier custody
 observations are preserved separately below.
 
 The public test endpoint is:
@@ -19,8 +20,8 @@ The service returns a governed evidence package. ChatGPT, or another connected A
 Use version **`bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752`** explicitly. Its
 [additive Explorer descriptor](../full-dmg/okf-corpus-context.json) preserves the
 existing DMG reading and Search views and adds the DMG-plus-ADM Ask corpus.
-The [candidate Explorer link — browser acceptance pending](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fbf50ef8d91b9f1ccc2cbdb354198eae74c9ed752%2Ffull-dmg%2Fokf-corpus-context.json&q=imprisonment#overview)
-requires the updated Explorer consumer. Before presenting it, check that Ask's
+The [verified public Explorer demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fbf50ef8d91b9f1ccc2cbdb354198eae74c9ed752%2Ffull-dmg%2Fokf-corpus-context.json&q=imprisonment#overview)
+uses the published consumer checked below. Before presenting it, check that Ask's
 package names the corpus snapshot and manifest below; an older consumer or
 different descriptor is not the same demonstration.
 
@@ -33,7 +34,8 @@ different descriptor is not the same demonstration.
 | Candidate evidence | All 40 staff questions retrieve evidence, including ADM pages; 12 retain an independently located page, 21 a page from a candidate PDF |
 | Live service | Official SDK checks passed for current imprisonment, current hospital and explicitly selected historical imprisonment |
 | Actual ChatGPT | Bounded abroad call inspected: six source pages, 31,312 bytes; no host truncation reported; still insufficient |
-| Published Explorer | Acceptance pending for this corpus version |
+| Published Explorer | Recorded Search, Ask, provenance, routing and JSON journeys passed at app commit `a8628fdb77c1c03a5d99b6d105d9e4b8722088d7` |
+| Native WebMCP | Codex in-app browser build and explain calls match the UI and remote bounded abroad package |
 
 See the [before-and-after results](../evaluation/staff-questions/results.md),
 [exact questions](../evaluation/staff-questions/cases.json) and
@@ -115,17 +117,52 @@ evidence with original PDF links; an absent ADM Reader record does not imply tha
 the source passage is unavailable. The 893 pages with no extracted text remain
 visible in source accounting but cannot supply a text match.
 
+## Published Explorer and native WebMCP
+
+The [public-browser observation](../validation/corpus-questions/public-explorer-observation.json)
+at 18:09 UTC on 19 September records Explorer commit
+`a8628fdb77c1c03a5d99b6d105d9e4b8722088d7`, published by
+[this Pages run](https://github.com/chris-page-gov/okf-explorer/actions/runs/35459583758).
+The [application-file check](../validation/corpus-questions/public-explorer-build-verification.json)
+separately verifies the downloaded build identities. No console errors were
+observed during the recorded journeys.
+
+Search for `imprisonment` showed 219 matches, with 200 displayed. Asking the full
+imprisonment question at default budgets resolved eight concepts and returned
+64 records, 127 relationships and 516,146 bytes. Expanded directed relationships
+visibly routed chapter 12 page 3 to chapters 24, 53, 54 and 78 using
+`dcterms:references`, labelled as normalised source assertions. State Pension
+Credit ambiguity remained visible. Context
+`urn:sha256:fbd44c332557919cc4e387a6991613c1b0a0316325a47f64143f5244e15ebea1`
+remained **insufficient and truncated**.
+
+For the abroad question, **Package bytes = 32768** produced six source pages,
+zero relationships and 31,312 bytes in the published UI. The Codex in-app
+browser actually called `okf_build_context` and `okf_explain_context`. The complete
+UI, native WebMCP build/explain and retained remote package matched by canonical
+content, with SHA-256
+`b119b6c4e4e4952691aec3926f54434e3531cc354226f2c4296a2a30052c427d`
+and context ID
+`urn:sha256:2cdfa5feb6310f58166d66e814bd3b2fbe2e9e146e25b25a65453b48e3dffabd`.
+The source page, original hash and capture date were inspected; the ADM C4 PDF
+link opened at page 4. Its PDF layout was not newly reviewed.
+
+These checks prove the recorded interactions and package agreement. They do not
+make the result sufficient, establish that every source has semantic links, or
+prove ChatGPT Voice access. The browser tools were invoked in the Codex in-app
+browser; ChatGPT used the separately observed remote MCP connection.
+
 ## Five-minute full-corpus presentation
 
 1. **Show the sources and the boundary.** State “This is an independent evidence
    demonstrator, not a benefits calculator.” Show the two-manual coverage above.
-   Use the candidate Explorer link only after its version and browser acceptance
-   have been confirmed; otherwise label the local or recorded view accurately.
+   Open the verified public Explorer link above and confirm its corpus snapshot.
 2. **Use Search, then Ask.** Search `imprisonment` to demonstrate the preserved
-   DMG discovery view. Select Ask and enter the staff question “What happens to
-   your benefits if you go abroad?” Show that Ask can retrieve candidate pages
-   from both manuals. Explain that country, duration, benefit and date are still
-   unspecified.
+   DMG discovery view: the recorded result has 219 matches, with 200 displayed.
+   Select Ask, set **Package bytes** to **32768**, leave the other budgets at
+   their defaults, and enter “What happens to your benefits if you go abroad?”
+   The comparison case has six ADM source pages and 31,312 package bytes.
+   Explain that country, duration, benefit and date are still unspecified.
 3. **Inspect one result.** Show its whole extracted page, official PDF link,
    source hash, inclusion reason and assertion status. A literal match is a
    possible lead. A model-authored concept is not an official source passage.
@@ -134,8 +171,9 @@ visible in source accounting but cannot supply a text match.
    package and its explicit source version.
 5. **Let ChatGPT inspect a bounded package.** Follow [Connect ChatGPT](#connect-chatgpt)
    and rehearse the prompt below. Its whole-page budget may remove relevant
-   evidence. Report the actual call and any host truncation; do not imply that
-   the smaller result matches a default-budget Explorer package.
+   evidence. Compare context `2cdfa5fe…`, version and budget with Explorer.
+   Report the actual call and any host truncation. The recorded comparison uses
+   the same 32,768-byte budget on both sides.
 
 ### Full-corpus ChatGPT rehearsal prompt
 
@@ -321,6 +359,21 @@ receipt requires `31ee08ec259e165a478e9c36826fe3721643631d`. The receipt also ch
 the relevant implementation hashes. Use separate checkouts so that replaying
 one version does not silently change another.
 
+CI creates the matching checkouts automatically. On a local machine, first check
+whether `.ci/okf-explorer-corpus` already exists. If it does, use it only if it is
+at the required commit, or pass another matching checkout to `--explorer-root`;
+do not overwrite existing work. If the directory is absent, run these preparation
+commands from the OKF-DWP repository. They download the preserved public history
+and select the exact implementation used by the receipts:
+
+```sh
+mkdir -p .ci
+git clone --branch ask-okf-full-corpus-20260919 --single-branch \
+  https://github.com/chris-page-gov/okf-explorer.git .ci/okf-explorer-corpus
+git -C .ci/okf-explorer-corpus checkout --detach 31ee08ec259e165a478e9c36826fe3721643631d
+git -C .ci/okf-explorer-corpus rev-parse HEAD
+```
+
 With those workflow checkouts available, reproduce the retained combined-corpus
 run without a network call:
 
@@ -329,7 +382,8 @@ node --experimental-strip-types scripts/evaluate_corpus_questions.mjs \
   --check --explorer-root .ci/okf-explorer-corpus
 node --experimental-strip-types scripts/test_corpus_questions.mjs \
   --explorer-root .ci/okf-explorer-corpus
-node validation/corpus-questions/bounded-abroad/verify.mjs
+node --experimental-strip-types validation/corpus-questions/bounded-abroad/verify.mjs \
+  --check --explorer-root .ci/okf-explorer-corpus
 ```
 
 For a local checkout outside CI, replace `.ci/okf-explorer-corpus` with a checkout

@@ -2,6 +2,17 @@
 
 ## Staff questions, ADM acquisition and repository governance — 19 September 2026
 
+- Repair inherited repository semantic and publication contract drift against
+  unchanged canonical schemas. Preserve per-delivery scope, status, authoring notes and
+  output descriptions in separate `okf.delivery.json`; declare concrete outputs
+  using governed roles and add the root OKF version declaration. Canonical
+  reconciliation passes without warnings. Add an offline CI gate and regression
+  controls for unsupported fields, unknown roles, unsafe/missing output paths,
+  altered schema bytes, broken references and dependency cycles. Preserve the
+  original publication classifications and source denominators separately;
+  canonical fields do not upgrade extraction or interpretation authority.
+  Keep real-browser journeys required and add a clearly labelled offline check
+  of retained public-browser identity and context evidence.
 - Add a public register of 40 question occurrences and 39 distinct wordings,
   preserving ambiguity and recording 42 verified source candidates without
   publishing private correspondence, contacts or collaboration links.
@@ -21,8 +32,8 @@
   complete packages match the shared engine, and all 40
   questions return candidate evidence, 12 retain a separately located page and
   21 retain a page from a candidate document. All 43 packages remain insufficient;
-  no answer-quality, AI-answer or specialist-acceptance claim follows. Published
-  browser acceptance remains a separate delivery gate.
+  no answer-quality, AI-answer or specialist-acceptance claim follows. Retain
+  published-browser acceptance as separate evidence.
 - Add eight ADM acquisition controls for frozen census identity, classification,
   bounded metadata, source paths, PDF integrity, page locators and unreviewed
   extraction authority. Existing DMG acquisition helpers remain unchanged.
@@ -42,17 +53,25 @@
   Explain provenance, date meanings, full capture versus evidence profiles,
   remote MCP, browser WebMCP, HTTP 405 and unverified Voice access.
 - Lead the meeting guide with the combined-corpus candidate, an explicit version
-  and a bounded ChatGPT rehearsal prompt. Keep the pending published-browser gate
-  visible and retain the earlier custody observations under their original
+  and a bounded ChatGPT rehearsal prompt. Record the completed published-browser
+  journeys and retain the earlier custody observations under their original
   version. Document separate consumer pins for replaying the two generations.
 - Verify deployment 5 through the official MCP SDK: current imprisonment and
   hospital packages and the explicitly selected historical imprisonment package
   exactly match the shared engine. Preserve the earlier failed hosting attempt;
-  distinguish these completed transport checks and the wider remote evaluation
-  from the published-browser gate still in progress.
+  distinguish these transport checks and the wider remote evaluation
+  from the separate published-browser observations.
 - Independently replay all 43 complete corpus packages, reverify 42 source
   candidates and reject all 21 corruption controls. Update only the delivery
   verification status; retain source snapshots and evidence authority unchanged.
+- Verify the published Explorer at commit `a8628fdb77c1c03a5d99b6d105d9e4b8722088d7`,
+  including downloaded app-file identities, Search, Ask, provenance, directed
+  chapter routing and machine-readable context. Native WebMCP build and explain
+  calls in the Codex browser match the UI and remote bounded abroad package:
+  six source pages, 31,312 bytes, context `2cdfa5fe…`, insufficient and truncated.
+  Default imprisonment exposes eight resolved concepts, 64 records, 127
+  relationships and chapter 24/53/54/78 routing, while remaining insufficient.
+  ChatGPT Voice and room audio are not verified by these checks.
 - Record ChatGPT's cached older tool schema rejecting the new corpus version
   before any MCP request. Document the observed existing-connection Refresh
   route and keep the post-refresh invocation separate from service acceptance.

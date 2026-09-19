@@ -96,8 +96,9 @@ The new full-corpus candidate uses version
 [five-minute walkthrough](remote-mcp-demo.md#five-minute-full-corpus-presentation)
 starts with a staff question and inspects whole pages from both manuals. The
 43-case remote evaluation and [three live SDK cases](remote-mcp-demo.md#live-sdk-verification-19-september)
-are recorded. ChatGPT also inspected a bounded abroad package; published-browser
-acceptance remains pending.
+are recorded. ChatGPT inspected a bounded abroad package. The published Explorer
+and native browser tools also returned the same complete bounded package in the
+[recorded public check](remote-mcp-demo.md#published-explorer-and-native-webmcp).
 The broad corpus does not yet have complete
 task-specific evidence profiles, so candidate evidence remains `insufficient`.
 
@@ -119,7 +120,9 @@ of every benefit. A matching page can be a useful starting point without proving
 that a rule applies to the question.
 
 **Try:** use the full-corpus walkthrough with “What happens to your benefits if
-you go abroad?” and inspect its source pages and missing facts. To compare with
+you go abroad?”, set **Package bytes** to **32768**, and inspect the six source
+pages and missing facts. That budget matches the recorded ChatGPT and browser-tool
+comparison. To compare with
 the original imprisonment acceptance case, explicitly open the preserved custody
 version. That version has a bounded imprisonment profile and lacks a hospital
 evidence profile. The [historical hospital review](remote-mcp-hospital-coverage.md)
@@ -170,6 +173,10 @@ browser visits. See [HTTP and 405](glossary.md#http-get-post-and-405).
 
 **WebMCP** exposes tools through a supporting browser page. Remote MCP connects
 to a service. Neither one proves that a particular AI client can use the other.
+In the published Explorer, the Codex in-app browser actually called the context
+build and explain tools. At the same version, question and 32,768-byte budget,
+their complete package matched Explorer's UI and the remote MCP result: six
+source pages and 31,312 bytes, still insufficient and truncated.
 Text calls were tested in ChatGPT; **Ask OKF invocation through ChatGPT Voice has
 not been verified**. Rehearse the intended account and audio equipment separately.
 
@@ -177,8 +184,9 @@ There are also two size limits. Ask OKF can deliberately omit items to meet a
 **budget**, and reports that omission. An AI host can separately cut down the
 received tool output. In the recorded ChatGPT tests, a complete service response
 did not always remain completely accessible to the model. Use the
-[tested custody-version prompts](remote-mcp-demo.md#preserved-custody-demonstration) and keep
-their insufficient status visible.
+[tested full-corpus prompt](remote-mcp-demo.md#full-corpus-chatgpt-rehearsal-prompt)
+and keep its insufficient status and truncation visible. Earlier custody-version
+observations remain separately labelled.
 
 ## 6. Decide what an evaluation actually proves
 
@@ -228,6 +236,12 @@ Published-browser and actual ChatGPT checks have separate evidence. Three live
 SDK checks have separately confirmed exact engine agreement for current
 imprisonment and hospital queries and the explicitly selected historical
 imprisonment profile.
+
+The [published-browser check](remote-mcp-demo.md#published-explorer-and-native-webmcp)
+also showed the default imprisonment task's eight resolved concepts, 64 records
+and 127 relationships, including visible routes to chapters 24, 53, 54 and 78.
+The 516,146-byte package remained insufficient and truncated. Visible routing
+helps inspection; it does not itself establish complete legal coverage.
 
 The [actual full-corpus ChatGPT rehearsal](remote-mcp-demo.md#actual-full-corpus-chatgpt-observation)
 first exposed irrelevant page selection. A general filter for ordinary question

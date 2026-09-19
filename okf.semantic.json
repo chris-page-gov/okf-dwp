@@ -45,18 +45,58 @@
         "generated": true
       },
       {
-        "path": "full-dmg/**",
-        "role": "indexed-runtime-and-sharded-semantic-projections",
+        "path": "full-dmg/okf-explorer.json",
+        "role": "explorer-runtime",
         "generated": true
       },
       {
-        "path": "context/discovery/**",
-        "role": "derived-existing-semantic-context-discovery",
+        "path": "full-dmg/okf-corpus-context.json",
+        "role": "explorer-runtime",
         "generated": true
       },
       {
-        "path": "context/corpus/**",
-        "role": "hash-bound-full-dmg-and-adm-context-corpus",
+        "path": "full-dmg/okf-bundle.yamlld",
+        "role": "semantic-yaml-ld",
+        "generated": true
+      },
+      {
+        "path": "full-dmg/okf-bundle.jsonld",
+        "role": "semantic-json-ld",
+        "generated": true
+      },
+      {
+        "path": "full-dmg/data/semantic/manifest.json",
+        "role": "semantic-manifest",
+        "generated": true
+      },
+      {
+        "path": "full-dmg/data/semantic/*.jsonld.gz",
+        "role": "semantic-json-ld-shards",
+        "generated": true
+      },
+      {
+        "path": "full-dmg/data/relationships-*.json.gz",
+        "role": "relationship-runtime",
+        "generated": true
+      },
+      {
+        "path": "context/discovery/assembly-index.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "context/discovery/manifest.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "context/corpus/manifest.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "context/corpus/base-index.json",
+        "role": "explorer-runtime",
         "generated": true
       }
     ],
@@ -68,28 +108,6 @@
       "Machine extraction has known defects. Full-DMG search includes clearly labelled historical amendments; the preserved Pension Credit pilot keeps them outside its default page search.",
       "ADM is a separate frozen source family. Corpus-wide page retrieval does not establish complete policy modelling or an answerability profile.",
       "The preserved custody context and its immutable acceptance receipts retain their original source and consumer versions."
-    ],
-    "deliveries": [
-      {
-        "id": "pension-credit-pilot",
-        "state": "generated-yaml-ld-assertion-graph",
-        "path": "bundle/okf-bundle.yamlld",
-        "authored_scope": "knowledge/**/*.yamlld excluding knowledge/full-dmg/**"
-      },
-      {
-        "id": "full-dmg",
-        "state": "generated-yaml-ld-sharded-graph",
-        "path": "full-dmg/okf-explorer.json",
-        "authored_scope": "existing pilot plus knowledge/full-dmg/**/*.yamlld",
-        "status": "published-research-candidate; recorded-public-browser-journeys-passed"
-      },
-      {
-        "id": "full-dmg-and-adm-context",
-        "state": "generated-bounded-context-corpus",
-        "path": "context/corpus/manifest.json",
-        "authored_scope": "existing semantic assertions plus explicitly configured frozen DMG and ADM sources",
-        "status": "research-candidate; remote-evaluation-verified; bounded-chatgpt-source-access-observed; published-explorer-acceptance-pending"
-      }
     ]
   },
   "relationship_contract": {
@@ -114,9 +132,7 @@
       "observed_at",
       "evidence",
       "rights"
-    ],
-    "pilot_vocabulary": "docs/next-stage/semantic-contract.md",
-    "proposal_input": "semantic_relations"
+    ]
   },
   "tooling": {
     "setup": [
@@ -129,6 +145,7 @@
       "uv run --locked python scripts/build_context_corpus.py"
     ],
     "check": [
+      "uv run --locked python scripts/check_semantic_contract.py",
       "uv run --locked python scripts/build_bundle.py --check",
       "uv run --locked python scripts/validate_bundle.py",
       "uv run --locked python scripts/build_full_dmg.py --check",
@@ -165,23 +182,6 @@
       "rights",
       "freshness",
       "lifecycle"
-    ],
-    "additional_deliveries": [
-      {
-        "scope": "full-dmg",
-        "delivery": "indexed-large-corpus",
-        "descriptor": "full-dmg/okf-explorer.json",
-        "consumer_commit": "8e01dfe16538c6045ee1d55b64c3f6e24bada9f7",
-        "verification_status": "passed-for-recorded-public-journeys",
-        "browser_receipt": "validation/full-dmg-browser.json"
-      },
-      {
-        "scope": "full-dmg-and-adm-context",
-        "delivery": "bounded-context-corpus",
-        "descriptor": "full-dmg/okf-corpus-context.json",
-        "verification_status": "remote-evaluation-verified; bounded-chatgpt-source-access-observed; published-explorer-acceptance-pending",
-        "source_manifest": "context/corpus/manifest.json"
-      }
     ]
   }
 }

@@ -1,3 +1,7 @@
+---
+okf_version: "0.2"
+---
+
 <a id="pension-credit-guidance-as-an-okf-bundle"></a>
 
 # DWP guidance as an OKF+ bundle
@@ -50,7 +54,9 @@ shared Explorer engine. Separately, [official SDK calls to the deployed service]
 match the shared engine for current imprisonment, current hospital and the
 explicitly selected historical imprisonment case. An [actual bounded ChatGPT call](validation/corpus-questions/chatgpt-observation.json)
 inspected six source pages about international issues: 31,312 bytes, no reported
-host truncation, still insufficient. Published-browser acceptance remains pending.
+host truncation, still insufficient. The [published Explorer and native WebMCP check](validation/corpus-questions/public-explorer-observation.json)
+also passed: its UI, browser tools and remote service returned the same complete
+bounded package. This does not establish complete answerability or Voice support.
 Independent replay verified all 43 packages and 42 source candidates; all 21
 corruption controls were rejected. The [before-and-after comparison](validation/corpus-questions/retrieval-comparison.json)
 preserves the initial retrieval flaw and the improvement from 10 to 12 exact-page
@@ -78,11 +84,29 @@ The current candidate uses both captured manuals through the additive
 [corpus descriptor](full-dmg/okf-corpus-context.json), at explicit content version
 `bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752`. Follow the
 [new five-minute presentation and bounded ChatGPT rehearsal](docs/remote-mcp-demo.md#five-minute-full-corpus-presentation).
-Its 43-case remote evaluation, three-case live SDK verification and bounded
-ChatGPT observation are recorded; published-browser acceptance remains pending.
+Its 43-case remote evaluation, three-case live SDK verification, bounded ChatGPT
+observation and published-browser journeys are recorded.
 The general corpus returns
 candidate evidence and explicit insufficiency, including for imprisonment; it
 does not inherit a completeness claim from the older custody profile.
+
+### Published Explorer and browser tools
+
+[Open the verified full-corpus demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fbf50ef8d91b9f1ccc2cbdb354198eae74c9ed752%2Ffull-dmg%2Fokf-corpus-context.json&q=imprisonment#overview).
+On 19 September, Explorer commit `a8628fdb77c1c03a5d99b6d105d9e4b8722088d7`
+passed the [recorded public journeys](validation/corpus-questions/public-explorer-observation.json);
+[downloaded application files](validation/corpus-questions/public-explorer-build-verification.json)
+matched the tested build. Search showed 219 imprisonment matches, with 200 displayed.
+The default imprisonment task resolved eight concepts and assembled 64 records,
+127 relationships and 516,146 bytes. Chapter 12 routing to chapters 24, 53, 54
+and 78 was visible; the package remained insufficient and truncated.
+
+For “What happens to your benefits if you go abroad?”, set Ask's **Package bytes**
+to **32768**. The six-source-page, 31,312-byte package matched native WebMCP build
+and explain calls and the retained remote package by complete canonical content.
+Its context identifier starts `2cdfa5fe`; the [guide](docs/remote-mcp-demo.md#published-explorer-and-native-webmcp)
+records the full identifier and comparison. Native WebMCP was verified in the
+Codex in-app browser; ChatGPT Voice and room audio remain untested.
 
 ### Preserved custody acceptance case
 
@@ -166,6 +190,7 @@ Install [uv](https://docs.astral.sh/uv/) and run:
 
 ```sh
 uv sync --locked
+uv run --locked python scripts/check_semantic_contract.py
 uv run --locked python scripts/build_bundle.py
 uv run --locked python scripts/build_bundle.py --check
 uv run --locked python scripts/validate_bundle.py
@@ -199,6 +224,7 @@ uv run --locked python scripts/build_context_corpus.py --check
 uv run --locked python scripts/audit_relationships.py --check
 uv run --locked python scripts/check_private_inputs.py
 uv run --locked python scripts/test_private_inputs.py
+uv run --locked python scripts/check_browser_evidence.py
 node --experimental-strip-types scripts/evaluate_staff_questions.mjs --check --explorer-root ../okf-explorer
 node --experimental-strip-types scripts/test_staff_questions.mjs --explorer-root ../okf-explorer
 ```
@@ -209,6 +235,11 @@ without calling a model or a live endpoint. The private-input check rejects
 tracked or staged `.email.md` files without reading their contents; run it before
 committing or pushing, not only in CI. The [governance guide](docs/repository-governance.md)
 explains these boundaries.
+
+The browser-evidence check validates the retained public observation against
+the deployed application identity and the bounded MCP package. It runs offline:
+it does not open a browser, repeat the journeys or certify a later deployment.
+Actual browser journeys remain a separate required publication check.
 
 The consumer check uses Node 26.7.0 in CI and unmodified, hash-pinned Explorer validation code under `profiles/explorer-runtime/`. It verifies the research notice and every route label against the actual consumer contract. Publisher titles retain their original bytes; display labels normalise whitespace only.
 
@@ -236,6 +267,13 @@ A deliberate source refresh is separate: inspect `scripts/acquire_sources.py --h
 - `full-dmg/` is the generated indexed corpus and sharded semantic delivery.
 - `profiles/bundle-wiki/` vendors the 16 canonical Explorer profile files with an unchanged vendor lock.
 - `okf.semantic.json` and `okf.publication.json` declare the semantic and publication boundaries.
+  Both contracts use unchanged, locally pinned canonical schemas, checked without
+  network access. Repository-specific
+  delivery scopes, observed status and authoring notes live separately in
+  [okf.delivery.json](okf.delivery.json); they do not extend the Reader format or
+  grant evidence authority. The original publication classifications and their
+  canonical mappings are preserved in
+  [publication contract details](docs/publication-contract-details.json).
 
 OKF 0.2 is the Markdown core. “OKF+” here means that core plus the additive Explorer Bundle Wiki semantic profile; it is not a separate universal OKF standard. YAML-LD 1.0 remains a W3C Working Draft. The build uses pinned local contexts and URDNA2015 RDF normalisation; it does not claim RDFC-1.0 or SHACL conformance.
 
@@ -273,8 +311,8 @@ All **331 DMG PDFs** are acquired and indexed. The separate **182 ADM PDFs**
 have now also been [acquired with original bytes and page text](docs/adm-acquisition.md),
 giving 513 documents and 19,090 measured pages across the two source families.
 The 43-case combined-corpus remote evaluation and three live SDK cases pass;
-ChatGPT inspected the bounded abroad package. Published-browser acceptance
-remains a separate delivery gate.
+ChatGPT inspected the bounded abroad package. Published Explorer and native
+WebMCP journeys also passed for the recorded version and application commit.
 The earlier custody profile and its receipts have not been rewritten.
 [The 24 September plan](docs/next-stage/full-dmg-by-24-september.md)
 separates source acquisition, semantic coverage and expert review. Content
