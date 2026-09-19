@@ -1,5 +1,7 @@
 # Ask OKF demonstration: Monday 21 September 2026
 
+[What changed](../CHANGELOG.md) · [Current work log](work-log-2026-09-19.md) · [Backlog](backlog.md)
+
 **The current candidate extends Ask OKF to both captured DWP manuals: 513 PDFs,
 19,090 pages and 18,197 pages with nonempty extracted text.** The deployed service
 has passed the official SDK checks and all 43 remote evaluation cases against the

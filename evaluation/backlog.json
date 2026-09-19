@@ -1,0 +1,396 @@
+{
+  "schema": "okf-dwp-backlog.v1",
+  "updated_on": "2026-09-19",
+  "status_meanings": {
+    "recorded_complete": "Named bounded result has retained evidence, not perpetual assurance.",
+    "in_progress": "Work is being prepared or implemented; publication/acceptance is not implied.",
+    "needs_domain_review": "Requires independent domain or user-research judgement.",
+    "needs_external_permission": "Requires source-access or reuse permission outside this implementation.",
+    "not_started": "Logged and ordered, with no completion claim."
+  },
+  "items": [
+    {
+      "id": "DWP-BL-001",
+      "title": "Extensive persona, journey and question review",
+      "status": "needs_domain_review",
+      "priority": "P0",
+      "depends_on": [],
+      "owner_role": "Domain and user-research reviewers",
+      "evidence": [
+        "docs/next-stage/stakeholder-needs-and-evaluation.md",
+        "evaluation/staff-questions/cases.json"
+      ],
+      "acceptance_checks": [
+        "Retain 40 occurrences / 39 distinct wordings; agree persona validity, intended decisions, ambiguity and independently evidenced success criteria."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-002",
+      "title": "Benefits engine feasibility",
+      "status": "not_started",
+      "priority": "P2",
+      "depends_on": [
+        "DWP-BL-001",
+        "DWP-BL-006",
+        "DWP-BL-007"
+      ],
+      "owner_role": "Policy, legal and engineering reviewers",
+      "evidence": [
+        "docs/next-stage/semantic-contract.md"
+      ],
+      "acceptance_checks": [
+        "One non-executable rule packet first; approved dated conditions/exceptions, independent synthetic tests and operational authority before any calculator."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-003",
+      "title": "Application and change-of-circumstances journeys",
+      "status": "not_started",
+      "priority": "P2",
+      "depends_on": [
+        "DWP-BL-001",
+        "DWP-BL-006",
+        "DWP-BL-007"
+      ],
+      "owner_role": "Service-design and operational reviewers",
+      "evidence": [
+        "docs/next-stage/stakeholder-needs-and-evaluation.md"
+      ],
+      "acceptance_checks": [
+        "Separate synthetic apply/change journeys; assisted access, privacy, evidence needs and official service boundaries tested before operation."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-004",
+      "title": "Frozen full DMG and ADM capture",
+      "status": "recorded_complete",
+      "priority": "P0",
+      "depends_on": [],
+      "owner_role": "Source producer",
+      "evidence": [
+        "source/full-dmg-2026-09-15/inventory.json",
+        "source/adm-2026-09-19/inventory.json",
+        "context/corpus/manifest.json"
+      ],
+      "acceptance_checks": [
+        "Reconcile 513 PDFs / 19,090 pages / 18,197 nonempty / 893 empty; every original and page hash checked; no completeness-of-law claim."
+      ],
+      "scope_note": "Recorded completion is limited to the named evidence; no specialist or legal assurance is implied."
+    },
+    {
+      "id": "DWP-BL-005",
+      "title": "Neutral domain concepts and meaning review",
+      "status": "needs_domain_review",
+      "priority": "P0",
+      "depends_on": [
+        "DWP-BL-001",
+        "DWP-BL-004"
+      ],
+      "owner_role": "Domain vocabulary reviewers",
+      "evidence": [
+        "docs/next-stage/semantic-contract.md",
+        "docs/ontology-use.md"
+      ],
+      "acceptance_checks": [
+        "Benefit/variant/circumstance terms have sources, aliases, confusions and scope; existing custody-specific meanings are not silently broadened."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-006",
+      "title": "Legislation, regulations and case-law reconciliation",
+      "status": "not_started",
+      "priority": "P0",
+      "depends_on": [
+        "DWP-BL-001"
+      ],
+      "owner_role": "Legal and domain reviewers",
+      "evidence": [
+        "docs/next-stage/legislation-integration.md",
+        "knowledge/legislation-resources.yamlld"
+      ],
+      "acceptance_checks": [
+        "Verify work/provision/version identities, effects, commencement and territory; record unresolved citations; catalogue links are not legal completeness."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-007",
+      "title": "Task-specific evidence completeness profiles",
+      "status": "needs_domain_review",
+      "priority": "P0",
+      "depends_on": [
+        "DWP-BL-001",
+        "DWP-BL-005",
+        "DWP-BL-006"
+      ],
+      "owner_role": "Domain evidence reviewers",
+      "evidence": [
+        "evaluation/context-assembly/imprisonment-case.json",
+        "evaluation/staff-questions/cases.json"
+      ],
+      "acceptance_checks": [
+        "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-008",
+      "title": "Progressive evidence manifests and exact reads",
+      "status": "in_progress",
+      "priority": "P0",
+      "depends_on": [
+        "DWP-BL-004"
+      ],
+      "owner_role": "Reusable Explorer and MCP maintainer",
+      "evidence": [
+        "docs/methodology.md"
+      ],
+      "acceptance_checks": [
+        "Unchanged ask_okf preserved; small manifest plus paginated exact reads; original version/question/budget/context identity replayed; stale/unknown IDs rejected; all slices reconstruct exactly; actual host check."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-009",
+      "title": "Whole-corpus conceptual navigation",
+      "status": "in_progress",
+      "priority": "P0",
+      "depends_on": [
+        "DWP-BL-004"
+      ],
+      "owner_role": "Navigation producer and Explorer maintainer",
+      "evidence": [
+        "docs/ontology-use.md"
+      ],
+      "acceptance_checks": [
+        "All 19,090 pages accounted for by source/benefit/circumstance/topic facets with unknown explicit; authored concepts and literal classifications distinguished; actual Reader/Ask journeys checked."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-010",
+      "title": "Fixed-evidence claim-level model trials",
+      "status": "needs_domain_review",
+      "priority": "P0",
+      "depends_on": [
+        "DWP-BL-004"
+      ],
+      "owner_role": "Evaluation author and independent domain reviewer",
+      "evidence": [
+        "evaluation/answer-review/README.md",
+        "evaluation/answer-review/cases.json"
+      ],
+      "acceptance_checks": [
+        "Retain identical fixed inputs/prompts and real model outputs; verify IDs/quotes/locators; independently assess entailment/exceptions/abstention; no self-graded gold or engineering-score substitution."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-011",
+      "title": "Source dates and provenance presentation",
+      "status": "recorded_complete",
+      "priority": "P1",
+      "depends_on": [],
+      "owner_role": "Source and UI maintainers",
+      "evidence": [
+        "docs/evidence/cpag-publication-date-review.json",
+        "validation/corpus-questions/public-explorer-observation.json"
+      ],
+      "acceptance_checks": [
+        "Preserve capture/publication/effect date roles and precision; recorded source links/hashes visible; later source changes require fresh verification."
+      ],
+      "scope_note": "Recorded completion is limited to the named evidence; no specialist or legal assurance is implied."
+    },
+    {
+      "id": "DWP-BL-012",
+      "title": "CPAG substantive content access",
+      "status": "needs_external_permission",
+      "priority": "P1",
+      "depends_on": [],
+      "owner_role": "Rights owner and publisher",
+      "evidence": [
+        "docs/cpag-handbook.md"
+      ],
+      "acceptance_checks": [
+        "Retain catalogue/contents metadata only until applicable written permission covers intended body acquisition, AI processing and redistribution."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-013",
+      "title": "Tribunal decision discovery",
+      "status": "not_started",
+      "priority": "P1",
+      "depends_on": [
+        "DWP-BL-001",
+        "DWP-BL-006"
+      ],
+      "owner_role": "Legal-source researcher",
+      "evidence": [
+        "docs/future-sources.md"
+      ],
+      "acceptance_checks": [
+        "Official decision census, case IDs, authority/jurisdiction/date and rights assessed; no inferred applicability from keyword overlap."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-014",
+      "title": "Calculator comparison",
+      "status": "not_started",
+      "priority": "P2",
+      "depends_on": [
+        "DWP-BL-001",
+        "DWP-BL-007"
+      ],
+      "owner_role": "Domain evaluation reviewers",
+      "evidence": [
+        "docs/future-sources.md"
+      ],
+      "acceptance_checks": [
+        "Controlled synthetic scenarios and calculator versions, evidence inputs and differences recorded; disagreement does not by itself prove error."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-015",
+      "title": "CASA framework assessment",
+      "status": "not_started",
+      "priority": "P2",
+      "depends_on": [
+        "DWP-BL-003"
+      ],
+      "owner_role": "Service-design and interface maintainers",
+      "evidence": [
+        "docs/future-sources.md"
+      ],
+      "acceptance_checks": [
+        "Assess current supported version/licence/accessibility and real flow needs; no dependency introduced solely because a link was supplied."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-016",
+      "title": "ChatGPT Voice and room audio rehearsal",
+      "status": "not_started",
+      "priority": "P0",
+      "depends_on": [],
+      "owner_role": "Presentation owner",
+      "evidence": [
+        "docs/next-stage/seminar-webmcp-and-audio.md",
+        "docs/remote-mcp-demo.md"
+      ],
+      "acceptance_checks": [
+        "Actual intended account calls tools in Voice if available; microphone, Mac output, PA and projection checked; recorded/text fallback described honestly."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-017",
+      "title": "Portable discovery-first departmental workflow",
+      "status": "in_progress",
+      "priority": "P1",
+      "depends_on": [],
+      "owner_role": "Methodology author",
+      "evidence": [
+        "docs/methodology.md",
+        "docs/templates/hmrc-discovery-brief.md"
+      ],
+      "acceptance_checks": [
+        "Template researches departmental terms, ontology and legislation before assertions; pinned consumer/profile and fixture gates; no HMRC acquisition or tax-answer claim."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-018",
+      "title": "Fair model and affordability benchmark",
+      "status": "not_started",
+      "priority": "P1",
+      "depends_on": [
+        "DWP-BL-007",
+        "DWP-BL-010"
+      ],
+      "owner_role": "Evaluation owner",
+      "evidence": [
+        "evaluation/model-comparison/README.md"
+      ],
+      "acceptance_checks": [
+        "Same questions/evidence/prompts/rubric and independent review across models; record token use/retries/provider accounting separately from subscription charges and human review cost."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-019",
+      "title": "Broader accessibility and cross-browser review",
+      "status": "not_started",
+      "priority": "P1",
+      "depends_on": [
+        "DWP-BL-009"
+      ],
+      "owner_role": "Accessibility and user researchers",
+      "evidence": [
+        "validation/corpus-questions/public-explorer-observation.json"
+      ],
+      "acceptance_checks": [
+        "Representative keyboard/screen-reader/mobile/engine journeys and failures recorded; named browser observations do not imply whole-product conformance."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-020",
+      "title": "Source refresh and drift process",
+      "status": "not_started",
+      "priority": "P1",
+      "depends_on": [
+        "DWP-BL-004",
+        "DWP-BL-006"
+      ],
+      "owner_role": "Source maintainers",
+      "evidence": [
+        "docs/adm-acquisition.md"
+      ],
+      "acceptance_checks": [
+        "New snapshots preserve old bytes; reconcile added/removed/changed documents and dates; apply impact checks before changing source/runtime bindings."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    },
+    {
+      "id": "DWP-BL-021",
+      "title": "Canonical contracts and protected publication",
+      "status": "recorded_complete",
+      "priority": "P0",
+      "depends_on": [],
+      "owner_role": "Repository maintainer",
+      "evidence": [
+        "okf.semantic.json",
+        "okf.publication.json",
+        "docs/repository-governance.md"
+      ],
+      "acceptance_checks": [
+        "Canonical unchanged schemas, private-input guard, required validate check, protected PR workflow and scoped browser receipts; recheck live settings on material change."
+      ],
+      "scope_note": "Recorded completion is limited to the named evidence; no specialist or legal assurance is implied."
+    },
+    {
+      "id": "DWP-BL-022",
+      "title": "Retrospective and visible multi-agent change history",
+      "status": "in_progress",
+      "priority": "P1",
+      "depends_on": [],
+      "owner_role": "Integration and documentation owners",
+      "evidence": [
+        "CHANGELOG.md",
+        "docs/retrospective.md",
+        "docs/work-log-2026-09-19.md"
+      ],
+      "acceptance_checks": [
+        "Visible changelog separates released/in progress; task ledger states ownership/files/dependencies/decisions/test evidence/handover; factual retrospective links receipts."
+      ],
+      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible."
+    }
+  ]
+}

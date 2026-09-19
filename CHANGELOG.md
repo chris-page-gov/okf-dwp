@@ -1,5 +1,45 @@
 # Changelog
 
+Notable changes for readers, in reverse date order. We use the
+[Keep a Changelog](https://keepachangelog.com/en/1.1.0/) distinction between
+unreleased work and dated changes; this repository currently uses dated research
+deliveries rather than claiming a Semantic Versioning release series.
+Implementation ownership and handovers belong in the
+[multi-agent work log](docs/work-log-2026-09-19.md), with stable work items in the
+[backlog](docs/backlog.md).
+
+## Unreleased — in progress
+
+Work on `codex/evidence-review-navigation` is not yet a new published acceptance
+result. The dated observations below keep their original scope.
+
+### Added
+
+- A discovery-first departmental method, HMRC discovery brief, actual namespace
+  map and factual retrospective, with the difference between adopted vocabulary,
+  proposed standards and domain concepts made explicit.
+- Stable backlog IDs, dependencies and acceptance checks, plus a separate
+  multi-agent work log with ownership and handover boundaries.
+- An additive review descriptor with 44 navigation labels and an explicit
+  classified/unclassified accounting of all 19,090 DMG/ADM pages. Literal facet
+  assignment does not assert legal applicability; the Reader keeps its DMG scope.
+- Forty human-readable staff review packs, with 42 shared source-evidence
+  resources and machine-readable packs of 3,795–12,062 bytes. Source candidates
+  remain distinct from retrieved pages; every case awaits specialist review.
+- Offline CI checks for backlog identities, dependencies and prose consistency,
+  and retained answer-trial input/output integrity. No model calls run in CI.
+- Three actual, fixed-public-evidence Claude subscription trials, with tools
+  disabled and no model override. Preserve the abroad trial's strict verbatim
+  quotation failures, the custody citation checks and the no-evidence abstention.
+  Human claim review remains pending; these are not engineering or legal passes.
+
+### Changed
+
+- Make this changelog directly visible from the main and beginner guides.
+- Progressive evidence manifests/reads, a human review route and conceptual
+  navigation are being integrated. Their source, consumer and client acceptance
+  must be recorded before this section claims deployment or completion.
+
 ## Staff questions, ADM acquisition and repository governance — 19 September 2026
 
 - Repair inherited repository semantic and publication contract drift against

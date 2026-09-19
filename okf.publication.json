@@ -560,6 +560,148 @@
         "browser",
         "release"
       ]
+    },
+    {
+      "id": "conceptual-navigation",
+      "label": "Governed source-mention navigation",
+      "kind": "structured-data-folder",
+      "paths": [
+        "domain-profile/navigation/**",
+        "full-dmg/okf-review-context.json",
+        "full-dmg/context/navigation/**",
+        "validation/navigation/**"
+      ],
+      "origin": "authored",
+      "authority": "mixed",
+      "snapshot_policy": "content-addressed",
+      "rights": {
+        "status": "mixed",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md",
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/LICENSE",
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/docs/adm-acquisition.md"
+        ],
+        "limitations": [
+          "MIT-original-structure; OGL-source-passages-with-exceptions",
+          "Licence and source-level exceptions remain as documented in the linked evidence; this classification is not a new rights clearance."
+        ]
+      },
+      "limitations": [
+        "Literal mention labels and existing authored concept references support navigation only; no legal appliesTo or schema:about assertion is inferred.",
+        "The native Reader projection keeps the frozen DMG record universe. The assignment audit separately accounts for full DMG and ADM sources.",
+        "Existing source releases, context corpus and acceptance receipts are preserved."
+      ],
+      "formats": [
+        "application/ld+yaml",
+        "application/json",
+        "application/gzip",
+        "text/markdown"
+      ],
+      "inventory": {
+        "method": "content-addressed-manifest",
+        "manifest_path": "validation/navigation/build.json",
+        "identity": [
+          "relative-path",
+          "bytes",
+          "sha256",
+          "source-identifier",
+          "source-version"
+        ]
+      },
+      "extraction": {
+        "mode": "deterministic-local",
+        "network_access": "prohibited",
+        "command_ids": [
+          "review-navigation-build"
+        ],
+        "limitations": [
+          "Deterministic projection of frozen local sources and public evaluation data; no network, source refresh, model inference or personal case data."
+        ]
+      },
+      "sensitivity": {
+        "status": "not-assessed",
+        "assessment": "Only public guidance, catalogue metadata and project-authored research are in this declared family. No claimant case files are acquired. An exhaustive personal-data assessment of all public source content is not claimed.",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md"
+        ]
+      },
+      "invalidates": [
+        "semantic",
+        "runtime",
+        "documentation",
+        "browser",
+        "release"
+      ]
+    },
+    {
+      "id": "staff-review-packs",
+      "label": "Bounded staff evidence review packs",
+      "kind": "structured-data-folder",
+      "paths": [
+        "evaluation/staff-review/**",
+        "validation/staff-review/**"
+      ],
+      "origin": "authored",
+      "authority": "mixed",
+      "snapshot_policy": "content-addressed",
+      "rights": {
+        "status": "mixed",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md",
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/LICENSE",
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/docs/adm-acquisition.md"
+        ],
+        "limitations": [
+          "MIT-original-structure; OGL-source-passages-with-exceptions",
+          "Licence and source-level exceptions remain as documented in the linked evidence; this classification is not a new rights clearance."
+        ]
+      },
+      "limitations": [
+        "Forty deidentified public question occurrences link to forty-two existing independently selected candidate pages. Private correspondence is not read by this producer.",
+        "Exact bounded extracted passages, source hashes and adjacent-page links remain unreviewed. All tasks remain insufficient.",
+        "Observed retrieval and assessor-selected evidence are explicitly separate; candidates are not inserted into the retrieval engine."
+      ],
+      "formats": [
+        "application/ld+yaml",
+        "application/json",
+        "application/gzip",
+        "text/markdown"
+      ],
+      "inventory": {
+        "method": "content-addressed-manifest",
+        "manifest_path": "validation/staff-review/build.json",
+        "identity": [
+          "relative-path",
+          "bytes",
+          "sha256",
+          "source-identifier",
+          "source-version"
+        ]
+      },
+      "extraction": {
+        "mode": "deterministic-local",
+        "network_access": "prohibited",
+        "command_ids": [
+          "staff-review-build"
+        ],
+        "limitations": [
+          "Deterministic projection of frozen local sources and public evaluation data; no network, source refresh, model inference or personal case data."
+        ]
+      },
+      "sensitivity": {
+        "status": "not-assessed",
+        "assessment": "Only public guidance, catalogue metadata and project-authored research are in this declared family. No claimant case files are acquired. An exhaustive personal-data assessment of all public source content is not claimed.",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md"
+        ]
+      },
+      "invalidates": [
+        "semantic",
+        "runtime",
+        "documentation",
+        "browser",
+        "release"
+      ]
     }
   ],
   "boundaries": {
@@ -722,7 +864,8 @@
         "scripts/semantic_authoring.py",
         "evaluation/**",
         "docs/evidence/cpag-publication-date-review.json",
-        "full-dmg/**"
+        "full-dmg/**",
+        "domain-profile/navigation/**"
       ],
       "command_ids": [
         "build-check",
@@ -735,7 +878,11 @@
         "full-dmg-retrieval-check",
         "full-dmg-reference-check",
         "full-dmg-trials-check",
-        "relationship-audit-check"
+        "relationship-audit-check",
+        "review-navigation-check",
+        "review-navigation-controls",
+        "staff-review-check",
+        "staff-review-controls"
       ]
     },
     {
@@ -749,10 +896,15 @@
       "paths": [
         "README.md",
         "docs/**",
-        "CHANGELOG.md"
+        "CHANGELOG.md",
+        "evaluation/backlog.json",
+        "scripts/check_backlog.py",
+        "scripts/test_backlog.py"
       ],
       "command_ids": [
-        "diff-check"
+        "diff-check",
+        "backlog-check",
+        "backlog-controls"
       ]
     },
     {
@@ -768,11 +920,17 @@
         "scripts/test_context_discovery.py",
         "scripts/test_context_corpus.py",
         "full-dmg/okf-corpus-context.json",
-        "full-dmg/context/corpus/**"
+        "full-dmg/context/corpus/**",
+        "full-dmg/okf-review-context.json",
+        "full-dmg/context/navigation/**",
+        "scripts/build_review_navigation.py",
+        "scripts/test_review_navigation.py"
       ],
       "command_ids": [
         "context-discovery-build-check",
-        "context-corpus-build-check"
+        "context-corpus-build-check",
+        "review-navigation-check",
+        "review-navigation-controls"
       ]
     },
     {
@@ -791,13 +949,20 @@
         "profiles/publication-method/**",
         "scripts/check_semantic_contract.py",
         "scripts/test_semantic_contract.py",
-        "docs/publication-contract-details.json"
+        "docs/publication-contract-details.json",
+        "evaluation/answer-review/**",
+        "scripts/evaluate_fixed_answers.py",
+        "scripts/check_answer_review.py",
+        "scripts/test_fixed_answers.py"
       ],
       "command_ids": [
         "private-input-check",
         "private-input-controls",
         "contract-check",
-        "contract-controls"
+        "contract-controls",
+        "answer-review-replay",
+        "answer-review-integrity",
+        "answer-review-controls"
       ]
     },
     {
@@ -1169,6 +1334,152 @@
         ],
         "command": "uv run --locked python scripts/check_browser_evidence.py",
         "source": "README.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "review-navigation-build",
+        "kind": "build",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_review_navigation.py",
+        "source": "README.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "review-navigation-check",
+        "kind": "check",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_review_navigation.py --check",
+        "source": "README.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "review-navigation-controls",
+        "kind": "test",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/test_review_navigation.py",
+        "source": "README.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "staff-review-build",
+        "kind": "build",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/build_staff_review_packs.py",
+        "source": "README.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "staff-review-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/build_staff_review_packs.py --check",
+        "source": "README.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "staff-review-controls",
+        "kind": "test",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/test_staff_review_packs.py",
+        "source": "README.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "backlog-check",
+        "kind": "check",
+        "planes": [
+          "documentation"
+        ],
+        "command": "uv run --locked python scripts/check_backlog.py",
+        "source": "docs/backlog.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "backlog-controls",
+        "kind": "test",
+        "planes": [
+          "documentation"
+        ],
+        "command": "uv run --locked python scripts/test_backlog.py",
+        "source": "docs/backlog.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "answer-review-replay",
+        "kind": "check",
+        "planes": [
+          "release"
+        ],
+        "command": "uv run --locked python scripts/evaluate_fixed_answers.py",
+        "source": "evaluation/answer-review/README.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "answer-review-integrity",
+        "kind": "check",
+        "planes": [
+          "release"
+        ],
+        "command": "uv run --locked python scripts/check_answer_review.py",
+        "source": "evaluation/answer-review/README.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "answer-review-controls",
+        "kind": "test",
+        "planes": [
+          "release"
+        ],
+        "command": "uv run --locked python scripts/test_fixed_answers.py",
+        "source": "evaluation/answer-review/README.md",
         "review_status": "unreviewed",
         "network": "none",
         "mutates": "none",

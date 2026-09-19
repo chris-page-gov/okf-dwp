@@ -8,6 +8,10 @@ okf_version: "0.2"
 
 **An independent, unofficial experimental exemplar. Not an official DWP document, benefits advice or an entitlement calculator.**
 
+**[What changed: changelog](CHANGELOG.md)** · [Current work log](docs/work-log-2026-09-19.md)
+· [Backlog and acceptance checks](docs/backlog.md) · [How to repeat the method](docs/methodology.md)
+· [What we learned](docs/retrospective.md)
+
 This repository turns public Department for Work and Pensions (DWP) guidance into source-linked records, a YAML-LD semantic graph and an indexed OKF Explorer research candidate. It began with a [Pension Credit pilot covering volumes 13 and 14](https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide), expanded to the [full Decision makers’ guide (DMG)](https://www.gov.uk/government/collections/decision-makers-guide-staff-guide), and now also preserves the separate [Advice for decision making (ADM) manual](docs/adm-acquisition.md). It demonstrates how a specialist or an AI can find evidence, inspect relationships and see what remains uncertain.
 
 **New to the project?** Follow the [practical learning path](docs/learning-path.md),
@@ -15,7 +19,33 @@ then use the [plain-English glossary](docs/glossary.md) when a benefit name or
 technical term appears. It explains Search, Ask OKF and AI answering through
 short tasks, including how to connect and why a browser can show HTTP 405.
 
+For the semantic design, see [the ontologies and namespaces actually used](docs/ontology-use.md).
+For the separate model trials, see [fixed-evidence answer review](evaluation/answer-review/README.md).
+Unreleased work is labelled in progress; it does not replace the dated delivery
+receipts below.
+
 [Verified Pension Credit semantic exemplar](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7d3c69df0571b8d5206c8edce92963d99979cb5c%2Fbundle%2Fokf-bundle.yamlld&view=graph#term/capital-disregards) · [Original meeting demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.yamlld&q=84351#question/pc001) · [Read the pilot bundle](bundle/index.md) · [Ten-minute meeting walkthrough](docs/meeting-walkthrough.md) · [Discovery findings](docs/discovery.md) · [AI interrogation guide](AI_USAGE.md) · [Public notice and rights](NOTICE.md)
+
+## Current work: review and navigation candidate
+
+The new [review descriptor](full-dmg/okf-review-context.json) adds benefit,
+circumstance, topic and existing-concept navigation to the Reader. Its
+[classification manifest](full-dmg/context/navigation/manifest.json) accounts for
+all 19,090 captured pages, including ADM and explicit unclassified values. The
+44 authored labels describe literal discovery categories; they do not establish
+which benefit rules apply. The Reader projection retains its DMG scope while
+the classification audit and Ask context cover both captured manuals.
+
+[Forty staff review packs](evaluation/staff-review/README.md) give readers small,
+source-linked starting points: 3,795–12,062 bytes per machine-readable pack,
+42 shared evidence resources and exact bounded source excerpts. They distinguish
+independently located candidates from pages retained by the recorded retrieval
+run. All questions remain insufficient and await specialist review.
+
+These are additive candidate artefacts. Their build receipts and checks do not
+by themselves establish a new public deployment. The existing demonstrations
+below retain their original source and consumer versions. The parallel work is
+tracked in the [work log](docs/work-log-2026-09-19.md).
 
 ## Current source and question coverage
 

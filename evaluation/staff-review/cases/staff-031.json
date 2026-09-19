@@ -1,0 +1,92 @@
+{
+  "ai_answer": null,
+  "ambiguities": [
+    "PIP components/rates, age, household, jurisdiction and other benefits are unspecified.",
+    "Receipt may be a qualifying condition rather than automatic entitlement to another benefit."
+  ],
+  "candidate_evidence": [
+    {
+      "bytes": 4057,
+      "id": "source-c039",
+      "page": 5,
+      "path": "../evidence/source-c039.json",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+      "review_note": "AA/DLA age conditions and PIP references; not a complete PIP transition or continuation rule.",
+      "selection_status": "source-candidate-only-not-complete-answer",
+      "sha256": "9f3b358103a64af43bb4359362521ed0e2738066f4ba9fc8d61d7081019e1c30",
+      "source_url": "https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=5"
+    },
+    {
+      "bytes": 3464,
+      "id": "source-c037",
+      "page": 4,
+      "path": "../evidence/source-c037.json",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+      "review_note": "Qualifying disability benefits and multiple carers; preserve cited memo dependencies.",
+      "selection_status": "source-candidate-only-not-complete-answer",
+      "sha256": "600d6066453173e81e04911d1d52dc818f4e86148196b0a40be83ab4373b4a44",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=4"
+    },
+    {
+      "bytes": 4332,
+      "id": "source-c027",
+      "page": 11,
+      "path": "../evidence/source-c027.json",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011",
+      "review_note": "Additional amount for severe disability; do not equate this with Severe Disablement Allowance.",
+      "selection_status": "source-candidate-only-not-complete-answer",
+      "sha256": "bfe211e195feeac36f9b68bcedd1a2ac898d7a4fb00b523fcfcb52a7543164d1",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=11"
+    }
+  ],
+  "duplicate_of": null,
+  "evidence_status": "insufficient",
+  "id": "staff-031",
+  "limitations": [
+    "Research review pack, not an answer, an entitlement decision or a complete legal evidence bundle.",
+    "Candidate selection is project-authored and unreviewed. It is independent of the retained retrieval run and is not injected into search or Ask OKF.",
+    "Each excerpt is an exact bounded substring of frozen machine text, with offsets, a literal hash and a whole-page link. Its surrounding qualifications may be outside the excerpt or on adjacent pages.",
+    "Machine extraction can damage tables, footnotes, spacing and reading order. Compare each material proposition with the original PDF, adjacent text and cited legislation.",
+    "Original source roles, capture dates and historical limitations remain unchanged. Current applicability and specialist acceptance are not established."
+  ],
+  "observed_retrieval": {
+    "candidate_documents_retained": [
+      "dmg-vol13-ch78"
+    ],
+    "candidate_ids_retained": [
+      "source-c027"
+    ],
+    "context_id": "urn:sha256:9f2f3b388229ec8b60caf5199ba45a009410af0a20182a655c667949c59582cd",
+    "evidence_status": "insufficient",
+    "note": "Historical observed retrieval, not a new evaluation or an answer-quality grade.",
+    "package_bytes": 483345,
+    "receipt_path": "validation/corpus-questions/receipt.json",
+    "receipt_sha256": "69069770f31f9ad5d93ee4a915529fdf6860ef6a9dc6aabb4b61d8aec95fb014",
+    "selected_records": 62,
+    "truncated": true,
+    "version": "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752"
+  },
+  "question": "What additional benefits would you be entitled to if you are entitled to PIP?",
+  "required_evidence": [
+    {
+      "requirement": "A bounded set of qualifying-benefit links with all additional conditions, rates and exceptions; PIP source scope must be acquired.",
+      "status": "not-yet-established"
+    }
+  ],
+  "review_checklist": [
+    "Resolve benefit, variant, time period and claimant circumstances without inventing missing facts.",
+    "Check each exact source passage and its adjacent pages against the official PDF.",
+    "Locate every condition, exception, qualification and cross-reference needed for the declared question.",
+    "Reconcile relevant legislation, amendments, ADM/DMG regime and effective dates.",
+    "Record each supported claim against exact evidence IDs, with contradicting or missing evidence separately.",
+    "Keep the answer insufficient until evidence requirements and claim-level assessment justify a bounded conclusion."
+  ],
+  "review_status": "awaiting-specialist-review",
+  "schema": "okf-staff-evidence-review.v1",
+  "scope_gaps": [
+    "No governed topic-specific context profile or independently complete evidence requirement in the approved immutable Ask index.",
+    "Relevant PIP/ADM source bodies and territorial/transition dependencies are not acquired as a complete profile; incidental PIP mentions in DMG do not close this gap.",
+    "The universe of other benefits, relationships or all scenarios has not been bounded."
+  ],
+  "section": "Personal Independence Payment"
+}

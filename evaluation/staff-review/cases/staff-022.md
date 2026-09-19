@@ -1,0 +1,232 @@
+# staff-022: How do State Pension and Pension Credit fit together. For example: If someone receives State Pension, could they also be entitled to Pension Credit?
+
+**Awaiting specialist review · evidence insufficient · no AI answer.**
+
+This is a review aid made from independently located source candidates. It does not alter Ask OKF retrieval.
+
+## Review needs
+
+- State Pension treatment in the Pension Credit assessment and the full relevant PC entitlement/amount dependencies.
+- Receiving State Pension and meeting Pension Credit conditions are separate facts.
+- Household, other income/capital and credit component are unspecified.
+
+## Candidate evidence
+
+### source-c003: DMG Vol 12 Ch 74: State Pension — PDF page 1
+
+[Official source](https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=1) · [Exact excerpt and hashes](../evidence/source-c003.json)
+
+Distinguishes new State Pension from retirement pension and routes old-regime research to chapter 75.
+
+```text
+74001 This Chapter gives guidance on SP. SP is the legislative term for “new state pension” whereas the
+legislative term for “old state pension” is RP. To be entitled to SP, a person must reach pensionable age
+
+on or after 6.4.161. A person who reached pensionable age before 6.4.16 may be entitled to RP 2.
+
+
+Note: See DMG Chapter 75 for guidance on RP.
+
+
+                                                                  1 Pensions Act 14, s 1(2); 2 SS CB Act 92
+
+
+
+Differences between state pension and retirement pension
+
+Single-component pension
+74002 Once the transition to the new SP is complete it will be a single-component pension in contrast to
+RP which can consist of BP and AP and other components such as GRB or age addition.
+
+```
+
+Excerpt omits 390 characters before and 0 after on this page. Check surrounding text and adjacent pages.
+
+### source-c008: DMG Vol 13 Ch 77: Conditions of entitlement, membership of the household and normal amount payable — PDF page 14
+
+[Official source](https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=14) · [Exact excerpt and hashes](../evidence/source-c008.json)
+
+Captured Pension Credit entitlement conditions; statutory and transitional dependencies remain.
+
+```text
+77031 A claimant is entitled to SPC if they1
+
+
+1. are in GB and
+
+
+2. have reached the qualifying age and
+
+
+3. satisfy the conditions to get a GC or SC and
+
+
+4. are not a member of a
+
+
+      4.1 couple where the other member is entitled to SPC or
+
+
+      4.2 mixed-age couple (see DMG 77035 and 77140)
+
+
+      4.3 polygamous marriage (see DMG 77016) where the other party to the marriage or the additional
+      spouse are members of the same household and entitled to SPC (but see DMG 77140 et seq) and
+
+
+5. have made a valid claim2 and
+
+
+6. where relevant, their partner, satisfy the NI provisions (see DMG Chapter 02) 3.
+
+
+           1 SPC Act 02, s 1(2) & 4(1) & (1A); SPC Regs, Sch III, para 1(3); 2 SS A Act 92, s 1(1) & (4); 3 s 1(1A)
+
+```
+
+Excerpt omits 315 characters before and 0 after on this page. Check surrounding text and adjacent pages.
+
+### source-c032: DMG Vol 14 Ch 85: Income other than earnings  — PDF page 30
+
+[Official source](https://assets.publishing.service.gov.uk/media/690b7db588a98da87e292365/dmg-ch-85.pdf#page=30) · [Exact excerpt and hashes](../evidence/source-c032.json)
+
+Named income types; exclusions, disregards and relevant variants require linked evidence.
+
+```text
+85091 When calculating income other than earnings the DM has to take
+
+
+1. Annuity income(except those annuities listed at DMG 85171)
+
+
+2. Armed forces death in service awards
+
+
+3. BA
+
+
+4. CA
+
+
+5. ESA(Cont)
+
+
+6. IB
+
+
+7. IIDB
+
+
+8. Certain types of income from capital
+
+
+9. Inherited royalties/copyright payments
+
+
+10. JSA(Cont)
+
+
+11. MA
+
+
+12. Maintenance payments for the claimant or partner
+
+
+13. PB and MDB scheme
+
+
+14. Retirement pension income (including increases for adult dependants) (see DMG 85130 et seq)
+
+
+15. SDA
+
+
+16. State Pension
+
+
+17. War orphan's pension
+
+
+18. WP
+
+```
+
+Excerpt omits 134 characters before and 0 after on this page. Check surrounding text and adjacent pages.
+
+### source-c012: DMG Vol 13 Ch 77: Conditions of entitlement, membership of the household and normal amount payable — PDF page 33
+
+[Official source](https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=33) · [Exact excerpt and hashes](../evidence/source-c012.json)
+
+Guarantee Credit and Savings Credit calculation inputs are distinct; no formula executable from this isolated page.
+
+```text
+77303 If there are
+
+
+1. any additions to the SMG, the total amount of GC will be the appropriate minimum guarantee (AMG)
+
+
+2. no additions to the SMG, the SMG will be the AMG and the total amount of GC will be the amount of
+the AMG
+
+
+less any income relevant to the SPC income assessment. See DMG 77330 et seq for guidance on how to
+work out the amount of GC payable.
+
+
+
+
+Savings credit
+77304 The amount of SC depends on1
+
+
+1. the level of the claimant’s income and
+
+
+2. the amount of the
+
+
+      2.1 claimant’s qualifying income (QI) and
+
+
+      2.2 savings credit threshold (SCT) and
+
+
+      2.3 AMG and
+
+
+      2.4 maximum savings credit (MSC).
+
+
+See DMG 77353 et seq for guidance on how to work out the amount of SC payable.
+
+
+                                                                                      1 SPC Act 02, s 3
+
+
+77305 - 77329
+
+```
+
+Excerpt omits 283 characters before and 0 after on this page. Check surrounding text and adjacent pages.
+
+## Observed retrieval
+
+The retained run selected 62 records, using 480,160 bytes. It retained 0 of 4 independently located candidate pages. This measures candidate overlap, not substantive correctness.
+
+## Review checklist
+
+- [ ] Resolve benefit, variant, time period and claimant circumstances without inventing missing facts.
+- [ ] Check each exact source passage and its adjacent pages against the official PDF.
+- [ ] Locate every condition, exception, qualification and cross-reference needed for the declared question.
+- [ ] Reconcile relevant legislation, amendments, ADM/DMG regime and effective dates.
+- [ ] Record each supported claim against exact evidence IDs, with contradicting or missing evidence separately.
+- [ ] Keep the answer insufficient until evidence requirements and claim-level assessment justify a bounded conclusion.
+
+## Boundaries
+
+- Research review pack, not an answer, an entitlement decision or a complete legal evidence bundle.
+- Candidate selection is project-authored and unreviewed. It is independent of the retained retrieval run and is not injected into search or Ask OKF.
+- Each excerpt is an exact bounded substring of frozen machine text, with offsets, a literal hash and a whole-page link. Its surrounding qualifications may be outside the excerpt or on adjacent pages.
+- Machine extraction can damage tables, footnotes, spacing and reading order. Compare each material proposition with the original PDF, adjacent text and cited legislation.
+- Original source roles, capture dates and historical limitations remain unchanged. Current applicability and specialist acceptance are not established.

@@ -1,0 +1,28 @@
+{
+  "schema": "okf-fixed-answer-review-cases.v1",
+  "classification": "public-source-model-trial-not-specialist-acceptance",
+  "max_context_bytes": 524288,
+  "cases": [
+    {
+      "id": "abroad",
+      "path": "validation/corpus-questions/bounded-abroad/context.json",
+      "format": "context-json",
+      "source_sha256": "f997c8147987c69960030e2cba717b7d9106b301c749fdb22b07ee1d75f8a932",
+      "expected_package_status": "insufficient"
+    },
+    {
+      "id": "custody",
+      "path": "validation/remote-mcp/imprisonment-tool-result.json.gz",
+      "format": "tool-result-gzip",
+      "source_sha256": "b0b693dabd8bc8c5dc6c0b212da400f69278812688b2252691246e98c007718e",
+      "expected_package_status": "sufficient"
+    },
+    {
+      "id": "unsupported",
+      "path": "validation/corpus-questions/control-unknown.response.json.gz",
+      "format": "sse-gzip",
+      "source_sha256": "4d8b49b8a04c5f5f6026518464d4eddfe2143f1424c5c14083713d96fa395181",
+      "expected_package_status": "insufficient"
+    }
+  ]
+}

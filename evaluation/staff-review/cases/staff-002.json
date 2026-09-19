@@ -1,0 +1,105 @@
+{
+  "ai_answer": null,
+  "ambiguities": [
+    "Reaching State Pension age is distinct from satisfying all entitlement conditions, claiming and first payment.",
+    "Contribution record, claim timing and any deferral are not specified."
+  ],
+  "candidate_evidence": [
+    {
+      "bytes": 3278,
+      "id": "source-c004",
+      "page": 3,
+      "path": "../evidence/source-c004.json",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0003",
+      "review_note": "Pensionable-age conditions; continues on page 4 and requires the relevant appendix.",
+      "selection_status": "source-candidate-only-not-complete-answer",
+      "sha256": "f431ac30bce5325be57a2da6df506606bdeb2cda16fef11b3620f733c8d53ced",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=3"
+    },
+    {
+      "bytes": 4058,
+      "id": "source-c005",
+      "page": 68,
+      "path": "../evidence/source-c005.json",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0068",
+      "review_note": "Captured age table contains the relevant birth-date band; no individual entitlement or payment date is calculated.",
+      "selection_status": "source-candidate-only-not-complete-answer",
+      "sha256": "4bbae6d05f428ff5d77eaa6afc099942686a4127ee3ddcd8a257fd19e6d62042",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=68"
+    },
+    {
+      "bytes": 3367,
+      "id": "source-c006",
+      "page": 11,
+      "path": "../evidence/source-c006.json",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0011",
+      "review_note": "Full-rate conditions in the stated no-pre-commencement scope; not a universal contribution rule.",
+      "selection_status": "source-candidate-only-not-complete-answer",
+      "sha256": "3c730dde843d531310768a80d07bf46b5bd12520aa40b3fa9a54ac62ed508a19",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=11"
+    },
+    {
+      "bytes": 3654,
+      "id": "source-c007",
+      "page": 15,
+      "path": "../evidence/source-c007.json",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0015",
+      "review_note": "Transitional-rate conditions; claim, NI record and other conditions remain separate.",
+      "selection_status": "source-candidate-only-not-complete-answer",
+      "sha256": "c93cc8c6626088b3a89fe1d887608be9fa63adf2811128d19dab703779a2289d",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69d8f255d3e08b8871b665ab/dmg-Ch-74.pdf#page=15"
+    }
+  ],
+  "duplicate_of": null,
+  "evidence_status": "insufficient",
+  "id": "staff-002",
+  "limitations": [
+    "Research review pack, not an answer, an entitlement decision or a complete legal evidence bundle.",
+    "Candidate selection is project-authored and unreviewed. It is independent of the retained retrieval run and is not injected into search or Ask OKF.",
+    "Each excerpt is an exact bounded substring of frozen machine text, with offsets, a literal hash and a whole-page link. Its surrounding qualifications may be outside the excerpt or on adjacent pages.",
+    "Machine extraction can damage tables, footnotes, spacing and reading order. Compare each material proposition with the original PDF, adjacent text and cited legislation.",
+    "Original source roles, capture dates and historical limitations remain unchanged. Current applicability and specialist acceptance are not established."
+  ],
+  "observed_retrieval": {
+    "candidate_documents_retained": [
+      "dmg-vol12-ch74"
+    ],
+    "candidate_ids_retained": [
+      "source-c004"
+    ],
+    "context_id": "urn:sha256:8e3df1505b34a8120f0cf61fbbeee1fb505d346b0f911b4c1569020e87e0da54",
+    "evidence_status": "insufficient",
+    "note": "Historical observed retrieval, not a new evaluation or an answer-quality grade.",
+    "package_bytes": 484368,
+    "receipt_path": "validation/corpus-questions/receipt.json",
+    "receipt_sha256": "69069770f31f9ad5d93ee4a915529fdf6860ef6a9dc6aabb4b61d8aec95fb014",
+    "selected_records": 62,
+    "truncated": true,
+    "version": "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752"
+  },
+  "question": "If your birthday is 30th May 1960, what is the first date you will be entitled to State Pension?",
+  "required_evidence": [
+    {
+      "requirement": "Applicable birth-date schedule with commencement/version evidence.",
+      "status": "not-yet-established"
+    },
+    {
+      "requirement": "Separate entitlement and payment-date conditions; do not calculate an individual entitlement date from birth date alone.",
+      "status": "not-yet-established"
+    }
+  ],
+  "review_checklist": [
+    "Resolve benefit, variant, time period and claimant circumstances without inventing missing facts.",
+    "Check each exact source passage and its adjacent pages against the official PDF.",
+    "Locate every condition, exception, qualification and cross-reference needed for the declared question.",
+    "Reconcile relevant legislation, amendments, ADM/DMG regime and effective dates.",
+    "Record each supported claim against exact evidence IDs, with contradicting or missing evidence separately.",
+    "Keep the answer insufficient until evidence requirements and claim-level assessment justify a bounded conclusion."
+  ],
+  "review_status": "awaiting-specialist-review",
+  "schema": "okf-staff-evidence-review.v1",
+  "scope_gaps": [
+    "No governed topic-specific context profile or independently complete evidence requirement in the approved immutable Ask index."
+  ],
+  "section": "State Pension"
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "okf-fixed-model-answer-trial.v1",
+  "id": "abroad",
+  "started_at": "2026-09-19T19:50:58.517372+00:00",
+  "finished_at": "2026-09-19T19:52:24.745569+00:00",
+  "elapsed_seconds": 86.227,
+  "provider_surface": "existing Claude Code subscription",
+  "cli_version": "2.1.245 (Claude Code)",
+  "model_override": null,
+  "reported_model_usage_entries": [
+    "claude-haiku-4-5-20251001",
+    "claude-opus-5"
+  ],
+  "tools_enabled": [],
+  "mcp_servers": [],
+  "customisations": "disabled-safe-mode",
+  "session_persistence": false,
+  "inputs": {
+    "source_path": "validation/corpus-questions/bounded-abroad/context.json",
+    "source_sha256": "f997c8147987c69960030e2cba717b7d9106b301c749fdb22b07ee1d75f8a932",
+    "context_sha256": "f997c8147987c69960030e2cba717b7d9106b301c749fdb22b07ee1d75f8a932",
+    "context_bytes": 31312,
+    "context_id": "urn:sha256:2cdfa5feb6310f58166d66e814bd3b2fbe2e9e146e25b25a65453b48e3dffabd",
+    "system_prompt_sha256": "e06f6546c5595a9c63b8ee8bfdee3d40710c184f9c8830c7ccf37d6c8af49d32",
+    "prompt_sha256": "ab7d72492fcce9fb48e8a9dce89e104823d4753a31fda5ec1ea1fd95208f2ee1",
+    "schema_sha256": "5c83e0ffdfeed95fd0feb59ae2a7fc3e65c35608843c1a5254348632a3e3d06f",
+    "harness_sha256": "e9feefe43bbd2ded8419e84374421b05bc8b686130a830316ae6d9fd90779be1"
+  },
+  "answer_sha256": "db5134b0e0bbca24bd632dfcff0205e09ae52aa08b716244663edeab0468bd1a",
+  "model_output_sha256": "66234292b0a86aa83454a2906a3e881bbd28244bded8547c7e957c62ca3ced89",
+  "mechanical_assessment": {
+    "status": "failed-mechanical-controls",
+    "failures": [
+      "c1:quote_not_verbatim",
+      "c2:quote_not_verbatim",
+      "c3:quote_not_verbatim",
+      "c4:quote_not_verbatim",
+      "c5:quote_not_verbatim",
+      "c6:quote_not_verbatim",
+      "c7:quote_not_verbatim",
+      "c8:quote_not_verbatim",
+      "c9:quote_not_verbatim",
+      "c10:quote_not_verbatim"
+    ],
+    "claims": 10,
+    "citations_checked": 14,
+    "entailment_review": "pending-independent-human-review",
+    "unsupported_claim_rate": null,
+    "answer_quality_score": null,
+    "specialist_accepted": false,
+    "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete."
+  },
+  "human_review": "pending",
+  "comparative_benchmark": false,
+  "cost_boundary": "Any CLI cost field is provider-reported accounting, not a verified subscription charge or saving. No price or model configuration was changed."
+}

@@ -21,7 +21,8 @@
       "source/full-dmg-2026-09-15/pages/*.json",
       "source/adm-2026-09-19/inventory.json",
       "source/adm-2026-09-19/pages/*.json",
-      "context/corpus-sources.json"
+      "context/corpus-sources.json",
+      "domain-profile/navigation/*.yamlld"
     ],
     "outputs": [
       {
@@ -98,6 +99,16 @@
         "path": "context/corpus/base-index.json",
         "role": "explorer-runtime",
         "generated": true
+      },
+      {
+        "path": "full-dmg/okf-review-context.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "full-dmg/context/navigation/catalogue.yamlld",
+        "role": "semantic-yaml-ld",
+        "generated": true
       }
     ],
     "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
@@ -142,7 +153,9 @@
       "uv run --locked python scripts/build_bundle.py",
       "uv run --locked python scripts/build_full_dmg.py",
       "uv run --locked python scripts/build_context_discovery.py",
-      "uv run --locked python scripts/build_context_corpus.py"
+      "uv run --locked python scripts/build_context_corpus.py",
+      "uv run --locked python scripts/build_review_navigation.py",
+      "uv run --locked python scripts/build_staff_review_packs.py"
     ],
     "check": [
       "uv run --locked python scripts/check_semantic_contract.py",
@@ -159,7 +172,9 @@
       "uv run --locked python scripts/build_context_discovery.py --check",
       "uv run --locked python scripts/build_context_corpus.py --check",
       "uv run --locked python scripts/audit_relationships.py --check",
-      "uv run --locked python scripts/check_private_inputs.py"
+      "uv run --locked python scripts/check_private_inputs.py",
+      "uv run --locked python scripts/build_review_navigation.py --check",
+      "uv run --locked python scripts/build_staff_review_packs.py --check"
     ]
   },
   "reader": {

@@ -1,0 +1,82 @@
+{
+  "ai_answer": null,
+  "ambiguities": [
+    "War Pensions Constant Allowance is not a fully resolved scheme/benefit name; clarify whether Constant Attendance Allowance is intended.",
+    "PIP component/rate, war-pension scheme, date and all variations are unspecified."
+  ],
+  "candidate_evidence": [
+    {
+      "bytes": 3630,
+      "id": "source-c034",
+      "page": 11,
+      "path": "../evidence/source-c034.json",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011",
+      "review_note": "Overlapping-benefit table continuation includes PIP daily living and attendance-related benefits; preceding definitions and exact scheme must be retained.",
+      "selection_status": "source-candidate-only-not-complete-answer",
+      "sha256": "ce39afe68430c289a682a34a86ff5e3ec339ba88773b124226c94a95b0c59206",
+      "source_url": "https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=11"
+    },
+    {
+      "bytes": 4507,
+      "id": "source-c041",
+      "page": 42,
+      "path": "../evidence/source-c041.json",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0042",
+      "review_note": "Industrial Injuries CAA candidate; must not be silently equated with a war-pension allowance.",
+      "selection_status": "source-candidate-only-not-complete-answer",
+      "sha256": "7b6ed5819fc19b1e160b9e6e5d5d9a276ace271477bd1e1608fffe11a5d98257",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6172830bd3bf7f55f94795f8/dmgch69.pdf#page=42"
+    }
+  ],
+  "duplicate_of": null,
+  "evidence_status": "insufficient",
+  "id": "staff-037",
+  "limitations": [
+    "Research review pack, not an answer, an entitlement decision or a complete legal evidence bundle.",
+    "Candidate selection is project-authored and unreviewed. It is independent of the retained retrieval run and is not injected into search or Ask OKF.",
+    "Each excerpt is an exact bounded substring of frozen machine text, with offsets, a literal hash and a whole-page link. Its surrounding qualifications may be outside the excerpt or on adjacent pages.",
+    "Machine extraction can damage tables, footnotes, spacing and reading order. Compare each material proposition with the original PDF, adjacent text and cited legislation.",
+    "Original source roles, capture dates and historical limitations remain unchanged. Current applicability and specialist acceptance are not established."
+  ],
+  "observed_retrieval": {
+    "candidate_documents_retained": [
+      "dmg-vol3-ch17"
+    ],
+    "candidate_ids_retained": [
+      "source-c034"
+    ],
+    "context_id": "urn:sha256:11721348ddbfd30efc36c67ae4fd67c3c2dff19cc3d3650774eed910025ad0db",
+    "evidence_status": "insufficient",
+    "note": "Historical observed retrieval, not a new evaluation or an answer-quality grade.",
+    "package_bytes": 70536,
+    "receipt_path": "validation/corpus-questions/receipt.json",
+    "receipt_sha256": "69069770f31f9ad5d93ee4a915529fdf6860ef6a9dc6aabb4b61d8aec95fb014",
+    "selected_records": 16,
+    "truncated": true,
+    "version": "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752"
+  },
+  "question": "If you receive PIP and War Pensions Constant Allowance, how much would you get each week (please provide all variations)?",
+  "required_evidence": [
+    {
+      "requirement": "Exact scheme identity, overlapping-component adjustment, versioned rates and a bounded variant matrix before any calculation.",
+      "status": "not-yet-established"
+    }
+  ],
+  "review_checklist": [
+    "Resolve benefit, variant, time period and claimant circumstances without inventing missing facts.",
+    "Check each exact source passage and its adjacent pages against the official PDF.",
+    "Locate every condition, exception, qualification and cross-reference needed for the declared question.",
+    "Reconcile relevant legislation, amendments, ADM/DMG regime and effective dates.",
+    "Record each supported claim against exact evidence IDs, with contradicting or missing evidence separately.",
+    "Keep the answer insufficient until evidence requirements and claim-level assessment justify a bounded conclusion."
+  ],
+  "review_status": "awaiting-specialist-review",
+  "schema": "okf-staff-evidence-review.v1",
+  "scope_gaps": [
+    "No governed topic-specific context profile or independently complete evidence requirement in the approved immutable Ask index.",
+    "Relevant PIP/ADM source bodies and territorial/transition dependencies are not acquired as a complete profile; incidental PIP mentions in DMG do not close this gap.",
+    "The requested rate period and complete date/version-specific schedules are not established. The captured 2026 memo routes to separate rate schedules; do not infer current rates from historical examples.",
+    "The universe of other benefits, relationships or all scenarios has not been bounded."
+  ],
+  "section": "Personal Independence Payment"
+}
