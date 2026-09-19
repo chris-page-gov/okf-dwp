@@ -1,6 +1,6 @@
 {
   "schema": "okf-repository-publication-contract.v1",
-  "modified": "2026-09-15",
+  "modified": "2026-09-19",
   "locale": "en-GB",
   "time_zone": "Europe/London",
   "repository": {
@@ -202,6 +202,60 @@
         "Source publication, observation and legal applicability dates remain distinct.",
         "ADM is separately scoped; no CPAG handbook body content is included."
       ]
+    },
+    {
+      "id": "adm-public-guidance",
+      "label": "ADM public guidance snapshot",
+      "kind": "public-document-snapshot",
+      "paths": [
+        "source/adm-2026-09-19/**"
+      ],
+      "authority": "official-source-with-derived-extraction-and-unreviewed-project-classification",
+      "inventory": {
+        "manifest_path": "source/adm-2026-09-19/inventory.json",
+        "denominator": 182,
+        "census_path": "source/adm-2026-09-19/census.json"
+      },
+      "rights": {
+        "status": "OGL-v3-with-attribution-and-exceptions",
+        "evidence": [
+          "source/adm-2026-09-19/publication-html.html",
+          "source/adm-2026-09-19/README.md",
+          "NOTICE.md"
+        ]
+      },
+      "limitations": [
+        "All 182 listed PDFs and 4347 measured pages acquired; full acquisition is not complete policy modelling.",
+        "91 pages have no extracted text. No OCR or exhaustive visual review is claimed.",
+        "Publication, observation and legal applicability dates remain distinct.",
+        "ADM is separately scoped from DMG; CPAG handbook body content remains excluded."
+      ]
+    },
+    {
+      "id": "context-discovery-projections",
+      "label": "Existing semantic context and full-corpus discovery",
+      "kind": "derived-evidence-discovery",
+      "paths": [
+        "context/**",
+        "full-dmg/okf-corpus-context.json",
+        "full-dmg/context/corpus/**"
+      ],
+      "origin": "existing-semantic-assertions-and-frozen-dmg-adm-page-extraction",
+      "authority": "source-derived-research-discovery; authored-semantics-unreviewed",
+      "snapshot_policy": "hash-bound-manifests-and-source-inventories",
+      "rights": {
+        "status": "MIT-original-structure; OGL-source-passages-with-exceptions",
+        "evidence": [
+          "NOTICE.md",
+          "LICENSE",
+          "docs/adm-acquisition.md"
+        ]
+      },
+      "limitations": [
+        "All captured page identities are accounted for, including pages with no machine-extracted text.",
+        "Lexical matching and relationship traversal do not establish current applicability, complete policy coverage or specialist acceptance.",
+        "The existing custody profile and prior receipts are preserved; new consumer and evaluation results require their own evidence."
+      ]
     }
   ],
   "boundaries": {
@@ -257,6 +311,18 @@
       {
         "path": "profiles/explorer-runtime/**",
         "role": "pinned-consumer-contract-code-and-licence"
+      },
+      {
+        "path": "context/corpus-sources.json",
+        "role": "explicit-source-family-configuration"
+      },
+      {
+        "path": "validation/**",
+        "role": "observed-validation-evidence"
+      },
+      {
+        "path": ".gitignore",
+        "role": "private-input-exclusion-policy"
       }
     ],
     "generated": [
@@ -267,6 +333,14 @@
       {
         "path": "full-dmg/**",
         "role": "indexed-full-dmg-and-sharded-semantic-projections"
+      },
+      {
+        "path": "context/discovery/**",
+        "role": "existing-semantic-discovery-projection"
+      },
+      {
+        "path": "context/corpus/**",
+        "role": "all-page-context-records-and-search-index"
       }
     ]
   },
@@ -279,7 +353,9 @@
       ],
       "command_ids": [
         "validate",
-        "full-dmg-source-check"
+        "full-dmg-source-check",
+        "adm-source-check",
+        "adm-acquisition-controls"
       ]
     },
     {
@@ -306,14 +382,17 @@
         "full-dmg-consumer-check",
         "full-dmg-retrieval-check",
         "full-dmg-reference-check",
-        "full-dmg-trials-check"
+        "full-dmg-trials-check",
+        "relationship-audit-check"
       ]
     },
     {
       "id": "documentation",
       "depends_on": [
         "source",
-        "semantic"
+        "semantic",
+        "context-discovery",
+        "repository-governance"
       ],
       "paths": [
         "README.md",
@@ -322,6 +401,41 @@
       ],
       "command_ids": [
         "diff-check"
+      ]
+    },
+    {
+      "id": "context-discovery",
+      "depends_on": [
+        "source",
+        "semantic"
+      ],
+      "paths": [
+        "context/**",
+        "scripts/build_context_discovery.py",
+        "scripts/build_context_corpus.py",
+        "scripts/test_context_discovery.py",
+        "scripts/test_context_corpus.py",
+        "full-dmg/okf-corpus-context.json",
+        "full-dmg/context/corpus/**"
+      ],
+      "command_ids": [
+        "context-discovery-build-check",
+        "context-corpus-build-check"
+      ]
+    },
+    {
+      "id": "repository-governance",
+      "depends_on": [],
+      "paths": [
+        ".gitignore",
+        ".github/workflows/**",
+        "scripts/check_private_inputs.py",
+        "scripts/test_private_inputs.py",
+        "validation/**"
+      ],
+      "command_ids": [
+        "private-input-check",
+        "private-input-controls"
       ]
     }
   ],
@@ -498,6 +612,97 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 10
+      },
+      {
+        "id": "adm-source-check",
+        "kind": "check",
+        "planes": [
+          "source"
+        ],
+        "command": "uv run --locked python scripts/acquire_adm.py --check",
+        "source": "docs/adm-acquisition.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "adm-acquisition-controls",
+        "kind": "check",
+        "planes": [
+          "source"
+        ],
+        "command": "uv run --locked python scripts/test_acquire_adm.py",
+        "source": "docs/adm-acquisition.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "relationship-audit-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/audit_relationships.py --check",
+        "source": "docs/relationship-audit.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "context-discovery-build-check",
+        "kind": "check",
+        "planes": [
+          "context-discovery"
+        ],
+        "command": "uv run --locked python scripts/build_context_discovery.py --check",
+        "source": "README.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "context-corpus-build-check",
+        "kind": "check",
+        "planes": [
+          "context-discovery"
+        ],
+        "command": "uv run --locked python scripts/build_context_corpus.py --check",
+        "source": "README.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 15
+      },
+      {
+        "id": "private-input-check",
+        "kind": "check",
+        "planes": [
+          "repository-governance"
+        ],
+        "command": "uv run --locked python scripts/check_private_inputs.py",
+        "source": "docs/repository-governance.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "private-input-controls",
+        "kind": "check",
+        "planes": [
+          "repository-governance"
+        ],
+        "command": "uv run --locked python scripts/test_private_inputs.py",
+        "source": "docs/repository-governance.md",
+        "review_status": "project-authored-validation",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
       }
     ]
   },
@@ -515,12 +720,16 @@
       "evaluation/**",
       "docs/evidence/cpag-publication-date-review.json",
       "full-dmg/**",
-      "profiles/explorer-runtime/**"
+      "profiles/explorer-runtime/**",
+      "context/**",
+      "validation/**",
+      ".gitignore"
     ],
     "documentation_paths": [
       "README.md",
       "REPOSITORY_STATUS.md",
-      "CHANGELOG.md"
+      "CHANGELOG.md",
+      "docs/**"
     ],
     "changelog_path": "CHANGELOG.md",
     "check_command_id": "diff-check",

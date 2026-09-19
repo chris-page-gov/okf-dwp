@@ -1,0 +1,56 @@
+{
+  "schema": "okf-repository-governance-observation.v1",
+  "repository": "https://github.com/chris-page-gov/okf-dwp",
+  "branch": "main",
+  "observed_at": "2026-09-19T16:11:08Z",
+  "branch_commit_at_observation": "1df1400221339e1db43635177ecd2dfbcb2b600d",
+  "method": "Authenticated read-only GitHub REST API verification after owner-authorised configuration",
+  "before": {
+    "observed_on": "2026-09-19",
+    "protected": false,
+    "branch_protection_response": "HTTP 404: Branch not protected",
+    "repository_rulesets": [],
+    "effective_branch_rules": [],
+    "existing_check": {
+      "context": "validate",
+      "app_id": 15368,
+      "conclusion": "success",
+      "url": "https://github.com/chris-page-gov/okf-dwp/actions/runs/35452758423/job/105922670217",
+      "required_for_merge": false
+    }
+  },
+  "after": {
+    "protected": true,
+    "mechanism": "classic-branch-protection",
+    "required_status_checks": {
+      "strict": true,
+      "contexts": ["validate"],
+      "checks": [{"context": "validate", "app_id": 15368}]
+    },
+    "required_pull_request_reviews": {
+      "dismiss_stale_reviews": true,
+      "require_code_owner_reviews": false,
+      "require_last_push_approval": false,
+      "required_approving_review_count": 0
+    },
+    "enforce_admins": true,
+    "required_conversation_resolution": true,
+    "required_linear_history": false,
+    "required_signatures": false,
+    "allow_force_pushes": false,
+    "allow_deletions": false,
+    "repository_rulesets": []
+  },
+  "evidence_endpoints": [
+    "https://api.github.com/repos/chris-page-gov/okf-dwp/branches/main",
+    "https://api.github.com/repos/chris-page-gov/okf-dwp/branches/main/protection",
+    "https://api.github.com/repos/chris-page-gov/okf-dwp/rulesets",
+    "https://api.github.com/repos/chris-page-gov/okf-dwp/rules/branches/main"
+  ],
+  "limitations": [
+    "Dated configuration observation, not perpetual assurance or continuous monitoring.",
+    "A zero formal approval count does not attest that independent review occurred.",
+    "Branch protection does not establish source authority, specialist review or correctness of validation tests.",
+    "Private-input filename checks do not scan file bodies, private research or Git history; local checking is needed before any public push."
+  ]
+}

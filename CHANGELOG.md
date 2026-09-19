@@ -1,5 +1,46 @@
 # Changelog
 
+## Staff questions, ADM acquisition and repository governance — 19 September 2026
+
+- Add a public register of 40 question occurrences and 39 distinct wordings,
+  preserving ambiguity and recording 42 verified source candidates without
+  publishing private correspondence, contacts or collaboration links.
+- Run all 40 questions through the remote MCP service against the preserved
+  custody profile. Retain exact HTTP response bodies, source/core hashes and
+  offline replay. All 40 packages match the shared engine and remain insufficient;
+  no substantive or specialist-approved answers, token savings or cost savings
+  are claimed. Eight mutation controls reject altered provenance, transport
+  accounting, parity claims and forged sufficiency.
+- Acquire all 182 PDFs and 4,347 pages in a separately frozen ADM publication
+  census. Preserve original PDFs, page text, acquisition receipts and date
+  distinctions without changing DMG evidence. Verify every file and page locator;
+  retain 91 pages without extracted text and other extraction-quality flags.
+- Record combined acquisition coverage of 513 PDFs, 19,090 measured pages,
+  18,197 pages with nonempty extracted text and 893 without. A first local
+  full-corpus run covers 40 staff questions and three boundary controls: all 40
+  questions return candidate evidence, ten retain a separately located page and
+  19 retain a page from a candidate document. All 43 packages remain insufficient;
+  no answer-quality, AI-answer or specialist-acceptance claim follows. Live-service
+  and browser acceptance remain separate delivery gates.
+- Add eight ADM acquisition controls for frozen census identity, classification,
+  bounded metadata, source paths, PDF integrity, page locators and unreviewed
+  extraction authority. Existing DMG acquisition helpers remain unchanged.
+- Audit authored relationships through semantic and runtime projections,
+  endpoint identities and bidirectional adjacency. Document sparse semantic
+  coverage separately from the Explorer display defects; data preservation does
+  not establish complete policy modelling or certify browser behaviour.
+- Enable and independently verify classic `main` protection: reviewed pull
+  request workflow, strict GitHub Actions `validate` requirement, administrator
+  enforcement, resolved conversations and no force pushes or deletion. Record
+  zero required formal approvals explicitly; configuration is not perpetual
+  assurance or evidence that substantive independent review occurred.
+- Add a private-input filename guard and seven temporary-repository tests.
+  Tracked or staged `.email.md` files are rejected without reading their contents.
+- Add a task-led beginner learning path and linked glossary, with official
+  references, benefit-variant explanations and distinct Search, Ask and AI roles.
+  Explain provenance, date meanings, full capture versus evidence profiles,
+  remote MCP, browser WebMCP, HTTP 405 and unverified Voice access.
+
 ## Remote Ask OKF acceptance — 19 September 2026
 
 - Add an independent HTTP MCP acceptance client for the imprisonment and hospital questions, comparing complete returned packages with the existing Explorer engine and evidence assessor.

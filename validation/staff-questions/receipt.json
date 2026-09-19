@@ -1,0 +1,3861 @@
+{
+  "schema": "okf-dwp-staff-question-run.v1",
+  "status": "passed-transport-integrity-and-fail-closed-controls",
+  "observed_at": "2026-09-19T16:22:03.532Z",
+  "endpoint": "https://ask-okf.crpage.chatgpt.site/okf/mcp",
+  "protocol": "2025-11-25",
+  "client": "independent Node.js raw HTTP MCP client",
+  "server": {
+    "name": "ask-okf",
+    "version": "0.1.0"
+  },
+  "bundle_version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+  "capture": "actual-fetch-decoded-http-body; JSON-or-SSE; no reconstructed envelope",
+  "binding": {
+    "index_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/efb05c66616a9cd4328a86cf412780fe7bc7cf0b/full-dmg/context/assembly-index.json",
+    "index_sha256": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54"
+  },
+  "inputs": {
+    "registry_sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a",
+    "index_sha256": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54",
+    "inventory_sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a",
+    "core_sha256": "4be756c3695d63ef05ec8073fede8833919d73cbb3ca7d0473fc2ac65bafb714",
+    "source_routes_sha256": "2e5313da51875cd8d76fd3c3c06694f68d30f56efee259abb6c1cb51f7bf1827",
+    "runner_sha256": "99ba7bc4124988dba78be3735fe5745c855e411462cfd9d100784b4a5a7ce0fa",
+    "sdk_assurance_sha256": "ba229f354fcf9200d3542c4b02c6fe70a90ed6746ab199973f3b69994c035299",
+    "transport_assurance_sha256": "36fa23829b5be906a1517f0d93d905673ce7f710e617660d4d0aa482878b09b3"
+  },
+  "baseline": {
+    "kind": "all-frozen-extracted-text-files",
+    "documents": 331,
+    "utf8_bytes": 27687918,
+    "unicode_code_points": 27613797,
+    "token_count": null,
+    "monetary_cost": null,
+    "comparable_answer_quality_established": false,
+    "limitation": "Whole-corpus text and an insufficient context package do not perform equivalent tasks. Byte reduction does not establish token, cost or quality improvement."
+  },
+  "tools_sha256": "0df0b196a63f145ebf0d9db21be7e4ddb46f7afca101ec60347b076430e3d614",
+  "summary": {
+    "questions": 40,
+    "unique_questions": 39,
+    "remote_core_parity_passed": 40,
+    "fail_closed_controls_passed": 40,
+    "sufficient_contexts": 0,
+    "substantive_answers_generated": 0,
+    "specialist_accepted": 0,
+    "source_candidates_verified": 42,
+    "minimum_package_bytes": 4172,
+    "maximum_package_bytes": 418797,
+    "truncated_packages": 0,
+    "token_savings_hypothesis": "not-established-no-token-count-or-equivalent-answer-quality-comparison"
+  },
+  "cases": [
+    {
+      "id": "staff-001",
+      "question": "What happens to your benefits if you go abroad?",
+      "section": "General",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What happens to your benefits if you go abroad?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-001.response.json.gz",
+      "archive_sha256": "b1d60799b55f913334fe2d1a9a2a5275339d1364906ae491d2927ef0dec623a5",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 3,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 8671,
+        "response_sha256": "9a229d240841d6a5485cc7f9ed5aaef5bf68ae90a025a67376dd7b664f84b598",
+        "duration_ms": 108
+      },
+      "context_id": "urn:sha256:a3d22211688da90bdbdbcfc121594a8190ed0963550f2c884a7b00d4bcc32d1f",
+      "package_sha256": "1b39d2b3c190eb007e2526ea3ce8ebbd8fb18c38700344bcd9567c601aa3e5ac",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "selected_evidence_records": 0,
+      "relationships": 0,
+      "applicable_requirements": 0,
+      "package_bytes": 4201,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 0,
+        "used_relationships": 0,
+        "used_bytes": 4201,
+        "reached_depth": 0,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "abroad",
+        "benefits",
+        "go",
+        "your"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_task",
+          "message": "No public concept alias resolves this task.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Which benefits and variants are in scope?",
+        "Temporary travel or a permanent move; destination, duration, purpose and relevant date are unspecified.",
+        "International coordination, residence and territorial regimes must be identified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-002",
+      "question": "If your birthday is 30th May 1960, what is the first date you will be entitled to State Pension?",
+      "section": "State Pension",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "If your birthday is 30th May 1960, what is the first date you will be entitled to State Pension?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-002.response.json.gz",
+      "archive_sha256": "83e0540a4729f50bc814c6722c0934972a3fa0d7ccf6b1f34f583bf588401780",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 4,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 849595,
+        "response_sha256": "02509da4cb0d9e6e15080c760fdf52682de207b767238889aa06f142d603226b",
+        "duration_ms": 224
+      },
+      "context_id": "urn:sha256:fe1c49a459d867d36f9be4105c732a47cbe29204c5048296f890ad0002836db0",
+      "package_sha256": "66329bb2774ee0dc9e2067bfcb6edfeb217bb7fd82cb96ce0d7bca55089f30d2",
+      "evidence_status": "insufficient",
+      "selected_records": 46,
+      "selected_evidence_records": 35,
+      "relationships": 94,
+      "applicable_requirements": 0,
+      "package_bytes": 415750,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 46,
+        "used_relationships": 94,
+        "used_bytes": 415750,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "1960",
+        "30th",
+        "birthday",
+        "date",
+        "first",
+        "pension",
+        "state",
+        "your"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/benefit-entitlement"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Reaching State Pension age is distinct from satisfying all entitlement conditions, claiming and first payment.",
+        "Contribution record, claim timing and any deferral are not specified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-003",
+      "question": "How does State Pension interact with PIP?",
+      "section": "State Pension",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "How does State Pension interact with PIP?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-003.response.json.gz",
+      "archive_sha256": "f0ca1a3eba37f6842c46310fac08a7ad7f35a23560f97f3f355a47da7142db8b",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 5,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 8665,
+        "response_sha256": "3a5d5103b6e4cd776436594351ee02906b41155a0ce4cde4ef4fbf8b068e1b6b",
+        "duration_ms": 56
+      },
+      "context_id": "urn:sha256:d2de2376adbd2fad0de3eb4c90e5a0acc2b96321c2c82edd4515b57e878ac7cd",
+      "package_sha256": "878b99e8c3d75fd74b0527f932dce3acf98a9dd6b7e84f358cfc5a30a304a31c",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "selected_evidence_records": 0,
+      "relationships": 0,
+      "applicable_requirements": 0,
+      "package_bytes": 4198,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 0,
+        "used_relationships": 0,
+        "used_bytes": 4198,
+        "reached_depth": 0,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "interact",
+        "pension",
+        "pip",
+        "state"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_task",
+          "message": "No public concept alias resolves this task.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "New or old State Pension, PIP component, age and jurisdiction are unspecified.",
+        "Existing PIP award and a new claim may require different rules."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-004",
+      "question": "What are the components which make up State Pension and how do you qualify for them?",
+      "section": "State Pension",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What are the components which make up State Pension and how do you qualify for them?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-004.response.json.gz",
+      "archive_sha256": "1bb6f051ea7c2e65b7fdf5ba3fad693a832c462eaca3134ac53f9491ef9e9087",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 6,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 8807,
+        "response_sha256": "d2ac0ca9cd02875b1c9ffaad25dc87ec059c5e254552936525d94066d482ca75",
+        "duration_ms": 49
+      },
+      "context_id": "urn:sha256:e249ba34276db9915142149f99d0a835197d8d51f07b53bfe463dd3ead513e70",
+      "package_sha256": "caaea366a494be1412b0897d2dba184462bd9416decd26aea725dc8ccb437afa",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "selected_evidence_records": 0,
+      "relationships": 0,
+      "applicable_requirements": 0,
+      "package_bytes": 4266,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 0,
+        "used_relationships": 0,
+        "used_bytes": 4266,
+        "reached_depth": 0,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "components",
+        "make",
+        "pension",
+        "qualify",
+        "state",
+        "them",
+        "up"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_task",
+          "message": "No public concept alias resolves this task.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "State Pension can mean the post-2016 or earlier regime.",
+        "A transitional award cannot be treated as the simple new-entrant case."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-005",
+      "question": "What other benefits could you receive in addition to State Pension, and under what circumstances would you be entitled to them?",
+      "section": "State Pension",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What other benefits could you receive in addition to State Pension, and under what circumstances would you be entitled to them?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-005.response.json.gz",
+      "archive_sha256": "bc0e8670d45c7e041a3757eafdc86851ffab38ceaea64df9992737691895cf8c",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 7,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 849689,
+        "response_sha256": "1be8fc6a1392c66414bf52420c1fbe31eade8f217dc09ef3499c487df1e488fa",
+        "duration_ms": 220
+      },
+      "context_id": "urn:sha256:69fceb7ac214141557c6366165ec370a5ae07a8546da7045a74a91d447782e0d",
+      "package_sha256": "03c054a69075c10351b2bd560e0a3ef46eb408af59e4bd6059a5e6bd0b77ae69",
+      "evidence_status": "insufficient",
+      "selected_records": 46,
+      "selected_evidence_records": 35,
+      "relationships": 94,
+      "applicable_requirements": 0,
+      "package_bytes": 415797,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 46,
+        "used_relationships": 94,
+        "used_bytes": 415797,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "addition",
+        "benefits",
+        "circumstances",
+        "other",
+        "pension",
+        "receive",
+        "state",
+        "them"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/benefit-entitlement"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Other benefits is open-ended; jurisdiction, household, disability and income circumstances are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-006",
+      "question": "What is the maximum you can have in savings to still qualify for Pension Credit?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What is the maximum you can have in savings to still qualify for Pension Credit?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-006.response.json.gz",
+      "archive_sha256": "a607077d730ddd233898918bf09855a5e09531c69c3d56a74c7036581e3c3039",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 8,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 823161,
+        "response_sha256": "2f92ff709ab71413313402f7860399accce53949c01e0bc57ba0552f9bdd8ace",
+        "duration_ms": 155
+      },
+      "context_id": "urn:sha256:ca8a61f15a5020279f75c0d648c40ef8b73a1ed98f9e715274f51efc96155c58",
+      "package_sha256": "9099133b903aeef0339df93de4b6ca79666af7d695959585cf49137d522f88db",
+      "evidence_status": "insufficient",
+      "selected_records": 45,
+      "selected_evidence_records": 35,
+      "relationships": 89,
+      "applicable_requirements": 0,
+      "package_bytes": 402844,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 45,
+        "used_relationships": 89,
+        "used_bytes": 402844,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "maximum",
+        "qualify",
+        "savings",
+        "still"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Savings may refer to cash savings or all capital; disregards, notional capital and partner ownership matter.",
+        "The question presupposes a universal maximum; that premise needs source testing."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-007",
+      "question": "What were the Pension Credit weekly rates over the last five years?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What were the Pension Credit weekly rates over the last five years?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-007.response.json.gz",
+      "archive_sha256": "262ebfd3c1efa732a8465f2b5bc7608a0428a38d92be8fb19484c149c79936e9",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 9,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 823139,
+        "response_sha256": "0133e55f48581a9329a10d73cc1dc43b952bff56c5da1a038b754b8a1d8492fa",
+        "duration_ms": 270
+      },
+      "context_id": "urn:sha256:ad63d6962c973bcffcf66a9378bae65deb07269e5b55d6adf28e522182f22229",
+      "package_sha256": "04c7bd9ed909a31e7adaca857faa4092c12ca520747b889dcf2eb4968502f7f8",
+      "evidence_status": "insufficient",
+      "selected_records": 45,
+      "selected_evidence_records": 35,
+      "relationships": 89,
+      "applicable_requirements": 0,
+      "package_bytes": 402832,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 45,
+        "used_relationships": 89,
+        "used_bytes": 402832,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "five",
+        "last",
+        "rates",
+        "weekly",
+        "years"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Last five years has no agreed as-of date or calendar/tax-year/uprating-period definition.",
+        "Single/couple, Guarantee Credit/Savings Credit and additional amounts need separate series."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-008",
+      "question": "What was the SDA amount over the last five years?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What was the SDA amount over the last five years?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-008.response.json.gz",
+      "archive_sha256": "2586346da71b4ef29fb43f0ac91a0659da364ec2dbc9f55e2a012eb8c2d0b879",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 10,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 8688,
+        "response_sha256": "cfc7ff2c63c6f5967b43d1c04c6851a22b14c6d8caa086e5a0a69a276df74c2c",
+        "duration_ms": 50
+      },
+      "context_id": "urn:sha256:28fcef58010b10eb3536a4b14f63dc226c83353a6b8fafecd29ce7e864723bfc",
+      "package_sha256": "a945b0f0398c03816445a05c554849c9b688789150c8a2eaf4aadd23cf0091a0",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "selected_evidence_records": 0,
+      "relationships": 0,
+      "applicable_requirements": 0,
+      "package_bytes": 4208,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 0,
+        "used_relationships": 0,
+        "used_bytes": 4208,
+        "reached_depth": 0,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "amount",
+        "five",
+        "last",
+        "sda",
+        "years"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_task",
+          "message": "No public concept alias resolves this task.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "SDA could mean Severe Disablement Allowance or shorthand for a Pension Credit severe-disability additional amount.",
+        "Last five years and household/rate variants are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-009",
+      "question": "Besides SDA, what are the other additional payments which you can receive in addition to basic Pension Credit, and what have been their rates over the last five years?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "Besides SDA, what are the other additional payments which you can receive in addition to basic Pension Credit, and what have been their rates over the last five years?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-009.response.json.gz",
+      "archive_sha256": "d25ab1128c5f0dc9e49e541016d4f0e75154bed36df26829b9ef7a74547c2a47",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 11,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 851882,
+        "response_sha256": "153b9d25e4c9f7e8f014e506f847e45663c3bcbd9b92edfdd68b51c3aba6e1c7",
+        "duration_ms": 211
+      },
+      "context_id": "urn:sha256:fbf9fca83b6266e8480daf7b908e8aea70092ac08e14eb13d4191ad33f806612",
+      "package_sha256": "1238df5c5a4e8e03e529fa4284c284e3e06ff355478ce5f55099b292f6432c59",
+      "evidence_status": "insufficient",
+      "selected_records": 46,
+      "selected_evidence_records": 35,
+      "relationships": 95,
+      "applicable_requirements": 0,
+      "package_bytes": 416826,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 46,
+        "used_relationships": 95,
+        "used_bytes": 416826,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "addition",
+        "additional",
+        "basic",
+        "besides",
+        "five",
+        "last",
+        "other",
+        "rates",
+        "receive",
+        "sda",
+        "years"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/benefit-payability"
+          ]
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "SDA is ambiguous; basic Pension Credit is not a precise component name.",
+        "Last five years, household/child variants and variable housing amounts need scope."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-010",
+      "question": "What is used in the Pension Credit calculation to assess eligibility and what is the threshold for each element?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What is used in the Pension Credit calculation to assess eligibility and what is the threshold for each element?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-010.response.json.gz",
+      "archive_sha256": "c59bf85d3c76d26a5b7834d0abbda9e05d1e8a9427d54aaa496444877957956f",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 12,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 823286,
+        "response_sha256": "67a1cae8ffc686ed66974b7654772b235154c26b66b899858440c66fb7362f42",
+        "duration_ms": 242
+      },
+      "context_id": "urn:sha256:2e55c2b06a22e9783cd8ba3575e80cebc36337752d942ef7a0e3cb1ab5065216",
+      "package_sha256": "5603d817d13496ee5d531c06d6117a720fa80474b8bdc50b6dd52a510646f785",
+      "evidence_status": "insufficient",
+      "selected_records": 45,
+      "selected_evidence_records": 35,
+      "relationships": 89,
+      "applicable_requirements": 0,
+      "package_bytes": 402904,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 45,
+        "used_relationships": 89,
+        "used_bytes": 402904,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "assess",
+        "calculation",
+        "element",
+        "eligibility",
+        "threshold",
+        "used"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Eligibility, award calculation and numeric thresholds are distinct.",
+        "Date, Guarantee Credit/Savings Credit, household and relevant benefit regimes are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-011",
+      "question": "How does Housing Benefit impact Pension Credit?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "How does Housing Benefit impact Pension Credit?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-011.response.json.gz",
+      "archive_sha256": "99fdfd001ba28f81a40a7a2a6d74da1cf849481659c7f988ebcecf4c292103a7",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 13,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 823076,
+        "response_sha256": "033c94caee0a35f1d91dd62929a038cc1ba11abffa0bb06bd11f27b4d00fc3af",
+        "duration_ms": 161
+      },
+      "context_id": "urn:sha256:e56abc6506f13016445808a631c4cd5d32e76cc8914053d2a9a3f5083276cb4a",
+      "package_sha256": "6cf3f3335d40e4c775219e38ff48b11e30bb43d2531188b6b11e46c7408a9bde",
+      "evidence_status": "insufficient",
+      "selected_records": 45,
+      "selected_evidence_records": 35,
+      "relationships": 89,
+      "applicable_requirements": 0,
+      "package_bytes": 402802,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 45,
+        "used_relationships": 89,
+        "used_bytes": 402802,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "benefit",
+        "housing",
+        "impact"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "HB treatment as income differs from housing-cost additions and pension-age/mixed-age access to HB.",
+        "Tenure, age, claim date and household are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-012",
+      "question": "Does Pension Credit stop is a citizen moves into a care home permanently if they are self-funding?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "Does Pension Credit stop is a citizen moves into a care home permanently if they are self-funding?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-012.response.json.gz",
+      "archive_sha256": "fbd126b4253b67fa85dc168219cae17997059922ea0a6ffc2eeb474a2d8468fd",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 14,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 823270,
+        "response_sha256": "d8981a1a7d236f455512750e102d88bd74257a05bea4d2ac3afc58f4cdc1cfa0",
+        "duration_ms": 265
+      },
+      "context_id": "urn:sha256:298e959875bbe378c33fb43d9eaa2f09881215b6e5d69a70e2e1b54c8d40aaca",
+      "package_sha256": "a5d7df5101e0c8ef79a662b9981ab8dd70dbe9da647c07e4737df5d9638bfe44",
+      "evidence_status": "insufficient",
+      "selected_records": 45,
+      "selected_evidence_records": 35,
+      "relationships": 89,
+      "applicable_requirements": 0,
+      "package_bytes": 402894,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 45,
+        "used_relationships": 89,
+        "used_bytes": 402894,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "care",
+        "citizen",
+        "funding",
+        "home",
+        "moves",
+        "permanently",
+        "self",
+        "stop"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Permanent residence, funding arrangements, household and qualifying disability benefits require evidence.",
+        "Base credit, additional amounts and housing costs are different questions."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-013",
+      "question": "Does Pension Credit stop is a citizen moves into a care home permanently if they are not self-funding?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "Does Pension Credit stop is a citizen moves into a care home permanently if they are not self-funding?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-013.response.json.gz",
+      "archive_sha256": "ca093ee739f8ec0cfb776858b7cbaff90318aa2c94bbf3902ab66e8943268aa6",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 15,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 823278,
+        "response_sha256": "2b32ab277935e35015e1a99948bd1a56a1ae6ccf4cd584b8d420b8163c44448b",
+        "duration_ms": 178
+      },
+      "context_id": "urn:sha256:1ac550d7ee66f1a19e96cf2505e31b49d20849445ef4b307350afb8c5e4a56ec",
+      "package_sha256": "341373666c8564999081e2bb80d680ce98846d5f2f33638f1cc95ae1c75a92ba",
+      "evidence_status": "insufficient",
+      "selected_records": 45,
+      "selected_evidence_records": 35,
+      "relationships": 89,
+      "applicable_requirements": 0,
+      "package_bytes": 402898,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 45,
+        "used_relationships": 89,
+        "used_bytes": 402898,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "care",
+        "citizen",
+        "funding",
+        "home",
+        "moves",
+        "permanently",
+        "self",
+        "stop"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Not self-funding does not identify the responsible funding body or all mixed-funding arrangements.",
+        "Base credit, disability additions, partner status and housing costs must be separated."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-014",
+      "question": "What is the impact of someone’s partner on their Pension Credit?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What is the impact of someone’s partner on their Pension Credit?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-014.response.json.gz",
+      "archive_sha256": "23085d040f5befc99572a87fd047674d6e1310fc511ec541847687c0a8fef09c",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 16,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 823124,
+        "response_sha256": "1e193deac75db30680f268f85b2697c46cb2dfc5ef2337724a9388b69c1c47ca",
+        "duration_ms": 243
+      },
+      "context_id": "urn:sha256:d4fd57ab8586fdee7e0e4ef6530a4c7a956464d01afabc45738bb25b11efcd57",
+      "package_sha256": "8f030503b7158071b4b0efe4222426dbc6a9be41fd8549e7c6a4d5df529aa22f",
+      "evidence_status": "insufficient",
+      "selected_records": 45,
+      "selected_evidence_records": 35,
+      "relationships": 89,
+      "applicable_requirements": 0,
+      "package_bytes": 402825,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 45,
+        "used_relationships": 89,
+        "used_bytes": 402825,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "impact",
+        "partner",
+        "s",
+        "someone"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Partner ages, relationship/household status, income, capital and existing claims are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-015",
+      "question": "What inputs are required for the Pension Credit calculation?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What inputs are required for the Pension Credit calculation?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-015.response.json.gz",
+      "archive_sha256": "d8eb555273f0953432fc2a629d81690b961bbbec9c20b43f5fb5b25d4af6d83f",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 17,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 823112,
+        "response_sha256": "4d945047ac57ca45c088b5845c4b9325ccce6c07231056bd6d267b7d8af54689",
+        "duration_ms": 155
+      },
+      "context_id": "urn:sha256:ac0677bfa5055d21960f8211f1530b5bde9527bc1e59115c7ea5230c185a7345",
+      "package_sha256": "85569ab892c887cdc88887a2177da6f3a567a3dda91a3d4b158d9607cd48ca7e",
+      "evidence_status": "insufficient",
+      "selected_records": 45,
+      "selected_evidence_records": 35,
+      "relationships": 89,
+      "applicable_requirements": 0,
+      "package_bytes": 402820,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 45,
+        "used_relationships": 89,
+        "used_bytes": 402820,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "calculation",
+        "inputs",
+        "required"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "The intended calculation date, household, credit component and scope are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-016",
+      "question": "Given these inputs what is the formula for calculating Pension Credit?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "Given these inputs what is the formula for calculating Pension Credit?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-016.response.json.gz",
+      "archive_sha256": "884f972ae67b0c9014aa75b600b4e6826f13a6121e80211a46ae661a1f85407b",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 18,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 823130,
+        "response_sha256": "88fde5b18fd637c3e2f8f133e3b031c929e73ecfaf72c700636b10aa2749208a",
+        "duration_ms": 147
+      },
+      "context_id": "urn:sha256:ab4049db06761083917506e664b3a865c4d08a1c006782c06361f07d875b0e5a",
+      "package_sha256": "0f2412c46b24c4409c570dd30d64fb3547b8324752f148efdbd901c3468c039b",
+      "evidence_status": "insufficient",
+      "selected_records": 45,
+      "selected_evidence_records": 35,
+      "relationships": 89,
+      "applicable_requirements": 0,
+      "package_bytes": 402829,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 45,
+        "used_relationships": 89,
+        "used_bytes": 402829,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "calculating",
+        "formula",
+        "inputs"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "These inputs refers to an earlier question; actual inputs have not been provided in this standalone prompt.",
+        "An explanatory formula and an executable decision engine require different assurance."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-017",
+      "question": "What difference to Pension Credit does having a partner make?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What difference to Pension Credit does having a partner make?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-017.response.json.gz",
+      "archive_sha256": "97104dee22a268f4768ddafa500517626fd14d6a8567ce33fb6a5e598c15c1ee",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 19,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 823098,
+        "response_sha256": "4433851ea200b774424196df0b9b7eb22d447c94321801c2bce29efa13e6dbe3",
+        "duration_ms": 244
+      },
+      "context_id": "urn:sha256:465b6dc58e474921fa2af83f8b6017c2c10c6759d57b58a040c8307d7d16799d",
+      "package_sha256": "f86e6125abe2f6bc29f4f15327f0db95b949b87c3ebea95a2fa4ab23af56d632",
+      "evidence_status": "insufficient",
+      "selected_records": 45,
+      "selected_evidence_records": 35,
+      "relationships": 89,
+      "applicable_requirements": 0,
+      "package_bytes": 402813,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 45,
+        "used_relationships": 89,
+        "used_bytes": 402813,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "having",
+        "make",
+        "partner"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Partner ages, relationship/household status, income, capital and existing claims are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-018",
+      "question": "What happens if someone with a partner goes permanently into a Care Home (please give all scenarios)?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What happens if someone with a partner goes permanently into a Care Home (please give all scenarios)?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-018.response.json.gz",
+      "archive_sha256": "854c8e76d183f82a2f3b209789c946c99ca9ebf21f7e4b41685ada84ddbff4af",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 20,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 8856,
+        "response_sha256": "21a03497854cf363b562bfe021cda4524db11491c3e4291189f22c96d06ba2f7",
+        "duration_ms": 53
+      },
+      "context_id": "urn:sha256:ba7a8fd3942c1da3ff2d4aca471a8e94f3653c25d3bc9cac8746b9a996cef356",
+      "package_sha256": "9f05fffa5045ef055061fec6cfb464e4c460d1e5d930cb2fa0a395a53958eada",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "selected_evidence_records": 0,
+      "relationships": 0,
+      "applicable_requirements": 0,
+      "package_bytes": 4290,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 0,
+        "used_relationships": 0,
+        "used_bytes": 4290,
+        "reached_depth": 0,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "care",
+        "goes",
+        "home",
+        "partner",
+        "permanently",
+        "scenarios",
+        "someone"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_task",
+          "message": "No public concept alias resolves this task.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "The section suggests Pension Credit, but the standalone question does not name a benefit.",
+        "All scenarios is unbounded; clarify jurisdiction, funding, partner ages, household and affected benefits."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-019",
+      "question": "How does Pension Credit work?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "How does Pension Credit work?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-019.response.json.gz",
+      "archive_sha256": "b8cc2f61ab5dbcc527eff701d8e5f9551fffa029218037f1c81cae7dbae1c027",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 21,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 822992,
+        "response_sha256": "5e9cc2c398818fc09f5d5d2a86f1b2c4f6972e891ee7f8464836996bcc5bde5c",
+        "duration_ms": 273
+      },
+      "context_id": "urn:sha256:31cf911e997c3feb08e2afe011fbe925592d54defe08e84a2ab9fa75ada0e33a",
+      "package_sha256": "e26a14453c8d37255ed94dbc4423288777d6c5f4d97ad1a4ef93e64d7ea4f5b7",
+      "evidence_status": "insufficient",
+      "selected_records": 45,
+      "selected_evidence_records": 35,
+      "relationships": 89,
+      "applicable_requirements": 0,
+      "package_bytes": 402762,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 45,
+        "used_relationships": 89,
+        "used_bytes": 402762,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "work"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "An overview, eligibility explanation and individual calculation are different tasks.",
+        "Date, jurisdiction and credit component are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-020",
+      "question": "How does a citizen qualify for Pension Credit?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "How does a citizen qualify for Pension Credit?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-020.response.json.gz",
+      "archive_sha256": "325f64337835beb571d31544920a77482c48aa1034f7141f12ac7410bde555ff",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 22,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 823054,
+        "response_sha256": "fddbf879e39519ec65381aa80b9b1990ceb30e57ca287fc64fe69228170454f0",
+        "duration_ms": 183
+      },
+      "context_id": "urn:sha256:4078b9c03f5d0dfe7e537f0d0f5e57eaa06810a9488207da8c1d34f275740f29",
+      "package_sha256": "a5d3059c5e6db0bf6adfbafa94b11bcd3d745ed15c44847b2a1c5b83e7eca1b1",
+      "evidence_status": "insufficient",
+      "selected_records": 45,
+      "selected_evidence_records": 35,
+      "relationships": 89,
+      "applicable_requirements": 0,
+      "package_bytes": 402792,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 45,
+        "used_relationships": 89,
+        "used_bytes": 402792,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "citizen",
+        "qualify"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Citizen does not establish the relevant residence/immigration or presence conditions.",
+        "Age, claim date, household and credit component are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-021",
+      "question": "What are the eligibility rules and entitlement rate for PC?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What are the eligibility rules and entitlement rate for PC?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-021.response.json.gz",
+      "archive_sha256": "d49566d7647ac6f31ddcd28979ae9b56ca4875b1b5ebbd484876927bc5443340",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 23,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 849464,
+        "response_sha256": "a38f7070f8304200b75a882e44ff51d77fc3721500ab06ccdc1c4d2258a54b0a",
+        "duration_ms": 293
+      },
+      "context_id": "urn:sha256:634e6f001711e30d3c40a9fd5a41d83d0182be80fbd33e2794db3d7043deaa86",
+      "package_sha256": "dbd0f394a3efb4180220be6d81a879e7f760f81aa289fbdf4a091741e4e6a3ca",
+      "evidence_status": "insufficient",
+      "selected_records": 46,
+      "selected_evidence_records": 35,
+      "relationships": 94,
+      "applicable_requirements": 0,
+      "package_bytes": 415688,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 46,
+        "used_relationships": 94,
+        "used_bytes": 415688,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "eligibility",
+        "pc",
+        "rate",
+        "rules"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/benefit-entitlement"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "PC must be resolved as Pension Credit; rate may mean minimum guarantee, Savings Credit or actual award.",
+        "The effective date and household/rate variants are not specified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-022",
+      "question": "How do State Pension and Pension Credit fit together. For example: If someone receives State Pension, could they also be entitled to Pension Credit?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "How do State Pension and Pension Credit fit together. For example: If someone receives State Pension, could they also be entitled to Pension Credit?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-022.response.json.gz",
+      "archive_sha256": "6cc3e181010e28ce16d87c383bc85ebec0b008266d99de87d8cb709979ecc852",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 24,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 835566,
+        "response_sha256": "fa7283310bd04d60363361eb7e2edb39389873999032c8d3ff6d4d0886b469b2",
+        "duration_ms": 190
+      },
+      "context_id": "urn:sha256:c5c0189d3cd438986aa20a3e0b428b5498235957d549aabc9e946971eac4c980",
+      "package_sha256": "856e0320cc1cceb2d24bef51e2dc39517a012bc1a675f7cc70007b6700b085c1",
+      "evidence_status": "insufficient",
+      "selected_records": 46,
+      "selected_evidence_records": 35,
+      "relationships": 95,
+      "applicable_requirements": 0,
+      "package_bytes": 408770,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 46,
+        "used_relationships": 95,
+        "used_bytes": 408770,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "example",
+        "fit",
+        "pension",
+        "receives",
+        "someone",
+        "state",
+        "together"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/benefit-entitlement"
+          ]
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Receiving State Pension and meeting Pension Credit conditions are separate facts.",
+        "Household, other income/capital and credit component are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-023",
+      "question": "What happens to Pension Credit if someone moves abroad?",
+      "section": "Pension Credit",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What happens to Pension Credit if someone moves abroad?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-023.response.json.gz",
+      "archive_sha256": "05e2ceb34870969becffa2d9a7bc09891cbc404ca65c0b7453350f1dc68a3d61",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 25,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 823088,
+        "response_sha256": "979752c7bde78b570e43e75e4c7dbac5da023eca55ad3744893914b4573acb6c",
+        "duration_ms": 275
+      },
+      "context_id": "urn:sha256:e9b7edd48cf00239cf97369aa205a429a97a526b52df9eff34de9757a992c41d",
+      "package_sha256": "213a3c055899e2f21beaf459ff27d536726d51cd317e90d65aa8c41a2ce96ccc",
+      "evidence_status": "insufficient",
+      "selected_records": 45,
+      "selected_evidence_records": 35,
+      "relationships": 89,
+      "applicable_requirements": 0,
+      "package_bytes": 402808,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 45,
+        "used_relationships": 89,
+        "used_bytes": 402808,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "abroad",
+        "moves",
+        "someone"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Moves abroad may mean a permanent move or a temporary absence; country, date, duration and purpose are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-024",
+      "question": "What additional benefits would you be entitled to if you are entitled to IIDB?",
+      "section": "Industrial Injuries Benefits",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What additional benefits would you be entitled to if you are entitled to IIDB?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-024.response.json.gz",
+      "archive_sha256": "ece08a2190a4d18d6b62da73e1cf710f0b759bc849e885b6afebac397f82cd20",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 26,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 849482,
+        "response_sha256": "e4909fca6b929255464fc09a103dc35e69a65c1a6f9cf2071633a73b75503431",
+        "duration_ms": 187
+      },
+      "context_id": "urn:sha256:2f31c5c5b864a1f1cc9afa7bbe7d101552293e4160fd65ac6403e5f47b340e60",
+      "package_sha256": "2cee09ab56ce219aa163d0defd330ac497bb3d5a6af8e79ada2919272d6f82b9",
+      "evidence_status": "insufficient",
+      "selected_records": 46,
+      "selected_evidence_records": 35,
+      "relationships": 94,
+      "applicable_requirements": 0,
+      "package_bytes": 415698,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 46,
+        "used_relationships": 94,
+        "used_bytes": 415698,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "additional",
+        "benefits",
+        "iidb"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/benefit-entitlement"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "IIDB alone does not specify disablement assessment, supplements or other personal/household conditions.",
+        "Additional benefits is unbounded."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-025",
+      "question": "What happens if you are on IIDB when you reach State Pension Age?",
+      "section": "Industrial Injuries Benefits",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What happens if you are on IIDB when you reach State Pension Age?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-025.response.json.gz",
+      "archive_sha256": "dd0152ecf20a0ae2f4ab9ac6c75931ac46aa04f4aa1cec77f3b5980bd1eea20c",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 27,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 8724,
+        "response_sha256": "1785025e72c09a527ebf8ae4c9f4b1fd208e37d0cb55ed575acf10fdc99aa7b6",
+        "duration_ms": 59
+      },
+      "context_id": "urn:sha256:a2c5d8f9c1928897edd5ecd28b200ff4aadc794ea3158c6e7fcb0f105e34354f",
+      "package_sha256": "4032c48cf3f0b0f93b53d724c5cd48baf2b6c4239426813a3941d32428d90ca4",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "selected_evidence_records": 0,
+      "relationships": 0,
+      "applicable_requirements": 0,
+      "package_bytes": 4226,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 0,
+        "used_relationships": 0,
+        "used_bytes": 4226,
+        "reached_depth": 0,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "age",
+        "iidb",
+        "pension",
+        "reach",
+        "state"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_task",
+          "message": "No public concept alias resolves this task.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "IIDB, Reduced Earnings Allowance and Retirement Allowance are distinct benefits.",
+        "Claim/accident dates, existing supplements, work and pension regime are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-026",
+      "question": "What is the interaction between Child DLA and PIP?",
+      "section": "Industrial Injuries Benefits",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What is the interaction between Child DLA and PIP?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-026.response.json.gz",
+      "archive_sha256": "aefbc0db247e9bc6c5e9350bdc4b6ac4032d40d556cdcd95ba69f65495c9222c",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 28,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 8682,
+        "response_sha256": "da6216095912cc31c72a3cb4fbc5e39345a2240b6dd88e723578004544bd863d",
+        "duration_ms": 132
+      },
+      "context_id": "urn:sha256:87420ce901ca95f68de4053f39c0362abf911c7691eba83ea50162c1238d52e7",
+      "package_sha256": "b6bacf74c01e3c6479b9ae16adc261534047e7bb9d6cb33379f90e82f67efc87",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "selected_evidence_records": 0,
+      "relationships": 0,
+      "applicable_requirements": 0,
+      "package_bytes": 4206,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 0,
+        "used_relationships": 0,
+        "used_bytes": 4206,
+        "reached_depth": 0,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "child",
+        "dla",
+        "interaction",
+        "pip"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_task",
+          "message": "No public concept alias resolves this task.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Child DLA-to-PIP transition, age, jurisdiction and existing award status are unspecified.",
+        "Current devolved disability benefits may change the relevant regime."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-027",
+      "question": "Can you receive both IIDB and JSA?",
+      "section": "Industrial Injuries Benefits",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "Can you receive both IIDB and JSA?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-027.response.json.gz",
+      "archive_sha256": "55313a56fd6efcc1311aa059c111c8c5c09dd7ba314134e4568881f786451a7e",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 29,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 842454,
+        "response_sha256": "27b72996e45eda9eb5f4ec4efde8e9f9d74f5e12ad90e4fbcb4c253e080cfdcb",
+        "duration_ms": 197
+      },
+      "context_id": "urn:sha256:393ef119ed6c9b0ed1abbfb3ce2598df90bbf304ea5464d25f3e103d661f3459",
+      "package_sha256": "696503aa65cf877855156d680823054fb30b1909125b42e7245ca4342723cc8b",
+      "evidence_status": "insufficient",
+      "selected_records": 45,
+      "selected_evidence_records": 35,
+      "relationships": 89,
+      "applicable_requirements": 0,
+      "package_bytes": 412402,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 45,
+        "used_relationships": 89,
+        "used_bytes": 412402,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "iidb",
+        "receive"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "JSA may be contributory, income-based or New Style; claim date and IIDB supplements are unspecified.",
+        "Concurrent entitlement and deduction from payment are different questions."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-028",
+      "question": "Can you receive both IIDB and ESA?",
+      "section": "Industrial Injuries Benefits",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "Can you receive both IIDB and ESA?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-028.response.json.gz",
+      "archive_sha256": "d854eb0792d033a8df77355eeae5ba93979b7f1a7e64305d5bb789d1cf0eeaa6",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 30,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 855780,
+        "response_sha256": "baa7ecbeb1c6f06cfb326badbf65fe56a9a087ffcea3960aaef77e9285f8f8a2",
+        "duration_ms": 266
+      },
+      "context_id": "urn:sha256:b47c3f7f1486568db7c3193e7eea82fd49d2502f266a317b1054b1eceb4c6fca",
+      "package_sha256": "cba812644ba158d7f5c8765e1e176416886b43fbf7c53c79baddd0005c77d59f",
+      "evidence_status": "insufficient",
+      "selected_records": 46,
+      "selected_evidence_records": 35,
+      "relationships": 94,
+      "applicable_requirements": 0,
+      "package_bytes": 418797,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 46,
+        "used_relationships": 94,
+        "used_bytes": 418797,
+        "reached_depth": 5,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "iidb",
+        "receive"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/esa-custody-regimes"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "ESA may be contributory, income-related or New Style; claim date and IIDB supplements are unspecified.",
+        "Concurrent entitlement, income treatment and payment adjustments differ."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-029",
+      "question": "What is the relationship between IIDB, PIP, Attendance Allowance and DLA?",
+      "section": "Industrial Injuries Benefits",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What is the relationship between IIDB, PIP, Attendance Allowance and DLA?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-029.response.json.gz",
+      "archive_sha256": "a2701b40d1dd8ad7a7153ab08603886dbda245b51848831b5a4e8a537c751210",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 31,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 8782,
+        "response_sha256": "4c5a0d42aa933419c900877d25e13895a896dae2d2f5607f217072206fad39f4",
+        "duration_ms": 55
+      },
+      "context_id": "urn:sha256:d929c3e08eb3c47f12a55561151e209c574217258f167e7df6ef981018832d0c",
+      "package_sha256": "11fc97e06b58906b8c3f661751a432c4f04d3bcfc337dd6d8cfcbaee5602853b",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "selected_evidence_records": 0,
+      "relationships": 0,
+      "applicable_requirements": 0,
+      "package_bytes": 4254,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 0,
+        "used_relationships": 0,
+        "used_bytes": 4254,
+        "reached_depth": 0,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "allowance",
+        "attendance",
+        "dla",
+        "iidb",
+        "pip",
+        "relationship"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_task",
+          "message": "No public concept alias resolves this task.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "The requested relationship could mean eligibility, transitions, income treatment or overlapping payment.",
+        "PIP/DLA components, age, jurisdiction and IIDB additions are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-030",
+      "question": "How does IIDB relate to PIP?",
+      "section": "Industrial Injuries Benefits",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "How does IIDB relate to PIP?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-030.response.json.gz",
+      "archive_sha256": "321f33de1088ff2ffb9076b4283f54a099f6ab5c108d8d26bc43e81305fc41f3",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 32,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 8612,
+        "response_sha256": "25c085b5501b13774667fd586e9838f72ad70d1bf518740a16c28c5b006e70c3",
+        "duration_ms": 53
+      },
+      "context_id": "urn:sha256:03e3dea00380d1a8301e507c5846d7bb2c1d5bbddf8d5cd4de8009a4febb1b23",
+      "package_sha256": "20357b1691796c71baaba0266ec43c3233a0d4df0b18a32d15b3056ac6542c16",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "selected_evidence_records": 0,
+      "relationships": 0,
+      "applicable_requirements": 0,
+      "package_bytes": 4172,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 0,
+        "used_relationships": 0,
+        "used_bytes": 4172,
+        "reached_depth": 0,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "iidb",
+        "pip",
+        "relate"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_task",
+          "message": "No public concept alias resolves this task.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "PIP component and IIDB supplements, jurisdiction and type of relationship are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-031",
+      "question": "What additional benefits would you be entitled to if you are entitled to PIP?",
+      "section": "Personal Independence Payment",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What additional benefits would you be entitled to if you are entitled to PIP?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-031.response.json.gz",
+      "archive_sha256": "967f4bf6a995203fe3157c76f840766876f6fc2dac6650fc247ea7bbd5200178",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 33,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 849478,
+        "response_sha256": "c91bfb8fb2f9594d897e8639b6ba13d8663fb11f449215f0ebd7d73a65f7daea",
+        "duration_ms": 167
+      },
+      "context_id": "urn:sha256:1959539405e9093f6103a0600c45595f62af688abf7bd02ffa8e3b485d7a039f",
+      "package_sha256": "ba26666da04e9d2c484f0130ceafa83d46600858b203a95c34744d09e230d359",
+      "evidence_status": "insufficient",
+      "selected_records": 46,
+      "selected_evidence_records": 35,
+      "relationships": 94,
+      "applicable_requirements": 0,
+      "package_bytes": 415696,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 46,
+        "used_relationships": 94,
+        "used_bytes": 415696,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "additional",
+        "benefits",
+        "pip"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/benefit-entitlement"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "PIP components/rates, age, household, jurisdiction and other benefits are unspecified.",
+        "Receipt may be a qualifying condition rather than automatic entitlement to another benefit."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-032",
+      "question": "What happens if you are on PIP when you reach State Pension Age?",
+      "section": "Personal Independence Payment",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What happens if you are on PIP when you reach State Pension Age?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-032.response.json.gz",
+      "archive_sha256": "e45f6c54f1f0894261e29ee14de9975170af3dd10dba47463ba6a95d5dd811c9",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 34,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 8720,
+        "response_sha256": "639446526bca834934306d4f34ba157993f5ac810431ffb77b7e5a246c9b42c2",
+        "duration_ms": 58
+      },
+      "context_id": "urn:sha256:ae3ce2343e8da7f01e3bb743d284763594ff63b13e958f25ff80f3742b888cd8",
+      "package_sha256": "14f554c4ce809ed5bead14b0a35b56c0ac8eaae1cf16eff25e9a4240dd96a5c9",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "selected_evidence_records": 0,
+      "relationships": 0,
+      "applicable_requirements": 0,
+      "package_bytes": 4224,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 0,
+        "used_relationships": 0,
+        "used_bytes": 4224,
+        "reached_depth": 0,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "age",
+        "pension",
+        "pip",
+        "reach",
+        "state"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_task",
+          "message": "No public concept alias resolves this task.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Existing PIP award, new claim or review; component, age and jurisdiction are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-033",
+      "question": "What is the interaction between Child DLA and PIP?",
+      "section": "Personal Independence Payment",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What is the interaction between Child DLA and PIP?"
+      },
+      "duplicate_of": "staff-026",
+      "archive": "staff-033.response.json.gz",
+      "archive_sha256": "f87bfc6b310b3e178c9b50a80834177601e2cfed3785fb3bc21325e2756f448e",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 35,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 8682,
+        "response_sha256": "426ab3c344267d54d5b7a023679bbffea8ce73fef346120c50810b85f2a746e4",
+        "duration_ms": 111
+      },
+      "context_id": "urn:sha256:87420ce901ca95f68de4053f39c0362abf911c7691eba83ea50162c1238d52e7",
+      "package_sha256": "b6bacf74c01e3c6479b9ae16adc261534047e7bb9d6cb33379f90e82f67efc87",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "selected_evidence_records": 0,
+      "relationships": 0,
+      "applicable_requirements": 0,
+      "package_bytes": 4206,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 0,
+        "used_relationships": 0,
+        "used_bytes": 4206,
+        "reached_depth": 0,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "child",
+        "dla",
+        "interaction",
+        "pip"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_task",
+          "message": "No public concept alias resolves this task.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Child DLA-to-PIP transition, age, jurisdiction and existing award status are unspecified.",
+        "Current devolved disability benefits may change the relevant regime."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-034",
+      "question": "Can you receive both PIP and JSA?",
+      "section": "Personal Independence Payment",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "Can you receive both PIP and JSA?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-034.response.json.gz",
+      "archive_sha256": "da919088d7ddc8d66e51debcfe7dbd4a9c9f740cce7ff36d07594dfe5eca7ca3",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 36,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 842450,
+        "response_sha256": "85d7be8c4e1ee97ab0a1809e2b60ea7e9f674fa4c3344a95ff485794e5638413",
+        "duration_ms": 146
+      },
+      "context_id": "urn:sha256:16a6608624f37bd0ac58016675ca6767ec83cc34e0b6d9e1ac02769cbddfc32c",
+      "package_sha256": "b49eea7cc98702bfaa9aaef39a0e978d8e8391ed63cd66ccd1e7e32c3d718d4e",
+      "evidence_status": "insufficient",
+      "selected_records": 45,
+      "selected_evidence_records": 35,
+      "relationships": 89,
+      "applicable_requirements": 0,
+      "package_bytes": 412400,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 45,
+        "used_relationships": 89,
+        "used_bytes": 412400,
+        "reached_depth": 4,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "pip",
+        "receive"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "JSA variant, PIP component, claim date and jurisdiction are unspecified.",
+        "Concurrent eligibility, disregarded income and additions are separate questions."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-035",
+      "question": "Can you receive both PIP and ESA?",
+      "section": "Personal Independence Payment",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "Can you receive both PIP and ESA?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-035.response.json.gz",
+      "archive_sha256": "666ddc874cc1c1f9b1b33e724f59a0dea56aab66f3bf97163631b95748b72cc7",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 37,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 855776,
+        "response_sha256": "2ea2ccdd03033bf2bd9588cfc08de0169678652c2acd6c35fc1ae70d1dbfc4de",
+        "duration_ms": 180
+      },
+      "context_id": "urn:sha256:56236c321e282e131d8aeaeed4c0fdeda9792a5059cd7d2c838c3b1c9fc9fefe",
+      "package_sha256": "710cec546e1b63e265d735912a044e8ba367bf6d4170ccf9fd2a09561bba78e3",
+      "evidence_status": "insufficient",
+      "selected_records": 46,
+      "selected_evidence_records": 35,
+      "relationships": 94,
+      "applicable_requirements": 0,
+      "package_bytes": 418795,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 46,
+        "used_relationships": 94,
+        "used_bytes": 418795,
+        "reached_depth": 5,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "pip",
+        "receive"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "uncovered_resolved_concept",
+          "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/esa-custody-regimes"
+          ]
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "ESA variant, PIP component, claim date and jurisdiction are unspecified.",
+        "Concurrent eligibility, income disregards and disability additions need separate evidence."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-036",
+      "question": "What is the relationship between PIP, Attendance Allowance and DLA?",
+      "section": "Personal Independence Payment",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What is the relationship between PIP, Attendance Allowance and DLA?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-036.response.json.gz",
+      "archive_sha256": "a515a2ec6925f1a9943a32718903097d5c0be49cc3d4d1296491fce6e01032a0",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 38,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 8754,
+        "response_sha256": "249835e247d52de026c9c96fac7a78a9217925659af018b899946c9924ec2f29",
+        "duration_ms": 105
+      },
+      "context_id": "urn:sha256:007179f556344be390afcfadbab1bef00905b9653eeb9adcbfcf906330c53b6d",
+      "package_sha256": "7df9e9c43a14b4d55876b24b5209da984f8bc60a7d44dccb76e27957ba806090",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "selected_evidence_records": 0,
+      "relationships": 0,
+      "applicable_requirements": 0,
+      "package_bytes": 4241,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 0,
+        "used_relationships": 0,
+        "used_bytes": 4241,
+        "reached_depth": 0,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "allowance",
+        "attendance",
+        "dla",
+        "pip",
+        "relationship"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_task",
+          "message": "No public concept alias resolves this task.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Relationship could mean age transition, replacement, co-payment or component overlap.",
+        "Jurisdiction, age and existing award status are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-037",
+      "question": "If you receive PIP and War Pensions Constant Allowance, how much would you get each week (please provide all variations)?",
+      "section": "Personal Independence Payment",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "If you receive PIP and War Pensions Constant Allowance, how much would you get each week (please provide all variations)?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-037.response.json.gz",
+      "archive_sha256": "32c70075634c514ad8fb126042ba58b6e2e521b3c4e4b1aa9e29faabf1b85c6e",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 39,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 8968,
+        "response_sha256": "595697789ec5a81408d89983cd543bcbef18c23220c67470ab9c3e9ffdf3137c",
+        "duration_ms": 55
+      },
+      "context_id": "urn:sha256:f0b7ffea23bb61421e632b568af5aa1b8af061f71d674c30c20a79b11e7f5cc8",
+      "package_sha256": "313cffe82a0f0c01c3769c7cdcfb94262594daab9d8af3b9f42f5c329dd91995",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "selected_evidence_records": 0,
+      "relationships": 0,
+      "applicable_requirements": 0,
+      "package_bytes": 4342,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 0,
+        "used_relationships": 0,
+        "used_bytes": 4342,
+        "reached_depth": 0,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "allowance",
+        "constant",
+        "get",
+        "much",
+        "pensions",
+        "pip",
+        "provide",
+        "receive",
+        "variations",
+        "war",
+        "week"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_task",
+          "message": "No public concept alias resolves this task.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "War Pensions Constant Allowance is not a fully resolved scheme/benefit name; clarify whether Constant Attendance Allowance is intended.",
+        "PIP component/rate, war-pension scheme, date and all variations are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-038",
+      "question": "Under what circumstances can a Citizen claim Carers Allowance?",
+      "section": "Carers Allowance",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "Under what circumstances can a Citizen claim Carers Allowance?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-038.response.json.gz",
+      "archive_sha256": "6eeb769ced208175e52b41b3c63d1f303a1649eab60197a05afc816c1a9b3edf",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 40,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 8750,
+        "response_sha256": "eac2eb09393c7328894a996cb03b5f328389eae46cfdac06da1cf9a2b0c70f83",
+        "duration_ms": 56
+      },
+      "context_id": "urn:sha256:94a755a02dbcb84728017b626d6a56a9ac1c216f98b416c2df625d834a7544e9",
+      "package_sha256": "19b048a25a98b8b02db89336ad52e68f1234310105a970df75228c799d654c42",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "selected_evidence_records": 0,
+      "relationships": 0,
+      "applicable_requirements": 0,
+      "package_bytes": 4239,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 0,
+        "used_relationships": 0,
+        "used_bytes": 4239,
+        "reached_depth": 0,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "allowance",
+        "carers",
+        "circumstances",
+        "citizen",
+        "claim"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_task",
+          "message": "No public concept alias resolves this task.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Jurisdiction, date, age, education, earnings and cared-for person benefit are unspecified.",
+        "Citizen does not establish residence or other legal conditions."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-039",
+      "question": "What impact does Carers Allowance have on other benefits which are being claimed?",
+      "section": "Carers Allowance",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What impact does Carers Allowance have on other benefits which are being claimed?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-039.response.json.gz",
+      "archive_sha256": "754bada8a7c2e6335aa47bd9cf1324d41a62e91fca835288dd3db3e8fc6f0e4a",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 41,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 8798,
+        "response_sha256": "041a7c01cae27d25df87bc35348f352fe16147dc80a83f44b66c6959a0cfb18f",
+        "duration_ms": 60
+      },
+      "context_id": "urn:sha256:0b7fec9021c30fe9e92621ecfdb582dff0a80cc8ad65d3d19d874caf63880163",
+      "package_sha256": "6bf40df694dacd6d7cfb85e4d8f24298d9c7e5cba8269de30cb95d61f89f4b55",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "selected_evidence_records": 0,
+      "relationships": 0,
+      "applicable_requirements": 0,
+      "package_bytes": 4262,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 0,
+        "used_relationships": 0,
+        "used_bytes": 4262,
+        "reached_depth": 0,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "allowance",
+        "benefits",
+        "carers",
+        "claimed",
+        "impact",
+        "other"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_task",
+          "message": "No public concept alias resolves this task.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "Other benefits is unbounded; distinguish the carer’s own awards from the cared-for person’s awards.",
+        "Entitlement, underlying entitlement, actual payment and benefit variants are not interchangeable."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    },
+    {
+      "id": "staff-040",
+      "question": "What happens to Carers Allowance if someone is caring for two or more people?",
+      "section": "Carers Allowance",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "version": "efb05c66616a9cd4328a86cf412780fe7bc7cf0b",
+        "question": "What happens to Carers Allowance if someone is caring for two or more people?"
+      },
+      "duplicate_of": null,
+      "archive": "staff-040.response.json.gz",
+      "archive_sha256": "116611a139b639d6155e9404ec3cd032f548f030211b2df711f42432b8eb4614",
+      "transport": {
+        "method": "tools/call",
+        "request_id": 42,
+        "http_status": 200,
+        "content_type": "text/event-stream",
+        "response_bytes": 8798,
+        "response_sha256": "4b4f3ab6de437b0be333b1d34c88b2abd9e1b6552097bb7f88dc7ea67c65fe0e",
+        "duration_ms": 58
+      },
+      "context_id": "urn:sha256:9f5bd9fdcbad0a294447d03b4982f35ae6317e5feb42ad0475c58db262de097e",
+      "package_sha256": "d6e45649043cf6f66d9b86525ed005fe073c4c906a6d931ce93bb114bb4f8b3e",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "selected_evidence_records": 0,
+      "relationships": 0,
+      "applicable_requirements": 0,
+      "package_bytes": 4261,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288,
+        "used_nodes": 0,
+        "used_relationships": 0,
+        "used_bytes": 4261,
+        "reached_depth": 0,
+        "truncated": false,
+        "omissions": []
+      },
+      "unresolved_terms": [
+        "allowance",
+        "carers",
+        "caring",
+        "more",
+        "people",
+        "someone",
+        "two"
+      ],
+      "reported_ambiguities": [],
+      "missing_evidence": [
+        {
+          "code": "no_evidence_requirements",
+          "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_task",
+          "message": "No public concept alias resolves this task.",
+          "ids": []
+        },
+        {
+          "code": "unresolved_terms",
+          "message": "The question contains terms outside the declared concept vocabulary.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null,
+      "direct_core_identical": true,
+      "answerability": "not-established-insufficient-context",
+      "assessor_ambiguities": [
+        "One carer supporting multiple people differs from multiple carers supporting one person.",
+        "Care hours per person, qualifying benefits and other claimants are unspecified."
+      ],
+      "assessment": {
+        "A_source_coverage": "candidate-locators-verified-completeness-not-established",
+        "B_semantic_coverage": "task-specific-profile-absent",
+        "C_retrieval": "observed-concept-resolution-not-an-answer-quality-score",
+        "D_traversal": "returned-custody-paths-do-not-establish-task-specific-guidance",
+        "E_context_assembly": "insufficient",
+        "F_provenance": "exact-pinned-core-parity-and-source-candidate-integrity-passed",
+        "G_boundaries": "passed-no-profile-no-ai-answer-scope-and-gaps-preserved",
+        "H_answerability": "not-established"
+      }
+    }
+  ],
+  "calls": [
+    {
+      "method": "initialize",
+      "request_id": 1,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 415,
+      "response_sha256": "f759bc2fcac24291cada23cacb9edc9ef37cc484b1e9317de8004a777e7ab60a",
+      "duration_ms": 1528
+    },
+    {
+      "method": "notifications/initialized",
+      "request_id": null,
+      "http_status": 202,
+      "content_type": "",
+      "response_bytes": 0,
+      "response_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "duration_ms": 61
+    },
+    {
+      "method": "tools/list",
+      "request_id": 2,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 9952,
+      "response_sha256": "6e5e4df24a07b308fcc12f97637c52160c6ea74beb309ed1f52b7dc5d25e1c86",
+      "duration_ms": 58
+    },
+    {
+      "method": "tools/call",
+      "request_id": 3,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 8671,
+      "response_sha256": "9a229d240841d6a5485cc7f9ed5aaef5bf68ae90a025a67376dd7b664f84b598",
+      "duration_ms": 108
+    },
+    {
+      "method": "tools/call",
+      "request_id": 4,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 849595,
+      "response_sha256": "02509da4cb0d9e6e15080c760fdf52682de207b767238889aa06f142d603226b",
+      "duration_ms": 224
+    },
+    {
+      "method": "tools/call",
+      "request_id": 5,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 8665,
+      "response_sha256": "3a5d5103b6e4cd776436594351ee02906b41155a0ce4cde4ef4fbf8b068e1b6b",
+      "duration_ms": 56
+    },
+    {
+      "method": "tools/call",
+      "request_id": 6,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 8807,
+      "response_sha256": "d2ac0ca9cd02875b1c9ffaad25dc87ec059c5e254552936525d94066d482ca75",
+      "duration_ms": 49
+    },
+    {
+      "method": "tools/call",
+      "request_id": 7,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 849689,
+      "response_sha256": "1be8fc6a1392c66414bf52420c1fbe31eade8f217dc09ef3499c487df1e488fa",
+      "duration_ms": 220
+    },
+    {
+      "method": "tools/call",
+      "request_id": 8,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 823161,
+      "response_sha256": "2f92ff709ab71413313402f7860399accce53949c01e0bc57ba0552f9bdd8ace",
+      "duration_ms": 155
+    },
+    {
+      "method": "tools/call",
+      "request_id": 9,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 823139,
+      "response_sha256": "0133e55f48581a9329a10d73cc1dc43b952bff56c5da1a038b754b8a1d8492fa",
+      "duration_ms": 270
+    },
+    {
+      "method": "tools/call",
+      "request_id": 10,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 8688,
+      "response_sha256": "cfc7ff2c63c6f5967b43d1c04c6851a22b14c6d8caa086e5a0a69a276df74c2c",
+      "duration_ms": 50
+    },
+    {
+      "method": "tools/call",
+      "request_id": 11,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 851882,
+      "response_sha256": "153b9d25e4c9f7e8f014e506f847e45663c3bcbd9b92edfdd68b51c3aba6e1c7",
+      "duration_ms": 211
+    },
+    {
+      "method": "tools/call",
+      "request_id": 12,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 823286,
+      "response_sha256": "67a1cae8ffc686ed66974b7654772b235154c26b66b899858440c66fb7362f42",
+      "duration_ms": 242
+    },
+    {
+      "method": "tools/call",
+      "request_id": 13,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 823076,
+      "response_sha256": "033c94caee0a35f1d91dd62929a038cc1ba11abffa0bb06bd11f27b4d00fc3af",
+      "duration_ms": 161
+    },
+    {
+      "method": "tools/call",
+      "request_id": 14,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 823270,
+      "response_sha256": "d8981a1a7d236f455512750e102d88bd74257a05bea4d2ac3afc58f4cdc1cfa0",
+      "duration_ms": 265
+    },
+    {
+      "method": "tools/call",
+      "request_id": 15,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 823278,
+      "response_sha256": "2b32ab277935e35015e1a99948bd1a56a1ae6ccf4cd584b8d420b8163c44448b",
+      "duration_ms": 178
+    },
+    {
+      "method": "tools/call",
+      "request_id": 16,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 823124,
+      "response_sha256": "1e193deac75db30680f268f85b2697c46cb2dfc5ef2337724a9388b69c1c47ca",
+      "duration_ms": 243
+    },
+    {
+      "method": "tools/call",
+      "request_id": 17,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 823112,
+      "response_sha256": "4d945047ac57ca45c088b5845c4b9325ccce6c07231056bd6d267b7d8af54689",
+      "duration_ms": 155
+    },
+    {
+      "method": "tools/call",
+      "request_id": 18,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 823130,
+      "response_sha256": "88fde5b18fd637c3e2f8f133e3b031c929e73ecfaf72c700636b10aa2749208a",
+      "duration_ms": 147
+    },
+    {
+      "method": "tools/call",
+      "request_id": 19,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 823098,
+      "response_sha256": "4433851ea200b774424196df0b9b7eb22d447c94321801c2bce29efa13e6dbe3",
+      "duration_ms": 244
+    },
+    {
+      "method": "tools/call",
+      "request_id": 20,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 8856,
+      "response_sha256": "21a03497854cf363b562bfe021cda4524db11491c3e4291189f22c96d06ba2f7",
+      "duration_ms": 53
+    },
+    {
+      "method": "tools/call",
+      "request_id": 21,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 822992,
+      "response_sha256": "5e9cc2c398818fc09f5d5d2a86f1b2c4f6972e891ee7f8464836996bcc5bde5c",
+      "duration_ms": 273
+    },
+    {
+      "method": "tools/call",
+      "request_id": 22,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 823054,
+      "response_sha256": "fddbf879e39519ec65381aa80b9b1990ceb30e57ca287fc64fe69228170454f0",
+      "duration_ms": 183
+    },
+    {
+      "method": "tools/call",
+      "request_id": 23,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 849464,
+      "response_sha256": "a38f7070f8304200b75a882e44ff51d77fc3721500ab06ccdc1c4d2258a54b0a",
+      "duration_ms": 293
+    },
+    {
+      "method": "tools/call",
+      "request_id": 24,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 835566,
+      "response_sha256": "fa7283310bd04d60363361eb7e2edb39389873999032c8d3ff6d4d0886b469b2",
+      "duration_ms": 190
+    },
+    {
+      "method": "tools/call",
+      "request_id": 25,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 823088,
+      "response_sha256": "979752c7bde78b570e43e75e4c7dbac5da023eca55ad3744893914b4573acb6c",
+      "duration_ms": 275
+    },
+    {
+      "method": "tools/call",
+      "request_id": 26,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 849482,
+      "response_sha256": "e4909fca6b929255464fc09a103dc35e69a65c1a6f9cf2071633a73b75503431",
+      "duration_ms": 187
+    },
+    {
+      "method": "tools/call",
+      "request_id": 27,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 8724,
+      "response_sha256": "1785025e72c09a527ebf8ae4c9f4b1fd208e37d0cb55ed575acf10fdc99aa7b6",
+      "duration_ms": 59
+    },
+    {
+      "method": "tools/call",
+      "request_id": 28,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 8682,
+      "response_sha256": "da6216095912cc31c72a3cb4fbc5e39345a2240b6dd88e723578004544bd863d",
+      "duration_ms": 132
+    },
+    {
+      "method": "tools/call",
+      "request_id": 29,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 842454,
+      "response_sha256": "27b72996e45eda9eb5f4ec4efde8e9f9d74f5e12ad90e4fbcb4c253e080cfdcb",
+      "duration_ms": 197
+    },
+    {
+      "method": "tools/call",
+      "request_id": 30,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 855780,
+      "response_sha256": "baa7ecbeb1c6f06cfb326badbf65fe56a9a087ffcea3960aaef77e9285f8f8a2",
+      "duration_ms": 266
+    },
+    {
+      "method": "tools/call",
+      "request_id": 31,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 8782,
+      "response_sha256": "4c5a0d42aa933419c900877d25e13895a896dae2d2f5607f217072206fad39f4",
+      "duration_ms": 55
+    },
+    {
+      "method": "tools/call",
+      "request_id": 32,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 8612,
+      "response_sha256": "25c085b5501b13774667fd586e9838f72ad70d1bf518740a16c28c5b006e70c3",
+      "duration_ms": 53
+    },
+    {
+      "method": "tools/call",
+      "request_id": 33,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 849478,
+      "response_sha256": "c91bfb8fb2f9594d897e8639b6ba13d8663fb11f449215f0ebd7d73a65f7daea",
+      "duration_ms": 167
+    },
+    {
+      "method": "tools/call",
+      "request_id": 34,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 8720,
+      "response_sha256": "639446526bca834934306d4f34ba157993f5ac810431ffb77b7e5a246c9b42c2",
+      "duration_ms": 58
+    },
+    {
+      "method": "tools/call",
+      "request_id": 35,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 8682,
+      "response_sha256": "426ab3c344267d54d5b7a023679bbffea8ce73fef346120c50810b85f2a746e4",
+      "duration_ms": 111
+    },
+    {
+      "method": "tools/call",
+      "request_id": 36,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 842450,
+      "response_sha256": "85d7be8c4e1ee97ab0a1809e2b60ea7e9f674fa4c3344a95ff485794e5638413",
+      "duration_ms": 146
+    },
+    {
+      "method": "tools/call",
+      "request_id": 37,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 855776,
+      "response_sha256": "2ea2ccdd03033bf2bd9588cfc08de0169678652c2acd6c35fc1ae70d1dbfc4de",
+      "duration_ms": 180
+    },
+    {
+      "method": "tools/call",
+      "request_id": 38,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 8754,
+      "response_sha256": "249835e247d52de026c9c96fac7a78a9217925659af018b899946c9924ec2f29",
+      "duration_ms": 105
+    },
+    {
+      "method": "tools/call",
+      "request_id": 39,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 8968,
+      "response_sha256": "595697789ec5a81408d89983cd543bcbef18c23220c67470ab9c3e9ffdf3137c",
+      "duration_ms": 55
+    },
+    {
+      "method": "tools/call",
+      "request_id": 40,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 8750,
+      "response_sha256": "eac2eb09393c7328894a996cb03b5f328389eae46cfdac06da1cf9a2b0c70f83",
+      "duration_ms": 56
+    },
+    {
+      "method": "tools/call",
+      "request_id": 41,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 8798,
+      "response_sha256": "041a7c01cae27d25df87bc35348f352fe16147dc80a83f44b66c6959a0cfb18f",
+      "duration_ms": 60
+    },
+    {
+      "method": "tools/call",
+      "request_id": 42,
+      "http_status": 200,
+      "content_type": "text/event-stream",
+      "response_bytes": 8798,
+      "response_sha256": "4b4f3ab6de437b0be333b1d34c88b2abd9e1b6552097bb7f88dc7ea67c65fe0e",
+      "duration_ms": 58
+    }
+  ],
+  "limitations": [
+    "No model responses or individual entitlement decisions were generated by this run.",
+    "A boundary-test pass is not an answered staff question or a quality score.",
+    "Source candidates locate acquired evidence; they are not complete legal answers or an expanded Ask profile.",
+    "The underlying index remains the immutable custody profile. This evaluation does not change it.",
+    "No private correspondence, contact details or collaborative-room links are evaluation inputs.",
+    "No model-token savings, monetary savings or provider comparison is established."
+  ]
+}

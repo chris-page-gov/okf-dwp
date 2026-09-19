@@ -55,6 +55,16 @@ The [official connection guide](https://developers.openai.com/plugins/deploy/con
 
 The `/okf/mcp` path matters. A localhost address, the Explorer page URL and the raw bundle URL are not this remote MCP endpoint.
 
+### A browser shows 405
+
+Opening `https://ask-okf.crpage.chatgpt.site/okf/mcp` directly in a browser returns
+**405 Method Not Allowed** because that visit uses `GET`. The MCP endpoint accepts
+`POST` calls from connected clients. Enter it in the connection settings above;
+use the [service information page](https://ask-okf.crpage.chatgpt.site/) for a
+normal browser visit. A 405 from a direct browser visit does not show that the
+MCP service is unavailable. The endpoint and readiness response were rechecked
+on 19 September 2026 after this behaviour was reported.
+
 ## Five-minute presentation
 
 ### 1. Show the separation
