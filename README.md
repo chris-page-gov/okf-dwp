@@ -8,13 +8,15 @@ okf_version: "0.2"
 
 **An independent, unofficial experimental exemplar. Not an official DWP document, benefits advice or an entitlement calculator.**
 
-**[What changed: changelog](CHANGELOG.md)** · [Current work log](docs/work-log-2026-09-20.md)
+**[What changed: changelog](CHANGELOG.md)** · [Current work log](docs/monday-delivery-work-log.md)
 · [Backlog and acceptance checks](docs/backlog.md) · [How to repeat the method](docs/methodology.md)
 · [What we learned](docs/retrospective.md)
+· [Monday handover and demonstration](docs/monday-handover-2026-09-21.md)
 
 This repository turns public Department for Work and Pensions (DWP) guidance into source-linked records, a YAML-LD semantic graph and an indexed OKF Explorer research candidate. It began with a [Pension Credit pilot covering volumes 13 and 14](https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide), expanded to the [full Decision makers’ guide (DMG)](https://www.gov.uk/government/collections/decision-makers-guide-staff-guide), and now also preserves the separate [Advice for decision making (ADM) manual](docs/adm-acquisition.md). It demonstrates how a specialist or an AI can find evidence, inspect relationships and see what remains uncertain.
 
-**New to the project?** Follow the [practical learning path](docs/learning-path.md),
+**New to the project?** Open the [learning website](https://chris-page-gov.github.io/okf-dwp/docs/learning-path.html)
+or follow its [Markdown source](docs/learning-path.md),
 or read [how the web edition is published](docs/learning-website.md),
 then use the [plain-English glossary](docs/glossary.md) when a benefit name or
 technical term appears. It explains Search, Ask OKF and AI answering through
@@ -27,16 +29,50 @@ explicit. Neither replaces the exact receipts below.
 
 [Verified Pension Credit semantic exemplar](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7d3c69df0571b8d5206c8edce92963d99979cb5c%2Fbundle%2Fokf-bundle.yamlld&view=graph#term/capital-disregards) · [Original meeting demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.yamlld&q=84351#question/pc001) · [Read the pilot bundle](bundle/index.md) · [Ten-minute meeting walkthrough](docs/meeting-walkthrough.md) · [Discovery findings](docs/discovery.md) · [AI interrogation guide](AI_USAGE.md) · [Public notice and rights](NOTICE.md)
 
-## Household candidate in progress
+## Current public release: household evidence
 
-The next [household evidence increment](docs/household-evidence-expansion.md) adds
+The [public evidence service](https://ask-okf.crpage.chatgpt.site/) now runs
+**0.5.0**, using fixed DWP source
+`3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84`. The
+[Monday handover](docs/monday-handover-2026-09-21.md) gives a ten-minute route
+through the evidence and its limits.
+
+The [household evidence increment](docs/household-evidence-expansion.md) adds
 complete qualifying pages and [selected dated statutory text](docs/legal-body-evidence.md).
-It currently retains 176 of 177 known candidate-page occurrences across the staff
+It retains **176 of 177 known candidate-page occurrences** across the staff
 questions. All 40 packages remain insufficient, with 203 named obligations still open.
 This measures evidence discovery, not answer accuracy or specialist acceptance.
+The 20 selected statutory units are additional source extracts, not 20 complete
+Acts or a complete legal dependency set. They do not change the 513-PDF manual
+count below.
 [Performance evidence](docs/context-performance.md), the [new trial protocol](docs/monday-model-trials.md)
-and the [Monday delivery log](docs/monday-delivery-work-log.md) distinguish candidate
-work from the published baseline below.
+and the [Monday delivery log](docs/monday-delivery-work-log.md) record separate
+engineering, delivery and answer-quality checks.
+
+The [actual SDK receipt](validation/compact-delivery/v0.5.0/sdk-receipt.json)
+passes **seven full-package cases and four compact cases** across four approved
+source versions. SDK means software development kit: here it is the external
+client used to compare service output with the shared evidence engine. The
+[public browser observation](validation/compact-delivery/v0.5.0/README.md) passes
+the care-home evidence journey in **Chrome, Firefox and WebKit**. Chrome and
+WebKit also pass strict console checks; Firefox retains two hosting-cookie
+warnings. The care-home package contains 35 records and 50 relationships at a
+262,144-byte budget and remains **insufficient and truncated**. No AI answer is
+generated. The separate historical browser journey suite was **not run** for
+0.5.0; the earlier version's observations remain historical.
+
+A [real public Chrome journey](docs/household-reader-public-verification.md)
+verified conceptual filtering, statutory text and graph links, source/audit dates,
+the care-home heading and unresolved SDA branches against 270 immutable corpus
+files. It had no console or network errors. Both assembled packages remained
+insufficient and truncated. Its cumulative 16.6-second run is one observation,
+not a general speed guarantee.
+
+The [household Reader checks](docs/household-reader-verification.md) also pass in
+Chrome, Firefox and WebKit against the exact local candidate. They verify all 20
+statutory extracts, useful directed relationships, date distinctions, the
+care-home qualification and both unresolved SDA meanings. They do not establish
+public deployment or complete legal applicability.
 
 ## Team handover and current work
 
@@ -51,22 +87,25 @@ passed the declared navigation, evidence and keyboard journeys, verifying actual
 application and corpus bytes. These are reviewable research outputs. All supplied tasks retain explicit gaps;
 no specialist acceptance or complete benefits answer is claimed.
 
-The [20 September team handover](docs/team-handover-2026-09-20.md) links the
-published demonstration and explains the remaining semantic work before Monday.
+The [Monday handover](docs/monday-handover-2026-09-21.md) links the current
+demonstration and remaining semantic work. The
+[20 September team handover](docs/team-handover-2026-09-20.md) preserves the
+earlier checkpoint.
 The [delivery and acceptance ledger](docs/backlog-work-packages.md) separates
 implementation from independent review, so a review gate cannot hide unfinished
 work. The bounded staff concepts/relationships (BL005) and task profiles (BL007)
 are delivered. Broader domain expansion and evidence closure remain explicit
 implementation packages; mention classifications do not complete those packages.
 
-The [public evidence service](https://ask-okf.crpage.chatgpt.site/) now serves the
-new staff corpus and preserves both earlier replay versions. Its
+The earlier public service **0.4.0** used the staff corpus at `9de52acf…`. Its
 [0.4.0 SDK observation](validation/compact-delivery/v0.4.0/sdk-receipt.json) passed
 five exact-engine cases and compact reconstruction for all three source versions.
 The [public staff reader check](validation/compact-delivery/v0.4.0/browser/staff-native/run-summary.json)
 passes functional evidence checks in all three engines. Chrome and WebKit pass
 strict console checks; Firefox retains hosting cookie warnings (BL023).
-Use the [Monday demonstration](docs/monday-demo-2026-09-21.md) for the current route.
+Those observations remain unchanged. Use the
+[Monday handover](docs/monday-handover-2026-09-21.md) for the current 0.5.0 route;
+the new service preserves all three earlier approved source versions explicitly.
 
 ## Preserved published baseline: evidence review and DMG navigation
 
@@ -160,7 +199,7 @@ assembly-budget truncation. Forty-two source candidates were separately verified
 These are honest coverage gaps, not 40 answered questions or expert-approved
 benefits conclusions. No token or monetary saving has been established.
 
-The [full-corpus remote run](validation/corpus-questions/receipt.json) now
+The historical [19 September full-corpus remote run](validation/corpus-questions/receipt.json)
 tests all 40 questions and three boundary controls against the combined manuals.
 All 40 staff questions return candidate evidence, including ADM pages. Twelve retain
 an independently located candidate page and 21 retain a page from a candidate
@@ -197,17 +236,25 @@ protections.
 
 ## Ask OKF: governed context assembly
 
-The current candidate uses both captured manuals through the additive
-[corpus descriptor](full-dmg/okf-corpus-context.json), at explicit content version
-`bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752`. Follow the
-[new five-minute presentation and bounded ChatGPT rehearsal](docs/remote-mcp-demo.md#five-minute-full-corpus-presentation).
+The current public service uses both captured manuals and the household/statutory
+semantic layer at content version `3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84`.
+Open [that fixed source in Explorer](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84%2Fcombined%2Fokf-explorer.json#overview)
+or follow the [Monday handover](docs/monday-handover-2026-09-21.md). A fixed source
+link does not freeze the Explorer application; its local Reader checks and the
+public compact-service checks have separate receipts.
+
+The preserved full-corpus baseline uses the additive
+[corpus descriptor](full-dmg/okf-corpus-context.json), at content version
+`bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752`. Its
+[five-minute presentation and bounded ChatGPT rehearsal](docs/remote-mcp-demo.md#five-minute-full-corpus-presentation)
+remain available as historical demonstrations.
 Its 43-case remote evaluation, three-case live SDK verification, bounded ChatGPT
 observation and published-browser journeys are recorded.
 The general corpus returns
 candidate evidence and explicit insufficiency, including for imprisonment; it
 does not inherit a completeness claim from the older custody profile.
 
-### Published Explorer and browser tools
+### Historical published Explorer and browser-tool checks
 
 [Open the verified full-corpus demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fbf50ef8d91b9f1ccc2cbdb354198eae74c9ed752%2Ffull-dmg%2Fokf-corpus-context.json&q=imprisonment#overview).
 On 19 September, Explorer commit `a8628fdb77c1c03a5d99b6d105d9e4b8722088d7`

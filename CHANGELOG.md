@@ -8,8 +8,30 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
-## Unreleased household and statutory candidate
+## Household delivery follow-up — 20 September 2026
 
+- Independently verify the successor model critique against its frozen inputs,
+  answer hashes and selected evidence. Recompute literal citation diagnostics,
+  retain the defective locator and keep semantic opinions subject to human review.
+- Verify the full household Reader on the public website in Chrome: conceptual
+  facets, statutory text and graph links, source/audit date separation, care-home
+  headings and unresolved SDA branches. Retain the failed first harness assumption
+  and all 16 execution artefacts, with bounded offline integrity controls.
+- Retain a separate nine-attempt model experiment: seven parser-accepted responses,
+  six mechanical passes including both empty-evidence controls, one bad locator,
+  a rejected formatter sequence and a timeout. Record 14 claims, 21 citations and
+  model-authored scope concerns; no substantive paired success or specialist
+  approval is claimed. Preserve all earlier experiments.
+- Prepare a current Voice rehearsal sheet with separate speech, tool-access and
+  room-audio checks, plus a verified-evidence fallback. Actual Voice and room
+  acceptance remain untested.
+- Publish service 0.5.0 from the merged runtime with four approved source
+  versions. Seven actual full-context SDK cases and four compact reconstructions
+  pass; all three public browser evidence journeys pass. Retain two Firefox
+  hosting-cookie warnings and keep its strict console check failed.
+- Add an explicit observation layout so a new release can declare historical
+  browser journeys not run. Verify the bound artefacts without inventing a pass
+  or changing earlier receipts.
 - Extend the staff concepts to 51 and selected whole DMG/ADM pages to 96, keeping
   household headings, conditions, dated transitions and neutral Income Support.
 - Add 20 selected dated statutory units, 43 references and one verified metadata
@@ -22,6 +44,17 @@ Implementation ownership and handovers belong in the
   prepare separate current-candidate checks and paired model trials.
 - Retain a portable engine-only ambiguity/performance experiment and strengthen
   source-plane identity to cover the statutory acquisitions as well as PDFs.
+- Verify all 20 statutory extracts and links, directed graph routes, source/audit
+  date separation, care-home qualifications and unresolved SDA branches in three
+  local browsers. Preserve two failed harness attempts and 41 hashed artefacts.
+- Freeze six new model inputs and retain five actual subscription attempts with
+  no accepted answers. Hold further calls after event-format mismatches and two
+  timeouts; investigate separately without changing the frozen experiment.
+- Bound retained-observation file reads and reject symlinked manifests, artefacts
+  or parent directories before opening them; preserve the original receipts.
+- Prepare a separately reviewed model experiment with strict observed CLI-event
+  recognition and reversible context dictionaries. Six exact round trips pass;
+  substantive inputs are 12–15% smaller, without an answer-quality or speed claim.
 
 ## Learning website — 20 September 2026
 

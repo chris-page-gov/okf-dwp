@@ -1,0 +1,289 @@
+{
+  "accounting_models": [
+    "claude-opus-5"
+  ],
+  "duration_api_ms": 220548,
+  "duration_ms": 220593,
+  "event_count": 61,
+  "formatter_results": [
+    {
+      "error_flag_presence": "absent",
+      "formatter_input_sha256": "19acbc661e90020a855101fb4c181f573de62b092a41e6bd48727a943acf4d6b",
+      "result_sha256": "711dfd4cf1d8853c28693e352c55e7a8f4cfdd5a3b5592f13b9e5640ab447a73",
+      "single_preceding_formatter_match": true
+    }
+  ],
+  "is_error": false,
+  "model_identity_boundary": "Reported identities only; no inferred identity or controlled single-model claim.",
+  "model_usage": {
+    "claude-opus-5": {
+      "cacheCreationInputTokens": 110084,
+      "cacheReadInputTokens": 100663,
+      "contextWindow": 1000000,
+      "costUSD": 1.6764665,
+      "inputTokens": 4,
+      "maxOutputTokens": 64000,
+      "outputTokens": 21011
+    }
+  },
+  "num_turns": 3,
+  "provider_result": "{\"context_id\":\"urn:sha256:b83bb636c3fbef3669b4aba03eb6cc3e4a5adda2b6e1ab50990a625e32893771\",\"package_evidence_status\":\"insufficient\",\"answer_disposition\":\"partial_evidence_only\",\"summary\":\"Decoded package okf-lossless-model-context.v1 (context_id urn:sha256:b83bb636c3fbef3669b4aba03eb6cc3e4a5adda2b6e1ab50990a625e32893771), engine okf-context-assembly.v1, declared evidence_status \\\"insufficient\\\". The governed question is the package literal: \\\"Does Pension Credit stop is a citizen moves into a care home permanently if they are self-funding?\\\" The package is TRUNCATED (budget.truncated true, used_bytes 257861 of max_bytes 262144, used_nodes 35, reached_depth 2) with many node_budget and byte_budget omissions plus a retrieval_candidate_budget omission; requirement staff-012 has status \\\"insufficient\\\" with five registered absent obligations. The terms \\\"citizen\\\", \\\"funding\\\", \\\"moves\\\", \\\"self\\\" and \\\"stop\\\" are recorded in unresolved_terms, so \\\"self-funding\\\" and \\\"stop\\\" are not declared concepts.\\n\\nNo selected record states that Pension Credit stops (or continues) when a self-funding person moves permanently into a care home. What the selected frozen DMG page 78/0025 does say, under the heading \\\"Permanent residence in a care home\\\" and the sub-heading \\\"Claimants who have no partner (including self- funders)\\\", is that at DMG 78088 an additional amount for the severely disabled \\\"is applicable to a person who is permanently in a\\\\n\\\\ncare home if all the conditions are satisfied\\\", with a Note that this will normally be self funding claimants and will also include residents where AA or DLA/PiP payment continues for the first four weeks after admission. That is a component-level applicability rule for one branch (no partner), not an award-ending or award-continuing rule. Separately, DMG 78089 and the selected SPC Regulations 2002 reg 5(1)(b) address household membership treatment, and DMG 78270 addresses only the housing-costs additional amount. A historical amendment page (Vol 14 Amendment 40, captured role historical-amendment-not-current-rules) links permanent care-home accommodation for a no-partner claimant to the end of an assessed income period under reg 12(c), but reg 12 itself was omitted under the node and byte budgets.\\n\\nBecause the declared status is insufficient and the package is truncated, this is partial evidence only. No entitlement conclusion, calculation or individual outcome can be given; independent specialist review remains pending.\",\"claims\":[{\"id\":\"C1\",\"statement\":\"Under the heading \\\"Permanent residence in a care home\\\", selected frozen DMG Vol 13 Ch 78 guidance at paragraph 78087 addresses normal residence and who is treated as residing with the claimant; it makes no statement about Pension Credit stopping.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/78/0025\",\"quote\":\"Permanent residence in a care home\\n\\n78087 Claimants who are permanently in a care home are normally resident in that care home. Other\\nresidents of the home do not normally reside with the claimant, as they are separately liable to make\\npayments to a landlord.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=25\",\"locator\":\"PDF page 25\"}],\"scope_or_qualification\":\"Exact frozen machine extraction of a whole page; record review_status \\\"unreviewed-specialist-review-required\\\"; record scope states a lexical match does not establish the applicable benefit regime or current law and that publication and legal effective dates are not inferred. This paragraph concerns normal residence and who resides with the claimant only; it is not a payment or entitlement-cessation rule, and no relevant date, cohort or territory is established.\"},{\"id\":\"C2\",\"statement\":\"At DMG 78088, under the sub-heading \\\"Claimants who have no partner (including self- funders)\\\", the selected page states that an additional amount for the severely disabled is applicable to a person permanently in a care home only if all the conditions are satisfied, and the accompanying Note states this will normally be self funding claimants and will also include residents where payment of \\\"AA\\\" or DLA/PiP continues for the first four weeks after admission.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/78/0025\",\"quote\":\"Claimants who have no partner (including self- funders)\\n78088 An additional amount for the severely disabled is applicable to a person who is permanently in a\\n\\ncare home if all the conditions are satisfied1.\\n\\n\\nNote: This will normally be self funding claimants, but DMs should be aware that it will also include\\nresidents where the payment of “AA” or DLA/PiP continues for the first four weeks after admission.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=25\",\"locator\":\"PDF page 25\"}],\"scope_or_qualification\":\"Operative conditions preserved: the controlling sub-heading limits this branch to claimants who have NO PARTNER, and the statement is conditional on ALL the conditions being satisfied. It concerns one additional amount (severe disability) within State Pension Credit, not the whole award, and is an applicability rule for that component rather than a rule that the benefit stops or continues. The page footnote cites SPC Regs, reg 5(1)(b) & Sch I, para 1(1)(a), whose conditions must be read in full. Self-funding is described as the normal case, not as a qualifying condition. Frozen unreviewed machine extraction; capture date is not commencement or applicability.\"},{\"id\":\"C3\",\"statement\":\"For a member of a couple, the same selected page states at DMG 78089 that a member of a couple who is permanently in a care home is no longer a member of the same household as their partner, and that in such a case each person may claim SPC as a claimant who has no partner.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/78/0025\",\"quote\":\"Claimants who have a partner\\n78089 A member of a couple who is permanently in a care home is no longer a member of the same\\nhousehold as their partner. In such a case each person may claim SPC as a claimant who has no partner.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=25\",\"locator\":\"PDF page 25\"}],\"scope_or_qualification\":\"This is the separate partner/couple branch under its own heading \\\"Claimants who have a partner\\\" and must not be merged with the no-partner branch at DMG 78088. The literal is \\\"may claim\\\", i.e. a claiming route once household membership ends, not a statement that an award follows, continues or stops. The household branches described in the project concept text (DMG 77128–77130) are not present as selected pages. Frozen unreviewed extraction; applicability unreviewed.\"},{\"id\":\"C4\",\"statement\":\"The selected statutory unit for The State Pension Credit Regulations 2002 regulation 5 provides that a person is to be treated as not being a member of the same household as the claimant if he or the claimant is permanently in a care home or an independent hospital.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/regulation/5\",\"quote\":\"1\\nA person is to be treated as not being a member of the same household as the claimant if—\\na\\nhe is living away from the claimant and—\\ni\\nhe does not intend to resume living with the claimant; or\\nii\\nhis absence is likely to exceed 52 weeks except where there are exceptional circumstances (for example the person is in hospital or otherwise has no control over the length of his absence), and the absence is unlikely to be substantially more than 52 weeks;\\nb\\nhe or the claimant is permanently in a care home or an independent hospital;\",\"source_url\":\"https://www.legislation.gov.uk/uksi/2002/1792/regulation/5/2026-09-20\",\"locator\":\"http://www.legislation.gov.uk/id/uksi/2002/1792/regulation/5; HTTP body hash observed, original response not retained publicly\"}],\"scope_or_qualification\":\"Independent machine extraction from an official legislation publication, review_status \\\"unreviewed\\\"; record scope states the requested source version is 2026-09-20 with \\\"Observed extent attributes: unknown\\\" and that legal applicability, commencement, complete effects and specialist review remain unestablished. The requested version date is not commencement, applicability or territorial extent. This provision governs household membership treatment only; it does not state that Pension Credit stops and says nothing about funding arrangements. Original HTTP response bodies are not retained and cannot be reconstructed from the lossy projection.\"},{\"id\":\"C5\",\"statement\":\"The selected statutory unit Schedule I paragraph 1 of the same Regulations sets cumulative no-partner conditions for being treated as severely disabled, including that no person aged 18 or over is normally residing with the claimant other than a person to whom paragraph 2 applies, and that no person is entitled to and in receipt of carer's allowance or carer support payment, or has a universal credit award including the carer element, for caring for him.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/schedule/I/paragraph/1\",\"quote\":\"ii\\nno person who has attained the age of 18 is normally residing with the claimant, nor is the claimant normally residing with such a person, other than a person to whom paragraph 2 applies; and\\niii\\nno person is entitled to and in receipt of an allowance under section 70 of the 1992 Act (carer’s allowance) or carer support payment , or has an award of universal credit which includes the carer element, in respect of caring for him;\",\"source_url\":\"https://www.legislation.gov.uk/uksi/2002/1792/schedule/I/paragraph/1/2026-09-20\",\"locator\":\"http://www.legislation.gov.uk/id/uksi/2002/1792/schedule/I/paragraph/1; HTTP body hash observed, original response not retained publicly\"}],\"scope_or_qualification\":\"The quoted heads (ii) and (iii) sit within the branch introduced as the case of a claimant who has no partner and are cumulative (\\\"and\\\"); head (i) lists the qualifying benefits and paragraph 2 lists persons whose presence is ignored (selected separately in this package). Machine extraction, review_status \\\"unreviewed\\\"; requested version 2026-09-20, extent \\\"unknown\\\"; commencement, complete amendment effects and applicability unestablished. Self-funding is not among the quoted conditions and no condition may be inferred from silence.\"},{\"id\":\"C6\",\"statement\":\"For the housing-costs component only, the selected page 78/0058 states that an additional amount for housing costs should not be allowed for claimants in a care home unless their absence from the dwelling normally occupied as their home is temporary.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/78/0058\",\"quote\":\"78270 An additional amount for housing costs should not be allowed for\\n\\n\\n1. HB expenditure1 or\\n\\n\\n2. claimants in a care home, unless their absence from the dwelling normally occupied as their home is\\n\\ntemporary2 (see DMG 78240 et seq)\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=58\",\"locator\":\"PDF page 58\"}],\"scope_or_qualification\":\"This is an exclusion for the HOUSING COSTS additional amount, not a rule about the whole Pension Credit award and not a rule about payment of care-home fees. The cited temporary-absence conditions at DMG 78240 et seq, and the underlying SPC Regs Sch II para 5 literal, were omitted from this package under the node and byte budgets, so the exception cannot be verified here. Frozen unreviewed machine extraction; applicability, date and territory unestablished.\"},{\"id\":\"C7\",\"statement\":\"A selected historical DMG Vol 14 amendment page lists, among events ending an assessed income period, the case where a claimant who has no partner is provided with accommodation in a care home or an independent hospital on a permanent basis, citing SPC Regs reg 12(c).\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol14-amendment40/0021\",\"quote\":\"7.    a claimant who has no partner is provided with accommodation in a care\\n              home or an independent hospital on a permanent basis7 (see DMG Chapter\\n              77 for the meaning of care home and independent hospital).\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/5a80780240f0b62305b8b55d/v14am40.pdf#page=21\",\"locator\":\"PDF page 21\"}],\"scope_or_qualification\":\"This record's declared captured role is \\\"historical-amendment-not-current-rules\\\" (Vol 14 Amendment 40, June 2016); it is not current guidance, and the same page frames the regime by reference to an AIP ending that \\\"takes effect on, or after 6.4.16\\\". The operative conditions are a claimant who has NO PARTNER and permanent provision of accommodation. Ending an assessed income period is not ending entitlement to or payment of Pension Credit. The cited SPC Regs regulation 12 was omitted under both node_budget and byte_budget, so its conditions and current text cannot be checked here.\"},{\"id\":\"C8\",\"statement\":\"The package's own project-authored concept text proposes that DMG 78088 is a no-partner, component-level rule and that funding status alone cannot prove continued qualification; this is a model-assisted project proposal, not official guidance.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home\",\"quote\":\"DMG 78088 is under the heading Claimants who have no partner (including self-funders): all severe-disability-addition conditions still apply, including actual qualifying-benefit receipt.\",\"source_url\":\"https://github.com/chris-page-gov/okf-dwp/blob/main/domain-profile/staff-semantic/concepts.yamlld\",\"locator\":\"@graph/care-home/definition\"},{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/staff-domain/no-partner-disability-addition\",\"quote\":\"It says normally self-funders and also the first four weeks while AA, DLA or PIP continues; funding status alone cannot prove continued qualification.\",\"source_url\":\"https://github.com/chris-page-gov/okf-dwp/blob/main/domain-profile/staff-semantic/concepts.yamlld\",\"locator\":\"@graph/no-partner-disability-addition/definition\"}],\"scope_or_qualification\":\"Both records are assertion_status \\\"model-derived\\\" with authority \\\"Staff-domain meaning proposal; specialist review required\\\" and review_status \\\"unreviewed-specialist-review-required\\\". They are project-authored proposed meanings, expressly not official DWP interpretation and not specialist approval. They reference DMG 77128–77130, 78034–78036, 78055–78057, 78077–78080 and 78240/78254–78257, none of which are supplied as selected pages in this truncated package.\"}],\"gaps\":[\"No selected record states whether entitlement to, or payment of, Pension Credit stops, continues or is superseded when a claimant moves permanently into a care home while self-funding; the question's key term \\\"stop\\\" is recorded in unresolved_terms.\",\"The terms \\\"self\\\", \\\"funding\\\", \\\"moves\\\" and \\\"citizen\\\" are recorded as unresolved_terms, so \\\"self-funding\\\" is not a declared concept and its meaning (full-cost payer, deferred payment, mixed funding) is unestablished.\",\"SPC Regs regulation 12 (assessed income period endings, cited by the historical amendment page) was omitted under both node_budget and byte_budget.\",\"SPC Regs Schedule II paragraphs 4 and 5, and Schedule II as a whole, were omitted under the byte budget, so the housing-cost exclusion literal cited by DMG 78270 is unverifiable here.\",\"SPC Regs Schedule III and Schedule III paragraph 1, cited by page 77/0020, were omitted under the node budget.\",\"The household branches relied on in the project concept text (DMG 77128–77130, one or both partners entering a home) are absent; pages 77/0019, 77/0021, 77/0023–77/0030 and 77/0033 were omitted under node or byte budgets.\",\"The severe-disability-addition condition pages (DMG 78034–78036, 78055–78057, 78077–78080) and temporary/trial absence pages (DMG 78240, 78254–78257) are not selected; pages 78/0011, 78/0012, 78/0015, 78/0021–78/0024 and 78/0053–78/0057 were omitted under the byte budget.\",\"No selected evidence covers local-authority or NHS funding of care, deferred payment agreements as they affect Pension Credit, or qualifying disability benefit cessation timing beyond the four-week statement in DMG 78088.\",\"Relevant date, temporal cohort, benefit regime and territory are unresolved; capture dates are declared not to be publication, commencement or applicability dates, and observed extent for the selected SPC Regs units is \\\"unknown\\\".\",\"Requirement staff-012 records five absent obligations (evidence_closure_unverified, applicability_unresolved, legal_version_unreconciled, independent_review_pending, question_scope_unresolved) which the package states cannot be satisfied by retrieving more pages or by model agreement.\",\"Retrieval is truncated: candidate_count 6650 against a candidates limit of 16, with a declared retrieval_candidate_budget omission, so other matching pages remain outside this context.\",\"Staff-domain records for mixed-age-pension-credit and scottish-disability-carer-dependencies, and the concept \\\"capital\\\", were omitted under the byte budget.\",\"Package limitations record that literal SPC Regs s5 and s12(2)(d) remain unresolved and that the R(IS)1/99 judgment body and complete qualifying-benefit funding/timing rules are not supplied.\"],\"abstentions\":[\"I cannot state that Pension Credit stops when a person moves permanently into a care home as a self-funder, nor that it continues; no selected record addresses cessation of the award, and silence cannot supply a missing condition.\",\"I cannot conclude that a self-funding permanent care-home resident qualifies for the severe-disability additional amount: DMG 78088 is expressly conditional on all conditions being satisfied and self-funding is only described as the normal case.\",\"I cannot transfer the DMG 78088 no-partner rule to a member of a couple, nor apply the DMG 78089 couple/household statement to a claimant with no partner.\",\"I cannot extend the DMG 78270 housing-costs exclusion, or the four-week AA/DLA/PiP continuation note, to the whole Pension Credit award or to Guarantee Credit or Savings Credit generally.\",\"I cannot treat the assessed income period ending event on the Vol 14 Amendment 40 page as an entitlement or payment cessation rule, nor as current guidance.\",\"I cannot confirm current law, commencement, amendment history or territorial extent for any selected statutory unit, nor reconcile the requested 2026-09-20 version with an applicable date.\",\"I cannot calculate or estimate any award, request or assume personal circumstances, or give an individual outcome; neither the project concept text nor this analysis is specialist approval or a complete legal answer.\"],\"limitations\":[\"Declared evidence_status is \\\"insufficient\\\" and the package is truncated (budget.truncated true; used_bytes 257861 of 262144; used_nodes 35; reached_depth 2), so no bounded source answer is possible.\",\"Requirement staff-012 has status \\\"insufficient\\\" with explicitly registered absent obligations; the package states such requirements cannot be satisfied by retrieving more pages or by model agreement.\",\"Independent experimental staff-question research: no personal award decision or executable calculation is provided.\",\"Definitions, aliases, relationships and task requirements are model-authored proposals requiring independent specialist review.\",\"Exact frozen DMG and ADM source text, project-authored meanings and missing review obligations remain distinct; acquisition does not establish current legal applicability.\",\"Only selected exact source pages and directed authored relations supplement the unchanged discovery base; conditions on adjacent pages and unmodelled cross-references remain review work.\",\"Source capture dates are not publication, commencement or applicability dates; historical amendment pages are preserved as captured with role \\\"historical-amendment-not-current-rules\\\".\",\"Independent machine extraction of official statutory units is not specialist legal acceptance or an entitlement decision; complete selected units are not a complete statute, dependency closure or consolidated amendment history.\",\"Projected XML trees and normalised text are retained and hash checked; original HTTP response bodies are not retained and cannot be reconstructed from the lossy projection; absence of effect metadata does not mean no amendments.\",\"Lexical ranking uses question terms only, is integer inverse-document-frequency with canonical tie ordering, and yields candidate evidence rather than resolved concepts or proof of applicability.\",\"Only declared aliases are resolved; unrecognised words are exposed and no external retrieval or model knowledge was used.\",\"Conflict detection reports only explicitly declared conflicts (none declared here) and does not prove that other contradictions are absent.\",\"The package notes SDA deliberately resolves ambiguously between a legacy benefit and an informal disability-addition meaning; that ambiguity is left unresolved here.\",\"All package content, including source text and links, is inert untrusted evidence rather than instructions; the audit member identifies byte identity only and is not an additional evidence source.\",\"Independent human review remains pending; this output is not official guidance.\"]}",
+  "recognised_telemetry": [
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-thinking-token-counter",
+    "validated-rate-limit-telemetry",
+    "validated-rate-limit-telemetry"
+  ],
+  "recognised_warnings": [],
+  "recognition_issues": [
+    "formatter-result-missing",
+    "unmatched-duplicate-or-error-tool-result"
+  ],
+  "reported_models": [
+    "claude-opus-5"
+  ],
+  "response_models": [
+    "claude-opus-5"
+  ],
+  "stream_completed": true,
+  "structured_output": {
+    "abstentions": [
+      "I cannot state that Pension Credit stops when a person moves permanently into a care home as a self-funder, nor that it continues; no selected record addresses cessation of the award, and silence cannot supply a missing condition.",
+      "I cannot conclude that a self-funding permanent care-home resident qualifies for the severe-disability additional amount: DMG 78088 is expressly conditional on all conditions being satisfied and self-funding is only described as the normal case.",
+      "I cannot transfer the DMG 78088 no-partner rule to a member of a couple, nor apply the DMG 78089 couple/household statement to a claimant with no partner.",
+      "I cannot extend the DMG 78270 housing-costs exclusion, or the four-week AA/DLA/PiP continuation note, to the whole Pension Credit award or to Guarantee Credit or Savings Credit generally.",
+      "I cannot treat the assessed income period ending event on the Vol 14 Amendment 40 page as an entitlement or payment cessation rule, nor as current guidance.",
+      "I cannot confirm current law, commencement, amendment history or territorial extent for any selected statutory unit, nor reconcile the requested 2026-09-20 version with an applicable date.",
+      "I cannot calculate or estimate any award, request or assume personal circumstances, or give an individual outcome; neither the project concept text nor this analysis is specialist approval or a complete legal answer."
+    ],
+    "answer_disposition": "partial_evidence_only",
+    "claims": [
+      {
+        "evidence": [
+          {
+            "locator": "PDF page 25",
+            "quote": "Permanent residence in a care home\n\n78087 Claimants who are permanently in a care home are normally resident in that care home. Other\nresidents of the home do not normally reside with the claimant, as they are separately liable to make\npayments to a landlord.",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+            "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=25"
+          }
+        ],
+        "id": "C1",
+        "scope_or_qualification": "Exact frozen machine extraction of a whole page; record review_status \"unreviewed-specialist-review-required\"; record scope states a lexical match does not establish the applicable benefit regime or current law and that publication and legal effective dates are not inferred. This paragraph concerns normal residence and who resides with the claimant only; it is not a payment or entitlement-cessation rule, and no relevant date, cohort or territory is established.",
+        "statement": "Under the heading \"Permanent residence in a care home\", selected frozen DMG Vol 13 Ch 78 guidance at paragraph 78087 addresses normal residence and who is treated as residing with the claimant; it makes no statement about Pension Credit stopping."
+      },
+      {
+        "evidence": [
+          {
+            "locator": "PDF page 25",
+            "quote": "Claimants who have no partner (including self- funders)\n78088 An additional amount for the severely disabled is applicable to a person who is permanently in a\n\ncare home if all the conditions are satisfied1.\n\n\nNote: This will normally be self funding claimants, but DMs should be aware that it will also include\nresidents where the payment of “AA” or DLA/PiP continues for the first four weeks after admission.",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+            "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=25"
+          }
+        ],
+        "id": "C2",
+        "scope_or_qualification": "Operative conditions preserved: the controlling sub-heading limits this branch to claimants who have NO PARTNER, and the statement is conditional on ALL the conditions being satisfied. It concerns one additional amount (severe disability) within State Pension Credit, not the whole award, and is an applicability rule for that component rather than a rule that the benefit stops or continues. The page footnote cites SPC Regs, reg 5(1)(b) & Sch I, para 1(1)(a), whose conditions must be read in full. Self-funding is described as the normal case, not as a qualifying condition. Frozen unreviewed machine extraction; capture date is not commencement or applicability.",
+        "statement": "At DMG 78088, under the sub-heading \"Claimants who have no partner (including self- funders)\", the selected page states that an additional amount for the severely disabled is applicable to a person permanently in a care home only if all the conditions are satisfied, and the accompanying Note states this will normally be self funding claimants and will also include residents where payment of \"AA\" or DLA/PiP continues for the first four weeks after admission."
+      },
+      {
+        "evidence": [
+          {
+            "locator": "PDF page 25",
+            "quote": "Claimants who have a partner\n78089 A member of a couple who is permanently in a care home is no longer a member of the same\nhousehold as their partner. In such a case each person may claim SPC as a claimant who has no partner.",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+            "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=25"
+          }
+        ],
+        "id": "C3",
+        "scope_or_qualification": "This is the separate partner/couple branch under its own heading \"Claimants who have a partner\" and must not be merged with the no-partner branch at DMG 78088. The literal is \"may claim\", i.e. a claiming route once household membership ends, not a statement that an award follows, continues or stops. The household branches described in the project concept text (DMG 77128–77130) are not present as selected pages. Frozen unreviewed extraction; applicability unreviewed.",
+        "statement": "For a member of a couple, the same selected page states at DMG 78089 that a member of a couple who is permanently in a care home is no longer a member of the same household as their partner, and that in such a case each person may claim SPC as a claimant who has no partner."
+      },
+      {
+        "evidence": [
+          {
+            "locator": "http://www.legislation.gov.uk/id/uksi/2002/1792/regulation/5; HTTP body hash observed, original response not retained publicly",
+            "quote": "1\nA person is to be treated as not being a member of the same household as the claimant if—\na\nhe is living away from the claimant and—\ni\nhe does not intend to resume living with the claimant; or\nii\nhis absence is likely to exceed 52 weeks except where there are exceptional circumstances (for example the person is in hospital or otherwise has no control over the length of his absence), and the absence is unlikely to be substantially more than 52 weeks;\nb\nhe or the claimant is permanently in a care home or an independent hospital;",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/regulation/5",
+            "source_url": "https://www.legislation.gov.uk/uksi/2002/1792/regulation/5/2026-09-20"
+          }
+        ],
+        "id": "C4",
+        "scope_or_qualification": "Independent machine extraction from an official legislation publication, review_status \"unreviewed\"; record scope states the requested source version is 2026-09-20 with \"Observed extent attributes: unknown\" and that legal applicability, commencement, complete effects and specialist review remain unestablished. The requested version date is not commencement, applicability or territorial extent. This provision governs household membership treatment only; it does not state that Pension Credit stops and says nothing about funding arrangements. Original HTTP response bodies are not retained and cannot be reconstructed from the lossy projection.",
+        "statement": "The selected statutory unit for The State Pension Credit Regulations 2002 regulation 5 provides that a person is to be treated as not being a member of the same household as the claimant if he or the claimant is permanently in a care home or an independent hospital."
+      },
+      {
+        "evidence": [
+          {
+            "locator": "http://www.legislation.gov.uk/id/uksi/2002/1792/schedule/I/paragraph/1; HTTP body hash observed, original response not retained publicly",
+            "quote": "ii\nno person who has attained the age of 18 is normally residing with the claimant, nor is the claimant normally residing with such a person, other than a person to whom paragraph 2 applies; and\niii\nno person is entitled to and in receipt of an allowance under section 70 of the 1992 Act (carer’s allowance) or carer support payment , or has an award of universal credit which includes the carer element, in respect of caring for him;",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/schedule/I/paragraph/1",
+            "source_url": "https://www.legislation.gov.uk/uksi/2002/1792/schedule/I/paragraph/1/2026-09-20"
+          }
+        ],
+        "id": "C5",
+        "scope_or_qualification": "The quoted heads (ii) and (iii) sit within the branch introduced as the case of a claimant who has no partner and are cumulative (\"and\"); head (i) lists the qualifying benefits and paragraph 2 lists persons whose presence is ignored (selected separately in this package). Machine extraction, review_status \"unreviewed\"; requested version 2026-09-20, extent \"unknown\"; commencement, complete amendment effects and applicability unestablished. Self-funding is not among the quoted conditions and no condition may be inferred from silence.",
+        "statement": "The selected statutory unit Schedule I paragraph 1 of the same Regulations sets cumulative no-partner conditions for being treated as severely disabled, including that no person aged 18 or over is normally residing with the claimant other than a person to whom paragraph 2 applies, and that no person is entitled to and in receipt of carer's allowance or carer support payment, or has a universal credit award including the carer element, for caring for him."
+      },
+      {
+        "evidence": [
+          {
+            "locator": "PDF page 58",
+            "quote": "78270 An additional amount for housing costs should not be allowed for\n\n\n1. HB expenditure1 or\n\n\n2. claimants in a care home, unless their absence from the dwelling normally occupied as their home is\n\ntemporary2 (see DMG 78240 et seq)",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058",
+            "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=58"
+          }
+        ],
+        "id": "C6",
+        "scope_or_qualification": "This is an exclusion for the HOUSING COSTS additional amount, not a rule about the whole Pension Credit award and not a rule about payment of care-home fees. The cited temporary-absence conditions at DMG 78240 et seq, and the underlying SPC Regs Sch II para 5 literal, were omitted from this package under the node and byte budgets, so the exception cannot be verified here. Frozen unreviewed machine extraction; applicability, date and territory unestablished.",
+        "statement": "For the housing-costs component only, the selected page 78/0058 states that an additional amount for housing costs should not be allowed for claimants in a care home unless their absence from the dwelling normally occupied as their home is temporary."
+      },
+      {
+        "evidence": [
+          {
+            "locator": "PDF page 21",
+            "quote": "7.    a claimant who has no partner is provided with accommodation in a care\n              home or an independent hospital on a permanent basis7 (see DMG Chapter\n              77 for the meaning of care home and independent hospital).",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol14-amendment40/0021",
+            "source_url": "https://assets.publishing.service.gov.uk/media/5a80780240f0b62305b8b55d/v14am40.pdf#page=21"
+          }
+        ],
+        "id": "C7",
+        "scope_or_qualification": "This record's declared captured role is \"historical-amendment-not-current-rules\" (Vol 14 Amendment 40, June 2016); it is not current guidance, and the same page frames the regime by reference to an AIP ending that \"takes effect on, or after 6.4.16\". The operative conditions are a claimant who has NO PARTNER and permanent provision of accommodation. Ending an assessed income period is not ending entitlement to or payment of Pension Credit. The cited SPC Regs regulation 12 was omitted under both node_budget and byte_budget, so its conditions and current text cannot be checked here.",
+        "statement": "A selected historical DMG Vol 14 amendment page lists, among events ending an assessed income period, the case where a claimant who has no partner is provided with accommodation in a care home or an independent hospital on a permanent basis, citing SPC Regs reg 12(c)."
+      },
+      {
+        "evidence": [
+          {
+            "locator": "@graph/care-home/definition",
+            "quote": "DMG 78088 is under the heading Claimants who have no partner (including self-funders): all severe-disability-addition conditions still apply, including actual qualifying-benefit receipt.",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "source_url": "https://github.com/chris-page-gov/okf-dwp/blob/main/domain-profile/staff-semantic/concepts.yamlld"
+          },
+          {
+            "locator": "@graph/no-partner-disability-addition/definition",
+            "quote": "It says normally self-funders and also the first four weeks while AA, DLA or PIP continues; funding status alone cannot prove continued qualification.",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/no-partner-disability-addition",
+            "source_url": "https://github.com/chris-page-gov/okf-dwp/blob/main/domain-profile/staff-semantic/concepts.yamlld"
+          }
+        ],
+        "id": "C8",
+        "scope_or_qualification": "Both records are assertion_status \"model-derived\" with authority \"Staff-domain meaning proposal; specialist review required\" and review_status \"unreviewed-specialist-review-required\". They are project-authored proposed meanings, expressly not official DWP interpretation and not specialist approval. They reference DMG 77128–77130, 78034–78036, 78055–78057, 78077–78080 and 78240/78254–78257, none of which are supplied as selected pages in this truncated package.",
+        "statement": "The package's own project-authored concept text proposes that DMG 78088 is a no-partner, component-level rule and that funding status alone cannot prove continued qualification; this is a model-assisted project proposal, not official guidance."
+      }
+    ],
+    "context_id": "urn:sha256:b83bb636c3fbef3669b4aba03eb6cc3e4a5adda2b6e1ab50990a625e32893771",
+    "gaps": [
+      "No selected record states whether entitlement to, or payment of, Pension Credit stops, continues or is superseded when a claimant moves permanently into a care home while self-funding; the question's key term \"stop\" is recorded in unresolved_terms.",
+      "The terms \"self\", \"funding\", \"moves\" and \"citizen\" are recorded as unresolved_terms, so \"self-funding\" is not a declared concept and its meaning (full-cost payer, deferred payment, mixed funding) is unestablished.",
+      "SPC Regs regulation 12 (assessed income period endings, cited by the historical amendment page) was omitted under both node_budget and byte_budget.",
+      "SPC Regs Schedule II paragraphs 4 and 5, and Schedule II as a whole, were omitted under the byte budget, so the housing-cost exclusion literal cited by DMG 78270 is unverifiable here.",
+      "SPC Regs Schedule III and Schedule III paragraph 1, cited by page 77/0020, were omitted under the node budget.",
+      "The household branches relied on in the project concept text (DMG 77128–77130, one or both partners entering a home) are absent; pages 77/0019, 77/0021, 77/0023–77/0030 and 77/0033 were omitted under node or byte budgets.",
+      "The severe-disability-addition condition pages (DMG 78034–78036, 78055–78057, 78077–78080) and temporary/trial absence pages (DMG 78240, 78254–78257) are not selected; pages 78/0011, 78/0012, 78/0015, 78/0021–78/0024 and 78/0053–78/0057 were omitted under the byte budget.",
+      "No selected evidence covers local-authority or NHS funding of care, deferred payment agreements as they affect Pension Credit, or qualifying disability benefit cessation timing beyond the four-week statement in DMG 78088.",
+      "Relevant date, temporal cohort, benefit regime and territory are unresolved; capture dates are declared not to be publication, commencement or applicability dates, and observed extent for the selected SPC Regs units is \"unknown\".",
+      "Requirement staff-012 records five absent obligations (evidence_closure_unverified, applicability_unresolved, legal_version_unreconciled, independent_review_pending, question_scope_unresolved) which the package states cannot be satisfied by retrieving more pages or by model agreement.",
+      "Retrieval is truncated: candidate_count 6650 against a candidates limit of 16, with a declared retrieval_candidate_budget omission, so other matching pages remain outside this context.",
+      "Staff-domain records for mixed-age-pension-credit and scottish-disability-carer-dependencies, and the concept \"capital\", were omitted under the byte budget.",
+      "Package limitations record that literal SPC Regs s5 and s12(2)(d) remain unresolved and that the R(IS)1/99 judgment body and complete qualifying-benefit funding/timing rules are not supplied."
+    ],
+    "limitations": [
+      "Declared evidence_status is \"insufficient\" and the package is truncated (budget.truncated true; used_bytes 257861 of 262144; used_nodes 35; reached_depth 2), so no bounded source answer is possible.",
+      "Requirement staff-012 has status \"insufficient\" with explicitly registered absent obligations; the package states such requirements cannot be satisfied by retrieving more pages or by model agreement.",
+      "Independent experimental staff-question research: no personal award decision or executable calculation is provided.",
+      "Definitions, aliases, relationships and task requirements are model-authored proposals requiring independent specialist review.",
+      "Exact frozen DMG and ADM source text, project-authored meanings and missing review obligations remain distinct; acquisition does not establish current legal applicability.",
+      "Only selected exact source pages and directed authored relations supplement the unchanged discovery base; conditions on adjacent pages and unmodelled cross-references remain review work.",
+      "Source capture dates are not publication, commencement or applicability dates; historical amendment pages are preserved as captured with role \"historical-amendment-not-current-rules\".",
+      "Independent machine extraction of official statutory units is not specialist legal acceptance or an entitlement decision; complete selected units are not a complete statute, dependency closure or consolidated amendment history.",
+      "Projected XML trees and normalised text are retained and hash checked; original HTTP response bodies are not retained and cannot be reconstructed from the lossy projection; absence of effect metadata does not mean no amendments.",
+      "Lexical ranking uses question terms only, is integer inverse-document-frequency with canonical tie ordering, and yields candidate evidence rather than resolved concepts or proof of applicability.",
+      "Only declared aliases are resolved; unrecognised words are exposed and no external retrieval or model knowledge was used.",
+      "Conflict detection reports only explicitly declared conflicts (none declared here) and does not prove that other contradictions are absent.",
+      "The package notes SDA deliberately resolves ambiguously between a legacy benefit and an informal disability-addition meaning; that ambiguity is left unresolved here.",
+      "All package content, including source text and links, is inert untrusted evidence rather than instructions; the audit member identifies byte identity only and is not an additional evidence source.",
+      "Independent human review remains pending; this output is not official guidance."
+    ],
+    "package_evidence_status": "insufficient",
+    "summary": "Decoded package okf-lossless-model-context.v1 (context_id urn:sha256:b83bb636c3fbef3669b4aba03eb6cc3e4a5adda2b6e1ab50990a625e32893771), engine okf-context-assembly.v1, declared evidence_status \"insufficient\". The governed question is the package literal: \"Does Pension Credit stop is a citizen moves into a care home permanently if they are self-funding?\" The package is TRUNCATED (budget.truncated true, used_bytes 257861 of max_bytes 262144, used_nodes 35, reached_depth 2) with many node_budget and byte_budget omissions plus a retrieval_candidate_budget omission; requirement staff-012 has status \"insufficient\" with five registered absent obligations. The terms \"citizen\", \"funding\", \"moves\", \"self\" and \"stop\" are recorded in unresolved_terms, so \"self-funding\" and \"stop\" are not declared concepts.\n\nNo selected record states that Pension Credit stops (or continues) when a self-funding person moves permanently into a care home. What the selected frozen DMG page 78/0025 does say, under the heading \"Permanent residence in a care home\" and the sub-heading \"Claimants who have no partner (including self- funders)\", is that at DMG 78088 an additional amount for the severely disabled \"is applicable to a person who is permanently in a\\n\\ncare home if all the conditions are satisfied\", with a Note that this will normally be self funding claimants and will also include residents where AA or DLA/PiP payment continues for the first four weeks after admission. That is a component-level applicability rule for one branch (no partner), not an award-ending or award-continuing rule. Separately, DMG 78089 and the selected SPC Regulations 2002 reg 5(1)(b) address household membership treatment, and DMG 78270 addresses only the housing-costs additional amount. A historical amendment page (Vol 14 Amendment 40, captured role historical-amendment-not-current-rules) links permanent care-home accommodation for a no-partner claimant to the end of an assessed income period under reg 12(c), but reg 12 itself was omitted under the node and byte budgets.\n\nBecause the declared status is insufficient and the package is truncated, this is partial evidence only. No entitlement conclusion, calculation or individual outcome can be given; independent specialist review remains pending."
+  },
+  "tool_event_census_status": "unknown-or-rejected-stream",
+  "tool_event_names": [
+    "StructuredOutput",
+    "StructuredOutput"
+  ],
+  "tool_events": [
+    {
+      "input_sha256": "fd8bf0e7b8ab3ffacd0f0b393a0381403d348f18b128bf9a9cb83522e12011c2",
+      "name": "StructuredOutput"
+    },
+    {
+      "input_sha256": "19acbc661e90020a855101fb4c181f573de62b092a41e6bd48727a943acf4d6b",
+      "name": "StructuredOutput"
+    }
+  ],
+  "total_cost_usd": 1.6764665,
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 110084,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 110084,
+    "cache_read_input_tokens": 100663,
+    "input_tokens": 4,
+    "output_tokens": 21011,
+    "output_tokens_details": {},
+    "server_tool_use": {
+      "web_fetch_requests": 0,
+      "web_search_requests": 0
+    }
+  }
+}

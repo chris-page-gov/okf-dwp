@@ -1,5 +1,10 @@
 # Seminar website, WebMCP and audio plan
 
+For the current meeting, use the [Voice rehearsal sheet](../voice-rehearsal.md)
+and [Monday handover](../monday-handover-2026-09-21.md). The service and browser
+now have separate delivery observations; the plan below retains its original
+15 September assessment. Voice invocation and room audio remain untested.
+
 Assessment: 15 September 2026. Content freeze: 24 September 2026.
 Seminar: 30 September 2026. Status: feasibility and acceptance plan; no new
 website, deployment, audio routing or end-to-end voice test is delivered by

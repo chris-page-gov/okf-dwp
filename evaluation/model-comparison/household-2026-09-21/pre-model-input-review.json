@@ -1,0 +1,191 @@
+{
+  "schema": "okf-fixed-monday-input-review.v1",
+  "review_kind": "model-authored-source-comparison-before-provider-calls",
+  "specialist_accepted": false,
+  "dwp_commit": "3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84",
+  "explorer_commit": "0e6a639f87c4060123b72d82c1ebe30405d475f1",
+  "context_manifest_sha256": "9fd2755fa6b0ac36345c4245162da97565f1a27b37b8b11e990a803c5f6a7719",
+  "context_replay": "passed",
+  "model_calls": 0,
+  "scope": "Literal checks demonstrate selected controlling text only. This review does not establish completeness, applicability or human acceptance. Frozen contexts and protocol unchanged.",
+  "cases": [
+    {
+      "case_id": "staff-012",
+      "context_sha256": "c3dd08c848e1203cb5c07518e3819bc7c4ef0116dd3096d99f54ea48187b5012",
+      "context_id": "urn:sha256:b83bb636c3fbef3669b4aba03eb6cc3e4a5adda2b6e1ab50990a625e32893771",
+      "bytes": 257861,
+      "selected_records": 35,
+      "relationships": 50,
+      "evidence_status": "insufficient",
+      "truncated": true,
+      "ambiguities": [],
+      "literal_checks": [
+        {
+          "route": "page/78/0025",
+          "literal": "Claimants who have no partner (including self- funders)",
+          "literal_present": true,
+          "whole_record_text_sha256": "a1e2462f65812d22a647562270b9ebb3a3d64c4c76a205bd5cf6d243e607b193"
+        },
+        {
+          "route": "page/78/0025",
+          "literal": "Entitlement to the additional amount continues as long as all of the above are satisfied.",
+          "literal_present": true,
+          "whole_record_text_sha256": "a1e2462f65812d22a647562270b9ebb3a3d64c4c76a205bd5cf6d243e607b193"
+        },
+        {
+          "route": "page/78/0058",
+          "literal": "temporary2 (see DMG 78240 et seq)",
+          "literal_present": true,
+          "whole_record_text_sha256": "54d1aadd860c1716513097da3470a231fa41c84f651850dd404fb9b58ee80a6b"
+        }
+      ],
+      "known_relevant_pages_not_selected": [
+        "page/78/0024",
+        "page/78/0026"
+      ],
+      "review_note": "The operative no-partner heading, permanent-residence paragraph and component-specific housing-cost exception are present. Neighbouring temporary-care and partner-continuation pages are not selected; this is not whole-chapter completeness."
+    },
+    {
+      "case_id": "staff-020",
+      "context_sha256": "779326129eca485a385f8e0837fc6c83e71f6c8c2fae09f6b162a04ce0a350de",
+      "context_id": "urn:sha256:0256b955f23237fc407c657bbad4b56aab79dbb518d1c7d63dc4cc75584730ee",
+      "bytes": 258130,
+      "selected_records": 44,
+      "relationships": 45,
+      "evidence_status": "insufficient",
+      "truncated": true,
+      "ambiguities": [],
+      "literal_checks": [
+        {
+          "route": "page/77/0014",
+          "literal": "77031 A claimant is entitled to SPC if they1",
+          "literal_present": true,
+          "whole_record_text_sha256": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51"
+        },
+        {
+          "route": "page/77/0015",
+          "literal": "Note 1: This definition applies only to new claims to SPC from 15.5.19.",
+          "literal_present": true,
+          "whole_record_text_sha256": "3c97a680ad9014e99f75e863f64fe299d6f50bc5e476a4ed433543150f89f6ac"
+        },
+        {
+          "route": "page/dmg-memo-04-24-282c3cef22/0005",
+          "literal": "provided they do so within 3 months",
+          "literal_present": true,
+          "whole_record_text_sha256": "62d3128632dd7008c188540bfda9495211caaabca55bf2e3f22c0f1ce366c428"
+        }
+      ],
+      "known_relevant_pages_not_selected": [
+        "page/77/0026"
+      ],
+      "review_note": "Basic entitlement conditions, mixed-age saving provisions and the selected protected-migration memo passage are present. Detailed DMG 77140 candidate page 77/0026 is absent from this 256 KiB package; model-proposed concepts cannot substitute for it."
+    },
+    {
+      "case_id": "staff-005",
+      "context_sha256": "e52e742f972db4184ca4e7472beb621e2f23e17d103c2399f98eaf4a17b21b75",
+      "context_id": "urn:sha256:a70379e75d9e1a9ebce2e624a4d18434b5d3802ef987b5ae146ee880797c7d21",
+      "bytes": 261474,
+      "selected_records": 46,
+      "relationships": 51,
+      "evidence_status": "insufficient",
+      "truncated": true,
+      "ambiguities": [],
+      "literal_checks": [
+        {
+          "route": "page/dmg-vol10-ch60/0003",
+          "literal": "Conditions for entitlement to Carer’s Allowance",
+          "literal_present": true,
+          "whole_record_text_sha256": "97f524ef78657a456deb3a2712b72bc34e933c4624b2102f2961bb21aecbb999"
+        },
+        {
+          "route": "page/dmg-vol10-ch61/0005",
+          "literal": "not entitled to DLA, PIP or PADP",
+          "literal_present": true,
+          "whole_record_text_sha256": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d"
+        }
+      ],
+      "known_relevant_pages_not_selected": [],
+      "review_note": "Carer’s Allowance conditions and AA/DLA age/non-overlap passage are present with adjacent source pages. These are qualifying routes, not automatic entitlement or a complete benefits catalogue."
+    },
+    {
+      "case_id": "staff-026",
+      "context_sha256": "1688178198ca3209ffbc711d755c22b2cf442153c07e1d9f43a9c843ca002437",
+      "context_id": "urn:sha256:c8b11f93f625139c8316df0f76844dd0caac396ab1e60b74c65f98590c12aaf6",
+      "bytes": 261532,
+      "selected_records": 54,
+      "relationships": 41,
+      "evidence_status": "insufficient",
+      "truncated": true,
+      "ambiguities": [],
+      "literal_checks": [
+        {
+          "route": "page/adm/adm-chapter-p1/0002",
+          "literal": "Those claimants already entitled to DLA on 8.4.13",
+          "literal_present": true,
+          "whole_record_text_sha256": "b38efe6e46180cb93381cdf717e268e9c2eb6f9288db3a39774e81dc9a994cfa"
+        },
+        {
+          "route": "page/adm/adm-chapter-p5/0003",
+          "literal": "person aged 16 or over",
+          "literal_present": true,
+          "whole_record_text_sha256": "740a2e7d5b7fce59fcf4b75d903857f3418ccf9763f9c6fadc56ae4197a1ff20"
+        }
+      ],
+      "known_relevant_pages_not_selected": [
+        "page/adm/adm-chapter-p5/0004"
+      ],
+      "review_note": "P1003 retains its 8 April 2013 DLA cohort; P5006 retains age 16 or over. The relevant-date definition begins on P5 page 3 but its next page 4 is absent; avoid completing it from general knowledge."
+    },
+    {
+      "case_id": "staff-008",
+      "context_sha256": "533968455b9209383ca92e86172af176acb17c694f484fc531fc56237e902e06",
+      "context_id": "urn:sha256:3fa7e89581cb8bf67cebc3b1cdf8a2730dfc28e66395c47ac466413cc1191ed9",
+      "bytes": 252429,
+      "selected_records": 43,
+      "relationships": 30,
+      "evidence_status": "insufficient",
+      "truncated": true,
+      "ambiguities": [
+        {
+          "candidates": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/sda",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-addition"
+          ],
+          "phrase": "SDA"
+        }
+      ],
+      "literal_checks": [
+        {
+          "route": "page/dmg-vol10-ch57/0005",
+          "literal": "SDA is not available to new claimants from 6.4.01.",
+          "literal_present": true,
+          "whole_record_text_sha256": "03d2cd839caa547ed6a0e3906fc72b69cefe883b6a89510f3459e205259cc17b"
+        },
+        {
+          "route": "page/78/0025",
+          "literal": "Claimants who have no partner (including self- funders)",
+          "literal_present": true,
+          "whole_record_text_sha256": "a1e2462f65812d22a647562270b9ebb3a3d64c4c76a205bd5cf6d243e607b193"
+        }
+      ],
+      "known_relevant_pages_not_selected": [
+        "page/dmg-vol10-ch57/0006"
+      ],
+      "review_note": "Both severe-disability-addition and Severe Disablement Allowance branches are supplied; the SDA ambiguity remains unresolved. The under-20 transitional passage continues beyond selected Chapter 57 page 5; no complete rate or applicability conclusion is established."
+    },
+    {
+      "case_id": "control-unknown",
+      "context_sha256": "b474066da0a789f519a6d25c7bff1f16e7ddbc52fdf67a08b0c4bcf4027e67b1",
+      "context_id": "urn:sha256:b604c488b36134952c3d6e09ce5d54b7f78c6bdfe7dee6539ae63ef686d00267",
+      "bytes": 5141,
+      "selected_records": 0,
+      "relationships": 0,
+      "evidence_status": "insufficient",
+      "truncated": false,
+      "ambiguities": [],
+      "literal_checks": [],
+      "known_relevant_pages_not_selected": [],
+      "review_note": "No evidence records or relationships are supplied; the expected behaviour is abstention."
+    }
+  ]
+}

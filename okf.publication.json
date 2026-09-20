@@ -1,6 +1,6 @@
 {
   "schema": "okf-repository-publication-contract.v1",
-  "modified": "2026-09-20",
+  "modified": "2026-09-21",
   "locale": "en-GB",
   "time_zone": "Europe/London",
   "repository": {
@@ -1512,7 +1512,13 @@
         "compact-client-check",
         "compact-client-controls",
         "monday-trial-preregistration",
-        "monday-trial-export-controls"
+        "monday-trial-export-controls",
+        "household-service-observation-integrity",
+        "monday-compact-projection",
+        "monday-compact-freeze",
+        "monday-compact-outcomes",
+        "public-household-observation-integrity",
+        "monday-compact-critique-integrity"
       ]
     },
     {
@@ -2384,6 +2390,84 @@
           "release"
         ],
         "command": "node --test scripts/test_monday_trial_export.mjs",
+        "source": "docs/monday-model-trials.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "household-service-observation-integrity",
+        "kind": "check",
+        "planes": [
+          "release"
+        ],
+        "command": "uv run --locked python scripts/check_staff_service_observations.py --directory validation/compact-delivery/v0.5.0",
+        "source": "docs/household-service-verification.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "monday-compact-projection",
+        "kind": "check",
+        "planes": [
+          "release"
+        ],
+        "command": "uv run --locked python scripts/project_monday_model_contexts.py",
+        "source": "docs/monday-model-trials.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "monday-compact-freeze",
+        "kind": "check",
+        "planes": [
+          "release"
+        ],
+        "command": "uv run --locked python scripts/run_monday_compact_trials.py",
+        "source": "docs/monday-model-trials.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "monday-compact-outcomes",
+        "kind": "check",
+        "planes": [
+          "release"
+        ],
+        "command": "uv run --locked python scripts/run_monday_compact_trials.py --check-report",
+        "source": "docs/monday-model-trials.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "public-household-observation-integrity",
+        "kind": "check",
+        "planes": [
+          "release"
+        ],
+        "command": "uv run --locked python scripts/check_public_household_observations.py",
+        "source": "docs/household-reader-public-verification.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "monday-compact-critique-integrity",
+        "kind": "check",
+        "planes": [
+          "release"
+        ],
+        "command": "uv run --locked python scripts/check_monday_compact_critique.py",
         "source": "docs/monday-model-trials.md",
         "review_status": "unreviewed",
         "network": "none",

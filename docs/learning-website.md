@@ -5,9 +5,15 @@ The project publishes its public Markdown documentation as a small static websit
 or AI service is needed to read them. The learning path is the home page, with
 links to the glossary, Monday demonstration, remaining work and Ask OKF.
 
-The intended public address is `https://chris-page-gov.github.io/okf-dwp/`.
-The learning path also has the stable route `/okf-dwp/docs/learning-path.html`.
-The release handover records whether these addresses have been verified live.
+Open the [learning website](https://chris-page-gov.github.io/okf-dwp/) or its
+[direct learning-path address](https://chris-page-gov.github.io/okf-dwp/docs/learning-path.html).
+The first public release was verified on 20 September 2026 against source commit
+`3f72ebc30128c2a3171951050a566d3ed8db7c16`: the manifest and all 108 output files
+returned HTTP 200 and matched their expected byte counts and hashes.
+The [retained observation](../validation/learning-site/public-3f72ebc30128c2a3171951050a566d3ed8db7c16/README.md)
+is a dated publication check, not a guarantee about future availability or later
+versions. A separate browser check opened the learning path and glossary without
+console errors or page-level horizontal overflow.
 
 ## Where the words come from
 
@@ -40,6 +46,12 @@ Do not edit generated HTML. Change the Markdown, build and test, then use a norm
 reviewed pull request. After protected main passes the full bundle validation,
 GitHub Actions builds its exact commit and uploads that single artefact to Pages.
 The Pages job does not regenerate or change evidence bundles.
+
+Verify the retained first-publication receipt without contacting the website:
+
+```sh
+uv run --locked python scripts/check_learning_site_observation.py
+```
 
 Publication of a guide does not establish complete answerability, specialist
 acceptance or a source document's current legal applicability. Read the

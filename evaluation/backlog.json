@@ -1,6 +1,6 @@
 {
   "schema": "okf-dwp-backlog.v1",
-  "updated_on": "2026-09-20",
+  "updated_on": "2026-09-21",
   "status_meanings": {
     "recorded_complete": "Named bounded result has retained evidence, not perpetual assurance.",
     "in_progress": "Work is being prepared or implemented; publication/acceptance is not implied.",
@@ -234,7 +234,7 @@
       "acceptance_checks": [
         "Verify work/provision/version identities, effects, commencement and territory; record unresolved citations; catalogue links are not legal completeness."
       ],
-      "scope_note": "Official provision identities, citation mappings and 20selected statutory units are implemented. Complete dependencies, commencement, extent, judgment evidence and substantive applicability remain open; no accepted legal proposition.",
+      "scope_note": "Official provision identities, citation mappings and 20 selected statutory units are implemented. Complete dependencies, commencement, extent, judgment evidence and substantive applicability remain open; no accepted legal proposition.",
       "work_packages": [
         {
           "id": "DWP-BL-006.delivery",
@@ -253,7 +253,7 @@
           "kind": "research",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Twenty selected statutory units and 43 navigationrelationships are implemented with dated sources and retained failures. Next resolve remaining statutory dependencies,12 unknown extents, commencement/effects and the missing judgment bodies; do not promote extraction to applicability.",
+          "next_action": "Twenty selected statutory units and 43 navigation relationships are implemented with dated sources and retained failures. Next resolve remaining statutory dependencies, 12 unknown extents, commencement/effects and the missing judgment bodies; do not promote extraction to applicability.",
           "evidence": [
             "docs/legal-reconciliation.md",
             "docs/monday-delivery-work-log.md",
@@ -290,7 +290,8 @@
         "docs/semantic-expansion.md",
         "docs/monday-delivery-work-log.md",
         "docs/household-evidence-expansion.md",
-        "docs/context-performance.md"
+        "docs/context-performance.md",
+        "docs/household-qualification-budget-review.md"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
@@ -323,6 +324,17 @@
           ]
         },
         {
+          "id": "DWP-BL-007.qualification-retention",
+          "kind": "implementation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Declare source-backed household qualification dependencies and test generic requirement-path allocation under node/byte pressure. The authoritative one/both-partner pages are already captured and linked but the small package drops them while retaining an authored summary. Preserve frozen 3ef observations and trials; publish a separately reviewed candidate only after evaluation. No named source-closure or specialist obligation is yet closed.",
+          "evidence": [
+            "docs/household-qualification-budget-review.md",
+            "docs/monday-delivery-work-log.md"
+          ]
+        },
+        {
           "id": "DWP-BL-007.acceptance",
           "kind": "independent_review",
           "status": "waiting",
@@ -351,12 +363,17 @@
         "validation/compact-delivery/sdk-receipt.json",
         "validation/compact-client/verification.json",
         "validation/compact-delivery/v0.4.0/deployment.json",
-        "validation/compact-delivery/v0.4.0/sdk-receipt.json"
+        "validation/compact-delivery/v0.4.0/sdk-receipt.json",
+        "validation/compact-delivery/v0.5.0/deployment.json",
+        "validation/compact-delivery/v0.5.0/sdk-receipt.json",
+        "validation/compact-delivery/v0.5.0/browser/staff/run-summary.json",
+        "validation/compact-delivery/v0.5.0/artifacts.json",
+        "docs/household-service-verification.md"
       ],
       "acceptance_checks": [
         "Unchanged ask_okf preserved; small manifest plus paginated exact reads; original version/question/budget/context identity replayed; stale/unknown IDs rejected; all slices reconstruct exactly; actual host check."
       ],
-      "scope_note": "Public service 0.4.0 and its actual SDK run establish bounded delivery against merged Explorer runtime fc71d65b8f5cfc860d52afe98a5e45b88231f3e5. Five question/version cases and compact reconstruction for the new staff corpus plus both earlier versions pass. The staff package has 50 records and 36 relationships and remains insufficient. Earlier replay identities and failed public-browser observations are preserved. Browser-host integration remains BL023; model, ChatGPT and Voice acceptance remain separate.",
+      "scope_note": "Public service 0.5.0 uses merged Explorer runtime d538de99e6567633204253cd88b87cbe325ac39a and DWP source 3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84. Seven actual SDK full-package cases and four compact reconstructions across four source versions pass, with 93 successful requests and no retries. The care-home package contains 35 records and 50 relationships and remains insufficient. All three browser evidence journeys pass; Firefox hosting-cookie warnings leave its strict console gate failed. Historical observations and identities remain separate; no AI, legal or Voice acceptance follows.",
       "work_packages": [
         {
           "id": "DWP-BL-008.delivery",
@@ -374,7 +391,12 @@
             "validation/compact-delivery/sdk-receipt.json",
             "validation/compact-client/verification.json",
             "validation/compact-delivery/v0.4.0/deployment.json",
-            "validation/compact-delivery/v0.4.0/sdk-receipt.json"
+            "validation/compact-delivery/v0.4.0/sdk-receipt.json",
+            "validation/compact-delivery/v0.5.0/deployment.json",
+            "validation/compact-delivery/v0.5.0/sdk-receipt.json",
+            "validation/compact-delivery/v0.5.0/browser/staff/run-summary.json",
+            "validation/compact-delivery/v0.5.0/artifacts.json",
+            "docs/household-service-verification.md"
           ]
         }
       ]
@@ -437,12 +459,16 @@
         "validation/model-comparison/staff-2026-09-20/results.json",
         "validation/model-comparison/staff-2026-09-20/claim-level-model-critique.json",
         "docs/monday-model-trials.md",
-        "evaluation/model-comparison/household-2026-09-21/protocol.json"
+        "evaluation/model-comparison/household-2026-09-21/protocol.json",
+        "evaluation/model-comparison/household-compact-v2-candidate/frozen-manifest.json",
+        "validation/model-comparison/household-compact-v2/results.json",
+        "validation/model-comparison/household-compact-v2/claim-level-model-critique.json",
+        "validation/model-comparison/household-compact-v2/README.md"
       ],
       "acceptance_checks": [
         "Retain identical fixed inputs/prompts and real model outputs; verify IDs/quotes/locators; independently assess entailment/exceptions/abstention; no self-graded gold or engineering-score substitution."
       ],
-      "scope_note": "Five paired fixed-input cases, 12 retained attempts, 49 claims and 79 citations; eight responses pass mechanical checks and two fail exact quotations. Model critique finds substantive omissions. Actual Codex model is unknown and Claude accounting includes multiple model identities. No specialist acceptance, comparative accuracy or affordability conclusion.",
+      "scope_note": "The original five paired cases retain their 12 attempts, 49 claims and 79 citations. The first household experiment adds five unsuccessful attempts. A separately frozen lossless-context successor retains nine attempts, seven parser-accepted responses, 14 claims and 21 citations. Six responses pass mechanical controls including both empty-evidence controls; one retained answer fails a locator check. Model review identifies scope and citation concerns. No successful substantive provider pair, specialist acceptance, actual Codex model identity, comparative accuracy or affordability conclusion is established.",
       "work_packages": [
         {
           "id": "DWP-BL-010.delivery",
@@ -462,10 +488,14 @@
           "kind": "implementation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Freeze the independently reviewed new protocol against immutable source and engine commits, run six paired subscription-client cases with identical authored inputs, preserve failures and perform claim-level review. Original five-pair experiment remains unchanged.",
+          "next_action": "Nine separately frozen successor attempts and a claim-level model critique are retained. Three remaining Claude cases are held after formatter rejection and a timeout; no automatic retries. Preserve all historical outcomes. Any new source/budget or event-policy experiment needs separate reviewed inputs; substantive paired acceptance remains unestablished.",
           "evidence": [
             "docs/monday-model-trials.md",
-            "evaluation/model-comparison/household-2026-09-21/protocol.json"
+            "evaluation/model-comparison/household-2026-09-21/protocol.json",
+            "evaluation/model-comparison/household-compact-v2-candidate/frozen-manifest.json",
+            "validation/model-comparison/household-compact-v2/results.json",
+            "validation/model-comparison/household-compact-v2/claim-level-model-critique.json",
+            "validation/model-comparison/household-compact-v2/README.md"
           ]
         },
         {
@@ -666,26 +696,31 @@
     {
       "id": "DWP-BL-016",
       "title": "ChatGPT Voice and room audio rehearsal",
-      "status": "not_started",
+      "status": "in_progress",
       "priority": "P0",
       "depends_on": [],
       "owner_role": "Presentation owner",
       "evidence": [
         "docs/next-stage/seminar-webmcp-and-audio.md",
-        "docs/remote-mcp-demo.md"
+        "docs/remote-mcp-demo.md",
+        "docs/voice-rehearsal.md",
+        "docs/monday-handover-2026-09-21.md"
       ],
       "acceptance_checks": [
         "Actual intended account calls tools in Voice if available; microphone, Mac output, PA and projection checked; recorded/text fallback described honestly."
       ],
-      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible.",
+      "scope_note": "Desk and room rehearsal instructions, explicit tool-access checks and a verified-evidence fallback are prepared. Current official Voice documentation was checked on 20 September. No Voice session, microphone permission, audio route or room equipment was exercised; intended-account and room acceptance remain waiting for the presenter.",
       "work_packages": [
         {
           "id": "DWP-BL-016.delivery",
           "kind": "implementation",
-          "status": "not_started",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Prepare explicit Voice capability checks and a text/recorded fallback.",
-          "evidence": []
+          "next_action": "Use the prepared five-minute desk check and explicit browser/recorded fallback. Keep actual Voice tool invocation and room audio acceptance separate.",
+          "evidence": [
+            "docs/voice-rehearsal.md",
+            "docs/monday-handover-2026-09-21.md"
+          ]
         },
         {
           "id": "DWP-BL-016.acceptance",
@@ -797,12 +832,15 @@
         "validation/combined-reader/browser/artifacts.json",
         "validation/combined-reader/build.json",
         "validation/combined-reader/public/README.md",
-        "validation/combined-reader/public/artifacts.json"
+        "validation/combined-reader/public/artifacts.json",
+        "docs/household-reader-public-verification.md",
+        "validation/household-reader-public/3ef0e786/artifact-manifest.json",
+        "docs/household-reader-verification.md"
       ],
       "acceptance_checks": [
         "Representative keyboard/screen-reader/mobile/engine journeys and failures recorded; named browser observations do not imply whole-product conformance."
       ],
-      "scope_note": "Combined Reader implementation, local checks and actual public Chrome, Firefox and WebKit observations passed within their declared scope. All 21 application files and the union of 261 observed corpus files were verified. Five conceptual/manual facets have Reader/Graph/Timeline parity. The initial five-second timeout remains recorded. Human assistive-technology/user research remains separate; no whole-product accessibility or legal-applicability claim.",
+      "scope_note": "The household candidate passed separate local Chrome/Firefox/WebKit keyboard and targeted accessibility checks. A real public Chrome run verified conceptual filters, statutory text, directed graph routes, source/audit dates and two context tasks with no console/network errors. Earlier public cross-browser observations remain version-specific. This is not complete assistive-technology, physical-mobile or human accessibility acceptance.",
       "work_packages": [
         {
           "id": "DWP-BL-019.delivery",
@@ -957,7 +995,12 @@
         "docs/staff-service-browser-verification.md",
         "validation/compact-delivery/v0.4.0/README.md",
         "validation/compact-delivery/v0.4.0/artifacts.json",
-        "validation/compact-delivery/v0.4.0/browser/historical/run-summary.json"
+        "validation/compact-delivery/v0.4.0/browser/historical/run-summary.json",
+        "validation/compact-delivery/v0.5.0/deployment.json",
+        "validation/compact-delivery/v0.5.0/sdk-receipt.json",
+        "validation/compact-delivery/v0.5.0/browser/staff/run-summary.json",
+        "validation/compact-delivery/v0.5.0/artifacts.json",
+        "docs/household-service-verification.md"
       ],
       "acceptance_checks": [
         "Preserve the failed public-browser observations and distinguish the functional checks from the strict no-console gate; identify the exact injected host script and affected deployment.",
@@ -965,7 +1008,7 @@
         "Rerun the same exact-version historical-profile journeys in Chrome, Firefox and WebKit; require both functional and strict console gates to pass and preserve source/context hashes.",
         "Record any full-corpus public-browser or AI-client check separately; a hosting fix does not establish model-answer quality or legal applicability."
       ],
-      "scope_note": "Service 0.4.0 sends the supported no-transform directive for HTML without weakening CSP. The current staff journey passes functional checks in Chrome, Firefox and WebKit; Chrome and WebKit also pass strict console checks. The injected inline-script error is absent, but Firefox still reports invalid-domain __cf_bm hosting cookies, so overall hosting acceptance remains open. The first Chrome driver-decoding failure and independently reviewed native-text rerun remain separate observations. Exact SDK package identity is verified; no AI-answer quality or legal-applicability claim. The exact historical suite passes all twelve functional journeys and eight strict gates; four Firefox strict gates fail on the same cookies. Synthetic response controls are identified separately from untouched public evidence.",
+      "scope_note": "Public service 0.5.0 preserves no-transform and Content Security Policy. Chrome, Firefox and WebKit pass the current household evidence journey; Chrome and WebKit pass strict console checks. Two Firefox invalid-domain __cf_bm hosting-cookie warnings remain, so overall hosting acceptance is open. All 90 browser tool requests completed without retries and reconstructed the exact SDK package. The historical browser suite was not rerun for 0.5.0. Earlier 0.4.0 functional passes, strict failures and native-text observations remain unchanged in their own release directory.",
       "work_packages": [
         {
           "id": "DWP-BL-023.delivery",
@@ -978,7 +1021,12 @@
             "validation/compact-delivery/v0.4.0/sdk-receipt.json",
             "validation/compact-delivery/v0.4.0/browser/staff/run-summary.json",
             "validation/compact-delivery/v0.4.0/browser/staff-native/run-summary.json",
-            "docs/staff-service-browser-verification.md"
+            "docs/staff-service-browser-verification.md",
+            "validation/compact-delivery/v0.5.0/deployment.json",
+            "validation/compact-delivery/v0.5.0/sdk-receipt.json",
+            "validation/compact-delivery/v0.5.0/browser/staff/run-summary.json",
+            "validation/compact-delivery/v0.5.0/artifacts.json",
+            "docs/household-service-verification.md"
           ]
         },
         {
@@ -995,7 +1043,12 @@
             "docs/staff-service-browser-verification.md",
             "validation/compact-delivery/v0.4.0/README.md",
             "validation/compact-delivery/v0.4.0/artifacts.json",
-            "validation/compact-delivery/v0.4.0/browser/historical/run-summary.json"
+            "validation/compact-delivery/v0.4.0/browser/historical/run-summary.json",
+            "validation/compact-delivery/v0.5.0/deployment.json",
+            "validation/compact-delivery/v0.5.0/sdk-receipt.json",
+            "validation/compact-delivery/v0.5.0/browser/staff/run-summary.json",
+            "validation/compact-delivery/v0.5.0/artifacts.json",
+            "docs/household-service-verification.md"
           ]
         }
       ]

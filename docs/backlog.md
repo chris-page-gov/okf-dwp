@@ -58,7 +58,7 @@ Do not read a delivered compiler or a denser graph as complete domain modelling.
 | DWP-BL-013 | P1 | Tribunal decision discovery | `needs_domain_review` | DWP-BL-001, DWP-BL-006 |
 | DWP-BL-014 | P2 | Calculator comparison | `not_started` | DWP-BL-001, DWP-BL-007 |
 | DWP-BL-015 | P2 | CASA framework assessment | `not_started` | DWP-BL-003 |
-| DWP-BL-016 | P0 | ChatGPT Voice and room audio rehearsal | `not_started` | — |
+| DWP-BL-016 | P0 | ChatGPT Voice and room audio rehearsal | `in_progress` | — |
 | DWP-BL-017 | P1 | Portable discovery-first departmental workflow | `recorded_complete` | — |
 | DWP-BL-018 | P1 | Fair model and affordability benchmark | `in_progress` | DWP-BL-007, DWP-BL-010 |
 | DWP-BL-019 | P1 | Broader accessibility and cross-browser review | `in_progress` | DWP-BL-009 |

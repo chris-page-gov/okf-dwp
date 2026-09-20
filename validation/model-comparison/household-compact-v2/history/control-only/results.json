@@ -1,0 +1,98 @@
+{
+  "attempts": [
+    {
+      "answer_present": true,
+      "attempt": "attempt-01",
+      "case_id": "control-unknown",
+      "inputs": {
+        "context_id": "urn:sha256:b604c488b36134952c3d6e09ce5d54b7f78c6bdfe7dee6539ae63ef686d00267",
+        "freeze_manifest_sha256": "faefc7f42282c2f8dfdee119ff6d30f26b537b73b43b1b9ed133c3befbef4678",
+        "original_context_sha256": "b474066da0a789f519a6d25c7bff1f16e7ddbc52fdf67a08b0c4bcf4027e67b1",
+        "packet_sha256": "9dcb07585cec27298386a6d7f8454c606b95b60b826d68d2d354881c9054a499",
+        "prompt_sha256": "4b898faa92e77c8d50daa385c8942ebd1c7cf4a623f11f963981d296eee083a2",
+        "schema_sha256": "5c83e0ffdfeed95fd0feb59ae2a7fc3e65c35608843c1a5254348632a3e3d06f",
+        "system_prompt_sha256": "391145a13ee07a20220a67cc9020e9fe78e9872408ba091fbb491b47acc721af"
+      },
+      "mechanical_assessment": {
+        "answer_quality_score": null,
+        "citations_checked": 0,
+        "claims": 0,
+        "entailment_review": "pending-independent-human-review",
+        "failures": [],
+        "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete.",
+        "specialist_accepted": false,
+        "status": "passed-mechanical-controls",
+        "unsupported_claim_rate": null
+      },
+      "provider": "claude-subscription",
+      "receipt": "validation/model-comparison/household-compact-v2/claude-subscription/control-unknown/attempt-01/receipt.json",
+      "receipt_sha256": "6deab6a2f092f0605221bc83aed7ecb6ef5b568e69a8dee409b86be91a182fb1",
+      "status": "actual-model-response-retained"
+    },
+    {
+      "answer_present": true,
+      "attempt": "attempt-01",
+      "case_id": "control-unknown",
+      "inputs": {
+        "context_id": "urn:sha256:b604c488b36134952c3d6e09ce5d54b7f78c6bdfe7dee6539ae63ef686d00267",
+        "freeze_manifest_sha256": "faefc7f42282c2f8dfdee119ff6d30f26b537b73b43b1b9ed133c3befbef4678",
+        "original_context_sha256": "b474066da0a789f519a6d25c7bff1f16e7ddbc52fdf67a08b0c4bcf4027e67b1",
+        "packet_sha256": "9dcb07585cec27298386a6d7f8454c606b95b60b826d68d2d354881c9054a499",
+        "prompt_sha256": "4b898faa92e77c8d50daa385c8942ebd1c7cf4a623f11f963981d296eee083a2",
+        "schema_sha256": "5c83e0ffdfeed95fd0feb59ae2a7fc3e65c35608843c1a5254348632a3e3d06f",
+        "system_prompt_sha256": "391145a13ee07a20220a67cc9020e9fe78e9872408ba091fbb491b47acc721af"
+      },
+      "mechanical_assessment": {
+        "answer_quality_score": null,
+        "citations_checked": 0,
+        "claims": 0,
+        "entailment_review": "pending-independent-human-review",
+        "failures": [],
+        "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete.",
+        "specialist_accepted": false,
+        "status": "passed-mechanical-controls",
+        "unsupported_claim_rate": null
+      },
+      "provider": "codex-subscription",
+      "receipt": "validation/model-comparison/household-compact-v2/codex-subscription/control-unknown/attempt-01/receipt.json",
+      "receipt_sha256": "1a36923eb98e2a195a26c91d099e2af77d833c9855ec5fbddc7f3d546d392ae5",
+      "status": "actual-model-response-retained"
+    }
+  ],
+  "comparative_accuracy_established": false,
+  "freeze_manifest_sha256": "faefc7f42282c2f8dfdee119ff6d30f26b537b73b43b1b9ed133c3befbef4678",
+  "pairs": [
+    {
+      "both_responses_retained": false,
+      "case_id": "staff-012",
+      "same_public_inputs": false
+    },
+    {
+      "both_responses_retained": false,
+      "case_id": "staff-020",
+      "same_public_inputs": false
+    },
+    {
+      "both_responses_retained": false,
+      "case_id": "staff-005",
+      "same_public_inputs": false
+    },
+    {
+      "both_responses_retained": false,
+      "case_id": "staff-026",
+      "same_public_inputs": false
+    },
+    {
+      "both_responses_retained": false,
+      "case_id": "staff-008",
+      "same_public_inputs": false
+    },
+    {
+      "both_responses_retained": true,
+      "case_id": "control-unknown",
+      "same_public_inputs": true
+    }
+  ],
+  "schema": "okf-compact-model-results.v2",
+  "specialist_accepted": false
+}

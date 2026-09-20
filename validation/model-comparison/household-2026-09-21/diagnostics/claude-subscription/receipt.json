@@ -1,0 +1,235 @@
+{
+  "auth_observation": {
+    "accepted": true,
+    "exit_code": 0,
+    "status": "subscription-auth-observed"
+  },
+  "census_status": "diagnostic-shapes-only",
+  "cli_version": "2.1.278 (Claude Code)",
+  "event_count": 6,
+  "events": [
+    {
+      "shape": {
+        "agents": {
+          "array_length": 4,
+          "item_shapes": [
+            "str",
+            "str",
+            "str",
+            "str"
+          ]
+        },
+        "apiKeySource": "str",
+        "claude_code_version": "str",
+        "cwd": "str",
+        "fast_mode_state": "str",
+        "mcp_servers": {
+          "array_length": 0,
+          "item_shapes": []
+        },
+        "model": "str",
+        "output_style": "str",
+        "permissionMode": "str",
+        "plugins": {
+          "array_length": 1,
+          "item_shapes": [
+            {
+              "name": "str",
+              "unlisted_key_count": 3
+            }
+          ]
+        },
+        "session_id": "str",
+        "skills": {
+          "array_length": 0,
+          "item_shapes": []
+        },
+        "slash_commands": {
+          "array_length": 0,
+          "item_shapes": []
+        },
+        "subtype": "str",
+        "tools": {
+          "array_length": 1,
+          "item_shapes": [
+            "str"
+          ]
+        },
+        "type": "str",
+        "unlisted_key_count": 5,
+        "uuid": "str"
+      },
+      "subtype": "init",
+      "type": "system"
+    },
+    {
+      "shape": {
+        "message": {
+          "content": {
+            "array_length": 1,
+            "item_shapes": [
+              {
+                "text": "str",
+                "type": "str",
+                "unlisted_key_count": 0
+              }
+            ]
+          },
+          "id": "str",
+          "model": "str",
+          "stop_reason": "NoneType",
+          "type": "str",
+          "unlisted_key_count": 7,
+          "usage": {
+            "unlisted_key_count": 7
+          }
+        },
+        "parent_tool_use_id": "NoneType",
+        "session_id": "str",
+        "timestamp": "str",
+        "type": "str",
+        "unlisted_key_count": 1,
+        "uuid": "str"
+      },
+      "type": "assistant"
+    },
+    {
+      "shape": {
+        "message": {
+          "content": {
+            "array_length": 1,
+            "item_shapes": [
+              {
+                "id": "str",
+                "input": "dict",
+                "name": "str",
+                "type": "str",
+                "unlisted_key_count": 1
+              }
+            ]
+          },
+          "id": "str",
+          "model": "str",
+          "stop_reason": "NoneType",
+          "type": "str",
+          "unlisted_key_count": 7,
+          "usage": {
+            "unlisted_key_count": 7
+          }
+        },
+        "parent_tool_use_id": "NoneType",
+        "session_id": "str",
+        "timestamp": "str",
+        "type": "str",
+        "unlisted_key_count": 2,
+        "uuid": "str"
+      },
+      "type": "assistant"
+    },
+    {
+      "shape": {
+        "message": {
+          "content": {
+            "array_length": 1,
+            "item_shapes": [
+              {
+                "content": "str",
+                "tool_use_id": "str",
+                "type": "str",
+                "unlisted_key_count": 0
+              }
+            ]
+          },
+          "unlisted_key_count": 1
+        },
+        "parent_tool_use_id": "NoneType",
+        "session_id": "str",
+        "timestamp": "str",
+        "type": "str",
+        "unlisted_key_count": 1,
+        "uuid": "str"
+      },
+      "type": "user"
+    },
+    {
+      "shape": {
+        "rate_limit_info": {
+          "isUsingOverage": "bool",
+          "rateLimitType": "str",
+          "resetsAt": "int",
+          "status": "str",
+          "unlisted_key_count": 3
+        },
+        "session_id": "str",
+        "type": "str",
+        "unlisted_key_count": 0,
+        "uuid": "str"
+      },
+      "type": "rate_limit_event"
+    },
+    {
+      "shape": {
+        "duration_api_ms": "int",
+        "duration_ms": "int",
+        "fast_mode_state": "str",
+        "is_error": "bool",
+        "modelUsage": {
+          "unlisted_key_count": 1
+        },
+        "num_turns": "int",
+        "permission_denials": {
+          "array_length": 0,
+          "item_shapes": []
+        },
+        "result": "str",
+        "session_id": "str",
+        "stop_reason": "str",
+        "structured_output": {
+          "unlisted_key_count": 1
+        },
+        "subtype": "str",
+        "total_cost_usd": "float",
+        "type": "str",
+        "unlisted_key_count": 10,
+        "usage": {
+          "unlisted_key_count": 11
+        },
+        "uuid": "str"
+      },
+      "subtype": "success",
+      "type": "result"
+    }
+  ],
+  "exit_code": 0,
+  "experiment_answer_accepted": false,
+  "finished_at": "2026-09-20T22:21:23.366376+00:00",
+  "formatter_results": [
+    {
+      "content_sha256": "711dfd4cf1d8853c28693e352c55e7a8f4cfdd5a3b5592f13b9e5640ab447a73",
+      "formatter_input_sha256": "dc52b0dd8a7f8427b9a7bc1afdc55a2297dab5533ff13196ab197c381bac21cf",
+      "is_error": false,
+      "matches_preceding_structured_output": true
+    }
+  ],
+  "isolation": {
+    "customisations": "disabled-safe-mode",
+    "skills_policy": "disabled-safe-mode-and-slash-commands"
+  },
+  "model_override": null,
+  "output_bound_exceeded": false,
+  "prompt_sha256": "80b9efb41ac261501e550f26d31016c14b5da329eb1e113bf0c277e117d1d74a",
+  "provider": "claude-subscription",
+  "response_models": [
+    "claude-opus-5"
+  ],
+  "runner_sha256": "e7b3e1fc93f531d764ff8046401990561ba299268c921269483f5bb07807b48b",
+  "sanitised_error_messages": [],
+  "schema": "okf-cli-shape-diagnostic.v1",
+  "schema_sha256": "297204836eb74f64ebbbe3acb39b5255b06ab94537ed23ceb3585b747f9ca455",
+  "scope": "Separate tiny synthetic diagnostic; does not replace or reinterpret frozen experiment outcomes. Raw streams, account/session identifiers, paths and reasoning are not retained.",
+  "started_at": "2026-09-20T22:21:20.633224+00:00",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "662ce06fcaaa5f6a7b7e487f3ce8943e1609f044449bf55c637e42033a0f701c",
+  "system_sha256": "33546cc9ac6c08f1886a4d3d2a057d5181b6ef1d6fa8296c42708ac215ea516f",
+  "timed_out": false
+}

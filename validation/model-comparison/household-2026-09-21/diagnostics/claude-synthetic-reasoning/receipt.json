@@ -1,0 +1,444 @@
+{
+  "answer_accepted": false,
+  "answer_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "checksum": {
+        "type": "integer"
+      },
+      "outcome": {
+        "enum": [
+          "no_evidence"
+        ],
+        "type": "string"
+      }
+    },
+    "required": [
+      "outcome",
+      "checksum"
+    ],
+    "type": "object"
+  },
+  "auth_observation": {
+    "accepted": true,
+    "exit_code": 0,
+    "status": "subscription-auth-observed"
+  },
+  "census_status": "diagnostic-shapes-only",
+  "event_count": 10,
+  "events": [
+    {
+      "fields": {
+        "agents": {
+          "array_length": 4,
+          "item_shapes": [
+            "str",
+            "str",
+            "str",
+            "str"
+          ]
+        },
+        "analytics_disabled": "bool",
+        "apiKeySource": "str",
+        "capabilities": {
+          "array_length": 3,
+          "item_shapes": [
+            "str",
+            "str",
+            "str"
+          ]
+        },
+        "claude_code_version": "str",
+        "cwd": "str",
+        "fast_mode_disabled_reason": "str",
+        "fast_mode_state": "str",
+        "mcp_servers": {
+          "array_length": 0,
+          "item_shapes": []
+        },
+        "messaging_socket_path": "str",
+        "model": "str",
+        "output_style": "str",
+        "permissionMode": "str",
+        "plugins": {
+          "array_length": 1,
+          "item_shapes": [
+            {
+              "name": "str",
+              "path": "str",
+              "source": "str",
+              "version": "str"
+            }
+          ]
+        },
+        "product_feedback_disabled": "bool",
+        "session_id": "str",
+        "skills": {
+          "array_length": 0,
+          "item_shapes": []
+        },
+        "slash_commands": {
+          "array_length": 0,
+          "item_shapes": []
+        },
+        "subtype": "str",
+        "tools": {
+          "array_length": 1,
+          "item_shapes": [
+            "str"
+          ]
+        },
+        "type": "str",
+        "uuid": "str"
+      },
+      "subtype": "init",
+      "type": "system"
+    },
+    {
+      "fields": {
+        "estimated_tokens": "int",
+        "estimated_tokens_delta": "int",
+        "session_id": "str",
+        "subtype": "str",
+        "type": "str",
+        "uuid": "str"
+      },
+      "subtype": "thinking_tokens",
+      "type": "system"
+    },
+    {
+      "fields": {
+        "estimated_tokens": "int",
+        "estimated_tokens_delta": "int",
+        "session_id": "str",
+        "subtype": "str",
+        "type": "str",
+        "uuid": "str"
+      },
+      "subtype": "thinking_tokens",
+      "type": "system"
+    },
+    {
+      "fields": {
+        "estimated_tokens": "int",
+        "estimated_tokens_delta": "int",
+        "session_id": "str",
+        "subtype": "str",
+        "type": "str",
+        "uuid": "str"
+      },
+      "subtype": "thinking_tokens",
+      "type": "system"
+    },
+    {
+      "fields": {
+        "estimated_tokens": "int",
+        "estimated_tokens_delta": "int",
+        "session_id": "str",
+        "subtype": "str",
+        "type": "str",
+        "uuid": "str"
+      },
+      "subtype": "thinking_tokens",
+      "type": "system"
+    },
+    {
+      "fields": {
+        "message": {
+          "container": "NoneType",
+          "content": {
+            "array_length": 1,
+            "item_shapes": [
+              {
+                "signature": "str",
+                "thinking": "str",
+                "type": "str"
+              }
+            ]
+          },
+          "context_management": "NoneType",
+          "diagnostics": "NoneType",
+          "id": "str",
+          "input_transformations": {
+            "array_length": 0,
+            "item_shapes": []
+          },
+          "model": "str",
+          "role": "str",
+          "stop_details": "NoneType",
+          "stop_reason": "NoneType",
+          "stop_sequence": "NoneType",
+          "type": "str",
+          "usage": {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": "int",
+              "ephemeral_5m_input_tokens": "int"
+            },
+            "cache_creation_input_tokens": "int",
+            "cache_read_input_tokens": "int",
+            "inference_geo": "str",
+            "input_tokens": "int",
+            "output_tokens": "int",
+            "service_tier": "str"
+          }
+        },
+        "parent_tool_use_id": "NoneType",
+        "request_id": "str",
+        "session_id": "str",
+        "timestamp": "str",
+        "type": "str",
+        "uuid": "str"
+      },
+      "type": "assistant"
+    },
+    {
+      "fields": {
+        "message": {
+          "container": "NoneType",
+          "content": {
+            "array_length": 1,
+            "item_shapes": [
+              {
+                "caller": {
+                  "type": "str"
+                },
+                "id": "str",
+                "input": {
+                  "checksum": "int",
+                  "outcome": "str"
+                },
+                "name": "str",
+                "type": "str"
+              }
+            ]
+          },
+          "context_management": "NoneType",
+          "diagnostics": "NoneType",
+          "id": "str",
+          "input_transformations": {
+            "array_length": 0,
+            "item_shapes": []
+          },
+          "model": "str",
+          "role": "str",
+          "stop_details": "NoneType",
+          "stop_reason": "NoneType",
+          "stop_sequence": "NoneType",
+          "type": "str",
+          "usage": {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": "int",
+              "ephemeral_5m_input_tokens": "int"
+            },
+            "cache_creation_input_tokens": "int",
+            "cache_read_input_tokens": "int",
+            "inference_geo": "str",
+            "input_tokens": "int",
+            "output_tokens": "int",
+            "service_tier": "str"
+          }
+        },
+        "parent_tool_use_id": "NoneType",
+        "request_id": "str",
+        "session_id": "str",
+        "timestamp": "str",
+        "type": "str",
+        "uuid": "str",
+        "wire_tool_inputs": {
+          "key_sha256_3fc163e473440a71d31b4dabfc4fc45d188c5160435f1fd1f4bb3f8dbc709a9d": {
+            "checksum": "int",
+            "outcome": "str"
+          }
+        }
+      },
+      "type": "assistant"
+    },
+    {
+      "fields": {
+        "message": {
+          "content": {
+            "array_length": 1,
+            "item_shapes": [
+              {
+                "content": "str",
+                "tool_use_id": "str",
+                "type": "str"
+              }
+            ]
+          },
+          "role": "str"
+        },
+        "parent_tool_use_id": "NoneType",
+        "session_id": "str",
+        "timestamp": "str",
+        "tool_use_result": "str",
+        "type": "str",
+        "uuid": "str"
+      },
+      "type": "user"
+    },
+    {
+      "fields": {
+        "rate_limit_info": {
+          "isUsingOverage": "bool",
+          "overageResetsAt": "int",
+          "overageStatus": "str",
+          "rateLimitType": "str",
+          "resetsAt": "int",
+          "status": "str",
+          "unifiedWindows": {
+            "five_hour": {
+              "resetsAt": "int",
+              "utilization": "float"
+            },
+            "seven_day": {
+              "resetsAt": "int",
+              "utilization": "float"
+            }
+          }
+        },
+        "session_id": "str",
+        "type": "str",
+        "uuid": "str"
+      },
+      "type": "rate_limit_event"
+    },
+    {
+      "fields": {
+        "api_error_status": "NoneType",
+        "duration_api_ms": "int",
+        "duration_ms": "int",
+        "fast_mode_disabled_reason": "str",
+        "fast_mode_state": "str",
+        "first_content_frame_ms": "int",
+        "is_error": "bool",
+        "modelUsage": {
+          "key_sha256_87d272cce8c318c0b6247c28406dabba0991f4c14d4a1d87e7c10aca885a3eb5": {
+            "cacheCreationInputTokens": "int",
+            "cacheReadInputTokens": "int",
+            "canonicalModel": "str",
+            "contextWindow": "int",
+            "costBasis": "str",
+            "costUSD": "float",
+            "inputTokens": "int",
+            "maxOutputTokens": "int",
+            "outputTokens": "int",
+            "provider": "str",
+            "thinkingTokens": "int",
+            "webSearchRequests": "int"
+          }
+        },
+        "num_turns": "int",
+        "permission_denials": {
+          "array_length": 0,
+          "item_shapes": []
+        },
+        "queued_turn_count": "int",
+        "result": "str",
+        "result_index": "int",
+        "session_id": "str",
+        "stop_reason": "str",
+        "structured_output": {
+          "checksum": "int",
+          "outcome": "str"
+        },
+        "subagent_stats": {
+          "by_type": {},
+          "completed": "int",
+          "failed": "int",
+          "killed": {
+            "parent": "int",
+            "system": "int",
+            "user": "int"
+          },
+          "max_depth": "int",
+          "refused": {
+            "budget": "int",
+            "concurrency_limit": "int",
+            "depth_limit": "int"
+          },
+          "requested": {
+            "background": "int",
+            "foreground": "int",
+            "unset": "int"
+          },
+          "spawned": "int",
+          "spawned_by_subagents": "int",
+          "started_in_background": "int"
+        },
+        "subtype": "str",
+        "terminal_reason": "str",
+        "time_to_request_ms": "int",
+        "total_cost_usd": "float",
+        "ttft_ms": "int",
+        "ttft_stream_ms": "int",
+        "type": "str",
+        "usage": {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": "int",
+            "ephemeral_5m_input_tokens": "int"
+          },
+          "cache_creation_input_tokens": "int",
+          "cache_read_input_tokens": "int",
+          "inference_geo": "str",
+          "input_tokens": "int",
+          "iterations": {
+            "array_length": 1,
+            "item_shapes": [
+              {
+                "cache_creation": {
+                  "ephemeral_1h_input_tokens": "int",
+                  "ephemeral_5m_input_tokens": "int"
+                },
+                "cache_creation_input_tokens": "int",
+                "cache_read_input_tokens": "int",
+                "input_tokens": "int",
+                "output_tokens": "int",
+                "type": "str"
+              }
+            ]
+          },
+          "output_tokens": "int",
+          "output_tokens_details": {
+            "thinking_tokens": "int"
+          },
+          "server_tool_use": {
+            "web_fetch_requests": "int",
+            "web_search_requests": "int"
+          },
+          "service_tier": "str",
+          "speed": "str"
+        },
+        "uuid": "str"
+      },
+      "subtype": "success",
+      "type": "result"
+    }
+  ],
+  "exit_code": 0,
+  "finished_at": "2026-09-20T22:27:48.415127+00:00",
+  "output_bound_exceeded": false,
+  "privacy_projection": {
+    "original_bytes": 12312,
+    "original_retained_publicly": false,
+    "original_sha256": "8dada01f104093c6d1e1288d03b270f6b198a3178fbb631b5fea3cd592dfbb86",
+    "producer_sha256": "0e5fbf971c3d35ed96111179d692dedcf92b2795377e3d18e3929b2ff36e6fc7",
+    "schema": "okf-diagnostic-privacy-projection.v1",
+    "transformation": "Dynamic tool/model map keys are hashed; scalar values were already type-only. Original observation retained only outside the public repository. This is a derived projection, not the unchanged diagnostic receipt."
+  },
+  "prompt": "Calculate the sum of the squares of integers from 1 to 137 inclusive that are divisible by neither 3 nor 5, then take its remainder modulo 97. Return outcome no_evidence and that checksum. This is a synthetic event-format diagnostic, not a benefits question.",
+  "provider": "claude-subscription",
+  "schema": "okf-cli-reasoning-shape-diagnostic.v1",
+  "scope": "Separate synthetic arithmetic call. Event field names and types only; no raw bodies, reasoning, account/session values or credentials retained. No historical event is reclassified.",
+  "source_sha256": {
+    "scripts/diagnose_monday_cli_events.py": "e7b3e1fc93f531d764ff8046401990561ba299268c921269483f5bb07807b48b",
+    "scripts/diagnose_monday_reasoning_events.py": "d03a6b430bae586fbc51c613d2e10bcd23d63b8293df867715f506c778134a70",
+    "scripts/run_monday_model_trials.py": "da5d0857d3108e84fc30252c3a71b7f37f92495b3a235d31f91573d65675f250",
+    "scripts/run_staff_model_trials.py": "f7d28f7194ed5540592976d791f310ab6d9fb416f777c2d46071b67c7f2fb7df"
+  },
+  "started_at": "2026-09-20T22:27:41.232969+00:00",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "f518f0536d44c7f6d1e16c1f04e867d9009aa18f61221fe2a55ee61dec729c82",
+  "system": "Synthetic arithmetic diagnostic only. Do not use tools or external sources. Return the requested JSON; do not include reasoning in the final answer.",
+  "timed_out": false
+}
