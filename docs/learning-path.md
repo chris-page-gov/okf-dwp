@@ -2,7 +2,7 @@
 
 [About the web edition](learning-website.md) · [Markdown source and project](../README.md)
 
-[What changed](../CHANGELOG.md) · [Work in progress](work-log-2026-09-20.md) · [Remaining work](backlog.md)
+[What changed](../CHANGELOG.md) · [Work in progress](monday-delivery-work-log.md) · [Remaining work](backlog.md)
 
 OKF-DWP is an independent experiment in making published benefits guidance easier
 to find, connect and inspect. It is not a DWP service, an entitlement decision or
@@ -17,8 +17,18 @@ The [retrospective](retrospective.md) explains what this experiment established.
 The [methodology](methodology.md) shows how another department can begin with
 source, terminology, legal and ontology discovery before building its own bundle.
 
-For a guided group session, use the [ten-minute Monday demonstration](monday-demo-2026-09-21.md).
-It connects the combined Reader, small evidence deliveries and actual paired model trials.
+For a guided group session, use the [Monday handover and ten-minute demonstration](monday-handover-2026-09-21.md).
+It connects the combined Reader, small evidence deliveries and separately recorded model trials.
+
+The public service now runs **0.5.0** with the household evidence release. Its
+[dated observation](../validation/compact-delivery/v0.5.0/README.md) records what
+passed and what did not: seven full-package and four compact client checks;
+successful evidence journeys in three browsers; and strict console checks that
+passed in Chrome and WebKit but retained Firefox hosting-cookie warnings.
+The [full public Reader check](household-reader-public-verification.md) also
+verified conceptual filters, a statutory relationship graph and separate source
+and audit dates in Chrome. These are checks that the right evidence arrived,
+not that every benefits question can be answered correctly.
 
 ### New route: follow a supplied staff question
 
@@ -39,7 +49,11 @@ before/after retrieval results.
 Follow a legal citation only after reading its surrounding guidance. A verified
 provision identifier tells you which section or regulation was found; it does
 not prove how it applies. The [legal-reference guide](legal-reconciliation.md)
-explains this distinction. Finally, compare a [fresh listing observation](source-refresh.md)
+explains this distinction. The household release also includes
+[20 selected statutory units](legal-body-evidence.md): sections, regulations or
+schedule paragraphs extracted with dated source links. They are not 20 complete
+Acts, complete legal coverage or specialist-approved interpretations. Finally,
+compare a [fresh listing observation](source-refresh.md)
 with the captured PDFs: a listing that looks unchanged does not prove that the
 documents' bytes or the applicable law are unchanged.
 
@@ -124,12 +138,21 @@ required for a supported task. It is more than a list of documents.
 
 ### Choose the version being demonstrated
 
-For the current Monday demonstration, use the [combined Reader and staff
-walkthrough](monday-demo-2026-09-21.md). Service 0.4.0 uses the staff-semantic
-content version `9de52acf1db84b27f8933d80480eaa850e74fa33`: both captured manuals,
-43 authored concepts and 40 task profiles with explicit outstanding requirements.
-Its 169 of 177 candidate-page matches measure retrieval against known staff
-questions, not answer accuracy; all 40 tasks remain insufficient.
+For the current Monday demonstration, use the [household handover](monday-handover-2026-09-21.md).
+Service **0.5.0** uses content version
+`3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84`: both captured manuals,
+51 authored concepts, 40 task profiles and 20 selected statutory units.
+The development check retains **176 of 177 candidate-page occurrences** for the
+known staff questions. These are passages selected for investigation, not 176
+correct answers. All 40 tasks remain insufficient, with **203 open obligations**
+for evidence closure, scope, applicable rules, legal version and independent
+review. The [evaluation](../evaluation/semantic-expansion/evaluation.json) records
+those results.
+
+The earlier service 0.4.0 source,
+`9de52acf1db84b27f8933d80480eaa850e74fa33`, remains available as an explicit
+version. Its [original observations](../validation/compact-delivery/v0.4.0/README.md)
+retain their own scope; they are not substituted for checks of the new release.
 
 The earlier full-corpus comparison uses version
 `bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752` and the additive
@@ -152,8 +175,8 @@ contains **40 question occurrences, with 39 distinct wordings**, to test broader
 needs against that baseline. A later profile requires its own version and
 evaluation; it must not silently change what this baseline proved.
 
-The newer combined-corpus path can select whole pages from the nonempty DMG and
-ADM text. Its remote evaluation is recorded; transport, browser and actual
+The combined-corpus path can select whole pages from the nonempty DMG and
+ADM text. Its versions have separate recorded evaluations; transport, browser and actual
 AI-client acceptance have separate evidence. It ranks the words in the question, while concept
 resolution separately uses declared aliases. Existing aliases and relationships
 retain their original scopes: a custody-specific concept is not a complete model
@@ -196,8 +219,10 @@ September capture does not turn an April publication into a September edition.
 ## 5. Connect an AI to the same evidence
 
 **[MCP](glossary.md#api-mcp-and-webmcp)** is a protocol through which an AI client
-can discover and call a service's tools. The remote Ask OKF tool is `ask_okf`.
-It reads an approved, pinned bundle; it does not write claimant records or search
+can discover and call a service's tools. The remote Ask OKF tools include
+`ask_okf` for a full package, `ask_okf_manifest` for a small catalogue, and
+`read_okf_evidence` for exact text and metadata in smaller parts. They read an
+approved, pinned bundle; they do not write claimant records or search
 arbitrary websites.
 
 For the tested ChatGPT setup, follow the [connection instructions](remote-mcp-demo.md#connect-chatgpt):
@@ -214,11 +239,12 @@ browser visits. See [HTTP and 405](glossary.md#http-get-post-and-405).
 
 **WebMCP** exposes tools through a supporting browser page. Remote MCP connects
 to a service. Neither one proves that a particular AI client can use the other.
-In the published Explorer, the Codex in-app browser actually called the context
+In the earlier published Explorer check, the Codex in-app browser actually called the context
 build and explain tools. At the same version, question and 32,768-byte budget,
 their complete package matched Explorer's UI and the remote MCP result: six
 source pages and 31,312 bytes, still insufficient and truncated.
-Text calls were tested in ChatGPT; **Ask OKF invocation through ChatGPT Voice has
+Earlier text calls were tested in ChatGPT; the 0.5.0 SDK/browser results do not
+establish new ChatGPT acceptance. **Ask OKF invocation through ChatGPT Voice has
 not been verified**. Rehearse the intended account and audio equipment separately.
 
 There are also two size limits. Ask OKF can deliberately omit items to meet a
@@ -262,7 +288,7 @@ packages matched the shared Explorer engine, with no assembly-budget truncation;
 reporting and source traceability. It leaves substantive answerability open.
 ChatGPT's handling of tool output has its [separate observed tests](remote-mcp-demo.md#actual-chatgpt-pro-observation-19-september).
 
-The [full-corpus remote run](../validation/corpus-questions/receipt.json)
+The historical [19 September full-corpus remote run](../validation/corpus-questions/receipt.json)
 uses those same 40 questions plus three boundary controls. All 40 staff questions
 return candidate evidence, including ADM pages. Twelve packages retain an
 independently located candidate page; 21 retain a page from a candidate PDF.
@@ -319,7 +345,16 @@ Return to the [project overview](../README.md), the [glossary](glossary.md) or t
 
 ## Read smaller pieces of the same evidence
 
-The [compact-evidence demonstration](compact-evidence-demo.md) introduces a
+The [current public care-home observation](../validation/compact-delivery/v0.5.0/README.md)
+shows a 35-record, 50-relationship package delivered within a 262,144-byte budget.
+The three browsers read the same package verified by the SDK client, including
+the heading limiting DMG 78088 to claimants with no partner. Its status remains
+insufficient and its limits omit some evidence. Use the
+[Monday handover](monday-handover-2026-09-21.md) to reproduce that example.
+The separate historical browser journeys were not rerun for 0.5.0; a passed SDK
+replay of earlier sources is a different check.
+
+The earlier [compact-evidence demonstration](compact-evidence-demo.md) introduces a
 catalogue, exact reads and a human replay link. The catalogue tells you what was
 selected; it is not the source passage. Read diagnostics and provenance before
 using a passage. A complete delivery still cannot turn insufficient evidence

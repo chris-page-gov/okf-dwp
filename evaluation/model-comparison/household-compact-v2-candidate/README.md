@@ -1,6 +1,8 @@
 # Lossless context and CLI compatibility candidate
 
-**Candidate only: not frozen and no successor model calls made.** This separate experiment preserves the [original five failed or rejected attempts](../../../validation/model-comparison/household-2026-09-21/results.json). It does not relabel those attempts as successful.
+**Reviewed, frozen and executed: nine attempts are retained.** Both unknown-term controls passed. Codex returned five substantive parser-accepted answers; four pass mechanical checks and Staff 008 fails a source-locator check. Claude Staff 012 was rejected for formatter-result recognition and Staff 020 timed out; its remaining three cases are held. The [claim-level model critique](../../../validation/model-comparison/household-compact-v2/claim-level-model-critique.json) identifies scope and attribution concerns separately from those mechanical results. No substantive pair or comparative accuracy result is established.
+
+This separate experiment preserves the [original five failed or rejected attempts](../../../validation/model-comparison/household-2026-09-21/results.json). It does not relabel those attempts as successful. The [frozen manifest](frozen-manifest.json) binds reviewed commit `78a8beea97242d646eb9159860dea190ca5e2998` and has SHA-256 `faefc7f42282c2f8dfdee119ff6d30f26b537b73b43b1b9ed133c3befbef4678`. Offline verification passes for all six cases. See the [retained successor outcomes and stopping decision](../../../validation/model-comparison/household-compact-v2/README.md); no further calls are authorised by this guide.
 
 ## What changes
 

@@ -1,0 +1,80 @@
+{
+  "accounting_models": [],
+  "answer_present": true,
+  "artefacts": {
+    "answer.json": "65a909d25aafa438a45124657cd40a4f9a106a178e1a7057b62c66dc2d7d03ad",
+    "model-output.json": "039d32974358b1880c0070669f7714fa46157a95fc774b8efafbffac85c3a236"
+  },
+  "attempt": "attempt-01",
+  "auth_observation": {
+    "accepted": true,
+    "exit_code": 0,
+    "status": "subscription-auth-observed"
+  },
+  "case_id": "staff-026",
+  "cli_version": "codex-cli 0.146.1",
+  "comparative_accuracy_established": false,
+  "elapsed_seconds": 43.874,
+  "exit_code": 0,
+  "fallback_override": null,
+  "finished_at": "2026-09-20T22:57:28.426466+00:00",
+  "human_review": "pending",
+  "inputs": {
+    "context_id": "urn:sha256:c8b11f93f625139c8316df0f76844dd0caac396ab1e60b74c65f98590c12aaf6",
+    "freeze_manifest_sha256": "faefc7f42282c2f8dfdee119ff6d30f26b537b73b43b1b9ed133c3befbef4678",
+    "original_context_sha256": "1688178198ca3209ffbc711d755c22b2cf442153c07e1d9f43a9c843ca002437",
+    "packet_sha256": "e8345c2cb9482c1e2138723158032327342252cc36b0244d29aaf565ab1c7579",
+    "prompt_sha256": "212eac3adfb45c0941142c6f8764cf13aa06d6ba132c2e328fc60967d4e1b9f4",
+    "schema_sha256": "5c83e0ffdfeed95fd0feb59ae2a7fc3e65c35608843c1a5254348632a3e3d06f",
+    "system_prompt_sha256": "391145a13ee07a20220a67cc9020e9fe78e9872408ba091fbb491b47acc721af"
+  },
+  "isolation": {
+    "customisations": "user-config-rules-project-docs-and-listed-features-disabled",
+    "disabled_skill_path_count": 17,
+    "limitation": "Host/system additions may still differ; absence of a warning is not proof of identical provider system context.",
+    "skills_policy": "process-local-disabled-for-discovered-user-skill-paths"
+  },
+  "loaded_helper_sha256": {
+    "scripts/evaluate_fixed_answers.py": "e9feefe43bbd2ded8419e84374421b05bc8b686130a830316ae6d9fd90779be1",
+    "scripts/monday_cli_events_v2.py": "19fb5f24f857f09f2e9a30d1508ee3c244070d955e3813dbebd67b3738bc108a",
+    "scripts/project_monday_model_contexts.py": "82e91080acab9ba37dbe58a4e19d82e145216423e9e4c677ae8b19cfcfb58055",
+    "scripts/run_monday_compact_trials.py": "51b758f0a56a6302052e7609a090a72b60fc91b91f598af50efc475fbf3612ac",
+    "scripts/run_monday_model_trials.py": "da5d0857d3108e84fc30252c3a71b7f37f92495b3a235d31f91573d65675f250",
+    "scripts/run_staff_model_trials.py": "f7d28f7194ed5540592976d791f310ab6d9fb416f777c2d46071b67c7f2fb7df"
+  },
+  "mechanical_assessment": {
+    "answer_quality_score": null,
+    "citations_checked": 6,
+    "claims": 4,
+    "entailment_review": "pending-independent-human-review",
+    "failures": [],
+    "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete.",
+    "specialist_accepted": false,
+    "status": "passed-mechanical-controls",
+    "unsupported_claim_rate": null
+  },
+  "model_override": null,
+  "provider": "codex-subscription",
+  "recognised_warnings": [
+    {
+      "boundary": "Host/system skill catalogue remains visible; identical provider system contexts are not established.",
+      "category": "skill-catalogue-shortening",
+      "message": "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+    }
+  ],
+  "recognition_issues": [],
+  "response_models": [],
+  "schema": "okf-compact-model-attempt.v2",
+  "source_commit": "78a8beea97242d646eb9159860dea190ca5e2998",
+  "specialist_accepted": false,
+  "started_at": "2026-09-20T22:56:44.551640+00:00",
+  "status": "actual-model-response-retained",
+  "stderr_sha256": "9107766f6e63c739e7a867279a5785d2c6fb5437f73109b58cb93dda59d3161e",
+  "stdout_sha256": "66aa7324ea70d67ca221fa38672f884630bb981c9702ed2290b302508daa0b4b",
+  "tool_event_census_status": "retained-validated-completed-stream",
+  "usage": {
+    "cached_input_tokens": 0,
+    "input_tokens": 77715,
+    "output_tokens": 2180
+  }
+}

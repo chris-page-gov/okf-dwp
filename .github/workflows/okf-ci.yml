@@ -20,6 +20,7 @@ jobs:
       EXPLORER_STAFF_COMMIT: f8daf84a4c04afb4839695d38a97cbf21b0ed0a0
       EXPLORER_HOUSEHOLD_COMMIT: 0e6a639f87c4060123b72d82c1ebe30405d475f1
       DWP_HOUSEHOLD_TRIAL_COMMIT: 3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84
+      DWP_COMPACT_TRIAL_COMMIT: 78a8beea97242d646eb9159860dea190ca5e2998
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
@@ -120,8 +121,10 @@ jobs:
         run: |
           node --test scripts/test_staff_service_browser.mjs
           uv run --locked python scripts/check_staff_service_observations.py
+          uv run --locked python scripts/check_staff_service_observations.py --directory validation/compact-delivery/v0.5.0
           uv run --locked python -m unittest discover -s scripts -p test_staff_service_observations.py
           node scripts/check_staff_service_browser.mjs --service-url https://ask-okf.crpage.chatgpt.site --sdk-receipt validation/compact-delivery/v0.4.0/sdk-receipt.json --deployment validation/compact-delivery/v0.4.0/deployment.json --check-inputs
+          node scripts/check_staff_service_browser.mjs --service-url https://ask-okf.crpage.chatgpt.site --sdk-receipt validation/compact-delivery/v0.5.0/sdk-receipt.json --deployment validation/compact-delivery/v0.5.0/deployment.json --check-inputs
       - name: Verify identical staff trial inputs and retained outcomes offline
         run: |
           node --experimental-strip-types scripts/export_staff_trial_contexts.mjs --check --explorer-root .ci/okf-explorer-staff
@@ -130,6 +133,8 @@ jobs:
         run: |
           git fetch --no-tags --depth=1 origin "$DWP_HOUSEHOLD_TRIAL_COMMIT"
           git cat-file -e "$DWP_HOUSEHOLD_TRIAL_COMMIT^{commit}"
+          git fetch --no-tags --depth=1 origin "$DWP_COMPACT_TRIAL_COMMIT"
+          git cat-file -e "$DWP_COMPACT_TRIAL_COMMIT^{commit}"
       - name: Verify portable performance evidence and new trial controls offline
         run: |
           node validation/context-performance/2026-09-21/verify.mjs
@@ -137,11 +142,19 @@ jobs:
           node --experimental-strip-types scripts/export_monday_trial_contexts.mjs --check-preregistration
           node --experimental-strip-types scripts/export_monday_trial_contexts.mjs --check --explorer-root .ci/okf-explorer-household
           uv run --locked python scripts/run_monday_model_trials.py --check-report
+          uv run --locked python scripts/project_monday_model_contexts.py
+          uv run --locked python scripts/run_monday_compact_trials.py
+          uv run --locked python scripts/run_monday_compact_trials.py --check-report
       - name: Verify retained household browser observations offline
         run: |
           node --test scripts/test_household_reader_browser.mjs
           uv run --locked python scripts/check_household_reader_observations.py
           uv run --locked python -m unittest discover -s scripts -p test_household_reader_observations.py
+      - name: Verify retained public household Reader observations offline
+        run: |
+          node --test scripts/test_public_household_reader.mjs
+          uv run --locked python scripts/check_public_household_observations.py
+          uv run --locked python -m unittest discover -s scripts -p test_public_household_observations.py
       - name: Check the public backlog and retained answer trials offline
         run: |
           uv run --locked python scripts/check_backlog.py

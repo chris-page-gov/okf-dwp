@@ -1,0 +1,36 @@
+{
+  "cases": [
+    {
+      "case": "care-home",
+      "different_fields": [
+        "/binding/index_url",
+        "/budget/used_bytes",
+        "/context_id"
+      ],
+      "local_context_id": "urn:sha256:aa701d5266dbe7b9614267af32b7eec85803de7c31993b0c82f0e5aac7287542",
+      "local_path": "validation/household-reader/attempt-03-chrome/care-home-context.json",
+      "local_sha256": "ae564f20a3b679d157f37f2b27a67ab500c0c81638c69bce67e0308545077404",
+      "public_context_id": "urn:sha256:8171073573ed7ee28b0e2461e8719ac3aba680dababdd8bbd2c8e79c744d791a",
+      "public_extra_bytes": 69,
+      "public_path": "attempt-02-chrome/care-home-context.json",
+      "public_sha256": "3bab2af7cc5c537666f9f2eba99990053f97fe3664fbece01223584d2e714ade"
+    },
+    {
+      "case": "sda",
+      "different_fields": [
+        "/binding/index_url",
+        "/budget/used_bytes",
+        "/context_id"
+      ],
+      "local_context_id": "urn:sha256:719d52673a8de4f6e5e62cd2adce1df9e6c8328d8b14b90cd4c479c1a0b30123",
+      "local_path": "validation/household-reader/attempt-03-chrome/sda-context.json",
+      "local_sha256": "4ecb51f22970e8fd8eb1c2abd795791b63bf349b3124d52d1c22f72102e703bf",
+      "public_context_id": "urn:sha256:6790fe83fccd966389bd2f880b4c514c8ace6d2a499ba458514484b7cdc6ae99",
+      "public_extra_bytes": 69,
+      "public_path": "attempt-02-chrome/sda-context.json",
+      "public_sha256": "07886a77e372a5b7cf76d904619ca181340468f9c21dc912f990cab97ecf0f46"
+    }
+  ],
+  "method": "Offline exact JSON comparison; excludes only the three listed public-versus-fixture binding and derived fields. Does not change either original package.",
+  "schema": "okf-public-household-local-comparison.v1"
+}

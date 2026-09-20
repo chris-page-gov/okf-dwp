@@ -1,0 +1,80 @@
+{
+  "accounting_models": [],
+  "answer_present": true,
+  "artefacts": {
+    "answer.json": "b1cc6ae3e9b20daa70fdba3e68bebc16d700753c283547e77583a3c35a94b4bb",
+    "model-output.json": "fd3afb38a96fa09069f685613e567fc6abfd26c964b1790fc7a7b1fa8309e95e"
+  },
+  "attempt": "attempt-01",
+  "auth_observation": {
+    "accepted": true,
+    "exit_code": 0,
+    "status": "subscription-auth-observed"
+  },
+  "case_id": "control-unknown",
+  "cli_version": "codex-cli 0.146.1",
+  "comparative_accuracy_established": false,
+  "elapsed_seconds": 10.602,
+  "exit_code": 0,
+  "fallback_override": null,
+  "finished_at": "2026-09-20T22:41:50.199021+00:00",
+  "human_review": "pending",
+  "inputs": {
+    "context_id": "urn:sha256:b604c488b36134952c3d6e09ce5d54b7f78c6bdfe7dee6539ae63ef686d00267",
+    "freeze_manifest_sha256": "faefc7f42282c2f8dfdee119ff6d30f26b537b73b43b1b9ed133c3befbef4678",
+    "original_context_sha256": "b474066da0a789f519a6d25c7bff1f16e7ddbc52fdf67a08b0c4bcf4027e67b1",
+    "packet_sha256": "9dcb07585cec27298386a6d7f8454c606b95b60b826d68d2d354881c9054a499",
+    "prompt_sha256": "4b898faa92e77c8d50daa385c8942ebd1c7cf4a623f11f963981d296eee083a2",
+    "schema_sha256": "5c83e0ffdfeed95fd0feb59ae2a7fc3e65c35608843c1a5254348632a3e3d06f",
+    "system_prompt_sha256": "391145a13ee07a20220a67cc9020e9fe78e9872408ba091fbb491b47acc721af"
+  },
+  "isolation": {
+    "customisations": "user-config-rules-project-docs-and-listed-features-disabled",
+    "disabled_skill_path_count": 17,
+    "limitation": "Host/system additions may still differ; absence of a warning is not proof of identical provider system context.",
+    "skills_policy": "process-local-disabled-for-discovered-user-skill-paths"
+  },
+  "loaded_helper_sha256": {
+    "scripts/evaluate_fixed_answers.py": "e9feefe43bbd2ded8419e84374421b05bc8b686130a830316ae6d9fd90779be1",
+    "scripts/monday_cli_events_v2.py": "19fb5f24f857f09f2e9a30d1508ee3c244070d955e3813dbebd67b3738bc108a",
+    "scripts/project_monday_model_contexts.py": "82e91080acab9ba37dbe58a4e19d82e145216423e9e4c677ae8b19cfcfb58055",
+    "scripts/run_monday_compact_trials.py": "51b758f0a56a6302052e7609a090a72b60fc91b91f598af50efc475fbf3612ac",
+    "scripts/run_monday_model_trials.py": "da5d0857d3108e84fc30252c3a71b7f37f92495b3a235d31f91573d65675f250",
+    "scripts/run_staff_model_trials.py": "f7d28f7194ed5540592976d791f310ab6d9fb416f777c2d46071b67c7f2fb7df"
+  },
+  "mechanical_assessment": {
+    "answer_quality_score": null,
+    "citations_checked": 0,
+    "claims": 0,
+    "entailment_review": "pending-independent-human-review",
+    "failures": [],
+    "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete.",
+    "specialist_accepted": false,
+    "status": "passed-mechanical-controls",
+    "unsupported_claim_rate": null
+  },
+  "model_override": null,
+  "provider": "codex-subscription",
+  "recognised_warnings": [
+    {
+      "boundary": "Host/system skill catalogue remains visible; identical provider system contexts are not established.",
+      "category": "skill-catalogue-shortening",
+      "message": "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+    }
+  ],
+  "recognition_issues": [],
+  "response_models": [],
+  "schema": "okf-compact-model-attempt.v2",
+  "source_commit": "78a8beea97242d646eb9159860dea190ca5e2998",
+  "specialist_accepted": false,
+  "started_at": "2026-09-20T22:41:39.596505+00:00",
+  "status": "actual-model-response-retained",
+  "stderr_sha256": "d112cb2cf2b620457ff6108703aa48025df37ae4fd0b3bdeae1f369ca5ad4fd5",
+  "stdout_sha256": "f69321f78d0fa1d5f43b41e50990f305db264aea551d63acbd05056cd9ec7db1",
+  "tool_event_census_status": "retained-validated-completed-stream",
+  "usage": {
+    "cached_input_tokens": 0,
+    "input_tokens": 10283,
+    "output_tokens": 326
+  }
+}

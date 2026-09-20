@@ -1,0 +1,708 @@
+{
+  "schema": "okf-staff-service-browser-observation.v1",
+  "started_at": "2026-09-20T22:41:30.988Z",
+  "browser": "webkit",
+  "url": "https://ask-okf.crpage.chatgpt.site/review/#eyJidW5kbGUiOiJva2YtZHdwIiwidmVyc2lvbiI6IjNlZjBlNzg2ZTlhMThlNzZmYTE3YzdkOTI1ZmY1MDlkNmQ2YzlmODQiLCJxdWVzdGlvbiI6IkRvZXMgUGVuc2lvbiBDcmVkaXQgc3RvcCBpcyBhIGNpdGl6ZW4gbW92ZXMgaW50byBhIGNhcmUgaG9tZSBwZXJtYW5lbnRseSBpZiB0aGV5IGFyZSBzZWxmLWZ1bmRpbmc_IiwiYnVkZ2V0Ijp7Im1heF9ub2RlcyI6NjQsIm1heF9yZWxhdGlvbnNoaXBzIjoxMjgsIm1heF9kZXB0aCI6NiwibWF4X2J5dGVzIjoyNjIxNDR9LCJjb250ZXh0X2lkIjoidXJuOnNoYTI1Njo2Y2RjM2RkMTU0ZDRmMTFlMWZiOGI5ZGQxYjk5YzQyZGE1OTg1NmJhNzg1N2RlNWEzZmUwNGQ2ZjNhYjg2MDc4In0",
+  "source_version": "3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84",
+  "question": "Does Pension Credit stop is a citizen moves into a care home permanently if they are self-funding?",
+  "context_id": "urn:sha256:6cdc3dd154d4f11e1fb8b9dd1b99c42da59856ba7857de5a3fe04d6f3ab86078",
+  "context_budget": {
+    "max_nodes": 64,
+    "max_relationships": 128,
+    "max_depth": 6,
+    "max_bytes": 262144
+  },
+  "binding": {
+    "script": {
+      "path": "scripts/check_staff_service_browser.mjs",
+      "sha256": "e28c746e52e8a73c2b9b3f3798c261eb5f0e418b3503329b14f049156930d64d"
+    },
+    "sdk": {
+      "path": "validation/compact-delivery/v0.5.0/sdk-receipt.json",
+      "sha256": "c0fe0fa1ae5989f274bc034b27f147346c20c8297c2f29a0d3a2d0699532966b"
+    },
+    "deployment": {
+      "path": "validation/compact-delivery/v0.5.0/deployment.json",
+      "sha256": "a2317fe1bd287ee4b4e2b47dffb346e8d15125abc28850562dcc9f293f6b254e"
+    },
+    "runtime_commit": "d538de99e6567633204253cd88b87cbe325ac39a",
+    "runtime_worker_sha256": "e1ab74760de22aff89a943faba5f4fc382f5c9f0fbdf092e3bc29db98d9589a7",
+    "site_version": 9,
+    "sdk_reference_identity_is_not_browser_worker_attestation": true,
+    "response_observation": "Read-only native fetch response cloning; no routing, request/response replacement or security-policy change. Driver/native digests recorded separately. Rendered text and full-package SDK hashes remain decisive.",
+    "request_pacing": {
+      "minimum_interval_ms": 750,
+      "scope": "shared across all requested browser engines",
+      "measured_from": "observed previous MCP request start",
+      "automatic_retries": false,
+      "rate_limit_response": "retained as a functional failure"
+    }
+  },
+  "functional_status": "passed",
+  "strict_console_status": "passed",
+  "overall_clean_browser_acceptance": true,
+  "calls": [
+    {
+      "tool": "ask_okf_manifest",
+      "milliseconds_since_previous_mcp_request": 1726.518,
+      "section": null,
+      "record_id": null,
+      "offset": 0
+    },
+    {
+      "tool": "ask_okf_manifest",
+      "milliseconds_since_previous_mcp_request": 1466.28,
+      "section": null,
+      "record_id": null,
+      "offset": 24
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 990.939,
+      "section": "record_text",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+      "offset": 0
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 1107.408,
+      "section": "record_metadata",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+      "offset": 0
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 985.191,
+      "section": "diagnostics",
+      "record_id": null,
+      "offset": 0
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 887.733,
+      "section": "diagnostics",
+      "record_id": null,
+      "offset": 14876
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 1130.376,
+      "section": "diagnostics",
+      "record_id": null,
+      "offset": 30271
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 919.963,
+      "section": "relationships",
+      "record_id": null,
+      "offset": 0
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 882.482,
+      "section": "relationships",
+      "record_id": null,
+      "offset": 15016
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 1075.549,
+      "section": "relationships",
+      "record_id": null,
+      "offset": 29967
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 901.937,
+      "section": "relationships",
+      "record_id": null,
+      "offset": 44986
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 1249.796,
+      "section": "relationships",
+      "record_id": null,
+      "offset": 60051
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 869.039,
+      "section": "relationships",
+      "record_id": null,
+      "offset": 75030
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 1042.36,
+      "section": "package",
+      "record_id": null,
+      "offset": 0
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 1009.239,
+      "section": "package",
+      "record_id": null,
+      "offset": 14879
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 916.371,
+      "section": "package",
+      "record_id": null,
+      "offset": 29981
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 987.788,
+      "section": "package",
+      "record_id": null,
+      "offset": 44945
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 1001.421,
+      "section": "package",
+      "record_id": null,
+      "offset": 59955
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 941.891,
+      "section": "package",
+      "record_id": null,
+      "offset": 75029
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 968.808,
+      "section": "package",
+      "record_id": null,
+      "offset": 90011
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 1053.561,
+      "section": "package",
+      "record_id": null,
+      "offset": 105195
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 1027.421,
+      "section": "package",
+      "record_id": null,
+      "offset": 120215
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 919.074,
+      "section": "package",
+      "record_id": null,
+      "offset": 135393
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 930.111,
+      "section": "package",
+      "record_id": null,
+      "offset": 150596
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 819.184,
+      "section": "package",
+      "record_id": null,
+      "offset": 165743
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 949.56,
+      "section": "package",
+      "record_id": null,
+      "offset": 180941
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 924.433,
+      "section": "package",
+      "record_id": null,
+      "offset": 196042
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 926.016,
+      "section": "package",
+      "record_id": null,
+      "offset": 211546
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 915.235,
+      "section": "package",
+      "record_id": null,
+      "offset": 226843
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 901.168,
+      "section": "package",
+      "record_id": null,
+      "offset": 241939
+    }
+  ],
+  "reads": [
+    {
+      "section": "record_text",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+      "slices": 1,
+      "characters": 2346,
+      "rendered_sha256": "a1e2462f65812d22a647562270b9ebb3a3d64c4c76a205bd5cf6d243e607b193",
+      "matches_sdk": true
+    },
+    {
+      "section": "record_metadata",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+      "slices": 1,
+      "characters": 3949,
+      "rendered_sha256": "cad9566b22bc56203d8c473ded5bf31220f7f4c09a8935a91b70de8503d37bd4",
+      "matches_sdk": true
+    },
+    {
+      "section": "diagnostics",
+      "record_id": null,
+      "slices": 3,
+      "characters": 35185,
+      "rendered_sha256": "bfb0f7104e98d9f766072b9579f04f1f9a4398cda89c0f83e63b6d8ae37997c4",
+      "matches_sdk": true
+    },
+    {
+      "section": "relationships",
+      "record_id": null,
+      "slices": 6,
+      "characters": 79392,
+      "rendered_sha256": "b942a8a501e7321af14fb078a9d9fac2e820da367d2fc27bb4a2821611c9bda8",
+      "matches_sdk": true
+    },
+    {
+      "section": "package",
+      "record_id": null,
+      "slices": 17,
+      "characters": 256885,
+      "rendered_sha256": "454b793795579f7bdda1e94f435ed30d5cdcb551e56dca2f1df8c8ba545f5af3",
+      "matches_sdk": true
+    }
+  ],
+  "response_observations": [
+    {
+      "tool": "ask_okf_manifest",
+      "rpc_id": 1,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34525,
+      "native_sha256": "608ebec30ed7531e9b9939888354e473678e7ec219f48fd2862d9a868d599655",
+      "driver_bytes": 34525,
+      "driver_sha256": "608ebec30ed7531e9b9939888354e473678e7ec219f48fd2862d9a868d599655",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "ask_okf_manifest",
+      "rpc_id": 2,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 18349,
+      "native_sha256": "a8c51c71d75fad229d19f0fd87ae403f5e9d681d3a2d8dd8a604a5d5c6255c72",
+      "driver_bytes": 18349,
+      "driver_sha256": "a8c51c71d75fad229d19f0fd87ae403f5e9d681d3a2d8dd8a604a5d5c6255c72",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 3,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 6281,
+      "native_sha256": "ce0fa0751bb53462cd780f10525283d63378e0c15be534962dbd90f4527bfca1",
+      "driver_bytes": 6281,
+      "driver_sha256": "ce0fa0751bb53462cd780f10525283d63378e0c15be534962dbd90f4527bfca1",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 4,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 10037,
+      "native_sha256": "7ac34ca99a1d77c7f6f41275d8ed82c57b5746f4720ad362709e65e5ee5c009a",
+      "driver_bytes": 10037,
+      "driver_sha256": "7ac34ca99a1d77c7f6f41275d8ed82c57b5746f4720ad362709e65e5ee5c009a",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 5,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34819,
+      "native_sha256": "4fc6d1417e00a39732ebbcc9c0faa2541789aaaeb7c671ba12a38e28b30a0828",
+      "driver_bytes": 34819,
+      "driver_sha256": "4fc6d1417e00a39732ebbcc9c0faa2541789aaaeb7c671ba12a38e28b30a0828",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 6,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 33773,
+      "native_sha256": "6f741e944a09a90ba27a0da8aabcc41dea160e98c83da65cc227cc2d15f57631",
+      "driver_bytes": 33773,
+      "driver_sha256": "6f741e944a09a90ba27a0da8aabcc41dea160e98c83da65cc227cc2d15f57631",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 7,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 13003,
+      "native_sha256": "3781acce29c523cfe6eb3002edf35cd992ea2bccf508a87c50b5f8c462213715",
+      "driver_bytes": 13003,
+      "driver_sha256": "3781acce29c523cfe6eb3002edf35cd992ea2bccf508a87c50b5f8c462213715",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 8,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34535,
+      "native_sha256": "ac055ece643db256b511a111a5aa8c2a247d8e44b25f54221a26f56968612e65",
+      "driver_bytes": 34535,
+      "driver_sha256": "ac055ece643db256b511a111a5aa8c2a247d8e44b25f54221a26f56968612e65",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 9,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34657,
+      "native_sha256": "2c2b153b294f6d2eddbbad57c91c212426c49d1af76e625af8cc2304a3fabc59",
+      "driver_bytes": 34657,
+      "driver_sha256": "2c2b153b294f6d2eddbbad57c91c212426c49d1af76e625af8cc2304a3fabc59",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 10,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34522,
+      "native_sha256": "86c0980b8efcded28b5d11e8417399d7bb8fb96e184aabc10f6d2057d5005628",
+      "driver_bytes": 34522,
+      "driver_sha256": "86c0980b8efcded28b5d11e8417399d7bb8fb96e184aabc10f6d2057d5005628",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 11,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34430,
+      "native_sha256": "271c486e7e59d76d879961290698f0c819839ccae0a667d285bffa37305cd956",
+      "driver_bytes": 34430,
+      "driver_sha256": "271c486e7e59d76d879961290698f0c819839ccae0a667d285bffa37305cd956",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 12,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34602,
+      "native_sha256": "38221c86439dd29e53095c5b528c7ef95a587cd1492cfd516d302f4d438562eb",
+      "driver_bytes": 34602,
+      "driver_sha256": "38221c86439dd29e53095c5b528c7ef95a587cd1492cfd516d302f4d438562eb",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 13,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 11040,
+      "native_sha256": "44728495e20abe3bc20eaf5c46895688253c800989340b7e83b376c7324f0129",
+      "driver_bytes": 11040,
+      "driver_sha256": "44728495e20abe3bc20eaf5c46895688253c800989340b7e83b376c7324f0129",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 14,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34820,
+      "native_sha256": "57d799131dbe55cb513f4121226d18514568c8252bda2ef33c6774f394515d57",
+      "driver_bytes": 34820,
+      "driver_sha256": "57d799131dbe55cb513f4121226d18514568c8252bda2ef33c6774f394515d57",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 15,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34366,
+      "native_sha256": "f8822953a7cf33a291a004b2f600b4f40f33b0bc093d0e40671340fdf0f8edc4",
+      "driver_bytes": 34366,
+      "driver_sha256": "f8822953a7cf33a291a004b2f600b4f40f33b0bc093d0e40671340fdf0f8edc4",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 16,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34642,
+      "native_sha256": "ad5988ea6453e38f85b7bb5459aed16a02cc6db7b6255a55969ac3b1c5eef21e",
+      "driver_bytes": 34642,
+      "driver_sha256": "ad5988ea6453e38f85b7bb5459aed16a02cc6db7b6255a55969ac3b1c5eef21e",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 17,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34550,
+      "native_sha256": "7c5f38ccdf1626edd3237bb456dba5c98bf950b489b87603c356a59f9a51b652",
+      "driver_bytes": 34550,
+      "driver_sha256": "7c5f38ccdf1626edd3237bb456dba5c98bf950b489b87603c356a59f9a51b652",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 18,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34422,
+      "native_sha256": "47ca6d0d6379ec96bf68a72612d7bd601ff616806aba38e801f5d369e8d5178e",
+      "driver_bytes": 34422,
+      "driver_sha256": "47ca6d0d6379ec96bf68a72612d7bd601ff616806aba38e801f5d369e8d5178e",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 19,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34606,
+      "native_sha256": "ab46dfbcb7461391efbccffc0834c1ee878ed6c4057ccc6dc3eced2d0cc7e9b7",
+      "driver_bytes": 34606,
+      "driver_sha256": "ab46dfbcb7461391efbccffc0834c1ee878ed6c4057ccc6dc3eced2d0cc7e9b7",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 20,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34198,
+      "native_sha256": "62ecb32094dd1591f9b3e786f644da804b758a04eccad7b62fb17231ef96c554",
+      "driver_bytes": 34198,
+      "driver_sha256": "62ecb32094dd1591f9b3e786f644da804b758a04eccad7b62fb17231ef96c554",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 21,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34508,
+      "native_sha256": "918fe88017ca86daa2b5f04aeba2dc2bbc03074026bd1ba040f20edca53bf99c",
+      "driver_bytes": 34508,
+      "driver_sha256": "918fe88017ca86daa2b5f04aeba2dc2bbc03074026bd1ba040f20edca53bf99c",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 22,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34156,
+      "native_sha256": "58390b5565ee6d61a595aa6d82baaacb6b3762f21ca2d2c89315f6729d840133",
+      "driver_bytes": 34156,
+      "driver_sha256": "58390b5565ee6d61a595aa6d82baaacb6b3762f21ca2d2c89315f6729d840133",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 23,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34122,
+      "native_sha256": "8d7094c3174a1b7e030ed72c9209d9ff05d83d56b648e57f1ffebee1c5a0c0e4",
+      "driver_bytes": 34122,
+      "driver_sha256": "8d7094c3174a1b7e030ed72c9209d9ff05d83d56b648e57f1ffebee1c5a0c0e4",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 24,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34210,
+      "native_sha256": "e16d46324e5b03d043a4873d9502b88187336eb91d6f6a75c4d4c80a1fdda90d",
+      "driver_bytes": 34210,
+      "driver_sha256": "e16d46324e5b03d043a4873d9502b88187336eb91d6f6a75c4d4c80a1fdda90d",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 25,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34152,
+      "native_sha256": "650af3b5e4b939e80480d4ce9b56c2738b4aa89fe9465c4db3de3d2ca888e8a4",
+      "driver_bytes": 34152,
+      "driver_sha256": "650af3b5e4b939e80480d4ce9b56c2738b4aa89fe9465c4db3de3d2ca888e8a4",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 26,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34342,
+      "native_sha256": "fe3f444addfec8cfdea2523357546e6d70dbecb5e9297e6f0c53d08b36db1482",
+      "driver_bytes": 34342,
+      "driver_sha256": "fe3f444addfec8cfdea2523357546e6d70dbecb5e9297e6f0c53d08b36db1482",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 27,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 33492,
+      "native_sha256": "6dc78aa91329b7802c717862e5b6c7fbee4635c758414adfb5d0bf857aef27d9",
+      "driver_bytes": 33492,
+      "driver_sha256": "6dc78aa91329b7802c717862e5b6c7fbee4635c758414adfb5d0bf857aef27d9",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 28,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 33842,
+      "native_sha256": "2bb5622a28c1eb57f0bb37696cba60ba53f522f600c9eea7a25999ddf48cf355",
+      "driver_bytes": 33842,
+      "driver_sha256": "2bb5622a28c1eb57f0bb37696cba60ba53f522f600c9eea7a25999ddf48cf355",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 29,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34328,
+      "native_sha256": "71a57ee391c913d4e3d73e89651447db8e26d922a08c29ec852bd825fdb59aec",
+      "driver_bytes": 34328,
+      "driver_sha256": "71a57ee391c913d4e3d73e89651447db8e26d922a08c29ec852bd825fdb59aec",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 30,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34156,
+      "native_sha256": "f45fb4a963602c78345cd31fc2f199edd5311a94a2ce3498dc34249e4bb838ce",
+      "driver_bytes": 34156,
+      "driver_sha256": "f45fb4a963602c78345cd31fc2f199edd5311a94a2ce3498dc34249e4bb838ce",
+      "driver_text_matches_native": true
+    }
+  ],
+  "console_errors": [],
+  "limitations": [
+    "Actual public browser requests without interception or local source substitution; SDK and hosting receipts establish separate reference identities.",
+    "One declared staff question and one source record per browser. This is not an accessibility audit, legal assessment, AI-answer test or whole-corpus semantic completeness claim.",
+    "Full selected package hashes are compared with the SDK; no cookie, account data, raw network trace or model response is retained.",
+    "Functional checks and strict browser-console acceptance are separate; any observed failure remains recorded."
+  ],
+  "browser_version": "26.5",
+  "shell": {
+    "status": 200,
+    "cache_control": "no-store, no-transform",
+    "content_security_policy": "default-src 'none'; script-src 'self'; connect-src 'self'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+  },
+  "catalogue": {
+    "records": 35,
+    "pages": 2,
+    "ids": [
+      "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol13-amendment37/0023",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol13-amendment38/0017",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol13-amendment43/0021",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol13-amendment44/0039",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part2/0021",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c1/0033",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-c1/0059",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol14-amendment40/0021",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-a1/0032",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-06-23-d4c22a8dab/0002",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol1-amendment50/0003",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol1-amendment51/0005",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol1-amendment55/0009",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-amendment42/0003",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-amendment43/0005",
+      "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/2002/1792/schedule/I",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/2002/1792/regulation/5",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/schedule/I/paragraph/2",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/schedule/I/paragraph/1",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/regulation/5",
+      "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home-housing-costs",
+      "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/household-separation",
+      "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/no-partner-disability-addition",
+      "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/temporary-care-home",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058",
+      "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-addition",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/77/0003",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/savings-credit",
+      "https://chris-page-gov.github.io/okf-dwp/id/chapter/77",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/guarantee-credit",
+      "https://chris-page-gov.github.io/okf-dwp/id/term/income-other-than-earnings"
+    ],
+    "summary": {
+      "selected_records": 35,
+      "relationships": 50,
+      "full_package_bytes": 257105,
+      "context_truncated": true,
+      "retrieval_truncated": true,
+      "resolved_concepts": 2,
+      "ambiguities": 0,
+      "unresolved_terms": 5,
+      "missing_evidence": 4,
+      "conflicts": 0,
+      "requirements": 3,
+      "missing_evidence_codes": [
+        "missing_required_evidence",
+        "unresolved_terms"
+      ],
+      "ai_answer": null
+    },
+    "metadata_matches_verified_package": true
+  },
+  "record": {
+    "id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+    "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=25",
+    "source_locator": "PDF page 25",
+    "provenance_visible": true
+  },
+  "diagnostics": {
+    "keys": [
+      "ai_answer",
+      "ambiguities",
+      "binding",
+      "budget",
+      "bundle",
+      "conflicts",
+      "context_id",
+      "engine",
+      "evidence_status",
+      "limitations",
+      "missing_evidence",
+      "question",
+      "relationship_count",
+      "requirements",
+      "resolved_concepts",
+      "retrieval",
+      "schema",
+      "scope",
+      "selected_records",
+      "unresolved_terms"
+    ],
+    "missing_evidence": 4,
+    "evidence_status": "insufficient",
+    "context_truncated": true
+  },
+  "completed_at": "2026-09-20T22:42:01.292Z",
+  "dropped_console_errors": 0
+}

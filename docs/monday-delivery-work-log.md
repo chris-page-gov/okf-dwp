@@ -152,3 +152,67 @@ a dynamic field name. Its public artefact is now an explicitly labelled privacy
 projection with the original digest; the original remains outside this public
 repository. The successor uses strict event shapes and does not reuse the
 diagnostic's generic redactor as an acceptance rule.
+
+## Live service checkpoint, 20 September at 23:50 BST
+
+DWP source PR 15 passed canonical validation `35541533112` and learning-site
+publication `35542299240`. Explorer engine Pages run `35541865447` passed.
+Service PR 129 merged as `d538de99e6567633204253cd88b87cbe325ac39a` and its
+canonical CI `35542085493` passed. Sites version 9 then deployed that runtime
+successfully at 22:36:48 UTC without changing the public audience.
+
+The actual remote SDK run passed seven full-package cases and four compact
+reconstructions across four source versions: 93 successful requests, no retries.
+Three public browser evidence journeys then reconstructed the same care-home
+package exactly: 35 records, 50 relationships, insufficient evidence, no AI
+answer. Chrome and WebKit passed strict console checks; Firefox retained two
+hosting-cookie warnings. The 90-request browser run made no retries. The new
+release explicitly records historical browser journeys as not run.
+
+The service-only Explorer merge exposed a publication gap: its nested guides
+passed the selected PR jobs but Pages rejected missing top-level documentation
+and changelog updates (`35542056363`). A separate correction updates both and
+moves lockstep checking ahead of CI impact selection. It changes no runtime
+bytes and retains the failed run. Publication of that correction remains open.
+
+Both successor model controls passed event recognition and mechanical abstention.
+The separately frozen protocol is bound to source commit
+`78a8beea97242d646eb9159860dea190ca5e2998`, manifest
+`faefc7f42282c2f8dfdee119ff6d30f26b537b73b43b1b9ed133c3befbef4678`.
+Only the first substantive pair is authorised at this checkpoint. The original
+five unsuccessful attempts retain their original outcomes.
+
+## Evidence and model checkpoint, 21 September shortly after midnight BST
+
+The public full Reader passed a separate real Chrome journey against 270 unique
+immutable source files and all 21 application files. Concept filtering, the
+statutory graph, requested-version versus audit dates, the care-home heading and
+both unresolved SDA meanings were observed. The 16.6-second cumulative journey
+had no console or network errors. Its first harness reset-state assumption failed
+and remains retained. Both context packages remain insufficient and truncated.
+The public/local comparison preserves the different binding URL and derived
+context identities rather than asserting equal package IDs.
+
+The successor model experiment is stable: nine attempts, seven parser-accepted
+responses, six mechanical passes including both empty-evidence controls. It
+retains 14 substantive claims and 21 citations, one defective source locator,
+a Claude formatter rejection and a Claude timeout. Three remaining Claude cases
+are explicitly held; no successful substantive pair is claimed. Model critique
+records scope and citation concerns separately from the mechanical results.
+
+A further source review found that the care-home partner qualifications already
+exist in the captured corpus and authored semantic index. The small package
+removes them under byte pressure while retaining an authored summary. The task
+profile does not yet declare those qualifications required. The next bounded
+work separates a source-backed dependency correction from a generic allocation
+change: no DWP-specific routing in Explorer, no new acquisition claimed, and no
+rewriting earlier trials. Existing no-pressure context results must stay exact.
+
+The presenter now has a Voice rehearsal sheet and a verified-evidence fallback.
+Actual Voice tool access and room audio remain untested. No account, microphone
+permission or audio setting was changed.
+
+Editorial check: the eight affected overview, handover and verification documents
+were checked with Explorer's British-English checker. Its six flags all concerned
+`judgment` or `judgments` in references to judicial decisions. These intentionally
+retain the UK legal spelling; none is an American-English prose substitution.

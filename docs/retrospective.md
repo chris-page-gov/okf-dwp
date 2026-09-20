@@ -200,3 +200,25 @@ not just appear in a graph. Independent review checks these cross-workstream
 interfaces before publication. HMRC can reuse these controls and the
 [discovery-first method](methodology.md), while rediscovering its own terms, law,
 source rights, personas and questions.
+
+
+### Keep delivery, model output and review separate
+
+The 0.5.0 public service passed exact SDK reconstruction and three functional
+browser journeys. Firefox still reported hosting-cookie warnings. An explicit
+observation layout now says when historical journeys were not run, so a new
+release cannot borrow an older release's pass. Keep successful delivery separate
+from source completeness and from the quality of an AI's claims.
+
+The original household model experiment retained five failures or rejections.
+A separately frozen successor uses an exactly reversible dictionary for repeated
+JSON values and stricter recognition of observed CLI events. The substantive
+packets are 12–15% smaller; the small no-evidence control is larger. This is a
+byte measurement, not proof of lower cost, faster responses or better answers.
+A changed event parser cannot retrospectively accept an old rejected attempt.
+
+A service-only pull request also skipped the documentation job and then failed
+Pages publication. The correction checks documentation lockstep before selecting
+expensive CI jobs. For an HMRC repeat, classify assurance requirements separately
+from expensive test selection: a cheap mandatory publication check must remain
+mandatory even when the app or corpus has not changed.

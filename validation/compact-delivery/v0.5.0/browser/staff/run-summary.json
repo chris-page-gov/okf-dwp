@@ -1,0 +1,57 @@
+{
+  "schema": "okf-staff-service-browser-run.v1",
+  "observed_at": "2026-09-20T22:42:01.292Z",
+  "binding": {
+    "script": {
+      "path": "scripts/check_staff_service_browser.mjs",
+      "sha256": "e28c746e52e8a73c2b9b3f3798c261eb5f0e418b3503329b14f049156930d64d"
+    },
+    "sdk": {
+      "path": "validation/compact-delivery/v0.5.0/sdk-receipt.json",
+      "sha256": "c0fe0fa1ae5989f274bc034b27f147346c20c8297c2f29a0d3a2d0699532966b"
+    },
+    "deployment": {
+      "path": "validation/compact-delivery/v0.5.0/deployment.json",
+      "sha256": "a2317fe1bd287ee4b4e2b47dffb346e8d15125abc28850562dcc9f293f6b254e"
+    },
+    "runtime_commit": "d538de99e6567633204253cd88b87cbe325ac39a",
+    "runtime_worker_sha256": "e1ab74760de22aff89a943faba5f4fc382f5c9f0fbdf092e3bc29db98d9589a7",
+    "site_version": 9,
+    "sdk_reference_identity_is_not_browser_worker_attestation": true,
+    "response_observation": "Read-only native fetch response cloning; no routing, request/response replacement or security-policy change. Driver/native digests recorded separately. Rendered text and full-package SDK hashes remain decisive.",
+    "request_pacing": {
+      "minimum_interval_ms": 750,
+      "scope": "shared across all requested browser engines",
+      "measured_from": "observed previous MCP request start",
+      "automatic_retries": false,
+      "rate_limit_response": "retained as a functional failure"
+    }
+  },
+  "results": [
+    {
+      "browser": "chrome",
+      "functional_status": "passed",
+      "strict_console_status": "passed",
+      "overall_clean_browser_acceptance": true,
+      "receipt": "chrome-receipt.json"
+    },
+    {
+      "browser": "firefox",
+      "functional_status": "passed",
+      "strict_console_status": "failed",
+      "overall_clean_browser_acceptance": false,
+      "receipt": "firefox-receipt.json"
+    },
+    {
+      "browser": "webkit",
+      "functional_status": "passed",
+      "strict_console_status": "passed",
+      "overall_clean_browser_acceptance": true,
+      "receipt": "webkit-receipt.json"
+    }
+  ],
+  "all_requested_engines_passed": false,
+  "all_three_engines_requested": true,
+  "all_three_engines_observed": true,
+  "scope": "Exact public compact evidence UI against separately retained SDK/deployment receipts; no AI-answer quality or specialist acceptance."
+}

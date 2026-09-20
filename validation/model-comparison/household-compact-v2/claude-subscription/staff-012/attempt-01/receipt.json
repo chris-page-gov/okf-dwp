@@ -1,0 +1,77 @@
+{
+  "accounting_models": [
+    "claude-opus-5"
+  ],
+  "answer_present": false,
+  "artefacts": {
+    "model-output.json": "8ffed49fd91e6a917ebaef8d031f02daf68cdb5caeb3039b64e473bdd66d14fa"
+  },
+  "attempt": "attempt-01",
+  "auth_observation": {
+    "accepted": true,
+    "exit_code": 0,
+    "status": "subscription-auth-observed"
+  },
+  "case_id": "staff-012",
+  "cli_version": "2.1.278 (Claude Code)",
+  "comparative_accuracy_established": false,
+  "elapsed_seconds": 221.524,
+  "exit_code": 0,
+  "fallback_override": null,
+  "finished_at": "2026-09-20T22:50:21.039816+00:00",
+  "human_review": "pending",
+  "inputs": {
+    "context_id": "urn:sha256:b83bb636c3fbef3669b4aba03eb6cc3e4a5adda2b6e1ab50990a625e32893771",
+    "freeze_manifest_sha256": "faefc7f42282c2f8dfdee119ff6d30f26b537b73b43b1b9ed133c3befbef4678",
+    "original_context_sha256": "c3dd08c848e1203cb5c07518e3819bc7c4ef0116dd3096d99f54ea48187b5012",
+    "packet_sha256": "387af60bde4f53c026724813177e53c09ea8b5c0b27d76ca0a918cb0ccbf7c03",
+    "prompt_sha256": "ff29cdf6b8fffe9affb6823868ecf172f54d2243e9d66cd85d6aff0e3d087f13",
+    "schema_sha256": "5c83e0ffdfeed95fd0feb59ae2a7fc3e65c35608843c1a5254348632a3e3d06f",
+    "system_prompt_sha256": "391145a13ee07a20220a67cc9020e9fe78e9872408ba091fbb491b47acc721af"
+  },
+  "isolation": {
+    "customisations": "disabled-safe-mode",
+    "skills_policy": "disabled-safe-mode-and-slash-commands"
+  },
+  "loaded_helper_sha256": {
+    "scripts/evaluate_fixed_answers.py": "e9feefe43bbd2ded8419e84374421b05bc8b686130a830316ae6d9fd90779be1",
+    "scripts/monday_cli_events_v2.py": "19fb5f24f857f09f2e9a30d1508ee3c244070d955e3813dbebd67b3738bc108a",
+    "scripts/project_monday_model_contexts.py": "82e91080acab9ba37dbe58a4e19d82e145216423e9e4c677ae8b19cfcfb58055",
+    "scripts/run_monday_compact_trials.py": "51b758f0a56a6302052e7609a090a72b60fc91b91f598af50efc475fbf3612ac",
+    "scripts/run_monday_model_trials.py": "da5d0857d3108e84fc30252c3a71b7f37f92495b3a235d31f91573d65675f250",
+    "scripts/run_staff_model_trials.py": "f7d28f7194ed5540592976d791f310ab6d9fb416f777c2d46071b67c7f2fb7df"
+  },
+  "model_override": null,
+  "provider": "claude-subscription",
+  "recognised_warnings": [],
+  "recognition_issues": [
+    "formatter-result-missing",
+    "unmatched-duplicate-or-error-tool-result"
+  ],
+  "response_models": [
+    "claude-opus-5"
+  ],
+  "schema": "okf-compact-model-attempt.v2",
+  "source_commit": "78a8beea97242d646eb9159860dea190ca5e2998",
+  "specialist_accepted": false,
+  "started_at": "2026-09-20T22:46:39.512304+00:00",
+  "status": "rejected-event-recognition",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "c4b80a08e1256889427f285b74abc22ed56a9640f07b1aae7adcc1c71af0d98b",
+  "tool_event_census_status": "unknown-or-rejected-stream",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 110084,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 110084,
+    "cache_read_input_tokens": 100663,
+    "input_tokens": 4,
+    "output_tokens": 21011,
+    "output_tokens_details": {},
+    "server_tool_use": {
+      "web_fetch_requests": 0,
+      "web_search_requests": 0
+    }
+  }
+}

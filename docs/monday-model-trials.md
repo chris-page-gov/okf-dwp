@@ -1,6 +1,12 @@
-# Next paired evidence trials for Monday
+# Paired evidence trials for Monday
 
-**Six context packages are frozen and their offline replay passes. Five subscription attempts are retained; none yielded a response accepted by the frozen experiment controls. Further calls are held for investigation.** They bind DWP commit `3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84` and Explorer engine commit `0e6a639f87c4060123b72d82c1ebe30405d475f1`. This guide is separate from the [retained 20 September trials](staff-model-trials.md); their inputs, scripts, results and failures remain unchanged.
+**Start with the [separate successor outcomes](../validation/model-comparison/household-compact-v2/README.md).** The successor uses the same governed evidence through a reversible, ID-referenced representation and separately reviewed CLI event recognition. Its nine attempts include seven parser-accepted responses, one formatter rejection and one timeout. Six responses pass mechanical checks; Staff 008 fails a source-locator check. Both unknown-term controls abstain correctly, but no substantive pair is complete. The [claim-level model critique](../validation/model-comparison/household-compact-v2/claim-level-model-critique.json) records scope, qualification and attribution concerns in the five substantive answers. An accepted output format and exact quotations do not establish legal correctness.
+
+The [successor protocol and frozen manifest](../evaluation/model-comparison/household-compact-v2-candidate/README.md) bind reviewed source commit `78a8beea97242d646eb9159860dea190ca5e2998`; the manifest SHA-256 is `faefc7f42282c2f8dfdee119ff6d30f26b537b73b43b1b9ed133c3befbef4678`. Repeated JSON values move to a dictionary: all six original contexts reconstruct byte for byte, including headings, exceptions, source metadata and missing-evidence declarations. The substantive packets are 11.8–14.9% smaller; the empty control is 916 bytes larger. No accuracy, latency or affordability improvement follows from those size measurements.
+
+## Historical first household experiment
+
+**The original five subscription attempts remain unchanged: none yielded a response accepted by its frozen controls. No further calls or retries use that experiment.** Its six context packages and offline replay bind DWP commit `3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84` and Explorer engine commit `0e6a639f87c4060123b72d82c1ebe30405d475f1`. This is also separate from the [retained 20 September trials](staff-model-trials.md); their inputs, scripts, results and failures remain unchanged.
 
 The [frozen catalogue](../evaluation/model-comparison/household-2026-09-21/frozen/manifest.json) has SHA-256 `9fd2755fa6b0ac36345c4245162da97565f1a27b37b8b11e990a803c5f6a7719`. The [pre-model input review](../evaluation/model-comparison/household-2026-09-21/pre-model-input-review.json) confirms that the no-partner heading is present for Staff 012 and records relevant neighbouring pages that the budget omitted. All five substantive packages remain insufficient and truncated; the unknown-term control contains no records. This is a model-authored source comparison, not specialist acceptance.
 
@@ -61,7 +67,17 @@ Only structured final answers, sanitised output metadata, numerical usage, timin
 
 The [validation note](../validation/model-comparison/household-2026-09-21/README.md) and [verified results ledger](../validation/model-comparison/household-2026-09-21/results.json) record all five attempts. Codex Staff 012 and the unknown-term control completed with an unrecognised `item:error` event and were rejected. The original error text was not retained, so its cause is unknown. Claude Staff 012 and Staff 020 exceeded the fixed 240-second limit. Claude's small control completed but exposed unrecognised `thinking_tokens`, `rate_limit_event` and `tool_result` categories alongside the permitted formatter, so it was rejected too. This is an event-format and execution-boundary finding, not evidence of inaccurate answers or established external tool use. Further cases are on hold; the frozen harness has not been relaxed and no retry has occurred. No failed or rejected output counts as an accepted answer. Provider usage accounting, when available, is not verified subscription charges or future affordability.
 
-## Commands
+## Offline checks and historical commands
+
+Check the successor without making a model call:
+
+```sh
+uv run --locked python scripts/project_monday_model_contexts.py
+uv run --locked python scripts/run_monday_compact_trials.py
+uv run --locked python scripts/run_monday_compact_trials.py --check-report
+```
+
+The commands below describe the **original, now closed experiment** for reproducibility. They are not instructions to rerun its failed cases. Keep the original catalogue, attempts and runner unchanged; new experiments require their own reviewed inputs and identity.
 
 The following are offline and make no model calls:
 

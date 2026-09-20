@@ -1,0 +1,896 @@
+{
+  "schema": "okf-staff-claim-model-critique.v1",
+  "review_type": "separately-authored-model-critique-not-gold",
+  "reviewer": "Codex task review agent; no independent model-identity assertion",
+  "basis": "Read every parser-accepted final answer, its cited quotations and the complete corresponding selected records in the exact original contexts reconstructed from the lossless packets. No outside legal facts used. A second task agent independently reviewed Staff012, with further independent findings recorded only when received.",
+  "freeze_manifest_sha256": "faefc7f42282c2f8dfdee119ff6d30f26b537b73b43b1b9ed133c3befbef4678",
+  "results_sha256": "f7129736c57a7f488160609a12b6383c9db8225dd3db57d112df1c5304417be1",
+  "human_review": "pending",
+  "specialist_accepted": false,
+  "unsupported_claim_rate": null,
+  "answer_quality_score": null,
+  "limitations": [
+    "Fallible model-authored source comparison, not specialist legal acceptance or a gold answer.",
+    "Parser acceptance, exact quotations and source identifiers are distinct from entailment, completeness and current applicability.",
+    "All five substantive packages remain insufficient and truncated. Requested statutory version dates and capture dates are not commencement, publication or applicability findings.",
+    "Two controls form an accepted pair; no substantive pair is complete. No comparative accuracy, latency causation, affordability or provider ranking is established.",
+    "Rejected Claude Staff012 output and timed-out Staff020 are excluded from accepted-answer critique and remain in the immutable attempt census.",
+    "Fourteen claims across five substantive answers are inspected, including the Staff008 answer that fails mechanical citation checks; a retained answer is not an approved answer."
+  ],
+  "reviews": [
+    {
+      "provider": "codex-subscription",
+      "case_id": "control-unknown",
+      "attempt": "attempt-01",
+      "answer_path": "validation/model-comparison/household-compact-v2/codex-subscription/control-unknown/attempt-01/answer.json",
+      "answer_sha256": "b1cc6ae3e9b20daa70fdba3e68bebc16d700753c283547e77583a3c35a94b4bb",
+      "context_path": "evaluation/model-comparison/household-2026-09-21/frozen/contexts/control-unknown.json",
+      "context_sha256": "b474066da0a789f519a6d25c7bff1f16e7ddbc52fdf67a08b0c4bcf4027e67b1",
+      "event_recognition_status": "actual-model-response-retained",
+      "mechanical_status": "passed-mechanical-controls",
+      "claim_reviews": [],
+      "additional_selected_evidence_reviewed": [],
+      "answer_level_findings": [],
+      "control_observation": "Correct abstention: insufficient status, cannot-establish disposition and no substantive claims or citations.",
+      "human_review": "pending"
+    },
+    {
+      "provider": "codex-subscription",
+      "case_id": "staff-005",
+      "attempt": "attempt-01",
+      "answer_path": "validation/model-comparison/household-compact-v2/codex-subscription/staff-005/attempt-01/answer.json",
+      "answer_sha256": "e01483a32688699a74753f6b0ba745f033604a919d288b1982088893c1455849",
+      "context_path": "evaluation/model-comparison/household-2026-09-21/frozen/contexts/staff-005.json",
+      "context_sha256": "e52e742f972db4184ca4e7472beb621e2f23e17d103c2399f98eaf4a17b21b75",
+      "event_recognition_status": "actual-model-response-retained",
+      "mechanical_status": "passed-mechanical-controls",
+      "claim_reviews": [
+        {
+          "claim_id": "claim-1",
+          "model_review_observation": "unsupported-paraphrase-mechanism",
+          "explanation": "The statement says National Insurance provisions may be satisfied “through their partner”. DMG 77031 lists conditions for the claimant and refers, where relevant, to the partner; the quoted wording does not establish a mechanism of satisfying the claimant’s condition through that partner. Preserve the separate subject/partner scope and reconcile the referenced claim provisions. This is a textual support concern, not a conclusion about an individual award.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 14",
+              "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=14",
+              "source_pair_in_package": true,
+              "record_text_sha256": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+                  "locator": "PDF page 14",
+                  "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+                  "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=14"
+                },
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+                  "locator": "pages[13].text",
+                  "source_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/pages/dmg-vol13-ch77.json"
+                }
+              ]
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-2",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The full quoted DMG 60025 list preserves caring, work, age, full-time education and residence/presence conditions and the memo references. The statement treats Carer’s Allowance as a conditional candidate and expressly refuses to establish payment alongside State Pension from this passage.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 3",
+              "source_url": "https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=3",
+              "source_pair_in_package": true,
+              "record_text_sha256": "97f524ef78657a456deb3a2712b72bc34e933c4624b2102f2961bb21aecbb999",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-15T19:45:32.596227Z",
+                  "literal_sha256": "97f524ef78657a456deb3a2712b72bc34e933c4624b2102f2961bb21aecbb999",
+                  "locator": "PDF page 3",
+                  "source_sha256": "ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a",
+                  "url": "https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=3"
+                },
+                {
+                  "captured_at": "2026-09-15T19:45:32.650255Z",
+                  "literal_sha256": "97f524ef78657a456deb3a2712b72bc34e933c4624b2102f2961bb21aecbb999",
+                  "locator": "pages[2].text",
+                  "source_sha256": "bc5925c0d434fbc4bec575bea2e1e2dbd020b014497ab156973054e80e326f2f",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/full-dmg-2026-09-15/pages/dmg-vol10-ch60.json"
+                }
+              ]
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-3",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The three quotations retain the age heading, pensionable-age threshold, exclusion where DLA/PIP/PADP entitlement exists, the 6 December 2018 source-stated change and the residence/presence/competency conditions. The statement also retains disability as a condition and does not treat State Pension as automatic qualification. Full disability and overlap continuations remain absent.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0004",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 4",
+              "source_url": "https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=4",
+              "source_pair_in_package": true,
+              "record_text_sha256": "27d1f5cf06c1e12dc07eedc4a888a70cc3af5d79ae5e36a10c42d5dce528d12c",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-15T19:45:32.783276Z",
+                  "literal_sha256": "27d1f5cf06c1e12dc07eedc4a888a70cc3af5d79ae5e36a10c42d5dce528d12c",
+                  "locator": "PDF page 4",
+                  "source_sha256": "884dc79907770bd9e178fe4122c0b7d404697f4ccc882b067e9220b34a0f002a",
+                  "url": "https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=4"
+                },
+                {
+                  "captured_at": "2026-09-15T19:45:32.925356Z",
+                  "literal_sha256": "27d1f5cf06c1e12dc07eedc4a888a70cc3af5d79ae5e36a10c42d5dce528d12c",
+                  "locator": "pages[3].text",
+                  "source_sha256": "23b4405d725de2fde124df29a8c753b9fcb7530405c83d588bd321e1e83226cc",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/full-dmg-2026-09-15/pages/dmg-vol10-ch61.json"
+                }
+              ]
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 5",
+              "source_url": "https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=5",
+              "source_pair_in_package": true,
+              "record_text_sha256": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-15T19:45:32.783276Z",
+                  "literal_sha256": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d",
+                  "locator": "PDF page 5",
+                  "source_sha256": "884dc79907770bd9e178fe4122c0b7d404697f4ccc882b067e9220b34a0f002a",
+                  "url": "https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=5"
+                },
+                {
+                  "captured_at": "2026-09-15T19:45:32.925356Z",
+                  "literal_sha256": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d",
+                  "locator": "pages[4].text",
+                  "source_sha256": "23b4405d725de2fde124df29a8c753b9fcb7530405c83d588bd321e1e83226cc",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/full-dmg-2026-09-15/pages/dmg-vol10-ch61.json"
+                }
+              ]
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 5",
+              "source_url": "https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=5",
+              "source_pair_in_package": true,
+              "record_text_sha256": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-15T19:45:32.783276Z",
+                  "literal_sha256": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d",
+                  "locator": "PDF page 5",
+                  "source_sha256": "884dc79907770bd9e178fe4122c0b7d404697f4ccc882b067e9220b34a0f002a",
+                  "url": "https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=5"
+                },
+                {
+                  "captured_at": "2026-09-15T19:45:32.925356Z",
+                  "literal_sha256": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d",
+                  "locator": "pages[4].text",
+                  "source_sha256": "23b4405d725de2fde124df29a8c753b9fcb7530405c83d588bd321e1e83226cc",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/full-dmg-2026-09-15/pages/dmg-vol10-ch61.json"
+                }
+              ]
+            }
+          ],
+          "human_acceptance": "pending"
+        }
+      ],
+      "additional_selected_evidence_reviewed": [],
+      "answer_level_findings": [
+        "The answer treats the benefit inventory as incomplete, distinguishes entitlement from payment and declines individual outcomes. The National Insurance “through their partner” wording requires correction before using the prose as an exemplar answer."
+      ],
+      "control_observation": null,
+      "human_review": "pending"
+    },
+    {
+      "provider": "codex-subscription",
+      "case_id": "staff-008",
+      "attempt": "attempt-01",
+      "answer_path": "validation/model-comparison/household-compact-v2/codex-subscription/staff-008/attempt-01/answer.json",
+      "answer_sha256": "3d2bc6db75a0c02577aefe5b85687398d4962f8cf5268e3d80de500da33574c9",
+      "context_path": "evaluation/model-comparison/household-2026-09-21/frozen/contexts/staff-008.json",
+      "context_sha256": "533968455b9209383ca92e86172af176acb17c694f484fc531fc56237e902e06",
+      "event_recognition_status": "actual-model-response-retained",
+      "mechanical_status": "failed-mechanical-controls",
+      "claim_reviews": [
+        {
+          "claim_id": "pc-additional-amounts-2021-2025",
+          "model_review_observation": "citation-integrity-failure-and-uncited-component",
+          "explanation": "The four quoted amounts and dates match selected pages 60, 61, 63 and 65, but the fourth supplied locator contains additional model-authored words and is not a source locator in the package; the mechanical failure is retained. The claim also states 2025 rates without a fifth citation. Those values and date exist on selected page 67, so this is missing claim-level attribution, not absent package evidence. No citation has been repaired in the answer. The claim keeps the Pension Credit interpretation conditional and does not resolve the SDA ambiguity or claim payment frequency.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 60",
+              "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=60",
+              "source_pair_in_package": true,
+              "record_text_sha256": "b3b7fa95eb1521e90091569f5fcf77ad3c2d4c16f5f1af1551e58b28b8e6362d",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "b3b7fa95eb1521e90091569f5fcf77ad3c2d4c16f5f1af1551e58b28b8e6362d",
+                  "locator": "PDF page 60",
+                  "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+                  "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=60"
+                },
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "b3b7fa95eb1521e90091569f5fcf77ad3c2d4c16f5f1af1551e58b28b8e6362d",
+                  "locator": "pages[59].text",
+                  "source_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/pages/dmg-vol13-ch77.json"
+                }
+              ]
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 61",
+              "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=61",
+              "source_pair_in_package": true,
+              "record_text_sha256": "5a0547f2e5fa050f0c08deafee5a76a884362d1aedd0cf42b842275139bf2eba",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "5a0547f2e5fa050f0c08deafee5a76a884362d1aedd0cf42b842275139bf2eba",
+                  "locator": "PDF page 61",
+                  "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+                  "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=61"
+                },
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "5a0547f2e5fa050f0c08deafee5a76a884362d1aedd0cf42b842275139bf2eba",
+                  "locator": "pages[60].text",
+                  "source_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/pages/dmg-vol13-ch77.json"
+                }
+              ]
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 63",
+              "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=63",
+              "source_pair_in_package": true,
+              "record_text_sha256": "4b8882feb36c30b151d425c33469736dcf4e61f533be8e6ae7a452fbaa18bc25",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "4b8882feb36c30b151d425c33469736dcf4e61f533be8e6ae7a452fbaa18bc25",
+                  "locator": "PDF page 63",
+                  "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+                  "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=63"
+                },
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "4b8882feb36c30b151d425c33469736dcf4e61f533be8e6ae7a452fbaa18bc25",
+                  "locator": "pages[62].text",
+                  "source_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/pages/dmg-vol13-ch77.json"
+                }
+              ]
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 65 good enough? no exact content from record yes.",
+              "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=65",
+              "source_pair_in_package": false,
+              "record_text_sha256": "b51521d425d3f428ec361c0bd860e248c89d96ed7b6f04ca99db95c6ccac7bc9",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "b51521d425d3f428ec361c0bd860e248c89d96ed7b6f04ca99db95c6ccac7bc9",
+                  "locator": "PDF page 65",
+                  "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+                  "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=65"
+                },
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "b51521d425d3f428ec361c0bd860e248c89d96ed7b6f04ca99db95c6ccac7bc9",
+                  "locator": "pages[64].text",
+                  "source_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/pages/dmg-vol13-ch77.json"
+                }
+              ]
+            }
+          ],
+          "human_acceptance": "pending"
+        }
+      ],
+      "additional_selected_evidence_reviewed": [
+        {
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067",
+          "text_sha256": "e8a57d5ac46e61f0d3dc8bdd3367b588b9a65182c641e66fb905cb35dfd6447e",
+          "authority": {
+            "class": "derived",
+            "label": "Exact frozen machine extraction; applicability unreviewed",
+            "source": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=67"
+          },
+          "assertion_status": "normalized",
+          "review_status": "unreviewed-specialist-review-required",
+          "provenance": [
+            {
+              "captured_at": "2026-09-15T14:21:01Z",
+              "literal_sha256": "e8a57d5ac46e61f0d3dc8bdd3367b588b9a65182c641e66fb905cb35dfd6447e",
+              "locator": "PDF page 67",
+              "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+              "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=67"
+            },
+            {
+              "captured_at": "2026-09-15T14:21:01Z",
+              "literal_sha256": "e8a57d5ac46e61f0d3dc8bdd3367b588b9a65182c641e66fb905cb35dfd6447e",
+              "locator": "pages[66].text",
+              "source_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+              "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/pages/dmg-vol13-ch77.json"
+            }
+          ]
+        }
+      ],
+      "answer_level_findings": [
+        "The response is parser-accepted but fails mechanical citation controls. Ambiguity between Severe Disablement Allowance and the Pension Credit additional amount remains explicit. “Last five years” is left undefined; the five dated entries must not be presented as a complete contemporary or 2026 series."
+      ],
+      "control_observation": null,
+      "human_review": "pending"
+    },
+    {
+      "provider": "codex-subscription",
+      "case_id": "staff-012",
+      "attempt": "attempt-01",
+      "answer_path": "validation/model-comparison/household-compact-v2/codex-subscription/staff-012/attempt-01/answer.json",
+      "answer_sha256": "9ef121e7512ef461bac4e0724f5d5c7fb7c18ee4c356c6d3f99ba5394ed7a5c6",
+      "context_path": "evaluation/model-comparison/household-2026-09-21/frozen/contexts/staff-012.json",
+      "context_sha256": "c3dd08c848e1203cb5c07518e3819bc7c4ef0116dd3096d99f54ea48187b5012",
+      "event_recognition_status": "actual-model-response-retained",
+      "mechanical_status": "passed-mechanical-controls",
+      "claim_reviews": [
+        {
+          "claim_id": "claim-1",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The quotation includes the controlling no-partner heading, permanent residence, all-conditions clause and qualifying-benefit continuation note. The statement preserves the additional-amount versus whole-award distinction and does not treat self-funding as sufficient.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 25",
+              "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=25",
+              "source_pair_in_package": true,
+              "record_text_sha256": "a1e2462f65812d22a647562270b9ebb3a3d64c4c76a205bd5cf6d243e607b193",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "a1e2462f65812d22a647562270b9ebb3a3d64c4c76a205bd5cf6d243e607b193",
+                  "locator": "PDF page 25",
+                  "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+                  "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=25"
+                },
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "a1e2462f65812d22a647562270b9ebb3a3d64c4c76a205bd5cf6d243e607b193",
+                  "locator": "pages[24].text",
+                  "source_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/pages/dmg-vol13-ch78.json"
+                }
+              ]
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-2",
+          "model_review_observation": "scope-reconciliation-needed",
+          "explanation": "The statutory quotation is literal, but the standalone statement that either partner permanently entering a care home ends household membership does not distinguish the one-partner branch from both partners entering. The selected project-authored household-separation concept explicitly flags the factual assessment for both partners. Its cited authoritative continuation DMG 77128–77130 is not selected. Later gaps acknowledge the missing one/both-partner evidence, but do not clearly qualify this claim. This is a source-reconciliation concern, not an established legal falsehood. A second review agent independently identified the same concern.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/regulation/5",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "http://www.legislation.gov.uk/id/uksi/2002/1792/regulation/5; HTTP body hash observed, original response not retained publicly",
+              "source_url": "https://www.legislation.gov.uk/uksi/2002/1792/regulation/5/2026-09-20",
+              "source_pair_in_package": true,
+              "record_text_sha256": "e43e6faad06f6487f72144734d193c740073afd95e07e61a397b84f73b7aabfb",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-20T21:29:53.614046+00:00",
+                  "literal_sha256": "e43e6faad06f6487f72144734d193c740073afd95e07e61a397b84f73b7aabfb",
+                  "locator": "http://www.legislation.gov.uk/id/uksi/2002/1792/regulation/5; HTTP body hash observed, original response not retained publicly",
+                  "source_date": "2026-09-20",
+                  "source_date_kind": "requested point-in-time version; not commencement",
+                  "source_sha256": "898e58d6e6bea9fe234d531c65570a1019c74aaa2ba6b43a0d717d7dbb0db35d",
+                  "url": "https://www.legislation.gov.uk/uksi/2002/1792/regulation/5/2026-09-20"
+                },
+                {
+                  "captured_at": "2026-09-20T21:29:53.614046+00:00",
+                  "literal_sha256": "e43e6faad06f6487f72144734d193c740073afd95e07e61a397b84f73b7aabfb",
+                  "locator": "Retained lossy XML-tree projection; units target uksi/2002/1792/regulation/5",
+                  "source_sha256": "222f597a3505ae3be047795bfd0d9b72d36a76e6b9e2004b9422666be5c58def",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/legal-bodies-2026-09-21-v2/provisions/uksi--2002--1792--regulation--5.json"
+                }
+              ]
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-3",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The quotation preserves the housing-cost additional amount as the subject, the exclusion for a care-home claimant and the exception for temporary absence from the dwelling normally occupied as home. It does not state that care-home fees become payable or that the whole Pension Credit award stops.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 58",
+              "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=58",
+              "source_pair_in_package": true,
+              "record_text_sha256": "54d1aadd860c1716513097da3470a231fa41c84f651850dd404fb9b58ee80a6b",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "54d1aadd860c1716513097da3470a231fa41c84f651850dd404fb9b58ee80a6b",
+                  "locator": "PDF page 58",
+                  "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+                  "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=58"
+                },
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "54d1aadd860c1716513097da3470a231fa41c84f651850dd404fb9b58ee80a6b",
+                  "locator": "pages[57].text",
+                  "source_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/pages/dmg-vol13-ch78.json"
+                }
+              ]
+            }
+          ],
+          "human_acceptance": "pending"
+        }
+      ],
+      "additional_selected_evidence_reviewed": [
+        {
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/household-separation",
+          "text_sha256": "1b1f12138d20be397682f73c7ad79d22914f903c2c73d706517f94160ac923f7",
+          "authority": {
+            "class": "model-assisted",
+            "label": "Staff-domain meaning proposal; specialist review required",
+            "source": "https://github.com/chris-page-gov/okf-dwp"
+          },
+          "assertion_status": "model-derived",
+          "review_status": "unreviewed-specialist-review-required",
+          "provenance": [
+            {
+              "captured_at": "2026-09-20T21:29:11Z",
+              "literal_sha256": "1b1f12138d20be397682f73c7ad79d22914f903c2c73d706517f94160ac923f7",
+              "locator": "@graph/household-separation/definition",
+              "source_sha256": "c254fb14f1dd4e13a80a189215fba2353598373eeaaddcf8abc89939590e09b3",
+              "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/domain-profile/staff-semantic/concepts.yamlld"
+            }
+          ]
+        }
+      ],
+      "answer_level_findings": [
+        "The summary and gaps distinguish the severe-disability and housing-cost components from the whole award. The claim-2 household-scope concern remains despite its later acknowledgement of incomplete partner branches."
+      ],
+      "control_observation": null,
+      "human_review": "pending"
+    },
+    {
+      "provider": "codex-subscription",
+      "case_id": "staff-020",
+      "attempt": "attempt-01",
+      "answer_path": "validation/model-comparison/household-compact-v2/codex-subscription/staff-020/attempt-01/answer.json",
+      "answer_sha256": "74b00d287c8454989fcf6a7b5623f0193c94b2ad0faebc34edde68a7850e2950",
+      "context_path": "evaluation/model-comparison/household-2026-09-21/frozen/contexts/staff-020.json",
+      "context_sha256": "779326129eca485a385f8e0837fc6c83e71f6c8c2fae09f6b162a04ce0a350de",
+      "event_recognition_status": "actual-model-response-retained",
+      "mechanical_status": "passed-mechanical-controls",
+      "claim_reviews": [
+        {
+          "claim_id": "claim-1",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The selected section 1(2) quotation states the three conditions summarised. The claim distinguishes the requested 20 September 2026 version and observed E+W+S extent from commencement and applicability. It does not claim that the referenced component conditions or the whole legal regime are established.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/legal-body/ukpga/2002/16/section/1",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "http://www.legislation.gov.uk/id/ukpga/2002/16/section/1; HTTP body hash observed, original response not retained publicly",
+              "source_url": "https://www.legislation.gov.uk/ukpga/2002/16/section/1/2026-09-20",
+              "source_pair_in_package": true,
+              "record_text_sha256": "e7f8d7510d568ca268e80063be9d5f7b7ecf0d59adf160439689e961e744243b",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-20T21:29:53.446248+00:00",
+                  "literal_sha256": "e7f8d7510d568ca268e80063be9d5f7b7ecf0d59adf160439689e961e744243b",
+                  "locator": "http://www.legislation.gov.uk/id/ukpga/2002/16/section/1; HTTP body hash observed, original response not retained publicly",
+                  "source_date": "2026-09-20",
+                  "source_date_kind": "requested point-in-time version; not commencement",
+                  "source_sha256": "8f2a30aaa9767ee5498352705764d3e09eadc34e6877f9f267bc48b2ebe171e5",
+                  "url": "https://www.legislation.gov.uk/ukpga/2002/16/section/1/2026-09-20"
+                },
+                {
+                  "captured_at": "2026-09-20T21:29:53.446248+00:00",
+                  "literal_sha256": "e7f8d7510d568ca268e80063be9d5f7b7ecf0d59adf160439689e961e744243b",
+                  "locator": "Retained lossy XML-tree projection; units target ukpga/2002/16/section/1",
+                  "source_sha256": "5ec46a71e986e502e3c709423b187676d3b831612583f3f447ae6980df6cc6bd",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/legal-bodies-2026-09-21-v2/provisions/ukpga--2002--16--section--1.json"
+                }
+              ]
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-2",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The quotation reproduces all listed DMG 77031 conditions and cross-references. The statement retains claimant and partner distinctions and acknowledges missing continuations. This is partial guidance: the NI reference should be read with the claim/identification provision, not interpreted as a contribution or derived-partner entitlement rule.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 14",
+              "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=14",
+              "source_pair_in_package": true,
+              "record_text_sha256": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+                  "locator": "PDF page 14",
+                  "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+                  "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=14"
+                },
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+                  "locator": "pages[13].text",
+                  "source_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/pages/dmg-vol13-ch77.json"
+                }
+              ]
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-3",
+          "model_review_observation": "selected-exception-not-reconciled",
+          "explanation": "The DMG 77035 quotation correctly dates the ordinary continuity protection to the same mixed-age couple and 14/15 May 2019. However, the qualification says uninterrupted entitlement is required while merely leaving later migration provisions unresolved. The same selected package includes memo 4/2024 page 5, paragraphs 15–17, describing a conditional route for protected mixed-age couples sent a migration notice to claim/reapply within three months after the relevant award ends. This selected qualification needs reconciliation before the continuity statement can stand alone. No contemporary application of the memo is accepted here.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 15",
+              "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=15",
+              "source_pair_in_package": true,
+              "record_text_sha256": "3c97a680ad9014e99f75e863f64fe299d6f50bc5e476a4ed433543150f89f6ac",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "3c97a680ad9014e99f75e863f64fe299d6f50bc5e476a4ed433543150f89f6ac",
+                  "locator": "PDF page 15",
+                  "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+                  "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=15"
+                },
+                {
+                  "captured_at": "2026-09-15T14:21:01Z",
+                  "literal_sha256": "3c97a680ad9014e99f75e863f64fe299d6f50bc5e476a4ed433543150f89f6ac",
+                  "locator": "pages[14].text",
+                  "source_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/pages/dmg-vol13-ch77.json"
+                }
+              ]
+            }
+          ],
+          "human_acceptance": "pending"
+        }
+      ],
+      "additional_selected_evidence_reviewed": [
+        {
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-04-24-282c3cef22/0005",
+          "text_sha256": "62d3128632dd7008c188540bfda9495211caaabca55bf2e3f22c0f1ce366c428",
+          "authority": {
+            "class": "derived",
+            "label": "Exact frozen machine extraction; applicability unreviewed",
+            "source": "https://assets.publishing.service.gov.uk/media/66867768899a6f92e5d9ccf0/dmg-memo-04-24.pdf#page=5"
+          },
+          "assertion_status": "normalized",
+          "review_status": "unreviewed-specialist-review-required",
+          "provenance": [
+            {
+              "captured_at": "2026-09-15T19:45:14.744338Z",
+              "literal_sha256": "62d3128632dd7008c188540bfda9495211caaabca55bf2e3f22c0f1ce366c428",
+              "locator": "PDF page 5",
+              "source_sha256": "35741a2aae92c4082f3cf9fe493674d3c33d998bdf9ecd8bc40a3014edb4ae75",
+              "url": "https://assets.publishing.service.gov.uk/media/66867768899a6f92e5d9ccf0/dmg-memo-04-24.pdf#page=5"
+            },
+            {
+              "captured_at": "2026-09-15T19:45:14.788585Z",
+              "literal_sha256": "62d3128632dd7008c188540bfda9495211caaabca55bf2e3f22c0f1ce366c428",
+              "locator": "pages[4].text",
+              "source_sha256": "96a341849256210150e02de5b6a8d71808a501e7a73733e93c0e1402191a239b",
+              "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/full-dmg-2026-09-15/pages/dmg-memo-04-24-282c3cef22.json"
+            }
+          ]
+        },
+        {
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/legal-body/ukpga/1992/5/section/1",
+          "text_sha256": "e99d367eb9de67153f4a1c95c5a69669495ae32c78812e6f57bce66639f02a5d",
+          "authority": {
+            "class": "derived",
+            "label": "Machine extraction from official legislation publication; unreviewed",
+            "source": "https://www.legislation.gov.uk/ukpga/1992/5/section/1/2026-09-20"
+          },
+          "assertion_status": "normalized",
+          "review_status": "unreviewed",
+          "provenance": [
+            {
+              "captured_at": "2026-09-20T21:29:53.824474+00:00",
+              "literal_sha256": "e99d367eb9de67153f4a1c95c5a69669495ae32c78812e6f57bce66639f02a5d",
+              "locator": "http://www.legislation.gov.uk/id/ukpga/1992/5/section/1; HTTP body hash observed, original response not retained publicly",
+              "source_date": "2026-09-20",
+              "source_date_kind": "requested point-in-time version; not commencement",
+              "source_sha256": "6096a799fcf1eac1587469933a8dd13e583742fc0288ad47d49a8796a2d81795",
+              "url": "https://www.legislation.gov.uk/ukpga/1992/5/section/1/2026-09-20"
+            },
+            {
+              "captured_at": "2026-09-20T21:29:53.824474+00:00",
+              "literal_sha256": "e99d367eb9de67153f4a1c95c5a69669495ae32c78812e6f57bce66639f02a5d",
+              "locator": "Retained lossy XML-tree projection; units target ukpga/1992/5/section/1",
+              "source_sha256": "51e2119402f6131fcfacc376b60d6346c7f14c8e842b287779fc363b299af32f",
+              "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/legal-bodies-2026-09-21-v2/provisions/ukpga--1992--5--section--1.json"
+            }
+          ]
+        }
+      ],
+      "answer_level_findings": [
+        "Memo 4/2024 page 5 is selected but not cited in the answer. The answer labels later migration unresolved instead of reconciling this available conditional exception. The package genuinely omits detailed DMG 77140 on page 77/0026; missing and present-but-unreconciled evidence are different problems."
+      ],
+      "control_observation": null,
+      "human_review": "pending"
+    },
+    {
+      "provider": "codex-subscription",
+      "case_id": "staff-026",
+      "attempt": "attempt-01",
+      "answer_path": "validation/model-comparison/household-compact-v2/codex-subscription/staff-026/attempt-01/answer.json",
+      "answer_sha256": "65a909d25aafa438a45124657cd40a4f9a106a178e1a7057b62c66dc2d7d03ad",
+      "context_path": "evaluation/model-comparison/household-2026-09-21/frozen/contexts/staff-026.json",
+      "context_sha256": "1688178198ca3209ffbc711d755c22b2cf442153c07e1d9f43a9c843ca002437",
+      "event_recognition_status": "actual-model-response-retained",
+      "mechanical_status": "passed-mechanical-controls",
+      "claim_reviews": [
+        {
+          "claim_id": "claim-1",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The detailed claim correctly limits retention to people already entitled to DLA on 8 April 2013 and quotes P1001’s relevant-date qualification. This correct detailed scope does not repair the broader answer summary, which drops the dated cohort.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0002",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 2",
+              "source_url": "https://assets.publishing.service.gov.uk/media/691f03c52b1627c20b7107f4/adm_p1.pdf#page=2",
+              "source_pair_in_package": true,
+              "record_text_sha256": "b38efe6e46180cb93381cdf717e268e9c2eb6f9288db3a39774e81dc9a994cfa",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-19T16:30:40.663145Z",
+                  "literal_sha256": "b38efe6e46180cb93381cdf717e268e9c2eb6f9288db3a39774e81dc9a994cfa",
+                  "locator": "PDF page 2",
+                  "source_sha256": "1aa2952829f0d5de2c4bd6f0eafda1306a3bb11c849f649a5a6af7f406447830",
+                  "url": "https://assets.publishing.service.gov.uk/media/691f03c52b1627c20b7107f4/adm_p1.pdf#page=2"
+                },
+                {
+                  "captured_at": "2026-09-19T16:30:40.706342Z",
+                  "literal_sha256": "b38efe6e46180cb93381cdf717e268e9c2eb6f9288db3a39774e81dc9a994cfa",
+                  "locator": "pages[1].text",
+                  "source_sha256": "8b4ef5c512170a1f8ecee2c2da35aeea9e77a9050b29dabe33ab5103bcb9ada0",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/adm-2026-09-19/pages/adm-chapter-p1.json"
+                }
+              ]
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0002",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 2",
+              "source_url": "https://assets.publishing.service.gov.uk/media/691f03c52b1627c20b7107f4/adm_p1.pdf#page=2",
+              "source_pair_in_package": true,
+              "record_text_sha256": "b38efe6e46180cb93381cdf717e268e9c2eb6f9288db3a39774e81dc9a994cfa",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-19T16:30:40.663145Z",
+                  "literal_sha256": "b38efe6e46180cb93381cdf717e268e9c2eb6f9288db3a39774e81dc9a994cfa",
+                  "locator": "PDF page 2",
+                  "source_sha256": "1aa2952829f0d5de2c4bd6f0eafda1306a3bb11c849f649a5a6af7f406447830",
+                  "url": "https://assets.publishing.service.gov.uk/media/691f03c52b1627c20b7107f4/adm_p1.pdf#page=2"
+                },
+                {
+                  "captured_at": "2026-09-19T16:30:40.706342Z",
+                  "literal_sha256": "b38efe6e46180cb93381cdf717e268e9c2eb6f9288db3a39774e81dc9a994cfa",
+                  "locator": "pages[1].text",
+                  "source_sha256": "8b4ef5c512170a1f8ecee2c2da35aeea9e77a9050b29dabe33ab5103bcb9ada0",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/adm-2026-09-19/pages/adm-chapter-p1.json"
+                }
+              ]
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-2",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The joined P5018–P5020 quotation includes the after-27-October-2013 cohort, relevant-date conditions and terminal-illness exception. The prose rejects an automatic universal transfer at age 16. The full quote also preserves “as soon as reasonably practicable”; definitions and other exceptions remain incomplete.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0006",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 6",
+              "source_url": "https://assets.publishing.service.gov.uk/media/659d2b1028753e000d8a6768/admp5.pdf#page=6",
+              "source_pair_in_package": true,
+              "record_text_sha256": "5c093e17bbc53bd2869eabad0a9df58c953e0b34a67b2c7e9c32a2603f637f87",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-19T16:30:41.014677Z",
+                  "literal_sha256": "5c093e17bbc53bd2869eabad0a9df58c953e0b34a67b2c7e9c32a2603f637f87",
+                  "locator": "PDF page 6",
+                  "source_sha256": "0231da4591e999a909e35ddec62209fe3278bddcf97be4eb87689758302677d3",
+                  "url": "https://assets.publishing.service.gov.uk/media/659d2b1028753e000d8a6768/admp5.pdf#page=6"
+                },
+                {
+                  "captured_at": "2026-09-19T16:30:41.073560Z",
+                  "literal_sha256": "5c093e17bbc53bd2869eabad0a9df58c953e0b34a67b2c7e9c32a2603f637f87",
+                  "locator": "pages[5].text",
+                  "source_sha256": "d59d21924c5a8d3e0dde48136d9c971cfbd7e6a4494e230f708d6d89a8ad63d2",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/adm-2026-09-19/pages/adm-chapter-p5.json"
+                }
+              ]
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-3",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The P5025 quote includes the under-16 heading and its whether-or-not-DLA qualification. The claim confines the statement to captured transitional guidance and does not infer current law or complete Child DLA continuity.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0008",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 8",
+              "source_url": "https://assets.publishing.service.gov.uk/media/659d2b1028753e000d8a6768/admp5.pdf#page=8",
+              "source_pair_in_package": true,
+              "record_text_sha256": "166f30bea8fa0e5423511a1b61d38ce9585ec2ff6627557c94a667b0ba82d110",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-19T16:30:41.014677Z",
+                  "literal_sha256": "166f30bea8fa0e5423511a1b61d38ce9585ec2ff6627557c94a667b0ba82d110",
+                  "locator": "PDF page 8",
+                  "source_sha256": "0231da4591e999a909e35ddec62209fe3278bddcf97be4eb87689758302677d3",
+                  "url": "https://assets.publishing.service.gov.uk/media/659d2b1028753e000d8a6768/admp5.pdf#page=8"
+                },
+                {
+                  "captured_at": "2026-09-19T16:30:41.073560Z",
+                  "literal_sha256": "166f30bea8fa0e5423511a1b61d38ce9585ec2ff6627557c94a667b0ba82d110",
+                  "locator": "pages[7].text",
+                  "source_sha256": "d59d21924c5a8d3e0dde48136d9c971cfbd7e6a4494e230f708d6d89a8ad63d2",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/adm-2026-09-19/pages/adm-chapter-p5.json"
+                }
+              ]
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-4",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The two citations join the P1013 first-time-entitlement heading on page 3 to the age/DLA continuation and upper-age exception reference on page 4. The statement preserves first-time scope and does not substitute this general condition for the full existing-award transition process.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0003",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 3",
+              "source_url": "https://assets.publishing.service.gov.uk/media/691f03c52b1627c20b7107f4/adm_p1.pdf#page=3",
+              "source_pair_in_package": true,
+              "record_text_sha256": "d448458d3eb824de48b13905d43158f70505fecc6a63f89fd8c9cec9d815b05d",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-19T16:30:40.663145Z",
+                  "literal_sha256": "d448458d3eb824de48b13905d43158f70505fecc6a63f89fd8c9cec9d815b05d",
+                  "locator": "PDF page 3",
+                  "source_sha256": "1aa2952829f0d5de2c4bd6f0eafda1306a3bb11c849f649a5a6af7f406447830",
+                  "url": "https://assets.publishing.service.gov.uk/media/691f03c52b1627c20b7107f4/adm_p1.pdf#page=3"
+                },
+                {
+                  "captured_at": "2026-09-19T16:30:40.706342Z",
+                  "literal_sha256": "d448458d3eb824de48b13905d43158f70505fecc6a63f89fd8c9cec9d815b05d",
+                  "locator": "pages[2].text",
+                  "source_sha256": "8b4ef5c512170a1f8ecee2c2da35aeea9e77a9050b29dabe33ab5103bcb9ada0",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/adm-2026-09-19/pages/adm-chapter-p1.json"
+                }
+              ]
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0004",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 4",
+              "source_url": "https://assets.publishing.service.gov.uk/media/691f03c52b1627c20b7107f4/adm_p1.pdf#page=4",
+              "source_pair_in_package": true,
+              "record_text_sha256": "a7e1e233660300d530a3e40d851828c6a874f1cfe258ed3f8fb9c67330925444",
+              "source_provenance": [
+                {
+                  "captured_at": "2026-09-19T16:30:40.663145Z",
+                  "literal_sha256": "a7e1e233660300d530a3e40d851828c6a874f1cfe258ed3f8fb9c67330925444",
+                  "locator": "PDF page 4",
+                  "source_sha256": "1aa2952829f0d5de2c4bd6f0eafda1306a3bb11c849f649a5a6af7f406447830",
+                  "url": "https://assets.publishing.service.gov.uk/media/691f03c52b1627c20b7107f4/adm_p1.pdf#page=4"
+                },
+                {
+                  "captured_at": "2026-09-19T16:30:40.706342Z",
+                  "literal_sha256": "a7e1e233660300d530a3e40d851828c6a874f1cfe258ed3f8fb9c67330925444",
+                  "locator": "pages[3].text",
+                  "source_sha256": "8b4ef5c512170a1f8ecee2c2da35aeea9e77a9050b29dabe33ab5103bcb9ada0",
+                  "url": "https://github.com/chris-page-gov/okf-dwp/blob/main/source/adm-2026-09-19/pages/adm-chapter-p1.json"
+                }
+              ]
+            }
+          ],
+          "human_acceptance": "pending"
+        }
+      ],
+      "additional_selected_evidence_reviewed": [],
+      "answer_level_findings": [
+        "The summary says existing DLA claimants generally retained DLA until a PIP decision without preserving the 8 April 2013 cohort correctly retained in claim-1. The summary therefore broadens the claim’s cited scope. Read the detailed claim and date together; do not circulate the summary as a complete rule."
+      ],
+      "control_observation": null,
+      "human_review": "pending"
+    },
+    {
+      "provider": "claude-subscription",
+      "case_id": "control-unknown",
+      "attempt": "attempt-01",
+      "answer_path": "validation/model-comparison/household-compact-v2/claude-subscription/control-unknown/attempt-01/answer.json",
+      "answer_sha256": "5ff9a11e49a4af51ca5dab094e759694d790aea4fd8e52aae968f015e63738dd",
+      "context_path": "evaluation/model-comparison/household-2026-09-21/frozen/contexts/control-unknown.json",
+      "context_sha256": "b474066da0a789f519a6d25c7bff1f16e7ddbc52fdf67a08b0c4bcf4027e67b1",
+      "event_recognition_status": "actual-model-response-retained",
+      "mechanical_status": "passed-mechanical-controls",
+      "claim_reviews": [],
+      "additional_selected_evidence_reviewed": [],
+      "answer_level_findings": [],
+      "control_observation": "Correct abstention: insufficient status, cannot-establish disposition and no substantive claims or citations.",
+      "human_review": "pending"
+    }
+  ]
+}
