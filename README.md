@@ -15,6 +15,7 @@ okf_version: "0.2"
 This repository turns public Department for Work and Pensions (DWP) guidance into source-linked records, a YAML-LD semantic graph and an indexed OKF Explorer research candidate. It began with a [Pension Credit pilot covering volumes 13 and 14](https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide), expanded to the [full Decision makers’ guide (DMG)](https://www.gov.uk/government/collections/decision-makers-guide-staff-guide), and now also preserves the separate [Advice for decision making (ADM) manual](docs/adm-acquisition.md). It demonstrates how a specialist or an AI can find evidence, inspect relationships and see what remains uncertain.
 
 **New to the project?** Follow the [practical learning path](docs/learning-path.md),
+or read [how the web edition is published](docs/learning-website.md),
 then use the [plain-English glossary](docs/glossary.md) when a benefit name or
 technical term appears. It explains Search, Ask OKF and AI answering through
 short tasks, including how to connect and why a browser can show HTTP 405.

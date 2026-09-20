@@ -1,5 +1,7 @@
 # Learn OKF-DWP by using it
 
+[About the web edition](learning-website.md) · [Markdown source and project](../README.md)
+
 [What changed](../CHANGELOG.md) · [Work in progress](work-log-2026-09-20.md) · [Remaining work](backlog.md)
 
 OKF-DWP is an independent experiment in making published benefits guidance easier
@@ -122,7 +124,14 @@ required for a supported task. It is more than a list of documents.
 
 ### Choose the version being demonstrated
 
-The new full-corpus candidate uses version
+For the current Monday demonstration, use the [combined Reader and staff
+walkthrough](monday-demo-2026-09-21.md). Service 0.4.0 uses the staff-semantic
+content version `9de52acf1db84b27f8933d80480eaa850e74fa33`: both captured manuals,
+43 authored concepts and 40 task profiles with explicit outstanding requirements.
+Its 169 of 177 candidate-page matches measure retrieval against known staff
+questions, not answer accuracy; all 40 tasks remain insufficient.
+
+The earlier full-corpus comparison uses version
 `bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752` and the additive
 `full-dmg/okf-corpus-context.json` descriptor. Its
 [five-minute walkthrough](remote-mcp-demo.md#five-minute-full-corpus-presentation)

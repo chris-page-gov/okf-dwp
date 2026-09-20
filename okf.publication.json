@@ -1125,6 +1125,10 @@
       {
         "path": "profiles/bundle-wiki/**",
         "role": "schema"
+      },
+      {
+        "path": "tools/learning-site/**",
+        "role": "generator"
       }
     ],
     "generated": [
@@ -1251,6 +1255,18 @@
         "check_command_ids": [
           "source-refresh-check"
         ]
+      },
+      {
+        "path": "_site/**",
+        "role": "site",
+        "plane": "documentation",
+        "required": false,
+        "build_command_ids": [
+          "learning-site-build"
+        ],
+        "check_command_ids": [
+          "learning-site-test"
+        ]
       }
     ]
   },
@@ -1334,13 +1350,18 @@
         "evaluation/backlog.json",
         "scripts/check_backlog.py",
         "scripts/test_backlog.py",
-        "scripts/build_backlog_work_packages.py"
+        "scripts/build_backlog_work_packages.py",
+        "scripts/build_learning_site.py",
+        "_site/**",
+        "tools/learning-site/**"
       ],
       "command_ids": [
         "diff-check",
         "backlog-check",
         "backlog-controls",
-        "backlog-ledger-check"
+        "backlog-ledger-check",
+        "learning-site-build",
+        "learning-site-test"
       ]
     },
     {
@@ -2193,6 +2214,32 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 2
+      },
+      {
+        "id": "learning-site-build",
+        "kind": "build",
+        "planes": [
+          "documentation"
+        ],
+        "command": "uv run --locked --project tools/learning-site python scripts/build_learning_site.py --commit COMMIT_SHA",
+        "source": "docs/learning-website.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "learning-site-test",
+        "kind": "test",
+        "planes": [
+          "documentation"
+        ],
+        "command": "uv run --locked --project tools/learning-site python -m unittest discover -s tools/learning-site -p test_learning_site.py",
+        "source": "docs/learning-website.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
       }
     ]
   },
@@ -2218,7 +2265,8 @@
       "profiles/bundle-wiki/**",
       "profiles/publication-method/**",
       "docs/publication-contract-details.json",
-      "combined/**"
+      "combined/**",
+      "tools/learning-site/**"
     ],
     "documentation_paths": [
       "README.md",
@@ -2238,7 +2286,8 @@
   "ci": {
     "provider": "github-actions",
     "workflow_paths": [
-      ".github/workflows/okf-ci.yml"
+      ".github/workflows/okf-ci.yml",
+      ".github/workflows/pages.yml"
     ],
     "impact_routing": "full-suite",
     "parallelism": "serial",
@@ -2264,7 +2313,7 @@
     "mode": "manual",
     "scope": "candidate",
     "authority": {
-      "decision": "Owner explicitly requested a public chris-page-gov repository and an unofficial meeting exemplar on 15 September 2026. The owner requested the next semantic stage, full DMG target by 24 September and seminar exploration for 30 September. The owner then requested unattended bundle completion; normal reviewed PR publication is authorised.",
+      "decision": "Owner explicitly requested a public chris-page-gov repository and an unofficial meeting exemplar on 15 September 2026. The owner requested the next semantic stage, full DMG target by 24 September and seminar exploration for 30 September. The owner then requested unattended bundle completion; normal reviewed PR publication is authorised. The owner requested a website URL for the learning path on 20 September; tracked public documentation is rendered after protected-main validation.",
       "evidence_paths": [
         "REPOSITORY_STATUS.md"
       ]
@@ -2276,6 +2325,14 @@
         "kind": "other",
         "workflow_path": ".github/workflows/okf-ci.yml",
         "public_base_url": "https://github.com/chris-page-gov/okf-dwp",
+        "exact_commit_required": true,
+        "promote_without_rebuild": true
+      },
+      {
+        "id": "github-pages-learning",
+        "kind": "github-pages",
+        "workflow_path": ".github/workflows/pages.yml",
+        "public_base_url": "https://chris-page-gov.github.io/okf-dwp/",
         "exact_commit_required": true,
         "promote_without_rebuild": true
       }
@@ -2363,7 +2420,7 @@
     "Independent experimental candidate; full Foundry production gates, specialist review and current legal applicability are not claimed.",
     "The canonical contract describes required boundaries and checks, not their successful execution. Existing assertion, source, remote and browser receipts retain their own immutable scope.",
     "Detailed original classifications, source denominators and the canonical mapping are retained in docs/publication-contract-details.json. Canonical mixed authority never promotes machine extraction or model-derived assertions to official authority.",
-    "Manual publication means reviewed PR merge of the validated Git candidate. The GitHub target workflow is the validation gate, not a separate site deployer; promotion refers to checked repository bytes without regenerating source or bundle outputs during merge.",
+    "Repository publication uses reviewed PR merge. The additional learning Pages workflow renders only tracked public Markdown from the exact successful protected-main validation commit and deploys that single built artefact; it never rebuilds the evidence corpus.",
     "Real-browser verification remains required. browser-evidence-check validates retained observations offline; it does not launch a browser, repeat the journeys or attest a later application deployment. Historical pilot journeys retain their earlier content and application-identity limitations.",
     "Console errors must be absent or explicitly recorded and justified in the retained observation; an undocumented error cannot pass the documented-allowlist policy.",
     "Rights evidence URLs locate repository documentation on main; they are not immutable source snapshots. Original source hashes and licence evidence remain in the named frozen inventories.",
