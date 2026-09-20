@@ -12,26 +12,31 @@
     {
       "id": "DWP-BL-001",
       "title": "Extensive persona, journey and question review",
-      "status": "in_progress",
+      "status": "needs_domain_review",
       "priority": "P0",
       "depends_on": [],
       "owner_role": "Domain and user-research reviewers",
       "evidence": [
         "docs/next-stage/stakeholder-needs-and-evaluation.md",
-        "evaluation/staff-questions/cases.json"
+        "evaluation/staff-questions/cases.json",
+        "evaluation/staff-needs/matrix.json",
+        "evaluation/staff-needs/README.md"
       ],
       "acceptance_checks": [
         "Retain 40 occurrences / 39 distinct wordings; agree persona validity, intended decisions, ambiguity and independently evidenced success criteria."
       ],
-      "scope_note": "Delivery work is now explicit and in progress. The separate acceptance package remains open; no implementation, publication or specialist acceptance is inferred from the aggregate status.",
+      "scope_note": "All 40 occurrences mapped to seven primary journeys and six projected personas, with ambiguity, requirements and negative scenarios. Mapping controls pass; representative-user and specialist validation remain open.",
       "work_packages": [
         {
           "id": "DWP-BL-001.delivery",
           "kind": "implementation",
-          "status": "in_progress",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Map all 40 supplied occurrences to provisional personas, journeys, ambiguities, evidence requirements and negative controls.",
-          "evidence": []
+          "next_action": "Delivered bounded increment; use the linked evidence and named remaining obligations for the next reviewed expansion.",
+          "evidence": [
+            "evaluation/staff-needs/matrix.json",
+            "evaluation/staff-needs/README.md"
+          ]
         },
         {
           "id": "DWP-BL-001.acceptance",
@@ -160,20 +165,38 @@
       "owner_role": "Domain vocabulary reviewers",
       "evidence": [
         "docs/next-stage/semantic-contract.md",
-        "docs/ontology-use.md"
+        "docs/ontology-use.md",
+        "evaluation/semantic-expansion/build.json",
+        "evaluation/semantic-expansion/catalogue.json",
+        "docs/semantic-expansion.md",
+        "evaluation/semantic-expansion/profiles.json"
       ],
       "acceptance_checks": [
         "Benefit/variant/circumstance terms have sources, aliases, confusions and scope; existing custody-specific meanings are not silently broadened."
       ],
-      "scope_note": "Delivery work is now explicit and in progress. The separate acceptance package remains open; no implementation, publication or specialist acceptance is inferred from the aggregate status.",
+      "scope_note": "Bounded staff-domain delivery adds neutral and variant meanings, exact source-backed associations and explicit ambiguity. It does not complete the entire benefits domain; source closure, temporal/territorial applicability and specialist acceptance remain open in named task obligations.",
       "work_packages": [
         {
           "id": "DWP-BL-005.delivery",
           "kind": "implementation",
-          "status": "in_progress",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Implement neutral benefit and variant concepts, source-backed conceptual relationships and alias corrections across the supplied question families.",
-          "evidence": []
+          "next_action": "Delivered bounded increment; use the linked evidence and named remaining obligations for the next reviewed expansion.",
+          "evidence": [
+            "evaluation/semantic-expansion/build.json",
+            "evaluation/semantic-expansion/catalogue.json",
+            "docs/semantic-expansion.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-005.domain-expansion",
+          "kind": "research",
+          "status": "not_started",
+          "executor": "agent",
+          "next_action": "Extend beyond the bounded staff concepts using the explicit source-closure obligations; inspect adjacent passages, aliases, variant confusions and unmapped concepts. This agent work does not wait for human acceptance.",
+          "evidence": [
+            "evaluation/semantic-expansion/profiles.json"
+          ]
         },
         {
           "id": "DWP-BL-005.acceptance",
@@ -196,20 +219,37 @@
       "owner_role": "Legal and domain reviewers",
       "evidence": [
         "docs/next-stage/legislation-integration.md",
-        "knowledge/legislation-resources.yamlld"
+        "knowledge/legislation-resources.yamlld",
+        "evaluation/legal-reconciliation/coverage.json",
+        "evaluation/legal-reconciliation/assertions.json",
+        "docs/legal-reconciliation.md"
       ],
       "acceptance_checks": [
         "Verify work/provision/version identities, effects, commencement and territory; record unresolved citations; catalogue links are not legal completeness."
       ],
-      "scope_note": "Delivery work is now explicit and in progress. The separate acceptance package remains open; no implementation, publication or specialist acceptance is inferred from the aggregate status.",
+      "scope_note": "Official work/provision identities, observed version attributes and exact citation mappings are delivered for the selected staff candidates. Statutory/judgment bodies, complete amendment/effect chains and substantive applicability reconciliation remain open; no accepted legal proposition.",
       "work_packages": [
         {
           "id": "DWP-BL-006.delivery",
           "kind": "research",
-          "status": "in_progress",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Reconcile exact statutory citations with official work, provision and observed version identities; retain unresolved effects and territory.",
-          "evidence": []
+          "next_action": "Delivered bounded increment; use the linked evidence and named remaining obligations for the next reviewed expansion.",
+          "evidence": [
+            "evaluation/legal-reconciliation/coverage.json",
+            "evaluation/legal-reconciliation/assertions.json",
+            "docs/legal-reconciliation.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-006.legal-body-evidence",
+          "kind": "research",
+          "status": "not_started",
+          "executor": "agent",
+          "next_action": "Acquire and retain appropriately licensed statutory/judgment body evidence for the identified provisions; model dated amendments and extent before proposing applicability. Identity metadata alone does not complete this work.",
+          "evidence": [
+            "docs/legal-reconciliation.md"
+          ]
         },
         {
           "id": "DWP-BL-006.acceptance",
@@ -234,20 +274,37 @@
       "owner_role": "Domain evidence reviewers",
       "evidence": [
         "evaluation/context-assembly/imprisonment-case.json",
-        "evaluation/staff-questions/cases.json"
+        "evaluation/staff-questions/cases.json",
+        "evaluation/semantic-expansion/profiles.json",
+        "evaluation/semantic-expansion/evaluation.json",
+        "docs/semantic-expansion.md"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
       ],
-      "scope_note": "Delivery work is now explicit and in progress. The separate acceptance package remains open; no implementation, publication or specialist acceptance is inferred from the aggregate status.",
+      "scope_note": "Forty executable development profiles, actual traversal and 203 named open obligations are delivered. All 40 remain insufficient. These known questions are not a held-out accuracy benchmark; meeting a source candidate is not evidence closure.",
       "work_packages": [
         {
           "id": "DWP-BL-007.delivery",
           "kind": "implementation",
-          "status": "in_progress",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Compile and exercise source-backed task profiles for all 39 distinct questions, preserving all 40 occurrences and explicit gaps.",
-          "evidence": []
+          "next_action": "Delivered bounded increment; use the linked evidence and named remaining obligations for the next reviewed expansion.",
+          "evidence": [
+            "evaluation/semantic-expansion/profiles.json",
+            "evaluation/semantic-expansion/evaluation.json",
+            "docs/semantic-expansion.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.evidence-closure",
+          "kind": "implementation",
+          "status": "not_started",
+          "executor": "agent",
+          "next_action": "Investigate the eight missed candidate requirements and all 43 source-closure obligations, follow continuations/exceptions and add evidenced paths. Keep question-scope, legal-version and human acceptance obligations separate.",
+          "evidence": [
+            "evaluation/semantic-expansion/profiles.json"
+          ]
         },
         {
           "id": "DWP-BL-007.acceptance",
@@ -346,7 +403,7 @@
     {
       "id": "DWP-BL-010",
       "title": "Fixed-evidence claim-level model trials",
-      "status": "in_progress",
+      "status": "needs_domain_review",
       "priority": "P0",
       "depends_on": [
         "DWP-BL-004"
@@ -354,20 +411,29 @@
       "owner_role": "Evaluation author and independent domain reviewer",
       "evidence": [
         "evaluation/answer-review/README.md",
-        "evaluation/answer-review/cases.json"
+        "evaluation/answer-review/cases.json",
+        "docs/staff-model-trials.md",
+        "evaluation/model-comparison/staff-2026-09-20/protocol.json",
+        "validation/model-comparison/staff-2026-09-20/results.json",
+        "validation/model-comparison/staff-2026-09-20/claim-level-model-critique.json"
       ],
       "acceptance_checks": [
         "Retain identical fixed inputs/prompts and real model outputs; verify IDs/quotes/locators; independently assess entailment/exceptions/abstention; no self-graded gold or engineering-score substitution."
       ],
-      "scope_note": "Delivery work is now explicit and in progress. The separate acceptance package remains open; no implementation, publication or specialist acceptance is inferred from the aggregate status.",
+      "scope_note": "Five paired fixed-input cases, 12 retained attempts, 49 claims and 79 citations; eight responses pass mechanical checks and two fail exact quotations. Model critique finds substantive omissions. Actual Codex model is unknown and Claude accounting includes multiple model identities. No specialist acceptance, comparative accuracy or affordability conclusion.",
       "work_packages": [
         {
           "id": "DWP-BL-010.delivery",
           "kind": "implementation",
-          "status": "in_progress",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Extend the fixed-evidence trial harness and supplied-question trials with per-claim mechanical checks, review records and preserved failures.",
-          "evidence": []
+          "next_action": "Delivered bounded paired subscription-client experiment with identical authored inputs, retained failures, usage observations and per-claim model critique. Specialist assessment and a controlled model/cost benchmark remain separate.",
+          "evidence": [
+            "docs/staff-model-trials.md",
+            "evaluation/model-comparison/staff-2026-09-20/protocol.json",
+            "validation/model-comparison/staff-2026-09-20/results.json",
+            "validation/model-comparison/staff-2026-09-20/claim-level-model-critique.json"
+          ]
         },
         {
           "id": "DWP-BL-010.acceptance",
@@ -416,7 +482,8 @@
       "depends_on": [],
       "owner_role": "Rights owner and publisher",
       "evidence": [
-        "docs/cpag-handbook.md"
+        "docs/cpag-handbook.md",
+        "docs/cpag-permission-request-draft.md"
       ],
       "acceptance_checks": [
         "Retain catalogue/contents metadata only until applicable written permission covers intended body acquisition, AI processing and redistribution."
@@ -438,13 +505,23 @@
           "executor": "external",
           "next_action": "Obtain applicable written permission for intended acquisition, AI processing and redistribution.",
           "evidence": []
+        },
+        {
+          "id": "DWP-BL-012.permission-scope",
+          "kind": "research",
+          "status": "recorded_complete",
+          "executor": "agent",
+          "next_action": "Owner may review and send the prepared request; no permission or message is implied.",
+          "evidence": [
+            "docs/cpag-permission-request-draft.md"
+          ]
         }
       ]
     },
     {
       "id": "DWP-BL-013",
       "title": "Tribunal decision discovery",
-      "status": "in_progress",
+      "status": "needs_domain_review",
       "priority": "P1",
       "depends_on": [
         "DWP-BL-001",
@@ -452,20 +529,25 @@
       ],
       "owner_role": "Legal-source researcher",
       "evidence": [
-        "docs/future-sources.md"
+        "docs/future-sources.md",
+        "evaluation/legal-reconciliation/tribunal-discovery.json",
+        "docs/legal-reconciliation.md"
       ],
       "acceptance_checks": [
         "Official decision census, case IDs, authority/jurisdiction/date and rights assessed; no inferred applicability from keyword overlap."
       ],
-      "scope_note": "Delivery work is now explicit and in progress. The separate acceptance package remains open; no implementation, publication or specialist acceptance is inferred from the aggregate status.",
+      "scope_note": "Six bounded official queries and 18 decision metadata records are delivered. Every query is truncated. Judgment body acquisition, rights assessment, precedential weight and applicability remain open.",
       "work_packages": [
         {
           "id": "DWP-BL-013.delivery",
           "kind": "research",
-          "status": "in_progress",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Record a bounded official tribunal-decision census with identifiers, dates, jurisdiction, rights and query limits.",
-          "evidence": []
+          "next_action": "Delivered bounded increment; use the linked evidence and named remaining obligations for the next reviewed expansion.",
+          "evidence": [
+            "evaluation/legal-reconciliation/tribunal-discovery.json",
+            "docs/legal-reconciliation.md"
+          ]
         },
         {
           "id": "DWP-BL-013.acceptance",
@@ -614,7 +696,7 @@
     {
       "id": "DWP-BL-018",
       "title": "Fair model and affordability benchmark",
-      "status": "not_started",
+      "status": "in_progress",
       "priority": "P1",
       "depends_on": [
         "DWP-BL-007",
@@ -622,20 +704,39 @@
       ],
       "owner_role": "Evaluation owner",
       "evidence": [
-        "evaluation/model-comparison/README.md"
+        "evaluation/model-comparison/README.md",
+        "docs/staff-model-trials.md",
+        "evaluation/model-comparison/staff-2026-09-20/protocol.json",
+        "validation/model-comparison/staff-2026-09-20/results.json",
+        "validation/model-comparison/staff-2026-09-20/claim-level-model-critique.json"
       ],
       "acceptance_checks": [
         "Same questions/evidence/prompts/rubric and independent review across models; record token use/retries/provider accounting separately from subscription charges and human review cost."
       ],
-      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible.",
+      "scope_note": "Five paired fixed-input cases, 12 retained attempts, 49 claims and 79 citations; eight responses pass mechanical checks and two fail exact quotations. Model critique finds substantive omissions. Actual Codex model is unknown and Claude accounting includes multiple model identities. No specialist acceptance, comparative accuracy or affordability conclusion.",
       "work_packages": [
         {
           "id": "DWP-BL-018.delivery",
           "kind": "implementation",
+          "status": "recorded_complete",
+          "executor": "agent",
+          "next_action": "Delivered bounded paired subscription-client experiment with identical authored inputs, retained failures, usage observations and per-claim model critique. Specialist assessment and a controlled model/cost benchmark remain separate.",
+          "evidence": [
+            "docs/staff-model-trials.md",
+            "evaluation/model-comparison/staff-2026-09-20/protocol.json",
+            "validation/model-comparison/staff-2026-09-20/results.json",
+            "validation/model-comparison/staff-2026-09-20/claim-level-model-critique.json"
+          ]
+        },
+        {
+          "id": "DWP-BL-018.controlled-benchmark",
+          "kind": "research",
           "status": "not_started",
           "executor": "agent",
-          "next_action": "Implement identical fixed-input comparison, observed usage and retry accounting across available models.",
-          "evidence": []
+          "next_action": "Establish actual single-model identity and comparable full invocation conditions, then extend the fixed-input sample. Retain unknown identity and observed provider accounting without guessing affordability.",
+          "evidence": [
+            "docs/staff-model-trials.md"
+          ]
         },
         {
           "id": "DWP-BL-018.acceptance",
@@ -650,27 +751,36 @@
     {
       "id": "DWP-BL-019",
       "title": "Broader accessibility and cross-browser review",
-      "status": "not_started",
+      "status": "in_progress",
       "priority": "P1",
       "depends_on": [
         "DWP-BL-009"
       ],
       "owner_role": "Accessibility and user researchers",
       "evidence": [
-        "validation/corpus-questions/public-explorer-observation.json"
+        "validation/corpus-questions/public-explorer-observation.json",
+        "docs/combined-reader.md",
+        "validation/combined-reader/README.md",
+        "validation/combined-reader/browser/artifacts.json",
+        "validation/combined-reader/build.json"
       ],
       "acceptance_checks": [
         "Representative keyboard/screen-reader/mobile/engine journeys and failures recorded; named browser observations do not imply whole-product conformance."
       ],
-      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible.",
+      "scope_note": "Combined Reader implementation and bounded local Chrome, Firefox and WebKit observations are recorded. Public deployment acceptance and human assistive-technology/user research remain separate; no whole-product accessibility claim.",
       "work_packages": [
         {
           "id": "DWP-BL-019.delivery",
           "kind": "implementation",
-          "status": "not_started",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Run bounded automated cross-browser, keyboard and mobile journeys on the new combined Reader.",
-          "evidence": []
+          "next_action": "Delivered additive both-manual Reader and bounded local browser, keyboard, narrow-screen and targeted accessibility checks; continue the separate acceptance work.",
+          "evidence": [
+            "docs/combined-reader.md",
+            "validation/combined-reader/README.md",
+            "validation/combined-reader/browser/artifacts.json",
+            "validation/combined-reader/build.json"
+          ]
         },
         {
           "id": "DWP-BL-019.acceptance",
@@ -685,7 +795,7 @@
     {
       "id": "DWP-BL-020",
       "title": "Source refresh and drift process",
-      "status": "not_started",
+      "status": "needs_domain_review",
       "priority": "P1",
       "depends_on": [
         "DWP-BL-004",
@@ -693,20 +803,27 @@
       ],
       "owner_role": "Source maintainers",
       "evidence": [
-        "docs/adm-acquisition.md"
+        "docs/adm-acquisition.md",
+        "evaluation/source-refresh/observed-comparison.json",
+        "evaluation/source-refresh/synthetic-controls.json",
+        "docs/source-refresh.md"
       ],
       "acceptance_checks": [
         "New snapshots preserve old bytes; reconcile added/removed/changed documents and dates; apply impact checks before changing source/runtime bindings."
       ],
-      "scope_note": "Not complete; dependent specialist, implementation or external acceptance remains visible.",
+      "scope_note": "Fresh 13-request official metadata observation and drift comparator delivered. All 513 captured attachment identities remain present; all 513 fresh body/extraction hashes unknown. No source/runtime switch approved automatically.",
       "work_packages": [
         {
           "id": "DWP-BL-020.delivery",
           "kind": "implementation",
-          "status": "not_started",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Implement an additive source-census drift comparison with added, removed, changed and unknown outcomes.",
-          "evidence": []
+          "next_action": "Delivered bounded increment; use the linked evidence and named remaining obligations for the next reviewed expansion.",
+          "evidence": [
+            "evaluation/source-refresh/observed-comparison.json",
+            "evaluation/source-refresh/synthetic-controls.json",
+            "docs/source-refresh.md"
+          ]
         },
         {
           "id": "DWP-BL-020.acceptance",
@@ -759,7 +876,8 @@
       "evidence": [
         "CHANGELOG.md",
         "docs/retrospective.md",
-        "docs/work-log-2026-09-19.md"
+        "docs/work-log-2026-09-19.md",
+        "docs/work-log-2026-09-20.md"
       ],
       "acceptance_checks": [
         "Visible changelog separates released/in progress; task ledger states ownership/files/dependencies/decisions/test evidence/handover; factual retrospective links receipts."
@@ -775,7 +893,8 @@
           "evidence": [
             "CHANGELOG.md",
             "docs/retrospective.md",
-            "docs/work-log-2026-09-19.md"
+            "docs/work-log-2026-09-19.md",
+            "docs/work-log-2026-09-20.md"
           ]
         }
       ]
@@ -836,7 +955,11 @@
       "evidence": [
         "full-dmg/okf-review-context.json",
         "full-dmg/context/navigation/manifest.json",
-        "docs/backlog.md"
+        "docs/backlog.md",
+        "docs/combined-reader.md",
+        "validation/combined-reader/README.md",
+        "validation/combined-reader/browser/artifacts.json",
+        "validation/combined-reader/build.json"
       ],
       "acceptance_checks": [
         "Add an ADM or combined-manual Reader projection while preserving frozen DMG outputs, existing source provenance, document dates, capture dates and source-family distinctions.",
@@ -844,15 +967,20 @@
         "Verify the exact published projection and deployed consumer in a real browser, retaining immutable source, application and journey evidence.",
         "Keep literal mentions distinct from reviewed concepts and legal applicability; generate no legal assertions from navigation matches."
       ],
-      "scope_note": "Delivery work is now explicit and in progress. The separate acceptance package remains open; no implementation, publication or specialist acceptance is inferred from the aggregate status.",
+      "scope_note": "Combined Reader implementation and bounded local Chrome, Firefox and WebKit observations are recorded. Public deployment acceptance and human assistive-technology/user research remain separate; no whole-product accessibility claim.",
       "work_packages": [
         {
           "id": "DWP-BL-024.delivery",
           "kind": "implementation",
-          "status": "in_progress",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Generate additive ADM and combined Reader projections with conceptual facets and semantic context integration.",
-          "evidence": []
+          "next_action": "Delivered additive both-manual Reader and bounded local browser, keyboard, narrow-screen and targeted accessibility checks; continue the separate acceptance work.",
+          "evidence": [
+            "docs/combined-reader.md",
+            "validation/combined-reader/README.md",
+            "validation/combined-reader/browser/artifacts.json",
+            "validation/combined-reader/build.json"
+          ]
         },
         {
           "id": "DWP-BL-024.acceptance",

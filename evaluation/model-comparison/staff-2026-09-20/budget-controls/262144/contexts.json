@@ -1,0 +1,113 @@
+{
+  "schema": "okf-fixed-staff-contexts.v1",
+  "inputs": {
+    "protocol_sha256": "fce22d96926f399915edb120b6e69c76651a4e75a547f10bcfe05452461c65e0",
+    "registry_sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a",
+    "semantic_index_sha256": "4b344b291d49c6268f3dcd7ad825cc949dcce4045d4b59631ca50610b4b6af6c",
+    "original_corpus_manifest_sha256": "aa9726ba72b7495323b031f149fa13cffeae0aa8fc868af63b7af3cac0e6be95",
+    "exporter_sha256": "82d7ea6caae1e719ac5a1b5d75b09c7e62318f0f647b07ba856930f7fd6c5549",
+    "engine": {
+      "index.ts": "846b551d2e209f820127001bdb9c1145b743b6466bf650d0c6d060ec63f4be7f",
+      "corpus.ts": "7f0ffe7cb2627be1d83ab5d3efecc0f99c0be967ea876dbfa73410280bda1d14",
+      "types.ts": "248b7db16fa1faf2cb6c5c07c8347b926ae649a528b79e92bca3816829938b65"
+    }
+  },
+  "binding": {
+    "index_url": "https://example.test/corpus/manifest.json",
+    "index_sha256": "3b22f647a2398449122024546f6e86097f7b2676b780c65d8746b40f37c81ff4"
+  },
+  "semantic_snapshot": "dwp-staff-semantics-0d320b16fda6a7d92bfa",
+  "scope": "Identical shared-engine packages frozen before paired subscription calls; offline local source projection, not a public deployment.",
+  "cases": [
+    {
+      "id": "staff-006",
+      "question": "What is the maximum you can have in savings to still qualify for Pension Credit?",
+      "path": "evaluation/model-comparison/staff-2026-09-20/contexts/staff-006.json",
+      "sha256": "e8a4db7f0dc17ec398dd86478bbeb6a5d31717b1e367fcb7ea9bcd11fdbec6ee",
+      "bytes": 253827,
+      "context_id": "urn:sha256:943060926973f973f0379d70fb0f42e6bd596cac0e85d09ad1b1fb9cc3bde5c5",
+      "evidence_status": "insufficient",
+      "selected_records": 52,
+      "relationships": 50,
+      "truncated": true,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 262144
+      }
+    },
+    {
+      "id": "staff-012",
+      "question": "Does Pension Credit stop is a citizen moves into a care home permanently if they are self-funding?",
+      "path": "evaluation/model-comparison/staff-2026-09-20/contexts/staff-012.json",
+      "sha256": "5e8ec9c0030a4bc4854baebdabb41cdd803b521db894498438c00e59c19f8267",
+      "bytes": 261570,
+      "context_id": "urn:sha256:2ebedc2fcbf8ba99a5a0c1587737e3b12cc5c4a3bb70b7121b8711f7b24f0382",
+      "evidence_status": "insufficient",
+      "selected_records": 52,
+      "relationships": 55,
+      "truncated": true,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 262144
+      }
+    },
+    {
+      "id": "staff-026",
+      "question": "What is the interaction between Child DLA and PIP?",
+      "path": "evaluation/model-comparison/staff-2026-09-20/contexts/staff-026.json",
+      "sha256": "d5a08990eaacb6998539cef1652f0706c3257d34c891b2777f052b1358cb5284",
+      "bytes": 216183,
+      "context_id": "urn:sha256:9fe4cab5a62e364e48cd3508b9c969a2965c7e962229e330b0761ff75133314d",
+      "evidence_status": "insufficient",
+      "selected_records": 50,
+      "relationships": 36,
+      "truncated": true,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 262144
+      }
+    },
+    {
+      "id": "staff-038",
+      "question": "Under what circumstances can a Citizen claim Carers Allowance?",
+      "path": "evaluation/model-comparison/staff-2026-09-20/contexts/staff-038.json",
+      "sha256": "4ee573746caa1ab78ae64786a9a52537ab3e98dee50b3eb31db3b3c8308ac1d5",
+      "bytes": 259770,
+      "context_id": "urn:sha256:5fbece8a576af1e4fb7af592d281295720403b6c174c6eda56565fc5fa2d0435",
+      "evidence_status": "insufficient",
+      "selected_records": 47,
+      "relationships": 49,
+      "truncated": true,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 262144
+      }
+    },
+    {
+      "id": "control-unknown",
+      "question": "xylophonicquasarteleportation",
+      "path": "evaluation/model-comparison/staff-2026-09-20/contexts/control-unknown.json",
+      "sha256": "d21907c487da7b2d86bb92367432f6fb88c1c4913a37671c8aa00ba4595a9142",
+      "bytes": 4104,
+      "context_id": "urn:sha256:3197eef1d2cfd803cf4271c06a147bb22a1fc99dde1f7d3321411a2cd15d73f5",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "relationships": 0,
+      "truncated": false,
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 262144
+      }
+    }
+  ]
+}

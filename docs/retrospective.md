@@ -88,6 +88,27 @@ Portable lesson: derive cache inputs from the renderer's bounded dependency
 closure, including exact-source alternates. Independent integration checks must
 cover the interfaces between workstreams as well as each agent's own files.
 
+## 20 September: make hidden work and integration defects visible
+
+The [work-package ledger](backlog-work-packages.md) now separates unfinished
+implementation from independent acceptance. Neutral benefit aliases had also
+been attached to custody-specific concepts. The [additive staff model](semantic-expansion.md)
+corrects that association without rewriting historical evidence. Its candidate
+overlap is a development measure, not proof that answers are accurate.
+
+Independent integration review found a direct-context file overwritten by a
+search shard and a citation parser carrying a recognised instrument into an
+unknown one. Both had been masked by successful nearby paths. The regression
+checks now exercise the fallback input and the unknown-instrument boundary.
+Source identity, normalised citation identity and substantive legal applicability
+must remain separate.
+
+The fixed-evidence export also exposed a budget edge case in the consumer:
+missing-evidence diagnostics were appended after trimming source records. A
+package could therefore collapse to an empty refusal even when useful evidence
+would fit. Keep small-budget failures as test artefacts and correct the reusable
+engine; increasing every limit would conceal the defect.
+
 ## What to repeat
 
 - Research terminology, legislation and standards before semantic generation.
@@ -115,3 +136,18 @@ The new [fixed-package model trials](../evaluation/answer-review/README.md) are
 separate from engineering acceptance and remain subject to independent human
 review. They do not yet establish a fair Claude-versus-Astra comparison or an
 affordability conclusion.
+
+### Preserve experimental inputs when publication metadata changes
+
+The September staff trial exposed another repeatability boundary: an upstream
+opaque legislation identifier matched a hosting secret-scanner pattern. Official
+unauthenticated XML confirmed its public origin. The publication was minimised to
+omit unused opaque fields while retaining substantive metadata, source locators
+and digests. No protection bypass was used.
+
+That small metadata change still changed the semantic provenance hashes. The
+correct response was to archive the trial's exact original input, regenerate the
+current view, and rerun browser observations. Rewriting old answer receipts to
+look as though they used the new source would have destroyed the experiment.
+HMRC repeats should freeze inputs before model calls and distinguish historical
+replay from verification of the current release.

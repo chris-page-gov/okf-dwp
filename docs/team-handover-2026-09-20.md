@@ -6,7 +6,9 @@ individual entitlement service.
 
 ## What the team can use now
 
-The published baseline is [DWP PR 10](https://github.com/chris-page-gov/okf-dwp/pull/10),
+### Earlier published baseline
+
+The earlier published baseline is [DWP PR 10](https://github.com/chris-page-gov/okf-dwp/pull/10),
 merged as `5dab65d2ad21138c47e2ea364e5f74805b4e141f`, and
 [Explorer PR 125](https://github.com/chris-page-gov/okf-explorer/pull/125), merged
 as `8a38d4bfe07a6797deacc148a2859911d8e2a68e`. The
@@ -32,7 +34,33 @@ controls and 147 Python tests are reproducible from the repository.
 
 The captured corpus contains 331 DMG PDFs and 182 ADM PDFs: 19,090 pages in
 total. Ask OKF searches both captured manuals. The baseline Reader projection
-contains DMG; the combined Reader is active work below.
+contains DMG; the new combined Reader below includes both manuals.
+
+### Included in the additive staff increment
+
+- [Question/persona/journey matrix](../evaluation/staff-needs/README.md): all
+  40 occurrences, seven primary journeys and six projected personas.
+- [Semantic guide and results](semantic-expansion.md): 43 concepts, 155
+  source-grounded associations, 60 selected source pages, 40 task profiles and
+  203 named open obligations. Candidate evidence is found for all 40 occurrences,
+  compared with 12 before the increment. This is a development-set observation.
+- [Legal reconciliation](legal-reconciliation.md): observed official provision
+  identities and exact citation mappings, plus six bounded tribunal queries.
+  Legal body evidence and applicability remain separate unfinished work.
+- [Combined Reader guide](combined-reader.md): both captured manuals, conceptual
+  facets, source/audit dates, semantic paths and inspectable context packages.
+  Local Chrome, Firefox and WebKit checks passed, including narrow-screen keyboard
+  journeys and targeted accessibility checks. Public deployment checks remain separate.
+- [Paired staff trials](staff-model-trials.md): five identical-input cases through
+  Claude and Codex, 12 retained attempts, 49 claims and 79 citations. Eight responses
+  pass mechanical checks; two fail exact quotations. Separate model critique finds
+  missing household/date qualifications. No specialist or comparative accuracy claim.
+- [Source refresh](source-refresh.md): all 513 attachment identities remain in
+  the fresh listings; fresh PDF and extraction hashes are explicitly unknown.
+
+The earlier baseline links above retain their original versions. New public
+journey observations and model-trial results are recorded separately before the
+new demonstration is marked ready. See the current work log for publication state.
 
 ## What remains incomplete, precisely
 
@@ -41,13 +69,21 @@ pages and a working tool interface do not establish complete answers. The
 preserved custody example has a narrower, declared legacy-DMG evidence profile;
 its sufficiency does not transfer to the broader corpus or establish current law.
 
-“Broader semantic modelling” means two specific unfinished deliverables:
+“Broader semantic modelling” is now represented by two bounded implementation
+deliveries with explicit remaining coverage and acceptance work:
 
 1. **DWP-BL-005:** neutral benefit and variant concepts, source-backed definitions,
    meaningful relationships, aliases, confusions and qualifiers across the
-   supplied question families. Literal mention tags are not these relationships.
+   supplied question families. The new proposals implement these meanings for
+   the selected staff scope. Literal mention tags are not these relationships.
 2. **DWP-BL-007:** task-specific evidence requirements and paths, including
    conditions, exceptions, legal references, dates and explicitly missing evidence.
+   All 40 profiles execute; their 203 named obligations remain open. Acquiring and
+   reviewing those missing dependencies is not marked complete.
+
+Further agent work remains under explicit `.domain-expansion`,
+`.legal-body-evidence`, `.evidence-closure` and `.controlled-benchmark` packages.
+These are not marked complete or hidden behind specialist acceptance.
 
 The old aggregate `needs_domain_review` label obscured unfinished implementation.
 The [work-package ledger](backlog-work-packages.md) now separates delivery from

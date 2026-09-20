@@ -8,7 +8,7 @@ okf_version: "0.2"
 
 **An independent, unofficial experimental exemplar. Not an official DWP document, benefits advice or an entitlement calculator.**
 
-**[What changed: changelog](CHANGELOG.md)** · [Current work log](docs/work-log-2026-09-19.md)
+**[What changed: changelog](CHANGELOG.md)** · [Current work log](docs/work-log-2026-09-20.md)
 · [Backlog and acceptance checks](docs/backlog.md) · [How to repeat the method](docs/methodology.md)
 · [What we learned](docs/retrospective.md)
 
@@ -28,6 +28,14 @@ explicit. Neither replaces the exact receipts below.
 
 ## Team handover and current work
 
+The additive staff increment provides [projected personas and journeys](evaluation/staff-needs/README.md),
+[source-backed concepts and task requirements](docs/semantic-expansion.md),
+[legal reference reconciliation](docs/legal-reconciliation.md),
+[a combined DMG and ADM Reader](docs/combined-reader.md) and
+[a fresh source-listing comparison](docs/source-refresh.md).
+These are reviewable research outputs. All supplied tasks retain explicit gaps;
+no specialist acceptance or complete benefits answer is claimed.
+
 The [20 September team handover](docs/team-handover-2026-09-20.md) links the
 published demonstration and explains the remaining semantic work before Monday.
 The [delivery and acceptance ledger](docs/backlog-work-packages.md) separates
@@ -35,7 +43,7 @@ implementation from independent review, so a review gate cannot hide unfinished
 work. Broader concepts/relationships (BL005) and task profiles (BL007) are active
 implementation work, not completed by the existing mention classifications.
 
-## Current delivery: evidence review and DMG navigation
+## Preserved published baseline: evidence review and DMG navigation
 
 [Open the verified DMG navigation](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F0c59f476602a49d4293e46112a0ca1ebf1486ff0%2Ffull-dmg%2Fokf-review-context.json#overview)
 or follow the [compact evidence demonstration](docs/compact-evidence-demo.md).
@@ -73,17 +81,19 @@ circumstance, topic and existing-concept navigation to the Reader. Its
 all 19,090 captured pages, including ADM and explicit unclassified values. The
 44 authored labels describe literal discovery categories; they do not establish
 which benefit rules apply. The Reader projection retains its DMG scope while
-the classification audit and Ask context cover both captured manuals. ADM Reader
-and cross-manual navigation remain unfinished under **DWP-BL-024** in the
-[backlog](docs/backlog.md).
+the classification audit and Ask context cover both captured manuals. The additive [combined Reader](docs/combined-reader.md) now includes ADM and
+cross-manual navigation, with local browser checks retained under **DWP-BL-024**.
+Its public deployment acceptance is recorded separately.
 
 [Forty staff review packs](evaluation/staff-review/README.md) give readers small,
 source-linked starting points: 3,795–12,062 bytes per machine-readable pack,
 42 shared evidence resources and exact bounded source excerpts. They distinguish
 independently located candidates from pages retained by the recorded retrieval
 run. All 40 staff-question occurrences and all 43 full-corpus evaluation cases
-remain insufficient and await specialist evidence profiles; model answers also
-need independent claim-level review.
+remain insufficient and await evidence closure and specialist approval of the new
+profiles. [Paired staff trials](docs/staff-model-trials.md) retain 49 claims and
+79 citations, including quotation failures and missing qualifications; independent
+specialist review remains open.
 
 A separate [actual Claude client observation](validation/compact-client/README.md)
 records seven local compact-tool calls and exact replay of diagnostics plus two

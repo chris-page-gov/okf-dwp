@@ -7,6 +7,7 @@
 - Read `okf.semantic.json` and `okf.publication.json` before changing the publication.
 - Authored semantic inputs are `knowledge/**/*.yamlld`; immutable acquisition evidence is under `source/`.
 - Additive navigation rules are authored in `domain-profile/navigation/*.yamlld` and compiled separately; do not rewrite frozen source releases or promote mention tags to legal applicability.
+- Staff concept and task-profile proposals are authored in `domain-profile/staff-semantic/`; legal-reference mappings in `domain-profile/legal-reconciliation/`; projected journeys in `domain-profile/staff-needs/`. Their separate producers build `evaluation/` review artefacts and the additive `combined/` Reader. Keep the earlier pilot and full-DMG projections frozen.
 - Generate bundle projections and record pages through the build script; never hand-edit them.
 - Preserve source file hashes, page locators, extraction limitations and historical classifications.
 - Use standard Markdown links, stable absolute semantic identifiers and explicit local routes.

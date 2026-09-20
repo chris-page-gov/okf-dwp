@@ -41,6 +41,12 @@ the [GitHub settings](https://github.com/chris-page-gov/okf-dwp/settings/branche
 and check results when changing governance. GitHub describes these controls in
 its [protected branches documentation](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches).
 
+The [20 September observation](../validation/repository-governance-2026-09-20.json)
+rechecked the required `validate` check, up-to-date branch requirement,
+administrator enforcement, conversation resolution and prohibition of force
+pushes and deletions. The formal approving-review count remains zero. This run
+did not change those settings; review evidence remains a separate obligation.
+
 ## Private correspondence
 
 Files named `.email.md` are local private inputs and must not be committed at any

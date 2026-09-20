@@ -1,0 +1,16 @@
+{
+  "schema": "okf-source-refresh-policy.v1",
+  "observation_date": "2026-09-20",
+  "source_families": ["dmg", "adm"],
+  "collection_url": "https://www.gov.uk/government/collections/decision-makers-guide-staff-guide",
+  "inventories": ["source/full-dmg-2026-09-15/inventory.json", "source/adm-2026-09-19/inventory.json"],
+  "max_api_requests": 20,
+  "max_response_bytes": 8388608,
+  "max_total_response_bytes": 67108864,
+  "source_bodies": "GOV.UK content API metadata responses only; never download linked PDF attachments",
+  "identity_policy": "publication URL plus source attachment ID; fall back to exact attachment URL when an ID is absent",
+  "date_policy": "Publication-page dates remain publication-page dates; do not infer PDF publication or legal commencement",
+  "missing_policy": "An unavailable or unvisited publication makes document presence unknown, never removed",
+  "content_policy": "Matching metadata and URLs do not establish unchanged PDF bytes; fresh content hashes remain unknown",
+  "publication_policy": "Preserve old snapshots and bindings; review impact before separate acquisition, semantic rebuild or published version change"
+}

@@ -1,0 +1,519 @@
+{
+  "counts": {
+    "assertions": 1322,
+    "base_records": 712,
+    "by_obligation_category": {
+      "applicability_unresolved": 40,
+      "evidence_closure_unverified": 43,
+      "independent_review_pending": 40,
+      "legal_version_unreconciled": 40,
+      "question_scope_unresolved": 40
+    },
+    "concepts_authored": 43,
+    "index_bytes": 4120659,
+    "legal_reference_edges": 62,
+    "legal_reference_nodes": 44,
+    "new_assertions": 155,
+    "open_obligations": 203,
+    "records": 840,
+    "selected_source_pages": 60,
+    "task_profiles": 40
+  },
+  "frozen_input_policy": "Preserve all frozen source and projection bytes; all refinements and alias reassignments are additive view changes only.",
+  "inputs": [
+    {
+      "bytes": 3585962,
+      "path": "context/corpus/base-index.json",
+      "sha256": "3b4cef18be425271f649349b65dd0b6dafb1e6e4e12a432e94e0b3f3124b2ef6"
+    },
+    {
+      "bytes": 34806,
+      "path": "domain-profile/staff-semantic/concepts.yamlld",
+      "sha256": "0fbc9673f539a686b7c620be0e90f0eb774a7c52a00c235a48fbb8af867e9303"
+    },
+    {
+      "bytes": 84207,
+      "path": "domain-profile/staff-semantic/profiles.yamlld",
+      "sha256": "e1010fec1606d82b5a6a2a9fccb813b60930729f185a0d67d28bf7df23b5f227"
+    },
+    {
+      "bytes": 103725,
+      "path": "evaluation/legal-reconciliation/assertions.json",
+      "sha256": "9033d7c2eca4d2bafc5fad8de7e70396262e9882bd6662167785e939db0cbbd1"
+    },
+    {
+      "bytes": 205988,
+      "path": "evaluation/staff-questions/cases.json",
+      "sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a"
+    },
+    {
+      "bytes": 556490,
+      "path": "full-dmg/data/source-documents.json",
+      "sha256": "2e5313da51875cd8d76fd3c3c06694f68d30f56efee259abb6c1cb51f7bf1827"
+    },
+    {
+      "bytes": 21813,
+      "path": "scripts/build_staff_semantic.py",
+      "sha256": "1131ce58ab36c70e413ea8148cff901536ed7532ea7271e50c914fa84c0ad1b1"
+    },
+    {
+      "bytes": 1046475,
+      "path": "source/adm-2026-09-19/inventory.json",
+      "sha256": "c274173a59d7792004f372fea7db19e018a4d0c1de6111ed65a57fc0c622896c"
+    },
+    {
+      "bytes": 15239,
+      "path": "source/adm-2026-09-19/pages/adm-chapter-p1.json",
+      "sha256": "8b4ef5c512170a1f8ecee2c2da35aeea9e77a9050b29dabe33ab5103bcb9ada0"
+    },
+    {
+      "bytes": 38140,
+      "path": "source/adm-2026-09-19/pages/adm-chapter-p4.json",
+      "sha256": "c6cd2d4bee6482859ca3cbfdb183ab016ee9bfcc76eb0e05616e8af971b7f9b0"
+    },
+    {
+      "bytes": 57929,
+      "path": "source/adm-2026-09-19/pages/adm-chapter-p5.json",
+      "sha256": "d59d21924c5a8d3e0dde48136d9c971cfbd7e6a4494e230f708d6d89a8ad63d2"
+    },
+    {
+      "bytes": 44362,
+      "path": "source/adm-2026-09-19/pages/adm-chapter-s1.json",
+      "sha256": "1d7d22343a3eb8b52bbdd1d349544756b369414377f88baa96c3860d710519da"
+    },
+    {
+      "bytes": 48198,
+      "path": "source/adm-2026-09-19/pages/adm-chapter-u1.json",
+      "sha256": "f75986f6287427b9356d3b669304e2a0d317123975164859b99813c5d5b86ce6"
+    },
+    {
+      "bytes": 79163,
+      "path": "source/adm-2026-09-19/pdf/adm-chapter-p1.pdf",
+      "sha256": "1aa2952829f0d5de2c4bd6f0eafda1306a3bb11c849f649a5a6af7f406447830"
+    },
+    {
+      "bytes": 111505,
+      "path": "source/adm-2026-09-19/pdf/adm-chapter-p4.pdf",
+      "sha256": "96c446f7bbb9b2b65ec1b4eba5170858988875c57e188ac9927e8dd2e820bc84"
+    },
+    {
+      "bytes": 150722,
+      "path": "source/adm-2026-09-19/pdf/adm-chapter-p5.pdf",
+      "sha256": "0231da4591e999a909e35ddec62209fe3278bddcf97be4eb87689758302677d3"
+    },
+    {
+      "bytes": 126205,
+      "path": "source/adm-2026-09-19/pdf/adm-chapter-s1.pdf",
+      "sha256": "218db02a3d25d7923c480b909b9fb76cf12274d397f15dc2bbc7f5c22d0f2394"
+    },
+    {
+      "bytes": 186675,
+      "path": "source/adm-2026-09-19/pdf/adm-chapter-u1.pdf",
+      "sha256": "fdc2ae7a6e073fe65c0a97d89bb6ae6a1eaf31a66bbc6b87c82e79bb4b6cefe3"
+    },
+    {
+      "bytes": 2240547,
+      "path": "source/full-dmg-2026-09-15/inventory.json",
+      "sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a"
+    },
+    {
+      "bytes": 7679,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-memo-02-26-f7835f1e40.json",
+      "sha256": "dbedf3629d9e48170b28131b376e4be417e77679ee8524acc55c95cca87bcbab"
+    },
+    {
+      "bytes": 78433,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch57.json",
+      "sha256": "5b68aac36596be58528e0c3561d5ef604ec3cf774a61eb2ab93d8639dca9531c"
+    },
+    {
+      "bytes": 49742,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch60.json",
+      "sha256": "bc5925c0d434fbc4bec575bea2e1e2dbd020b014497ab156973054e80e326f2f"
+    },
+    {
+      "bytes": 267925,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch61.json",
+      "sha256": "23b4405d725de2fde124df29a8c753b9fcb7530405c83d588bd321e1e83226cc"
+    },
+    {
+      "bytes": 109651,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol11-ch69.json",
+      "sha256": "fcaf30907d52d71cc7473cf40c8c876469efc3f8d18f7f9af7b3d32bf5016d95"
+    },
+    {
+      "bytes": 322798,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol11-ch71.json",
+      "sha256": "1414e514cf78c7a2e0a3ce66e2d88727d3fda28f764fd2e8654361dc569356d6"
+    },
+    {
+      "bytes": 126757,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol12-ch74.json",
+      "sha256": "c762e93940b4342d70d5bc96a80c3e094c91852d93868f5709e04f293faef61a"
+    },
+    {
+      "bytes": 270499,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part1.json",
+      "sha256": "4ffe86a4c907dcc7b8bf3883bfdc46b6a8b9db03a0ccda563189ee12cbead47c"
+    },
+    {
+      "bytes": 98312,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part6.json",
+      "sha256": "efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9"
+    },
+    {
+      "bytes": 51518,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol3-ch17.json",
+      "sha256": "c00f0acadb11047d22fe6c046a756a164cc7be254aaebfb91470f2f38201af99"
+    },
+    {
+      "bytes": 302406,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol4-ch20.json",
+      "sha256": "ed007251fa43ff9c63f5116f603798f2279c84006af8539bbbfd50194ab0ab56"
+    },
+    {
+      "bytes": 275787,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-vol8-ch41.json",
+      "sha256": "039044b6fddda8d3476d3fa9fce766d7da6b12508704fc4fd2a1b97dd870a227"
+    },
+    {
+      "bytes": 97148,
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-memo-02-26-f7835f1e40.pdf",
+      "sha256": "45e454a6d546b653fc5926d29a64e5cc383145f5951581969ff6504631d55aa5"
+    },
+    {
+      "bytes": 166443,
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-vol10-ch57.pdf",
+      "sha256": "e5308157f4aed131c245dfd1554a126ad2800f670127de7995f6c643db8ce63b"
+    },
+    {
+      "bytes": 148286,
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-vol10-ch60.pdf",
+      "sha256": "ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a"
+    },
+    {
+      "bytes": 776872,
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-vol10-ch61.pdf",
+      "sha256": "884dc79907770bd9e178fe4122c0b7d404697f4ccc882b067e9220b34a0f002a"
+    },
+    {
+      "bytes": 256347,
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-vol11-ch69.pdf",
+      "sha256": "3bbd376d12fc0a6633010680e88d11efdf7f5b34dde311016a073e80ac3e56b8"
+    },
+    {
+      "bytes": 1263854,
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-vol11-ch71.pdf",
+      "sha256": "e001c101fb7be9bc739a8a5b9c1281637a93f34a099658e7dafef6fbb2b5d4f5"
+    },
+    {
+      "bytes": 310281,
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-vol12-ch74.pdf",
+      "sha256": "5961a9cb7c86814a0f6fa147c0a8a551b4258c803680fac14a95cab9eca1afd6"
+    },
+    {
+      "bytes": 639729,
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-vol2-ch7-part1.pdf",
+      "sha256": "32a065d37da4bd460b25258d71b5dfc3127d6c98e65c53ab5562491aea16f18a"
+    },
+    {
+      "bytes": 332768,
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-vol2-ch7-part6.pdf",
+      "sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790"
+    },
+    {
+      "bytes": 155483,
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-vol3-ch17.pdf",
+      "sha256": "ce6967960168b301ae0b454df6824017202f6d3f6a14282a7ef0d4778bdac19a"
+    },
+    {
+      "bytes": 809997,
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-vol4-ch20.pdf",
+      "sha256": "0474580014a697c47370992feee115d49c80b105b9c43270bf89afff0e4b0aa5"
+    },
+    {
+      "bytes": 616239,
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-vol8-ch41.pdf",
+      "sha256": "bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418"
+    },
+    {
+      "bytes": 80089,
+      "path": "source/legal-discovery-2026-09-20/legislation/ukpga--1992--4--schedule--7.json",
+      "sha256": "64417e217e8de63f449662b95db72017c20a850c8a062ccba9b93ea16c63fbcb"
+    },
+    {
+      "bytes": 77555,
+      "path": "source/legal-discovery-2026-09-20/legislation/ukpga--1992--4--section--103.json",
+      "sha256": "987eae6558f15e322724c3458e5d2b34d209cd321776d4d8b1e5c14fcf16b46a"
+    },
+    {
+      "bytes": 78865,
+      "path": "source/legal-discovery-2026-09-20/legislation/ukpga--1992--4--section--64.json",
+      "sha256": "823e8f296e8cba8c5b4e6b9b099acf4f364a11225c4b00494e9baaf4b52b65b3"
+    },
+    {
+      "bytes": 78512,
+      "path": "source/legal-discovery-2026-09-20/legislation/ukpga--1992--4--section--68.json",
+      "sha256": "fb189bf43acee3b550cc8ba6373ec926abeff2d91448cf87a55802fa40eb0e9d"
+    },
+    {
+      "bytes": 79331,
+      "path": "source/legal-discovery-2026-09-20/legislation/ukpga--1992--4--section--70.json",
+      "sha256": "53ceee75cbe7e0ae92e02804b823bb8c0688a979af7a8c2e9fb25ae30c96c71d"
+    },
+    {
+      "bytes": 78344,
+      "path": "source/legal-discovery-2026-09-20/legislation/ukpga--1992--4--section--75.json",
+      "sha256": "a29e3d17ef451da4cc63e11e4f70098e38703666a933c75033da42b60e949506"
+    },
+    {
+      "bytes": 77333,
+      "path": "source/legal-discovery-2026-09-20/legislation/ukpga--1992--4--section--78.json",
+      "sha256": "bd6768e2ccee37ad0cc68f45f8a6a894f5dbe33e87db23356c0b74318faf8219"
+    },
+    {
+      "bytes": 40044,
+      "path": "source/legal-discovery-2026-09-20/legislation/ukpga--1992--5--section--1.json",
+      "sha256": "63ae623a2aa4688a88948c01ab69e6d947e7d496eeffe01ddd21e78ae7c513ac"
+    },
+    {
+      "bytes": 21240,
+      "path": "source/legal-discovery-2026-09-20/legislation/ukpga--1995--26--schedule--4.json",
+      "sha256": "be71d4659f27e51a3e6b67efb5feb51053c3959409634b0525db8fb1a8eae499"
+    },
+    {
+      "bytes": 13942,
+      "path": "source/legal-discovery-2026-09-20/legislation/ukpga--2002--16--section--1.json",
+      "sha256": "19dabadeb6bfca0ec02083b24ecd0bf2071b0174d9f01bcf9769f1fce5d1c1f9"
+    },
+    {
+      "bytes": 12998,
+      "path": "source/legal-discovery-2026-09-20/legislation/ukpga--2002--16--section--15.json",
+      "sha256": "6f52a84af31985c9b5c51c1117b2f955f7590fb09fb9fc9dc1344bc5fd23e09d"
+    },
+    {
+      "bytes": 13111,
+      "path": "source/legal-discovery-2026-09-20/legislation/ukpga--2002--16--section--2.json",
+      "sha256": "8c44674085357d8c04db6fea35cd96452727bbd668173328c0fdf502ac9dfc9e"
+    },
+    {
+      "bytes": 11965,
+      "path": "source/legal-discovery-2026-09-20/legislation/ukpga--2002--16--section--3.json",
+      "sha256": "2e3da3be1b8ab0da2e9a8115cd6bece78e17e59c20ca4607ed8eadd65bc154ba"
+    },
+    {
+      "bytes": 4604,
+      "path": "source/legal-discovery-2026-09-20/legislation/ukpga--2007--22--section--13.json",
+      "sha256": "dbbbbb508f8205d87bd59968e79d94bbf61197ba6c8e86e382dde45cd566e1c2"
+    },
+    {
+      "bytes": 47608,
+      "path": "source/legal-discovery-2026-09-20/legislation/ukpga--2012--5--section--83.json",
+      "sha256": "0c97b5279a9cb932427ef116fb66a9266ed59dab27181834b4cf7226446a16c4"
+    },
+    {
+      "bytes": 5089,
+      "path": "source/legal-discovery-2026-09-20/legislation/ukpga--2014--19--section--1.json",
+      "sha256": "11d912fd2f61dc299c7b90fa970eaf1f0725e99db27dde6b2ace8420af777b6e"
+    },
+    {
+      "bytes": 4715,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1975--563--regulation--2.json",
+      "sha256": "8caf5ae650fd43b0cf0d29c71f59c70cdb422c12b9652a36b853bb9bf20ab1a4"
+    },
+    {
+      "bytes": 4863,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1976--409--regulation--4.json",
+      "sha256": "7404a0cb1a5071d8e50a35cd6dc2ba0d5163b7b9d9816daf06ac062a6563d9d8"
+    },
+    {
+      "bytes": 4780,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1976--409--regulation--7.json",
+      "sha256": "c763056b36d5b80f54a5834ea2165489c17315af31887cbd90cd42400a429af1"
+    },
+    {
+      "bytes": 5115,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1976--409--regulation--9.json",
+      "sha256": "80ebb2c86113322efdf50ea6909a327247cf34e75fc2dd41cc89cd12d3d661ed"
+    },
+    {
+      "bytes": 4720,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1982--1408--regulation--43.json",
+      "sha256": "cd881cacb24fb457127ad3413444419596d02ee864879da96f837e6e207b5131"
+    },
+    {
+      "bytes": 4720,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1982--1408--regulation--44.json",
+      "sha256": "4d7d74a18f5da3062e94e4e3e21b0de56d01e3094ef51042024896539c282c3b"
+    },
+    {
+      "bytes": 5443,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1985--967--regulation--20.json",
+      "sha256": "232d902f00d2a210a712756a6a254b28eabf7af161922601334aa52394bd9f39"
+    },
+    {
+      "bytes": 5472,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1985--967--regulation--34.json",
+      "sha256": "47229e1baf0a2d96e3c1091b7d5c220191f480a05b8bfa69009affcbf674d8d9"
+    },
+    {
+      "bytes": 4574,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1987--1968--regulation--9.json",
+      "sha256": "e96e6fb01bbf57f7756a255f0011966e8b0983e3d8509aee0fecd1fd756f12b3"
+    },
+    {
+      "bytes": 4694,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1987--1968--schedule--1.json",
+      "sha256": "e2e95f1e8d39996405c241d134e0a25c8b5eb2b09da7d464e6e9a28546ada2e6"
+    },
+    {
+      "bytes": 4506,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1987--415--regulation--5.json",
+      "sha256": "3d6829b55ca883a7f6c86caae2357d045577a95c2bdd371cf466ff67bf8331f5"
+    },
+    {
+      "bytes": 4506,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1987--415--regulation--7.json",
+      "sha256": "c7f43725e8e7e6bd84918a33234711fa318b6be6f5c8607aaf93dba1ce2d581e"
+    },
+    {
+      "bytes": 4506,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1987--415--regulation--8.json",
+      "sha256": "25ed4b233b22a7813770137993613a7841be4e10c852362d37671974cd0d1167"
+    },
+    {
+      "bytes": 4672,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1991--2740--regulation--2.json",
+      "sha256": "e98e40ba7bff3cfef562f7cd84ebe497e96da7fb983e8acc63e1e5bd6d33c86f"
+    },
+    {
+      "bytes": 5220,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1991--2890--regulation--2.json",
+      "sha256": "4c12a78367623e57be94d63750b551b661cab47328326ce6f83f2c87abdff279"
+    },
+    {
+      "bytes": 4113,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1991--2890--schedule--1.json",
+      "sha256": "9b0c5760511a0c2c46aa1728bf1446e9e729f1fbbc81dba8ae149592c1794d1f"
+    },
+    {
+      "bytes": 6241,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1999--991--regulation--11A.json",
+      "sha256": "3748859cc3a12bb53f6f6b4b04dda9a47677c969295ac005e06c60585085d24a"
+    },
+    {
+      "bytes": 7107,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--1999--991--schedule--2.json",
+      "sha256": "6fd41745e996ba6c2b5e6c1f04d9b2dfbdf4e5701ef6ab3838451736627c08e5"
+    },
+    {
+      "bytes": 6374,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--2002--1792--regulation--15.json",
+      "sha256": "b0a555826167f88c11b372ac5f52693c60913fbcb45376a95f09f06ff0e00722"
+    },
+    {
+      "bytes": 4444,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--2002--1792--regulation--3.json",
+      "sha256": "7b1faa3b60e8b5ae805ecae813d780e0aa244c240cd078f58ce4b93458838466"
+    },
+    {
+      "bytes": 5065,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--2002--1792--regulation--5.json",
+      "sha256": "2cd63cb532b5fbb008a96483eb35aeeb93315d13b94266f600fa10f979b22b3f"
+    },
+    {
+      "bytes": 4670,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--2002--1792--regulation--6.json",
+      "sha256": "501a7b4bdbeeb4ed8b8197e7731e9e63407750f99a02470ed975550626610a92"
+    },
+    {
+      "bytes": 4388,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--2002--1792--regulation--8.json",
+      "sha256": "402feb423f157ec6d51beb4b0b554a79f43ae7dfe67b712e045bb58e1a355a30"
+    },
+    {
+      "bytes": 4936,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--2002--1792--schedule--I.json",
+      "sha256": "396d8166049a036a199171676351c71878b7394248ebda7f30ead3507435ab0a"
+    },
+    {
+      "bytes": 6747,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--2002--1792--schedule--II.json",
+      "sha256": "4f565b44e351181c380a368235657110e94a9a3be6668fa15a941cf24247cde1"
+    },
+    {
+      "bytes": 4840,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--2002--1792--schedule--III.json",
+      "sha256": "767c461bdc6789b8e9b6b32fb6c8aa126aeecef88800809653be4677b5b00057"
+    },
+    {
+      "bytes": 4890,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--2002--1792--schedule--IV.json",
+      "sha256": "c297347cec92d928413c3859696681d0ac2a66a6bc2e387e688da3398a4e1644"
+    },
+    {
+      "bytes": 7179,
+      "path": "source/legal-discovery-2026-09-20/legislation/uksi--2006--213--regulation--12.json",
+      "sha256": "0eaa266f2db413da567e192903e8617f5961565425713e7219b324480775d2a6"
+    },
+    {
+      "bytes": 118124,
+      "path": "source/pages/dmg-vol13-ch77.json",
+      "sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19"
+    },
+    {
+      "bytes": 348037,
+      "path": "source/pages/dmg-vol13-ch78.json",
+      "sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894"
+    },
+    {
+      "bytes": 240965,
+      "path": "source/pages/dmg-vol14-ch84.json",
+      "sha256": "bf1cc65d4b7521b7acb9193a212855e07a88d5a3ef03f5f9eaa74c3c222f39f5"
+    },
+    {
+      "bytes": 173734,
+      "path": "source/pages/dmg-vol14-ch85.json",
+      "sha256": "5b06b8fe3c59d46f5943d6c27006840e324bdca152086ed38e223e4385ea53ee"
+    },
+    {
+      "bytes": 357396,
+      "path": "source/pdf/dmg-vol13-ch77.pdf",
+      "sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708"
+    },
+    {
+      "bytes": 900939,
+      "path": "source/pdf/dmg-vol13-ch78.pdf",
+      "sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8"
+    },
+    {
+      "bytes": 536108,
+      "path": "source/pdf/dmg-vol14-ch84.pdf",
+      "sha256": "f5c610b29bdb81e11736409b7f33ccf7917a4d8945f2821802801073e0d753ee"
+    },
+    {
+      "bytes": 444324,
+      "path": "source/pdf/dmg-vol14-ch85.pdf",
+      "sha256": "fe6fe79a4ff52271d6edf97af6b01ebd4290867b30d6288c38eb5e3a6d613c74"
+    }
+  ],
+  "outputs": [
+    {
+      "bytes": 4120659,
+      "path": "evaluation/semantic-expansion/assembly-index.json",
+      "sha256": "79ac30aef41ac467db83ec6b79ed20e4a4cc9330461d08713f45ea5830cb6e2d"
+    },
+    {
+      "bytes": 314185,
+      "path": "evaluation/semantic-expansion/catalogue.json",
+      "sha256": "c6b318b455dd7879383a52b8b5ed542126fa9587424184105d16231c0b0a982f"
+    },
+    {
+      "bytes": 310663,
+      "path": "evaluation/semantic-expansion/profiles.json",
+      "sha256": "26627a916323bf6fa7f99ba5ed0959807e3e5044a3ca76f354828f2187ac7821"
+    }
+  ],
+  "schema": "okf-dwp-staff-semantic-build.v1",
+  "snapshot": "dwp-staff-semantics-48fa02c3fdf28046dc57"
+}

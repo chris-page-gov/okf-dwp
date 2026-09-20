@@ -1,6 +1,6 @@
 # Learn OKF-DWP by using it
 
-[What changed](../CHANGELOG.md) · [Work in progress](work-log-2026-09-19.md) · [Remaining work](backlog.md)
+[What changed](../CHANGELOG.md) · [Work in progress](work-log-2026-09-20.md) · [Remaining work](backlog.md)
 
 OKF-DWP is an independent experiment in making published benefits guidance easier
 to find, connect and inspect. It is not a DWP service, an entitlement decision or
@@ -14,6 +14,29 @@ return to, not required reading first.
 The [retrospective](retrospective.md) explains what this experiment established.
 The [methodology](methodology.md) shows how another department can begin with
 source, terminology, legal and ontology discovery before building its own bundle.
+
+### New route: follow a supplied staff question
+
+Start with the [question and journey matrix](../evaluation/staff-needs/README.md).
+A **persona** is a proposed role, such as a welfare rights adviser. A **journey**
+groups the steps that role needs to take. These are design proposals, not findings
+from interviews. Choose a question, open its evidence pack, then use the
+[combined-manual walkthrough](combined-reader.md) to inspect DMG and ADM together.
+
+Ask OKF resolves words to **concepts**: named meanings such as Pension Credit or
+capital. A **task profile** lists the evidence needed for a type of question.
+An **open obligation** is a named requirement that has not been established,
+such as checking which date or benefit variant applies. Seeing it in the package
+is useful: it tells a reviewer what to check next. It is not source evidence.
+See the [semantic guide](semantic-expansion.md) for examples and the measured
+before/after retrieval results.
+
+Follow a legal citation only after reading its surrounding guidance. A verified
+provision identifier tells you which section or regulation was found; it does
+not prove how it applies. The [legal-reference guide](legal-reconciliation.md)
+explains this distinction. Finally, compare a [fresh listing observation](source-refresh.md)
+with the captured PDFs: a listing that looks unchanged does not prove that the
+documents' bytes or the applicable law are unchanged.
 
 ## 1. Find out what is in the collection
 
@@ -290,3 +313,11 @@ selected; it is not the source passage. Read diagnostics and provenance before
 using a passage. A complete delivery still cannot turn insufficient evidence
 into a complete answer. Public SDK checks and local Claude observations are
 recorded separately from specialist answer review and Voice support.
+
+### Compare answers against fixed evidence
+
+Use the [staff model trial guide](staff-model-trials.md) to follow one question
+from its bounded evidence package to two original answers and a claim-by-claim
+critique. A correct quotation can still omit an important condition. Start with
+the care-home example and its missing household qualification; then inspect the
+unknown-term control, where both clients abstain.

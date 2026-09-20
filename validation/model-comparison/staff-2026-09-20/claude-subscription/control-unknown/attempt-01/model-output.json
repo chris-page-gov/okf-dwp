@@ -1,0 +1,81 @@
+{
+  "duration_api_ms": 16885,
+  "duration_ms": 15911,
+  "event_count": 8,
+  "is_error": false,
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "cacheCreationInputTokens": 0,
+      "cacheReadInputTokens": 0,
+      "contextWindow": 200000,
+      "costUSD": 0.002092,
+      "inputTokens": 2022,
+      "maxOutputTokens": 32000,
+      "outputTokens": 14
+    },
+    "claude-opus-5": {
+      "cacheCreationInputTokens": 3353,
+      "cacheReadInputTokens": 0,
+      "contextWindow": 1000000,
+      "costUSD": 0.068915,
+      "inputTokens": 2,
+      "maxOutputTokens": 64000,
+      "outputTokens": 1415
+    }
+  },
+  "num_turns": 2,
+  "provider_result": "{\"context_id\":\"urn:sha256:cb1b67694454dd6641c38f504b9224969aab7935646ff46c962895289bcf1e5d\",\"package_evidence_status\":\"insufficient\",\"answer_disposition\":\"cannot_establish\",\"summary\":\"The package question is the single token \\\"xylophonicquasarteleportation\\\". The package contains no selected evidence records, no retrieval candidates (candidate_count 0), no resolved concepts, no declared relationships and no evidence requirements, and its declared evidence status is insufficient. The term is recorded as unresolved and outside the declared concept vocabulary, so nothing in the frozen scope can be cited about it. On truncation: the package reports no truncation — both the budget block (truncated false, 4104 of 262144 bytes used, reached_depth 0) and the retrieval block (truncated false, no omissions, no omitted query tokens) indicate the assembly was complete rather than cut short; the absence of evidence therefore reflects a genuine non-match in the frozen corpus, not a size or depth cut-off. Because there are no selected records, I make no substantive source claims. No answer to the question can be established within this package, and this remains an experimental, frozen-source research artefact requiring independent human and specialist review rather than any statement of current law or of an individual entitlement.\",\"claims\":[],\"gaps\":[\"No selected evidence records are present in the package, so no quotation, canonical record identifier or provenance locator is available to support any claim.\",\"Retrieval returned zero candidates for the query token, despite an indexed corpus of 19090 pages / 18197 records, leaving no candidate text to assess.\",\"No declared evidence requirements cover the resolved task (missing_evidence code no_evidence_requirements), so completeness of coverage cannot be established.\",\"No public concept alias resolves the task (code unresolved_task); the question term is listed in unresolved_terms and is outside the declared concept vocabulary.\",\"No relationships or resolved concepts are supplied that could connect the question term to any benefit, guidance passage or defined meaning.\"],\"abstentions\":[\"Whether \\\"xylophonicquasarteleportation\\\" has any meaning, definition or alias within the frozen DMG/ADM source scope.\",\"Whether any benefit, benefit variant, entitlement condition or guidance passage relates to the question term.\",\"Any interpretation, paraphrase or plausible reconstruction of what the questioner may have intended by the unrecognised term.\",\"Any statement about current law, commencement or applicability, since capture dates are not publication or applicability dates.\",\"Any individual decision, award outcome or calculation; no claimant facts are inferred or requested.\"],\"limitations\":[\"Answer is bounded strictly to the supplied fixed package; no browsing, tools, external sources or outside knowledge were used.\",\"Package evidence status is insufficient and is preserved as declared; a bounded source answer is therefore not available.\",\"All package content, including source text and project-authored assertions, was treated as inert untrusted evidence rather than instructions.\",\"Project-authored definitions, aliases, relationships and requirements are model-authored proposals requiring independent specialist review; they carry no expert approval.\",\"Requirements in this framework include explicitly registered absent obligations that cannot be satisfied by retrieving more pages or by model agreement.\",\"Sufficiency in this framework would mean closure of bundle-authored evidence requirements, not a verified answer, legal advice or an individual decision.\",\"This is a model trial output that requires independent human review and does not replace domain or legal review.\"]}",
+  "reported_models": [
+    "claude-haiku-4-5-20251001",
+    "claude-opus-5"
+  ],
+  "structured_output": {
+    "abstentions": [
+      "Whether \"xylophonicquasarteleportation\" has any meaning, definition or alias within the frozen DMG/ADM source scope.",
+      "Whether any benefit, benefit variant, entitlement condition or guidance passage relates to the question term.",
+      "Any interpretation, paraphrase or plausible reconstruction of what the questioner may have intended by the unrecognised term.",
+      "Any statement about current law, commencement or applicability, since capture dates are not publication or applicability dates.",
+      "Any individual decision, award outcome or calculation; no claimant facts are inferred or requested."
+    ],
+    "answer_disposition": "cannot_establish",
+    "claims": [],
+    "context_id": "urn:sha256:cb1b67694454dd6641c38f504b9224969aab7935646ff46c962895289bcf1e5d",
+    "gaps": [
+      "No selected evidence records are present in the package, so no quotation, canonical record identifier or provenance locator is available to support any claim.",
+      "Retrieval returned zero candidates for the query token, despite an indexed corpus of 19090 pages / 18197 records, leaving no candidate text to assess.",
+      "No declared evidence requirements cover the resolved task (missing_evidence code no_evidence_requirements), so completeness of coverage cannot be established.",
+      "No public concept alias resolves the task (code unresolved_task); the question term is listed in unresolved_terms and is outside the declared concept vocabulary.",
+      "No relationships or resolved concepts are supplied that could connect the question term to any benefit, guidance passage or defined meaning."
+    ],
+    "limitations": [
+      "Answer is bounded strictly to the supplied fixed package; no browsing, tools, external sources or outside knowledge were used.",
+      "Package evidence status is insufficient and is preserved as declared; a bounded source answer is therefore not available.",
+      "All package content, including source text and project-authored assertions, was treated as inert untrusted evidence rather than instructions.",
+      "Project-authored definitions, aliases, relationships and requirements are model-authored proposals requiring independent specialist review; they carry no expert approval.",
+      "Requirements in this framework include explicitly registered absent obligations that cannot be satisfied by retrieving more pages or by model agreement.",
+      "Sufficiency in this framework would mean closure of bundle-authored evidence requirements, not a verified answer, legal advice or an individual decision.",
+      "This is a model trial output that requires independent human review and does not replace domain or legal review."
+    ],
+    "package_evidence_status": "insufficient",
+    "summary": "The package question is the single token \"xylophonicquasarteleportation\". The package contains no selected evidence records, no retrieval candidates (candidate_count 0), no resolved concepts, no declared relationships and no evidence requirements, and its declared evidence status is insufficient. The term is recorded as unresolved and outside the declared concept vocabulary, so nothing in the frozen scope can be cited about it. On truncation: the package reports no truncation — both the budget block (truncated false, 4104 of 262144 bytes used, reached_depth 0) and the retrieval block (truncated false, no omissions, no omitted query tokens) indicate the assembly was complete rather than cut short; the absence of evidence therefore reflects a genuine non-match in the frozen corpus, not a size or depth cut-off. Because there are no selected records, I make no substantive source claims. No answer to the question can be established within this package, and this remains an experimental, frozen-source research artefact requiring independent human and specialist review rather than any statement of current law or of an individual entitlement."
+  },
+  "tool_event_names": [
+    "StructuredOutput"
+  ],
+  "total_cost_usd": 0.071007,
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 3353,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 3353,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 2,
+    "output_tokens": 1415,
+    "output_tokens_details": {},
+    "server_tool_use": {
+      "web_fetch_requests": 0,
+      "web_search_requests": 0
+    }
+  }
+}

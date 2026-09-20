@@ -1,0 +1,775 @@
+'@context':
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  schema: https://schema.org/
+  nav: https://chris-page-gov.github.io/okf-dwp/ns/navigation#
+  dimension: nav:dimension
+  match:
+    '@id': nav:literalMatchingRule
+    '@type': '@json'
+  review_status: nav:reviewStatus
+  scope: skos:scopeNote
+schema: okf-dwp-navigation-rules.v1
+method: whole-word-whitespace-flexible-literal-v1
+policy:
+  authority: project-authored navigation rules; specialist review required
+  assertion: A literal is present in extracted text. This does not mean the guidance applies to that
+    benefit or person.
+  short_abbreviations: 'IS, PC, SP, CA, AA and SDA deliberately excluded: ambiguous abbreviations require
+    separate resolution.'
+  unmatched: Keep an explicit Not classified value per dimension. Absence of a tag is not evidence
+    of absence.
+  source_scope: Frozen DMG 15 September 2026 and ADM 19 September 2026; no source refresh.
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  '@type': skos:ConceptScheme
+  skos:prefLabel:
+    '@value': DWP evidence navigation labels
+    '@language': en-GB
+  dcterms:description: Project-authored discovery labels over frozen machine-extracted text; not an
+    official departmental ontology.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/pension-credit
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Pension Credit
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - pension credit
+    - state pension credit
+    case_sensitive_abbreviations:
+    - SPC
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/state-pension
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': State Pension
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - state pension
+    - retirement pension
+    case_sensitive_abbreviations: []
+    excluded_spans:
+    - state pension credit
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/guarantee-credit
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Guarantee Credit
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - guarantee credit
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/savings-credit
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Savings Credit
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - savings credit
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/universal-credit
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Universal Credit
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - universal credit
+    case_sensitive_abbreviations:
+    - UC
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/jsa
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Jobseeker’s Allowance
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - jobseeker's allowance
+    - jobseeker’s allowance
+    - jobseekers allowance
+    case_sensitive_abbreviations:
+    - JSA
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/income-support
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Income Support
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - income support
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/esa
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Employment and Support Allowance
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - employment and support allowance
+    case_sensitive_abbreviations:
+    - ESA
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/contributory-esa
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Contributory ESA
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - contributory esa
+    - contribution-based esa
+    - contribution based esa
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/income-related-esa
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Income-related ESA
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - income-related esa
+    - income related esa
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/pip
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Personal Independence Payment
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - personal independence payment
+    case_sensitive_abbreviations:
+    - PIP
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/dla
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Disability Living Allowance
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - disability living allowance
+    case_sensitive_abbreviations:
+    - DLA
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/attendance-allowance
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Attendance Allowance
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - attendance allowance
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/carers-allowance
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Carer’s Allowance
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - carer's allowance
+    - carer’s allowance
+    - carers allowance
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/housing-benefit
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Housing Benefit
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - housing benefit
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/iidb
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Industrial Injuries Disablement Benefit
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - industrial injuries disablement benefit
+    case_sensitive_abbreviations:
+    - IIDB
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/severe-disablement-allowance
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Severe Disablement Allowance
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - severe disablement allowance
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/child-benefit
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Child Benefit
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - child benefit
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/bereavement
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Bereavement benefits
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - bereavement benefit
+    - bereavement support payment
+    - widowed parent
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/benefit/incapacity-benefit
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Incapacity Benefit
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: benefit
+  match:
+    phrases:
+    - incapacity benefit
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/circumstance/custody
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Imprisonment and detention
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: circumstance
+  match:
+    phrases:
+    - imprisonment
+    - imprisoned
+    - legal custody
+    - detention
+    - prisoner
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/circumstance/abroad
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Absence abroad
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: circumstance
+  match:
+    phrases:
+    - abroad
+    - absent from great britain
+    - absence from great britain
+    - absent from gb
+    - absence from gb
+    - exportability
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/circumstance/hospital
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Hospital admission
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: circumstance
+  match:
+    phrases:
+    - hospital
+    - in-patient
+    - inpatient
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/circumstance/care-home
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Care homes
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: circumstance
+  match:
+    phrases:
+    - care home
+    - care homes
+    - residential accommodation
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/circumstance/couples
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Couples and partners
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: circumstance
+  match:
+    phrases:
+    - partner
+    - partners
+    - couple
+    - couples
+    - polygamous
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/circumstance/caring
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Caring responsibilities
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: circumstance
+  match:
+    phrases:
+    - caring
+    - carer
+    - carers
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/circumstance/children
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Children and young people
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: circumstance
+  match:
+    phrases:
+    - child
+    - children
+    - young person
+    - young people
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/circumstance/bereavement
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Bereavement
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: circumstance
+  match:
+    phrases:
+    - bereavement
+    - death of
+    - widow
+    - widower
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/circumstance/self-employment
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Self-employment
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: circumstance
+  match:
+    phrases:
+    - self-employed
+    - self employed
+    - self-employment
+    - self employment
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/circumstance/disability
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Disability and capability for work
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: circumstance
+  match:
+    phrases:
+    - disability
+    - disabled
+    - limited capability for work
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/topic/entitlement
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Entitlement
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: topic
+  match:
+    phrases:
+    - entitlement
+    - entitled
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/topic/payment
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Payment and payability
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: topic
+  match:
+    phrases:
+    - payment
+    - payments
+    - payable
+    - payability
+    - receiving benefit
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/topic/disqualification
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Disqualification
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: topic
+  match:
+    phrases:
+    - disqualification
+    - disqualified
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/topic/capital
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Capital and savings
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: topic
+  match:
+    phrases:
+    - capital
+    - savings
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/topic/income
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Income and earnings
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: topic
+  match:
+    phrases:
+    - income
+    - earnings
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/topic/housing-costs
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Housing costs
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: topic
+  match:
+    phrases:
+    - housing costs
+    - mortgage interest
+    - service charges
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/topic/residence
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Residence and presence
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: topic
+  match:
+    phrases:
+    - habitual residence
+    - right to reside
+    - residence
+    - presence
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/topic/rates
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Rates and amounts
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: topic
+  match:
+    phrases:
+    - rates
+    - weekly amount
+    - weekly rate
+    - additional amount
+    - additional amounts
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/topic/pension-age
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Pensionable age
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: topic
+  match:
+    phrases:
+    - pensionable age
+    - state pension age
+    - qualifying age
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/topic/claims
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Claims and evidence
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: topic
+  match:
+    phrases:
+    - claim
+    - claims
+    - evidence
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/topic/decisions
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Decisions and appeals
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: topic
+  match:
+    phrases:
+    - decision
+    - decisions
+    - appeal
+    - appeals
+    - supersession
+    - revision
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/topic/exceptions
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Exceptions and disregards
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: topic
+  match:
+    phrases:
+    - exception
+    - exceptions
+    - disregard
+    - disregards
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/topic/contributions
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': National Insurance contributions
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: topic
+  match:
+    phrases:
+    - national insurance
+    - contribution conditions
+    - contribution condition
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/topic/work
+  '@type': skos:Concept
+  skos:prefLabel:
+    '@value': Work and work-related requirements
+    '@language': en-GB
+  skos:inScheme:
+    '@id': https://chris-page-gov.github.io/okf-dwp/id/navigation/scheme
+  dimension: topic
+  match:
+    phrases:
+    - work-related
+    - work related
+    - work search
+    - work availability
+    - minimum income floor
+    case_sensitive_abbreviations: []
+  review_status: unreviewed
+  scope: Explicit source-text mentions for navigation only; not a legal definition, applicability
+    assertion or statement of entitlement.

@@ -1,0 +1,1811 @@
+{
+  "schema": "okf-staff-needs-matrix.v1",
+  "review_status": "projected-not-user-validated",
+  "occurrences": 40,
+  "unique_questions": 39,
+  "primary_journeys": 7,
+  "personas": [
+    {
+      "id": "persona/welfare-rights-adviser",
+      "goal": "Find and explain cited guidance while identifying missing qualifications.",
+      "research_status": "projected"
+    },
+    {
+      "id": "persona/pensions-specialist",
+      "goal": "Check Pension Credit and State Pension distinctions, dates and cross-references.",
+      "research_status": "projected"
+    },
+    {
+      "id": "persona/policy-law-reviewer",
+      "goal": "Distinguish guidance from legislation and test the scope of each interpretation.",
+      "research_status": "projected"
+    },
+    {
+      "id": "persona/evidence-assurance-reviewer",
+      "goal": "Audit whether evidence supports each claim and what remains missing.",
+      "research_status": "projected"
+    },
+    {
+      "id": "persona/knowledge-engineer",
+      "goal": "Reproduce source, semantic, retrieval and model-output identities.",
+      "research_status": "projected"
+    },
+    {
+      "id": "persona/assisted-support",
+      "goal": "Navigate the same evidence by keyboard and explain terms when needed.",
+      "research_status": "projected"
+    }
+  ],
+  "cross_cutting_journeys": [
+    {
+      "id": "journey/source-audit",
+      "personas": [
+        "persona/knowledge-engineer",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "cases": "all",
+      "acceptance": "Every cited claim preserves source identity, locator and hash; altered or missing evidence is rejected."
+    },
+    {
+      "id": "journey/assisted-reading",
+      "personas": [
+        "persona/assisted-support"
+      ],
+      "cases": "all",
+      "acceptance": "Use keyboard and narrow-screen evidence navigation; explain acronyms and reveal gaps without relying on colour alone. Actual user validation remains separate."
+    }
+  ],
+  "cases": [
+    {
+      "id": "staff-001",
+      "question": "What happens to your benefits if you go abroad?",
+      "duplicate_of": null,
+      "section": "General",
+      "journey": "journey/absence-and-residence",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/policy-law-reviewer"
+      ],
+      "intended_decision": "Identify what must be established before explaining an absence rule.",
+      "ambiguities": [
+        "Which benefits and variants are in scope?",
+        "Temporary travel or a permanent move; destination, duration, purpose and relevant date are unspecified.",
+        "International coordination, residence and territorial regimes must be identified."
+      ],
+      "required_evidence": [
+        "Benefit-specific absence and exportability rules, exceptions, territorial scope and effective dates."
+      ],
+      "source_candidate_ids": [
+        "source-c001",
+        "source-c002"
+      ],
+      "negative_control": "Change temporary absence to a permanent move; do not preserve the same applicability claim without evidence.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-001.md"
+    },
+    {
+      "id": "staff-002",
+      "question": "If your birthday is 30th May 1960, what is the first date you will be entitled to State Pension?",
+      "duplicate_of": null,
+      "section": "State Pension",
+      "journey": "journey/age-and-transition",
+      "personas": [
+        "persona/pensions-specialist",
+        "persona/policy-law-reviewer"
+      ],
+      "intended_decision": "Distinguish age thresholds, contribution conditions, existing awards, new claims and first payment.",
+      "ambiguities": [
+        "Reaching State Pension age is distinct from satisfying all entitlement conditions, claiming and first payment.",
+        "Contribution record, claim timing and any deferral are not specified."
+      ],
+      "required_evidence": [
+        "Applicable birth-date schedule with commencement/version evidence.",
+        "Separate entitlement and payment-date conditions; do not calculate an individual entitlement date from birth date alone."
+      ],
+      "source_candidate_ids": [
+        "source-c004",
+        "source-c005",
+        "source-c006",
+        "source-c007"
+      ],
+      "negative_control": "Remove the applicable date or regime; do not calculate entitlement or silently substitute a current rule.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-002.md"
+    },
+    {
+      "id": "staff-003",
+      "question": "How does State Pension interact with PIP?",
+      "duplicate_of": null,
+      "section": "State Pension",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "New or old State Pension, PIP component, age and jurisdiction are unspecified.",
+        "Existing PIP award and a new claim may require different rules."
+      ],
+      "required_evidence": [
+        "PIP/State Pension interaction and age-continuation rules, plus complete overlap/disregard provisions."
+      ],
+      "source_candidate_ids": [
+        "source-c003",
+        "source-c039",
+        "source-c034"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-003.md"
+    },
+    {
+      "id": "staff-004",
+      "question": "What are the components which make up State Pension and how do you qualify for them?",
+      "duplicate_of": null,
+      "section": "State Pension",
+      "journey": "journey/age-and-transition",
+      "personas": [
+        "persona/pensions-specialist",
+        "persona/policy-law-reviewer"
+      ],
+      "intended_decision": "Distinguish age thresholds, contribution conditions, existing awards, new claims and first payment.",
+      "ambiguities": [
+        "State Pension can mean the post-2016 or earlier regime.",
+        "A transitional award cannot be treated as the simple new-entrant case."
+      ],
+      "required_evidence": [
+        "Regime-specific components, qualifying records, transitional/inherited elements and cited legal conditions."
+      ],
+      "source_candidate_ids": [
+        "source-c003",
+        "source-c006",
+        "source-c007"
+      ],
+      "negative_control": "Remove the applicable date or regime; do not calculate entitlement or silently substitute a current rule.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-004.md"
+    },
+    {
+      "id": "staff-005",
+      "question": "What other benefits could you receive in addition to State Pension, and under what circumstances would you be entitled to them?",
+      "duplicate_of": null,
+      "section": "State Pension",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "Other benefits is open-ended; jurisdiction, household, disability and income circumstances are unspecified."
+      ],
+      "required_evidence": [
+        "An explicitly bounded benefit inventory with eligibility, age, income and overlap rules for each proposed interaction."
+      ],
+      "source_candidate_ids": [
+        "source-c003",
+        "source-c008",
+        "source-c032",
+        "source-c039",
+        "source-c036"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-005.md"
+    },
+    {
+      "id": "staff-006",
+      "question": "What is the maximum you can have in savings to still qualify for Pension Credit?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/pension-credit-components",
+      "personas": [
+        "persona/pensions-specialist",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Explain source-backed components and prerequisites without operating an award calculator.",
+      "ambiguities": [
+        "Savings may refer to cash savings or all capital; disregards, notional capital and partner ownership matter.",
+        "The question presupposes a universal maximum; that premise needs source testing."
+      ],
+      "required_evidence": [
+        "Capital valuation/disregard and deemed-income rules combined with Guarantee Credit/Savings Credit conditions."
+      ],
+      "source_candidate_ids": [
+        "source-c031",
+        "source-c012",
+        "source-c008"
+      ],
+      "negative_control": "Treat a capital threshold or example as a universal maximum; require the missing valuation, disregard and component evidence.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-006.md"
+    },
+    {
+      "id": "staff-007",
+      "question": "What were the Pension Credit weekly rates over the last five years?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/historical-rates",
+      "personas": [
+        "persona/pensions-specialist",
+        "persona/policy-law-reviewer"
+      ],
+      "intended_decision": "Identify distinct effective periods and source versions for historical figures.",
+      "ambiguities": [
+        "Last five years has no agreed as-of date or calendar/tax-year/uprating-period definition.",
+        "Single/couple, Guarantee Credit/Savings Credit and additional amounts need separate series."
+      ],
+      "required_evidence": [
+        "A complete date-indexed rate schedule for each agreed period, effective days and every requested variant.",
+        "Resolve the captured 2026 memo route to the separate benefit-rate schedule."
+      ],
+      "source_candidate_ids": [
+        "source-c015",
+        "source-c016",
+        "source-c017",
+        "source-c018",
+        "source-c019",
+        "source-c020",
+        "source-c021",
+        "source-c022",
+        "source-c023",
+        "source-c024",
+        "source-c014",
+        "source-c025"
+      ],
+      "negative_control": "Replace an effective date with a capture date or infer an omitted year; reject the unsupported historical series.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-007.md"
+    },
+    {
+      "id": "staff-008",
+      "question": "What was the SDA amount over the last five years?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/historical-rates",
+      "personas": [
+        "persona/pensions-specialist",
+        "persona/policy-law-reviewer"
+      ],
+      "intended_decision": "Identify distinct effective periods and source versions for historical figures.",
+      "ambiguities": [
+        "SDA could mean Severe Disablement Allowance or shorthand for a Pension Credit severe-disability additional amount.",
+        "Last five years and household/rate variants are unspecified."
+      ],
+      "required_evidence": [
+        "Resolve the acronym before selecting the benefit or component.",
+        "Complete period-specific rates and qualifying scopes for the resolved term."
+      ],
+      "source_candidate_ids": [
+        "source-c035",
+        "source-c027",
+        "source-c015",
+        "source-c016",
+        "source-c017",
+        "source-c018",
+        "source-c019",
+        "source-c020",
+        "source-c021",
+        "source-c022",
+        "source-c023",
+        "source-c024",
+        "source-c014",
+        "source-c025"
+      ],
+      "negative_control": "Replace an effective date with a capture date or infer an omitted year; reject the unsupported historical series.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-008.md"
+    },
+    {
+      "id": "staff-009",
+      "question": "Besides SDA, what are the other additional payments which you can receive in addition to basic Pension Credit, and what have been their rates over the last five years?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/historical-rates",
+      "personas": [
+        "persona/pensions-specialist",
+        "persona/policy-law-reviewer"
+      ],
+      "intended_decision": "Identify distinct effective periods and source versions for historical figures.",
+      "ambiguities": [
+        "SDA is ambiguous; basic Pension Credit is not a precise component name.",
+        "Last five years, household/child variants and variable housing amounts need scope."
+      ],
+      "required_evidence": [
+        "All scoped additional-amount categories and conditions, plus period-specific rate or calculation evidence."
+      ],
+      "source_candidate_ids": [
+        "source-c026",
+        "source-c027",
+        "source-c029",
+        "source-c015",
+        "source-c016",
+        "source-c017",
+        "source-c018",
+        "source-c019",
+        "source-c020",
+        "source-c021",
+        "source-c022",
+        "source-c023",
+        "source-c024",
+        "source-c014",
+        "source-c025"
+      ],
+      "negative_control": "Replace an effective date with a capture date or infer an omitted year; reject the unsupported historical series.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-009.md"
+    },
+    {
+      "id": "staff-010",
+      "question": "What is used in the Pension Credit calculation to assess eligibility and what is the threshold for each element?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/pension-credit-components",
+      "personas": [
+        "persona/pensions-specialist",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Explain source-backed components and prerequisites without operating an award calculator.",
+      "ambiguities": [
+        "Eligibility, award calculation and numeric thresholds are distinct.",
+        "Date, Guarantee Credit/Savings Credit, household and relevant benefit regimes are unspecified."
+      ],
+      "required_evidence": [
+        "Complete inputs, exclusions, disregards, calculation dependencies and versioned thresholds for the agreed scope."
+      ],
+      "source_candidate_ids": [
+        "source-c008",
+        "source-c012",
+        "source-c013",
+        "source-c031",
+        "source-c032"
+      ],
+      "negative_control": "Treat a capital threshold or example as a universal maximum; require the missing valuation, disregard and component evidence.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-010.md"
+    },
+    {
+      "id": "staff-011",
+      "question": "How does Housing Benefit impact Pension Credit?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "HB treatment as income differs from housing-cost additions and pension-age/mixed-age access to HB.",
+        "Tenure, age, claim date and household are unspecified."
+      ],
+      "required_evidence": [
+        "Directional HB-to-PC and PC-to-HB dependencies, income disregards, housing exclusions and transitional conditions."
+      ],
+      "source_candidate_ids": [
+        "source-c033",
+        "source-c030",
+        "source-c009"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-011.md"
+    },
+    {
+      "id": "staff-012",
+      "question": "Does Pension Credit stop is a citizen moves into a care home permanently if they are self-funding?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/household-and-care",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/pensions-specialist"
+      ],
+      "intended_decision": "Trace how partner status, permanence and funding circumstances alter the evidence needed.",
+      "ambiguities": [
+        "Permanent residence, funding arrangements, household and qualifying disability benefits require evidence.",
+        "Base credit, additional amounts and housing costs are different questions."
+      ],
+      "required_evidence": [
+        "Permanent care-home rules with self-funding conditions, continuing qualifying benefits, household changes and each affected award component."
+      ],
+      "source_candidate_ids": [
+        "source-c028",
+        "source-c030",
+        "source-c010"
+      ],
+      "negative_control": "Switch self-funding to public funding or change a temporary stay to permanent; retain unresolved qualifications.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-012.md"
+    },
+    {
+      "id": "staff-013",
+      "question": "Does Pension Credit stop is a citizen moves into a care home permanently if they are not self-funding?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/household-and-care",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/pensions-specialist"
+      ],
+      "intended_decision": "Trace how partner status, permanence and funding circumstances alter the evidence needed.",
+      "ambiguities": [
+        "Not self-funding does not identify the responsible funding body or all mixed-funding arrangements.",
+        "Base credit, disability additions, partner status and housing costs must be separated."
+      ],
+      "required_evidence": [
+        "Care funding and qualifying-benefit cessation/continuation rules, timing, household treatment and component-level consequences."
+      ],
+      "source_candidate_ids": [
+        "source-c028",
+        "source-c030",
+        "source-c010"
+      ],
+      "negative_control": "Switch self-funding to public funding or change a temporary stay to permanent; retain unresolved qualifications.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-013.md"
+    },
+    {
+      "id": "staff-014",
+      "question": "What is the impact of someone’s partner on their Pension Credit?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/household-and-care",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/pensions-specialist"
+      ],
+      "intended_decision": "Trace how partner status, permanence and funding circumstances alter the evidence needed.",
+      "ambiguities": [
+        "Partner ages, relationship/household status, income, capital and existing claims are unspecified."
+      ],
+      "required_evidence": [
+        "Couple and mixed-age definitions, aggregation, rate/component effects and transitional protections."
+      ],
+      "source_candidate_ids": [
+        "source-c009",
+        "source-c010",
+        "source-c011",
+        "source-c031",
+        "source-c012"
+      ],
+      "negative_control": "Switch self-funding to public funding or change a temporary stay to permanent; retain unresolved qualifications.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-014.md"
+    },
+    {
+      "id": "staff-015",
+      "question": "What inputs are required for the Pension Credit calculation?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/pension-credit-components",
+      "personas": [
+        "persona/pensions-specialist",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Explain source-backed components and prerequisites without operating an award calculator.",
+      "ambiguities": [
+        "The intended calculation date, household, credit component and scope are unspecified."
+      ],
+      "required_evidence": [
+        "A complete source-backed input inventory including exclusions and evidence needed to determine each field."
+      ],
+      "source_candidate_ids": [
+        "source-c008",
+        "source-c012",
+        "source-c013",
+        "source-c031",
+        "source-c032"
+      ],
+      "negative_control": "Treat a capital threshold or example as a universal maximum; require the missing valuation, disregard and component evidence.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-015.md"
+    },
+    {
+      "id": "staff-016",
+      "question": "Given these inputs what is the formula for calculating Pension Credit?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/pension-credit-components",
+      "personas": [
+        "persona/pensions-specialist",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Explain source-backed components and prerequisites without operating an award calculator.",
+      "ambiguities": [
+        "These inputs refers to an earlier question; actual inputs have not been provided in this standalone prompt.",
+        "An explanatory formula and an executable decision engine require different assurance."
+      ],
+      "required_evidence": [
+        "Resolved input contract, versioned component formulas, ordering/rounding, exceptions and non-calculation eligibility gates."
+      ],
+      "source_candidate_ids": [
+        "source-c012",
+        "source-c013",
+        "source-c031",
+        "source-c032"
+      ],
+      "negative_control": "Treat a capital threshold or example as a universal maximum; require the missing valuation, disregard and component evidence.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-016.md"
+    },
+    {
+      "id": "staff-017",
+      "question": "What difference to Pension Credit does having a partner make?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/household-and-care",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/pensions-specialist"
+      ],
+      "intended_decision": "Trace how partner status, permanence and funding circumstances alter the evidence needed.",
+      "ambiguities": [
+        "Partner ages, relationship/household status, income, capital and existing claims are unspecified."
+      ],
+      "required_evidence": [
+        "Couple and mixed-age definitions, aggregation, rate/component effects and transitional protections."
+      ],
+      "source_candidate_ids": [
+        "source-c009",
+        "source-c010",
+        "source-c011",
+        "source-c031",
+        "source-c012"
+      ],
+      "negative_control": "Switch self-funding to public funding or change a temporary stay to permanent; retain unresolved qualifications.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-017.md"
+    },
+    {
+      "id": "staff-018",
+      "question": "What happens if someone with a partner goes permanently into a Care Home (please give all scenarios)?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/household-and-care",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/pensions-specialist"
+      ],
+      "intended_decision": "Trace how partner status, permanence and funding circumstances alter the evidence needed.",
+      "ambiguities": [
+        "The section suggests Pension Credit, but the standalone question does not name a benefit.",
+        "All scenarios is unbounded; clarify jurisdiction, funding, partner ages, household and affected benefits."
+      ],
+      "required_evidence": [
+        "A bounded scenario matrix, persistent household and funding conditions, affected components and explicit excluded cases."
+      ],
+      "source_candidate_ids": [
+        "source-c028",
+        "source-c010",
+        "source-c011",
+        "source-c030"
+      ],
+      "negative_control": "Switch self-funding to public funding or change a temporary stay to permanent; retain unresolved qualifications.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-018.md"
+    },
+    {
+      "id": "staff-019",
+      "question": "How does Pension Credit work?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/pension-credit-components",
+      "personas": [
+        "persona/pensions-specialist",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Explain source-backed components and prerequisites without operating an award calculator.",
+      "ambiguities": [
+        "An overview, eligibility explanation and individual calculation are different tasks.",
+        "Date, jurisdiction and credit component are unspecified."
+      ],
+      "required_evidence": [
+        "A bounded source-backed overview and key definitions/routes, with clear omissions and no personal award decision."
+      ],
+      "source_candidate_ids": [
+        "source-c008",
+        "source-c012",
+        "source-c013",
+        "source-c031",
+        "source-c032"
+      ],
+      "negative_control": "Treat a capital threshold or example as a universal maximum; require the missing valuation, disregard and component evidence.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-019.md"
+    },
+    {
+      "id": "staff-020",
+      "question": "How does a citizen qualify for Pension Credit?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/pension-credit-components",
+      "personas": [
+        "persona/pensions-specialist",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Explain source-backed components and prerequisites without operating an award calculator.",
+      "ambiguities": [
+        "Citizen does not establish the relevant residence/immigration or presence conditions.",
+        "Age, claim date, household and credit component are unspecified."
+      ],
+      "required_evidence": [
+        "Complete entitlement conditions, territorial and transitional rules, claim requirements and credit-specific financial tests."
+      ],
+      "source_candidate_ids": [
+        "source-c008",
+        "source-c009",
+        "source-c011",
+        "source-c012"
+      ],
+      "negative_control": "Treat a capital threshold or example as a universal maximum; require the missing valuation, disregard and component evidence.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-020.md"
+    },
+    {
+      "id": "staff-021",
+      "question": "What are the eligibility rules and entitlement rate for PC?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/pension-credit-components",
+      "personas": [
+        "persona/pensions-specialist",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Explain source-backed components and prerequisites without operating an award calculator.",
+      "ambiguities": [
+        "PC must be resolved as Pension Credit; rate may mean minimum guarantee, Savings Credit or actual award.",
+        "The effective date and household/rate variants are not specified."
+      ],
+      "required_evidence": [
+        "Entitlement conditions and a dated rate/amount model with the difference between standard figures and actual award preserved."
+      ],
+      "source_candidate_ids": [
+        "source-c008",
+        "source-c009",
+        "source-c012",
+        "source-c015",
+        "source-c016",
+        "source-c017",
+        "source-c018",
+        "source-c019",
+        "source-c020",
+        "source-c021",
+        "source-c022",
+        "source-c023",
+        "source-c024",
+        "source-c014",
+        "source-c025"
+      ],
+      "negative_control": "Treat a capital threshold or example as a universal maximum; require the missing valuation, disregard and component evidence.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-021.md"
+    },
+    {
+      "id": "staff-022",
+      "question": "How do State Pension and Pension Credit fit together. For example: If someone receives State Pension, could they also be entitled to Pension Credit?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "Receiving State Pension and meeting Pension Credit conditions are separate facts.",
+        "Household, other income/capital and credit component are unspecified."
+      ],
+      "required_evidence": [
+        "State Pension treatment in the Pension Credit assessment and the full relevant PC entitlement/amount dependencies."
+      ],
+      "source_candidate_ids": [
+        "source-c003",
+        "source-c008",
+        "source-c032",
+        "source-c012"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-022.md"
+    },
+    {
+      "id": "staff-023",
+      "question": "What happens to Pension Credit if someone moves abroad?",
+      "duplicate_of": null,
+      "section": "Pension Credit",
+      "journey": "journey/absence-and-residence",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/policy-law-reviewer"
+      ],
+      "intended_decision": "Identify what must be established before explaining an absence rule.",
+      "ambiguities": [
+        "Moves abroad may mean a permanent move or a temporary absence; country, date, duration and purpose are unspecified."
+      ],
+      "required_evidence": [
+        "SPC presence/residence and absence rules, exceptions, territorial dependencies and dated transition evidence."
+      ],
+      "source_candidate_ids": [
+        "source-c002",
+        "source-c008",
+        "source-c009"
+      ],
+      "negative_control": "Change temporary absence to a permanent move; do not preserve the same applicability claim without evidence.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-023.md"
+    },
+    {
+      "id": "staff-024",
+      "question": "What additional benefits would you be entitled to if you are entitled to IIDB?",
+      "duplicate_of": null,
+      "section": "Industrial Injuries Benefits",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "IIDB alone does not specify disablement assessment, supplements or other personal/household conditions.",
+        "Additional benefits is unbounded."
+      ],
+      "required_evidence": [
+        "A scoped list of IIDB-related additions and cross-benefit eligibility/overlap conditions; no automatic entitlement assumption."
+      ],
+      "source_candidate_ids": [
+        "source-c040",
+        "source-c041",
+        "source-c037",
+        "source-c032"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-024.md"
+    },
+    {
+      "id": "staff-025",
+      "question": "What happens if you are on IIDB when you reach State Pension Age?",
+      "duplicate_of": null,
+      "section": "Industrial Injuries Benefits",
+      "journey": "journey/age-and-transition",
+      "personas": [
+        "persona/pensions-specialist",
+        "persona/policy-law-reviewer"
+      ],
+      "intended_decision": "Distinguish age thresholds, contribution conditions, existing awards, new claims and first payment.",
+      "ambiguities": [
+        "IIDB, Reduced Earnings Allowance and Retirement Allowance are distinct benefits.",
+        "Claim/accident dates, existing supplements, work and pension regime are unspecified."
+      ],
+      "required_evidence": [
+        "Exact benefit-specific pension-age rules and historic/transitional conditions without transferring REA rules to IIDB."
+      ],
+      "source_candidate_ids": [
+        "source-c040",
+        "source-c042",
+        "source-c003",
+        "source-c034"
+      ],
+      "negative_control": "Remove the applicable date or regime; do not calculate entitlement or silently substitute a current rule.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-025.md"
+    },
+    {
+      "id": "staff-026",
+      "question": "What is the interaction between Child DLA and PIP?",
+      "duplicate_of": null,
+      "section": "Industrial Injuries Benefits",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "Child DLA-to-PIP transition, age, jurisdiction and existing award status are unspecified.",
+        "Current devolved disability benefits may change the relevant regime."
+      ],
+      "required_evidence": [
+        "Complete transition/invitation, age, claim and continuity rules from the appropriate PIP/ADM and territorial sources."
+      ],
+      "source_candidate_ids": [
+        "source-c039"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-026.md"
+    },
+    {
+      "id": "staff-027",
+      "question": "Can you receive both IIDB and JSA?",
+      "duplicate_of": null,
+      "section": "Industrial Injuries Benefits",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "JSA may be contributory, income-based or New Style; claim date and IIDB supplements are unspecified.",
+        "Concurrent entitlement and deduction from payment are different questions."
+      ],
+      "required_evidence": [
+        "Variant-specific JSA entitlement, income and overlap treatment of IIDB with source-backed exceptions."
+      ],
+      "source_candidate_ids": [
+        "source-c040",
+        "source-c034",
+        "source-c032"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-027.md"
+    },
+    {
+      "id": "staff-028",
+      "question": "Can you receive both IIDB and ESA?",
+      "duplicate_of": null,
+      "section": "Industrial Injuries Benefits",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "ESA may be contributory, income-related or New Style; claim date and IIDB supplements are unspecified.",
+        "Concurrent entitlement, income treatment and payment adjustments differ."
+      ],
+      "required_evidence": [
+        "Variant-specific ESA entitlement, income and overlap treatment of IIDB, including ADM where applicable."
+      ],
+      "source_candidate_ids": [
+        "source-c040",
+        "source-c034",
+        "source-c032"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-028.md"
+    },
+    {
+      "id": "staff-029",
+      "question": "What is the relationship between IIDB, PIP, Attendance Allowance and DLA?",
+      "duplicate_of": null,
+      "section": "Industrial Injuries Benefits",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "The requested relationship could mean eligibility, transitions, income treatment or overlapping payment.",
+        "PIP/DLA components, age, jurisdiction and IIDB additions are unspecified."
+      ],
+      "required_evidence": [
+        "A bounded typed relationship matrix with each component/benefit interaction and its source-dependent qualifications."
+      ],
+      "source_candidate_ids": [
+        "source-c040",
+        "source-c041",
+        "source-c039",
+        "source-c034"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-029.md"
+    },
+    {
+      "id": "staff-030",
+      "question": "How does IIDB relate to PIP?",
+      "duplicate_of": null,
+      "section": "Industrial Injuries Benefits",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "PIP component and IIDB supplements, jurisdiction and type of relationship are unspecified."
+      ],
+      "required_evidence": [
+        "PIP/IIDB entitlement, payment and attendance-related overlap evidence; not a generic graph association alone."
+      ],
+      "source_candidate_ids": [
+        "source-c040",
+        "source-c041",
+        "source-c034"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-030.md"
+    },
+    {
+      "id": "staff-031",
+      "question": "What additional benefits would you be entitled to if you are entitled to PIP?",
+      "duplicate_of": null,
+      "section": "Personal Independence Payment",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "PIP components/rates, age, household, jurisdiction and other benefits are unspecified.",
+        "Receipt may be a qualifying condition rather than automatic entitlement to another benefit."
+      ],
+      "required_evidence": [
+        "A bounded set of qualifying-benefit links with all additional conditions, rates and exceptions; PIP source scope must be acquired."
+      ],
+      "source_candidate_ids": [
+        "source-c039",
+        "source-c037",
+        "source-c027"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-031.md"
+    },
+    {
+      "id": "staff-032",
+      "question": "What happens if you are on PIP when you reach State Pension Age?",
+      "duplicate_of": null,
+      "section": "Personal Independence Payment",
+      "journey": "journey/age-and-transition",
+      "personas": [
+        "persona/pensions-specialist",
+        "persona/policy-law-reviewer"
+      ],
+      "intended_decision": "Distinguish age thresholds, contribution conditions, existing awards, new claims and first payment.",
+      "ambiguities": [
+        "Existing PIP award, new claim or review; component, age and jurisdiction are unspecified."
+      ],
+      "required_evidence": [
+        "PIP pension-age continuation/new-claim rules and relevant transitions, not AA/DLA age rules transferred to PIP."
+      ],
+      "source_candidate_ids": [
+        "source-c039",
+        "source-c004"
+      ],
+      "negative_control": "Remove the applicable date or regime; do not calculate entitlement or silently substitute a current rule.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-032.md"
+    },
+    {
+      "id": "staff-033",
+      "question": "What is the interaction between Child DLA and PIP?",
+      "duplicate_of": "staff-026",
+      "section": "Personal Independence Payment",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "Child DLA-to-PIP transition, age, jurisdiction and existing award status are unspecified.",
+        "Current devolved disability benefits may change the relevant regime."
+      ],
+      "required_evidence": [
+        "Complete transition/invitation, age, claim and continuity rules from the appropriate PIP/ADM and territorial sources."
+      ],
+      "source_candidate_ids": [
+        "source-c039"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-033.md"
+    },
+    {
+      "id": "staff-034",
+      "question": "Can you receive both PIP and JSA?",
+      "duplicate_of": null,
+      "section": "Personal Independence Payment",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "JSA variant, PIP component, claim date and jurisdiction are unspecified.",
+        "Concurrent eligibility, disregarded income and additions are separate questions."
+      ],
+      "required_evidence": [
+        "JSA variant-specific PIP income/disregard, entitlement and overlap evidence, including relevant ADM bodies."
+      ],
+      "source_candidate_ids": [
+        "source-c039",
+        "source-c034",
+        "source-c037"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-034.md"
+    },
+    {
+      "id": "staff-035",
+      "question": "Can you receive both PIP and ESA?",
+      "duplicate_of": null,
+      "section": "Personal Independence Payment",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "ESA variant, PIP component, claim date and jurisdiction are unspecified.",
+        "Concurrent eligibility, income disregards and disability additions need separate evidence."
+      ],
+      "required_evidence": [
+        "ESA variant-specific PIP treatment and premium/addition conditions, including ADM where applicable."
+      ],
+      "source_candidate_ids": [
+        "source-c039",
+        "source-c034",
+        "source-c037"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-035.md"
+    },
+    {
+      "id": "staff-036",
+      "question": "What is the relationship between PIP, Attendance Allowance and DLA?",
+      "duplicate_of": null,
+      "section": "Personal Independence Payment",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "Relationship could mean age transition, replacement, co-payment or component overlap.",
+        "Jurisdiction, age and existing award status are unspecified."
+      ],
+      "required_evidence": [
+        "Complete AA/DLA/PIP transition and overlapping-payment rules with component and territorial qualifications."
+      ],
+      "source_candidate_ids": [
+        "source-c039",
+        "source-c034"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-036.md"
+    },
+    {
+      "id": "staff-037",
+      "question": "If you receive PIP and War Pensions Constant Allowance, how much would you get each week (please provide all variations)?",
+      "duplicate_of": null,
+      "section": "Personal Independence Payment",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "War Pensions Constant Allowance is not a fully resolved scheme/benefit name; clarify whether Constant Attendance Allowance is intended.",
+        "PIP component/rate, war-pension scheme, date and all variations are unspecified."
+      ],
+      "required_evidence": [
+        "Exact scheme identity, overlapping-component adjustment, versioned rates and a bounded variant matrix before any calculation."
+      ],
+      "source_candidate_ids": [
+        "source-c034",
+        "source-c041"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-037.md"
+    },
+    {
+      "id": "staff-038",
+      "question": "Under what circumstances can a Citizen claim Carers Allowance?",
+      "duplicate_of": null,
+      "section": "Carers Allowance",
+      "journey": "journey/carer-qualification",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Locate conditions and distinguish caring responsibilities from multiple payment assumptions.",
+      "ambiguities": [
+        "Jurisdiction, date, age, education, earnings and cared-for person benefit are unspecified.",
+        "Citizen does not establish residence or other legal conditions."
+      ],
+      "required_evidence": [
+        "Complete Carer’s Allowance conditions, exclusions, territorial changes and relevant definitions with effective dates."
+      ],
+      "source_candidate_ids": [
+        "source-c036",
+        "source-c037"
+      ],
+      "negative_control": "Double a payment because two people receive care; refuse arithmetic or an unsupported entitlement inference.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-038.md"
+    },
+    {
+      "id": "staff-039",
+      "question": "What impact does Carers Allowance have on other benefits which are being claimed?",
+      "duplicate_of": null,
+      "section": "Carers Allowance",
+      "journey": "journey/benefit-interactions",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Distinguish qualification, overlapping payment, disregard and passporting for the named variants.",
+      "ambiguities": [
+        "Other benefits is unbounded; distinguish the carer’s own awards from the cared-for person’s awards.",
+        "Entitlement, underlying entitlement, actual payment and benefit variants are not interchangeable."
+      ],
+      "required_evidence": [
+        "A directional interaction matrix covering overlap/income, additional amounts and effects on the cared-for person, with qualifications."
+      ],
+      "source_candidate_ids": [
+        "source-c036",
+        "source-c037",
+        "source-c029",
+        "source-c027",
+        "source-c034"
+      ],
+      "negative_control": "Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-039.md"
+    },
+    {
+      "id": "staff-040",
+      "question": "What happens to Carers Allowance if someone is caring for two or more people?",
+      "duplicate_of": null,
+      "section": "Carers Allowance",
+      "journey": "journey/carer-qualification",
+      "personas": [
+        "persona/welfare-rights-adviser",
+        "persona/evidence-assurance-reviewer"
+      ],
+      "intended_decision": "Locate conditions and distinguish caring responsibilities from multiple payment assumptions.",
+      "ambiguities": [
+        "One carer supporting multiple people differs from multiple carers supporting one person.",
+        "Care hours per person, qualifying benefits and other claimants are unspecified."
+      ],
+      "required_evidence": [
+        "Complete multiple-person caring rule, qualifying conditions, election/competing-claim distinction and relevant timing."
+      ],
+      "source_candidate_ids": [
+        "source-c038",
+        "source-c036",
+        "source-c037"
+      ],
+      "negative_control": "Double a payment because two people receive care; refuse arithmetic or an unsupported entitlement inference.",
+      "acceptance_dimensions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "user_validation": "not-run",
+      "specialist_acceptance": "not-reviewed",
+      "execution": {
+        "mapping_integrity": "passed",
+        "behavioural_negative_control": "not-run"
+      },
+      "review_pack": "../staff-review/cases/staff-040.md"
+    }
+  ],
+  "limitations": [
+    "Mappings are project-authored hypotheses, not completed user research.",
+    "Behavioural negative controls are specified here; their execution needs separately retained evidence.",
+    "No claimant data, entitlement decisions or award calculations are required."
+  ],
+  "inputs": [
+    {
+      "path": "domain-profile/staff-needs/journeys.json",
+      "sha256": "84393d075425808b7a298cda32cbcf60d0c127c8577684a4ab35e8ead88f22c7",
+      "bytes": 5062
+    },
+    {
+      "path": "evaluation/staff-questions/cases.json",
+      "sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a",
+      "bytes": 205988
+    }
+  ]
+}

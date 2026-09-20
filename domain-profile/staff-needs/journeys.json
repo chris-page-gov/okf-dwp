@@ -1,0 +1,26 @@
+{
+  "schema": "okf-staff-journey-authoring.v1",
+  "review_status": "projected-not-user-validated",
+  "source_registry": "evaluation/staff-questions/cases.json",
+  "personas": [
+    {"id":"persona/welfare-rights-adviser","goal":"Find and explain cited guidance while identifying missing qualifications.","research_status":"projected"},
+    {"id":"persona/pensions-specialist","goal":"Check Pension Credit and State Pension distinctions, dates and cross-references.","research_status":"projected"},
+    {"id":"persona/policy-law-reviewer","goal":"Distinguish guidance from legislation and test the scope of each interpretation.","research_status":"projected"},
+    {"id":"persona/evidence-assurance-reviewer","goal":"Audit whether evidence supports each claim and what remains missing.","research_status":"projected"},
+    {"id":"persona/knowledge-engineer","goal":"Reproduce source, semantic, retrieval and model-output identities.","research_status":"projected"},
+    {"id":"persona/assisted-support","goal":"Navigate the same evidence by keyboard and explain terms when needed.","research_status":"projected"}
+  ],
+  "journeys": [
+    {"id":"journey/absence-and-residence","label":"Check absence and residence scope","cases":["staff-001","staff-023"],"personas":["persona/welfare-rights-adviser","persona/policy-law-reviewer"],"decision":"Identify what must be established before explaining an absence rule.","negative_control":"Change temporary absence to a permanent move; do not preserve the same applicability claim without evidence."},
+    {"id":"journey/age-and-transition","label":"Separate age, entitlement and transition","cases":["staff-002","staff-004","staff-025","staff-032"],"personas":["persona/pensions-specialist","persona/policy-law-reviewer"],"decision":"Distinguish age thresholds, contribution conditions, existing awards, new claims and first payment.","negative_control":"Remove the applicable date or regime; do not calculate entitlement or silently substitute a current rule."},
+    {"id":"journey/benefit-interactions","label":"Trace benefit interactions","cases":["staff-003","staff-005","staff-011","staff-022","staff-024","staff-026","staff-027","staff-028","staff-029","staff-030","staff-031","staff-033","staff-034","staff-035","staff-036","staff-037","staff-039"],"personas":["persona/welfare-rights-adviser","persona/evidence-assurance-reviewer"],"decision":"Distinguish qualification, overlapping payment, disregard and passporting for the named variants.","negative_control":"Reverse an interaction or replace an existing award with a new claim; report missing conditions instead of assuming symmetry."},
+    {"id":"journey/pension-credit-components","label":"Inspect Pension Credit inputs and components","cases":["staff-006","staff-010","staff-015","staff-016","staff-019","staff-020","staff-021"],"personas":["persona/pensions-specialist","persona/evidence-assurance-reviewer"],"decision":"Explain source-backed components and prerequisites without operating an award calculator.","negative_control":"Treat a capital threshold or example as a universal maximum; require the missing valuation, disregard and component evidence."},
+    {"id":"journey/historical-rates","label":"Check dated rate evidence","cases":["staff-007","staff-008","staff-009"],"personas":["persona/pensions-specialist","persona/policy-law-reviewer"],"decision":"Identify distinct effective periods and source versions for historical figures.","negative_control":"Replace an effective date with a capture date or infer an omitted year; reject the unsupported historical series."},
+    {"id":"journey/household-and-care","label":"Check household and care changes","cases":["staff-012","staff-013","staff-014","staff-017","staff-018"],"personas":["persona/welfare-rights-adviser","persona/pensions-specialist"],"decision":"Trace how partner status, permanence and funding circumstances alter the evidence needed.","negative_control":"Switch self-funding to public funding or change a temporary stay to permanent; retain unresolved qualifications."},
+    {"id":"journey/carer-qualification","label":"Check caring conditions and multiple people","cases":["staff-038","staff-040"],"personas":["persona/welfare-rights-adviser","persona/evidence-assurance-reviewer"],"decision":"Locate conditions and distinguish caring responsibilities from multiple payment assumptions.","negative_control":"Double a payment because two people receive care; refuse arithmetic or an unsupported entitlement inference."}
+  ],
+  "cross_cutting_journeys": [
+    {"id":"journey/source-audit","personas":["persona/knowledge-engineer","persona/evidence-assurance-reviewer"],"cases":"all","acceptance":"Every cited claim preserves source identity, locator and hash; altered or missing evidence is rejected."},
+    {"id":"journey/assisted-reading","personas":["persona/assisted-support"],"cases":"all","acceptance":"Use keyboard and narrow-screen evidence navigation; explain acronyms and reveal gaps without relying on colour alone. Actual user validation remains separate."}
+  ]
+}

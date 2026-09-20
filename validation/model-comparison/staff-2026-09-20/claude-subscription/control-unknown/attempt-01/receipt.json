@@ -1,0 +1,62 @@
+{
+  "answer_present": false,
+  "artefacts": {
+    "model-output.json": "5dec444ee1c50bc2549c62336d732c3f9f1da4b68bf36320e302c9f43e307825"
+  },
+  "attempt": "attempt-01",
+  "case_id": "control-unknown",
+  "cli_version": "2.1.245 (Claude Code)",
+  "comparative_accuracy_or_affordability_established": false,
+  "cost_boundary": "Provider usage and cost accounting are not verified subscription charges, future pricing, savings or human review costs.",
+  "elapsed_seconds": 16.923,
+  "exit_code": 0,
+  "finished_at": "2026-09-20T19:10:42.820593+00:00",
+  "harness_sha256": "ca967e8514a3b27e7d6b117dfa8ee10d143e6a90d770b8dc649489cc7070d107",
+  "human_review": "pending",
+  "inputs": {
+    "context_bytes": 4104,
+    "context_id": "urn:sha256:cb1b67694454dd6641c38f504b9224969aab7935646ff46c962895289bcf1e5d",
+    "context_manifest_sha256": "e11f643a2f3995037744a9f244e172e930f33c6b014685efceae1d4d1066e23f",
+    "context_path": "evaluation/model-comparison/staff-2026-09-20/contexts/control-unknown.json",
+    "context_sha256": "31782b986a3548548dc97887aa2b32e189beacaa12ebbe536fac8619751fc433",
+    "prompt_sha256": "0f7a493dc14153a908c63d273f37c7ff450e90d3a528bd50ea4fbd12d930a4da",
+    "protocol_sha256": "fad23ff6d0183db5f70aa838ac5ce24b4f40df82394a80d21b70dc11399459b6",
+    "schema_sha256": "5c83e0ffdfeed95fd0feb59ae2a7fc3e65c35608843c1a5254348632a3e3d06f",
+    "system_prompt_sha256": "e06f6546c5595a9c63b8ee8bfdee3d40710c184f9c8830c7ccf37d6c8af49d32"
+  },
+  "isolation": {
+    "customisations": "disabled-safe-mode",
+    "skills_policy": "disabled-safe-mode-and-slash-commands"
+  },
+  "mcp_servers": [],
+  "model_override": null,
+  "observed_tool_events": [
+    "StructuredOutput"
+  ],
+  "provider": "claude-subscription",
+  "reported_models": [
+    "claude-haiku-4-5-20251001",
+    "claude-opus-5"
+  ],
+  "schema": "okf-paired-staff-model-attempt.v1",
+  "started_at": "2026-09-20T19:10:25.897312+00:00",
+  "status": "rejected-observed-tool-event",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "63112ebded6092336d3b6d3110903ac1866a94ea735c31a2fa0d4c485a022bc0",
+  "tools_requested": [],
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 3353,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 3353,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 2,
+    "output_tokens": 1415,
+    "output_tokens_details": {},
+    "server_tool_use": {
+      "web_fetch_requests": 0,
+      "web_search_requests": 0
+    }
+  }
+}

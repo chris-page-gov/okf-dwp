@@ -1,0 +1,61 @@
+{
+  "schema": "okf-fixed-staff-model-protocol.v1",
+  "purpose": "Paired observations of supplied staff questions on identical bounded evidence; not specialist acceptance or a price benchmark.",
+  "selected_cases": [
+    "staff-006",
+    "staff-012",
+    "staff-026",
+    "staff-038",
+    "control-unknown"
+  ],
+  "selection_reason": "Cover a challenged capital premise, care-home circumstances, cross-manual disability transition, caring conditions and an unanswerable control before observing new model outputs.",
+  "context_budget": {
+    "max_nodes": 64,
+    "max_relationships": 128,
+    "max_depth": 6,
+    "max_bytes": 262144
+  },
+  "providers": [
+    "claude-subscription",
+    "codex-subscription"
+  ],
+  "system_prompt": "system-prompt.txt",
+  "user_prompt": "user-prompt.txt",
+  "answer_schema": "evaluation/answer-review/answer.schema.json",
+  "tool_policy": "No external tools, web retrieval, MCP, memory or project customisations; reject any observed tool event.",
+  "model_policy": "Existing CLI defaults, no persistent configuration changes; observed model identity and any inability to establish it must be recorded.",
+  "retry_policy": "One attempt per provider/case/output directory; preserve failure. A subsequent attempt is separate and never overwrites it.",
+  "review_policy": "Mechanical citation and boundary checks followed by a separately authored claim-level model critique and pending independent human review. No model output is gold.",
+  "cost_policy": "Record observed usage, elapsed time, retries and provider accounting when available. Subscription charges, future prices and human review cost remain unknown. No affordability conclusion.",
+  "amendment_history": [
+    {
+      "made_before_provider_calls": true,
+      "prior_protocol_sha256": "e97850ed2e99a8f94f00e93923310454e1d1a4c8188e7e4adb11c5b041f5be5b",
+      "prior_budget_max_bytes": 65536,
+      "reason": "All four substantive cases exceeded the package metadata budget and returned zero selected records. Retain that negative control and use the same larger fixed 262144-byte whole-package budget for both providers, allowing meaningful claim-level observations without silently dropping evidence diagnostics.",
+      "retained_control": "budget-controls/65536/README.md"
+    },
+    {
+      "made_before_provider_calls": true,
+      "prior_budget_max_bytes": 262144,
+      "final_budget_max_bytes": 65536,
+      "reason": "Independent investigation found that missing-evidence diagnostics were appended after byte trimming, sometimes replacing usable bounded evidence with an empty metadata-budget fallback. The generic shared engine now includes these diagnostics during trimming. Refreeze the same cases using the original 65,536-byte budget and corrected engine; retain both earlier observations.",
+      "retained_controls": [
+        "budget-controls/65536/README.md",
+        "budget-controls/262144/README.md"
+      ],
+      "corrected_context_engine_sha256": "110b53569b216af33a0969e6390596a9a51b189b48ff58b03337be8dba4ee18d",
+      "semantic_index_sha256": "8c22f9a259a8b07cbc41b837693aa4f7ad4da48175fca8753cfcc3b0172d6d97"
+    },
+    {
+      "made_before_provider_calls": true,
+      "prior_budget_max_bytes": 65536,
+      "final_budget_max_bytes": 262144,
+      "reason": "The corrected 65,536-byte controls retain evidence but no relationships. Use the same 262,144-byte whole-package budget for both providers to retain useful graph paths and permit meaningful claim-level observations. All contexts remain explicitly insufficient; no completeness claim is upgraded.",
+      "retained_control": "budget-controls/65536-corrected/README.md",
+      "explorer_consumer_commit": "602622771e222db880a9d53b299db1d79d612409",
+      "corrected_context_engine_sha256": "110b53569b216af33a0969e6390596a9a51b189b48ff58b03337be8dba4ee18d",
+      "semantic_index_sha256": "8c22f9a259a8b07cbc41b837693aa4f7ad4da48175fca8753cfcc3b0172d6d97"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "okf-repository-protection-observation.v1",
+  "observed_at": "2026-09-20T19:17:18.231920+00:00",
+  "repository": "chris-page-gov/okf-dwp",
+  "branch": "main",
+  "method": "Read-only GitHub API branch protection query; selected non-sensitive configuration fields.",
+  "settings": {
+    "allow_deletions": false,
+    "allow_force_pushes": false,
+    "enforce_admins": true,
+    "required_conversation_resolution": true,
+    "required_pull_request_reviews": {
+      "dismiss_stale_reviews": true,
+      "require_code_owner_reviews": false,
+      "require_last_push_approval": false,
+      "required_approving_review_count": 0,
+      "url": "https://api.github.com/repos/chris-page-gov/okf-dwp/branches/main/protection/required_pull_request_reviews"
+    },
+    "required_status_checks": {
+      "checks": [
+        {
+          "app_id": 15368,
+          "context": "validate"
+        }
+      ],
+      "contexts": [
+        "validate"
+      ],
+      "contexts_url": "https://api.github.com/repos/chris-page-gov/okf-dwp/branches/main/protection/required_status_checks/contexts",
+      "strict": true,
+      "url": "https://api.github.com/repos/chris-page-gov/okf-dwp/branches/main/protection/required_status_checks"
+    }
+  },
+  "limitations": [
+    "Dated observation, not continuous monitoring. A zero formal approval count does not certify independent review.",
+    "This run did not change branch protection."
+  ]
+}

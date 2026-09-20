@@ -24,6 +24,13 @@
       "authored_scope": "existing semantic assertions plus explicitly configured frozen DMG and ADM sources",
       "status": "research-candidate; remote-evaluation-verified; bounded-chatgpt-source-access-observed; recorded-published-explorer-and-native-webmcp-journeys-passed",
       "browser_receipt": "validation/corpus-questions/public-explorer-observation.json"
+    },
+    {
+      "id": "staff-semantic-development",
+      "state": "generated-bounded-context-corpus",
+      "path": "evaluation/semantic-expansion/assembly-index.json",
+      "authored_scope": "Additive domain-profile staff semantics, legal references and unchanged source candidates",
+      "status": "unreviewed-development-profiles; all-forty-insufficient"
     }
   ],
   "reader_deliveries": [
@@ -44,6 +51,15 @@
       "consumer_commit": "a8628fdb77c1c03a5d99b6d105d9e4b8722088d7",
       "browser_receipt": "validation/corpus-questions/public-explorer-observation.json",
       "app_bytes_receipt": "validation/corpus-questions/public-explorer-build-verification.json"
+    },
+    {
+      "scope": "combined-dmg-adm-staff-semantics",
+      "delivery": "indexed-large-corpus",
+      "descriptor": "combined/okf-explorer.json",
+      "verification_status": "local-browser-observations; public-verification-pending",
+      "source_manifest": "combined/context/corpus/manifest.json",
+      "consumer_commit": "f8daf84a4c04afb4839695d38a97cbf21b0ed0a0",
+      "browser_receipt": "validation/combined-reader/README.md"
     }
   ],
   "authoring": {
@@ -81,6 +97,20 @@
       "canonical_output_paths": [
         "context/corpus/manifest.json",
         "context/corpus/base-index.json"
+      ]
+    },
+    {
+      "path": "combined/**",
+      "description": "additive-both-manual-reader-and-staff-context",
+      "generated": true,
+      "canonical_output_paths": [
+        "combined/okf-explorer.json",
+        "combined/context/corpus/manifest.json",
+        "combined/data/relationships-*.json.gz",
+        "combined/okf-bundle.yamlld",
+        "combined/okf-bundle.jsonld",
+        "combined/data/semantic/manifest.json",
+        "combined/data/semantic/*.jsonld.gz"
       ]
     }
   ]

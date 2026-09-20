@@ -1,0 +1,1015 @@
+{
+  "schema": "okf-staff-claim-model-critique.v1",
+  "review_type": "separately-authored-model-critique-not-gold",
+  "reviewer": "Codex task review agent; no independent model-identity assertion",
+  "basis": "Read original answers, cited quotations and corresponding frozen source pages; no outside legal facts used. Independent second-agent review confirmed the date-cohort and care-home household omissions and early Claude quotation fragments.",
+  "human_review": "pending",
+  "specialist_accepted": false,
+  "unsupported_claim_rate": null,
+  "answer_quality_score": null,
+  "limitations": [
+    "These observations are fallible model review, not expert legal acceptance.",
+    "Whitespace-normalised matching diagnoses literal failures only; it does not repair quotations or establish entailment.",
+    "A source-support candidate still needs date, territory, conditions and specialist review.",
+    "Only the selected five cases are assessed; there is no coverage or affordability conclusion for all supplied questions."
+  ],
+  "reviews": [
+    {
+      "provider": "claude-subscription",
+      "case_id": "staff-006",
+      "attempt": "attempt-01",
+      "answer_path": "validation/model-comparison/staff-2026-09-20/claude-subscription/staff-006/attempt-01/answer.json",
+      "answer_sha256": "c5ebfeef93eba4c74b4dfa1cf56531f4fb40e76df4198d7d60cccee015e31941",
+      "context_sha256": "b1bc88754e6d08307966393820b31eea154883dddc6f3f9f16229842ad51123f",
+      "claim_reviews": [
+        {
+          "claim_id": "c1",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The full source page contains the incomplete-£500 rule, but the two quoted fragments omit that operative clause. A literal pass does not make these fragments a complete claim citation.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 128"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 128"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c2",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The partner-aggregation quotation supports the material aggregation observation; household definitions and applicability are expressly left unresolved.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 128"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c3",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The first quote ends before the calculation-sequence sentence completes. The full page supports the observation; include the operative sentence in a usable claim citation.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/84/0002",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 2"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/84/0002",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 2"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c4",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The quote ends “when working out what” and does not complete the beneficial-ownership rule. Full-page support is available, but the quoted citation is incomplete.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/84/0008",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 8"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c5",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The two fragments do not establish the long list of entitlement conditions stated in the claim. The full page must be inspected; absence of a savings maximum is appropriately bounded to that page.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 14"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 14"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c6",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The Savings Credit quote ends at “low or modest”, omitting the object and later date qualification. The answer recognises the source’s 6 December 2018 statement, but the fragments are not a self-contained citation.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0003",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 3"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0003",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 3"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c7",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "“The amount of SC depends on” and “maximum savings credit (MSC)” do not quote the other calculation inputs. Full-page support exists but the selected fragments do not establish the complete claim.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 33"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 33"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c8",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The quotations omit the end of the income-definition statement and the capital-disregard exception. Those operative qualifications need to be present in the claim citation.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/85/0004",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 4"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/85/0004",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 4"
+            }
+          ],
+          "human_acceptance": "pending"
+        }
+      ],
+      "answer_level_findings": [],
+      "control_observation": null,
+      "human_review": "pending"
+    },
+    {
+      "provider": "claude-subscription",
+      "case_id": "staff-012",
+      "attempt": "attempt-01",
+      "answer_path": "validation/model-comparison/staff-2026-09-20/claude-subscription/staff-012/attempt-01/answer.json",
+      "answer_sha256": "0a69b966c7ad0229e3ba31fc51659ba8d8e88cacb8265ee38bf76a74767a5bce",
+      "context_sha256": "8dabcc77c7bba5f51864433bc7f89ecf7a95fbb15ff06ec7b4be1f58ba670064",
+      "claim_reviews": [
+        {
+          "claim_id": "c1",
+          "model_review_observation": "missing-operative-qualification",
+          "explanation": "The heading above 78088 is “Claimants who have no partner (including self-funders)”. The claim omits that household qualification. Its quote also ends before “care home if all the conditions are satisfied”. The full page is stronger than the quotation.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 25"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c2",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The quote stops before the AA/DLA/PIP continuation clause stated in the claim. The whole page contains that clause; the citation fragment does not establish it.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 25"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c3",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The quote stops before completing the care-home residence sentence and before the separate-liability explanation. The whole page must be inspected.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 25"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c4",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The quote supports separate claim basis but omits the preceding household rule asserted in the same claim. That rule is present on the whole page.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 25"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c5",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The quote ends before “temporary”, the operative exception in the claim. A literal check cannot detect this lost condition.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 58"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c6",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The quote states the GC/SC condition only, while the claim lists age, presence and claim conditions. The full-page text contains more support than the quoted fragment.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 14"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c7",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The quote ends before “home or an independent hospital on a permanent basis”. The answer correctly labels this historical assessed-income-period material and avoids equating its ending with loss of Pension Credit.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol14-amendment40/0021",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 21"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c8",
+          "model_review_observation": "authority-boundary-preserved",
+          "explanation": "The quote is a project-authored concept proposal, not DWP source text. The claim explicitly identifies its model-derived, unreviewed status; it must not count as independent authoritative support.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "@graph/care-home/definition"
+            }
+          ],
+          "human_acceptance": "pending"
+        }
+      ],
+      "answer_level_findings": [],
+      "control_observation": null,
+      "human_review": "pending"
+    },
+    {
+      "provider": "claude-subscription",
+      "case_id": "staff-026",
+      "attempt": "attempt-02",
+      "answer_path": "validation/model-comparison/staff-2026-09-20/claude-subscription/staff-026/attempt-02/answer.json",
+      "answer_sha256": "98e3d6b5503af2472f348f6096ccc98d7ce5ebb7ede00e042875644756378662",
+      "context_sha256": "bf3486b320467918200d0a4f3722bec0c4fa917728d95a6996cd20cda3be3888",
+      "claim_reviews": [
+        {
+          "claim_id": "c1",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "Both definition quotes end before their operative nouns and notification purpose. The full page supports more than the fragments show.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0003",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 3"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0003",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 3"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c2",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The relevant-date conditions are quoted, but the first fragment stops before the age-16 and 27 October 2013 trigger. Quote the complete invitation sentence with its conditions.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0006",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 6"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0006",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 6"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0006",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 6"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c3",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The quotations omit “terminally ill” and stop before the hospital-discharge ending. Those are the operative exceptions asserted; full-page support does not make the fragments adequate.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0006",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 6"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0007",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 7"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0007",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 7"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c4",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The quote stops before completing the regardless-of-DLA-status clause. The full page supports the bounded transitional observation.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0008",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 8"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c5",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The 28-day fragment lacks the preceding claim-period definition. The answer correctly leaves downstream termination and continuity unresolved, but the citation should preserve the whole notification condition.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0009",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 9"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0009",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 9"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c6",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The claim correctly preserves the 8 April 2013 cohort, unlike the competing answer. Its fragments omit the relevant-date and final PIP-decision wording. Also see the answer-level finding: the summary broadens this carefully qualified claim.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0002",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 2"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0002",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 2"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0002",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 2"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c7",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The full pages support the listed first-time conditions, but the quotes do not include the upper-age condition. The answer correctly identifies exceptions and applicability limits.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0004",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 4"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0004",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 4"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0003",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 3"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c8",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The quotations omit the under-pensionable-age and higher-rate age-three conditions stated in the claim. The full page includes these and an historical pre-April-2001 qualifier; inspect the whole dated rule.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 5"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 5"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 5"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c9",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The full memo supports the England-and-Wales to Scotland observation, CDP/ADP replacements and specified new-claim dates. The selected fragments omit the ADP replacement definition, completion of the move rule and CDP from the dated new-claim sentence.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-11-25/0002",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 2"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-11-25/0002",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 2"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-12-25-4667bf5b64/0002",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 2"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c10",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The quotes do not establish the highest-rate DLA branch or the complete Pension Credit comparable structure. The full cited pages support more of the statement; it remains a partial interaction observation, not a full award test.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-f1/0017",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 17"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-f1/0018",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 18"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0088",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 88"
+            }
+          ],
+          "human_acceptance": "pending"
+        }
+      ],
+      "answer_level_findings": [
+        "The summary says existing DLA claimants retain DLA until a PIP decision without the 8 April 2013 cohort restriction correctly preserved in c6. Keep summaries no broader than their cited claims.",
+        "The gaps say no Welsh territorial guidance is included, while the same answer and cited cross-border memo explicitly say England and Wales. This negative coverage statement is inconsistent with the package; distinguish missing comprehensive territorial coverage from no Welsh guidance."
+      ],
+      "control_observation": null,
+      "human_review": "pending"
+    },
+    {
+      "provider": "claude-subscription",
+      "case_id": "staff-038",
+      "attempt": "attempt-01",
+      "answer_path": "validation/model-comparison/staff-2026-09-20/claude-subscription/staff-038/attempt-01/answer.json",
+      "answer_sha256": "ff21943d9f33ad5986cb3f983aa73379a60fbebc2fdf82f10aea2e75145d29bc",
+      "context_sha256": "d1e7d054033f8ba4463989c90b9e6103e9b79432d50312b87fa1469d6acf5a5b",
+      "claim_reviews": [
+        {
+          "claim_id": "c1",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The complete six-condition quotation supports the captured list. The answer identifies missing detailed tests and memo updates instead of treating the list as a complete claim decision.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 3"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c2",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The quotations preserve both the lack of a family-relationship requirement and the written-election or decision-maker route for competing carers.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 4"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 4"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c3",
+          "model_review_observation": "boundary-preserved",
+          "explanation": "The answer explicitly identifies a page-boundary truncation and does not present the extracted qualifying-benefit list as complete.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 4"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c4",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The full quoted multiple-disabled-person rule preserves the starting date and non-aggregation condition. The answer identifies missing adjacent guidance and the different historical rule.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0007",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 7"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c5",
+          "model_review_observation": "quotation-partial-support",
+          "explanation": "The quote ends before the full temporary-break test. The qualification usefully names further 22-week and in-patient conditions; this remains a partial observation requiring the rest of the test.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0007",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 7"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c6",
+          "model_review_observation": "qualification-needs-review",
+          "explanation": "The quoted cohort includes a requirement to be in the UK. The prose claim should state that condition expressly alongside economic activity, family member and agreement coverage, rather than relying on the longer quotation to preserve it.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-07-24/0003",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 3"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-07-24/0003",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 3"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c7",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The source supports the narrowly framed historical protected-cohort observation. The answer does not treat the old guidance as proof of current force.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 11"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0029",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 29"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c8",
+          "model_review_observation": "qualification-needs-review",
+          "explanation": "The claim says the Pension Credit additional amount “is awarded where”, while the source says “may be awarded”. Preserve the conditional wording. The answer does correctly distinguish this component from Carer’s Allowance itself.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0027",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 27"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0027",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 27"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "c9",
+          "model_review_observation": "authority-boundary-preserved",
+          "explanation": "The claim explicitly identifies the concept statement as an unreviewed model-derived project proposal; it must not be counted as independent source evidence.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/carers-allowance",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "@graph/carers-allowance/definition"
+            }
+          ],
+          "human_acceptance": "pending"
+        }
+      ],
+      "answer_level_findings": [],
+      "control_observation": null,
+      "human_review": "pending"
+    },
+    {
+      "provider": "claude-subscription",
+      "case_id": "control-unknown",
+      "attempt": "attempt-02",
+      "answer_path": "validation/model-comparison/staff-2026-09-20/claude-subscription/control-unknown/attempt-02/answer.json",
+      "answer_sha256": "067b0ba5ff2df4f98fe6a09fb334b7b88027976ff87dc7ed62f626a01f573acc",
+      "context_sha256": "31782b986a3548548dc97887aa2b32e189beacaa12ebbe536fac8619751fc433",
+      "claim_reviews": [],
+      "answer_level_findings": [],
+      "control_observation": "No claims; cannot_establish disposition preserved.",
+      "human_review": "pending"
+    },
+    {
+      "provider": "codex-subscription",
+      "case_id": "staff-006",
+      "attempt": "attempt-01",
+      "answer_path": "validation/model-comparison/staff-2026-09-20/codex-subscription/staff-006/attempt-01/answer.json",
+      "answer_sha256": "6d321bc9df7a58b21021fe160505d0bde30760d84328fec941c0ea04fa6dc3ea",
+      "context_sha256": "b1bc88754e6d08307966393820b31eea154883dddc6f3f9f16229842ad51123f",
+      "claim_reviews": [
+        {
+          "claim_id": "claim-1",
+          "model_review_observation": "qualification-needs-review",
+          "explanation": "The deemed-income calculation is on the quoted page, but absence of automatic disqualification is an inference from this passage, not a verified negative proposition about all Pension Credit rules. Preserve that restricted reading.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 128"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-2",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The quotation preserves the actual/notional capital sequence and ownership, disregard and valuation questions. The answer properly leaves the complete rules unresolved.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/84/0002",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 2"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-3",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The two passages support different calculation inputs. The answer distinguishes maximum Savings Credit from a maximum amount of savings and declines to derive an award.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 33"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 33"
+            }
+          ],
+          "human_acceptance": "pending"
+        }
+      ],
+      "answer_level_findings": [],
+      "control_observation": null,
+      "human_review": "pending"
+    },
+    {
+      "provider": "codex-subscription",
+      "case_id": "staff-012",
+      "attempt": "attempt-01",
+      "answer_path": "validation/model-comparison/staff-2026-09-20/codex-subscription/staff-012/attempt-01/answer.json",
+      "answer_sha256": "f1e78cd864917633b4be0bd234c61544445bcee8db6bbb4fdf2a705a9a743458",
+      "context_sha256": "8dabcc77c7bba5f51864433bc7f89ecf7a95fbb15ff06ec7b4be1f58ba670064",
+      "claim_reviews": [
+        {
+          "claim_id": "claim-1",
+          "model_review_observation": "missing-operative-qualification",
+          "explanation": "The heading above DMG 78088 is “Claimants who have no partner (including self-funders)”. The claim omits this household qualification. “All conditions” and a generic applicability caveat do not identify it. Retain the additional-amount versus whole-Pension-Credit distinction.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 25"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-2",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The quote supports the household-treatment observation and says each person may claim, not that each is entitled. The answer preserves this limit.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 25"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-3",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The quoted care-home exclusion preserves its temporary-absence exception and is expressly limited to the housing-cost additional amount.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 58"
+            }
+          ],
+          "human_acceptance": "pending"
+        }
+      ],
+      "answer_level_findings": [],
+      "control_observation": null,
+      "human_review": "pending"
+    },
+    {
+      "provider": "codex-subscription",
+      "case_id": "staff-026",
+      "attempt": "attempt-01",
+      "answer_path": "validation/model-comparison/staff-2026-09-20/codex-subscription/staff-026/attempt-01/answer.json",
+      "answer_sha256": "b751ee27c7e73107cbcbe85b5110f693711cf4211f45f23c541d09dfa1354ee7",
+      "context_sha256": "bf3486b320467918200d0a4f3722bec0c4fa917728d95a6996cd20cda3be3888",
+      "claim_reviews": [
+        {
+          "claim_id": "claim-1",
+          "model_review_observation": "missing-operative-qualification",
+          "explanation": "P1003 applies to claimants already entitled to DLA on 8 April 2013. “An existing DLA award continues” broadens that cohort. A generic unreviewed-date caveat does not preserve the condition. One quote also collapses source line wrapping.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0002",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 2"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0002",
+              "exact_quote": false,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 2"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-2",
+          "model_review_observation": "quotation-contract-failure",
+          "explanation": "The invitation statement preserves the relevant-date restriction and notes the terminal-illness exception, but the P5018 quotation collapses source line breaks and fails the exact-text contract.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0006",
+              "exact_quote": false,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 6"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0006",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 6"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-3",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The selected transitional passage supports the under-16 claim restriction; the answer retains territorial and current-applicability uncertainty.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0008",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 8"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-4",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The notification passage supports the notice content and initial 28-day period. The qualification explicitly excludes a complete account of extensions and continuity.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0009",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 9"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-5",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The memo identifies the devolved equivalents. The answer also retains its England-and-Wales cross-border scope rather than using it as complete Scottish eligibility guidance.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-11-25/0002",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 2"
+            }
+          ],
+          "human_acceptance": "pending"
+        }
+      ],
+      "answer_level_findings": [],
+      "control_observation": null,
+      "human_review": "pending"
+    },
+    {
+      "provider": "codex-subscription",
+      "case_id": "staff-038",
+      "attempt": "attempt-01",
+      "answer_path": "validation/model-comparison/staff-2026-09-20/codex-subscription/staff-038/attempt-01/answer.json",
+      "answer_sha256": "4040ab198645fa1183bc0a3bcf637362ba0e64f74e3f9ff6afa59a7ce1fba69f",
+      "context_sha256": "d1e7d054033f8ba4463989c90b9e6103e9b79432d50312b87fa1469d6acf5a5b",
+      "claim_reviews": [
+        {
+          "claim_id": "claim-1",
+          "model_review_observation": "quotation-contract-failure",
+          "explanation": "The condition list is present in DMG 60025, but the quote collapses the line break between “the” and “claimant”. Definitions and detailed conditions remain unresolved; the list is not a complete eligibility test.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003",
+              "exact_quote": false,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 3"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-2",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The quoted notes support lack of a relationship requirement and election between multiple carers. The answer does not infer entitlement for an individual.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 4"
+            },
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 4"
+            }
+          ],
+          "human_acceptance": "pending"
+        },
+        {
+          "claim_id": "claim-3",
+          "model_review_observation": "source-support-candidate",
+          "explanation": "The claim correctly limits non-aggregation and the 35-hour statement to the captured multiple-disabled-person provision and preserves its stated starting date.",
+          "citation_diagnostics": [
+            {
+              "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0007",
+              "exact_quote": true,
+              "whitespace_normalised_match": true,
+              "locator": "PDF page 7"
+            }
+          ],
+          "human_acceptance": "pending"
+        }
+      ],
+      "answer_level_findings": [],
+      "control_observation": null,
+      "human_review": "pending"
+    },
+    {
+      "provider": "codex-subscription",
+      "case_id": "control-unknown",
+      "attempt": "attempt-01",
+      "answer_path": "validation/model-comparison/staff-2026-09-20/codex-subscription/control-unknown/attempt-01/answer.json",
+      "answer_sha256": "187a7a20de06f8819128ea051bd18b99854ddea02abca538dfa19e99129d7998",
+      "context_sha256": "31782b986a3548548dc97887aa2b32e189beacaa12ebbe536fac8619751fc433",
+      "claim_reviews": [],
+      "answer_level_findings": [],
+      "control_observation": "No claims; cannot_establish disposition preserved.",
+      "human_review": "pending"
+    }
+  ]
+}

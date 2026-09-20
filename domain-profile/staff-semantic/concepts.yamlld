@@ -1,0 +1,1088 @@
+schema: okf-dwp-staff-semantic-authoring.v1
+authored_at: '2026-09-20T18:39:47Z'
+author: Codex model-assisted proposal; no human or specialist approval
+assertion_status: model-derived
+scope: Frozen-source staff-question research. Source text is not current-law assurance and proposed meaning is
+  not an official interpretation.
+'@context':
+  skos: http://www.w3.org/2004/02/skos/core#
+  dwp: https://chris-page-gov.github.io/okf-dwp/ns#
+'@graph':
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit
+  route: term/pension-credit
+  key: pension-credit
+  '@type':
+  - skos:Concept
+  - dwp:Benefit
+  label: State Pension Credit
+  definition: A benefit with Guarantee Credit and Savings Credit components; the captured entitlement
+    conditions, household rules and financial assessment must be read together.
+  aliases:
+  - Pension Credit
+  - SPC
+  - label: PC
+    case_sensitive: true
+  source_candidates:
+  - source-c008
+  - source-c009
+  - source-c012
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/guarantee-credit
+  route: term/guarantee-credit
+  key: guarantee-credit
+  '@type':
+  - skos:Concept
+  - dwp:BenefitComponent
+  label: Guarantee Credit
+  definition: The Guarantee Credit component of Pension Credit has a financial assessment and
+    additional-amount dependencies distinct from Savings Credit.
+  aliases:
+  - GC
+  source_candidates:
+  - source-c012
+  - source-c013
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/savings-credit
+  route: term/savings-credit
+  key: savings-credit
+  '@type':
+  - skos:Concept
+  - dwp:BenefitComponent
+  label: Savings Credit
+  definition: The Savings Credit component has separate conditions and calculations. Do not treat its
+    thresholds as the Guarantee Credit calculation.
+  aliases:
+  - SC
+  source_candidates:
+  - source-c012
+  - source-c013
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/state-pension
+  route: staff-domain/state-pension
+  key: state-pension
+  '@type':
+  - skos:Concept
+  - dwp:Benefit
+  label: State Pension
+  definition: The question label State Pension requires regime resolution. DMG 74001 distinguishes new State
+    Pension from the earlier Retirement Pension regime.
+  aliases:
+  - State pension
+  source_candidates:
+  - source-c003
+  - source-c006
+  - source-c007
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/new-state-pension
+  route: staff-domain/new-state-pension
+  key: new-state-pension
+  '@type':
+  - skos:Concept
+  - dwp:BenefitVariant
+  label: New State Pension
+  definition: DMG chapter 74 distinguishes the post-6 April 2016 pensionable-age regime and its full-rate and
+    transitional branches.
+  aliases:
+  - new pension
+  source_candidates:
+  - source-c003
+  - source-c006
+  - source-c007
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/retirement-pension
+  route: staff-domain/retirement-pension
+  key: retirement-pension
+  '@type':
+  - skos:Concept
+  - dwp:BenefitVariant
+  label: Retirement Pension
+  definition: DMG 74001 names Retirement Pension as the legislative name for the earlier State Pension regime
+    and routes readers to chapter 75.
+  aliases:
+  - old State Pension
+  - old pension
+  source_candidates:
+  - source-c003
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pension-age
+  route: staff-domain/pension-age
+  key: pension-age
+  '@type':
+  - skos:Concept
+  - dwp:Circumstance
+  label: State Pension age
+  definition: Reaching pensionable age is a condition separate from contribution records, a valid claim,
+    applicable regime and payment date.
+  aliases:
+  - pensionable age
+  - birthday
+  - reaches pension age
+  - reach State Pension Age
+  source_candidates:
+  - source-c004
+  - source-c005
+  - source-c006
+  - source-c007
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pip
+  route: staff-domain/pip
+  key: pip
+  '@type':
+  - skos:Concept
+  - dwp:Benefit
+  label: Personal Independence Payment
+  definition: PIP has daily living and mobility components. ADM supplies its own age, entitlement and
+    transition guidance; AA or DLA rules cannot simply be transferred to PIP.
+  aliases:
+  - PIP
+  source_candidates:
+  - source-c037
+  - source-c039
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: adm
+    document_id: adm-chapter-p1
+    page: 2
+    anchor: P1001
+  - family: adm
+    document_id: adm-chapter-p1
+    page: 3
+    anchor: P1011
+  - family: adm
+    document_id: adm-chapter-p1
+    page: 4
+    anchor: The residence
+  - family: adm
+    document_id: adm-chapter-p4
+    page: 13
+    anchor: P4077
+  - family: adm
+    document_id: adm-chapter-p4
+    page: 14
+    anchor: P4080
+  - family: adm
+    document_id: adm-chapter-p5
+    page: 9
+    anchor: P5034
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pip-daily-living
+  route: staff-domain/pip-daily-living
+  key: pip-daily-living
+  '@type':
+  - skos:Concept
+  - dwp:BenefitComponent
+  label: PIP daily living component
+  definition: This component is named in the Carer’s Allowance qualifying-benefit list and the Pension Credit
+    severe-disability additional-amount conditions; the other conditions remain material.
+  aliases:
+  - daily living component
+  source_candidates:
+  - source-c027
+  - source-c037
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pip-mobility
+  route: staff-domain/pip-mobility
+  key: pip-mobility
+  '@type':
+  - skos:Concept
+  - dwp:BenefitComponent
+  label: PIP mobility component
+  definition: PIP mobility is distinct from daily living. The captured upper-age guidance contains
+    restrictions on later mobility changes.
+  aliases:
+  - mobility component
+  source_candidates: []
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: adm
+    document_id: adm-chapter-p4
+    page: 15
+    anchor: P4083
+  - family: adm
+    document_id: adm-chapter-p4
+    page: 18
+    anchor: P4087
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/dla
+  route: staff-domain/dla
+  key: dla
+  '@type':
+  - skos:Concept
+  - dwp:Benefit
+  label: Disability Living Allowance
+  definition: DLA has component-specific age conditions and separate transition arrangements towards PIP;
+    jurisdiction and existing-award status require resolution.
+  aliases:
+  - DLA
+  - Child DLA
+  source_candidates:
+  - source-c039
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: adm
+    document_id: adm-chapter-p5
+    page: 3
+    anchor: P5006
+  - family: adm
+    document_id: adm-chapter-p5
+    page: 6
+    anchor: P5016
+  - family: adm
+    document_id: adm-chapter-p5
+    page: 7
+    anchor: P5021
+  - family: adm
+    document_id: adm-chapter-p5
+    page: 8
+    anchor: P5025
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/attendance-allowance
+  route: staff-domain/attendance-allowance
+  key: attendance-allowance
+  '@type':
+  - skos:Concept
+  - dwp:Benefit
+  label: Attendance Allowance
+  definition: Attendance Allowance is a distinct benefit named in qualifying-benefit and overlap provisions;
+    it is not interchangeable with PIP, DLA or a Constant Attendance Allowance scheme.
+  aliases:
+  - AA
+  source_candidates:
+  - source-c037
+  - source-c039
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/iidb
+  route: staff-domain/iidb
+  key: iidb
+  '@type':
+  - skos:Concept
+  - dwp:Benefit
+  label: Industrial Injuries Disablement Benefit
+  definition: The captured IIDB guidance specifies industrial accident/disease and disablement conditions;
+    distinct supplements and overlap questions must be assessed separately.
+  aliases:
+  - IIDB
+  source_candidates:
+  - source-c040
+  - source-c041
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/industrial-caa
+  route: staff-domain/industrial-caa
+  key: industrial-caa
+  '@type':
+  - skos:Concept
+  - dwp:BenefitComponent
+  label: Industrial Injuries Constant Attendance Allowance
+  definition: The industrial-injuries CAA route has its own disablement and attendance conditions. A
+    war-pensions allowance must not silently be equated with this scheme.
+  aliases:
+  - industrial CAA
+  source_candidates:
+  - source-c041
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/war-caa
+  route: staff-domain/war-caa
+  key: war-caa
+  '@type':
+  - skos:Concept
+  - dwp:Benefit
+  label: War Pensions Constant Attendance Allowance
+  definition: The staff wording War Pensions Constant Allowance is retained as an unresolved scheme-name
+    proposal. Overlap guidance names service-pensions instruments separately from industrial-injuries CAA.
+  aliases:
+  - War Pensions Constant Allowance
+  - War Pensions Constant Attendance Allowance
+  source_candidates:
+  - source-c034
+  - source-c041
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/rea
+  route: staff-domain/rea
+  key: rea
+  '@type':
+  - skos:Concept
+  - dwp:Benefit
+  label: Reduced Earnings Allowance
+  definition: Reduced Earnings Allowance has a separate pension-age and historical transition context; those
+    rules cannot be transferred to IIDB merely because both concern industrial injury.
+  aliases:
+  - REA
+  source_candidates:
+  - source-c042
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/sda
+  route: staff-domain/sda
+  key: sda
+  '@type':
+  - skos:Concept
+  - dwp:Benefit
+  label: Severe Disablement Allowance
+  definition: SDA is a distinct legacy benefit with captured closure and continuation conditions. The acronym
+    may instead be used informally for a Pension Credit disability addition and is deliberately ambiguous.
+  aliases:
+  - label: SDA
+    case_sensitive: true
+  source_candidates:
+  - source-c035
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-addition
+  route: staff-domain/severe-disability-addition
+  key: severe-disability-addition
+  '@type':
+  - skos:Concept
+  - dwp:BenefitComponent
+  label: Pension Credit severe-disability additional amount
+  definition: The Pension Credit additional amount has qualifying-benefit, household and carer conditions. It
+    is not the Severe Disablement Allowance benefit.
+  aliases:
+  - label: SDA
+    case_sensitive: true
+  - severe disability additional amount
+  source_candidates:
+  - source-c027
+  - source-c028
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/carers-allowance
+  route: staff-domain/carers-allowance
+  key: carers-allowance
+  '@type':
+  - skos:Concept
+  - dwp:Benefit
+  label: Carer’s Allowance
+  definition: Carer’s Allowance has caring, age, employment, education and residence/presence conditions.
+    Actual payment, underlying entitlement and effects on other awards are separate questions.
+  aliases:
+  - Carers Allowance
+  - Carer's Allowance
+  - CA
+  source_candidates:
+  - source-c036
+  - source-c037
+  - source-c038
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/carer-addition
+  route: staff-domain/carer-addition
+  key: carer-addition
+  '@type':
+  - skos:Concept
+  - dwp:BenefitComponent
+  label: Pension Credit carer additional amount
+  definition: The additional amount for carers refers to entitlement to Carer’s Allowance or being treated as
+    satisfying qualifying conditions, with exclusions and continuation rules.
+  aliases:
+  - carer additional amount
+  source_candidates:
+  - source-c029
+  - source-c027
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/housing-benefit
+  route: staff-domain/housing-benefit
+  key: housing-benefit
+  '@type':
+  - skos:Concept
+  - dwp:Benefit
+  label: Housing Benefit
+  definition: Housing Benefit income treatment in Pension Credit is distinct from eligibility for Housing
+    Benefit and from a Pension Credit housing-cost additional amount.
+  aliases:
+  - HB
+  source_candidates:
+  - source-c033
+  - source-c030
+  - source-c009
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/jsa
+  route: staff-domain/jsa
+  key: jsa
+  '@type':
+  - skos:Concept
+  - dwp:Benefit
+  label: Jobseeker’s Allowance
+  definition: JSA needs contributory, income-based or New Style regime resolution before entitlement, income
+    and overlap rules are selected.
+  aliases:
+  - JSA
+  - Jobseeker's Allowance
+  source_candidates:
+  - source-c032
+  - source-c034
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol4-ch20
+    page: 9
+    anchor: '20015'
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/jsa-contributory
+  route: staff-domain/jsa-contributory
+  key: jsa-contributory
+  '@type':
+  - skos:Concept
+  - dwp:BenefitVariant
+  label: Contributory JSA
+  definition: The contributory JSA variant must be distinguished from the income-based and New Style regimes
+    and from payment deductions.
+  aliases:
+  - JSA(Cont)
+  - contribution-based JSA
+  source_candidates:
+  - source-c032
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol4-ch20
+    page: 9
+    anchor: '20015'
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/jsa-income-based
+  route: staff-domain/jsa-income-based
+  key: jsa-income-based
+  '@type':
+  - skos:Concept
+  - dwp:BenefitVariant
+  label: Income-based JSA
+  definition: Income-based JSA is a distinct legacy means-tested variant; broad JSA wording does not establish
+    its applicability.
+  aliases:
+  - JSA(IB)
+  - income based JSA
+  source_candidates: []
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol4-ch20
+    page: 9
+    anchor: '20015'
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/jsa-new-style
+  route: staff-domain/jsa-new-style
+  key: jsa-new-style
+  '@type':
+  - skos:Concept
+  - dwp:BenefitVariant
+  label: New Style JSA
+  definition: New Style JSA has its own ADM amount and pension-payment rules; regime and claim date must be
+    resolved.
+  aliases:
+  - new-style JSA
+  source_candidates: []
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: adm
+    document_id: adm-chapter-s1
+    page: 3
+    anchor: S1001
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/esa
+  route: staff-domain/esa
+  key: esa
+  '@type':
+  - skos:Concept
+  - dwp:Benefit
+  label: Employment and Support Allowance
+  definition: ESA needs contributory, income-related or New Style regime resolution before the correct
+    entitlement and payment rules can be selected.
+  aliases:
+  - ESA
+  source_candidates:
+  - source-c032
+  - source-c034
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol8-ch41
+    page: 2
+    anchor: '41003'
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/esa-contributory
+  route: staff-domain/esa-contributory
+  key: esa-contributory
+  '@type':
+  - skos:Concept
+  - dwp:BenefitVariant
+  label: Contributory ESA
+  definition: The contributory ESA variant must be distinguished from the income-related and New Style
+    regimes.
+  aliases:
+  - ESA(Cont)
+  - contribution-based ESA
+  source_candidates:
+  - source-c032
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol8-ch41
+    page: 2
+    anchor: '41003'
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/esa-income-related
+  route: staff-domain/esa-income-related
+  key: esa-income-related
+  '@type':
+  - skos:Concept
+  - dwp:BenefitVariant
+  label: Income-related ESA
+  definition: Income-related ESA is a distinct legacy means-tested variant; broad ESA wording alone cannot
+    select it.
+  aliases:
+  - ESA(IR)
+  - income related ESA
+  source_candidates: []
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol8-ch41
+    page: 2
+    anchor: '41003'
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/esa-new-style
+  route: staff-domain/esa-new-style
+  key: esa-new-style
+  '@type':
+  - skos:Concept
+  - dwp:BenefitVariant
+  label: New Style ESA
+  definition: The ADM ESA introduction defines the source’s post-abolition-of-income-related-ESA scope and
+    routes transitional questions separately.
+  aliases:
+  - new-style ESA
+  source_candidates: []
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: adm
+    document_id: adm-chapter-u1
+    page: 2
+    anchor: U1002
+  - family: adm
+    document_id: adm-chapter-u1
+    page: 3
+    anchor: U1010
+  - family: adm
+    document_id: adm-chapter-u1
+    page: 4
+    anchor: U1011
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/abroad
+  route: staff-domain/abroad
+  key: abroad
+  '@type':
+  - skos:Concept
+  - dwp:Circumstance
+  label: Absence abroad
+  definition: Temporary absence, permanent residence abroad and exportability are separate benefit-specific
+    questions; duration, purpose, destination and dates matter.
+  aliases:
+  - abroad
+  - moves abroad
+  - go abroad
+  source_candidates:
+  - source-c001
+  - source-c002
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home
+  route: staff-domain/care-home
+  key: care-home
+  '@type':
+  - skos:Concept
+  - dwp:ChangeOfCircumstance
+  label: Permanent care-home residence
+  definition: Permanent care-home residence affects household and component-specific conditions. Self-funding
+    alone does not establish the whole Pension Credit result.
+  aliases:
+  - Care Home
+  - Care Homes
+  - care home permanently
+  - permanently into a care home
+  source_candidates:
+  - source-c028
+  - source-c030
+  - source-c010
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner
+  route: staff-domain/partner
+  key: partner
+  '@type':
+  - skos:Concept
+  - dwp:Circumstance
+  label: Partner and household membership
+  definition: Partner treatment requires the source definition of couple and household, including mixed-age
+    and temporary/permanent separation conditions.
+  aliases:
+  - partner
+  - partners
+  - couple
+  - mixed-age couple
+  source_candidates:
+  - source-c009
+  - source-c010
+  - source-c011
+  - source-c031
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/capital
+  route: term/capital
+  key: capital
+  '@type':
+  - skos:Concept
+  - dwp:AssessmentInput
+  label: Capital
+  definition: Actual and notional capital, ownership, valuation and disregards precede any deemed-income
+    assessment. Savings is not a complete capital definition.
+  aliases:
+  - savings
+  source_candidates:
+  - source-c031
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/income-other-than-earnings
+  route: term/income-other-than-earnings
+  key: income
+  '@type':
+  - skos:Concept
+  - dwp:AssessmentInput
+  label: Income other than earnings
+  definition: Named income types and individual disregards must be read with their scopes; inclusion in a list
+    alone does not determine an award.
+  aliases:
+  - income
+  source_candidates:
+  - source-c032
+  - source-c033
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/calculation
+  route: staff-domain/calculation
+  key: calculation
+  '@type':
+  - skos:Concept
+  - dwp:AssessmentProcess
+  label: Pension Credit assessment inputs
+  definition: The source separates entitlement conditions, Guarantee Credit, Savings Credit, income/capital
+    and additions. These dependencies do not constitute an executable award calculator.
+  aliases:
+  - calculation
+  - calculating
+  - formula
+  - inputs
+  - threshold
+  source_candidates:
+  - source-c008
+  - source-c012
+  - source-c013
+  - source-c031
+  - source-c032
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/rates
+  route: staff-domain/rates
+  key: rates
+  '@type':
+  - skos:Concept
+  - dwp:TemporalScope
+  label: Dated benefit rates
+  definition: Historical weekly figures need an agreed period, component and household scope; an uprating memo
+    can route to a separate schedule without containing all rates.
+  aliases:
+  - rates
+  - rate
+  - weekly
+  - last five years
+  source_candidates:
+  - source-c014
+  - source-c015
+  - source-c016
+  - source-c017
+  - source-c018
+  - source-c019
+  - source-c020
+  - source-c021
+  - source-c022
+  - source-c023
+  - source-c024
+  - source-c025
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/additional-amounts
+  route: term/additional-amounts
+  key: additional-amounts
+  '@type':
+  - skos:Concept
+  - dwp:BenefitComponent
+  label: Additional amounts
+  definition: Pension Credit additional amounts have separate qualifying conditions; they are not automatic
+    passported entitlements.
+  aliases:
+  - additional payments
+  source_candidates:
+  - source-c013
+  - source-c026
+  - source-c027
+  - source-c029
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/overlap
+  route: staff-domain/overlap
+  key: overlap
+  '@type':
+  - skos:Concept
+  - dwp:AssessmentProcess
+  label: Benefit interaction
+  definition: Concurrent entitlement, income treatment, overlapping payment, qualifying-benefit links and
+    effects on another person’s award are different relationships.
+  aliases:
+  - interaction
+  - interact
+  - relationship
+  - receive both
+  - relate
+  - impact
+  - fit together
+  source_candidates:
+  - source-c034
+  - source-c032
+  - source-c027
+  - source-c037
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/multiple-care
+  route: staff-domain/multiple-care
+  key: multiple-care
+  '@type':
+  - skos:Concept
+  - dwp:Circumstance
+  label: Caring for several people
+  definition: One person caring for several people is distinct from several carers for one person. DMG 60044
+    refers to care for one qualifying person and must be read with 60043.
+  aliases:
+  - two or more people
+  - several people
+  - multiple people
+  source_candidates:
+  - source-c038
+  - source-c037
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/eligibility
+  route: staff-domain/eligibility
+  key: eligibility
+  '@type':
+  - skos:Concept
+  - dwp:AssessmentProcess
+  label: Conditions of entitlement
+  definition: A general eligibility question requires benefit-specific conditions and scope; claiming,
+    entitlement and payment are distinct.
+  aliases:
+  - eligibility
+  - qualify
+  - qualifies
+  - qualifying
+  source_candidates:
+  - source-c008
+  - source-c036
+  - source-c040
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/additional-benefits
+  route: staff-domain/additional-benefits
+  key: additional-benefits
+  '@type':
+  - skos:Concept
+  - dwp:AssessmentProcess
+  label: Additional benefits or supplements
+  definition: An additional-benefit question requires a bounded inventory and each benefit or component’s own
+    conditions. A qualifying-benefit link does not establish automatic entitlement.
+  aliases:
+  - additional benefits
+  - in addition
+  source_candidates:
+  - source-c027
+  - source-c037
+  - source-c041
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/entitlement
+  route: staff-domain/entitlement
+  key: entitlement
+  '@type':
+  - skos:Concept
+  - dwp:AssessmentProcess
+  label: Entitlement
+  definition: Meeting entitlement conditions is distinct from the amount payable or deductions from payment.
+    The precise distinction depends on the selected benefit and source scope.
+  aliases:
+  - entitlement
+  - loss of entitlement
+  - entitled
+  source_candidates:
+  - source-c008
+  - source-c034
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/payment
+  route: staff-domain/payment
+  key: payment
+  '@type':
+  - skos:Concept
+  - dwp:AssessmentProcess
+  label: Payment and payability
+  definition: A payment, reduction or overlap rule is not by itself proof that underlying entitlement ends or
+    survives. Inspect the benefit-specific wording and conditions.
+  aliases:
+  - payment
+  - payments
+  - payability
+  - receiving
+  - loss of payment
+  source_candidates:
+  - source-c012
+  - source-c034
+  review_status: unreviewed-specialist-review-required
+relationships:
+- source: guarantee-credit
+  target: pension-credit
+  predicate: skos:broader
+  statement: Broader benefit context; all component/regime-specific qualifications remain.
+  source_candidates:
+  - source-c012
+- source: savings-credit
+  target: pension-credit
+  predicate: skos:broader
+  statement: Broader benefit context; all component/regime-specific qualifications remain.
+  source_candidates:
+  - source-c012
+- source: new-state-pension
+  target: state-pension
+  predicate: skos:broader
+  statement: Broader benefit context; all component/regime-specific qualifications remain.
+  source_candidates:
+  - source-c003
+- source: retirement-pension
+  target: state-pension
+  predicate: skos:broader
+  statement: Broader benefit context; all component/regime-specific qualifications remain.
+  source_candidates:
+  - source-c003
+- source: pip-daily-living
+  target: pip
+  predicate: skos:broader
+  statement: Broader benefit context; all component/regime-specific qualifications remain.
+  source_candidates:
+  - source-c037
+- source: pip-mobility
+  target: pip
+  predicate: skos:broader
+  statement: Broader benefit context; all component/regime-specific qualifications remain.
+  source_candidates:
+  - source-c039
+- source: severe-disability-addition
+  target: pension-credit
+  predicate: skos:broader
+  statement: Broader benefit context; all component/regime-specific qualifications remain.
+  source_candidates:
+  - source-c027
+- source: carer-addition
+  target: pension-credit
+  predicate: skos:broader
+  statement: Broader benefit context; all component/regime-specific qualifications remain.
+  source_candidates:
+  - source-c029
+- source: industrial-caa
+  target: iidb
+  predicate: skos:broader
+  statement: Broader benefit context; all component/regime-specific qualifications remain.
+  source_candidates:
+  - source-c041
+- source: pension-credit
+  target: guarantee-credit
+  predicate: skos:related
+  statement: The captured calculation distinguishes Guarantee Credit from Savings Credit.
+  source_candidates:
+  - source-c012
+- source: pension-credit
+  target: savings-credit
+  predicate: skos:related
+  statement: The captured calculation distinguishes Savings Credit from Guarantee Credit.
+  source_candidates:
+  - source-c012
+- source: state-pension
+  target: new-state-pension
+  predicate: skos:related
+  statement: DMG 74001 distinguishes the new pension regime.
+  source_candidates:
+  - source-c003
+- source: state-pension
+  target: retirement-pension
+  predicate: skos:related
+  statement: DMG 74001 routes the earlier regime to chapter 75.
+  source_candidates:
+  - source-c003
+- source: pension-credit
+  target: capital
+  predicate: skos:related
+  statement: Deemed-income assessment uses capital and partner aggregation; valuation and disregards remain
+    dependencies.
+  source_candidates:
+  - source-c031
+- source: pension-credit
+  target: income
+  predicate: skos:related
+  statement: Chapter 85 lists income other than earnings; inspect each exclusion/disregard before applying it.
+  source_candidates:
+  - source-c032
+- source: state-pension
+  target: pension-credit
+  predicate: skos:related
+  statement: State Pension is named in the captured Pension Credit income list; this is not an automatic award
+    conclusion.
+  source_candidates:
+  - source-c032
+- source: housing-benefit
+  target: pension-credit
+  predicate: skos:related
+  statement: DMG 85302 says payments of Housing Benefit are fully disregarded in this source income context.
+  source_candidates:
+  - source-c033
+- source: housing-benefit
+  target: care-home
+  predicate: skos:related
+  statement: DMG 78270 separates HB expenditure and care-home housing-cost exclusions; this does not model the
+    full HB scheme.
+  source_candidates:
+  - source-c030
+- source: care-home
+  target: severe-disability-addition
+  predicate: skos:related
+  statement: DMG 78088 requires all conditions for the additional amount; its self-funding note is not a
+    whole-credit cessation rule.
+  source_candidates:
+  - source-c028
+- source: partner
+  target: pension-credit
+  predicate: skos:related
+  statement: Mixed-age couple definition and savings provisions qualify the Pension Credit entitlement
+    conditions.
+  source_candidates:
+  - source-c009
+- source: carers-allowance
+  target: carer-addition
+  predicate: skos:related
+  statement: CA entitlement is a route into carer additional-amount conditions; actual payment and exclusions
+    require separate checking.
+  source_candidates:
+  - source-c029
+- source: carers-allowance
+  target: severe-disability-addition
+  predicate: skos:related
+  statement: Receipt of CA for caring for the person is one named condition affecting this disability-addition
+    branch.
+  source_candidates:
+  - source-c027
+- source: pip-daily-living
+  target: carers-allowance
+  predicate: skos:related
+  statement: The daily-living component is named in the cared-for-person qualifying-benefit list; it does not
+    alone establish CA entitlement.
+  source_candidates:
+  - source-c037
+- source: pip-daily-living
+  target: severe-disability-addition
+  predicate: skos:related
+  statement: The daily-living component is named among qualifying benefits, with household and carer
+    conditions on the same source page.
+  source_candidates:
+  - source-c027
+- source: carers-allowance
+  target: multiple-care
+  predicate: skos:related
+  statement: DMG 60044 distinguishes hours caring for one person from aggregating care across several people.
+  source_candidates:
+  - source-c038
+- source: iidb
+  target: industrial-caa
+  predicate: skos:related
+  statement: CAA has specific industrial-injuries disablement and attendance conditions; IIDB alone does not
+    establish CAA.
+  source_candidates:
+  - source-c041
+- source: sda
+  target: severe-disability-addition
+  predicate: skos:related
+  statement: The SDA legacy-benefit identity differs from the Pension Credit disability-addition concept;
+    clarify the acronym.
+  source_candidates:
+  - source-c035
+- source: abroad
+  target: pension-credit
+  predicate: skos:related
+  statement: SPC temporary absence requires continuing other entitlement conditions and applies
+    duration/purpose branches.
+  source_candidates:
+  - source-c002
+- source: pension-age
+  target: state-pension
+  predicate: skos:related
+  statement: Pensionable age is only one entitlement condition, with a birth-date schedule and
+    contribution/claim dependencies.
+  source_candidates:
+  - source-c004
+- source: overlap
+  target: war-caa
+  predicate: skos:related
+  statement: Overlap guidance distinguishes industrial-injuries and non-Act/service-pension schemes; resolve
+    the exact allowance.
+  source_candidates:
+  - source-c034
+- source: jsa-contributory
+  target: jsa
+  predicate: skos:broader
+  statement: Distinct benefit variant; the captured source defines its scope separately. Broad benefit wording
+    does not select this regime.
+  source_candidates: []
+  source_concept_evidence: jsa-contributory
+- source: jsa-income-based
+  target: jsa
+  predicate: skos:broader
+  statement: Distinct benefit variant; the captured source defines its scope separately. Broad benefit wording
+    does not select this regime.
+  source_candidates: []
+  source_concept_evidence: jsa-income-based
+- source: jsa-new-style
+  target: jsa
+  predicate: skos:broader
+  statement: Distinct benefit variant; the captured source defines its scope separately. Broad benefit wording
+    does not select this regime.
+  source_candidates: []
+  source_concept_evidence: jsa-new-style
+- source: esa-contributory
+  target: esa
+  predicate: skos:broader
+  statement: Distinct benefit variant; the captured source defines its scope separately. Broad benefit wording
+    does not select this regime.
+  source_candidates: []
+  source_concept_evidence: esa-contributory
+- source: esa-income-related
+  target: esa
+  predicate: skos:broader
+  statement: Distinct benefit variant; the captured source defines its scope separately. Broad benefit wording
+    does not select this regime.
+  source_candidates: []
+  source_concept_evidence: esa-income-related
+- source: esa-new-style
+  target: esa
+  predicate: skos:broader
+  statement: Distinct benefit variant; the captured source defines its scope separately. Broad benefit wording
+    does not select this regime.
+  source_candidates: []
+  source_concept_evidence: esa-new-style
+alias_reassignments:
+  term/pc-prisoner-credit-rates:
+  - State Pension Credit
+  - Pension Credit
+  - SPC
+  term/legacy-jsa-custody-availability:
+  - JSA
+  - Jobseeker’s Allowance
+  - Jobseeker's Allowance
+  - JSA(Cont)
+  - JSA(IB)
+  - contribution-based JSA
+  - income-based JSA
+  term/esa-custody-regimes:
+  - ESA
+  - Employment and Support Allowance
+  term/esa-contributory-custody:
+  - ESA(Cont)
+  - contributory ESA
+  - contribution-based ESA
+  term/esa-income-related-custody:
+  - ESA(IR)
+  - income-related ESA
+  - income related ESA
+  term/benefit-entitlement:
+  - entitlement
+  - loss of entitlement
+  - entitled
+  term/benefit-payability:
+  - payment
+  - payability
+  - receiving
+  - loss of payment
+  - payments
