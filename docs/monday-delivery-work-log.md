@@ -216,3 +216,24 @@ Editorial check: the eight affected overview, handover and verification document
 were checked with Explorer's British-English checker. Its six flags all concerned
 `judgment` or `judgments` in references to judicial decisions. These intentionally
 retain the UK legal spelling; none is an American-English prose substitution.
+
+## Publication and review checkpoint, 21 September at 00:20 BST
+
+DWP checkpoint `c19446c1` is pushed to PR 16. It includes the current service and
+public Reader observations, frozen successor trials, Voice rehearsal and updated
+beginner documentation. Private correspondence and unrelated research remain
+outside the commit. Explorer PR 130 passed all checks, including the full browser
+suite, and merged normally; canonical CI and Pages are being checked separately.
+
+A separate offline critique checker verifies seven retained answers, 14 claims,
+21 citation diagnostics and four additional selected records. It preserves the
+invalid source-locator pair and rejects evidence or authority changes. Eleven
+tamper controls include a check that changing a model opinion does not make it
+machine-validated semantic truth. No frozen experiment file was changed.
+
+The next source and engine improvements have separate working trees. Qualification
+dependencies will be declared in DWP authoring; Explorer will allocate bounded
+context using those general dependencies. Recomputing missing declared
+dependencies after trimming deliberately corrects an existing diagnostic gap:
+an omitted dependency must remain visible even if its relationship was trimmed.
+Historical observations and model trials remain immutable.

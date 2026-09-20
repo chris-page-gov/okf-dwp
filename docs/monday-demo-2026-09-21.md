@@ -1,5 +1,10 @@
 # Monday demonstration: inspect evidence before trusting an answer
 
+**For the current household source and service 0.5.0, use the
+[Monday handover and ten-minute demonstration](monday-handover-2026-09-21.md).**
+The earlier staff-source journey below remains available with its original
+versioned links and observations.
+
 **Independent experimental publication. Not official DWP guidance or individual benefits advice.**
 Allow ten minutes. Use public sample questions, without claimant details.
 

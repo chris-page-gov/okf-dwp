@@ -145,6 +145,7 @@ jobs:
           uv run --locked python scripts/project_monday_model_contexts.py
           uv run --locked python scripts/run_monday_compact_trials.py
           uv run --locked python scripts/run_monday_compact_trials.py --check-report
+          uv run --locked python scripts/check_monday_compact_critique.py
       - name: Verify retained household browser observations offline
         run: |
           node --test scripts/test_household_reader_browser.mjs

@@ -1,6 +1,6 @@
 {
   "schema": "okf-repository-publication-contract.v1",
-  "modified": "2026-09-20",
+  "modified": "2026-09-21",
   "locale": "en-GB",
   "time_zone": "Europe/London",
   "repository": {
@@ -1517,7 +1517,8 @@
         "monday-compact-projection",
         "monday-compact-freeze",
         "monday-compact-outcomes",
-        "public-household-observation-integrity"
+        "public-household-observation-integrity",
+        "monday-compact-critique-integrity"
       ]
     },
     {
@@ -2455,6 +2456,19 @@
         ],
         "command": "uv run --locked python scripts/check_public_household_observations.py",
         "source": "docs/household-reader-public-verification.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "monday-compact-critique-integrity",
+        "kind": "check",
+        "planes": [
+          "release"
+        ],
+        "command": "uv run --locked python scripts/check_monday_compact_critique.py",
+        "source": "docs/monday-model-trials.md",
         "review_status": "unreviewed",
         "network": "none",
         "mutates": "none",

@@ -10,6 +10,9 @@ Implementation ownership and handovers belong in the
 
 ## Household delivery follow-up — 20 September 2026
 
+- Independently verify the successor model critique against its frozen inputs,
+  answer hashes and selected evidence. Recompute literal citation diagnostics,
+  retain the defective locator and keep semantic opinions subject to human review.
 - Verify the full household Reader on the public website in Chrome: conceptual
   facets, statutory text and graph links, source/audit date separation, care-home
   headings and unresolved SDA branches. Retain the failed first harness assumption

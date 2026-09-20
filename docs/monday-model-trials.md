@@ -75,7 +75,15 @@ Check the successor without making a model call:
 uv run --locked python scripts/project_monday_model_contexts.py
 uv run --locked python scripts/run_monday_compact_trials.py
 uv run --locked python scripts/run_monday_compact_trials.py --check-report
+uv run --locked python scripts/check_monday_compact_critique.py
 ```
+
+The independent critique checker verifies seven retained answers, 14 claims,
+21 citation diagnostics and four additional selected records against the frozen
+inputs. It recomputes quotation and source-locator checks, including the recorded
+invalid locator. It makes no model, network or Git calls. It checks the evidence
+behind the review, not the truth of the model's opinions: human review remains
+pending and no answer-quality score is assigned.
 
 The commands below describe the **original, now closed experiment** for reproducibility. They are not instructions to rerun its failed cases. Keep the original catalogue, attempts and runner unchanged; new experiments require their own reviewed inputs and identity.
 
