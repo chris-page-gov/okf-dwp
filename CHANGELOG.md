@@ -28,6 +28,8 @@ Implementation ownership and handovers belong in the
 - Freeze six new model inputs and retain five actual subscription attempts with
   no accepted answers. Hold further calls after event-format mismatches and two
   timeouts; investigate separately without changing the frozen experiment.
+- Bound retained-observation file reads and reject symlinked manifests, artefacts
+  or parent directories before opening them; preserve the original receipts.
 
 ## Learning website — 20 September 2026
 

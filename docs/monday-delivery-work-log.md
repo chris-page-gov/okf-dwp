@@ -112,3 +112,28 @@ The learning website's actual HTTPS verification also passed: 109 responses
 (manifest plus 108 files) matched the exact independently generated build.
 The receipt retains 1,473,921 transferred bytes and no retries. This check reads
 documentation only and does not fetch corpus bodies or private correspondence.
+
+## Explorer merge and service review, 20 September at 23:30 BST
+
+Explorer PR 128 merged as `9b5bfc5a273905d125581e4c9a3a56023c7632b1` after
+all required checks passed, including the full Chrome/Firefox/WebKit gate.
+Its Pages run is `35541865447`; publication remains under verification.
+DWP PR 16 preserves the new local-browser, learning-publication and original
+five-attempt model observations, with independent integrity review.
+
+Explorer PR 129 carries service 0.5.0 at
+`45fd5e02ede8fe7e306a69285c30e88f85cc3cfd`. Independent review and 47 local
+tests pass. Four source versions work through both supported MCP client versions;
+108 immutable source files are hash-checked. A corrected Source family label
+has a fresh integration receipt, and the earlier candidate observation remains
+retained. Required CI, deployment and actual public SDK/browser checks are next.
+
+The original rejected model outcomes remain unchanged. Separate small diagnostic
+calls identify current wrapper formats, while an independently checked lossless
+projection preserves every original context field and reduces the substantive
+input packages by 12–15%. Neither finding establishes better answers or speed.
+
+Independent review of the two new receipt checkers found unbounded or symlinked
+local reads. The correction adds pre-read size/type checks and parent-directory
+checks, with ten passing integrity and tamper controls. Recorded browser and
+website observations remain unchanged; both inventories still verify.

@@ -2,10 +2,42 @@
 """Verify retained local browser artefacts offline; never relabel them as public."""
 import hashlib
 import json
+import os
+import re
+import stat
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DIRECTORY = ROOT / "validation/household-reader"
+MAX_MANIFEST_BYTES = 128 * 1024
+MAX_MEMBER_BYTES = 10 * 1024 * 1024
+
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def checked_directory(directory):
+    directory = directory.absolute()
+    for part in [*reversed(directory.parents), directory]:
+        require(stat.S_ISDIR(part.lstat().st_mode), "Observation directory and parents must not be symlinks")
+    return directory
+
+
+def bounded_read(path, limit=MAX_MEMBER_BYTES):
+    checked_directory(path.parent)
+    before = path.lstat()
+    require(stat.S_ISREG(before.st_mode), "Observation must be a regular file, never a symlink")
+    require(before.st_size <= limit, "Observation exceeds byte limit")
+    descriptor = os.open(path, os.O_RDONLY | os.O_NOFOLLOW)
+    with os.fdopen(descriptor, "rb") as stream:
+        opened = os.fstat(stream.fileno())
+        require(stat.S_ISREG(opened.st_mode) and opened.st_size <= limit, "Opened observation exceeds bound")
+        raw = stream.read(limit + 1)
+    require(len(raw) <= limit and len(raw) == before.st_size == opened.st_size,
+            "Observation changed or exceeded byte limit")
+    return raw
 
 
 def digest(raw):
@@ -13,38 +45,47 @@ def digest(raw):
 
 
 def verify_files(directory, manifest):
+    directory = checked_directory(directory)
+    require(isinstance(manifest["files"], list) and 0 < len(manifest["files"]) <= 256,
+            "Observation inventory exceeds file bound")
+    require(all(type(row["bytes"]) is int and 0 <= row["bytes"] <= MAX_MEMBER_BYTES
+                and re.fullmatch(r"[a-f0-9]{64}", row["sha256"]) for row in manifest["files"]),
+            "Invalid bounded observation metadata")
+    require(sum(row["bytes"] for row in manifest["files"]) <= 32 * 1024 * 1024,
+            "Observation inventory exceeds total byte bound")
     expected = set()
     for row in manifest["files"]:
         relative = Path(row["path"])
         if relative.is_absolute() or ".." in relative.parts or relative.as_posix() != row["path"]:
             raise ValueError("Unsafe observation path")
         target = directory / relative
-        if target.is_symlink() or not target.is_file():
-            raise ValueError("Observation must be an independent regular file")
         if row["path"] in expected:
             raise ValueError("Repeated observation path")
         expected.add(row["path"])
-        raw = target.read_bytes()
+        raw = bounded_read(target)
         if len(raw) != row["bytes"] or digest(raw) != row["sha256"]:
             raise ValueError("Observation artefact bytes differ: " + row["path"])
-    actual = {p.relative_to(directory).as_posix() for p in directory.rglob("*")
+    paths = list(directory.rglob("*"))
+    require(all(not p.is_symlink() for p in paths), "Symlinks are forbidden in observations")
+    actual = {p.relative_to(directory).as_posix() for p in paths
               if p.is_file() and p.name not in {"artifact-manifest.json", "README.md", ".DS_Store"}}
     if actual != expected:
         raise ValueError("Observation inventory differs")
 
 
 def validate(directory=DIRECTORY):
-    manifest = json.loads((directory / "artifact-manifest.json").read_bytes())
+    directory = checked_directory(directory)
+    manifest = json.loads(bounded_read(directory / "artifact-manifest.json", MAX_MANIFEST_BYTES))
     verify_files(directory, manifest)
     admitted = {row["path"] for row in manifest["files"]}
     observations = []
     for relative in manifest["passed_observations"]:
         assert relative in admitted
         path = directory / relative
-        row = json.loads(path.read_bytes())
+        row = json.loads(bounded_read(path))
         assert row["status"] == "passed"
         assert row["environment"] == "local-browser-candidate"
-        assert row["harness_sha256"] == digest((path.parent / "executed-harness.mjs").read_bytes())
+        assert row["harness_sha256"] == digest(bounded_read(path.parent / "executed-harness.mjs"))
         assert not row["console_errors"]
         checks = row["checks"]
         assert checks["facets_and_timeline"]["statutory_units"] == 20
@@ -59,7 +100,7 @@ def validate(directory=DIRECTORY):
         assert not checks["accessibility"]["narrow_ask_and_panel_violations"]
         assert checks["accessibility"]["json_focus"] and checks["accessibility"]["same_context_id"]
         for filename, key in [("care-home-context.json", "care_home"), ("sda-context.json", "sda")]:
-            context = json.loads((path.parent / filename).read_bytes())
+            context = json.loads(bounded_read(path.parent / filename))
             observed = checks[key]
             assert context["context_id"] == observed["context_id"]
             assert context["bundle"]["snapshot"] == observed["context_snapshot"]
@@ -92,9 +133,9 @@ def validate(directory=DIRECTORY):
     for relative in manifest["failed_attempts"]:
         assert relative in admitted
         path = directory / relative
-        failed = json.loads(path.read_bytes())
+        failed = json.loads(bounded_read(path))
         assert failed["status"] == "failed"
-        assert failed["harness_sha256"] == digest((path.parent / "executed-harness.mjs").read_bytes())
+        assert failed["harness_sha256"] == digest(bounded_read(path.parent / "executed-harness.mjs"))
     return {"status": "passed", "files": len(manifest["files"]), "browser_observations": len(observations),
             "retained_failed_attempts": len(manifest["failed_attempts"]), "scope": "offline integrity of local observations; no new browser execution"}
 
