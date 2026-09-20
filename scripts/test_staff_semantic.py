@@ -65,11 +65,13 @@ class StaffSemanticTests(unittest.TestCase):
         care=base+'staff-domain/care-home';household=base+'staff-domain/household-separation'
         pages={base+'page/77/'+str(n).zfill(4) for n in (7,19,21,23,24,25)}|{base+'page/78/0025'}
         edges={row['id']:row for row in self.index['assertions']}
-        declarations=[edges[identity] for identity in self.catalogue['qualification_assertion_ids']]
+        all_declarations=[edges[identity] for identity in self.catalogue['qualification_assertion_ids']]
+        self.assertEqual(len(all_declarations),15)
+        declarations=[edge for edge in all_declarations if edge['source'] in {care,household}]
         self.assertEqual(len(declarations),8)
         self.assertEqual({(e['source'],e['target']) for e in declarations},
                          {(care,household)}|{(household,page) for page in pages})
-        for edge in declarations:
+        for edge in all_declarations:
             self.assertEqual(edge['predicate'],DCT+'requires')
             self.assertEqual(edge['assertion_status'],'model-derived')
             self.assertEqual(edge['authority']['class'],'model-assisted')
@@ -78,8 +80,8 @@ class StaffSemanticTests(unittest.TestCase):
         requirements={r['id']:r for r in self.index['requirements']}
         for cid in ('staff-012','staff-013'):
             profile=profiles[cid];requirement=requirements[profile['requirement_id']]
-            self.assertEqual(set(profile['qualification_evidence_ids']),pages)
-            self.assertEqual(profile['qualification_concept_ids'],[household])
+            self.assertTrue(pages<=set(profile['qualification_evidence_ids']))
+            self.assertIn(household,profile['qualification_concept_ids'])
             self.assertTrue(pages|{household}<=set(requirement['required']))
             for page in pages:
                 path=next(p for p in profile['qualification_paths'] if p['records'][-1]==page)
@@ -90,6 +92,53 @@ class StaffSemanticTests(unittest.TestCase):
                 self.assertTrue(all(edges[i]['predicate']==DCT+'requires' for i in path['assertions']))
         self.assertEqual({p['id'] for p in profiles.values() if p.get('qualification_concept_ids')},
                          {'staff-012','staff-013'})
+
+    def test_component_dependencies_keep_temporary_scope_separate(self):
+        base='https://chris-page-gov.github.io/okf-dwp/id/'
+        care=base+'staff-domain/care-home';housing=base+'staff-domain/care-home-housing-costs'
+        temporary=base+'staff-domain/temporary-care-home'
+        pages={base+'page/78/'+str(n).zfill(4) for n in (53,55,56,57,58)}
+        edges={row['id']:row for row in self.index['assertions']}
+        dependencies=[edges[identity] for identity in self.catalogue['qualification_assertion_ids']]
+        self.assertEqual({e['target'] for e in dependencies if e['source']==housing},pages)
+        self.assertEqual({e['target'] for e in dependencies if e['source']==temporary},
+                         {base+'page/78/0024',base+'page/78/0025'})
+        self.assertFalse(any(e['source']==care and e['target']==temporary for e in dependencies))
+        node=next(n for n in self.catalogue['concepts'] if n['key']=='care-home-housing-costs')
+        self.assertIn(base+'page/78/0054',node['evidence_ids'])
+        self.assertNotIn(base+'page/78/0054',node['required_source_ids'])
+        requirements={r['id']:r for r in self.index['requirements']}
+        for profile in self.profiles['profiles']:
+            if profile['id'] not in ('staff-012','staff-013'):continue
+            required=requirements[profile['requirement_id']]
+            self.assertEqual(set(profile['qualification_concept_ids']),
+                             {base+'staff-domain/household-separation',housing})
+            self.assertTrue(pages<=set(profile['qualification_evidence_ids']))
+            self.assertNotIn(temporary,required['required'])
+            self.assertNotIn(base+'page/78/0024',required['required'])
+            for page in pages:
+                path=next(p for p in profile['qualification_paths'] if p['records'][-1]==page)
+                self.assertEqual(path['records'],[care,housing,page])
+                self.assertIn(path['seed'],required['when_all'])
+                self.assertEqual(edges[path['assertions'][-1]]['predicate'],DCT+'requires')
+                self.assertIn(path,required['required_paths'])
+
+    def test_component_wording_preserves_source_subject_and_heading(self):
+        base='https://chris-page-gov.github.io/okf-dwp/id/'
+        rows={row['id']:row for row in self.index['records']}
+        housing=rows[base+'staff-domain/care-home-housing-costs']['text']
+        self.assertNotIn('expenditure met by Housing Benefit',housing)
+        self.assertNotIn('permits a trial stay',housing)
+        self.assertIn('an element for which Housing Benefit may be payable',housing)
+        self.assertIn('allows treatment as living in the former home, with housing costs allowed',housing)
+        self.assertIn('any element for which HB may be payable',rows[base+'page/78/0058']['text'])
+        temporary=rows[base+'staff-domain/temporary-care-home']['text']
+        self.assertTrue(temporary.startswith('For a claimant with no partner whose normal home circumstances'))
+        self.assertIn('residential care exceeds 28 days and DLA payability ceases',temporary)
+        page=rows[base+'page/78/0024']['text']
+        self.assertLess(page.index('Claimants who have no partner'),page.index('78084'))
+        self.assertLess(page.index('78084'),page.index('Claimants who have a partner'))
+        self.assertIn('The lower rate EASD is not appropriate',rows[base+'page/78/0025']['text'])
 
     def test_qualification_pages_preserve_both_partner_scope_and_continuation(self):
         base='https://chris-page-gov.github.io/okf-dwp/id/page/77/'

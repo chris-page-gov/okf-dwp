@@ -105,11 +105,16 @@ context requirements, not an OWL benefits ontology. Their 203 missing obligation
 are explicitly absent evidence. Legal citation links identify provision references;
 reference metadata does not become statutory text or an applicability rule. Twenty selected statutory units now have separate derived evidence records and 43 source-backed references, using the same Dublin Core vocabulary. No additional legal ontology or applicability predicate is invented for them.
 
-The household qualification increment also uses the existing Dublin Core
-`requires` term for eight explicit support dependencies. Seven captured pages
-must accompany the complete household summary, and the care-home overview needs
-that summary. These are authored context needs with evidence and review status;
-they do not assert that a benefit is payable or that a legal rule applies.
+The qualification increments also use the existing Dublin Core `requires` term
+for 15 explicit support dependencies. The initial household checkpoint supplies
+eight: seven captured pages for the complete household summary, plus the
+care-home overview's dependency on that summary. The
+[component follow-up](carehome-component-dependency-review.md) adds five
+housing-cost and two temporary-residence page dependencies. Staff 012 and 013
+require the household and housing-cost paths; temporary residence remains a
+record-level requirement. These are authored context needs with evidence and
+review status; they do not assert that a benefit is payable or that a legal rule
+applies. No new ontology predicate is introduced.
 
 ## Declared or researched, but not implemented as claimed semantics
 

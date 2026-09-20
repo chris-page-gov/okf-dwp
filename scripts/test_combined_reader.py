@@ -158,12 +158,21 @@ class CombinedReaderTests(unittest.TestCase):
         self.assertEqual(len(adm), 4347)
         self.assertTrue(all(row["predicate"] == "http://purl.org/dc/terms/isPartOf" for row in adm))
 
-    def test_household_support_edges_preserve_requirement_meaning_and_authority(self):
+    def test_qualification_support_edges_preserve_requirement_meaning_and_authority(self):
         catalogue = json.loads((ROOT / "evaluation/semantic-expansion/catalogue.json").read_bytes())
         required_ids = set(catalogue["qualification_assertion_ids"])
         edges = [row for row in self.edges if row["id"] in required_ids]
-        self.assertEqual(len(edges), 8)
+        self.assertEqual(len(edges), 15)
         self.assertEqual({row["id"] for row in edges}, required_ids)
+        by_source = {}
+        for row in edges:
+            by_source.setdefault(row["source"], []).append(row)
+        self.assertEqual({key: len(value) for key, value in by_source.items()}, {
+            "staff-domain/household-separation": 7,
+            "staff-domain/care-home": 1,
+            "staff-domain/care-home-housing-costs": 5,
+            "staff-domain/temporary-care-home": 2,
+        })
         for row in edges:
             self.assertEqual(row["predicate"], "http://purl.org/dc/terms/requires")
             self.assertEqual(row["kind"], "authored context requirement")

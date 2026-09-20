@@ -97,13 +97,17 @@ work. The bounded staff concepts/relationships (BL005) and task profiles (BL007)
 are delivered. Broader domain expansion and evidence closure remain explicit
 implementation packages; mention classifications do not complete those packages.
 
-The next [household qualification increment](docs/household-qualification-budget-review.md#additive-authoring-implementation)
-declares eight explicit support relationships. Seven already captured pages
-support the complete household summary, including the distinction between one
-and both partners living in a care home. Staff 012 and 013 now require those
-paths. Source text and all 203 open obligations are preserved. Bounded context
-retention and publication are separate checks; the public links above retain
-their verified source versions.
+The next [qualification increment](docs/carehome-component-dependency-review.md)
+declares **15 explicit support relationships**: the initial eight household
+dependencies, five housing-cost dependencies and two temporary-residence
+dependencies. Seven captured pages support the complete household summary,
+including the distinction between one and both partners living in a care home.
+Staff 012 and 013 require the household and housing-cost paths. The temporary
+summary keeps its own support requirements without being made mandatory for
+every permanent-care-home question. The source index now has 901 records and
+1,442 assertions. Source text and all 203 open obligations are preserved.
+Bounded context retention and publication are separate checks; the public links
+above retain their verified source versions.
 
 The earlier public service **0.4.0** used the staff corpus at `9de52acf…`. Its
 [0.4.0 SDK observation](validation/compact-delivery/v0.4.0/sdk-receipt.json) passed

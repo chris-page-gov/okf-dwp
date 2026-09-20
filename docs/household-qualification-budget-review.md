@@ -151,6 +151,12 @@ Knowing which facts and source branches are needed does not establish those fact
 
 ## Additive authoring implementation
 
+This section preserves the **initial eight-dependency checkpoint**. The later
+[care-home component increment](carehome-component-dependency-review.md)
+adds housing-cost and temporary-residence support, giving 15 dependencies in
+the current source candidate. The initial counts and verification below are
+historical, not a description of the later source or public deployment.
+
 Following the review, a separate candidate implements the authored part of the proposal. The original frozen context and the findings above remain unchanged. Integration with the revised generic allocator and a new context evaluation are separate checks; the producer results below do not prove that a bounded assembled package now retains every required page.
 
 The existing [concept authoring](../domain-profile/staff-semantic/concepts.yamlld) accepts two optional, explicit annotations:

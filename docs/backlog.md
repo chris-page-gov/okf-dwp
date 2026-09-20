@@ -39,6 +39,15 @@ behind human review. Independent acceptance remains a separate work package.
 The 203 named task obligations are in [the profile register](../evaluation/semantic-expansion/profiles.json).
 Do not read a delivered compiler or a denser graph as complete domain modelling.
 
+The [qualification-retention work package](backlog-work-packages.md#dwp-bl-007-broader-semantic-modelling-task-specific-evidence-profiles)
+now records 15 declared support dependencies: eight for the initial household
+group, five for housing costs and two for temporary residence. Staff 012 and 013
+require the household and housing-cost paths. The
+[component review](carehome-component-dependency-review.md) keeps the larger
+no-partner and severe-disability overview support sets as explicit remaining
+work. Joint source/allocator retention checks and exact-version publication are
+still required; none of the 203 obligations has been closed.
+
 ## Current register
 
 | ID | Priority | Work | Status | Depends on |
@@ -94,7 +103,10 @@ accounts for both captured manuals, and Ask OKF already retrieves from both DMG
 and ADM. The preserved baseline human Reader contains DMG records. **DWP-BL-024** now
 supplies an additive [combined Reader](combined-reader.md), with source-family and
 date distinctions and locally verified filter parity across Reader/Graph/Timeline.
-Exact public-browser acceptance remains open; literal mentions are not legal assertions.
+The [earlier staff-source public observation](../validation/combined-reader/public/README.md)
+and [household-source public observation](household-reader-public-verification.md)
+retain their exact source and application versions. Neither attests the later
+qualification candidate. Literal mentions are not legal assertions.
 The [published DMG navigation check](../validation/navigation/browser/public/README.md)
 is separate from the unresolved service hosting-console issue.
 
@@ -107,13 +119,13 @@ Voice claim.
 
 Cloudflare documents [`Cache-Control: no-transform`](https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/#if-your-origin-sends-a-no-transform-header)
 as preventing JavaScript Detections injection; its detection result then becomes
-`missing`. Assess a narrow HTML-response experiment with the host maintainer,
-preserving the existing `no-store` policy and Content Security Policy. This
-candidate is untested: verify both functional behaviour and the strict console
-gate against the exact deployment before claiming a fix. The Firefox cookie
-domain error needs separate hosting assessment. Keep the
-[recorded public-browser failure](../validation/compact-delivery/browser/README.md)
-open until both issues are resolved and checked.
+`missing`. The later service preserves `no-store` and its Content Security Policy
+while using `no-transform`. The [actual 0.5.0 observation](../validation/compact-delivery/v0.5.0/README.md)
+passed all three functional browser journeys and the Chrome/WebKit strict console
+checks. Firefox retained two hosting-cookie warnings, so its strict check remains
+failed. Historical-profile journeys were not run for 0.5.0. Preserve the
+[earlier public-browser failures](../validation/compact-delivery/browser/README.md)
+and keep this work item open for the unresolved hosting acceptance.
 
 ## Recheck the register
 

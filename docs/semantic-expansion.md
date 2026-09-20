@@ -28,11 +28,15 @@ These are inspectable project proposals; they are not official DWP interpretatio
 
 A reference helps a reader find related material. A **required dependency** says
 that an interpretation needs particular material to be inspected with it. The
-[household qualification increment](household-qualification-budget-review.md#additive-authoring-implementation)
+[initial household checkpoint](household-qualification-budget-review.md#additive-authoring-implementation)
 uses the existing `dcterms:requires` relationship for that purpose. Seven captured
 pages support the complete household summary; the care-home overview also
-requires that summary. The two care-home task profiles declare the resulting
-paths explicitly. These declarations remain project-authored and unreviewed.
+requires that summary. The [component follow-up](carehome-component-dependency-review.md)
+adds five housing-cost and two temporary-residence page dependencies: 15 support
+relationships in total. Staff 012 and 013 declare the household and housing-cost
+paths explicitly. Temporary-residence support stays attached to its own summary,
+without becoming mandatory for every permanent-care-home question. These
+declarations remain project-authored and unreviewed.
 
 This makes an omitted qualification detectable. It does not make a small context
 package complete: a separate allocator must retain the paths within its budget,
@@ -43,14 +47,20 @@ or report the missing support. All 203 existing obligations remain open.
 | Item | Delivered scope |
 | --- | --- |
 | Authored concepts | 51, including neutral benefits, variants, components and circumstances |
-| Source-grounded conceptual associations | 217, including directed source references and qualified concept relationships |
+| Source-grounded conceptual associations | 232, including directed source references, qualified concept relationships and 15 explicit support dependencies |
 | Selected exact source pages | 96 across DMG and ADM, with PDF/extraction hashes and page locators |
 | Legislative references in Ask | 44 staff-linked provision identities, 62 source-page citation links and one separately recorded metadata bridge |
 | Selected statutory bodies | 20 complete selected units and 43 evidence-bearing navigation links; derived and unreviewed |
 | Staff task profiles | 40 occurrences, preserving all 39 distinct questions and the repeated DLA/PIP question |
 | Explicit open obligations | 203, across five named categories |
 | Existing discovery graph | All 712 original record identities and 1,105 assertion identities retained |
-| New context index | 901 records and 1,427 assertions; 4,581,721 bytes, within the new 8 MiB semantic-index limit |
+| Current source candidate index | 901 records and 1,442 assertions; 4,622,241 bytes, within the 8 MiB semantic-index limit |
+
+The current source candidate is `dwp-staff-semantics-fc2ad1545adcbeeb2243`, with
+index SHA-256 `7ffc9d00e71fef6aed5531373510df82998123e89fdb28091cfb82384adf2876`.
+The initial household-dependency checkpoint had 1,435 assertions. The earlier
+public service source `3ef0e786…` had 1,427 assertions and a 4,581,721-byte index;
+its retained evaluations below remain observations of those earlier bytes.
 
 The concepts are authored in
 [domain-profile/staff-semantic](../domain-profile/staff-semantic/).
@@ -94,7 +104,7 @@ flowchart TD
     Staff["39 distinct staff questions<br/>40 recorded occurrences"]
     Concepts["51 model-authored concepts<br/>benefit, variant, component, circumstance"]
     Profiles["40 proposed task profiles"]
-    Relations["217 source-grounded associations<br/>SKOS and Dublin Core"]
+    Relations["232 source-grounded associations<br/>including 15 explicit support dependencies"]
     DMG["Frozen DMG source pages<br/>exact text, hashes and PDF locators"]
     ADM["Frozen ADM source pages<br/>including PIP age and transition guidance"]
     Legal["44 verified provision references<br/>metadata only"]
@@ -140,7 +150,11 @@ Constant Allowance” also retains its unresolved scheme-name boundary.
 
 The earlier legal reference nodes remain scope records labelled **reference-only-unreviewed**. The new [statutory-body increment](legal-body-evidence.md) adds separate derived evidence records for 20 selected units, connected through 43 source-backed references. A metadata record does not become source text, and a source passage does not establish applicability. All 203 obligations remain open. The separate [legal reconciliation](legal-reconciliation.md) retains the earlier identity and footnote work.
 
-## Measured before and after
+## Earlier household-source comparison
+
+This retained comparison predates the 15 explicit qualification dependencies.
+It does not attest the current source candidate or its joint behaviour with a
+revised context allocator. Those require a separately bound evaluation.
 
 Both runs use the **same shared Explorer engine, budgets and frozen lexical
 shards**. Only the explicitly authored semantic base differs.

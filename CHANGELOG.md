@@ -8,7 +8,22 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
-## Household qualification dependencies — 21 September 2026
+## Care-home component qualification dependencies — 21 September 2026
+
+- Narrow the housing-cost summary to the captured former-home treatment and the
+  Housing Benefit “may be payable” condition. Keep the no-partner opening of
+  the temporary-care-home rule explicit.
+- Add five required housing-cost pages and two required temporary-residence
+  pages. Together with the initial household checkpoint, this produces 15
+  model-derived support relationships. Staff 012 and 013 require the household
+  and housing-cost paths; temporary-residence support remains a record-level
+  dependency rather than an unconditional permanent-care-home task requirement.
+- Regenerate the semantic index and combined Reader, retaining 901 semantic
+  records and 1,442 assertions. Preserve all source bytes, historical observations
+  and 203 open obligations. The no-partner and severe-disability overview
+  dependency sets, bounded-context evaluation and publication remain separate work.
+
+## Initial household qualification checkpoint — 21 September 2026
 
 - Declare seven captured guidance pages as required support for the household
   summary, and make the care-home overview require that summary. Compile eight

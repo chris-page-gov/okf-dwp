@@ -238,7 +238,7 @@ dependencies after trimming deliberately corrects an existing diagnostic gap:
 an omitted dependency must remain visible even if its relationship was trimmed.
 Historical observations and model trials remain immutable.
 
-## Qualification source increment, 21 September
+## Initial qualification source checkpoint, 21 September
 
 The isolated source candidate adds eight required-support assertions and two
 explicit qualification profiles. It retains 901 records, now with 1,435 semantic
@@ -248,3 +248,39 @@ Reader build preserves 20,044 records and now has 21,195 relationships. Its
 existing requirement labels apply in both directions; no new vocabulary or
 display fallback is necessary. Context allocation and publication are separate
 remaining checks, and no one has closed the 203 outstanding obligations.
+
+## Component qualification follow-up, 21 September
+
+The [bounded component review](carehome-component-dependency-review.md) led to
+two narrower definitions and seven additional support relationships. The housing
+summary now describes the former-home treatment and Housing Benefit expenditure
+that may be payable. The temporary-residence summary keeps its no-partner
+opening. Five housing-cost pages and two temporary-residence pages are required
+support for their respective summaries. Staff 012 and 013 add the housing-cost
+closure; the permanent-care-home questions do not unconditionally require the
+temporary-residence branch. The broader no-partner and severe-disability overview
+support options remain explicit follow-up work.
+
+The current semantic candidate has **901 records, 1,442 assertions, 15 support
+dependencies and two qualification profiles**. Each of Staff 012 and 013 declares
+20 required identifiers and 17 paths; its five open obligation identifiers are
+still absent evidence. All 203 obligations and original candidate identifiers
+remain unchanged. Its snapshot is `dwp-staff-semantics-fc2ad1545adcbeeb2243` and
+index SHA-256 is `7ffc9d00e71fef6aed5531373510df82998123e89fdb28091cfb82384adf2876`.
+
+The regenerated combined Reader retains **20,044 records, 513 source PDFs and
+19,090 source pages**, with **21,202 relationships**. Its snapshot is
+`dwp-combined-9b85571294b473b9fe6e`. The 20 selected statutory units remain separate
+from the manual counts. Current producer and Reader outputs are reviewable
+engineering artefacts; the earlier eight-edge checkpoint above retains its
+original counts. Joint context allocation, exact-version publication and answer
+quality remain separate checks. No frozen source, model-trial package or browser
+observation was rewritten.
+
+Verification for this follow-up: all **31 staff producer controls**, **20 combined
+Reader controls** and **15 backlog controls** pass. The Reader checks cover all
+15 requirement edges, their four source-concept groups, both navigation labels,
+provenance and unreviewed authority. The backlog projection matches its register.
+Both producer `--check` commands pass; the combined check reproduces all 4,758
+declared output files exactly. These offline checks do not establish a later
+browser or AI-answer result.
