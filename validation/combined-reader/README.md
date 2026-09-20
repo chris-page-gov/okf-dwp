@@ -1,5 +1,8 @@
 # Combined Reader verification
 
+[Published three-browser and conceptual-facet checks](public/README.md) now
+record the separate real-HTTPS acceptance of the immutable content commit.
+
 The [build receipt](build.json) binds every generated input/output. The browser observations below use the actual pinned Explorer application with source files supplied byte-for-byte from the local combined projection. They are **local candidate observations**, not a public deployment attestation or specialist legal review.
 
 The [superseded observation archive](history/dwp-combined-80a1236a793a4828ae6e/README.md)

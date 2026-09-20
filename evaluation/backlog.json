@@ -193,7 +193,7 @@
           "kind": "research",
           "status": "not_started",
           "executor": "agent",
-          "next_action": "Extend beyond the bounded staff concepts using the explicit source-closure obligations; inspect adjacent passages, aliases, variant confusions and unmapped concepts. This agent work does not wait for human acceptance.",
+          "next_action": "Extend beyond the bounded staff concepts using the explicit source-closure obligations; inspect adjacent passages, aliases, variant confusions and unmapped concepts. This agent work does not wait for human acceptance. In particular, add a neutral Income Support meaning separately from the preserved custody concept, retaining the case-sensitive IS alias so ordinary is/Is words do not resolve as a benefit.",
           "evidence": [
             "evaluation/semantic-expansion/profiles.json"
           ]
@@ -333,12 +333,14 @@
         "validation/compact-delivery/v0.3.1/browser/historical/run-summary.json",
         "validation/compact-delivery/deployment.json",
         "validation/compact-delivery/sdk-receipt.json",
-        "validation/compact-client/verification.json"
+        "validation/compact-client/verification.json",
+        "validation/compact-delivery/v0.4.0/deployment.json",
+        "validation/compact-delivery/v0.4.0/sdk-receipt.json"
       ],
       "acceptance_checks": [
         "Unchanged ask_okf preserved; small manifest plus paginated exact reads; original version/question/budget/context identity replayed; stale/unknown IDs rejected; all slices reconstruct exactly; actual host check."
       ],
-      "scope_note": "Public service 0.3.1 and official SDK verification establish bounded delivery and reconstruction at runtime 8493b323ca664e645a2548ebb48bf7917d7f6eb1. The stale replay-link correction passed twelve local browser journeys. Twelve public v7 historical-profile functional sequences and a separate full-corpus Chrome journey passed their functional checks, but strict console gates failed because of hosting integration (DWP-BL-023). Earlier v6 observations and failures are preserved. Local Claude, ChatGPT and Voice retain their separate gates.",
+      "scope_note": "Public service 0.4.0 and its actual SDK run establish bounded delivery against merged Explorer runtime fc71d65b8f5cfc860d52afe98a5e45b88231f3e5. Five question/version cases and compact reconstruction for the new staff corpus plus both earlier versions pass. The staff package has 50 records and 36 relationships and remains insufficient. Earlier replay identities and failed public-browser observations are preserved. Browser-host integration remains BL023; model, ChatGPT and Voice acceptance remain separate.",
       "work_packages": [
         {
           "id": "DWP-BL-008.delivery",
@@ -354,7 +356,9 @@
             "validation/compact-delivery/v0.3.1/browser/historical/run-summary.json",
             "validation/compact-delivery/deployment.json",
             "validation/compact-delivery/sdk-receipt.json",
-            "validation/compact-client/verification.json"
+            "validation/compact-client/verification.json",
+            "validation/compact-delivery/v0.4.0/deployment.json",
+            "validation/compact-delivery/v0.4.0/sdk-receipt.json"
           ]
         }
       ]
@@ -380,7 +384,7 @@
       "acceptance_checks": [
         "All 19,090 DMG and ADM pages accounted for by conceptual classification with unknown explicit; authored concepts and literal classifications distinguished; actual DMG Reader and combined-corpus Ask journeys checked within their separate scopes."
       ],
-      "scope_note": "Producer accounting covers both captured manuals; exact local and public Chrome observations verify the DMG Reader navigation. The published check binds Explorer 8a38d4bfe07a6797deacc148a2859911d8e2a68e and DWP 0c59f476602a49d4293e46112a0ca1ebf1486ff0, with 21 app and 188 observed corpus files verified. Ask OKF already retrieves from both DMG and ADM. The Reader projection remains DMG-only; ADM and cross-manual Reader navigation are unfinished work in DWP-BL-024. Literal classifications are discovery-only, not complete domain semantics or legal applicability.",
+      "scope_note": "Producer accounting covers both captured manuals; exact local and public Chrome observations verify the DMG Reader navigation. The published check binds Explorer 8a38d4bfe07a6797deacc148a2859911d8e2a68e and DWP 0c59f476602a49d4293e46112a0ca1ebf1486ff0, with 21 app and 188 observed corpus files verified. Ask OKF already retrieves from both DMG and ADM. That earlier Reader projection remains DMG-only; the additive combined Reader and its separate public acceptance are now delivered under DWP-BL-024. Literal classifications are discovery-only, not complete domain semantics or legal applicability.",
       "work_packages": [
         {
           "id": "DWP-BL-009.delivery",
@@ -762,12 +766,14 @@
         "docs/combined-reader.md",
         "validation/combined-reader/README.md",
         "validation/combined-reader/browser/artifacts.json",
-        "validation/combined-reader/build.json"
+        "validation/combined-reader/build.json",
+        "validation/combined-reader/public/README.md",
+        "validation/combined-reader/public/artifacts.json"
       ],
       "acceptance_checks": [
         "Representative keyboard/screen-reader/mobile/engine journeys and failures recorded; named browser observations do not imply whole-product conformance."
       ],
-      "scope_note": "Combined Reader implementation and bounded local Chrome, Firefox and WebKit observations are recorded. Public deployment acceptance and human assistive-technology/user research remain separate; no whole-product accessibility claim.",
+      "scope_note": "Combined Reader implementation, local checks and actual public Chrome, Firefox and WebKit observations passed within their declared scope. All 21 application files and the union of 261 observed corpus files were verified. Five conceptual/manual facets have Reader/Graph/Timeline parity. The initial five-second timeout remains recorded. Human assistive-technology/user research remains separate; no whole-product accessibility or legal-applicability claim.",
       "work_packages": [
         {
           "id": "DWP-BL-019.delivery",
@@ -914,7 +920,15 @@
         "validation/compact-delivery/browser/public/run-summary.json",
         "validation/compact-delivery/browser/public/chrome-receipt.json",
         "validation/compact-delivery/browser/public/firefox-receipt.json",
-        "validation/compact-delivery/deployment.json"
+        "validation/compact-delivery/deployment.json",
+        "validation/compact-delivery/v0.4.0/deployment.json",
+        "validation/compact-delivery/v0.4.0/sdk-receipt.json",
+        "validation/compact-delivery/v0.4.0/browser/staff/run-summary.json",
+        "validation/compact-delivery/v0.4.0/browser/staff-native/run-summary.json",
+        "docs/staff-service-browser-verification.md",
+        "validation/compact-delivery/v0.4.0/README.md",
+        "validation/compact-delivery/v0.4.0/artifacts.json",
+        "validation/compact-delivery/v0.4.0/browser/historical/run-summary.json"
       ],
       "acceptance_checks": [
         "Preserve the failed public-browser observations and distinguish the functional checks from the strict no-console gate; identify the exact injected host script and affected deployment.",
@@ -922,30 +936,45 @@
         "Rerun the same exact-version historical-profile journeys in Chrome, Firefox and WebKit; require both functional and strict console gates to pass and preserve source/context hashes.",
         "Record any full-corpus public-browser or AI-client check separately; a hosting fix does not establish model-answer quality or legal applicability."
       ],
-      "scope_note": "The original v6 nine-case suite and corrected v7 twelve-case suite passed their functional assertions but failed every strict console gate. Separate full-corpus Chrome journeys also retained the host CSP error. The service blocked an injected Cloudflare inline challenge loader; Firefox also reported invalid-domain __cf_bm cookies. SDK package integrity remains separately verified; no hosting remediation or clean browser acceptance is claimed.",
+      "scope_note": "Service 0.4.0 sends the supported no-transform directive for HTML without weakening CSP. The current staff journey passes functional checks in Chrome, Firefox and WebKit; Chrome and WebKit also pass strict console checks. The injected inline-script error is absent, but Firefox still reports invalid-domain __cf_bm hosting cookies, so overall hosting acceptance remains open. The first Chrome driver-decoding failure and independently reviewed native-text rerun remain separate observations. Exact SDK package identity is verified; no AI-answer quality or legal-applicability claim. The exact historical suite passes all twelve functional journeys and eight strict gates; four Firefox strict gates fail on the same cookies. Synthetic response controls are identified separately from untouched public evidence.",
       "work_packages": [
         {
           "id": "DWP-BL-023.delivery",
           "kind": "implementation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Assess and implement supported hosting controls without weakening CSP or hiding console errors.",
-          "evidence": []
+          "next_action": "The supported HTML no-transform change is deployed. Investigate remaining Firefox hosting-cookie behaviour through supported host controls without weakening CSP or hiding errors.",
+          "evidence": [
+            "validation/compact-delivery/v0.4.0/deployment.json",
+            "validation/compact-delivery/v0.4.0/sdk-receipt.json",
+            "validation/compact-delivery/v0.4.0/browser/staff/run-summary.json",
+            "validation/compact-delivery/v0.4.0/browser/staff-native/run-summary.json",
+            "docs/staff-service-browser-verification.md"
+          ]
         },
         {
           "id": "DWP-BL-023.acceptance",
           "kind": "live_observation",
-          "status": "waiting",
+          "status": "in_progress",
           "executor": "agent",
-          "next_action": "Rerun exact public functional and strict console journeys across Chrome, Firefox and WebKit.",
-          "evidence": []
+          "next_action": "Retain passing three-engine staff functional checks and Firefox strict-console failure; require a genuinely clean observation before closing hosting acceptance.",
+          "evidence": [
+            "validation/compact-delivery/v0.4.0/deployment.json",
+            "validation/compact-delivery/v0.4.0/sdk-receipt.json",
+            "validation/compact-delivery/v0.4.0/browser/staff/run-summary.json",
+            "validation/compact-delivery/v0.4.0/browser/staff-native/run-summary.json",
+            "docs/staff-service-browser-verification.md",
+            "validation/compact-delivery/v0.4.0/README.md",
+            "validation/compact-delivery/v0.4.0/artifacts.json",
+            "validation/compact-delivery/v0.4.0/browser/historical/run-summary.json"
+          ]
         }
       ]
     },
     {
       "id": "DWP-BL-024",
       "title": "ADM Reader and cross-manual navigation",
-      "status": "in_progress",
+      "status": "recorded_complete",
       "priority": "P1",
       "depends_on": [
         "DWP-BL-004",
@@ -959,7 +988,9 @@
         "docs/combined-reader.md",
         "validation/combined-reader/README.md",
         "validation/combined-reader/browser/artifacts.json",
-        "validation/combined-reader/build.json"
+        "validation/combined-reader/build.json",
+        "validation/combined-reader/public/README.md",
+        "validation/combined-reader/public/artifacts.json"
       ],
       "acceptance_checks": [
         "Add an ADM or combined-manual Reader projection while preserving frozen DMG outputs, existing source provenance, document dates, capture dates and source-family distinctions.",
@@ -967,7 +998,7 @@
         "Verify the exact published projection and deployed consumer in a real browser, retaining immutable source, application and journey evidence.",
         "Keep literal mentions distinct from reviewed concepts and legal applicability; generate no legal assertions from navigation matches."
       ],
-      "scope_note": "Combined Reader implementation and bounded local Chrome, Firefox and WebKit observations are recorded. Public deployment acceptance and human assistive-technology/user research remain separate; no whole-product accessibility claim.",
+      "scope_note": "Combined Reader implementation, local checks and actual public Chrome, Firefox and WebKit observations passed within their declared scope. All 21 application files and the union of 261 observed corpus files were verified. Five conceptual/manual facets have Reader/Graph/Timeline parity. The initial five-second timeout remains recorded. Human assistive-technology/user research remains separate; no whole-product accessibility or legal-applicability claim.",
       "work_packages": [
         {
           "id": "DWP-BL-024.delivery",
@@ -985,10 +1016,13 @@
         {
           "id": "DWP-BL-024.acceptance",
           "kind": "live_observation",
-          "status": "waiting",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Verify exact published identities, both-manual routes, conceptual facets, Graph, Timeline and Ask in a real browser.",
-          "evidence": []
+          "next_action": "Retain exact published identities and scoped three-browser/facet observations; later application or source changes need fresh publication checks.",
+          "evidence": [
+            "validation/combined-reader/public/README.md",
+            "validation/combined-reader/public/artifacts.json"
+          ]
         }
       ]
     }

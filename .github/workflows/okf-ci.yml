@@ -98,6 +98,12 @@ jobs:
           uv run --locked python scripts/check_combined_reader_observations.py
       - name: Replay staff semantic development cases and failure controls
         run: node --experimental-strip-types scripts/evaluate_staff_semantic.mjs --check --explorer-root .ci/okf-explorer-staff
+      - name: Check the portable public-reader verifier without network
+        run: |
+          node --test scripts/test_staff_service_browser.mjs
+          uv run --locked python scripts/check_staff_service_observations.py
+          uv run --locked python -m unittest discover -s scripts -p test_staff_service_observations.py
+          node scripts/check_staff_service_browser.mjs --service-url https://ask-okf.crpage.chatgpt.site --sdk-receipt validation/compact-delivery/v0.4.0/sdk-receipt.json --deployment validation/compact-delivery/v0.4.0/deployment.json --check-inputs
       - name: Verify identical staff trial inputs and retained outcomes offline
         run: |
           node --experimental-strip-types scripts/export_staff_trial_contexts.mjs --check --explorer-root .ci/okf-explorer-staff

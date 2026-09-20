@@ -15,6 +15,9 @@ The [retrospective](retrospective.md) explains what this experiment established.
 The [methodology](methodology.md) shows how another department can begin with
 source, terminology, legal and ontology discovery before building its own bundle.
 
+For a guided group session, use the [ten-minute Monday demonstration](monday-demo-2026-09-21.md).
+It connects the combined Reader, small evidence deliveries and actual paired model trials.
+
 ### New route: follow a supplied staff question
 
 Start with the [question and journey matrix](../evaluation/staff-needs/README.md).

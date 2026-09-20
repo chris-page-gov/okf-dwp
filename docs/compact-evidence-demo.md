@@ -1,8 +1,39 @@
 # Smaller evidence deliveries: five-minute demonstration
 
-[Changelog](../CHANGELOG.md) · [Backlog](backlog.md) · [Work log](work-log-2026-09-19.md)
+[Changelog](../CHANGELOG.md) · [Backlog](backlog.md) · [Work log](work-log-2026-09-20.md)
 
-**Recorded public service: version 0.3.1, deployed on 19 September 2026.**
+## Current service and Monday route
+
+**Service 0.4.0 was deployed on 20 September 2026.** The
+[hosting receipt](../validation/compact-delivery/v0.4.0/deployment.json) and
+[actual SDK check](../validation/compact-delivery/v0.4.0/sdk-receipt.json) bind the
+merged Explorer runtime `fc71d65b8f5cfc860d52afe98a5e45b88231f3e5` and hosting
+version 8. All five question/version cases passed exact engine comparison. Compact
+catalogue and read reconstruction passed for the new staff corpus and both
+preserved earlier versions. The [staff browser check](../validation/compact-delivery/v0.4.0/browser/staff-native/run-summary.json)
+passes the functional evidence journey in all three engines. Chrome and WebKit
+pass strict console checks; Firefox still emits hosting cookie warnings. BL023
+remains open. The [first attempt](../validation/compact-delivery/v0.4.0/browser/staff/run-summary.json)
+retains Chrome's driver-decoded text measurement failure. A separately reviewed
+observer reads cloned browser-native responses; it does not replace requests,
+responses or page content. Exact rendered package hashes remain required.
+
+Use the [Monday demonstration](monday-demo-2026-09-21.md) for the new combined
+Reader, staff task, external-client instruction and paired model trials.
+The new Child DLA/PIP service package contains 50 records and 36 relationships,
+occupies 216,464 bytes and remains insufficient and truncated. Its catalogue
+uses three bounded responses; the SDK reconstructed the full package in eight
+reads of at most 32,768 response bytes. The human reader uses smaller slices.
+[Replay that exact staff context](https://ask-okf.crpage.chatgpt.site/review/#eyJidW5kbGUiOiJva2YtZHdwIiwidmVyc2lvbiI6IjlkZTUyYWNmMWRiODRiMjdmODkzM2Q4MDQ4MGVhYTg1MGU3NGZhMzMiLCJxdWVzdGlvbiI6IldoYXQgaXMgdGhlIGludGVyYWN0aW9uIGJldHdlZW4gQ2hpbGQgRExBIGFuZCBQSVA_IiwiYnVkZ2V0Ijp7Im1heF9ub2RlcyI6NjQsIm1heF9yZWxhdGlvbnNoaXBzIjoxMjgsIm1heF9kZXB0aCI6NiwibWF4X2J5dGVzIjoyNjIxNDR9LCJjb250ZXh0X2lkIjoidXJuOnNoYTI1Njo2NzMxYWYwNWJmMWE5Zjg5NTc4NzQzZGEzYzBiY2FmYzEwOTRjMmRiNzRlZjZlZjI3NDEwZjkwM2Q4YWY3MzQ0In0).
+
+The earlier abroad example below retains its exact question, budget and identity.
+New defaults do not rewrite old replay links. CSP means Content Security Policy:
+it limits the code a web page may execute. The new HTML response asks hosting
+intermediaries not to transform it; the policy itself remains restricted.
+
+## Preserved service observations from 19 September
+
+**Earlier public service: version 0.3.1, deployed on 19 September 2026.**
 The [hosting receipt](../validation/compact-delivery/v0.3.1/deployment.json) and
 [official SDK check](../validation/compact-delivery/v0.3.1/sdk-receipt.json) bind Explorer
 runtime `8493b323ca664e645a2548ebb48bf7917d7f6eb1`, hosting version 7. This is an independent
@@ -52,7 +83,7 @@ browser pass. The conceptual-navigation Explorer deployment is a separate
 publication, described below. Earlier observations retain their recorded
 versions and scope.
 
-**Current public reader (0.3.1): functional checks passed; strict console gates
+**Earlier public reader (0.3.1): functional checks passed; strict console gates
 failed.** The [corrected historical-profile suite](../validation/compact-delivery/v0.3.1/browser/historical/run-summary.json)
 ran four journeys in each of Chrome, Firefox and WebKit, including changing from
 question A to B and verifying the new replay-link identity. All twelve reached
@@ -76,8 +107,8 @@ and 188 observed corpus files, date roles and the visible Timeline limit, with
 no console errors or targeted accessibility violations.
 
 This preserved Reader covers DMG. The new [combined Reader](combined-reader.md)
-adds ADM and cross-manual navigation, with local verification under DWP-BL-024;
-its public acceptance is tracked separately. Ask OKF and the classification audit
+adds ADM and cross-manual navigation. Its [separate public checks](../validation/combined-reader/public/README.md)
+passed in three engines under DWP-BL-024. Ask OKF and the classification audit
 cover both captured manuals. Literal
 categories do not establish legal applicability. The separate evidence service's
 host-console failure remains open, and all 40 staff questions plus three controls
@@ -153,7 +184,8 @@ conditions, dates, exceptions and legal applicability remains necessary.
 
 ## Reproduce without overwriting retained receipts
 
-The verifier is in the reusable Explorer repository at the runtime commit above.
+The current verifier is in the reusable Explorer repository at runtime
+`fc71d65b8f5cfc860d52afe98a5e45b88231f3e5`.
 In a separate clean checkout at that commit, install its locked service
 packages, build, then use a **new output path**:
 

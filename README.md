@@ -33,15 +33,28 @@ The additive staff increment provides [projected personas and journeys](evaluati
 [legal reference reconciliation](docs/legal-reconciliation.md),
 [a combined DMG and ADM Reader](docs/combined-reader.md) and
 [a fresh source-listing comparison](docs/source-refresh.md).
-These are reviewable research outputs. All supplied tasks retain explicit gaps;
+[Open the merged combined Reader](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F9de52acf1db84b27f8933d80480eaa850e74fa33%2Fcombined%2Fokf-explorer.json#overview).
+Its [public Chrome, Firefox and WebKit checks](validation/combined-reader/public/README.md)
+passed the declared navigation, evidence and keyboard journeys, verifying actual
+application and corpus bytes. These are reviewable research outputs. All supplied tasks retain explicit gaps;
 no specialist acceptance or complete benefits answer is claimed.
 
 The [20 September team handover](docs/team-handover-2026-09-20.md) links the
 published demonstration and explains the remaining semantic work before Monday.
 The [delivery and acceptance ledger](docs/backlog-work-packages.md) separates
 implementation from independent review, so a review gate cannot hide unfinished
-work. Broader concepts/relationships (BL005) and task profiles (BL007) are active
-implementation work, not completed by the existing mention classifications.
+work. The bounded staff concepts/relationships (BL005) and task profiles (BL007)
+are delivered. Broader domain expansion and evidence closure remain explicit
+implementation packages; mention classifications do not complete those packages.
+
+The [public evidence service](https://ask-okf.crpage.chatgpt.site/) now serves the
+new staff corpus and preserves both earlier replay versions. Its
+[0.4.0 SDK observation](validation/compact-delivery/v0.4.0/sdk-receipt.json) passed
+five exact-engine cases and compact reconstruction for all three source versions.
+The [public staff reader check](validation/compact-delivery/v0.4.0/browser/staff-native/run-summary.json)
+passes functional evidence checks in all three engines. Chrome and WebKit pass
+strict console checks; Firefox retains hosting cookie warnings (BL023).
+Use the [Monday demonstration](docs/monday-demo-2026-09-21.md) for the current route.
 
 ## Preserved published baseline: evidence review and DMG navigation
 
@@ -54,11 +67,11 @@ Graph and Timeline, with matching counts of 74, 343, 268 and 1. It checked all
 and the Timeline display limit. No console errors or targeted accessibility
 violations were found. This is a dated, scoped check, not whole-site conformance.
 
-The [compact-delivery guide](docs/compact-evidence-demo.md) now records public
+The [compact-delivery guide](docs/compact-evidence-demo.md) preserves the earlier
 service 0.3.1 and its official SDK acceptance: a small catalogue, exact bounded
 reads and a replay link, while preserving the original full-package tool. The
 31,312-byte abroad package reconstructs exactly and stays insufficient.
-The corrected public reader's twelve historical-profile journeys and a separate
+That corrected public reader's twelve historical-profile journeys and a separate
 [full-corpus Chrome journey](validation/compact-delivery/v0.3.1/browser/full-corpus/chrome-receipt.json)
 passed their functional checks, but their strict console gates failed because
 CSP blocked a host-injected script; Firefox also reported cookie-domain errors.
@@ -82,8 +95,8 @@ all 19,090 captured pages, including ADM and explicit unclassified values. The
 44 authored labels describe literal discovery categories; they do not establish
 which benefit rules apply. The Reader projection retains its DMG scope while
 the classification audit and Ask context cover both captured manuals. The additive [combined Reader](docs/combined-reader.md) now includes ADM and
-cross-manual navigation, with local browser checks retained under **DWP-BL-024**.
-Its public deployment acceptance is recorded separately.
+cross-manual navigation, with local and public browser checks retained under **DWP-BL-024**.
+The [public observations](validation/combined-reader/public/README.md) retain exact scope and limitations.
 
 [Forty staff review packs](evaluation/staff-review/README.md) give readers small,
 source-linked starting points: 3,795–12,062 bytes per machine-readable pack,

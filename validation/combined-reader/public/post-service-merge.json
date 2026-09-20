@@ -1,0 +1,224 @@
+{
+  "schema": "okf-combined-reader-post-deployment-fingerprint.v1",
+  "status": "identical-application-bytes",
+  "started_at": "2026-09-20T20:24:54.078724+00:00",
+  "completed_at": "2026-09-20T20:24:55.182963+00:00",
+  "network_mode": "real-https-no-interception",
+  "method": "Read the exact public manifest and all 21 declared application files over HTTPS; verify canonical response URLs, status 200, byte lengths, SHA256 hashes, and the application material-tree digest against the three retained browser observations. Each request is bounded at 20 seconds; up to four run concurrently. No automatic retries or substituted responses.",
+  "deployment": {
+    "id": 35534787876,
+    "html_url": "https://github.com/chris-page-gov/okf-explorer/actions/runs/35534787876",
+    "head_sha": "fc71d65b8f5cfc860d52afe98a5e45b88231f3e5",
+    "status": "completed",
+    "conclusion": "success",
+    "event": "push",
+    "updated_at": "2026-09-20T20:19:05Z",
+    "path": ".github/workflows/pages.yml",
+    "metadata_source": "GitHub REST API actions/runs/35534787876",
+    "pull_request": "https://github.com/chris-page-gov/okf-explorer/pull/127"
+  },
+  "app": {
+    "manifest_url": "https://chris-page-gov.github.io/okf-explorer/okf-explorer-build-manifest.json",
+    "manifest_sha256": "1a08fe787725fc48c132068d08161c090fd6fae6395ffd01ec47309187e10087",
+    "manifest_bytes": 3681,
+    "tree_sha256": "fa442a5f0806c0c9c7f5ab19c1f1362fe48be5cf2a1628414f2bc17114c9dc58",
+    "verified_materials": 21
+  },
+  "manifest_text": "{\n  \"schema\": \"okf-explorer-app-build-manifest.v1\",\n  \"algorithm\": \"sha256-canonical-json-materials-v1\",\n  \"file_count\": 21,\n  \"tree_sha256\": \"fa442a5f0806c0c9c7f5ab19c1f1362fe48be5cf2a1628414f2bc17114c9dc58\",\n  \"materials\": [\n    {\n      \"path\": \"404.html\",\n      \"bytes\": 1561,\n      \"sha256\": \"9a152f8b6668b38d891bb52528585e32b8ae4fff4fb66c629a596e75445bd135\"\n    },\n    {\n      \"path\": \"_app/immutable/assets/3.-L698N5w.css\",\n      \"bytes\": 10041,\n      \"sha256\": \"e893d044ccd23ff83a24fd38c03fe7d15603e58017c158ceb78133d2fa99ba18\"\n    },\n    {\n      \"path\": \"_app/immutable/assets/4.Bh_A5oMz.css\",\n      \"bytes\": 100372,\n      \"sha256\": \"1e5d7c346c7533c8d13741f3fe996cef3f3e3c0eb7c4262110f102250b95ac99\"\n    },\n    {\n      \"path\": \"_app/immutable/chunks/BPQHxExo.js\",\n      \"bytes\": 29278,\n      \"sha256\": \"c8ea73041213b621db7b7c427dfcc3a00adf6c7d5f3b557921e2ba73594b13dd\"\n    },\n    {\n      \"path\": \"_app/immutable/chunks/Bjy-W4x2.js\",\n      \"bytes\": 1365,\n      \"sha256\": \"f07424758318dd6b5f32b0fe8de9d2ffb8d97a17c841758626d18ba0faa0456a\"\n    },\n    {\n      \"path\": \"_app/immutable/chunks/BrhoDqSI.js\",\n      \"bytes\": 49749,\n      \"sha256\": \"1ebd5dff07b7f968c4f56b5cc304a149d7c35c7dee4e8ce3354fbbea4bc33fc8\"\n    },\n    {\n      \"path\": \"_app/immutable/chunks/CMLes7b-.js\",\n      \"bytes\": 152,\n      \"sha256\": \"aabc6b9cc1d3991fcf763f5b93f63c56ecf723f08f13eeca2ed8f9922f1ce5cf\"\n    },\n    {\n      \"path\": \"_app/immutable/chunks/xihTtKlq.js\",\n      \"bytes\": 65,\n      \"sha256\": \"0214edcff77242079f540507a53803aa22d857b6ad673e60e39748b6c7aa08c1\"\n    },\n    {\n      \"path\": \"_app/immutable/entry/app.BJEBKuLV.js\",\n      \"bytes\": 4814,\n      \"sha256\": \"541b8734a79551d30932967f9e5c98ed0b9b95185daf98d30ff07e1de1ced22c\"\n    },\n    {\n      \"path\": \"_app/immutable/entry/start.Cw_Lrl-1.js\",\n      \"bytes\": 82,\n      \"sha256\": \"9fa0a21fe1899245797f3fc7735f6c19b33271c1485255abee51416c0de6841d\"\n    },\n    {\n      \"path\": \"_app/immutable/nodes/0.Dfd2ry8o.js\",\n      \"bytes\": 146,\n      \"sha256\": \"4c36da4ad06d8e1278078471221bd0dcc6efbef3f7b5a727f0729a3607bce46e\"\n    },\n    {\n      \"path\": \"_app/immutable/nodes/1.CJITgjoz.js\",\n      \"bytes\": 631,\n      \"sha256\": \"04c3d109d7b03e6480db1c87e31686271a69f59ca768ede5c1ef3430a5c29078\"\n    },\n    {\n      \"path\": \"_app/immutable/nodes/2.CiYwn6Qd.js\",\n      \"bytes\": 188,\n      \"sha256\": \"5612ead0ff8968f7a1fd4b896f20c46b7f662d08f65b89de178bc574396ac3a4\"\n    },\n    {\n      \"path\": \"_app/immutable/nodes/3.DWj6cO2D.js\",\n      \"bytes\": 24584,\n      \"sha256\": \"edd3d449c2ef3d3c82caff4851a2d9ee79f0ca83cd4a0fec12e5e4ed10f0ce02\"\n    },\n    {\n      \"path\": \"_app/immutable/nodes/4.gEqqGrI_.js\",\n      \"bytes\": 752220,\n      \"sha256\": \"fe677b67d85517382c3da41bf58e9088919d74fc7e760e12b7ca32038debe07c\"\n    },\n    {\n      \"path\": \"_app/immutable/workers/largeSearch.worker-CzgrrL90.js\",\n      \"bytes\": 71325,\n      \"sha256\": \"964b1b91bbb6887802a25d64d45279994b0ba196e1e359ab92f02ca6239630a2\"\n    },\n    {\n      \"path\": \"_app/version.json\",\n      \"bytes\": 19,\n      \"sha256\": \"47deec71c490e4aaed041316ff7c3377f40b937f6d7cf9e24010c3d2c76dbab3\"\n    },\n    {\n      \"path\": \"explore/index.html\",\n      \"bytes\": 1994,\n      \"sha256\": \"b62be1d6caec9200835b101f99c9ca22f1aeebd236302f8f4bc1b86c2d8afa7a\"\n    },\n    {\n      \"path\": \"favicon.svg\",\n      \"bytes\": 300,\n      \"sha256\": \"b13175f4b33ebf5759702efe154d463f3e1d30d4c1cb07334c394b677ae80cb9\"\n    },\n    {\n      \"path\": \"index.html\",\n      \"bytes\": 15918,\n      \"sha256\": \"eb859fb443122d9ce3a3c117ce073860612977ffe7501d26361abf99b612987f\"\n    },\n    {\n      \"path\": \"okf-registry.json\",\n      \"bytes\": 7714,\n      \"sha256\": \"da99d57b545e803aa5fb90d07ee8504a0216e3e2071d561d933a86a22de52cf8\"\n    }\n  ]\n}\n",
+  "files": [
+    {
+      "path": "404.html",
+      "bytes": 1561,
+      "sha256": "9a152f8b6668b38d891bb52528585e32b8ae4fff4fb66c629a596e75445bd135",
+      "url": "https://chris-page-gov.github.io/okf-explorer/404.html",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "_app/immutable/assets/3.-L698N5w.css",
+      "bytes": 10041,
+      "sha256": "e893d044ccd23ff83a24fd38c03fe7d15603e58017c158ceb78133d2fa99ba18",
+      "url": "https://chris-page-gov.github.io/okf-explorer/_app/immutable/assets/3.-L698N5w.css",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "_app/immutable/assets/4.Bh_A5oMz.css",
+      "bytes": 100372,
+      "sha256": "1e5d7c346c7533c8d13741f3fe996cef3f3e3c0eb7c4262110f102250b95ac99",
+      "url": "https://chris-page-gov.github.io/okf-explorer/_app/immutable/assets/4.Bh_A5oMz.css",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "_app/immutable/chunks/BPQHxExo.js",
+      "bytes": 29278,
+      "sha256": "c8ea73041213b621db7b7c427dfcc3a00adf6c7d5f3b557921e2ba73594b13dd",
+      "url": "https://chris-page-gov.github.io/okf-explorer/_app/immutable/chunks/BPQHxExo.js",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "_app/immutable/chunks/Bjy-W4x2.js",
+      "bytes": 1365,
+      "sha256": "f07424758318dd6b5f32b0fe8de9d2ffb8d97a17c841758626d18ba0faa0456a",
+      "url": "https://chris-page-gov.github.io/okf-explorer/_app/immutable/chunks/Bjy-W4x2.js",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "_app/immutable/chunks/BrhoDqSI.js",
+      "bytes": 49749,
+      "sha256": "1ebd5dff07b7f968c4f56b5cc304a149d7c35c7dee4e8ce3354fbbea4bc33fc8",
+      "url": "https://chris-page-gov.github.io/okf-explorer/_app/immutable/chunks/BrhoDqSI.js",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "_app/immutable/chunks/CMLes7b-.js",
+      "bytes": 152,
+      "sha256": "aabc6b9cc1d3991fcf763f5b93f63c56ecf723f08f13eeca2ed8f9922f1ce5cf",
+      "url": "https://chris-page-gov.github.io/okf-explorer/_app/immutable/chunks/CMLes7b-.js",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "_app/immutable/chunks/xihTtKlq.js",
+      "bytes": 65,
+      "sha256": "0214edcff77242079f540507a53803aa22d857b6ad673e60e39748b6c7aa08c1",
+      "url": "https://chris-page-gov.github.io/okf-explorer/_app/immutable/chunks/xihTtKlq.js",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "_app/immutable/entry/app.BJEBKuLV.js",
+      "bytes": 4814,
+      "sha256": "541b8734a79551d30932967f9e5c98ed0b9b95185daf98d30ff07e1de1ced22c",
+      "url": "https://chris-page-gov.github.io/okf-explorer/_app/immutable/entry/app.BJEBKuLV.js",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "_app/immutable/entry/start.Cw_Lrl-1.js",
+      "bytes": 82,
+      "sha256": "9fa0a21fe1899245797f3fc7735f6c19b33271c1485255abee51416c0de6841d",
+      "url": "https://chris-page-gov.github.io/okf-explorer/_app/immutable/entry/start.Cw_Lrl-1.js",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "_app/immutable/nodes/0.Dfd2ry8o.js",
+      "bytes": 146,
+      "sha256": "4c36da4ad06d8e1278078471221bd0dcc6efbef3f7b5a727f0729a3607bce46e",
+      "url": "https://chris-page-gov.github.io/okf-explorer/_app/immutable/nodes/0.Dfd2ry8o.js",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "_app/immutable/nodes/1.CJITgjoz.js",
+      "bytes": 631,
+      "sha256": "04c3d109d7b03e6480db1c87e31686271a69f59ca768ede5c1ef3430a5c29078",
+      "url": "https://chris-page-gov.github.io/okf-explorer/_app/immutable/nodes/1.CJITgjoz.js",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "_app/immutable/nodes/2.CiYwn6Qd.js",
+      "bytes": 188,
+      "sha256": "5612ead0ff8968f7a1fd4b896f20c46b7f662d08f65b89de178bc574396ac3a4",
+      "url": "https://chris-page-gov.github.io/okf-explorer/_app/immutable/nodes/2.CiYwn6Qd.js",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "_app/immutable/nodes/3.DWj6cO2D.js",
+      "bytes": 24584,
+      "sha256": "edd3d449c2ef3d3c82caff4851a2d9ee79f0ca83cd4a0fec12e5e4ed10f0ce02",
+      "url": "https://chris-page-gov.github.io/okf-explorer/_app/immutable/nodes/3.DWj6cO2D.js",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "_app/immutable/nodes/4.gEqqGrI_.js",
+      "bytes": 752220,
+      "sha256": "fe677b67d85517382c3da41bf58e9088919d74fc7e760e12b7ca32038debe07c",
+      "url": "https://chris-page-gov.github.io/okf-explorer/_app/immutable/nodes/4.gEqqGrI_.js",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "_app/immutable/workers/largeSearch.worker-CzgrrL90.js",
+      "bytes": 71325,
+      "sha256": "964b1b91bbb6887802a25d64d45279994b0ba196e1e359ab92f02ca6239630a2",
+      "url": "https://chris-page-gov.github.io/okf-explorer/_app/immutable/workers/largeSearch.worker-CzgrrL90.js",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "_app/version.json",
+      "bytes": 19,
+      "sha256": "47deec71c490e4aaed041316ff7c3377f40b937f6d7cf9e24010c3d2c76dbab3",
+      "url": "https://chris-page-gov.github.io/okf-explorer/_app/version.json",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "explore/index.html",
+      "bytes": 1994,
+      "sha256": "b62be1d6caec9200835b101f99c9ca22f1aeebd236302f8f4bc1b86c2d8afa7a",
+      "url": "https://chris-page-gov.github.io/okf-explorer/explore/index.html",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 300,
+      "sha256": "b13175f4b33ebf5759702efe154d463f3e1d30d4c1cb07334c394b677ae80cb9",
+      "url": "https://chris-page-gov.github.io/okf-explorer/favicon.svg",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "index.html",
+      "bytes": 15918,
+      "sha256": "eb859fb443122d9ce3a3c117ce073860612977ffe7501d26361abf99b612987f",
+      "url": "https://chris-page-gov.github.io/okf-explorer/index.html",
+      "status": 200,
+      "matches_manifest": true
+    },
+    {
+      "path": "okf-registry.json",
+      "bytes": 7714,
+      "sha256": "da99d57b545e803aa5fb90d07ee8504a0216e3e2071d561d933a86a22de52cf8",
+      "url": "https://chris-page-gov.github.io/okf-explorer/okf-registry.json",
+      "status": 200,
+      "matches_manifest": true
+    }
+  ],
+  "prior_journeys": [
+    {
+      "path": "chrome/observation.json",
+      "sha256": "e54b4c12637a7622f2741eb13620a61ab8779258b9a3d466a0a0ec83804e4000",
+      "observed_at": "2026-09-20T20:06:01.649Z"
+    },
+    {
+      "path": "firefox/observation.json",
+      "sha256": "98b49c89cb833c212bf73ceb93c147fc95c5b769e96f2772be687b46860e6e8d",
+      "observed_at": "2026-09-20T20:06:04.501Z"
+    },
+    {
+      "path": "webkit/observation.json",
+      "sha256": "8ca3da110ca34445428e5822171f30fb2ff05cb17c6d4323859f6eb99be9d9ec",
+      "observed_at": "2026-09-20T20:06:04.141Z"
+    }
+  ],
+  "journeys_rerun": false,
+  "corpus_refetched": false,
+  "prior_checker_failure": {
+    "phase": "material-tree-self-check",
+    "cause": "The first ad-hoc check sorted object keys using the publication-unit algorithm; the application manifest instead specifies path/bytes/sha256 insertion order with a trailing newline. The manifest identity matched; no application file checks had yet run.",
+    "correction": "Used the application manifest producer algorithm from apps/okf-explorer/scripts/app_build_manifest.mjs. This is a checker correction, not a changed public application or source.",
+    "original_observation_overwritten": false
+  },
+  "scope": "Post-service-merge application fingerprint only. Original three-browser journeys and their timestamps are preserved. This does not rerun interaction, accessibility, model, service or corpus checks; it does not attest hidden server code or future availability. Workflow success supplies deployment context; fetched response hashes establish the observed public application identity."
+}

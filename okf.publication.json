@@ -2167,6 +2167,32 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 10
+      },
+      {
+        "id": "staff-service-browser-controls",
+        "kind": "test",
+        "planes": [
+          "runtime"
+        ],
+        "command": "node --test scripts/test_staff_service_browser.mjs",
+        "source": "docs/staff-service-browser-verification.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "staff-service-observation-integrity",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/check_staff_service_observations.py",
+        "source": "docs/staff-service-browser-verification.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
       }
     ]
   },
@@ -2200,7 +2226,9 @@
       "CHANGELOG.md",
       "docs/**",
       "docs/staff-model-trials.md",
-      "docs/combined-reader.md"
+      "docs/combined-reader.md",
+      "docs/staff-service-browser-verification.md",
+      "docs/monday-demo-2026-09-21.md"
     ],
     "changelog_path": "CHANGELOG.md",
     "check_command_id": "diff-check",
