@@ -1,0 +1,62 @@
+{
+  "answer_present": true,
+  "artefacts": {
+    "answer.json": "6d321bc9df7a58b21021fe160505d0bde30760d84328fec941c0ea04fa6dc3ea",
+    "model-output.json": "561db913bc2930e01ef1e84724c45aafbf086ff690033ed413768eb909b026ab"
+  },
+  "attempt": "attempt-01",
+  "case_id": "staff-006",
+  "cli_version": "codex-cli 0.146.1",
+  "comparative_accuracy_or_affordability_established": false,
+  "cost_boundary": "Provider usage and cost accounting are not verified subscription charges, future pricing, savings or human review costs.",
+  "elapsed_seconds": 29.764,
+  "exit_code": 0,
+  "finished_at": "2026-09-20T19:13:36.671961+00:00",
+  "formatting_events": [],
+  "harness_sha256": "99aa7d2ff478363972c072bd1df217851424b24825e421fbd2e13159d310a255",
+  "human_review": "pending",
+  "inputs": {
+    "context_bytes": 253827,
+    "context_id": "urn:sha256:0b813b33fb0436cb615b99ddc75b6da73cafd7151172e76a268e9aba05d448d6",
+    "context_manifest_sha256": "20ba6c0a18f378ff817540a779c88aaa9532685703c928fb164aa3025c82c0d8",
+    "context_path": "evaluation/model-comparison/staff-2026-09-20/contexts/staff-006.json",
+    "context_sha256": "b1bc88754e6d08307966393820b31eea154883dddc6f3f9f16229842ad51123f",
+    "prompt_sha256": "8e22c351a866e296edbd64d249e6287c1b23b4337139564655d99e586cb22913",
+    "protocol_sha256": "01a40ee76bd60fd369e15dc8fe239aaac56e88e6c27076a07fb0f0d9c0bca020",
+    "schema_sha256": "5c83e0ffdfeed95fd0feb59ae2a7fc3e65c35608843c1a5254348632a3e3d06f",
+    "system_prompt_sha256": "e06f6546c5595a9c63b8ee8bfdee3d40710c184f9c8830c7ccf37d6c8af49d32"
+  },
+  "isolation": {
+    "customisations": "user-config-rules-project-docs-and-listed-features-disabled",
+    "disabled_skill_path_count": 17,
+    "limitation": "Host/system additions may still differ; absence of a warning is not proof of identical provider system context.",
+    "skills_policy": "process-local-disabled-for-discovered-user-skill-paths"
+  },
+  "mcp_servers": [],
+  "mechanical_assessment": {
+    "answer_quality_score": null,
+    "citations_checked": 4,
+    "claims": 3,
+    "entailment_review": "pending-independent-human-review",
+    "failures": [],
+    "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete.",
+    "specialist_accepted": false,
+    "status": "passed-mechanical-controls",
+    "unsupported_claim_rate": null
+  },
+  "model_override": null,
+  "observed_tool_events": [],
+  "provider": "codex-subscription",
+  "reported_models": [],
+  "schema": "okf-paired-staff-model-attempt.v1",
+  "started_at": "2026-09-20T19:13:06.908197+00:00",
+  "status": "actual-model-response-retained",
+  "stderr_sha256": "ce2548eb2c31989cece020eaadef44ed5bcf22917a0d8c3cb472f0e4d903c4e0",
+  "stdout_sha256": "2bda036391d32cd5a4c2c3163678689a6f6b7c51f8d8152ac57aabb0a8af3553",
+  "tools_requested": [],
+  "usage": {
+    "cached_input_tokens": 0,
+    "input_tokens": 86160,
+    "output_tokens": 1363
+  }
+}

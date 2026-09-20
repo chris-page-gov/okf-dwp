@@ -1,0 +1,200 @@
+{
+  "added_and_removed": {
+    "after_documents": 1,
+    "before_documents": 1,
+    "content_counts": {
+      "unknown": 2
+    },
+    "documents": [
+      {
+        "before": {
+          "attachment_id": "1",
+          "classification": "chapter",
+          "content_sha256": "a",
+          "extraction_sha256": "x",
+          "family": "synthetic",
+          "id": "fixture-a",
+          "publication_updated_at": "2026-01-01",
+          "publication_url": "https://example.invalid/publication",
+          "title": "Synthetic source",
+          "url": "https://example.invalid/a.pdf"
+        },
+        "content": "unknown",
+        "extraction": "unknown",
+        "key": "https://example.invalid/publication#attachment=1",
+        "presence": "removed",
+        "reason": "publication-observed-completely"
+      },
+      {
+        "after": {
+          "attachment_id": "2",
+          "classification": "chapter",
+          "content_sha256": "a",
+          "extraction_sha256": "x",
+          "family": "synthetic",
+          "id": "fixture-b",
+          "publication_updated_at": "2026-01-01",
+          "publication_url": "https://example.invalid/publication",
+          "title": "Synthetic source",
+          "url": "https://example.invalid/a.pdf"
+        },
+        "content": "unknown",
+        "extraction": "unknown",
+        "key": "https://example.invalid/publication#attachment=2",
+        "presence": "added"
+      }
+    ],
+    "extraction_counts": {
+      "unknown": 2
+    },
+    "limitations": [
+      "Matching listing metadata never proves unchanged PDF bytes.",
+      "Removed means absent from a successfully observed complete publication attachment list, not repealed or deleted from all official services.",
+      "Unknown dates/classifications remain unknown; a source refresh does not establish legal applicability.",
+      "No source version or live context binding is changed by this report."
+    ],
+    "metadata_changed_documents": 0,
+    "presence_counts": {
+      "added": 1,
+      "removed": 1
+    },
+    "schema": "okf-source-census-comparison.v1"
+  },
+  "content_extraction_date_classification_changes": {
+    "after_documents": 1,
+    "before_documents": 1,
+    "content_counts": {
+      "changed": 1
+    },
+    "documents": [
+      {
+        "after_observed_at": null,
+        "before_observed_at": null,
+        "changes": {
+          "classification": {
+            "after": "memo",
+            "before": "chapter"
+          },
+          "publication_updated_at": {
+            "after": "2026-02-01",
+            "before": "2026-01-01"
+          },
+          "title": {
+            "after": "Changed synthetic source",
+            "before": "Synthetic source"
+          }
+        },
+        "content": "changed",
+        "extraction": "changed",
+        "family": "synthetic",
+        "id": "fixture-a",
+        "key": "https://example.invalid/publication#attachment=1",
+        "metadata": "changed",
+        "presence": "present",
+        "unknown_metadata_fields": [
+          "declared_size_bytes",
+          "declared_pages",
+          "source_publication_date"
+        ]
+      }
+    ],
+    "extraction_counts": {
+      "changed": 1
+    },
+    "limitations": [
+      "Matching listing metadata never proves unchanged PDF bytes.",
+      "Removed means absent from a successfully observed complete publication attachment list, not repealed or deleted from all official services.",
+      "Unknown dates/classifications remain unknown; a source refresh does not establish legal applicability.",
+      "No source version or live context binding is changed by this report."
+    ],
+    "metadata_changed_documents": 1,
+    "presence_counts": {
+      "present": 1
+    },
+    "schema": "okf-source-census-comparison.v1"
+  },
+  "failed_publication_is_unknown": {
+    "after_documents": 0,
+    "before_documents": 1,
+    "content_counts": {
+      "unknown": 1
+    },
+    "documents": [
+      {
+        "before": {
+          "attachment_id": "1",
+          "classification": "chapter",
+          "content_sha256": "a",
+          "extraction_sha256": "x",
+          "family": "synthetic",
+          "id": "fixture-a",
+          "publication_updated_at": "2026-01-01",
+          "publication_url": "https://example.invalid/publication",
+          "title": "Synthetic source",
+          "url": "https://example.invalid/a.pdf"
+        },
+        "content": "unknown",
+        "extraction": "unknown",
+        "key": "https://example.invalid/publication#attachment=1",
+        "presence": "unknown",
+        "reason": "publication-not-observed"
+      }
+    ],
+    "extraction_counts": {
+      "unknown": 1
+    },
+    "limitations": [
+      "Matching listing metadata never proves unchanged PDF bytes.",
+      "Removed means absent from a successfully observed complete publication attachment list, not repealed or deleted from all official services.",
+      "Unknown dates/classifications remain unknown; a source refresh does not establish legal applicability.",
+      "No source version or live context binding is changed by this report."
+    ],
+    "metadata_changed_documents": 0,
+    "presence_counts": {
+      "unknown": 1
+    },
+    "schema": "okf-source-census-comparison.v1"
+  },
+  "metadata_only_content_is_unknown": {
+    "after_documents": 1,
+    "before_documents": 1,
+    "content_counts": {
+      "unknown": 1
+    },
+    "documents": [
+      {
+        "after_observed_at": null,
+        "before_observed_at": null,
+        "changes": {},
+        "content": "unknown",
+        "extraction": "unknown",
+        "family": "synthetic",
+        "id": "fixture-a",
+        "key": "https://example.invalid/publication#attachment=1",
+        "metadata": "no-change-in-comparable-fields",
+        "presence": "present",
+        "unknown_metadata_fields": [
+          "declared_size_bytes",
+          "declared_pages",
+          "source_publication_date"
+        ]
+      }
+    ],
+    "extraction_counts": {
+      "unknown": 1
+    },
+    "limitations": [
+      "Matching listing metadata never proves unchanged PDF bytes.",
+      "Removed means absent from a successfully observed complete publication attachment list, not repealed or deleted from all official services.",
+      "Unknown dates/classifications remain unknown; a source refresh does not establish legal applicability.",
+      "No source version or live context binding is changed by this report."
+    ],
+    "metadata_changed_documents": 0,
+    "presence_counts": {
+      "present": 1
+    },
+    "schema": "okf-source-census-comparison.v1"
+  },
+  "schema": "okf-source-drift-controls.v1",
+  "synthetic": true
+}

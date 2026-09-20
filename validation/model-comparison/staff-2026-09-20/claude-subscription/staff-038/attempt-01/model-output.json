@@ -1,0 +1,242 @@
+{
+  "duration_api_ms": 128833,
+  "duration_ms": 126793,
+  "event_count": 38,
+  "is_error": false,
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "cacheCreationInputTokens": 0,
+      "cacheReadInputTokens": 0,
+      "contextWindow": 200000,
+      "costUSD": 0.09298000000000001,
+      "inputTokens": 92895,
+      "maxOutputTokens": 32000,
+      "outputTokens": 17
+    },
+    "claude-opus-5": {
+      "cacheCreationInputTokens": 116603,
+      "cacheReadInputTokens": 1355,
+      "contextWindow": 1000000,
+      "costUSD": 1.4478925,
+      "inputTokens": 2,
+      "maxOutputTokens": 64000,
+      "outputTokens": 11247
+    }
+  },
+  "num_turns": 2,
+  "provider_result": "{\"context_id\":\"urn:sha256:545e18b1c7c7d09484c5b278b5a19dbdb17385b25e64213aab47fd888d2fd724\",\"package_evidence_status\":\"insufficient\",\"answer_disposition\":\"partial_evidence_only\",\"summary\":\"The package question (\\\"Under what circumstances can a Citizen claim Carers Allowance?\\\") cannot be answered completely from this package: its declared evidence status is insufficient, and requirement staff-038 records five absent obligations (evidence closure, applicability, legal version reconciliation, independent meaning review, question-scope resolution) that more retrieval cannot satisfy. The package is also truncated: budget.truncated is true (47 nodes, 49 relationships, reached depth 5 of 6), fourteen whole items were dropped for the byte budget (including DMG chapter 84, pages 84/0002, 84/0008, 84/0128, 85/0077, the beneficial-ownership term and several State Pension Credit legal provisions), and retrieval is truncated to sixteen highest-ranked lexical candidates out of 7,823, so other matching pages are outside scope. Within that frozen scope the selected exact DMG/ADM source pages do state a captured set of Carer's Allowance entitlement conditions (caring for a severely disabled person, regular and substantial care, not gainfully employed, aged 16 or over, not in full-time education, prescribed residence/presence conditions in Great Britain), plus captured rules on competing carers, caring for two or more disabled people, temporary breaks in care, an EU-coordination cohort affected by the AH judgment from 21 April 2023, and a pre-28.10.02 transitional protection for carers aged 65 and over. Several cross-referenced elements (gainful-employment earnings rules, the age condition detail, full-time education, the residence/presence conditions in DMG Chapter 07 Part 2) are referenced but not included; the definition of \\\"severely disabled person\\\" is cut off at a page boundary. The question terms \\\"circumstances\\\", \\\"citizen\\\" and \\\"claim\\\" are recorded as unresolved, so nationality, residence status and date are not established. Source text is captured, machine-extracted and marked unreviewed; capture dates are not publication, commencement or applicability dates. Nothing here is current-law assurance, a complete legal answer or an individual decision, and no award is calculated. Independent specialist human review is required.\",\"claims\":[{\"id\":\"c1\",\"statement\":\"A selected frozen DMG page states the captured conditions for entitlement to Carer's Allowance as: engaged in caring for a severely disabled person for any day; regularly and substantially engaged in caring for that person; not gainfully employed; aged 16 or over; not in full-time education; and satisfying prescribed conditions of residence or presence in Great Britain.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003\",\"quote\":\"60025 [See DMG memo 12/23] [See DMG memo 12-25] The conditions for entitlement are that the\\nclaimant\\n\\n\\n1. is engaged in caring for a severely disabled person for any day1 (see DMG 60035 - 60042) and\\n\\n\\n2. is regularly and substantially engaged in caring for that person 2 (see DMG 60035 - 60042) and\\n\\n\\n3. is not gainfully employed3 (see DMG 60051 - 60052) and\\n\\n\\n4. is aged 16 or over4 (see DMG 60058) and\\n\\n\\n5. is not in FTE5 (see DMG 60068 - 60081) and\\n\\n\\n6. satisfies prescribed conditions of residence or presence in GB6 (see DMG Chapter 07 Part 2).\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=3\",\"locator\":\"PDF page 3\"}],\"scope_or_qualification\":\"Whole-page machine extraction from DMG Vol 10 Ch 60, captured 2026-09-15, review_status 'unreviewed-specialist-review-required'. The page itself carries memo markers ([See DMG memo 12/23], [See DMG memo 12-25]) whose content is not in the package. Each condition cross-refers to DMG paragraphs (60035-60042, 60051-60052, 60058, 60068-60081, Chapter 07 Part 2) that are not included, so the detail of gainful employment, age, full-time education and residence/presence is not established here. Capture date is not a publication, commencement or applicability date.\"},{\"id\":\"c2\",\"statement\":\"The same chapter records that the claimant does not have to be related to the severely disabled person, and that where two or more people care for the same severely disabled person only one can be entitled to Carer's Allowance for any day, by written election signed by all of them or, absent an election, by decision-maker determination.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004\",\"quote\":\"Note 1: The claimant does not have to be related to the severely disabled person 7.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=4\",\"locator\":\"PDF page 4\"},{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004\",\"quote\":\"60026 [See DMG memo 12/23] However, where two or more people are caring for the same severely\\n\\ndisabled person, only one of them will be entitled to CA for any day 1. It will be up to them to choose and\\n\\nelect who will be entitled to CA2 by giving the DM a notice in writing signed by all of them specifying who\\n\\nshould be entitled to CA3. If there is no election the DM should decide who should have entitlement to\\n\\nCA4.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=4\",\"locator\":\"PDF page 4\"}],\"scope_or_qualification\":\"Frozen DMG Vol 10 Ch 60 page 4, captured 2026-09-15, unreviewed. Footnotes cite SS CB Act 92 s 70 and the Social Security (Invalid Care Allowance) Regulations 1976; the package holds only reference metadata for those provisions, with statutory text and applicability expressly not established. The page also carries a [See DMG memo 12/23] marker not included in the package.\"},{\"id\":\"c3\",\"statement\":\"The captured guidance defines 'severely disabled person' by reference to receipt of specified benefits, but the definition list is cut off at the page boundary in this package.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004\",\"quote\":\"60033 [see DMG memo 02/25] “Severely disabled person” means a person for whom\\n\\n\\n1. AA1 or\\n\\n\\n2. the care component of DLA at the highest or middle rate or pension age disability\\npayment2 or\\n\\n3. CAA payable as\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=4\",\"locator\":\"PDF page 4\"}],\"scope_or_qualification\":\"The extracted page continues to heads 3.1-3.4 and '4. the daily living component of PIP at the standard or enhanced rate 7 or' and then ends; any further heads fall on a page not selected in this package. The list must not be read as complete. Page carries a [see DMG memo 02/25] marker.\"},{\"id\":\"c4\",\"statement\":\"For a person caring for two or more severely disabled people, the captured guidance states that from 17.8.93 caring hours are not aggregated and entitlement requires at least 35 hours a week caring for one of them, with time caring for the other disregarded.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0007\",\"quote\":\"60044 From 17.8.93, where a person who is caring for two or more severely disabled people claims CA\\n\\n\\n1. the hours spent in caring are not added together and\\n\\n\\n2. there will only be entitlement to CA if a person spends at least 35 hours a week caring for one of the\\nseverely disabled people and\\n\\n\\n3. any time spent in caring for the other severely disabled person is not taken into account 1.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=7\",\"locator\":\"PDF page 7\"}],\"scope_or_qualification\":\"Frozen DMG Vol 10 Ch 60 page 7, captured 2026-09-15, unreviewed; footnote cites SS (ICA) Regs, reg 4(1A), held in the package as reference metadata only. The same page records a different, historical rule for claims beginning 19.11.92 to 16.8.93 where hours could be added together. The project-authored (model-derived) relation for this page notes that DMG 60044 'must be read with 60043', which is not selected here. The 35-hour caring condition itself (DMG 60035-60042) is not included.\"},{\"id\":\"c5\",\"statement\":\"The captured guidance provides that a week in which the caring condition is not met can be treated as satisfied where the cessation is temporary and specified qualifying-week tests are met.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0007\",\"quote\":\"60045 A week when a person does not satisfy the “caring condition” is treated as a week in which that\\ncondition is satisfied, if that person\\n\\n\\n1. has only temporarily ceased to satisfy the “caring condition” and\\n\\n\\n2. has satisfied the caring condition for at least 14 weeks in a 26 week period.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=7\",\"locator\":\"PDF page 7\"}],\"scope_or_qualification\":\"Partial quotation of a longer conditional test that continues with the 26-week period end, a 22-week condition and in-patient treatment circumstances, footnoted to SS (ICA) Regs, reg 4(2). The page header carries '[See DMG Memo 06/20]', whose content is not in the package, and DMG 60046 onward (limits on total breaks) is cut off at the page boundary.\"},{\"id\":\"c6\",\"statement\":\"A supplementary ADM memo page records an EU social-security-coordination cohort in which claimants claiming Carer's Allowance among other benefits, who are economically inactive with an economically active family member in a listed state and covered by Reg 883 via specified agreements, fall within the Court of Appeal AH judgment, which the memo says does not apply to circumstances prior to 21 April 2023.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-07-24/0003\",\"quote\":\"11. The CoA judgment concerns the following cohort and claimants must satisfy the below\\n       conditions:\\n            1. Be in the UK\\n            2. Be claiming Attendance Allowance, Carer’s Allowance, Disability Living Allowance (Care\\n              Component) or Personal Independence Payment (Daily Living Component)\\n            3. Be economically inactive (an adult who is not employed or self-employed, or a child)\\n            4. Have a family member (spouse or parent) who is economically active in an EU member\\n              state (MS) or Iceland, Norway, Liechtenstein or Switzerland\\n            5. Is covered by Reg 883 via the EU Withdrawal Agreement (EUWA), the EEA EFTA\\n              Separation Agreement or the Swiss Citizen’s Rights Agreement.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/669fbc11fc8e12ac3edb02a8/adm-memo-07-24.pdf#page=3\",\"locator\":\"PDF page 3\"},{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-07-24/0003\",\"quote\":\"12.In circumstances where the Court of Appeal’s judgment applies, the UK is competent for the\\n       claimant’s cash sickness benefits pursuant to Article 11(3)(e) of Reg 883. The judgment does not\\n       apply to circumstances prior to 21 April 2023.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/669fbc11fc8e12ac3edb02a8/adm-memo-07-24.pdf#page=3\",\"locator\":\"PDF page 3\"}],\"scope_or_qualification\":\"ADM memo 07/24, captured 2026-09-19, record scope marks the captured role as 'supplementary-guidance-applicability-unreviewed'; a lexical match does not establish the applicable benefit regime or current law. This concerns which state is competent for cash sickness benefits, not the domestic caring/age/employment/education conditions, and is not a nationality or residence test for an individual. The parallel DMG memo 06/2024 page in the package gives an equivalent list and worked examples for Carer's Allowance recipients.\"},{\"id\":\"c7\",\"statement\":\"State Pension Credit guidance in the package records a transitional protection under which carers aged 65 and over before 28.10.02 can continue to be entitled to Carer's Allowance even though they are no longer providing care.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/78/0011\",\"quote\":\"78035 [see DMG memo 02/25] Carers who were aged 65 and over before 28.10.02 can continue to be\\n\\nentitled to CA even though they are no longer providing care1, for example after the disabled person has\\ndied.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=11\",\"locator\":\"PDF page 11\"},{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/78/0029\",\"quote\":\"78111 Carers who were aged 65 and over before 28.10.02 can continue to be entitled to CA even though\\n\\nthey are no longer providing care1, for example after the disabled person has died. Where this protection\\napplies and CA is retained the carer can continue to receive the additional amount for carers.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=29\",\"locator\":\"PDF page 29\"}],\"scope_or_qualification\":\"Both pages are from DMG Vol 13 Ch 78 (State Pension Credit: additional amounts and special groups), captured 2026-09-15, unreviewed; footnoted to The Regulatory Reform (Carer's Allowance) Order 2002, S.I. 2002/1457, art 4, which is not held as text in this package. The statement is captured historical guidance about a protected group; it does not establish the rule's current force, and page 78/0011 carries a [see DMG memo 02/25] marker.\"},{\"id\":\"c8\",\"statement\":\"The package distinguishes entitlement to Carer's Allowance itself from the separate State Pension Credit additional amount for carers, which is awarded where a claimant or partner is entitled to CA or treated as still satisfying the qualifying conditions, and which is not payable for prisoners or fully maintained members of religious orders.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/78/0027\",\"quote\":\"78105 [See DMG memo 12/23] An additional amount for carers may be awarded for each claimant 1 or, in\\n\\nthe case of partners, each partner2 who is\\n\\n\\n1. entitled to CA3 or\\n\\n\\n2. treated as still satisfying the qualifying conditions for the award of the additional amount 4 (see DMG\\n78107).\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=27\",\"locator\":\"PDF page 27\"},{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/page/78/0027\",\"quote\":\"an\\n\\nadditional amount for carers may be applicable 1. But the additional amount is not payable2 in the case of\\n\\n\\n1. prisoners and\\n\\n\\n2. members of religious orders who are fully maintained by their order.\",\"source_url\":\"https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=27\",\"locator\":\"PDF page 27\"}],\"scope_or_qualification\":\"Benefit-variant distinction: this is the Pension Credit carer additional amount, a component of a different benefit, not the conditions for claiming Carer's Allowance. DMG Vol 13 Ch 78 page 27, captured 2026-09-15, unreviewed, with [See DMG memo 12/23] and [See Memo DMG 01/26] markers not in the package. Footnotes cite SPC Act 02 and SPC Regs provisions held only as reference metadata.\"},{\"id\":\"c9\",\"statement\":\"The project's own concept record for Carer's Allowance is an unreviewed model-derived proposal stating that the benefit has caring, age, employment, education and residence/presence conditions and that payment, underlying entitlement and effects on other awards are separate questions.\",\"evidence\":[{\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/staff-domain/carers-allowance\",\"quote\":\"Carer’s Allowance has caring, age, employment, education and residence/presence conditions. Actual payment, underlying entitlement and effects on other awards are separate questions.\",\"source_url\":\"https://github.com/chris-page-gov/okf-dwp/blob/main/domain-profile/staff-semantic/concepts.yamlld\",\"locator\":\"@graph/carers-allowance/definition\"}],\"scope_or_qualification\":\"Project-authored, model-assisted meaning proposal with assertion_status 'model-derived' and review_status 'unreviewed-specialist-review-required'. It is not source text, not an official interpretation and carries less authority than the frozen DMG pages; it must not be treated as a legal definition or as expert approval.\"}],\"gaps\":[\"Requirement staff-038 registers five missing obligations (evidence_closure_unverified, applicability_unresolved, legal_version_unreconciled, independent_review_pending, question_scope_unresolved) that cannot be closed by retrieving more pages.\",\"The residence and presence conditions for Carer's Allowance are cross-referred to DMG Chapter 07 Part 2, which is not in the package.\",\"The gainful employment test (DMG 60051-60057), including any earnings limit, is referenced but not included.\",\"The age condition detail (DMG 60058), the rules for people who have reached age 65, the 8 weeks run on and full-time education rules (DMG 60068-60081) are listed in the chapter contents but their text is not selected.\",\"The 'regularly and substantially engaged in caring' / 35-hour caring condition text (DMG 60035-60042) is not included.\",\"The definition of 'severely disabled person' (DMG 60033) is truncated at a page boundary; the complete list of qualifying benefits is not established.\",\"DMG 60043, expressly flagged by a project-authored relation as needing to be read with 60044, is not a selected record.\",\"Statutory texts (SS CB Act 92 s 70, SS (ICA) Regs regs 4 and 7, SPC Act 2002 and SPC Regs provisions) are present only as reference metadata; provision text, amendments and applicability are not established.\",\"Memo content referenced on the selected pages (DMG memos 12/23, 12-25, 02/25, 06/20, 01/26) is not included.\",\"Fourteen whole items were dropped for the byte budget, including DMG chapter 84 and pages 84/0002, 84/0008, 84/0128, 85/0077 and several State Pension Credit legal provisions.\",\"Retrieval was capped at sixteen candidates from 7,823 matching pages, so other relevant Carer's Allowance pages remain outside the package.\",\"Territorial changes, exclusions, overlapping-benefit rules and effective/commencement dates required by staff-038 are not supplied.\",\"The question terms 'circumstances', 'citizen' and 'claim' are recorded as unresolved against the declared concept vocabulary.\"],\"abstentions\":[\"Cannot establish a complete or authoritative statement of the circumstances in which a person can claim Carer's Allowance.\",\"Cannot establish what 'Citizen' means for entitlement; nationality, immigration status and residence or presence conditions are not resolved in this package.\",\"Cannot establish whether any quoted guidance reflects current law, or its commencement or applicability dates; capture dates are not publication or effective dates.\",\"Cannot determine entitlement, payment or any award for any individual, and no calculation is performed.\",\"Cannot confirm the completeness of the six captured conditions, the 'severely disabled person' benefit list, exclusions or overlapping-benefit effects.\",\"Cannot resolve whether the pre-28.10.02 transitional protection or the historical pre-17.8.93 aggregation rule remain in force.\",\"Cannot treat the project-authored concepts and relationships as approved domain meanings; they remain unreviewed proposals.\",\"Cannot confirm that no contradictions exist beyond the conflicts explicitly declared in the bundle (none were declared).\"],\"limitations\":[\"The package's declared evidence status is insufficient, so no bounded source answer is given; this is partial evidence only.\",\"The context is truncated (budget.truncated true, 47 nodes, 49 relationships, depth 5), with byte-budget and retrieval-candidate omissions recorded.\",\"All source text is untrusted, frozen, machine-extracted and marked 'unreviewed-specialist-review-required'; it is evidence, not instructions.\",\"Source text, normalised records, project-authored assertions and this response carry different authority; none amounts to expert approval.\",\"Lexical matching and declared-alias resolution are candidate evidence only and do not establish the applicable benefit regime, concept resolution or policy coverage.\",\"Legal records in the package are reference metadata only; statutory text and applicability are expressly not established.\",\"Sufficiency, where claimed by the package, would mean closure of bundle-authored evidence requirements, not a verified answer or an individual decision.\",\"No tools, browsing, external sources or inferred claimant facts were used, and no personal data was requested.\",\"This is an experimental model trial output requiring independent human specialist review; it does not replace domain review or constitute a legal answer.\"]}",
+  "reported_models": [
+    "claude-haiku-4-5-20251001",
+    "claude-opus-5"
+  ],
+  "structured_output": {
+    "abstentions": [
+      "Cannot establish a complete or authoritative statement of the circumstances in which a person can claim Carer's Allowance.",
+      "Cannot establish what 'Citizen' means for entitlement; nationality, immigration status and residence or presence conditions are not resolved in this package.",
+      "Cannot establish whether any quoted guidance reflects current law, or its commencement or applicability dates; capture dates are not publication or effective dates.",
+      "Cannot determine entitlement, payment or any award for any individual, and no calculation is performed.",
+      "Cannot confirm the completeness of the six captured conditions, the 'severely disabled person' benefit list, exclusions or overlapping-benefit effects.",
+      "Cannot resolve whether the pre-28.10.02 transitional protection or the historical pre-17.8.93 aggregation rule remain in force.",
+      "Cannot treat the project-authored concepts and relationships as approved domain meanings; they remain unreviewed proposals.",
+      "Cannot confirm that no contradictions exist beyond the conflicts explicitly declared in the bundle (none were declared)."
+    ],
+    "answer_disposition": "partial_evidence_only",
+    "claims": [
+      {
+        "evidence": [
+          {
+            "locator": "PDF page 3",
+            "quote": "60025 [See DMG memo 12/23] [See DMG memo 12-25] The conditions for entitlement are that the\nclaimant\n\n\n1. is engaged in caring for a severely disabled person for any day1 (see DMG 60035 - 60042) and\n\n\n2. is regularly and substantially engaged in caring for that person 2 (see DMG 60035 - 60042) and\n\n\n3. is not gainfully employed3 (see DMG 60051 - 60052) and\n\n\n4. is aged 16 or over4 (see DMG 60058) and\n\n\n5. is not in FTE5 (see DMG 60068 - 60081) and\n\n\n6. satisfies prescribed conditions of residence or presence in GB6 (see DMG Chapter 07 Part 2).",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003",
+            "source_url": "https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=3"
+          }
+        ],
+        "id": "c1",
+        "scope_or_qualification": "Whole-page machine extraction from DMG Vol 10 Ch 60, captured 2026-09-15, review_status 'unreviewed-specialist-review-required'. The page itself carries memo markers ([See DMG memo 12/23], [See DMG memo 12-25]) whose content is not in the package. Each condition cross-refers to DMG paragraphs (60035-60042, 60051-60052, 60058, 60068-60081, Chapter 07 Part 2) that are not included, so the detail of gainful employment, age, full-time education and residence/presence is not established here. Capture date is not a publication, commencement or applicability date.",
+        "statement": "A selected frozen DMG page states the captured conditions for entitlement to Carer's Allowance as: engaged in caring for a severely disabled person for any day; regularly and substantially engaged in caring for that person; not gainfully employed; aged 16 or over; not in full-time education; and satisfying prescribed conditions of residence or presence in Great Britain."
+      },
+      {
+        "evidence": [
+          {
+            "locator": "PDF page 4",
+            "quote": "Note 1: The claimant does not have to be related to the severely disabled person 7.",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+            "source_url": "https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=4"
+          },
+          {
+            "locator": "PDF page 4",
+            "quote": "60026 [See DMG memo 12/23] However, where two or more people are caring for the same severely\n\ndisabled person, only one of them will be entitled to CA for any day 1. It will be up to them to choose and\n\nelect who will be entitled to CA2 by giving the DM a notice in writing signed by all of them specifying who\n\nshould be entitled to CA3. If there is no election the DM should decide who should have entitlement to\n\nCA4.",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+            "source_url": "https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=4"
+          }
+        ],
+        "id": "c2",
+        "scope_or_qualification": "Frozen DMG Vol 10 Ch 60 page 4, captured 2026-09-15, unreviewed. Footnotes cite SS CB Act 92 s 70 and the Social Security (Invalid Care Allowance) Regulations 1976; the package holds only reference metadata for those provisions, with statutory text and applicability expressly not established. The page also carries a [See DMG memo 12/23] marker not included in the package.",
+        "statement": "The same chapter records that the claimant does not have to be related to the severely disabled person, and that where two or more people care for the same severely disabled person only one can be entitled to Carer's Allowance for any day, by written election signed by all of them or, absent an election, by decision-maker determination."
+      },
+      {
+        "evidence": [
+          {
+            "locator": "PDF page 4",
+            "quote": "60033 [see DMG memo 02/25] “Severely disabled person” means a person for whom\n\n\n1. AA1 or\n\n\n2. the care component of DLA at the highest or middle rate or pension age disability\npayment2 or\n\n3. CAA payable as",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+            "source_url": "https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=4"
+          }
+        ],
+        "id": "c3",
+        "scope_or_qualification": "The extracted page continues to heads 3.1-3.4 and '4. the daily living component of PIP at the standard or enhanced rate 7 or' and then ends; any further heads fall on a page not selected in this package. The list must not be read as complete. Page carries a [see DMG memo 02/25] marker.",
+        "statement": "The captured guidance defines 'severely disabled person' by reference to receipt of specified benefits, but the definition list is cut off at the page boundary in this package."
+      },
+      {
+        "evidence": [
+          {
+            "locator": "PDF page 7",
+            "quote": "60044 From 17.8.93, where a person who is caring for two or more severely disabled people claims CA\n\n\n1. the hours spent in caring are not added together and\n\n\n2. there will only be entitlement to CA if a person spends at least 35 hours a week caring for one of the\nseverely disabled people and\n\n\n3. any time spent in caring for the other severely disabled person is not taken into account 1.",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0007",
+            "source_url": "https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=7"
+          }
+        ],
+        "id": "c4",
+        "scope_or_qualification": "Frozen DMG Vol 10 Ch 60 page 7, captured 2026-09-15, unreviewed; footnote cites SS (ICA) Regs, reg 4(1A), held in the package as reference metadata only. The same page records a different, historical rule for claims beginning 19.11.92 to 16.8.93 where hours could be added together. The project-authored (model-derived) relation for this page notes that DMG 60044 'must be read with 60043', which is not selected here. The 35-hour caring condition itself (DMG 60035-60042) is not included.",
+        "statement": "For a person caring for two or more severely disabled people, the captured guidance states that from 17.8.93 caring hours are not aggregated and entitlement requires at least 35 hours a week caring for one of them, with time caring for the other disregarded."
+      },
+      {
+        "evidence": [
+          {
+            "locator": "PDF page 7",
+            "quote": "60045 A week when a person does not satisfy the “caring condition” is treated as a week in which that\ncondition is satisfied, if that person\n\n\n1. has only temporarily ceased to satisfy the “caring condition” and\n\n\n2. has satisfied the caring condition for at least 14 weeks in a 26 week period.",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0007",
+            "source_url": "https://assets.publishing.service.gov.uk/media/69e0fdcbb5e95ca5017ed9da/dmg-Chap-60.pdf#page=7"
+          }
+        ],
+        "id": "c5",
+        "scope_or_qualification": "Partial quotation of a longer conditional test that continues with the 26-week period end, a 22-week condition and in-patient treatment circumstances, footnoted to SS (ICA) Regs, reg 4(2). The page header carries '[See DMG Memo 06/20]', whose content is not in the package, and DMG 60046 onward (limits on total breaks) is cut off at the page boundary.",
+        "statement": "The captured guidance provides that a week in which the caring condition is not met can be treated as satisfied where the cessation is temporary and specified qualifying-week tests are met."
+      },
+      {
+        "evidence": [
+          {
+            "locator": "PDF page 3",
+            "quote": "11. The CoA judgment concerns the following cohort and claimants must satisfy the below\n       conditions:\n            1. Be in the UK\n            2. Be claiming Attendance Allowance, Carer’s Allowance, Disability Living Allowance (Care\n              Component) or Personal Independence Payment (Daily Living Component)\n            3. Be economically inactive (an adult who is not employed or self-employed, or a child)\n            4. Have a family member (spouse or parent) who is economically active in an EU member\n              state (MS) or Iceland, Norway, Liechtenstein or Switzerland\n            5. Is covered by Reg 883 via the EU Withdrawal Agreement (EUWA), the EEA EFTA\n              Separation Agreement or the Swiss Citizen’s Rights Agreement.",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-07-24/0003",
+            "source_url": "https://assets.publishing.service.gov.uk/media/669fbc11fc8e12ac3edb02a8/adm-memo-07-24.pdf#page=3"
+          },
+          {
+            "locator": "PDF page 3",
+            "quote": "12.In circumstances where the Court of Appeal’s judgment applies, the UK is competent for the\n       claimant’s cash sickness benefits pursuant to Article 11(3)(e) of Reg 883. The judgment does not\n       apply to circumstances prior to 21 April 2023.",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-07-24/0003",
+            "source_url": "https://assets.publishing.service.gov.uk/media/669fbc11fc8e12ac3edb02a8/adm-memo-07-24.pdf#page=3"
+          }
+        ],
+        "id": "c6",
+        "scope_or_qualification": "ADM memo 07/24, captured 2026-09-19, record scope marks the captured role as 'supplementary-guidance-applicability-unreviewed'; a lexical match does not establish the applicable benefit regime or current law. This concerns which state is competent for cash sickness benefits, not the domestic caring/age/employment/education conditions, and is not a nationality or residence test for an individual. The parallel DMG memo 06/2024 page in the package gives an equivalent list and worked examples for Carer's Allowance recipients.",
+        "statement": "A supplementary ADM memo page records an EU social-security-coordination cohort in which claimants claiming Carer's Allowance among other benefits, who are economically inactive with an economically active family member in a listed state and covered by Reg 883 via specified agreements, fall within the Court of Appeal AH judgment, which the memo says does not apply to circumstances prior to 21 April 2023."
+      },
+      {
+        "evidence": [
+          {
+            "locator": "PDF page 11",
+            "quote": "78035 [see DMG memo 02/25] Carers who were aged 65 and over before 28.10.02 can continue to be\n\nentitled to CA even though they are no longer providing care1, for example after the disabled person has\ndied.",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011",
+            "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=11"
+          },
+          {
+            "locator": "PDF page 29",
+            "quote": "78111 Carers who were aged 65 and over before 28.10.02 can continue to be entitled to CA even though\n\nthey are no longer providing care1, for example after the disabled person has died. Where this protection\napplies and CA is retained the carer can continue to receive the additional amount for carers.",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0029",
+            "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=29"
+          }
+        ],
+        "id": "c7",
+        "scope_or_qualification": "Both pages are from DMG Vol 13 Ch 78 (State Pension Credit: additional amounts and special groups), captured 2026-09-15, unreviewed; footnoted to The Regulatory Reform (Carer's Allowance) Order 2002, S.I. 2002/1457, art 4, which is not held as text in this package. The statement is captured historical guidance about a protected group; it does not establish the rule's current force, and page 78/0011 carries a [see DMG memo 02/25] marker.",
+        "statement": "State Pension Credit guidance in the package records a transitional protection under which carers aged 65 and over before 28.10.02 can continue to be entitled to Carer's Allowance even though they are no longer providing care."
+      },
+      {
+        "evidence": [
+          {
+            "locator": "PDF page 27",
+            "quote": "78105 [See DMG memo 12/23] An additional amount for carers may be awarded for each claimant 1 or, in\n\nthe case of partners, each partner2 who is\n\n\n1. entitled to CA3 or\n\n\n2. treated as still satisfying the qualifying conditions for the award of the additional amount 4 (see DMG\n78107).",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0027",
+            "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=27"
+          },
+          {
+            "locator": "PDF page 27",
+            "quote": "an\n\nadditional amount for carers may be applicable 1. But the additional amount is not payable2 in the case of\n\n\n1. prisoners and\n\n\n2. members of religious orders who are fully maintained by their order.",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0027",
+            "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=27"
+          }
+        ],
+        "id": "c8",
+        "scope_or_qualification": "Benefit-variant distinction: this is the Pension Credit carer additional amount, a component of a different benefit, not the conditions for claiming Carer's Allowance. DMG Vol 13 Ch 78 page 27, captured 2026-09-15, unreviewed, with [See DMG memo 12/23] and [See Memo DMG 01/26] markers not in the package. Footnotes cite SPC Act 02 and SPC Regs provisions held only as reference metadata.",
+        "statement": "The package distinguishes entitlement to Carer's Allowance itself from the separate State Pension Credit additional amount for carers, which is awarded where a claimant or partner is entitled to CA or treated as still satisfying the qualifying conditions, and which is not payable for prisoners or fully maintained members of religious orders."
+      },
+      {
+        "evidence": [
+          {
+            "locator": "@graph/carers-allowance/definition",
+            "quote": "Carer’s Allowance has caring, age, employment, education and residence/presence conditions. Actual payment, underlying entitlement and effects on other awards are separate questions.",
+            "record_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/carers-allowance",
+            "source_url": "https://github.com/chris-page-gov/okf-dwp/blob/main/domain-profile/staff-semantic/concepts.yamlld"
+          }
+        ],
+        "id": "c9",
+        "scope_or_qualification": "Project-authored, model-assisted meaning proposal with assertion_status 'model-derived' and review_status 'unreviewed-specialist-review-required'. It is not source text, not an official interpretation and carries less authority than the frozen DMG pages; it must not be treated as a legal definition or as expert approval.",
+        "statement": "The project's own concept record for Carer's Allowance is an unreviewed model-derived proposal stating that the benefit has caring, age, employment, education and residence/presence conditions and that payment, underlying entitlement and effects on other awards are separate questions."
+      }
+    ],
+    "context_id": "urn:sha256:545e18b1c7c7d09484c5b278b5a19dbdb17385b25e64213aab47fd888d2fd724",
+    "gaps": [
+      "Requirement staff-038 registers five missing obligations (evidence_closure_unverified, applicability_unresolved, legal_version_unreconciled, independent_review_pending, question_scope_unresolved) that cannot be closed by retrieving more pages.",
+      "The residence and presence conditions for Carer's Allowance are cross-referred to DMG Chapter 07 Part 2, which is not in the package.",
+      "The gainful employment test (DMG 60051-60057), including any earnings limit, is referenced but not included.",
+      "The age condition detail (DMG 60058), the rules for people who have reached age 65, the 8 weeks run on and full-time education rules (DMG 60068-60081) are listed in the chapter contents but their text is not selected.",
+      "The 'regularly and substantially engaged in caring' / 35-hour caring condition text (DMG 60035-60042) is not included.",
+      "The definition of 'severely disabled person' (DMG 60033) is truncated at a page boundary; the complete list of qualifying benefits is not established.",
+      "DMG 60043, expressly flagged by a project-authored relation as needing to be read with 60044, is not a selected record.",
+      "Statutory texts (SS CB Act 92 s 70, SS (ICA) Regs regs 4 and 7, SPC Act 2002 and SPC Regs provisions) are present only as reference metadata; provision text, amendments and applicability are not established.",
+      "Memo content referenced on the selected pages (DMG memos 12/23, 12-25, 02/25, 06/20, 01/26) is not included.",
+      "Fourteen whole items were dropped for the byte budget, including DMG chapter 84 and pages 84/0002, 84/0008, 84/0128, 85/0077 and several State Pension Credit legal provisions.",
+      "Retrieval was capped at sixteen candidates from 7,823 matching pages, so other relevant Carer's Allowance pages remain outside the package.",
+      "Territorial changes, exclusions, overlapping-benefit rules and effective/commencement dates required by staff-038 are not supplied.",
+      "The question terms 'circumstances', 'citizen' and 'claim' are recorded as unresolved against the declared concept vocabulary."
+    ],
+    "limitations": [
+      "The package's declared evidence status is insufficient, so no bounded source answer is given; this is partial evidence only.",
+      "The context is truncated (budget.truncated true, 47 nodes, 49 relationships, depth 5), with byte-budget and retrieval-candidate omissions recorded.",
+      "All source text is untrusted, frozen, machine-extracted and marked 'unreviewed-specialist-review-required'; it is evidence, not instructions.",
+      "Source text, normalised records, project-authored assertions and this response carry different authority; none amounts to expert approval.",
+      "Lexical matching and declared-alias resolution are candidate evidence only and do not establish the applicable benefit regime, concept resolution or policy coverage.",
+      "Legal records in the package are reference metadata only; statutory text and applicability are expressly not established.",
+      "Sufficiency, where claimed by the package, would mean closure of bundle-authored evidence requirements, not a verified answer or an individual decision.",
+      "No tools, browsing, external sources or inferred claimant facts were used, and no personal data was requested.",
+      "This is an experimental model trial output requiring independent human specialist review; it does not replace domain review or constitute a legal answer."
+    ],
+    "package_evidence_status": "insufficient",
+    "summary": "The package question (\"Under what circumstances can a Citizen claim Carers Allowance?\") cannot be answered completely from this package: its declared evidence status is insufficient, and requirement staff-038 records five absent obligations (evidence closure, applicability, legal version reconciliation, independent meaning review, question-scope resolution) that more retrieval cannot satisfy. The package is also truncated: budget.truncated is true (47 nodes, 49 relationships, reached depth 5 of 6), fourteen whole items were dropped for the byte budget (including DMG chapter 84, pages 84/0002, 84/0008, 84/0128, 85/0077, the beneficial-ownership term and several State Pension Credit legal provisions), and retrieval is truncated to sixteen highest-ranked lexical candidates out of 7,823, so other matching pages are outside scope. Within that frozen scope the selected exact DMG/ADM source pages do state a captured set of Carer's Allowance entitlement conditions (caring for a severely disabled person, regular and substantial care, not gainfully employed, aged 16 or over, not in full-time education, prescribed residence/presence conditions in Great Britain), plus captured rules on competing carers, caring for two or more disabled people, temporary breaks in care, an EU-coordination cohort affected by the AH judgment from 21 April 2023, and a pre-28.10.02 transitional protection for carers aged 65 and over. Several cross-referenced elements (gainful-employment earnings rules, the age condition detail, full-time education, the residence/presence conditions in DMG Chapter 07 Part 2) are referenced but not included; the definition of \"severely disabled person\" is cut off at a page boundary. The question terms \"circumstances\", \"citizen\" and \"claim\" are recorded as unresolved, so nationality, residence status and date are not established. Source text is captured, machine-extracted and marked unreviewed; capture dates are not publication, commencement or applicability dates. Nothing here is current-law assurance, a complete legal answer or an individual decision, and no award is calculated. Independent specialist human review is required."
+  },
+  "tool_event_names": [
+    "StructuredOutput"
+  ],
+  "tool_events": [
+    {
+      "input_sha256": "ff21943d9f33ad5986cb3f983aa73379a60fbebc2fdf82f10aea2e75145d29bc",
+      "name": "StructuredOutput"
+    }
+  ],
+  "total_cost_usd": 1.5408725,
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 116603,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 116603,
+    "cache_read_input_tokens": 1355,
+    "input_tokens": 2,
+    "output_tokens": 11247,
+    "output_tokens_details": {},
+    "server_tool_use": {
+      "web_fetch_requests": 0,
+      "web_search_requests": 0
+    }
+  }
+}

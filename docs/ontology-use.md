@@ -97,6 +97,14 @@ classes. The [semantic pilot contract](next-stage/semantic-contract.md) states
 the meaning and evidence requirements for the local predicates actually emitted.
 Neutral cross-benefit definitions and review are tracked as **DWP-BL-005**.
 
+The [20 September staff increment](semantic-expansion.md) adds 43 source-backed
+concept proposals, including neutral benefit and benefit-variant meanings,
+using SKOS `related` and `broader` and Dublin Core `references`. It retains
+the earlier namespace audit unchanged. The 40 task profiles are executable
+context requirements, not an OWL benefits ontology. Their 203 missing obligations
+are explicitly absent evidence. Legal citation links identify provision references;
+reference metadata does not become statutory text or an applicability rule.
+
 ## Declared or researched, but not implemented as claimed semantics
 
 | Item | Current boundary |

@@ -1,0 +1,80 @@
+{
+  "answer_present": true,
+  "artefacts": {
+    "answer.json": "067b0ba5ff2df4f98fe6a09fb334b7b88027976ff87dc7ed62f626a01f573acc",
+    "model-output.json": "697f50e2c3c57193d92ac2f989a4e7d640b899d2b0c7ffaabc1939096c5ba7f3"
+  },
+  "attempt": "attempt-02",
+  "case_id": "control-unknown",
+  "cli_version": "2.1.245 (Claude Code)",
+  "comparative_accuracy_or_affordability_established": false,
+  "cost_boundary": "Provider usage and cost accounting are not verified subscription charges, future pricing, savings or human review costs.",
+  "elapsed_seconds": 20.141,
+  "exit_code": 0,
+  "finished_at": "2026-09-20T19:15:50.083193+00:00",
+  "formatting_events": [
+    {
+      "input_sha256": "067b0ba5ff2df4f98fe6a09fb334b7b88027976ff87dc7ed62f626a01f573acc",
+      "name": "StructuredOutput"
+    }
+  ],
+  "harness_sha256": "53a7f7cbba7b07dd2d519fe3fd39b990ec19bf6677d8cd3efb09e7eab398c632",
+  "human_review": "pending",
+  "inputs": {
+    "context_bytes": 4104,
+    "context_id": "urn:sha256:cb1b67694454dd6641c38f504b9224969aab7935646ff46c962895289bcf1e5d",
+    "context_manifest_sha256": "20ba6c0a18f378ff817540a779c88aaa9532685703c928fb164aa3025c82c0d8",
+    "context_path": "evaluation/model-comparison/staff-2026-09-20/contexts/control-unknown.json",
+    "context_sha256": "31782b986a3548548dc97887aa2b32e189beacaa12ebbe536fac8619751fc433",
+    "prompt_sha256": "0f7a493dc14153a908c63d273f37c7ff450e90d3a528bd50ea4fbd12d930a4da",
+    "protocol_sha256": "01a40ee76bd60fd369e15dc8fe239aaac56e88e6c27076a07fb0f0d9c0bca020",
+    "schema_sha256": "5c83e0ffdfeed95fd0feb59ae2a7fc3e65c35608843c1a5254348632a3e3d06f",
+    "system_prompt_sha256": "e06f6546c5595a9c63b8ee8bfdee3d40710c184f9c8830c7ccf37d6c8af49d32"
+  },
+  "isolation": {
+    "customisations": "disabled-safe-mode",
+    "skills_policy": "disabled-safe-mode-and-slash-commands"
+  },
+  "mcp_servers": [],
+  "mechanical_assessment": {
+    "answer_quality_score": null,
+    "citations_checked": 0,
+    "claims": 0,
+    "entailment_review": "pending-independent-human-review",
+    "failures": [],
+    "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete.",
+    "specialist_accepted": false,
+    "status": "passed-mechanical-controls",
+    "unsupported_claim_rate": null
+  },
+  "model_override": null,
+  "observed_tool_events": [
+    "StructuredOutput"
+  ],
+  "provider": "claude-subscription",
+  "reported_models": [
+    "claude-haiku-4-5-20251001",
+    "claude-opus-5"
+  ],
+  "schema": "okf-paired-staff-model-attempt.v1",
+  "started_at": "2026-09-20T19:15:29.942417+00:00",
+  "status": "actual-model-response-retained",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "2218520931ed71d2e06bc37a5313f2397998d9095047af4d1cda4b58196511bd",
+  "tools_requested": [],
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 3353,
+    "input_tokens": 2,
+    "output_tokens": 1675,
+    "output_tokens_details": {},
+    "server_tool_use": {
+      "web_fetch_requests": 0,
+      "web_search_requests": 0
+    }
+  }
+}

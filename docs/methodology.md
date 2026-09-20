@@ -157,3 +157,25 @@ and backlog on evidence, then curate the user-facing changelog. Keep unmerged
 work and failed attempts visible; promote only the tested candidate through the
 protected PR and publication workflow. See this run's
 [work log](work-log-2026-09-19.md) for a concrete example.
+
+### Track delivery separately from acceptance
+
+The [20 September ledger](backlog-work-packages.md) corrects a tracking failure:
+one `needs_domain_review` status hid implementation that was also unfinished.
+Give each stable backlog item separate delivery and acceptance packages, with
+an executor, next action and evidence. The automated checker rejects an item
+marked complete while a package remains open. A review gate should name what
+needs judgement; it must not obscure work an agent can do now.
+
+Use neutral concept identifiers first, then task-specific rules. Test ordinary
+labels such as a benefit name: they must not resolve directly to one exceptional
+circumstance merely because that was the first demonstration. Derive task
+profiles from the domain and supplied questions, but label those questions as
+development cases. Paraphrases and negative controls help find defects; they
+do not turn the same development set into an independent accuracy benchmark.
+
+Test budget boundaries with real evidence packages. Count explanations and
+missing-evidence diagnostics in the size limit, not just quoted source text.
+An empty result can be a packaging defect rather than a lack of source evidence.
+Retain both the failure and its corrected replay, identifying the consumer
+version used for each.

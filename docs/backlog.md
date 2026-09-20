@@ -15,7 +15,7 @@ to bypass source, rights or review boundaries.
 
 ## What broader semantic modelling means
 
-This work was incomplete; it was not recorded as done. The previous single
+The original work was incomplete; it was not recorded as done. The previous single
 `needs_domain_review` label hid unfinished implementation behind a review gate.
 **BL005** covers neutral concepts, variants and source-backed relationships.
 **BL007** covers task-specific evidence requirements, routes, exceptions and
@@ -31,11 +31,19 @@ proposals. A completed implementation does not close the human review.
 See the [team handover](team-handover-2026-09-20.md) for the published baseline
 and the ordered work continuing towards Monday 21 September.
 
+The 20 September increment now supplies bounded implementation for BL001/005/006/007/013/020.
+Their bounded delivery packages link actual outputs. Separate agent work packages
+now name remaining domain expansion, legal body acquisition, evidence closure and
+a controlled model benchmark; these are unfinished implementation, not blocked
+behind human review. Independent acceptance remains a separate work package.
+The 203 named task obligations are in [the profile register](../evaluation/semantic-expansion/profiles.json).
+Do not read a delivered compiler or a denser graph as complete domain modelling.
+
 ## Current register
 
 | ID | Priority | Work | Status | Depends on |
 | --- | --- | --- | --- | --- |
-| DWP-BL-001 | P0 | Extensive persona, journey and question review | `in_progress` | — |
+| DWP-BL-001 | P0 | Extensive persona, journey and question review | `needs_domain_review` | — |
 | DWP-BL-002 | P2 | Benefits engine feasibility | `not_started` | DWP-BL-001, DWP-BL-006, DWP-BL-007 |
 | DWP-BL-003 | P2 | Application and change-of-circumstances journeys | `not_started` | DWP-BL-001, DWP-BL-006, DWP-BL-007 |
 | DWP-BL-004 | P0 | Frozen full DMG and ADM capture | `recorded_complete` | — |
@@ -44,17 +52,17 @@ and the ordered work continuing towards Monday 21 September.
 | DWP-BL-007 | P0 | Broader semantic modelling: task-specific evidence profiles | `in_progress` | DWP-BL-001, DWP-BL-005, DWP-BL-006 |
 | DWP-BL-008 | P0 | Progressive evidence manifests and exact reads | `recorded_complete` | DWP-BL-004 |
 | DWP-BL-009 | P0 | Conceptual classification and DMG Reader navigation | `recorded_complete` | DWP-BL-004 |
-| DWP-BL-010 | P0 | Fixed-evidence claim-level model trials | `in_progress` | DWP-BL-004 |
+| DWP-BL-010 | P0 | Fixed-evidence claim-level model trials | `needs_domain_review` | DWP-BL-004 |
 | DWP-BL-011 | P1 | Source dates and provenance presentation | `recorded_complete` | — |
 | DWP-BL-012 | P1 | CPAG substantive content access | `needs_external_permission` | — |
-| DWP-BL-013 | P1 | Tribunal decision discovery | `in_progress` | DWP-BL-001, DWP-BL-006 |
+| DWP-BL-013 | P1 | Tribunal decision discovery | `needs_domain_review` | DWP-BL-001, DWP-BL-006 |
 | DWP-BL-014 | P2 | Calculator comparison | `not_started` | DWP-BL-001, DWP-BL-007 |
 | DWP-BL-015 | P2 | CASA framework assessment | `not_started` | DWP-BL-003 |
 | DWP-BL-016 | P0 | ChatGPT Voice and room audio rehearsal | `not_started` | — |
 | DWP-BL-017 | P1 | Portable discovery-first departmental workflow | `recorded_complete` | — |
-| DWP-BL-018 | P1 | Fair model and affordability benchmark | `not_started` | DWP-BL-007, DWP-BL-010 |
-| DWP-BL-019 | P1 | Broader accessibility and cross-browser review | `not_started` | DWP-BL-009 |
-| DWP-BL-020 | P1 | Source refresh and drift process | `not_started` | DWP-BL-004, DWP-BL-006 |
+| DWP-BL-018 | P1 | Fair model and affordability benchmark | `in_progress` | DWP-BL-007, DWP-BL-010 |
+| DWP-BL-019 | P1 | Broader accessibility and cross-browser review | `in_progress` | DWP-BL-009 |
+| DWP-BL-020 | P1 | Source refresh and drift process | `needs_domain_review` | DWP-BL-004, DWP-BL-006 |
 | DWP-BL-021 | P0 | Canonical contracts and protected publication | `recorded_complete` | — |
 | DWP-BL-022 | P1 | Retrospective and visible multi-agent change history | `recorded_complete` | — |
 | DWP-BL-023 | P1 | Hosting and Content Security Policy integration | `in_progress` | DWP-BL-008 |
@@ -83,10 +91,10 @@ and operational application/change journeys depend on those reviews.
 
 **DWP-BL-009 has a deliberately narrower Reader scope.** Its classification audit
 accounts for both captured manuals, and Ask OKF already retrieves from both DMG
-and ADM. The current human Reader projection contains DMG records. **DWP-BL-024**
-tracks an additive ADM or combined Reader, with source-family and date distinctions,
-filter parity across Reader/Graph/Timeline and exact public-browser verification.
-This remains unfinished; literal mentions must not become legal assertions.
+and ADM. The preserved baseline human Reader contains DMG records. **DWP-BL-024** now
+supplies an additive [combined Reader](combined-reader.md), with source-family and
+date distinctions and locally verified filter parity across Reader/Graph/Timeline.
+Exact public-browser acceptance remains open; literal mentions are not legal assertions.
 The [published DMG navigation check](../validation/navigation/browser/public/README.md)
 is separate from the unresolved service hosting-console issue.
 

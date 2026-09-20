@@ -1,0 +1,17 @@
+{
+  "schema": "okf-staff-execution-provenance-note.v1",
+  "reason": "The offline report command was added while the substantive batch processes were running. Early receipts read the on-disk harness hash at each attempt start rather than caching the loaded source hash once. Original receipts are retained unchanged. The exact two source snapshots are retained, and their invocation, isolation, sanitisation and assessment functions are byte-identical as extracted function source. The current harness now captures its source digest once at import.",
+  "batch_invocation_startup_harness_sha256": "99aa7d2ff478363972c072bd1df217851424b24825e421fbd2e13159d310a255",
+  "report_only_revision_harness_sha256": "53a7f7cbba7b07dd2d519fe3fd39b990ec19bf6677d8cd3efb09e7eab398c632",
+  "batch_scope": "All four first substantive attempts for each provider used one loaded process started at the batch invocation digest. The separately launched amended Claude control and staff-026 retry used the report-only revision.",
+  "limitations": "This note explains source-file bookkeeping; it does not add missing timeout output, prove unseen provider context, or accept any model answer.",
+  "identical_function_source_sha256": {
+    "run_one": "04e13c316070317081e7fc56031f42b4b2b2aae93cbb5bbd1c8511148a30d587",
+    "fixed_input": "0c487b343366e5091ae78a99ac9fbe8113040f9f55303ddd9faaf454389de2fd",
+    "command": "55aab3e954ae2baac944f329a6852a447a01c19f6fd90d76774621e187604ecf",
+    "sanitise_claude": "2eb863af1475d0fb0570cc6b5a7730b362a7783f214a68a44c79d879ebfaf47b",
+    "sanitise_codex": "f2d3001b9afb31fb55b4928c63a3de78d016fcd643017314f6404d93bfc110ab",
+    "forbidden_tool_events": "190a30274534fa2851ec4b9f5bfa9f702dc3b0aef4e0a3ea84221e380b42c0a4",
+    "mechanical": "05b6e5342083f08191c95726caeffedf6fdea24159e3ab381d1f37fbd66ca5d5"
+  }
+}

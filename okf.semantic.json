@@ -22,7 +22,12 @@
       "source/adm-2026-09-19/inventory.json",
       "source/adm-2026-09-19/pages/*.json",
       "context/corpus-sources.json",
-      "domain-profile/navigation/*.yamlld"
+      "domain-profile/navigation/*.yamlld",
+      "domain-profile/staff-semantic/*.yamlld",
+      "domain-profile/legal-reconciliation/*.yamlld",
+      "domain-profile/legal-reconciliation/seeds.json",
+      "domain-profile/staff-needs/journeys.json",
+      "source/legal-discovery-2026-09-20/manifest.json"
     ],
     "outputs": [
       {
@@ -109,6 +114,46 @@
         "path": "full-dmg/context/navigation/catalogue.yamlld",
         "role": "semantic-yaml-ld",
         "generated": true
+      },
+      {
+        "path": "evaluation/semantic-expansion/assembly-index.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "combined/okf-explorer.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "combined/context/corpus/manifest.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "combined/data/relationships-*.json.gz",
+        "role": "relationship-runtime",
+        "generated": true
+      },
+      {
+        "path": "combined/okf-bundle.yamlld",
+        "role": "semantic-yaml-ld",
+        "generated": true
+      },
+      {
+        "path": "combined/okf-bundle.jsonld",
+        "role": "semantic-json-ld",
+        "generated": true
+      },
+      {
+        "path": "combined/data/semantic/manifest.json",
+        "role": "semantic-manifest",
+        "generated": true
+      },
+      {
+        "path": "combined/data/semantic/*.jsonld.gz",
+        "role": "semantic-json-ld-shards",
+        "generated": true
       }
     ],
     "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
@@ -118,7 +163,9 @@
       "Authored references are navigation; explicit semantic relations are source-backed model proposals awaiting specialist review. PDF page containment is deterministically derived.",
       "Machine extraction has known defects. Full-DMG search includes clearly labelled historical amendments; the preserved Pension Credit pilot keeps them outside its default page search.",
       "ADM is a separate frozen source family. Corpus-wide page retrieval does not establish complete policy modelling or an answerability profile.",
-      "The preserved custody context and its immutable acceptance receipts retain their original source and consumer versions."
+      "The preserved custody context and its immutable acceptance receipts retain their original source and consumer versions.",
+      "The additive combined Reader and staff semantic projection preserve earlier releases. Forty development profiles contain named unmet obligations; none establishes a complete answer or independent specialist acceptance.",
+      "Verified provision reference metadata is navigation only. It does not contain statutory body evidence or establish commencement, extent for an individual case, or legal applicability."
     ]
   },
   "relationship_contract": {
@@ -155,7 +202,12 @@
       "uv run --locked python scripts/build_context_discovery.py",
       "uv run --locked python scripts/build_context_corpus.py",
       "uv run --locked python scripts/build_review_navigation.py",
-      "uv run --locked python scripts/build_staff_review_packs.py"
+      "uv run --locked python scripts/build_staff_review_packs.py",
+      "uv run --locked python scripts/build_staff_needs.py",
+      "uv run --locked python scripts/build_legal_reconciliation.py",
+      "uv run --locked python scripts/build_staff_semantic.py",
+      "uv run --locked python scripts/build_combined_reader.py",
+      "uv run --locked python scripts/compare_source_census.py"
     ],
     "check": [
       "uv run --locked python scripts/check_semantic_contract.py",
@@ -174,7 +226,13 @@
       "uv run --locked python scripts/audit_relationships.py --check",
       "uv run --locked python scripts/check_private_inputs.py",
       "uv run --locked python scripts/build_review_navigation.py --check",
-      "uv run --locked python scripts/build_staff_review_packs.py --check"
+      "uv run --locked python scripts/build_staff_review_packs.py --check",
+      "uv run --locked python scripts/build_staff_needs.py --check",
+      "uv run --locked python scripts/build_legal_reconciliation.py --check",
+      "uv run --locked python scripts/build_staff_semantic.py --check",
+      "uv run --locked python scripts/build_combined_reader.py --check",
+      "uv run --locked python scripts/compare_source_census.py --check",
+      "uv run --locked python scripts/check_combined_reader_observations.py"
     ]
   },
   "reader": {

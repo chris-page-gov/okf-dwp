@@ -5,8 +5,34 @@ Notable changes for readers, in reverse date order. We use the
 unreleased work and dated changes; this repository currently uses dated research
 deliveries rather than claiming a Semantic Versioning release series.
 Implementation ownership and handovers belong in the
-[multi-agent work log](docs/work-log-2026-09-19.md), with stable work items in the
+[multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
+
+## Additive staff semantics and both-manual evidence — 20 September 2026
+
+- Retain five paired Claude/Codex fixed-evidence cases, 12 attempts, 49 claims
+  and 79 citations, including failed quotations, a timeout and a formatter-policy
+  rejection. Keep model critique distinct from specialist acceptance and cost.
+- Map all 40 supplied question occurrences to projected personas and journeys,
+  retaining exact wording, repeated questions, ambiguity and evidence needs.
+- Add neutral benefit and variant concepts, source-backed relationships and 40
+  executable task profiles. Preserve 203 explicit missing obligations and label
+  the supplied questions as development cases. No complete answer or specialist
+  acceptance is inferred from improved candidate retrieval.
+- Add official provision-identity metadata, exact citation mappings and six
+  bounded tribunal searches. Keep statutory bodies, legal effects completeness,
+  current applicability and judgment reuse outside the achieved evidence scope.
+- Add a combined DMG/ADM Reader with source-manual and conceptual facets, full
+  captured-page search, directed relationships and separate source/audit dates.
+  Preserve earlier release bytes and identifiers.
+- Compare a fresh official source-listing observation with all 513 captured
+  attachment identities. Report fresh PDF/extraction hashes as unknown because
+  this observation did not acquire the PDF bodies.
+- Retain independent-review corrections for citation inheritance and direct
+  context delivery. Reproduce producer outputs and boundary controls in CI.
+- Explain the new outputs through the beginner learning path, semantic and legal
+  guides, ontology map, methodology, retrospective and delivery ledger. Prepare
+  a CPAG permission-scope draft without sending it or changing reuse rights.
 
 ## Team handover and explicit delivery tracking — 20 September 2026
 

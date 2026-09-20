@@ -75,8 +75,10 @@ of 74, 343, 268 and 1 across Reader, Graph and Timeline. It verified 21 app file
 and 188 observed corpus files, date roles and the visible Timeline limit, with
 no console errors or targeted accessibility violations.
 
-This Reader covers DMG. Ask OKF and the classification audit cover both captured
-manuals; ADM Reader and cross-manual navigation remain DWP-BL-024. Literal
+This preserved Reader covers DMG. The new [combined Reader](combined-reader.md)
+adds ADM and cross-manual navigation, with local verification under DWP-BL-024;
+its public acceptance is tracked separately. Ask OKF and the classification audit
+cover both captured manuals. Literal
 categories do not establish legal applicability. The separate evidence service's
 host-console failure remains open, and all 40 staff questions plus three controls
 remain insufficient in the full-corpus evaluation. No AI-answer acceptance follows

@@ -1,5 +1,21 @@
 # Repository status
 
+## Current additive staff increment: 20 September 2026
+
+Use the [team handover](docs/team-handover-2026-09-20.md) and
+[current work log](docs/work-log-2026-09-20.md) for the latest delivery status.
+The sections below preserve dated earlier release observations; their original
+source counts, consumer versions and limitations are not current whole-project
+claims. Both DMG and ADM have since been captured: 513 PDFs and 19,090 pages.
+
+The new [staff semantic increment](docs/semantic-expansion.md) separates neutral
+benefit meanings from task-specific rules, records missing evidence obligations,
+and supplies an additive [combined Reader](docs/combined-reader.md).
+The [legal references](docs/legal-reconciliation.md) identify observed provisions;
+they do not establish statutory body evidence or current applicability.
+The [source refresh](docs/source-refresh.md) compares fresh official listings,
+while explicitly leaving fresh PDF and extraction hashes unknown.
+
 <a id="unattended-full-dmg-work-in-progress"></a>
 
 ## Full-DMG research candidate

@@ -1,0 +1,493 @@
+{
+  "attempts": [
+    {
+      "attempt": "attempt-01",
+      "authored_prompt_sha256": "0f7a493dc14153a908c63d273f37c7ff450e90d3a528bd50ea4fbd12d930a4da",
+      "case_id": "control-unknown",
+      "context_sha256": "31782b986a3548548dc97887aa2b32e189beacaa12ebbe536fac8619751fc433",
+      "elapsed_seconds": 16.923,
+      "mechanical_assessment": null,
+      "observed_tool_events": [
+        "StructuredOutput"
+      ],
+      "provider": "claude-subscription",
+      "receipt": "validation/model-comparison/staff-2026-09-20/claude-subscription/control-unknown/attempt-01/receipt.json",
+      "receipt_sha256": "14ac2f350cbb2c1bfa212a21e5c839cd8930e2c3968de7021965cd84d3fca6e7",
+      "reported_models": [
+        "claude-haiku-4-5-20251001",
+        "claude-opus-5"
+      ],
+      "status": "rejected-observed-tool-event",
+      "tool_event_census_status": "retained",
+      "usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 3353,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 3353,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 2,
+        "output_tokens": 1415,
+        "output_tokens_details": {},
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    },
+    {
+      "attempt": "attempt-02",
+      "authored_prompt_sha256": "0f7a493dc14153a908c63d273f37c7ff450e90d3a528bd50ea4fbd12d930a4da",
+      "case_id": "control-unknown",
+      "context_sha256": "31782b986a3548548dc97887aa2b32e189beacaa12ebbe536fac8619751fc433",
+      "elapsed_seconds": 20.141,
+      "mechanical_assessment": {
+        "answer_quality_score": null,
+        "citations_checked": 0,
+        "claims": 0,
+        "entailment_review": "pending-independent-human-review",
+        "failures": [],
+        "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete.",
+        "specialist_accepted": false,
+        "status": "passed-mechanical-controls",
+        "unsupported_claim_rate": null
+      },
+      "observed_tool_events": [
+        "StructuredOutput"
+      ],
+      "provider": "claude-subscription",
+      "receipt": "validation/model-comparison/staff-2026-09-20/claude-subscription/control-unknown/attempt-02/receipt.json",
+      "receipt_sha256": "05edbfb4326eb7c0366df2e7360e2b8cb565d9f075677e3b5bd458f9c54b668e",
+      "reported_models": [
+        "claude-haiku-4-5-20251001",
+        "claude-opus-5"
+      ],
+      "status": "actual-model-response-retained",
+      "tool_event_census_status": "retained",
+      "usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 3353,
+        "input_tokens": 2,
+        "output_tokens": 1675,
+        "output_tokens_details": {},
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    },
+    {
+      "attempt": "attempt-01",
+      "authored_prompt_sha256": "8e22c351a866e296edbd64d249e6287c1b23b4337139564655d99e586cb22913",
+      "case_id": "staff-006",
+      "context_sha256": "b1bc88754e6d08307966393820b31eea154883dddc6f3f9f16229842ad51123f",
+      "elapsed_seconds": 100.452,
+      "mechanical_assessment": {
+        "answer_quality_score": null,
+        "citations_checked": 14,
+        "claims": 8,
+        "entailment_review": "pending-independent-human-review",
+        "failures": [],
+        "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete.",
+        "specialist_accepted": false,
+        "status": "passed-mechanical-controls",
+        "unsupported_claim_rate": null
+      },
+      "observed_tool_events": [
+        "StructuredOutput"
+      ],
+      "provider": "claude-subscription",
+      "receipt": "validation/model-comparison/staff-2026-09-20/claude-subscription/staff-006/attempt-01/receipt.json",
+      "receipt_sha256": "f7ec359fdd7db92c3c26211216e0fc0d578a8949ceeed73c1e2a6ec30d7f3e38",
+      "reported_models": [
+        "claude-haiku-4-5-20251001",
+        "claude-opus-5"
+      ],
+      "status": "actual-model-response-retained",
+      "tool_event_census_status": "retained",
+      "usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 114310,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 114310,
+        "cache_read_input_tokens": 1355,
+        "input_tokens": 2,
+        "output_tokens": 8782,
+        "output_tokens_details": {},
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    },
+    {
+      "attempt": "attempt-01",
+      "authored_prompt_sha256": "851d0863fa85a675141551bfb07703023fcd46fc69a89beb53bd6aba73d949ed",
+      "case_id": "staff-012",
+      "context_sha256": "8dabcc77c7bba5f51864433bc7f89ecf7a95fbb15ff06ec7b4be1f58ba670064",
+      "elapsed_seconds": 80.607,
+      "mechanical_assessment": {
+        "answer_quality_score": null,
+        "citations_checked": 8,
+        "claims": 8,
+        "entailment_review": "pending-independent-human-review",
+        "failures": [],
+        "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete.",
+        "specialist_accepted": false,
+        "status": "passed-mechanical-controls",
+        "unsupported_claim_rate": null
+      },
+      "observed_tool_events": [
+        "StructuredOutput"
+      ],
+      "provider": "claude-subscription",
+      "receipt": "validation/model-comparison/staff-2026-09-20/claude-subscription/staff-012/attempt-01/receipt.json",
+      "receipt_sha256": "d622dbc0d9814d61163ac9328339f909c1b48237625d1b034d37e592640eb541",
+      "reported_models": [
+        "claude-haiku-4-5-20251001",
+        "claude-opus-5"
+      ],
+      "status": "actual-model-response-retained",
+      "tool_event_census_status": "retained",
+      "usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 117591,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 117591,
+        "cache_read_input_tokens": 1355,
+        "input_tokens": 2,
+        "output_tokens": 6950,
+        "output_tokens_details": {},
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    },
+    {
+      "attempt": "attempt-01",
+      "authored_prompt_sha256": "145c7a616bf471aad7b0cc329663a08ce8c6be76653ba9a8d0a045cdd877ea99",
+      "case_id": "staff-026",
+      "context_sha256": "bf3486b320467918200d0a4f3722bec0c4fa917728d95a6996cd20cda3be3888",
+      "elapsed_seconds": 240.028,
+      "mechanical_assessment": null,
+      "observed_tool_events": null,
+      "provider": "claude-subscription",
+      "receipt": "validation/model-comparison/staff-2026-09-20/claude-subscription/staff-026/attempt-01/receipt.json",
+      "receipt_sha256": "e2b7c7c6b5f8852a96c4b4f363a7a4fdb89ff3206c8585e9ba825f93519880e3",
+      "reported_models": [],
+      "status": "provider-timeout",
+      "tool_event_census_status": "not-retained-for-failed-attempt",
+      "usage": {}
+    },
+    {
+      "attempt": "attempt-02",
+      "authored_prompt_sha256": "145c7a616bf471aad7b0cc329663a08ce8c6be76653ba9a8d0a045cdd877ea99",
+      "case_id": "staff-026",
+      "context_sha256": "bf3486b320467918200d0a4f3722bec0c4fa917728d95a6996cd20cda3be3888",
+      "elapsed_seconds": 147.394,
+      "mechanical_assessment": {
+        "answer_quality_score": null,
+        "citations_checked": 26,
+        "claims": 10,
+        "entailment_review": "pending-independent-human-review",
+        "failures": [],
+        "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete.",
+        "specialist_accepted": false,
+        "status": "passed-mechanical-controls",
+        "unsupported_claim_rate": null
+      },
+      "observed_tool_events": [
+        "StructuredOutput"
+      ],
+      "provider": "claude-subscription",
+      "receipt": "validation/model-comparison/staff-2026-09-20/claude-subscription/staff-026/attempt-02/receipt.json",
+      "receipt_sha256": "c0c43e7beaad18ebfa1720aa07dff06144745a37970c922d7989f1a86079b713",
+      "reported_models": [
+        "claude-haiku-4-5-20251001",
+        "claude-opus-5"
+      ],
+      "status": "actual-model-response-retained",
+      "tool_event_census_status": "retained",
+      "usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 98714,
+        "input_tokens": 2,
+        "output_tokens": 12982,
+        "output_tokens_details": {},
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    },
+    {
+      "attempt": "attempt-01",
+      "authored_prompt_sha256": "d0826482c647e767a398c65985078cbd0b0b6265d7bb8c5b41bc5cafc3a04bd8",
+      "case_id": "staff-038",
+      "context_sha256": "d1e7d054033f8ba4463989c90b9e6103e9b79432d50312b87fa1469d6acf5a5b",
+      "elapsed_seconds": 127.978,
+      "mechanical_assessment": {
+        "answer_quality_score": null,
+        "citations_checked": 13,
+        "claims": 9,
+        "entailment_review": "pending-independent-human-review",
+        "failures": [],
+        "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete.",
+        "specialist_accepted": false,
+        "status": "passed-mechanical-controls",
+        "unsupported_claim_rate": null
+      },
+      "observed_tool_events": [
+        "StructuredOutput"
+      ],
+      "provider": "claude-subscription",
+      "receipt": "validation/model-comparison/staff-2026-09-20/claude-subscription/staff-038/attempt-01/receipt.json",
+      "receipt_sha256": "0058412aadb62c2ce6fb0a78a99ecac4ec46bb42723ad53617e6767a4249f16c",
+      "reported_models": [
+        "claude-haiku-4-5-20251001",
+        "claude-opus-5"
+      ],
+      "status": "actual-model-response-retained",
+      "tool_event_census_status": "retained",
+      "usage": {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 116603,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 116603,
+        "cache_read_input_tokens": 1355,
+        "input_tokens": 2,
+        "output_tokens": 11247,
+        "output_tokens_details": {},
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        }
+      }
+    },
+    {
+      "attempt": "attempt-01",
+      "authored_prompt_sha256": "0f7a493dc14153a908c63d273f37c7ff450e90d3a528bd50ea4fbd12d930a4da",
+      "case_id": "control-unknown",
+      "context_sha256": "31782b986a3548548dc97887aa2b32e189beacaa12ebbe536fac8619751fc433",
+      "elapsed_seconds": 13.482,
+      "mechanical_assessment": {
+        "answer_quality_score": null,
+        "citations_checked": 0,
+        "claims": 0,
+        "entailment_review": "pending-independent-human-review",
+        "failures": [],
+        "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete.",
+        "specialist_accepted": false,
+        "status": "passed-mechanical-controls",
+        "unsupported_claim_rate": null
+      },
+      "observed_tool_events": [],
+      "provider": "codex-subscription",
+      "receipt": "validation/model-comparison/staff-2026-09-20/codex-subscription/control-unknown/attempt-01/receipt.json",
+      "receipt_sha256": "447ea31df88a1653688b499b3666bb082fe9b161ad7ddc8abfa2a3809a787e26",
+      "reported_models": [],
+      "status": "actual-model-response-retained",
+      "tool_event_census_status": "retained",
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 9595,
+        "output_tokens": 240
+      }
+    },
+    {
+      "attempt": "attempt-01",
+      "authored_prompt_sha256": "8e22c351a866e296edbd64d249e6287c1b23b4337139564655d99e586cb22913",
+      "case_id": "staff-006",
+      "context_sha256": "b1bc88754e6d08307966393820b31eea154883dddc6f3f9f16229842ad51123f",
+      "elapsed_seconds": 29.764,
+      "mechanical_assessment": {
+        "answer_quality_score": null,
+        "citations_checked": 4,
+        "claims": 3,
+        "entailment_review": "pending-independent-human-review",
+        "failures": [],
+        "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete.",
+        "specialist_accepted": false,
+        "status": "passed-mechanical-controls",
+        "unsupported_claim_rate": null
+      },
+      "observed_tool_events": [],
+      "provider": "codex-subscription",
+      "receipt": "validation/model-comparison/staff-2026-09-20/codex-subscription/staff-006/attempt-01/receipt.json",
+      "receipt_sha256": "a077806305a74f35da25592a91077690f7db52e76146094a6e2f51563683f41c",
+      "reported_models": [],
+      "status": "actual-model-response-retained",
+      "tool_event_census_status": "retained",
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 86160,
+        "output_tokens": 1363
+      }
+    },
+    {
+      "attempt": "attempt-01",
+      "authored_prompt_sha256": "851d0863fa85a675141551bfb07703023fcd46fc69a89beb53bd6aba73d949ed",
+      "case_id": "staff-012",
+      "context_sha256": "8dabcc77c7bba5f51864433bc7f89ecf7a95fbb15ff06ec7b4be1f58ba670064",
+      "elapsed_seconds": 22.834,
+      "mechanical_assessment": {
+        "answer_quality_score": null,
+        "citations_checked": 3,
+        "claims": 3,
+        "entailment_review": "pending-independent-human-review",
+        "failures": [],
+        "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete.",
+        "specialist_accepted": false,
+        "status": "passed-mechanical-controls",
+        "unsupported_claim_rate": null
+      },
+      "observed_tool_events": [],
+      "provider": "codex-subscription",
+      "receipt": "validation/model-comparison/staff-2026-09-20/codex-subscription/staff-012/attempt-01/receipt.json",
+      "receipt_sha256": "09f42dc4dfa2ad0df1e44cca36e332315131d76aa41b3d7527cda9754eb8c084",
+      "reported_models": [],
+      "status": "actual-model-response-retained",
+      "tool_event_census_status": "retained",
+      "usage": {
+        "cached_input_tokens": 3200,
+        "input_tokens": 84754,
+        "output_tokens": 1052
+      }
+    },
+    {
+      "attempt": "attempt-01",
+      "authored_prompt_sha256": "145c7a616bf471aad7b0cc329663a08ce8c6be76653ba9a8d0a045cdd877ea99",
+      "case_id": "staff-026",
+      "context_sha256": "bf3486b320467918200d0a4f3722bec0c4fa917728d95a6996cd20cda3be3888",
+      "elapsed_seconds": 35.977,
+      "mechanical_assessment": {
+        "answer_quality_score": null,
+        "citations_checked": 7,
+        "claims": 5,
+        "entailment_review": "pending-independent-human-review",
+        "failures": [
+          "claim-1:quote_not_verbatim",
+          "claim-2:quote_not_verbatim"
+        ],
+        "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete.",
+        "specialist_accepted": false,
+        "status": "failed-mechanical-controls",
+        "unsupported_claim_rate": null
+      },
+      "observed_tool_events": [],
+      "provider": "codex-subscription",
+      "receipt": "validation/model-comparison/staff-2026-09-20/codex-subscription/staff-026/attempt-01/receipt.json",
+      "receipt_sha256": "1be64a4ddf49b96f6c0747fe74b8a759636b5ad4d1e64896e9912f4e2717784b",
+      "reported_models": [],
+      "status": "actual-model-response-retained",
+      "tool_event_census_status": "retained",
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 74806,
+        "output_tokens": 1746
+      }
+    },
+    {
+      "attempt": "attempt-01",
+      "authored_prompt_sha256": "d0826482c647e767a398c65985078cbd0b0b6265d7bb8c5b41bc5cafc3a04bd8",
+      "case_id": "staff-038",
+      "context_sha256": "d1e7d054033f8ba4463989c90b9e6103e9b79432d50312b87fa1469d6acf5a5b",
+      "elapsed_seconds": 32.045,
+      "mechanical_assessment": {
+        "answer_quality_score": null,
+        "citations_checked": 4,
+        "claims": 3,
+        "entailment_review": "pending-independent-human-review",
+        "failures": [
+          "claim-1:quote_not_verbatim"
+        ],
+        "limitation": "Exact quotation, identifier and boundary checks do not establish that the cited passage entails the claim or that conditions and exceptions are complete.",
+        "specialist_accepted": false,
+        "status": "failed-mechanical-controls",
+        "unsupported_claim_rate": null
+      },
+      "observed_tool_events": [],
+      "provider": "codex-subscription",
+      "receipt": "validation/model-comparison/staff-2026-09-20/codex-subscription/staff-038/attempt-01/receipt.json",
+      "receipt_sha256": "289a0ff70ce4d7e80687a99c0ef0ee3746a0af6e58f78f0bd347825702d4878b",
+      "reported_models": [],
+      "status": "actual-model-response-retained",
+      "tool_event_census_status": "retained",
+      "usage": {
+        "cached_input_tokens": 0,
+        "input_tokens": 88382,
+        "output_tokens": 1469
+      }
+    }
+  ],
+  "comparative_accuracy_or_affordability_established": false,
+  "context_manifest_sha256": "20ba6c0a18f378ff817540a779c88aaa9532685703c928fb164aa3025c82c0d8",
+  "human_review": "pending",
+  "limitations": [
+    "Matching quotations and source locators do not establish entailment or complete legal qualifications.",
+    "The authored public inputs are identical; provider wrappers, host instructions and model defaults can differ.",
+    "Retain every failure and retry; usage accounting is not verified subscription pricing."
+  ],
+  "pairs": [
+    {
+      "attempts": {
+        "claude-subscription": "attempt-01",
+        "codex-subscription": "attempt-01"
+      },
+      "both_responses_retained": true,
+      "case_id": "staff-006",
+      "same_public_context_and_authored_prompt": true
+    },
+    {
+      "attempts": {
+        "claude-subscription": "attempt-01",
+        "codex-subscription": "attempt-01"
+      },
+      "both_responses_retained": true,
+      "case_id": "staff-012",
+      "same_public_context_and_authored_prompt": true
+    },
+    {
+      "attempts": {
+        "claude-subscription": "attempt-02",
+        "codex-subscription": "attempt-01"
+      },
+      "both_responses_retained": true,
+      "case_id": "staff-026",
+      "same_public_context_and_authored_prompt": true
+    },
+    {
+      "attempts": {
+        "claude-subscription": "attempt-01",
+        "codex-subscription": "attempt-01"
+      },
+      "both_responses_retained": true,
+      "case_id": "staff-038",
+      "same_public_context_and_authored_prompt": true
+    },
+    {
+      "attempts": {
+        "claude-subscription": "attempt-02",
+        "codex-subscription": "attempt-01"
+      },
+      "both_responses_retained": true,
+      "case_id": "control-unknown",
+      "same_public_context_and_authored_prompt": true
+    }
+  ],
+  "protocol_sha256": "01a40ee76bd60fd369e15dc8fe239aaac56e88e6c27076a07fb0f0d9c0bca020",
+  "schema": "okf-paired-staff-results.v1",
+  "specialist_accepted": false
+}
