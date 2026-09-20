@@ -173,3 +173,30 @@ loading timeout before bounded reruns with phase timings. Neither failure was
 erased by updating a status label. For HMRC, allocate separate checks for exact
 source, generated outputs, model inputs, deployed application and human-visible
 evidence. Passing one does not establish the others.
+
+
+## Household continuation: lessons for another department
+
+A missing result had three different causes. Six candidate pages needed explicit
+source-backed graph paths; two belonged to unresolved meanings of SDA. A nearby
+node-budget warning did not establish the cause. Keep coverage, resolution,
+traversal and truncation diagnostics separate before changing limits. The
+[portable engine experiment](context-performance.md) holds the old source index
+fixed and records its own gains; the larger domain increment is a separate test.
+
+A model can quote a sentence exactly and still omit its controlling heading.
+The new household work preserves full pages and highlights no-partner and
+temporary-absence qualifications. The [next paired trial](monday-model-trials.md)
+changes both evidence and instructions, so it cannot attribute any answer change
+to just the engine, prompt or model. Independent review also caught incomplete
+CLI event streams being accepted as proof of no tool use: absence of a recorded
+tool is meaningful only when the event census is complete.
+
+The learning website needed a Markdown renderer. Adding its dependency to the
+main lock changed a frozen corpus build identity, even though no legal content
+changed. A separate locked website environment keeps that boundary explicit.
+Similarly, new statutory acquisitions must enter the source-plane fingerprint,
+not just appear in a graph. Independent review checks these cross-workstream
+interfaces before publication. HMRC can reuse these controls and the
+[discovery-first method](methodology.md), while rediscovering its own terms, law,
+source rights, personas and questions.

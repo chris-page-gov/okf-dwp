@@ -27,6 +27,17 @@ explicit. Neither replaces the exact receipts below.
 
 [Verified Pension Credit semantic exemplar](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7d3c69df0571b8d5206c8edce92963d99979cb5c%2Fbundle%2Fokf-bundle.yamlld&view=graph#term/capital-disregards) · [Original meeting demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.yamlld&q=84351#question/pc001) · [Read the pilot bundle](bundle/index.md) · [Ten-minute meeting walkthrough](docs/meeting-walkthrough.md) · [Discovery findings](docs/discovery.md) · [AI interrogation guide](AI_USAGE.md) · [Public notice and rights](NOTICE.md)
 
+## Household candidate in progress
+
+The next [household evidence increment](docs/household-evidence-expansion.md) adds
+complete qualifying pages and [selected dated statutory text](docs/legal-body-evidence.md).
+It currently retains 176 of 177 known candidate-page occurrences across the staff
+questions. All 40 packages remain insufficient, with 203 named obligations still open.
+This measures evidence discovery, not answer accuracy or specialist acceptance.
+[Performance evidence](docs/context-performance.md), the [new trial protocol](docs/monday-model-trials.md)
+and the [Monday delivery log](docs/monday-delivery-work-log.md) distinguish candidate
+work from the published baseline below.
+
 ## Team handover and current work
 
 The additive staff increment provides [projected personas and journeys](evaluation/staff-needs/README.md),

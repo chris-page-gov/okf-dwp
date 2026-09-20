@@ -52,7 +52,7 @@ Do not read a delivered compiler or a denser graph as complete domain modelling.
 | DWP-BL-007 | P0 | Broader semantic modelling: task-specific evidence profiles | `in_progress` | DWP-BL-001, DWP-BL-005, DWP-BL-006 |
 | DWP-BL-008 | P0 | Progressive evidence manifests and exact reads | `recorded_complete` | DWP-BL-004 |
 | DWP-BL-009 | P0 | Conceptual classification and DMG Reader navigation | `recorded_complete` | DWP-BL-004 |
-| DWP-BL-010 | P0 | Fixed-evidence claim-level model trials | `needs_domain_review` | DWP-BL-004 |
+| DWP-BL-010 | P0 | Fixed-evidence claim-level model trials | `in_progress` | DWP-BL-004 |
 | DWP-BL-011 | P1 | Source dates and provenance presentation | `recorded_complete` | — |
 | DWP-BL-012 | P1 | CPAG substantive content access | `needs_external_permission` | — |
 | DWP-BL-013 | P1 | Tribunal decision discovery | `needs_domain_review` | DWP-BL-001, DWP-BL-006 |

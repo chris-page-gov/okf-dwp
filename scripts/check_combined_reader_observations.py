@@ -2,6 +2,8 @@
 """Verify retained combined Reader observations; no fresh browser claim."""
 import json
 import re
+import io
+import tarfile
 from pathlib import Path
 from urllib.parse import urljoin
 
@@ -9,7 +11,37 @@ from build_bundle import ROOT, digest
 from build_context_discovery import require
 
 
+def retained_source(root):
+    """Read the exact observed publication, independently of today's candidate."""
+    directory = root / 'validation/combined-reader'
+    binding = json.loads((directory / 'retained-source.json').read_bytes())
+    require(binding.get('schema') == 'okf-combined-reader-retained-source.v1', 'Unknown retained source binding')
+    require(re.fullmatch(r'[a-f0-9]{40}', binding.get('source_commit', '')), 'Missing immutable source commit')
+    path = (directory / binding['archive']).resolve()
+    require(path.is_relative_to((directory / 'source-snapshots').resolve()) and not (directory / binding['archive']).is_symlink(), 'Unsafe retained archive path')
+    require(path.stat().st_size <= 24 * 1024 * 1024, 'Retained archive exceeds byte limit')
+    raw = path.read_bytes()
+    require(len(raw) == binding['archive_bytes'] and digest(raw) == binding['archive_sha256'], 'Retained source archive changed')
+    expected = {row['path']: row for row in binding['source_files']}
+    require(len(expected) == len(binding['source_files']) <= 512, 'Duplicate or excessive retained files')
+    files = {}
+    total = 0
+    with tarfile.open(fileobj=io.BytesIO(raw), mode='r:gz') as archive:
+        for member in archive:
+            require(member.isfile() and member.name in expected and member.name not in files, 'Unexpected archive member')
+            row = expected[member.name]
+            require(member.size == row['bytes'] and member.size <= 8 * 1024 * 1024, 'Retained member exceeds declared size')
+            total += member.size
+            require(total <= 32 * 1024 * 1024, 'Retained source exceeds total decoded limit')
+            value = archive.extractfile(member).read()
+            require(digest(value) == row['sha256'], 'Retained source member changed')
+            files[member.name] = value
+    require(set(files) == set(expected), 'Retained source archive incomplete')
+    return binding, files
+
+
 def check(root=ROOT):
+    binding, source_files = retained_source(root)
     browser = root / "validation/combined-reader/browser"
     history = browser.parent / "history"
     archived = 0
@@ -29,7 +61,7 @@ def check(root=ROOT):
         require(path.is_relative_to(browser.resolve()), "Artefact path escapes observation directory")
         raw = path.read_bytes()
         require(len(raw) == item["bytes"] and digest(raw) == item["sha256"], "Browser artefact changed: " + item["path"])
-    descriptor_raw = (root / "combined/okf-explorer.json").read_bytes()
+    descriptor_raw = source_files['okf-explorer.json']
     descriptor = json.loads(descriptor_raw)
     contexts = set()
     checked_files = set()
@@ -43,7 +75,7 @@ def check(root=ROOT):
         for row in files:
             path = (root / "combined" / row["path"]).resolve()
             require(path.is_relative_to((root / "combined").resolve()), "Corpus path escapes candidate")
-            raw = path.read_bytes()
+            raw = source_files[row['path']]
             require(len(raw) == row["bytes"] and digest(raw) == row["sha256"], "Observed corpus response changed: " + row["path"])
             checked_files.add(row["path"])
         if engine != "facets":
@@ -76,12 +108,13 @@ def check(root=ROOT):
             require(observation["descriptor"]["sha256"] == digest(descriptor_raw) and observation["descriptor"]["snapshot"] == descriptor["snapshot"], "Stale public descriptor")
             match = re.fullmatch(r"https://raw\.githubusercontent\.com/chris-page-gov/okf-dwp/([a-f0-9]{40})/combined/okf-explorer\.json", observation["bundle_url"])
             require(match is not None and match[1] == observation["content_commit"], "Public bundle is not an immutable commit")
+            require(match[1] == binding['source_commit'], 'Observation belongs to another retained publication')
             require(observation["app"] == local_app and observation["console_errors"] == [], "Public app identity or console differs")
             prefix = observation["bundle_url"].removesuffix("okf-explorer.json")
             for row in observation["corpus_requests"]:
                 path = (root / "combined" / row["path"]).resolve()
                 require(path.is_relative_to((root / "combined").resolve()), "Public corpus path escapes candidate")
-                raw = path.read_bytes()
+                raw = source_files[row['path']]
                 require(len(raw) == row["bytes"] and digest(raw) == row["sha256"], "Published corpus bytes changed: " + row["path"])
                 require(row["url"] == prefix + row["path"], "Published response URL differs")
                 public_files.add(row["path"])
@@ -89,7 +122,7 @@ def check(root=ROOT):
             require(context["context_id"] == observation["ask"]["context_id"] and context["budget"] == observation["ask"]["budget"], "Public context or budget mismatch")
             require(context["ai_answer"] is None and context["evidence_status"] == "insufficient", "Public staff boundary changed")
             require(context["binding"]["index_url"] == prefix + "context/corpus/manifest.json", "Public context was assembled from another binding")
-            require(context["binding"]["index_sha256"] == digest((root / "combined/context/corpus/manifest.json").read_bytes()), "Public context manifest hash differs")
+            require(context["binding"]["index_sha256"] == digest(source_files['context/corpus/manifest.json']), "Public context manifest hash differs")
             require(observation["accessibility"]["desktop_ask_violations"] == [] and observation["accessibility"]["mobile_ask_and_panel_violations"] == [], "Public targeted accessibility violation")
             require(observation["accessibility"]["keyboard"]["same_context_as_desktop"] and observation["accessibility"]["keyboard"]["json_summary_focus_verified"] and not observation["accessibility"]["page_horizontal_overflow"], "Public keyboard or narrow layout control failed")
             require(observation["phase_timings"][-1]["phase"] == "narrow_keyboard_ask_ready", "Public timings lack completed journey")
@@ -133,11 +166,12 @@ def check(root=ROOT):
             for row in facets["served_files"]:
                 path = (root / "combined" / row["path"]).resolve()
                 require(path.is_relative_to((root / "combined").resolve()), "Public facet corpus path escapes candidate")
-                raw = path.read_bytes()
+                raw = source_files[row['path']]
                 require(len(raw) == row["bytes"] and digest(raw) == row["sha256"], "Public facet response changed")
                 public_files.add(row["path"])
     return {"status": "verified-retained-observations", "engines": 3, "facet_groups": 5, "corpus_files": len(checked_files), "superseded_archives": archived,
-            "public_engines": public_engines, "public_corpus_files": len(public_files), "post_deployment_application_files": post_deployment_files, "snapshot": descriptor["snapshot"]}
+            "public_engines": public_engines, "public_corpus_files": len(public_files), "post_deployment_application_files": post_deployment_files, "snapshot": descriptor["snapshot"],
+            "retained_source_commit": binding['source_commit'], "current_candidate_checked": False}
 
 
 if __name__ == "__main__":

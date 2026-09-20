@@ -6,7 +6,7 @@ import unittest
 from unittest.mock import patch
 
 from build_bundle import ROOT, digest, load_yaml
-from build_staff_semantic import AUTHORING, OUTPUT, BASE_INDEX, compile_staff_semantic
+from build_staff_semantic import AUTHORING, OUTPUT, BASE_INDEX, compile_staff_semantic, check_statutory_governance
 
 
 class StaffSemanticTests(unittest.TestCase):
@@ -20,7 +20,7 @@ class StaffSemanticTests(unittest.TestCase):
     def test_reproducible_and_additive(self):
         for name,raw in self.outputs.items():self.assertEqual((ROOT/name).read_bytes(),raw)
         old=json.loads((ROOT/BASE_INDEX).read_bytes())
-        self.assertLess(len(self.outputs[OUTPUT+'assembly-index.json']),4*1024*1024)
+        self.assertLessEqual(len(self.outputs[OUTPUT+'assembly-index.json']),8*1024*1024)
         self.assertTrue({r['id'] for r in old['records']} <= {r['id'] for r in self.index['records']})
         self.assertTrue({r['id'] for r in old['assertions']} <= {r['id'] for r in self.index['assertions']})
         old_evidence={r['id']:r for r in old['records'] if r['kind']=='evidence'}
@@ -81,6 +81,96 @@ class StaffSemanticTests(unittest.TestCase):
             self.assertEqual(rows[identifier]['review_status'],'reference-only-unreviewed')
             self.assertNotIn(identifier,required)
             self.assertIn('statutory text and applicability are not established',rows[identifier]['text'])
+
+    def test_all_statutory_bodies_and_links_integrate_without_changes(self):
+        overlay=json.loads((ROOT/'domain-profile/legal-bodies/context-overlay.json').read_bytes())
+        records={r['id']:r for r in self.index['records']}; assertions={a['id']:a for a in self.index['assertions']}
+        self.assertEqual(len(self.catalogue['statutory_body_ids']),20)
+        self.assertEqual(len(self.catalogue['statutory_body_assertion_ids']),43)
+        self.assertEqual(set(self.catalogue['statutory_body_ids']),{r['id'] for r in overlay['records']})
+        self.assertEqual(set(self.catalogue['statutory_body_assertion_ids']),{a['id'] for a in overlay['assertions']})
+        for row in overlay['records']:
+            self.assertEqual(records[row['id']],row)
+            check_statutory_governance(row,record=True)
+        for row in overlay['assertions']:
+            self.assertEqual(assertions[row['id']],row)
+            self.assertIn(row['source'],records);self.assertIn(row['target'],records)
+            check_statutory_governance(row)
+
+    def test_missing_prior_staff_reference_is_separately_source_bound(self):
+        identifier='https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/2002/16/section/4'
+        self.assertEqual(self.catalogue['statutory_supplementary_reference_ids'],[identifier])
+        record=next(r for r in self.index['records'] if r['id']==identifier)
+        self.assertEqual(record['kind'],'scope');self.assertEqual(record['authority']['class'],'derived')
+        self.assertEqual(record['review_status'],'reference-only-unreviewed')
+        projection=ROOT/'source/legal-bodies-2026-09-21-v2/provisions/ukpga--2002--16--section--4.json'
+        self.assertEqual(record['provenance'][0]['source_sha256'],digest(projection.read_bytes()))
+        self.assertIn('http://www.legislation.gov.uk/ukpga/2002/16/section/4/2026-09-20',record['text'])
+        self.assertNotIn(identifier,{i for r in self.index['requirements'] for i in r['required']})
+
+    def test_six_case_body_census_preserves_every_obligation(self):
+        coverage=json.loads((ROOT/'domain-profile/legal-bodies/coverage.json').read_bytes())
+        profiles={p['id']:p for p in self.profiles['profiles']}
+        self.assertEqual(len(self.profiles['obligations']),203)
+        self.assertEqual(len(coverage['cases']),6)
+        for case in coverage['cases']:
+            profile=profiles[case['case_id']]
+            self.assertEqual(profile['statutory_body_ids'],case['selected_body_ids'])
+            self.assertEqual(profile['evidence_status'],'insufficient')
+            self.assertTrue(profile['obligation_ids'])
+        categories={o['category'] for o in self.profiles['obligations']}
+        self.assertTrue({'independent_review_pending','legal_version_unreconciled','applicability_unresolved'}<=categories)
+
+    def test_rejects_statutory_authority_or_provenance_promotion(self):
+        body=json.loads((ROOT/'domain-profile/legal-bodies/context-overlay.json').read_bytes())
+        for record in (True,False):
+            source=body['records' if record else 'assertions'][0]
+            mutations=[lambda r:r.update(assertion_status='official'),
+                lambda r:r['authority'].update(**{'class':'legislation'}),
+                lambda r:r['authority'].update(source='OKF-DWP'),
+                lambda r:r['authority'].update(source='https://name:password@example.test/'),
+                lambda r:r.update(provenance=[]),
+                lambda r:r['provenance'][0].update(source_sha256=''),
+                lambda r:r['provenance'][0].update(locator='')]
+            if record:
+                mutations += [lambda r:r.update(review_status='human-reviewed'),
+                    lambda r:r['provenance'][0].update(literal_sha256='0'*64)]
+            else: mutations += [lambda r:r.update(predicate='http://example.test/appliesTo')]
+            for mutation in mutations:
+                with self.subTest(record=record,mutation=mutation):
+                    changed=deepcopy(source);mutation(changed)
+                    with self.assertRaises(ValueError):check_statutory_governance(changed,record=record)
+
+    def mutate_body_output(self,path,mutate,message):
+        import build_legal_body_evidence
+        from build_context_discovery import Inputs
+        outputs=build_legal_body_evidence.build();changed=deepcopy(outputs)
+        data=json.loads(changed[path]);mutate(data)
+        changed[path]=(json.dumps(data,sort_keys=True,indent=2)+'\n').encode()
+        original=Inputs.read
+        def fake_read(inputs,relative,expected=None,size=None):
+            raw=original(inputs,relative,expected,size)
+            return changed[relative] if relative==path else raw
+        with patch('build_legal_body_evidence.build',return_value=changed),patch.object(Inputs,'read',fake_read):
+            with self.assertRaisesRegex(ValueError,message):compile_staff_semantic()
+
+    def test_rejects_unverified_supplementary_endpoint(self):
+        def changed(data):
+            data['assertions'][0]['source']='https://chris-page-gov.github.io/okf-dwp/id/legal/unverified/invented'
+        self.mutate_body_output('domain-profile/legal-bodies/context-overlay.json',changed,'not the verified provision identity')
+
+    def test_rejects_absent_case_body_id(self):
+        self.mutate_body_output('domain-profile/legal-bodies/coverage.json',
+            lambda d:d['cases'][0]['selected_body_ids'].append('https://example.test/missing'),
+            'Statutory profile references absent evidence')
+
+    def test_rejects_changed_statutory_source_projection(self):
+        target=ROOT/'source/legal-bodies-2026-09-21-v2/provisions/uksi--2002--1792--regulation--5.json'
+        original=Path.read_bytes
+        def changed(path):
+            raw=original(path);return raw+b' ' if path==target else raw
+        with patch.object(Path,'read_bytes',changed):
+            with self.assertRaisesRegex(ValueError,'File changed|manifest binding'):compile_staff_semantic()
 
     def test_scope_compaction_preserves_specialised_scopes(self):
         old={r['id']:r for r in json.loads((ROOT/BASE_INDEX).read_bytes())['assertions']}

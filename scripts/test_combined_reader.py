@@ -187,6 +187,40 @@ class CombinedReaderTests(unittest.TestCase):
         ordinals = {row[0] for row in self.read(posting["postings"])["tokens"][token]}
         self.assertIn(next(i for i, row in enumerate(self.records) if row["route"] == route), ordinals)
 
+    def test_statutory_bodies_keep_literal_text_source_links_and_date_roles(self):
+        overlay = json.loads((ROOT / "domain-profile/legal-bodies/context-overlay.json").read_bytes())
+        resources = {row["id"]: row for path in self.manifest["chunks"]["resources"] for row in self.read(path)}
+        self.assertEqual(self.read("coverage.json")["selected_statutory_units"], 20)
+        for original in overlay["records"]:
+            row = self.by_route[original["route"]]
+            source = original["provenance"][0]
+            self.assertEqual(row["source_family"], "Legislation")
+            self.assertEqual(row["timestamp"], "")
+            self.assertNotIn("published_at", row)
+            self.assertEqual(row["provenance"]["date_roles"]["requested_source_version"], "2026-09-20")
+            self.assertEqual(row["provenance"]["authority"]["class"], "derived")
+            self.assertEqual(row["provenance"]["review_status"], "unreviewed")
+            self.assertEqual(row["provenance"]["literal_sha256"], digest(original["text"].encode()))
+            self.assertIn(source_text_block(original["text"]), row["narrative"]["body"])
+            self.assertIn(original["scope"], row["narrative"]["body"])
+            self.assertEqual(row["url"], source["url"])
+            self.assertEqual(resources[row["resource_ids"][0]]["source_access"]["url"], source["url"])
+
+    def test_source_plane_binds_statutory_acquisitions_as_well_as_pdfs(self):
+        from build_bundle import canonical
+        identity = self.read("data/source-identity.json")
+        self.assertEqual(len(identity["pdf_documents"]), 513)
+        self.assertTrue(identity["statutory_retained_files"])
+        self.assertEqual(digest(canonical(identity)), self.descriptor["plane_roots"]["source"])
+        self.assertEqual(len(self.descriptor["source"]["statutory_inventories"]), 2)
+        for binding in identity["statutory_retained_files"]:
+            raw = (ROOT / binding["path"]).read_bytes()
+            self.assertEqual(digest(raw), binding["sha256"])
+            self.assertEqual(len(raw), binding["bytes"])
+        changed = deepcopy(identity)
+        changed["statutory_retained_files"][0]["sha256"] = "0" * 64
+        self.assertNotEqual(digest(canonical(changed)), self.descriptor["plane_roots"]["source"])
+
     def test_context_exact_source_shards_preserved_and_snapshot_rebound(self):
         manifest = self.read("context/corpus/manifest.json")
         self.assertEqual(manifest["semantic_source_snapshot"], self.descriptor["snapshot"])

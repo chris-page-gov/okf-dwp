@@ -3,13 +3,13 @@
   "mode": "local-shared-engine-development-case-comparison",
   "inputs": {
     "registry_sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a",
-    "profiles_sha256": "26627a916323bf6fa7f99ba5ed0959807e3e5044a3ca76f354828f2187ac7821",
+    "profiles_sha256": "a10e3d6d2c8c01d97b303e11a21dedf3323d273b6bacc71de540047793bda81a",
     "base_sha256": "3b4cef18be425271f649349b65dd0b6dafb1e6e4e12a432e94e0b3f3124b2ef6",
-    "overlay_sha256": "79ac30aef41ac467db83ec6b79ed20e4a4cc9330461d08713f45ea5830cb6e2d",
+    "overlay_sha256": "f3e74d970b18aaaa39a78dd6cbd7fce3bca15ca457d63704c5743936718b4587",
     "runner_sha256": "9a32861cc6a651644881eb3ebc9fe120ef7b0797970b0a5b8d9591d48c0731bc",
     "engine": {
-      "index.ts": "110b53569b216af33a0969e6390596a9a51b189b48ff58b03337be8dba4ee18d",
-      "corpus.ts": "7f0ffe7cb2627be1d83ab5d3efecc0f99c0be967ea876dbfa73410280bda1d14",
+      "index.ts": "bade207cbc414b9a057778fdc28564d1c0f9c03e7548b3644a3fb9ec9b8731e6",
+      "corpus.ts": "72fec179d1015df39fd16834d5876740b95a6477f70b6013821f24398a69eb65",
       "types.ts": "248b7db16fa1faf2cb6c5c07c8347b926ae649a528b79e92bca3816829938b65"
     }
   },
@@ -17,7 +17,7 @@
     "question_occurrences": 40,
     "unique_questions": 39,
     "before_candidate_hits": 12,
-    "after_candidate_hits": 169,
+    "after_candidate_hits": 176,
     "before_cases_with_candidates": 12,
     "after_cases_with_candidates": 40,
     "own_profile_triggered": 40,
@@ -68,7 +68,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:b8424a660a1191f42e100bb1aa0a8834854010658e21e824a5366b31c81e1608",
+        "context_id": "urn:sha256:d3289481e469db02b54ea8111e73288e95641e0b2b45f52b76a235cc5aacfb83",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/abroad",
@@ -77,8 +77,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 54,
-        "relationships": 51,
+        "selected_records": 64,
+        "relationships": 80,
         "requirements": 1,
         "expected_candidates_retained": [
           "source-c001",
@@ -98,7 +98,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-001/applicability_unresolved/applicability",
@@ -107,7 +108,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-001/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-001/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 253393,
+        "package_bytes": 372807,
         "truncated": true,
         "unresolved_terms": [
           "benefits",
@@ -126,7 +127,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-001.json.gz",
-      "archive_sha256": "71b4ea98ab6e990397874a0bf97070b65905a1b865b11fb405f969fd3111bc9b"
+      "archive_sha256": "9790a82b20533a333eb0f235af0182262ac69d3d7bb31bb6a3d3fb5cb13339ad"
     },
     {
       "id": "staff-002",
@@ -174,7 +175,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:02681e16cd314f5828751fe1354420066ee12ccad80d246706c9cd76d3c7198b",
+        "context_id": "urn:sha256:07f27c764d39869aeb09ebf582e862a60628059c1a273c996a8a10fbb17d5e2a",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/entitlement",
@@ -191,8 +192,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 60,
-        "relationships": 64,
+        "selected_records": 64,
+        "relationships": 90,
         "requirements": 2,
         "expected_candidates_retained": [
           "source-c004",
@@ -209,7 +210,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-002/applicability_unresolved/applicability",
@@ -224,7 +226,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-004/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-004/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 297250,
+        "package_bytes": 387124,
         "truncated": true,
         "unresolved_terms": [
           "1960",
@@ -246,7 +248,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-002.json.gz",
-      "archive_sha256": "8260600b88f29c6743ab2ec050256e67add5805d0c1f49d0be72ed6f79729d22"
+      "archive_sha256": "def0e64b295b1806e8ed3ffb5ee46483c94e446ad065c987b6af4e81123a405b"
     },
     {
       "id": "staff-003",
@@ -292,7 +294,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:2e84c8994b1751afde04a79a749b527c1ae3433482cce96ed4da3ebda2c0ef11",
+        "context_id": "urn:sha256:f40b95bc89b0b5c53666b0123e35a4db7a4b238a50793423a2f4886bdfb6a38f",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/overlap",
@@ -310,7 +312,7 @@
         "ambiguities": [],
         "evidence_status": "insufficient",
         "selected_records": 64,
-        "relationships": 75,
+        "relationships": 93,
         "requirements": 2,
         "expected_candidates_retained": [
           "source-c003",
@@ -363,7 +365,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-004/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-004/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 318569,
+        "package_bytes": 361262,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -379,7 +381,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-003.json.gz",
-      "archive_sha256": "5fffacfa3d86a1f15628d7fb554ab460c11e684f6e9db59ada25f53a35395a52"
+      "archive_sha256": "07adb6f7f4369ca65ea0481249f54344225eeb8e316f87a50231d2a4c30a56a6"
     },
     {
       "id": "staff-004",
@@ -423,7 +425,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:2ef649a0ec25e6ab745ca7137b8123d9b5b0e7e7a1e08a8627483d17b146e95c",
+        "context_id": "urn:sha256:4b9b844bc12e7a9f9ef561459bbd746dfc3aaab5542a8bb76dfc1dae5cbe972e",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/eligibility",
@@ -436,8 +438,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 58,
-        "relationships": 61,
+        "selected_records": 64,
+        "relationships": 88,
         "requirements": 1,
         "expected_candidates_retained": [
           "source-c003",
@@ -455,7 +457,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-004/applicability_unresolved/applicability",
@@ -464,7 +467,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-004/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-004/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 281549,
+        "package_bytes": 379371,
         "truncated": true,
         "unresolved_terms": [
           "components",
@@ -485,7 +488,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-004.json.gz",
-      "archive_sha256": "4a3ec7d6a3804762b01550e7653df541db58cfa30cf24f0e3843d169b38d88a8"
+      "archive_sha256": "b4c61b86db9021b58206f38065faadf3ad51833262f2543719478531622fcea3"
     },
     {
       "id": "staff-005",
@@ -530,7 +533,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:349050346b2890bbfbb683e473f87975f93f848589d020593e7bda085aee8b7c",
+        "context_id": "urn:sha256:163441c1a1c49372de4639178b961471df6ceffcfb39288762c938f51a023e88",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/additional-benefits",
@@ -548,12 +551,13 @@
         "ambiguities": [],
         "evidence_status": "insufficient",
         "selected_records": 64,
-        "relationships": 67,
+        "relationships": 111,
         "requirements": 2,
         "expected_candidates_retained": [
           "source-c003",
           "source-c008",
-          "source-c032"
+          "source-c036",
+          "source-c039"
         ],
         "adm_pages": [
           "page/adm/adm-chapter-c1/0102",
@@ -577,10 +581,9 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-005/independent_review_pending/meaning-review",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-005/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-005/question_scope_unresolved/question-scope",
-          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003",
-          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005"
+          "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
         ],
-        "package_bytes": 315811,
+        "package_bytes": 414065,
         "truncated": true,
         "unresolved_terms": [
           "benefits",
@@ -602,7 +605,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-005.json.gz",
-      "archive_sha256": "2300d3540ddf0f92529e70b2484bc0899ccf1392f51703669fc5b246f2dd283a"
+      "archive_sha256": "0c995f705938587952d1e1ef5b2d1597322276b5dbb7d2081707c97af4480070"
     },
     {
       "id": "staff-006",
@@ -640,7 +643,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:05833cb5c11f6366de53a6a72eb8d8b8387af6d8c9334686eca32887a7da9871",
+        "context_id": "urn:sha256:c01a8890d14f91441803527c99a9c64d9e8de6531c491619b94d9e9af5007724",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/eligibility",
@@ -657,8 +660,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 52,
-        "relationships": 50,
+        "selected_records": 64,
+        "relationships": 80,
         "requirements": 4,
         "expected_candidates_retained": [
           "source-c008",
@@ -670,7 +673,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-006/applicability_unresolved/applicability",
@@ -688,7 +692,6 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-020/independent_review_pending/meaning-review",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-020/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-020/question_scope_unresolved/question-scope",
-          "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-021/applicability_unresolved/applicability",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-021/evidence_closure_unverified/source-requirement-1",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-021/independent_review_pending/meaning-review",
@@ -707,7 +710,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068",
           "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002"
         ],
-        "package_bytes": 253827,
+        "package_bytes": 382802,
         "truncated": true,
         "unresolved_terms": [
           "maximum",
@@ -726,7 +729,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-006.json.gz",
-      "archive_sha256": "11745fc9bd136924fbdb7bd9e93732031c6657508c7330456562c9f39b6067ea"
+      "archive_sha256": "6b6c6c3b5f339a8c5d5a18b684d67e8c7042fff9ef7b6eae2a2763cfe703a191"
     },
     {
       "id": "staff-007",
@@ -768,7 +771,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:e39b14e0b66bf3470d9a63189e2162209852aa0132d150e3e382cd2fc96450d7",
+        "context_id": "urn:sha256:2a1aefd7200f1ba208f2a5cb5bb7712ec0bdc4a171cb1bc596def82d79399f27",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/rates",
@@ -781,8 +784,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 59,
-        "relationships": 55,
+        "selected_records": 64,
+        "relationships": 81,
         "requirements": 3,
         "expected_candidates_retained": [
           "source-c014",
@@ -806,7 +809,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-007/applicability_unresolved/applicability",
@@ -829,7 +833,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 292146,
+        "package_bytes": 385406,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -845,7 +849,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-007.json.gz",
-      "archive_sha256": "a2a5e100f4b09367298bdb93db3ae2ab620d8998fb7b8d76a72d2049fae21a01"
+      "archive_sha256": "249ac952f2584397e1f3212be85c31cfe027b31bd8368d195751e746bfb2620e"
     },
     {
       "id": "staff-008",
@@ -879,7 +883,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:add9d34b31f874ff8289fa12dbd6118dbc796ab3baf8c074a835a43518501300",
+        "context_id": "urn:sha256:447b80a42cde82b5e9d09a847921f0f939cb1e451506c60d075613c134e028b8",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/rates",
@@ -896,8 +900,8 @@
           }
         ],
         "evidence_status": "insufficient",
-        "selected_records": 29,
-        "relationships": 12,
+        "selected_records": 64,
+        "relationships": 99,
         "requirements": 1,
         "expected_candidates_retained": [
           "source-c014",
@@ -911,14 +915,18 @@
           "source-c022",
           "source-c023",
           "source-c024",
-          "source-c025"
+          "source-c025",
+          "source-c027",
+          "source-c035"
         ],
         "adm_pages": [
           "page/adm/adm-chapter-e2/0027"
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget",
+          "alternative_path_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-008/applicability_unresolved/applicability",
@@ -926,11 +934,9 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-008/evidence_closure_unverified/source-requirement-2",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-008/independent_review_pending/meaning-review",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-008/legal_version_unreconciled/legal-version",
-          "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-008/question_scope_unresolved/question-scope",
-          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011",
-          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch57/0005"
+          "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-008/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 143374,
+        "package_bytes": 478510,
         "truncated": true,
         "unresolved_terms": [
           "amount"
@@ -948,7 +954,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-008.json.gz",
-      "archive_sha256": "374e961594e18255f42adfce0e7172871060830d1d69feb460c1b1631b58ba62"
+      "archive_sha256": "59c81f8f58231449c20dd1f97b9e7e965816d8977240e19f6c6b07569579b912"
     },
     {
       "id": "staff-009",
@@ -997,7 +1003,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:400e7fb92182a92117e60896e6aebc31ae5df562981eabed1a1c14a0a8367d0f",
+        "context_id": "urn:sha256:015d14778343c5bd9c767f3026f529525e5f9be50494170b3f8c4c77402891bb",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/additional-benefits",
@@ -1027,7 +1033,7 @@
         ],
         "evidence_status": "insufficient",
         "selected_records": 64,
-        "relationships": 93,
+        "relationships": 128,
         "requirements": 4,
         "expected_candidates_retained": [
           "source-c014",
@@ -1052,7 +1058,9 @@
         "semantic_adm_pages": [],
         "truncation_codes": [
           "retrieval_candidate_budget",
-          "node_budget"
+          "relationship_budget",
+          "node_budget",
+          "alternative_path_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-007/applicability_unresolved/applicability",
@@ -1067,7 +1075,6 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-008/independent_review_pending/meaning-review",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-008/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-008/question_scope_unresolved/question-scope",
-          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch57/0005",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-009/applicability_unresolved/applicability",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-009/evidence_closure_unverified/source-requirement-1",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-009/independent_review_pending/meaning-review",
@@ -1081,7 +1088,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
           "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
         ],
-        "package_bytes": 371784,
+        "package_bytes": 460739,
         "truncated": true,
         "unresolved_terms": [
           "basic",
@@ -1102,7 +1109,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-009.json.gz",
-      "archive_sha256": "faeba67baef13fbd3b655f6c133a2aa5512922637e0c8da5a8c3b7585d611cbe"
+      "archive_sha256": "5b8db79dec2f5b6bf951ea94d7f079461010d55805c32c3e8f37197da4792b7c"
     },
     {
       "id": "staff-010",
@@ -1152,7 +1159,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:672fa2a8b0daf206491cd4045b0ec367025ce7c0898e309a394b97189e73762e",
+        "context_id": "urn:sha256:0cc1d02993060501f39948c81902fae4fff972882a50251104be930fa5fe2888",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/calculation",
@@ -1169,8 +1176,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 53,
-        "relationships": 55,
+        "selected_records": 64,
+        "relationships": 85,
         "requirements": 6,
         "expected_candidates_retained": [
           "source-c008",
@@ -1194,7 +1201,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-010/applicability_unresolved/applicability",
@@ -1241,7 +1249,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068",
           "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002"
         ],
-        "package_bytes": 277604,
+        "package_bytes": 401571,
         "truncated": true,
         "unresolved_terms": [
           "assess",
@@ -1261,7 +1269,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-010.json.gz",
-      "archive_sha256": "f784382476392d3ea76e323c2f1e59bcb2a3fda45ba7367115f06fcf69bd69fb"
+      "archive_sha256": "d784e19a426b153482b001adcdd83c23dc9782adc79787f30483893ee9aca8be"
     },
     {
       "id": "staff-011",
@@ -1307,7 +1315,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:aeb5ba1575717dde9a6ce478af483b6ad3d4069688a3ec5ba797e634ddef1a59",
+        "context_id": "urn:sha256:ad5d8ebbe46187b70c768b61d86b5a5e7c2d63197b9b03a0ec5d32721a27d8e0",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/housing-benefit",
@@ -1325,7 +1333,7 @@
         "ambiguities": [],
         "evidence_status": "insufficient",
         "selected_records": 64,
-        "relationships": 76,
+        "relationships": 128,
         "requirements": 2,
         "expected_candidates_retained": [
           "source-c009",
@@ -1347,6 +1355,7 @@
         "semantic_adm_pages": [],
         "truncation_codes": [
           "retrieval_candidate_budget",
+          "relationship_budget",
           "node_budget"
         ],
         "missing_requirement_ids": [
@@ -1359,9 +1368,10 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/evidence_closure_unverified/source-requirement-1",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/independent_review_pending/meaning-review",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/legal_version_unreconciled/legal-version",
-          "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/question_scope_unresolved/question-scope"
+          "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/question_scope_unresolved/question-scope",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128"
         ],
-        "package_bytes": 321001,
+        "package_bytes": 465212,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -1377,7 +1387,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-011.json.gz",
-      "archive_sha256": "4ed26b34cbc7d614cb8d73b0347b71a8601dd643b82a53f68ef8b26f15381868"
+      "archive_sha256": "e1274fc2fc859684606fd8c8ae0672b884ab2d1675f5a59387b39c8d5fe4e222"
     },
     {
       "id": "staff-012",
@@ -1423,7 +1433,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:9063b5af07b4447f9dc84de3319f526038c2d7fcb838570476451725c9128619",
+        "context_id": "urn:sha256:16765c2c0ebc9381bedfe449ab5431212fdb0bc0f9abd8563c0cdd64eb910b72",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
@@ -1436,8 +1446,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 55,
-        "relationships": 58,
+        "selected_records": 64,
+        "relationships": 118,
         "requirements": 3,
         "expected_candidates_retained": [
           "source-c010",
@@ -1451,7 +1461,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-012/applicability_unresolved/applicability",
@@ -1468,9 +1479,12 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/evidence_closure_unverified/source-requirement-1",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/independent_review_pending/meaning-review",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/legal_version_unreconciled/legal-version",
-          "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/question_scope_unresolved/question-scope"
+          "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/question_scope_unresolved/question-scope",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
         ],
-        "package_bytes": 272904,
+        "package_bytes": 482202,
         "truncated": true,
         "unresolved_terms": [
           "citizen",
@@ -1492,7 +1506,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-012.json.gz",
-      "archive_sha256": "2faff2df509389f40160a15c2460674906bd4fe2cb5a4936aa4ab14bb4e2a65f"
+      "archive_sha256": "379baf96ecaadcb4956265f5d9a2618a30d3e20a57af5468d130c6a57338f813"
     },
     {
       "id": "staff-013",
@@ -1538,7 +1552,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:db89980f33279e6f2d04cc5a142b56f538ec7001d788c4fcb814608715f3a5e2",
+        "context_id": "urn:sha256:146f5949da3decfb532bd9d604f9ff910fcd899fca8023d818c2979220bd45dc",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
@@ -1551,8 +1565,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 55,
-        "relationships": 58,
+        "selected_records": 64,
+        "relationships": 118,
         "requirements": 3,
         "expected_candidates_retained": [
           "source-c010",
@@ -1566,7 +1580,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-012/applicability_unresolved/applicability",
@@ -1583,9 +1598,12 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/evidence_closure_unverified/source-requirement-1",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/independent_review_pending/meaning-review",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/legal_version_unreconciled/legal-version",
-          "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/question_scope_unresolved/question-scope"
+          "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/question_scope_unresolved/question-scope",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
         ],
-        "package_bytes": 272908,
+        "package_bytes": 482206,
         "truncated": true,
         "unresolved_terms": [
           "citizen",
@@ -1607,7 +1625,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-013.json.gz",
-      "archive_sha256": "fd4cddc5a705b28caabebf4741c3035d00b782b68b7d02ed6fc5efd0418a3f5e"
+      "archive_sha256": "30cb24d52835f29dcb4e7bfd72722ff82f43ca65cf9d9ddddd5d00e3e83582f9"
     },
     {
       "id": "staff-014",
@@ -1653,7 +1671,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:8a19cab56f812c6f2c79b8a5a893e07f8dc4f0e2f7aefbdfc2739f91ed87238e",
+        "context_id": "urn:sha256:677f03a3e3d41adabfff0faa9bfa866fba7b94404ff3c00ee1ae3ff6eb2cfa8d",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/overlap",
@@ -1670,8 +1688,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 63,
-        "relationships": 66,
+        "selected_records": 64,
+        "relationships": 113,
         "requirements": 3,
         "expected_candidates_retained": [
           "source-c009",
@@ -1693,7 +1711,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-014/applicability_unresolved/applicability",
@@ -1710,9 +1729,10 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/evidence_closure_unverified/source-requirement-1",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/independent_review_pending/meaning-review",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/legal_version_unreconciled/legal-version",
-          "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/question_scope_unresolved/question-scope"
+          "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/question_scope_unresolved/question-scope",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035"
         ],
-        "package_bytes": 310522,
+        "package_bytes": 434884,
         "truncated": true,
         "unresolved_terms": [
           "s",
@@ -1731,7 +1751,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-014.json.gz",
-      "archive_sha256": "f1c315aebbce05694ab5989bd7abd6f86fe7f1e0de1c1a83548e530643974823"
+      "archive_sha256": "60b6dec7eb3792b9324c3b861dc3016b997525b9735f65d9bf924d379f47bd05"
     },
     {
       "id": "staff-015",
@@ -1772,7 +1792,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:f7100a3167801a5194eda44333971a6a1ea29cf7ca7c7542b8cd8764ee04f8a9",
+        "context_id": "urn:sha256:52c4f32d4feb98cfefed6ebfc454ea2dfbc55e5d41b853fb86166bbcfeab1c5b",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/calculation",
@@ -1785,8 +1805,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 48,
-        "relationships": 49,
+        "selected_records": 64,
+        "relationships": 81,
         "requirements": 4,
         "expected_candidates_retained": [
           "source-c008",
@@ -1804,7 +1824,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-010/applicability_unresolved/applicability",
@@ -1828,7 +1849,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 252670,
+        "package_bytes": 400568,
         "truncated": true,
         "unresolved_terms": [
           "required"
@@ -1846,7 +1867,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-015.json.gz",
-      "archive_sha256": "ae4fd281f9820a04a4275e9bc90c49173fdf7aabb82db50ee61869ba7dcf6632"
+      "archive_sha256": "dc2eda2fd700c9e3fb2ac40b5cf8bf640023d7f6b92c7cd6ac64569854d84347"
     },
     {
       "id": "staff-016",
@@ -1887,7 +1908,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:df03c6cf4753a17dc52db0f69b0cfbaeafcfd30d24d8243e6fe64b454d782010",
+        "context_id": "urn:sha256:2eac768dd48290139a4756f27f77c29c691777fffe0850202ceae2ab9e06ca48",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/calculation",
@@ -1900,8 +1921,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 47,
-        "relationships": 48,
+        "selected_records": 64,
+        "relationships": 80,
         "requirements": 4,
         "expected_candidates_retained": [
           "source-c012",
@@ -1918,7 +1939,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-010/applicability_unresolved/applicability",
@@ -1942,7 +1964,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 242828,
+        "package_bytes": 400850,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -1958,7 +1980,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-016.json.gz",
-      "archive_sha256": "2ae8f10d59b4123c35f3d68ecf54dc338cad8533c7929b82f3bf2e895d580156"
+      "archive_sha256": "a571ef8503406976db3d9e0d4ce1ade2833ad9f971c2d8c7c211c2100a7bcf15"
     },
     {
       "id": "staff-017",
@@ -1997,7 +2019,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:04a833a41969ac3ba0acf1c485c0eb759373521535b36faf1664565a71efc421",
+        "context_id": "urn:sha256:6ef73c170ba201c3b45df2b2548c9eb1de2df7e32595ee240b068ee278aba5c5",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
@@ -2010,8 +2032,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 50,
-        "relationships": 51,
+        "selected_records": 64,
+        "relationships": 103,
         "requirements": 3,
         "expected_candidates_retained": [
           "source-c009",
@@ -2027,7 +2049,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-014/applicability_unresolved/applicability",
@@ -2044,9 +2067,10 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/evidence_closure_unverified/source-requirement-1",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/independent_review_pending/meaning-review",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/legal_version_unreconciled/legal-version",
-          "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/question_scope_unresolved/question-scope"
+          "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/question_scope_unresolved/question-scope",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
         ],
-        "package_bytes": 258641,
+        "package_bytes": 455570,
         "truncated": true,
         "unresolved_terms": [
           "having",
@@ -2065,7 +2089,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-017.json.gz",
-      "archive_sha256": "84d2546c36901e851b858917f51bc3a78726b46ef4cd37906a79fcf322444d7d"
+      "archive_sha256": "ea83db27548d5d86b1e523be9787f3ab94455ec138fd9950f9b209d838c9dd0d"
     },
     {
       "id": "staff-018",
@@ -2105,7 +2129,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:b938f062b7045d6a5013591509236fc1afe115001c6e5f4c15a9f33f1d5b3830",
+        "context_id": "urn:sha256:1fe5beead09b1e9fbd79121ad4d21cb4915d4c2ee3a4a3891e01984162e7424c",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
@@ -2118,8 +2142,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 57,
-        "relationships": 64,
+        "selected_records": 64,
+        "relationships": 116,
         "requirements": 1,
         "expected_candidates_retained": [
           "source-c010",
@@ -2134,7 +2158,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-018/applicability_unresolved/applicability",
@@ -2143,7 +2168,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-018/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-018/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 284708,
+        "package_bytes": 497786,
         "truncated": true,
         "unresolved_terms": [
           "goes",
@@ -2163,7 +2188,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-018.json.gz",
-      "archive_sha256": "715b510cfc02d765ff3986562f48108aea2cdfaed95c40ff0556b2eef301eb6e"
+      "archive_sha256": "dfaeb60a8180b063469c563280d3fe8d8e6486e6e694f6f57a53845751da56ca"
     },
     {
       "id": "staff-019",
@@ -2210,7 +2235,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:4e5cd11e65aeb300aed618b09e2dad771a741376fed6f106134ae846ba51e721",
+        "context_id": "urn:sha256:1fea79e7834e89c21de51993332687e5a2529249ec48b2c7d61b79e68522862a",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
@@ -2219,8 +2244,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 46,
-        "relationships": 43,
+        "selected_records": 64,
+        "relationships": 75,
         "requirements": 1,
         "expected_candidates_retained": [
           "source-c008",
@@ -2246,7 +2271,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/applicability_unresolved/applicability",
@@ -2255,7 +2281,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 210195,
+        "package_bytes": 365625,
         "truncated": true,
         "unresolved_terms": [
           "work"
@@ -2273,7 +2299,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-019.json.gz",
-      "archive_sha256": "c1cdc99300a2d890ddcb1858a1a1101535e359a3898d8a3ae61d2f0bc669f607"
+      "archive_sha256": "ada1e67f90574ef2b34a63d8264a69cd7d64a03b055529be96a4a26b1ab921cc"
     },
     {
       "id": "staff-020",
@@ -2315,7 +2341,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:71fbf07eac80138161d5c4e31a98fc89a5613ca033ff038d556f3a4a94282968",
+        "context_id": "urn:sha256:76367f2f23ac5177ac1227b30ac36cd95ba094702d36ac060a54ebdea7838a56",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/eligibility",
@@ -2328,12 +2354,13 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 52,
-        "relationships": 50,
+        "selected_records": 64,
+        "relationships": 80,
         "requirements": 3,
         "expected_candidates_retained": [
           "source-c008",
           "source-c009",
+          "source-c011",
           "source-c012"
         ],
         "adm_pages": [
@@ -2347,7 +2374,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/applicability_unresolved/applicability",
@@ -2360,7 +2388,6 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-020/independent_review_pending/meaning-review",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-020/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-020/question_scope_unresolved/question-scope",
-          "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-021/applicability_unresolved/applicability",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-021/evidence_closure_unverified/source-requirement-1",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-021/independent_review_pending/meaning-review",
@@ -2379,7 +2406,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068",
           "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002"
         ],
-        "package_bytes": 254865,
+        "package_bytes": 378077,
         "truncated": true,
         "unresolved_terms": [
           "citizen"
@@ -2397,7 +2424,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-020.json.gz",
-      "archive_sha256": "fdf9cf71671d742261d4e8c7dbac1a82767b87f7a93c88c392de101b2412c5f1"
+      "archive_sha256": "02fc07cd8d8a4e585134b14e1d4809c4d8fbca8afa385a5e28993274123f3734"
     },
     {
       "id": "staff-021",
@@ -2441,7 +2468,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:5c2d4fbac21ab69113ab42f5659bf8573c8ab5affa5717b9c77e2c4aac3e8346",
+        "context_id": "urn:sha256:660ef2832ebdf2051cab090ac94a5979e1bd8ded047983f679da4e30620e83f7",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/eligibility",
@@ -2463,7 +2490,7 @@
         "ambiguities": [],
         "evidence_status": "insufficient",
         "selected_records": 64,
-        "relationships": 65,
+        "relationships": 81,
         "requirements": 5,
         "expected_candidates_retained": [
           "source-c008",
@@ -2516,6 +2543,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/independent_review_pending/meaning-review",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-019/question_scope_unresolved/question-scope",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-020/applicability_unresolved/applicability",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-020/evidence_closure_unverified/source-requirement-1",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-020/independent_review_pending/meaning-review",
@@ -2528,7 +2556,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-021/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-021/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 334088,
+        "package_bytes": 383694,
         "truncated": true,
         "unresolved_terms": [
           "rules"
@@ -2546,7 +2574,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-021.json.gz",
-      "archive_sha256": "15a094d14ee472e1d70c869492a197337c8ca14619b0fa0738adf499b218a5a1"
+      "archive_sha256": "ad3e72a8f227bb94d69345699fd0565666001efce88dca701b3e4efe3faf3052"
     },
     {
       "id": "staff-022",
@@ -2596,7 +2624,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:455892375da456171fe841406f941b047c5be04b331cf790d775af528c90dc07",
+        "context_id": "urn:sha256:16c5f6777a8eb7e11181d675979cd35cb6bcade01ed68512596cc9ea19f8f752",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/entitlement",
@@ -2618,7 +2646,7 @@
         "ambiguities": [],
         "evidence_status": "insufficient",
         "selected_records": 64,
-        "relationships": 71,
+        "relationships": 99,
         "requirements": 3,
         "expected_candidates_retained": [
           "source-c003",
@@ -2656,7 +2684,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-022/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-022/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 316432,
+        "package_bytes": 392570,
         "truncated": true,
         "unresolved_terms": [
           "example",
@@ -2676,7 +2704,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-022.json.gz",
-      "archive_sha256": "80813ffdb3368a702cbceb605718205b73f41e532a76816c79948f77662ceb23"
+      "archive_sha256": "c8d0767ff2ef278baf6cca7b4a7e205ea6e05b3a69af6ef3c7032fa135ee6539"
     },
     {
       "id": "staff-023",
@@ -2719,7 +2747,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:c27f38de864f8a63730f183ae0f91329fea512ad3fdd22bedb0e43f8a46c2bc6",
+        "context_id": "urn:sha256:66e8b44d6cef6c9bfc80196c78fb7e1691b41c89eb4ead593acf34827da86f72",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/abroad",
@@ -2732,8 +2760,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 54,
-        "relationships": 51,
+        "selected_records": 64,
+        "relationships": 80,
         "requirements": 3,
         "expected_candidates_retained": [
           "source-c002",
@@ -2751,7 +2779,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-001/applicability_unresolved/applicability",
@@ -2770,7 +2799,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-023/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-023/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 264238,
+        "package_bytes": 380219,
         "truncated": true,
         "unresolved_terms": [
           "someone"
@@ -2788,7 +2817,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-023.json.gz",
-      "archive_sha256": "d80d175af82c352ceee9305769cf3172f4df5bb079a9cdd2cd5107a2993a5749"
+      "archive_sha256": "6d8407c85bacc2159221e27d37be5fefae9eb9dde7544d701d1e8eb12048e01a"
     },
     {
       "id": "staff-024",
@@ -2825,7 +2854,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:bbdee8be10b24868defcc871343b61c47611caae6351bdf110781d9475919c64",
+        "context_id": "urn:sha256:81bf15f6f87dd443bf796066852e0b76a48614b32241c74df5e02a75cfcfca61",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/additional-benefits",
@@ -2842,10 +2871,11 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 39,
-        "relationships": 24,
+        "selected_records": 64,
+        "relationships": 89,
         "requirements": 1,
         "expected_candidates_retained": [
+          "source-c032",
           "source-c037",
           "source-c040",
           "source-c041"
@@ -2855,17 +2885,17 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-024/applicability_unresolved/applicability",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-024/evidence_closure_unverified/source-requirement-1",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-024/independent_review_pending/meaning-review",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-024/legal_version_unreconciled/legal-version",
-          "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-024/question_scope_unresolved/question-scope",
-          "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
+          "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-024/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 161115,
+        "package_bytes": 364458,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -2881,7 +2911,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-024.json.gz",
-      "archive_sha256": "d88901364e9dc85202ea40dacb3f86907776899f72916bf465d56cf56b6324b1"
+      "archive_sha256": "08b3c85c5d245622a864ee19077c1d714c0dd16c5c52a999f11427aa1ee5a95b"
     },
     {
       "id": "staff-025",
@@ -2918,7 +2948,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:177665835d1f64a355da7fb36fbd0d62a944df4b20a756819537e5e468b5ce7a",
+        "context_id": "urn:sha256:7c28e662b5a2652ab551b35fbfe176c460a34b8edb933e6cfe21e789740e9a7b",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/iidb",
@@ -2932,11 +2962,13 @@
         "ambiguities": [],
         "evidence_status": "insufficient",
         "selected_records": 64,
-        "relationships": 72,
+        "relationships": 74,
         "requirements": 1,
         "expected_candidates_retained": [
           "source-c003",
-          "source-c040"
+          "source-c034",
+          "source-c040",
+          "source-c042"
         ],
         "adm_pages": [
           "page/adm/adm-chapter-c4/0029",
@@ -2952,11 +2984,9 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-025/evidence_closure_unverified/source-requirement-1",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-025/independent_review_pending/meaning-review",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-025/legal_version_unreconciled/legal-version",
-          "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-025/question_scope_unresolved/question-scope",
-          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch71/0117",
-          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011"
+          "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-025/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 325587,
+        "package_bytes": 329971,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -2972,7 +3002,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-025.json.gz",
-      "archive_sha256": "5c6ac83b0f1a122d186285e803c725c97b8f40bfa8fb899d32c98cbc591ec915"
+      "archive_sha256": "096cde197fa56581ccbaa6339d45e78ca3caec44939fcefb95f253bdbc72c9ed"
     },
     {
       "id": "staff-026",
@@ -3015,7 +3045,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:2f6d3f91860c8595cf1da0e2514070896d33e0b521e0f3db3e3722d59ee73781",
+        "context_id": "urn:sha256:cdccb2611347f87706673bd9f7346a087617fa6d6ed993a3fa0c34cba9d02a48",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/dla",
@@ -3032,8 +3062,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 50,
-        "relationships": 36,
+        "selected_records": 55,
+        "relationships": 42,
         "requirements": 2,
         "expected_candidates_retained": [
           "source-c039"
@@ -3088,7 +3118,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-033/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-033/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 216183,
+        "package_bytes": 264556,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -3104,7 +3134,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-026.json.gz",
-      "archive_sha256": "5f4389ac494f3c194f057557c7a0ee3c8365cde3a413bca96c35fc5107afb71e"
+      "archive_sha256": "a37bda0c273f6c87d25bdfe9629c6af510d448e52e630edfd09a656b226cd6cf"
     },
     {
       "id": "staff-027",
@@ -3140,7 +3170,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:a9e8b93cb2d847eca75cbc50234112448cf70ac82e63e471abaa4eb975b2f534",
+        "context_id": "urn:sha256:7fb628a80f3f3e5848d87f4a4c04b6ce7f54e71bab1b9e3f357b0cb4a0721e50",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/iidb",
@@ -3157,8 +3187,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 40,
-        "relationships": 26,
+        "selected_records": 61,
+        "relationships": 50,
         "requirements": 1,
         "expected_candidates_retained": [
           "source-c032",
@@ -3179,7 +3209,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-027/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-027/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 166525,
+        "package_bytes": 297851,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -3195,7 +3225,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-027.json.gz",
-      "archive_sha256": "e43b180d6a26c05618eda82d25f7dd8ba768f8cbb90ff3aef1c25118eacf1c92"
+      "archive_sha256": "02acaeaf3527f3901c3989515412ffb3f82c265882f3b03797e4bb480d14a660"
     },
     {
       "id": "staff-028",
@@ -3231,7 +3261,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:594c77d335aeeafacc248bb554e450b14705670a2d1b3fc1a740a70a08951595",
+        "context_id": "urn:sha256:0db64a0684cd1b39cbfbc7bfc797bbdbf5eecf47820f259ce797b979a7736b50",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/esa",
@@ -3248,8 +3278,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 40,
-        "relationships": 26,
+        "selected_records": 61,
+        "relationships": 50,
         "requirements": 1,
         "expected_candidates_retained": [
           "source-c032",
@@ -3270,7 +3300,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-028/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-028/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 164604,
+        "package_bytes": 295930,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -3286,7 +3316,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-028.json.gz",
-      "archive_sha256": "22714b41eb73a2b0b1292df4d1efad866fbd33007a13e502a1fb4da099ddc059"
+      "archive_sha256": "39753e61bec5a907dffbacb1a9eeb5af91659d24ab722b1919a73fe820a9d0bf"
     },
     {
       "id": "staff-029",
@@ -3325,7 +3355,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:a9bfeee468e03eb87893314563d801b1a528a79b314c35ffc55e36a749373e72",
+        "context_id": "urn:sha256:33b04fc5a61d35cb420ee61087cdf855d86b4e5963e182724191d75c26b97cf8",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/attendance-allowance",
@@ -3350,8 +3380,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 56,
-        "relationships": 43,
+        "selected_records": 64,
+        "relationships": 63,
         "requirements": 5,
         "expected_candidates_retained": [
           "source-c034",
@@ -3387,7 +3417,8 @@
           "page/adm/adm-chapter-p4/0013"
         ],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-026/applicability_unresolved/applicability",
@@ -3416,7 +3447,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-036/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-036/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 253646,
+        "package_bytes": 318271,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -3432,7 +3463,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-029.json.gz",
-      "archive_sha256": "64d38a6283c962e5b9829ae9a88dbd229fea7d7b5659e2052fd65837531ee26f"
+      "archive_sha256": "d0b27ca4603b8451886e1e513e86ea3fa0769b83f653f99d3bcc4ad6961fe4af"
     },
     {
       "id": "staff-030",
@@ -3470,7 +3501,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:3c557deab4a723732243a44f9a8dd59d886865da5f1a806aa50d86334d5161eb",
+        "context_id": "urn:sha256:d0d98ef1dc4544680c63e425c35807925ce20cbbee1069c415f938d9052f0596",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/iidb",
@@ -3488,7 +3519,7 @@
         "ambiguities": [],
         "evidence_status": "insufficient",
         "selected_records": 64,
-        "relationships": 88,
+        "relationships": 105,
         "requirements": 1,
         "expected_candidates_retained": [
           "source-c034",
@@ -3527,7 +3558,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-030/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-030/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 341569,
+        "package_bytes": 374717,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -3543,7 +3574,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-030.json.gz",
-      "archive_sha256": "0b637efc866022ef369b33034c29539f0406836ec585e54db4c00a127a677f8c"
+      "archive_sha256": "be43ec69b5d2a3d621dde21227ab6c53b05bfd00382eba41f29755d68847640f"
     },
     {
       "id": "staff-031",
@@ -3590,7 +3621,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:ab1e17cf9d6f5ac83d2ab3649a08f8f7f54828e618cdaf4d05251f0523d86c74",
+        "context_id": "urn:sha256:b34b2a6de276835400e5f4a058c5446ccaf2ed4b427076c4b265e082be099e76",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/additional-benefits",
@@ -3607,8 +3638,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 46,
-        "relationships": 32,
+        "selected_records": 64,
+        "relationships": 89,
         "requirements": 1,
         "expected_candidates_retained": [
           "source-c027",
@@ -3641,7 +3672,8 @@
           "page/adm/adm-chapter-p4/0013"
         ],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-031/applicability_unresolved/applicability",
@@ -3650,7 +3682,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-031/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-031/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 189454,
+        "package_bytes": 383131,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -3666,7 +3698,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-031.json.gz",
-      "archive_sha256": "12f3307443699704b8fcc0556be42f08cac64752da5c2f33d5b7197dcc6e598f"
+      "archive_sha256": "d35de97f1a800d24b6c9dcce3cc5b96770eaabfa91863a5f715510a14be74737"
     },
     {
       "id": "staff-032",
@@ -3704,7 +3736,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:cad05dc868da8e99e2bc119643c1d38c567104cf276e650a0588449c139c33a5",
+        "context_id": "urn:sha256:ad9831950c5ba15e2df18efcb8c7179cf390371ed42caebb5d1ca45fb4bb3826",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pension-age",
@@ -3718,7 +3750,7 @@
         "ambiguities": [],
         "evidence_status": "insufficient",
         "selected_records": 64,
-        "relationships": 72,
+        "relationships": 91,
         "requirements": 1,
         "expected_candidates_retained": [
           "source-c004",
@@ -3756,7 +3788,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-032/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-032/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 328837,
+        "package_bytes": 367958,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -3772,7 +3804,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-032.json.gz",
-      "archive_sha256": "ec3077e83b4658cb79ae8d3d85c365c89b3b17ab545b09bcb172390c21978c79"
+      "archive_sha256": "c9d82f28e1b9ea39cf018a489ed5e0ea74fafe6f63eff338d93e46d0579ce1a0"
     },
     {
       "id": "staff-033",
@@ -3815,7 +3847,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:2f6d3f91860c8595cf1da0e2514070896d33e0b521e0f3db3e3722d59ee73781",
+        "context_id": "urn:sha256:cdccb2611347f87706673bd9f7346a087617fa6d6ed993a3fa0c34cba9d02a48",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/dla",
@@ -3832,8 +3864,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 50,
-        "relationships": 36,
+        "selected_records": 55,
+        "relationships": 42,
         "requirements": 2,
         "expected_candidates_retained": [
           "source-c039"
@@ -3888,7 +3920,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-033/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-033/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 216183,
+        "package_bytes": 264556,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -3904,7 +3936,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-033.json.gz",
-      "archive_sha256": "5f4389ac494f3c194f057557c7a0ee3c8365cde3a413bca96c35fc5107afb71e"
+      "archive_sha256": "a37bda0c273f6c87d25bdfe9629c6af510d448e52e630edfd09a656b226cd6cf"
     },
     {
       "id": "staff-034",
@@ -3955,7 +3987,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:9265ff5a6e6988cf957261ba87109050652cf468fb5debe06e1f0f698e80de5d",
+        "context_id": "urn:sha256:36bfbb9b4b35f2f047ebb5a8312f8301e81f7013816794dc3d1b5aad2c44facf",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/jsa",
@@ -3972,8 +4004,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 46,
-        "relationships": 31,
+        "selected_records": 50,
+        "relationships": 36,
         "requirements": 1,
         "expected_candidates_retained": [
           "source-c034",
@@ -4022,7 +4054,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-034/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-034/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 196232,
+        "package_bytes": 239080,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -4038,7 +4070,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-034.json.gz",
-      "archive_sha256": "901c4e92be43494131b63004da214353e0c60241d1c7d011891d8ab65c03f586"
+      "archive_sha256": "c7cb86a8d509bc77b67da0ba50feec22d4a7c0d2eb46765cbc49ed283e852ddd"
     },
     {
       "id": "staff-035",
@@ -4089,7 +4121,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:afa7a1f66bfb710af9857ab19f3253b24a408510cdc2226338481853fc421087",
+        "context_id": "urn:sha256:45fe18c827e04199817eea5b5bb5bb34db99f5dd2982567e618c0707193d3439",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/esa",
@@ -4106,8 +4138,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 46,
-        "relationships": 31,
+        "selected_records": 50,
+        "relationships": 36,
         "requirements": 1,
         "expected_candidates_retained": [
           "source-c034",
@@ -4156,7 +4188,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-035/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-035/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 194970,
+        "package_bytes": 237818,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -4172,7 +4204,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-035.json.gz",
-      "archive_sha256": "21c77a82f363c19cca04afaed111fc817b26fa033ea83eb398bb534360617b0d"
+      "archive_sha256": "f91b9dd8dfeff7c1cc89f26de4ca0c5f88c6e8d1ff9c74cbc8426d78521826b7"
     },
     {
       "id": "staff-036",
@@ -4210,7 +4242,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:44a52a5883c18a70a6da15378a7a8c6b251a3333c2bb2464b2fc0121aa43d5a3",
+        "context_id": "urn:sha256:25524c3a3a466703cc52c010b5b76aabc997834669387d59daa86a127da80112",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/attendance-allowance",
@@ -4231,8 +4263,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 49,
-        "relationships": 35,
+        "selected_records": 54,
+        "relationships": 41,
         "requirements": 3,
         "expected_candidates_retained": [
           "source-c034",
@@ -4285,7 +4317,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-036/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-036/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 219522,
+        "package_bytes": 267703,
         "truncated": true,
         "unresolved_terms": []
       },
@@ -4301,7 +4333,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-036.json.gz",
-      "archive_sha256": "d17abebc9064306df934d12ebab9d4f749b5da4b95e73e4b141250d99e2ef35b"
+      "archive_sha256": "0b2872eff8ee641294a67ea632504c1cfe51a25dbc0f8e49076f8faf923144ce"
     },
     {
       "id": "staff-037",
@@ -4346,7 +4378,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:2bb77adbcd18ed10033f987d0bcaca3abb82273c5e3d111d06a36ff560e95d11",
+        "context_id": "urn:sha256:35951720d8e2e2e09bd5241d64473e62d0bcc3ccdf7cde79142ebcc1c133d15b",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pip",
@@ -4396,7 +4428,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-037/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-037/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 157345,
+        "package_bytes": 158375,
         "truncated": true,
         "unresolved_terms": [
           "get",
@@ -4419,7 +4451,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-037.json.gz",
-      "archive_sha256": "59484f97d0e8985b51cd50890b10b2dd7b70cf16fd35eb060d3603d512062e26"
+      "archive_sha256": "efb52674e7a576dad38ea4055534ffa7e775f275064d8ff18489ad043c9d1d5b"
     },
     {
       "id": "staff-038",
@@ -4461,7 +4493,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:e13efe343b958ff3b578d2282625a9d0ffc6ae8c0f5215c6a68a004b11eac44b",
+        "context_id": "urn:sha256:db54b2c37a2784eba23eb05078391be34eed871f2e4e7744eb9cd3742cb0a7fd",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/carers-allowance",
@@ -4470,8 +4502,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 61,
-        "relationships": 67,
+        "selected_records": 64,
+        "relationships": 104,
         "requirements": 1,
         "expected_candidates_retained": [
           "source-c036",
@@ -4485,7 +4517,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-038/applicability_unresolved/applicability",
@@ -4494,7 +4527,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-038/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-038/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 324184,
+        "package_bytes": 448764,
         "truncated": true,
         "unresolved_terms": [
           "circumstances",
@@ -4514,7 +4547,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-038.json.gz",
-      "archive_sha256": "2243085102bd86be845f479335b59c48b787f8340f739024b756ef16c9d47300"
+      "archive_sha256": "4d03e48ca85f047a8fd973084340478ccdaa2340e8a4d1178bc96862fd13e402"
     },
     {
       "id": "staff-039",
@@ -4558,7 +4591,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:55384f0138ed992dafb9b19d31615f577dfc2cfd6713f37f700bd97077aa44f2",
+        "context_id": "urn:sha256:80cf02b0066f1210ef5a3da47a2ba7a8ffee8972b987bce21857b60010904221",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/carers-allowance",
@@ -4572,7 +4605,7 @@
         "ambiguities": [],
         "evidence_status": "insufficient",
         "selected_records": 64,
-        "relationships": 78,
+        "relationships": 109,
         "requirements": 2,
         "expected_candidates_retained": [
           "source-c027",
@@ -4603,7 +4636,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-039/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-039/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 339447,
+        "package_bytes": 430489,
         "truncated": true,
         "unresolved_terms": [
           "benefits",
@@ -4623,7 +4656,7 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-039.json.gz",
-      "archive_sha256": "b58d535c9bc243e28af4dbca229aef12be725df1668f1a02344236080430508d"
+      "archive_sha256": "79a3bfb4a69f0ad09ed74849e8381af704a59df73f7e67fccbc84d7e2e7cdfb9"
     },
     {
       "id": "staff-040",
@@ -4667,7 +4700,7 @@
         ]
       },
       "after": {
-        "context_id": "urn:sha256:fe7ae3ffd7e404951b63f1c2f79331a5258995342cda7c286a202580125d7baf",
+        "context_id": "urn:sha256:5308df8749b0cad0e530ed79cfbf7dff91f70804f01533fc9d0144c0e3028787",
         "resolved": [
           {
             "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/carers-allowance",
@@ -4680,8 +4713,8 @@
         ],
         "ambiguities": [],
         "evidence_status": "insufficient",
-        "selected_records": 61,
-        "relationships": 67,
+        "selected_records": 64,
+        "relationships": 104,
         "requirements": 2,
         "expected_candidates_retained": [
           "source-c036",
@@ -4696,7 +4729,8 @@
         ],
         "semantic_adm_pages": [],
         "truncation_codes": [
-          "retrieval_candidate_budget"
+          "retrieval_candidate_budget",
+          "node_budget"
         ],
         "missing_requirement_ids": [
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-038/applicability_unresolved/applicability",
@@ -4710,7 +4744,7 @@
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-040/legal_version_unreconciled/legal-version",
           "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-040/question_scope_unresolved/question-scope"
         ],
-        "package_bytes": 321795,
+        "package_bytes": 447448,
         "truncated": true,
         "unresolved_terms": [
           "caring",
@@ -4729,14 +4763,14 @@
         "H_answerability": "Specialist acceptance and legal applicability remain unestablished."
       },
       "archive": "cases/staff-040.json.gz",
-      "archive_sha256": "b2b3488fa999ecdb1a849baebf2ae4fbb9fbf609ded8dcf72a1ef872ca57d913"
+      "archive_sha256": "aa9053b3317970b8e809e878b2fd6f897c0d2b75f3345cee76a333baf8d4c41c"
     }
   ],
   "generalisation_controls": [
     {
       "id": "capital-paraphrase",
       "question": "Explain the assessment of savings for Pension Credit",
-      "context_id": "urn:sha256:d606b6e5a17dbd87e7d29666cb7cb039013c24f6e6a9b57db946356fbe2dc677",
+      "context_id": "urn:sha256:f86d3b372a4fe45097f5f5b1b37d05fa0a497e86c4ce7fb149ae17ed4fc86c1b",
       "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/capital",
       "source_route": "page/84/0128",
       "evidence_status": "insufficient",
@@ -4745,7 +4779,7 @@
     {
       "id": "partner-paraphrase",
       "question": "Explain the Pension Credit household rules for a partner",
-      "context_id": "urn:sha256:3c6f99d462d8d26af781fd0c7db315202b358668281003d9431f88065ae20e30",
+      "context_id": "urn:sha256:39ce231932192f07747bcbbfc2a5026f0c193ff59aa755d38f18b2cf3f529aa5",
       "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
       "source_route": "page/77/0015",
       "evidence_status": "insufficient",
@@ -4754,7 +4788,7 @@
     {
       "id": "pip-age-paraphrase",
       "question": "Explain PIP at pensionable age",
-      "context_id": "urn:sha256:52a89db28e97bf796167f8ef41a056bfee89ee8a655441ab6db1d852fe70f6cf",
+      "context_id": "urn:sha256:de3878de3ab1f9af37ce2ffdb0e6fb14b2b727340888d49fbc692e36de0a8efb",
       "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pip",
       "source_route": "page/adm/adm-chapter-p4/0013",
       "evidence_status": "insufficient",
@@ -4763,7 +4797,7 @@
     {
       "id": "custody-regression",
       "question": "A claimant is imprisoned. Explain the effect on JSA, IS, State Pension Credit and ESA, distinguishing loss of payment from loss of entitlement, and trace each conclusion to the relevant DMG guidance.",
-      "context_id": "urn:sha256:07206335a9ebd1e1d07ceb60b5835573ee51a36c20ff8910c1b8a6cff110c481",
+      "context_id": "urn:sha256:4be85848cd7009dfc2d846a46cec803c5a3ddaaac18aaf10b8c75ead33d45ac1",
       "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
       "source_route": "page/dmg-vol3-ch12/0003",
       "evidence_status": "insufficient",
@@ -4779,64 +4813,69 @@
   "budget_observations": [
     {
       "id": "staff-006",
-      "context_id": "urn:sha256:4b0f9bf4f02acd06fb78af07cc7d7b4ea3f940dd46995f5eb35fdb9a86f63d5a",
+      "context_id": "urn:sha256:fb49d2e8535cbaa5a41dedd222af6e1628128353b341abf8fb7f45ee1e72211f",
       "budget": 65536,
-      "bytes": 61683,
-      "records": 4,
+      "bytes": 64011,
+      "records": 3,
       "relationships": 0,
       "requirements": 4,
       "evidence_status": "insufficient",
       "truncation_codes": [
         "retrieval_candidate_budget",
+        "node_budget",
         "byte_budget"
       ]
     },
     {
       "id": "staff-006",
-      "context_id": "urn:sha256:786a50386bca9b21adda12ac17a22b39da9b29f27d977da41159d234321458f5",
+      "context_id": "urn:sha256:54653c5a5a9231c33b54f69eeb3dc7cd97fed970f8d0c8635a1f9c8ccd7f53f8",
       "budget": 262144,
-      "bytes": 253827,
-      "records": 52,
-      "relationships": 50,
+      "bytes": 256913,
+      "records": 43,
+      "relationships": 47,
       "requirements": 4,
       "evidence_status": "insufficient",
       "truncation_codes": [
-        "retrieval_candidate_budget"
+        "retrieval_candidate_budget",
+        "node_budget",
+        "byte_budget"
       ]
     },
     {
       "id": "staff-012",
-      "context_id": "urn:sha256:9daa3237b072d49b45be8a02307a435f6c2a116c5b2eda3c8d302aa17446d51c",
+      "context_id": "urn:sha256:1027e358a503a1da95780953112ef4fc71f023611c3f3daa6ae60553a67f3831",
       "budget": 65536,
-      "bytes": 63558,
-      "records": 6,
+      "bytes": 63202,
+      "records": 4,
       "relationships": 0,
       "requirements": 3,
       "evidence_status": "insufficient",
       "truncation_codes": [
         "retrieval_candidate_budget",
+        "node_budget",
         "byte_budget"
       ]
     },
     {
       "id": "staff-012",
-      "context_id": "urn:sha256:db0002bc834c100def600c1bf8428092fdcd8b96a092a52ee90a1d7bfe9fd318",
+      "context_id": "urn:sha256:ca19055ad4f2d3d1526114c78e20f3c69bc62c46195d5fd4caa7b7004c09b2d0",
       "budget": 262144,
-      "bytes": 261570,
-      "records": 52,
-      "relationships": 55,
+      "bytes": 257854,
+      "records": 35,
+      "relationships": 50,
       "requirements": 3,
       "evidence_status": "insufficient",
       "truncation_codes": [
         "retrieval_candidate_budget",
+        "node_budget",
         "byte_budget"
       ]
     },
     {
       "id": "staff-026",
-      "context_id": "urn:sha256:cec71c1f4194189be247eac12524ed8a0a1c1748e4ae5b3e68611a54ebd01be1",
+      "context_id": "urn:sha256:1f2b5d50a8acaaa7329b014c528cd5b940644d01dd9a522930eadf9b1fce4494",
       "budget": 65536,
-      "bytes": 62959,
+      "bytes": 64920,
       "records": 11,
       "relationships": 0,
       "requirements": 2,
@@ -4848,25 +4887,12 @@
     },
     {
       "id": "staff-026",
-      "context_id": "urn:sha256:2fa6a9897041d2c314d414b3de3087752235a36b7af6638c59725b89904dd980",
+      "context_id": "urn:sha256:c5b0395eda36c1a13e8ef4513dfedd2a99bb330b92cca135ef8365b9a7435a54",
       "budget": 262144,
-      "bytes": 216183,
-      "records": 50,
-      "relationships": 36,
+      "bytes": 261525,
+      "records": 54,
+      "relationships": 41,
       "requirements": 2,
-      "evidence_status": "insufficient",
-      "truncation_codes": [
-        "retrieval_candidate_budget"
-      ]
-    },
-    {
-      "id": "staff-038",
-      "context_id": "urn:sha256:6858427bc2f1a71e59450dbc7e3dff8cddf450d1d062c47fdf502470fc76c09f",
-      "budget": 65536,
-      "bytes": 61195,
-      "records": 9,
-      "relationships": 0,
-      "requirements": 1,
       "evidence_status": "insufficient",
       "truncation_codes": [
         "retrieval_candidate_budget",
@@ -4875,15 +4901,31 @@
     },
     {
       "id": "staff-038",
-      "context_id": "urn:sha256:1e5bf57c893474afb5219a9b03199ac8462037e81e58ae4aa8274f82f608db1b",
-      "budget": 262144,
-      "bytes": 259770,
-      "records": 47,
-      "relationships": 49,
+      "context_id": "urn:sha256:54c40d54d361c81589f6a6462b6db3a86dca573c423784d210b4e966f2185943",
+      "budget": 65536,
+      "bytes": 61894,
+      "records": 8,
+      "relationships": 0,
       "requirements": 1,
       "evidence_status": "insufficient",
       "truncation_codes": [
         "retrieval_candidate_budget",
+        "node_budget",
+        "byte_budget"
+      ]
+    },
+    {
+      "id": "staff-038",
+      "context_id": "urn:sha256:e59e7fb6b0b0553393b7b27c84da83129a65d84e726b7062eac5f6d851609c5b",
+      "budget": 262144,
+      "bytes": 258485,
+      "records": 41,
+      "relationships": 41,
+      "requirements": 1,
+      "evidence_status": "insufficient",
+      "truncation_codes": [
+        "retrieval_candidate_budget",
+        "node_budget",
         "byte_budget"
       ]
     }
