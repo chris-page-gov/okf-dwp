@@ -137,3 +137,18 @@ Independent review of the two new receipt checkers found unbounded or symlinked
 local reads. The correction adds pre-read size/type checks and parent-directory
 checks, with ten passing integrity and tamper controls. Recorded browser and
 website observations remain unchanged; both inventories still verify.
+
+## Model successor preparation
+
+Independent review and the integrator's replay pass 40 Monday Python controls
+and all six exact dictionary round trips. The new protocol keeps the same
+240-second execution limit and default subscription models, with no paid API,
+tools or configuration changes. It first tests both unknown-term controls;
+substantive calls depend on those observed results. The original five rejected
+or timed-out attempts remain unchanged.
+
+The one-off reasoning diagnostic initially retained an opaque tool identifier as
+a dynamic field name. Its public artefact is now an explicitly labelled privacy
+projection with the original digest; the original remains outside this public
+repository. The successor uses strict event shapes and does not reuse the
+diagnostic's generic redactor as an acceptance rule.

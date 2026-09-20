@@ -1,0 +1,94 @@
+{
+  "auth_observation": {
+    "accepted": true,
+    "exit_code": 0,
+    "status": "subscription-auth-observed"
+  },
+  "census_status": "diagnostic-shapes-only",
+  "cli_version": "codex-cli 0.146.1",
+  "event_count": 5,
+  "events": [
+    {
+      "shape": {
+        "type": "str",
+        "unlisted_key_count": 1
+      },
+      "type": "thread.started"
+    },
+    {
+      "shape": {
+        "type": "str",
+        "unlisted_key_count": 0
+      },
+      "type": "turn.started"
+    },
+    {
+      "item_type": "error",
+      "shape": {
+        "item": {
+          "id": "str",
+          "message": "str",
+          "type": "str",
+          "unlisted_key_count": 0
+        },
+        "type": "str",
+        "unlisted_key_count": 0
+      },
+      "type": "item.completed"
+    },
+    {
+      "item_type": "agent_message",
+      "shape": {
+        "item": {
+          "id": "str",
+          "text": "str",
+          "type": "str",
+          "unlisted_key_count": 0
+        },
+        "type": "str",
+        "unlisted_key_count": 0
+      },
+      "type": "item.completed"
+    },
+    {
+      "shape": {
+        "type": "str",
+        "unlisted_key_count": 0,
+        "usage": {
+          "unlisted_key_count": 5
+        }
+      },
+      "type": "turn.completed"
+    }
+  ],
+  "exit_code": 0,
+  "experiment_answer_accepted": false,
+  "finished_at": "2026-09-20T22:21:26.242339+00:00",
+  "formatter_results": [],
+  "isolation": {
+    "customisations": "user-config-rules-project-docs-and-listed-features-disabled",
+    "disabled_skill_path_count": 17,
+    "limitation": "Host/system additions may still differ; absence of a warning is not proof of identical provider system context.",
+    "skills_policy": "process-local-disabled-for-discovered-user-skill-paths"
+  },
+  "model_override": null,
+  "output_bound_exceeded": false,
+  "prompt_sha256": "80b9efb41ac261501e550f26d31016c14b5da329eb1e113bf0c277e117d1d74a",
+  "provider": "codex-subscription",
+  "response_models": [],
+  "runner_sha256": "e7b3e1fc93f531d764ff8046401990561ba299268c921269483f5bb07807b48b",
+  "sanitised_error_messages": [
+    {
+      "location": "item.error",
+      "message": "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+    }
+  ],
+  "schema": "okf-cli-shape-diagnostic.v1",
+  "schema_sha256": "297204836eb74f64ebbbe3acb39b5255b06ab94537ed23ceb3585b747f9ca455",
+  "scope": "Separate tiny synthetic diagnostic; does not replace or reinterpret frozen experiment outcomes. Raw streams, account/session identifiers, paths and reasoning are not retained.",
+  "started_at": "2026-09-20T22:21:21.366761+00:00",
+  "stderr_sha256": "ed724eb8357693d86f106a33786970b5a918f1ff724b5e50f18a9681b5b57f42",
+  "stdout_sha256": "4441fbcbf3798d7d7f7b26e33e4b5235e681fe028ac0d0053c9ecf46e41f17e8",
+  "system_sha256": "33546cc9ac6c08f1886a4d3d2a057d5181b6ef1d6fa8296c42708ac215ea516f",
+  "timed_out": false
+}

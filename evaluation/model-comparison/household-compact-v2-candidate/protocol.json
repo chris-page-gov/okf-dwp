@@ -1,0 +1,48 @@
+{
+  "schema": "okf-compact-paired-model-protocol.v2",
+  "phase": "candidate-not-frozen-awaiting-independent-review",
+  "purpose": "A separately versioned compatibility and lossless-projection experiment. All original context fields and literal source text reconstruct exactly; no model readability, accuracy or latency improvement is established.",
+  "selected_cases": [
+    "staff-012",
+    "staff-020",
+    "staff-005",
+    "staff-026",
+    "staff-008",
+    "control-unknown"
+  ],
+  "selection_reason": "Revisit the omitted no-partner heading; inspect general Pension Credit and additional-benefit paths; retain the DLA/PIP cohort challenge; test ambiguous SDA alternatives and an unknown-term abstention control. Selection precedes model outputs.",
+  "control_question": "xylophonicquasarteleportation",
+  "context_budget": {
+    "max_nodes": 64,
+    "max_relationships": 128,
+    "max_depth": 6,
+    "max_bytes": 262144
+  },
+  "providers": [
+    "claude-subscription",
+    "codex-subscription"
+  ],
+  "system_prompt": "system-prompt.txt",
+  "user_prompt": "user-prompt.txt",
+  "answer_schema": "evaluation/answer-review/answer.schema.json",
+  "freeze_policy": "Freeze only after independent review and root approval of an exact committed candidate. Bind every prompt, protocol, packet, original audit context, original catalogue, schema and imported helper to that commit. No real call before freeze. Explicit reviewed manifest digest required per call.",
+  "tool_policy": "Exact observed Codex skill-description-shortening warning is separately recorded as host/system catalogue contamination, never blanket error acceptance. Unknown errors and events fail closed. Claude thinking-token counters and rate-limit telemetry must match the exact observed field/type schemas. Each StructuredOutput tool use must have a unique ID and exactly one later matched non-error tool result; all other tools/results are rejected.",
+  "allowed_formatting_events": {
+    "claude-subscription": [
+      "StructuredOutput"
+    ],
+    "codex-subscription": []
+  },
+  "model_policy": "Use existing subscription CLI defaults with no model override, fallback override, paid API or persistent configuration change. Record observed response and accounting model identities separately; unknown is valid, and more than one identity is not a controlled single-model trial.",
+  "retry_policy": "One explicit case/provider per --run, using an unused attempt-NN directory. Preserve every failure, timeout and retry. No automatic retries or repaired answers.",
+  "retention_policy": "Retain only public context, authored prompts, schema, structured final answers, sanitised model identities, tool-event categories/digests, numerical usage and timings. Do not publish raw CLI logs, reasoning, account/session identifiers, credentials, local skill paths or stderr.",
+  "review_policy": "Mechanical schema, exact-quotation, source-locator and boundary checks are followed by claim-level model review and pending independent specialist review. A fragment can match literally yet omit a controlling heading or condition. No model answer is gold.",
+  "historical_comparison": "The same six original governed contexts are reversibly factored through explicit IDs; trusted decoding instructions and CLI-event recognition differ. Original five failed or rejected attempts remain unchanged. Neither previous unknown error causes nor outcomes are retrospectively reclassified. Any subsequent difference cannot be attributed solely to byte savings.",
+  "cost_policy": "Numerical provider accounting is not verified subscription charges, future affordability or human review cost.",
+  "timeout_seconds": 240,
+  "max_stdout_bytes": 2097152,
+  "max_stderr_bytes": 524288,
+  "original_frozen_manifest_sha256": "9fd2755fa6b0ac36345c4245162da97565f1a27b37b8b11e990a803c5f6a7719",
+  "initial_execution_gate": "After approval, run the small unknown-term control for each provider first. Only then run Staff012 if both event formats are accepted. Remaining cases need root approval based on those concrete observations; no automatic retries.",
+  "projection_policy": "Every original JSON field remains present after decoding. Repeated values use $okf_value_ref IDs only; no records, literal text, qualifiers, provenance, relationships, requirements, gaps, ambiguity or budget declarations are filtered or summarised. Audit paths and original hashes remain in every packet. The encoding instruction belongs to this trusted prompt, not the evidence itself."
+}

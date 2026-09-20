@@ -30,6 +30,9 @@ Implementation ownership and handovers belong in the
   timeouts; investigate separately without changing the frozen experiment.
 - Bound retained-observation file reads and reject symlinked manifests, artefacts
   or parent directories before opening them; preserve the original receipts.
+- Prepare a separately reviewed model experiment with strict observed CLI-event
+  recognition and reversible context dictionaries. Six exact round trips pass;
+  substantive inputs are 12–15% smaller, without an answer-quality or speed claim.
 
 ## Learning website — 20 September 2026
 
