@@ -105,6 +105,12 @@ context requirements, not an OWL benefits ontology. Their 203 missing obligation
 are explicitly absent evidence. Legal citation links identify provision references;
 reference metadata does not become statutory text or an applicability rule. Twenty selected statutory units now have separate derived evidence records and 43 source-backed references, using the same Dublin Core vocabulary. No additional legal ontology or applicability predicate is invented for them.
 
+The household qualification increment also uses the existing Dublin Core
+`requires` term for eight explicit support dependencies. Seven captured pages
+must accompany the complete household summary, and the care-home overview needs
+that summary. These are authored context needs with evidence and review status;
+they do not assert that a benefit is payable or that a legal rule applies.
+
 ## Declared or researched, but not implemented as claimed semantics
 
 | Item | Current boundary |

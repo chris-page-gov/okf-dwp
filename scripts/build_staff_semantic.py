@@ -63,6 +63,40 @@ def check_statutory_governance(row, record=False):
         require(row.get('predicate')==DCT+'references', 'Statutory navigation is not applicability')
 
 
+def bounded_unique_strings(value, maximum, label):
+    require(isinstance(value,list) and len(value)<=maximum and
+            all(isinstance(item,str) and item for item in value), 'Invalid '+label)
+    require(len(value)==len(set(value)), 'Duplicate '+label)
+    return value
+
+
+def qualification_dependencies(catalogue, assertions, records):
+    """Validate explicit authored dependencies; ordinary references stay optional."""
+    concepts={node['key']:node for node in catalogue}
+    pairs={(edge['source'],edge['target']) for edge in assertions.values()
+           if edge['predicate'] in {SKOS+'related',SKOS+'broader'}}
+    dependencies={}
+    for node in catalogue:
+        sources=bounded_unique_strings(node.get('required_source_ids',[]),16,'required source IDs')
+        targets=bounded_unique_strings(node.get('required_concepts',[]),8,'required concepts')
+        require(set(sources)<=set(node['evidence_ids']), 'Required source is outside the concept source selection')
+        require(all(records.get(identifier,{}).get('kind')=='evidence' for identifier in sources),
+                'Required source must be verified evidence')
+        require(set(targets)<=set(concepts), 'Unknown required concept')
+        require(all((node['@id'],concepts[key]['@id']) in pairs for key in targets),
+                'Required concept lacks an existing source-backed relationship')
+        dependencies[node['@id']]=sorted(sources+[concepts[key]['@id'] for key in targets])
+    active=set();complete=set()
+    def visit(identifier):
+        require(identifier not in active,'Cyclic qualification dependency')
+        if identifier in complete:return
+        active.add(identifier)
+        for target in dependencies.get(identifier,[]):visit(target)
+        active.remove(identifier);complete.add(identifier)
+    for identifier in dependencies:visit(identifier)
+    return dependencies
+
+
 def compile_staff_semantic(root: Path = ROOT):
     inputs = Inputs(root)
     def authored(name):
@@ -167,6 +201,18 @@ def compile_staff_semantic(root: Path = ROOT):
         if r.get('source_concept_evidence'):
             evidence_ids += next(n['evidence_ids'] for n in catalogue if n['key']==r['source_concept_evidence'])
         edge(concepts[r['source']],concepts[r['target']],SKOS+r['predicate'].split(':')[1],r['statement'],evidence_ids,f'relationships/{i}')
+    dependencies=qualification_dependencies(catalogue,assertions,records)
+    concept_by_id={node['@id']:node for node in catalogue}
+    dependency_edges={}
+    for source,targets in sorted(dependencies.items()):
+        node=concept_by_id[source]
+        for target in targets:
+            evidence_ids=([target] if records[target]['kind']=='evidence'
+                          else concept_by_id[target]['evidence_ids'])
+            relation=edge(source,target,DCT+'requires',
+                'Required qualification context for '+node['label'],evidence_ids,
+                '@graph/'+node['key']+'/qualification-dependencies')
+            dependency_edges[source,target]=relation
     # Adjacent-page locators remain explicit in the review catalogue. The small
     # semantic base does not add every neighbour: the full corpus still contains
     # them, and the unverified closure obligations prevent a completeness claim.
@@ -266,15 +312,35 @@ def compile_staff_semantic(root: Path = ROOT):
     require(all(case['evidence_status']=='insufficient' for case in body_coverage['cases']), 'Statutory coverage cannot close staff obligations')
     outgoing={}
     for e in assertions.values():outgoing.setdefault(e['source'],[]).append(e)
-    def route_path(seeds,target):
+    def route_path(seeds,target,prefer_dependencies=False):
         queue=deque((seed,[seed],[]) for seed in sorted(seeds));visited=set()
         while queue:
             here,rs,es=queue.popleft()
             if here==target:return {'seed':rs[0],'records':rs,'assertions':es}
             if here in visited or len(es)>=3:continue
             visited.add(here)
-            for e in sorted(outgoing.get(here,[]),key=lambda e:e['id']):queue.append((e['target'],rs+[e['target']],es+[e['id']]))
+            for e in sorted(outgoing.get(here,[]),key=lambda e:(prefer_dependencies and e['predicate']!=DCT+'requires',e['id'])):
+                queue.append((e['target'],rs+[e['target']],es+[e['id']]))
         return None
+    def qualification_paths(seeds,keys):
+        required=[];paths=[]
+        for key in keys:
+            identifier=concepts[key]
+            require(bool(dependencies.get(identifier)), 'Qualification concept has no explicit dependencies')
+            initial=route_path(seeds,identifier,prefer_dependencies=True)
+            require(initial is not None, 'Qualification concept is unreachable from profile triggers')
+            queue=deque([(identifier,initial)]);visited=set()
+            while queue:
+                here,path=queue.popleft()
+                if here in visited:continue
+                visited.add(here);required.append(here)
+                require(len(path['assertions'])<=8,'Qualification path exceeds context depth bound')
+                if path['assertions']:paths.append(path)
+                for target in dependencies.get(here,[]):
+                    relation=dependency_edges[here,target]
+                    queue.append((target,{'seed':path['seed'],'records':path['records']+[target],
+                                         'assertions':path['assertions']+[relation['id']]}))
+        return list(dict.fromkeys(required)),list({canonical(path):path for path in paths}.values())
     expected_ids={c['id'] for c in registry['cases']}
     require({p['id'] for p in profile_author['profiles']}==expected_ids and len(profile_author['profiles'])==40, 'Profiles must cover all question occurrences exactly')
     profiles=[];requirements=[];obligations=[]
@@ -293,8 +359,14 @@ def compile_staff_semantic(root: Path = ROOT):
         require(any(o['category']=='independent_review_pending' for o in spec['obligations']), 'Profile cannot silently close independent review')
         required=[candidate_records[c] for c in spec['candidate_ids']]
         paths=[p for target in required if (p:=route_path(seeds,target)) and p['assertions']]
+        qualification_keys=bounded_unique_strings(spec.get('qualification_concepts',[]),8,'profile qualification concepts')
+        require(set(qualification_keys)<=set(concepts),'Unknown profile qualification concept')
+        qualification_ids,extra_paths=qualification_paths(seeds,qualification_keys)
+        paths=list({canonical(path):path for path in paths+extra_paths}.values())
+        all_required=list(dict.fromkeys(required+qualification_ids+missing))
+        require(len(paths)<=100 and len(all_required)<=200,'Qualification requirements exceed context bounds')
         requirement={'id':BASE+'id/requirement/staff/'+spec['id'],'label':spec['id']+': '+case['required_evidence'][0],
-                     'when_all':seeds,'required':required+missing,'required_paths':paths,
+                     'when_all':seeds,'required':all_required,'required_paths':paths,
                      'scope':'Proposed review scope for '+spec['id']+'. '+case['question'],
                      'limitations':[o['category']+': '+o['label'] for o in spec['obligations']]+case['ambiguities']}
         requirements.append(requirement)
@@ -308,6 +380,10 @@ def compile_staff_semantic(root: Path = ROOT):
                          'statutory_body_ids':body_by_case.get(spec['id'],[]),
                          'statutory_body_status':'Selected units acquired; version applicability, dependencies and specialist acceptance remain unresolved',
                          'assessment_boundary':'Development profile derived from known staff cases; candidate overlap is not an independent answer-accuracy test.'})
+        if qualification_keys:
+            profiles[-1]['qualification_concept_ids']=[identifier for identifier in qualification_ids if records[identifier]['kind']=='concept']
+            profiles[-1]['qualification_evidence_ids']=[identifier for identifier in qualification_ids if records[identifier]['kind']=='evidence']
+            profiles[-1]['qualification_paths']=extra_paths
     inputs.read('scripts/build_staff_semantic.py')
     snapshot='dwp-staff-semantics-'+digest(canonical(sorted(inputs.files.values(),key=lambda x:x['path'])))[:20]
     index={'schema':'okf-context-index.v1','bundle':{**old['bundle'],'snapshot':snapshot},'scope':declarations['scope'],
@@ -318,12 +394,14 @@ def compile_staff_semantic(root: Path = ROOT):
     outputs={OUTPUT+'assembly-index.json':raw,
              OUTPUT+'catalogue.json':pretty({'schema':'okf-dwp-staff-semantic-catalogue.v1','concepts':catalogue,'source_pages':sorted(bound_pages.values(),key=lambda x:x['id']),
                                             'new_assertion_ids':added,'legal_reference_ids':sorted(legal_nodes),'legal_assertion_ids':legal_edges,
+                                            'qualification_assertion_ids':sorted(row['id'] for row in dependency_edges.values()),
                                             'statutory_body_ids':sorted(body_ids),'statutory_body_assertion_ids':sorted(body_edges),
                                             'statutory_supplementary_reference_ids':sorted(body_reference_ids),
                                             'scope_compaction':{'before':DISCOVERY_SCOPE,'after':compact_scope,'assertion_ids':compacted},
                                             'alias_reassignments':alias_changes,'refined_records':replacements,'limitations':LIMITATIONS}),
              OUTPUT+'profiles.json':pretty({'schema':'okf-dwp-staff-evidence-profiles.v1','question_occurrences':40,'unique_questions':39,'profiles':profiles,'obligations':obligations,'limitations':LIMITATIONS})}
     counts={'concepts_authored':len(concepts),'selected_source_pages':len(bound_pages),'new_assertions':len(added),'legal_reference_nodes':len(legal_nodes),'legal_reference_edges':len(legal_edges),
+            'qualification_assertions':len(dependency_edges),'qualification_profiles':sum(bool(p.get('qualification_concept_ids')) for p in profiles),
             'statutory_body_records':len(body_ids),'statutory_body_relationships':len(body_edges),
             'statutory_supplementary_references':len(body_reference_ids),
             'task_profiles':len(profiles),'open_obligations':len(obligations),'by_obligation_category':dict(sorted(Counter(o['category'] for o in obligations).items())),

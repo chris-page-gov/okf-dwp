@@ -24,6 +24,20 @@ An **assertion** is a directed relationship with its own status and provenance.
 A **profile** declares the evidence and unresolved obligations for a task.
 These are inspectable project proposals; they are not official DWP interpretations.
 
+## Required support for a summary
+
+A reference helps a reader find related material. A **required dependency** says
+that an interpretation needs particular material to be inspected with it. The
+[household qualification increment](household-qualification-budget-review.md#additive-authoring-implementation)
+uses the existing `dcterms:requires` relationship for that purpose. Seven captured
+pages support the complete household summary; the care-home overview also
+requires that summary. The two care-home task profiles declare the resulting
+paths explicitly. These declarations remain project-authored and unreviewed.
+
+This makes an omitted qualification detectable. It does not make a small context
+package complete: a separate allocator must retain the paths within its budget,
+or report the missing support. All 203 existing obligations remain open.
+
 ## What is implemented
 
 | Item | Delivered scope |

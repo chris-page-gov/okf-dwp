@@ -237,3 +237,14 @@ context using those general dependencies. Recomputing missing declared
 dependencies after trimming deliberately corrects an existing diagnostic gap:
 an omitted dependency must remain visible even if its relationship was trimmed.
 Historical observations and model trials remain immutable.
+
+## Qualification source increment, 21 September
+
+The isolated source candidate adds eight required-support assertions and two
+explicit qualification profiles. It retains 901 records, now with 1,435 semantic
+assertions. All seven declared support pages already existed; no source text was
+acquired or edited. Producer tests and Explorer input validation pass. The combined
+Reader build preserves 20,044 records and now has 21,195 relationships. Its
+existing requirement labels apply in both directions; no new vocabulary or
+display fallback is necessary. Context allocation and publication are separate
+remaining checks, and no one has closed the 203 outstanding obligations.

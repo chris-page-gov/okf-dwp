@@ -158,6 +158,22 @@ class CombinedReaderTests(unittest.TestCase):
         self.assertEqual(len(adm), 4347)
         self.assertTrue(all(row["predicate"] == "http://purl.org/dc/terms/isPartOf" for row in adm))
 
+    def test_household_support_edges_preserve_requirement_meaning_and_authority(self):
+        catalogue = json.loads((ROOT / "evaluation/semantic-expansion/catalogue.json").read_bytes())
+        required_ids = set(catalogue["qualification_assertion_ids"])
+        edges = [row for row in self.edges if row["id"] in required_ids]
+        self.assertEqual(len(edges), 8)
+        self.assertEqual({row["id"] for row in edges}, required_ids)
+        for row in edges:
+            self.assertEqual(row["predicate"], "http://purl.org/dc/terms/requires")
+            self.assertEqual(row["kind"], "authored context requirement")
+            self.assertEqual(row["inverse_label"], "is required context for")
+            self.assertTrue(row["label"].startswith("Required qualification context for "))
+            self.assertEqual(row["assertion_status"], "model-derived")
+            self.assertEqual(row["authority"]["class"], "model-assisted")
+            self.assertEqual(row["review_status"], "unreviewed-specialist-review-required")
+            self.assertTrue(row["evidence"])
+
     def test_all_routes_resolve_through_hash_bound_locator(self):
         locator = self.read("data/locator/manifest.json")
         cache = {key: self.read(value["path"]) for key, value in locator["buckets"].items()}

@@ -81,7 +81,7 @@ The additive staff increment provides [projected personas and journeys](evaluati
 [legal reference reconciliation](docs/legal-reconciliation.md),
 [a combined DMG and ADM Reader](docs/combined-reader.md) and
 [a fresh source-listing comparison](docs/source-refresh.md).
-[Open the merged combined Reader](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F9de52acf1db84b27f8933d80480eaa850e74fa33%2Fcombined%2Fokf-explorer.json#overview).
+[Open the earlier staff-source Reader](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F9de52acf1db84b27f8933d80480eaa850e74fa33%2Fcombined%2Fokf-explorer.json#overview).
 Its [public Chrome, Firefox and WebKit checks](validation/combined-reader/public/README.md)
 passed the declared navigation, evidence and keyboard journeys, verifying actual
 application and corpus bytes. These are reviewable research outputs. All supplied tasks retain explicit gaps;
@@ -96,6 +96,14 @@ implementation from independent review, so a review gate cannot hide unfinished
 work. The bounded staff concepts/relationships (BL005) and task profiles (BL007)
 are delivered. Broader domain expansion and evidence closure remain explicit
 implementation packages; mention classifications do not complete those packages.
+
+The next [household qualification increment](docs/household-qualification-budget-review.md#additive-authoring-implementation)
+declares eight explicit support relationships. Seven already captured pages
+support the complete household summary, including the distinction between one
+and both partners living in a care home. Staff 012 and 013 now require those
+paths. Source text and all 203 open obligations are preserved. Bounded context
+retention and publication are separate checks; the public links above retain
+their verified source versions.
 
 The earlier public service **0.4.0** used the staff corpus at `9de52acf…`. Its
 [0.4.0 SDK observation](validation/compact-delivery/v0.4.0/sdk-receipt.json) passed

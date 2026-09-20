@@ -8,6 +8,18 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Household qualification dependencies — 21 September 2026
+
+- Declare seven captured guidance pages as required support for the household
+  summary, and make the care-home overview require that summary. Compile eight
+  source-backed, model-derived `dcterms:requires` relationships and explicit
+  qualification paths for Staff 012 and 013.
+- Preserve source bytes, original candidate identifiers, all 203 open obligations
+  and earlier model and browser observations. A support declaration does not
+  establish complete legal applicability or specialist acceptance.
+- Carry the new edges through the combined Reader with the existing forward and
+  inverse requirement labels, source provenance and review boundaries.
+
 ## Household delivery follow-up — 20 September 2026
 
 - Independently verify the successor model critique against its frozen inputs,

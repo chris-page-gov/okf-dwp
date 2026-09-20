@@ -148,3 +148,45 @@ These Staff012 obligations remain unchanged and open:
 - `question_scope_unresolved/question-scope` — including whether one or both partners live in the home.
 
 Knowing which facts and source branches are needed does not establish those facts. This review makes the evidence-selection failure reproducible and proposes a reusable remedy; it does not settle entitlement or legal applicability.
+
+## Additive authoring implementation
+
+Following the review, a separate candidate implements the authored part of the proposal. The original frozen context and the findings above remain unchanged. Integration with the revised generic allocator and a new context evaluation are separate checks; the producer results below do not prove that a bounded assembled package now retains every required page.
+
+The existing [concept authoring](../domain-profile/staff-semantic/concepts.yamlld) accepts two optional, explicit annotations:
+
+- `required_source_ids`: up to 16 distinct stable identifiers, each already in that concept's verified source selection and resolving to an evidence record;
+- `required_concepts`: up to eight distinct concept keys, each already connected by a source-backed conceptual relationship.
+
+The [task-profile authoring](../domain-profile/staff-semantic/profiles.yamlld) accepts `qualification_concepts`, up to eight existing concept keys with explicit dependencies. These annotations are producer instructions for a declared context requirement. Their resulting graph assertions use the already-supported `http://purl.org/dc/terms/requires` predicate. No new domain predicate or Explorer index schema is introduced.
+
+The candidate makes precisely these declarations:
+
+| Authoring location | Declaration | Scope |
+| --- | --- | --- |
+| `household-separation.required_source_ids` | **77/7, 77/19, 77/21, 77/23, 77/24, 77/25, 78/25** | Seven pages supporting the actual full definition: couple meaning, domestic establishment, one/both-partner branches, examples and the separate ability to claim. |
+| `care-home.required_concepts` | `household-separation` | The overview's household distinction depends on the separately authored household context. |
+| Staff012 and Staff013 `qualification_concepts` | `household-separation` | Add its dependency closure to these profiles' declared requirements. |
+
+The **four core qualification pages** are 77/21, 77/23, 77/24 and 77/25. They are not interchangeable with the **seven-page support set** for the full household definition. Page 77/19 is needed because that definition asserts the domestic-establishment meaning; page 77/7 and page 78/25 support its additional statements. The pre-existing reference to page 77/20 remains a reference and is not converted into a household dependency.
+
+The [producer](../scripts/build_staff_semantic.py) emits eight source-backed, model-derived `dcterms:requires` assertions: one from care home to household separation and seven from household separation to evidence pages. Each profile's required paths start at the **care-home concept already named in its `when_all` triggers**, then follow the complete directed chain to the household concept and the source page. The producer does not seed an unresolved endpoint or equate a source reference with a mandatory dependency.
+
+Original `candidate_ids`, question wording, original `source_evidence_ids` and all 203 absent obligation identifiers are preserved. The profile catalogue records the added `qualification_concept_ids`, `qualification_evidence_ids` and `qualification_paths` separately. Staff012 and Staff013 each have 15 required identifiers, including their five open obligations, and 11 required paths. The other 38 profiles' required identifier lists remain unchanged.
+
+The producer rejects malformed or duplicate declarations, unknown concepts, required sources outside the concept's verified evidence, non-evidence targets, unbacked concept associations, cycles and qualification concepts unreachable from the profile triggers. It also enforces the existing context limits on required identifiers, path count and path depth.
+
+This increment does **not** declare the other care-home summaries' complete qualification sets. The omitted supports for the disability-addition, temporary-residence and housing-cost summaries remain follow-up work. Nor does it reconcile regulation 5 with judgments or close any legal or specialist-review obligation.
+
+### Producer verification
+
+The locked environment and documented commands were used:
+
+```sh
+uv sync --locked
+uv run --locked python scripts/build_staff_semantic.py
+uv run --locked python scripts/build_staff_semantic.py --check
+uv run --locked python -m unittest discover -s scripts -p test_staff_semantic.py
+```
+
+The 29 producer controls pass. They include the exact seven-page closure, resolved-root directed paths, the page 24/page 25 example continuation, one-partner/both-partners source wording, negative declaration controls, preserved source evidence and the unchanged 203 obligations. The existing Explorer `validateContextIndex` validator also accepts the generated output. The candidate has **901 records, 1,435 assertions, eight qualification assertions and two qualification profiles**. All 40 profiles remain labelled insufficient. No combined Reader or frozen bundle was rebuilt by this change.
