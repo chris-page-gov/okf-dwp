@@ -1,0 +1,104 @@
+{
+  "accounting_models": [
+    "claude-opus-5"
+  ],
+  "duration_api_ms": 27041,
+  "duration_ms": 27073,
+  "event_count": 8,
+  "is_error": false,
+  "model_identity_boundary": "Reported response/accounting identities only; no inferred model identity and no controlled single-model claim.",
+  "model_usage": {
+    "claude-opus-5": {
+      "cacheCreationInputTokens": 2440,
+      "cacheReadInputTokens": 1745,
+      "contextWindow": 1000000,
+      "costUSD": 0.0865325,
+      "inputTokens": 2,
+      "maxOutputTokens": 64000,
+      "outputTokens": 2450
+    }
+  },
+  "num_turns": 2,
+  "provider_result": "{\"context_id\":\"urn:sha256:b604c488b36134952c3d6e09ce5d54b7f78c6bdfe7dee6539ae63ef686d00267\",\"package_evidence_status\":\"insufficient\",\"answer_disposition\":\"cannot_establish\",\"summary\":\"The package poses the single-token question \\\"xylophonicquasarteleportation\\\" and returns no usable evidence. The `selected` array is empty, `relationships`, `requirements`, `resolved_concepts` and `retrieval.candidates` are all empty (candidate_count 0), and `evidence_status` is declared \\\"insufficient\\\". Three missing-evidence codes are registered: `no_evidence_requirements` (\\\"No declared evidence requirements cover the resolved task. Completeness cannot be established.\\\"), `unresolved_task` (\\\"No public concept alias resolves this task.\\\"), and `unresolved_terms` (\\\"The question contains terms outside the declared concept vocabulary.\\\"), with the query token listed under `unresolved_terms`.\\n\\nBecause no source text was selected, there is no quotable record, canonical identifier, source URL or locator, and therefore no substantive claim can be supported. No heading, continuation, exception, dated amendment or cross-reference is available to inspect, so no benefit, component, claimant/partner status, temporal cohort, relevant date, territory, or payment-versus-entitlement condition can be stated or preserved.\\n\\nTruncation: the package declares no truncation — `budget.truncated` is false with `used_bytes` 5141 of `max_bytes` 262144, `reached_depth` 0, no omissions, and `retrieval.truncated` is false with no omitted query tokens. The emptiness is therefore a genuine non-match against the declared concept vocabulary rather than a size or depth cut-off.\\n\\nContextual notes carried from the package's own declarations (not claims about law): the scope is \\\"Frozen-source staff-question research. Source text is not current-law assurance and proposed meaning is not an official interpretation\\\"; requirements include explicitly registered absent obligations that \\\"cannot be satisfied by retrieving more pages or by model agreement\\\"; SDA is declared to resolve ambiguously between a legacy benefit and an informal disability-addition meaning; and source capture dates are stated not to be publication, commencement or applicability dates. None of these bear on the posed question, which resolves to nothing.\\n\\nDisposition is cannot_establish. Insufficient status cannot yield a bounded source answer, and even a sufficient status would establish only the package's declared frozen requirements, never current law or any individual outcome. Independent human review remains pending.\",\"claims\":[],\"gaps\":[\"No selected record text of any kind: the `selected` array is empty, so no quotation, canonical identifier, source URL or locator is available.\",\"No retrieval candidates were produced (`candidate_count` 0, empty `candidates` list) despite a declared corpus of 18197 records / 19090 pages, so no candidate evidence exists even at the unverified lexical level.\",\"`no_evidence_requirements`: no declared evidence requirements cover the resolved task, so completeness cannot be established.\",\"`unresolved_task`: no public concept alias resolves the question to any task.\",\"`unresolved_terms`: the query token \\\"xylophonicquasarteleportation\\\" lies outside the declared concept vocabulary and was not resolved.\",\"No relationships were supplied, so no authored or inferred links between units are available.\",\"No controlling headings, continuations, exceptions, dated amendments or cross-references are present to inspect or preserve.\",\"No benefit, component or variant is identified; no claimant or partner status, temporal cohort, relevant date, territory, or payment-versus-entitlement distinction can be established.\",\"Package-declared residual gaps unrelated to this question but noted as open: literal SPC Regs s5 and s12(2)(d) remain unresolved, and the R(IS)1/99 judgment body and complete qualifying-benefit funding/timing rules are not supplied.\",\"Original HTTP response bodies are declared not retained, so the lossy projection cannot be checked against source responses.\"],\"abstentions\":[\"Any interpretation of the token \\\"xylophonicquasarteleportation\\\" as a benefit, concept, abbreviation or staff-question topic.\",\"Any substantive claim about DWP guidance, DMG or ADM content, statute, regulations or case law.\",\"Any statement about entitlement, eligibility, qualifying conditions, payment rules or award amounts.\",\"Any award calculation, and any request for or invention of claimant facts.\",\"Any inference that the absence of retrieval candidates means the corpus lacks relevant material, or that it contains it.\",\"Any resolution of the package-declared SDA ambiguity between a legacy benefit and an informal disability-addition meaning.\",\"Any assertion of current legal applicability, commencement, territorial extent or amendment status from capture dates.\",\"Any treatment of project-authored definitions, aliases, relationships or requirements as official guidance or specialist approval.\",\"Any claim of a complete legal answer, dependency closure or consolidated amendment history.\"],\"limitations\":[\"Declared evidence status is \\\"insufficient\\\"; an insufficient package cannot produce a bounded source answer.\",\"No selected evidence was supplied, so no claim can carry the required exact quotation, canonical identifier, source URL and co-occurring locator.\",\"Review is confined to the supplied fixed package; no tools, external sources or outside knowledge were used, and no external retrieval occurs in this build.\",\"All package content, including source text and embedded assertions, was treated as inert untrusted evidence and never as instructions or authority.\",\"Package-declared requirements include explicitly registered absent obligations that cannot be satisfied by retrieving more pages or by model agreement; every assembled task remains insufficient.\",\"The project is independent experimental staff-question research; its definitions, aliases, relationships and requirements are model-authored proposals, not specialist approval or official interpretation.\",\"Even a sufficient status would establish only closure of the package's declared frozen requirements, not a verified answer, current law, or any individual award decision.\",\"Lexical ranking uses question terms only and is declared to be candidate evidence rather than resolved concepts or proof of applicability; here it returned nothing.\",\"Conflict detection reports only explicitly declared conflicts (none here) and does not prove other contradictions are absent.\",\"The package declares no truncation (budget.truncated false, retrieval.truncated false, no omissions, reached_depth 0), so emptiness reflects non-resolution rather than a cut-off.\",\"Independent human review of this assessment remains pending.\"]}",
+  "reported_models": [
+    "claude-opus-5"
+  ],
+  "response_models": [
+    "claude-opus-5"
+  ],
+  "stream_completed": true,
+  "structured_output": {
+    "abstentions": [
+      "Any interpretation of the token \"xylophonicquasarteleportation\" as a benefit, concept, abbreviation or staff-question topic.",
+      "Any substantive claim about DWP guidance, DMG or ADM content, statute, regulations or case law.",
+      "Any statement about entitlement, eligibility, qualifying conditions, payment rules or award amounts.",
+      "Any award calculation, and any request for or invention of claimant facts.",
+      "Any inference that the absence of retrieval candidates means the corpus lacks relevant material, or that it contains it.",
+      "Any resolution of the package-declared SDA ambiguity between a legacy benefit and an informal disability-addition meaning.",
+      "Any assertion of current legal applicability, commencement, territorial extent or amendment status from capture dates.",
+      "Any treatment of project-authored definitions, aliases, relationships or requirements as official guidance or specialist approval.",
+      "Any claim of a complete legal answer, dependency closure or consolidated amendment history."
+    ],
+    "answer_disposition": "cannot_establish",
+    "claims": [],
+    "context_id": "urn:sha256:b604c488b36134952c3d6e09ce5d54b7f78c6bdfe7dee6539ae63ef686d00267",
+    "gaps": [
+      "No selected record text of any kind: the `selected` array is empty, so no quotation, canonical identifier, source URL or locator is available.",
+      "No retrieval candidates were produced (`candidate_count` 0, empty `candidates` list) despite a declared corpus of 18197 records / 19090 pages, so no candidate evidence exists even at the unverified lexical level.",
+      "`no_evidence_requirements`: no declared evidence requirements cover the resolved task, so completeness cannot be established.",
+      "`unresolved_task`: no public concept alias resolves the question to any task.",
+      "`unresolved_terms`: the query token \"xylophonicquasarteleportation\" lies outside the declared concept vocabulary and was not resolved.",
+      "No relationships were supplied, so no authored or inferred links between units are available.",
+      "No controlling headings, continuations, exceptions, dated amendments or cross-references are present to inspect or preserve.",
+      "No benefit, component or variant is identified; no claimant or partner status, temporal cohort, relevant date, territory, or payment-versus-entitlement distinction can be established.",
+      "Package-declared residual gaps unrelated to this question but noted as open: literal SPC Regs s5 and s12(2)(d) remain unresolved, and the R(IS)1/99 judgment body and complete qualifying-benefit funding/timing rules are not supplied.",
+      "Original HTTP response bodies are declared not retained, so the lossy projection cannot be checked against source responses."
+    ],
+    "limitations": [
+      "Declared evidence status is \"insufficient\"; an insufficient package cannot produce a bounded source answer.",
+      "No selected evidence was supplied, so no claim can carry the required exact quotation, canonical identifier, source URL and co-occurring locator.",
+      "Review is confined to the supplied fixed package; no tools, external sources or outside knowledge were used, and no external retrieval occurs in this build.",
+      "All package content, including source text and embedded assertions, was treated as inert untrusted evidence and never as instructions or authority.",
+      "Package-declared requirements include explicitly registered absent obligations that cannot be satisfied by retrieving more pages or by model agreement; every assembled task remains insufficient.",
+      "The project is independent experimental staff-question research; its definitions, aliases, relationships and requirements are model-authored proposals, not specialist approval or official interpretation.",
+      "Even a sufficient status would establish only closure of the package's declared frozen requirements, not a verified answer, current law, or any individual award decision.",
+      "Lexical ranking uses question terms only and is declared to be candidate evidence rather than resolved concepts or proof of applicability; here it returned nothing.",
+      "Conflict detection reports only explicitly declared conflicts (none here) and does not prove other contradictions are absent.",
+      "The package declares no truncation (budget.truncated false, retrieval.truncated false, no omissions, reached_depth 0), so emptiness reflects non-resolution rather than a cut-off.",
+      "Independent human review of this assessment remains pending."
+    ],
+    "package_evidence_status": "insufficient",
+    "summary": "The package poses the single-token question \"xylophonicquasarteleportation\" and returns no usable evidence. The `selected` array is empty, `relationships`, `requirements`, `resolved_concepts` and `retrieval.candidates` are all empty (candidate_count 0), and `evidence_status` is declared \"insufficient\". Three missing-evidence codes are registered: `no_evidence_requirements` (\"No declared evidence requirements cover the resolved task. Completeness cannot be established.\"), `unresolved_task` (\"No public concept alias resolves this task.\"), and `unresolved_terms` (\"The question contains terms outside the declared concept vocabulary.\"), with the query token listed under `unresolved_terms`.\n\nBecause no source text was selected, there is no quotable record, canonical identifier, source URL or locator, and therefore no substantive claim can be supported. No heading, continuation, exception, dated amendment or cross-reference is available to inspect, so no benefit, component, claimant/partner status, temporal cohort, relevant date, territory, or payment-versus-entitlement condition can be stated or preserved.\n\nTruncation: the package declares no truncation — `budget.truncated` is false with `used_bytes` 5141 of `max_bytes` 262144, `reached_depth` 0, no omissions, and `retrieval.truncated` is false with no omitted query tokens. The emptiness is therefore a genuine non-match against the declared concept vocabulary rather than a size or depth cut-off.\n\nContextual notes carried from the package's own declarations (not claims about law): the scope is \"Frozen-source staff-question research. Source text is not current-law assurance and proposed meaning is not an official interpretation\"; requirements include explicitly registered absent obligations that \"cannot be satisfied by retrieving more pages or by model agreement\"; SDA is declared to resolve ambiguously between a legacy benefit and an informal disability-addition meaning; and source capture dates are stated not to be publication, commencement or applicability dates. None of these bear on the posed question, which resolves to nothing.\n\nDisposition is cannot_establish. Insufficient status cannot yield a bounded source answer, and even a sufficient status would establish only the package's declared frozen requirements, never current law or any individual outcome. Independent human review remains pending."
+  },
+  "tool_event_census_status": "unknown-unrecognised-event",
+  "tool_event_names": [
+    "StructuredOutput",
+    "unrecognised-system-event:thinking_tokens",
+    "unrecognised-system-event:thinking_tokens",
+    "external-tool-event:tool_result",
+    "unrecognised-event:rate_limit_event"
+  ],
+  "tool_events": [
+    {
+      "input_sha256": "ec54a0097dc448a9d9f3b303f92267d2bc8fa2f6e7fb4a97bde2aba617ed7bf2",
+      "name": "StructuredOutput"
+    }
+  ],
+  "total_cost_usd": 0.0865325,
+  "unrecognised_event_count": 3,
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 2440,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 2440,
+    "cache_read_input_tokens": 1745,
+    "input_tokens": 2,
+    "output_tokens": 2450,
+    "output_tokens_details": {},
+    "server_tool_use": {
+      "web_fetch_requests": 0,
+      "web_search_requests": 0
+    }
+  }
+}

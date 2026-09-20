@@ -1,6 +1,8 @@
 # Next paired evidence trials for Monday
 
-**Preparation only: no context packages have been frozen and no model calls have been made for this trial.** The root task must first provide the final immutable source and Explorer engine versions. This guide is separate from the [retained 20 September trials](staff-model-trials.md); their inputs, scripts, results and failures remain unchanged.
+**Six context packages are frozen and their offline replay passes. Five subscription attempts are retained; none yielded a response accepted by the frozen experiment controls. Further calls are held for investigation.** They bind DWP commit `3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84` and Explorer engine commit `0e6a639f87c4060123b72d82c1ebe30405d475f1`. This guide is separate from the [retained 20 September trials](staff-model-trials.md); their inputs, scripts, results and failures remain unchanged.
+
+The [frozen catalogue](../evaluation/model-comparison/household-2026-09-21/frozen/manifest.json) has SHA-256 `9fd2755fa6b0ac36345c4245162da97565f1a27b37b8b11e990a803c5f6a7719`. The [pre-model input review](../evaluation/model-comparison/household-2026-09-21/pre-model-input-review.json) confirms that the no-partner heading is present for Staff 012 and records relevant neighbouring pages that the budget omitted. All five substantive packages remain insufficient and truncated; the unknown-term control contains no records. This is a model-authored source comparison, not specialist acceptance.
 
 A **paired trial** gives two AI clients the same question, evidence and authored instructions. It helps us inspect whether their claims preserve the evidence. It does not establish accuracy, affordability, a preferred model or a specialist-approved benefits answer.
 
@@ -57,7 +59,7 @@ Only structured final answers, sanitised output metadata, numerical usage, timin
 4. Inspect gaps, ambiguity and truncation statements. More retrieved pages do not prove completeness.
 5. Retain a claim-level model critique and request independent specialist review separately. A model critique is not a gold answer.
 
-No new results exist yet. The initial [validation note](../validation/model-comparison/household-2026-09-21/README.md) says so explicitly. Provider usage accounting, when available, is not verified subscription charges or future affordability.
+The [validation note](../validation/model-comparison/household-2026-09-21/README.md) and [verified results ledger](../validation/model-comparison/household-2026-09-21/results.json) record all five attempts. Codex Staff 012 and the unknown-term control completed with an unrecognised `item:error` event and were rejected. The original error text was not retained, so its cause is unknown. Claude Staff 012 and Staff 020 exceeded the fixed 240-second limit. Claude's small control completed but exposed unrecognised `thinking_tokens`, `rate_limit_event` and `tool_result` categories alongside the permitted formatter, so it was rejected too. This is an event-format and execution-boundary finding, not evidence of inaccurate answers or established external tool use. Further cases are on hold; the frozen harness has not been relaxed and no retry has occurred. No failed or rejected output counts as an accepted answer. Provider usage accounting, when available, is not verified subscription charges or future affordability.
 
 ## Commands
 

@@ -14,7 +14,8 @@ okf_version: "0.2"
 
 This repository turns public Department for Work and Pensions (DWP) guidance into source-linked records, a YAML-LD semantic graph and an indexed OKF Explorer research candidate. It began with a [Pension Credit pilot covering volumes 13 and 14](https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide), expanded to the [full Decision makers’ guide (DMG)](https://www.gov.uk/government/collections/decision-makers-guide-staff-guide), and now also preserves the separate [Advice for decision making (ADM) manual](docs/adm-acquisition.md). It demonstrates how a specialist or an AI can find evidence, inspect relationships and see what remains uncertain.
 
-**New to the project?** Follow the [practical learning path](docs/learning-path.md),
+**New to the project?** Open the [learning website](https://chris-page-gov.github.io/okf-dwp/docs/learning-path.html)
+or follow its [Markdown source](docs/learning-path.md),
 or read [how the web edition is published](docs/learning-website.md),
 then use the [plain-English glossary](docs/glossary.md) when a benefit name or
 technical term appears. It explains Search, Ask OKF and AI answering through
@@ -37,6 +38,12 @@ This measures evidence discovery, not answer accuracy or specialist acceptance.
 [Performance evidence](docs/context-performance.md), the [new trial protocol](docs/monday-model-trials.md)
 and the [Monday delivery log](docs/monday-delivery-work-log.md) distinguish candidate
 work from the published baseline below.
+
+The [household Reader checks](docs/household-reader-verification.md) pass in
+Chrome, Firefox and WebKit against the exact local candidate. They verify all 20
+statutory extracts, useful directed relationships, date distinctions, the
+care-home qualification and both unresolved SDA meanings. They do not establish
+public deployment or complete legal applicability.
 
 ## Team handover and current work
 

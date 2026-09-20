@@ -22,6 +22,12 @@ Implementation ownership and handovers belong in the
   prepare separate current-candidate checks and paired model trials.
 - Retain a portable engine-only ambiguity/performance experiment and strengthen
   source-plane identity to cover the statutory acquisitions as well as PDFs.
+- Verify all 20 statutory extracts and links, directed graph routes, source/audit
+  date separation, care-home qualifications and unresolved SDA branches in three
+  local browsers. Preserve two failed harness attempts and 41 hashed artefacts.
+- Freeze six new model inputs and retain five actual subscription attempts with
+  no accepted answers. Hold further calls after event-format mismatches and two
+  timeouts; investigate separately without changing the frozen experiment.
 
 ## Learning website — 20 September 2026
 
