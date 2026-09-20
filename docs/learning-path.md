@@ -1,5 +1,7 @@
 # Learn OKF-DWP by using it
 
+[About the web edition](learning-website.md) · [Markdown source and project](../README.md)
+
 [What changed](../CHANGELOG.md) · [Work in progress](work-log-2026-09-20.md) · [Remaining work](backlog.md)
 
 OKF-DWP is an independent experiment in making published benefits guidance easier

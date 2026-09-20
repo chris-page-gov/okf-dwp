@@ -8,6 +8,15 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Learning website — 20 September 2026
+
+- Add a script-free web edition of the learning path, glossary, guides and public
+  evaluation notes. Keep Markdown as the source and bind every page to its commit.
+- Publish only tracked allowlisted documents after protected-main validation;
+  private correspondence and untracked research remain outside the site.
+- Add safe rendering, stable links, keyboard navigation, source fingerprints and
+  deterministic build controls. Live publication checks are recorded separately.
+
 ## Publication follow-up — 20 September 2026
 
 - Publish service 0.4.0 with the new staff corpus and both preserved earlier
