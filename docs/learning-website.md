@@ -27,13 +27,15 @@ narrow-screen checks are reported separately from publication success.
 ## Rebuild and publish
 
 ```sh
-uv sync --locked
-uv run --locked python -m unittest discover -s scripts -p test_learning_site.py
-uv run --locked python scripts/build_learning_site.py --commit "$(git rev-parse HEAD)"
+uv sync --locked --project tools/learning-site
+uv run --locked --project tools/learning-site python -m unittest discover -s tools/learning-site -p test_learning_site.py
+uv run --locked --project tools/learning-site python scripts/build_learning_site.py --commit "$(git rev-parse HEAD)"
 ```
 
 The output directory must be new: the build refuses to overwrite a candidate.
-The locked Markdown renderer is the same renderer family used by OKF Explorer.
+The renderer has its own locked environment under `tools/learning-site/`; this
+keeps the frozen evidence producers’ dependency identity unchanged. It is the
+same Markdown renderer family used by OKF Explorer.
 Do not edit generated HTML. Change the Markdown, build and test, then use a normal
 reviewed pull request. After protected main passes the full bundle validation,
 GitHub Actions builds its exact commit and uploads that single artefact to Pages.

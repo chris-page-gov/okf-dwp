@@ -1125,6 +1125,10 @@
       {
         "path": "profiles/bundle-wiki/**",
         "role": "schema"
+      },
+      {
+        "path": "tools/learning-site/**",
+        "role": "generator"
       }
     ],
     "generated": [
@@ -1348,8 +1352,8 @@
         "scripts/test_backlog.py",
         "scripts/build_backlog_work_packages.py",
         "scripts/build_learning_site.py",
-        "scripts/test_learning_site.py",
-        "_site/**"
+        "_site/**",
+        "tools/learning-site/**"
       ],
       "command_ids": [
         "diff-check",
@@ -1413,9 +1417,7 @@
         "scripts/check_answer_review.py",
         "scripts/test_fixed_answers.py",
         "scripts/check_compact_client.py",
-        "scripts/test_compact_client.py",
-        "pyproject.toml",
-        "uv.lock"
+        "scripts/test_compact_client.py"
       ],
       "command_ids": [
         "private-input-check",
@@ -2219,7 +2221,7 @@
         "planes": [
           "documentation"
         ],
-        "command": "uv run --locked python scripts/build_learning_site.py --commit COMMIT_SHA",
+        "command": "uv run --locked --project tools/learning-site python scripts/build_learning_site.py --commit COMMIT_SHA",
         "source": "docs/learning-website.md",
         "review_status": "reviewed-local-guidance",
         "network": "none",
@@ -2232,7 +2234,7 @@
         "planes": [
           "documentation"
         ],
-        "command": "uv run --locked python -m unittest discover -s scripts -p test_learning_site.py",
+        "command": "uv run --locked --project tools/learning-site python -m unittest discover -s tools/learning-site -p test_learning_site.py",
         "source": "docs/learning-website.md",
         "review_status": "reviewed-local-guidance",
         "network": "none",
@@ -2264,8 +2266,7 @@
       "profiles/publication-method/**",
       "docs/publication-contract-details.json",
       "combined/**",
-      "pyproject.toml",
-      "uv.lock"
+      "tools/learning-site/**"
     ],
     "documentation_paths": [
       "README.md",
