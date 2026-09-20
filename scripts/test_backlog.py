@@ -60,6 +60,51 @@ class BacklogTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "rows differ"):
             validate(self.register, self.markdown.replace("in_progress", "recorded_complete"), self.root)
 
+    def tracked(self):
+        self.register["delivery_tracking"] = "okf-backlog-work-packages.v1"
+        self.register["items"][0]["work_packages"] = [
+            {"id": "DWP-BL-001.delivery", "kind": "implementation", "status": "recorded_complete",
+             "executor": "agent", "next_action": "Retain the inspected fixture", "evidence": ["public.md"]},
+            {"id": "DWP-BL-001.acceptance", "kind": "independent_review", "status": "waiting",
+             "executor": "human", "next_action": "Review the intended meaning", "evidence": []}]
+        return self.register["items"][0]
+
+    def test_delivery_can_complete_while_review_stays_open(self):
+        self.tracked()
+        self.assertEqual(validate(self.register, self.markdown, self.root)["items"], 1)
+
+    def test_rejects_completion_that_hides_pending_review(self):
+        item = self.tracked()
+        item["status"] = "recorded_complete"
+        with self.assertRaisesRegex(ValueError, "hides open"):
+            validate(self.register, self.markdown.replace("in_progress", "recorded_complete"), self.root)
+
+    def test_rejects_completed_work_without_evidence(self):
+        self.tracked()["work_packages"][0]["evidence"] = []
+        with self.assertRaisesRegex(ValueError, "lacks evidence"):
+            validate(self.register, self.markdown, self.root)
+
+    def test_rejects_model_review_as_independent_acceptance(self):
+        self.tracked()["work_packages"][1]["executor"] = "agent"
+        with self.assertRaisesRegex(ValueError, "cannot be assigned"):
+            validate(self.register, self.markdown, self.root)
+
+    def test_rejects_missing_delivery_breakdown(self):
+        self.register["delivery_tracking"] = "okf-backlog-work-packages.v1"
+        with self.assertRaisesRegex(ValueError, "Missing work packages"):
+            validate(self.register, self.markdown, self.root)
+
+    def test_rejects_unregistered_package_evidence(self):
+        self.tracked()["work_packages"][0]["evidence"] = [".email.md"]
+        with self.assertRaisesRegex(ValueError, "Unregistered"):
+            validate(self.register, self.markdown, self.root)
+
+    def test_work_package_projection_preserves_open_acceptance(self):
+        from build_backlog_work_packages import render
+        self.tracked()
+        result = render(self.register)
+        self.assertIn("`DWP-BL-001.acceptance` | independent_review | `waiting` | human", result)
+
 
 if __name__ == "__main__":
     unittest.main()

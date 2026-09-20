@@ -1,6 +1,6 @@
 # Product and evaluation backlog
 
-[What changed](../CHANGELOG.md) · [Current work log](work-log-2026-09-19.md) · [Retrospective](retrospective.md) · [Portable method](methodology.md)
+[What changed](../CHANGELOG.md) · [Current work log](work-log-2026-09-20.md) · [Retrospective](retrospective.md) · [Portable method](methodology.md)
 
 This register keeps stable IDs for the owner’s original ideas and later findings.
 **DWP-BL-001, DWP-BL-002 and DWP-BL-003 preserve the original three backlog items.**
@@ -13,23 +13,41 @@ name the missing decision; `not_started` records work that has not been done.
 P0 means the next demonstration or evidence-quality priority, not an instruction
 to bypass source, rights or review boundaries.
 
+## What broader semantic modelling means
+
+This work was incomplete; it was not recorded as done. The previous single
+`needs_domain_review` label hid unfinished implementation behind a review gate.
+**BL005** covers neutral concepts, variants and source-backed relationships.
+**BL007** covers task-specific evidence requirements, routes, exceptions and
+explicit gaps. BL001 supplies the question/persona scope; BL006 supplies legal
+reference reconciliation. BL009 mention classifications do not complete either
+semantic milestone.
+
+The [work-package register](backlog-work-packages.md) now separates delivery from
+independent review, external permission and live observation. A pending human
+review does not prevent implementation of source-backed, clearly unreviewed
+proposals. A completed implementation does not close the human review.
+
+See the [team handover](team-handover-2026-09-20.md) for the published baseline
+and the ordered work continuing towards Monday 21 September.
+
 ## Current register
 
 | ID | Priority | Work | Status | Depends on |
 | --- | --- | --- | --- | --- |
-| DWP-BL-001 | P0 | Extensive persona, journey and question review | `needs_domain_review` | — |
+| DWP-BL-001 | P0 | Extensive persona, journey and question review | `in_progress` | — |
 | DWP-BL-002 | P2 | Benefits engine feasibility | `not_started` | DWP-BL-001, DWP-BL-006, DWP-BL-007 |
 | DWP-BL-003 | P2 | Application and change-of-circumstances journeys | `not_started` | DWP-BL-001, DWP-BL-006, DWP-BL-007 |
 | DWP-BL-004 | P0 | Frozen full DMG and ADM capture | `recorded_complete` | — |
-| DWP-BL-005 | P0 | Neutral domain concepts and meaning review | `needs_domain_review` | DWP-BL-001, DWP-BL-004 |
-| DWP-BL-006 | P0 | Legislation, regulations and case-law reconciliation | `not_started` | DWP-BL-001 |
-| DWP-BL-007 | P0 | Task-specific evidence completeness profiles | `needs_domain_review` | DWP-BL-001, DWP-BL-005, DWP-BL-006 |
+| DWP-BL-005 | P0 | Broader semantic modelling: neutral domain concepts and relationships | `in_progress` | DWP-BL-001, DWP-BL-004 |
+| DWP-BL-006 | P0 | Legislation, regulations and case-law reconciliation | `in_progress` | DWP-BL-001 |
+| DWP-BL-007 | P0 | Broader semantic modelling: task-specific evidence profiles | `in_progress` | DWP-BL-001, DWP-BL-005, DWP-BL-006 |
 | DWP-BL-008 | P0 | Progressive evidence manifests and exact reads | `recorded_complete` | DWP-BL-004 |
 | DWP-BL-009 | P0 | Conceptual classification and DMG Reader navigation | `recorded_complete` | DWP-BL-004 |
-| DWP-BL-010 | P0 | Fixed-evidence claim-level model trials | `needs_domain_review` | DWP-BL-004 |
+| DWP-BL-010 | P0 | Fixed-evidence claim-level model trials | `in_progress` | DWP-BL-004 |
 | DWP-BL-011 | P1 | Source dates and provenance presentation | `recorded_complete` | — |
 | DWP-BL-012 | P1 | CPAG substantive content access | `needs_external_permission` | — |
-| DWP-BL-013 | P1 | Tribunal decision discovery | `not_started` | DWP-BL-001, DWP-BL-006 |
+| DWP-BL-013 | P1 | Tribunal decision discovery | `in_progress` | DWP-BL-001, DWP-BL-006 |
 | DWP-BL-014 | P2 | Calculator comparison | `not_started` | DWP-BL-001, DWP-BL-007 |
 | DWP-BL-015 | P2 | CASA framework assessment | `not_started` | DWP-BL-003 |
 | DWP-BL-016 | P0 | ChatGPT Voice and room audio rehearsal | `not_started` | — |
@@ -40,7 +58,7 @@ to bypass source, rights or review boundaries.
 | DWP-BL-021 | P0 | Canonical contracts and protected publication | `recorded_complete` | — |
 | DWP-BL-022 | P1 | Retrospective and visible multi-agent change history | `recorded_complete` | — |
 | DWP-BL-023 | P1 | Hosting and Content Security Policy integration | `in_progress` | DWP-BL-008 |
-| DWP-BL-024 | P1 | ADM Reader and cross-manual navigation | `not_started` | DWP-BL-004, DWP-BL-009 |
+| DWP-BL-024 | P1 | ADM Reader and cross-manual navigation | `in_progress` | DWP-BL-004, DWP-BL-009 |
 
 ## Acceptance before closure
 
@@ -93,6 +111,9 @@ open until both issues are resolved and checked.
 
 Run `uv run --locked python scripts/check_backlog.py`. It checks IDs, declared
 statuses, dependency cycles, public evidence paths and consistency of this table
-with the machine register. Regression controls run with
+with the machine register. It also checks work-package evidence and rejects a
+completed parent that conceals unfinished work. Regenerate the detailed ledger
+with `uv run --locked python scripts/build_backlog_work_packages.py`; validate it
+with the same command followed by `--check`. Regression controls run with
 `uv run --locked python scripts/test_backlog.py`. These are structural checks;
 they do not decide whether a domain or acceptance review has passed.

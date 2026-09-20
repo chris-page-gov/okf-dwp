@@ -8,6 +8,21 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-19.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Team handover and explicit delivery tracking — 20 September 2026
+
+- Add a shareable team handover with the merged baseline, verified demonstration
+  links, supplied-question evidence and a dependency-ordered continuation plan.
+- Name broader semantic modelling explicitly under BL005 (neutral concepts and
+  relationships) and BL007 (task evidence profiles). Their implementation is in
+  progress; existing mention classifications do not complete these tasks.
+- Split each backlog item into delivery and acceptance work packages. Record the
+  executor, next action and evidence separately; generate the detailed Markdown
+  ledger from the register and check it in CI.
+- Add controls rejecting completed work without evidence, aggregate completion
+  with open packages, and model review presented as independent human acceptance.
+  The focused backlog suite passes 15 tests. Preserve all earlier source, context,
+  model and browser receipts; this checkpoint makes no new semantic-release claim.
+
 ## Evidence review and navigation — 19 September 2026
 
 This dated entry records the evidence-review and navigation work.

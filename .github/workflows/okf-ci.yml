@@ -81,6 +81,7 @@ jobs:
       - name: Check the public backlog and retained answer trials offline
         run: |
           uv run --locked python scripts/check_backlog.py
+          uv run --locked python scripts/build_backlog_work_packages.py --check
           uv run --locked python scripts/evaluate_fixed_answers.py
           uv run --locked python scripts/check_answer_review.py
           uv run --locked python scripts/check_compact_client.py
