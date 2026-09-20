@@ -1,0 +1,72 @@
+{
+  "schema": "okf-staff-service-browser-observation.v1",
+  "started_at": "2026-09-20T20:18:06.305Z",
+  "browser": "chrome",
+  "url": "https://ask-okf.crpage.chatgpt.site/review/#eyJidW5kbGUiOiJva2YtZHdwIiwidmVyc2lvbiI6IjlkZTUyYWNmMWRiODRiMjdmODkzM2Q4MDQ4MGVhYTg1MGU3NGZhMzMiLCJxdWVzdGlvbiI6IldoYXQgaXMgdGhlIGludGVyYWN0aW9uIGJldHdlZW4gQ2hpbGQgRExBIGFuZCBQSVA_IiwiYnVkZ2V0Ijp7Im1heF9ub2RlcyI6NjQsIm1heF9yZWxhdGlvbnNoaXBzIjoxMjgsIm1heF9kZXB0aCI6NiwibWF4X2J5dGVzIjoyNjIxNDR9LCJjb250ZXh0X2lkIjoidXJuOnNoYTI1Njo2NzMxYWYwNWJmMWE5Zjg5NTc4NzQzZGEzYzBiY2FmYzEwOTRjMmRiNzRlZjZlZjI3NDEwZjkwM2Q4YWY3MzQ0In0",
+  "source_version": "9de52acf1db84b27f8933d80480eaa850e74fa33",
+  "question": "What is the interaction between Child DLA and PIP?",
+  "context_id": "urn:sha256:6731af05bf1a9f89578743da3c0bcafc1094c2db74ef6ef27410f903d8af7344",
+  "context_budget": {
+    "max_nodes": 64,
+    "max_relationships": 128,
+    "max_depth": 6,
+    "max_bytes": 262144
+  },
+  "binding": {
+    "script": {
+      "path": "scripts/check_staff_service_browser.mjs",
+      "sha256": "e72deae478fd9c7503fb0515ba784f030c3ec83b4afd4b96a7f249c7d01a1fc6"
+    },
+    "sdk": {
+      "path": "validation/compact-delivery/v0.4.0/sdk-receipt.json",
+      "sha256": "686db4e8633a925c79c5c413d906f5234640c60b54b2a5609cb9be875135c8dc"
+    },
+    "deployment": {
+      "path": "validation/compact-delivery/v0.4.0/deployment.json",
+      "sha256": "34848826dda28e2c4286c34da31567a60f68d433aae2a59f52e0a4e6766509d1"
+    },
+    "runtime_commit": "fc71d65b8f5cfc860d52afe98a5e45b88231f3e5",
+    "runtime_worker_sha256": "cf39080fbd011f2d47bfe5aa97872cf63a36d105bf35986cca5f197bcf47f683",
+    "site_version": 8,
+    "sdk_reference_identity_is_not_browser_worker_attestation": true,
+    "request_pacing": {
+      "minimum_interval_ms": 750,
+      "scope": "shared across all requested browser engines",
+      "measured_from": "observed previous MCP request start",
+      "automatic_retries": false,
+      "rate_limit_response": "retained as a functional failure"
+    }
+  },
+  "functional_status": "failed",
+  "strict_console_status": "passed",
+  "overall_clean_browser_acceptance": false,
+  "calls": [
+    {
+      "tool": "ask_okf_manifest",
+      "milliseconds_since_previous_mcp_request": null,
+      "section": null,
+      "record_id": null,
+      "offset": 0
+    }
+  ],
+  "reads": [],
+  "console_errors": [],
+  "limitations": [
+    "Actual public browser requests without interception or local source substitution; SDK and hosting receipts establish separate reference identities.",
+    "One declared staff question and one source record per browser. This is not an accessibility audit, legal assessment, AI-answer test or whole-corpus semantic completeness claim.",
+    "Full selected package hashes are compared with the SDK; no cookie, account data, raw network trace or model response is retained.",
+    "Functional checks and strict browser-console acceptance are separate; any observed failure remains recorded."
+  ],
+  "browser_version": "153.0.8010.52",
+  "shell": {
+    "status": 200,
+    "cache_control": "no-store, no-transform",
+    "content_security_policy": "default-src 'none'; script-src 'self'; connect-src 'self'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+  },
+  "failure": {
+    "name": "AssertionError",
+    "message": "Expected values to be strictly equal:\n\n15953 !== 16063\n"
+  },
+  "completed_at": "2026-09-20T20:18:10.201Z",
+  "dropped_console_errors": 0
+}

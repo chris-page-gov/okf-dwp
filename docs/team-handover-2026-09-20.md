@@ -4,7 +4,22 @@
 publication. It is not official DWP guidance, a benefits calculator or an
 individual entitlement service.
 
+[Ten-minute Monday demonstration](monday-demo-2026-09-21.md) · [Beginner learning path](learning-path.md)
+
 ## What the team can use now
+
+### Merged staff increment
+
+[DWP PR 12](https://github.com/chris-page-gov/okf-dwp/pull/12) and
+[Explorer PR 126](https://github.com/chris-page-gov/okf-explorer/pull/126) are merged.
+The immutable DWP content commit is `9de52acf1db84b27f8933d80480eaa850e74fa33`.
+The new evidence and model trials below are in the shared repository, not just an
+agent checkout. [Canonical DWP validation](https://github.com/chris-page-gov/okf-dwp/actions/runs/35533814909)
+passed, and Explorer Pages is deployed. The [combined Reader public checks](../validation/combined-reader/public/README.md)
+bind actual served bytes and scoped journeys in three browser engines.
+
+[Open the combined DMG and ADM Reader](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F9de52acf1db84b27f8933d80480eaa850e74fa33%2Fcombined%2Fokf-explorer.json#overview).
+For Monday, load the route and let its loading indicator finish before speaking.
 
 ### Earlier published baseline
 
@@ -49,8 +64,9 @@ contains DMG; the new combined Reader below includes both manuals.
   Legal body evidence and applicability remain separate unfinished work.
 - [Combined Reader guide](combined-reader.md): both captured manuals, conceptual
   facets, source/audit dates, semantic paths and inspectable context packages.
-  Local Chrome, Firefox and WebKit checks passed, including narrow-screen keyboard
-  journeys and targeted accessibility checks. Public deployment checks remain separate.
+  Local and public Chrome, Firefox and WebKit checks passed, including narrow-screen
+  keyboard journeys and targeted accessibility checks. See the [exact public
+  observations](../validation/combined-reader/public/README.md).
 - [Paired staff trials](staff-model-trials.md): five identical-input cases through
   Claude and Codex, 12 retained attempts, 49 claims and 79 citations. Eight responses
   pass mechanical checks; two fail exact quotations. Separate model critique finds
@@ -59,8 +75,8 @@ contains DMG; the new combined Reader below includes both manuals.
   the fresh listings; fresh PDF and extraction hashes are explicitly unknown.
 
 The earlier baseline links above retain their original versions. New public
-journey observations and model-trial results are recorded separately before the
-new demonstration is marked ready. See the current work log for publication state.
+journey observations and model-trial results have their own exact identities.
+Service 0.4.0 is live with the new staff corpus; [actual SDK checks](../validation/compact-delivery/v0.4.0/sdk-receipt.json) pass across all three supported source versions.
 
 ## What remains incomplete, precisely
 
@@ -90,9 +106,15 @@ The [work-package ledger](backlog-work-packages.md) now separates delivery from
 independent review and external permission. Implementation can proceed as clearly
 unreviewed work; that does not imply specialist acceptance.
 
-The live compact reader also has an unresolved hosting-console issue: functional
-journeys pass, but host-injected code and a Firefox cookie warning fail the strict
-console checks. See BL023. ChatGPT Voice and the room PA have not been rehearsed.
+The current [service browser observation](../validation/compact-delivery/v0.4.0/browser/staff-native/run-summary.json)
+passes the staff evidence journey in Chrome, Firefox and WebKit. All twelve
+[historical functional regression journeys](../validation/compact-delivery/v0.4.0/browser/historical/run-summary.json)
+also pass. Chrome and WebKit
+also pass strict console checks; Firefox retains hosting cookie warnings. BL023
+therefore remains open. The earlier failed driver-decoding observation is preserved;
+the later check reads cloned browser-native response text and verifies rendered
+package hashes without substituting any response. ChatGPT Voice and the room PA
+have not been rehearsed.
 
 ## Work proceeding in dependency order
 

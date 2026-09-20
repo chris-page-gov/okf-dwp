@@ -1,0 +1,621 @@
+{
+  "schema": "okf-staff-service-browser-observation.v1",
+  "started_at": "2026-09-20T20:23:46.595Z",
+  "browser": "chrome",
+  "url": "https://ask-okf.crpage.chatgpt.site/review/#eyJidW5kbGUiOiJva2YtZHdwIiwidmVyc2lvbiI6IjlkZTUyYWNmMWRiODRiMjdmODkzM2Q4MDQ4MGVhYTg1MGU3NGZhMzMiLCJxdWVzdGlvbiI6IldoYXQgaXMgdGhlIGludGVyYWN0aW9uIGJldHdlZW4gQ2hpbGQgRExBIGFuZCBQSVA_IiwiYnVkZ2V0Ijp7Im1heF9ub2RlcyI6NjQsIm1heF9yZWxhdGlvbnNoaXBzIjoxMjgsIm1heF9kZXB0aCI6NiwibWF4X2J5dGVzIjoyNjIxNDR9LCJjb250ZXh0X2lkIjoidXJuOnNoYTI1Njo2NzMxYWYwNWJmMWE5Zjg5NTc4NzQzZGEzYzBiY2FmYzEwOTRjMmRiNzRlZjZlZjI3NDEwZjkwM2Q4YWY3MzQ0In0",
+  "source_version": "9de52acf1db84b27f8933d80480eaa850e74fa33",
+  "question": "What is the interaction between Child DLA and PIP?",
+  "context_id": "urn:sha256:6731af05bf1a9f89578743da3c0bcafc1094c2db74ef6ef27410f903d8af7344",
+  "context_budget": {
+    "max_nodes": 64,
+    "max_relationships": 128,
+    "max_depth": 6,
+    "max_bytes": 262144
+  },
+  "binding": {
+    "script": {
+      "path": "scripts/check_staff_service_browser.mjs",
+      "sha256": "e28c746e52e8a73c2b9b3f3798c261eb5f0e418b3503329b14f049156930d64d"
+    },
+    "sdk": {
+      "path": "validation/compact-delivery/v0.4.0/sdk-receipt.json",
+      "sha256": "686db4e8633a925c79c5c413d906f5234640c60b54b2a5609cb9be875135c8dc"
+    },
+    "deployment": {
+      "path": "validation/compact-delivery/v0.4.0/deployment.json",
+      "sha256": "34848826dda28e2c4286c34da31567a60f68d433aae2a59f52e0a4e6766509d1"
+    },
+    "runtime_commit": "fc71d65b8f5cfc860d52afe98a5e45b88231f3e5",
+    "runtime_worker_sha256": "cf39080fbd011f2d47bfe5aa97872cf63a36d105bf35986cca5f197bcf47f683",
+    "site_version": 8,
+    "sdk_reference_identity_is_not_browser_worker_attestation": true,
+    "response_observation": "Read-only native fetch response cloning; no routing, request/response replacement or security-policy change. Driver/native digests recorded separately. Rendered text and full-package SDK hashes remain decisive.",
+    "request_pacing": {
+      "minimum_interval_ms": 750,
+      "scope": "shared across all requested browser engines",
+      "measured_from": "observed previous MCP request start",
+      "automatic_retries": false,
+      "rate_limit_response": "retained as a functional failure"
+    }
+  },
+  "functional_status": "passed",
+  "strict_console_status": "passed",
+  "overall_clean_browser_acceptance": true,
+  "calls": [
+    {
+      "tool": "ask_okf_manifest",
+      "milliseconds_since_previous_mcp_request": null,
+      "section": null,
+      "record_id": null,
+      "offset": 0
+    },
+    {
+      "tool": "ask_okf_manifest",
+      "milliseconds_since_previous_mcp_request": 4347.901,
+      "section": null,
+      "record_id": null,
+      "offset": 25
+    },
+    {
+      "tool": "ask_okf_manifest",
+      "milliseconds_since_previous_mcp_request": 783.356,
+      "section": null,
+      "record_id": null,
+      "offset": 49
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 864.955,
+      "section": "record_text",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-11-25/0002",
+      "offset": 0
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 1082.805,
+      "section": "record_metadata",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-11-25/0002",
+      "offset": 0
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 801.763,
+      "section": "diagnostics",
+      "record_id": null,
+      "offset": 0
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 787.439,
+      "section": "relationships",
+      "record_id": null,
+      "offset": 0
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 827.16,
+      "section": "relationships",
+      "record_id": null,
+      "offset": 14932
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 768.594,
+      "section": "relationships",
+      "record_id": null,
+      "offset": 29875
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 785.004,
+      "section": "package",
+      "record_id": null,
+      "offset": 0
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 883.084,
+      "section": "package",
+      "record_id": null,
+      "offset": 15067
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 787.443,
+      "section": "package",
+      "record_id": null,
+      "offset": 30021
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 780.454,
+      "section": "package",
+      "record_id": null,
+      "offset": 44931
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 780.247,
+      "section": "package",
+      "record_id": null,
+      "offset": 59871
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 815.353,
+      "section": "package",
+      "record_id": null,
+      "offset": 75119
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 1051.401,
+      "section": "package",
+      "record_id": null,
+      "offset": 90101
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 783.842,
+      "section": "package",
+      "record_id": null,
+      "offset": 105119
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 769.754,
+      "section": "package",
+      "record_id": null,
+      "offset": 120257
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 816.175,
+      "section": "package",
+      "record_id": null,
+      "offset": 135234
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 780.44,
+      "section": "package",
+      "record_id": null,
+      "offset": 150414
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 801.603,
+      "section": "package",
+      "record_id": null,
+      "offset": 165462
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 784.97,
+      "section": "package",
+      "record_id": null,
+      "offset": 180587
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 784.215,
+      "section": "package",
+      "record_id": null,
+      "offset": 195569
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 845.214,
+      "section": "package",
+      "record_id": null,
+      "offset": 210606
+    }
+  ],
+  "reads": [
+    {
+      "section": "record_text",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-11-25/0002",
+      "slices": 1,
+      "characters": 2343,
+      "rendered_sha256": "cc5aeda7915f2257c487af1327bc15890fbe2c9ddaabcd41da1383b3c1d1d192",
+      "matches_sdk": true
+    },
+    {
+      "section": "record_metadata",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-11-25/0002",
+      "slices": 1,
+      "characters": 2107,
+      "rendered_sha256": "4eaaa737a063111556a1eb0a41b66b8ae9404f6346f3cb4c921153423397f8aa",
+      "matches_sdk": true
+    },
+    {
+      "section": "diagnostics",
+      "record_id": null,
+      "slices": 1,
+      "characters": 14663,
+      "rendered_sha256": "50814de85953443f15fa142df2d9a27e44bfd38db7e9bba7f8aa76c34542a971",
+      "matches_sdk": true
+    },
+    {
+      "section": "relationships",
+      "record_id": null,
+      "slices": 3,
+      "characters": 44103,
+      "rendered_sha256": "2005cf13afdc435139dd4129b14336ad1306cd4df963c560a5a4f11eab417f93",
+      "matches_sdk": true
+    },
+    {
+      "section": "package",
+      "record_id": null,
+      "slices": 15,
+      "characters": 216270,
+      "rendered_sha256": "5aef07d91ea7e33227bb2bc11a5ee821638f9f4abe596e5c65abf9507d52a00a",
+      "matches_sdk": true
+    }
+  ],
+  "response_observations": [
+    {
+      "tool": "ask_okf_manifest",
+      "rpc_id": 1,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 33873,
+      "native_sha256": "f5464370c707adc8d1ebf1b18e1ec45d97a65d4372f0f97b9c1e735e395a9aec",
+      "driver_bytes": 34093,
+      "driver_sha256": "e3c919969f820d37f8d8073054f61470869fc642e892b632e60c1722775feaca",
+      "driver_text_matches_native": false
+    },
+    {
+      "tool": "ask_okf_manifest",
+      "rpc_id": 2,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 33479,
+      "native_sha256": "82b842a2b09794d3d777564bea9a404527e586c4bb39cb6cca8da2288c24b8af",
+      "driver_bytes": 33719,
+      "driver_sha256": "5a385f27a3857b3e7ba5367a12dc19b1f6f0f0f7f6fbd2359274a9b7c5f790d7",
+      "driver_text_matches_native": false
+    },
+    {
+      "tool": "ask_okf_manifest",
+      "rpc_id": 3,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 6421,
+      "native_sha256": "381ceb83fb157b76504ddba4ab97138ea0e7bdf7b425d04be6241c5b2cddcb07",
+      "driver_bytes": 6431,
+      "driver_sha256": "605f868071a0f5a374af24a4abdd998c4d504c52be2acbce958c8804d969e8c8",
+      "driver_text_matches_native": false
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 4,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 6267,
+      "native_sha256": "0f22f4b41a7ec2406ebdf3f7c0ec386d469dbcf039341003c4ec8a0c9b62a4d3",
+      "driver_bytes": 6287,
+      "driver_sha256": "c7e1a0448607f70d8da5f91c68cea251af782af84626b7c3b49e74d504ec301f",
+      "driver_text_matches_native": false
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 5,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 6161,
+      "native_sha256": "400bfca8b7df05fba4d093512ef28579b8c363e701e09179a5bbaa98f4029ad9",
+      "driver_bytes": 6171,
+      "driver_sha256": "8119b215f72c70b09e28cfabc18f1e77c69da72a135093e812c32c07765e622c",
+      "driver_text_matches_native": false
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 6,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 33397,
+      "native_sha256": "dacef29e9388e87b79e7cd56b69f69d90f0b06ba552db32873765d13bd7436bf",
+      "driver_bytes": 33397,
+      "driver_sha256": "dacef29e9388e87b79e7cd56b69f69d90f0b06ba552db32873765d13bd7436bf",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 7,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34703,
+      "native_sha256": "52d1c23ade47edf6287839a56d5abca5a0884b5369d19255c73e75f63ced0a06",
+      "driver_bytes": 34703,
+      "driver_sha256": "52d1c23ade47edf6287839a56d5abca5a0884b5369d19255c73e75f63ced0a06",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 8,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34673,
+      "native_sha256": "1225e3dbf1e84859d9db75fe12c48e3c6efa842cabe64e8d712f534ee880c7ba",
+      "driver_bytes": 34673,
+      "driver_sha256": "1225e3dbf1e84859d9db75fe12c48e3c6efa842cabe64e8d712f534ee880c7ba",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 9,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 33285,
+      "native_sha256": "3cd7e8093dfa7fcf4b6fd469c9176d4401564e54150f2d712a44893f57f27a2a",
+      "driver_bytes": 33285,
+      "driver_sha256": "3cd7e8093dfa7fcf4b6fd469c9176d4401564e54150f2d712a44893f57f27a2a",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 10,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34444,
+      "native_sha256": "56a6cf8232e3025f167e1d19bf4936a1716210f3e7fafd1d0567f8ead051e954",
+      "driver_bytes": 34444,
+      "driver_sha256": "56a6cf8232e3025f167e1d19bf4936a1716210f3e7fafd1d0567f8ead051e954",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 11,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34662,
+      "native_sha256": "88220715d7f14f4d828fe6992bb1f5e0719d7ae6a3b72c836798d3fd94ede315",
+      "driver_bytes": 34662,
+      "driver_sha256": "88220715d7f14f4d828fe6992bb1f5e0719d7ae6a3b72c836798d3fd94ede315",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 12,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34746,
+      "native_sha256": "ab5e51e7ed7f4d11041e1dca467495836020a4549904fd2df5692ee76bad4df2",
+      "driver_bytes": 34746,
+      "driver_sha256": "ab5e51e7ed7f4d11041e1dca467495836020a4549904fd2df5692ee76bad4df2",
+      "driver_text_matches_native": true
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 13,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34686,
+      "native_sha256": "0a50145ddb2e2a68813d4127edaf4a6ff55a342eb6f656e7726e10ca5673d92b",
+      "driver_bytes": 34696,
+      "driver_sha256": "ad7b31a1fbec97b14bdc96a9c44fc99a61e17c1705292c1d88df1b2e6f082a7c",
+      "driver_text_matches_native": false
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 14,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34006,
+      "native_sha256": "b2e778c10a5824e172878c2be99cbc48af4c23835ec36a7f8a91f6f9d8bcd3b9",
+      "driver_bytes": 34154,
+      "driver_sha256": "91221cb47469dbc60dc346602b3f1e70c5ede262b7d8ac15713bd93f636159d7",
+      "driver_text_matches_native": false
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 15,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34570,
+      "native_sha256": "b444de83bc20cce0b6fa54964976ebb032c663d24ecc87ad9c718d2de2c79727",
+      "driver_bytes": 34656,
+      "driver_sha256": "ab47b0ab5b384087c12f8bc72ae6b977a041afbcde892ad45d42a08cb48c6896",
+      "driver_text_matches_native": false
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 16,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34478,
+      "native_sha256": "113771d961f3bff72a14ccfa8348d9b7a5531c61fd5f64afc2e9d26a3c83b794",
+      "driver_bytes": 34598,
+      "driver_sha256": "e7d05c0c7ebbe2da444b34bd29f3d7e6e7bb88ad70d510428ac123d0652b2e71",
+      "driver_text_matches_native": false
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 17,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34256,
+      "native_sha256": "8d3b7f11d8174d45ab2be4c7133035c5572c95f84fd557fdfba29ca0fdf8d0b6",
+      "driver_bytes": 34336,
+      "driver_sha256": "468d7f5ef049804dd4cafc93891ec7c606f09f0a6f11a6d9330b523018c7edd7",
+      "driver_text_matches_native": false
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 18,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34578,
+      "native_sha256": "deb83ab8b1186fc7987dd9899b9cb0073cc13ead55128fc951646629955ee6e8",
+      "driver_bytes": 34658,
+      "driver_sha256": "69b6cb3bdca22b6c57aa268a4f58edc9820ddb5840ba2dea83e018f8e24d10b7",
+      "driver_text_matches_native": false
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 19,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34172,
+      "native_sha256": "fca04b4d316b8dcede0aa2c847b3d8d37dac45d95651dfbf227faa40194e306d",
+      "driver_bytes": 34252,
+      "driver_sha256": "9b9cda665b7e8164960599fca114d265da4fbda1aa9a2a9caf2cf86509681b71",
+      "driver_text_matches_native": false
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 20,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34432,
+      "native_sha256": "ad94eeb016a5fc404dd31f018c6dedeb29d1e2987c15730aae7cd09930ef3617",
+      "driver_bytes": 34514,
+      "driver_sha256": "e9e45c6355fb92d62b22404bdad9807ef4cf29a8e231eb6776258f7203e9935f",
+      "driver_text_matches_native": false
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 21,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34286,
+      "native_sha256": "ffdf255fa92167c68fd868d876699ec8f1daa2b631c69e9d2072e3374ad5fdc6",
+      "driver_bytes": 34356,
+      "driver_sha256": "7bac7f75f03543586a44289dc3e876f42f8b60725127e1430bb491fbc19c476a",
+      "driver_text_matches_native": false
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 22,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34572,
+      "native_sha256": "d050a7b81722277ebb7107eaca33292a918a2e614b80b034e8df053bcaa28b31",
+      "driver_bytes": 34642,
+      "driver_sha256": "d7e5776d597f88673ded19aabc19e4548ef826a3f7c8d9f28b96cda95d1bea66",
+      "driver_text_matches_native": false
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 23,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 34458,
+      "native_sha256": "bdc83b9ca3c974b78898488756f05416da4d23d2bb5d0728a256037df16ec74a",
+      "driver_bytes": 34538,
+      "driver_sha256": "d8e4ba664ef00bea949e7580edf1a510fa20b01d11a519619641e4c2285ba4dc",
+      "driver_text_matches_native": false
+    },
+    {
+      "tool": "read_okf_evidence",
+      "rpc_id": 24,
+      "representation": "browser-native Response.clone().text() UTF-8",
+      "native_bytes": 13862,
+      "native_sha256": "6d688b1901a957ee5f09affc6cfa5dd591f02ace2e9b1430751528a41e273703",
+      "driver_bytes": 13892,
+      "driver_sha256": "509bdd56f224a1c8ee97cc7e19f417c267fc3d2e9bb646b4aa9908910be4fdc7",
+      "driver_text_matches_native": false
+    }
+  ],
+  "console_errors": [],
+  "limitations": [
+    "Actual public browser requests without interception or local source substitution; SDK and hosting receipts establish separate reference identities.",
+    "One declared staff question and one source record per browser. This is not an accessibility audit, legal assessment, AI-answer test or whole-corpus semantic completeness claim.",
+    "Full selected package hashes are compared with the SDK; no cookie, account data, raw network trace or model response is retained.",
+    "Functional checks and strict browser-console acceptance are separate; any observed failure remains recorded."
+  ],
+  "browser_version": "153.0.8010.52",
+  "shell": {
+    "status": 200,
+    "cache_control": "no-store, no-transform",
+    "content_security_policy": "default-src 'none'; script-src 'self'; connect-src 'self'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+  },
+  "catalogue": {
+    "records": 50,
+    "pages": 3,
+    "ids": [
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-11-25/0002",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-12-25-4667bf5b64/0002",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p2/0051",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/78/0008",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/78/0088",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/85/0027",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/85/0068",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-a3/0039",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-f1/0017",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-f1/0018",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-f2/0033",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-f3/0020",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-f3/0021",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-f3/0022",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-g3/0003",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-h6/0010",
+      "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/dla",
+      "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/overlap",
+      "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pip",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/2002/1792/schedule/I",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/2002/1792/regulation/6",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/2002/16/section/2",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0003",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0007",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0006",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0008",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+      "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/war-caa",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0002",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p4/0014",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0009",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0003",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0004",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p4/0013",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/2007/22/section/13",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/1991/2890/schedule/1",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/1992/4/section/75",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/2012/5/section/83",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/1992/4/section/64",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0042",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/1992/4/section/70",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/1976/409/regulation/7",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/1992/4/section/78",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/1982/1408/regulation/43",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/1999/991/schedule/2",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/1982/1408/regulation/44"
+    ],
+    "summary": {
+      "selected_records": 50,
+      "relationships": 36,
+      "full_package_bytes": 216464,
+      "context_truncated": true,
+      "retrieval_truncated": true,
+      "resolved_concepts": 3,
+      "ambiguities": 0,
+      "unresolved_terms": 0,
+      "missing_evidence": 3,
+      "conflicts": 0,
+      "requirements": 2,
+      "missing_evidence_codes": [
+        "missing_required_evidence",
+        "uncovered_resolved_concept"
+      ],
+      "ai_answer": null
+    },
+    "metadata_matches_verified_package": true
+  },
+  "record": {
+    "id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-11-25/0002",
+    "source_url": "https://assets.publishing.service.gov.uk/media/691f0549c62d57eb3a7107fd/adm-memo-11-25.pdf#page=2",
+    "source_locator": "PDF page 2",
+    "provenance_visible": true
+  },
+  "diagnostics": {
+    "keys": [
+      "ai_answer",
+      "ambiguities",
+      "binding",
+      "budget",
+      "bundle",
+      "conflicts",
+      "context_id",
+      "engine",
+      "evidence_status",
+      "limitations",
+      "missing_evidence",
+      "question",
+      "relationship_count",
+      "requirements",
+      "resolved_concepts",
+      "retrieval",
+      "schema",
+      "scope",
+      "selected_records",
+      "unresolved_terms"
+    ],
+    "missing_evidence": 3,
+    "evidence_status": "insufficient",
+    "context_truncated": true
+  },
+  "completed_at": "2026-09-20T20:24:11.962Z",
+  "dropped_console_errors": 0
+}

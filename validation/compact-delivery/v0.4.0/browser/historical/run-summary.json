@@ -1,0 +1,221 @@
+{
+  "schema": "okf-historical-service-browser-projection.v1",
+  "service_version": "0.4.0",
+  "base_url": "https://ask-okf.crpage.chatgpt.site",
+  "deployment": {
+    "runtime_commit": "fc71d65b8f5cfc860d52afe98a5e45b88231f3e5",
+    "runtime_worker_sha256": "cf39080fbd011f2d47bfe5aa97872cf63a36d105bf35986cca5f197bcf47f683",
+    "site_version_number": 8,
+    "receipt_sha256": "34848826dda28e2c4286c34da31567a60f68d433aae2a59f52e0a4e6766509d1"
+  },
+  "harness": [
+    {
+      "source_path": "apps/okf-explorer/tests/service-review/evidence-review.spec.ts",
+      "sha256": "229e6dbd9912b1dc0b642c4bcfecc9e9348e674ccf7a27d2d06c080bfc324837",
+      "copy": "evidence-review.spec-229e6dbd9912b1dc0b642c4bcfecc9e9348e674ccf7a27d2d06c080bfc324837.ts"
+    },
+    {
+      "source_path": "apps/okf-explorer/playwright.service-review.config.ts",
+      "sha256": "448f919c5ecd979bbdf779c899633857434c6e263e691a56e8887498b6e17415",
+      "copy": "playwright.service-review.config-448f919c5ecd979bbdf779c899633857434c6e263e691a56e8887498b6e17415.ts"
+    }
+  ],
+  "projector_sha256": "8b113049fc8501bdd6ee1df8510a4363c29fc9db59a021f5f4478acc60f63cd3",
+  "raw_results_sha256": "555c13631f86a76dd2bbad1585cc479b441138cb7895777213507b1a9490bc27",
+  "raw_results_and_traces_published": false,
+  "stats": {
+    "startTime": "2026-09-20T20:26:34.363Z",
+    "duration": 21610.612,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  },
+  "functional_tests_passed": 12,
+  "strict_tests_passed": 8,
+  "strict_tests_failed": 4,
+  "strict_status": "failed",
+  "tests": [
+    {
+      "browser": "chrome",
+      "title": "built script loads inert replay, exact source evidence, metadata, diagnostics and bounded parts",
+      "strict_status": "passed",
+      "functional_status": "passed",
+      "reached_final_console_assertion": true,
+      "console_assertion_line": null,
+      "failure_class": null,
+      "error_message_sha256": null,
+      "duration_ms": 3620,
+      "retry": 0,
+      "request_mode": "public-service-without-response-routing"
+    },
+    {
+      "browser": "chrome",
+      "title": "replay links are removed when changing or recreating a context and regenerated for the new identity",
+      "strict_status": "passed",
+      "functional_status": "passed",
+      "reached_final_console_assertion": true,
+      "console_assertion_line": null,
+      "failure_class": null,
+      "error_message_sha256": null,
+      "duration_ms": 1423,
+      "retry": 0,
+      "request_mode": "public-service-without-response-routing"
+    },
+    {
+      "browser": "chrome",
+      "title": "question change discards a late replay response",
+      "strict_status": "passed",
+      "functional_status": "passed",
+      "reached_final_console_assertion": true,
+      "console_assertion_line": null,
+      "failure_class": null,
+      "error_message_sha256": null,
+      "duration_ms": 742,
+      "retry": 0,
+      "request_mode": "delayed-real-response-ui-control"
+    },
+    {
+      "browser": "chrome",
+      "title": "invalid fragment is inert and synthetic returned markup renders as text",
+      "strict_status": "passed",
+      "functional_status": "passed",
+      "reached_final_console_assertion": true,
+      "console_assertion_line": null,
+      "failure_class": null,
+      "error_message_sha256": null,
+      "duration_ms": 764,
+      "retry": 0,
+      "request_mode": "synthetic-response-ui-control"
+    },
+    {
+      "browser": "firefox",
+      "title": "built script loads inert replay, exact source evidence, metadata, diagnostics and bounded parts",
+      "strict_status": "failed",
+      "functional_status": "passed",
+      "reached_final_console_assertion": true,
+      "console_assertion_line": 162,
+      "failure_class": "host-cookie-domain-rejection",
+      "error_message_sha256": "e37116702d0395ecadc5f53bb32d7cd40b1126602848d4e1142600d8f46e7800",
+      "duration_ms": 2182,
+      "retry": 0,
+      "request_mode": "public-service-without-response-routing"
+    },
+    {
+      "browser": "firefox",
+      "title": "replay links are removed when changing or recreating a context and regenerated for the new identity",
+      "strict_status": "failed",
+      "functional_status": "passed",
+      "reached_final_console_assertion": true,
+      "console_assertion_line": 196,
+      "failure_class": "host-cookie-domain-rejection",
+      "error_message_sha256": "e37116702d0395ecadc5f53bb32d7cd40b1126602848d4e1142600d8f46e7800",
+      "duration_ms": 1301,
+      "retry": 0,
+      "request_mode": "public-service-without-response-routing"
+    },
+    {
+      "browser": "firefox",
+      "title": "question change discards a late replay response",
+      "strict_status": "failed",
+      "functional_status": "passed",
+      "reached_final_console_assertion": true,
+      "console_assertion_line": 222,
+      "failure_class": "host-cookie-domain-rejection",
+      "error_message_sha256": "0d2b66e7c35652cb3abf1d0b0b1b57712d56d94f8e36d843723a87df9ef4ee80",
+      "duration_ms": 894,
+      "retry": 0,
+      "request_mode": "delayed-real-response-ui-control"
+    },
+    {
+      "browser": "firefox",
+      "title": "invalid fragment is inert and synthetic returned markup renders as text",
+      "strict_status": "failed",
+      "functional_status": "passed",
+      "reached_final_console_assertion": true,
+      "console_assertion_line": 253,
+      "failure_class": "host-cookie-domain-rejection",
+      "error_message_sha256": "1b4bd9da412d1d9e8e3c6dc45ba213a6b7aa3173dfe33bc47b7c6f1986a87a46",
+      "duration_ms": 1805,
+      "retry": 0,
+      "request_mode": "synthetic-response-ui-control"
+    },
+    {
+      "browser": "webkit",
+      "title": "built script loads inert replay, exact source evidence, metadata, diagnostics and bounded parts",
+      "strict_status": "passed",
+      "functional_status": "passed",
+      "reached_final_console_assertion": true,
+      "console_assertion_line": null,
+      "failure_class": null,
+      "error_message_sha256": null,
+      "duration_ms": 2585,
+      "retry": 0,
+      "request_mode": "public-service-without-response-routing"
+    },
+    {
+      "browser": "webkit",
+      "title": "replay links are removed when changing or recreating a context and regenerated for the new identity",
+      "strict_status": "passed",
+      "functional_status": "passed",
+      "reached_final_console_assertion": true,
+      "console_assertion_line": null,
+      "failure_class": null,
+      "error_message_sha256": null,
+      "duration_ms": 1118,
+      "retry": 0,
+      "request_mode": "public-service-without-response-routing"
+    },
+    {
+      "browser": "webkit",
+      "title": "question change discards a late replay response",
+      "strict_status": "passed",
+      "functional_status": "passed",
+      "reached_final_console_assertion": true,
+      "console_assertion_line": null,
+      "failure_class": null,
+      "error_message_sha256": null,
+      "duration_ms": 554,
+      "retry": 0,
+      "request_mode": "delayed-real-response-ui-control"
+    },
+    {
+      "browser": "webkit",
+      "title": "invalid fragment is inert and synthetic returned markup renders as text",
+      "strict_status": "passed",
+      "functional_status": "passed",
+      "reached_final_console_assertion": true,
+      "console_assertion_line": null,
+      "failure_class": null,
+      "error_message_sha256": null,
+      "duration_ms": 805,
+      "retry": 0,
+      "request_mode": "synthetic-response-ui-control"
+    }
+  ],
+  "receipts": [
+    {
+      "browser": "chrome",
+      "path": "chrome-receipt.json",
+      "sha256": "29dd1aa2275d859c2a23584bb13965280ea3c18d0cc4aa32fdd7f31cd531c29e"
+    },
+    {
+      "browser": "firefox",
+      "path": "firefox-receipt.json",
+      "sha256": "dc01fb8721449715e137f0b2ed1e89eb1dabd284c7797174cf62a86cfab4aa86"
+    },
+    {
+      "browser": "webkit",
+      "path": "webkit-receipt.json",
+      "sha256": "6d1d69782239d3bc00328c00e7a13abcb458b8eb8f9a94d7dedd7580ee4e6068"
+    }
+  ],
+  "limits": [
+    "Existing four historical UI journeys in each of three browser engines; retries disabled and one worker.",
+    "Delayed-response and synthetic-markup cases intentionally use routing to test UI boundaries; these are not untouched source-evidence observations.",
+    "A failure at the final console assertion records preceding functional assertions as passed, while preserving strict failure.",
+    "Hosting cookie errors remain failures. No browser security or privacy setting was weakened.",
+    "Public projection omits raw trace/network data, error snippets, private paths and console URLs. Digests identify retained local originals.",
+    "Historical research sufficiency is not current legal, specialist, model-answer or whole-corpus acceptance."
+  ]
+}

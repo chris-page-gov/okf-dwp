@@ -66,7 +66,7 @@ Do not read a delivered compiler or a denser graph as complete domain modelling.
 | DWP-BL-021 | P0 | Canonical contracts and protected publication | `recorded_complete` | — |
 | DWP-BL-022 | P1 | Retrospective and visible multi-agent change history | `recorded_complete` | — |
 | DWP-BL-023 | P1 | Hosting and Content Security Policy integration | `in_progress` | DWP-BL-008 |
-| DWP-BL-024 | P1 | ADM Reader and cross-manual navigation | `in_progress` | DWP-BL-004, DWP-BL-009 |
+| DWP-BL-024 | P1 | ADM Reader and cross-manual navigation | `recorded_complete` | DWP-BL-004, DWP-BL-009 |
 
 ## Acceptance before closure
 

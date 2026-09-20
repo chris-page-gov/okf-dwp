@@ -3,12 +3,81 @@ from collections import Counter
 from copy import deepcopy
 import gzip
 import json
+import os
 import re
+import shutil
+import subprocess
+import tempfile
 import unittest
+from pathlib import Path
 
 from build_bundle import ROOT, BASE, digest, source_text_block
 from build_combined_reader import LABELS, compile_combined, add_semantics
 from build_full_dmg import bucket, tokens
+
+
+@unittest.skipUnless(shutil.which("node"), "Node is required for browser-harness admission controls")
+class CombinedBrowserOutputTests(unittest.TestCase):
+    """Exercise admission before importing dependencies, without browser/network."""
+
+    def run_harness(self, checkout, output, public=True):
+        env = {key: value for key, value in os.environ.items() if not key.startswith("OKF_COMBINED_")}
+        env.update(OKF_EXPLORER_CHECKOUT=str(checkout), OKF_COMBINED_OUTPUT=str(output))
+        if public:
+            env.update(
+                OKF_COMBINED_BUNDLE_URL="https://raw.githubusercontent.com/chris-page-gov/okf-dwp/" + "a" * 40 + "/combined/okf-explorer.json",
+                OKF_COMBINED_APP_URL="https://chris-page-gov.github.io/okf-explorer/explore/",
+                OKF_COMBINED_APP_MANIFEST_SHA256="a" * 64,
+            )
+        return subprocess.run([shutil.which("node"), str(ROOT / "scripts/check_combined_reader_browser.mjs")],
+                              env=env, text=True, capture_output=True, timeout=10, check=False)
+
+    def test_public_rejects_existing_paths_before_import_and_preserves_bytes(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            directory = root / "prior-pass"
+            directory.mkdir()
+            marker = directory / "observation.json"
+            marker.write_bytes(b'{"original":"retained"}\n')
+            existing_file = root / "existing-file"
+            existing_file.write_bytes(b"retained file\n")
+            link = root / "linked-pass"
+            link.symlink_to(directory, target_is_directory=True)
+            empty = root / "empty-directory"
+            empty.mkdir()
+            for output in (directory, existing_file, link, empty):
+                with self.subTest(output=output.name):
+                    result = self.run_harness(root / "missing-checkout", output)
+                    self.assertNotEqual(result.returncode, 0)
+                    self.assertIn("Public observations require a fresh output directory", result.stderr)
+                    self.assertNotIn("ERR_MODULE_NOT_FOUND", result.stderr)
+                    self.assertEqual(marker.read_bytes(), b'{"original":"retained"}\n')
+                    self.assertEqual(existing_file.read_bytes(), b"retained file\n")
+                    self.assertEqual(list(directory.iterdir()), [marker])
+                    self.assertEqual(list(empty.iterdir()), [])
+                    self.assertTrue(link.is_symlink())
+
+    def test_public_reserves_fresh_nested_directory_before_dependency_import(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            output = root / "new-parent" / "new-run"
+            result = self.run_harness(root / "missing-checkout", output)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("ERR_MODULE_NOT_FOUND", result.stderr)
+            self.assertNotIn("Public observations require a fresh output directory", result.stderr)
+            self.assertTrue(output.is_dir())
+            self.assertEqual(list(output.iterdir()), [])
+
+    def test_local_existing_directory_is_not_rejected(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            marker = root / "prior-local.json"
+            marker.write_bytes(b"retained local data\n")
+            result = self.run_harness(root / "missing-checkout", root, public=False)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("ERR_MODULE_NOT_FOUND", result.stderr)
+            self.assertNotIn("Public observations require a fresh output directory", result.stderr)
+            self.assertEqual(marker.read_bytes(), b"retained local data\n")
 
 
 class CombinedReaderTests(unittest.TestCase):

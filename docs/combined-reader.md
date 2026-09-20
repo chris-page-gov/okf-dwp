@@ -7,6 +7,18 @@ The combined Reader brings two captured manuals into the same Explorer:
 
 The new entry point is [combined/okf-explorer.json](../combined/okf-explorer.json). It is additive: the earlier DMG release, source PDFs, extracted pages and historical observations retain their original bytes and identifiers.
 
+[Open the checked public combined Reader](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F9de52acf1db84b27f8933d80480eaa850e74fa33%2Fcombined%2Fokf-explorer.json#overview)
+and read the [dated public verification](../validation/combined-reader/public/README.md).
+It covers three browser engines and the five conceptual facets, while retaining
+the initial loading timeout and the actual context budget.
+
+The first public Chrome attempt exceeded a five-second test wait during facet
+loading. Bounded sixty-second waits then passed. The timed reruns reached the
+end of the narrow-screen journey in 10.59–13.52 seconds, including earlier
+integrity checks and interactions; these are observations, not cold-cache or
+service-level guarantees. Load the intended route before the meeting demonstration
+and let its loading state finish.
+
 ## What to demonstrate
 
 1. Load the combined descriptor in Explorer. The overview identifies **513 captured PDFs and 19,090 measured pages** across the two manuals.
@@ -69,6 +81,12 @@ expected `OKF_COMBINED_APP_MANIFEST_SHA256`. Public mode rejects mutable branch
 URLs, installs no request interception, and checks each observed corpus response
 against the local candidate bytes. It records a separate public observation;
 running the local fixture never establishes that the public site works.
+Set `OKF_COMBINED_OUTPUT` to a new, non-existent directory for every public run.
+The harness reserves that directory before loading browser dependencies or
+launching a browser and rejects an existing directory, file or symlink. This
+preserves earlier evidence even if a later run fails part-way through. Local
+fixture runs retain their existing output-directory behaviour. The offline
+combined tests exercise this guard without launching a browser or using a network.
 
 ## Boundaries
 

@@ -1,0 +1,36 @@
+{
+  "schema": "okf-combined-reader-harness-change.v1",
+  "recorded_at": "2026-09-20T20:32:24.456482+00:00",
+  "change": "Require exclusive creation of a fresh public output directory before dependency import or browser launch; preserve existing local output behaviour.",
+  "previous_source": {
+    "path": "validation/combined-reader/public/harness-history/before-output-preservation-guard.mjs",
+    "bytes": 18764,
+    "sha256": "16470c9d49c46a07ff722e829309ff9d4a36bd06dd93c9107965ee0e46912303"
+  },
+  "updated_source": {
+    "path": "scripts/check_combined_reader_browser.mjs",
+    "bytes": 19374,
+    "sha256": "c1e85fd9fe5df9946efeb23f2017186c6fd06dec7a0beaeec7781bb84c79dcbe"
+  },
+  "test_source": {
+    "path": "scripts/test_combined_reader.py",
+    "bytes": 17404,
+    "sha256": "74b7c84717f8f7ad09cdf1cb41f6c0d6f3f2802b6ba0ad88a528bacb2f64df4a"
+  },
+  "validation": {
+    "command": "uv run --locked python -m unittest discover -s scripts -p test_combined_reader.py",
+    "tests_run": 17,
+    "tests_passed": 17,
+    "new_admission_tests": 3,
+    "scope": [
+      "Existing public directory, empty directory, file and symlink reject before browser dependency import; prior bytes remain unchanged.",
+      "Fresh nested public directory is reserved before dependency import.",
+      "Existing local directory is admitted; local output behaviour is unchanged."
+    ],
+    "node_syntax_check": "passed",
+    "network_used_by_admission_tests": false,
+    "browser_launched_by_admission_tests": false
+  },
+  "historical_binding": "The archived source was copied immediately before this edit. The existing browser receipts did not bind a harness source hash. This later archive preserves the previous script without claiming a retrospective execution binding. Original observations, screenshots, context packages and their timestamps were not rewritten.",
+  "public_browser_journeys_rerun": false
+}

@@ -11,9 +11,6 @@ const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
 const corpus = path.join(root, 'combined');
 const checkout = process.env.OKF_EXPLORER_CHECKOUT;
 assert.ok(checkout, 'Supply OKF_EXPLORER_CHECKOUT with installed, pinned Explorer dependencies');
-const modulePath = path.join(checkout, 'apps/okf-explorer/node_modules/@playwright/test/index.mjs');
-const { chromium, firefox, webkit, expect } = await import(pathToFileURL(modulePath));
-const { default: AxeBuilder } = await import(pathToFileURL(path.join(checkout, 'apps/okf-explorer/node_modules/@axe-core/playwright/dist/index.mjs')));
 const appUrl = process.env.OKF_COMBINED_APP_URL || 'http://127.0.0.1:8014/explore/';
 const engine = process.env.OKF_COMBINED_BROWSER || 'chrome';
 const publicBundleUrl = process.env.OKF_COMBINED_BUNDLE_URL;
@@ -24,6 +21,22 @@ if (publicBundleUrl) {
   assert.match(expectedAppManifest || '', /^[a-f0-9]{64}$/, 'Public check requires the expected application manifest digest');
 }
 const output = process.env.OKF_COMBINED_OUTPUT || path.join(root, publicBundleUrl ? 'validation/combined-reader/public' : 'validation/combined-reader/browser', engine);
+if (publicBundleUrl) {
+  // Exclusive creation rejects an existing directory, file or symlink before
+  // loading browser dependencies or launching a browser. Do not overwrite a
+  // prior pass with partial artefacts from a later failed observation.
+  await mkdir(path.dirname(path.resolve(output)), { recursive: true });
+  try { await mkdir(output); } catch (error) {
+    if (error?.code === 'EEXIST') {
+      throw new Error('Public observations require a fresh output directory; set OKF_COMBINED_OUTPUT to a new path. Existing evidence was not changed.');
+    }
+    throw error;
+  }
+}
+const modulePath = path.join(checkout, 'apps/okf-explorer/node_modules/@playwright/test/index.mjs');
+const { chromium, firefox, webkit, expect: playwrightExpect } = await import(pathToFileURL(modulePath));
+const { default: AxeBuilder } = await import(pathToFileURL(path.join(checkout, 'apps/okf-explorer/node_modules/@axe-core/playwright/dist/index.mjs')));
+const expect = playwrightExpect.configure({ timeout: publicBundleUrl ? 60000 : 5000 });
 const origin = 'https://combined-reader.fixture.test';
 const bundleUrl = publicBundleUrl || origin + '/okf-explorer.json';
 const publicBase = publicBundleUrl ? new URL('.', publicBundleUrl).href : null;
@@ -34,6 +47,12 @@ const facets = JSON.parse(await readFile(path.join(corpus, 'data/facets.json')))
 const served = new Map();
 const publicReadChecks = [];
 const publicReadErrors = [];
+const started = performance.now();
+const timings = [];
+const mark = phase => {
+  const elapsed = Math.round(performance.now() - started);
+  timings.push({ phase, elapsed_ms: elapsed, phase_ms: elapsed - (timings.at(-1)?.elapsed_ms || 0) });
+};
 const corpusPath = reference => {
   const target = path.resolve(corpus, reference);
   assert.ok(target.startsWith(corpus + path.sep), 'Bounded corpus path');
@@ -43,6 +62,7 @@ const launchOptions = engine === 'chrome' ? { channel: 'chrome' } : {};
 const browser = await ({ chrome: chromium, firefox, webkit }[engine]).launch(launchOptions);
 const context = await browser.newContext({ viewport: { width: 1440, height: 1080 } });
 const page = await context.newPage();
+if (publicBundleUrl) page.setDefaultTimeout(60000);
 const consoleErrors = [];
 page.on('pageerror', error => consoleErrors.push(error.message));
 page.on('console', message => { if (message.type() === 'error') consoleErrors.push(message.text()); });
@@ -68,7 +88,7 @@ if (publicBase) {
       'content-type': reference.endsWith('.gz') ? 'application/gzip' : 'application/json' } });
   });
 }
-await mkdir(output, { recursive: true });
+if (!publicBundleUrl) await mkdir(output, { recursive: true });
 try {
   const manifestUrl = new URL('../okf-explorer-build-manifest.json', appUrl).href;
   const response = await page.request.get(manifestUrl);
@@ -84,15 +104,18 @@ try {
     assert.equal(bytes.length, row.bytes, row.path);
     assert.equal(hash(bytes), row.sha256, row.path);
   }
+  mark('application_integrity_verified');
   if (publicBundleUrl) {
     const published = await page.request.get(publicBundleUrl);
     assert.equal(published.ok(), true, 'Public descriptor response');
     assert.equal(published.url(), publicBundleUrl, 'Public descriptor canonical URL');
     assert.equal(hash(await published.body()), hash(descriptorBytes), 'Public descriptor differs from local candidate');
   }
+  mark('descriptor_verified');
   const url = (route = 'overview', suffix = '') => `${appUrl}?bundle=${encodeURIComponent(bundleUrl)}${suffix}#${route}`;
   await page.goto(url());
   await expect(page.locator('.title-block')).toContainText(descriptor.title);
+  mark('initial_view_ready');
   const facet = page.locator('[data-facet-key="source_family"]');
   const toggle = facet.locator('.facet-toggle');
   await expect(toggle).toHaveAttribute('aria-expanded', /^(true|false)$/);
@@ -102,9 +125,11 @@ try {
   const admCount = facets.source_family.find(row => row.value === 'ADM').count;
   const scope = `0 highlighted / ${admCount.toLocaleString('en-GB')} in scope`;
   await expect(page.locator('.exploration-toolbar')).toContainText(scope);
+  mark('adm_facet_reduction_ready');
   await page.getByLabel('Views').getByRole('button', { name: 'Graph', exact: true }).click();
   await expect(page.getByRole('group', { name: 'Large corpus graph', exact: true })).toBeVisible();
   await expect(page.locator('.exploration-toolbar')).toContainText(scope);
+  mark('adm_graph_ready');
   await page.getByLabel('Views').getByRole('button', { name: 'Timeline', exact: true }).click();
   await expect(page.getByLabel('Primary date role')).toBeVisible();
   await expect(page.locator('.view-heading').filter({ hasText: 'Timeline' })).toContainText(`${admCount.toLocaleString('en-GB')} guidance records in current reduction`);
@@ -114,6 +139,7 @@ try {
   await page.getByLabel('Primary date role').selectOption('audit');
   const auditSeries = await page.locator('.release-series').count();
   assert.ok(auditSeries > 0 && auditSeries <= 80);
+  mark('adm_timeline_ready');
   await page.screenshot({ path: path.join(output, 'adm-timeline.png') });
   await page.goto(url('overview', '&q=P1001'));
   await expect(page.locator('input.search-input')).toHaveValue('P1001');
@@ -123,6 +149,7 @@ try {
   await expect(page.locator('body')).toContainText('PDF page 2');
   const official = await page.locator('a[href*="assets.publishing.service.gov.uk"][href$="#page=2"]').count();
   assert.ok(official > 0, 'Exact official ADM PDF page link');
+  mark('adm_source_page_ready');
   await page.screenshot({ path: path.join(output, 'adm-source-page.png') });
   await page.goto(url('staff-domain/pip', '&view=graph'));
   const graph = page.getByRole('group', { name: 'Large corpus graph', exact: true });
@@ -132,6 +159,7 @@ try {
   const graphText = await graph.textContent();
   assert.ok(/Personal Independence Payment|PIP/.test(graphText));
   assert.ok(/references|Conditions of entitlement|Daily Living/.test(graphText), 'Authored concept has useful source relationship paths: ' + graphText);
+  mark('pip_graph_ready');
   await page.screenshot({ path: path.join(output, 'pip-graph.png') });
   await page.getByRole('button', { name: 'Ask OKF', exact: true }).click();
   const question = 'What is the interaction between Child DLA and PIP?';
@@ -144,6 +172,7 @@ try {
   assert.equal(evidence.ai_answer, null);
   assert.ok(evidence.resolved_concepts.some(row => /PIP|Personal Independence/.test(row.label)));
   assert.ok(evidence.selected.some(row => row.record?.route?.startsWith('page/adm/') || row.route?.startsWith('page/adm/')), 'Ask retains ADM evidence');
+  mark('desktop_ask_context_ready');
   await page.screenshot({ path: path.join(output, 'ask-staff-question.png') });
   const desktopAccessibility = await new AxeBuilder({ page }).include('.ask-okf').analyze();
   assert.deepEqual(desktopAccessibility.violations, [], 'Targeted desktop Ask accessibility');
@@ -188,6 +217,7 @@ try {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'No page-level horizontal overflow at 390px');
   const mobileAccessibility = await new AxeBuilder({ page }).include('.ask-okf').include('.panel-footer').analyze();
   assert.deepEqual(mobileAccessibility.violations, [], 'Targeted narrow Ask and panel controls accessibility');
+  mark('narrow_keyboard_ask_ready');
   await page.screenshot({ path: path.join(output, 'mobile-keyboard-ask.png') });
   await Promise.all(publicReadChecks);
   assert.deepEqual(publicReadErrors, [], 'Published corpus response integrity');
@@ -198,6 +228,7 @@ try {
     schema: 'okf-combined-reader-browser.v1', status: 'passed', observed_at: new Date().toISOString(), browser: engine,
     browser_version: browser.version(), browser_preferences: {},
     environment: publicBundleUrl ? 'published-browser-observation' : 'local-browser-candidate', app_url: appUrl,
+    phase_timings: timings,
     ...(publicBundleUrl ? { bundle_url: publicBundleUrl, content_commit: publicBundleUrl.split('/')[5], network_mode: 'real-https-no-interception', public_response_integrity_errors: publicReadErrors } : {}),
     app: { manifest_sha256: hash(manifestBytes), tree_sha256: appManifest.tree_sha256, verified_materials: appManifest.materials.length },
     descriptor: { path: 'combined/okf-explorer.json', sha256: hash(descriptorBytes), snapshot: descriptor.snapshot },
@@ -205,7 +236,7 @@ try {
     timeline: { source_series: sourceSeries, audit_series: auditSeries },
     search: { query: 'P1001', exact_adm_page: 'page/adm/adm-chapter-p1/0002', official_page_links: official },
     semantic_graph: { focus: 'staff-domain/pip', text: graphText },
-    ask: { question, context_id: evidence.context_id, evidence_status: evidence.evidence_status, selected_records: evidence.selected.length,
+    ask: { question, context_id: evidence.context_id, evidence_status: evidence.evidence_status, budget: evidence.budget, selected_records: evidence.selected.length,
       relationships: evidence.relationships.length, ai_answer: evidence.ai_answer }, console_errors: consoleErrors,
     accessibility: { desktop_ask_violations: desktopAccessibility.violations, mobile_ask_and_panel_violations: mobileAccessibility.violations,
       mobile_viewport: { width: 390, height: 844 }, keyboard: { events: `${forwardKey}, ${backwardKey} and Enter only for navigation; keyboard typing for question`, tab_steps: tabSteps,
@@ -217,4 +248,24 @@ try {
       'No physical mobile device or live screen-reader session was tested. Browser operation is not legal correctness certification.']
   }, null, 2) + '\n');
   console.log(JSON.stringify({ status: 'passed', browser: engine, output, context_id: evidence.context_id, corpus_requests: served.size }));
+} catch (error) {
+  if (publicBundleUrl) {
+    await Promise.all(publicReadChecks);
+    const failure = { schema: 'okf-combined-reader-browser-failure.v1', status: 'failed', recorded_at: new Date().toISOString(),
+      browser: engine, environment: 'published-browser-observation', app_url: appUrl, bundle_url: publicBundleUrl,
+      expected_app_manifest_sha256: expectedAppManifest, descriptor_sha256: hash(descriptorBytes),
+      error_name: error?.name || 'Error', error_message: String(error?.message || error).slice(0, 4000),
+      corpus_requests: [...served.values()].sort((a,b) => a.path.localeCompare(b.path)),
+      phase_timings: timings,
+      public_response_integrity_errors: publicReadErrors, console_errors: consoleErrors,
+      limitations: ['Failed attempt, not an acceptance receipt. Requests listed only where response integrity completed.'] };
+    const failures = path.join(root, 'validation/combined-reader/public/failed-attempts');
+    await mkdir(failures, { recursive: true });
+    const failureId = `${engine}-${Date.now()}`;
+    failure.page_url = page.url();
+    failure.toolbar_state = await page.locator('.exploration-toolbar').innerText({ timeout: 5000 }).catch(() => 'unavailable');
+    failure.screenshot = await page.screenshot({ path: path.join(failures, `${failureId}.png`), timeout: 5000 }).then(() => `${failureId}.png`).catch(() => null);
+    await writeFile(path.join(failures, `${failureId}.json`), JSON.stringify(failure, null, 2) + '\n');
+  }
+  throw error;
 } finally { await browser.close(); }

@@ -8,6 +8,27 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Publication follow-up — 20 September 2026
+
+- Publish service 0.4.0 with the new staff corpus and both preserved earlier
+  source versions; pass five actual SDK cases and three compact reconstructions.
+- Verify the combined Reader publicly in Chrome, Firefox and WebKit, with 261
+  distinct observed corpus files and five facet-parity checks. Preserve the first
+  loading timeout and bounded rerun timings. Add a ten-minute Monday script.
+
+- Record the merged staff-semantic release and separate remaining domain work
+  from human acceptance. Name the neutral Income Support modelling gap explicitly.
+- Add a portable public evidence-reader verifier with exact SDK/hosting bindings,
+  catalogue and slice checks, fifteen offline controls, recorded request pacing and
+  separate functional and console outcomes. Actual deployment observations are
+  recorded separately; the verifier alone is not a public acceptance claim.
+- Retain three-engine staff functional passes and all twelve earlier functional
+  regression journeys. Chrome and WebKit pass strict console checks; Firefox
+  hosting-cookie warnings keep BL023 open. Preserve the failed Chrome driver
+  measurement and reviewed browser-native observation amendment.
+- Refuse to overwrite retained public Reader observations and check the saved
+  service artefact census, digests and outcome bindings offline in CI.
+
 ## Additive staff semantics and both-manual evidence — 20 September 2026
 
 - Retain five paired Claude/Codex fixed-evidence cases, 12 attempts, 49 claims

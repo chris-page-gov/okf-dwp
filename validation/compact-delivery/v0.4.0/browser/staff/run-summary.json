@@ -1,0 +1,56 @@
+{
+  "schema": "okf-staff-service-browser-run.v1",
+  "observed_at": "2026-09-20T20:18:53.777Z",
+  "binding": {
+    "script": {
+      "path": "scripts/check_staff_service_browser.mjs",
+      "sha256": "e72deae478fd9c7503fb0515ba784f030c3ec83b4afd4b96a7f249c7d01a1fc6"
+    },
+    "sdk": {
+      "path": "validation/compact-delivery/v0.4.0/sdk-receipt.json",
+      "sha256": "686db4e8633a925c79c5c413d906f5234640c60b54b2a5609cb9be875135c8dc"
+    },
+    "deployment": {
+      "path": "validation/compact-delivery/v0.4.0/deployment.json",
+      "sha256": "34848826dda28e2c4286c34da31567a60f68d433aae2a59f52e0a4e6766509d1"
+    },
+    "runtime_commit": "fc71d65b8f5cfc860d52afe98a5e45b88231f3e5",
+    "runtime_worker_sha256": "cf39080fbd011f2d47bfe5aa97872cf63a36d105bf35986cca5f197bcf47f683",
+    "site_version": 8,
+    "sdk_reference_identity_is_not_browser_worker_attestation": true,
+    "request_pacing": {
+      "minimum_interval_ms": 750,
+      "scope": "shared across all requested browser engines",
+      "measured_from": "observed previous MCP request start",
+      "automatic_retries": false,
+      "rate_limit_response": "retained as a functional failure"
+    }
+  },
+  "results": [
+    {
+      "browser": "chrome",
+      "functional_status": "failed",
+      "strict_console_status": "passed",
+      "overall_clean_browser_acceptance": false,
+      "receipt": "chrome-receipt.json"
+    },
+    {
+      "browser": "firefox",
+      "functional_status": "passed",
+      "strict_console_status": "failed",
+      "overall_clean_browser_acceptance": false,
+      "receipt": "firefox-receipt.json"
+    },
+    {
+      "browser": "webkit",
+      "functional_status": "passed",
+      "strict_console_status": "passed",
+      "overall_clean_browser_acceptance": true,
+      "receipt": "webkit-receipt.json"
+    }
+  ],
+  "all_requested_engines_passed": false,
+  "all_three_engines_requested": true,
+  "all_three_engines_observed": true,
+  "scope": "Exact public compact evidence UI against separately retained SDK/deployment receipts; no AI-answer quality or specialist acceptance."
+}

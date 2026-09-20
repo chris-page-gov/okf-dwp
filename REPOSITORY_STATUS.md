@@ -2,6 +2,20 @@
 
 ## Current additive staff increment: 20 September 2026
 
+[DWP PR 12](https://github.com/chris-page-gov/okf-dwp/pull/12) and
+[Explorer PR 126](https://github.com/chris-page-gov/okf-explorer/pull/126) are merged.
+The additive content is pinned to `9de52acf1db84b27f8933d80480eaa850e74fa33`.
+Canonical DWP validation passed. Public combined Reader checks passed in Chrome,
+Firefox and WebKit; [their exact scope](validation/combined-reader/public/README.md)
+includes five facets, source links, graph paths and targeted accessibility checks.
+[Explorer PR 127](https://github.com/chris-page-gov/okf-explorer/pull/127) is also
+merged and its Pages build passed. Service 0.4.0 is deployed; its
+[SDK observation](validation/compact-delivery/v0.4.0/sdk-receipt.json) verifies five
+cases and compact reconstruction across all three approved source versions.
+The [public staff reader](validation/compact-delivery/v0.4.0/browser/staff-native/run-summary.json)
+passes functional checks in all three engines; Firefox hosting cookie warnings
+keep the overall strict hosting gate open.
+
 Use the [team handover](docs/team-handover-2026-09-20.md) and
 [current work log](docs/work-log-2026-09-20.md) for the latest delivery status.
 The sections below preserve dated earlier release observations; their original

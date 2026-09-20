@@ -1,0 +1,378 @@
+{
+  "schema": "okf-staff-service-browser-observation.v1",
+  "started_at": "2026-09-20T20:18:32.664Z",
+  "browser": "webkit",
+  "url": "https://ask-okf.crpage.chatgpt.site/review/#eyJidW5kbGUiOiJva2YtZHdwIiwidmVyc2lvbiI6IjlkZTUyYWNmMWRiODRiMjdmODkzM2Q4MDQ4MGVhYTg1MGU3NGZhMzMiLCJxdWVzdGlvbiI6IldoYXQgaXMgdGhlIGludGVyYWN0aW9uIGJldHdlZW4gQ2hpbGQgRExBIGFuZCBQSVA_IiwiYnVkZ2V0Ijp7Im1heF9ub2RlcyI6NjQsIm1heF9yZWxhdGlvbnNoaXBzIjoxMjgsIm1heF9kZXB0aCI6NiwibWF4X2J5dGVzIjoyNjIxNDR9LCJjb250ZXh0X2lkIjoidXJuOnNoYTI1Njo2NzMxYWYwNWJmMWE5Zjg5NTc4NzQzZGEzYzBiY2FmYzEwOTRjMmRiNzRlZjZlZjI3NDEwZjkwM2Q4YWY3MzQ0In0",
+  "source_version": "9de52acf1db84b27f8933d80480eaa850e74fa33",
+  "question": "What is the interaction between Child DLA and PIP?",
+  "context_id": "urn:sha256:6731af05bf1a9f89578743da3c0bcafc1094c2db74ef6ef27410f903d8af7344",
+  "context_budget": {
+    "max_nodes": 64,
+    "max_relationships": 128,
+    "max_depth": 6,
+    "max_bytes": 262144
+  },
+  "binding": {
+    "script": {
+      "path": "scripts/check_staff_service_browser.mjs",
+      "sha256": "e72deae478fd9c7503fb0515ba784f030c3ec83b4afd4b96a7f249c7d01a1fc6"
+    },
+    "sdk": {
+      "path": "validation/compact-delivery/v0.4.0/sdk-receipt.json",
+      "sha256": "686db4e8633a925c79c5c413d906f5234640c60b54b2a5609cb9be875135c8dc"
+    },
+    "deployment": {
+      "path": "validation/compact-delivery/v0.4.0/deployment.json",
+      "sha256": "34848826dda28e2c4286c34da31567a60f68d433aae2a59f52e0a4e6766509d1"
+    },
+    "runtime_commit": "fc71d65b8f5cfc860d52afe98a5e45b88231f3e5",
+    "runtime_worker_sha256": "cf39080fbd011f2d47bfe5aa97872cf63a36d105bf35986cca5f197bcf47f683",
+    "site_version": 8,
+    "sdk_reference_identity_is_not_browser_worker_attestation": true,
+    "request_pacing": {
+      "minimum_interval_ms": 750,
+      "scope": "shared across all requested browser engines",
+      "measured_from": "observed previous MCP request start",
+      "automatic_retries": false,
+      "rate_limit_response": "retained as a functional failure"
+    }
+  },
+  "functional_status": "passed",
+  "strict_console_status": "passed",
+  "overall_clean_browser_acceptance": true,
+  "calls": [
+    {
+      "tool": "ask_okf_manifest",
+      "milliseconds_since_previous_mcp_request": 1870.312,
+      "section": null,
+      "record_id": null,
+      "offset": 0
+    },
+    {
+      "tool": "ask_okf_manifest",
+      "milliseconds_since_previous_mcp_request": 1146.718,
+      "section": null,
+      "record_id": null,
+      "offset": 25
+    },
+    {
+      "tool": "ask_okf_manifest",
+      "milliseconds_since_previous_mcp_request": 770.752,
+      "section": null,
+      "record_id": null,
+      "offset": 49
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 905.045,
+      "section": "record_text",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-11-25/0002",
+      "offset": 0
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 815.574,
+      "section": "record_metadata",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-11-25/0002",
+      "offset": 0
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 791.434,
+      "section": "diagnostics",
+      "record_id": null,
+      "offset": 0
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 784.581,
+      "section": "relationships",
+      "record_id": null,
+      "offset": 0
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 855.66,
+      "section": "relationships",
+      "record_id": null,
+      "offset": 14932
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 787.113,
+      "section": "relationships",
+      "record_id": null,
+      "offset": 29875
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 877.75,
+      "section": "package",
+      "record_id": null,
+      "offset": 0
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 785.885,
+      "section": "package",
+      "record_id": null,
+      "offset": 15067
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 816.191,
+      "section": "package",
+      "record_id": null,
+      "offset": 30021
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 774.666,
+      "section": "package",
+      "record_id": null,
+      "offset": 44931
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 854.322,
+      "section": "package",
+      "record_id": null,
+      "offset": 59871
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 781.447,
+      "section": "package",
+      "record_id": null,
+      "offset": 75119
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 863.429,
+      "section": "package",
+      "record_id": null,
+      "offset": 90101
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 783.931,
+      "section": "package",
+      "record_id": null,
+      "offset": 105119
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 1173.95,
+      "section": "package",
+      "record_id": null,
+      "offset": 120257
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 808.035,
+      "section": "package",
+      "record_id": null,
+      "offset": 135234
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 803.084,
+      "section": "package",
+      "record_id": null,
+      "offset": 150414
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 765.655,
+      "section": "package",
+      "record_id": null,
+      "offset": 165462
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 767.502,
+      "section": "package",
+      "record_id": null,
+      "offset": 180587
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 815.033,
+      "section": "package",
+      "record_id": null,
+      "offset": 195569
+    },
+    {
+      "tool": "read_okf_evidence",
+      "milliseconds_since_previous_mcp_request": 860.2,
+      "section": "package",
+      "record_id": null,
+      "offset": 210606
+    }
+  ],
+  "reads": [
+    {
+      "section": "record_text",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-11-25/0002",
+      "slices": 1,
+      "characters": 2343,
+      "rendered_sha256": "cc5aeda7915f2257c487af1327bc15890fbe2c9ddaabcd41da1383b3c1d1d192",
+      "matches_sdk": true
+    },
+    {
+      "section": "record_metadata",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-11-25/0002",
+      "slices": 1,
+      "characters": 2107,
+      "rendered_sha256": "4eaaa737a063111556a1eb0a41b66b8ae9404f6346f3cb4c921153423397f8aa",
+      "matches_sdk": true
+    },
+    {
+      "section": "diagnostics",
+      "record_id": null,
+      "slices": 1,
+      "characters": 14663,
+      "rendered_sha256": "50814de85953443f15fa142df2d9a27e44bfd38db7e9bba7f8aa76c34542a971",
+      "matches_sdk": true
+    },
+    {
+      "section": "relationships",
+      "record_id": null,
+      "slices": 3,
+      "characters": 44103,
+      "rendered_sha256": "2005cf13afdc435139dd4129b14336ad1306cd4df963c560a5a4f11eab417f93",
+      "matches_sdk": true
+    },
+    {
+      "section": "package",
+      "record_id": null,
+      "slices": 15,
+      "characters": 216270,
+      "rendered_sha256": "5aef07d91ea7e33227bb2bc11a5ee821638f9f4abe596e5c65abf9507d52a00a",
+      "matches_sdk": true
+    }
+  ],
+  "console_errors": [],
+  "limitations": [
+    "Actual public browser requests without interception or local source substitution; SDK and hosting receipts establish separate reference identities.",
+    "One declared staff question and one source record per browser. This is not an accessibility audit, legal assessment, AI-answer test or whole-corpus semantic completeness claim.",
+    "Full selected package hashes are compared with the SDK; no cookie, account data, raw network trace or model response is retained.",
+    "Functional checks and strict browser-console acceptance are separate; any observed failure remains recorded."
+  ],
+  "browser_version": "26.5",
+  "shell": {
+    "status": 200,
+    "cache_control": "no-store, no-transform",
+    "content_security_policy": "default-src 'none'; script-src 'self'; connect-src 'self'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+  },
+  "catalogue": {
+    "records": 50,
+    "pages": 3,
+    "ids": [
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-11-25/0002",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-12-25-4667bf5b64/0002",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p2/0051",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/78/0008",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/78/0088",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/85/0027",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/85/0068",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-a3/0039",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-f1/0017",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-f1/0018",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-f2/0033",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-f3/0020",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-f3/0021",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-f3/0022",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-g3/0003",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-h6/0010",
+      "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/dla",
+      "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/overlap",
+      "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pip",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/2002/1792/schedule/I",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/2002/1792/regulation/6",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/2002/16/section/2",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0003",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0007",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0006",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0008",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+      "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/war-caa",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0002",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p4/0014",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p5/0009",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0003",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p1/0004",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-chapter-p4/0013",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/2007/22/section/13",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/1991/2890/schedule/1",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/1992/4/section/75",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/2012/5/section/83",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/1992/4/section/64",
+      "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0042",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/1992/4/section/70",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/1976/409/regulation/7",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/1992/4/section/78",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/1982/1408/regulation/43",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/1999/991/schedule/2",
+      "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/1982/1408/regulation/44"
+    ],
+    "summary": {
+      "selected_records": 50,
+      "relationships": 36,
+      "full_package_bytes": 216464,
+      "context_truncated": true,
+      "retrieval_truncated": true,
+      "resolved_concepts": 3,
+      "ambiguities": 0,
+      "unresolved_terms": 0,
+      "missing_evidence": 3,
+      "conflicts": 0,
+      "requirements": 2,
+      "missing_evidence_codes": [
+        "missing_required_evidence",
+        "uncovered_resolved_concept"
+      ],
+      "ai_answer": null
+    },
+    "metadata_matches_verified_package": true
+  },
+  "record": {
+    "id": "https://chris-page-gov.github.io/okf-dwp/id/page/adm/adm-memo-11-25/0002",
+    "source_url": "https://assets.publishing.service.gov.uk/media/691f0549c62d57eb3a7107fd/adm-memo-11-25.pdf#page=2",
+    "source_locator": "PDF page 2",
+    "provenance_visible": true
+  },
+  "diagnostics": {
+    "keys": [
+      "ai_answer",
+      "ambiguities",
+      "binding",
+      "budget",
+      "bundle",
+      "conflicts",
+      "context_id",
+      "engine",
+      "evidence_status",
+      "limitations",
+      "missing_evidence",
+      "question",
+      "relationship_count",
+      "requirements",
+      "resolved_concepts",
+      "retrieval",
+      "schema",
+      "scope",
+      "selected_records",
+      "unresolved_terms"
+    ],
+    "missing_evidence": 3,
+    "evidence_status": "insufficient",
+    "context_truncated": true
+  },
+  "completed_at": "2026-09-20T20:18:53.777Z",
+  "dropped_console_errors": 0
+}

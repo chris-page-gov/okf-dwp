@@ -151,3 +151,25 @@ current view, and rerun browser observations. Rewriting old answer receipts to
 look as though they used the new source would have destroyed the experiment.
 HMRC repeats should freeze inputs before model calls and distinguish historical
 replay from verification of the current release.
+
+### Treat the build environment as part of reproducibility
+
+The service's local dependency symlink changed esbuild's emitted path comments
+and added dependency paths to its input receipt. CI's real locked installation
+therefore produced a different build even though the source and lockfile matched.
+Preserving logical dependency paths and testing a relocated real-versus-linked
+installation restored identical Worker, Node and receipt bytes. The build script
+itself now participates in that identity. Original observations were archived
+and integration rerun; integrity checks were not relaxed to accept mismatches.
+
+
+### Release checks are observations, not labels
+
+The final service publication exposed a dependency-path portability defect: a
+linked local installation built different bytes from CI. Locked installation and
+a linked-versus-real build regression corrected the producer; historical receipts
+were retained. Public Reader verification also retained an initial five-second
+loading timeout before bounded reruns with phase timings. Neither failure was
+erased by updating a status label. For HMRC, allocate separate checks for exact
+source, generated outputs, model inputs, deployed application and human-visible
+evidence. Passing one does not establish the others.
