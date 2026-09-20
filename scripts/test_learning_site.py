@@ -21,6 +21,13 @@ class LearningSiteTests(unittest.TestCase):
     def test_evidence_links_remain_commit_bound(self):
         self.assertIn(f"/blob/{COMMIT}/evaluation/test.json", rewrite_link("../evaluation/test.json", "docs/learning-path.md", set(), {"evaluation/test.json"}, COMMIT))
 
+    def test_directory_evidence_links_open_the_exact_tree(self):
+        self.assertEqual(rewrite_link('../evaluation/cases/', 'docs/a.md', set(), {'evaluation/cases/a.json'}, COMMIT), f'https://github.com/chris-page-gov/okf-dwp/tree/{COMMIT}/evaluation/cases')
+
+    def test_local_images_use_raw_commit_bound_assets(self):
+        _, output = render('docs/a.md', '# A\n\n![Result](../validation/screenshot.png)', set(), {'validation/screenshot.png'}, COMMIT)
+        self.assertIn(f'src="https://raw.githubusercontent.com/chris-page-gov/okf-dwp/{COMMIT}/validation/screenshot.png"', output)
+
     def test_raw_html_inert_and_anchors_retained(self):
         _, output = render("docs/a.md", '# Heading\n\n<a id="scope"></a>\n<script>alert(1)</script>\n\n[x](javascript:alert(1))', set(), set(), COMMIT)
         self.assertNotIn("<script>", output)

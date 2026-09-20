@@ -44,10 +44,16 @@ def rewrite_link(href: str, source: str, pages: set[str], tracked: set[str], com
     if parsed.scheme or parsed.netloc or href.startswith("#") or not parsed.path:
         return href
     target = posixpath.normpath(posixpath.join(posixpath.dirname(source), unquote(parsed.path)))
-    if target.startswith("../") or target.startswith("/") or target not in tracked:
-        # Preserve author-visible missing references on GitHub; never publish a local file.
+    if target.startswith("../") or target.startswith("/") or any(part.startswith('.') for part in PurePosixPath(target).parts):
         return source_url(source, commit)
-    path = BASE + page_path(target) if target in pages else source_url(target, commit)
+    if target in pages:
+        path = BASE + page_path(target)
+    elif any(item.startswith(target.rstrip('/') + '/') for item in tracked):
+        path = f"{REPOSITORY}/tree/{commit}/{quote(target, safe='/')}"
+    else:
+        # Missing authored references keep their intended repository destination;
+        # never substitute a misleading link back to the referring page.
+        path = source_url(target, commit)
     return urlunsplit(("", "", path, parsed.query, parsed.fragment))
 
 
@@ -84,7 +90,10 @@ def render(source: str, text: str, pages: set[str], tracked: set[str], commit: s
         for child in token.children or []:
             if child.type in {"link_open", "image"}:
                 attribute = "href" if child.type == "link_open" else "src"
-                child.attrSet(attribute, rewrite_link(child.attrGet(attribute) or "", source, pages, tracked, commit))
+                rewritten = rewrite_link(child.attrGet(attribute) or "", source, pages, tracked, commit)
+                if child.type == 'image' and rewritten.startswith(f'{REPOSITORY}/blob/{commit}/'):
+                    rewritten = rewritten.replace(f'{REPOSITORY}/blob/', 'https://raw.githubusercontent.com/chris-page-gov/okf-dwp/', 1)
+                child.attrSet(attribute, rewritten)
     body = md.renderer.render(tokens, md.options, {})
     for key, identifier in anchors.items():
         body = body.replace(key, f'<a id="{html.escape(identifier)}"></a>')
