@@ -26,6 +26,15 @@ explicit. Neither replaces the exact receipts below.
 
 [Verified Pension Credit semantic exemplar](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7d3c69df0571b8d5206c8edce92963d99979cb5c%2Fbundle%2Fokf-bundle.yamlld&view=graph#term/capital-disregards) · [Original meeting demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.yamlld&q=84351#question/pc001) · [Read the pilot bundle](bundle/index.md) · [Ten-minute meeting walkthrough](docs/meeting-walkthrough.md) · [Discovery findings](docs/discovery.md) · [AI interrogation guide](AI_USAGE.md) · [Public notice and rights](NOTICE.md)
 
+## Team handover and current work
+
+The [20 September team handover](docs/team-handover-2026-09-20.md) links the
+published demonstration and explains the remaining semantic work before Monday.
+The [delivery and acceptance ledger](docs/backlog-work-packages.md) separates
+implementation from independent review, so a review gate cannot hide unfinished
+work. Broader concepts/relationships (BL005) and task profiles (BL007) are active
+implementation work, not completed by the existing mention classifications.
+
 ## Current delivery: evidence review and DMG navigation
 
 [Open the verified DMG navigation](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F0c59f476602a49d4293e46112a0ca1ebf1486ff0%2Ffull-dmg%2Fokf-review-context.json#overview)
