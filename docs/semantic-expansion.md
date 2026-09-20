@@ -28,14 +28,15 @@ These are inspectable project proposals; they are not official DWP interpretatio
 
 | Item | Delivered scope |
 | --- | --- |
-| Authored concepts | 43, including neutral benefits, variants, components and circumstances |
-| Source-grounded conceptual associations | 155, including directed source references and qualified concept relationships |
-| Selected exact source pages | 60 across DMG and ADM, with PDF/extraction hashes and page locators |
-| Legislative references in Ask | 44 verified provision identities and 62 deduplicated source-page citation links |
+| Authored concepts | 51, including neutral benefits, variants, components and circumstances |
+| Source-grounded conceptual associations | 217, including directed source references and qualified concept relationships |
+| Selected exact source pages | 96 across DMG and ADM, with PDF/extraction hashes and page locators |
+| Legislative references in Ask | 44 staff-linked provision identities, 62 source-page citation links and one separately recorded metadata bridge |
+| Selected statutory bodies | 20 complete selected units and 43 evidence-bearing navigation links; derived and unreviewed |
 | Staff task profiles | 40 occurrences, preserving all 39 distinct questions and the repeated DLA/PIP question |
 | Explicit open obligations | 203, across five named categories |
 | Existing discovery graph | All 712 original record identities and 1,105 assertion identities retained |
-| New context index | 840 records and 1,322 assertions; 4,120,659 bytes, below the existing 4 MiB limit |
+| New context index | 901 records and 1,427 assertions; 4,581,721 bytes, within the new 8 MiB semantic-index limit |
 
 The concepts are authored in
 [domain-profile/staff-semantic](../domain-profile/staff-semantic/).
@@ -77,12 +78,13 @@ a navigation hierarchy, not an executable legal rule or an OWL class axiom.
 ~~~mermaid
 flowchart TD
     Staff["39 distinct staff questions<br/>40 recorded occurrences"]
-    Concepts["43 model-authored concepts<br/>benefit, variant, component, circumstance"]
+    Concepts["51 model-authored concepts<br/>benefit, variant, component, circumstance"]
     Profiles["40 proposed task profiles"]
-    Relations["155 source-grounded associations<br/>SKOS and Dublin Core"]
+    Relations["217 source-grounded associations<br/>SKOS and Dublin Core"]
     DMG["Frozen DMG source pages<br/>exact text, hashes and PDF locators"]
     ADM["Frozen ADM source pages<br/>including PIP age and transition guidance"]
     Legal["44 verified provision references<br/>metadata only"]
+    Bodies["20 selected dated statutory units<br/>derived and unreviewed"]
     Open["203 named open obligations<br/>scope, closure, applicability, law version, review"]
     Package["Bounded inspectable context<br/>remains insufficient"]
     Staff --> Concepts
@@ -91,6 +93,8 @@ flowchart TD
     Relations --> DMG
     Relations --> ADM
     DMG -->|"62 citation links"| Legal
+    Legal -->|"explicit source-backed references"| Bodies
+    Bodies --> Package
     Profiles --> Open
     Relations --> Package
     Profiles --> Package
@@ -120,11 +124,7 @@ or informal shorthand for a Pension Credit severe-disability additional amount.
 The resolver shows both candidates instead of choosing silently. “War Pensions
 Constant Allowance” also retains its unresolved scheme-name boundary.
 
-The legal nodes are scope records labelled **reference-only-unreviewed**.
-They expose dated official provision URLs and acquisition metadata, not statutory
-body text or an applicable legal rule. None satisfies a substantive legal
-evidence requirement. The separate [legal reconciliation](legal-reconciliation.md)
-records the fuller identity and footnote work.
+The earlier legal reference nodes remain scope records labelled **reference-only-unreviewed**. The new [statutory-body increment](legal-body-evidence.md) adds separate derived evidence records for 20 selected units, connected through 43 source-backed references. A metadata record does not become source text, and a source passage does not establish applicability. All 203 obligations remain open. The separate [legal reconciliation](legal-reconciliation.md) retains the earlier identity and footnote work.
 
 ## Measured before and after
 
@@ -133,7 +133,7 @@ shards**. Only the explicitly authored semantic base differs.
 
 | Diagnostic | Before | After |
 | --- | ---: | ---: |
-| Known candidate-page hits across the 40 occurrences | 12 of 177 | 169 of 177 |
+| Known candidate-page hits across the 40 occurrences | 12 of 177 | 176 of 177 |
 | Questions retaining at least one candidate page | 12 of 40 | 40 of 40 |
 | Own declared task profile activated | 0 | 40 of 40 |
 | Contexts declared sufficient | 0 | 0 |
@@ -141,7 +141,7 @@ shards**. Only the explicitly authored semantic base differs.
 
 This is a **development-case comparison**: the supplied questions and candidate
 pages were known during modelling. It is not a held-out accuracy result.
-A page hit does not prove the page supports a claim or supplies every exception.
+A page hit does not prove the page supports a claim or supplies every exception. The previous released staff model retained 169 of 177 candidates. The separate [engine-only experiment](context-performance.md) retained 171; the expanded household candidate retains 176. One candidate in staff-005 remains omitted under the node bound. These are distinct comparisons, not an answer-accuracy score.
 
 Every after-run also contains ADM pages and reports truncation. **ADM presence
 is not a relevance score.** The lexical stage finds broad matches in both
@@ -155,7 +155,7 @@ codes. Candidate, node, relationship and byte limits remain visible.
 Ten shared-engine controls cover neutral resolution, explicit SDA ambiguity,
 no results, missing source evidence, reversed relationships, three paraphrases,
 the original imprisonment routing question and a counterfactual entitlement
-premise. Fifteen producer tests check source hashes, exact spans, all question
+premise. Twenty-two producer tests check source hashes, exact spans, all question
 occurrences, legal-reference boundaries, preserved scopes and rejected
 governance/authoring mutations.
 
@@ -174,10 +174,10 @@ staff questions used for the paired model trial:
 
 | Case | At 64 KiB: records / relationships | At 256 KiB: records / relationships |
 | --- | ---: | ---: |
-| staff-006 | 4 / 0 | 52 / 50 |
-| staff-012 | 6 / 0 | 52 / 55 |
-| staff-026 | 11 / 0 | 50 / 36 |
-| staff-038 | 9 / 0 | 47 / 49 |
+| staff-006 | 3 / 0 | 43 / 47 |
+| staff-012 | 4 / 0 | 35 / 50 |
+| staff-026 | 11 / 0 | 54 / 41 |
+| staff-038 | 8 / 0 | 41 / 41 |
 
 All eight packages remain **insufficient** and disclose truncation. At 64 KiB,
 retained lexical passages do not retain the semantic paths; this is a poor
@@ -198,7 +198,7 @@ uv sync --locked
 # Use a separate Explorer checkout at the recorded consumer version.
 git clone https://github.com/chris-page-gov/okf-explorer.git ../okf-explorer-staff
 export EXPLORER_STAFF_ROOT="$(cd ../okf-explorer-staff && pwd)"
-git -C "$EXPLORER_STAFF_ROOT" checkout f8daf84a4c04afb4839695d38a97cbf21b0ed0a0
+git -C "$EXPLORER_STAFF_ROOT" checkout 0e6a639f87c4060123b72d82c1ebe30405d475f1
 uv run --locked python scripts/build_staff_semantic.py --check
 uv run --locked python scripts/test_staff_semantic.py
 node --experimental-strip-types scripts/evaluate_staff_semantic.mjs \
@@ -218,9 +218,7 @@ metadata publication projection and whitespace-only YAML clean-up. Replaying
 those trials checks the archived inputs; it does not claim they used the newer
 current snapshot.
 
-The index is already compact JSON. To retain the existing 4 MiB bound, the
-producer shortens one repeated generic discovery scope string in the **new
-projection only**. The catalogue retains the exact before/after mapping.
+The index is compact JSON. The first staff projection shortened one repeated generic discovery scope string in the **new projection only**. The household projection preserves this declared normalisation and whole source pages; it requires the explicitly tested 8 MiB semantic-index bound. Ordinary search and record shards remain limited to 4 MiB each; returned packages keep their existing limits. The catalogue retains the exact before/after mapping.
 Specialised custody scopes, source text, source hashes, provenance and the
 original frozen index remain unchanged.
 

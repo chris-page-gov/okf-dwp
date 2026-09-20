@@ -56,10 +56,10 @@ Priority **P0**; aggregate status `in_progress`.
 | Work package | Kind | Status | Executor | Next action or retained result |
 | --- | --- | --- | --- | --- |
 | `DWP-BL-005.delivery` | implementation | `recorded_complete` | agent | Delivered bounded increment; use the linked evidence and named remaining obligations for the next reviewed expansion. |
-| `DWP-BL-005.domain-expansion` | research | `not_started` | agent | Extend beyond the bounded staff concepts using the explicit source-closure obligations; inspect adjacent passages, aliases, variant confusions and unmapped concepts. This agent work does not wait for human acceptance. In particular, add a neutral Income Support meaning separately from the preserved custody concept, retaining the case-sensitive IS alias so ordinary is/Is words do not resolve as a benefit. |
+| `DWP-BL-005.domain-expansion` | research | `in_progress` | agent | The household candidate adds neutral Income Support, eight further concepts and complete qualifying source pages. Continue with the remaining task families, adjacent exceptions and temporal/territorial distinctions; the entire domain is not complete. |
 | `DWP-BL-005.acceptance` | independent_review | `waiting` | human | Review definitions, confusions, qualifications and assertion meanings; publication of proposals is not acceptance. |
 
-Evidence: [docs/next-stage/semantic-contract.md](../docs/next-stage/semantic-contract.md) · [docs/ontology-use.md](../docs/ontology-use.md) · [evaluation/semantic-expansion/build.json](../evaluation/semantic-expansion/build.json) · [evaluation/semantic-expansion/catalogue.json](../evaluation/semantic-expansion/catalogue.json) · [docs/semantic-expansion.md](../docs/semantic-expansion.md) · [evaluation/semantic-expansion/profiles.json](../evaluation/semantic-expansion/profiles.json)
+Evidence: [docs/next-stage/semantic-contract.md](../docs/next-stage/semantic-contract.md) · [docs/ontology-use.md](../docs/ontology-use.md) · [evaluation/semantic-expansion/build.json](../evaluation/semantic-expansion/build.json) · [evaluation/semantic-expansion/catalogue.json](../evaluation/semantic-expansion/catalogue.json) · [docs/semantic-expansion.md](../docs/semantic-expansion.md) · [evaluation/semantic-expansion/profiles.json](../evaluation/semantic-expansion/profiles.json) · [docs/monday-delivery-work-log.md](../docs/monday-delivery-work-log.md) · [docs/household-evidence-expansion.md](../docs/household-evidence-expansion.md)
 
 ## DWP-BL-006: Legislation, regulations and case-law reconciliation
 
@@ -68,10 +68,10 @@ Priority **P0**; aggregate status `in_progress`.
 | Work package | Kind | Status | Executor | Next action or retained result |
 | --- | --- | --- | --- | --- |
 | `DWP-BL-006.delivery` | research | `recorded_complete` | agent | Delivered bounded increment; use the linked evidence and named remaining obligations for the next reviewed expansion. |
-| `DWP-BL-006.legal-body-evidence` | research | `not_started` | agent | Acquire and retain appropriately licensed statutory/judgment body evidence for the identified provisions; model dated amendments and extent before proposing applicability. Identity metadata alone does not complete this work. |
+| `DWP-BL-006.legal-body-evidence` | research | `in_progress` | agent | Twenty selected statutory units and 43 navigationrelationships are implemented with dated sources and retained failures. Next resolve remaining statutory dependencies,12 unknown extents, commencement/effects and the missing judgment bodies; do not promote extraction to applicability. |
 | `DWP-BL-006.acceptance` | independent_review | `waiting` | human | Review applicability, commencement, amendments and completeness for each substantive conclusion. |
 
-Evidence: [docs/next-stage/legislation-integration.md](../docs/next-stage/legislation-integration.md) · [knowledge/legislation-resources.yamlld](../knowledge/legislation-resources.yamlld) · [evaluation/legal-reconciliation/coverage.json](../evaluation/legal-reconciliation/coverage.json) · [evaluation/legal-reconciliation/assertions.json](../evaluation/legal-reconciliation/assertions.json) · [docs/legal-reconciliation.md](../docs/legal-reconciliation.md)
+Evidence: [docs/next-stage/legislation-integration.md](../docs/next-stage/legislation-integration.md) · [knowledge/legislation-resources.yamlld](../knowledge/legislation-resources.yamlld) · [evaluation/legal-reconciliation/coverage.json](../evaluation/legal-reconciliation/coverage.json) · [evaluation/legal-reconciliation/assertions.json](../evaluation/legal-reconciliation/assertions.json) · [docs/legal-reconciliation.md](../docs/legal-reconciliation.md) · [docs/monday-delivery-work-log.md](../docs/monday-delivery-work-log.md) · [docs/legal-body-evidence.md](../docs/legal-body-evidence.md) · [domain-profile/legal-bodies/coverage.json](../domain-profile/legal-bodies/coverage.json)
 
 ## DWP-BL-007: Broader semantic modelling: task-specific evidence profiles
 
@@ -80,10 +80,10 @@ Priority **P0**; aggregate status `in_progress`.
 | Work package | Kind | Status | Executor | Next action or retained result |
 | --- | --- | --- | --- | --- |
 | `DWP-BL-007.delivery` | implementation | `recorded_complete` | agent | Delivered bounded increment; use the linked evidence and named remaining obligations for the next reviewed expansion. |
-| `DWP-BL-007.evidence-closure` | implementation | `not_started` | agent | Investigate the eight missed candidate requirements and all 43 source-closure obligations, follow continuations/exceptions and add evidenced paths. Keep question-scope, legal-version and human acceptance obligations separate. |
+| `DWP-BL-007.evidence-closure` | implementation | `in_progress` | agent | Seven of the eight previously missed candidate occurrences are now retained. Investigate the remaining staff-005 candidate under node pressure and continue all 43 source-closure obligations. Household headings and adjacent conditions are better represented; scope, legal applicability and specialist gates remain separate. |
 | `DWP-BL-007.acceptance` | independent_review | `waiting` | human | Accept the evidence requirements and qualifications independently before marking broader answers sufficient. |
 
-Evidence: [evaluation/context-assembly/imprisonment-case.json](../evaluation/context-assembly/imprisonment-case.json) · [evaluation/staff-questions/cases.json](../evaluation/staff-questions/cases.json) · [evaluation/semantic-expansion/profiles.json](../evaluation/semantic-expansion/profiles.json) · [evaluation/semantic-expansion/evaluation.json](../evaluation/semantic-expansion/evaluation.json) · [docs/semantic-expansion.md](../docs/semantic-expansion.md)
+Evidence: [evaluation/context-assembly/imprisonment-case.json](../evaluation/context-assembly/imprisonment-case.json) · [evaluation/staff-questions/cases.json](../evaluation/staff-questions/cases.json) · [evaluation/semantic-expansion/profiles.json](../evaluation/semantic-expansion/profiles.json) · [evaluation/semantic-expansion/evaluation.json](../evaluation/semantic-expansion/evaluation.json) · [docs/semantic-expansion.md](../docs/semantic-expansion.md) · [docs/monday-delivery-work-log.md](../docs/monday-delivery-work-log.md) · [docs/household-evidence-expansion.md](../docs/household-evidence-expansion.md) · [docs/context-performance.md](../docs/context-performance.md)
 
 ## DWP-BL-008: Progressive evidence manifests and exact reads
 
@@ -107,14 +107,15 @@ Evidence: [full-dmg/okf-review-context.json](../full-dmg/okf-review-context.json
 
 ## DWP-BL-010: Fixed-evidence claim-level model trials
 
-Priority **P0**; aggregate status `needs_domain_review`.
+Priority **P0**; aggregate status `in_progress`.
 
 | Work package | Kind | Status | Executor | Next action or retained result |
 | --- | --- | --- | --- | --- |
 | `DWP-BL-010.delivery` | implementation | `recorded_complete` | agent | Delivered bounded paired subscription-client experiment with identical authored inputs, retained failures, usage observations and per-claim model critique. Specialist assessment and a controlled model/cost benchmark remain separate. |
+| `DWP-BL-010.household-trials` | implementation | `in_progress` | agent | Freeze the independently reviewed new protocol against immutable source and engine commits, run six paired subscription-client cases with identical authored inputs, preserve failures and perform claim-level review. Original five-pair experiment remains unchanged. |
 | `DWP-BL-010.acceptance` | independent_review | `waiting` | human | Assess entailment, exceptions, dates and abstention independently; model review is not human acceptance. |
 
-Evidence: [evaluation/answer-review/README.md](../evaluation/answer-review/README.md) · [evaluation/answer-review/cases.json](../evaluation/answer-review/cases.json) · [docs/staff-model-trials.md](../docs/staff-model-trials.md) · [evaluation/model-comparison/staff-2026-09-20/protocol.json](../evaluation/model-comparison/staff-2026-09-20/protocol.json) · [validation/model-comparison/staff-2026-09-20/results.json](../validation/model-comparison/staff-2026-09-20/results.json) · [validation/model-comparison/staff-2026-09-20/claim-level-model-critique.json](../validation/model-comparison/staff-2026-09-20/claim-level-model-critique.json)
+Evidence: [evaluation/answer-review/README.md](../evaluation/answer-review/README.md) · [evaluation/answer-review/cases.json](../evaluation/answer-review/cases.json) · [docs/staff-model-trials.md](../docs/staff-model-trials.md) · [evaluation/model-comparison/staff-2026-09-20/protocol.json](../evaluation/model-comparison/staff-2026-09-20/protocol.json) · [validation/model-comparison/staff-2026-09-20/results.json](../validation/model-comparison/staff-2026-09-20/results.json) · [validation/model-comparison/staff-2026-09-20/claim-level-model-critique.json](../validation/model-comparison/staff-2026-09-20/claim-level-model-critique.json) · [docs/monday-model-trials.md](../docs/monday-model-trials.md) · [evaluation/model-comparison/household-2026-09-21/protocol.json](../evaluation/model-comparison/household-2026-09-21/protocol.json)
 
 ## DWP-BL-011: Source dates and provenance presentation
 

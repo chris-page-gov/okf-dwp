@@ -8,6 +8,21 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Unreleased household and statutory candidate
+
+- Extend the staff concepts to 51 and selected whole DMG/ADM pages to 96, keeping
+  household headings, conditions, dated transitions and neutral Income Support.
+- Add 20 selected dated statutory units, 43 references and one verified metadata
+  bridge; retain both acquisition attempts, source hashes and extraction limits.
+- Keep statutory evidence separate in the Reader, including source-family filters,
+  official links and requested-version dates that do not become publication dates.
+- Retain 176 of 177 known candidate-page occurrences across 40 development tasks;
+  all remain insufficient, with 203 explicit obligations and no specialist approval.
+- Preserve previous browser observations against archived exact source files;
+  prepare separate current-candidate checks and paired model trials.
+- Retain a portable engine-only ambiguity/performance experiment and strengthen
+  source-plane identity to cover the statutory acquisitions as well as PDFs.
+
 ## Learning website — 20 September 2026
 
 - Add a script-free web edition of the learning path, glossary, guides and public

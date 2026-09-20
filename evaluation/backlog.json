@@ -169,7 +169,9 @@
         "evaluation/semantic-expansion/build.json",
         "evaluation/semantic-expansion/catalogue.json",
         "docs/semantic-expansion.md",
-        "evaluation/semantic-expansion/profiles.json"
+        "evaluation/semantic-expansion/profiles.json",
+        "docs/monday-delivery-work-log.md",
+        "docs/household-evidence-expansion.md"
       ],
       "acceptance_checks": [
         "Benefit/variant/circumstance terms have sources, aliases, confusions and scope; existing custody-specific meanings are not silently broadened."
@@ -191,11 +193,13 @@
         {
           "id": "DWP-BL-005.domain-expansion",
           "kind": "research",
-          "status": "not_started",
+          "status": "in_progress",
           "executor": "agent",
-          "next_action": "Extend beyond the bounded staff concepts using the explicit source-closure obligations; inspect adjacent passages, aliases, variant confusions and unmapped concepts. This agent work does not wait for human acceptance. In particular, add a neutral Income Support meaning separately from the preserved custody concept, retaining the case-sensitive IS alias so ordinary is/Is words do not resolve as a benefit.",
+          "next_action": "The household candidate adds neutral Income Support, eight further concepts and complete qualifying source pages. Continue with the remaining task families, adjacent exceptions and temporal/territorial distinctions; the entire domain is not complete.",
           "evidence": [
-            "evaluation/semantic-expansion/profiles.json"
+            "evaluation/semantic-expansion/profiles.json",
+            "docs/monday-delivery-work-log.md",
+            "docs/household-evidence-expansion.md"
           ]
         },
         {
@@ -222,12 +226,15 @@
         "knowledge/legislation-resources.yamlld",
         "evaluation/legal-reconciliation/coverage.json",
         "evaluation/legal-reconciliation/assertions.json",
-        "docs/legal-reconciliation.md"
+        "docs/legal-reconciliation.md",
+        "docs/monday-delivery-work-log.md",
+        "docs/legal-body-evidence.md",
+        "domain-profile/legal-bodies/coverage.json"
       ],
       "acceptance_checks": [
         "Verify work/provision/version identities, effects, commencement and territory; record unresolved citations; catalogue links are not legal completeness."
       ],
-      "scope_note": "Official work/provision identities, observed version attributes and exact citation mappings are delivered for the selected staff candidates. Statutory/judgment bodies, complete amendment/effect chains and substantive applicability reconciliation remain open; no accepted legal proposition.",
+      "scope_note": "Official provision identities, citation mappings and 20selected statutory units are implemented. Complete dependencies, commencement, extent, judgment evidence and substantive applicability remain open; no accepted legal proposition.",
       "work_packages": [
         {
           "id": "DWP-BL-006.delivery",
@@ -244,11 +251,14 @@
         {
           "id": "DWP-BL-006.legal-body-evidence",
           "kind": "research",
-          "status": "not_started",
+          "status": "in_progress",
           "executor": "agent",
-          "next_action": "Acquire and retain appropriately licensed statutory/judgment body evidence for the identified provisions; model dated amendments and extent before proposing applicability. Identity metadata alone does not complete this work.",
+          "next_action": "Twenty selected statutory units and 43 navigationrelationships are implemented with dated sources and retained failures. Next resolve remaining statutory dependencies,12 unknown extents, commencement/effects and the missing judgment bodies; do not promote extraction to applicability.",
           "evidence": [
-            "docs/legal-reconciliation.md"
+            "docs/legal-reconciliation.md",
+            "docs/monday-delivery-work-log.md",
+            "docs/legal-body-evidence.md",
+            "domain-profile/legal-bodies/coverage.json"
           ]
         },
         {
@@ -277,7 +287,10 @@
         "evaluation/staff-questions/cases.json",
         "evaluation/semantic-expansion/profiles.json",
         "evaluation/semantic-expansion/evaluation.json",
-        "docs/semantic-expansion.md"
+        "docs/semantic-expansion.md",
+        "docs/monday-delivery-work-log.md",
+        "docs/household-evidence-expansion.md",
+        "docs/context-performance.md"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
@@ -299,11 +312,14 @@
         {
           "id": "DWP-BL-007.evidence-closure",
           "kind": "implementation",
-          "status": "not_started",
+          "status": "in_progress",
           "executor": "agent",
-          "next_action": "Investigate the eight missed candidate requirements and all 43 source-closure obligations, follow continuations/exceptions and add evidenced paths. Keep question-scope, legal-version and human acceptance obligations separate.",
+          "next_action": "Seven of the eight previously missed candidate occurrences are now retained. Investigate the remaining staff-005 candidate under node pressure and continue all 43 source-closure obligations. Household headings and adjacent conditions are better represented; scope, legal applicability and specialist gates remain separate.",
           "evidence": [
-            "evaluation/semantic-expansion/profiles.json"
+            "evaluation/semantic-expansion/profiles.json",
+            "docs/monday-delivery-work-log.md",
+            "docs/household-evidence-expansion.md",
+            "docs/context-performance.md"
           ]
         },
         {
@@ -407,7 +423,7 @@
     {
       "id": "DWP-BL-010",
       "title": "Fixed-evidence claim-level model trials",
-      "status": "needs_domain_review",
+      "status": "in_progress",
       "priority": "P0",
       "depends_on": [
         "DWP-BL-004"
@@ -419,7 +435,9 @@
         "docs/staff-model-trials.md",
         "evaluation/model-comparison/staff-2026-09-20/protocol.json",
         "validation/model-comparison/staff-2026-09-20/results.json",
-        "validation/model-comparison/staff-2026-09-20/claim-level-model-critique.json"
+        "validation/model-comparison/staff-2026-09-20/claim-level-model-critique.json",
+        "docs/monday-model-trials.md",
+        "evaluation/model-comparison/household-2026-09-21/protocol.json"
       ],
       "acceptance_checks": [
         "Retain identical fixed inputs/prompts and real model outputs; verify IDs/quotes/locators; independently assess entailment/exceptions/abstention; no self-graded gold or engineering-score substitution."
@@ -437,6 +455,17 @@
             "evaluation/model-comparison/staff-2026-09-20/protocol.json",
             "validation/model-comparison/staff-2026-09-20/results.json",
             "validation/model-comparison/staff-2026-09-20/claim-level-model-critique.json"
+          ]
+        },
+        {
+          "id": "DWP-BL-010.household-trials",
+          "kind": "implementation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Freeze the independently reviewed new protocol against immutable source and engine commits, run six paired subscription-client cases with identical authored inputs, preserve failures and perform claim-level review. Original five-pair experiment remains unchanged.",
+          "evidence": [
+            "docs/monday-model-trials.md",
+            "evaluation/model-comparison/household-2026-09-21/protocol.json"
           ]
         },
         {

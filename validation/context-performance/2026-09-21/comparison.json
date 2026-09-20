@@ -1,0 +1,2005 @@
+{
+  "schema": "okf-context-retrieval-development-comparison.v1",
+  "started_at": "2026-09-20T21:43:44.748Z",
+  "completed_at": "2026-09-20T21:44:00.477Z",
+  "runtime": {
+    "node": "v26.7.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "inputs": {
+    "runner_sha256": "248d8f3da6c56eeb3c52c3cdc9717e142d5df9fa100c34ee79752132bf95c815",
+    "manifest_sha256": "aa9726ba72b7495323b031f149fa13cffeae0aa8fc868af63b7af3cac0e6be95",
+    "overlay_sha256": "79ac30aef41ac467db83ec6b79ed20e4a4cc9330461d08713f45ea5830cb6e2d",
+    "registry_sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a",
+    "baseline_commit": "fc71d65b8f5cfc860d52afe98a5e45b88231f3e5",
+    "current_engine_sha256": {
+      "index.ts": "bade207cbc414b9a057778fdc28564d1c0f9c03e7548b3644a3fb9ec9b8731e6",
+      "corpus.ts": "72fec179d1015df39fd16834d5876740b95a6477f70b6013821f24398a69eb65",
+      "types.ts": "248b7db16fa1faf2cb6c5c07c8347b926ae649a528b79e92bca3816829938b65"
+    }
+  },
+  "summary": {
+    "before_hits": 169,
+    "after_hits": 171,
+    "identical_packages": 38,
+    "changed_cases": [
+      "staff-008",
+      "staff-009"
+    ],
+    "cases": 40,
+    "sufficient": 0,
+    "ai_answers": 0
+  },
+  "cases": [
+    {
+      "id": "staff-001",
+      "question": "What happens to your benefits if you go abroad?",
+      "before": {
+        "context_id": "urn:sha256:b8424a660a1191f42e100bb1aa0a8834854010658e21e824a5366b31c81e1608",
+        "elapsed_ms": 130.758417,
+        "records": 54,
+        "relationships": 51,
+        "bytes": 253393,
+        "expected": 2,
+        "hits": [
+          "source-c001",
+          "source-c002"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:b8424a660a1191f42e100bb1aa0a8834854010658e21e824a5366b31c81e1608",
+        "elapsed_ms": 100.40450000000001,
+        "records": 54,
+        "relationships": 51,
+        "bytes": 253393,
+        "expected": 2,
+        "hits": [
+          "source-c001",
+          "source-c002"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-002",
+      "question": "If your birthday is 30th May 1960, what is the first date you will be entitled to State Pension?",
+      "before": {
+        "context_id": "urn:sha256:02681e16cd314f5828751fe1354420066ee12ccad80d246706c9cd76d3c7198b",
+        "elapsed_ms": 115.93650000000002,
+        "records": 60,
+        "relationships": 64,
+        "bytes": 297250,
+        "expected": 4,
+        "hits": [
+          "source-c004",
+          "source-c005",
+          "source-c006",
+          "source-c007"
+        ],
+        "ambiguities": [],
+        "requirements": 2,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:02681e16cd314f5828751fe1354420066ee12ccad80d246706c9cd76d3c7198b",
+        "elapsed_ms": 93.62854200000004,
+        "records": 60,
+        "relationships": 64,
+        "bytes": 297250,
+        "expected": 4,
+        "hits": [
+          "source-c004",
+          "source-c005",
+          "source-c006",
+          "source-c007"
+        ],
+        "ambiguities": [],
+        "requirements": 2,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-003",
+      "question": "How does State Pension interact with PIP?",
+      "before": {
+        "context_id": "urn:sha256:2e84c8994b1751afde04a79a749b527c1ae3433482cce96ed4da3ebda2c0ef11",
+        "elapsed_ms": 106.31441600000005,
+        "records": 64,
+        "relationships": 75,
+        "bytes": 318569,
+        "expected": 3,
+        "hits": [
+          "source-c003",
+          "source-c034",
+          "source-c039"
+        ],
+        "ambiguities": [],
+        "requirements": 2,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:2e84c8994b1751afde04a79a749b527c1ae3433482cce96ed4da3ebda2c0ef11",
+        "elapsed_ms": 98.7578749999999,
+        "records": 64,
+        "relationships": 75,
+        "bytes": 318569,
+        "expected": 3,
+        "hits": [
+          "source-c003",
+          "source-c034",
+          "source-c039"
+        ],
+        "ambiguities": [],
+        "requirements": 2,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-004",
+      "question": "What are the components which make up State Pension and how do you qualify for them?",
+      "before": {
+        "context_id": "urn:sha256:2ef649a0ec25e6ab745ca7137b8123d9b5b0e7e7a1e08a8627483d17b146e95c",
+        "elapsed_ms": 102.41212500000006,
+        "records": 58,
+        "relationships": 61,
+        "bytes": 281549,
+        "expected": 3,
+        "hits": [
+          "source-c003",
+          "source-c006",
+          "source-c007"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:2ef649a0ec25e6ab745ca7137b8123d9b5b0e7e7a1e08a8627483d17b146e95c",
+        "elapsed_ms": 92.41870800000004,
+        "records": 58,
+        "relationships": 61,
+        "bytes": 281549,
+        "expected": 3,
+        "hits": [
+          "source-c003",
+          "source-c006",
+          "source-c007"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-005",
+      "question": "What other benefits could you receive in addition to State Pension, and under what circumstances would you be entitled to them?",
+      "before": {
+        "context_id": "urn:sha256:349050346b2890bbfbb683e473f87975f93f848589d020593e7bda085aee8b7c",
+        "elapsed_ms": 119.05712500000016,
+        "records": 64,
+        "relationships": 67,
+        "bytes": 315811,
+        "expected": 5,
+        "hits": [
+          "source-c003",
+          "source-c008",
+          "source-c032"
+        ],
+        "ambiguities": [],
+        "requirements": 2,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:349050346b2890bbfbb683e473f87975f93f848589d020593e7bda085aee8b7c",
+        "elapsed_ms": 103.88891599999988,
+        "records": 64,
+        "relationships": 67,
+        "bytes": 315811,
+        "expected": 5,
+        "hits": [
+          "source-c003",
+          "source-c008",
+          "source-c032"
+        ],
+        "ambiguities": [],
+        "requirements": 2,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-006",
+      "question": "What is the maximum you can have in savings to still qualify for Pension Credit?",
+      "before": {
+        "context_id": "urn:sha256:05833cb5c11f6366de53a6a72eb8d8b8387af6d8c9334686eca32887a7da9871",
+        "elapsed_ms": 105.4810829999999,
+        "records": 52,
+        "relationships": 50,
+        "bytes": 253827,
+        "expected": 3,
+        "hits": [
+          "source-c008",
+          "source-c012",
+          "source-c031"
+        ],
+        "ambiguities": [],
+        "requirements": 4,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:05833cb5c11f6366de53a6a72eb8d8b8387af6d8c9334686eca32887a7da9871",
+        "elapsed_ms": 95.95687500000008,
+        "records": 52,
+        "relationships": 50,
+        "bytes": 253827,
+        "expected": 3,
+        "hits": [
+          "source-c008",
+          "source-c012",
+          "source-c031"
+        ],
+        "ambiguities": [],
+        "requirements": 4,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-007",
+      "question": "What were the Pension Credit weekly rates over the last five years?",
+      "before": {
+        "context_id": "urn:sha256:e39b14e0b66bf3470d9a63189e2162209852aa0132d150e3e382cd2fc96450d7",
+        "elapsed_ms": 111.52108399999997,
+        "records": 59,
+        "relationships": 55,
+        "bytes": 292146,
+        "expected": 12,
+        "hits": [
+          "source-c014",
+          "source-c015",
+          "source-c016",
+          "source-c017",
+          "source-c018",
+          "source-c019",
+          "source-c020",
+          "source-c021",
+          "source-c022",
+          "source-c023",
+          "source-c024",
+          "source-c025"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:e39b14e0b66bf3470d9a63189e2162209852aa0132d150e3e382cd2fc96450d7",
+        "elapsed_ms": 96.54541599999993,
+        "records": 59,
+        "relationships": 55,
+        "bytes": 292146,
+        "expected": 12,
+        "hits": [
+          "source-c014",
+          "source-c015",
+          "source-c016",
+          "source-c017",
+          "source-c018",
+          "source-c019",
+          "source-c020",
+          "source-c021",
+          "source-c022",
+          "source-c023",
+          "source-c024",
+          "source-c025"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-008",
+      "question": "What was the SDA amount over the last five years?",
+      "before": {
+        "context_id": "urn:sha256:add9d34b31f874ff8289fa12dbd6118dbc796ab3baf8c074a835a43518501300",
+        "elapsed_ms": 106.82850000000008,
+        "records": 29,
+        "relationships": 12,
+        "bytes": 143374,
+        "expected": 14,
+        "hits": [
+          "source-c014",
+          "source-c015",
+          "source-c016",
+          "source-c017",
+          "source-c018",
+          "source-c019",
+          "source-c020",
+          "source-c021",
+          "source-c022",
+          "source-c023",
+          "source-c024",
+          "source-c025"
+        ],
+        "ambiguities": [
+          {
+            "phrase": "SDA",
+            "candidates": [
+              "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/sda",
+              "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-addition"
+            ]
+          }
+        ],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:beeccccf006afe56bc597289d4a59e7792d9279449fcd56a33fb6f83244601b0",
+        "elapsed_ms": 98.34058300000015,
+        "records": 64,
+        "relationships": 67,
+        "bytes": 367200,
+        "expected": 14,
+        "hits": [
+          "source-c014",
+          "source-c015",
+          "source-c016",
+          "source-c017",
+          "source-c018",
+          "source-c019",
+          "source-c020",
+          "source-c021",
+          "source-c022",
+          "source-c023",
+          "source-c024",
+          "source-c025",
+          "source-c027",
+          "source-c035"
+        ],
+        "ambiguities": [
+          {
+            "phrase": "SDA",
+            "candidates": [
+              "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/sda",
+              "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-addition"
+            ]
+          }
+        ],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": false
+    },
+    {
+      "id": "staff-009",
+      "question": "Besides SDA, what are the other additional payments which you can receive in addition to basic Pension Credit, and what have been their rates over the last five years?",
+      "before": {
+        "context_id": "urn:sha256:400e7fb92182a92117e60896e6aebc31ae5df562981eabed1a1c14a0a8367d0f",
+        "elapsed_ms": 117.47195800000009,
+        "records": 64,
+        "relationships": 93,
+        "bytes": 371784,
+        "expected": 15,
+        "hits": [
+          "source-c014",
+          "source-c015",
+          "source-c016",
+          "source-c017",
+          "source-c018",
+          "source-c019",
+          "source-c020",
+          "source-c021",
+          "source-c022",
+          "source-c023",
+          "source-c024",
+          "source-c025",
+          "source-c026",
+          "source-c027",
+          "source-c029"
+        ],
+        "ambiguities": [
+          {
+            "phrase": "SDA",
+            "candidates": [
+              "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/sda",
+              "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-addition"
+            ]
+          }
+        ],
+        "requirements": 4,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:14813c21aeac53ebc5fc0e5ac9097d790fd1c659fc64a2e567c999e4373fc43e",
+        "elapsed_ms": 103.69579099999987,
+        "records": 64,
+        "relationships": 93,
+        "bytes": 386432,
+        "expected": 15,
+        "hits": [
+          "source-c014",
+          "source-c015",
+          "source-c016",
+          "source-c017",
+          "source-c018",
+          "source-c019",
+          "source-c020",
+          "source-c021",
+          "source-c022",
+          "source-c023",
+          "source-c024",
+          "source-c025",
+          "source-c026",
+          "source-c027",
+          "source-c029"
+        ],
+        "ambiguities": [
+          {
+            "phrase": "SDA",
+            "candidates": [
+              "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/sda",
+              "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-addition"
+            ]
+          }
+        ],
+        "requirements": 4,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": false
+    },
+    {
+      "id": "staff-010",
+      "question": "What is used in the Pension Credit calculation to assess eligibility and what is the threshold for each element?",
+      "before": {
+        "context_id": "urn:sha256:672fa2a8b0daf206491cd4045b0ec367025ce7c0898e309a394b97189e73762e",
+        "elapsed_ms": 110.74812499999985,
+        "records": 53,
+        "relationships": 55,
+        "bytes": 277604,
+        "expected": 5,
+        "hits": [
+          "source-c008",
+          "source-c012",
+          "source-c013",
+          "source-c031",
+          "source-c032"
+        ],
+        "ambiguities": [],
+        "requirements": 6,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:672fa2a8b0daf206491cd4045b0ec367025ce7c0898e309a394b97189e73762e",
+        "elapsed_ms": 96.36083400000007,
+        "records": 53,
+        "relationships": 55,
+        "bytes": 277604,
+        "expected": 5,
+        "hits": [
+          "source-c008",
+          "source-c012",
+          "source-c013",
+          "source-c031",
+          "source-c032"
+        ],
+        "ambiguities": [],
+        "requirements": 6,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-011",
+      "question": "How does Housing Benefit impact Pension Credit?",
+      "before": {
+        "context_id": "urn:sha256:aeb5ba1575717dde9a6ce478af483b6ad3d4069688a3ec5ba797e634ddef1a59",
+        "elapsed_ms": 100.46737499999972,
+        "records": 64,
+        "relationships": 76,
+        "bytes": 321001,
+        "expected": 3,
+        "hits": [
+          "source-c009",
+          "source-c030",
+          "source-c033"
+        ],
+        "ambiguities": [],
+        "requirements": 2,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:aeb5ba1575717dde9a6ce478af483b6ad3d4069688a3ec5ba797e634ddef1a59",
+        "elapsed_ms": 95.55045800000016,
+        "records": 64,
+        "relationships": 76,
+        "bytes": 321001,
+        "expected": 3,
+        "hits": [
+          "source-c009",
+          "source-c030",
+          "source-c033"
+        ],
+        "ambiguities": [],
+        "requirements": 2,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-012",
+      "question": "Does Pension Credit stop is a citizen moves into a care home permanently if they are self-funding?",
+      "before": {
+        "context_id": "urn:sha256:9063b5af07b4447f9dc84de3319f526038c2d7fcb838570476451725c9128619",
+        "elapsed_ms": 105.42583299999978,
+        "records": 55,
+        "relationships": 58,
+        "bytes": 272904,
+        "expected": 3,
+        "hits": [
+          "source-c010",
+          "source-c028",
+          "source-c030"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:9063b5af07b4447f9dc84de3319f526038c2d7fcb838570476451725c9128619",
+        "elapsed_ms": 94.32712500000025,
+        "records": 55,
+        "relationships": 58,
+        "bytes": 272904,
+        "expected": 3,
+        "hits": [
+          "source-c010",
+          "source-c028",
+          "source-c030"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-013",
+      "question": "Does Pension Credit stop is a citizen moves into a care home permanently if they are not self-funding?",
+      "before": {
+        "context_id": "urn:sha256:db89980f33279e6f2d04cc5a142b56f538ec7001d788c4fcb814608715f3a5e2",
+        "elapsed_ms": 98.19537500000024,
+        "records": 55,
+        "relationships": 58,
+        "bytes": 272908,
+        "expected": 3,
+        "hits": [
+          "source-c010",
+          "source-c028",
+          "source-c030"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:db89980f33279e6f2d04cc5a142b56f538ec7001d788c4fcb814608715f3a5e2",
+        "elapsed_ms": 93.49204199999986,
+        "records": 55,
+        "relationships": 58,
+        "bytes": 272908,
+        "expected": 3,
+        "hits": [
+          "source-c010",
+          "source-c028",
+          "source-c030"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-014",
+      "question": "What is the impact of someone’s partner on their Pension Credit?",
+      "before": {
+        "context_id": "urn:sha256:8a19cab56f812c6f2c79b8a5a893e07f8dc4f0e2f7aefbdfc2739f91ed87238e",
+        "elapsed_ms": 92.8789999999999,
+        "records": 63,
+        "relationships": 66,
+        "bytes": 310522,
+        "expected": 5,
+        "hits": [
+          "source-c009",
+          "source-c010",
+          "source-c011",
+          "source-c012",
+          "source-c031"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:8a19cab56f812c6f2c79b8a5a893e07f8dc4f0e2f7aefbdfc2739f91ed87238e",
+        "elapsed_ms": 85.3498340000001,
+        "records": 63,
+        "relationships": 66,
+        "bytes": 310522,
+        "expected": 5,
+        "hits": [
+          "source-c009",
+          "source-c010",
+          "source-c011",
+          "source-c012",
+          "source-c031"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-015",
+      "question": "What inputs are required for the Pension Credit calculation?",
+      "before": {
+        "context_id": "urn:sha256:f7100a3167801a5194eda44333971a6a1ea29cf7ca7c7542b8cd8764ee04f8a9",
+        "elapsed_ms": 98.2953749999997,
+        "records": 48,
+        "relationships": 49,
+        "bytes": 252670,
+        "expected": 5,
+        "hits": [
+          "source-c008",
+          "source-c012",
+          "source-c013",
+          "source-c031",
+          "source-c032"
+        ],
+        "ambiguities": [],
+        "requirements": 4,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:f7100a3167801a5194eda44333971a6a1ea29cf7ca7c7542b8cd8764ee04f8a9",
+        "elapsed_ms": 91.48270899999989,
+        "records": 48,
+        "relationships": 49,
+        "bytes": 252670,
+        "expected": 5,
+        "hits": [
+          "source-c008",
+          "source-c012",
+          "source-c013",
+          "source-c031",
+          "source-c032"
+        ],
+        "ambiguities": [],
+        "requirements": 4,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-016",
+      "question": "Given these inputs what is the formula for calculating Pension Credit?",
+      "before": {
+        "context_id": "urn:sha256:df03c6cf4753a17dc52db0f69b0cfbaeafcfd30d24d8243e6fe64b454d782010",
+        "elapsed_ms": 103.92987500000027,
+        "records": 47,
+        "relationships": 48,
+        "bytes": 242828,
+        "expected": 4,
+        "hits": [
+          "source-c012",
+          "source-c013",
+          "source-c031",
+          "source-c032"
+        ],
+        "ambiguities": [],
+        "requirements": 4,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:df03c6cf4753a17dc52db0f69b0cfbaeafcfd30d24d8243e6fe64b454d782010",
+        "elapsed_ms": 93.74333399999978,
+        "records": 47,
+        "relationships": 48,
+        "bytes": 242828,
+        "expected": 4,
+        "hits": [
+          "source-c012",
+          "source-c013",
+          "source-c031",
+          "source-c032"
+        ],
+        "ambiguities": [],
+        "requirements": 4,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-017",
+      "question": "What difference to Pension Credit does having a partner make?",
+      "before": {
+        "context_id": "urn:sha256:04a833a41969ac3ba0acf1c485c0eb759373521535b36faf1664565a71efc421",
+        "elapsed_ms": 104.23404200000004,
+        "records": 50,
+        "relationships": 51,
+        "bytes": 258641,
+        "expected": 5,
+        "hits": [
+          "source-c009",
+          "source-c010",
+          "source-c011",
+          "source-c012",
+          "source-c031"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:04a833a41969ac3ba0acf1c485c0eb759373521535b36faf1664565a71efc421",
+        "elapsed_ms": 91.62729200000012,
+        "records": 50,
+        "relationships": 51,
+        "bytes": 258641,
+        "expected": 5,
+        "hits": [
+          "source-c009",
+          "source-c010",
+          "source-c011",
+          "source-c012",
+          "source-c031"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-018",
+      "question": "What happens if someone with a partner goes permanently into a Care Home (please give all scenarios)?",
+      "before": {
+        "context_id": "urn:sha256:b938f062b7045d6a5013591509236fc1afe115001c6e5f4c15a9f33f1d5b3830",
+        "elapsed_ms": 99.717083,
+        "records": 57,
+        "relationships": 64,
+        "bytes": 284708,
+        "expected": 4,
+        "hits": [
+          "source-c010",
+          "source-c011",
+          "source-c028",
+          "source-c030"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:b938f062b7045d6a5013591509236fc1afe115001c6e5f4c15a9f33f1d5b3830",
+        "elapsed_ms": 93.60725000000002,
+        "records": 57,
+        "relationships": 64,
+        "bytes": 284708,
+        "expected": 4,
+        "hits": [
+          "source-c010",
+          "source-c011",
+          "source-c028",
+          "source-c030"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-019",
+      "question": "How does Pension Credit work?",
+      "before": {
+        "context_id": "urn:sha256:4e5cd11e65aeb300aed618b09e2dad771a741376fed6f106134ae846ba51e721",
+        "elapsed_ms": 97.05708400000003,
+        "records": 46,
+        "relationships": 43,
+        "bytes": 210195,
+        "expected": 5,
+        "hits": [
+          "source-c008",
+          "source-c012",
+          "source-c013",
+          "source-c031",
+          "source-c032"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:4e5cd11e65aeb300aed618b09e2dad771a741376fed6f106134ae846ba51e721",
+        "elapsed_ms": 90.36625000000004,
+        "records": 46,
+        "relationships": 43,
+        "bytes": 210195,
+        "expected": 5,
+        "hits": [
+          "source-c008",
+          "source-c012",
+          "source-c013",
+          "source-c031",
+          "source-c032"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-020",
+      "question": "How does a citizen qualify for Pension Credit?",
+      "before": {
+        "context_id": "urn:sha256:71fbf07eac80138161d5c4e31a98fc89a5613ca033ff038d556f3a4a94282968",
+        "elapsed_ms": 98.90287499999977,
+        "records": 52,
+        "relationships": 50,
+        "bytes": 254865,
+        "expected": 4,
+        "hits": [
+          "source-c008",
+          "source-c009",
+          "source-c012"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:71fbf07eac80138161d5c4e31a98fc89a5613ca033ff038d556f3a4a94282968",
+        "elapsed_ms": 91.50212500000043,
+        "records": 52,
+        "relationships": 50,
+        "bytes": 254865,
+        "expected": 4,
+        "hits": [
+          "source-c008",
+          "source-c009",
+          "source-c012"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-021",
+      "question": "What are the eligibility rules and entitlement rate for PC?",
+      "before": {
+        "context_id": "urn:sha256:5c2d4fbac21ab69113ab42f5659bf8573c8ab5affa5717b9c77e2c4aac3e8346",
+        "elapsed_ms": 102.52937500000007,
+        "records": 64,
+        "relationships": 65,
+        "bytes": 334088,
+        "expected": 15,
+        "hits": [
+          "source-c008",
+          "source-c009",
+          "source-c012",
+          "source-c014",
+          "source-c015",
+          "source-c016",
+          "source-c017",
+          "source-c018",
+          "source-c019",
+          "source-c020",
+          "source-c021",
+          "source-c022",
+          "source-c023",
+          "source-c024",
+          "source-c025"
+        ],
+        "ambiguities": [],
+        "requirements": 5,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:5c2d4fbac21ab69113ab42f5659bf8573c8ab5affa5717b9c77e2c4aac3e8346",
+        "elapsed_ms": 94.69791700000042,
+        "records": 64,
+        "relationships": 65,
+        "bytes": 334088,
+        "expected": 15,
+        "hits": [
+          "source-c008",
+          "source-c009",
+          "source-c012",
+          "source-c014",
+          "source-c015",
+          "source-c016",
+          "source-c017",
+          "source-c018",
+          "source-c019",
+          "source-c020",
+          "source-c021",
+          "source-c022",
+          "source-c023",
+          "source-c024",
+          "source-c025"
+        ],
+        "ambiguities": [],
+        "requirements": 5,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-022",
+      "question": "How do State Pension and Pension Credit fit together. For example: If someone receives State Pension, could they also be entitled to Pension Credit?",
+      "before": {
+        "context_id": "urn:sha256:455892375da456171fe841406f941b047c5be04b331cf790d775af528c90dc07",
+        "elapsed_ms": 102.96583399999963,
+        "records": 64,
+        "relationships": 71,
+        "bytes": 316432,
+        "expected": 4,
+        "hits": [
+          "source-c003",
+          "source-c008",
+          "source-c012",
+          "source-c032"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:455892375da456171fe841406f941b047c5be04b331cf790d775af528c90dc07",
+        "elapsed_ms": 96.05599999999959,
+        "records": 64,
+        "relationships": 71,
+        "bytes": 316432,
+        "expected": 4,
+        "hits": [
+          "source-c003",
+          "source-c008",
+          "source-c012",
+          "source-c032"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-023",
+      "question": "What happens to Pension Credit if someone moves abroad?",
+      "before": {
+        "context_id": "urn:sha256:c27f38de864f8a63730f183ae0f91329fea512ad3fdd22bedb0e43f8a46c2bc6",
+        "elapsed_ms": 99.77429200000006,
+        "records": 54,
+        "relationships": 51,
+        "bytes": 264238,
+        "expected": 3,
+        "hits": [
+          "source-c002",
+          "source-c008",
+          "source-c009"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:c27f38de864f8a63730f183ae0f91329fea512ad3fdd22bedb0e43f8a46c2bc6",
+        "elapsed_ms": 93.05925000000025,
+        "records": 54,
+        "relationships": 51,
+        "bytes": 264238,
+        "expected": 3,
+        "hits": [
+          "source-c002",
+          "source-c008",
+          "source-c009"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-024",
+      "question": "What additional benefits would you be entitled to if you are entitled to IIDB?",
+      "before": {
+        "context_id": "urn:sha256:bbdee8be10b24868defcc871343b61c47611caae6351bdf110781d9475919c64",
+        "elapsed_ms": 98.29375000000073,
+        "records": 39,
+        "relationships": 24,
+        "bytes": 161115,
+        "expected": 4,
+        "hits": [
+          "source-c037",
+          "source-c040",
+          "source-c041"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:bbdee8be10b24868defcc871343b61c47611caae6351bdf110781d9475919c64",
+        "elapsed_ms": 88.44325000000026,
+        "records": 39,
+        "relationships": 24,
+        "bytes": 161115,
+        "expected": 4,
+        "hits": [
+          "source-c037",
+          "source-c040",
+          "source-c041"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-025",
+      "question": "What happens if you are on IIDB when you reach State Pension Age?",
+      "before": {
+        "context_id": "urn:sha256:177665835d1f64a355da7fb36fbd0d62a944df4b20a756819537e5e468b5ce7a",
+        "elapsed_ms": 102.95716699999957,
+        "records": 64,
+        "relationships": 72,
+        "bytes": 325587,
+        "expected": 4,
+        "hits": [
+          "source-c003",
+          "source-c040"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:177665835d1f64a355da7fb36fbd0d62a944df4b20a756819537e5e468b5ce7a",
+        "elapsed_ms": 95.11841699999968,
+        "records": 64,
+        "relationships": 72,
+        "bytes": 325587,
+        "expected": 4,
+        "hits": [
+          "source-c003",
+          "source-c040"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-026",
+      "question": "What is the interaction between Child DLA and PIP?",
+      "before": {
+        "context_id": "urn:sha256:2f6d3f91860c8595cf1da0e2514070896d33e0b521e0f3db3e3722d59ee73781",
+        "elapsed_ms": 97.16229099999964,
+        "records": 50,
+        "relationships": 36,
+        "bytes": 216183,
+        "expected": 1,
+        "hits": [
+          "source-c039"
+        ],
+        "ambiguities": [],
+        "requirements": 2,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:2f6d3f91860c8595cf1da0e2514070896d33e0b521e0f3db3e3722d59ee73781",
+        "elapsed_ms": 90.45183399999951,
+        "records": 50,
+        "relationships": 36,
+        "bytes": 216183,
+        "expected": 1,
+        "hits": [
+          "source-c039"
+        ],
+        "ambiguities": [],
+        "requirements": 2,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-027",
+      "question": "Can you receive both IIDB and JSA?",
+      "before": {
+        "context_id": "urn:sha256:a9e8b93cb2d847eca75cbc50234112448cf70ac82e63e471abaa4eb975b2f534",
+        "elapsed_ms": 90.07033299999966,
+        "records": 40,
+        "relationships": 26,
+        "bytes": 166525,
+        "expected": 3,
+        "hits": [
+          "source-c032",
+          "source-c034",
+          "source-c040"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:a9e8b93cb2d847eca75cbc50234112448cf70ac82e63e471abaa4eb975b2f534",
+        "elapsed_ms": 85.79349999999977,
+        "records": 40,
+        "relationships": 26,
+        "bytes": 166525,
+        "expected": 3,
+        "hits": [
+          "source-c032",
+          "source-c034",
+          "source-c040"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-028",
+      "question": "Can you receive both IIDB and ESA?",
+      "before": {
+        "context_id": "urn:sha256:594c77d335aeeafacc248bb554e450b14705670a2d1b3fc1a740a70a08951595",
+        "elapsed_ms": 85.43787499999962,
+        "records": 40,
+        "relationships": 26,
+        "bytes": 164604,
+        "expected": 3,
+        "hits": [
+          "source-c032",
+          "source-c034",
+          "source-c040"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:594c77d335aeeafacc248bb554e450b14705670a2d1b3fc1a740a70a08951595",
+        "elapsed_ms": 81.74045800000022,
+        "records": 40,
+        "relationships": 26,
+        "bytes": 164604,
+        "expected": 3,
+        "hits": [
+          "source-c032",
+          "source-c034",
+          "source-c040"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-029",
+      "question": "What is the relationship between IIDB, PIP, Attendance Allowance and DLA?",
+      "before": {
+        "context_id": "urn:sha256:a9bfeee468e03eb87893314563d801b1a528a79b314c35ffc55e36a749373e72",
+        "elapsed_ms": 103.17679099999987,
+        "records": 56,
+        "relationships": 43,
+        "bytes": 253646,
+        "expected": 4,
+        "hits": [
+          "source-c034",
+          "source-c039",
+          "source-c040",
+          "source-c041"
+        ],
+        "ambiguities": [],
+        "requirements": 5,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:a9bfeee468e03eb87893314563d801b1a528a79b314c35ffc55e36a749373e72",
+        "elapsed_ms": 96.5443750000004,
+        "records": 56,
+        "relationships": 43,
+        "bytes": 253646,
+        "expected": 4,
+        "hits": [
+          "source-c034",
+          "source-c039",
+          "source-c040",
+          "source-c041"
+        ],
+        "ambiguities": [],
+        "requirements": 5,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-030",
+      "question": "How does IIDB relate to PIP?",
+      "before": {
+        "context_id": "urn:sha256:3c557deab4a723732243a44f9a8dd59d886865da5f1a806aa50d86334d5161eb",
+        "elapsed_ms": 98.1073750000005,
+        "records": 64,
+        "relationships": 88,
+        "bytes": 341569,
+        "expected": 3,
+        "hits": [
+          "source-c034",
+          "source-c040",
+          "source-c041"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:3c557deab4a723732243a44f9a8dd59d886865da5f1a806aa50d86334d5161eb",
+        "elapsed_ms": 90.60450000000037,
+        "records": 64,
+        "relationships": 88,
+        "bytes": 341569,
+        "expected": 3,
+        "hits": [
+          "source-c034",
+          "source-c040",
+          "source-c041"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-031",
+      "question": "What additional benefits would you be entitled to if you are entitled to PIP?",
+      "before": {
+        "context_id": "urn:sha256:ab1e17cf9d6f5ac83d2ab3649a08f8f7f54828e618cdaf4d05251f0523d86c74",
+        "elapsed_ms": 92.52016700000058,
+        "records": 46,
+        "relationships": 32,
+        "bytes": 189454,
+        "expected": 3,
+        "hits": [
+          "source-c027",
+          "source-c037",
+          "source-c039"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:ab1e17cf9d6f5ac83d2ab3649a08f8f7f54828e618cdaf4d05251f0523d86c74",
+        "elapsed_ms": 84.18370899999991,
+        "records": 46,
+        "relationships": 32,
+        "bytes": 189454,
+        "expected": 3,
+        "hits": [
+          "source-c027",
+          "source-c037",
+          "source-c039"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-032",
+      "question": "What happens if you are on PIP when you reach State Pension Age?",
+      "before": {
+        "context_id": "urn:sha256:cad05dc868da8e99e2bc119643c1d38c567104cf276e650a0588449c139c33a5",
+        "elapsed_ms": 103.4960000000001,
+        "records": 64,
+        "relationships": 72,
+        "bytes": 328837,
+        "expected": 2,
+        "hits": [
+          "source-c004",
+          "source-c039"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:cad05dc868da8e99e2bc119643c1d38c567104cf276e650a0588449c139c33a5",
+        "elapsed_ms": 95.20941599999969,
+        "records": 64,
+        "relationships": 72,
+        "bytes": 328837,
+        "expected": 2,
+        "hits": [
+          "source-c004",
+          "source-c039"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-033",
+      "question": "What is the interaction between Child DLA and PIP?",
+      "before": {
+        "context_id": "urn:sha256:2f6d3f91860c8595cf1da0e2514070896d33e0b521e0f3db3e3722d59ee73781",
+        "elapsed_ms": 100.06683299999986,
+        "records": 50,
+        "relationships": 36,
+        "bytes": 216183,
+        "expected": 1,
+        "hits": [
+          "source-c039"
+        ],
+        "ambiguities": [],
+        "requirements": 2,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:2f6d3f91860c8595cf1da0e2514070896d33e0b521e0f3db3e3722d59ee73781",
+        "elapsed_ms": 92.97083399999974,
+        "records": 50,
+        "relationships": 36,
+        "bytes": 216183,
+        "expected": 1,
+        "hits": [
+          "source-c039"
+        ],
+        "ambiguities": [],
+        "requirements": 2,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-034",
+      "question": "Can you receive both PIP and JSA?",
+      "before": {
+        "context_id": "urn:sha256:9265ff5a6e6988cf957261ba87109050652cf468fb5debe06e1f0f698e80de5d",
+        "elapsed_ms": 99.65212500000052,
+        "records": 46,
+        "relationships": 31,
+        "bytes": 196232,
+        "expected": 3,
+        "hits": [
+          "source-c034",
+          "source-c037",
+          "source-c039"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:9265ff5a6e6988cf957261ba87109050652cf468fb5debe06e1f0f698e80de5d",
+        "elapsed_ms": 90.7264580000001,
+        "records": 46,
+        "relationships": 31,
+        "bytes": 196232,
+        "expected": 3,
+        "hits": [
+          "source-c034",
+          "source-c037",
+          "source-c039"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-035",
+      "question": "Can you receive both PIP and ESA?",
+      "before": {
+        "context_id": "urn:sha256:afa7a1f66bfb710af9857ab19f3253b24a408510cdc2226338481853fc421087",
+        "elapsed_ms": 94.7860840000003,
+        "records": 46,
+        "relationships": 31,
+        "bytes": 194970,
+        "expected": 3,
+        "hits": [
+          "source-c034",
+          "source-c037",
+          "source-c039"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:afa7a1f66bfb710af9857ab19f3253b24a408510cdc2226338481853fc421087",
+        "elapsed_ms": 90.84141699999964,
+        "records": 46,
+        "relationships": 31,
+        "bytes": 194970,
+        "expected": 3,
+        "hits": [
+          "source-c034",
+          "source-c037",
+          "source-c039"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-036",
+      "question": "What is the relationship between PIP, Attendance Allowance and DLA?",
+      "before": {
+        "context_id": "urn:sha256:44a52a5883c18a70a6da15378a7a8c6b251a3333c2bb2464b2fc0121aa43d5a3",
+        "elapsed_ms": 102.79154199999994,
+        "records": 49,
+        "relationships": 35,
+        "bytes": 219522,
+        "expected": 2,
+        "hits": [
+          "source-c034",
+          "source-c039"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:44a52a5883c18a70a6da15378a7a8c6b251a3333c2bb2464b2fc0121aa43d5a3",
+        "elapsed_ms": 91.74420800000007,
+        "records": 49,
+        "relationships": 35,
+        "bytes": 219522,
+        "expected": 2,
+        "hits": [
+          "source-c034",
+          "source-c039"
+        ],
+        "ambiguities": [],
+        "requirements": 3,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-037",
+      "question": "If you receive PIP and War Pensions Constant Allowance, how much would you get each week (please provide all variations)?",
+      "before": {
+        "context_id": "urn:sha256:2bb77adbcd18ed10033f987d0bcaca3abb82273c5e3d111d06a36ff560e95d11",
+        "elapsed_ms": 106.23979099999997,
+        "records": 38,
+        "relationships": 21,
+        "bytes": 157345,
+        "expected": 2,
+        "hits": [
+          "source-c034",
+          "source-c041"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:2bb77adbcd18ed10033f987d0bcaca3abb82273c5e3d111d06a36ff560e95d11",
+        "elapsed_ms": 92.33024999999998,
+        "records": 38,
+        "relationships": 21,
+        "bytes": 157345,
+        "expected": 2,
+        "hits": [
+          "source-c034",
+          "source-c041"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-038",
+      "question": "Under what circumstances can a Citizen claim Carers Allowance?",
+      "before": {
+        "context_id": "urn:sha256:e13efe343b958ff3b578d2282625a9d0ffc6ae8c0f5215c6a68a004b11eac44b",
+        "elapsed_ms": 108.01583399999981,
+        "records": 61,
+        "relationships": 67,
+        "bytes": 324184,
+        "expected": 2,
+        "hits": [
+          "source-c036",
+          "source-c037"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:e13efe343b958ff3b578d2282625a9d0ffc6ae8c0f5215c6a68a004b11eac44b",
+        "elapsed_ms": 99.51133300000038,
+        "records": 61,
+        "relationships": 67,
+        "bytes": 324184,
+        "expected": 2,
+        "hits": [
+          "source-c036",
+          "source-c037"
+        ],
+        "ambiguities": [],
+        "requirements": 1,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-039",
+      "question": "What impact does Carers Allowance have on other benefits which are being claimed?",
+      "before": {
+        "context_id": "urn:sha256:55384f0138ed992dafb9b19d31615f577dfc2cfd6713f37f700bd97077aa44f2",
+        "elapsed_ms": 108.06566599999951,
+        "records": 64,
+        "relationships": 78,
+        "bytes": 339447,
+        "expected": 5,
+        "hits": [
+          "source-c027",
+          "source-c029",
+          "source-c034",
+          "source-c036",
+          "source-c037"
+        ],
+        "ambiguities": [],
+        "requirements": 2,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:55384f0138ed992dafb9b19d31615f577dfc2cfd6713f37f700bd97077aa44f2",
+        "elapsed_ms": 100.45966599999974,
+        "records": 64,
+        "relationships": 78,
+        "bytes": 339447,
+        "expected": 5,
+        "hits": [
+          "source-c027",
+          "source-c029",
+          "source-c034",
+          "source-c036",
+          "source-c037"
+        ],
+        "ambiguities": [],
+        "requirements": 2,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    },
+    {
+      "id": "staff-040",
+      "question": "What happens to Carers Allowance if someone is caring for two or more people?",
+      "before": {
+        "context_id": "urn:sha256:fe7ae3ffd7e404951b63f1c2f79331a5258995342cda7c286a202580125d7baf",
+        "elapsed_ms": 107.79491599999983,
+        "records": 61,
+        "relationships": 67,
+        "bytes": 321795,
+        "expected": 3,
+        "hits": [
+          "source-c036",
+          "source-c037",
+          "source-c038"
+        ],
+        "ambiguities": [],
+        "requirements": 2,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "after": {
+        "context_id": "urn:sha256:fe7ae3ffd7e404951b63f1c2f79331a5258995342cda7c286a202580125d7baf",
+        "elapsed_ms": 95.88125000000036,
+        "records": 61,
+        "relationships": 67,
+        "bytes": 321795,
+        "expected": 3,
+        "hits": [
+          "source-c036",
+          "source-c037",
+          "source-c038"
+        ],
+        "ambiguities": [],
+        "requirements": 2,
+        "truncated": true,
+        "evidence_status": "insufficient"
+      },
+      "identical_package": true
+    }
+  ],
+  "timings": [
+    {
+      "id": "staff-005",
+      "repeat": 0,
+      "engine": "before",
+      "elapsed_ms": 388.98,
+      "peak_fetches": 1,
+      "calls": 21,
+      "package_bytes": 315811
+    },
+    {
+      "id": "staff-005",
+      "repeat": 0,
+      "engine": "after",
+      "elapsed_ms": 174.21,
+      "peak_fetches": 4,
+      "calls": 21,
+      "package_bytes": 315811
+    },
+    {
+      "id": "staff-005",
+      "repeat": 1,
+      "engine": "after",
+      "elapsed_ms": 174.13,
+      "peak_fetches": 4,
+      "calls": 21,
+      "package_bytes": 315811
+    },
+    {
+      "id": "staff-005",
+      "repeat": 1,
+      "engine": "before",
+      "elapsed_ms": 396,
+      "peak_fetches": 1,
+      "calls": 21,
+      "package_bytes": 315811
+    },
+    {
+      "id": "staff-005",
+      "repeat": 2,
+      "engine": "before",
+      "elapsed_ms": 392.89,
+      "peak_fetches": 1,
+      "calls": 21,
+      "package_bytes": 315811
+    },
+    {
+      "id": "staff-005",
+      "repeat": 2,
+      "engine": "after",
+      "elapsed_ms": 177.07,
+      "peak_fetches": 4,
+      "calls": 21,
+      "package_bytes": 315811
+    },
+    {
+      "id": "staff-008",
+      "repeat": 0,
+      "engine": "before",
+      "elapsed_ms": 366.84,
+      "peak_fetches": 1,
+      "calls": 20,
+      "package_bytes": 143374
+    },
+    {
+      "id": "staff-008",
+      "repeat": 0,
+      "engine": "after",
+      "elapsed_ms": 197.57,
+      "peak_fetches": 4,
+      "calls": 20,
+      "package_bytes": 367200
+    },
+    {
+      "id": "staff-008",
+      "repeat": 1,
+      "engine": "after",
+      "elapsed_ms": 192.81,
+      "peak_fetches": 4,
+      "calls": 20,
+      "package_bytes": 367200
+    },
+    {
+      "id": "staff-008",
+      "repeat": 1,
+      "engine": "before",
+      "elapsed_ms": 364.86,
+      "peak_fetches": 1,
+      "calls": 20,
+      "package_bytes": 143374
+    },
+    {
+      "id": "staff-008",
+      "repeat": 2,
+      "engine": "before",
+      "elapsed_ms": 375.37,
+      "peak_fetches": 1,
+      "calls": 20,
+      "package_bytes": 143374
+    },
+    {
+      "id": "staff-008",
+      "repeat": 2,
+      "engine": "after",
+      "elapsed_ms": 192.05,
+      "peak_fetches": 4,
+      "calls": 20,
+      "package_bytes": 367200
+    },
+    {
+      "id": "staff-020",
+      "repeat": 0,
+      "engine": "before",
+      "elapsed_ms": 300.96,
+      "peak_fetches": 1,
+      "calls": 16,
+      "package_bytes": 254865
+    },
+    {
+      "id": "staff-020",
+      "repeat": 0,
+      "engine": "after",
+      "elapsed_ms": 158.7,
+      "peak_fetches": 4,
+      "calls": 16,
+      "package_bytes": 254865
+    },
+    {
+      "id": "staff-020",
+      "repeat": 1,
+      "engine": "after",
+      "elapsed_ms": 154.4,
+      "peak_fetches": 4,
+      "calls": 16,
+      "package_bytes": 254865
+    },
+    {
+      "id": "staff-020",
+      "repeat": 1,
+      "engine": "before",
+      "elapsed_ms": 304.24,
+      "peak_fetches": 1,
+      "calls": 16,
+      "package_bytes": 254865
+    },
+    {
+      "id": "staff-020",
+      "repeat": 2,
+      "engine": "before",
+      "elapsed_ms": 311.69,
+      "peak_fetches": 1,
+      "calls": 16,
+      "package_bytes": 254865
+    },
+    {
+      "id": "staff-020",
+      "repeat": 2,
+      "engine": "after",
+      "elapsed_ms": 155.42,
+      "peak_fetches": 4,
+      "calls": 16,
+      "package_bytes": 254865
+    },
+    {
+      "id": "staff-024",
+      "repeat": 0,
+      "engine": "before",
+      "elapsed_ms": 324.72,
+      "peak_fetches": 1,
+      "calls": 18,
+      "package_bytes": 161115
+    },
+    {
+      "id": "staff-024",
+      "repeat": 0,
+      "engine": "after",
+      "elapsed_ms": 160.76,
+      "peak_fetches": 4,
+      "calls": 18,
+      "package_bytes": 161115
+    },
+    {
+      "id": "staff-024",
+      "repeat": 1,
+      "engine": "after",
+      "elapsed_ms": 164.78,
+      "peak_fetches": 4,
+      "calls": 18,
+      "package_bytes": 161115
+    },
+    {
+      "id": "staff-024",
+      "repeat": 1,
+      "engine": "before",
+      "elapsed_ms": 345.86,
+      "peak_fetches": 1,
+      "calls": 18,
+      "package_bytes": 161115
+    },
+    {
+      "id": "staff-024",
+      "repeat": 2,
+      "engine": "before",
+      "elapsed_ms": 340.72,
+      "peak_fetches": 1,
+      "calls": 18,
+      "package_bytes": 161115
+    },
+    {
+      "id": "staff-024",
+      "repeat": 2,
+      "engine": "after",
+      "elapsed_ms": 172.19,
+      "peak_fetches": 4,
+      "calls": 18,
+      "package_bytes": 161115
+    },
+    {
+      "id": "staff-025",
+      "repeat": 0,
+      "engine": "before",
+      "elapsed_ms": 325.54,
+      "peak_fetches": 1,
+      "calls": 17,
+      "package_bytes": 325587
+    },
+    {
+      "id": "staff-025",
+      "repeat": 0,
+      "engine": "after",
+      "elapsed_ms": 169.57,
+      "peak_fetches": 4,
+      "calls": 17,
+      "package_bytes": 325587
+    },
+    {
+      "id": "staff-025",
+      "repeat": 1,
+      "engine": "after",
+      "elapsed_ms": 165.38,
+      "peak_fetches": 4,
+      "calls": 17,
+      "package_bytes": 325587
+    },
+    {
+      "id": "staff-025",
+      "repeat": 1,
+      "engine": "before",
+      "elapsed_ms": 330.49,
+      "peak_fetches": 1,
+      "calls": 17,
+      "package_bytes": 325587
+    },
+    {
+      "id": "staff-025",
+      "repeat": 2,
+      "engine": "before",
+      "elapsed_ms": 333.36,
+      "peak_fetches": 1,
+      "calls": 17,
+      "package_bytes": 325587
+    },
+    {
+      "id": "staff-025",
+      "repeat": 2,
+      "engine": "after",
+      "elapsed_ms": 175.64,
+      "peak_fetches": 4,
+      "calls": 17,
+      "package_bytes": 325587
+    }
+  ],
+  "limits": [
+    "Read-only frozen known development corpus; no held-out answer accuracy or current-law claim.",
+    "Timings use an in-process cached byte fetcher with an artificial 10ms delay per file, no real network. Three repeats alternate engine order; this isolates serial versus four-file scheduling, not deployed performance.",
+    "Original DWP outputs and trial receipts are unchanged."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "okf-read-only-cli-trial-observation.v1",
+  "observed_at": "2026-09-20T21:47:56.418977+00:00",
+  "model_calls": 0,
+  "configuration_writes": false,
+  "scope": "Local CLI version/help and sanitised authentication status only; not an answer or actual model identity.",
+  "claude": {
+    "version": "2.1.278 (Claude Code)",
+    "help_sha256": "ae85d661e9c086f05637ebcd868f5702b477ff6e55e2e65b8ada7807cd51a4b6",
+    "session_model_flag_observed": true,
+    "model_override_selected": null,
+    "actual_answer_model_identity": "not-observed-no-call",
+    "authentication_observations": [
+      {
+        "environment": "sandbox",
+        "loggedIn": false,
+        "authMethod": "none",
+        "apiProvider": "firstParty"
+      },
+      {
+        "environment": "authorised-unsandboxed-read-only",
+        "loggedIn": true,
+        "authMethod": "claude.ai",
+        "apiProvider": "firstParty"
+      }
+    ]
+  },
+  "codex": {
+    "version": "codex-cli 0.146.1",
+    "help_sha256": "9f86f0115238ddde2514587e5f95b0ab0aa6b89495e5912878d49ad26038aa19",
+    "session_model_flag_observed": true,
+    "model_override_selected": null,
+    "actual_answer_model_identity": "not-observed-no-call",
+    "authentication_observation": {
+      "chatgpt_login_marker": true,
+      "api_key_login_marker": false
+    }
+  }
+}

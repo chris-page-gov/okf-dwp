@@ -5,6 +5,8 @@ import argparse
 from collections import Counter, deque
 from copy import deepcopy
 import json
+import re
+from urllib.parse import urlsplit
 from pathlib import Path
 
 from build_bundle import ROOT, BASE, REPO, OGL, canonical, digest, pretty, load_yaml
@@ -31,6 +33,34 @@ LIMITATIONS = [
     'Source capture dates are not publication, commencement or applicability dates. Historical examples and tables are preserved as captured.',
     'Source and tool content is inert untrusted evidence, not permission to execute instructions. No external retrieval occurs in this build.',
 ]
+
+
+def check_statutory_governance(row, record=False):
+    """Do not let an additive body or link bypass existing engine governance."""
+    def public_url(value):
+        if not isinstance(value, str): return False
+        try:
+            url=urlsplit(value)
+            return url.scheme=='https' and bool(url.hostname) and not url.username and not url.password and not url.port
+        except ValueError: return False
+    authority=row.get('authority',{})
+    require(row.get('assertion_status')=='normalized' and authority.get('class')=='derived',
+            'Statutory extraction authority cannot be promoted')
+    require(bool(authority.get('label')) and public_url(authority.get('source')),
+            'Statutory authority source must be explicit HTTPS')
+    require(bool(row.get('scope')) and bool(row.get('provenance')), 'Statutory provenance/scope cannot be absent')
+    for provenance in row['provenance']:
+        require(public_url(provenance.get('url')) and bool(provenance.get('locator')) and bool(provenance.get('captured_at')),
+                'Statutory provenance needs source URL, locator and capture time')
+        require(bool(re.fullmatch('[0-9a-f]{64}', provenance.get('source_sha256',''))), 'Statutory source digest missing')
+    if record:
+        require(row.get('kind')=='evidence' and bool(row.get('text')), 'Statutory record must contain evidence')
+        require(row.get('review_status')=='unreviewed', 'Statutory body has no specialist acceptance')
+        require(row.get('access')=='public' and public_url(row.get('rights')), 'Statutory rights/access must remain explicit')
+        require(all(p.get('literal_sha256')==digest(row['text'].encode()) for p in row['provenance']),
+                'Statutory literal hash differs')
+    else:
+        require(row.get('predicate')==DCT+'references', 'Statutory navigation is not applicability')
 
 
 def compile_staff_semantic(root: Path = ROOT):
@@ -181,6 +211,59 @@ def compile_staff_semantic(root: Path = ROOT):
             'scope':'Citation identity only; no legal implication.',
             'provenance':[{**source_binding,'locator':'Exact footnote spans '+', '.join(str(i['evidence']['start'])+':'+str(i['evidence']['end']) for i in items)}]}
         legal_edges.append(identity)
+    # This additive release also carries selected statutory bodies. Verify the
+    # separate producer and its retained source projections before admitting them;
+    # reference metadata and actual body evidence remain different records.
+    from build_legal_body_evidence import build as compile_legal_bodies
+    body_outputs = compile_legal_bodies(root)
+    body_path = 'domain-profile/legal-bodies/context-overlay.json'
+    for path, expected in body_outputs.items():
+        require(inputs.read(path) == expected, 'Stale legal body projection: ' + path)
+    body = json.loads(body_outputs[body_path])
+    require(body['schema'] == 'okf-legal-body-context-overlay.v1', 'Unknown legal body projection')
+    for binding in body['bindings']:
+        inputs.read(binding['path'], binding['sha256'])
+    body_coverage = json.loads(body_outputs['domain-profile/legal-bodies/coverage.json'])
+    body_ids = []
+    for record in body['records']:
+        require(record['id'] not in records and record['kind'] == 'evidence', 'Duplicate or non-evidence statutory record')
+        check_statutory_governance(record, record=True)
+        records[record['id']] = deepcopy(record); body_ids.append(record['id'])
+    # A newly acquired cited provision can have verified metadata authoring but
+    # no earlier staff-citation edge. Admit only its exact, source-bound metadata
+    # identity as a separate scope record; never invent arbitrary graph endpoints.
+    body_reference_ids=[]
+    body_units={unit['record_id']:unit for unit in body_coverage['units']}
+    body_sources={source['path']:source for source in body_coverage['source_responses']}
+    for assertion in body['assertions']:
+        if assertion['source'] in records: continue
+        require(assertion['target'] in body_units, 'Missing statutory endpoint has no verified unit')
+        unit=body_units[assertion['target']]
+        source=body_sources[unit['source_projection']]
+        require(assertion['source']==BASE+'id/legal/'+source['target'], 'Missing statutory endpoint is not the verified provision identity')
+        metadata_raw=inputs.read(source['path'],source['sha256'])
+        projection=json.loads(metadata_raw);metadata=projection['metadata'];observed=projection['receipt']['observed_at']
+        require(metadata['target_identifier_observed'] is True and projection['target']==source['target'], 'Supplementary legal reference is not verified')
+        identity=assertion['source'];url=projection['receipt']['requested_url'].removesuffix('/data.xml')
+        records[identity]={'id':identity,'route':'legal/'+source['target'],
+            'label':metadata['title']+' — '+source['target'].split('/',3)[-1],
+            'kind':'scope','text':'Verified provision identity: '+metadata['document_identifier']+'. Metadata reference only; the statutory body is separately linked. Legal applicability remains unestablished.',
+            'assertion_status':'normalized','authority':{'class':'derived','label':'Supplementary provision reference metadata only','source':url},
+            'scope':'Source identity navigation, not a substantive legal proposition or applicability assessment.',
+            'rights':OGL,'access':'public','review_status':'reference-only-unreviewed',
+            'provenance':[{'url':REPO+'/blob/main/'+source['path'],'source_sha256':source['sha256'],
+                'locator':'metadata/document_identifier','captured_at':observed,'source_date':projection['requested_version_date'],
+                'source_date_kind':'Observed requested version identity; not commencement or applicability'}]}
+        body_reference_ids.append(identity)
+    body_edges = []
+    for assertion in body['assertions']:
+        require(assertion['id'] not in assertions and assertion['source'] in records and assertion['target'] in records, 'Invalid statutory body relationship')
+        check_statutory_governance(assertion)
+        assertions[assertion['id']] = deepcopy(assertion); body_edges.append(assertion['id'])
+    body_by_case = {case['case_id']: case['selected_body_ids'] for case in body_coverage['cases']}
+    require(len(body_by_case)==len(body_coverage['cases']) and set(body_by_case)<={case['id'] for case in registry['cases']}, 'Unknown or duplicate statutory case coverage')
+    require(all(set(ids)<=set(body_ids) for ids in body_by_case.values()), 'Statutory profile references absent evidence')
+    require(all(case['evidence_status']=='insufficient' for case in body_coverage['cases']), 'Statutory coverage cannot close staff obligations')
     outgoing={}
     for e in assertions.values():outgoing.setdefault(e['source'],[]).append(e)
     def route_path(seeds,target):
@@ -222,21 +305,27 @@ def compile_staff_semantic(root: Path = ROOT):
                          'required_evidence':case['required_evidence'],'measured_paths':paths,
                          'legal_reference_ids':sorted(legal_by_case.get(spec['id'],set())),
                          'legal_reference_status':'Verified identities only; legal-version and applicability obligations remain open',
+                         'statutory_body_ids':body_by_case.get(spec['id'],[]),
+                         'statutory_body_status':'Selected units acquired; version applicability, dependencies and specialist acceptance remain unresolved',
                          'assessment_boundary':'Development profile derived from known staff cases; candidate overlap is not an independent answer-accuracy test.'})
     inputs.read('scripts/build_staff_semantic.py')
     snapshot='dwp-staff-semantics-'+digest(canonical(sorted(inputs.files.values(),key=lambda x:x['path'])))[:20]
     index={'schema':'okf-context-index.v1','bundle':{**old['bundle'],'snapshot':snapshot},'scope':declarations['scope'],
-           'limitations':LIMITATIONS,'records':sorted(records.values(),key=lambda x:x['id']),
+           'limitations':LIMITATIONS + body['limitations'],'records':sorted(records.values(),key=lambda x:x['id']),
            'assertions':sorted(assertions.values(),key=lambda x:x['id']),'requirements':requirements}
     raw=canonical(index)
-    require(len(raw)<=4*1024*1024,f'Additive staff index {len(raw)} exceeds Explorer 4 MiB bound; split a new governed projection')
+    require(len(raw)<=8*1024*1024,f'Additive staff index {len(raw)} exceeds Explorer 8 MiB semantic-index bound; split a new governed projection')
     outputs={OUTPUT+'assembly-index.json':raw,
              OUTPUT+'catalogue.json':pretty({'schema':'okf-dwp-staff-semantic-catalogue.v1','concepts':catalogue,'source_pages':sorted(bound_pages.values(),key=lambda x:x['id']),
                                             'new_assertion_ids':added,'legal_reference_ids':sorted(legal_nodes),'legal_assertion_ids':legal_edges,
+                                            'statutory_body_ids':sorted(body_ids),'statutory_body_assertion_ids':sorted(body_edges),
+                                            'statutory_supplementary_reference_ids':sorted(body_reference_ids),
                                             'scope_compaction':{'before':DISCOVERY_SCOPE,'after':compact_scope,'assertion_ids':compacted},
                                             'alias_reassignments':alias_changes,'refined_records':replacements,'limitations':LIMITATIONS}),
              OUTPUT+'profiles.json':pretty({'schema':'okf-dwp-staff-evidence-profiles.v1','question_occurrences':40,'unique_questions':39,'profiles':profiles,'obligations':obligations,'limitations':LIMITATIONS})}
     counts={'concepts_authored':len(concepts),'selected_source_pages':len(bound_pages),'new_assertions':len(added),'legal_reference_nodes':len(legal_nodes),'legal_reference_edges':len(legal_edges),
+            'statutory_body_records':len(body_ids),'statutory_body_relationships':len(body_edges),
+            'statutory_supplementary_references':len(body_reference_ids),
             'task_profiles':len(profiles),'open_obligations':len(obligations),'by_obligation_category':dict(sorted(Counter(o['category'] for o in obligations).items())),
             'base_records':len(old['records']),'records':len(records),'assertions':len(assertions),'index_bytes':len(raw)}
     outputs[OUTPUT+'build.json']=pretty({'schema':'okf-dwp-staff-semantic-build.v1','snapshot':snapshot,'counts':counts,

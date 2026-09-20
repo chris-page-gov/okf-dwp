@@ -1,6 +1,6 @@
 {
   "counts": {
-    "assertions": 1322,
+    "assertions": 1427,
     "base_records": 712,
     "by_obligation_category": {
       "applicability_unresolved": 40,
@@ -9,14 +9,17 @@
       "legal_version_unreconciled": 40,
       "question_scope_unresolved": 40
     },
-    "concepts_authored": 43,
-    "index_bytes": 4120659,
+    "concepts_authored": 51,
+    "index_bytes": 4581721,
     "legal_reference_edges": 62,
     "legal_reference_nodes": 44,
-    "new_assertions": 155,
+    "new_assertions": 217,
     "open_obligations": 203,
-    "records": 840,
-    "selected_source_pages": 60,
+    "records": 901,
+    "selected_source_pages": 96,
+    "statutory_body_records": 20,
+    "statutory_body_relationships": 43,
+    "statutory_supplementary_references": 1,
     "task_profiles": 40
   },
   "frozen_input_policy": "Preserve all frozen source and projection bytes; all refinements and alias reassignments are additive view changes only.",
@@ -27,14 +30,44 @@
       "sha256": "3b4cef18be425271f649349b65dd0b6dafb1e6e4e12a432e94e0b3f3124b2ef6"
     },
     {
-      "bytes": 34806,
-      "path": "domain-profile/staff-semantic/concepts.yamlld",
-      "sha256": "0fbc9673f539a686b7c620be0e90f0eb774a7c52a00c235a48fbb8af867e9303"
+      "bytes": 239528,
+      "path": "domain-profile/legal-bodies/context-overlay.json",
+      "sha256": "1e38f5e1cd6a113758e692c718530dde43bda7c31200125475e230a6a0eef9eb"
     },
     {
-      "bytes": 84207,
+      "bytes": 96866,
+      "path": "domain-profile/legal-bodies/coverage.json",
+      "sha256": "30d4fa19ce31c592c02e6a57908a073e79a5737b442c4c5a9a2218d6438485c7"
+    },
+    {
+      "bytes": 339502,
+      "path": "domain-profile/legal-bodies/evidence.yamlld",
+      "sha256": "2a32d60bcdb0787716d586eebe242946371dbbe24b22f8875834096f091898b7"
+    },
+    {
+      "bytes": 1065,
+      "path": "domain-profile/legal-bodies/navigation.json",
+      "sha256": "028230b5d60f0828bf89f13075198502896fb51f7ec0867990df53608fb52e68"
+    },
+    {
+      "bytes": 23894,
+      "path": "domain-profile/legal-bodies/seeds.json",
+      "sha256": "5e408304b46ff723fd4a866fb47376e5097dfa2cbd80713139e54b74480d493c"
+    },
+    {
+      "bytes": 218744,
+      "path": "domain-profile/legal-reconciliation/references.yamlld",
+      "sha256": "f612335ee71b440e75cf5fc99ea5f4e3bf4133a6d57c0fafb05ff3a74008c191"
+    },
+    {
+      "bytes": 53953,
+      "path": "domain-profile/staff-semantic/concepts.yamlld",
+      "sha256": "c254fb14f1dd4e13a80a189215fba2353598373eeaaddcf8abc89939590e09b3"
+    },
+    {
+      "bytes": 85689,
       "path": "domain-profile/staff-semantic/profiles.yamlld",
-      "sha256": "e1010fec1606d82b5a6a2a9fccb813b60930729f185a0d67d28bf7df23b5f227"
+      "sha256": "49d52629aace44e56e2a9e57342cc6daa6375a0ab5d67aa6f1da98dc6e5f4379"
     },
     {
       "bytes": 103725,
@@ -52,9 +85,14 @@
       "sha256": "2e5313da51875cd8d76fd3c3c06694f68d30f56efee259abb6c1cb51f7bf1827"
     },
     {
-      "bytes": 21813,
+      "bytes": 18318,
+      "path": "scripts/build_legal_body_evidence.py",
+      "sha256": "7899df0a16e4d7feed7761f16653a399ec6d334f5ccf4b558d8d6c418a92efb7"
+    },
+    {
+      "bytes": 28955,
       "path": "scripts/build_staff_semantic.py",
-      "sha256": "1131ce58ab36c70e413ea8148cff901536ed7532ea7271e50c914fa84c0ad1b1"
+      "sha256": "7a263216264aa4af239f14d7cf56aa4e61e45bd6a0239f01ceb76158d3dc83fd"
     },
     {
       "bytes": 1046475,
@@ -117,9 +155,29 @@
       "sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a"
     },
     {
+      "bytes": 10977,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-memo-01-26-0605724317.json",
+      "sha256": "14de5319b76d1d512343dac8e9273fea16331cd6a02f0c555b8b84fc8d8fede3"
+    },
+    {
+      "bytes": 14121,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-memo-02-25-e03b36ce3e.json",
+      "sha256": "1803b26fbd5f5536dae404d87eb5598f906b0aa1ad1f040de40802f0da133314"
+    },
+    {
       "bytes": 7679,
       "path": "source/full-dmg-2026-09-15/pages/dmg-memo-02-26-f7835f1e40.json",
       "sha256": "dbedf3629d9e48170b28131b376e4be417e77679ee8524acc55c95cca87bcbab"
+    },
+    {
+      "bytes": 30281,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-memo-04-24-282c3cef22.json",
+      "sha256": "96a341849256210150e02de5b6a8d71808a501e7a73733e93c0e1402191a239b"
+    },
+    {
+      "bytes": 28937,
+      "path": "source/full-dmg-2026-09-15/pages/dmg-memo-06-25-5fee4f859a.json",
+      "sha256": "b760e928b19f28460b7ebe877e347aa8bc48f2bb048cd3ebc47254ef7dba4683"
     },
     {
       "bytes": 78433,
@@ -177,9 +235,29 @@
       "sha256": "039044b6fddda8d3476d3fa9fce766d7da6b12508704fc4fd2a1b97dd870a227"
     },
     {
+      "bytes": 105201,
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-memo-01-26-0605724317.pdf",
+      "sha256": "3f9046be5c3e80ca1e96cf59e5b648a358d07cf0ede104bd1d91daf785887db7"
+    },
+    {
+      "bytes": 119650,
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-memo-02-25-e03b36ce3e.pdf",
+      "sha256": "33ca59d7b36288d35b50242927aa4c8a2921b28eb78922bdf74a3a5983fdab4c"
+    },
+    {
       "bytes": 97148,
       "path": "source/full-dmg-2026-09-15/pdf/dmg-memo-02-26-f7835f1e40.pdf",
       "sha256": "45e454a6d546b653fc5926d29a64e5cc383145f5951581969ff6504631d55aa5"
+    },
+    {
+      "bytes": 91075,
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-memo-04-24-282c3cef22.pdf",
+      "sha256": "35741a2aae92c4082f3cf9fe493674d3c33d998bdf9ecd8bc40a3014edb4ae75"
+    },
+    {
+      "bytes": 160109,
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-memo-06-25-5fee4f859a.pdf",
+      "sha256": "006a34df1aa517d8441cb77ada09bc4376e6876c2293130420de039ecf4505da"
     },
     {
       "bytes": 166443,
@@ -235,6 +313,21 @@
       "bytes": 616239,
       "path": "source/full-dmg-2026-09-15/pdf/dmg-vol8-ch41.pdf",
       "sha256": "bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418"
+    },
+    {
+      "bytes": 4160,
+      "path": "source/legal-bodies-2026-09-21-v2/manifest.json",
+      "sha256": "eae42f60f254471e2823be439605982930dcc81d832ae1cfbb3f994f0f51272e"
+    },
+    {
+      "bytes": 32186,
+      "path": "source/legal-bodies-2026-09-21-v2/provisions/ukpga--2002--16--section--4.json",
+      "sha256": "bf4fcae074683ecd21fe22dc0b23ad3f6cb634f954c6924ad9a3c84d4a51c30c"
+    },
+    {
+      "bytes": 3978,
+      "path": "source/legal-bodies-2026-09-21/manifest.json",
+      "sha256": "b1369eec1d766197c9f517f744b80ed47f0c7182a90ddfd0e0f2c86e9cf9018a"
     },
     {
       "bytes": 80089,
@@ -499,21 +592,21 @@
   ],
   "outputs": [
     {
-      "bytes": 4120659,
+      "bytes": 4581721,
       "path": "evaluation/semantic-expansion/assembly-index.json",
-      "sha256": "79ac30aef41ac467db83ec6b79ed20e4a4cc9330461d08713f45ea5830cb6e2d"
+      "sha256": "f3e74d970b18aaaa39a78dd6cbd7fce3bca15ca457d63704c5743936718b4587"
     },
     {
-      "bytes": 314185,
+      "bytes": 411500,
       "path": "evaluation/semantic-expansion/catalogue.json",
-      "sha256": "c6b318b455dd7879383a52b8b5ed542126fa9587424184105d16231c0b0a982f"
+      "sha256": "2c10bed909a254ddbe25cd6261c484096a98caed60e1774a24a918369f477744"
     },
     {
-      "bytes": 310663,
+      "bytes": 329587,
       "path": "evaluation/semantic-expansion/profiles.json",
-      "sha256": "26627a916323bf6fa7f99ba5ed0959807e3e5044a3ca76f354828f2187ac7821"
+      "sha256": "a10e3d6d2c8c01d97b303e11a21dedf3323d273b6bacc71de540047793bda81a"
     }
   ],
   "schema": "okf-dwp-staff-semantic-build.v1",
-  "snapshot": "dwp-staff-semantics-48fa02c3fdf28046dc57"
+  "snapshot": "dwp-staff-semantics-33e624ef99bb632271e5"
 }

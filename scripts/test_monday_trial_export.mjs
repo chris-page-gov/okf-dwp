@@ -1,0 +1,10 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {safeRelative,validateProtocol,main} from './export_monday_trial_contexts.mjs';
+const protocol=JSON.parse(await readFile(new URL('../evaluation/model-comparison/household-2026-09-21/protocol.json',import.meta.url)));
+test('pre-registration has unique cases and one fixed shared budget',()=>{assert.equal(validateProtocol(protocol).context_budget.max_bytes,262144);});
+test('reject a changed budget or duplicate case before any freeze',()=>{const p=structuredClone(protocol);p.context_budget.max_bytes=32768;assert.throws(()=>validateProtocol(p));const q=structuredClone(protocol);q.selected_cases[0]=q.selected_cases[1];assert.throws(()=>validateProtocol(q));});
+test('reject traversal, absolute paths and backslashes',()=>{for(const p of ['../.email.md','/private/file','a/../b','a\\b','a//b'])assert.throws(()=>safeRelative(p));});
+test('freeze requires two explicit immutable commits',async()=>{await assert.rejects(main(['--freeze','--explorer-root','/does-not-exist']),/immutable DWP commit/);});
+test('read-only preregistration succeeds without a frozen directory or engine',async()=>{await main(['--check-preregistration']);});

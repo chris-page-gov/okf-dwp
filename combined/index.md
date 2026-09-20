@@ -16,6 +16,6 @@ The graph retains relationship direction and evidence. Facet co-occurrence does 
 
 Ask OKF uses the same frozen source pages. Completeness requires the declared task evidence and unresolved obligations; no general legal completeness is claimed.
 
-Statutory provision text, tribunal judgments and subscriber-only handbook contents are not supplied.
+Selected dated statutory units are supplied as unreviewed machine extractions. Their legal applicability and complete amendment dependencies remain unestablished. Tribunal judgments and subscriber-only handbook contents are not supplied.
 
 [Indexed Reader descriptor](okf-explorer.json) · [Source coverage](coverage.json) · [Source documents](data/source-documents.json).

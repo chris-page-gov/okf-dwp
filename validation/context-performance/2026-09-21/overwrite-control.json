@@ -1,0 +1,13 @@
+{
+  "schema": "okf-context-performance-overwrite-control.v1",
+  "command": [
+    "node",
+    "--experimental-strip-types",
+    "validation/context-performance/2026-09-21/compare.mjs"
+  ],
+  "exit_code": 1,
+  "expected_diagnostic": "Refusing to overwrite an existing comparison: choose a fresh OKF_CONTEXT_COMPARISON_OUTPUT",
+  "comparison_sha256_before": "ef181a1d0fa2935053606544839100474e57afa58d19e794b9f0123949ba5b93",
+  "comparison_sha256_after": "ef181a1d0fa2935053606544839100474e57afa58d19e794b9f0123949ba5b93",
+  "result": "passed; existing observation unchanged"
+}

@@ -1046,6 +1046,74 @@
         "browser",
         "release"
       ]
+    },
+    {
+      "id": "selected-statutory-bodies",
+      "label": "Selected dated statutory units and retained acquisition attempts",
+      "kind": "structured-data-folder",
+      "paths": [
+        "source/legal-bodies-2026-09-21/**",
+        "source/legal-bodies-2026-09-21-v2/**",
+        "domain-profile/legal-bodies/**"
+      ],
+      "origin": "mixed",
+      "authority": "mixed",
+      "snapshot_policy": "content-addressed",
+      "rights": {
+        "status": "mixed",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/docs/legal-body-evidence.md",
+          "https://www.legislation.gov.uk/reusingdata"
+        ],
+        "limitations": [
+          "OGL-source-text-with-attribution-and-exceptions; original structure MIT. Rights notes and acquisition limitations remain in the dated manifests."
+        ]
+      },
+      "limitations": [
+        "20 complete selected units from 16 provisions; unreviewed and incomplete legal dependency coverage.",
+        "Original HTTP bodies are not retained publicly; observed response hashes and lossy XML-tree projections are distinguished. First failures and unknown extent remain explicit."
+      ],
+      "formats": [
+        "application/ld+yaml",
+        "application/json",
+        "application/gzip",
+        "text/markdown"
+      ],
+      "inventory": {
+        "method": "content-addressed-manifest",
+        "manifest_path": "source/legal-bodies-2026-09-21-v2/manifest.json",
+        "identity": [
+          "relative-path",
+          "bytes",
+          "sha256",
+          "source-identifier",
+          "source-version"
+        ]
+      },
+      "extraction": {
+        "mode": "deterministic-local",
+        "network_access": "prohibited",
+        "command_ids": [
+          "legal-body-build"
+        ],
+        "limitations": [
+          "Offline verification and projection of separately acquired public statutory responses. Requested point-in-time version does not establish commencement or individual applicability."
+        ]
+      },
+      "sensitivity": {
+        "status": "not-assessed",
+        "assessment": "Only public guidance, catalogue metadata and project-authored research are in this declared family. No claimant case files are acquired. An exhaustive personal-data assessment of all public source content is not claimed.",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md"
+        ]
+      },
+      "invalidates": [
+        "semantic",
+        "runtime",
+        "documentation",
+        "browser",
+        "release"
+      ]
     }
   ],
   "boundaries": {
@@ -1278,7 +1346,8 @@
         "source/**",
         "domain-profile/source-refresh-policy.json",
         "scripts/compare_source_census.py",
-        "scripts/test_source_census.py"
+        "scripts/test_source_census.py",
+        "scripts/acquire_legal_bodies.py"
       ],
       "command_ids": [
         "validate",
@@ -1308,7 +1377,11 @@
         "domain-profile/staff-needs/**",
         "scripts/build_staff_semantic.py",
         "scripts/build_legal_reconciliation.py",
-        "scripts/build_staff_needs.py"
+        "scripts/build_staff_needs.py",
+        "domain-profile/legal-bodies/**",
+        "scripts/build_legal_body_evidence.py",
+        "scripts/test_legal_body_evidence.py",
+        "scripts/test_household_semantic.py"
       ],
       "command_ids": [
         "build-check",
@@ -1332,7 +1405,9 @@
         "legal-reconciliation-check",
         "staff-semantic-build",
         "staff-semantic-check",
-        "staff-semantic-evaluation"
+        "staff-semantic-evaluation",
+        "legal-body-build",
+        "legal-body-check"
       ]
     },
     {
@@ -1392,7 +1467,8 @@
         "review-navigation-check",
         "review-navigation-controls",
         "combined-reader-build",
-        "combined-reader-check"
+        "combined-reader-check",
+        "context-performance-check"
       ]
     },
     {
@@ -1417,7 +1493,13 @@
         "scripts/check_answer_review.py",
         "scripts/test_fixed_answers.py",
         "scripts/check_compact_client.py",
-        "scripts/test_compact_client.py"
+        "scripts/test_compact_client.py",
+        "scripts/export_monday_trial_contexts.mjs",
+        "scripts/run_monday_model_trials.py",
+        "scripts/test_monday_model_trials.py",
+        "scripts/test_monday_trial_export.mjs",
+        "scripts/test_retained_reader_source.py",
+        "scripts/check_combined_reader_observations.py"
       ],
       "command_ids": [
         "private-input-check",
@@ -1428,7 +1510,9 @@
         "answer-review-integrity",
         "answer-review-controls",
         "compact-client-check",
-        "compact-client-controls"
+        "compact-client-controls",
+        "monday-trial-preregistration",
+        "monday-trial-export-controls"
       ]
     },
     {
@@ -2140,7 +2224,7 @@
           "semantic",
           "runtime"
         ],
-        "command": "node --experimental-strip-types scripts/evaluate_staff_semantic.mjs --check --explorer-root .ci/okf-explorer-staff",
+        "command": "node --experimental-strip-types scripts/evaluate_staff_semantic.mjs --check --explorer-root .ci/okf-explorer-household",
         "source": "docs/semantic-expansion.md",
         "review_status": "unreviewed",
         "network": "none",
@@ -2237,6 +2321,71 @@
         "command": "uv run --locked --project tools/learning-site python -m unittest discover -s tools/learning-site -p test_learning_site.py",
         "source": "docs/learning-website.md",
         "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "legal-body-build",
+        "kind": "build",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/build_legal_body_evidence.py",
+        "source": "docs/legal-body-evidence.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "legal-body-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/build_legal_body_evidence.py --check",
+        "source": "docs/legal-body-evidence.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "context-performance-check",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "node validation/context-performance/2026-09-21/verify.mjs",
+        "source": "docs/context-performance.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "monday-trial-preregistration",
+        "kind": "check",
+        "planes": [
+          "release"
+        ],
+        "command": "node --experimental-strip-types scripts/export_monday_trial_contexts.mjs --check-preregistration",
+        "source": "docs/monday-model-trials.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "monday-trial-export-controls",
+        "kind": "test",
+        "planes": [
+          "release"
+        ],
+        "command": "node --test scripts/test_monday_trial_export.mjs",
+        "source": "docs/monday-model-trials.md",
+        "review_status": "unreviewed",
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 5
@@ -2426,6 +2575,7 @@
     "Rights evidence URLs locate repository documentation on main; they are not immutable source snapshots. Original source hashes and licence evidence remain in the named frozen inventories.",
     "Sensitivity is conservatively not-assessed: no claimant files are acquired, but this metadata repair does not establish an exhaustive personal-data review of public guidance or project research.",
     "The original project-authored and pinned-consumer command labels describe origin rather than review. They map to unreviewed; existing reviewed-local-guidance labels are preserved only for the prior AGENTS.md commands.",
-    "The 20 September additive increment preserves frozen source/runtime releases. Fresh listing metadata is not a fresh PDF-body verification; reference-only legal metadata is not substantive legal evidence."
+    "The 20 September additive increment preserves frozen source/runtime releases. Fresh listing metadata is not a fresh PDF-body verification; reference-only legal metadata is not substantive legal evidence.",
+    "The household candidate adds bounded statutory body evidence without closing the 203 recorded obligations. Earlier model trials and browser observations retain their exact source and engine bindings; fresh candidate verification is separate."
   ]
 }

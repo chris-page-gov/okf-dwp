@@ -18,6 +18,7 @@ jobs:
       EXPLORER_CONTEXT_COMMIT: 97f13d22b689d92cd785de04758fe932d4a4d369
       EXPLORER_CORPUS_COMMIT: 31ee08ec259e165a478e9c36826fe3721643631d
       EXPLORER_STAFF_COMMIT: f8daf84a4c04afb4839695d38a97cbf21b0ed0a0
+      EXPLORER_HOUSEHOLD_COMMIT: 0e6a639f87c4060123b72d82c1ebe30405d475f1
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
@@ -71,6 +72,15 @@ jobs:
           persist-credentials: false
       - name: Verify the staff consumer checkout identity
         run: test "$(git -C .ci/okf-explorer-staff rev-parse HEAD)" = "$EXPLORER_STAFF_COMMIT"
+      - name: Check out the separate household-context consumer
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: chris-page-gov/okf-explorer
+          ref: ${{ env.EXPLORER_HOUSEHOLD_COMMIT }}
+          path: .ci/okf-explorer-household
+          persist-credentials: false
+      - name: Verify the household consumer checkout identity
+        run: test "$(git -C .ci/okf-explorer-household rev-parse HEAD)" = "$EXPLORER_HOUSEHOLD_COMMIT"
       - name: Install locked context evaluator dependencies
         run: uv sync --locked --project .ci/okf-explorer
       - name: Install source verification tools
@@ -96,12 +106,13 @@ jobs:
         run: |
           uv run --locked python scripts/build_staff_needs.py --check
           uv run --locked python scripts/build_legal_reconciliation.py --check
+          uv run --locked python scripts/build_legal_body_evidence.py --check
           uv run --locked python scripts/build_staff_semantic.py --check
           uv run --locked python scripts/build_combined_reader.py --check
           uv run --locked python scripts/compare_source_census.py --check
           uv run --locked python scripts/check_combined_reader_observations.py
       - name: Replay staff semantic development cases and failure controls
-        run: node --experimental-strip-types scripts/evaluate_staff_semantic.mjs --check --explorer-root .ci/okf-explorer-staff
+        run: node --experimental-strip-types scripts/evaluate_staff_semantic.mjs --check --explorer-root .ci/okf-explorer-household
       - name: Check the portable public-reader verifier without network
         run: |
           node --test scripts/test_staff_service_browser.mjs
@@ -112,6 +123,11 @@ jobs:
         run: |
           node --experimental-strip-types scripts/export_staff_trial_contexts.mjs --check --explorer-root .ci/okf-explorer-staff
           uv run --locked python scripts/run_staff_model_trials.py --report --check-report
+      - name: Verify portable performance evidence and new trial controls offline
+        run: |
+          node validation/context-performance/2026-09-21/verify.mjs
+          node --test scripts/test_monday_trial_export.mjs
+          node --experimental-strip-types scripts/export_monday_trial_contexts.mjs --check-preregistration
       - name: Check the public backlog and retained answer trials offline
         run: |
           uv run --locked python scripts/check_backlog.py

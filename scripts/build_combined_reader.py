@@ -24,8 +24,8 @@ from build_review_navigation import DIMENSIONS, UNKNOWN, load_pages
 
 OUTPUT = "combined"
 SEMANTIC = "evaluation/semantic-expansion/assembly-index.json"
-CONSUMER_COMMIT = "f8daf84a4c04afb4839695d38a97cbf21b0ed0a0"
-LABELS = {"source_family": "Source manual", **DIMENSIONS}
+CONSUMER_COMMIT = "0e6a639f87c4060123b72d82c1ebe30405d475f1"
+LABELS = {"source_family": "Source family", **DIMENSIONS}
 TITLE = "DWP guidance: combined DMG and ADM evidence review"
 LIMITATIONS = [
     "Independent experimental publication, not official DWP guidance, benefits advice or an entitlement decision.",
@@ -36,7 +36,7 @@ LIMITATIONS = [
     "Historical, amendment, transitional and memo documents retain their captured classifications. Recently captured does not mean currently applicable.",
     "The graph retains relationship direction and evidence. Facet co-occurrence does not generate a legal relationship.",
     "Ask OKF uses the same frozen source pages. Completeness requires the declared task evidence and unresolved obligations; no general legal completeness is claimed.",
-    "Statutory provision text, tribunal judgments and subscriber-only handbook contents are not supplied.",
+    "Selected dated statutory units are supplied as unreviewed machine extractions. Their legal applicability and complete amendment dependencies remain unestablished. Tribunal judgments and subscriber-only handbook contents are not supplied.",
 ]
 
 
@@ -91,6 +91,22 @@ def compile_combined(root=ROOT, semantic_path=SEMANTIC):
     semantic_raw = inputs.read(semantic_path)
     semantic = json.loads(semantic_raw)
     require(semantic.get("schema") == "okf-context-index.v1", "Unsupported semantic overlay")
+    statutory = json.loads(inputs.read("domain-profile/legal-bodies/context-overlay.json"))
+    statutory_source_files = {}
+    statutory_inventories = []
+    for binding in statutory["bindings"]:
+        if not binding["path"].startswith("source/"):
+            continue
+        raw = inputs.read(binding["path"])
+        require(digest(raw) == binding["sha256"], "Statutory acquisition manifest changed")
+        statutory_source_files[binding["path"]] = {"path": binding["path"], "bytes": len(raw), "sha256": digest(raw)}
+        statutory_inventories.append(statutory_source_files[binding["path"]])
+        directory = binding["path"].rsplit("/", 1)[0]
+        for item in json.loads(raw)["files"]:
+            path = directory + "/" + item["path"]
+            value = inputs.read(path)
+            require(len(value) == item["bytes"] and digest(value) == item["sha256"], "Retained statutory source changed")
+            statutory_source_files[path] = {"path": path, "bytes": len(value), "sha256": digest(value)}
     declarations_path = "domain-profile/staff-semantic/concepts.yamlld"
     inputs.read(declarations_path)
     declarations = load_yaml(inputs.path(declarations_path))
@@ -243,10 +259,12 @@ def compile_combined(root=ROOT, semantic_path=SEMANTIC):
     search["manifest"].update(shard_metadata="data/search/shards.json", shard_manifest_sha256=digest(canonical(search_shards)))
     put("data/search/manifest.json", search["manifest"])
     counts = {"records": len(records), "datasets": len(records), "resources": len(resources), "relationships": len(edges),
-        "publishers": 2, "source_documents": len(documents), "source_pages": len(pages)}
+        "publishers": 3, "source_documents": len(documents), "source_pages": len(pages),
+        "selected_statutory_units": sum(row["source_family"] == "Legislation" for row in records)}
     publishers = [{"id": "publisher/" + name, "name": name, "title": title,
         "dataset_count": sum(row["publisher"] == name for row in records), "resource_count": sum(row["resource_count"] for row in records if row["publisher"] == name)}
-        for name, title in (("dwp", "DWP source; independent extraction"), ("independent-project", "Independent project-authored research"))]
+        for name, title in (("dwp", "DWP source; independent extraction"), ("independent-project", "Independent project-authored research"),
+                            ("legislation-gov-uk", "Legislation.gov.uk source; independent extraction"))]
     put("data/publishers.json", publishers)
     put("data/overview.json", {"schema": "okf-large-overview.v1", "title": TITLE, "generated_at": when, "counts": counts,
         "recent_datasets": search["results"][:12], "notices": LIMITATIONS, "facet_previews": {key: rows[:15] for key, rows in facets.items()}})
@@ -295,13 +313,18 @@ def compile_combined(root=ROOT, semantic_path=SEMANTIC):
     descriptor["entrypoint_integrity"]["concept_navigation"] = bind("context/navigation/manifest.json")
     descriptor["extensions"]["okf-explorer-presentation.v1"]["snapshot"] = snapshot
     descriptor["extensions"]["okf-explorer-presentation.v1"]["facets"].insert(0,
-        {"key": "source_family", "label": "Source manual", "description": "Captured manual membership; legal regime and applicability still require checking.",
+        {"key": "source_family", "label": "Source family", "description": "DMG, ADM, selected statutory units or project-authored material; legal regime and applicability still require checking.",
          "order": -1, "default_state": "pinned", "open_control": "list", "value_order": "count-desc"})
-    descriptor["vocabulary"]["search_placeholder"] = "Search captured DMG and ADM guidance"
-    descriptor["plane_roots"] = {"source": digest(canonical([{ "id": doc["id"], "sha256": doc["sha256"]} for doc in sorted(documents.values(), key=lambda row: row["id"])])),
+    descriptor["vocabulary"]["search_placeholder"] = "Search captured guidance and selected legislation"
+    source_identity = {"pdf_documents": [{"id": doc["id"], "sha256": doc["sha256"]} for doc in sorted(documents.values(), key=lambda row: row["id"])],
+        "statutory_retained_files": sorted(statutory_source_files.values(), key=lambda row: row["path"])}
+    put("data/source-identity.json", source_identity)
+    descriptor["plane_roots"] = {"source": digest(canonical(source_identity)),
         "semantic": semantic_manifest["semantic_identity"]["sha256"], "data": digest(canonical(dataset_shards)), "search": digest(canonical(search_shards)), "presentation": digest(canonical(descriptor["extensions"]))}
     descriptor["exploratory_publication"].update(snapshot_id=snapshot, generated_at=when, applicable_plane_roots=descriptor["plane_roots"], limitations=LIMITATIONS)
     descriptor["source"] = {"url": REPO, "inventory": "context/corpus-sources.json", "sha256": digest(inputs.read("context/corpus-sources.json")), "observed_at": when}
+    descriptor["source"].update(identity=bind("data/source-identity.json"), statutory_inventories=statutory_inventories,
+        scope="513 captured DWP PDFs plus separately retained statutory acquisition projections and failures. Original statutory HTTP hashes are observed; original responses are not retained publicly.")
     put("okf-explorer.json", descriptor)
     control = {"@context": context(), "@id": BASE + "id/bundle/combined", "@type": "okf:Bundle", "title": TITLE,
         "description": LIMITATIONS[0], "version": "0.1.0", "status": "experimental",
@@ -446,6 +469,33 @@ def add_semantics(records, resources, edges, full_text, semantic, when, semantic
             "license_id": "mixed-see-notice", "license_title": "Original metadata MIT; source-specific rights apply", "license_source_id": REPO + "/blob/main/NOTICE.md",
             "provenance": {"semantic_iri": row["id"], "authority": row.get("authority"), "assertion_status": row.get("assertion_status"),
                 "review_status": row.get("review_status", "unreviewed"), "source_references": row.get("provenance", []), "date_roles": {"generated_at": when}}}
+        if route.startswith("legal-body/"):
+            require(row["kind"] == "evidence" and row["authority"]["class"] == "derived"
+                    and row["assertion_status"] == "normalized" and row.get("review_status") == "unreviewed",
+                    "Statutory body must remain a derived, unreviewed evidence record")
+            source = row["provenance"][0]
+            require(urlsplit(source["url"]).hostname == "www.legislation.gov.uk"
+                    and source["literal_sha256"] == digest(row["text"].encode()), "Invalid statutory source identity")
+            resource_id = "resource/source-" + digest(route.encode())[:24]
+            dates = {"captured_at": source["captured_at"], "generated_at": when,
+                     "requested_source_version": source["source_date"],
+                     "publication_date_status": "not-established-from-document-evidence",
+                     "commencement_status": "not-established-for-task"}
+            record.update(type="Statutory unit", record_type="Statutory unit", source_family="Legislation",
+                publisher="legislation-gov-uk", publisher_title="Legislation.gov.uk source; independent extraction",
+                source_role="Selected dated statutory unit — unreviewed extraction", source_tier="official-source-unreviewed-extraction",
+                source_adapter="retained-statutory-xml-projection", document_id=route.removeprefix("legal-body/"),
+                volume="Statutory provision", metadata_created=source["captured_at"], url=source["url"],
+                resource_ids=[resource_id], resource_count=1, formats=["HTML"], tags=["Legislation", "Unreviewed extraction"],
+                license_id="uk-ogl", license_title="Open Government Licence v3.0", license_source_id=row["rights"])
+            record["provenance"].update(source_sha256=source["source_sha256"], literal_sha256=source["literal_sha256"], date_roles=dates)
+            record["narrative"]["body"] = ("# " + row["label"] + "\n\n**Normalised machine extraction from legislation.gov.uk; unreviewed.**\n\n"
+                + row["scope"] + "\n\n## Captured source text\n\n" + source_text_block(row["text"])
+                + "\n\n## Provenance\n\n" + "\n".join(f"- [{p['locator']}]({p['url']})" for p in row["provenance"]))
+            resources.append({"id": resource_id, "route": resource_id, "dataset": route, "name": "Official dated statutory source",
+                "url": source["url"], "host": urlsplit(source["url"]).hostname, "format": "HTML",
+                "source_access": {"url": source["url"], "label": "Verify the official statutory source", "media_type": "text/html", "display_mode": "link"},
+                "provenance": record["provenance"]})
         records.append(record); by_id[row["id"]] = record; full_text[route] = row["text"]
     existing = {row["id"] for row in edges}
     predicate_labels = {row["predicate"]: (row["kind"], row.get("inverse_label", "is referenced by")) for row in edges}
@@ -487,7 +537,7 @@ def relocate_context(inputs, outputs, descriptor, snapshot, semantic):
     base = deepcopy(semantic) if semantic else json.loads(inputs.bound("context/corpus", manifest["base_index"]))
     base["bundle"]["snapshot"] = snapshot
     base_raw = canonical(base)
-    require(len(base_raw) <= 4 * 1024 * 1024, "Combined context base exceeds the consumer 4 MiB bound")
+    require(len(base_raw) <= 8 * 1024 * 1024, "Combined context base exceeds the consumer 8 MiB semantic-index bound")
     outputs["context/corpus/base-index.json"] = base_raw
     manifest["base_index"] = {"path": "base-index.json", "bytes": len(base_raw), "sha256": digest(base_raw)}
     manifest["semantic_source_snapshot"] = snapshot

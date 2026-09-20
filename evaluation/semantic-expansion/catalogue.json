@@ -67,6 +67,14 @@
         "loss of payment",
         "payments"
       ]
+    },
+    {
+      "reason": "Resolve neutral benefit first; custody-specific meanings retain their own labels and evidence.",
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount",
+      "removed_aliases": [
+        "IS",
+        "Income Support"
+      ]
     }
   ],
   "concepts": [
@@ -452,6 +460,14 @@
         "skos:Concept",
         "dwp:Benefit"
       ],
+      "additional_sources": [
+        {
+          "anchor": "61012",
+          "document_id": "dmg-vol10-ch61",
+          "family": "dmg",
+          "page": 4
+        }
+      ],
       "aliases": [
         "AA"
       ],
@@ -460,6 +476,7 @@
       "definition": "Attendance Allowance is a distinct benefit named in qualifying-benefit and overlap provisions; it is not interchangeable with PIP, DLA or a Constant Attendance Allowance scheme.",
       "evidence_ids": [
         "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0004",
         "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005"
       ],
       "key": "attendance-allowance",
@@ -551,6 +568,14 @@
         "skos:Concept",
         "dwp:Benefit"
       ],
+      "additional_sources": [
+        {
+          "anchor": "71753",
+          "document_id": "dmg-vol11-ch71",
+          "family": "dmg",
+          "page": 118
+        }
+      ],
       "aliases": [
         "REA"
       ],
@@ -558,7 +583,8 @@
       "authority": "model-assisted",
       "definition": "Reduced Earnings Allowance has a separate pension-age and historical transition context; those rules cannot be transferred to IIDB merely because both concern industrial injury.",
       "evidence_ids": [
-        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch71/0117"
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch71/0117",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch71/0118"
       ],
       "key": "rea",
       "label": "Reduced Earnings Allowance",
@@ -609,7 +635,7 @@
       ],
       "assertion_status": "model-derived",
       "authority": "model-assisted",
-      "definition": "The Pension Credit additional amount has qualifying-benefit, household and carer conditions. It is not the Severe Disablement Allowance benefit.",
+      "definition": "The Pension Credit additional amount has different no-partner and partner branches, qualifying-benefit receipt, household and carer conditions. DMG 78088 concerns claimants who have no partner, including self-funders; it is not a rule for every care-home resident or the whole Pension Credit award. Dated Scottish-benefit memoranda amend dependencies. It is not the Severe Disablement Allowance benefit.",
       "evidence_ids": [
         "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011",
         "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025"
@@ -1012,7 +1038,7 @@
       ],
       "assertion_status": "model-derived",
       "authority": "model-assisted",
-      "definition": "Permanent care-home residence affects household and component-specific conditions. Self-funding alone does not establish the whole Pension Credit result.",
+      "definition": "Permanent and temporary care-home stays require different Pension Credit household and component checks. DMG 78088 is under the heading Claimants who have no partner (including self-funders): all severe-disability-addition conditions still apply, including actual qualifying-benefit receipt. One partner entering permanently and both partners living permanently in a home require the separate DMG 77128–77130 household branches. Funding alone does not determine the whole credit.",
       "evidence_ids": [
         "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020",
         "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
@@ -1037,12 +1063,11 @@
       "aliases": [
         "partner",
         "partners",
-        "couple",
-        "mixed-age couple"
+        "couple"
       ],
       "assertion_status": "model-derived",
       "authority": "model-assisted",
-      "definition": "Partner treatment requires the source definition of couple and household, including mixed-age and temporary/permanent separation conditions.",
+      "definition": "Pension Credit couple status requires the DMG 77013 definition and household facts. Temporary absence, one partner entering a care home permanently, both partners living there, and mixed-age status are distinct conditional branches. Shared accommodation alone does not establish a shared household; the DMG 77130 factors are non-exhaustive and none alone decides the question.",
       "evidence_ids": [
         "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015",
         "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020",
@@ -1089,6 +1114,14 @@
         "skos:Concept",
         "dwp:AssessmentInput"
       ],
+      "additional_sources": [
+        {
+          "anchor": "85092",
+          "document_id": "dmg-vol14-ch85",
+          "family": "dmg",
+          "page": 31
+        }
+      ],
       "aliases": [
         "income"
       ],
@@ -1097,6 +1130,7 @@
       "definition": "Named income types and individual disregards must be read with their scopes; inclusion in a list alone does not determine an award.",
       "evidence_ids": [
         "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0031",
         "https://chris-page-gov.github.io/okf-dwp/id/page/85/0077"
       ],
       "key": "income",
@@ -1226,6 +1260,14 @@
         "skos:Concept",
         "dwp:AssessmentProcess"
       ],
+      "additional_sources": [
+        {
+          "anchor": "17085",
+          "document_id": "dmg-vol3-ch17",
+          "family": "dmg",
+          "page": 10
+        }
+      ],
       "aliases": [
         "interaction",
         "interact",
@@ -1242,6 +1284,7 @@
         "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011",
         "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030",
         "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0010",
         "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011"
       ],
       "key": "overlap",
@@ -1395,6 +1438,470 @@
         "source-c012",
         "source-c034"
       ]
+    },
+    {
+      "@id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/household-separation",
+      "@type": [
+        "skos:Concept",
+        "dwp:Circumstance"
+      ],
+      "additional_sources": [
+        {
+          "anchor": "77013",
+          "document_id": "dmg-vol13-ch77",
+          "family": "dmg",
+          "page": 7
+        },
+        {
+          "anchor": "77102",
+          "document_id": "dmg-vol13-ch77",
+          "family": "dmg",
+          "page": 19
+        },
+        {
+          "anchor": "77117",
+          "document_id": "dmg-vol13-ch77",
+          "family": "dmg",
+          "page": 21
+        },
+        {
+          "anchor": "77121",
+          "document_id": "dmg-vol13-ch77",
+          "family": "dmg",
+          "page": 23
+        },
+        {
+          "anchor": "77128",
+          "document_id": "dmg-vol13-ch77",
+          "family": "dmg",
+          "page": 24
+        },
+        {
+          "anchor": "77131",
+          "document_id": "dmg-vol13-ch77",
+          "family": "dmg",
+          "page": 25
+        }
+      ],
+      "aliases": [
+        "household separation",
+        "both partners in a care home"
+      ],
+      "assertion_status": "model-derived",
+      "authority": "model-assisted",
+      "definition": "DMG 77013 defines a couple; DMG 77102 explains household as a domestic establishment, not merely a building. Under DMG 77128, one partner entering a care home permanently is treated as no longer in the same household. Where both enter permanently, the decision maker must establish whether they remain one household on the facts. DMG 77129–77130 require reasonable independence and responsibility in running a domestic establishment; the seven factors are non-exhaustive and none is decisive alone. DMG 78089 says each may claim when household membership ends, not that an award automatically follows. Temporary absence is a separate branch.",
+      "evidence_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0007",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0019",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0021",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0023",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0024",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0025",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025"
+      ],
+      "key": "household-separation",
+      "label": "Pension Credit household separation and care-home residence",
+      "review_status": "unreviewed-specialist-review-required",
+      "route": "staff-domain/household-separation",
+      "source_candidates": [
+        "source-c010",
+        "source-c028"
+      ]
+    },
+    {
+      "@id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/no-partner-disability-addition",
+      "@type": [
+        "skos:Concept",
+        "dwp:Applicability"
+      ],
+      "additional_sources": [
+        {
+          "anchor": "78034",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 11
+        },
+        {
+          "anchor": "78036",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 12
+        },
+        {
+          "anchor": "78055",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 15
+        },
+        {
+          "anchor": "78077",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 21
+        },
+        {
+          "anchor": "78078",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 22
+        },
+        {
+          "anchor": "78080",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 23
+        },
+        {
+          "anchor": "78088",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 25
+        }
+      ],
+      "aliases": [
+        "claimants who have no partner",
+        "self-funders"
+      ],
+      "assertion_status": "model-derived",
+      "authority": "model-assisted",
+      "definition": "The no-partner branch in DMG 78034 requires a specified qualifying disability benefit, no adult normally residing with the claimant unless ignored, and no Carer’s Allowance payment or Universal Credit carer element for caring for them. Read the protected and ignored-person exceptions in DMG 78035–78036 and 78077–78080. DMG 78055–78057 distinguish actual payment from underlying entitlement. The heading Claimants who have no partner (including self-funders) governs DMG 78088: all conditions must still be met. It says normally self-funders and also the first four weeks while AA, DLA or PIP continues; funding status alone cannot prove continued qualification. Scottish-benefit memoranda are separate dated dependencies. Partner cases use DMG 78045–78050.",
+      "evidence_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0015",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0021",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0022",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0023",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025"
+      ],
+      "key": "no-partner-disability-addition",
+      "label": "Severe-disability addition: claimant with no partner",
+      "review_status": "unreviewed-specialist-review-required",
+      "route": "staff-domain/no-partner-disability-addition",
+      "source_candidates": [
+        "source-c028"
+      ]
+    },
+    {
+      "@id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+      "@type": [
+        "skos:Concept",
+        "dwp:Applicability"
+      ],
+      "additional_sources": [
+        {
+          "anchor": "78045",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 12
+        },
+        {
+          "anchor": "78047",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 13
+        },
+        {
+          "anchor": "78050",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 14
+        }
+      ],
+      "aliases": [
+        "partner disability addition"
+      ],
+      "assertion_status": "model-derived",
+      "authority": "model-assisted",
+      "definition": "DMG 78045–78050 provide separate lower-rate and higher-rate partner branches with qualifying benefits, blindness, residence and actual caring-payment conditions. DMG 78047 has a partner-in-hospital exception; DMG 78050 limits deemed qualifying-benefit receipt where patient rules apply. Do not apply the no-partner care-home paragraph 78088 to a couple before deciding household status. The captured examples and rates are historical, not current award calculations.",
+      "evidence_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0013",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0014"
+      ],
+      "key": "partner-disability-addition",
+      "label": "Severe-disability addition: claimant with a partner",
+      "review_status": "unreviewed-specialist-review-required",
+      "route": "staff-domain/partner-disability-addition",
+      "source_candidates": []
+    },
+    {
+      "@id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/temporary-care-home",
+      "@type": [
+        "skos:Concept",
+        "dwp:Circumstance"
+      ],
+      "additional_sources": [
+        {
+          "anchor": "78084",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 24
+        },
+        {
+          "anchor": "78087",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 25
+        }
+      ],
+      "aliases": [
+        "temporary care-home stay",
+        "temporary stay in a care home"
+      ],
+      "assertion_status": "model-derived",
+      "authority": "model-assisted",
+      "definition": "DMG 78084 does not turn a claimant who normally lives with another person into someone normally living alone during a temporary care-home stay. DMG 78085 retains household membership for a temporarily absent partner, but DMG 78086 requires a review of Pension Credit and the severe-disability addition if residential care exceeds 28 days and DLA payability ceases. The example continues on the next page. These are component and qualifying-benefit conditions, not a universal 28-day end to Pension Credit.",
+      "evidence_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0024",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025"
+      ],
+      "key": "temporary-care-home",
+      "label": "Temporary care-home stay and continuing household",
+      "review_status": "unreviewed-specialist-review-required",
+      "route": "staff-domain/temporary-care-home",
+      "source_candidates": []
+    },
+    {
+      "@id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home-housing-costs",
+      "@type": [
+        "skos:Concept",
+        "dwp:BenefitComponent"
+      ],
+      "additional_sources": [
+        {
+          "anchor": "78240",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 53
+        },
+        {
+          "anchor": "78241",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 54
+        },
+        {
+          "anchor": "78254",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 55
+        },
+        {
+          "anchor": "3.11",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 56
+        },
+        {
+          "anchor": "78257",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 57
+        }
+      ],
+      "aliases": [
+        "care-home housing costs",
+        "trial care-home stay"
+      ],
+      "assertion_status": "model-derived",
+      "authority": "model-assisted",
+      "definition": "DMG 78270 concerns the housing-cost additional amount, not the whole Pension Credit award. It states that an additional amount for housing costs is not allowed for claimants in a care home unless their absence from the dwelling normally occupied as home is temporary. The exception does not establish payment of care-home fees. DMG 78240 permits a trial stay of up to 13 weeks only with suitability assessment, intention to return if unsuitable and an unlet home; the overall absence limit is 52 weeks. DMG 78254–78257 set separate 52-week conditions including intention to return, no letting or subletting, a listed reason and expected duration. Permanent residence and expenditure met by Housing Benefit are separate exclusions. The complete paragraphs span adjacent pages.",
+      "evidence_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0053",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0054",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0055",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0056",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0057",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058"
+      ],
+      "key": "care-home-housing-costs",
+      "label": "Pension Credit housing costs during care-home absence",
+      "review_status": "unreviewed-specialist-review-required",
+      "route": "staff-domain/care-home-housing-costs",
+      "source_candidates": [
+        "source-c030"
+      ]
+    },
+    {
+      "@id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/mixed-age-pension-credit",
+      "@type": [
+        "skos:Concept",
+        "dwp:Applicability"
+      ],
+      "additional_sources": [
+        {
+          "anchor": "77035",
+          "document_id": "dmg-vol13-ch77",
+          "family": "dmg",
+          "page": 15
+        },
+        {
+          "anchor": "77041",
+          "document_id": "dmg-vol13-ch77",
+          "family": "dmg",
+          "page": 16
+        },
+        {
+          "anchor": "77140",
+          "document_id": "dmg-vol13-ch77",
+          "family": "dmg",
+          "page": 26
+        },
+        {
+          "anchor": "77160",
+          "document_id": "dmg-vol13-ch77",
+          "family": "dmg",
+          "page": 27
+        },
+        {
+          "anchor": "77161",
+          "document_id": "dmg-vol13-ch77",
+          "family": "dmg",
+          "page": 28
+        },
+        {
+          "anchor": "77172",
+          "document_id": "dmg-vol13-ch77",
+          "family": "dmg",
+          "page": 29
+        },
+        {
+          "anchor": "77184",
+          "document_id": "dmg-vol13-ch77",
+          "family": "dmg",
+          "page": 30
+        },
+        {
+          "anchor": "08/06/24",
+          "document_id": "dmg-memo-04-24-282c3cef22",
+          "family": "dmg",
+          "page": 2
+        },
+        {
+          "anchor": "17.",
+          "document_id": "dmg-memo-04-24-282c3cef22",
+          "family": "dmg",
+          "page": 5
+        }
+      ],
+      "aliases": [
+        "mixed-age couple",
+        "mixed age couple",
+        "protected mixed-age couple"
+      ],
+      "assertion_status": "model-derived",
+      "authority": "model-assisted",
+      "definition": "DMG 77035 distinguishes new claims from 15 May 2019 and continuity protection linked to Pension Credit or pension-age Housing Benefit on 14 May 2019. DMG 77140–77184 distinguish the mixed-age definition, Universal Credit interaction, excluded-partner exceptions and effective dates. The general exclusion is not the complete rule. DMG memo 04/24 paragraphs 15–17 add a protected mixed-age migration route from 8 June 2024: the specified protected couples sent a migration notice may reclaim pension-age Housing Benefit or claim Pension Credit within three months after the relevant UC or HB award ends. That route requires its stated prior entitlement and migration facts; it is not a general right for every mixed-age couple. Contemporary applicability, legislation and the ADM counterpart still require reconciliation.",
+      "evidence_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0016",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0027",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0028",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0029",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0030",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-04-24-282c3cef22/0002",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-04-24-282c3cef22/0005"
+      ],
+      "key": "mixed-age-pension-credit",
+      "label": "Pension Credit mixed-age couple conditions and protections",
+      "review_status": "unreviewed-specialist-review-required",
+      "route": "staff-domain/mixed-age-pension-credit",
+      "source_candidates": [
+        "source-c009",
+        "source-c011"
+      ]
+    },
+    {
+      "@id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/scottish-disability-carer-dependencies",
+      "@type": [
+        "skos:Concept",
+        "dwp:Guidance"
+      ],
+      "additional_sources": [
+        {
+          "anchor": "13.",
+          "document_id": "dmg-memo-02-25-e03b36ce3e",
+          "family": "dmg",
+          "page": 5
+        },
+        {
+          "anchor": "21.3.25",
+          "document_id": "dmg-memo-06-25-5fee4f859a",
+          "family": "dmg",
+          "page": 3
+        },
+        {
+          "anchor": "30.",
+          "document_id": "dmg-memo-06-25-5fee4f859a",
+          "family": "dmg",
+          "page": 9
+        },
+        {
+          "anchor": "15.03.26",
+          "document_id": "dmg-memo-01-26-0605724317",
+          "family": "dmg",
+          "page": 3
+        }
+      ],
+      "aliases": [
+        "Scottish disability and carer dependencies"
+      ],
+      "assertion_status": "model-derived",
+      "authority": "model-assisted",
+      "definition": "The captured chapter must be read with its amendment memoranda. DMG memo 02/25 paragraphs 13–16 add Pension Age Disability Payment (PADP) from 21 October 2024 to the AA meaning and qualifying/ignored-person provisions. DMG memo 06/25 paragraphs 30–33 add Scottish Adult Disability Living Allowance (SADLA) to specified Pension Credit disability and housing-cost provisions; its introduction gives commencement as 21 March 2025. DMG memo 01/26 paragraphs 5–7 amend Carer Support Payment (CSP) terminology and the specified bereavement run-on from 15 March 2026. Its paragraphs 5 and 6 use different component wording, preserved in the source and requiring legal reconciliation. Do not silently treat these benefits as synonyms in all rules or infer present entitlement from a capture date.",
+      "evidence_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
+      ],
+      "key": "scottish-disability-carer-dependencies",
+      "label": "Dated Scottish disability and carer dependencies for Pension Credit",
+      "review_status": "unreviewed-specialist-review-required",
+      "route": "staff-domain/scottish-disability-carer-dependencies",
+      "source_candidates": []
+    },
+    {
+      "@id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/income-support",
+      "@type": [
+        "skos:Concept",
+        "dwp:Benefit"
+      ],
+      "additional_sources": [
+        {
+          "anchor": "20002",
+          "document_id": "dmg-vol4-ch20",
+          "family": "dmg",
+          "page": 4
+        },
+        {
+          "anchor": "20022",
+          "document_id": "dmg-vol4-ch20",
+          "family": "dmg",
+          "page": 11
+        }
+      ],
+      "aliases": [
+        {
+          "case_sensitive": true,
+          "label": "IS"
+        }
+      ],
+      "assertion_status": "model-derived",
+      "authority": "model-assisted",
+      "definition": "Income Support has its own conditions of entitlement, distinguished from JSA in DMG 20002 and listed in DMG 20022. The captured rules include prescribed-category, age, work, income and partner conditions and an explicit mixed-age exception in Note 2. They are legacy guidance, not proof of current availability for a new claim. Prisoner applicable-amount rules are one circumstance-specific branch, not the definition of Income Support.",
+      "evidence_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch20/0004",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch20/0011"
+      ],
+      "key": "income-support",
+      "label": "Income Support",
+      "review_status": "unreviewed-specialist-review-required",
+      "route": "staff-domain/income-support",
+      "source_candidates": []
     }
   ],
   "legal_assertion_ids": [
@@ -1555,6 +2062,7 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/c916a1ba771d3441cb5ccb6a1d67775474d836b711e2b6f34977126a3347a4a5",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/fdf990d5f82c83a238d7d14a3d88fd6b1971c7a2177d43179a0825f01d189d83",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/65e9554d03f29b4b19b6501f2932df55f54cbec9637e4ac02a5aa5c786c995e5",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/6a3b0f98b8766c8ad9ba772fd7be8d26213599396090afca193be1dcf3e90bd6",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/dd982400fab6e025006d758722d1a76d46344795940c744d139a6f6b4dfb6126",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/da2d3473dbc10089eaf993285bf903477b22f958cfa9cdc7c3249bd3e48797c7",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/c5c1e8f9e1092e61bb8972fa9f26bda22c5fbf8fa6d879e1075104834252646c",
@@ -1562,6 +2070,7 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/0f25bd61656e055ad40b1e9aa832d07169efedc2708034ce18e996887f71ed8b",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/577b8ce1f15c8244ce78bc52081862c3d0aa7ce6ddaca6b632aaf60ac49052a3",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/39d403c75d031f630e7bc210e30600d131511df92825f0d8f038256f02849d6f",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/c29452fed9a7df847ff5bcb7aa34272c4bd48c8d23892fc44e383621f2f77054",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9dc0a8882745d1a8aec654b9d1a932e45cc06fc4957daa78e822688984c4732e",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/80bd0a50653626fe93b78f9e881af7b8f01f83f2239691935f503dd5e941ba6a",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/01065a565050af7aea619519d543beb1371aaa67671fe693b2ba569bb2566f8f",
@@ -1600,6 +2109,7 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/fffc11b59d09ef5b729c68cd922b519d774273a7d24cb1aba7807feb80846fdd",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d9ceea4abbd2b57b5eb337b147bd99183a08295fb2c57d43056dc801a6da3e49",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/5f8602922e245576506fe408a5658c4eb7a58927cc64b645924dfd38d955795b",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/4fcaad0e6174118c6134798e952da8983377b106e6de3df704f06f75f06d78a7",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d268aa0e4bf866fc3a6e1e8d385f7df6ca8ef1f3d177035ad92abd836ab2b447",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/e409fba66acd4e44b1aff5fe849cebac5530e9df705c07dc02ab0498c8064e2e",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9baeaf8124e6870bb3dfe884ec21d6c8193cd8884a30a7169e0e02e9edab2902",
@@ -1625,6 +2135,7 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/b0ca4bf8597a4abcf4075187ab4a64639a11e028a55809e26d7f6385e18663bc",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d01fc582a4768ba6de83aaaad3907b25387c86cf28514af90cf40ced3b76da73",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/5b785267d01b10fbfb4d16b778f1c69c2982e82c455e26077110558557702eda",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/22fda8f50203770c8321aea12c0e47f0619bb3d972332c4fcedc53bffb5cfeae",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/ec7fc4e546926308884475d987c86f78874b44a541e4e6a6aac400b6fa76d50d",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/5db57ceedfe263a3b431361d2569add4fa263ec958e5fae1057449642e9959f4",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/a9096e6fa7a807ad17b6853585de485015b6d36f03e5bbd7ddac5f954e2420bf",
@@ -1638,6 +2149,47 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/18f0705513ecb6162a320af6f90ef2a72192749f1174417c60511b702723020b",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/216ee020dee88f87382933269994510e690358338d4f3012ec269420d9de55ec",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/5e693a87f5ba5b666ccbfb4853fc3faddce645e4845dc8b78336ee4be9e983f8",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/b5a27eedfe8de6b6d390ac780da1e23ada967d6030bb68eba0b1c96b0c762944",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/cc3bae7848666cb052ac3b5a29572b1e5030a69e5c6f818a65d06ea1e525c093",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3d51edbe3bc4fa22f237ae2a280a098d9f2bac98878d1c4d7d154f0f819c1cdc",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/a5d8f2c3d6a886e1bca09268e49f1156e5c6f69331bb45cb751f4ba4c6664fe3",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d9c7fb658a90b3e9e9b51a9ffd8236291495379d0b8bd89e5704ddd8ed6277e5",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/4cc1734223f272223402550f0ed3168f82733dbe1e865e8ce0d82fb8ac03bc70",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/2fb14090a2815b940883ab709eb75cd055be5004f3ad07c33f36380c221b20bd",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/7ad0eb414862901194e1f5bc6f7a70ab27a8301dc8b6d442f543411075aa830d",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/b0b987b7d89facb137a6082da75c83f3fc6453226dd4180299dab592076592ee",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/76b17cd9322c58e9f8f1e74d75e60be5727585d480006b120e572ee5c9e782a8",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/1c4ff2305c769a7afa227ee119d099f3346cf377be0caa0031b4a59951540a1d",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f896f899dc594172600c9a43157105e0ecb5d8c977752927002c930f4f10bb21",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/a66afb37d4f7ca35f71a27ed38fe07d28a24dfffa6477b0f9d2b54878a1cc405",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/26bed8a210801cb8e6c7afcb0532285da9716ff6f1f884f33391e749c7554985",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/44c486121753e094acf43deac017ade9528ce8457372de8d55ba654756540b15",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/455e2f808fce365b055d3831fda921e57773bde72dca8020528a02e7f5cd85a9",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/6c33d6d2f66ccbbd3d00b4ad60188ff331969b32bc3284a0d59e7feb0000e467",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/0dd03659db3d32d274eff19a541f164e029007c444b84055e40fe3952b1e5fe2",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f4940d6ceac571031959d40d130bdb9a5378680bc0667897082e250249ab67f7",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/7312a04a103e0c49ccb05bcb0ca8be11d1133f3dc9b9a77f163672f07e787eea",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9736e6348a67cceac7f86e2499cc36e8ae7a465ad6b872d8eefa551782384be4",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3b512e211ee842d05ed51e7d49787e9402d2467f2aa5bb6bc7da169e7e88c83f",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/1d39c3bf6dba7b1e0fef8efb27075d52d0aff373f3ac1022561f2b2f9b03f6c5",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/ee2f5ee1bc3f9641e2c482c5b95baa3ffca5f083bbfcbd61140f13f7b8e0bf93",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/bc92a6f45e831de67e4ed64ec0acf7879184899e84bae99c87ed97e8fccf94cb",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/0a78ebcde3352f6c629829ec7983e9091794a275ccd029108b2de20fe0013829",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/76b0d48d0e9ff7ee30e6eed36b2a00605489af74452385fda024ada091de79be",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/30a61361da796b8b350e4c756a2de57071eb705bcf752238f7ad519d336165a3",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/8f68c37da9fb02cdf98ad7481120c2e33d6ca4b187dd5a2dd90673decedb63dd",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/e6a8738aa9fc14d894ad13ab0858a02f873645e05314aff8289d32b41441acb1",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/133b5162b6e8294827b7b1b8134e2caf7cb7dc7ec972318b4b2753043984f876",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/79731a9007d3b982142abd5a4a3c436a44bc860d7b3c1b8508791554fc6c0900",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/cd48ee6cc43bb43bce3c5325a7d50e8c28b109b1e0e9bfc8cada63c85a4280b2",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/19617853d76b1fe65d80c71fcaa052966cfda7090e30afcfc4cd72ced70d16db",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/dd1cbaece4aa084b0fe30258bea98a85647b200f6728268c136ba26dbea34b8f",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/0858e5912bc8f1f754bfb6ceaf71af987bc2fbae364a52f82df5741442db5768",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/fb90151efffc2f6dda3b01ccdb135f74498c125966956ae60fc71aa7af3520fe",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/1217d050f5100d814a5c103540802b0cd24fe8b15bec300ea78efd0c00c23ca7",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3841d51741303b1aef1915fbf25f0d89bfc80a6c4480bcc3d0850a0f6c1a1f42",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/116de8fa37e0ef16ff811c9de6c3ed9b4ef100269d3412f43d2b6b1b1c9a27aa",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/927b8380de50ec7b18705ac9253705f0f3489a3f9648d06372cc69d8738a206c",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/8b44d637915d680eee438161bb540109525a2b8ca164d2dda7cf15a3c6c26324",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d0908c90ae7e0244fc1d6c05206212f8dfd9c1673be7271d11ee8c5d087cf8c9",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3790e37f5c3177b7c2dccf5862ebca1d8624e191b452da2e82c0a53521d1e152",
@@ -1656,7 +2208,7 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/353efee2c14bfde6afb9e28649e2aa024b06a92d08f17a72d076edbac939fd7e",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/66a1d97ea99657cb861c5382a84cb616e49dbd88b8558696d25b79a9154d8750",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/a3db2469fcf33bb2e6837351f32ec776e61dc91d34b41abeb4cc4b886ee2c538",
-    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/103c8225c90a0aaabbc02cc8503c7adaf19b231dfe30bb52580e8aceadb3e023",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/84c769b5d0ef0304d9bc944b1889dc6826dcaf1ddb1bfd72240f7cf1543bae2c",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/2179aea3d52059a8ebdda077dbe74a7802e0d27c794a3acf0f0747f5b7ae6527",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3cff6983e6b2e28b721f8f0c969c752ea29aac41fb6657dcdb79f8e0d8a83bfb",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/05e71d5c982a1375ddda7ec0187d4bb6abe1356ad605d0b558ffbf23c0cd3869",
@@ -1673,7 +2225,24 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/29d8d3fa6ef4203d67e7332032edfca0512553a9254db91f88ab341031262f7d",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/27cb269de23a3cd9423d4853415988732c02653af0870a6e1b281d7ff404c28a",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/db2827cf6452a6bc4b8ba3434f555bf6fee8494bd0bfea65258a98033033d36f",
-    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/b3db25ac8c4a218d0817560fab6ca1e129e182fa97364e1fd95e1afbc92aa157"
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/b3db25ac8c4a218d0817560fab6ca1e129e182fa97364e1fd95e1afbc92aa157",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/11322b675c1d17d71c479790cc682c0262970eac0214277877b3a1dac50d6bb6",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/1af32a14e824c29d799061814313cda55c1560f0ebfe0824e013ed19eac9ede6",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/24a9f0ae1770f13348df97bed0279a4ae57901629b5de30c0e034bbaa0f67859",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/ef8f698d83d5fde92325417718543e113094095ae997e59b9009f01a64879251",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/603aa34e6704e32ea05d8c25108e7e74b07f3f04ba9af09d6d1363044f668f8a",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/0e51fdb112544632869ea88c97f72c7bca64a38c0b1cf1f75846aa89eb3871e6",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/95ee4f9ee002eb089fd02b9c5a8252b15e900142a0142c60cead4d4d39eb3d06",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/8cdaeb0dcae3b67c88d0b134bf1250dacb57f17c607f2da78364a36e689bd201",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f043c02be8cb5c85e892aa2df2fd822dbf4c8b4fcd96a494ae001d664119d73d",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/804fa63112ae4404bb178b3d101038758f85ca845bf1e7b92e3686810bf3fe43",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/2ee6e07665a8109c04c3c8dd9b338bcca121065e95c919eb8acf59e9e8dff2fa",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/1d0a207c981e457d6fa4eb5c975764bf31e25ee5d770dc4b3673f4c2c2ea53b9",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/e98c244c31f56c12848ec7cb9d6fb1d1cc4e6f7d5988894656382f791c704130",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/0a28e48352b1a087c957147fbb7a6d893f9b325a742bd4ae208f6372480c7bcd",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f9b60640be8b652324330ef5ddb6f0605980adb271449a3035ed7da2fecce6f0",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/06b0fd026c83e614916e6abf0ed94deb200a3310074242b9c4d9feb2b441455c"
   ],
   "refined_records": [
     {
@@ -2697,6 +3266,38 @@
     {
       "adjacent_pages": [
         {
+          "page": 6,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=6"
+        },
+        {
+          "page": 8,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=8"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch77",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0007",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "ee2fcf4c870199c95b20fc29c0f12ae34dd4a56bad974d76b884d6f319d24f62",
+      "page": 7,
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "pages_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+      "route": "page/77/0007",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+      "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=7"
+    },
+    {
+      "adjacent_pages": [
+        {
           "page": 13,
           "status": "available-in-full-corpus-not-assumed-selected",
           "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=13"
@@ -2761,6 +3362,70 @@
     {
       "adjacent_pages": [
         {
+          "page": 15,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=15"
+        },
+        {
+          "page": 17,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=17"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch77",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0016",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "f696502ea076100ca07fbc59614c63517e907a2874b4ab05ee66ddce0b045a21",
+      "page": 16,
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "pages_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+      "route": "page/77/0016",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+      "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=16"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 18,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=18"
+        },
+        {
+          "page": 20,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=20"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch77",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0019",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "0d3da5f0378153beafd1470084fb4c4db05c7db9b3b4309e315142bce103aa20",
+      "page": 19,
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "pages_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+      "route": "page/77/0019",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+      "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=19"
+    },
+    {
+      "adjacent_pages": [
+        {
           "page": 19,
           "status": "available-in-full-corpus-not-assumed-selected",
           "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=19"
@@ -2793,6 +3458,134 @@
     {
       "adjacent_pages": [
         {
+          "page": 20,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=20"
+        },
+        {
+          "page": 22,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=22"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch77",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0021",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "17ca407fd315e9ef645e0c7ffd58aabed7d27805f1a10629557353c6c84f1133",
+      "page": 21,
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "pages_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+      "route": "page/77/0021",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+      "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=21"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 22,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=22"
+        },
+        {
+          "page": 24,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=24"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch77",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0023",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "d6a01981d4e119680f32737e6d236199e2b3683c23b0770443cdf80c00ad4b35",
+      "page": 23,
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "pages_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+      "route": "page/77/0023",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+      "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=23"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 23,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=23"
+        },
+        {
+          "page": 25,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=25"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch77",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0024",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "617b15668bd7233b6161a36d30d86201be5fdf6df9e702b84fb1b9733b40392e",
+      "page": 24,
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "pages_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+      "route": "page/77/0024",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+      "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=24"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 24,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=24"
+        },
+        {
+          "page": 26,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=26"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch77",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0025",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "3550ae19586e3de78e595dd4f7a218a90cf079f4cbd81c0c4894fae299c2971c",
+      "page": 25,
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "pages_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+      "route": "page/77/0025",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+      "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=25"
+    },
+    {
+      "adjacent_pages": [
+        {
           "page": 25,
           "status": "available-in-full-corpus-not-assumed-selected",
           "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=25"
@@ -2821,6 +3614,134 @@
       "source_role": "substantive",
       "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
       "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=26"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 26,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=26"
+        },
+        {
+          "page": 28,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=28"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch77",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0027",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "46f63a19536c769b74dda9e8587365bcdfafe8dd937e815ba142a8755e7288ec",
+      "page": 27,
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "pages_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+      "route": "page/77/0027",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+      "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=27"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 27,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=27"
+        },
+        {
+          "page": 29,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=29"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch77",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0028",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "c92b39e12c870783154861c4c1b098a1b665162f5a24b1e010ebb793fc3989a5",
+      "page": 28,
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "pages_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+      "route": "page/77/0028",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+      "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=28"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 28,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=28"
+        },
+        {
+          "page": 30,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=30"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch77",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0029",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "b5cc51d64f8d9cee3e47dcd3609f9106c7a6000e1318f9755a9f970fcece7980",
+      "page": 29,
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "pages_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+      "route": "page/77/0029",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+      "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=29"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 29,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=29"
+        },
+        {
+          "page": 31,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=31"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch77",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0030",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "e87392a82dd725629be629686aa341608b0884099c11b1965f486ce3356a6155",
+      "page": 30,
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "pages_sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19",
+      "route": "page/77/0030",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+      "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=30"
     },
     {
       "adjacent_pages": [
@@ -3305,6 +4226,262 @@
     {
       "adjacent_pages": [
         {
+          "page": 11,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=11"
+        },
+        {
+          "page": 13,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=13"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch78",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "be4c3d9cab28e6deeae204dd65e8a98b57e074f24868c34b5838552e211a2e00",
+      "page": 12,
+      "pages_path": "source/pages/dmg-vol13-ch78.json",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "route": "page/78/0012",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=12"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 12,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=12"
+        },
+        {
+          "page": 14,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=14"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch78",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0013",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "57ab804200c6760c6172599735fb2b6fcb5b4826c77d63d3659a1ed5efda06cd",
+      "page": 13,
+      "pages_path": "source/pages/dmg-vol13-ch78.json",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "route": "page/78/0013",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=13"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 13,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=13"
+        },
+        {
+          "page": 15,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=15"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch78",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0014",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "0cff3b76580573871f27394292919508c2d937c6a5c7da0abba0a4e6c81a9232",
+      "page": 14,
+      "pages_path": "source/pages/dmg-vol13-ch78.json",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "route": "page/78/0014",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=14"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 14,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=14"
+        },
+        {
+          "page": 16,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=16"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch78",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0015",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "5a5969807ac6fb4e6fddde8cb0181bc714f1704a6be90e19ca2f35a9cdcd103c",
+      "page": 15,
+      "pages_path": "source/pages/dmg-vol13-ch78.json",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "route": "page/78/0015",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=15"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 20,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=20"
+        },
+        {
+          "page": 22,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=22"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch78",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0021",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "86eaa2e7029ca0f9b002def96d385020d27a7224da9a21548886b6e6ee27d6ba",
+      "page": 21,
+      "pages_path": "source/pages/dmg-vol13-ch78.json",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "route": "page/78/0021",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=21"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 21,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=21"
+        },
+        {
+          "page": 23,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=23"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch78",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0022",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "16d5aaafb45fce00731aa34821cd361df38b6fb4d0ccee9aabf04701ce7c5da7",
+      "page": 22,
+      "pages_path": "source/pages/dmg-vol13-ch78.json",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "route": "page/78/0022",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=22"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 22,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=22"
+        },
+        {
+          "page": 24,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=24"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch78",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0023",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "c38812807d193af56e5c0da373a0e53bebef3d039bed4a5efb39c5036a155bc4",
+      "page": 23,
+      "pages_path": "source/pages/dmg-vol13-ch78.json",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "route": "page/78/0023",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=23"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 23,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=23"
+        },
+        {
+          "page": 25,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=25"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch78",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0024",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "aed04cdfbb82586da3cb6cc9bf4c899018b4a2f9144a40e4d544212fd96545d5",
+      "page": 24,
+      "pages_path": "source/pages/dmg-vol13-ch78.json",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "route": "page/78/0024",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=24"
+    },
+    {
+      "adjacent_pages": [
+        {
           "page": 24,
           "status": "available-in-full-corpus-not-assumed-selected",
           "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=24"
@@ -3365,6 +4542,166 @@
       "source_role": "substantive",
       "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
       "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=27"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 52,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=52"
+        },
+        {
+          "page": 54,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=54"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch78",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0053",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "d86cdfe54e309e4055b254e0a7281fdbddf2f7acd92fd8593d9ba394e49f31fe",
+      "page": 53,
+      "pages_path": "source/pages/dmg-vol13-ch78.json",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "route": "page/78/0053",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=53"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 53,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=53"
+        },
+        {
+          "page": 55,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=55"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch78",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0054",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "cf6ed8654cf31a86797b13104d372405bf56843b603d51b68aab4534776f0a00",
+      "page": 54,
+      "pages_path": "source/pages/dmg-vol13-ch78.json",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "route": "page/78/0054",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=54"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 54,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=54"
+        },
+        {
+          "page": 56,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=56"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch78",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0055",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "dda790710887c8ef87b9d85f86761bc1048939a4b2bb18d7840e226df8af952a",
+      "page": 55,
+      "pages_path": "source/pages/dmg-vol13-ch78.json",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "route": "page/78/0055",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=55"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 55,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=55"
+        },
+        {
+          "page": 57,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=57"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch78",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0056",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "34c5f95cf503eda54305a8f53f66abaa4e02e1a50aeb2fbeb57b0b8fbc1c0f4b",
+      "page": 56,
+      "pages_path": "source/pages/dmg-vol13-ch78.json",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "route": "page/78/0056",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=56"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 56,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=56"
+        },
+        {
+          "page": 58,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=58"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch78",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0057",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "01d0a149820df7047b710eb851046722cb46ec91482b4a30b0d0993c2de46268",
+      "page": 57,
+      "pages_path": "source/pages/dmg-vol13-ch78.json",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "route": "page/78/0057",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=57"
     },
     {
       "adjacent_pages": [
@@ -3461,6 +4798,38 @@
       "source_role": "substantive",
       "source_sha256": "fe6fe79a4ff52271d6edf97af6b01ebd4290867b30d6288c38eb5e3a6d613c74",
       "source_url": "https://assets.publishing.service.gov.uk/media/690b7db588a98da87e292365/dmg-ch-85.pdf#page=30"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 30,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/690b7db588a98da87e292365/dmg-ch-85.pdf#page=30"
+        },
+        {
+          "page": 32,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/690b7db588a98da87e292365/dmg-ch-85.pdf#page=32"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:03Z",
+      "document_id": "dmg-vol14-ch85",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/85/0031",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "51a87119e261b2f2b793551cd4554b78e22b277cc317af590d2eaa8f4c5a788f",
+      "page": 31,
+      "pages_path": "source/pages/dmg-vol14-ch85.json",
+      "pages_sha256": "5b06b8fe3c59d46f5943d6c27006840e324bdca152086ed38e223e4385ea53ee",
+      "route": "page/85/0031",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "fe6fe79a4ff52271d6edf97af6b01ebd4290867b30d6288c38eb5e3a6d613c74",
+      "source_url": "https://assets.publishing.service.gov.uk/media/690b7db588a98da87e292365/dmg-ch-85.pdf#page=31"
     },
     {
       "adjacent_pages": [
@@ -4009,6 +5378,70 @@
     {
       "adjacent_pages": [
         {
+          "page": 2,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69d8f55d96c86b751317022e/dmg-memo-01-26.pdf#page=2"
+        },
+        {
+          "page": 4,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69d8f55d96c86b751317022e/dmg-memo-01-26.pdf#page=4"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:13.385306Z",
+      "document_id": "dmg-memo-01-26-0605724317",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "b22a4c493020cbc96b3368d9de8f516e26df14f10a5baea8fdb5628af4ae707a",
+      "page": 3,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-memo-01-26-0605724317.json",
+      "pages_sha256": "14de5319b76d1d512343dac8e9273fea16331cd6a02f0c555b8b84fc8d8fede3",
+      "route": "page/dmg-memo-01-26-0605724317/0003",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "supplementary-guidance-applicability-unreviewed",
+      "source_sha256": "3f9046be5c3e80ca1e96cf59e5b648a358d07cf0ede104bd1d91daf785887db7",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69d8f55d96c86b751317022e/dmg-memo-01-26.pdf#page=3"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 4,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/67b72f6978dd6cacb71c6aa6/dmg-memo-02-25.pdf#page=4"
+        },
+        {
+          "page": 6,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/67b72f6978dd6cacb71c6aa6/dmg-memo-02-25.pdf#page=6"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:14.307430Z",
+      "document_id": "dmg-memo-02-25-e03b36ce3e",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "51dc1576d0e2647075c8acd4dd408f595f0b7ef68953abd5eabbe19972271dd1",
+      "page": 5,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-memo-02-25-e03b36ce3e.json",
+      "pages_sha256": "1803b26fbd5f5536dae404d87eb5598f906b0aa1ad1f040de40802f0da133314",
+      "route": "page/dmg-memo-02-25-e03b36ce3e/0005",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "supplementary-guidance-applicability-unreviewed",
+      "source_sha256": "33ca59d7b36288d35b50242927aa4c8a2921b28eb78922bdf74a3a5983fdab4c",
+      "source_url": "https://assets.publishing.service.gov.uk/media/67b72f6978dd6cacb71c6aa6/dmg-memo-02-25.pdf#page=5"
+    },
+    {
+      "adjacent_pages": [
+        {
           "page": 1,
           "status": "available-in-full-corpus-not-assumed-selected",
           "url": "https://assets.publishing.service.gov.uk/media/6a0f19b9f71ef78abbd59de2/dmg-memo-02-26.pdf#page=1"
@@ -4037,6 +5470,134 @@
       "source_role": "supplementary-guidance-applicability-unreviewed",
       "source_sha256": "45e454a6d546b653fc5926d29a64e5cc383145f5951581969ff6504631d55aa5",
       "source_url": "https://assets.publishing.service.gov.uk/media/6a0f19b9f71ef78abbd59de2/dmg-memo-02-26.pdf#page=2"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 1,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/66867768899a6f92e5d9ccf0/dmg-memo-04-24.pdf#page=1"
+        },
+        {
+          "page": 3,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/66867768899a6f92e5d9ccf0/dmg-memo-04-24.pdf#page=3"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:14.744338Z",
+      "document_id": "dmg-memo-04-24-282c3cef22",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-04-24-282c3cef22/0002",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "8569aee3aaade9e027716127cf6150c31a89bb3c2f4c502d41b756cbfb1158d1",
+      "page": 2,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-memo-04-24-282c3cef22.json",
+      "pages_sha256": "96a341849256210150e02de5b6a8d71808a501e7a73733e93c0e1402191a239b",
+      "route": "page/dmg-memo-04-24-282c3cef22/0002",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "supplementary-guidance-applicability-unreviewed",
+      "source_sha256": "35741a2aae92c4082f3cf9fe493674d3c33d998bdf9ecd8bc40a3014edb4ae75",
+      "source_url": "https://assets.publishing.service.gov.uk/media/66867768899a6f92e5d9ccf0/dmg-memo-04-24.pdf#page=2"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 4,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/66867768899a6f92e5d9ccf0/dmg-memo-04-24.pdf#page=4"
+        },
+        {
+          "page": 6,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/66867768899a6f92e5d9ccf0/dmg-memo-04-24.pdf#page=6"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:14.744338Z",
+      "document_id": "dmg-memo-04-24-282c3cef22",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-04-24-282c3cef22/0005",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "62d3128632dd7008c188540bfda9495211caaabca55bf2e3f22c0f1ce366c428",
+      "page": 5,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-memo-04-24-282c3cef22.json",
+      "pages_sha256": "96a341849256210150e02de5b6a8d71808a501e7a73733e93c0e1402191a239b",
+      "route": "page/dmg-memo-04-24-282c3cef22/0005",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "supplementary-guidance-applicability-unreviewed",
+      "source_sha256": "35741a2aae92c4082f3cf9fe493674d3c33d998bdf9ecd8bc40a3014edb4ae75",
+      "source_url": "https://assets.publishing.service.gov.uk/media/66867768899a6f92e5d9ccf0/dmg-memo-04-24.pdf#page=5"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 2,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/67ffaac1ed87b816085467a8/dmg-memo-06-25.pdf#page=2"
+        },
+        {
+          "page": 4,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/67ffaac1ed87b816085467a8/dmg-memo-06-25.pdf#page=4"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:14.367862Z",
+      "document_id": "dmg-memo-06-25-5fee4f859a",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "495d339486cebca5b5d5fe8ab9f4687d54ae780c1bdbe753c8cd8e03f6af9116",
+      "page": 3,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-memo-06-25-5fee4f859a.json",
+      "pages_sha256": "b760e928b19f28460b7ebe877e347aa8bc48f2bb048cd3ebc47254ef7dba4683",
+      "route": "page/dmg-memo-06-25-5fee4f859a/0003",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "supplementary-guidance-applicability-unreviewed",
+      "source_sha256": "006a34df1aa517d8441cb77ada09bc4376e6876c2293130420de039ecf4505da",
+      "source_url": "https://assets.publishing.service.gov.uk/media/67ffaac1ed87b816085467a8/dmg-memo-06-25.pdf#page=3"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 8,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/67ffaac1ed87b816085467a8/dmg-memo-06-25.pdf#page=8"
+        },
+        {
+          "page": 10,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/67ffaac1ed87b816085467a8/dmg-memo-06-25.pdf#page=10"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:14.367862Z",
+      "document_id": "dmg-memo-06-25-5fee4f859a",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "7e2242ed2d7a7eefedf3ff4f5086a4a1b29d01b3015ca91b8640e8b1a52152b5",
+      "page": 9,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-memo-06-25-5fee4f859a.json",
+      "pages_sha256": "b760e928b19f28460b7ebe877e347aa8bc48f2bb048cd3ebc47254ef7dba4683",
+      "route": "page/dmg-memo-06-25-5fee4f859a/0009",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "supplementary-guidance-applicability-unreviewed",
+      "source_sha256": "006a34df1aa517d8441cb77ada09bc4376e6876c2293130420de039ecf4505da",
+      "source_url": "https://assets.publishing.service.gov.uk/media/67ffaac1ed87b816085467a8/dmg-memo-06-25.pdf#page=9"
     },
     {
       "adjacent_pages": [
@@ -4169,6 +5730,38 @@
     {
       "adjacent_pages": [
         {
+          "page": 3,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=3"
+        },
+        {
+          "page": 5,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=5"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:32.783276Z",
+      "document_id": "dmg-vol10-ch61",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0004",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "27d1f5cf06c1e12dc07eedc4a888a70cc3af5d79ae5e36a10c42d5dce528d12c",
+      "page": 4,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch61.json",
+      "pages_sha256": "23b4405d725de2fde124df29a8c753b9fcb7530405c83d588bd321e1e83226cc",
+      "route": "page/dmg-vol10-ch61/0004",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "884dc79907770bd9e178fe4122c0b7d404697f4ccc882b067e9220b34a0f002a",
+      "source_url": "https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=4"
+    },
+    {
+      "adjacent_pages": [
+        {
           "page": 4,
           "status": "available-in-full-corpus-not-assumed-selected",
           "url": "https://assets.publishing.service.gov.uk/media/695ba618295a95414df21af4/dmg-ch-61.pdf#page=4"
@@ -4293,6 +5886,38 @@
       "source_role": "substantive",
       "source_sha256": "e001c101fb7be9bc739a8a5b9c1281637a93f34a099658e7dafef6fbb2b5d4f5",
       "source_url": "https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=117"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 117,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=117"
+        },
+        {
+          "page": 119,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=119"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:34.428591Z",
+      "document_id": "dmg-vol11-ch71",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch71/0118",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "857a1f085ab37af9e4a656998f6dffe6bc30ff79d102b53d8ee499154ec7c980",
+      "page": 118,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol11-ch71.json",
+      "pages_sha256": "1414e514cf78c7a2e0a3ce66e2d88727d3fda28f764fd2e8654361dc569356d6",
+      "route": "page/dmg-vol11-ch71/0118",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "e001c101fb7be9bc739a8a5b9c1281637a93f34a099658e7dafef6fbb2b5d4f5",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5d11f8c6e5274a065e721738/dmgch71.pdf#page=118"
     },
     {
       "adjacent_pages": [
@@ -4516,6 +6141,38 @@
     {
       "adjacent_pages": [
         {
+          "page": 9,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=9"
+        },
+        {
+          "page": 11,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=11"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:22.416226Z",
+      "document_id": "dmg-vol3-ch17",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0010",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "7b022cb1c6cea0e8f38fb3dc5e15a0584a3a9c5071663d28de03fb20938f25a4",
+      "page": 10,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol3-ch17.json",
+      "pages_sha256": "c00f0acadb11047d22fe6c046a756a164cc7be254aaebfb91470f2f38201af99",
+      "route": "page/dmg-vol3-ch17/0010",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "ce6967960168b301ae0b454df6824017202f6d3f6a14282a7ef0d4778bdac19a",
+      "source_url": "https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=10"
+    },
+    {
+      "adjacent_pages": [
+        {
           "page": 10,
           "status": "available-in-full-corpus-not-assumed-selected",
           "url": "https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=10"
@@ -4544,6 +6201,38 @@
       "source_role": "substantive",
       "source_sha256": "ce6967960168b301ae0b454df6824017202f6d3f6a14282a7ef0d4778bdac19a",
       "source_url": "https://assets.publishing.service.gov.uk/media/62d7b8d5d3bf7f2865c6fe43/dmgch17.pdf#page=11"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 3,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=3"
+        },
+        {
+          "page": 5,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=5"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:23.333269Z",
+      "document_id": "dmg-vol4-ch20",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch20/0004",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "cd244daa18b0fa96afd0eb0c041980517ce3c8f172989fa69f3832758e618b02",
+      "page": 4,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol4-ch20.json",
+      "pages_sha256": "ed007251fa43ff9c63f5116f603798f2279c84006af8539bbbfd50194ab0ab56",
+      "route": "page/dmg-vol4-ch20/0004",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "0474580014a697c47370992feee115d49c80b105b9c43270bf89afff0e4b0aa5",
+      "source_url": "https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=4"
     },
     {
       "adjacent_pages": [
@@ -4580,6 +6269,38 @@
     {
       "adjacent_pages": [
         {
+          "page": 10,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=10"
+        },
+        {
+          "page": 12,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=12"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:23.333269Z",
+      "document_id": "dmg-vol4-ch20",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch20/0011",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "02be6bac670eed5e3fe57ea5f50d11978463ee518672c86e0b43cc1d21a860f0",
+      "page": 11,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol4-ch20.json",
+      "pages_sha256": "ed007251fa43ff9c63f5116f603798f2279c84006af8539bbbfd50194ab0ab56",
+      "route": "page/dmg-vol4-ch20/0011",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "0474580014a697c47370992feee115d49c80b105b9c43270bf89afff0e4b0aa5",
+      "source_url": "https://assets.publishing.service.gov.uk/media/67ffaf91694d57c6b1cf8e0e/dmgch20.pdf#page=11"
+    },
+    {
+      "adjacent_pages": [
+        {
           "page": 1,
           "status": "available-in-full-corpus-not-assumed-selected",
           "url": "https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=1"
@@ -4609,5 +6330,75 @@
       "source_sha256": "bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418",
       "source_url": "https://assets.publishing.service.gov.uk/media/689db34d1fedc616bb13399c/dmg-ch-41.pdf#page=2"
     }
+  ],
+  "statutory_body_assertion_ids": [
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/1088b1a608130b40a9155bd4",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/10cf16b5ab6f311ad3fe1b8b",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/1199c6e38e389494401eaf43",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/23287c860ef0c445f6c702ec",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/23f0ed8074094d7b3ca632c8",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/25400c6228eb3e3f37701ef4",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/28be4e0b23c2bef33e77996e",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/2ffb713f9797360edc130719",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/3013508bbf12171b4ce9487b",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/3496783bea6080cd62a9a030",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/3b11c36eaddfdf0585c40a7b",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/471165b0ddfe418e9bdceb27",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/4d28fdcb43f620acb6dc12c3",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/57796b5245b7425689ad88b4",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/57a765c5f7ca1bd6e67224cf",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/5d317e01cd5a15b9b97d1b6f",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/5f260f8bbf98347b252256e7",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/6e2c69afd35653821a3d537d",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/70768aa1a5d9585d366c057f",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/7c7d6227f57b5b40619b514e",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/7dd9f8590f1e57f38bc9d44e",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/805b39b0050f61eadfdbbf71",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/80d8549e60c9caf793e5cc91",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/8ba0ad931a1b0039414b89af",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/930038305b7211daee82aeb6",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/93eadc6c0777b3777ee90c7d",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/9bb7f0d5464ef125ac4c3aec",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/a27bba11aae99801c5cdb210",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/aa32ac771dfeee5df63bfc12",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/b48681e20489647cf421dd61",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/bb66b4ee4ec589c7bee50f9f",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/be8e175b190d0d0752adc9bf",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/d04ce0a11465f25aeb450d12",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/d0a4aa338a94531451cb9ca6",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/d5511e832093746aecb173f1",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/dd05d34725d4921679fe33bc",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/e1c3c4b70d8ab46ab1383908",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/e52624ea3eeb1dfac82bcd0f",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/e56fc24f852640c6dc6bbf63",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/e72137ddb580b47eb27e7a8a",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/eb19f3edeea5da8419887e3d",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/f11b6f224287d093f776fa93",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/f68ac59daab26ce145f10ffc"
+  ],
+  "statutory_body_ids": [
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/ukpga/1992/5/section/1",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/ukpga/2002/16/section/1",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/ukpga/2002/16/section/15",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/ukpga/2002/16/section/2",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/ukpga/2002/16/section/3",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/ukpga/2002/16/section/4",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/regulation/1",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/regulation/15",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/regulation/5",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/regulation/6",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/regulation/8",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/schedule/I/paragraph/1",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/schedule/I/paragraph/2",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/schedule/II/paragraph/1",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/schedule/II/paragraph/3",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/schedule/II/paragraph/4",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/schedule/II/paragraph/5",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/schedule/III/paragraph/1",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2006/213/regulation/12",
+    "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2013/376/regulation/3"
+  ],
+  "statutory_supplementary_reference_ids": [
+    "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/2002/16/section/4"
   ]
 }

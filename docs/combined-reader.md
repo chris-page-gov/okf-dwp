@@ -90,4 +90,13 @@ combined tests exercise this guard without launching a browser or using a networ
 
 ## Boundaries
 
-This remains an independent experimental publication. Source acquisition, navigable relationships, useful context assembly, a model’s answer and specialist legal approval are different claims. The combined Reader does not add statutory provision text, tribunal judgments or subscriber-only handbook contents. Capturing an entire manual does not establish complete semantic modelling or current legal applicability.
+This remains an independent experimental publication. Source acquisition, navigable relationships, useful context assembly, a model’s answer and specialist legal approval are different claims. The household candidate adds selected dated statutory units as unreviewed machine extractions, with separate official links, source-family filtering and requested-version dates. It does not add tribunal judgments or subscriber-only handbook contents. The older recorded public journeys remain tied to their earlier content version; they do not attest this candidate. Capturing an entire manual does not establish complete semantic modelling or current legal applicability.
+
+
+## Household and statutory candidate
+
+The additive household work retains complete qualifying source pages, including the no-partner heading, household exceptions and dated transitional references. [Household evidence expansion](household-evidence-expansion.md) explains the scope. [Selected statutory evidence](legal-body-evidence.md) explains the legal sources and unresolved dependencies. A statutory unit is one selected section, regulation or schedule paragraph; it is not the complete legislation.
+
+The **Source family** facet separates DMG, ADM, Legislation and Project-authored material. Statutory records keep the exact normalised text, an official dated source link and a second link to the retained extraction. A requested point-in-time version is not a publication or commencement date, so it does not create a publication-timeline event. The extracted text remains derived and unreviewed.
+
+Earlier browser observations are checked against the [retained observed source files](../validation/combined-reader/source-snapshots/README.md). The check explicitly reports that it has not checked the current candidate. New public verification must bind the new descriptor and application.

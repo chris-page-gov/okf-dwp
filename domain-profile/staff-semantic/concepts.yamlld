@@ -1,5 +1,5 @@
 schema: okf-dwp-staff-semantic-authoring.v1
-authored_at: '2026-09-20T18:39:47Z'
+authored_at: '2026-09-20T21:29:11Z'
 author: Codex model-assisted proposal; no human or specialist approval
 assertion_status: model-derived
 scope: Frozen-source staff-question research. Source text is not current-law assurance and proposed meaning is
@@ -248,6 +248,11 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   - source-c037
   - source-c039
   review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol10-ch61
+    page: 4
+    anchor: '61012'
 - '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/iidb
   route: staff-domain/iidb
   key: iidb
@@ -307,6 +312,11 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   source_candidates:
   - source-c042
   review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol11-ch71
+    page: 118
+    anchor: '71753'
 - '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/sda
   route: staff-domain/sda
   key: sda
@@ -329,8 +339,11 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   - skos:Concept
   - dwp:BenefitComponent
   label: Pension Credit severe-disability additional amount
-  definition: The Pension Credit additional amount has qualifying-benefit, household and carer conditions. It
-    is not the Severe Disablement Allowance benefit.
+  definition: The Pension Credit additional amount has different no-partner and partner branches,
+    qualifying-benefit receipt, household and carer conditions. DMG 78088 concerns claimants who have no
+    partner, including self-funders; it is not a rule for every care-home resident or the whole Pension Credit
+    award. Dated Scottish-benefit memoranda amend dependencies. It is not the Severe Disablement Allowance
+    benefit.
   aliases:
   - label: SDA
     case_sensitive: true
@@ -575,8 +588,11 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   - skos:Concept
   - dwp:ChangeOfCircumstance
   label: Permanent care-home residence
-  definition: Permanent care-home residence affects household and component-specific conditions. Self-funding
-    alone does not establish the whole Pension Credit result.
+  definition: 'Permanent and temporary care-home stays require different Pension Credit household and component
+    checks. DMG 78088 is under the heading Claimants who have no partner (including self-funders): all severe-disability-addition
+    conditions still apply, including actual qualifying-benefit receipt. One partner entering permanently and both
+    partners living permanently in a home require the separate DMG 77128–77130 household branches. Funding alone
+    does not determine the whole credit.'
   aliases:
   - Care Home
   - Care Homes
@@ -594,13 +610,14 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   - skos:Concept
   - dwp:Circumstance
   label: Partner and household membership
-  definition: Partner treatment requires the source definition of couple and household, including mixed-age
-    and temporary/permanent separation conditions.
+  definition: Pension Credit couple status requires the DMG 77013 definition and household facts. Temporary
+    absence, one partner entering a care home permanently, both partners living there, and mixed-age status
+    are distinct conditional branches. Shared accommodation alone does not establish a shared household; the
+    DMG 77130 factors are non-exhaustive and none alone decides the question.
   aliases:
   - partner
   - partners
   - couple
-  - mixed-age couple
   source_candidates:
   - source-c009
   - source-c010
@@ -636,6 +653,11 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   - source-c032
   - source-c033
   review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol14-ch85
+    page: 31
+    anchor: '85092'
 - '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/calculation
   route: staff-domain/calculation
   key: calculation
@@ -726,6 +748,11 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   - source-c027
   - source-c037
   review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol3-ch17
+    page: 10
+    anchor: '17085'
 - '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/multiple-care
   route: staff-domain/multiple-care
   key: multiple-care
@@ -815,6 +842,320 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   - source-c012
   - source-c034
   review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/household-separation
+  route: staff-domain/household-separation
+  key: household-separation
+  '@type':
+  - skos:Concept
+  - dwp:Circumstance
+  label: Pension Credit household separation and care-home residence
+  definition: DMG 77013 defines a couple; DMG 77102 explains household as a domestic establishment, not merely
+    a building. Under DMG 77128, one partner entering a care home permanently is treated as no longer in the
+    same household. Where both enter permanently, the decision maker must establish whether they remain one
+    household on the facts. DMG 77129–77130 require reasonable independence and responsibility in running a
+    domestic establishment; the seven factors are non-exhaustive and none is decisive alone. DMG 78089 says
+    each may claim when household membership ends, not that an award automatically follows. Temporary absence
+    is a separate branch.
+  aliases:
+  - household separation
+  - both partners in a care home
+  source_candidates:
+  - source-c010
+  - source-c028
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 7
+    anchor: '77013'
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 19
+    anchor: '77102'
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 21
+    anchor: '77117'
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 23
+    anchor: '77121'
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 24
+    anchor: '77128'
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 25
+    anchor: '77131'
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/no-partner-disability-addition
+  route: staff-domain/no-partner-disability-addition
+  key: no-partner-disability-addition
+  '@type':
+  - skos:Concept
+  - dwp:Applicability
+  label: 'Severe-disability addition: claimant with no partner'
+  definition: 'The no-partner branch in DMG 78034 requires a specified qualifying disability benefit, no adult normally
+    residing with the claimant unless ignored, and no Carer’s Allowance payment or Universal Credit carer element
+    for caring for them. Read the protected and ignored-person exceptions in DMG 78035–78036 and 78077–78080. DMG
+    78055–78057 distinguish actual payment from underlying entitlement. The heading Claimants who have no partner
+    (including self-funders) governs DMG 78088: all conditions must still be met. It says normally self-funders
+    and also the first four weeks while AA, DLA or PIP continues; funding status alone cannot prove continued qualification.
+    Scottish-benefit memoranda are separate dated dependencies. Partner cases use DMG 78045–78050.'
+  aliases:
+  - claimants who have no partner
+  - self-funders
+  source_candidates:
+  - source-c028
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 11
+    anchor: '78034'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 12
+    anchor: '78036'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 15
+    anchor: '78055'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 21
+    anchor: '78077'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 22
+    anchor: '78078'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 23
+    anchor: '78080'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 25
+    anchor: '78088'
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition
+  route: staff-domain/partner-disability-addition
+  key: partner-disability-addition
+  '@type':
+  - skos:Concept
+  - dwp:Applicability
+  label: 'Severe-disability addition: claimant with a partner'
+  definition: DMG 78045–78050 provide separate lower-rate and higher-rate partner branches with qualifying
+    benefits, blindness, residence and actual caring-payment conditions. DMG 78047 has a partner-in-hospital
+    exception; DMG 78050 limits deemed qualifying-benefit receipt where patient rules apply. Do not apply the
+    no-partner care-home paragraph 78088 to a couple before deciding household status. The captured examples
+    and rates are historical, not current award calculations.
+  aliases:
+  - partner disability addition
+  source_candidates: []
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 12
+    anchor: '78045'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 13
+    anchor: '78047'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 14
+    anchor: '78050'
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/temporary-care-home
+  route: staff-domain/temporary-care-home
+  key: temporary-care-home
+  '@type':
+  - skos:Concept
+  - dwp:Circumstance
+  label: Temporary care-home stay and continuing household
+  definition: DMG 78084 does not turn a claimant who normally lives with another person into someone normally
+    living alone during a temporary care-home stay. DMG 78085 retains household membership for a temporarily
+    absent partner, but DMG 78086 requires a review of Pension Credit and the severe-disability addition if
+    residential care exceeds 28 days and DLA payability ceases. The example continues on the next page. These
+    are component and qualifying-benefit conditions, not a universal 28-day end to Pension Credit.
+  aliases:
+  - temporary care-home stay
+  - temporary stay in a care home
+  source_candidates: []
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 24
+    anchor: '78084'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 25
+    anchor: '78087'
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home-housing-costs
+  route: staff-domain/care-home-housing-costs
+  key: care-home-housing-costs
+  '@type':
+  - skos:Concept
+  - dwp:BenefitComponent
+  label: Pension Credit housing costs during care-home absence
+  definition: DMG 78270 concerns the housing-cost additional amount, not the whole Pension Credit award. It
+    states that an additional amount for housing costs is not allowed for claimants in a care home unless
+    their absence from the dwelling normally occupied as home is temporary. The exception does not establish
+    payment of care-home fees. DMG 78240 permits a trial stay of up to 13 weeks only with suitability assessment,
+    intention to return if unsuitable and an unlet home; the overall absence limit is 52 weeks. DMG
+    78254–78257 set separate 52-week conditions including intention to return, no letting or subletting, a
+    listed reason and expected duration. Permanent residence and expenditure met by Housing Benefit are
+    separate exclusions. The complete paragraphs span adjacent pages.
+  aliases:
+  - care-home housing costs
+  - trial care-home stay
+  source_candidates:
+  - source-c030
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 53
+    anchor: '78240'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 54
+    anchor: '78241'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 55
+    anchor: '78254'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 56
+    anchor: '3.11'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 57
+    anchor: '78257'
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/mixed-age-pension-credit
+  route: staff-domain/mixed-age-pension-credit
+  key: mixed-age-pension-credit
+  '@type':
+  - skos:Concept
+  - dwp:Applicability
+  label: Pension Credit mixed-age couple conditions and protections
+  definition: 'DMG 77035 distinguishes new claims from 15 May 2019 and continuity protection linked to Pension Credit
+    or pension-age Housing Benefit on 14 May 2019. DMG 77140–77184 distinguish the mixed-age definition, Universal
+    Credit interaction, excluded-partner exceptions and effective dates. The general exclusion is not the complete
+    rule. DMG memo 04/24 paragraphs 15–17 add a protected mixed-age migration route from 8 June 2024: the specified
+    protected couples sent a migration notice may reclaim pension-age Housing Benefit or claim Pension Credit within
+    three months after the relevant UC or HB award ends. That route requires its stated prior entitlement and migration
+    facts; it is not a general right for every mixed-age couple. Contemporary applicability, legislation and the
+    ADM counterpart still require reconciliation.'
+  aliases:
+  - mixed-age couple
+  - mixed age couple
+  - protected mixed-age couple
+  source_candidates:
+  - source-c009
+  - source-c011
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 15
+    anchor: '77035'
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 16
+    anchor: '77041'
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 26
+    anchor: '77140'
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 27
+    anchor: '77160'
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 28
+    anchor: '77161'
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 29
+    anchor: '77172'
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 30
+    anchor: '77184'
+  - family: dmg
+    document_id: dmg-memo-04-24-282c3cef22
+    page: 2
+    anchor: 08/06/24
+  - family: dmg
+    document_id: dmg-memo-04-24-282c3cef22
+    page: 5
+    anchor: '17.'
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/scottish-disability-carer-dependencies
+  route: staff-domain/scottish-disability-carer-dependencies
+  key: scottish-disability-carer-dependencies
+  '@type':
+  - skos:Concept
+  - dwp:Guidance
+  label: Dated Scottish disability and carer dependencies for Pension Credit
+  definition: The captured chapter must be read with its amendment memoranda. DMG memo 02/25 paragraphs 13–16
+    add Pension Age Disability Payment (PADP) from 21 October 2024 to the AA meaning and
+    qualifying/ignored-person provisions. DMG memo 06/25 paragraphs 30–33 add Scottish Adult Disability Living
+    Allowance (SADLA) to specified Pension Credit disability and housing-cost provisions; its introduction
+    gives commencement as 21 March 2025. DMG memo 01/26 paragraphs 5–7 amend Carer Support Payment (CSP)
+    terminology and the specified bereavement run-on from 15 March 2026. Its paragraphs 5 and 6 use different
+    component wording, preserved in the source and requiring legal reconciliation. Do not silently treat these
+    benefits as synonyms in all rules or infer present entitlement from a capture date.
+  aliases:
+  - Scottish disability and carer dependencies
+  source_candidates: []
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-memo-02-25-e03b36ce3e
+    page: 5
+    anchor: '13.'
+  - family: dmg
+    document_id: dmg-memo-06-25-5fee4f859a
+    page: 3
+    anchor: 21.3.25
+  - family: dmg
+    document_id: dmg-memo-06-25-5fee4f859a
+    page: 9
+    anchor: '30.'
+  - family: dmg
+    document_id: dmg-memo-01-26-0605724317
+    page: 3
+    anchor: 15.03.26
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/income-support
+  route: staff-domain/income-support
+  key: income-support
+  '@type':
+  - skos:Concept
+  - dwp:Benefit
+  label: Income Support
+  definition: Income Support has its own conditions of entitlement, distinguished from JSA in DMG 20002 and
+    listed in DMG 20022. The captured rules include prescribed-category, age, work, income and partner
+    conditions and an explicit mixed-age exception in Note 2. They are legacy guidance, not proof of current
+    availability for a new claim. Prisoner applicable-amount rules are one circumstance-specific branch, not
+    the definition of Income Support.
+  aliases:
+  - label: IS
+    case_sensitive: true
+  source_candidates: []
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol4-ch20
+    page: 4
+    anchor: '20002'
+  - family: dmg
+    document_id: dmg-vol4-ch20
+    page: 11
+    anchor: '20022'
 relationships:
 - source: guarantee-credit
   target: pension-credit
@@ -930,8 +1271,9 @@ relationships:
 - source: care-home
   target: severe-disability-addition
   predicate: skos:related
-  statement: DMG 78088 requires all conditions for the additional amount; its self-funding note is not a
-    whole-credit cessation rule.
+  statement: DMG 78088 is explicitly the no-partner branch and requires all severe-disability-addition
+    conditions. Its self-funding and initial four-week qualification is not a rule ending or continuing the
+    whole credit for every care-home resident.
   source_candidates:
   - source-c028
 - source: partner
@@ -1052,6 +1394,130 @@ relationships:
     does not select this regime.
   source_candidates: []
   source_concept_evidence: esa-new-style
+- source: care-home
+  target: household-separation
+  predicate: skos:related
+  statement: A permanent move requires the one-partner/both-partner household distinction before treating
+    someone as a single claimant.
+  source_candidates: []
+  source_concept_evidence: household-separation
+- source: partner
+  target: household-separation
+  predicate: skos:related
+  statement: Shared residence alone does not establish one household; use the non-exhaustive factual test and
+    separate permanent-care branches.
+  source_candidates: []
+  source_concept_evidence: household-separation
+- source: care-home
+  target: no-partner-disability-addition
+  predicate: skos:related
+  statement: The DMG 78088 heading limits this branch to claimants who have no partner; all conditions remain
+    material.
+  source_candidates: []
+  source_concept_evidence: no-partner-disability-addition
+- source: severe-disability-addition
+  target: no-partner-disability-addition
+  predicate: skos:related
+  statement: Inspect the no-partner conditions and the ignored-person and protected-payment qualifications.
+  source_candidates: []
+  source_concept_evidence: no-partner-disability-addition
+- source: partner
+  target: partner-disability-addition
+  predicate: skos:related
+  statement: The source supplies separate partner branches; determine the household before selecting one.
+  source_candidates: []
+  source_concept_evidence: partner-disability-addition
+- source: care-home
+  target: temporary-care-home
+  predicate: skos:related
+  statement: Check permanence before applying the permanent-residence branch; temporary residence has separate
+    household and payment-review rules.
+  source_candidates: []
+  source_concept_evidence: temporary-care-home
+- source: care-home
+  target: care-home-housing-costs
+  predicate: skos:related
+  statement: Housing-cost exclusions and temporary-absence exceptions affect this additional amount, not
+    automatically the whole Pension Credit award.
+  source_candidates: []
+  source_concept_evidence: care-home-housing-costs
+- source: partner
+  target: mixed-age-pension-credit
+  predicate: skos:related
+  statement: Partner ages, prior awards, migration facts and effective dates select different mixed-age
+    branches.
+  source_candidates: []
+  source_concept_evidence: mixed-age-pension-credit
+- source: pension-credit
+  target: mixed-age-pension-credit
+  predicate: skos:related
+  statement: DMG 77031–77035 route general Pension Credit eligibility to mixed-age conditions, protections and
+    the dated migration amendment.
+  source_candidates:
+  - source-c008
+  source_concept_evidence: mixed-age-pension-credit
+- source: no-partner-disability-addition
+  target: scottish-disability-carer-dependencies
+  predicate: skos:related
+  statement: The captured no-partner qualifying-benefit and carer conditions have dated Scottish-benefit
+    dependencies; reconcile the memo wording.
+  source_candidates: []
+  source_concept_evidence: scottish-disability-carer-dependencies
+- source: partner-disability-addition
+  target: scottish-disability-carer-dependencies
+  predicate: skos:related
+  statement: The memo provisions also name partner cases; do not transfer a benefit alias beyond the provision
+    scope.
+  source_candidates: []
+  source_concept_evidence: scottish-disability-carer-dependencies
+- source: income-support
+  target: eligibility
+  predicate: skos:related
+  statement: DMG 20002 and 20022 distinguish Income Support conditions, including the captured mixed-age
+    exception, from JSA and prisoner applicable-amount rules.
+  source_candidates: []
+  source_concept_evidence: income-support
+- source: additional-benefits
+  target: carers-allowance
+  predicate: skos:related
+  statement: When considering an additional benefit, inspect Carer’s Allowance’s own caring, work, age,
+    education and residence conditions; State Pension receipt alone does not satisfy them.
+  source_candidates:
+  - source-c036
+- source: additional-benefits
+  target: attendance-allowance
+  predicate: skos:related
+  statement: For a pension-age disability-benefit comparison, inspect Attendance Allowance age, disability and
+    competing-benefit conditions; age or another award alone does not establish entitlement.
+  source_candidates:
+  - source-c039
+  source_concept_evidence: attendance-allowance
+- source: iidb
+  target: income
+  predicate: skos:related
+  statement: DMG 85091 names IIDB in the Pension Credit income assessment. This is an effect on Pension Credit
+    assessment, not automatic entitlement to another IIDB supplement.
+  source_candidates:
+  - source-c032
+  source_concept_evidence: income
+- source: iidb
+  target: overlap
+  predicate: skos:related
+  statement: DMG 17085–17086 distinguish named industrial-injuries components and other benefits in a
+    two-column adjustment table. Match the exact component and direction; core IIDB is not interchangeable
+    with Constant Attendance Allowance or Unemployability Supplement.
+  source_candidates:
+  - source-c034
+  source_concept_evidence: overlap
+- source: iidb
+  target: rea
+  predicate: skos:related
+  statement: DMG 71748–71754 compare combined IIDB and Reduced Earnings Allowance in the historical branch for
+    people retired by 5 April 1987. Later retirement cohorts have separate rules; this does not establish that
+    IIDB ceases at pension age.
+  source_candidates:
+  - source-c042
+  source_concept_evidence: rea
 alias_reassignments:
   term/pc-prisoner-credit-rates:
   - State Pension Credit
@@ -1086,3 +1552,6 @@ alias_reassignments:
   - receiving
   - loss of payment
   - payments
+  term/is-prisoner-applicable-amount:
+  - IS
+  - Income Support

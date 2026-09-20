@@ -27,7 +27,11 @@
       "domain-profile/legal-reconciliation/*.yamlld",
       "domain-profile/legal-reconciliation/seeds.json",
       "domain-profile/staff-needs/journeys.json",
-      "source/legal-discovery-2026-09-20/manifest.json"
+      "source/legal-discovery-2026-09-20/manifest.json",
+      "source/legal-bodies-2026-09-21/manifest.json",
+      "source/legal-bodies-2026-09-21-v2/manifest.json",
+      "domain-profile/legal-bodies/seeds.json",
+      "domain-profile/legal-bodies/navigation.json"
     ],
     "outputs": [
       {
@@ -154,6 +158,16 @@
         "path": "combined/data/semantic/*.jsonld.gz",
         "role": "semantic-json-ld-shards",
         "generated": true
+      },
+      {
+        "path": "domain-profile/legal-bodies/evidence.yamlld",
+        "role": "semantic-yaml-ld",
+        "generated": true
+      },
+      {
+        "path": "domain-profile/legal-bodies/context-overlay.json",
+        "role": "explorer-runtime",
+        "generated": true
       }
     ],
     "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
@@ -165,7 +179,8 @@
       "ADM is a separate frozen source family. Corpus-wide page retrieval does not establish complete policy modelling or an answerability profile.",
       "The preserved custody context and its immutable acceptance receipts retain their original source and consumer versions.",
       "The additive combined Reader and staff semantic projection preserve earlier releases. Forty development profiles contain named unmet obligations; none establishes a complete answer or independent specialist acceptance.",
-      "Verified provision reference metadata is navigation only. It does not contain statutory body evidence or establish commencement, extent for an individual case, or legal applicability."
+      "Verified provision reference metadata is navigation only. It does not contain statutory body evidence or establish commencement, extent for an individual case, or legal applicability.",
+      "The additive household candidate includes 20 selected dated statutory units as derived, unreviewed extractions; this does not resolve complete legal dependencies, commencement, applicability or specialist review. Earlier reference-only outputs and receipts keep their original scope."
     ]
   },
   "relationship_contract": {
@@ -205,6 +220,7 @@
       "uv run --locked python scripts/build_staff_review_packs.py",
       "uv run --locked python scripts/build_staff_needs.py",
       "uv run --locked python scripts/build_legal_reconciliation.py",
+      "uv run --locked python scripts/build_legal_body_evidence.py",
       "uv run --locked python scripts/build_staff_semantic.py",
       "uv run --locked python scripts/build_combined_reader.py",
       "uv run --locked python scripts/compare_source_census.py"
@@ -232,7 +248,8 @@
       "uv run --locked python scripts/build_staff_semantic.py --check",
       "uv run --locked python scripts/build_combined_reader.py --check",
       "uv run --locked python scripts/compare_source_census.py --check",
-      "uv run --locked python scripts/check_combined_reader_observations.py"
+      "uv run --locked python scripts/check_combined_reader_observations.py",
+      "uv run --locked python scripts/build_legal_body_evidence.py --check"
     ]
   },
   "reader": {
