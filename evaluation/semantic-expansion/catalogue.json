@@ -626,6 +626,32 @@
         "skos:Concept",
         "dwp:BenefitComponent"
       ],
+      "additional_sources": [
+        {
+          "anchor": "78034",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 11
+        },
+        {
+          "anchor": "78045",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 12
+        },
+        {
+          "anchor": "78088",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 25
+        },
+        {
+          "anchor": "57001",
+          "document_id": "dmg-vol10-ch57",
+          "family": "dmg",
+          "page": 5
+        }
+      ],
       "aliases": [
         {
           "case_sensitive": true,
@@ -635,13 +661,21 @@
       ],
       "assertion_status": "model-derived",
       "authority": "model-assisted",
-      "definition": "The Pension Credit additional amount has different no-partner and partner branches, qualifying-benefit receipt, household and carer conditions. DMG 78088 concerns claimants who have no partner, including self-funders; it is not a rule for every care-home resident or the whole Pension Credit award. Dated Scottish-benefit memoranda amend dependencies. It is not the Severe Disablement Allowance benefit.",
+      "definition": "Navigation to the Pension Credit additional amount for people who are severely disabled. The captured guidance identifies separate no-partner and partner branches in DMG 78034 and 78045. The permanent-care-home paragraph 78088 is headed Claimants who have no partner (including self-funders) and requires all its conditions to be satisfied. This additional amount is distinct from the Severe Disablement Allowance benefit described in DMG 57001. This overview does not set out the full qualifying conditions or a consolidated current-law rule.",
       "evidence_ids": [
         "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011",
-        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025"
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch57/0005"
       ],
       "key": "severe-disability-addition",
       "label": "Pension Credit severe-disability additional amount",
+      "required_source_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch57/0005"
+      ],
       "review_status": "unreviewed-specialist-review-required",
       "route": "staff-domain/severe-disability-addition",
       "source_candidates": [
@@ -1547,6 +1581,18 @@
           "page": 15
         },
         {
+          "anchor": "78060",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 16
+        },
+        {
+          "anchor": "which the award is first paid",
+          "document_id": "dmg-vol13-ch78",
+          "family": "dmg",
+          "page": 17
+        },
+        {
           "anchor": "78077",
           "document_id": "dmg-vol13-ch78",
           "family": "dmg",
@@ -1569,6 +1615,30 @@
           "document_id": "dmg-vol13-ch78",
           "family": "dmg",
           "page": 25
+        },
+        {
+          "anchor": "13.",
+          "document_id": "dmg-memo-02-25-e03b36ce3e",
+          "family": "dmg",
+          "page": 5
+        },
+        {
+          "anchor": "21.3.25",
+          "document_id": "dmg-memo-06-25-5fee4f859a",
+          "family": "dmg",
+          "page": 3
+        },
+        {
+          "anchor": "30.",
+          "document_id": "dmg-memo-06-25-5fee4f859a",
+          "family": "dmg",
+          "page": 9
+        },
+        {
+          "anchor": "15.03.26",
+          "document_id": "dmg-memo-01-26-0605724317",
+          "family": "dmg",
+          "page": 3
         }
       ],
       "aliases": [
@@ -1577,18 +1647,36 @@
       ],
       "assertion_status": "model-derived",
       "authority": "model-assisted",
-      "definition": "The no-partner branch in DMG 78034 requires a specified qualifying disability benefit, no adult normally residing with the claimant unless ignored, and no Carer’s Allowance payment or Universal Credit carer element for caring for them. Read the protected and ignored-person exceptions in DMG 78035–78036 and 78077–78080. DMG 78055–78057 distinguish actual payment from underlying entitlement. The heading Claimants who have no partner (including self-funders) governs DMG 78088: all conditions must still be met. It says normally self-funders and also the first four weeks while AA, DLA or PIP continues; funding status alone cannot prove continued qualification. Scottish-benefit memoranda are separate dated dependencies. Partner cases use DMG 78045–78050.",
+      "definition": "Bounded reading of the captured lower-rate branch for a claimant with no partner. DMG 78034–78036 set receipt, residence and caring conditions and the stated transitional-protection exception. In DMG 78057, Carer’s Allowance or Universal Credit including the carer element, in respect of caring for the claimant or partner, must actually be in payment before it affects entitlement to this additional amount. That is not a universal cash-payment test for disability benefits: DMG 78060 treats specified disability benefits as received for periods before an award is made but in respect of which it is awarded, or periods not covered by an award but with payment in lieu of an award, and treats CA or UC including the carer element as not received before its first payment. Its separate patient provision expressly concerns a claimant who has a partner and must not be transferred to a no-partner care-home case. Under the no-partner heading, DMG 78088 requires all conditions to remain satisfied; funding status alone does not settle them. Read these captured passages with the separate dated changes in memos 02/25, 06/25 and 01/26. This component does not consolidate those changes or determine every residence, ignored-person, funding or hospital rule.",
       "evidence_ids": [
         "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011",
         "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012",
         "https://chris-page-gov.github.io/okf-dwp/id/page/78/0015",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0016",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0017",
         "https://chris-page-gov.github.io/okf-dwp/id/page/78/0021",
         "https://chris-page-gov.github.io/okf-dwp/id/page/78/0022",
         "https://chris-page-gov.github.io/okf-dwp/id/page/78/0023",
-        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025"
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
       ],
       "key": "no-partner-disability-addition",
       "label": "Severe-disability addition: claimant with no partner",
+      "required_source_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0015",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0016",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0017",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003"
+      ],
       "review_status": "unreviewed-specialist-review-required",
       "route": "staff-domain/no-partner-disability-addition",
       "source_candidates": [
@@ -2096,7 +2184,9 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/c29452fed9a7df847ff5bcb7aa34272c4bd48c8d23892fc44e383621f2f77054",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9dc0a8882745d1a8aec654b9d1a932e45cc06fc4957daa78e822688984c4732e",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/80bd0a50653626fe93b78f9e881af7b8f01f83f2239691935f503dd5e941ba6a",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/48320be113458ff80d2280194654a7ebf4e05d27510b934932f8ff26ea6fcedc",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/01065a565050af7aea619519d543beb1371aaa67671fe693b2ba569bb2566f8f",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/c6ad9543cad7ea2cf366092ec2377806900184e55101ef736ee7c407a7e2b85a",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d476c169af5fa2038ac25d44dcaf890c21851ea18ab6eba263dffc34e4cabf5a",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d63191dcf949b686646c4879f6eeed84a58b71d6b8440c7af750590d40b7d7cd",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/51600d1389f92e81cfec6b09bbb89041df1432f6a5b1e47733f38ef5072e757a",
@@ -2183,10 +2273,16 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/b0b987b7d89facb137a6082da75c83f3fc6453226dd4180299dab592076592ee",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/76b17cd9322c58e9f8f1e74d75e60be5727585d480006b120e572ee5c9e782a8",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/1c4ff2305c769a7afa227ee119d099f3346cf377be0caa0031b4a59951540a1d",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/626e4fed3c05aa0ae6d9e35f9f38ee36dfaee45a412a7cd9414ee92120083b8a",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/2f1dc378e0f899865de902865e699089f58932e02193e713f957713f13ee7ce9",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f896f899dc594172600c9a43157105e0ecb5d8c977752927002c930f4f10bb21",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/a66afb37d4f7ca35f71a27ed38fe07d28a24dfffa6477b0f9d2b54878a1cc405",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/26bed8a210801cb8e6c7afcb0532285da9716ff6f1f884f33391e749c7554985",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/44c486121753e094acf43deac017ade9528ce8457372de8d55ba654756540b15",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/5897115f695cd98499e786dee63c2e3582628e91517516e6858492ae389d4efb",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/69ac690750a62ad2db60b5f77a6169c992253f94f92bb84fbb21d627b82cb9e6",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9f3a4c2de72f2f842b9b73bdbbab8272050535409a5098efb2128442989f382a",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/e32a9ff1d3db361343b926f4c2206abf221d5abe8cf35f2d4ef9cbfda99bfe51",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/455e2f808fce365b055d3831fda921e57773bde72dca8020528a02e7f5cd85a9",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/6c33d6d2f66ccbbd3d00b4ad60188ff331969b32bc3284a0d59e7feb0000e467",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/0dd03659db3d32d274eff19a541f164e029007c444b84055e40fe3952b1e5fe2",
@@ -2279,24 +2375,52 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/7a7117c25c4a25c475dea0f609f56d3cbc58633c73f876f89d845292c68309fb",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/013c61140270ce511879a6cdd38319bf61db384e8d5547437725671269840ab8",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/ac2e20e468daca9c7bafaf9460def1486a3d2e61ba50f0b213bc42188bcec909",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3c4e521474fdedb463f80eec3a2bc2b82fc8e2b92e29f5129cb1b9ee8d794275",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/14c892511f155b3bc74d2c6cebef1360f75c38916ff9bc849c243e1f5231bab5",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f0541b9851cc0684d4a43380c22402223c012aa45ae70414e825f5d8acc02e18",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/5b9c089b37b334fa00bc4a628458faadc94b5c5beac46aa85a639c41f0ddef4b",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/dae2a7515901fad8cb19b58c4dcfc96c6e70c0e19c2166ed5f60406b3ef2a6af",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9ae23ccea9b555e25774eb82ccefa2be7a5d68e7d9fd951367a77399e8b3c9a6",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/0962562f70eddb5d888fb518250d205a1eba6a1b22fdfc9152350cdd37b15770",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/53b2dee3d823ee349b591448548af5aa250aa94caa0f7d3adbecc58d21b2a501",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/5a3fb8ea7deae417042d2aedff2a5424e8f4617618bb6cf06c4ab926c14a8b67",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/e2fe2b90fe177e471714b2f20d80a6ebdef7363e232d4f8afe99f0b125f9ada3",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3321674ef0a1a47069adeb28b38cce0c1b95bffb47e4f78ff3262adcdfab0bc4",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/ad5f290f6e57057ad6f2c4b95ddc1ba8cfcdd49e3650a9abdb260b752d9ca36f",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/956e3cc953de3e2998dff6ec240fc55988193d548acea982d154f0b7c3779c53",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/8e400b8bf9fb0bf32f32e6ec3fc00a370b7348d36dded40d1f94bcd62b90e602",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9163c9c6aaa208690ae63e39619efc55196ef0f9d33d7e3c105279673d2657db",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f39de992e2dd7c37e1767dd9d2fed4737f71ed53d1b4194e28ac0fa062891445"
   ],
   "qualification_assertion_ids": [
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/013c61140270ce511879a6cdd38319bf61db384e8d5547437725671269840ab8",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/0962562f70eddb5d888fb518250d205a1eba6a1b22fdfc9152350cdd37b15770",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/14c892511f155b3bc74d2c6cebef1360f75c38916ff9bc849c243e1f5231bab5",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/21c1b85b38bd721036abed8206d8f755b29a878bbb35d6501e0f0d7695957325",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3093de9ecc54b03e6c9cedcdac79387670e894323c41c41ba9370c130f92ee28",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3321674ef0a1a47069adeb28b38cce0c1b95bffb47e4f78ff3262adcdfab0bc4",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3c4e521474fdedb463f80eec3a2bc2b82fc8e2b92e29f5129cb1b9ee8d794275",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/53b2dee3d823ee349b591448548af5aa250aa94caa0f7d3adbecc58d21b2a501",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/5a3fb8ea7deae417042d2aedff2a5424e8f4617618bb6cf06c4ab926c14a8b67",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/5b9c089b37b334fa00bc4a628458faadc94b5c5beac46aa85a639c41f0ddef4b",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/5e898f9d50db21e9ac0a930adeff49a0730d3ead8b56b2aa76fe4d646733aaf8",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/62c2011561a12540b40a48735c54b7f8d1bc352d6d460c6737a188712fef3f9e",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/7a7117c25c4a25c475dea0f609f56d3cbc58633c73f876f89d845292c68309fb",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/8e400b8bf9fb0bf32f32e6ec3fc00a370b7348d36dded40d1f94bcd62b90e602",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9163c9c6aaa208690ae63e39619efc55196ef0f9d33d7e3c105279673d2657db",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/956e3cc953de3e2998dff6ec240fc55988193d548acea982d154f0b7c3779c53",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9ae23ccea9b555e25774eb82ccefa2be7a5d68e7d9fd951367a77399e8b3c9a6",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/a5278d1b76f2a7f9131256aa41424e4c5fe8022b96a3847fdc89a885b6715544",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/ab309e7dcd4473f5292a1dc7afe062168f2ffd5a8905a7a49655a0d1986bfb30",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/ac2e20e468daca9c7bafaf9460def1486a3d2e61ba50f0b213bc42188bcec909",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/ad5f290f6e57057ad6f2c4b95ddc1ba8cfcdd49e3650a9abdb260b752d9ca36f",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/b70529a58429aa2abcc5eaebed953969404d27ebe7f88ca6e3ab2d7b89947dae",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/cf5f40a6b49fc1c0a2835f375c2015b0baa20efcea742a7688d44a630e695f07",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/dae2a7515901fad8cb19b58c4dcfc96c6e70c0e19c2166ed5f60406b3ef2a6af",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/dc7bc003b61f1f64cee99a68a9221fbe38bf384812b3d7f0f40b7eb6565edabc",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/e2fe2b90fe177e471714b2f20d80a6ebdef7363e232d4f8afe99f0b125f9ada3",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/e832533493c916419bff7636e9c09e7c56050e5d1862dc45ebfd3ceabf09e8d3",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f0541b9851cc0684d4a43380c22402223c012aa45ae70414e825f5d8acc02e18",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f39de992e2dd7c37e1767dd9d2fed4737f71ed53d1b4194e28ac0fa062891445"
   ],
   "refined_records": [
@@ -4405,6 +4529,70 @@
       "source_role": "substantive",
       "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
       "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=15"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 15,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=15"
+        },
+        {
+          "page": 17,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=17"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch78",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0016",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "d460401ebba54c108a6211f3e2eaa02e8dffb75177de1efacc17b70b4996f293",
+      "page": 16,
+      "pages_path": "source/pages/dmg-vol13-ch78.json",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "route": "page/78/0016",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=16"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 16,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=16"
+        },
+        {
+          "page": 18,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=18"
+        }
+      ],
+      "captured_at": "2026-09-15T14:21:01Z",
+      "document_id": "dmg-vol13-ch78",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0017",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "8b22b67c0956490c0b399c262554da6cd8a8e781875f497b72fc42d53c89b706",
+      "page": 17,
+      "pages_path": "source/pages/dmg-vol13-ch78.json",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "route": "page/78/0017",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "source_url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=17"
     },
     {
       "adjacent_pages": [

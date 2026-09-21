@@ -66,7 +66,7 @@ class StaffSemanticTests(unittest.TestCase):
         pages={base+'page/77/'+str(n).zfill(4) for n in (7,19,21,23,24,25)}|{base+'page/78/0025'}
         edges={row['id']:row for row in self.index['assertions']}
         all_declarations=[edges[identity] for identity in self.catalogue['qualification_assertion_ids']]
-        self.assertEqual(len(all_declarations),15)
+        self.assertEqual(len(all_declarations),29)
         declarations=[edge for edge in all_declarations if edge['source'] in {care,household}]
         self.assertEqual(len(declarations),8)
         self.assertEqual({(e['source'],e['target']) for e in declarations},
@@ -112,7 +112,9 @@ class StaffSemanticTests(unittest.TestCase):
             if profile['id'] not in ('staff-012','staff-013'):continue
             required=requirements[profile['requirement_id']]
             self.assertEqual(set(profile['qualification_concept_ids']),
-                             {base+'staff-domain/household-separation',housing})
+                             {base+'staff-domain/household-separation',housing,
+                              base+'staff-domain/severe-disability-addition',
+                              base+'staff-domain/no-partner-disability-addition'})
             self.assertTrue(pages<=set(profile['qualification_evidence_ids']))
             self.assertNotIn(temporary,required['required'])
             self.assertNotIn(base+'page/78/0024',required['required'])
@@ -122,6 +124,88 @@ class StaffSemanticTests(unittest.TestCase):
                 self.assertIn(path['seed'],required['when_all'])
                 self.assertEqual(edges[path['assertions'][-1]]['predicate'],DCT+'requires')
                 self.assertIn(path,required['required_paths'])
+
+    def test_disability_support_keeps_the_overview_small_and_receipt_complete(self):
+        base='https://chris-page-gov.github.io/okf-dwp/id/'
+        overview=base+'staff-domain/severe-disability-addition'
+        branch=base+'staff-domain/no-partner-disability-addition'
+        overview_pages={base+'page/78/'+str(n).zfill(4) for n in (11,12,25)}|{
+            base+'page/dmg-vol10-ch57/0005'}
+        branch_pages={base+'page/78/'+str(n).zfill(4) for n in (11,12,15,16,17,25)}|{
+            base+'page/dmg-memo-02-25-e03b36ce3e/0005',
+            base+'page/dmg-memo-06-25-5fee4f859a/0003',
+            base+'page/dmg-memo-06-25-5fee4f859a/0009',
+            base+'page/dmg-memo-01-26-0605724317/0003'}
+        records={r['id']:r for r in self.index['records']}
+        declarations=[e for e in self.index['assertions'] if e['id'] in
+                      set(self.catalogue['qualification_assertion_ids'])]
+        for concept,pages in [(overview,overview_pages),(branch,branch_pages)]:
+            actual=[e for e in declarations if e['source']==concept]
+            self.assertEqual({e['target'] for e in actual},pages)
+            self.assertEqual(len(actual),len(pages))
+            self.assertTrue(all(records[e['target']]['kind']=='evidence' for e in actual))
+        self.assertEqual(len(overview_pages|branch_pages),11)
+        # No intermediary concept dependencies can pull every branch into the overview.
+        self.assertFalse(any(e['source']==overview and records[e['target']]['kind']=='concept'
+                             for e in declarations))
+        for page in (21,22,23,24):
+            self.assertNotIn(base+'page/78/'+str(page).zfill(4),branch_pages)
+        node=next(c for c in self.catalogue['concepts'] if c['key']=='no-partner-disability-addition')
+        self.assertTrue({base+'page/78/'+str(n).zfill(4) for n in (21,22,23)}<=set(node['evidence_ids']))
+
+    def test_disability_profile_paths_are_conditional_investigation_not_claimant_facts(self):
+        base='https://chris-page-gov.github.io/okf-dwp/id/'
+        care=base+'staff-domain/care-home'
+        keys=('severe-disability-addition','no-partner-disability-addition')
+        nodes={n['key']:n for n in self.catalogue['concepts']}
+        edges={e['id']:e for e in self.index['assertions']}
+        requirements={r['id']:r for r in self.index['requirements']}
+        frozen=json.loads((ROOT/'evaluation/model-comparison/household-2026-09-21/frozen/input-snapshots/assembly-index.json').read_bytes())
+        previous={r['id']:r for r in frozen['requirements']}
+        for row in self.index['requirements']:
+            self.assertEqual(row['when_all'],previous[row['id']]['when_all'])
+        for profile in self.profiles['profiles']:
+            if profile['id'] not in ('staff-012','staff-013'):continue
+            requirement=requirements[profile['requirement_id']]
+            self.assertEqual(requirement['when_all'],[base+'term/pension-credit',care])
+            self.assertTrue(any('Conditional branch investigation only' in v and
+                                'does not establish that the claimant has no partner' in v
+                                for v in requirement['limitations']))
+            self.assertEqual(profile['evidence_status'],'insufficient')
+            self.assertEqual(len(profile['obligation_ids']),5)
+            for key in keys:
+                concept=nodes[key]['@id']
+                for page in nodes[key]['required_source_ids']:
+                    expected=[care,concept,page]
+                    path=next(p for p in profile['qualification_paths'] if p['records']==expected)
+                    self.assertIn(path,requirement['required_paths'])
+                    self.assertIn(path['seed'],requirement['when_all'])
+                    self.assertEqual([edges[i]['predicate'] for i in path['assertions']],
+                                     [SKOS+'related',DCT+'requires'])
+
+    def test_new_receipt_pages_preserve_literal_bytes_and_sda_ambiguity(self):
+        base='https://chris-page-gov.github.io/okf-dwp/id/'
+        rows={r['id']:r for r in self.index['records']}
+        for number,expected in [(16,'d460401ebba54c108a6211f3e2eaa02e8dffb75177de1efacc17b70b4996f293'),
+                                (17,'8b22b67c0956490c0b399c262554da6cd8a8e781875f497b72fc42d53c89b706')]:
+            row=rows[base+'page/78/'+str(number).zfill(4)]
+            self.assertEqual(digest(row['text'].encode()),expected)
+            self.assertEqual(row['assertion_status'],'normalized')
+            self.assertEqual(row['authority']['class'],'derived')
+        candidates=[r['id'] for r in self.index['records']
+                    if {'label':'SDA','case_sensitive':True} in r.get('aliases',[])]
+        self.assertEqual(set(candidates),{base+'staff-domain/sda',base+'staff-domain/severe-disability-addition'})
+        # The current addition does not reinterpret any earlier whole-page evidence.
+        frozen=json.loads((ROOT/'evaluation/model-comparison/household-2026-09-21/frozen/input-snapshots/assembly-index.json').read_bytes())
+        for before in frozen['records']:
+            if before['kind']=='evidence':self.assertEqual(rows[before['id']],before)
+
+    def test_receipt_continuation_rejects_an_invented_paragraph_anchor(self):
+        def mutation(data):
+            node=next(n for n in data['@graph'] if n['key']=='no-partner-disability-addition')
+            page=next(x for x in node['additional_sources'] if x['document_id']=='dmg-vol13-ch78' and x['page']==17)
+            page['anchor']='78060'
+        self.mutate_authoring('concepts.yamlld',mutation,'Source anchor absent')
 
     def test_component_wording_preserves_source_subject_and_heading(self):
         base='https://chris-page-gov.github.io/okf-dwp/id/'

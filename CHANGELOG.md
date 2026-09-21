@@ -8,6 +8,20 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Disability-addition qualification support — 21 September 2026
+
+- Distinguish the limited severe-disability overview from the detailed no-partner
+  branch. Require their four and ten supporting pages, including two already
+  captured Chapter 78 pages newly selected into the semantic index.
+- Preserve the difference between actual carer-benefit payment and the specified
+  disability-benefit receipt qualifications. Keep partner-only patient scope and
+  separate memo dates explicit; retain both unresolved meanings of SDA.
+- Add conditional support paths for Staff 012 and 013 without presuming that the
+  claimant has no partner. Preserve all 203 obligation identifiers and statuses.
+- Independently review the source changes and pass 35 staff and 11 household
+  controls. The 903-record, 1,464-assertion semantic index is prepared; combined
+  Reader integration, bounded context retention and publication remain separate.
+
 ## Learning publication verified — 21 September 2026
 
 - Verify the published learning site against commit

@@ -1,5 +1,5 @@
 schema: okf-dwp-staff-task-profiles.v1
-authored_at: '2026-09-20T23:38:36Z'
+authored_at: '2026-09-21T00:02:39Z'
 authority: Codex model-assisted proposal; no human or specialist approval
 profiles:
 - id: staff-001
@@ -556,6 +556,8 @@ profiles:
   qualification_concepts:
   - household-separation
   - care-home-housing-costs
+  - severe-disability-addition
+  - no-partner-disability-addition
   candidate_ids:
   - source-c028
   - source-c030
@@ -563,7 +565,8 @@ profiles:
   obligations:
   - id: source-requirement-1
     category: evidence_closure_unverified
-    label: Separate permanent residence with no partner (DMG 78088 heading), one partner leaving the
+    label: Conditional branch investigation only; inspecting the no-partner branch does not establish that
+      the claimant has no partner. Separate permanent residence with no partner (DMG 78088 heading), one partner leaving the
       household, both partners in a home, qualifying-benefit receipt and housing-cost exclusions; self-funding
       alone is insufficient.
     status: candidate-evidence-only
@@ -605,6 +608,8 @@ profiles:
   qualification_concepts:
   - household-separation
   - care-home-housing-costs
+  - severe-disability-addition
+  - no-partner-disability-addition
   candidate_ids:
   - source-c028
   - source-c030
@@ -612,7 +617,9 @@ profiles:
   obligations:
   - id: source-requirement-1
     category: evidence_closure_unverified
-    label: Establish the funding arrangement and actual qualifying-benefit payment; separate the no-partner
+    label: Conditional branch investigation only; inspecting the no-partner branch does not establish that
+      the claimant has no partner. Establish the funding arrangement and qualifying-benefit receipt, including
+      the captured treated-as-receipt qualifications; separate the no-partner
       disability-addition branch, household change and housing costs from the basic Pension Credit award.
     status: candidate-evidence-only
     resolution: DMG 78088 states normally self-funders and the initial four-week continuation, subject to all
