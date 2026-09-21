@@ -234,9 +234,9 @@ telemetry. Numeric telemetry is bounded to the exact JSON integer range; malform
 usage is rejected while preserving an attempt receipt. A retained public Claude terminal string is wrapped only as a labelled
 synthetic parser fixture; its historical formatter invocation remains unchanged.
 
-Passing these tests is an engineering result. Actual direct-JSON provider
-behaviour, model answers, semantic correctness and specialist acceptance remain
-unmeasured. A failed control stops progression; it does not authorise a new
+Passing these tests is an engineering result. The later four direct-JSON calls
+and their retained answers are observed separately. Agent review identifies
+specific qualification issues; specialist acceptance remains unestablished. A failed control stops progression; it does not authorise a new
 exception or an automatic retry.
 
 ## Exact metadata additions and evidence

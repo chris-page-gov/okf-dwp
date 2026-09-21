@@ -17,6 +17,8 @@ and [PR 22](https://github.com/chris-page-gov/okf-dwp/pull/22) carry the later
 publication and trial work through normal protected checks. This checkpoint
 does not claim their eventual merged CI or a later public observation.
 
+<a id="current-additive-staff-increment-20-september-2026"></a>
+
 ## Earlier additive staff increment: 20 September 2026
 
 [DWP PR 12](https://github.com/chris-page-gov/okf-dwp/pull/12) and
