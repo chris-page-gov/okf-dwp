@@ -14,6 +14,17 @@ Implementation ownership and handovers belong in the
 - Check committed inputs, complete reconstruction and bounded resource files; preserve the existing Markdown-only website when no registry is declared. Twenty-three offline controls and independent review pass.
 - Explain the browser reader, explicit publication approval and integrity limits in the beginner publication guide. A local build is separate from public-site verification and legal acceptance.
 
+## Public versioned evidence and direct trial freeze — 21 September 2026
+
+- Preserve the deployed 0.6.0 service record and separate public SDK observations: the first failed envelope comparison and the corrected 121-request, 11-case pass. Runtime and verifier identities remain distinct.
+- Freeze the actual received current care-home and empty-control packages for a separately governed direct-JSON paired trial. Thirty-two offline admission controls pass; no model outcome is implied by freezing its inputs.
+
+## Direct JSON model-trial harness — 21 September 2026
+
+- Add a separately reviewed fixed-evidence trial harness for the original Staff 012 care-home question and an independently assembled unknown-term control. Both subscription clients receive identical, complete governed evidence; every tool event is rejected.
+- Add 30 offline controls and strict source, engine, service, compact-reconstruction and hosting bindings. Limit execution to one attempt per provider and case, with successful empty controls required before substantive attempts.
+- Keep the protocol pending until the exact public service observations and final inputs are frozen. This entry records the harness, not new provider calls, answer success or specialist approval. Earlier trials remain unchanged.
+
 ## Later public observations — 21 September 2026
 
 - Preserve a separate [learning-site observation](validation/learning-site/public-91b9907836c8a340d974dd958969f4f8cbb3a0c6/README.md): exact source `91b99078…`, 123 successful responses and 2,382 checked internal links.
