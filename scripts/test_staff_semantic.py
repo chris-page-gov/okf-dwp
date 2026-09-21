@@ -66,7 +66,7 @@ class StaffSemanticTests(unittest.TestCase):
         pages={base+'page/77/'+str(n).zfill(4) for n in (7,19,21,23,24,25)}|{base+'page/78/0025'}
         edges={row['id']:row for row in self.index['assertions']}
         all_declarations=[edges[identity] for identity in self.catalogue['qualification_assertion_ids']]
-        self.assertEqual(len(all_declarations),39)
+        self.assertEqual(len(all_declarations),61)
         declarations=[edge for edge in all_declarations if edge['source'] in {care,household}]
         self.assertEqual(len(declarations),8)
         self.assertEqual({(e['source'],e['target']) for e in declarations},
@@ -115,10 +115,17 @@ class StaffSemanticTests(unittest.TestCase):
                              {base+'staff-domain/household-separation',housing,
                               base+'staff-domain/severe-disability-addition',
                               base+'staff-domain/no-partner-disability-addition',
-                              base+'staff-domain/partner-disability-addition'})
+                              base+'staff-domain/partner-disability-addition',
+                              base+'staff-domain/severe-disability-ignored-persons',
+                              base+'staff-domain/severe-disability-normal-residence'})
             self.assertTrue(pages<=set(profile['qualification_evidence_ids']))
             self.assertNotIn(temporary,required['required'])
-            self.assertNotIn(base+'page/78/0024',required['required'])
+            # Page 24 now completes the shared-lives example. Its later temporary
+            # heading does not activate the separate temporary-care-home branch.
+            continuation=[p for p in profile['qualification_paths'] if p['records'][-1]==base+'page/78/0024']
+            self.assertTrue(continuation)
+            self.assertTrue(all(base+'staff-domain/severe-disability-ignored-persons' in p['records']
+                                and temporary not in p['records'] for p in continuation))
             for page in pages:
                 path=next(p for p in profile['qualification_paths'] if p['records'][-1]==page)
                 self.assertEqual(path['records'],[care,housing,page])
@@ -141,7 +148,7 @@ class StaffSemanticTests(unittest.TestCase):
         declarations=[e for e in self.index['assertions'] if e['id'] in
                       set(self.catalogue['qualification_assertion_ids'])]
         for concept,pages in [(overview,overview_pages),(branch,branch_pages)]:
-            actual=[e for e in declarations if e['source']==concept]
+            actual=[e for e in declarations if e['source']==concept and records[e['target']]['kind']=='evidence']
             self.assertEqual({e['target'] for e in actual},pages)
             self.assertEqual(len(actual),len(pages))
             self.assertTrue(all(records[e['target']]['kind']=='evidence' for e in actual))
@@ -211,7 +218,7 @@ class StaffSemanticTests(unittest.TestCase):
             base+'page/dmg-memo-01-26-0605724317/0003'}
         rows={r['id']:r for r in self.index['records']}
         dependencies=[e for e in self.index['assertions'] if e['predicate']==DCT+'requires']
-        actual=[e for e in dependencies if e['source']==branch]
+        actual=[e for e in dependencies if e['source']==branch and rows[e['target']]['kind']=='evidence']
         self.assertEqual(len(actual),10)
         self.assertEqual({e['target'] for e in actual},expected)
         self.assertTrue(all(rows[e['target']]['kind']=='evidence' for e in actual))
@@ -244,7 +251,9 @@ class StaffSemanticTests(unittest.TestCase):
                 self.assertEqual(len(p['obligation_ids']),5)
                 self.assertEqual(p['evidence_status'],'insufficient')
                 if seedkey=='partner':
-                    self.assertEqual(p['qualification_concept_ids'],[concept])
+                    self.assertEqual(set(p['qualification_concept_ids']),{
+                        concept,base+'staff-domain/severe-disability-ignored-persons',
+                        base+'staff-domain/severe-disability-normal-residence'})
                     self.assertTrue(any('qualifying disability-benefit receipt, residence and caring facts remain unknown'
                                         in text for text in r['limitations']))
                 else:
@@ -263,6 +272,77 @@ class StaffSemanticTests(unittest.TestCase):
             data['relationships']=[r for r in data['relationships']
                                    if (r['source'],r['target'])!=('care-home','partner-disability-addition')]
         self.mutate_authoring('concepts.yamlld',remove_route,'unreachable from profile triggers')
+
+    def test_ignored_person_closure_keeps_whole_sources_and_current_bounds(self):
+        base='https://chris-page-gov.github.io/okf-dwp/id/'
+        ignored=base+'staff-domain/severe-disability-ignored-persons'
+        residence=base+'staff-domain/severe-disability-normal-residence'
+        nodes={n['@id']:n for n in self.catalogue['concepts']}
+        pages={base+'page/78/'+str(p).zfill(4) for p in (5,6,15,16,17,18,19,20,21,22,23,24)}|{
+            base+'page/77/'+str(p).zfill(4) for p in (7,9,10,11)}|{
+            base+'page/dmg-memo-02-25-e03b36ce3e/0005'}
+        self.assertEqual(len(pages),17)
+        self.assertEqual(len(nodes[ignored]['required_source_ids']),14)
+        self.assertEqual(len(nodes[residence]['required_source_ids']),5)
+        self.assertEqual(set(nodes[ignored]['required_source_ids'])|set(nodes[residence]['required_source_ids']),pages)
+        rows={r['id']:r for r in self.index['records']}
+        edges={r['id']:r for r in self.index['assertions']}
+        expected={'staff-012':(74,49),'staff-013':(74,49),'staff-014':(31,36),'staff-017':(31,36)}
+        for requirement in self.index['requirements']:
+            cid=requirement['id'].rsplit('/',1)[1]
+            if cid not in expected:
+                self.assertNotIn(ignored,requirement['required'])
+                self.assertNotIn(residence,requirement['required'])
+                continue
+            self.assertEqual((len(requirement['required_paths']),len(requirement['required'])),expected[cid])
+            self.assertTrue(pages|{ignored,residence}<=set(requirement['required']))
+            for path in requirement['required_paths']:
+                self.assertIn(path['seed'],requirement['when_all'])
+                self.assertEqual(path['seed'],path['records'][0])
+                self.assertLessEqual(len(path['assertions']),4)
+                self.assertEqual(len(path['records']),len(path['assertions'])+1)
+                for a,left,right in zip(path['assertions'],path['records'],path['records'][1:]):
+                    self.assertEqual((edges[a]['source'],edges[a]['target']),(left,right))
+            self.assertTrue(any('/independent_review_pending/' in r for r in requirement['required']))
+        for key in (ignored,residence):
+            self.assertEqual(rows[key]['assertion_status'],'model-derived')
+            self.assertEqual(rows[key]['authority']['class'],'model-assisted')
+        overview=base+'staff-domain/severe-disability-addition'
+        self.assertEqual({e['target'] for e in edges.values() if e['source']==overview and e['predicate']==DCT+'requires'},
+                         {base+'page/78/'+str(p).zfill(4) for p in (11,12,25)}|{base+'page/dmg-vol10-ch57/0005'})
+
+    def test_ignored_person_source_edges_and_continuations_cannot_be_omitted(self):
+        def node(data,key):return next(n for n in data['@graph'] if n['key']==key)
+        for page in (23,24):
+            def remove(data,page=page):
+                n=node(data,'severe-disability-ignored-persons')
+                n['additional_sources']=[s for s in n['additional_sources']
+                                         if (s['document_id'],s['page'])!=('dmg-vol13-ch78',page)]
+            self.mutate_authoring('concepts.yamlld',remove,'outside the concept source selection')
+        def remove_link(data):
+            data['relationships']=[r for r in data['relationships'] if
+                (r['source'],r['target'])!=('severe-disability-ignored-persons','severe-disability-normal-residence')]
+        self.mutate_authoring('concepts.yamlld',remove_link,'lacks an existing source-backed relationship')
+
+    def test_ignored_person_increment_preserves_open_obligations_and_new_literal_fingerprints(self):
+        from build_bundle import canonical
+        self.assertEqual(digest(canonical(self.profiles['obligations'])),
+                         '95ef06b5de51ca970ac9afd4111687702d99b323986c1c77c81563d26f2ac5ba')
+        hashes={
+            '78/0005':'a576d71f89196f71231f98ce5866ab46324f9b88fa759d0a4ffbb5674fe023e4',
+            '78/0006':'9bf6514e59254b9723276e2b6e61bc2dc3d01e6b7d4157718e5f44238f4956eb',
+            '78/0018':'ac216f8637e7202353f3e30a5043c479a8fed0ac256a7c8d6013e6e08aed44d4',
+            '78/0019':'79792d8f6873a5837ac3a8588cb7e5c993bd46522a07d128e5048ec48b94e3fc',
+            '78/0020':'84af12a47f8bec39e66b98a082e4a9952ca9bf1ad3c79eebcc0b544aaa70be71',
+            '77/0009':'1ec58d7d641e8b4f32435f3ba4218d4e81fce387cb8a410a9c09f5b6979a1fd5',
+            '77/0010':'704130ab074bd3ce05403003605327016554f1b55874ab53ce6908e9210aa350',
+            '77/0011':'4ab44019a6cc198a6936808c5a33bc7d56d0e2df55c4f447f6c96b84c765207c'}
+        rows={r['route']:r for r in self.index['records']}
+        for suffix,expected in hashes.items():
+            r=rows['page/'+suffix]
+            self.assertEqual(digest(r['text'].encode()),expected)
+            self.assertEqual(r['assertion_status'],'normalized')
+            self.assertEqual(r['authority']['class'],'derived')
 
     def test_receipt_continuation_rejects_an_invented_paragraph_anchor(self):
         def mutation(data):

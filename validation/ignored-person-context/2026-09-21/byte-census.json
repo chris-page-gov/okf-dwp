@@ -1,0 +1,704 @@
+{
+  "schema": "okf-context-byte-census.v1",
+  "classification": "supplementary-exact-offline-replay",
+  "inputs": {
+    "protocol_sha256": "d467d0bb0b55f596000d4b7c8a059d52e150b26792d1a8065fdb297b6c7cd5e9",
+    "comparison_sha256": "c45dcc69170db2d74ca144f3b9cdbbbb8fe514dbaef1e0c8695d372e82fed785",
+    "source_commits": {
+      "old": "7e5fdb9b906052914b307c17c0fd19feb2d008a7",
+      "new": "c44bc3a111d18b6d4098a148a9a1b67c1411882b"
+    },
+    "engine_commit": "c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e",
+    "engine_sha256": {
+      "index.ts": "cc9fe1c162e1ad505f080712b6eacf0bad843f0e32d6f953b697b8349b2c4ca8",
+      "corpus.ts": "72fec179d1015df39fd16834d5876740b95a6477f70b6013821f24398a69eb65",
+      "types.ts": "d9eff934ec504c3fbd2afff672ae1d3a8a275e84cc11b71fed8a3e1b0edfdcf3"
+    },
+    "files": {
+      "byte-census.mjs": "0a047e55f77426dfc5365c68c6ef11b664ecf2a3bd8f5d1bf58a932f3c045f2e",
+      "bytes.mjs": "0a6a3ec57225fb0185626dfc1952f656a265200b308e06ff06a98d62f7f38154",
+      "guards.mjs": "6ea6621ea928b0574a938db1b80b3d4e78cb889c702b9ce01124188c24ab7a73"
+    }
+  },
+  "limitations": [
+    "Every measured package must match its canonical digest in the original 320-assembly observation. This does not replace that observation.",
+    "Top-level property bytes plus root punctuation equal the whole canonical package. The selected-value partition is nested inside selected; do not add it again.",
+    "Raw evidence text and provenance sizes are overlapping observations. The remaining bytes include necessary provenance, scope, paths, diagnostics and structure; they are not all disposable overhead.",
+    "This measures selected packages only, not bytes for all omitted required source text, model tokenisation or a redesigned representation.",
+    "No public-host call, model call, completeness improvement or legal acceptance is asserted."
+  ],
+  "rows": [
+    {
+      "source": "old",
+      "case_id": "staff-012",
+      "max_bytes": 262144,
+      "context_id": "urn:sha256:55c495b8950736518ed01af632a17b3e90c94700af7a7d2a775b7d8f1a6b7b29",
+      "package_sha256": "9d9636de1728054ca808225ffeac43a2c120bc0306088dc934d7525171582a79",
+      "canonical_package_bytes": 258930,
+      "top_level_property_bytes": {
+        "ai_answer": 16,
+        "ambiguities": 16,
+        "binding": 163,
+        "budget": 27445,
+        "bundle": 188,
+        "conflicts": 14,
+        "context_id": 90,
+        "engine": 34,
+        "evidence_status": 32,
+        "limitations": 3451,
+        "missing_evidence": 24139,
+        "question": 111,
+        "relationships": 76336,
+        "requirements": 77216,
+        "resolved_concepts": 414,
+        "retrieval": 3077,
+        "schema": 34,
+        "scope": 145,
+        "selected": 45926,
+        "unresolved_terms": 62
+      },
+      "root_punctuation_bytes": 21,
+      "selected_value_partition": {
+        "evidence_text_json_bytes": 6043,
+        "other_record_text_json_bytes": 5726,
+        "remaining_selected_structure_bytes": 34146,
+        "total": 45915
+      },
+      "overlapping_observations": {
+        "evidence_text_raw_utf8_bytes": 5816,
+        "selected_record_provenance_json_bytes": 6248
+      },
+      "selected_evidence_records": 4
+    },
+    {
+      "source": "old",
+      "case_id": "staff-013",
+      "max_bytes": 262144,
+      "context_id": "urn:sha256:38ce039d52bd4654bd0a6fe814a3f222916c62d027ba3151fc2b56759d833722",
+      "package_sha256": "d9ec90dc67aaa8c0da97526a4d03f7e6645a3eb5b791da43b6acf234542f986a",
+      "canonical_package_bytes": 258934,
+      "top_level_property_bytes": {
+        "ai_answer": 16,
+        "ambiguities": 16,
+        "binding": 163,
+        "budget": 27445,
+        "bundle": 188,
+        "conflicts": 14,
+        "context_id": 90,
+        "engine": 34,
+        "evidence_status": 32,
+        "limitations": 3451,
+        "missing_evidence": 24139,
+        "question": 115,
+        "relationships": 76336,
+        "requirements": 77216,
+        "resolved_concepts": 414,
+        "retrieval": 3077,
+        "schema": 34,
+        "scope": 145,
+        "selected": 45926,
+        "unresolved_terms": 62
+      },
+      "root_punctuation_bytes": 21,
+      "selected_value_partition": {
+        "evidence_text_json_bytes": 6043,
+        "other_record_text_json_bytes": 5726,
+        "remaining_selected_structure_bytes": 34146,
+        "total": 45915
+      },
+      "overlapping_observations": {
+        "evidence_text_raw_utf8_bytes": 5816,
+        "selected_record_provenance_json_bytes": 6248
+      },
+      "selected_evidence_records": 4
+    },
+    {
+      "source": "old",
+      "case_id": "staff-014",
+      "max_bytes": 262144,
+      "context_id": "urn:sha256:2daa824e8b1fe890fc88c103463cb6242f8b187a60b38542e6ce4ef7d05b7299",
+      "package_sha256": "ed938d58227b1e2df2e84ccc69216b1a34955218eec921c505b0d8cdd7c409f8",
+      "canonical_package_bytes": 256784,
+      "top_level_property_bytes": {
+        "ai_answer": 16,
+        "ambiguities": 16,
+        "binding": 163,
+        "budget": 10842,
+        "bundle": 188,
+        "conflicts": 14,
+        "context_id": 90,
+        "engine": 34,
+        "evidence_status": 32,
+        "limitations": 3451,
+        "missing_evidence": 2815,
+        "question": 79,
+        "relationships": 65968,
+        "requirements": 28937,
+        "resolved_concepts": 580,
+        "retrieval": 2928,
+        "schema": 34,
+        "scope": 145,
+        "selected": 140397,
+        "unresolved_terms": 34
+      },
+      "root_punctuation_bytes": 21,
+      "selected_value_partition": {
+        "evidence_text_json_bytes": 53892,
+        "other_record_text_json_bytes": 2052,
+        "remaining_selected_structure_bytes": 84442,
+        "total": 140386
+      },
+      "overlapping_observations": {
+        "evidence_text_raw_utf8_bytes": 52243,
+        "selected_record_provenance_json_bytes": 20602
+      },
+      "selected_evidence_records": 27
+    },
+    {
+      "source": "old",
+      "case_id": "staff-017",
+      "max_bytes": 262144,
+      "context_id": "urn:sha256:5a6502a312b7d89e177807c23eb739d22f927f28ee5ffa9a65e30194da7d92a2",
+      "package_sha256": "e82a73fed2593ba4f3e2f42df6abceea2d3a9d8ff3af4e26226ee47fe6ce16cf",
+      "canonical_package_bytes": 260603,
+      "top_level_property_bytes": {
+        "ai_answer": 16,
+        "ambiguities": 16,
+        "binding": 163,
+        "budget": 9229,
+        "bundle": 188,
+        "conflicts": 14,
+        "context_id": 90,
+        "engine": 34,
+        "evidence_status": 32,
+        "limitations": 3451,
+        "missing_evidence": 2576,
+        "question": 74,
+        "relationships": 65968,
+        "requirements": 28937,
+        "resolved_concepts": 401,
+        "retrieval": 3016,
+        "schema": 34,
+        "scope": 145,
+        "selected": 146162,
+        "unresolved_terms": 36
+      },
+      "root_punctuation_bytes": 21,
+      "selected_value_partition": {
+        "evidence_text_json_bytes": 58489,
+        "other_record_text_json_bytes": 2052,
+        "remaining_selected_structure_bytes": 85610,
+        "total": 146151
+      },
+      "overlapping_observations": {
+        "evidence_text_raw_utf8_bytes": 56810,
+        "selected_record_provenance_json_bytes": 21194
+      },
+      "selected_evidence_records": 28
+    },
+    {
+      "source": "old",
+      "case_id": "staff-012",
+      "max_bytes": 524288,
+      "context_id": "urn:sha256:6b398cd3e616340df1235a390adac7c40b0d360aaaf5126e5d7c39b38b8dbe77",
+      "package_sha256": "a52579c8cdab6912dd444b414aa6878f30ad3baae372a6dff927abe0841407a5",
+      "canonical_package_bytes": 524089,
+      "top_level_property_bytes": {
+        "ai_answer": 16,
+        "ambiguities": 16,
+        "binding": 163,
+        "budget": 20513,
+        "bundle": 188,
+        "conflicts": 14,
+        "context_id": 90,
+        "engine": 34,
+        "evidence_status": 32,
+        "limitations": 3451,
+        "missing_evidence": 2645,
+        "question": 111,
+        "relationships": 176668,
+        "requirements": 64076,
+        "resolved_concepts": 414,
+        "retrieval": 3077,
+        "schema": 34,
+        "scope": 145,
+        "selected": 252319,
+        "unresolved_terms": 62
+      },
+      "root_punctuation_bytes": 21,
+      "selected_value_partition": {
+        "evidence_text_json_bytes": 86756,
+        "other_record_text_json_bytes": 5726,
+        "remaining_selected_structure_bytes": 159826,
+        "total": 252308
+      },
+      "overlapping_observations": {
+        "evidence_text_raw_utf8_bytes": 84099,
+        "selected_record_provenance_json_bytes": 33843
+      },
+      "selected_evidence_records": 45
+    },
+    {
+      "source": "old",
+      "case_id": "staff-013",
+      "max_bytes": 524288,
+      "context_id": "urn:sha256:02a67e05391d258a420ed4353fa339b2206a264d9e9023d2c995c667fbd9f1c7",
+      "package_sha256": "223c14c6cf71ec8f83bfa136cee5862c37b3b602dd2b25f8f46c23f38b304093",
+      "canonical_package_bytes": 524093,
+      "top_level_property_bytes": {
+        "ai_answer": 16,
+        "ambiguities": 16,
+        "binding": 163,
+        "budget": 20513,
+        "bundle": 188,
+        "conflicts": 14,
+        "context_id": 90,
+        "engine": 34,
+        "evidence_status": 32,
+        "limitations": 3451,
+        "missing_evidence": 2645,
+        "question": 115,
+        "relationships": 176668,
+        "requirements": 64076,
+        "resolved_concepts": 414,
+        "retrieval": 3077,
+        "schema": 34,
+        "scope": 145,
+        "selected": 252319,
+        "unresolved_terms": 62
+      },
+      "root_punctuation_bytes": 21,
+      "selected_value_partition": {
+        "evidence_text_json_bytes": 86756,
+        "other_record_text_json_bytes": 5726,
+        "remaining_selected_structure_bytes": 159826,
+        "total": 252308
+      },
+      "overlapping_observations": {
+        "evidence_text_raw_utf8_bytes": 84099,
+        "selected_record_provenance_json_bytes": 33843
+      },
+      "selected_evidence_records": 45
+    },
+    {
+      "source": "old",
+      "case_id": "staff-014",
+      "max_bytes": 524288,
+      "context_id": "urn:sha256:ac0cd683432e74d6625d9c370404810f3dcbfd537e1ec6affdfb7f46bbb54b6d",
+      "package_sha256": "a2ff844eb475c9b21509966d75e5402cd172378a88d1899aa8a126e036d76232",
+      "canonical_package_bytes": 520839,
+      "top_level_property_bytes": {
+        "ai_answer": 16,
+        "ambiguities": 16,
+        "binding": 163,
+        "budget": 5372,
+        "bundle": 188,
+        "conflicts": 14,
+        "context_id": 90,
+        "engine": 34,
+        "evidence_status": 32,
+        "limitations": 3451,
+        "missing_evidence": 4558,
+        "question": 79,
+        "relationships": 190018,
+        "requirements": 28937,
+        "resolved_concepts": 580,
+        "retrieval": 2928,
+        "schema": 34,
+        "scope": 145,
+        "selected": 284129,
+        "unresolved_terms": 34
+      },
+      "root_punctuation_bytes": 21,
+      "selected_value_partition": {
+        "evidence_text_json_bytes": 103517,
+        "other_record_text_json_bytes": 5945,
+        "remaining_selected_structure_bytes": 174656,
+        "total": 284118
+      },
+      "overlapping_observations": {
+        "evidence_text_raw_utf8_bytes": 100783,
+        "selected_record_provenance_json_bytes": 40273
+      },
+      "selected_evidence_records": 44
+    },
+    {
+      "source": "old",
+      "case_id": "staff-017",
+      "max_bytes": 524288,
+      "context_id": "urn:sha256:dd9a31170616c063fe7e77f4fa8ded163e4e631999fc516e7e1228dd4ea9e858",
+      "package_sha256": "9bbb210f974428065c410134e00159b01ada337402c0d9cbc00c1b678e5976eb",
+      "canonical_package_bytes": 519958,
+      "top_level_property_bytes": {
+        "ai_answer": 16,
+        "ambiguities": 16,
+        "binding": 163,
+        "budget": 3913,
+        "bundle": 188,
+        "conflicts": 14,
+        "context_id": 90,
+        "engine": 34,
+        "evidence_status": 32,
+        "limitations": 3451,
+        "missing_evidence": 4319,
+        "question": 74,
+        "relationships": 185535,
+        "requirements": 28937,
+        "resolved_concepts": 401,
+        "retrieval": 3016,
+        "schema": 34,
+        "scope": 145,
+        "selected": 289523,
+        "unresolved_terms": 36
+      },
+      "root_punctuation_bytes": 21,
+      "selected_value_partition": {
+        "evidence_text_json_bytes": 108122,
+        "other_record_text_json_bytes": 5787,
+        "remaining_selected_structure_bytes": 175603,
+        "total": 289512
+      },
+      "overlapping_observations": {
+        "evidence_text_raw_utf8_bytes": 105324,
+        "selected_record_provenance_json_bytes": 40465
+      },
+      "selected_evidence_records": 45
+    },
+    {
+      "source": "new",
+      "case_id": "staff-012",
+      "max_bytes": 262144,
+      "context_id": "urn:sha256:9ab5a552235d894bee45a3df08108ef9633880b97379b2ca6d6ae2259882a213",
+      "package_sha256": "882d157ca402c771185bc0564a8ea9970aa2dacdefddc9c6007bd57f3fc3335e",
+      "canonical_package_bytes": 255592,
+      "top_level_property_bytes": {
+        "ai_answer": 16,
+        "ambiguities": 16,
+        "binding": 163,
+        "budget": 35515,
+        "bundle": 188,
+        "conflicts": 14,
+        "context_id": 90,
+        "engine": 34,
+        "evidence_status": 32,
+        "limitations": 3451,
+        "missing_evidence": 32956,
+        "question": 111,
+        "relationships": 26134,
+        "requirements": 140211,
+        "resolved_concepts": 414,
+        "retrieval": 3077,
+        "schema": 34,
+        "scope": 145,
+        "selected": 12908,
+        "unresolved_terms": 62
+      },
+      "root_punctuation_bytes": 21,
+      "selected_value_partition": {
+        "evidence_text_json_bytes": 0,
+        "other_record_text_json_bytes": 4116,
+        "remaining_selected_structure_bytes": 8781,
+        "total": 12897
+      },
+      "overlapping_observations": {
+        "evidence_text_raw_utf8_bytes": 0,
+        "selected_record_provenance_json_bytes": 1823
+      },
+      "selected_evidence_records": 0
+    },
+    {
+      "source": "new",
+      "case_id": "staff-013",
+      "max_bytes": 262144,
+      "context_id": "urn:sha256:4f5bf8e6eefaadd0c45313e0933594d7341ce60540c07160740f7b6f6c2c7fcb",
+      "package_sha256": "ca30cdcf52e3856438f4a0da1cd401c31a3c678ae485517e6b388e5fb799835a",
+      "canonical_package_bytes": 255596,
+      "top_level_property_bytes": {
+        "ai_answer": 16,
+        "ambiguities": 16,
+        "binding": 163,
+        "budget": 35515,
+        "bundle": 188,
+        "conflicts": 14,
+        "context_id": 90,
+        "engine": 34,
+        "evidence_status": 32,
+        "limitations": 3451,
+        "missing_evidence": 32956,
+        "question": 115,
+        "relationships": 26134,
+        "requirements": 140211,
+        "resolved_concepts": 414,
+        "retrieval": 3077,
+        "schema": 34,
+        "scope": 145,
+        "selected": 12908,
+        "unresolved_terms": 62
+      },
+      "root_punctuation_bytes": 21,
+      "selected_value_partition": {
+        "evidence_text_json_bytes": 0,
+        "other_record_text_json_bytes": 4116,
+        "remaining_selected_structure_bytes": 8781,
+        "total": 12897
+      },
+      "overlapping_observations": {
+        "evidence_text_raw_utf8_bytes": 0,
+        "selected_record_provenance_json_bytes": 1823
+      },
+      "selected_evidence_records": 0
+    },
+    {
+      "source": "new",
+      "case_id": "staff-014",
+      "max_bytes": 262144,
+      "context_id": "urn:sha256:b5e0a51228ebdd6d518c34a6830d5d51d0bc29c992c12479eec72db16b465380",
+      "package_sha256": "8f9da48bb44f33570739ff77bc3228198fcf2300fdd04418e08c9c41be9a2c4c",
+      "canonical_package_bytes": 257270,
+      "top_level_property_bytes": {
+        "ai_answer": 16,
+        "ambiguities": 16,
+        "binding": 163,
+        "budget": 23143,
+        "bundle": 188,
+        "conflicts": 14,
+        "context_id": 90,
+        "engine": 34,
+        "evidence_status": 32,
+        "limitations": 3451,
+        "missing_evidence": 12241,
+        "question": 79,
+        "relationships": 79097,
+        "requirements": 64527,
+        "resolved_concepts": 580,
+        "retrieval": 2928,
+        "schema": 34,
+        "scope": 145,
+        "selected": 70437,
+        "unresolved_terms": 34
+      },
+      "root_punctuation_bytes": 21,
+      "selected_value_partition": {
+        "evidence_text_json_bytes": 21212,
+        "other_record_text_json_bytes": 2052,
+        "remaining_selected_structure_bytes": 47162,
+        "total": 70426
+      },
+      "overlapping_observations": {
+        "evidence_text_raw_utf8_bytes": 20469,
+        "selected_record_provenance_json_bytes": 10227
+      },
+      "selected_evidence_records": 12
+    },
+    {
+      "source": "new",
+      "case_id": "staff-017",
+      "max_bytes": 262144,
+      "context_id": "urn:sha256:aaf2810ff39a5e8206dcc76059b9724fab44094583efbd0aece3e39b1c9031cf",
+      "package_sha256": "853a37e063563c26a2bed8bb2c053cb62f795c3ab4c30eb9f73d8956fe0b4b6e",
+      "canonical_package_bytes": 261873,
+      "top_level_property_bytes": {
+        "ai_answer": 16,
+        "ambiguities": 16,
+        "binding": 163,
+        "budget": 20906,
+        "bundle": 188,
+        "conflicts": 14,
+        "context_id": 90,
+        "engine": 34,
+        "evidence_status": 32,
+        "limitations": 3451,
+        "missing_evidence": 11356,
+        "question": 74,
+        "relationships": 82001,
+        "requirements": 64137,
+        "resolved_concepts": 401,
+        "retrieval": 3016,
+        "schema": 34,
+        "scope": 145,
+        "selected": 75742,
+        "unresolved_terms": 36
+      },
+      "root_punctuation_bytes": 21,
+      "selected_value_partition": {
+        "evidence_text_json_bytes": 23389,
+        "other_record_text_json_bytes": 2052,
+        "remaining_selected_structure_bytes": 50290,
+        "total": 75731
+      },
+      "overlapping_observations": {
+        "evidence_text_raw_utf8_bytes": 22583,
+        "selected_record_provenance_json_bytes": 10886
+      },
+      "selected_evidence_records": 13
+    },
+    {
+      "source": "new",
+      "case_id": "staff-012",
+      "max_bytes": 524288,
+      "context_id": "urn:sha256:b6f5bd60e12d6c1c37d4fa693c7e5e7903ae9beb087de690d6a898099f9f26ad",
+      "package_sha256": "1c1fca8e70c3ce3e2f82fafb1fba198816a0dfde4d046c97302e01207380c636",
+      "canonical_package_bytes": 521393,
+      "top_level_property_bytes": {
+        "ai_answer": 16,
+        "ambiguities": 16,
+        "binding": 163,
+        "budget": 30357,
+        "bundle": 188,
+        "conflicts": 14,
+        "context_id": 90,
+        "engine": 34,
+        "evidence_status": 32,
+        "limitations": 3451,
+        "missing_evidence": 12863,
+        "question": 111,
+        "relationships": 170815,
+        "requirements": 124383,
+        "resolved_concepts": 414,
+        "retrieval": 3077,
+        "schema": 34,
+        "scope": 145,
+        "selected": 175107,
+        "unresolved_terms": 62
+      },
+      "root_punctuation_bytes": 21,
+      "selected_value_partition": {
+        "evidence_text_json_bytes": 45608,
+        "other_record_text_json_bytes": 9109,
+        "remaining_selected_structure_bytes": 120379,
+        "total": 175096
+      },
+      "overlapping_observations": {
+        "evidence_text_raw_utf8_bytes": 44092,
+        "selected_record_provenance_json_bytes": 20637
+      },
+      "selected_evidence_records": 25
+    },
+    {
+      "source": "new",
+      "case_id": "staff-013",
+      "max_bytes": 524288,
+      "context_id": "urn:sha256:a6f897dc9b3e08139370f7ef1e3a2395223e0ea17633fec252bda38029bfc400",
+      "package_sha256": "cf1b0ebde1a850728e6d71e77236e7ebad4c4afbf8fe324a27d55cd7e936d6f2",
+      "canonical_package_bytes": 521397,
+      "top_level_property_bytes": {
+        "ai_answer": 16,
+        "ambiguities": 16,
+        "binding": 163,
+        "budget": 30357,
+        "bundle": 188,
+        "conflicts": 14,
+        "context_id": 90,
+        "engine": 34,
+        "evidence_status": 32,
+        "limitations": 3451,
+        "missing_evidence": 12863,
+        "question": 115,
+        "relationships": 170815,
+        "requirements": 124383,
+        "resolved_concepts": 414,
+        "retrieval": 3077,
+        "schema": 34,
+        "scope": 145,
+        "selected": 175107,
+        "unresolved_terms": 62
+      },
+      "root_punctuation_bytes": 21,
+      "selected_value_partition": {
+        "evidence_text_json_bytes": 45608,
+        "other_record_text_json_bytes": 9109,
+        "remaining_selected_structure_bytes": 120379,
+        "total": 175096
+      },
+      "overlapping_observations": {
+        "evidence_text_raw_utf8_bytes": 44092,
+        "selected_record_provenance_json_bytes": 20637
+      },
+      "selected_evidence_records": 25
+    },
+    {
+      "source": "new",
+      "case_id": "staff-014",
+      "max_bytes": 524288,
+      "context_id": "urn:sha256:b499a34e9a6c1986ace1d94cdd2be3cd10ad55fc1b6e790542576a23e060b81b",
+      "package_sha256": "09cb272267fd623afdd6fed41f1070f3e20bb75d7ec36825f4a0cc1407260984",
+      "canonical_package_bytes": 522288,
+      "top_level_property_bytes": {
+        "ai_answer": 16,
+        "ambiguities": 16,
+        "binding": 163,
+        "budget": 16633,
+        "bundle": 188,
+        "conflicts": 14,
+        "context_id": 90,
+        "engine": 34,
+        "evidence_status": 32,
+        "limitations": 3451,
+        "missing_evidence": 4309,
+        "question": 79,
+        "relationships": 171492,
+        "requirements": 56415,
+        "resolved_concepts": 580,
+        "retrieval": 2928,
+        "schema": 34,
+        "scope": 145,
+        "selected": 265614,
+        "unresolved_terms": 34
+      },
+      "root_punctuation_bytes": 21,
+      "selected_value_partition": {
+        "evidence_text_json_bytes": 94039,
+        "other_record_text_json_bytes": 7918,
+        "remaining_selected_structure_bytes": 163646,
+        "total": 265603
+      },
+      "overlapping_observations": {
+        "evidence_text_raw_utf8_bytes": 91247,
+        "selected_record_provenance_json_bytes": 34814
+      },
+      "selected_evidence_records": 46
+    },
+    {
+      "source": "new",
+      "case_id": "staff-017",
+      "max_bytes": 524288,
+      "context_id": "urn:sha256:3daf020b2ce73fab1aa39063742b2a39eb73b748a8b82f42100a2291e08dfc50",
+      "package_sha256": "5d7e72fd894d64df9f42b52d3abb36891ade87e75d3ade8e0e549b760069875c",
+      "canonical_package_bytes": 513425,
+      "top_level_property_bytes": {
+        "ai_answer": 16,
+        "ambiguities": 16,
+        "binding": 163,
+        "budget": 14748,
+        "bundle": 188,
+        "conflicts": 14,
+        "context_id": 90,
+        "engine": 34,
+        "evidence_status": 32,
+        "limitations": 3451,
+        "missing_evidence": 2576,
+        "question": 74,
+        "relationships": 164479,
+        "requirements": 56415,
+        "resolved_concepts": 401,
+        "retrieval": 3016,
+        "schema": 34,
+        "scope": 145,
+        "selected": 267476,
+        "unresolved_terms": 36
+      },
+      "root_punctuation_bytes": 21,
+      "selected_value_partition": {
+        "evidence_text_json_bytes": 98644,
+        "other_record_text_json_bytes": 7115,
+        "remaining_selected_structure_bytes": 161706,
+        "total": 267465
+      },
+      "overlapping_observations": {
+        "evidence_text_raw_utf8_bytes": 95788,
+        "selected_record_provenance_json_bytes": 34642
+      },
+      "selected_evidence_records": 47
+    }
+  ]
+}

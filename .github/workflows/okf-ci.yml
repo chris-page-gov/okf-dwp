@@ -23,6 +23,7 @@ jobs:
       EXPLORER_QUALIFICATION_BASELINE_COMMIT: b9a3b68b6dbf222f9a73cc8f450dd53f126e1b55
       DWP_QUALIFICATION_COMMIT: 7f9feb9634e3d94004853b838462aca132c505a5
       DWP_DISABILITY_COMMIT: 8ea4465a4cb5a867d82c87e635f2ef1d1df18d8a
+      DWP_IGNORED_PERSON_COMMIT: c44bc3a111d18b6d4098a148a9a1b67c1411882b
       DWP_DISABILITY_PUBLIC_COMMIT: df352daa5d1d6a99a30fddcb2db341f74c6473e5
       DWP_PARTNER_COMMIT: 7e5fdb9b906052914b307c17c0fd19feb2d008a7
       DWP_HOUSEHOLD_TRIAL_COMMIT: 3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84
@@ -172,6 +173,8 @@ jobs:
           git cat-file -e "$DWP_QUALIFICATION_COMMIT^{commit}"
           git fetch --no-tags --depth=1 origin "$DWP_DISABILITY_COMMIT"
           git cat-file -e "$DWP_DISABILITY_COMMIT^{commit}"
+          git fetch --no-tags --depth=1 origin "$DWP_IGNORED_PERSON_COMMIT"
+          git cat-file -e "$DWP_IGNORED_PERSON_COMMIT^{commit}"
           git fetch --no-tags --depth=1 origin "$DWP_DISABILITY_PUBLIC_COMMIT"
           git cat-file -e "$DWP_DISABILITY_PUBLIC_COMMIT^{commit}"
           git fetch --no-tags --depth=1 origin "$DWP_PARTNER_COMMIT"
@@ -196,6 +199,10 @@ jobs:
         run: |
           node --test validation/partner-context/2026-09-21/admission.test.mjs validation/partner-context/2026-09-21/metrics.test.mjs
           node --experimental-strip-types validation/partner-context/2026-09-21/compare.mjs --dwp-root . --explorer-root .ci/okf-explorer-qualification --check validation/partner-context/2026-09-21/attempt-01
+      - name: Replay the separate ignored-person capacity comparison offline
+        run: |
+          node --test validation/ignored-person-context/2026-09-21/admission.test.mjs validation/ignored-person-context/2026-09-21/metrics.test.mjs validation/ignored-person-context/2026-09-21/diagnostics.test.mjs validation/ignored-person-context/2026-09-21/bytes.test.mjs
+          node --experimental-strip-types validation/ignored-person-context/2026-09-21/compare.mjs --dwp-root . --explorer-root .ci/okf-explorer-qualification --check validation/ignored-person-context/2026-09-21/attempt-01
       - name: Verify portable performance evidence and new trial controls offline
         run: |
           node validation/context-performance/2026-09-21/verify.mjs

@@ -67,21 +67,24 @@ Later source increments need their own publication observations.
 
 | Item | Delivered scope |
 | --- | --- |
-| Authored concepts | 51, including neutral benefits, variants, components and circumstances |
-| Source-grounded conceptual associations | 272, including directed source references, qualified concept relationships and 39 explicit support dependencies |
-| Selected exact source pages | 98 across DMG and ADM, with PDF/extraction hashes and page locators |
+| Authored concepts | 53, including neutral benefits, variants, components and circumstances |
+| Source-grounded conceptual associations | 316, including directed source references, qualified concept relationships and 61 explicit support dependencies |
+| Selected exact source pages | 106 across DMG and ADM, with PDF/extraction hashes and page locators |
 | Legislative references in Ask | 44 staff-linked provision identities, 62 source-page citation links and one separately recorded metadata bridge |
 | Selected statutory bodies | 20 complete selected units and 43 evidence-bearing navigation links; derived and unreviewed |
 | Staff task profiles | 40 occurrences, preserving all 39 distinct questions and the repeated DLA/PIP question |
 | Explicit open obligations | 203, across five named categories |
 | Existing discovery graph | All 712 original record identities and 1,105 assertion identities retained |
-| Current source candidate index | 903 records and 1,482 assertions; 4,740,429 bytes, within the 8 MiB semantic-index limit |
+| Current source candidate index | 913 records and 1,526 assertions; 4,929,466 bytes, within the 8 MiB semantic-index limit |
 
-The current source candidate is `dwp-staff-semantics-91e16565bd7c97e72f3b`, with
-index SHA-256 `685353567b90db880f1bd1ba33b57ae7ecc430673332ce69e47512a9ae606886`.
+The current source candidate is `dwp-staff-semantics-86ddda5d6272f6b65b33`, with
+index SHA-256 `5cba980ec155a5fdc20610aaa95898374a933abf084f94cb72ef71657ab882a6`.
 Its current 40-case evaluation retains 177 of 177 candidate occurrences at
-512 KiB. The richer care-home requirements no longer all fit 256 KiB: the
-package exposes missing support. The earlier four-cell comparison above retains
+512 KiB. The new ignored-person requirements no longer all fit even 512 KiB;
+at 256 KiB some earlier candidate passages are also omitted. The separate
+[comparison](../validation/ignored-person-context/2026-09-21/README.md) records
+the required-path losses and named missing support. The partner source remains
+the separately frozen Monday service/trial input. The earlier four-cell comparison above retains
 its separate 901-record source and does not attest this larger increment.
 The initial household-dependency checkpoint had 1,435 assertions. The earlier
 public service source `3ef0e786…` had 1,427 assertions and a 4,581,721-byte index;

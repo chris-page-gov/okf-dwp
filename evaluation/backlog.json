@@ -177,7 +177,11 @@
         "docs/partner-addition-qualification-review.md",
         "validation/partner-context/2026-09-21/README.md",
         "validation/partner-context/2026-09-21/protocol.json",
-        "validation/partner-context/2026-09-21/attempt-01/comparison.json"
+        "validation/partner-context/2026-09-21/attempt-01/comparison.json",
+        "docs/ignored-person-qualification-review.md",
+        "validation/ignored-person-context/2026-09-21/README.md",
+        "validation/ignored-person-context/2026-09-21/protocol.json",
+        "validation/ignored-person-context/2026-09-21/attempt-01/comparison.json"
       ],
       "acceptance_checks": [
         "Benefit/variant/circumstance terms have sources, aliases, confusions and scope; existing custody-specific meanings are not silently broadened."
@@ -201,7 +205,7 @@
           "kind": "research",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Neutral benefit and household concepts now include 39 explicit support dependencies across household, housing, temporary residence, overview, no-partner and partner components. Continue remaining task families and conditional ignored-person/normal-residence work, preserving receipt qualifications, exceptions and temporal/territorial distinctions. The departmental domain remains incomplete.",
+          "next_action": "The reviewed source increment now has 53 concepts and 61 conditional support dependencies, including ignored-person and normal-residence qualifications. Continue other task families, legal dependencies and temporal/territorial distinctions. The departmental domain remains incomplete; the larger declared closure exceeds the 512 KiB context budget.",
           "evidence": [
             "evaluation/semantic-expansion/profiles.json",
             "docs/monday-delivery-work-log.md",
@@ -211,7 +215,11 @@
             "docs/partner-addition-qualification-review.md",
             "validation/partner-context/2026-09-21/README.md",
             "validation/partner-context/2026-09-21/protocol.json",
-            "validation/partner-context/2026-09-21/attempt-01/comparison.json"
+            "validation/partner-context/2026-09-21/attempt-01/comparison.json",
+            "docs/ignored-person-qualification-review.md",
+            "validation/ignored-person-context/2026-09-21/README.md",
+            "validation/ignored-person-context/2026-09-21/protocol.json",
+            "validation/ignored-person-context/2026-09-21/attempt-01/comparison.json"
           ]
         },
         {
@@ -319,12 +327,16 @@
         "docs/partner-addition-qualification-review.md",
         "validation/partner-context/2026-09-21/README.md",
         "validation/partner-context/2026-09-21/protocol.json",
-        "validation/partner-context/2026-09-21/attempt-01/comparison.json"
+        "validation/partner-context/2026-09-21/attempt-01/comparison.json",
+        "docs/ignored-person-qualification-review.md",
+        "validation/ignored-person-context/2026-09-21/README.md",
+        "validation/ignored-person-context/2026-09-21/protocol.json",
+        "validation/ignored-person-context/2026-09-21/attempt-01/comparison.json"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
       ],
-      "scope_note": "Forty executable development profiles and 203 named open obligations are delivered. Separate frozen comparisons preserve 901-record qualification, 903-record disability and903-record partner increments. The latest current engine retains 585/585 declared paths at 512 KiB but 449/585 at 256 KiB, despite 177/177 candidate overlap. All contexts stay insufficient. Ignored-person/normal-residence work, legal/evidence closure, service publication and specialist acceptance remain separately tracked.",
+      "scope_note": "Forty executable development profiles and 203 named open obligations remain. Frozen qualification, disability, partner and ignored-person comparisons retain their own denominators. The richer ignored-person closure exceeds 512 KiB despite complete candidate overlap; all contexts stay insufficient. Source modelling is complete only for each explicitly bounded increment. Capacity, legal/evidence closure, publication and specialist acceptance remain separately tracked.",
       "work_packages": [
         {
           "id": "DWP-BL-007.delivery",
@@ -343,7 +355,7 @@
           "kind": "implementation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Continue the 43 source-closure obligations. The partner increment declares 585 activated path occurrences, retained completely at 512 KiB but 449 at 256 KiB despite 177/177 original candidate overlap. Reconcile ignored-person/normal-residence continuations, remaining exceptions, legal dependencies and question scope; do not convert retention into specialist acceptance.",
+          "next_action": "Continue all 43 open source-closure obligations. The ignored-person extension exposes a larger requirement set that exceeds 512 KiB despite 177/177 candidate overlap. Preserve all missing requirements and distinguish source coverage, context capacity, legal applicability and specialist acceptance.",
           "evidence": [
             "evaluation/semantic-expansion/profiles.json",
             "docs/monday-delivery-work-log.md",
@@ -358,7 +370,11 @@
             "docs/partner-addition-qualification-review.md",
             "validation/partner-context/2026-09-21/README.md",
             "validation/partner-context/2026-09-21/protocol.json",
-            "validation/partner-context/2026-09-21/attempt-01/comparison.json"
+            "validation/partner-context/2026-09-21/attempt-01/comparison.json",
+            "docs/ignored-person-qualification-review.md",
+            "validation/ignored-person-context/2026-09-21/README.md",
+            "validation/ignored-person-context/2026-09-21/protocol.json",
+            "validation/ignored-person-context/2026-09-21/attempt-01/comparison.json"
           ]
         },
         {
@@ -425,12 +441,27 @@
         {
           "id": "DWP-BL-007.ignored-person-qualification",
           "kind": "implementation",
+          "status": "recorded_complete",
+          "executor": "agent",
+          "next_action": "Bounded source modelling is independently reviewed: two concepts, 17 whole support pages (eight newly selected), 913 records, 1,526 assertions, 61 requires, and 61 focused controls. Existing evidence and all 203 obligations are unchanged. Larger context retention fails to preserve all declared paths at 512 KiB; that capacity problem, public delivery and specialist acceptance remain separate.",
+          "evidence": [
+            "docs/ignored-person-qualification-review.md",
+            "validation/ignored-person-context/2026-09-21/README.md",
+            "validation/ignored-person-context/2026-09-21/protocol.json",
+            "validation/ignored-person-context/2026-09-21/attempt-01/comparison.json"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.qualification-capacity",
+          "kind": "implementation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Source discovery has identified distinct ignored-person and normal-residence meanings and 17 already captured whole-page dependencies. Review the concrete proposal, then author a separately tested conditional component. Preserve first-time caring purpose, prior qualification, twelve-week limit, commercial/close-relative/shared-lives restrictions. Measure the larger evidence budget before adoption; statutory/judgment gaps stay explicit.",
+          "next_action": "Investigate staged component context or reversible representation to retain the larger ignored-person closure without raising budgets, dropping required paths or disguising omissions. Compare required record bytes, repeated path metadata and delivered selected evidence. Keep Monday service/trial source fixed while evaluating this separate regression.",
           "evidence": [
-            "docs/disability-addition-qualification-review.md",
-            "docs/carehome-component-dependency-review.md"
+            "docs/ignored-person-qualification-review.md",
+            "validation/ignored-person-context/2026-09-21/README.md",
+            "validation/ignored-person-context/2026-09-21/protocol.json",
+            "validation/ignored-person-context/2026-09-21/attempt-01/comparison.json"
           ]
         },
         {

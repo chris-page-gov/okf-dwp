@@ -122,6 +122,100 @@ class HouseholdSemanticTests(unittest.TestCase):
         self.assertNotIn('qualification_concepts',self.profiles['staff-018'])
         self.assertTrue(any('all scenarios' in a.lower() for a in self.profiles['staff-018']['ambiguities']))
 
+    def test_ignored_presence_is_distinct_from_normal_residence_and_couple_membership(self):
+        ignored=self.nodes['severe-disability-ignored-persons']
+        residence=self.nodes['severe-disability-normal-residence']
+        self.assertIn('not a finding that a person is absent from the household for every purpose',ignored['definition'])
+        self.assertIn('Assess normal residence separately',ignored['definition'])
+        self.assertIn('separate from ignoring a person’s presence',residence['definition'])
+        self.assertIn('from deciding whether partners remain one household',residence['definition'])
+        self.assertIn('All residence and contractual facts remain unknown',residence['definition'])
+        source=self.text('dmg-vol13-ch78',25)
+        self.assertIn('do not normally reside with',source)
+        self.assertNotIn('78087',ignored['definition'])
+        for key in ('no-partner-disability-addition','partner-disability-addition'):
+            self.assertEqual(self.nodes[key]['required_concepts'],['severe-disability-ignored-persons'])
+        self.assertEqual(ignored['required_concepts'],['severe-disability-normal-residence'])
+        self.assertFalse(residence.get('required_concepts'))
+        for n in (ignored,residence):
+            self.assertEqual(n['review_status'],'unreviewed-specialist-review-required')
+            self.assertFalse(set(n['aliases'])&{'SDA','carer','child','partner','residence','household','non-dependant'})
+
+    def test_ignored_carer_and_young_person_categories_keep_their_qualifications(self):
+        n=self.nodes['severe-disability-ignored-persons'];text=n['definition']
+        for phrase in ('a person aged under 18','highest- or middle-rate DLA care',
+                       'standard- or enhanced-rate PIP or ADP daily living',
+                       'consultant ophthalmologist','28 weeks after regained eyesight',
+                       'engaged by a charitable or voluntary organisation which charges',
+                       'that carer’s partner','a source-defined qualifying young person, or a child for Child Benefit purposes',
+                       'neither education alone nor being under 20 is enough'):
+            self.assertIn(phrase,text)
+        source=' '.join(self.text('dmg-vol13-ch78',22).split())
+        self.assertIn('lives with the claimant in order to care for the claimant or partner and',source)
+        self.assertIn('makes a charge to the claimant or partner',source)
+        self.assertIn('not a public authority or LA',self.text('dmg-vol13-ch78',6))
+        for page in (9,10,11):self.assertIn(('dmg-vol13-ch77',page),self.evidence(n['key']))
+        self.assertIn('receiving UC, JSA, IS or ESA',self.text('dmg-vol13-ch77',10))
+        self.assertIn('will not satisfy the condition in DMG 77025',self.text('dmg-vol13-ch77',11))
+
+    def test_first_time_carer_qualification_keeps_immediate_prior_condition_and_twelve_weeks(self):
+        text=self.nodes['severe-disability-ignored-persons']['definition']
+        for phrase in ('first joining the household to care for the claimant or partner',
+                       'satisfying the additional-amount conditions immediately beforehand',
+                       'first 12 weeks after joining'):
+            self.assertIn(phrase,text)
+        self.assertIn('joins the claimant’s household for the first time',self.text('dmg-vol13-ch78',22))
+        self.assertIn('immediately before joining',self.text('dmg-vol13-ch78',22))
+        self.assertIn('first twelve weeks',self.text('dmg-vol13-ch78',23))
+
+    def test_commercial_and_joint_occupation_rules_keep_both_directions_and_date_exception(self):
+        text=self.nodes['severe-disability-ignored-persons']['definition']
+        for phrase in ('not a close relative','from that person to the claimant or partner',
+                       'from the claimant or partner to that person','membership of that person’s household',
+                       'legal liability','broadly comparable to a lodger’s',
+                       'joint liability to the same landlord','person’s-partner branch',
+                       'satisfying DMG 78078(3) or (4) as well as the timing condition',
+                       'before 11 April 1988 or, if later, on or before first occupation',
+                       'right-to-occupy date, not a later moving-in date'):
+            self.assertIn(phrase,text)
+        source=' '.join(self.text('dmg-vol13-ch78',23).split())
+        self.assertIn('is a close relative who satisfies 3. or 4.',source)
+        self.assertIn('before 11.4.88 or',source)
+        self.assertIn('date they had the right to occupy the dwelling',source)
+        self.assertIn('legal relationship not the blood',self.text('dmg-vol13-ch77',7))
+
+    def test_shared_lives_and_padp_keep_exclusion_completion_and_specific_amendment(self):
+        text=self.nodes['severe-disability-ignored-persons']['definition']
+        self.assertIn('exclusion where other people cannot be ignored',text)
+        self.assertIn('not a general award rule or a current rate',text)
+        self.assertIn('Memo 02/25 paragraph 15',text)
+        self.assertIn('21 October 2024',text)
+        self.assertIn('separately from the memo’s claimant/partner and housing-deduction propositions',text)
+        self.assertIn('Scottish Adult Disability Living Allowance wording requiring separate legal reconciliation',text)
+        self.assertIn('partner-patient item must not be transferred automatically to a third person',text)
+        self.assertIn('who cannot be ignored',self.text('dmg-vol13-ch78',23))
+        self.assertIn('household facilities',self.text('dmg-vol13-ch78',24))
+        self.assertIn('£395/week',self.text('dmg-vol13-ch78',24))
+        memo=self.text('dmg-memo-02-25-e03b36ce3e',5)
+        paragraph=memo[memo.index('15. DMG 78077'):memo.index('Deductions for non-dependants')]
+        self.assertIn('From 21.10.24 PADP is added',paragraph)
+
+    def test_normal_residence_has_complete_sharing_liability_and_overnight_carer_evidence(self):
+        n=self.nodes['severe-disability-normal-residence'];text=n['definition']
+        self.assertEqual(set(self.evidence(n['key'])),{('dmg-vol13-ch78',p) for p in range(17,22)})
+        for phrase in ('temporary absence does not itself change the normal home',
+                       'degree of sharing','only a bathroom, lavatory or communal area',
+                       'same landlord','personal items are stored or meals prepared',
+                       'merely passing through to a self-contained flat',
+                       'contractual capacity and intention to create legal relations',
+                       'connection between non-payment and ending the licence or lease',
+                       'another liability to a third party','England-and-Wales scope',
+                       'separate address, actual use and frequency, postal address and Council Tax registration'):
+            self.assertIn(phrase,text)
+        self.assertIn('A kitchen is not shared if a person',self.text('dmg-vol13-ch78',19))
+        self.assertIn('the liability has to be to the same landlord',self.text('dmg-vol13-ch78',20))
+        self.assertIn('what address the carer is registered at for CT purposes',self.text('dmg-vol13-ch78',21))
+
     def test_temporary_housing_cost_conditions_have_continuations(self):
         for page in [53,54,55,56,57]:self.assertIn(('dmg-vol13-ch78',page),self.evidence('care-home-housing-costs'))
         n=self.nodes['care-home-housing-costs']

@@ -162,7 +162,7 @@ class CombinedReaderTests(unittest.TestCase):
         catalogue = json.loads((ROOT / "evaluation/semantic-expansion/catalogue.json").read_bytes())
         required_ids = set(catalogue["qualification_assertion_ids"])
         edges = [row for row in self.edges if row["id"] in required_ids]
-        self.assertEqual(len(edges), 39)
+        self.assertEqual(len(edges), 61)
         self.assertEqual({row["id"] for row in edges}, required_ids)
         by_source = {}
         for row in edges:
@@ -173,8 +173,10 @@ class CombinedReaderTests(unittest.TestCase):
             "staff-domain/care-home-housing-costs": 5,
             "staff-domain/temporary-care-home": 2,
             "staff-domain/severe-disability-addition": 4,
-            "staff-domain/no-partner-disability-addition": 10,
-            "staff-domain/partner-disability-addition": 10,
+            "staff-domain/no-partner-disability-addition": 11,
+            "staff-domain/partner-disability-addition": 11,
+            "staff-domain/severe-disability-ignored-persons": 15,
+            "staff-domain/severe-disability-normal-residence": 5,
         })
         for row in edges:
             self.assertEqual(row["predicate"], "http://purl.org/dc/terms/requires")
