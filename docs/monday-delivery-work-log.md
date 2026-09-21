@@ -408,6 +408,13 @@ the later comparison step reuses it. No test, receipt or source is weakened or
 rewritten. The failed run remains visible; the corrected commit needs a fresh
 required CI pass before merge.
 
+The subsequent run `35549578095` reached all 396 tests and exposed a second
+portability problem: six temporary-directory cases used macOS `/private/tmp`,
+which does not exist on Ubuntu. The test now resolves Python's platform temporary
+directory before constructing its isolated fixtures. The symlink checks and
+frozen checker/receipt bytes are unchanged; all 14 focused controls and the
+offline receipt check pass locally. A new Linux CI run remains required.
+
 ## Partner retention checkpoint, 21 September shortly after 02:00 BST
 
 The reviewed partner source is frozen at
