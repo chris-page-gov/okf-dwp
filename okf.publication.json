@@ -1197,6 +1197,10 @@
       {
         "path": "tools/learning-site/**",
         "role": "generator"
+      },
+      {
+        "path": "evidence-examples/registry.json",
+        "role": "release-authorisation"
       }
     ],
     "generated": [
@@ -1335,6 +1339,19 @@
         "check_command_ids": [
           "learning-site-test"
         ]
+      },
+      {
+        "path": "evidence-examples/*/**",
+        "role": "release-pack",
+        "plane": "documentation",
+        "required": false,
+        "build_command_ids": [
+          "retained-evidence-export"
+        ],
+        "check_command_ids": [
+          "retained-evidence-check",
+          "learning-site-test"
+        ]
       }
     ]
   },
@@ -1428,7 +1445,8 @@
         "scripts/build_backlog_work_packages.py",
         "scripts/build_learning_site.py",
         "_site/**",
-        "tools/learning-site/**"
+        "tools/learning-site/**",
+        "evidence-examples/**"
       ],
       "command_ids": [
         "diff-check",
@@ -1436,7 +1454,9 @@
         "backlog-controls",
         "backlog-ledger-check",
         "learning-site-build",
-        "learning-site-test"
+        "learning-site-test",
+        "retained-evidence-export",
+        "retained-evidence-check"
       ]
     },
     {
@@ -2473,6 +2493,32 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 5
+      },
+      {
+        "id": "retained-evidence-export",
+        "kind": "build",
+        "planes": [
+          "documentation"
+        ],
+        "command": "node --experimental-strip-types OKF_EXPLORER_CHECKOUT/tools/context-archive/export.ts --registry EXPORT_REGISTRY --input-root . --output evidence-examples/RELEASE_ID",
+        "source": "docs/retained-evidence-publication.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "retained-evidence-check",
+        "kind": "check",
+        "planes": [
+          "documentation"
+        ],
+        "command": "uv run --locked --project tools/learning-site python scripts/build_learning_site.py --commit COMMIT_SHA --check-examples",
+        "source": "docs/retained-evidence-publication.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
       }
     ]
   },
@@ -2499,7 +2545,8 @@
       "profiles/publication-method/**",
       "docs/publication-contract-details.json",
       "combined/**",
-      "tools/learning-site/**"
+      "tools/learning-site/**",
+      "evidence-examples/**"
     ],
     "documentation_paths": [
       "README.md",
@@ -2653,13 +2700,14 @@
     "Independent experimental candidate; full Foundry production gates, specialist review and current legal applicability are not claimed.",
     "The canonical contract describes required boundaries and checks, not their successful execution. Existing assertion, source, remote and browser receipts retain their own immutable scope.",
     "Detailed original classifications, source denominators and the canonical mapping are retained in docs/publication-contract-details.json. Canonical mixed authority never promotes machine extraction or model-derived assertions to official authority.",
-    "Repository publication uses reviewed PR merge. The additional learning Pages workflow renders only tracked public Markdown from the exact successful protected-main validation commit and deploys that single built artefact; it never rebuilds the evidence corpus.",
+    "Repository publication uses reviewed PR merge. The learning Pages workflow renders tracked public Markdown and, only when explicitly declared, copies bounded retained evidence archives from the exact successful protected-main validation commit. It deploys that single built artefact; it never rebuilds or copies an unlisted evidence corpus.",
     "Real-browser verification remains required. browser-evidence-check validates retained observations offline; it does not launch a browser, repeat the journeys or attest a later application deployment. Historical pilot journeys retain their earlier content and application-identity limitations.",
     "Console errors must be absent or explicitly recorded and justified in the retained observation; an undocumented error cannot pass the documented-allowlist policy.",
     "Rights evidence URLs locate repository documentation on main; they are not immutable source snapshots. Original source hashes and licence evidence remain in the named frozen inventories.",
     "Sensitivity is conservatively not-assessed: no claimant files are acquired, but this metadata repair does not establish an exhaustive personal-data review of public guidance or project research.",
     "The original project-authored and pinned-consumer command labels describe origin rather than review. They map to unreviewed; existing reviewed-local-guidance labels are preserved only for the prior AGENTS.md commands.",
     "The 20 September additive increment preserves frozen source/runtime releases. Fresh listing metadata is not a fresh PDF-body verification; reference-only legal metadata is not substantive legal evidence.",
-    "The household candidate adds bounded statutory body evidence without closing the 203 recorded obligations. Earlier model trials and browser observations retain their exact source and engine bindings; fresh candidate verification is separate."
+    "The household candidate adds bounded statutory body evidence without closing the 203 recorded obligations. Earlier model trials and browser observations retain their exact source and engine bindings; fresh candidate verification is separate.",
+    "Retained evidence archives require a Git-bound publication declaration and input/output hashes. Their exporter commit is declared review provenance; the offline publisher checks the approved module hashes rather than fetching or independently attesting a remote Explorer checkout. Delivery integrity is not legal applicability, specialist acceptance or AI answer correctness."
   ]
 }

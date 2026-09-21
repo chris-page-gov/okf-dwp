@@ -8,6 +8,12 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Retained evidence publication — 21 September 2026
+
+- Add a narrowly approved static publication route for up to three fixed evidence examples, preserving exact packages, provenance, missing evidence and original authority labels.
+- Check committed inputs, complete reconstruction and bounded resource files; preserve the existing Markdown-only website when no registry is declared. Twenty-three offline controls and independent review pass.
+- Explain the browser reader, explicit publication approval and integrity limits in the beginner publication guide. A local build is separate from public-site verification and legal acceptance.
+
 ## Later public observations — 21 September 2026
 
 - Preserve a separate [learning-site observation](validation/learning-site/public-91b9907836c8a340d974dd958969f4f8cbb3a0c6/README.md): exact source `91b99078…`, 123 successful responses and 2,382 checked internal links.
