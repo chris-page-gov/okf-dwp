@@ -1,6 +1,6 @@
 # Product and evaluation backlog
 
-[What changed](../CHANGELOG.md) · [Current work log](monday-delivery-work-log.md) · [Retrospective](retrospective.md) · [Portable method](methodology.md)
+[What changed](../CHANGELOG.md) · [Current work log](monday-delivery-work-log.md) · [Retrospective](retrospective.md) · [Portable method](methodology.md) · [Release checkpoint](monday-release-checkpoint.md)
 
 This register keeps stable IDs for the owner’s original ideas and later findings.
 **DWP-BL-001, DWP-BL-002 and DWP-BL-003 preserve the original three backlog items.**

@@ -12,6 +12,7 @@ okf_version: "0.2"
 · [Backlog and acceptance checks](docs/backlog.md) · [How to repeat the method](docs/methodology.md)
 · [What we learned](docs/retrospective.md)
 · [Monday handover and demonstration](docs/monday-handover-2026-09-21.md)
+· [Reviewed release checkpoint and remaining gaps](docs/monday-release-checkpoint.md)
 
 This repository turns public Department for Work and Pensions (DWP) guidance into source-linked records, a YAML-LD semantic graph and an indexed OKF Explorer research candidate. It began with a [Pension Credit pilot covering volumes 13 and 14](https://www.gov.uk/government/publications/decision-makers-guide-vols-13-and-14-state-pension-credit-staff-guide), expanded to the [full Decision makers’ guide (DMG)](https://www.gov.uk/government/collections/decision-makers-guide-staff-guide), and now also preserves the separate [Advice for decision making (ADM) manual](docs/adm-acquisition.md). It demonstrates how a specialist or an AI can find evidence, inspect relationships and see what remains uncertain.
 
@@ -40,7 +41,7 @@ reconstructed 11 evidence cases in 121 requests, including exact historical
 replay. The current care-home package has 55 records and 115 relationships and
 remains insufficient. [Three retained examples](docs/retained-evidence-examples.md)
 let a person inspect small evidence parts and the same complete package;
-publication and public-browser checks have their own dated receipts.
+public verification is pending; earlier observations retain their own dated scope.
 
 The [paired direct-v4 trial](validation/model-comparison/household-direct-v4/README.md)
 retains both clients' answers to the original care-home question and both empty

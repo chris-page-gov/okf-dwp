@@ -8,6 +8,12 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Reviewed Monday integration — 21 September 2026
+
+- Record the merged Explorer exporter and DWP evidence-reader/model-trial publication, preserving exact review, source and service identities.
+- Add a [release checkpoint](docs/monday-release-checkpoint.md) linking the beginner learning path, reproducible demonstration, actual paired responses, critique and named unfinished work.
+- Keep canonical validation and actual public observations separate from passing protected PR checks. All 203 staff obligations, specialist acceptance and the current-service browser/Voice rehearsal remain open.
+
 ## Paired fixed-evidence responses — 21 September 2026
 
 - Retain four direct-v4 subscription attempts: two empty controls and both Staff 012 care-home answers. All pass mechanical checks with zero observed tools; the substantive answers contain six claims and seven exact citations.
