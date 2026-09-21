@@ -398,7 +398,17 @@ categories and statuses of all 203 obligations are preserved. Four conditional
 labels are intentionally clearer. Combined projection, bounded context retention
 and public delivery for that next increment remain separate work.
 
-## Partner retention checkpoint, 21 September at 02:06 BST
+### CI ordering correction
+
+PR 18 run `35548995209` failed because the new receipt test executed before CI
+fetched its immutable `7f9feb96…` source. The local checkout already contained
+that commit, so its 396 passing tests did not expose the shallow-checkout
+dependency. The workflow now fetches that exact source before the unit suite;
+the later comparison step reuses it. No test, receipt or source is weakened or
+rewritten. The failed run remains visible; the corrected commit needs a fresh
+required CI pass before merge.
+
+## Partner retention checkpoint, 21 September shortly after 02:00 BST
 
 The reviewed partner source is frozen at
 `7e5fdb9b906052914b307c17c0fd19feb2d008a7`. Root rebuilt and checked all 4,758
