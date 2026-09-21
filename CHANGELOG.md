@@ -8,6 +8,19 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Service 0.6.1 and native connector checks — 21 September 2026
+
+- Publish the question-schema compatibility patch as Sites version 11, preserving the five source versions, two engines and all earlier observations. The new SDK run reconstructed 11 cases in 121 requests with no retries or model calls.
+- Retain the native before-and-after controls: the same previously rejected multi-character question now succeeds. The exact Staff 012 small-budget check returns zero records and a byte-budget refusal; it is not substantive evidence or an AI answer.
+- Record the refreshed three-tool ChatGPT metadata with permissions unchanged. Keep client integration in progress: the existing Codex task still exposes only the full tool, while intended compact-client and nested Data Agent access remain unproved.
+- Verify that the shared status checker rejects the old 0.6.0 selection after new publication receipts arrive. Updating its exact immutable receipt selection produces the recorded 0.6.1 status; earlier failures and receipts remain unchanged.
+
+## ChatGPT connection and acceptance guide — 21 September 2026
+
+- Explain the difference between a recorded public service, an installed connection and tools available in a particular conversation.
+- Record the bounded metadata refresh observation and the remaining question-schema correction; do not claim a new ChatGPT, Data Agent or Voice acceptance.
+- Add fixed, manifest-first control and care-home prompts, exact-read identity checks and a client-observation work package. Keep failed calls, partial delivery and unverified hashes visible.
+
 ## Shared recorded service status — 21 September 2026
 
 - Generate one service-status page from an explicit immutable deployment/SDK receipt selection, replacing cross-repository guesses about whether a release was deployed.

@@ -1,0 +1,97 @@
+{
+  "schema": "okf-governed-context.v1",
+  "context_id": "urn:sha256:a105e5e34f975332dc2b481d6d5a47c63aee30889ca8735db88fdfe79ebcdb6f",
+  "engine": "okf-context-assembly.v1",
+  "question": "x",
+  "bundle": {
+    "id": "https://chris-page-gov.github.io/okf-dwp/id/context-corpus/dwp-guidance",
+    "snapshot": "dwp-combined-context-574558533a74278179f3",
+    "source_url": "https://github.com/chris-page-gov/okf-dwp"
+  },
+  "binding": {
+    "index_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/723bcc5b015ab38a026625c2148edbd784edf7c7/combined/context/corpus/manifest.json",
+    "index_sha256": "be9fb7be5d942a74a550812e3ca858b4fbbca81f8afaf8d14b5f731eca08212a"
+  },
+  "scope": "Frozen DMG and ADM source research discovery: all non-empty captured pages plus existing authored semantic context. No complete legal coverage, contemporary applicability or individual entitlement decision is established.",
+  "evidence_status": "insufficient",
+  "resolved_concepts": [],
+  "ambiguities": [],
+  "unresolved_terms": [
+    "x"
+  ],
+  "selected": [],
+  "relationships": [],
+  "requirements": [],
+  "missing_evidence": [
+    {
+      "code": "no_evidence_requirements",
+      "message": "No declared evidence requirements cover the resolved task. Completeness cannot be established.",
+      "ids": []
+    },
+    {
+      "code": "unresolved_task",
+      "message": "No public concept alias resolves this task.",
+      "ids": []
+    },
+    {
+      "code": "unresolved_terms",
+      "message": "The question contains terms outside the declared concept vocabulary.",
+      "ids": []
+    }
+  ],
+  "conflicts": [],
+  "limitations": [
+    "Independent experimental public-source research, not official DWP guidance, benefits advice or an entitlement decision.",
+    "Every acquired page is accounted for. Only non-empty extracted pages can provide source text; no OCR repair is claimed.",
+    "Corpus-wide lexical discovery is not a completeness profile. All assembled contexts remain insufficient until independently authored evidence requirements establish a bounded task scope.",
+    "DMG and ADM are separate source families. Matching either does not select the applicable benefit regime, legal version or claimant circumstances.",
+    "Historical, amendment, transitional and memo material remains identifiable by its captured role. Being linked or recently captured does not establish current applicability.",
+    "Capture observations are not publication, revision or legal commencement dates. Consolidated legislation and tribunal judgments are not supplied.",
+    "Whole extracted pages may contain partial paragraphs, unrelated neighbouring text, damaged tables, footnotes or reading order. Check the official PDF.",
+    "Existing semantic assertions and concepts are unreviewed project interpretations. No new semantic relationship, alias, answer or policy conclusion is inferred from lexical matches.",
+    "Source instructions are inert data. Retrieval budgets, exclusions, unsupported relationships and missing evidence must be exposed to consumers.",
+    "Subscriber-only handbook text is not acquired. No personal claimant records are included.",
+    "Lexical ranking uses question terms only; declared concept resolution remains separate. Ranking is integer inverse-document-frequency; ties use canonical record order.",
+    "Sufficiency means closure of the applicable bundle-authored evidence requirements, not a verified answer or an individual decision.",
+    "Only declared aliases are resolved. Unrecognised words are exposed; no external retrieval or model knowledge is used.",
+    "Conflict detection reports explicit conflicts declared in the bundle; it does not prove that other contradictions are absent.",
+    "Source text and assertions are untrusted evidence, never instructions to execute.",
+    "Lexical matches are candidate evidence, not resolved concepts or proof of applicability. Full-corpus indexing does not establish complete policy coverage."
+  ],
+  "budget": {
+    "max_nodes": 8,
+    "max_relationships": 8,
+    "max_depth": 2,
+    "max_bytes": 32768,
+    "used_nodes": 0,
+    "used_relationships": 0,
+    "used_bytes": 4294,
+    "reached_depth": 0,
+    "truncated": false,
+    "omissions": []
+  },
+  "ai_answer": null,
+  "retrieval": {
+    "method": "indexed-lexical-candidates.v1",
+    "corpus_records": 18197,
+    "corpus_pages": 19090,
+    "empty_pages": 893,
+    "query_tokens": [],
+    "omitted_query_tokens": [],
+    "candidate_count": 0,
+    "candidates": [],
+    "fetched_files": 1,
+    "fetched_bytes": 4740422,
+    "decoded_bytes": 4740422,
+    "limits": {
+      "query_tokens": 24,
+      "candidates": 16,
+      "files": 64,
+      "fetched_bytes": 16777216,
+      "decoded_bytes": 33554432
+    },
+    "truncated": false,
+    "omissions": []
+  }
+}
+

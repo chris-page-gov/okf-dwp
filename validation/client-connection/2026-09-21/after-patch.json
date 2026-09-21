@@ -1,0 +1,97 @@
+{
+  "schema": "okf-client-connection-observation.v1",
+  "classification": "actual-codex-native-tool-call",
+  "client": "Codex desktop, same existing task and installed Ask OKF connector",
+  "service_release": "0.6.1",
+  "deployment_reference": "../../compact-delivery/v0.6.1/deployment.json",
+  "observed_tool": "mcp__codex_apps__ask_okf_ask_okf",
+  "attempts": [
+    {
+      "id": "unknown-term-after-patch",
+      "started_at": "2026-09-21T10:54:14Z",
+      "completed_at": "2026-09-21T10:54:16Z",
+      "request": {
+        "bundle": "okf-dwp",
+        "question": "xylophonicquasarteleportation",
+        "budget": {
+          "max_bytes": 32768,
+          "max_nodes": 8,
+          "max_relationships": 8,
+          "max_depth": 2
+        }
+      },
+      "outcome": "bounded-context-returned",
+      "is_error": false,
+      "retained_package": "unknown-term-after-patch.json",
+      "context_id": "urn:sha256:97dee630fb571915c1762d4caf365aac8923f4f7548facf9314298d2972fa2bb",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "relationships": 0,
+      "budget_truncated": false,
+      "omissions": [],
+      "ai_answer": null
+    },
+    {
+      "id": "staff-012-small-budget-smoke",
+      "started_at": "2026-09-21T10:54:31Z",
+      "completed_at": "2026-09-21T10:54:33Z",
+      "request": {
+        "bundle": "okf-dwp",
+        "question": "Does Pension Credit stop is a citizen moves into a care home permanently if they are self-funding?",
+        "budget": {
+          "max_bytes": 16384,
+          "max_nodes": 16,
+          "max_relationships": 16,
+          "max_depth": 3
+        }
+      },
+      "outcome": "bounded-context-returned",
+      "is_error": false,
+      "retained_package": "staff-012-small-budget-context.json",
+      "context_id": "urn:sha256:a587c8c751dbb0ea3c1bafa2cf0ab0e0ec7b982f990008e53fa2eedad942f431",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "relationships": 0,
+      "budget_truncated": true,
+      "omissions": [
+        {
+          "code": "byte_budget",
+          "message": "The full result could not be represented within this budget.",
+          "ids": []
+        }
+      ],
+      "ai_answer": null
+    }
+  ],
+  "ui_metadata_observation": {
+    "classification": "agent-observed-ChatGPT-settings",
+    "observed_at": "2026-09-21T10:53:28Z",
+    "time_scope": "Clock read after the single refresh, not an exact click timestamp",
+    "notification": "Actions refreshed.",
+    "tools": [
+      "ask_okf",
+      "ask_okf_manifest",
+      "read_okf_evidence"
+    ],
+    "question_pattern": "^[\\s\\S]*\\S[\\s\\S]*$",
+    "question_min_length": 1,
+    "question_max_length": 2000,
+    "approved_sources": 5,
+    "approved_engines": 2,
+    "permissions_changed": false
+  },
+  "current_task_exposed_tool_names": [
+    "mcp__codex_apps__ask_okf_ask_okf"
+  ],
+  "raw_mcp_initialisation_observed": false,
+  "raw_mcp_tools_list_observed": false,
+  "data_agent_acceptance": false,
+  "voice_acceptance": false,
+  "limitations": [
+    "The native tool inventory in this already-open Codex task still exposes only the full-package tool; compact tools were observed in refreshed ChatGPT connection metadata, not called by this task.",
+    "The Staff 012 smoke test deliberately uses a smaller budget than the frozen comparison. It returned no selected records and an explicit byte-budget omission; this is not useful substantive evidence or complete answer delivery.",
+    "No Data Agent execution catalogue or tool call was observed. A parent chat's plugin does not prove propagation into a nested agent.",
+    "These are diagnostic connector calls, not model answer-quality trials."
+  ]
+}
+
