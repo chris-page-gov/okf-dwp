@@ -20,17 +20,12 @@ source, terminology, legal and ontology discovery before building its own bundle
 For a guided group session, use the [Monday handover and ten-minute demonstration](monday-handover-2026-09-21.md).
 It connects the combined Reader, small evidence deliveries and separately recorded model trials.
 For a short explanation of manifests, exact parts, hashes and AI checks, follow
-[Learn by opening one retained evidence package](evidence-delivery-learning.md).
+[Learn by opening one retained evidence package](evidence-delivery-learning.md),
+then try the [three recorded examples](retained-evidence-examples.md).
 
-The public service now runs **0.5.0** with the household evidence release. Its
-[dated observation](../validation/compact-delivery/v0.5.0/README.md) records what
-passed and what did not: seven full-package and four compact client checks;
-successful evidence journeys in three browsers; and strict console checks that
-passed in Chrome and WebKit but retained Firefox hosting-cookie warnings.
-The [full public Reader check](household-reader-public-verification.md) also
-verified conceptual filters, a statutory relationship graph and separate source
-and audit dates in Chrome. These are checks that the right evidence arrived,
-not that every benefits question can be answered correctly.
+The public service now runs **0.6.0**. Its [public verification report](../validation/compact-delivery/v0.6.0/README.md) records 121 requests checking 11 evidence cases, including current, historical and empty results. Both client libraries returned matching tool definitions. The first failed verification remains recorded. These are delivery checks, not evidence of complete benefits answers or AI accuracy.
+
+The earlier [0.5.0 browser observations](../validation/compact-delivery/v0.5.0/README.md) retain their own sources and results, including Firefox hosting-cookie warnings. The [full public Reader check](household-reader-public-verification.md) separately verified conceptual filters, a statutory relationship graph and source/audit dates in Chrome. No new 0.6.0 public browser or Voice acceptance is implied.
 
 ### New route: follow a supplied staff question
 
