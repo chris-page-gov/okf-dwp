@@ -28,6 +28,11 @@ jobs:
       DWP_PARTNER_COMMIT: 7e5fdb9b906052914b307c17c0fd19feb2d008a7
       DWP_HOUSEHOLD_TRIAL_COMMIT: 3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84
       DWP_COMPACT_TRIAL_COMMIT: 78a8beea97242d646eb9159860dea190ca5e2998
+      DWP_DIRECT_TRIAL_COMMIT: d0251f0c9c757e082ac36ade47892a7c3d272a6d
+      DWP_DIRECT_V4_TRIAL_COMMIT: afeb78d1241c03c73adb593a07614cf53634eb0b
+      DWP_DIRECT_SOURCE_COMMIT: 723bcc5b015ab38a026625c2148edbd784edf7c7
+      EXPLORER_DIRECT_RUNTIME_COMMIT: 0472b75a9dd353d6094a83ca9f752c4d78914168
+      EXPLORER_DIRECT_VERIFIER_COMMIT: 03d0264c02a6d59d75013df4bffba279b3d4aa9c
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
@@ -57,6 +62,11 @@ jobs:
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: '26.7.0'
+      - name: Verify approved retained examples and bounded public-verifier controls offline
+        run: |
+          uv run --locked --project tools/learning-site python scripts/build_learning_site.py --commit "$GITHUB_SHA" --check-examples
+          node --test scripts/test_learning_site_v2.mjs
+          node --test scripts/test_retained_examples_browser.mjs
       - name: Require an immutable context consumer commit
         run: >-
           uv run --locked python -c
@@ -173,6 +183,19 @@ jobs:
           git cat-file -e "$DWP_PARTNER_COMMIT^{commit}"
           git -C .ci/okf-explorer-qualification fetch --no-tags --depth=1 origin "$EXPLORER_QUALIFICATION_BASELINE_COMMIT"
           git -C .ci/okf-explorer-qualification cat-file -e "$EXPLORER_QUALIFICATION_BASELINE_COMMIT^{commit}"
+      - name: Verify the exact direct-trial freeze without calling a provider
+        run: |
+          git fetch --no-tags --depth=1 origin "$DWP_DIRECT_TRIAL_COMMIT" "$DWP_DIRECT_SOURCE_COMMIT"
+          git -C .ci/okf-explorer-qualification fetch --no-tags --depth=1 origin "$EXPLORER_DIRECT_RUNTIME_COMMIT" "$EXPLORER_DIRECT_VERIFIER_COMMIT"
+          uv run --locked python -m unittest discover -s scripts -p test_monday_direct_trials.py
+          uv run --locked python scripts/run_monday_direct_trials.py --explorer-root .ci/okf-explorer-qualification
+          uv run --locked python -m unittest discover -s scripts -p test_monday_direct_observations.py
+          uv run --locked python scripts/check_monday_direct_observations.py --explorer-root .ci/okf-explorer-qualification
+      - name: Verify the v4 paired outputs without calling a provider
+        run: |
+          git fetch --no-tags --depth=1 origin "$DWP_DIRECT_V4_TRIAL_COMMIT"
+          uv run --locked python scripts/run_monday_direct_v4_trials.py --explorer-root .ci/okf-explorer-qualification
+          uv run --locked python scripts/check_monday_direct_v4_observations.py --explorer-root .ci/okf-explorer-qualification
       - name: Replay the independent source and allocator comparison offline
         run: |
           node --test validation/qualification-context/2026-09-21/admission.test.mjs validation/qualification-context/2026-09-21/metrics.test.mjs

@@ -1,0 +1,91 @@
+{
+  "accounting_models": [],
+  "answer_text_bytes": 5932,
+  "answer_text_sha256": "dad8d9d955ec998f7b64831ab14b704ad6558f67673083796838d0bee39ae606",
+  "assistant_confirmation": "sole-completed-agent-message",
+  "event_count": 5,
+  "issues": [],
+  "last_validated_event_index": 4,
+  "model_identity_boundary": "Reported identities only; no inferred or controlled single-model identity.",
+  "model_identity_status": "not-reported",
+  "observed_tool_events": 0,
+  "response_models": [],
+  "schema": "okf-direct-cli-events.v4",
+  "stream_completed": true,
+  "structural_diagnostic": {
+    "event_count": 5,
+    "events": [
+      {
+        "field_count": 2,
+        "object_fields": {
+          "thread_id": "str",
+          "type": "str"
+        }
+      },
+      {
+        "field_count": 1,
+        "object_fields": {
+          "type": "str"
+        }
+      },
+      {
+        "field_count": 2,
+        "object_fields": {
+          "item": {
+            "field_count": 3,
+            "object_fields": {
+              "id": "str",
+              "message": "str",
+              "type": "str"
+            }
+          },
+          "type": "str"
+        }
+      },
+      {
+        "field_count": 2,
+        "object_fields": {
+          "item": {
+            "field_count": 3,
+            "object_fields": {
+              "id": "str",
+              "text": "str",
+              "type": "str"
+            }
+          },
+          "type": "str"
+        }
+      },
+      {
+        "field_count": 2,
+        "object_fields": {
+          "type": "str",
+          "usage": {
+            "field_count": 5,
+            "object_fields": {
+              "cache_write_input_tokens": "int",
+              "cached_input_tokens": "int",
+              "input_tokens": "int",
+              "output_tokens": "int",
+              "reasoning_output_tokens": "int"
+            }
+          }
+        }
+      }
+    ],
+    "schema": "okf-cli-value-free-shapes.v1",
+    "truncated": false
+  },
+  "telemetry": [],
+  "tool_event_census": "complete-zero-observed-tools",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 0,
+    "input_tokens": 173883,
+    "output_tokens": 1355,
+    "reasoning_output_tokens": 130
+  },
+  "warnings": [
+    "skill-catalogue-shortening-host-context-still-visible"
+  ]
+}

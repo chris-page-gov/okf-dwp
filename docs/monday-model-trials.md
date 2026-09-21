@@ -1,8 +1,14 @@
 # Paired evidence trials for Monday
 
-**Start with the [separate successor outcomes](../validation/model-comparison/household-compact-v2/README.md).** The successor uses the same governed evidence through a reversible, ID-referenced representation and separately reviewed CLI event recognition. Its nine attempts include seven parser-accepted responses, one formatter rejection and one timeout. Six responses pass mechanical checks; Staff 008 fails a source-locator check. Both unknown-term controls abstain correctly, but no substantive pair is complete. The [claim-level model critique](../validation/model-comparison/household-compact-v2/claim-level-model-critique.json) records scope, qualification and attribution concerns in the five substantive answers. An accepted output format and exact quotations do not establish legal correctness.
+**The latest paired question is the [direct-v4 care-home trial](../validation/model-comparison/household-direct-v4/README.md): both controls and both substantive responses pass mechanical checks with no observed tools. The separate agent review of six claims and seven citations records omitted exceptions and an overstated evidence gap in one answer; specialist acceptance remains pending.**
+
+The earlier [successor experiment](../validation/model-comparison/household-compact-v2/README.md) uses the same governed evidence through a reversible, ID-referenced representation and separately reviewed CLI event recognition. Its nine attempts include seven parser-accepted responses, one formatter rejection and one timeout. Six responses pass mechanical checks; Staff 008 fails a source-locator check. Both unknown-term controls abstain correctly, but no substantive pair is complete. The [claim-level model critique](../validation/model-comparison/household-compact-v2/claim-level-model-critique.json) records scope, qualification and attribution concerns in the five substantive answers. An accepted output format and exact quotations do not establish legal correctness.
 
 The [successor protocol and frozen manifest](../evaluation/model-comparison/household-compact-v2-candidate/README.md) bind reviewed source commit `78a8beea97242d646eb9159860dea190ca5e2998`; the manifest SHA-256 is `faefc7f42282c2f8dfdee119ff6d30f26b537b73b43b1b9ed133c3befbef4678`. Repeated JSON values move to a dictionary: all six original contexts reconstruct byte for byte, including headings, exceptions, source metadata and missing-evidence declarations. The substantive packets are 11.8–14.9% smaller; the empty control is 916 bytes larger. No accuracy, latency or affordability improvement follows from those size measurements.
+
+## Preserved direct-v3 controls
+
+A [separately frozen v3 experiment](../validation/model-comparison/household-direct-v3/README.md) used the actual 0.6.0 public packages. Both empty-evidence controls exited successfully but were rejected for unrecognised CLI metadata. No substantive calls were made. These are harness compatibility failures, not assessed benefits answers. Earlier accepted responses, rejected attempts and claim critiques remain unchanged below.
 
 ## Historical first household experiment
 
@@ -115,3 +121,7 @@ uv run --locked python scripts/run_monday_model_trials.py --run \
 ```
 
 Use the same catalogue digest and case for `codex-subscription`. A retry needs a new attempt identifier. Omitting `--run` verifies an existing attempt or the frozen inputs without making a model call. `--report` writes a new deterministic results ledger; a different existing ledger is refused and must be preserved before a later one is published. `--check-report` checks the retained ledger without rewriting it.
+
+## Separate direct JSON successor
+
+The [direct-trial protocol](monday-direct-trial-protocol.md) and 30 offline controls are ready. It binds complete evidence received through the versioned compact service to the source, assembler and hosting observation. Claude is asked to return JSON directly; all tools remain forbidden. That v3 protocol was subsequently frozen; both actual empty controls were rejected for client metadata and no substantive call followed. The separate [v4 outcomes and critique](../validation/model-comparison/household-direct-v4/README.md) record the later completed experiment. Earlier failed, rejected and accepted attempts remain unchanged.

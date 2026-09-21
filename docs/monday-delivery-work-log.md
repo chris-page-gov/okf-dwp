@@ -474,3 +474,41 @@ attempts are separate from these offline measurements.
 ## Retained later public observations, 21 September
 
 Root preserved the 01:53 BST learning-site check for exact source `91b99078…`: 123 HTTP 200 responses, 120 HTML pages and 2,382 internal links. The separate 01:55 BST public Chrome observation of disability source `df352daa…` passed six journeys and retained the complete packages. Its offline admission checks 273 immutable source inputs, 71/71 returned required care-home paths and 12/12 returned required SDA paths; frontier relationships remain separately reported. Six new local checker-admission controls cover altered bytes, file bounds, symlinks and non-regular files. These observations do not attest the later partner source or the undeployed MCP successor. Historical files and `.email.md` remain untouched.
+
+## Versioned public delivery and retained examples, 21 September at 08:30 BST
+
+Root deployed service 0.6.0 once, retaining the exact Worker, source and hosting identities. The first public SDK check delivered all 11 evidence cases but failed its comparison of different SDK envelopes. A reviewed verifier-only correction preserves complete tool rows and exact schema/trust checks. The fresh run passed 121 requests, including all nine compatible source/engine pairs, an empty control and exact historical replay. The failed run remains unchanged.
+
+The reusable offline archive exporter passed independent review, eleven controls and a local seven-check Chrome journey. The DWP publisher passed 23 controls; its separate public byte verifier passed thirteen. Root exported three approved actual public packages into 225 files/2,766,291 bytes and admitted their exact Git-bound inputs. Public Pages and browser verification remain separate gates.
+
+Both direct-v3 subscription controls completed within bounds but their parsers rejected undocumented-for-that-run metadata. The receipts preserve the failure categories and unknown tool census. No substantive call or retry followed. Installed-client schema inspection is informing a separately reviewed successor; the frozen v3 inputs remain unchanged. This is not a successful paired answer-quality or affordability result.
+
+The first integrated 457-test run exposed one draft-only test that still required the protocol to be pending after the approved freeze. Its lifecycle assertion now requires the committed freeze while separately exercising refusal of a synthetic pending protocol. Frozen executable inputs and actual trial outputs are unchanged.
+
+## CI temporary-directory portability correction, 21 September
+
+PR 21's eight retained direct-v3 observation controls failed on Linux because
+the test fixture required the macOS-specific `/private/tmp` directory. The test
+now uses Python's system temporary-directory default and resolves the resulting
+path before applying the existing strict symlink checks. All eight controls pass
+locally with both the ordinary environment and an explicit `/tmp` symlink on
+macOS. Linux CI must confirm the candidate after publication; these local checks
+do not claim a remote CI pass.
+
+A scoped scan of test files changed in the previous 15 commits found no other
+hard-coded platform temporary-directory requirement. The other guarded Python
+fixtures already resolve `tempfile.gettempdir()`, while the browser controls use
+Node's `tmpdir()`. Literal private paths in older negative tests are synthetic
+rejection/redaction inputs, not directories to create. Only the fixture and
+these documentation notes changed; frozen executable inputs and recorded
+provider outcomes remain untouched.
+
+The next push-run failure occurred during fixture cleanup: a background Git pack directory changed while Python removed a synthetic repository. Fixture repositories now disable automatic garbage collection and maintenance locally; real repository configuration and publication validation are unchanged. The failed run remains visible in CI.
+
+## Paired direct responses, 21 September
+
+The separately reviewed v4 freeze preserved the complete v3 packages, prompt and answer schema. Its parser adds documented installed-client metadata recognition, bounded structural diagnostics and strict numeric usage fields. Thirty-nine controls and independent review passed before any provider call.
+
+Both actual empty controls passed and abstained. The root then made exactly one Staff 012 call per subscription client: both passed mechanical checks with complete event census and zero observed tools. The two answers contain six claims and seven exact citations. Both distinguish the whole award from additional amounts and decline a whole-award conclusion. Independent agent claim review is separate; specialist acceptance, model identity parity, comparative accuracy and affordability remain unestablished. No trial was retried or earlier failure overwritten.
+
+The independent agent review binds four attempts and 21 selected qualification records. It finds the six main scoped statements traceable, but records omitted treated-receipt/transitional exceptions, an overstated gap and further citation needs in one response. The answers remain unchanged and BL010 stays open for qualification repair and human assessment. The integrated local suite passes all 507 Python controls; public and protected-main checks remain separate gates.

@@ -29,9 +29,30 @@ explicit. Neither replaces the exact receipts below.
 
 [Verified Pension Credit semantic exemplar](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7d3c69df0571b8d5206c8edce92963d99979cb5c%2Fbundle%2Fokf-bundle.yamlld&view=graph#term/capital-disregards) · [Original meeting demonstration](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F79d21c758e37948fd6d4bde0f1b4d97b266e2e4f%2Fbundle%2Fokf-bundle.yamlld&q=84351#question/pc001) · [Read the pilot bundle](bundle/index.md) · [Ten-minute meeting walkthrough](docs/meeting-walkthrough.md) · [Discovery findings](docs/discovery.md) · [AI interrogation guide](AI_USAGE.md) · [Public notice and rights](NOTICE.md)
 
-## Current public release: household evidence
+<a id="current-public-release-household-evidence"></a>
 
-The [public evidence service](https://ask-okf.crpage.chatgpt.site/) now runs
+## Current public release: versioned evidence and paired review
+
+The [public evidence service](https://ask-okf.crpage.chatgpt.site/) runs **0.6.0**,
+using the partner-qualified source `723bcc5b015ab38a026625c2148edbd784edf7c7`.
+Its [actual public SDK check](validation/compact-delivery/v0.6.0/README.md)
+reconstructed 11 evidence cases in 121 requests, including exact historical
+replay. The current care-home package has 55 records and 115 relationships and
+remains insufficient. [Three retained examples](docs/retained-evidence-examples.md)
+let a person inspect small evidence parts and the same complete package;
+publication and public-browser checks have their own dated receipts.
+
+The [paired direct-v4 trial](validation/model-comparison/household-direct-v4/README.md)
+retains both clients' answers to the original care-home question and both empty
+controls. All four pass mechanical checks with zero observed tool calls.
+The separate agent critique records omitted exceptions and an overstated gap in
+one answer. Specialist acceptance and comparative accuracy are not established.
+Use the [Monday handover](docs/monday-handover-2026-09-21.md) for the current
+source distinctions, remaining work and ten-minute demonstration.
+
+## Earlier public 0.5.0 checkpoint: household evidence
+
+The earlier [public evidence service](https://ask-okf.crpage.chatgpt.site/) ran
 **0.5.0**, using fixed DWP source
 `3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84`. The
 [Monday handover](docs/monday-handover-2026-09-21.md) gives a ten-minute route
@@ -173,8 +194,8 @@ The [public staff reader check](validation/compact-delivery/v0.4.0/browser/staff
 passes functional evidence checks in all three engines. Chrome and WebKit pass
 strict console checks; Firefox retains hosting cookie warnings (BL023).
 Those observations remain unchanged. Use the
-[Monday handover](docs/monday-handover-2026-09-21.md) for the current 0.5.0 route;
-the new service preserves all three earlier approved source versions explicitly.
+[Monday handover](docs/monday-handover-2026-09-21.md) for the current 0.6.0 route;
+that service preserves five approved source versions with explicit engine compatibility.
 
 ## Preserved published baseline: evidence review and DMG navigation
 
@@ -305,9 +326,9 @@ protections.
 
 ## Ask OKF: governed context assembly
 
-The current public service uses both captured manuals and the household/statutory
-semantic layer at content version `3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84`.
-Open [that fixed source in Explorer](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84%2Fcombined%2Fokf-explorer.json#overview)
+The current public service uses both captured manuals and the partner-qualified household/statutory
+semantic layer at content version `723bcc5b015ab38a026625c2148edbd784edf7c7`.
+Open [that fixed source in Explorer](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F723bcc5b015ab38a026625c2148edbd784edf7c7%2Fcombined%2Fokf-explorer.json#overview)
 or follow the [Monday handover](docs/monday-handover-2026-09-21.md). A fixed source
 link does not freeze the Explorer application; its local Reader checks and the
 public compact-service checks have separate receipts.

@@ -1,6 +1,25 @@
 # Repository status
 
-## Current additive staff increment: 20 September 2026
+## Monday delivery checkpoint: 21 September 2026
+
+The [current handover](docs/monday-handover-2026-09-21.md) separates the public
+0.6.0 service, exact source versions, retained evidence reader and paired model
+trial. [DWP PR 20](https://github.com/chris-page-gov/okf-dwp/pull/20) and its exact
+merged validation and Pages checks passed. The ignored-person source contains
+53 concepts, 106 selected pages and 61 support dependencies; the service remains
+pinned to the preceding partner source because the richer source exposes a
+measured context-size limit.
+
+The [v4 results and agent critique](validation/model-comparison/household-direct-v4/README.md)
+retain mechanically accepted responses with specific qualification issues.
+All 203 task obligations remain open. [PR 21](https://github.com/chris-page-gov/okf-dwp/pull/21)
+and [PR 22](https://github.com/chris-page-gov/okf-dwp/pull/22) carry the later
+publication and trial work through normal protected checks. This checkpoint
+does not claim their eventual merged CI or a later public observation.
+
+<a id="current-additive-staff-increment-20-september-2026"></a>
+
+## Earlier additive staff increment: 20 September 2026
 
 [DWP PR 12](https://github.com/chris-page-gov/okf-dwp/pull/12) and
 [Explorer PR 126](https://github.com/chris-page-gov/okf-explorer/pull/126) are merged.

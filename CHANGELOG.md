@@ -8,6 +8,42 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Paired fixed-evidence responses — 21 September 2026
+
+- Retain four direct-v4 subscription attempts: two empty controls and both Staff 012 care-home answers. All pass mechanical checks with zero observed tools; the substantive answers contain six claims and seven exact citations.
+- Preserve identical complete evidence, authored prompt and schema for both clients. Both answers retain insufficient status and refuse to decide whether the whole Pension Credit award stops or continues.
+- Retain an independent agent critique: the main scoped claims are traceable, but one answer omits selected exceptions and overstates a gap. Preserve every original output and older failure; one paired question does not establish specialist acceptance, comparative accuracy, affordability or complete legal answerability.
+
+## Direct trial v4 preparation — 21 September 2026
+
+- Prepare a separately versioned client-format successor using documented installed CLI fields and retained value-free observations. Keep the original authored prompt, answer schema and complete public packages identical.
+- Add bounded structural diagnostics and strict scalar/structured usage validation. Thirty-nine controls and independent review pass; unknown events, tools and formatter calls still fail closed.
+- Preserve every v3 input and failed attempt. A new immutable freeze and successful controls are required before any substantive v4 calls; no answer result is implied by this preparation.
+
+## Recorded Monday delivery checkpoint — 21 September 2026
+
+- Make the eight retained direct-v3 observation tests portable across macOS and Linux by using the system temporary directory and resolving its path. Preserve all frozen executables, inputs and outcomes.
+- Export three actual public-service examples into 225 bounded static files, preserving complete package hashes, source and engine identity, insufficient status and historical limits.
+- Retain both rejected direct-v3 empty controls and hold substantive calls. Record client-format failures without claiming AI correctness or retrying the frozen attempts.
+- Add thirteen offline controls for the fixed-origin v2 website verifier, including late-response rejection, and update the beginner learning route and Monday handover.
+
+## Retained evidence publication — 21 September 2026
+
+- Add a narrowly approved static publication route for up to three fixed evidence examples, preserving exact packages, provenance, missing evidence and original authority labels.
+- Check committed inputs, complete reconstruction and bounded resource files; preserve the existing Markdown-only website when no registry is declared. Twenty-three offline controls and independent review pass.
+- Explain the browser reader, explicit publication approval and integrity limits in the beginner publication guide. A local build is separate from public-site verification and legal acceptance.
+
+## Public versioned evidence and direct trial freeze — 21 September 2026
+
+- Preserve the deployed 0.6.0 service record and separate public SDK observations: the first failed envelope comparison and the corrected 121-request, 11-case pass. Runtime and verifier identities remain distinct.
+- Freeze the actual received current care-home and empty-control packages for a separately governed direct-JSON paired trial. Thirty-two offline admission controls pass; no model outcome is implied by freezing its inputs.
+
+## Direct JSON model-trial harness — 21 September 2026
+
+- Add a separately reviewed fixed-evidence trial harness for the original Staff 012 care-home question and an independently assembled unknown-term control. Both subscription clients receive identical, complete governed evidence; every tool event is rejected.
+- Add 30 offline controls and strict source, engine, service, compact-reconstruction and hosting bindings. Limit execution to one attempt per provider and case, with successful empty controls required before substantive attempts.
+- Keep the protocol pending until the exact public service observations and final inputs are frozen. This entry records the harness, not new provider calls, answer success or specialist approval. Earlier trials remain unchanged.
+
 ## Ignored-person and normal-residence qualifications — 21 September 2026
 
 - Add separate model-authored concepts for normally residing with someone and disregarding a person's presence for the Pension Credit severe-disability addition. Retain 17 whole captured pages, including eight newly selected pages; preserve dated conditions and distinct statutory definitions.

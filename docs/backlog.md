@@ -66,11 +66,17 @@ from its completed source modelling. See the [source review](ignored-person-qual
 and [separate comparison](../validation/ignored-person-context/2026-09-21/README.md).
 Exact-version publication and public observation retain a separate in-progress
 package: the qualification Reader has a new public Chrome receipt, while the
-later source increments and MCP service still need their own release checks.
+later source increments retain their own release checks. Service 0.6.0 has since passed its separate 121-request public SDK observation; the retained reader has a distinct public publication gate.
 All 43 evidence-closure checks and
 all 203 total obligations remain open. At 64 KiB, Staff 012 correctly refuses
 because its obligation metadata does not fit; a small refusal does not erase
 the underlying task requirements.
+
+The [paired direct-v4 results](../validation/model-comparison/household-direct-v4/README.md)
+now include two mechanically accepted care-home answers after both empty controls.
+The independent agent critique identifies qualification omissions and an overstated
+gap in one response. BL010 remains open for qualification repair and human assessment;
+a completed pair does not imply complete legal answers or a model ranking.
 
 ## Current register
 
