@@ -8,6 +8,11 @@ single generated DWP status page. For the current meeting route, follow the
 browser checks and AI-answer review have separate evidence; no page claims
 real-time health merely because a past call succeeded.
 
+To use the service from ChatGPT, follow [Connect ChatGPT to Ask OKF](chatgpt-connection.md).
+It checks the actual conversation's tools, starts with a small manifest and
+records missing access explicitly. Service verification does not establish
+that every AI client has the connection.
+
 ## Historical full-corpus observation: 19 September 2026
 
 The journey below preserves the recorded full-corpus and compact-interface

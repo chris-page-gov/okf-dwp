@@ -503,7 +503,8 @@
         "validation/qualification-context/2026-09-21/README.md",
         "docs/methodology.md",
         "docs/retained-evidence-publication.md",
-        "validation/compact-delivery/v0.6.0/README.md"
+        "validation/compact-delivery/v0.6.0/README.md",
+        "docs/chatgpt-connection.md"
       ],
       "acceptance_checks": [
         "Unchanged ask_okf preserved; small manifest plus paginated exact reads; original version/question/budget/context identity replayed; stale/unknown IDs rejected; all slices reconstruct exactly; actual host check."
@@ -545,6 +546,16 @@
             "validation/compact-delivery/v0.5.0/README.md",
             "validation/qualification-context/2026-09-21/README.md",
             "validation/compact-delivery/v0.6.0/README.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-008.client-connection",
+          "kind": "live_observation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "The existing ChatGPT connection was refreshed on 21 September and advertises three read-only tools, five source versions and two engines. After the 0.6.1 question-schema correction is released, refresh again and test a new Work conversation with explicit Ask OKF selection: retain the unknown-term control, manifest and exact evidence reads, actual identities, errors and gaps. An older Codex task still exposed cached metadata. No Data Agent or Voice acceptance is established.",
+          "evidence": [
+            "docs/chatgpt-connection.md"
           ]
         },
         {

@@ -78,6 +78,14 @@ The independent agent critique identifies qualification omissions and an oversta
 gap in one response. BL010 remains open for qualification repair and human assessment;
 a completed pair does not imply complete legal answers or a model ranking.
 
+**DWP-BL-008.client-connection** now tracks the separate client boundary:
+the existing ChatGPT connection has been refreshed and advertises three tools,
+but the new-conversation control and exact-read journey remain unaccepted.
+The [connection guide](chatgpt-connection.md) gives the steps and evidence to
+retain. An older Codex task still exposed cached metadata; the multi-character
+input-schema correction is being prepared for 0.6.1. Neither installed tools
+nor a public SDK pass establishes Data Agent or Voice acceptance.
+
 ## Current register
 
 | ID | Priority | Work | Status | Depends on |

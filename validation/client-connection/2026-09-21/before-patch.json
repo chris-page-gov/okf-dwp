@@ -1,0 +1,85 @@
+{
+  "schema": "okf-client-connection-observation.v1",
+  "classification": "actual-codex-native-tool-call",
+  "client": "Codex desktop, existing task, installed Ask OKF connector",
+  "observed_tool": "mcp__codex_apps__ask_okf_ask_okf",
+  "observed_tool_inventory": {
+    "tools": [
+      "ask_okf"
+    ],
+    "approved_source_versions_advertised": [
+      "bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752",
+      "efb05c66616a9cd4328a86cf412780fe7bc7cf0b"
+    ],
+    "engine_id_advertised": false,
+    "question_pattern": "\\S"
+  },
+  "attempts": [
+    {
+      "id": "ordinary-unknown-term",
+      "started_at": "2026-09-21T10:10:53Z",
+      "completed_at": "2026-09-21T10:10:53Z",
+      "request": {
+        "bundle": "okf-dwp",
+        "question": "xylophonicquasarteleportation",
+        "budget": {
+          "max_bytes": 32768,
+          "max_nodes": 8,
+          "max_relationships": 8,
+          "max_depth": 2
+        }
+      },
+      "outcome": "connector-schema-rejection",
+      "is_error": true,
+      "error_code": "INVALID_ARGUMENT",
+      "reason": "INVALID_PARAMETERS",
+      "failed_field": "question",
+      "failed_keyword": "pattern",
+      "failed_pattern": "\\S",
+      "service_invocation_observed": false
+    },
+    {
+      "id": "one-character-control",
+      "started_at": "2026-09-21T10:11:34Z",
+      "completed_at": "2026-09-21T10:11:38Z",
+      "request": {
+        "bundle": "okf-dwp",
+        "question": "x",
+        "budget": {
+          "max_bytes": 32768,
+          "max_nodes": 8,
+          "max_relationships": 8,
+          "max_depth": 2
+        }
+      },
+      "outcome": "context-returned",
+      "is_error": false,
+      "retained_package": "single-character-context.json",
+      "context_id": "urn:sha256:a105e5e34f975332dc2b481d6d5a47c63aee30889ca8735db88fdfe79ebcdb6f",
+      "evidence_status": "insufficient",
+      "selected_records": 0,
+      "relationships": 0,
+      "ai_answer": null
+    }
+  ],
+  "raw_mcp_initialisation_observed": false,
+  "raw_mcp_tools_list_observed": false,
+  "data_agent_acceptance": false,
+  "voice_acceptance": false,
+  "privacy": {
+    "projection": "Explicit allowlist; no raw connector error envelope retained",
+    "omitted": [
+      "broker metadata",
+      "location",
+      "account/session/window identifiers",
+      "clamp rewrite metadata"
+    ]
+  },
+  "limitations": [
+    "These are two diagnostic connector calls, not a model answer-quality trial.",
+    "The one-character control does not establish multiword question compatibility.",
+    "The metadata and call observations are specific to this existing Codex task; they do not establish tool availability in the Data agent's session.",
+    "The server invocation for the rejected input was not observed; rejection was returned by connector schema validation."
+  ]
+}
+

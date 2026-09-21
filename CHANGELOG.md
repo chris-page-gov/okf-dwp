@@ -8,6 +8,12 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## ChatGPT connection and acceptance guide — 21 September 2026
+
+- Explain the difference between a recorded public service, an installed connection and tools available in a particular conversation.
+- Record the bounded metadata refresh observation and the remaining question-schema correction; do not claim a new ChatGPT, Data Agent or Voice acceptance.
+- Add fixed, manifest-first control and care-home prompts, exact-read identity checks and a client-observation work package. Keep failed calls, partial delivery and unverified hashes visible.
+
 ## Shared recorded service status — 21 September 2026
 
 - Generate one service-status page from an explicit immutable deployment/SDK receipt selection, replacing cross-repository guesses about whether a release was deployed.

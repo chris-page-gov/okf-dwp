@@ -23,7 +23,13 @@ For a short explanation of manifests, exact parts, hashes and AI checks, follow
 [Learn by opening one retained evidence package](evidence-delivery-learning.md),
 then try the [three recorded examples](retained-evidence-examples.md).
 
-The public service now runs **0.6.0**. Its [public verification report](../validation/compact-delivery/v0.6.0/README.md) records 121 requests checking 11 evidence cases, including current, historical and empty results. Both client libraries returned matching tool definitions. The first failed verification remains recorded. These are delivery checks, not evidence of complete benefits answers or AI accuracy.
+To ask through ChatGPT, use [the connection and client-check guide](chatgpt-connection.md).
+It explains plugins and tool inputs at the point you need them, includes a
+copyable evidence-only prompt, and distinguishes a missing tool from missing
+source evidence.
+
+Use the [shared service status](service-publication.md) for the latest recorded
+publication. The [0.6.0 public verification report](../validation/compact-delivery/v0.6.0/README.md) records 121 requests checking 11 evidence cases, including current, historical and empty results. Both client libraries returned matching tool definitions. The first failed verification remains recorded. These are delivery checks, not evidence of complete benefits answers or AI accuracy.
 
 The earlier [0.5.0 browser observations](../validation/compact-delivery/v0.5.0/README.md) retain their own sources and results, including Firefox hosting-cookie warnings. The [full public Reader check](household-reader-public-verification.md) separately verified conceptual filters, a statutory relationship graph and source/audit dates in Chrome. No new 0.6.0 public browser or Voice acceptance is implied.
 
