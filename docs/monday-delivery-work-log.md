@@ -503,7 +503,9 @@ rejection/redaction inputs, not directories to create. Only the fixture and
 these documentation notes changed; frozen executable inputs and recorded
 provider outcomes remain untouched.
 
-## Paired direct responses, 21 September shortly after 09:00 BST
+The next push-run failure occurred during fixture cleanup: a background Git pack directory changed while Python removed a synthetic repository. Fixture repositories now disable automatic garbage collection and maintenance locally; real repository configuration and publication validation are unchanged. The failed run remains visible in CI.
+
+## Paired direct responses, 21 September
 
 The separately reviewed v4 freeze preserved the complete v3 packages, prompt and answer schema. Its parser adds documented installed-client metadata recognition, bounded structural diagnostics and strict numeric usage fields. Thirty-nine controls and independent review passed before any provider call.
 
