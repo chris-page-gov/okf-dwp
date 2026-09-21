@@ -4,7 +4,7 @@ import gzip
 import io
 from pathlib import Path
 import shutil
-from tempfile import TemporaryDirectory
+from tempfile import TemporaryDirectory, gettempdir
 import unittest
 from unittest.mock import Mock, patch
 
@@ -63,7 +63,7 @@ class PinnedPublicObservationTests(unittest.TestCase):
             self.assertEqual((row['returned_required_path_occurrences'], row['returned_required_paths_fully_retained']), (requirements, requirements))
 
     def test_inventory_requires_exact_files_and_regular_bounded_members(self):
-        with TemporaryDirectory(dir='/private/tmp') as tmp:
+        with TemporaryDirectory(dir=Path(gettempdir()).resolve()) as tmp:
             base = Path(tmp); directory = self.fixture(base)
             self.assertEqual(len(check.inventory(base)), 11)
             extra = directory / 'extra.json'; extra.write_bytes(b'{}')
@@ -75,7 +75,7 @@ class PinnedPublicObservationTests(unittest.TestCase):
 
     def test_root_parent_and_attempt_symlinks_reject_before_read(self):
         for kind in ['root', 'parent', 'attempt']:
-            with self.subTest(kind=kind), TemporaryDirectory(dir='/private/tmp') as tmp:
+            with self.subTest(kind=kind), TemporaryDirectory(dir=Path(gettempdir()).resolve()) as tmp:
                 root = Path(tmp); actual = root / 'actual'; actual.mkdir(); self.fixture(actual)
                 link = root / 'link'; link.symlink_to(actual, target_is_directory=True)
                 if kind == 'root': target = link
@@ -89,7 +89,7 @@ class PinnedPublicObservationTests(unittest.TestCase):
                     opened.assert_not_called()
 
     def test_oversized_member_and_metadata_symlink_rejected(self):
-        with TemporaryDirectory(dir='/private/tmp') as tmp:
+        with TemporaryDirectory(dir=Path(gettempdir()).resolve()) as tmp:
             root = Path(tmp); directory = self.fixture(root)
             target = directory / 'app-manifest.json'
             with target.open('wb') as stream: stream.truncate(check.MAX_MEMBER + 1)
@@ -110,7 +110,7 @@ class PinnedPublicObservationTests(unittest.TestCase):
             called.assert_not_called()
 
     def test_rewritten_observation_cannot_self_approve_with_new_inventory(self):
-        with TemporaryDirectory(dir='/private/tmp') as tmp:
+        with TemporaryDirectory(dir=Path(gettempdir()).resolve()) as tmp:
             base = Path(tmp)
             shutil.copytree(self.directory, base / check.ATTEMPT)
             value = copy.deepcopy(self.observation); value['browser_version'] = 'invented'

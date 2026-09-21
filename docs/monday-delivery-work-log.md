@@ -408,6 +408,13 @@ the later comparison step reuses it. No test, receipt or source is weakened or
 rewritten. The failed run remains visible; the corrected commit needs a fresh
 required CI pass before merge.
 
+The subsequent run `35549578095` reached all 396 tests and exposed a second
+portability problem: six temporary-directory cases used macOS `/private/tmp`,
+which does not exist on Ubuntu. The test now resolves Python's platform temporary
+directory before constructing its isolated fixtures. The symlink checks and
+frozen checker/receipt bytes are unchanged; all 14 focused controls and the
+offline receipt check pass locally. A new Linux CI run remains required.
+
 ## Partner retention checkpoint, 21 September shortly after 02:00 BST
 
 The reviewed partner source is frozen at
@@ -463,3 +470,7 @@ remain fixed to the partner source `723bcc5b…`. Work was interrupted overnight
 by usage limits; on resumption, source PR 19 passed and merged normally, and the
 reviewed service passed all protected checks. New live observations and model
 attempts are separate from these offline measurements.
+
+## Retained later public observations, 21 September
+
+Root preserved the 01:53 BST learning-site check for exact source `91b99078…`: 123 HTTP 200 responses, 120 HTML pages and 2,382 internal links. The separate 01:55 BST public Chrome observation of disability source `df352daa…` passed six journeys and retained the complete packages. Its offline admission checks 273 immutable source inputs, 71/71 returned required care-home paths and 12/12 returned required SDA paths; frontier relationships remain separately reported. Six new local checker-admission controls cover altered bytes, file bounds, symlinks and non-regular files. These observations do not attest the later partner source or the undeployed MCP successor. Historical files and `.email.md` remain untouched.
