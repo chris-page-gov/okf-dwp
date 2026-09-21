@@ -8,6 +8,11 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Public versioned evidence and direct trial freeze — 21 September 2026
+
+- Preserve the deployed 0.6.0 service record and separate public SDK observations: the first failed envelope comparison and the corrected 121-request, 11-case pass. Runtime and verifier identities remain distinct.
+- Freeze the actual received current care-home and empty-control packages for a separately governed direct-JSON paired trial. Thirty-two offline admission controls pass; no model outcome is implied by freezing its inputs.
+
 ## Direct JSON model-trial harness — 21 September 2026
 
 - Add a separately reviewed fixed-evidence trial harness for the original Staff 012 care-home question and an independently assembled unknown-term control. Both subscription clients receive identical, complete governed evidence; every tool event is rejected.

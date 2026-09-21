@@ -306,7 +306,7 @@ class DirectTrials(unittest.TestCase):
     def freeze_fixture(self):
         sdk_path = 'validation/compact-delivery/v9.9.9/sdk/attempt-01/observation.json'
         dep_path = 'validation/compact-delivery/v9.9.9/deployment.json'
-        source_commit = '1' * 40; trial_commit = '2' * 40; explorer_commit = '3' * 40; service_commit = '5' * 40; worker = '4' * 64
+        source_commit = '1' * 40; trial_commit = '2' * 40; explorer_commit = '3' * 40; service_commit = '5' * 40; verifier_commit = '6' * 40; worker = '4' * 64
         blobs = {**self.bound, trial.PREFIX + 'protocol.json': trial.encoded(self.ready)}
         for name in trial.CODE + ['pyproject.toml', 'uv.lock']: blobs[name] = (trial.ROOT / name).read_bytes()
         blobs[trial.SOURCE_FILES[1]] = trial.encoded({'schema': 'okf-context-index.v1', 'bundle': {'snapshot': 'synthetic-semantic'}})
@@ -321,7 +321,7 @@ class DirectTrials(unittest.TestCase):
         engine['engine_id'] = 'urn:okf:context-engine:sha256:' + event.sha(trial.canonical(engine))
         catalogue = [{'engine_id': engine['engine_id'], 'source_commit': explorer_commit, 'source_versions': [source_commit]}]
         sdk = {'schema': 'okf-versioned-remote-verification.v1', 'classification': 'actual-public-http', 'passed': True,
-            'current_source_version': source_commit, 'comparison_commit': service_commit, 'expected_worker_sha256': worker,
+            'current_source_version': source_commit, 'comparison_commit': verifier_commit, 'expected_worker_sha256': worker,
             'expected_service_version': '9.9.9', 'deployed_worker_bytes_independently_verified': False, 'full_ask_okf_calls': 0,
             'model_calls': 0, 'runner_sha256': event.sha(b'verifier'), 'engine_catalogue': catalogue,
             'observed_health': {'engine_id': engine['engine_id'], 'bundle_version': source_commit, 'approved_engines': catalogue},
@@ -349,7 +349,7 @@ class DirectTrials(unittest.TestCase):
             'runtime_commit': service_commit, 'runtime_worker_sha256': worker, 'service_version': '9.9.9', 'archive_sha256': 'sha256:' + '6' * 64,
             'site_version_id': 'fixture', 'deployment': {'version_id': 'fixture', 'status': 'succeeded', 'url': 'https://example.test'}})
         manifest = {'schema': 'okf-direct-trial-freeze.v3', 'trial_commit': trial_commit, 'source_commit': source_commit,
-            'explorer_commit': explorer_commit, 'service_commit': service_commit, 'worker_sha256': worker, 'service_version': '9.9.9',
+            'explorer_commit': explorer_commit, 'service_commit': service_commit, 'verifier_commit': verifier_commit, 'worker_sha256': worker, 'service_version': '9.9.9',
             'sdk_receipt': sdk_path, 'deployment': dep_path, 'inputs': [], 'engine_id': engine['engine_id'],
             'engine_modules': {n: event.sha(b'engine') for n in ('index.ts', 'types.ts', 'corpus.ts')}, 'cases': cases}
         def rebind():
@@ -362,6 +362,7 @@ class DirectTrials(unittest.TestCase):
                 return trial.encoded(engine) if name.endswith('/manifest.json') else b'engine'
             if name == 'services/ask-okf-mcp/scripts/verify-versioned-remote.ts': return b'verifier'
             return blobs[name]
+        self.enterContext(patch.object(trial, 'runtime_inventory', return_value={'synthetic-runtime': {'mode': '100644', 'blob': 'a' * 40}}))
         return blobs, manifest, git, rebind
 
     def test_frozen_manifest_changed_hash_commit_or_service_refuses(self):
@@ -377,6 +378,51 @@ class DirectTrials(unittest.TestCase):
                 with self.assertRaises(ValueError): trial.inputs(self.ready, m, Path('/fixture'))
             with patch.object(trial, 'git_bytes', return_value=b'changed'):
                 with self.assertRaisesRegex(ValueError, 'differs-from-commit'): trial.inputs(self.ready, manifest, Path('/fixture'))
+
+    def test_verifier_revision_is_distinct_but_cannot_change_runtime_or_relabel_deployment(self):
+        blobs, manifest, git, rebind = self.freeze_fixture()
+        self.assertNotEqual(manifest['service_commit'], manifest['verifier_commit'])
+        reads = []
+        def observed_git(root, commit, name, *args):
+            reads.append((commit, name))
+            return git(root, commit, name, *args)
+        with patch.object(trial, 'read', side_effect=lambda name, *args: blobs[name]), patch.object(trial, 'git_bytes', side_effect=observed_git):
+            trial.inputs(self.ready, manifest, Path('/fixture'))
+            self.assertIn((manifest['verifier_commit'], 'services/ask-okf-mcp/scripts/verify-versioned-remote.ts'), reads)
+            self.assertIn((manifest['service_commit'], 'services/ask-okf-mcp/vendor/engines/' + manifest['explorer_commit'] + '/index.ts'), reads)
+            for newer in ({'runtime': 'changed'}, {'runtime': 'original', 'new-runtime-file': 'added'}):
+                with patch.object(trial, 'runtime_inventory', side_effect=[{'runtime': 'original'}, newer]):
+                    with self.assertRaisesRegex(ValueError, 'verifier-runtime-inputs-differ'):
+                        trial.inputs(self.ready, manifest, Path('/fixture'))
+            changed = deepcopy(manifest); changed['service_commit'] = changed['verifier_commit']
+            with self.assertRaisesRegex(ValueError, 'deployment-identity-mismatch'):
+                trial.inputs(self.ready, changed, Path('/fixture'))
+            sdk = json.loads(blobs[manifest['sdk_receipt']]); sdk['comparison_commit'] = manifest['service_commit']
+            blobs[manifest['sdk_receipt']] = trial.encoded(sdk); rebind()
+            with self.assertRaisesRegex(ValueError, 'service-replay-identity-mismatch'):
+                trial.inputs(self.ready, manifest, Path('/fixture'))
+
+    def test_runtime_inventory_has_fixed_scope_bounds_and_rejects_special_modes(self):
+        rows = []
+        for path in trial.RUNTIME_PATHS:
+            name = path + '/fixture.ts' if path.endswith(('/src', '/vendor')) else path
+            rows.append(('100644 blob ' + 'a' * 40 + '\t' + name).encode())
+        raw = b'\0'.join(rows) + b'\0'
+        ok = {'returncode': 0, 'stdout': raw, 'stderr': b'', 'timed_out': False, 'output_bound_exceeded': False}
+        with patch.object(trial, 'capture', return_value=ok) as invoke:
+            inventory = trial.runtime_inventory(Path('/fixture'), '1' * 40)
+            self.assertEqual(len(inventory), len(trial.RUNTIME_PATHS))
+            args, prompt, directory, env = invoke.call_args.args
+            self.assertEqual(args, ['git', 'ls-tree', '-rz', '1' * 40, '--', *trial.RUNTIME_PATHS])
+            self.assertEqual(invoke.call_args.kwargs, {'timeout': 10, 'stdout_cap': 1048576, 'stderr_cap': 16384})
+        for altered in [raw.replace(b'100644', b'120000', 1), raw + rows[0] + b'\0',
+                        b'100644 blob ' + b'a' * 40 + b'\toutside/file\0', b'']:
+            with patch.object(trial, 'capture', return_value={**ok, 'stdout': altered}):
+                with self.assertRaises(ValueError): trial.runtime_inventory(Path('/fixture'), '1' * 40)
+        for changed in [{'timed_out': True}, {'output_bound_exceeded': True}, {'returncode': 1}]:
+            with patch.object(trial, 'capture', return_value={**ok, **changed}):
+                with self.assertRaisesRegex(ValueError, 'unavailable-or-over-limit'):
+                    trial.runtime_inventory(Path('/fixture'), '1' * 40)
 
     def test_historical_source_data_is_read_from_frozen_git_not_current_bundle(self):
         blobs, manifest, git, _ = self.freeze_fixture()

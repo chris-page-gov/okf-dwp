@@ -38,6 +38,15 @@ ENV = {'HOME', 'PATH', 'USER', 'LOGNAME', 'SHELL', 'LANG', 'TMPDIR', 'TERM', 'CO
        'NO_COLOR', 'CODEX_HOME', 'CLAUDE_CONFIG_DIR'}
 SOURCE_FILES = ['combined/context/corpus/manifest.json', 'combined/context/corpus/base-index.json',
                 'evaluation/staff-questions/cases.json']
+# Runtime and local-comparator dependencies must be identical when only the verifier advances.
+# Whole directories include added/deleted files; the verifier and its tests/docs are excluded.
+RUNTIME_PATHS = ['services/ask-okf-mcp/src', 'services/ask-okf-mcp/vendor',
+    'services/ask-okf-mcp/package.json', 'services/ask-okf-mcp/package-lock.json',
+    'services/ask-okf-mcp/scripts/build.mjs', 'services/ask-okf-mcp/scripts/verify-approved-versions.ts',
+    'services/ask-okf-mcp/scripts/verify-delivery.mjs', 'services/ask-okf-mcp/scripts/verification-cases.mjs',
+    'apps/okf-explorer/src/lib/context/index.ts', 'apps/okf-explorer/src/lib/context/corpus.ts',
+    'apps/okf-explorer/src/lib/context/types.ts', 'apps/okf-explorer/src/lib/context/delivery.ts',
+    'profiles/context-assembly/v1/common.schema.json', 'profiles/context-assembly/v1/package.schema.json']
 TRIAL_FILES = CODE + [PREFIX + n for n in ('protocol.json', 'answer.schema.json', 'prompt.md')] + ['pyproject.toml', 'uv.lock']
 PROTOCOL_KEYS = {'schema', 'phase', 'providers', 'selected_cases', 'questions', 'context_budget',
     'timeout_seconds', 'max_stdout_bytes', 'max_stderr_bytes', 'max_answer_bytes', 'attempt',
@@ -100,6 +109,29 @@ def git_bytes(root, commit, name, limit=16 * 1024 * 1024):
     return value
 
 
+def runtime_inventory(root, commit):
+    """Read a bounded Git object census; never execute code from either revision."""
+    require(bool(re.fullmatch(r'[0-9a-f]{40}', commit or '')), 'immutable-commit-required')
+    result = capture(['git', 'ls-tree', '-rz', commit, '--', *RUNTIME_PATHS], '', str(root), environment(),
+                     timeout=10, stdout_cap=1024 * 1024, stderr_cap=16384)
+    require(result['returncode'] == 0 and not result['timed_out'] and not result['output_bound_exceeded'],
+            'runtime-inventory-unavailable-or-over-limit')
+    entries = result['stdout'].split(b'\0')
+    require(entries[-1] == b'' and 0 < len(entries) - 1 <= 256, 'runtime-inventory-census')
+    inventory = {}
+    for entry in entries[:-1]:
+        metadata, name = entry.decode('utf-8').split('\t', 1)
+        mode, kind, digest = metadata.split(' ')
+        relative(name)
+        require(any(name == path or name.startswith(path + '/') for path in RUNTIME_PATHS), 'runtime-inventory-path')
+        require(mode in {'100644', '100755'} and kind == 'blob' and bool(re.fullmatch('[a-f0-9]{40}', digest))
+                and name not in inventory, 'runtime-inventory-entry')
+        inventory[name] = {'mode': mode, 'blob': digest}
+    require(all(path in inventory or any(name.startswith(path + '/') for name in inventory) for path in RUNTIME_PATHS),
+            'runtime-inventory-missing-family')
+    return inventory
+
+
 def protocol():
     raw = read(PREFIX + 'protocol.json', 65536); p = events.strict_json(raw)
     require(set(p) == PROTOCOL_KEYS and p['schema'] == 'okf-direct-model-protocol.v3', 'unknown-protocol')
@@ -147,10 +179,10 @@ def package(case, raw, p):
 def inputs(p, manifest, explorer_root):
     """Verify immutable source bytes and actual compact SDK reconstruction, offline."""
     require(p['phase'] == 'ready-for-freeze', 'protocol-still-pending')
-    keys = {'schema', 'trial_commit', 'source_commit', 'explorer_commit', 'service_commit',
+    keys = {'schema', 'trial_commit', 'source_commit', 'explorer_commit', 'service_commit', 'verifier_commit',
             'worker_sha256', 'service_version', 'sdk_receipt', 'deployment', 'inputs', 'engine_modules', 'engine_id', 'cases'}
     require(set(manifest) == keys and manifest['schema'] == 'okf-direct-trial-freeze.v3', 'unknown-freeze')
-    for key in ('trial_commit', 'source_commit', 'explorer_commit', 'service_commit'):
+    for key in ('trial_commit', 'source_commit', 'explorer_commit', 'service_commit', 'verifier_commit'):
         require(bool(re.fullmatch('[a-f0-9]{40}', manifest[key])), 'immutable-commit-required')
     require(bool(re.fullmatch('[a-f0-9]{64}', manifest['worker_sha256'])), 'worker-hash-required')
     require(bool(re.fullmatch(r'\d+\.\d+\.\d+', manifest['service_version'])), 'service-version-required')
@@ -185,6 +217,8 @@ def inputs(p, manifest, explorer_root):
         bound[name] = raw
     require(set(bound) == expected, 'missing-input-binding')
     require(all(events.sha(bound[n]) == h for n, h in LOADED.items()), 'loaded-helper-changed')
+    require(runtime_inventory(explorer_root, manifest['service_commit'])
+            == runtime_inventory(explorer_root, manifest['verifier_commit']), 'verifier-runtime-inputs-differ-from-deployment')
     modules = manifest['engine_modules']
     require(set(modules) == {'index.ts', 'corpus.ts', 'types.ts'}, 'incomplete-engine-binding')
     vendor = 'services/ask-okf-mcp/vendor/engines/' + manifest['explorer_commit'] + '/'
@@ -205,13 +239,13 @@ def inputs(p, manifest, explorer_root):
     sdk = events.strict_json(bound[manifest['sdk_receipt']]); deployment = events.strict_json(bound[manifest['deployment']])
     require(sdk.get('schema') == 'okf-versioned-remote-verification.v1' and sdk.get('classification') == 'actual-public-http'
             and sdk.get('passed') is True and sdk.get('current_source_version') == manifest['source_commit']
-            and sdk.get('comparison_commit') == manifest['service_commit']
+            and sdk.get('comparison_commit') == manifest['verifier_commit']
             and sdk.get('expected_worker_sha256') == manifest['worker_sha256']
             and sdk.get('expected_service_version') == manifest['service_version']
             and sdk.get('deployed_worker_bytes_independently_verified') is False
             and type(sdk.get('full_ask_okf_calls')) is int and sdk['full_ask_okf_calls'] == 0
             and type(sdk.get('model_calls')) is int and sdk['model_calls'] == 0, 'service-replay-identity-mismatch')
-    verifier = git_bytes(explorer_root, manifest['service_commit'], 'services/ask-okf-mcp/scripts/verify-versioned-remote.ts')
+    verifier = git_bytes(explorer_root, manifest['verifier_commit'], 'services/ask-okf-mcp/scripts/verify-versioned-remote.ts')
     require(sdk.get('runner_sha256') == events.sha(verifier), 'sdk-verifier-commit-mismatch')
     catalogue = [e for e in sdk.get('engine_catalogue', []) if e.get('engine_id') == manifest['engine_id']]
     health = sdk.get('observed_health', {})

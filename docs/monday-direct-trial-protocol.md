@@ -106,7 +106,7 @@ The freeze is deliberately absent. After source/service integration and review:
 2. Change only the reviewed protocol phase to `ready-for-freeze`. Commit the
    reviewed runner, helper, schema, prompt, protocol, packages and actual public
    SDK/deployment observations. Record separate exact DWP source, Explorer
-   engine, service and trial-input commits. No commit is inferred from `main`.
+   engine, deployed service, SDK verifier and trial-input commits. No commit is inferred from `main`.
 3. Create a new `frozen/manifest.json` with schema
    `okf-direct-trial-freeze.v3` and the exact fields below. This manifest is
    created after the trial-input commit, avoiding a self-referential commit hash.
@@ -114,7 +114,7 @@ The freeze is deliberately absent. After source/service integration and review:
 
 | Field | Required value |
 | --- | --- |
-| `trial_commit`, `source_commit`, `explorer_commit`, `service_commit` | Four explicit 40-character Git commit identifiers; identities may coincide only when the actual commits do. |
+| `trial_commit`, `source_commit`, `explorer_commit`, `service_commit`, `verifier_commit` | Five explicit 40-character Git commit identifiers. `service_commit` identifies the deployed runtime; `verifier_commit` identifies the successful SDK comparison and verifier. A verifier-only correction does not change the deployment identity. |
 | `worker_sha256`, `service_version` | The separately recorded hosting Worker digest and service version; the SDK compares local Worker bytes but does not attest hosted bytes. |
 | `sdk_receipt`, `deployment` | Explicit public paths `validation/compact-delivery/vX.Y.Z/sdk/attempt-NN/observation.json` and the same release’s `deployment.json`. A failed attempt stays preserved; a later attempt needs separate authorisation and its exact path. |
 | `inputs` | Exactly the runner’s `TRIAL_FILES`, `SOURCE_FILES`, both public receipt paths, the two context paths and the two original compressed package artefacts named by the cases. Each entry contains `path`, `bytes`, `sha256`, `commit`. Source files bind to `source_commit`; other files bind to `trial_commit`. |
@@ -135,14 +135,32 @@ must still match those frozen bytes. Root/parent/member symlinks and oversized
 files are rejected before bounded reads.
 
 The SDK observation must use `okf-versioned-remote-verification.v1` and identify
-an actual successful public HTTP run. It binds the exact source, service comparator,
-engine catalogue and expected local Worker digest. The runner verifies the
-executed verifier’s digest against its immutable service commit. For both exact
+an actual successful public HTTP run. It binds the exact source, verifier comparator,
+engine catalogue and expected local Worker digest. The runner requires its
+`comparison_commit` to equal `verifier_commit` and verifies the executed verifier’s
+digest against that immutable commit. Deployment and vendored engine bindings
+continue to use `service_commit`. For both exact
 questions, it checks source and engine identifiers, the complete four-field budget,
 canonical package hash, bytes, record and relationship counts, evidence status,
 provenance digest, ordered catalogue, compact text/structured value equality and
 complete-package equality with the local reference. The empty control has its own
 case classification. A recorded complete package read must carry the same digest.
+
+A verifier-only correction is admitted only when the two commits have identical
+Git object inventories for the runtime and local comparator dependencies:
+service source and vendor directories, package manifests/lock, build and approved
+comparison helpers, the four shared context modules and two context schemas.
+The census includes additions and deletions, rejects symlink modes, and is bounded
+to 256 entries/1 MiB/10 seconds per commit. Only Git objects are read; neither
+revision is executed by this check. The verifier and its tests/documentation are
+outside that runtime census. The expected Worker hash must still match both the
+SDK observation and separate deployment evidence.
+
+The reviewed correction `03d0264c02a6d59d75013df4bffba279b3d4aa9c` and deployed
+runtime `0472b75a9dd353d6094a83ca9f752c4d78914168` have the same 44-entry runtime
+inventory, SHA-256 `003c291ec51b93fb7483a959c0b58cd6cedc54009995ab9f62a9408a045b64aa`.
+This local source comparison does not replace the actual successful SDK or
+hosting receipts required before freezing a trial.
 
 The original compressed package artefacts must match both their SDK artefact
 bindings and immutable Git inputs. Bounded decompression must reproduce the exact
@@ -199,7 +217,7 @@ forecast. Executable hashes do not freeze dynamically loaded provider internals.
 
 ## Offline verification
 
-**30 controls pass** using synthetic fixtures and local Python child processes.
+**32 controls pass** using synthetic fixtures and local Python child processes.
 They exercise stream and answer bounds, malformed wrappers, duplicate JSON,
 terminal success, unknown events, zero formatter exceptions, model-identity
 privacy, literal/source checks, changed freeze bindings, immutable commit checks,
