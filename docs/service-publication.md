@@ -4,20 +4,20 @@
 
 **This page reports retained observations, not real-time health.** It makes no live request. Ask OKF is an independent experiment, not an official DWP service or benefits advice.
 
-The latest recorded successful publication is **service 0.6.0**, on **21 September 2026 at 08:03:29 BST**. See the [exact recorded receipt](https://github.com/chris-page-gov/okf-dwp/blob/d0251f0c9c757e082ac36ade47892a7c3d272a6d/validation/compact-delivery/v0.6.0/deployment.json).
+The latest recorded successful publication is **service 0.6.1**, on **21 September 2026 at 11:52:32 BST**. See the [exact recorded receipt](https://github.com/chris-page-gov/okf-dwp/blob/a13a291f8b61161d60b9745ba7623ecc04839998/validation/compact-delivery/v0.6.1/deployment.json).
 
 [Open the service](https://ask-okf.crpage.chatgpt.site/) · [Monday walkthrough](monday-handover-2026-09-21.md) · [What Search, Ask OKF and an AI answer mean](learning-path.md)
 
 | Recorded identity | Value |
 | --- | --- |
-| Service version | `0.6.0` |
+| Service version | `0.6.1` |
 | DWP source commit | `723bcc5b015ab38a026625c2148edbd784edf7c7` |
-| Deployed runtime commit | `0472b75a9dd353d6094a83ca9f752c4d78914168` |
-| Local Worker SHA-256 | `9e8840a9e31bac105dce0b40037300423cffe9dec90bbbab29b7541dd29b28ac` |
+| Deployed runtime commit | `1420c3165f32b49afca6b33adcccadfdd956cd50` |
+| Local Worker SHA-256 | `bd3283e5413bd2b13428ea599e8b3e4b8897004603094327525163afccfc7467` |
 
 ## Recorded tool verification
 
-The [exact recorded receipt](https://github.com/chris-page-gov/okf-dwp/blob/d0251f0c9c757e082ac36ade47892a7c3d272a6d/validation/compact-delivery/v0.6.0/sdk/attempt-02/observation.json) completed at **21 September 2026 at 08:21:01 BST**. It passed **11 evidence cases**, including **9 approved source/engine combinations**, with **121 HTTP requests** and **10,322,602 received bytes**.
+The [exact recorded receipt](https://github.com/chris-page-gov/okf-dwp/blob/a13a291f8b61161d60b9745ba7623ecc04839998/validation/compact-delivery/v0.6.1/sdk/attempt-01/observation.json) completed at **21 September 2026 at 11:55:35 BST**. It passed **11 evidence cases**, including **9 approved source/engine combinations**, with **121 HTTP requests** and **10,322,722 received bytes**.
 
 SDK means software development kit: here it is the test client used to call the tools. Complete packages were reconstructed from bounded reads and compared with the local reference. There were no automatic retries, model calls or full `ask_okf` calls.
 
@@ -25,7 +25,7 @@ HTTP response census: 120 × HTTP 200, 1 × HTTP 202.
 
 - Context engine source: `c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e`.
 - Context engine identifier: `urn:okf:context-engine:sha256:e94ce301033de019d1051684acfd02803a3fe306fd963b44bd3f4b7dba16f652`.
-- SDK verifier commit: `03d0264c02a6d59d75013df4bffba279b3d4aa9c`.
+- SDK verifier commit: `1420c3165f32b49afca6b33adcccadfdd956cd50`.
 
 The verifier and deployed runtime can have different commits: a verifier correction does not redeploy the service.
 

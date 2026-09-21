@@ -512,3 +512,34 @@ The separately reviewed v4 freeze preserved the complete v3 packages, prompt and
 Both actual empty controls passed and abstained. The root then made exactly one Staff 012 call per subscription client: both passed mechanical checks with complete event census and zero observed tools. The two answers contain six claims and seven exact citations. Both distinguish the whole award from additional amounts and decline a whole-award conclusion. Independent agent claim review is separate; specialist acceptance, model identity parity, comparative accuracy and affordability remain unestablished. No trial was retried or earlier failure overwritten.
 
 The independent agent review binds four attempts and 21 selected qualification records. It finds the six main scoped statements traceable, but records omitted treated-receipt/transitional exceptions, an overstated gap and further citation needs in one response. The answers remain unchanged and BL010 stays open for qualification repair and human assessment. The integrated local suite passes all 507 Python controls; public and protected-main checks remain separate gates.
+
+## Service 0.6.1 and native client checks, 21 September 2026
+
+The question-schema patch was published as Sites version 11 at 11:52:32 BST.
+The reviewed runtime `1420c316…` and merged Explorer commit `68743984…` share
+complete Git tree `67eb52f7…`; the original build identity is preserved. An
+initial archive save was rejected before a version was created because of the
+entrypoint layout. The corrected final archive used unchanged Worker bytes.
+The [0.6.1 release record](../validation/compact-delivery/v0.6.1/README.md)
+links the exact archive, storage, runtime and publication identities.
+
+The new actual SDK run passed 11 cases in 121 requests, receiving 10,322,722
+bytes from 11:53:33 to 11:55:35 BST. It includes all nine allowed source/engine
+pairs, the historical care-home package and an empty control, without retries,
+model calls or full-package tool calls. Every complete package hash matches the
+preserved 0.6.0 run. The larger Staff 012 package remains insufficient.
+
+After refresh, ChatGPT settings advertised the corrected pattern, three tools,
+five sources and two engines; permissions were unchanged. The same previously
+rejected native unknown-term control then succeeded. The exact Staff 012 native
+smoke check also returned, but its 16 KiB budget retained no records and reported
+an explicit byte-budget omission. It does not establish useful answerability.
+The existing Codex task still exposes only full `ask_okf`; compact-client and
+nested Data Agent access remain unproved. BL008.client-connection stays in
+progress, and no new AI-answer or Voice acceptance is claimed.
+
+The status checker was also exercised against real drift: new receipts with
+the old 0.6.0 selection failed with “A newer successful deployment is not
+represented”. Pinning the receipts at immutable commit `a13a291f…` produced the
+0.6.1 status and passed check mode plus 19 controls. The before/after client
+records and all older SDK failures remain separately retained.

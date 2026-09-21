@@ -16,25 +16,29 @@ individual entitlement decision. Use only the public demonstration questions.
 
 | Surface | Observation | What remains unproved |
 | --- | --- | --- |
-| Public service | The [recorded 0.6.0 SDK check](../validation/compact-delivery/v0.6.0/README.md) reconstructed 11 cases in 121 requests. | Access from each ChatGPT conversation or Data Agent task. |
-| Existing ChatGPT Ask OKF connection | Refresh displayed “Actions refreshed.” Three read-only tools, five source versions and two engine identifiers appeared. Permissions were unchanged. | Successful calls from a new conversation using those refreshed schemas. |
-| Existing Codex task | Its available metadata still described only the old `ask_okf` tool and two source versions. A single-character control succeeded; a longer question was rejected by input validation. | Updated tools becoming available in that existing task. |
-| Planned 0.6.1 correction | A schema correction addresses clients interpreting the old `\S` pattern as a whole-string match. | Deployment, another refresh and a successful multi-character client check. |
+| Public service | [Service 0.6.1 was published and its SDK check passed](../validation/compact-delivery/v0.6.1/README.md): 11 cases reconstructed through 121 requests, with the source and engines unchanged. | Access from each ChatGPT conversation or Data Agent task. |
+| Existing ChatGPT Ask OKF connection | Refresh displayed “Actions refreshed.” Three read-only tools now advertise the corrected question pattern, five source versions and two engines. Permissions were unchanged. | Compact-tool calls from the intended new conversation or Data Agent task. |
+| Existing Codex task | The same multi-character unknown-term question rejected before the patch now returned an empty, insufficient package. Its tool catalogue still exposes only the full `ask_okf` tool. | The compact catalogue and exact-read tools becoming callable in that task. |
+| Staff 012 small-budget check | The exact supplied question reached the service, but its 16 KiB package budget returned zero records and an explicit byte-budget omission. | Useful substantive evidence, a complete client evidence journey or an AI answer. |
 
-These are separate observations. The first refresh still advertised the old
-question pattern. Do not treat it as verification of the correction. Consult the
-[generated service status](service-publication.md) for recorded deployment and
-SDK results; it does not report real-time availability. No Data Agent or Voice
-acceptance is claimed here. The [paired model trials](monday-model-trials.md)
-used a different, explicitly recorded workflow.
+The [before-and-after client observations](../validation/client-connection/2026-09-21/README.md)
+retain the original rejection and both later returned packages. The successful
+unknown-term call demonstrates that this connector now accepts that longer
+question. It does not establish that every conversation receives the same tools.
+The first refresh had still advertised the old pattern; the later refresh
+observed the corrected pattern after publication.
 
-The [client observation record](../validation/client-connection/2026-09-21/README.md)
-retains the rejected call and the returned one-character control package, with
-private broker metadata removed.
+Consult the [generated service status](service-publication.md) for recorded
+deployment and SDK results; it does not report real-time availability. No Data
+Agent or Voice acceptance is claimed here. The [paired model trials](monday-model-trials.md)
+used a different, explicitly recorded workflow. Private broker metadata is
+excluded from the client observations.
 
 ## 1. Refresh the existing connection after release
 
-Once the corrected release has been recorded:
+Service 0.6.1 has a recorded publication. Check the connection in the account
+and conversation you intend to use; the earlier refresh does not update every
+already-open task.
 
 1. Open [ChatGPT Plugins](https://chatgpt.com/plugins) in the intended account.
 2. Open **Ask OKF → Plugin actions → Manage**. This was the observed route for
@@ -93,7 +97,7 @@ and missing evidence. Do not invent a meaning or make benefits claims.
 If a call fails, record its tool, arguments and error and stop.
 ```
 
-The [recorded SDK control](../validation/compact-delivery/v0.6.0/README.md)
+The [recorded 0.6.1 SDK control](../validation/compact-delivery/v0.6.1/README.md)
 returned no selected records and insufficient evidence. Check the new response;
 do not copy that expected result into an observation.
 
@@ -137,6 +141,14 @@ exact bytes. Reading every slice completes transport of that bounded package;
 it cannot restore evidence omitted during assembly. See the
 [evidence-delivery lesson](evidence-delivery-learning.md).
 
+The native 16 KiB Staff 012 check was deliberately a smaller package than this
+512 KiB comparison. It returned only a 2,032-byte refusal, with no selected
+evidence. By contrast, the SDK reconstructed the 523,326-byte package at the
+comparison budget, containing 55 records and 115 relationships. Both results
+remain **insufficient**. Small delivery slices let a client receive the larger
+bounded package; shrinking the package itself can discard all useful evidence.
+The intended compact-client journey above still needs its own observation.
+
 ## 5. Record acceptance without overstating it
 
 Retain a public-safe observation with:
@@ -157,3 +169,12 @@ record. A completed call is not specialist review or proof of answer accuracy.
 Client acceptance remains **DWP-BL-008.client-connection**; Voice and room audio
 remain **DWP-BL-016**. A Data Agent test needs its own observed tool calls and
 evidence checks. There is no automatic acceptance transfer between clients.
+Selecting **Ask OKF** in a parent chat also does not prove that a separate Data
+Agent run receives those tools. Record that agent's own call and result; tool
+availability must be established at the point where the agent runs.
+
+For a separate analysis when a host cannot expose these tools, an explicitly
+supplied [retained evidence example](retained-evidence-publication.md) can still
+give an AI the same inspectable material. Label that a **frozen evidence
+handoff**, preserve its recorded identities and gaps, and keep the failed live
+connection test. It is not a fresh MCP invocation or a substitute acceptance pass.

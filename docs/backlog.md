@@ -78,13 +78,20 @@ The independent agent critique identifies qualification omissions and an oversta
 gap in one response. BL010 remains open for qualification repair and human assessment;
 a completed pair does not imply complete legal answers or a model ranking.
 
-**DWP-BL-008.client-connection** now tracks the separate client boundary:
-the existing ChatGPT connection has been refreshed and advertises three tools,
-but the new-conversation control and exact-read journey remain unaccepted.
-The [connection guide](chatgpt-connection.md) gives the steps and evidence to
-retain. An older Codex task still exposed cached metadata; the multi-character
-input-schema correction is being prepared for 0.6.1. Neither installed tools
-nor a public SDK pass establishes Data Agent or Voice acceptance.
+**DWP-BL-008.client-connection** remains `in_progress`. Service 0.6.1 is
+published and [its new SDK observation](../validation/compact-delivery/v0.6.1/README.md)
+passes 11 cases in 121 requests. After refresh, the ChatGPT connection advertises
+all three tools and the corrected question pattern. The same native control
+rejected before the patch now succeeds. The exact Staff 012 question also
+reaches the service, but its deliberately small 16 KiB budget returns zero
+records and an explicit byte-budget omission. These [client observations](../validation/client-connection/2026-09-21/README.md)
+establish neither useful answerability nor complete client integration.
+
+The existing Codex task still exposes only the full-package tool. A new
+conversation's compact catalogue and exact-read journey, and tool propagation
+into the intended Data Agent, remain unaccepted. The [connection guide](chatgpt-connection.md)
+preserves the fixed comparison question and budget. Neither installed metadata
+nor the SDK pass establishes Data Agent or Voice acceptance.
 
 ## Current register
 

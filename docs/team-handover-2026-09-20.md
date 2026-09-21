@@ -6,6 +6,15 @@ individual entitlement service.
 
 [Ten-minute Monday demonstration](monday-demo-2026-09-21.md) · [Beginner learning path](learning-path.md)
 
+## Later status: 21 September 2026
+
+This dated handover preserves its earlier baseline. For the later service 0.6.1
+publication and 11-case SDK observation, read the [new release record](../validation/compact-delivery/v0.6.1/README.md)
+and [shared recorded status](service-publication.md). The [client guide](chatgpt-connection.md)
+records a corrected native control and the remaining compact-client/Data Agent
+acceptance gap. The small Staff 012 native check contains no evidence; no new
+AI answer or Voice acceptance is implied.
+
 ## What the team can use now
 
 ### Merged staff increment
