@@ -4,6 +4,10 @@
 
 The [successor protocol and frozen manifest](../evaluation/model-comparison/household-compact-v2-candidate/README.md) bind reviewed source commit `78a8beea97242d646eb9159860dea190ca5e2998`; the manifest SHA-256 is `faefc7f42282c2f8dfdee119ff6d30f26b537b73b43b1b9ed133c3befbef4678`. Repeated JSON values move to a dictionary: all six original contexts reconstruct byte for byte, including headings, exceptions, source metadata and missing-evidence declarations. The substantive packets are 11.8–14.9% smaller; the empty control is 916 bytes larger. No accuracy, latency or affordability improvement follows from those size measurements.
 
+## Latest direct JSON controls
+
+A [separately frozen v3 experiment](../validation/model-comparison/household-direct-v3/README.md) used the actual 0.6.0 public packages. Both empty-evidence controls exited successfully but were rejected for unrecognised CLI metadata. No substantive calls were made. These are harness compatibility failures, not assessed benefits answers. Earlier accepted responses, rejected attempts and claim critiques remain unchanged below.
+
 ## Historical first household experiment
 
 **The original five subscription attempts remain unchanged: none yielded a response accepted by its frozen controls. No further calls or retries use that experiment.** Its six context packages and offline replay bind DWP commit `3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84` and Explorer engine commit `0e6a639f87c4060123b72d82c1ebe30405d475f1`. This is also separate from the [retained 20 September trials](staff-model-trials.md); their inputs, scripts, results and failures remain unchanged.

@@ -8,6 +8,12 @@ versioned links and observations.
 **Independent experimental publication. Not official DWP guidance or individual benefits advice.**
 Allow ten minutes. Use public sample questions, without claimant details.
 
+## Updated opening for Monday
+
+Start with the [three recorded evidence examples](retained-evidence-examples.md) and [beginner walkthrough](evidence-delivery-learning.md). Compare the current care-home selection with the empty control and the original historical package. Show provenance, directed relationships, gaps and complete JSON. The service is now 0.6.0; its [121-request public SDK check](../validation/compact-delivery/v0.6.0/README.md) is separate from the earlier browser observations below.
+
+Show the latest [direct-trial failures](../validation/model-comparison/household-direct-v3/README.md) honestly: both controls were rejected for client metadata, and no substantive v3 calls followed. Use earlier recorded answers only with their original source, critique and failure labels. Do not describe them as answers from the newer evidence package.
+
 ## 1. Understand the two manuals
 
 [Open the combined Reader](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F9de52acf1db84b27f8933d80480eaa850e74fa33%2Fcombined%2Fokf-explorer.json#overview)

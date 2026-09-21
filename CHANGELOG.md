@@ -8,6 +8,12 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Recorded Monday delivery checkpoint — 21 September 2026
+
+- Export three actual public-service examples into 225 bounded static files, preserving complete package hashes, source and engine identity, insufficient status and historical limits.
+- Retain both rejected direct-v3 empty controls and hold substantive calls. Record client-format failures without claiming AI correctness or retrying the frozen attempts.
+- Add thirteen offline controls for the fixed-origin v2 website verifier, including late-response rejection, and update the beginner learning route and Monday handover.
+
 ## Retained evidence publication — 21 September 2026
 
 - Add a narrowly approved static publication route for up to three fixed evidence examples, preserving exact packages, provenance, missing evidence and original authority labels.

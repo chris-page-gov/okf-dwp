@@ -95,7 +95,7 @@ controlling qualifications; independent claim review remains necessary.
 
 ## Final freeze interface
 
-The freeze is deliberately absent. After source/service integration and review:
+The freeze and recorded control outcomes are now available in the execution section below. The following steps describe how its immutable inputs were prepared:
 
 1. Assemble the two actual packages at the fixed budget. Preserve their complete
    canonical bytes under
