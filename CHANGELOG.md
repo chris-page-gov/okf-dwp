@@ -13,7 +13,8 @@ Implementation ownership and handovers belong in the
 - Trace the reported five weak lexical matches to the historical 19 September client observation and distinguish it from a fresh offline replay of the published source and engine.
 - Reuse international concept identifiers, add overseas wording and declare whole-page Pension Credit qualification support. Preserve broad-benefit ambiguity, historical limits and open obligations.
 - Add focused source, paraphrase and budget checks; track cross-benefit coverage, task discrimination and historical source competition as separate unfinished work.
-- Add beginner explanations of Voice/client boundaries and the proposed use of Data Analytics for source-linked semantic proposals. No new Voice acceptance, Data Agent trial or legal answer-quality result is implied.
+- Audit all 40 retained 512 KiB staff packages: 27 of 38 ADM-containing packages have no ADM relationship path, broad or duplicated triggers remain, and required-path losses differ from support-dependency gaps. Record exact denominators and case lists without upgrading any insufficient result or open obligation.
+- Add beginner explanations of Voice/client boundaries and record the returned frozen-file Data Analytics proposal review. Full artefact import and independent verification remain pending; native MCP access, Voice acceptance and improved legal-answer accuracy are not established.
 
 ## Service 0.6.1 and native connector checks — 21 September 2026
 

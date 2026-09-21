@@ -560,9 +560,34 @@ Public-service admission and generic capacity repair remain separate; all 203
 obligations stay open. Explorer's shared-classifier change passes 607 tests and
 has its own reviewed PR; frozen MCP engines are not rewritten.
 
-At the owner's request, a separate ChatGPT Work task was submitted for a
-source-bound Data agent semantic review. Creation first returned a pending client
-identity; the new Work conversation was subsequently observed active with the
-complete submitted brief. No inspected sources or completed result have yet
-been observed. The [method guide](data-agent-semantic-review.md) remains a
-proposed protocol until that task supplies inputs, tool observations and results.
+At the owner's request, a separate ChatGPT Work task returned a frozen-file
+semantic review and proposal summary for source `723bcc5b…`. Its reported
+workflow used local Git and file/PDF inspection after raw web reads failed;
+it reported no callable Ask OKF tools or separate nested Data Agent call. The
+local task inspected the returned messages and proposal summary, not the two
+complete cloud artefacts. Their reported hashes remain unverified locally.
+Novel proposals await full artefact import and independent source review; the
+[method guide](data-agent-semantic-review.md) records this boundary rather than
+claiming native MCP acceptance or an accuracy benchmark.
+
+## Case-level wider semantic audit, 21 September 2026
+
+A read-only audit inspected all 40 retained current `after` packages (39 distinct
+questions) and verified their decoded hashes against the evaluation at source
+commit `c203a4bd621e57c99273b3933df0207e101c5a85`. The packages use the pinned
+`c4f2de0a…` engine, a 512 KiB limit and semantic index SHA-256
+`92a8871b8f1f2e51f1feace0b1f57c67dfd0ddcb0434cf4574795e5942e95fd6`.
+No assembly rerun, model call or public-service test was made for this audit.
+
+The [wider-work section](abroad-semantic-audit.md#wider-work-that-remains) now
+names the remaining work: 27/38 ADM-containing packages have no ADM relationship
+path (27/40 overall); 24/40 activate multiple profiles; and 23/40 retain
+unresolved tokens, including both domain constraints and ordinary wording.
+It distinguishes duplicated and broad profile triggers from missing evidence.
+Only cases 012/013 lose declared required paths: 118/776 path occurrences across
+the 40 packages, or 62/463 after deduplicating identical paths within each
+package. Separately, 15/40 have 86 support-dependency diagnostics, all pointing
+to records present in the index. Existing backlog packages cover these findings.
+All 40 packages remain insufficient and all 203 obligations stay open. These
+checks describe recorded selection and diagnostics, not specialist acceptance
+or a new legal answer-quality result.

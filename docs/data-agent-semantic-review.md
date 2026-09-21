@@ -3,9 +3,10 @@
 [Learning path](learning-path.md) · [Portable methodology](methodology.md) ·
 [Check the ChatGPT connection](chatgpt-connection.md)
 
-**Proposed trial — not run.** This guide describes a small, reviewable experiment,
-not an automatic ontology feature or a completed Data Agent evaluation. OKF-DWP
-is an independent experiment, not an official DWP service or benefits advice.
+**A first frozen-file review has returned proposals.** This guide records its
+limited observations and the repeatable review method. It does not establish an
+automatic ontology feature or a completed accuracy benchmark. OKF-DWP is an
+independent experiment, not an official DWP service or benefits advice.
 
 ## What the documented workflow adds
 
@@ -44,6 +45,52 @@ feasibility of model-assisted proposals. It is an engineering example with
 June 2025 benchmarks, not a promise that ChatGPT Data Agent supplies that
 pipeline or understands a whole corpus.
 [Temporal knowledge-graph cookbook](https://developers.openai.com/cookbook/examples/partners/temporal_agents_with_knowledge_graphs/temporal_agents)
+
+## First parallel review, 21 September 2026
+
+The separate ChatGPT Work task **Semantic quality review** returned a report and
+JSON proposal artefact for frozen source commit
+`723bcc5b015ab38a026625c2148edbd784edf7c7`. Its returned account says it used the
+Data Analytics report workflow, local Git, structured-file inspection, hashing,
+PDF rendering and visual inspection. Direct raw-file web reads failed with
+`DisabledError`; it obtained the exact public commit through Git instead.
+
+It reported no callable Ask OKF tools and no separate nested Data Agent call.
+This is a **frozen-file semantic review**, not a live MCP acceptance test. The
+local implementation task inspected the returned messages and proposal summary;
+it has not imported or independently verified the two complete cloud artefacts.
+The following file identities are therefore **reported checksums**, not local
+verification receipts:
+
+| Reported artefact | Reported SHA-256 |
+| --- | --- |
+| `OKF-DWP_semantic_quality_review_723bcc5_2026-09-21.md` | `0da1f5e61bb6ec0088a194db087e9c151d25695cad3287d07e3e82bd8ce280db` |
+| `OKF-DWP_semantic_proposals_723bcc5_2026-09-21.json` | `baa71e73d698736a4f174bf378695b9956af67626e78a30764e22b4435a385cb` |
+
+The useful contribution was comparison across the source inventory, extracted
+pages, concepts, task profiles and catalogue. It classified defects and proposed
+source-linked relationships, review gates and tests. No database connector was
+needed for that exercise.
+
+| Proposal awaiting review | Source locator in the frozen extraction | Why it matters |
+| --- | --- | --- |
+| Qualifying young person | DMG 077008–077014, Chapter 7 Part 6, PDF pages 12–13 | Keep household conditions and further qualifications together. |
+| Expected absence duration | DMG 077001 and its examples, pages 8–9, with related branches on pages 9–12 | An expected duration and elapsed time are not interchangeable facts. |
+| Absence purpose | DMG 077003 and 077007, pages 9–12 | A general travel mention cannot establish the purpose required by a passage. |
+| Passage continuation dependencies | Pages 8–9, 9–10, 10–11, 11–12 and 13–14 | A page boundary must not cut an example or qualification away from its support. |
+
+The review also recommended reusing the existing international concept IDs and
+keeping the general abroad question as a clarification and routing task. Those
+points agree with the independently developed [bounded repair](abroad-semantic-audit.md).
+Agreement between model-assisted reviews is not specialist acceptance. The
+additional proposals remain `model-derived` and `unreviewed`; they have not been
+inserted automatically into the semantic source. Current legal applicability,
+DMG 04642, cited regulations and relevant ADM evidence remain unresolved.
+
+Before integration, obtain the full artefacts, verify their bytes and exact
+quotations, review every condition and date limit, and test the proposed change
+against fixed inputs. No held-out benchmark, improved AI-answer accuracy,
+affordability or complete benefits coverage has been established.
 
 ## A small proposal-and-review trial
 
@@ -113,7 +160,7 @@ Expected behaviour may be a clear refusal or an unresolved alternative.
 Evaluate AI answers separately against the exact supplied evidence: each claim
 needs support and its qualifications. More graph edges, valid citations or more
 retrieved pages do not by themselves mean more accurate answers. Retain failed
-attempts and unchanged baseline results. This proposed trial has no scores yet.
+attempts and unchanged baseline results. The first proposal review has no held-out accuracy scores.
 
 ## Establish access at the point of use
 
