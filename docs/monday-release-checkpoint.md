@@ -49,3 +49,11 @@ Follow the [discovery-first method](methodology.md), [ontology map](ontology-use
 ## Publication discipline
 
 Feature branches and normal protected pull requests preserve the reviewed changes. Strict up-to-date validation is required; force pushes to main and deletion of main are disabled. The private `.email.md` remains ignored and absent from Git. No raw provider streams, private correspondence or claimant data are introduced into the public trial outputs. Earlier failed trials, failed CI checks and historical source/replay observations remain distinguishable from later successful checks.
+
+## Final unattended publication checkpoint
+
+At **09:58 BST on 21 September 2026**, canonical run [35578922296](https://github.com/chris-page-gov/okf-dwp/actions/runs/35578922296) for `d45774648f00008ffff744a9c8d37bd154070d1c` was still running. The protected feature checks passed before merge; this is not a canonical CI or fresh public Pages pass. No new website-byte or static-reader public-browser observation has been run for this commit. The existing live [Ask OKF service](https://ask-okf.crpage.chatgpt.site/) and its retained SDK observations have their separate identities.
+
+The final documentation is preserved in [PR 23](https://github.com/chris-page-gov/okf-dwp/pull/23). Independent document review corrected two premature publication phrases. Private-input and backlog checks pass, and the exact candidate website build includes 131 Markdown pages and 359 listed outputs. This local build does not establish public availability.
+
+After canonical validation and Pages succeed, follow the [website verification procedure](learning-website.md) and [retained-reader browser procedure](retained-evidence-browser-verification.md), using full source commit `d45774648f00008ffff744a9c8d37bd154070d1c` and a fresh receipt directory. Preserve failures. These are the first remaining publication actions; neither a re-acquisition nor another model call is needed. The owner's stop time is 10:00 BST; no further scope is added at that deadline.

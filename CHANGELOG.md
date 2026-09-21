@@ -12,7 +12,7 @@ Implementation ownership and handovers belong in the
 
 - Record the merged Explorer exporter and DWP evidence-reader/model-trial publication, preserving exact review, source and service identities.
 - Add a [release checkpoint](docs/monday-release-checkpoint.md) linking the beginner learning path, reproducible demonstration, actual paired responses, critique and named unfinished work.
-- Keep canonical validation and actual public observations separate from passing protected PR checks. All 203 staff obligations, specialist acceptance and the current-service browser/Voice rehearsal remain open.
+- Preserve the 09:58 BST publication checkpoint: canonical validation is still running and the new public reader checks have not run. Keep these separate from passing protected PR checks. All 203 staff obligations, specialist acceptance and the current-service browser/Voice rehearsal remain open.
 
 ## Paired fixed-evidence responses — 21 September 2026
 
