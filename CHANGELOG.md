@@ -8,6 +8,12 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Shared recorded service status — 21 September 2026
+
+- Generate one service-status page from an explicit immutable deployment/SDK receipt selection, replacing cross-repository guesses about whether a release was deployed.
+- Reject stale selections when a newer successful compact-service publication or matching SDK observation is recorded. A deployment without matching verification remains pending; no browser, Voice, legal-accuracy or real-time availability claim is inferred.
+- Keep historical receipts unchanged and add bounded offline integrity, freshness and failure controls to CI.
+
 ## Paired fixed-evidence responses — 21 September 2026
 
 - Retain four direct-v4 subscription attempts: two empty controls and both Staff 012 care-home answers. All pass mechanical checks with zero observed tools; the substantive answers contain six claims and seven exact citations.

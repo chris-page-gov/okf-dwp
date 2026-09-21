@@ -33,7 +33,13 @@ explicit. Neither replaces the exact receipts below.
 
 ## Current public release: versioned evidence and paired review
 
-The [public evidence service](https://ask-okf.crpage.chatgpt.site/) runs **0.6.0**,
+Use the **[latest recorded service publication status](docs/service-publication.md)**
+for the selected deployment and SDK observations. This generated page is the shared
+status reference for DWP and Explorer; it does not claim real-time health.
+
+### Dated observation: 21 September 2026
+
+The [public evidence service](https://ask-okf.crpage.chatgpt.site/) was recorded as **0.6.0**,
 using the partner-qualified source `723bcc5b015ab38a026625c2148edbd784edf7c7`.
 Its [actual public SDK check](validation/compact-delivery/v0.6.0/README.md)
 reconstructed 11 evidence cases in 121 requests, including exact historical
@@ -194,8 +200,8 @@ The [public staff reader check](validation/compact-delivery/v0.4.0/browser/staff
 passes functional evidence checks in all three engines. Chrome and WebKit pass
 strict console checks; Firefox retains hosting cookie warnings (BL023).
 Those observations remain unchanged. Use the
-[Monday handover](docs/monday-handover-2026-09-21.md) for the current 0.6.0 route;
-that service preserves five approved source versions with explicit engine compatibility.
+[Monday handover](docs/monday-handover-2026-09-21.md) for the demonstration, and the [shared status page](docs/service-publication.md)
+for the latest recorded release. The 0.6.0 observation preserves five approved source versions with explicit engine compatibility.
 
 ## Preserved published baseline: evidence review and DMG navigation
 
@@ -326,7 +332,7 @@ protections.
 
 ## Ask OKF: governed context assembly
 
-The current public service uses both captured manuals and the partner-qualified household/statutory
+The recorded 0.6.0 service uses both captured manuals and the partner-qualified household/statutory
 semantic layer at content version `723bcc5b015ab38a026625c2148edbd784edf7c7`.
 Open [that fixed source in Explorer](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F723bcc5b015ab38a026625c2148edbd784edf7c7%2Fcombined%2Fokf-explorer.json#overview)
 or follow the [Monday handover](docs/monday-handover-2026-09-21.md). A fixed source

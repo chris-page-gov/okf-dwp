@@ -1446,7 +1446,10 @@
         "scripts/build_learning_site.py",
         "_site/**",
         "tools/learning-site/**",
-        "evidence-examples/**"
+        "evidence-examples/**",
+        "evaluation/service-publication.json",
+        "scripts/build_service_publication.py",
+        "scripts/test_service_publication.py"
       ],
       "command_ids": [
         "diff-check",
@@ -1456,7 +1459,10 @@
         "learning-site-build",
         "learning-site-test",
         "retained-evidence-export",
-        "retained-evidence-check"
+        "retained-evidence-check",
+        "service-publication-build",
+        "service-publication-check",
+        "service-publication-controls"
       ]
     },
     {
@@ -1519,7 +1525,10 @@
         "scripts/test_monday_model_trials.py",
         "scripts/test_monday_trial_export.mjs",
         "scripts/test_retained_reader_source.py",
-        "scripts/check_combined_reader_observations.py"
+        "scripts/check_combined_reader_observations.py",
+        "evaluation/service-publication.json",
+        "scripts/build_service_publication.py",
+        "scripts/test_service_publication.py"
       ],
       "command_ids": [
         "private-input-check",
@@ -1538,7 +1547,10 @@
         "monday-compact-freeze",
         "monday-compact-outcomes",
         "public-household-observation-integrity",
-        "monday-compact-critique-integrity"
+        "monday-compact-critique-integrity",
+        "service-publication-build",
+        "service-publication-check",
+        "service-publication-controls"
       ]
     },
     {
@@ -2541,6 +2553,48 @@
         ],
         "command": "node --test scripts/test_learning_site_v2.mjs",
         "source": "docs/retained-evidence-publication.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "service-publication-build",
+        "kind": "build",
+        "planes": [
+          "documentation",
+          "release"
+        ],
+        "command": "uv run --locked python scripts/build_service_publication.py",
+        "source": "docs/service-publication.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "service-publication-check",
+        "kind": "check",
+        "planes": [
+          "documentation",
+          "release"
+        ],
+        "command": "uv run --locked python scripts/build_service_publication.py --check",
+        "source": "docs/service-publication.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "service-publication-controls",
+        "kind": "test",
+        "planes": [
+          "documentation",
+          "release"
+        ],
+        "command": "uv run --locked python -m unittest discover -s scripts -p test_service_publication.py",
+        "source": "docs/service-publication.md",
         "review_status": "unreviewed",
         "network": "none",
         "mutates": "none",
