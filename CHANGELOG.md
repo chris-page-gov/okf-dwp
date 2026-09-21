@@ -8,6 +8,12 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Direct trial v4 preparation — 21 September 2026
+
+- Prepare a separately versioned client-format successor using documented installed CLI fields and retained value-free observations. Keep the original authored prompt, answer schema and complete public packages identical.
+- Add bounded structural diagnostics and strict scalar/structured usage validation. Thirty-nine controls and independent review pass; unknown events, tools and formatter calls still fail closed.
+- Preserve every v3 input and failed attempt. A new immutable freeze and successful controls are required before any substantive v4 calls; no answer result is implied by this preparation.
+
 ## Recorded Monday delivery checkpoint — 21 September 2026
 
 - Export three actual public-service examples into 225 bounded static files, preserving complete package hashes, source and engine identity, insufficient status and historical limits.

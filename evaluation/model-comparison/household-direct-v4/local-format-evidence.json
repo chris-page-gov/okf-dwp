@@ -1,0 +1,90 @@
+{
+  "schema": "okf-direct-v4-local-format-evidence.v1",
+  "provider_calls": 0,
+  "scope": "Installed executable schema and previously public value-free shapes; not reconstruction or reclassification of rejected v3 streams.",
+  "sources": [
+    {
+      "executable": "codex",
+      "sha256": "35d248101b211d6248ad4e6b8c1d441fe81236da87afb9f3e9ea51a049e9f179",
+      "bytes": 270973936,
+      "fragments": [
+        {
+          "needle": "TurnCompletedEventusage",
+          "offset": 198045313,
+          "bytes": 550,
+          "sha256": "86d8a49645c65f998ca8f02f8a91ca20aec6f64f04d56639e4b6a78f452b177b",
+          "text": "TurnCompletedEventusagein_progresscompletedfailedcommandaggregated_outputexit_codemessagecontent_metastructured_contentdeclinedinput_tokenscached_input_tokenscache_write_input_tokensoutput_tokensreasoning_output_tokensspawn_agentsend_inputwaitclose_agentidThreadEventThreadStartedthread.startedTurnStartedturn.startedTurnCompletedturn.completedTurnFailedturn.failedItemStarteditem.startedItemUpdateditem.updatedItemCompleteditem.completeditemsqueryactionchangesserverargumentsresultadddeleteupdateTurnFailedEventpathpending_initrunninginterruptederro"
+        }
+      ]
+    },
+    {
+      "executable": "2.1.278",
+      "sha256": "bd245662fb8a0e321b3bf133e930371d6563c387527885f30b2613aef3ba14d6",
+      "bytes": 217695408,
+      "fragments": [
+        {
+          "needle": "function UGe(e)",
+          "offset": 185905323,
+          "bytes": 2450,
+          "sha256": "14c3972795721aaf57cafff1e59a44dde06eed00cda3da6e6311e80586f5a335",
+          "text": "function UGe(e){let n=new Set(e.mcpClients.map((y)=>y.name)),r=e.mcpServerErrors.filter((y)=>!n.has(y.name)),s=e.commands.filter((y)=>y.userInvocable!==!1&&y.terminalOriented===!0).map((y)=>y.name),g={type:\"system\",subtype:\"init\",cwd:e.cwd,session_id:e.sessionId,tools:e.tools.map((y)=>b0t(y.name)),mcp_servers:e.mcpClients.map((y)=>({name:y.name,status:$He(y.type),...y.source!==void 0&&{source:y.source}})),model:e.model,permissionMode:Jc(e.permissionMode),slash_commands:e.commands.filter((y)=>y.userInvocable!==!1).map((y)=>y.name),...s.length>0&&{terminal_slash_commands:s},apiKeySource:e.apiKeySource,betas:e.betas,claude_code_version:{ISSUES_EXPLAINER:\"report the issue at https://github.com/anthropics/claude-code/issues\",PACKAGE_URL:\"@anthropic-ai/claude-code\",README_URL:\"https://code.claude.com/docs/en/overview\",VERSION:\"2.1.278\",FEEDBACK_CHANNEL:\"https://github.com/anthropics/claude-code/issues\",BUILD_TIME:\"2026-09-19T01:12:36Z\",GIT_SHA:\"809c980662e3525645594dc8b74f78c38a348db1\",HOOKS_WORKER_URL:\"/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js\",DD_SOURCEMAP_GROUP:\"darwin\"}.VERSION,output_style:e.outputStyle,agents:e.agents.map((y)=>y.agentType),skills:Gl(e.skills,\"name\").filter((y)=>y.userInvocable!==!1).map((y)=>y.name),plugins:e.plugins.map(aen),...e.pluginErrors.length>0&&{plugin_errors:e.pluginErrors.map((y)=>({...y}))},...e.pluginWarnings.length>0&&{plugin_warnings:e.pluginWarnings.map((y)=>({...y}))},...e.capabilities&&{capabilities:[...e.capabilities]},...r.length>0&&{mcp_server_errors:r.map((y)=>({...y}))},analytics_disabled:e.analyticsDisabled,product_feedback_disabled:e.productFeedbackDisabled,uuid:Gb()};if(e.memoryPaths)g.memory_paths={...e.memoryPaths};if(e.scratchpadPath!==void 0)g.scratchpad_path=e.scratchpadPath;if(e.workerEpoch!==void 0&&e.workerEpoch>=1)g.worker_epoch=e.workerEpoch;if(e.messagingSocketPath!==void 0)g.messaging_socket_path=e.messagingSocketPath;if(g.fast_mode_state=e.fastModeState,g.fast_mode_disabled_reason=e.fastModeDisabledReason,e.footerIndicator)g.footer_indicator={...e.footerIndicator};if(e.effort!==void 0)g.effort=e.effort;if(e.powerShellPath!==void 0)g.powershell_path=e.powerShellPath;return g}function E0t(e,n){es(\"init_emit_ms\",performance.now()-n,n);let r=mzr();if(r)e.startup_timing=r}function len(e){if(typeof e===\"string\")return e;let n=e.at(-1);return n?.type===\"text\"?n.text:null}import{randomUUID as fT}from\"crypto\";import{readFile as yT,stat"
+        },
+        {
+          "needle": "rm=f(",
+          "offset": 173783390,
+          "bytes": 620,
+          "sha256": "ba3a87a3c7816959583ad9a91ba2e8b28cb3f187668c42c3c88cb79d37ad42e0",
+          "text": "rm=f(()=>u({input_tokens:A().int(),output_tokens:A().int(),cache_creation_input_tokens:A().int().nullable(),cache_read_input_tokens:A().int().nullable(),cache_creation:fpe().nullable().describe(\"Cache writes by TTL.\"),server_tool_use:_pe().nullable(),service_tier:o().nullable().describe(\"standard, priority or batch.\"),inference_geo:o().nullable().optional(),speed:o().nullable().optional().describe(\"standard or fast.\"),iterations:ie().optional().describe(\"Per-iteration usage when the request ran several sampling iterations.\"),output_tokens_details:mpe().nullable().optional()})),HB=f(()=>u({id:o().optional(),type:R"
+        },
+        {
+          "needle": "yi=f(",
+          "offset": 173785613,
+          "bytes": 1650,
+          "sha256": "545c47a24cd727f6abdc1e20180af158062896cc32484b4dd1e47b0afc865c61",
+          "text": "yi=f(()=>u({inputTokens:A().int(),outputTokens:A().int(),thinkingTokens:A().int().optional().describe(\"Thinking tokens, already counted inside outputTokens. Counts only turns run on CLI versions that record this field: absent when none did, and partial for a resumed session that began on an older version.\"),cacheReadInputTokens:A().int(),cacheCreationInputTokens:A().int(),webSearchRequests:A().int(),costUSD:A(),contextWindow:A().int(),maxOutputTokens:A().int(),canonicalModel:o().optional().describe(\"Canonical model id used for the pricing lookup (e.g. 'claude-opus-4-7'). May differ from the raw model string this entry is keyed by (provider-specific ids, aliases).\"),provider:o().optional().describe(\"API provider that served this model (e.g. 'firstParty', 'bedrock', 'vertex', 'foundry', 'anthropicAws', 'mantle', 'gateway').\"),costBasis:z([\"list\",\"managed\",\"unknown\"]).optional().describe(\"Which price table the most recent request for this model was priced at: Claude Code's built-in list prices ('list'), the organization's managed-settings modelPricing rates or multiplier ('managed'), or neither ('unknown' \\u2014 no pricing row and no built-in price matched the model ID, so costUSD is a guess at the default model's rate). Overwritten per request like canonicalModel, so a consumer that differences the cumulative costUSD per turn gets that turn's basis. Absent until this process has priced a request for the model (e.g. right after --resume) and on builds that predate the field; treat as 'list'.\")})),hpe=f(()=>R(\"json_schema\")),WFe=f(()=>u({type:hpe()})),Epe=f(()=>u({type:R(\"json_schema\"),schema:fe(o(),ie())})),qFe=f(()=>Epe()),S"
+        },
+        {
+          "needle": "type:R(\"assistant\")",
+          "offset": 173853897,
+          "bytes": 600,
+          "sha256": "e7da5eb0dec87e5b3c39901a0c33855e29b07da40555cb474ac9b37605583dfd",
+          "text": "type:R(\"assistant\"),message:Kfe(),parent_tool_use_id:o().nullable(),error:fm().optional(),uuid:ee(),historical:H().optional().describe(\"@internal Replayed history rather than a live message (stamped by the Remote Control bridge when it flushes history to the session server).\"),session_id:o(),request_id:o().optional(),user_message_uuid:o().optional().describe(\"Client uuid of the user message this turn is answering (submitMessage options.uuid), stamped on an assistant message each time that send changes \\u2014 the turn's FIRST top-level assistant message (which may carry only a thinking block, o"
+        },
+        {
+          "needle": "D_e=f(",
+          "offset": 173880452,
+          "bytes": 2850,
+          "sha256": "bd06e41534b2b0ea44e82bd281907478680384c0575d784acc3634df527b69d0",
+          "text": "D_e=f(()=>u({type:R(\"result\"),subtype:R(\"success\"),duration_ms:A().int(),duration_api_ms:A().int(),ttft_ms:A().int().optional(),ttft_stream_ms:A().int().optional(),time_to_request_ms:A().int().optional(),user_message_uuid:o().optional(),user_message_uuids:k(o()).optional(),resume_reason:o().optional(),local_command:o().optional(),request_sent_wall_ms:A().optional(),first_content_frame_ms:A().int().optional(),first_stream_post_ms:A().int().optional(),first_stream_post_ack_ms:A().int().optional(),first_stream_post_queue_wait_ms:A().int().optional(),first_stream_post_queued_behind:z(PB).optional(),first_stream_post_wall_ms:A().optional(),frame_received_wall_ms:A().optional().describe(\"@internal Date.now() (epoch ms) when the triggering send's frame arrived on a session reading its input from the session server's SSE stream (--sdk-url), before the input loop read it. With frame_enqueued_wall_ms and turn_started_wall_ms it splits the stretch between the server's persist and request_sent_wall_ms into transit, the input loop's handling of the frame, its wait on the command queue, and the turn's own work. Present only together with request_sent_wall_ms, and only when the transport recorded the receipt; absent on a local stdin host and from older producers.\"),frame_enqueued_wall_ms:A().optional().describe(\"@internal Date.now() (epoch ms) when the input loop put the triggering send's frame on the command queue. Present exactly when frame_received_wall_ms is.\"),turn_started_wall_ms:A().optional().describe(\"@internal Date.now() (epoch ms) when the turn's clock started: the anchor duration_ms, ttft_ms, ttft_stream_ms, time_to_request_ms, first_content_frame_ms, first_stream_post_ms and first_stream_post_ack_ms are measured from. Present exactly when frame_received_wall_ms is.\"),first_text_post_ms:A().int().optional(),first_text_post_wall_ms:A().optional(),time_to_request_from_spawn_ms:A().int().optional(),warm_spare_claimed:H().optional(),time_origin_ms:A().optional(),is_error:H(),api_error_status:A().int().nullable().optional(),api_error_code:o().optional().describe(\"@internal The api_error_code of the API error that ended the turn (see SDKAssistantMessage.api_error_code): the server's error.details.error_code when it is an identifier. Absent when the turn did not end on an API error or the response carried no code.\"),num_turns:A().int(),result:o(),stop_reason:o().nullable(),total_cost_usd:A().describe(gH),usage:iH(),modelUsage:fe(o(),yi()).describe(fH),subagent_stats:pH().optional().describe(_H),permission_denials:k(dH()),queued_turn_count:A().int().optional().describe(mH),structured_output:ie().optional(),deferred_tool_use:Zfe().optional(),terminal_reason:uH().optional(),result_index:A().int().nonnegative().optional().describe(hH),fast_mode_state:Ci().optional(),fast_mode_disabled_reason:wi().optional(),origi"
+        },
+        {
+          "needle": "pH=f(",
+          "offset": 173872310,
+          "bytes": 2450,
+          "sha256": "44d9f72aff3a7acaeb01857bb3e26c0de0f04dfde1b05162014ea8d27e7b5f9b",
+          "text": "pH=f(()=>u({spawned:A().int().describe(\"Subagents actually started (one tengu_agent_tool_selected each); a refused or failed launch is not counted.\"),requested:u({background:A().int(),foreground:A().int(),unset:A().int()}).describe(\"Spawns by the run_in_background value the model passed; all count as unset while the parameter is not offered (background tasks disabled, or the fork gate on).\"),started_in_background:A().int().describe(\"Spawns that started in the background after defaults and session settings (tengu_agent_tool_selected.is_async); the rest blocked the spawning tool call.\"),by_type:fe(o(),A().int()).describe(\"Spawns by agent type.\"),max_depth:A().int().describe(\"Deepest spawn: 1 = started by the main thread, 2 = by a depth-1 subagent.\"),spawned_by_subagents:A().int().describe(\"Spawns made from inside another subagent (depth > 1).\"),completed:A().int(),failed:A().int(),killed:u({parent:A().int(),user:A().int(),system:A().int()}).describe(\"Stopped before finishing: parent = by another agent through TaskStop; system = by Claude Code itself (the --max-budget-usd halt, the sweep of background subagents when an SDK or IDE client interrupts, or -p giving up on a background subagent still running at its wait ceiling); user = any other stop, including a foreground subagent cancelled just as it finished (counted here, not as completed).\"),refused:u({depth_limit:A().int(),concurrency_limit:A().int(),budget:A().int()}).describe(\"Agent tool calls turned down because one of these limits was reached (other denials, such as an unknown agent type, are not counted). depth_limit stays near zero in practice: a subagent at the nesting limit is normally not offered the tool at all.\")}).describe(\"@internal Subagents started through the Agent tool in this session, as running totals (forked skills, workflows, teammates and other internal agents are not counted; two sessions in one process keep separate counts). Cumulative like modelUsage: read the latest result rather than summing across results; a resumed session starts fresh and a mid-session /clear zeroes it, though a background subagent that outlives the /clear still records its outcome, so completed, failed and killed can then exceed spawned. A result that was held back while background subagents finished carries the counts as of when it is written to the stream, as do its total_cost_usd, duration_api_ms and modelUsage (and usage where that is a running total; a per"
+        }
+      ]
+    },
+    {
+      "path": "validation/model-comparison/household-2026-09-21/diagnostics/claude-synthetic-reasoning/receipt.json",
+      "sha256": "999d2948feb289726c22c733cc019cf00393acedb3f309bd2f8b372bb29486cf",
+      "bytes": 12978
+    },
+    {
+      "path": "validation/model-comparison/household-2026-09-21/diagnostics/codex-subscription/receipt.json",
+      "sha256": "37e652a57c0c3c6bc0214e865ae214e7d2af7f5959fb1bef016dbcbe56c75f3c",
+      "bytes": 3011
+    },
+    {
+      "path": "validation/model-comparison/household-direct-v3/claude-subscription/control-unknown/attempt-01/receipt.json",
+      "sha256": "970815320e3cfa15003d2a10eca55daffbe95a059cc76a026f8f55fcd488a795",
+      "bytes": 2094
+    },
+    {
+      "path": "validation/model-comparison/household-direct-v3/codex-subscription/control-unknown/attempt-01/receipt.json",
+      "sha256": "70a0d9a49ddd75df4f4ead152f48c794af0b04b15682b1b7b5ff622a8c043716",
+      "bytes": 2243
+    }
+  ]
+}
