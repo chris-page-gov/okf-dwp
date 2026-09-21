@@ -115,3 +115,7 @@ uv run --locked python scripts/run_monday_model_trials.py --run \
 ```
 
 Use the same catalogue digest and case for `codex-subscription`. A retry needs a new attempt identifier. Omitting `--run` verifies an existing attempt or the frozen inputs without making a model call. `--report` writes a new deterministic results ledger; a different existing ledger is refused and must be preserved before a later one is published. `--check-report` checks the retained ledger without rewriting it.
+
+## Separate direct JSON successor
+
+The [direct-trial protocol](monday-direct-trial-protocol.md) and 29 offline controls are ready. It binds complete evidence received through the versioned compact service to the source, assembler and hosting observation. Claude is asked to return JSON directly; all tools remain forbidden. The protocol is still pending final input freeze, and no provider call or new answer is claimed. Earlier failed, rejected and accepted attempts remain unchanged.

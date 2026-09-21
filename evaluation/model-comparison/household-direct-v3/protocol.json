@@ -1,0 +1,33 @@
+{
+  "schema": "okf-direct-model-protocol.v3",
+  "phase": "pending-final-source-package-runner-freeze",
+  "providers": [
+    "claude-subscription",
+    "codex-subscription"
+  ],
+  "selected_cases": [
+    "control-unknown",
+    "staff-012"
+  ],
+  "questions": {
+    "control-unknown": "xylophonicquasarteleportation",
+    "staff-012": "Does Pension Credit stop is a citizen moves into a care home permanently if they are self-funding?"
+  },
+  "context_budget": {
+    "max_nodes": 64,
+    "max_relationships": 128,
+    "max_depth": 6,
+    "max_bytes": 524288
+  },
+  "timeout_seconds": 240,
+  "max_stdout_bytes": 2097152,
+  "max_stderr_bytes": 524288,
+  "max_answer_bytes": 16384,
+  "attempt": "attempt-01",
+  "max_provider_calls": 4,
+  "allowed_tool_events": [],
+  "execution_policy": "Pending until an independently reviewed ready protocol, immutable inputs, exact local-engine/compact-service reconstructed package equality and explicit root authorisation. Both accepted empty controls precede separate substantive authorisation. One attempt per provider/case; no retries or repair.",
+  "provider_policy": "Existing subscription defaults; no model/fallback override, paid API, persistent configuration change or authentication repair. Claude stream-json without json-schema; Codex json stream with local output-schema.",
+  "privacy_policy": "No raw stderr, reasoning, account/session/tool IDs, paths or arbitrary errors. Retain bounded recognised categories, numeric usage, safe reported model identities or their digest and final schema-checked answer only.",
+  "comparison_boundary": "Different source, prompt and output mechanism from prior attempts. No accuracy, speed, cost, formatter-causality or specialist-acceptance claim."
+}
