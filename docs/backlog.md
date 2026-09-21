@@ -40,18 +40,26 @@ The 203 named task obligations are in [the profile register](../evaluation/seman
 Do not read a delivered compiler or a denser graph as complete domain modelling.
 
 The [qualification-retention work package](backlog-work-packages.md#dwp-bl-007-broader-semantic-modelling-task-specific-evidence-profiles)
-now records 15 declared support dependencies: eight for the initial household
+records the preceding 15-support-dependency increment: eight for the initial household
 group, five for housing costs and two for temporary residence. Staff 012 and 013
 require the household and housing-cost paths. The
-[component review](carehome-component-dependency-review.md) keeps the larger
-no-partner and severe-disability overview support sets as explicit remaining
-work. The [joint comparison](../validation/qualification-context/2026-09-21/README.md)
+[component review](carehome-component-dependency-review.md) motivated a separate
+no-partner and severe-disability overview increment. The original
+[joint comparison](../validation/qualification-context/2026-09-21/README.md)
 now passes 320 assemblies and replay: the final pair retains all 177 known candidate
 occurrences and 433 declared path occurrences at both tested budgets, including
 seven of seven household pages for Staff 012 and 013. This bounded retention
-package is recorded complete. Exact-version publication and public observation
-have a separate in-progress package; the larger component support sets have a
-separate not-started implementation package. All 43 evidence-closure checks and
+package is recorded complete. The [disability increment](disability-addition-qualification-review.md)
+is also implemented and independently reviewed: 29 dependencies in a 903-record
+index, with a [separate frozen comparison](../validation/disability-context/2026-09-21/README.md).
+All 497 declared path occurrences survive 512 KiB; only 407 survive 256 KiB,
+despite unchanged 177/177 candidate overlap. Its bounded implementation is
+recorded complete. The partner extension is explicitly in progress; the
+conditional ignored-person extension is a separate not-started package.
+Exact-version publication and public observation retain a separate in-progress
+package: the qualification Reader has a new public Chrome receipt, while the
+larger disability source and MCP service still need their own release checks.
+All 43 evidence-closure checks and
 all 203 total obligations remain open. At 64 KiB, Staff 012 correctly refuses
 because its obligation metadata does not fit; a small refusal does not erase
 the underlying task requirements.

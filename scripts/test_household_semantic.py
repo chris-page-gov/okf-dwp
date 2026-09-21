@@ -29,11 +29,51 @@ class HouseholdSemanticTests(unittest.TestCase):
         self.assertLess(source.index('Claimants who have no partner'),source.index('78088'))
         self.assertLess(source.index('78088'),source.index('Claimants who have a partner'))
         definition=self.nodes['no-partner-disability-addition']['definition']
-        for condition in ('no partner','all conditions','first four weeks','actual payment','78077','78080','Partner cases'):
+        for condition in ('no partner','all conditions','must actually be in payment',
+                          'not a universal cash-payment test','transitional-protection exception',
+                          'does not consolidate','funding status alone does not settle'):
             self.assertIn(condition,definition)
         selected=self.evidence('no-partner-disability-addition')
-        for page in [11,12,15,21,22,23,25]:self.assertIn(('dmg-vol13-ch78',page),selected)
+        for page in [11,12,15,16,17,21,22,23,25]:self.assertIn(('dmg-vol13-ch78',page),selected)
         self.assertIn('no-partner',self.nodes['severe-disability-addition']['definition'])
+
+    def test_receipt_rule_keeps_award_period_and_partner_patient_qualifications(self):
+        first=self.text('dmg-vol13-ch78',16);second=self.text('dmg-vol13-ch78',17)
+        self.assertIn('before an award is made but in respect of which the allowance is awarded',first)
+        self.assertIn('not covered by an award but in respect of which a payment is made in lieu of an award',first)
+        self.assertIn('in the case of a claimant who has a partner',first)
+        self.assertIn('but for being a patient for over 28 days',second)
+        self.assertIn('which the award is first paid',second)
+        definition=self.nodes['no-partner-disability-addition']['definition']
+        self.assertIn('periods before an award is made but in respect of which it is awarded',definition)
+        self.assertIn('periods not covered by an award but with payment in lieu of an award',definition)
+        self.assertIn('in respect of caring for the claimant or partner, must actually be in payment',definition)
+        self.assertIn('expressly concerns a claimant who has a partner',definition)
+        self.assertIn('must not be transferred to a no-partner care-home case',definition)
+        for page,anchor in [(16,'78060'),(17,'which the award is first paid')]:
+            evidence=self.evidence('no-partner-disability-addition')[('dmg-vol13-ch78',page)]
+            self.assertEqual(evidence['anchor'],anchor)
+        source=self.text('dmg-vol13-ch78',15)
+        self.assertIn('CA/UC carer element',source)
+        self.assertIn('has to actually be in payment before it affects',source)
+
+    def test_dated_receipt_support_is_required_without_consolidating_memo_terms(self):
+        base='https://chris-page-gov.github.io/okf-dwp/id/page/'
+        node=self.nodes['no-partner-disability-addition']
+        memo_sources=[('dmg-memo-02-25-e03b36ce3e',5),('dmg-memo-06-25-5fee4f859a',3),
+                      ('dmg-memo-06-25-5fee4f859a',9),('dmg-memo-01-26-0605724317',3)]
+        for doc,page in memo_sources:
+            self.assertIn((doc,page),self.evidence(node['key']))
+            self.assertIn(base+doc+'/'+str(page).zfill(4),node['required_source_ids'])
+        self.assertIn('21.10.24',self.text(memo_sources[0][0],5))
+        self.assertIn('21.3.25',self.text(memo_sources[1][0],3))
+        text=self.text(memo_sources[3][0],3)
+        self.assertIn('15.03.26',text)
+        self.assertIn('carer support component',text)
+        self.assertIn('carer\n\nsupport payment component',text)
+        self.assertFalse(self.nodes['severe-disability-addition'].get('required_concepts'))
+        self.assertNotIn('Dated Scottish-benefit memoranda amend dependencies',
+                         self.nodes['severe-disability-addition']['definition'])
 
     def test_one_and_both_partners_are_separate_conditional_branches(self):
         n=self.nodes['household-separation']

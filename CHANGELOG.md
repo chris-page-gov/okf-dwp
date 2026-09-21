@@ -8,6 +8,35 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Disability-addition qualification support — 21 September 2026
+
+- Distinguish the limited severe-disability overview from the detailed no-partner
+  branch. Require their four and ten supporting pages, including two already
+  captured Chapter 78 pages newly selected into the semantic index.
+- Preserve the difference between actual carer-benefit payment and the specified
+  disability-benefit receipt qualifications. Keep partner-only patient scope and
+  separate memo dates explicit; retain both unresolved meanings of SDA.
+- Add conditional support paths for Staff 012 and 013 without presuming that the
+  claimant has no partner. Preserve all 203 obligation identifiers and statuses.
+- Independently review the source changes; pass 35 staff, 11 household and
+  20 combined Reader controls. Rebuild the 903-record, 1,464-assertion index and
+  21,224-relationship combined Reader without changing captured source bytes.
+- Retain a separate 320-assembly comparison and exact replay: all 497 declared
+  path occurrences survive 512 KiB, while only 407 survive 256 KiB even though
+  original candidate overlap remains 177/177. Preserve the visible missing
+  qualifications, 64 KiB metadata refusal and every earlier observation.
+  Publication and model-answer acceptance remain separate checks.
+- Preserve the separate public Chrome observation of qualification source
+  `7f9feb96…` and the published allocator. Verify its 273 immutable inputs,
+  complete source passages and directed paths offline with 14 failure controls;
+  distinguish selected evidence from references to explicitly omitted targets.
+  This receipt does not attest the later disability source or remote service.
+- Fetch the receipt's immutable historical source before the complete unit-test
+  suite in shallow CI checkouts. Preserve the initial failed run rather than
+  treating a local checkout with complete history as proof of CI readiness.
+- Use the resolved platform temporary directory for the new receipt controls,
+  preserving symlink checks while allowing the same tests on macOS and Linux.
+
 ## Learning publication verified — 21 September 2026
 
 - Verify the published learning site against commit
