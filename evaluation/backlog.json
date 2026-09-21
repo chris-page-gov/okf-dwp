@@ -626,12 +626,14 @@
         "validation/model-comparison/household-compact-v2/README.md",
         "validation/qualification-context/2026-09-21/README.md",
         "validation/model-comparison/household-direct-v3/README.md",
-        "validation/model-comparison/household-direct-v4/README.md"
+        "validation/model-comparison/household-direct-v4/README.md",
+        "validation/model-comparison/household-direct-v4/independent-claim-review.md",
+        "validation/model-comparison/household-direct-v4/independent-claim-review.json"
       ],
       "acceptance_checks": [
         "Retain identical fixed inputs/prompts and real model outputs; verify IDs/quotes/locators; independently assess entailment/exceptions/abstention; no self-graded gold or engineering-score substitution."
       ],
-      "scope_note": "The original five paired cases retain their 12 attempts, 49 claims and 79 citations. The first household experiment adds five unsuccessful attempts. A separately frozen lossless-context successor retains nine attempts, seven parser-accepted responses, 14 claims and 21 citations. Six responses pass mechanical controls including both empty-evidence controls; one retained answer fails a locator check. Model review identifies scope and citation concerns. Those earlier experiments establish no successful substantive provider pair. Specialist acceptance, actual Codex model identity, comparative accuracy and affordability remain unestablished. A separate direct-v3 freeze uses actual public 0.6.0 packages; both empty controls were rejected for unrecognised CLI metadata, so no substantive call followed. This is a retained harness compatibility gap, not a model-quality result. The separately frozen direct-v4 experiment preserves identical complete evidence and authored inputs; both empty controls and both Staff 012 responses pass mechanical checks with zero observed tools. Six claims and seven citations receive separate agent review, not specialist acceptance.",
+      "scope_note": "The original five paired cases retain their 12 attempts, 49 claims and 79 citations. The first household experiment adds five unsuccessful attempts. A separately frozen lossless-context successor retains nine attempts, seven parser-accepted responses, 14 claims and 21 citations. Six responses pass mechanical controls including both empty-evidence controls; one retained answer fails a locator check. Model review identifies scope and citation concerns. Those earlier experiments establish no successful substantive provider pair. Specialist acceptance, actual Codex model identity, comparative accuracy and affordability remain unestablished. A separate direct-v3 freeze uses actual public 0.6.0 packages; both empty controls were rejected for unrecognised CLI metadata, so no substantive call followed. This is a retained harness compatibility gap, not a model-quality result. The separately frozen direct-v4 experiment preserves identical complete evidence and authored inputs; both empty controls and both Staff 012 responses pass mechanical checks with zero observed tools. Six claims and seven citations receive separate agent review, not specialist acceptance. Independent agent review finds support for the six main scoped claims, but identifies omitted treated-receipt/transitional exceptions, an overstated gap and additional citation needs in one answer. Original outputs remain unchanged; qualification repair and human assessment remain open.",
       "work_packages": [
         {
           "id": "DWP-BL-010.delivery",
@@ -651,7 +653,7 @@
           "kind": "implementation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "A separately frozen direct-v4 pair now passes mechanical checks after both empty controls. Preserve the four attempts, six claims, seven citations and all earlier failures; complete the independent agent claim review and protected publication. Specialist acceptance and model/cost comparisons remain separate.",
+          "next_action": "Four frozen direct-v4 attempts and independent agent review are retained: both controls and the paired Staff 012 answers pass mechanical checks, but one answer omits selected exceptions and overstates an evidence gap. Preserve all outputs; define a separate qualification-repair experiment without editing these answers. Specialist assessment and a controlled model/cost benchmark remain separate.",
           "evidence": [
             "docs/monday-model-trials.md",
             "evaluation/model-comparison/household-2026-09-21/protocol.json",
@@ -661,7 +663,8 @@
             "validation/model-comparison/household-compact-v2/README.md",
             "validation/qualification-context/2026-09-21/README.md",
             "validation/model-comparison/household-direct-v3/README.md",
-            "validation/model-comparison/household-direct-v4/README.md"
+            "validation/model-comparison/household-direct-v4/README.md",
+            "validation/model-comparison/household-direct-v4/independent-claim-review.json"
           ]
         },
         {

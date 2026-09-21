@@ -16,7 +16,7 @@ answers, so this successor cannot recover or reclassify those calls.
 V4 admits only additional metadata supported by the installed CLI or previously
 public, value-free shape receipts. It retains bounded structural diagnostics on
 failure. It still asks for one direct JSON object and rejects every tool event,
-including the formatter used in older experiments. No actual v4 result exists.
+including the formatter used in older experiments. At preparation no actual v4 result existed; the later [four retained attempts](../validation/model-comparison/household-direct-v4/README.md) and separate claim review now record the outcomes. The frozen executable inputs remain unchanged.
 
 The two providers receive exactly the same complete evidence bytes for each case:
 

@@ -136,15 +136,21 @@ required for a supported task. It is more than a list of documents.
 ### Choose the version being demonstrated
 
 For the current Monday demonstration, use the [household handover](monday-handover-2026-09-21.md).
-Service **0.5.0** uses content version
-`3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84`: both captured manuals,
-51 authored concepts, 40 task profiles and 20 selected statutory units.
-The development check retains **176 of 177 candidate-page occurrences** for the
-known staff questions. These are passages selected for investigation, not 176
-correct answers. All 40 tasks remain insufficient, with **203 open obligations**
-for evidence closure, scope, applicable rules, legal version and independent
-review. The [evaluation](../evaluation/semantic-expansion/evaluation.json) records
-those results.
+Service **0.6.0** uses the partner-qualified source
+`723bcc5b015ab38a026625c2148edbd784edf7c7`. Its [public SDK check](../validation/compact-delivery/v0.6.0/README.md)
+reconstructed 11 cases in 121 requests. The current care-home example has 55 records
+and 115 relationships and remains insufficient.
+
+The later ignored-person source `c44bc3a111d18b6d4098a148a9a1b67c1411882b`
+has 53 concepts, 106 selected source pages and 61 support dependencies. It is
+separate from that service version. Its [measured comparison](../validation/ignored-person-context/2026-09-21/README.md)
+retains 177/177 candidate occurrences at 512 KiB but only 647/765 required path
+occurrences. These counts describe selected evidence, not correct answers.
+All 40 tasks remain insufficient and all 203 obligations remain open.
+
+The original 0.5.0 source `3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84`
+and its [176/177 evaluation](https://github.com/chris-page-gov/okf-dwp/blob/3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84/evaluation/semantic-expansion/evaluation.json)
+remain available with their earlier observations.
 
 The earlier service 0.4.0 source,
 `9de52acf1db84b27f8933d80480eaa850e74fa33`, remains available as an explicit
@@ -342,12 +348,12 @@ Return to the [project overview](../README.md), the [glossary](glossary.md) or t
 
 ## Read smaller pieces of the same evidence
 
-The [current public care-home observation](../validation/compact-delivery/v0.5.0/README.md)
+The earlier [0.5.0 public care-home observation](../validation/compact-delivery/v0.5.0/README.md)
 shows a 35-record, 50-relationship package delivered within a 262,144-byte budget.
 The three browsers read the same package verified by the SDK client, including
 the heading limiting DMG 78088 to claimants with no partner. Its status remains
 insufficient and its limits omit some evidence. Use the
-[Monday handover](monday-handover-2026-09-21.md) to reproduce that example.
+[retained examples](retained-evidence-examples.md) to compare its original bytes with the newer 0.6.0 package.
 The separate historical browser journeys were not rerun for 0.5.0; a passed SDK
 replay of earlier sources is a different check.
 
@@ -377,3 +383,9 @@ from its bounded evidence package to two original answers and a claim-by-claim
 critique. A correct quotation can still omit an important condition. Start with
 the care-home example and its missing household qualification; then inspect the
 unknown-term control, where both clients abstain.
+
+The latest [direct-v4 paired trial](../validation/model-comparison/household-direct-v4/README.md)
+uses the exact complete 0.6.0 care-home package for both clients. Both pass the
+empty control and quotation checks; both decline a whole-award conclusion.
+Read the separate claim review too: exact quotations do not ensure that every
+additional qualification is correct or that all exceptions have been retained.

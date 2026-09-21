@@ -12,7 +12,7 @@ Implementation ownership and handovers belong in the
 
 - Retain four direct-v4 subscription attempts: two empty controls and both Staff 012 care-home answers. All pass mechanical checks with zero observed tools; the substantive answers contain six claims and seven exact citations.
 - Preserve identical complete evidence, authored prompt and schema for both clients. Both answers retain insufficient status and refuse to decide whether the whole Pension Credit award stops or continues.
-- Keep all older failures and separate agent claim review from specialist acceptance. One paired question does not establish comparative accuracy, affordability or complete legal answerability.
+- Retain an independent agent critique: the main scoped claims are traceable, but one answer omits selected exceptions and overstates a gap. Preserve every original output and older failure; one paired question does not establish specialist acceptance, comparative accuracy, affordability or complete legal answerability.
 
 ## Direct trial v4 preparation — 21 September 2026
 

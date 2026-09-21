@@ -1,6 +1,6 @@
 # Paired evidence trials for Monday
 
-**The latest paired question is the [direct-v4 care-home trial](../validation/model-comparison/household-direct-v4/README.md): both controls and both substantive responses pass mechanical checks with no observed tools. Six claims and seven citations remain subject to separate claim review and specialist acceptance.**
+**The latest paired question is the [direct-v4 care-home trial](../validation/model-comparison/household-direct-v4/README.md): both controls and both substantive responses pass mechanical checks with no observed tools. The separate agent review of six claims and seven citations records omitted exceptions and an overstated evidence gap in one answer; specialist acceptance remains pending.**
 
 The earlier [separate successor outcomes](../validation/model-comparison/household-compact-v2/README.md).** The successor uses the same governed evidence through a reversible, ID-referenced representation and separately reviewed CLI event recognition. Its nine attempts include seven parser-accepted responses, one formatter rejection and one timeout. Six responses pass mechanical checks; Staff 008 fails a source-locator check. Both unknown-term controls abstain correctly, but no substantive pair is complete. The [claim-level model critique](../validation/model-comparison/household-compact-v2/claim-level-model-critique.json) records scope, qualification and attribution concerns in the five substantive answers. An accepted output format and exact quotations do not establish legal correctness.
 
