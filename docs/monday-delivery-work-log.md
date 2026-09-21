@@ -484,3 +484,21 @@ The reusable offline archive exporter passed independent review, eleven controls
 Both direct-v3 subscription controls completed within bounds but their parsers rejected undocumented-for-that-run metadata. The receipts preserve the failure categories and unknown tool census. No substantive call or retry followed. Installed-client schema inspection is informing a separately reviewed successor; the frozen v3 inputs remain unchanged. This is not a successful paired answer-quality or affordability result.
 
 The first integrated 457-test run exposed one draft-only test that still required the protocol to be pending after the approved freeze. Its lifecycle assertion now requires the committed freeze while separately exercising refusal of a synthetic pending protocol. Frozen executable inputs and actual trial outputs are unchanged.
+
+## CI temporary-directory portability correction, 21 September
+
+PR 21's eight retained direct-v3 observation controls failed on Linux because
+the test fixture required the macOS-specific `/private/tmp` directory. The test
+now uses Python's system temporary-directory default and resolves the resulting
+path before applying the existing strict symlink checks. All eight controls pass
+locally with both the ordinary environment and an explicit `/tmp` symlink on
+macOS. Linux CI must confirm the candidate after publication; these local checks
+do not claim a remote CI pass.
+
+A scoped scan of test files changed in the previous 15 commits found no other
+hard-coded platform temporary-directory requirement. The other guarded Python
+fixtures already resolve `tempfile.gettempdir()`, while the browser controls use
+Node's `tmpdir()`. Literal private paths in older negative tests are synthetic
+rejection/redaction inputs, not directories to create. Only the fixture and
+these documentation notes changed; frozen executable inputs and recorded
+provider outcomes remain untouched.
