@@ -6,7 +6,8 @@ import unittest
 from unittest.mock import patch
 
 from build_bundle import ROOT, digest, load_yaml
-from build_staff_semantic import AUTHORING, OUTPUT, BASE_INDEX, compile_staff_semantic, check_statutory_governance
+from build_staff_semantic import (AUTHORING, OUTPUT, BASE_INDEX, DCT, SKOS,
+    compile_staff_semantic, check_statutory_governance, qualification_dependencies)
 
 
 class StaffSemanticTests(unittest.TestCase):
@@ -58,6 +59,150 @@ class StaffSemanticTests(unittest.TestCase):
                 self.assertFalse(obligations[iri]['is_source_evidence'])
                 self.assertTrue(obligations[iri]['category'])
                 self.assertTrue(obligations[iri]['resolution'])
+
+    def test_household_qualification_group_and_trigger_paths(self):
+        base='https://chris-page-gov.github.io/okf-dwp/id/'
+        care=base+'staff-domain/care-home';household=base+'staff-domain/household-separation'
+        pages={base+'page/77/'+str(n).zfill(4) for n in (7,19,21,23,24,25)}|{base+'page/78/0025'}
+        edges={row['id']:row for row in self.index['assertions']}
+        all_declarations=[edges[identity] for identity in self.catalogue['qualification_assertion_ids']]
+        self.assertEqual(len(all_declarations),15)
+        declarations=[edge for edge in all_declarations if edge['source'] in {care,household}]
+        self.assertEqual(len(declarations),8)
+        self.assertEqual({(e['source'],e['target']) for e in declarations},
+                         {(care,household)}|{(household,page) for page in pages})
+        for edge in all_declarations:
+            self.assertEqual(edge['predicate'],DCT+'requires')
+            self.assertEqual(edge['assertion_status'],'model-derived')
+            self.assertEqual(edge['authority']['class'],'model-assisted')
+            self.assertTrue(edge['provenance'][0]['locator'].endswith('/qualification-dependencies'))
+        profiles={p['id']:p for p in self.profiles['profiles']}
+        requirements={r['id']:r for r in self.index['requirements']}
+        for cid in ('staff-012','staff-013'):
+            profile=profiles[cid];requirement=requirements[profile['requirement_id']]
+            self.assertTrue(pages<=set(profile['qualification_evidence_ids']))
+            self.assertIn(household,profile['qualification_concept_ids'])
+            self.assertTrue(pages|{household}<=set(requirement['required']))
+            for page in pages:
+                path=next(p for p in profile['qualification_paths'] if p['records'][-1]==page)
+                self.assertEqual(path['seed'],care)
+                self.assertIn(path['seed'],requirement['when_all'])
+                self.assertEqual(path['records'],[care,household,page])
+                self.assertIn(path,requirement['required_paths'])
+                self.assertTrue(all(edges[i]['predicate']==DCT+'requires' for i in path['assertions']))
+        self.assertEqual({p['id'] for p in profiles.values() if p.get('qualification_concept_ids')},
+                         {'staff-012','staff-013'})
+
+    def test_component_dependencies_keep_temporary_scope_separate(self):
+        base='https://chris-page-gov.github.io/okf-dwp/id/'
+        care=base+'staff-domain/care-home';housing=base+'staff-domain/care-home-housing-costs'
+        temporary=base+'staff-domain/temporary-care-home'
+        pages={base+'page/78/'+str(n).zfill(4) for n in (53,55,56,57,58)}
+        edges={row['id']:row for row in self.index['assertions']}
+        dependencies=[edges[identity] for identity in self.catalogue['qualification_assertion_ids']]
+        self.assertEqual({e['target'] for e in dependencies if e['source']==housing},pages)
+        self.assertEqual({e['target'] for e in dependencies if e['source']==temporary},
+                         {base+'page/78/0024',base+'page/78/0025'})
+        self.assertFalse(any(e['source']==care and e['target']==temporary for e in dependencies))
+        node=next(n for n in self.catalogue['concepts'] if n['key']=='care-home-housing-costs')
+        self.assertIn(base+'page/78/0054',node['evidence_ids'])
+        self.assertNotIn(base+'page/78/0054',node['required_source_ids'])
+        requirements={r['id']:r for r in self.index['requirements']}
+        for profile in self.profiles['profiles']:
+            if profile['id'] not in ('staff-012','staff-013'):continue
+            required=requirements[profile['requirement_id']]
+            self.assertEqual(set(profile['qualification_concept_ids']),
+                             {base+'staff-domain/household-separation',housing})
+            self.assertTrue(pages<=set(profile['qualification_evidence_ids']))
+            self.assertNotIn(temporary,required['required'])
+            self.assertNotIn(base+'page/78/0024',required['required'])
+            for page in pages:
+                path=next(p for p in profile['qualification_paths'] if p['records'][-1]==page)
+                self.assertEqual(path['records'],[care,housing,page])
+                self.assertIn(path['seed'],required['when_all'])
+                self.assertEqual(edges[path['assertions'][-1]]['predicate'],DCT+'requires')
+                self.assertIn(path,required['required_paths'])
+
+    def test_component_wording_preserves_source_subject_and_heading(self):
+        base='https://chris-page-gov.github.io/okf-dwp/id/'
+        rows={row['id']:row for row in self.index['records']}
+        housing=rows[base+'staff-domain/care-home-housing-costs']['text']
+        self.assertNotIn('expenditure met by Housing Benefit',housing)
+        self.assertNotIn('permits a trial stay',housing)
+        self.assertIn('an element for which Housing Benefit may be payable',housing)
+        self.assertIn('allows treatment as living in the former home, with housing costs allowed',housing)
+        self.assertIn('any element for which HB may be payable',rows[base+'page/78/0058']['text'])
+        temporary=rows[base+'staff-domain/temporary-care-home']['text']
+        self.assertTrue(temporary.startswith('For a claimant with no partner whose normal home circumstances'))
+        self.assertIn('residential care exceeds 28 days and DLA payability ceases',temporary)
+        page=rows[base+'page/78/0024']['text']
+        self.assertLess(page.index('Claimants who have no partner'),page.index('78084'))
+        self.assertLess(page.index('78084'),page.index('Claimants who have a partner'))
+        self.assertIn('The lower rate EASD is not appropriate',rows[base+'page/78/0025']['text'])
+
+    def test_qualification_pages_preserve_both_partner_scope_and_continuation(self):
+        base='https://chris-page-gov.github.io/okf-dwp/id/page/77/'
+        pages={r['id']:r for r in self.index['records']}
+        self.assertIn('Where both partners',pages[base+'0023']['text'])
+        self.assertIn('Where one of a couple',pages[base+'0024']['text'])
+        self.assertIn('But both partners',pages[base+'0024']['text'])
+        self.assertIn('None of these facts on their own are',pages[base+'0024']['text'])
+        self.assertIn('R(IS) 1/99',pages[base+'0024']['text'])
+        self.assertTrue(pages[base+'0025']['text'].startswith('Bill and Agnes are members of the same household.'))
+        self.assertIn('They do not have a domestic establishment',pages[base+'0025']['text'])
+
+    def test_qualification_addition_preserves_all_open_obligations_and_candidate_ids(self):
+        frozen=ROOT/'evaluation/model-comparison/household-2026-09-21/frozen/input-snapshots/assembly-index.json'
+        previous={r['id']:r for r in json.loads(frozen.read_bytes())['requirements']}
+        prefix='https://chris-page-gov.github.io/okf-dwp/id/obligation/'
+        self.assertEqual(len(self.profiles['obligations']),203)
+        for row in self.index['requirements']:
+            before=previous[row['id']]
+            self.assertEqual([i for i in row['required'] if i.startswith(prefix)],
+                             [i for i in before['required'] if i.startswith(prefix)])
+            if not row['id'].endswith(('/staff-012','/staff-013')):
+                self.assertEqual(row['required'],before['required'])
+        node=next(c for c in self.catalogue['concepts'] if c['key']=='household-separation')
+        self.assertIn('https://chris-page-gov.github.io/okf-dwp/id/page/77/0020',node['evidence_ids'])
+        self.assertNotIn('https://chris-page-gov.github.io/okf-dwp/id/page/77/0020',node['required_source_ids'])
+
+    def test_rejects_invalid_qualification_source_selection(self):
+        def node(data):return next(n for n in data['@graph'] if n['key']=='household-separation')
+        for value,message in [
+            ('not-a-list','Invalid required source IDs'),
+            (['https://example.test/missing'],'outside the concept source selection'),
+            (['https://chris-page-gov.github.io/okf-dwp/id/staff-domain/household-separation'],'outside the concept source selection'),
+            (['https://chris-page-gov.github.io/okf-dwp/id/page/77/0024']*2,'Duplicate required source IDs')]:
+            with self.subTest(value=value):
+                self.mutate_authoring('concepts.yamlld',lambda d:node(d).update(required_source_ids=value),message)
+
+    def test_rejects_unknown_or_unbacked_required_concept(self):
+        for key,message in [('invented','Unknown required concept'),
+                            ('household-separation','lacks an existing source-backed relationship')]:
+            with self.subTest(key=key):
+                self.mutate_authoring('concepts.yamlld',
+                    lambda d:next(n for n in d['@graph'] if n['key']=='household-separation').update(required_concepts=[key]),message)
+
+    def test_rejects_cyclic_or_non_evidence_qualification_dependency(self):
+        nodes=[{'key':'a','@id':'urn:a','evidence_ids':['urn:e'],'required_concepts':['b']},
+               {'key':'b','@id':'urn:b','evidence_ids':['urn:e'],'required_concepts':['a']}]
+        edges={str(n):{'source':s,'target':t,'predicate':SKOS+'related'}
+               for n,(s,t) in enumerate([('urn:a','urn:b'),('urn:b','urn:a')])}
+        with self.assertRaisesRegex(ValueError,'Cyclic qualification dependency'):
+            qualification_dependencies(nodes,edges,{'urn:e':{'kind':'evidence'}})
+        nodes=[{'key':'a','@id':'urn:a','evidence_ids':['urn:e'],'required_source_ids':['urn:e']}]
+        with self.assertRaisesRegex(ValueError,'Required source must be verified evidence'):
+            qualification_dependencies(nodes,{}, {'urn:e':{'kind':'scope'}})
+
+    def test_rejects_invalid_or_unreachable_profile_qualification(self):
+        def case(data):return next(p for p in data['profiles'] if p['id']=='staff-012')
+        for value,message in [(['missing'],'Unknown profile qualification concept'),
+                              (['household-separation']*2,'Duplicate profile qualification concepts'),
+                              (['partner'],'has no explicit dependencies')]:
+            with self.subTest(value=value):
+                self.mutate_authoring('profiles.yamlld',lambda d:case(d).update(qualification_concepts=value),message)
+        self.mutate_authoring('profiles.yamlld',lambda d:case(d).update(when_all=['pip-daily-living']),
+                              'unreachable from profile triggers')
 
     def test_source_backed_meanings_never_promoted(self):
         rows={r['id']:r for r in self.index['records']}

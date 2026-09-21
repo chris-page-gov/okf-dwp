@@ -1,5 +1,5 @@
 schema: okf-dwp-staff-semantic-authoring.v1
-authored_at: '2026-09-20T21:29:11Z'
+authored_at: '2026-09-20T23:38:36Z'
 author: Codex model-assisted proposal; no human or specialist approval
 assertion_status: model-derived
 scope: Frozen-source staff-question research. Source text is not current-law assurance and proposed meaning is
@@ -602,6 +602,8 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   - source-c028
   - source-c030
   - source-c010
+  required_concepts:
+  - household-separation
   review_status: unreviewed-specialist-review-required
 - '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner
   route: staff-domain/partner
@@ -862,6 +864,14 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   source_candidates:
   - source-c010
   - source-c028
+  required_source_ids:
+  - https://chris-page-gov.github.io/okf-dwp/id/page/77/0007
+  - https://chris-page-gov.github.io/okf-dwp/id/page/77/0019
+  - https://chris-page-gov.github.io/okf-dwp/id/page/77/0021
+  - https://chris-page-gov.github.io/okf-dwp/id/page/77/0023
+  - https://chris-page-gov.github.io/okf-dwp/id/page/77/0024
+  - https://chris-page-gov.github.io/okf-dwp/id/page/77/0025
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0025
   review_status: unreviewed-specialist-review-required
   additional_sources:
   - family: dmg
@@ -973,8 +983,9 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   - skos:Concept
   - dwp:Circumstance
   label: Temporary care-home stay and continuing household
-  definition: DMG 78084 does not turn a claimant who normally lives with another person into someone normally
-    living alone during a temporary care-home stay. DMG 78085 retains household membership for a temporarily
+  definition: For a claimant with no partner whose normal home circumstances do not satisfy the additional-amount
+    conditions, DMG 78084 says a temporary care-home stay does not itself change their normal residence.
+    DMG 78085 retains household membership for a temporarily
     absent partner, but DMG 78086 requires a review of Pension Credit and the severe-disability addition if
     residential care exceeds 28 days and DLA payability ceases. The example continues on the next page. These
     are component and qualifying-benefit conditions, not a universal 28-day end to Pension Credit.
@@ -982,6 +993,9 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   - temporary care-home stay
   - temporary stay in a care home
   source_candidates: []
+  required_source_ids:
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0024
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0025
   review_status: unreviewed-specialist-review-required
   additional_sources:
   - family: dmg
@@ -1002,16 +1016,26 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   definition: DMG 78270 concerns the housing-cost additional amount, not the whole Pension Credit award. It
     states that an additional amount for housing costs is not allowed for claimants in a care home unless
     their absence from the dwelling normally occupied as home is temporary. The exception does not establish
-    payment of care-home fees. DMG 78240 permits a trial stay of up to 13 weeks only with suitability assessment,
-    intention to return if unsuitable and an unlet home; the overall absence limit is 52 weeks. DMG
+    payment of care-home fees. DMG 78240 allows treatment as living in the former home, with housing costs
+    allowed, for a trial period of up to 13 weeks, subject to assessment of suitability, intention to return
+    if unsuitable and the normally occupied part of the home not being let or sublet. This temporary-absence
+    treatment is subject to the stated overall maximum of 52 weeks. DMG
     78254–78257 set separate 52-week conditions including intention to return, no letting or subletting, a
-    listed reason and expected duration. Permanent residence and expenditure met by Housing Benefit are
-    separate exclusions. The complete paragraphs span adjacent pages.
+    listed reason and expected duration. Permanent residence and Housing Benefit expenditure are separate
+    exclusions. DMG 78271 defines Housing Benefit expenditure as an element for which Housing Benefit may be
+    payable; actual payment of Housing Benefit is not stated as a condition here. The complete paragraphs
+    span adjacent pages.
   aliases:
   - care-home housing costs
   - trial care-home stay
   source_candidates:
   - source-c030
+  required_source_ids:
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0053
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0055
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0056
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0057
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0058
   review_status: unreviewed-specialist-review-required
   additional_sources:
   - family: dmg

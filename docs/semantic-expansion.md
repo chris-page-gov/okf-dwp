@@ -24,19 +24,48 @@ An **assertion** is a directed relationship with its own status and provenance.
 A **profile** declares the evidence and unresolved obligations for a task.
 These are inspectable project proposals; they are not official DWP interpretations.
 
+## Required support for a summary
+
+A reference helps a reader find related material. A **required dependency** says
+that an interpretation needs particular material to be inspected with it. The
+[initial household checkpoint](household-qualification-budget-review.md#additive-authoring-implementation)
+uses the existing `dcterms:requires` relationship for that purpose. Seven captured
+pages support the complete household summary; the care-home overview also
+requires that summary. The [component follow-up](carehome-component-dependency-review.md)
+adds five housing-cost and two temporary-residence page dependencies: 15 support
+relationships in total. Staff 012 and 013 declare the household and housing-cost
+paths explicitly. Temporary-residence support stays attached to its own summary,
+without becoming mandatory for every permanent-care-home question. These
+declarations remain project-authored and unreviewed.
+
+The [joint comparison](../validation/qualification-context/2026-09-21/README.md)
+verifies that the generic allocator retains the declared paths within its budget.
+It runs DWP `7f9feb9634e3d94004853b838462aca132c505a5` with Explorer
+`c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e`, separately from the earlier public
+service. The final pair retains all 433 activated path occurrences at 256 KiB
+and 512 KiB, including all seven household pages for Staff 012 and 013. This is
+bounded evidence retention, not complete domain modelling. All 203 obligations
+remain open; protected publication and fresh public checks remain pending.
+
 ## What is implemented
 
 | Item | Delivered scope |
 | --- | --- |
 | Authored concepts | 51, including neutral benefits, variants, components and circumstances |
-| Source-grounded conceptual associations | 217, including directed source references and qualified concept relationships |
+| Source-grounded conceptual associations | 232, including directed source references, qualified concept relationships and 15 explicit support dependencies |
 | Selected exact source pages | 96 across DMG and ADM, with PDF/extraction hashes and page locators |
 | Legislative references in Ask | 44 staff-linked provision identities, 62 source-page citation links and one separately recorded metadata bridge |
 | Selected statutory bodies | 20 complete selected units and 43 evidence-bearing navigation links; derived and unreviewed |
 | Staff task profiles | 40 occurrences, preserving all 39 distinct questions and the repeated DLA/PIP question |
 | Explicit open obligations | 203, across five named categories |
 | Existing discovery graph | All 712 original record identities and 1,105 assertion identities retained |
-| New context index | 901 records and 1,427 assertions; 4,581,721 bytes, within the new 8 MiB semantic-index limit |
+| Current source candidate index | 901 records and 1,442 assertions; 4,622,241 bytes, within the 8 MiB semantic-index limit |
+
+The current source candidate is `dwp-staff-semantics-fc2ad1545adcbeeb2243`, with
+index SHA-256 `7ffc9d00e71fef6aed5531373510df82998123e89fdb28091cfb82384adf2876`.
+The initial household-dependency checkpoint had 1,435 assertions. The earlier
+public service source `3ef0e786…` had 1,427 assertions and a 4,581,721-byte index;
+its immutable linked evaluation remains an observation of those earlier bytes.
 
 The concepts are authored in
 [domain-profile/staff-semantic](../domain-profile/staff-semantic/).
@@ -80,7 +109,7 @@ flowchart TD
     Staff["39 distinct staff questions<br/>40 recorded occurrences"]
     Concepts["51 model-authored concepts<br/>benefit, variant, component, circumstance"]
     Profiles["40 proposed task profiles"]
-    Relations["217 source-grounded associations<br/>SKOS and Dublin Core"]
+    Relations["232 source-grounded associations<br/>including 15 explicit support dependencies"]
     DMG["Frozen DMG source pages<br/>exact text, hashes and PDF locators"]
     ADM["Frozen ADM source pages<br/>including PIP age and transition guidance"]
     Legal["44 verified provision references<br/>metadata only"]
@@ -126,14 +155,19 @@ Constant Allowance” also retains its unresolved scheme-name boundary.
 
 The earlier legal reference nodes remain scope records labelled **reference-only-unreviewed**. The new [statutory-body increment](legal-body-evidence.md) adds separate derived evidence records for 20 selected units, connected through 43 source-backed references. A metadata record does not become source text, and a source passage does not establish applicability. All 203 obligations remain open. The separate [legal reconciliation](legal-reconciliation.md) retains the earlier identity and footnote work.
 
-## Measured before and after
+## Current source-only comparison
+
+The [current evaluation](../evaluation/semantic-expansion/evaluation.json) compares
+the original discovery base with the final semantic source using the same
+Explorer `c4f2de0a…` engine. This differs from the four-cell joint comparison,
+which also changes the engine independently. Both preserve their input hashes.
 
 Both runs use the **same shared Explorer engine, budgets and frozen lexical
 shards**. Only the explicitly authored semantic base differs.
 
 | Diagnostic | Before | After |
 | --- | ---: | ---: |
-| Known candidate-page hits across the 40 occurrences | 12 of 177 | 176 of 177 |
+| Known candidate-page hits across the 40 occurrences | 12 of 177 | 177 of 177 |
 | Questions retaining at least one candidate page | 12 of 40 | 40 of 40 |
 | Own declared task profile activated | 0 | 40 of 40 |
 | Contexts declared sufficient | 0 | 0 |
@@ -141,7 +175,14 @@ shards**. Only the explicitly authored semantic base differs.
 
 This is a **development-case comparison**: the supplied questions and candidate
 pages were known during modelling. It is not a held-out accuracy result.
-A page hit does not prove the page supports a claim or supplies every exception. The previous released staff model retained 169 of 177 candidates. The separate [engine-only experiment](context-performance.md) retained 171; the expanded household candidate retains 176. One candidate in staff-005 remains omitted under the node bound. These are distinct comparisons, not an answer-accuracy score.
+A page hit does not prove the page supports a claim or supplies every exception.
+The earlier released staff model retained 169 of 177 candidates. The separate
+[ambiguity/loading experiment](context-performance.md) retained 171, and the
+[immutable household-source evaluation](https://github.com/chris-page-gov/okf-dwp/blob/3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84/evaluation/semantic-expansion/evaluation.json)
+retained 176. Those historical counts do not refer to the newly regenerated
+local evaluation. The current candidate retains all 177 occurrences, including
+the formerly omitted Staff 005 page, while all 43 evidence-closure obligations
+remain open. These are distinct development comparisons, not accuracy scores.
 
 Every after-run also contains ADM pages and reports truncation. **ADM presence
 is not a relevance score.** The lexical stage finds broad matches in both
@@ -155,9 +196,9 @@ codes. Candidate, node, relationship and byte limits remain visible.
 Ten shared-engine controls cover neutral resolution, explicit SDA ambiguity,
 no results, missing source evidence, reversed relationships, three paraphrases,
 the original imprisonment routing question and a counterfactual entitlement
-premise. Twenty-two producer tests check source hashes, exact spans, all question
-occurrences, legal-reference boundaries, preserved scopes and rejected
-governance/authoring mutations.
+premise. Thirty-one producer controls check source hashes, exact spans, all
+question occurrences, qualification dependencies, legal-reference boundaries,
+preserved scopes and rejected governance/authoring mutations.
 
 ## Context sizes and practical limits
 
@@ -170,19 +211,28 @@ passages that fit and still refuses when metadata alone exceeds the budget.
 It does not shorten evidence text or suppress missing obligations.
 
 The reproducible `budget_observations` in the evaluation receipt cover four
-staff questions used for the paired model trial:
+staff questions also used in earlier model trials. These are new engine/source
+observations, not replacements for their frozen trial inputs:
 
 | Case | At 64 KiB: records / relationships | At 256 KiB: records / relationships |
 | --- | ---: | ---: |
-| staff-006 | 3 / 0 | 43 / 47 |
-| staff-012 | 4 / 0 | 35 / 50 |
-| staff-026 | 11 / 0 | 54 / 41 |
-| staff-038 | 8 / 0 | 41 / 41 |
+| staff-006 | 4 / 3 | 41 / 46 |
+| staff-012 | **0 / 0: metadata refusal** | 27 / 63 |
+| staff-026 | 11 / 1 | 54 / 41 |
+| staff-038 | 9 / 2 | 41 / 41 |
 
 All eight packages remain **insufficient** and disclose truncation. At 64 KiB,
-retained lexical passages do not retain the semantic paths; this is a poor
-budget for demonstrating relationship-led interpretation of these tasks.
-The 256 KiB trial budget preserves useful paths, while retaining its omissions.
+Staff 012 returns a **1,926-byte `metadata_budget` refusal**: its interpretation
+and evidence obligations cannot fit, so no records, relationships or requirements
+are returned. The other seven observations retain non-empty evidence. A zero-record
+refusal does not mean that the source has no requirements; the independent joint
+harness counts activated authored requirements before output trimming.
+
+At 256 KiB, Staff 012 retains its seven household support pages. The separate
+512 KiB joint observation retains 62 records and 124 relationships, but also
+reports a missing `temporary-care-home` → `page/78/0024` dependency. That optional
+summary is not an unconditional requirement of the permanent-care-home profile.
+The no-partner and severe-disability overview dependency expansions remain open.
 These sizes are observations for these questions and this snapshot, not a
 universal minimum. One question can activate several task profiles when their
 concept conditions overlap: these four activate 4, 3, 2 and 1 respectively.
@@ -198,7 +248,7 @@ uv sync --locked
 # Use a separate Explorer checkout at the recorded consumer version.
 git clone https://github.com/chris-page-gov/okf-explorer.git ../okf-explorer-staff
 export EXPLORER_STAFF_ROOT="$(cd ../okf-explorer-staff && pwd)"
-git -C "$EXPLORER_STAFF_ROOT" checkout 0e6a639f87c4060123b72d82c1ebe30405d475f1
+git -C "$EXPLORER_STAFF_ROOT" checkout c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e
 uv run --locked python scripts/build_staff_semantic.py --check
 uv run --locked python scripts/test_staff_semantic.py
 node --experimental-strip-types scripts/evaluate_staff_semantic.mjs \

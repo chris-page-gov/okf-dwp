@@ -45,7 +45,7 @@ class HouseholdSemanticTests(unittest.TestCase):
     def test_temporary_housing_cost_conditions_have_continuations(self):
         for page in [53,54,55,56,57]:self.assertIn(('dmg-vol13-ch78',page),self.evidence('care-home-housing-costs'))
         n=self.nodes['care-home-housing-costs']
-        for term in ('not the whole','intention to return','unlet home','52 weeks','temporary'):
+        for term in ('not the whole','intention to return','normally occupied part of the home not being let or sublet','52 weeks','temporary'):
             self.assertIn(term,n['definition'])
         self.assertEqual(n['source_candidates'],['source-c030'])
         self.assertIn('not allowed for claimants in a care home',n['definition'])

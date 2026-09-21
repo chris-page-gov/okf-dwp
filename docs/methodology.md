@@ -124,6 +124,22 @@ small, separate model trial. It is not a legal gold standard. A fair model or
 delivery comparison must use the same questions, evidence, prompt, rubric and
 review process. Record different input conditions as different trials.
 
+When both the modelled evidence and the engine change, test the four combinations:
+old source with old engine, old source with new engine, new source with old engine,
+and new source with new engine. Fix the questions and budgets. The
+[qualification comparison](../validation/qualification-context/2026-09-21/README.md)
+shows why: improved allocation can displace a useful passage that the old model
+never declared required. A denser source model can still lose its qualifications
+under the same delivery limit.
+
+Count expected requirements from the authored model and concept resolution
+before applying output limits. Report missing paths even if their descriptions
+cannot fit in the returned package. Separately check whole source passages,
+scope, dependency gaps, ambiguity and explicit small-budget refusals. Preserve
+the exact source and engine identities; a later engine can produce a different
+package from the same source. A historical replay must reproduce its expected
+identity or report the mismatch.
+
 ## 6. Transfer the method to HMRC
 
 Use the [HMRC discovery brief](templates/hmrc-discovery-brief.md), selecting a

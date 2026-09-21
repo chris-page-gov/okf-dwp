@@ -19,6 +19,9 @@ jobs:
       EXPLORER_CORPUS_COMMIT: 31ee08ec259e165a478e9c36826fe3721643631d
       EXPLORER_STAFF_COMMIT: f8daf84a4c04afb4839695d38a97cbf21b0ed0a0
       EXPLORER_HOUSEHOLD_COMMIT: 0e6a639f87c4060123b72d82c1ebe30405d475f1
+      EXPLORER_QUALIFICATION_COMMIT: c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e
+      EXPLORER_QUALIFICATION_BASELINE_COMMIT: b9a3b68b6dbf222f9a73cc8f450dd53f126e1b55
+      DWP_QUALIFICATION_COMMIT: 7f9feb9634e3d94004853b838462aca132c505a5
       DWP_HOUSEHOLD_TRIAL_COMMIT: 3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84
       DWP_COMPACT_TRIAL_COMMIT: 78a8beea97242d646eb9159860dea190ca5e2998
     steps:
@@ -41,7 +44,10 @@ jobs:
       - name: Verify retained public-browser evidence offline
         run: uv run --locked python scripts/check_browser_evidence.py
       - name: Verify the retained learning-site publication offline
-        run: uv run --locked python scripts/check_learning_site_observation.py
+        run: |
+          uv run --locked python scripts/check_learning_site_observation.py
+          uv run --locked python validation/learning-site/public-7815b17bb3db3903738c745d3fb9508919ebab15/check_observation.py
+          uv run --locked python -m unittest discover -s validation/learning-site/public-7815b17bb3db3903738c745d3fb9508919ebab15 -p test_verify_public.py
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: '26.7.0'
@@ -85,6 +91,15 @@ jobs:
           persist-credentials: false
       - name: Verify the household consumer checkout identity
         run: test "$(git -C .ci/okf-explorer-household rev-parse HEAD)" = "$EXPLORER_HOUSEHOLD_COMMIT"
+      - name: Check out the separate qualification-context consumer
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: chris-page-gov/okf-explorer
+          ref: ${{ env.EXPLORER_QUALIFICATION_COMMIT }}
+          path: .ci/okf-explorer-qualification
+          persist-credentials: false
+      - name: Verify the qualification consumer checkout identity
+        run: test "$(git -C .ci/okf-explorer-qualification rev-parse HEAD)" = "$EXPLORER_QUALIFICATION_COMMIT"
       - name: Install locked context evaluator dependencies
         run: uv sync --locked --project .ci/okf-explorer
       - name: Install source verification tools
@@ -116,7 +131,7 @@ jobs:
           uv run --locked python scripts/compare_source_census.py --check
           uv run --locked python scripts/check_combined_reader_observations.py
       - name: Replay staff semantic development cases and failure controls
-        run: node --experimental-strip-types scripts/evaluate_staff_semantic.mjs --check --explorer-root .ci/okf-explorer-household
+        run: node --experimental-strip-types scripts/evaluate_staff_semantic.mjs --check --explorer-root .ci/okf-explorer-qualification
       - name: Check the portable public-reader verifier without network
         run: |
           node --test scripts/test_staff_service_browser.mjs
@@ -135,6 +150,16 @@ jobs:
           git cat-file -e "$DWP_HOUSEHOLD_TRIAL_COMMIT^{commit}"
           git fetch --no-tags --depth=1 origin "$DWP_COMPACT_TRIAL_COMMIT"
           git cat-file -e "$DWP_COMPACT_TRIAL_COMMIT^{commit}"
+      - name: Fetch the frozen qualification comparison inputs
+        run: |
+          git fetch --no-tags --depth=1 origin "$DWP_QUALIFICATION_COMMIT"
+          git cat-file -e "$DWP_QUALIFICATION_COMMIT^{commit}"
+          git -C .ci/okf-explorer-qualification fetch --no-tags --depth=1 origin "$EXPLORER_QUALIFICATION_BASELINE_COMMIT"
+          git -C .ci/okf-explorer-qualification cat-file -e "$EXPLORER_QUALIFICATION_BASELINE_COMMIT^{commit}"
+      - name: Replay the independent source and allocator comparison offline
+        run: |
+          node --test validation/qualification-context/2026-09-21/admission.test.mjs validation/qualification-context/2026-09-21/metrics.test.mjs
+          node --experimental-strip-types validation/qualification-context/2026-09-21/compare.mjs --dwp-root . --explorer-root .ci/okf-explorer-qualification --check validation/qualification-context/2026-09-21/attempt-01
       - name: Verify portable performance evidence and new trial controls offline
         run: |
           node validation/context-performance/2026-09-21/verify.mjs

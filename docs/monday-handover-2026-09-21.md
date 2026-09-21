@@ -10,7 +10,7 @@ Open the [learning website](https://chris-page-gov.github.io/okf-dwp/) and follo
 
 **DWP** is the Department for Work and Pensions. Its **Decision makers’ guide (DMG)** and **Advice for decision making (ADM)** are separate staff guidance collections. The captured collections contain 513 PDFs and 19,090 pages. A **bundle** brings source records, named concepts and relationships together so people and software can inspect them.
 
-The website was checked against exact source commit `3f72ebc30128c2a3171951050a566d3ed8db7c16` on 20 September at 23:20 BST. Its manifest and all 108 listed output files matched: 109 successful HTTPS responses. This is a dated publication check, not a guarantee that the website can never change. The [receipt](../validation/learning-site/public-3f72ebc30128c2a3171951050a566d3ed8db7c16/README.md) records every response and explains the check’s limits.
+The website was checked against exact source commit `7815b17bb3db3903738c745d3fb9508919ebab15` on 21 September at 00:52 BST. Its manifest and all 121 listed output files matched: 122 successful HTTPS responses. All 2,320 internal links resolved, including section anchors. This is a dated publication check, not a guarantee that the website can never change. The [receipt](../validation/learning-site/public-7815b17bb3db3903738c745d3fb9508919ebab15/README.md) records every response and explains the check’s limits; the [earlier observation](../validation/learning-site/public-3f72ebc30128c2a3171951050a566d3ed8db7c16/README.md) remains unchanged.
 
 ## Which version are we demonstrating?
 
@@ -31,7 +31,30 @@ The [SDK receipt](../validation/compact-delivery/v0.5.0/sdk-receipt.json), [host
 
 The authored semantic layer now has **51 concepts**, **96 selected source pages** and **20 selected statutory units**. A **concept** names a meaning, such as a couple or a benefit component. A **statutory unit** is a selected section, regulation or schedule paragraph; the count does not mean 20 complete Acts. The source manuals remain much larger than these deliberately modelled selections.
 
-The development check retrieves **176 of 177 expected candidate occurrences** across **40 supplied question occurrences, representing 39 unique questions**. These are candidate passages chosen for investigation, not 176 correct answers. One staff-005 candidate remains omitted under the record limit. All 40 question packages still report **insufficient**; there are no AI answers or independent specialist approvals in this retrieval evaluation. See the [evaluation](../evaluation/semantic-expansion/evaluation.json).
+The [current development check](../evaluation/semantic-expansion/evaluation.json) retrieves **177 of 177 expected candidate occurrences** across **40 supplied question occurrences, representing 39 unique questions**, using the separate qualification source and revised engine. These are candidate passages chosen for investigation, not 177 correct answers. All 40 question packages still report **insufficient**; there are no AI answers or independent specialist approvals in this retrieval evaluation. The earlier public source and engine retrieved 176 occurrences; their [retained result](https://github.com/chris-page-gov/okf-dwp/blob/3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84/evaluation/semantic-expansion/evaluation.json) remains unchanged.
+
+### Next qualification release: measured separately
+
+The new source declares 15 support dependencies, including whole passages that
+qualify household, housing-cost and temporary-residence summaries. A dependency
+says which material must accompany an interpretation; it does not make that
+interpretation official. The [joint comparison](../validation/qualification-context/2026-09-21/README.md)
+freezes source `7f9feb9634e3d94004853b838462aca132c505a5` and Explorer
+`c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e` independently of the public 0.5.0
+demonstration above. Publication and live checks for that pair remain separate.
+
+At both 256 KiB and 512 KiB, the pair retains all 433 declared path occurrences.
+Both care-home questions retain all seven household-support pages through their
+declared paths. At 256 KiB each package has 27 records and 63 relationships.
+The 512 KiB result also includes an optional temporary-care summary whose page
+78/24 support is missing, and reports that gap. The earlier 64 KiB envelope
+cannot hold the expanded care-home requirement metadata: it returns an explicit
+`metadata_budget` refusal. That is a useful limit to demonstrate, not an answer.
+
+All 203 obligations remain open. None of these new observations repairs an
+earlier model response or establishes specialist acceptance. Use the
+[component review](carehome-component-dependency-review.md) to inspect the exact
+wording corrections and the remaining disability-addition modelling work.
 
 There are **203 open obligations**: 43 evidence-closure requirements and 40 each for applicability, legal version, independent review and question scope. An **open obligation** names something that has not been established. It prevents the system from turning a promising source trail into a false claim of completeness. The [profiles](../evaluation/semantic-expansion/profiles.json) retain these requirements; the [legal-body guide](legal-body-evidence.md) records the statutory extraction and its remaining limits, including 12 units with unknown extent.
 

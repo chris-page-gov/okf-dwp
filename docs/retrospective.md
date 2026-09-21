@@ -26,6 +26,34 @@ from concepts, assertions, questions and answerable tasks.
 
 ## Findings that changed the design
 
+### Later evidence: qualifications need modelling and allocation
+
+The [21 September comparison](../validation/qualification-context/2026-09-21/README.md)
+separately changed the source model and the context engine, using both versions
+of each with the same questions and two byte budgets. The revised pair retained
+all 433 declared path occurrences and all 177 candidate occurrences. Those are
+development measures, not correct-answer counts; all contexts remained
+insufficient and the 203 obligations remained open.
+
+Changing the engine alone displaced six useful household pages at the larger
+budget because the earlier model had never declared them required. Changing the
+source alone still lost paths under budget pressure. The combined change kept
+all seven household pages for both care-home questions. A remaining optional
+temporary-care dependency was still missing at 512 KiB and was reported.
+
+Independent review also found that counting only requirements returned in a
+package could hide omissions when a very small budget cleared that metadata.
+The comparison now derives its denominator from the authored requirements and
+pre-budget concept resolution. A separate 64 KiB check records an explicit
+metadata refusal for the expanded care-home task. It does not pretend that an
+empty package contained zero expected requirements.
+
+For another department, name the qualifications an interpretation needs, preserve
+their complete passages and measure source and engine changes independently.
+Do not promote a navigation overview into a complete rule. Preserve unsuccessful
+observations and keep candidate overlap, path retention and claim accuracy as
+different measures.
+
 ### 1. A search failure can be several different failures
 
 The imprisonment question needed benefit resolution, the payment/entitlement
