@@ -8,6 +8,12 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Ignored-person and normal-residence qualifications — 21 September 2026
+
+- Add separate model-authored concepts for normally residing with someone and disregarding a person's presence for the Pension Credit severe-disability addition. Retain 17 whole captured pages, including eight newly selected pages; preserve dated conditions and distinct statutory definitions.
+- Declare conditional evidence dependencies without changing question triggers, existing evidence or any of the 203 open obligations. The compiled index has 913 records, 53 concepts, 1,526 assertions and 61 support dependencies within existing limits.
+- Record independent source review and 61 focused controls. Context retention, public delivery, model quality and specialist acceptance remain separate gates; no individual entitlement is established.
+
 ## Partner qualification support — 21 September 2026
 
 - Preserve the separate partner lower- and higher-rate branches, actual caring
