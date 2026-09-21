@@ -100,7 +100,7 @@ controlling qualifications; independent claim review remains necessary.
 
 ## Final freeze interface
 
-The freeze is deliberately absent. After source/service integration and review:
+At preparation the freeze was deliberately absent. The following procedure records how the later freeze was created after source/service integration and review:
 
 1. Assemble the two actual packages at the fixed budget. Preserve their complete
    canonical bytes under
