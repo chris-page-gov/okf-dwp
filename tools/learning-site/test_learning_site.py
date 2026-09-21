@@ -45,6 +45,8 @@ class LearningSiteTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as name:
             root = Path(name)
             subprocess.run(["git", "init", "-q", str(root)], check=True)
+            subprocess.run(["git", "config", "gc.auto", "0"], cwd=root, check=True)
+            subprocess.run(["git", "config", "maintenance.auto", "false"], cwd=root, check=True)
             (root / "docs").mkdir()
             for path in ["docs/learning-path.md", "docs/glossary.md", "NOTICE.md"]:
                 (root / path).write_text("# Public\n")
@@ -185,6 +187,9 @@ class RetainedEvidenceTests(unittest.TestCase):
         self.addCleanup(self.directory.cleanup)
         self.root = Path(self.directory.name).resolve()
         subprocess.run(['git', 'init', '-q', str(self.root)], check=True)
+        # No background Git process may race deletion of an ephemeral fixture.
+        subprocess.run(['git', 'config', 'gc.auto', '0'], cwd=self.root, check=True)
+        subprocess.run(['git', 'config', 'maintenance.auto', 'false'], cwd=self.root, check=True)
         for path in ('docs/learning-path.md', 'docs/glossary.md', 'NOTICE.md'):
             target = self.root / path
             target.parent.mkdir(parents=True, exist_ok=True)

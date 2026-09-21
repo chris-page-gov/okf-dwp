@@ -502,3 +502,5 @@ Node's `tmpdir()`. Literal private paths in older negative tests are synthetic
 rejection/redaction inputs, not directories to create. Only the fixture and
 these documentation notes changed; frozen executable inputs and recorded
 provider outcomes remain untouched.
+
+The next push-run failure occurred during fixture cleanup: a background Git pack directory changed while Python removed a synthetic repository. Fixture repositories now disable automatic garbage collection and maintenance locally; real repository configuration and publication validation are unchanged. The failed run remains visible in CI.
