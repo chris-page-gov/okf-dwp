@@ -591,3 +591,9 @@ to records present in the index. Existing backlog packages cover these findings.
 All 40 packages remain insufficient and all 203 obligations stay open. These
 checks describe recorded selection and diagnostics, not specialist acceptance
 or a new legal answer-quality result.
+
+The local browser review of the committed learning website exposed two stale
+learning-path descriptions: the returned Data review still read as unrun, and
+the dated 0.6.0 baseline was called current. Both are corrected. Mutable service
+status now points to the generated, receipt-checked record; historical counts
+retain their own dated observation. No service deployment was performed.

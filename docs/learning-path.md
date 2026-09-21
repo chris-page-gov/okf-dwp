@@ -141,11 +141,13 @@ required for a supported task. It is more than a list of documents.
 
 ### Choose the version being demonstrated
 
-For the current Monday demonstration, use the [household handover](monday-handover-2026-09-21.md).
-Service **0.6.0** uses the partner-qualified source
+Read the [generated service status](service-publication.md) for the latest
+recorded deployment and its exact source and engine. Use the
+[household handover](monday-handover-2026-09-21.md) for the demonstration steps.
+The **0.6.0 observation recorded on 21 September 2026** used the partner-qualified source
 `723bcc5b015ab38a026625c2148edbd784edf7c7`. Its [public SDK check](../validation/compact-delivery/v0.6.0/README.md)
-reconstructed 11 cases in 121 requests. The current care-home example has 55 records
-and 115 relationships and remains insufficient.
+reconstructed 11 cases in 121 requests. That recorded care-home example has
+55 records and 115 relationships and remains insufficient.
 
 The later ignored-person source `c44bc3a111d18b6d4098a148a9a1b67c1411882b`
 has 53 concepts, 106 selected source pages and 61 support dependencies. It is
@@ -338,7 +340,12 @@ or equal answer quality. Those claims need a separate measured comparison.
 
 The [abroad-question review](abroad-semantic-audit.md) separates an older word-ranking bug from current gaps in concepts, connected passages and budget capacity. Follow the question from everyday wording to the source pages and check which conditions were actually retained.
 
-A [Data Analytics proposal exercise](data-agent-semantic-review.md) could help extend this modelling. It describes what an analysis workflow adds beyond connectors, and why source checks and specialist review remain separate. The proposed exercise has not been run.
+The first [Data Analytics proposal review](data-agent-semantic-review.md)
+returned source-linked proposals from a frozen-file handoff. Read its tool and
+verification limits alongside the findings. It illustrates how an analysis
+workflow can help extend this modelling beyond connector access; it does not
+establish native Ask OKF access, specialist acceptance or improved answer
+accuracy. Full artefact import and independent verification remain pending.
 
 ## 7. Explore how the bundle is built
 
