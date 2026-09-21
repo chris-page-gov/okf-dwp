@@ -8,6 +8,12 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Later public observations — 21 September 2026
+
+- Preserve a separate [learning-site observation](validation/learning-site/public-91b9907836c8a340d974dd958969f4f8cbb3a0c6/README.md): exact source `91b99078…`, 123 successful responses and 2,382 checked internal links.
+- Preserve six actual [public Chrome journeys](validation/household-reader-public/df352daa-c4f2de0a/README.md) for disability candidate `df352daa…`, with complete care-home and unresolved-SDA packages. Add offline source/hash/path admission and six controls; retain every original observation unchanged.
+- Keep public browser observations, offline comparison, protected publication, remote delivery and model trials separately labelled in the Monday handover.
+
 ## Partner qualification support — 21 September 2026
 
 - Preserve the separate partner lower- and higher-rate branches, actual caring
