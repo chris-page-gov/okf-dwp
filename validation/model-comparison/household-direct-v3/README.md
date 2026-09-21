@@ -22,3 +22,11 @@ The [freeze manifest](../../../evaluation/model-comparison/household-direct-v3/f
 The source, runtime, verifier and model inputs have distinct immutable identities. Exact public delivery and successful freeze admission are separate from model output acceptance. Do not alter the frozen runner to make these attempts appear successful. A successor requires a new reviewed format contract, new inputs and separately recorded attempts.
 
 Raw client event bodies were deliberately not retained, so these rejection categories cannot reconstruct the precise omitted wrapper fields. The next harness needs value-free structural diagnostics to make a format failure actionable without publishing private client metadata.
+
+## Check these recorded outcomes offline
+
+```sh
+uv run --locked python scripts/check_monday_direct_observations.py --explorer-root OKF_EXPLORER_CHECKOUT
+```
+
+The checker reuses the frozen input admission, verifies the exact two receipt and artefact fingerprints, rejects extra experiment files and confirms that the frozen substantive gate stays closed. Eight negative controls pass. It verifies the retained projections; it cannot replay raw client events that were deliberately not retained. It makes no provider or network calls.

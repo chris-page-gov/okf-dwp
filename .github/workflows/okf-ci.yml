@@ -187,6 +187,8 @@ jobs:
           git -C .ci/okf-explorer-qualification fetch --no-tags --depth=1 origin "$EXPLORER_DIRECT_RUNTIME_COMMIT" "$EXPLORER_DIRECT_VERIFIER_COMMIT"
           uv run --locked python -m unittest discover -s scripts -p test_monday_direct_trials.py
           uv run --locked python scripts/run_monday_direct_trials.py --explorer-root .ci/okf-explorer-qualification
+          uv run --locked python -m unittest discover -s scripts -p test_monday_direct_observations.py
+          uv run --locked python scripts/check_monday_direct_observations.py --explorer-root .ci/okf-explorer-qualification
       - name: Replay the independent source and allocator comparison offline
         run: |
           node --test validation/qualification-context/2026-09-21/admission.test.mjs validation/qualification-context/2026-09-21/metrics.test.mjs
