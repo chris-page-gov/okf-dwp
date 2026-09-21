@@ -82,6 +82,46 @@ class HouseholdSemanticTests(unittest.TestCase):
         for page in [7,19,21,23,24,25]:self.assertIn(('dmg-vol13-ch77',page),self.evidence('household-separation'))
         self.assertIn('77130',self.text('dmg-vol13-ch77',24))
 
+    def test_partner_lower_rate_conditions_keep_both_page_continuations(self):
+        p12=self.text('dmg-vol13-ch78',12);p13=self.text('dmg-vol13-ch78',13)
+        p14=self.text('dmg-vol13-ch78',14)
+        self.assertLess(p12.index('Claimants who have a partner'),p12.index('78045'))
+        self.assertIn('for only one of the partners',p12)
+        self.assertIn('the other partner is certified as blind or severely sight impaired',p13)
+        self.assertIn('but for being a patient for over 28 days',p13)
+        self.assertTrue(p13.lstrip().startswith('1.5 AFIP and'))
+        self.assertTrue(p14.lstrip().startswith('3.2 who the partners normally reside with'))
+        # Do not silently harmonise this literal restriction with the wider benefit list.
+        self.assertIn('the partner who is receiving “AA” or DLA as in 1.',p13)
+        self.assertIn('the partner who is receiving “AA” or DLA as in 1.',p14)
+        node=self.nodes['partner-disability-addition']
+        for page in range(12,18):self.assertIn(('dmg-vol13-ch78',page),self.evidence(node['key']))
+
+    def test_partner_higher_rate_reference_keeps_patient_item_and_footnote_distinct(self):
+        source=self.text('dmg-vol13-ch78',14)
+        self.assertIn('does not apply to claimants who have no partner',source)
+        self.assertIn('either partner',source)
+        self.assertIn('DMG 78060 2.1.',source)  # Captured flattened superscript is preserved.
+        self.assertIn('lower rate of additional amount should be considered',source)
+        definition=self.nodes['partner-disability-addition']['definition']
+        self.assertIn('partner-patient provision in 78060(2)',definition)
+        self.assertIn('does not exclude every form of treated receipt',definition)
+        self.assertIn('CA/UC actual-payment qualification in 78057, in respect of caring for the claimant or partner',definition)
+        self.assertIn('does not establish that partner status persists after care-home admission',definition)
+        self.assertIn('in the case of a claimant who has a partner',self.text('dmg-vol13-ch78',16))
+        self.assertIn('which the award is first paid',self.text('dmg-vol13-ch78',17))
+
+    def test_partner_support_scope_matches_component_questions_and_keeps_unbounded_case_open(self):
+        cases={c['id']:c for c in self.registry['cases']}
+        for cid in ('staff-014','staff-017'):
+            self.assertIn('rate/component effects',' '.join(cases[cid]['required_evidence']))
+            self.assertEqual(self.profiles[cid]['qualification_concepts'],['partner-disability-addition'])
+            obligation=self.profiles[cid]['obligations'][0]
+            self.assertIn('qualifying disability-benefit receipt, residence and caring facts remain unknown',obligation['label'])
+            self.assertIn('does not establish entitlement',obligation['label'])
+        self.assertNotIn('qualification_concepts',self.profiles['staff-018'])
+        self.assertTrue(any('all scenarios' in a.lower() for a in self.profiles['staff-018']['ambiguities']))
+
     def test_temporary_housing_cost_conditions_have_continuations(self):
         for page in [53,54,55,56,57]:self.assertIn(('dmg-vol13-ch78',page),self.evidence('care-home-housing-costs'))
         n=self.nodes['care-home-housing-costs']

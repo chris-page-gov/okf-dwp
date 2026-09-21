@@ -1019,14 +1019,31 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   - skos:Concept
   - dwp:Applicability
   label: 'Severe-disability addition: claimant with a partner'
-  definition: DMG 78045–78050 provide separate lower-rate and higher-rate partner branches with qualifying
-    benefits, blindness, residence and actual caring-payment conditions. DMG 78047 has a partner-in-hospital
-    exception; DMG 78050 limits deemed qualifying-benefit receipt where patient rules apply. Do not apply the
-    no-partner care-home paragraph 78088 to a couple before deciding household status. The captured examples
-    and rates are historical, not current award calculations.
+  definition: Bounded reading of the captured Pension Credit severe-disability additional-amount rules for
+    a claimant who has a partner. DMG 78045–78047 set distinct lower-rate branches, and 78048–78050 address
+    the higher rate. Their benefit, residence and caring conditions must be read together. DMG 78047's
+    patient branch concerns the other partner being unable to receive the specified benefit because of
+    being a patient for over 28 days; its remaining conditions continue on the next page. DMG 78050
+    restricts the higher-rate condition when either partner is treated as receiving benefit under the
+    partner-patient provision in 78060(2), and directs consideration of the lower rate. It does not exclude
+    every form of treated receipt. Read the separate CA/UC actual-payment qualification in 78057, in respect
+    of caring for the claimant or partner, and the complete treated-receipt provisions in 78060, with the
+    dated changes in memos 02/25, 06/25 and 01/26. This component does not establish that partner status
+    persists after care-home admission, consolidate current law or calculate an award.
   aliases:
   - partner disability addition
   source_candidates: []
+  required_source_ids:
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0012
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0013
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0014
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0015
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0016
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0017
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003
   review_status: unreviewed-specialist-review-required
   additional_sources:
   - family: dmg
@@ -1041,6 +1058,34 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
     document_id: dmg-vol13-ch78
     page: 14
     anchor: '78050'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 15
+    anchor: '78057'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 16
+    anchor: '78060'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 17
+    anchor: which the award is first paid
+  - family: dmg
+    document_id: dmg-memo-02-25-e03b36ce3e
+    page: 5
+    anchor: '13.'
+  - family: dmg
+    document_id: dmg-memo-06-25-5fee4f859a
+    page: 3
+    anchor: 21.3.25
+  - family: dmg
+    document_id: dmg-memo-06-25-5fee4f859a
+    page: 9
+    anchor: '30.'
+  - family: dmg
+    document_id: dmg-memo-01-26-0605724317
+    page: 3
+    anchor: 15.03.26
 - '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/temporary-care-home
   route: staff-domain/temporary-care-home
   key: temporary-care-home
@@ -1607,6 +1652,15 @@ relationships:
   source_candidates:
   - source-c042
   source_concept_evidence: rea
+- source: care-home
+  target: partner-disability-addition
+  predicate: skos:related
+  statement: A care-home enquiry may require investigation of the partner disability-addition branch after
+    household status is examined; this navigation link does not establish that the claimant remains a
+    member of a couple or satisfies the qualifying conditions.
+  source_candidates:
+  - source-c028
+  source_concept_evidence: partner-disability-addition
 alias_reassignments:
   term/pc-prisoner-credit-rates:
   - State Pension Credit

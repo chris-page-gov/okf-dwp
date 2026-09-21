@@ -66,7 +66,7 @@ class StaffSemanticTests(unittest.TestCase):
         pages={base+'page/77/'+str(n).zfill(4) for n in (7,19,21,23,24,25)}|{base+'page/78/0025'}
         edges={row['id']:row for row in self.index['assertions']}
         all_declarations=[edges[identity] for identity in self.catalogue['qualification_assertion_ids']]
-        self.assertEqual(len(all_declarations),29)
+        self.assertEqual(len(all_declarations),39)
         declarations=[edge for edge in all_declarations if edge['source'] in {care,household}]
         self.assertEqual(len(declarations),8)
         self.assertEqual({(e['source'],e['target']) for e in declarations},
@@ -91,7 +91,7 @@ class StaffSemanticTests(unittest.TestCase):
                 self.assertIn(path,requirement['required_paths'])
                 self.assertTrue(all(edges[i]['predicate']==DCT+'requires' for i in path['assertions']))
         self.assertEqual({p['id'] for p in profiles.values() if p.get('qualification_concept_ids')},
-                         {'staff-012','staff-013'})
+                         {'staff-012','staff-013','staff-014','staff-017'})
 
     def test_component_dependencies_keep_temporary_scope_separate(self):
         base='https://chris-page-gov.github.io/okf-dwp/id/'
@@ -114,7 +114,8 @@ class StaffSemanticTests(unittest.TestCase):
             self.assertEqual(set(profile['qualification_concept_ids']),
                              {base+'staff-domain/household-separation',housing,
                               base+'staff-domain/severe-disability-addition',
-                              base+'staff-domain/no-partner-disability-addition'})
+                              base+'staff-domain/no-partner-disability-addition',
+                              base+'staff-domain/partner-disability-addition'})
             self.assertTrue(pages<=set(profile['qualification_evidence_ids']))
             self.assertNotIn(temporary,required['required'])
             self.assertNotIn(base+'page/78/0024',required['required'])
@@ -200,6 +201,69 @@ class StaffSemanticTests(unittest.TestCase):
         for before in frozen['records']:
             if before['kind']=='evidence':self.assertEqual(rows[before['id']],before)
 
+    def test_partner_support_retains_ten_whole_pages_without_expanding_the_overview(self):
+        base='https://chris-page-gov.github.io/okf-dwp/id/'
+        branch=base+'staff-domain/partner-disability-addition'
+        expected={base+'page/78/'+str(n).zfill(4) for n in (12,13,14,15,16,17)}|{
+            base+'page/dmg-memo-02-25-e03b36ce3e/0005',
+            base+'page/dmg-memo-06-25-5fee4f859a/0003',
+            base+'page/dmg-memo-06-25-5fee4f859a/0009',
+            base+'page/dmg-memo-01-26-0605724317/0003'}
+        rows={r['id']:r for r in self.index['records']}
+        dependencies=[e for e in self.index['assertions'] if e['predicate']==DCT+'requires']
+        actual=[e for e in dependencies if e['source']==branch]
+        self.assertEqual(len(actual),10)
+        self.assertEqual({e['target'] for e in actual},expected)
+        self.assertTrue(all(rows[e['target']]['kind']=='evidence' for e in actual))
+        for page,sha in [(13,'57ab804200c6760c6172599735fb2b6fcb5b4826c77d63d3659a1ed5efda06cd'),
+                         (14,'0cff3b76580573871f27394292919508c2d937c6a5c7da0abba0a4e6c81a9232')]:
+            self.assertEqual(digest(rows[base+'page/78/'+str(page).zfill(4)]['text'].encode()),sha)
+        overview=[e for e in dependencies if e['source']==base+'staff-domain/severe-disability-addition']
+        self.assertEqual(len(overview),4)
+        self.assertNotIn(branch,{e['target'] for e in overview})
+
+    def test_partner_qualification_paths_start_only_at_existing_question_triggers(self):
+        base='https://chris-page-gov.github.io/okf-dwp/id/'
+        concept=base+'staff-domain/partner-disability-addition'
+        node=next(n for n in self.catalogue['concepts'] if n['@id']==concept)
+        edges={e['id']:e for e in self.index['assertions']}
+        requirements={r['id']:r for r in self.index['requirements']}
+        profiles={p['id']:p for p in self.profiles['profiles']}
+        for cid,seedkey in [('staff-012','care-home'),('staff-013','care-home'),
+                            ('staff-014','partner'),('staff-017','partner')]:
+            with self.subTest(case=cid):
+                p=profiles[cid];r=requirements[p['requirement_id']]
+                seed=base+'staff-domain/'+seedkey
+                self.assertEqual(r['when_all'],[base+'term/pension-credit',seed])
+                for page in node['required_source_ids']:
+                    path=next(q for q in p['qualification_paths'] if q['records']==[seed,concept,page])
+                    self.assertEqual(path['seed'],seed)
+                    self.assertIn(path,r['required_paths'])
+                    self.assertEqual([edges[e]['predicate'] for e in path['assertions']],
+                                     [SKOS+'related',DCT+'requires'])
+                self.assertEqual(len(p['obligation_ids']),5)
+                self.assertEqual(p['evidence_status'],'insufficient')
+                if seedkey=='partner':
+                    self.assertEqual(p['qualification_concept_ids'],[concept])
+                    self.assertTrue(any('qualifying disability-benefit receipt, residence and caring facts remain unknown'
+                                        in text for text in r['limitations']))
+                else:
+                    self.assertTrue(any('does not establish that partner status persists after care-home admission'
+                                        in text for text in r['limitations']))
+        self.assertNotIn('qualification_concept_ids',profiles['staff-018'])
+        new=[e for e in edges.values() if e['source']==base+'staff-domain/care-home' and e['target']==concept]
+        self.assertEqual(len(new),1)
+        self.assertEqual(new[0]['predicate'],SKOS+'related')
+        self.assertEqual(new[0]['assertion_status'],'model-derived')
+        self.assertIn('does not establish',new[0]['label'])
+        self.assertTrue(any('page=25' in p['url'] for p in new[0]['provenance']))
+
+    def test_partner_component_cannot_be_seeded_when_care_home_route_is_removed(self):
+        def remove_route(data):
+            data['relationships']=[r for r in data['relationships']
+                                   if (r['source'],r['target'])!=('care-home','partner-disability-addition')]
+        self.mutate_authoring('concepts.yamlld',remove_route,'unreachable from profile triggers')
+
     def test_receipt_continuation_rejects_an_invented_paragraph_anchor(self):
         def mutation(data):
             node=next(n for n in data['@graph'] if n['key']=='no-partner-disability-addition')
@@ -244,7 +308,7 @@ class StaffSemanticTests(unittest.TestCase):
             before=previous[row['id']]
             self.assertEqual([i for i in row['required'] if i.startswith(prefix)],
                              [i for i in before['required'] if i.startswith(prefix)])
-            if not row['id'].endswith(('/staff-012','/staff-013')):
+            if not row['id'].endswith(('/staff-012','/staff-013','/staff-014','/staff-017')):
                 self.assertEqual(row['required'],before['required'])
         node=next(c for c in self.catalogue['concepts'] if c['key']=='household-separation')
         self.assertIn('https://chris-page-gov.github.io/okf-dwp/id/page/77/0020',node['evidence_ids'])
