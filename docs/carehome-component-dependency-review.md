@@ -187,7 +187,27 @@ uv run --locked python -m unittest discover -s scripts -p test_staff_semantic.py
 
 The 31 producer controls pass, including the unchanged eight-edge household group, overall 15-edge census, exact five/two component support groups, resolved-root housing paths, optional page 78/54, absence of unconditional temporary-profile activation, the no-partner heading, the DLA-payability conjunction and the Housing Benefit “may be payable” distinction. Frozen source and original candidate/obligation preservation controls also pass.
 
-Generated source snapshot: `dwp-staff-semantics-fc2ad1545adcbeeb2243`; semantic index SHA-256 `7ffc9d00e71fef6aed5531373510df82998123e89fdb28091cfb82384adf2876`. This identity differs from the preceding household-only candidate. Producer verification does not prove package retention or answer accuracy. The [combined Reader integration](combined-reader.md) now preserves all 15 support relationships and passes its 20 offline controls; the joint engine/source evaluation remains separate. Earlier trial and public observations retain their original identities.
+Generated source snapshot: `dwp-staff-semantics-fc2ad1545adcbeeb2243`; semantic index SHA-256 `7ffc9d00e71fef6aed5531373510df82998123e89fdb28091cfb82384adf2876`. This identity differs from the preceding household-only candidate. Producer verification does not prove package retention or answer accuracy. The [combined Reader integration](combined-reader.md) now preserves all 15 support relationships and passes its 20 offline controls; the [separate joint engine/source evaluation](../validation/qualification-context/2026-09-21/README.md) now passes all 320 assemblies and exact replay. Earlier trial and public observations retain their original identities.
+
+
+## Joint retention status
+
+The final DWP source `7f9feb9634e3d94004853b838462aca132c505a5` and Explorer
+`c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e` retain all 433 activated declared
+path occurrences and all 177 known candidate occurrences at 256 KiB and 512 KiB.
+Staff 012 and 013 each retain all seven household support pages and all 17 paths
+in their own profiles. Their three activated profiles together declare 39 paths.
+The 256 KiB packages have 27 records and 63 relationships; the 512 KiB packages
+have 62 records and 124 relationships. The larger packages also expose the
+missing support `temporary-care-home` → `page/78/0024` on optional context.
+
+The separate 64 KiB Staff 012 observation correctly returns only a 1,926-byte
+`metadata_budget` refusal, rather than hiding a missing qualification. No model
+trial was rerun. All 203 obligations remain open; the larger no-partner and
+severe-disability overview sets described above remain unauthored proposals.
+Protected publication and new public checks are pending. The exact results,
+source-only controls and trade-offs are in the [joint receipt guide](../validation/qualification-context/2026-09-21/README.md).
+
 
 ## Literal source hash appendix
 

@@ -171,7 +171,9 @@
         "docs/semantic-expansion.md",
         "evaluation/semantic-expansion/profiles.json",
         "docs/monday-delivery-work-log.md",
-        "docs/household-evidence-expansion.md"
+        "docs/household-evidence-expansion.md",
+        "validation/qualification-context/2026-09-21/README.md",
+        "docs/carehome-component-dependency-review.md"
       ],
       "acceptance_checks": [
         "Benefit/variant/circumstance terms have sources, aliases, confusions and scope; existing custody-specific meanings are not silently broadened."
@@ -195,11 +197,13 @@
           "kind": "research",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "The household candidate adds neutral Income Support, eight further concepts and complete qualifying source pages. Continue with the remaining task families, adjacent exceptions and temporal/territorial distinctions; the entire domain is not complete.",
+          "next_action": "Neutral Income Support, household concepts and 15 explicit household/housing/temporary support dependencies are implemented and jointly tested. Continue remaining task families and the larger no-partner/severe-disability support sets, preserving deemed-receipt, exception and temporal/territorial distinctions. The departmental domain remains incomplete.",
           "evidence": [
             "evaluation/semantic-expansion/profiles.json",
             "docs/monday-delivery-work-log.md",
-            "docs/household-evidence-expansion.md"
+            "docs/household-evidence-expansion.md",
+            "validation/qualification-context/2026-09-21/README.md",
+            "docs/carehome-component-dependency-review.md"
           ]
         },
         {
@@ -295,12 +299,15 @@
         "domain-profile/staff-semantic/concepts.yamlld",
         "domain-profile/staff-semantic/profiles.yamlld",
         "scripts/test_staff_semantic.py",
-        "docs/carehome-component-dependency-review.md"
+        "docs/carehome-component-dependency-review.md",
+        "validation/qualification-context/2026-09-21/README.md",
+        "validation/qualification-context/2026-09-21/attempt-01/comparison.json",
+        "validation/qualification-context/2026-09-21/protocol.json"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
       ],
-      "scope_note": "Forty executable development profiles, actual traversal and 203 named open obligations are delivered. All 40 remain insufficient. These known questions are not a held-out accuracy benchmark; meeting a source candidate is not evidence closure.",
+      "scope_note": "Forty executable development profiles and 203 named open obligations are delivered. The final immutable source/engine comparison retains all 177 candidate occurrences and 433 activated declared paths at 256/512 KiB, including seven household pages for Staff 012/013. All contexts remain insufficient. Evidence closure, larger component modelling, protected publication and specialist acceptance remain separately tracked; this is not a held-out accuracy benchmark.",
       "work_packages": [
         {
           "id": "DWP-BL-007.delivery",
@@ -319,27 +326,55 @@
           "kind": "implementation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Seven of the eight previously missed candidate occurrences are now retained. Investigate the remaining staff-005 candidate under node pressure and continue all 43 source-closure obligations. Household headings and adjacent conditions are better represented; scope, legal applicability and specialist gates remain separate.",
+          "next_action": "All 177 previously registered candidate occurrences are retained with the final source and allocator. Continue the 43 source-closure obligations: reconcile continuations, exceptions, deemed receipt and task scope rather than treating candidate overlap as completeness. The 512 KiB care-home package still reports an optional temporary-care-home dependency gap; broader component support and independent legal/specialist gates remain separate.",
           "evidence": [
             "evaluation/semantic-expansion/profiles.json",
             "docs/monday-delivery-work-log.md",
             "docs/household-evidence-expansion.md",
-            "docs/context-performance.md"
+            "docs/context-performance.md",
+            "validation/qualification-context/2026-09-21/README.md",
+            "validation/qualification-context/2026-09-21/attempt-01/comparison.json"
           ]
         },
         {
           "id": "DWP-BL-007.qualification-retention",
           "kind": "implementation",
-          "status": "in_progress",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "The current source candidate declares 15 required-support assertions: eight for the initial household group, five housing-cost pages and two temporary-residence pages. Staff 012/013 explicitly require household and housing-cost paths; temporary support stays at record level. Verify joint retention with the separately reviewed generic allocator under node and byte pressure, then publish exact source and consumer versions. Preserve frozen observations and trials. All 203 obligations remain open. The reviewed larger support options for the no-partner and severe-disability overviews remain to be authored and checked; no blanket requirement of unrelated references is authorised.",
+          "next_action": "Bounded increment verified: final DWP 7f9feb96 and Explorer c4f2de0a retain 433/433 declared path occurrences and 177/177 candidate occurrences at both budgets; Staff 012/013 retain all seven household pages. All 320 assemblies and exact replay pass, with 14 offline controls. The 64 KiB Staff 012 metadata refusal, optional temporary dependency at 512 KiB and all 203 obligations remain explicit. Publication and larger component sets are separate packages; no historical answer is regraded.",
           "evidence": [
             "docs/household-qualification-budget-review.md",
             "docs/monday-delivery-work-log.md",
             "domain-profile/staff-semantic/concepts.yamlld",
             "domain-profile/staff-semantic/profiles.yamlld",
             "scripts/test_staff_semantic.py",
-            "docs/carehome-component-dependency-review.md"
+            "docs/carehome-component-dependency-review.md",
+            "validation/qualification-context/2026-09-21/README.md",
+            "validation/qualification-context/2026-09-21/attempt-01/comparison.json",
+            "validation/qualification-context/2026-09-21/protocol.json"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.qualification-publication",
+          "kind": "live_observation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Complete normal protected publication of the exact verified source and consumer versions, then perform fresh version-bound service/browser acceptance. Current public 0.5.0 and earlier browser/model observations retain their original 3ef0e786 source; a local comparison does not attest a new public release.",
+          "evidence": [
+            "validation/qualification-context/2026-09-21/README.md",
+            "validation/qualification-context/2026-09-21/protocol.json",
+            "docs/monday-delivery-work-log.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.component-qualification-expansion",
+          "kind": "implementation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Implementation is running in an isolated feature checkout; publication and independent review are pending. Author and test the reviewed no-partner disability-addition and severe-disability overview support sets, including acquired-but-unmodelled deemed-receipt pages 78/16–17 when asserted, example continuations and separately dated Scottish dependencies. Do not make every navigation reference unconditional. Re-evaluate scope, budgets and omission diagnostics in a new version; preserve all 203 obligations until their own criteria are met.",
+          "evidence": [
+            "docs/carehome-component-dependency-review.md",
+            "validation/qualification-context/2026-09-21/README.md"
           ]
         },
         {
@@ -355,7 +390,7 @@
     {
       "id": "DWP-BL-008",
       "title": "Progressive evidence manifests and exact reads",
-      "status": "recorded_complete",
+      "status": "in_progress",
       "priority": "P0",
       "depends_on": [
         "DWP-BL-004"
@@ -376,12 +411,15 @@
         "validation/compact-delivery/v0.5.0/sdk-receipt.json",
         "validation/compact-delivery/v0.5.0/browser/staff/run-summary.json",
         "validation/compact-delivery/v0.5.0/artifacts.json",
-        "docs/household-service-verification.md"
+        "docs/household-service-verification.md",
+        "validation/compact-delivery/v0.5.0/README.md",
+        "validation/qualification-context/2026-09-21/README.md",
+        "docs/methodology.md"
       ],
       "acceptance_checks": [
         "Unchanged ask_okf preserved; small manifest plus paginated exact reads; original version/question/budget/context identity replayed; stale/unknown IDs rejected; all slices reconstruct exactly; actual host check."
       ],
-      "scope_note": "Public service 0.5.0 uses merged Explorer runtime d538de99e6567633204253cd88b87cbe325ac39a and DWP source 3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84. Seven actual SDK full-package cases and four compact reconstructions across four source versions pass, with 93 successful requests and no retries. The care-home package contains 35 records and 50 relationships and remains insufficient. All three browser evidence journeys pass; Firefox hosting-cookie warnings leave its strict console gate failed. Historical observations and identities remain separate; no AI, legal or Voice acceptance follows.",
+      "scope_note": "Public service 0.5.0 uses merged Explorer runtime d538de99e6567633204253cd88b87cbe325ac39a and DWP source 3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84. Seven actual SDK full-package cases and four compact reconstructions across four source versions pass, with 93 successful requests and no retries. The care-home package contains 35 records and 50 relationships and remains insufficient. All three browser evidence journeys pass; Firefox hosting-cookie warnings leave its strict console gate failed. Historical observations and identities remain separate; no AI, legal or Voice acceptance follows. The delivered progressive-read interface remains complete in its recorded scope. Engine-pinned historical replay is a separate implementation increment now in progress; retained static packages remain a planned extension.",
       "work_packages": [
         {
           "id": "DWP-BL-008.delivery",
@@ -405,6 +443,29 @@
             "validation/compact-delivery/v0.5.0/browser/staff/run-summary.json",
             "validation/compact-delivery/v0.5.0/artifacts.json",
             "docs/household-service-verification.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-008.engine-replay",
+          "kind": "implementation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Implement explicit assembler identity in replay recipes and bounded compatibility with the reviewed previous assembler. Preserve expected context-ID checks, complete package identity, source-engine allowlists and all historical receipts. Do not claim current service deployment or automatic retention of anonymous questions.",
+          "evidence": [
+            "docs/compact-evidence-demo.md",
+            "validation/compact-delivery/v0.5.0/README.md",
+            "validation/qualification-context/2026-09-21/README.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-008.retained-evidence-resources",
+          "kind": "implementation",
+          "status": "not_started",
+          "executor": "agent",
+          "next_action": "Prepare explicitly approved public evidence snapshots with full canonical-package hashes and bounded manifest/record reads, so selected audit examples can remain readable after an assembler retires. Keep anonymous questions unrecorded and distinguish retained evidence from an AI-answer audit log.",
+          "evidence": [
+            "docs/compact-evidence-demo.md",
+            "docs/methodology.md"
           ]
         }
       ]
@@ -471,7 +532,8 @@
         "evaluation/model-comparison/household-compact-v2-candidate/frozen-manifest.json",
         "validation/model-comparison/household-compact-v2/results.json",
         "validation/model-comparison/household-compact-v2/claim-level-model-critique.json",
-        "validation/model-comparison/household-compact-v2/README.md"
+        "validation/model-comparison/household-compact-v2/README.md",
+        "validation/qualification-context/2026-09-21/README.md"
       ],
       "acceptance_checks": [
         "Retain identical fixed inputs/prompts and real model outputs; verify IDs/quotes/locators; independently assess entailment/exceptions/abstention; no self-graded gold or engineering-score substitution."
@@ -496,14 +558,15 @@
           "kind": "implementation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Nine separately frozen successor attempts and a claim-level model critique are retained. Three remaining Claude cases are held after formatter rejection and a timeout; no automatic retries. Preserve all historical outcomes. Any new source/budget or event-policy experiment needs separate reviewed inputs; substantive paired acceptance remains unestablished.",
+          "next_action": "Nine separately frozen successor attempts and a claim-level model critique remain immutable. Three Claude cases stay held after formatter rejection and timeout; no automatic retries. The new qualification source/allocator passed offline retention checks but has not been submitted to either model. Any new trial requires a separate reviewed source/context/prompt freeze; no retrospective regrading or substantive paired acceptance is claimed.",
           "evidence": [
             "docs/monday-model-trials.md",
             "evaluation/model-comparison/household-2026-09-21/protocol.json",
             "evaluation/model-comparison/household-compact-v2-candidate/frozen-manifest.json",
             "validation/model-comparison/household-compact-v2/results.json",
             "validation/model-comparison/household-compact-v2/claim-level-model-critique.json",
-            "validation/model-comparison/household-compact-v2/README.md"
+            "validation/model-comparison/household-compact-v2/README.md",
+            "validation/qualification-context/2026-09-21/README.md"
           ]
         },
         {

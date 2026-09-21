@@ -1,6 +1,32 @@
-# Context retrieval and loading experiment
+# Context retrieval, allocation and loading experiments
 
-The candidate Ask OKF assembler shows evidence for each possible meaning of an ambiguous term and
+## Current qualification allocation result
+
+The [joint source/engine comparison](../validation/qualification-context/2026-09-21/README.md)
+records 320 deterministic assemblies and verified replay across two source
+versions, two engines, 40 tasks and two budgets. DWP `7f9feb9634e3d94004853b838462aca132c505a5`
+and Explorer `c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e` retain 177 of 177 candidate
+occurrences and 433 of 433 activated declared paths at 256 KiB and 512 KiB.
+All seven household pages remain inspectable for Staff 012 and 013. All contexts
+remain insufficient; 203 named obligations remain open. These candidates await
+protected publication and separate public service/browser checks.
+
+The comparison separates source modelling from allocation. With the earlier
+source at 512 KiB, the new allocator displaces six incidentally selected household
+pages because those pages were not declared required. Adding explicit qualification
+paths restores all seven at both budgets. This is a useful measured trade-off,
+not a guarantee that unmodelled qualifications will survive. The larger-budget
+permanent-care-home package still exposes a missing optional temporary-residence
+dependency. [Current budget controls](semantic-expansion.md#context-sizes-and-practical-limits)
+also retain a legitimate zero-record metadata refusal for Staff 012 at 64 KiB.
+
+The joint receipt's timings are single local observations. They do not establish
+a speed gain. The separate controlled loading experiment below is historical
+and retains its original inputs, counts and interpretation.
+
+## Historical ambiguity and loading experiment
+
+The retained candidate Ask OKF assembler shows evidence for each possible meaning of an ambiguous term and
 loads up to four corpus files at a time. This improves inspection and reduces
 serial waiting. It does not choose the meaning or establish a correct answer.
 

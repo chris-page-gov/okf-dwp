@@ -8,6 +8,37 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Learning publication verified — 21 September 2026
+
+- Verify the published learning site against commit
+  `7815b17bb3db3903738c745d3fb9508919ebab15`: 122 actual HTTPS responses match
+  the public manifest and all 121 generated outputs. Check 2,320 internal links
+  in the received HTML, with no missing targets, missing fragments or duplicate IDs.
+- Retain the [dated publication receipt](validation/learning-site/public-7815b17bb3db3903738c745d3fb9508919ebab15/README.md),
+  exact generated manifest, executed verifier and successful publication gates.
+  This is a point-in-time publication-byte/link observation; it does not attest
+  the later qualification source/engine pair, browser accessibility or AI answers.
+
+## Qualification retention verified locally — 21 September 2026
+
+- Compare two immutable source versions and two archived engines across all 40
+  cases at 256 KiB and 512 KiB: 320 assemblies and deterministic replay pass.
+  The final source/engine pair retains 177 of 177 known candidate occurrences
+  and 433 of 433 activated declared path occurrences. These are evidence
+  retention measures, not answer-accuracy results.
+- Retain all seven household support pages for Staff 012 and 013. Record the
+  smaller 27-record/63-relationship packages at 256 KiB, the 62/124 packages at
+  512 KiB and their remaining optional temporary-care-home dependency gap.
+- Rebuild current source-only evaluation: 12 to 177 candidate occurrences,
+  ten generalisation controls and eight budget observations. Staff 012 at
+  64 KiB correctly refuses with `metadata_budget`, zero records and 1,926 bytes;
+  the other seven observations retain evidence. All contexts stay insufficient.
+- Bind the [joint receipt](validation/qualification-context/2026-09-21/README.md)
+  to DWP `7f9feb9634e3d94004853b838462aca132c505a5` and Explorer
+  `c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e`. Keep all 203 obligations, earlier
+  models and public observations unchanged. Protected publication, fresh public
+  acceptance and larger component support sets remain separate open work.
+
 ## Care-home component qualification dependencies — 21 September 2026
 
 - Narrow the housing-cost summary to the captured former-home treatment and the
@@ -21,7 +52,7 @@ Implementation ownership and handovers belong in the
 - Regenerate the semantic index and combined Reader, retaining 901 semantic
   records and 1,442 assertions. Preserve all source bytes, historical observations
   and 203 open obligations. The no-partner and severe-disability overview
-  dependency sets, bounded-context evaluation and publication remain separate work.
+  dependency sets and publication remain separate work. The later joint comparison above records bounded retention without closing those larger sets.
 
 ## Initial household qualification checkpoint — 21 September 2026
 

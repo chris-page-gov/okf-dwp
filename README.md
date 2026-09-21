@@ -39,7 +39,7 @@ through the evidence and its limits.
 
 The [household evidence increment](docs/household-evidence-expansion.md) adds
 complete qualifying pages and [selected dated statutory text](docs/legal-body-evidence.md).
-It retains **176 of 177 known candidate-page occurrences** across the staff
+Its [source-version evaluation](https://github.com/chris-page-gov/okf-dwp/blob/3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84/evaluation/semantic-expansion/evaluation.json) retained **176 of 177 known candidate-page occurrences** across the staff
 questions. All 40 packages remain insufficient, with 203 named obligations still open.
 This measures evidence discovery, not answer accuracy or specialist acceptance.
 The 20 selected statutory units are additional source extracts, not 20 complete
@@ -97,7 +97,7 @@ work. The bounded staff concepts/relationships (BL005) and task profiles (BL007)
 are delivered. Broader domain expansion and evidence closure remain explicit
 implementation packages; mention classifications do not complete those packages.
 
-The next [qualification increment](docs/carehome-component-dependency-review.md)
+The verified [qualification candidate](docs/carehome-component-dependency-review.md)
 declares **15 explicit support relationships**: the initial eight household
 dependencies, five housing-cost dependencies and two temporary-residence
 dependencies. Seven captured pages support the complete household summary,
@@ -106,8 +106,21 @@ Staff 012 and 013 require the household and housing-cost paths. The temporary
 summary keeps its own support requirements without being made mandatory for
 every permanent-care-home question. The source index now has 901 records and
 1,442 assertions. Source text and all 203 open obligations are preserved.
-Bounded context retention and publication are separate checks; the public links
-above retain their verified source versions.
+The [joint source/engine comparison](validation/qualification-context/2026-09-21/README.md)
+now passes all 320 assemblies and exact replay, using DWP `7f9feb9634e3d94004853b838462aca132c505a5`
+and Explorer `c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e`. At both 256 KiB and
+512 KiB it retains **177 of 177 candidate occurrences and all 433 declared path
+occurrences**. Staff 012 and 013 retain all seven household support pages.
+At 256 KiB each package has 27 records and 63 relationships; at 512 KiB it has
+62 records and 124 relationships, with an explicitly missing optional
+temporary-care-home dependency. All contexts remain insufficient and truncated.
+
+A smaller 64 KiB Staff 012 request legitimately returns a 1,926-byte
+`metadata_budget` refusal with no records: even its interpretation and obligation
+metadata cannot fit. Larger no-partner and severe-disability support sets remain
+[explicit backlog work](docs/backlog.md). Protected publication and new public
+service/browser checks are pending; the public links above retain their verified
+source versions. No earlier model trial has been rerun or regraded.
 
 The earlier public service **0.4.0** used the staff corpus at `9de52acf…`. Its
 [0.4.0 SDK observation](validation/compact-delivery/v0.4.0/sdk-receipt.json) passed

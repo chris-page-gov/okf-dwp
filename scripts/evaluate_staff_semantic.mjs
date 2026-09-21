@@ -81,11 +81,21 @@ for(const id of ['staff-006','staff-012','staff-026','staff-038']){
   const m=manifests[1];
   const pack=await assembleCorpusContext(m,{index_url:'https://example.test/corpus/manifest.json',index_sha256:sha(canonicalJson(m))},c.question,{max_bytes},fetcher);
   assert.equal(pack.evidence_status,'insufficient');assert.equal(pack.ai_answer,null);
-  assert(pack.budget.used_bytes<=max_bytes);assert(pack.selected.length>0,'Budget trimming discarded all usable source records');
-  assert(!pack.missing_evidence.some(x=>x.code==='metadata_budget'));
+  assert(pack.budget.used_bytes<=max_bytes);
+  const metadataRefusal=pack.missing_evidence.some(x=>x.code==='metadata_budget');
+  // The expanded care-home requirements do not fit the 64 KiB envelope. Keep
+  // that measured refusal explicit; other cases must still retain evidence.
+  assert.equal(metadataRefusal,id==='staff-012'&&max_bytes===65536,'Unexpected metadata-budget outcome');
+  if(metadataRefusal){
+   assert.equal(pack.selected.length,0);assert.equal(pack.relationships.length,0);
+   assert.equal(pack.requirements.length,0);assert(pack.budget.truncated);
+   assert(pack.budget.omissions.some(x=>x.code==='byte_budget'));
+  }else assert(pack.selected.length>0,'Budget trimming discarded all usable source records');
   budgetObservations.push({id,context_id:pack.context_id,budget:pack.budget.max_bytes,bytes:pack.budget.used_bytes,
    records:pack.selected.length,relationships:pack.relationships.length,requirements:pack.requirements.length,
-   evidence_status:pack.evidence_status,truncation_codes:[...new Set(pack.budget.omissions.map(x=>x.code))]});
+   evidence_status:pack.evidence_status,metadata_refusal:metadataRefusal,
+   missing_evidence_codes:[...new Set(pack.missing_evidence.map(x=>x.code))],
+   truncation_codes:[...new Set(pack.budget.omissions.map(x=>x.code))]});
  }
 }
 const summary={question_occurrences:rows.length,unique_questions:new Set(rows.map(x=>x.question)).size,

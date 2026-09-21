@@ -1,6 +1,6 @@
 # Product and evaluation backlog
 
-[What changed](../CHANGELOG.md) · [Current work log](work-log-2026-09-20.md) · [Retrospective](retrospective.md) · [Portable method](methodology.md)
+[What changed](../CHANGELOG.md) · [Current work log](monday-delivery-work-log.md) · [Retrospective](retrospective.md) · [Portable method](methodology.md)
 
 This register keeps stable IDs for the owner’s original ideas and later findings.
 **DWP-BL-001, DWP-BL-002 and DWP-BL-003 preserve the original three backlog items.**
@@ -45,8 +45,16 @@ group, five for housing costs and two for temporary residence. Staff 012 and 013
 require the household and housing-cost paths. The
 [component review](carehome-component-dependency-review.md) keeps the larger
 no-partner and severe-disability overview support sets as explicit remaining
-work. Joint source/allocator retention checks and exact-version publication are
-still required; none of the 203 obligations has been closed.
+work. The [joint comparison](../validation/qualification-context/2026-09-21/README.md)
+now passes 320 assemblies and replay: the final pair retains all 177 known candidate
+occurrences and 433 declared path occurrences at both tested budgets, including
+seven of seven household pages for Staff 012 and 013. This bounded retention
+package is recorded complete. Exact-version publication and public observation
+have a separate in-progress package; the larger component support sets have a
+separate not-started implementation package. All 43 evidence-closure checks and
+all 203 total obligations remain open. At 64 KiB, Staff 012 correctly refuses
+because its obligation metadata does not fit; a small refusal does not erase
+the underlying task requirements.
 
 ## Current register
 
@@ -59,7 +67,7 @@ still required; none of the 203 obligations has been closed.
 | DWP-BL-005 | P0 | Broader semantic modelling: neutral domain concepts and relationships | `in_progress` | DWP-BL-001, DWP-BL-004 |
 | DWP-BL-006 | P0 | Legislation, regulations and case-law reconciliation | `in_progress` | DWP-BL-001 |
 | DWP-BL-007 | P0 | Broader semantic modelling: task-specific evidence profiles | `in_progress` | DWP-BL-001, DWP-BL-005, DWP-BL-006 |
-| DWP-BL-008 | P0 | Progressive evidence manifests and exact reads | `recorded_complete` | DWP-BL-004 |
+| DWP-BL-008 | P0 | Progressive evidence manifests and exact reads | `in_progress` | DWP-BL-004 |
 | DWP-BL-009 | P0 | Conceptual classification and DMG Reader navigation | `recorded_complete` | DWP-BL-004 |
 | DWP-BL-010 | P0 | Fixed-evidence claim-level model trials | `in_progress` | DWP-BL-004 |
 | DWP-BL-011 | P1 | Source dates and provenance presentation | `recorded_complete` | — |

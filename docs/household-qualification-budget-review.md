@@ -182,7 +182,7 @@ Original `candidate_ids`, question wording, original `source_evidence_ids` and a
 
 The producer rejects malformed or duplicate declarations, unknown concepts, required sources outside the concept's verified evidence, non-evidence targets, unbacked concept associations, cycles and qualification concepts unreachable from the profile triggers. It also enforces the existing context limits on required identifiers, path count and path depth.
 
-This increment does **not** declare the other care-home summaries' complete qualification sets. The omitted supports for the disability-addition, temporary-residence and housing-cost summaries remain follow-up work. Nor does it reconcile regulation 5 with judgments or close any legal or specialist-review obligation.
+At this initial checkpoint, other care-home summaries' complete qualification sets were not declared. The later [component follow-up](carehome-component-dependency-review.md#implemented-bounded-increment) adds housing-cost and temporary-residence support. The larger disability-addition and severe-disability overview sets remain open. Neither increment reconciles regulation 5 with judgments or closes a legal or specialist-review obligation.
 
 ### Producer verification
 
@@ -196,3 +196,23 @@ uv run --locked python -m unittest discover -s scripts -p test_staff_semantic.py
 ```
 
 The 29 producer controls pass. They include the exact seven-page closure, resolved-root directed paths, the page 24/page 25 example continuation, one-partner/both-partners source wording, negative declaration controls, preserved source evidence and the unchanged 203 obligations. The existing Explorer `validateContextIndex` validator also accepts the generated output. The candidate has **901 records, 1,435 assertions, eight qualification assertions and two qualification profiles**. All 40 profiles remain labelled insufficient. No combined Reader or frozen bundle was rebuilt by this change.
+
+
+## Verified joint qualification retention, 21 September 2026
+
+The [new joint comparison](../validation/qualification-context/2026-09-21/README.md)
+uses immutable DWP `7f9feb9634e3d94004853b838462aca132c505a5` and Explorer
+`c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e`, alongside their earlier source/engine
+controls. All 320 assemblies and deterministic replay pass. The final pair
+retains all seven household support pages for Staff 012 and Staff 013 at both
+256 KiB and 512 KiB. It retains all 433 activated declared path occurrences and
+177 known candidate occurrences across the 40 cases.
+
+At 256 KiB each care-home package has 27 records and 63 relationships; at 512 KiB
+it has 62 records and 124 relationships, with an explicit missing optional
+`temporary-care-home` → `page/78/0024` dependency. The separate current 64 KiB
+Staff 012 control returns a 1,926-byte `metadata_budget` refusal, with no selected
+records. These new results neither alter the original trial package described
+above nor upgrade its model answer. All 203 obligations remain open, and the
+larger component support sets remain backlog work. Protected publication and
+fresh exact-version public checks are pending.

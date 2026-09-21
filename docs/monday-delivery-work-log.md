@@ -9,7 +9,7 @@ DWP main `8d3349e7be91112fdc81ada1c9dda5ccdfcef60d` and Explorer main
 canonical checks. The public service is 0.4.0. Earlier releases, trials and
 receipts remain immutable. Private `.email.md` remains outside Git.
 
-## Concurrent work and ownership
+## Initial concurrent work and ownership
 
 | Owner | Bounded work | State |
 | --- | --- | --- |
@@ -284,3 +284,53 @@ provenance and unreviewed authority. The backlog projection matches its register
 Both producer `--check` commands pass; the combined check reproduces all 4,758
 declared output files exactly. These offline checks do not establish a later
 browser or AI-answer result.
+
+
+## Joint qualification verification and ledger update, 21 September
+
+- Root froze the final DWP candidate as `7f9feb9634e3d94004853b838462aca132c505a5`
+  and the independently reviewed Explorer allocator as
+  `c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e`. The source has 901 records,
+  1,442 assertions and 15 explicit support relationships; all 203 obligations
+  are unchanged. The combined projection has 20,044 records and 21,202 edges.
+- The semantic agent ran the [four-cell comparison](../validation/qualification-context/2026-09-21/README.md):
+  two immutable sources, two archived engines, two budgets and 40 cases produce
+  320 assemblies. Actual run and exact deterministic replay pass. The Explorer
+  agent independently reviewed archive admission and the authored-path census;
+  all 14 offline controls pass. A review finding was corrected before execution:
+  omitted output requirements cannot shrink the expected path denominator.
+- The final pair retains 177 of 177 candidate occurrences and 433 of 433
+  activated declared paths at both budgets. Staff 012 and 013 retain all seven
+  household pages, with 27 records/63 relationships at 256 KiB and 62/124 at
+  512 KiB. The latter packages expose a missing optional temporary-care-home
+  dependency; no evidence sufficiency or specialist acceptance is claimed.
+- The trade-off remains visible: on the old source at 512 KiB, allocation can
+  displace six household pages that were not declared required. The new source
+  declarations are necessary for the verified seven-page retention result.
+- Root separately regenerated the current source-only evaluation: 12 to 177
+  candidate occurrences. At 64 KiB, Staff 012 correctly produces a 1,926-byte
+  `metadata_budget` refusal with zero records; the other seven budget controls
+  retain non-empty evidence. All 40 main cases remain insufficient.
+- Documentation and the generated work-package ledger now distinguish completed
+  bounded qualification retention, pending exact-version publication/public
+  checks, larger unauthored component support sets and independent review.
+  All earlier model attempts, source snapshots and public receipts are unchanged.
+
+Joint receipt SHA-256: `45fb3ce7b768833eb6f94b6461f1531f56293de419665bd5adaf606d9bfdc3ac`.
+The evidence-path improvements do not retrospectively repair or regrade any
+model answer. No new model or public HTTP calls were part of this comparison.
+
+### Continuing independent increments
+
+Two follow-on implementations are running in isolated checkouts. The disability
+addition work narrows the summaries, adds the two captured treated-receipt pages
+and reviews their conditional dependencies. It is tracked as
+`DWP-BL-007.component-qualification-expansion`; the current qualification release
+and its fixed comparison are unchanged.
+
+The service work adds explicit assembler identity and bounded historical replay
+under `DWP-BL-008.engine-replay`. The existing progressive evidence-read milestone
+retains its recorded completion; the aggregate item is now in progress because
+this additional work has started. Public retained evidence resources have their
+own pending package. Neither workstream has deployed a new service or rerun the
+frozen model trials.

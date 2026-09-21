@@ -38,9 +38,14 @@ paths explicitly. Temporary-residence support stays attached to its own summary,
 without becoming mandatory for every permanent-care-home question. These
 declarations remain project-authored and unreviewed.
 
-This makes an omitted qualification detectable. It does not make a small context
-package complete: a separate allocator must retain the paths within its budget,
-or report the missing support. All 203 existing obligations remain open.
+The [joint comparison](../validation/qualification-context/2026-09-21/README.md)
+verifies that the generic allocator retains the declared paths within its budget.
+It runs DWP `7f9feb9634e3d94004853b838462aca132c505a5` with Explorer
+`c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e`, separately from the earlier public
+service. The final pair retains all 433 activated path occurrences at 256 KiB
+and 512 KiB, including all seven household pages for Staff 012 and 013. This is
+bounded evidence retention, not complete domain modelling. All 203 obligations
+remain open; protected publication and fresh public checks remain pending.
 
 ## What is implemented
 
@@ -60,7 +65,7 @@ The current source candidate is `dwp-staff-semantics-fc2ad1545adcbeeb2243`, with
 index SHA-256 `7ffc9d00e71fef6aed5531373510df82998123e89fdb28091cfb82384adf2876`.
 The initial household-dependency checkpoint had 1,435 assertions. The earlier
 public service source `3ef0e786…` had 1,427 assertions and a 4,581,721-byte index;
-its retained evaluations below remain observations of those earlier bytes.
+its immutable linked evaluation remains an observation of those earlier bytes.
 
 The concepts are authored in
 [domain-profile/staff-semantic](../domain-profile/staff-semantic/).
@@ -150,18 +155,19 @@ Constant Allowance” also retains its unresolved scheme-name boundary.
 
 The earlier legal reference nodes remain scope records labelled **reference-only-unreviewed**. The new [statutory-body increment](legal-body-evidence.md) adds separate derived evidence records for 20 selected units, connected through 43 source-backed references. A metadata record does not become source text, and a source passage does not establish applicability. All 203 obligations remain open. The separate [legal reconciliation](legal-reconciliation.md) retains the earlier identity and footnote work.
 
-## Earlier household-source comparison
+## Current source-only comparison
 
-This retained comparison predates the 15 explicit qualification dependencies.
-It does not attest the current source candidate or its joint behaviour with a
-revised context allocator. Those require a separately bound evaluation.
+The [current evaluation](../evaluation/semantic-expansion/evaluation.json) compares
+the original discovery base with the final semantic source using the same
+Explorer `c4f2de0a…` engine. This differs from the four-cell joint comparison,
+which also changes the engine independently. Both preserve their input hashes.
 
 Both runs use the **same shared Explorer engine, budgets and frozen lexical
 shards**. Only the explicitly authored semantic base differs.
 
 | Diagnostic | Before | After |
 | --- | ---: | ---: |
-| Known candidate-page hits across the 40 occurrences | 12 of 177 | 176 of 177 |
+| Known candidate-page hits across the 40 occurrences | 12 of 177 | 177 of 177 |
 | Questions retaining at least one candidate page | 12 of 40 | 40 of 40 |
 | Own declared task profile activated | 0 | 40 of 40 |
 | Contexts declared sufficient | 0 | 0 |
@@ -169,7 +175,14 @@ shards**. Only the explicitly authored semantic base differs.
 
 This is a **development-case comparison**: the supplied questions and candidate
 pages were known during modelling. It is not a held-out accuracy result.
-A page hit does not prove the page supports a claim or supplies every exception. The previous released staff model retained 169 of 177 candidates. The separate [engine-only experiment](context-performance.md) retained 171; the expanded household candidate retains 176. One candidate in staff-005 remains omitted under the node bound. These are distinct comparisons, not an answer-accuracy score.
+A page hit does not prove the page supports a claim or supplies every exception.
+The earlier released staff model retained 169 of 177 candidates. The separate
+[ambiguity/loading experiment](context-performance.md) retained 171, and the
+[immutable household-source evaluation](https://github.com/chris-page-gov/okf-dwp/blob/3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84/evaluation/semantic-expansion/evaluation.json)
+retained 176. Those historical counts do not refer to the newly regenerated
+local evaluation. The current candidate retains all 177 occurrences, including
+the formerly omitted Staff 005 page, while all 43 evidence-closure obligations
+remain open. These are distinct development comparisons, not accuracy scores.
 
 Every after-run also contains ADM pages and reports truncation. **ADM presence
 is not a relevance score.** The lexical stage finds broad matches in both
@@ -183,9 +196,9 @@ codes. Candidate, node, relationship and byte limits remain visible.
 Ten shared-engine controls cover neutral resolution, explicit SDA ambiguity,
 no results, missing source evidence, reversed relationships, three paraphrases,
 the original imprisonment routing question and a counterfactual entitlement
-premise. Twenty-two producer tests check source hashes, exact spans, all question
-occurrences, legal-reference boundaries, preserved scopes and rejected
-governance/authoring mutations.
+premise. Thirty-one producer controls check source hashes, exact spans, all
+question occurrences, qualification dependencies, legal-reference boundaries,
+preserved scopes and rejected governance/authoring mutations.
 
 ## Context sizes and practical limits
 
@@ -198,19 +211,28 @@ passages that fit and still refuses when metadata alone exceeds the budget.
 It does not shorten evidence text or suppress missing obligations.
 
 The reproducible `budget_observations` in the evaluation receipt cover four
-staff questions used for the paired model trial:
+staff questions also used in earlier model trials. These are new engine/source
+observations, not replacements for their frozen trial inputs:
 
 | Case | At 64 KiB: records / relationships | At 256 KiB: records / relationships |
 | --- | ---: | ---: |
-| staff-006 | 3 / 0 | 43 / 47 |
-| staff-012 | 4 / 0 | 35 / 50 |
-| staff-026 | 11 / 0 | 54 / 41 |
-| staff-038 | 8 / 0 | 41 / 41 |
+| staff-006 | 4 / 3 | 41 / 46 |
+| staff-012 | **0 / 0: metadata refusal** | 27 / 63 |
+| staff-026 | 11 / 1 | 54 / 41 |
+| staff-038 | 9 / 2 | 41 / 41 |
 
 All eight packages remain **insufficient** and disclose truncation. At 64 KiB,
-retained lexical passages do not retain the semantic paths; this is a poor
-budget for demonstrating relationship-led interpretation of these tasks.
-The 256 KiB trial budget preserves useful paths, while retaining its omissions.
+Staff 012 returns a **1,926-byte `metadata_budget` refusal**: its interpretation
+and evidence obligations cannot fit, so no records, relationships or requirements
+are returned. The other seven observations retain non-empty evidence. A zero-record
+refusal does not mean that the source has no requirements; the independent joint
+harness counts activated authored requirements before output trimming.
+
+At 256 KiB, Staff 012 retains its seven household support pages. The separate
+512 KiB joint observation retains 62 records and 124 relationships, but also
+reports a missing `temporary-care-home` → `page/78/0024` dependency. That optional
+summary is not an unconditional requirement of the permanent-care-home profile.
+The no-partner and severe-disability overview dependency expansions remain open.
 These sizes are observations for these questions and this snapshot, not a
 universal minimum. One question can activate several task profiles when their
 concept conditions overlap: these four activate 4, 3, 2 and 1 respectively.
@@ -226,7 +248,7 @@ uv sync --locked
 # Use a separate Explorer checkout at the recorded consumer version.
 git clone https://github.com/chris-page-gov/okf-explorer.git ../okf-explorer-staff
 export EXPLORER_STAFF_ROOT="$(cd ../okf-explorer-staff && pwd)"
-git -C "$EXPLORER_STAFF_ROOT" checkout 0e6a639f87c4060123b72d82c1ebe30405d475f1
+git -C "$EXPLORER_STAFF_ROOT" checkout c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e
 uv run --locked python scripts/build_staff_semantic.py --check
 uv run --locked python scripts/test_staff_semantic.py
 node --experimental-strip-types scripts/evaluate_staff_semantic.mjs \
