@@ -233,3 +233,7 @@ Passing these tests is an engineering result. Actual direct-JSON provider
 behaviour, model answers, semantic correctness and specialist acceptance remain
 unmeasured. A failed control stops progression; it does not authorise a new
 exception or an automatic retry.
+
+## Recorded v3 execution
+
+The freeze is now committed and [both actual control attempts are retained](../validation/model-comparison/household-direct-v3/README.md). Their strict parsers rejected client metadata, so neither control passed and no substantive call was made. Preserve the executable inputs and failures unchanged. A successor must have its own reviewed contract and freeze.
