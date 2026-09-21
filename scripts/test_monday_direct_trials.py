@@ -60,14 +60,15 @@ class DirectTrials(unittest.TestCase):
         cls.schema = json.loads(cls.bound[trial.PREFIX + 'answer.schema.json'])
         cls.packages = {c: context(c) for c in trial.CASES}
 
-    def test_protocol_stays_pending_and_source_question_is_exact(self):
-        self.assertEqual(self.p['phase'], 'pending-final-source-package-runner-freeze')
+    def test_frozen_protocol_keeps_pending_execution_gate_and_exact_question(self):
+        self.assertEqual(self.p['phase'], 'ready-for-freeze')
+        self.assertTrue((trial.SPEC / 'frozen/manifest.json').is_file())
         self.assertEqual(self.p['questions']['staff-012'], trial.QUESTIONS['staff-012'])
         self.assertEqual(self.p['allowed_tool_events'], [])
         self.assertEqual(self.schema['properties']['claims']['maxItems'], 3)
         self.assertEqual(self.schema['properties']['claims']['items']['properties']['evidence']['maxItems'], 2)
         with patch.object(sys, 'argv', ['trial', '--run']), patch.object(trial, 'command') as cmd, patch.object(trial, 'read') as read:
-            with patch.object(trial, 'protocol', return_value=(self.p, b'pending')):
+            with patch.object(trial, 'protocol', return_value=({**self.p, 'phase': 'pending-final-source-package-runner-freeze'}, b'pending')):
                 with self.assertRaisesRegex(ValueError, 'protocol-still-pending'): trial.main()
             cmd.assert_not_called(); read.assert_not_called()
 
