@@ -66,7 +66,7 @@ class StaffSemanticTests(unittest.TestCase):
         pages={base+'page/77/'+str(n).zfill(4) for n in (7,19,21,23,24,25)}|{base+'page/78/0025'}
         edges={row['id']:row for row in self.index['assertions']}
         all_declarations=[edges[identity] for identity in self.catalogue['qualification_assertion_ids']]
-        self.assertEqual(len(all_declarations),61)
+        self.assertEqual(len(all_declarations),74)
         declarations=[edge for edge in all_declarations if edge['source'] in {care,household}]
         self.assertEqual(len(declarations),8)
         self.assertEqual({(e['source'],e['target']) for e in declarations},
@@ -91,7 +91,7 @@ class StaffSemanticTests(unittest.TestCase):
                 self.assertIn(path,requirement['required_paths'])
                 self.assertTrue(all(edges[i]['predicate']==DCT+'requires' for i in path['assertions']))
         self.assertEqual({p['id'] for p in profiles.values() if p.get('qualification_concept_ids')},
-                         {'staff-012','staff-013','staff-014','staff-017'})
+                         {'staff-012','staff-013','staff-014','staff-017','staff-023'})
 
     def test_component_dependencies_keep_temporary_scope_separate(self):
         base='https://chris-page-gov.github.io/okf-dwp/id/'
@@ -388,7 +388,7 @@ class StaffSemanticTests(unittest.TestCase):
             before=previous[row['id']]
             self.assertEqual([i for i in row['required'] if i.startswith(prefix)],
                              [i for i in before['required'] if i.startswith(prefix)])
-            if not row['id'].endswith(('/staff-012','/staff-013','/staff-014','/staff-017')):
+            if not row['id'].endswith(('/staff-012','/staff-013','/staff-014','/staff-017','/staff-023')):
                 self.assertEqual(row['required'],before['required'])
         node=next(c for c in self.catalogue['concepts'] if c['key']=='household-separation')
         self.assertIn('https://chris-page-gov.github.io/okf-dwp/id/page/77/0020',node['evidence_ids'])

@@ -1,6 +1,18 @@
 # Repository status
 
-## Monday delivery checkpoint: 21 September 2026
+## Latest additive source review: 21 September 2026
+
+The [abroad audit](docs/abroad-semantic-audit.md) distinguishes a historical
+lexical failure from current semantic and capacity gaps. The additive source
+contains 57 authored concepts, 112 selected pages and 74 support dependencies.
+A [retained comparison](validation/abroad-context/2026-09-21/README.md) preserves
+24 packages and 10 negative controls: four Pension Credit questions retain all
+seven qualification pages at 512 KiB, while 32 KiB results still fail to retain
+useful evidence. All 203 obligations remain open. The source increment does not
+change the separately versioned public-service default; use the generated
+[service publication status](docs/service-publication.md) for that baseline.
+
+## Earlier Monday delivery checkpoint: 21 September 2026
 
 The [current handover](docs/monday-handover-2026-09-21.md) separates the public
 0.6.0 service, exact source versions, retained evidence reader and paired model

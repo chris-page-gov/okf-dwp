@@ -93,6 +93,10 @@ into the intended Data Agent, remain unaccepted. The [connection guide](chatgpt-
 preserves the fixed comparison question and budget. Neither installed metadata
 nor the SDK pass establishes Data Agent or Voice acceptance.
 
+## Abroad review and wider semantic follow-up
+
+The [21 September audit](abroad-semantic-audit.md) traces the reported five irrelevant pages to the preserved 19 September pre-fix result, then tests the published source and engine. The exact question now resolves abroad, but overseas paraphrases, disconnected international concepts, incomplete passage continuations and broad profile activation expose remaining gaps. The machine register names separate connectivity, qualification, cross-benefit coverage, task-discrimination and historical-version competition packages; none declares the broader domain complete.
+
 ## Current register
 
 | ID | Priority | Work | Status | Depends on |
@@ -105,7 +109,7 @@ nor the SDK pass establishes Data Agent or Voice acceptance.
 | DWP-BL-006 | P0 | Legislation, regulations and case-law reconciliation | `in_progress` | DWP-BL-001 |
 | DWP-BL-007 | P0 | Broader semantic modelling: task-specific evidence profiles | `in_progress` | DWP-BL-001, DWP-BL-005, DWP-BL-006 |
 | DWP-BL-008 | P0 | Progressive evidence manifests and exact reads | `in_progress` | DWP-BL-004 |
-| DWP-BL-009 | P0 | Conceptual classification and DMG Reader navigation | `recorded_complete` | DWP-BL-004 |
+| DWP-BL-009 | P0 | Conceptual classification and DMG Reader navigation | `in_progress` | DWP-BL-004 |
 | DWP-BL-010 | P0 | Fixed-evidence claim-level model trials | `in_progress` | DWP-BL-004 |
 | DWP-BL-011 | P1 | Source dates and provenance presentation | `recorded_complete` | — |
 | DWP-BL-012 | P1 | CPAG substantive content access | `needs_external_permission` | — |

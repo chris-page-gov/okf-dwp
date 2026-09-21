@@ -1,5 +1,5 @@
 schema: okf-dwp-staff-semantic-authoring.v1
-authored_at: '2026-09-21T01:19:43Z'
+authored_at: '2026-09-21T20:49:04Z'
 author: Codex model-assisted proposal; no human or specialist approval
 assertion_status: model-derived
 scope: Frozen-source staff-question research. Source text is not current-law assurance and proposed meaning is
@@ -594,15 +594,162 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   - skos:Concept
   - dwp:Circumstance
   label: Absence abroad
-  definition: Temporary absence, permanent residence abroad and exportability are separate benefit-specific
-    questions; duration, purpose, destination and dates matter.
+  definition: Temporary absence from Great Britain, permanent residence abroad and exportability are separate
+    benefit-specific questions; duration, purpose, destination and dates matter. Overseas wording identifies
+    a research topic, not an applicable rule or a benefit. Great Britain and the United Kingdom are not
+    interchangeable territorial tests. Domestic temporary absence and a holiday without a stated destination
+    do not establish travel abroad. The linked SPC branch concerns Pension Credit only; it does not establish
+    rules for JSA, ESA, PIP, Universal Credit, State Pension or all benefits.
   aliases:
   - abroad
   - moves abroad
   - go abroad
+  - overseas
+  - travel abroad
+  - travel overseas
+  - living abroad
+  - living overseas
+  - outside Great Britain
+  - outside GB
   source_candidates:
   - source-c001
   - source-c002
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-spc-claimant-absence
+  route: term/intl-spc-claimant-absence
+  key: intl-spc-claimant-absence
+  '@type':
+  - skos:Concept
+  - dwp:DecisionRule
+  label: SPC claimant temporary absence in the source
+  definition: Source-bounded Pension Credit research through DMG 077001–077004, not a rule for all
+    benefits. Other entitlement conditions must continue. The captured four-week branch requires an
+    absence not expected to exceed four weeks; the examples distinguish expected duration from an
+    early return or later extension. The eight-week branch requires the specified death connection, an
+    absence not expected to exceed eight weeks and the Secretary of State considering return within
+    four weeks unreasonable. The twenty-six-week branch requires an absence not expected to exceed
+    twenty-six weeks and solely for the specified treatment, medically approved convalescence or care,
+    or accompanying the specified person. Preserve the practitioner, pre-existing-condition and
+    accompanying-person qualifications exactly as stated on pages 9–11; being abroad when an accident
+    occurs is not itself the stated purpose condition. The qualified-practitioner definition continues
+    onto page 11. Household membership, qualifying young person, the dated 2016 transition and the
+    source-described non-export boundary need separate conditional review. Destination, purpose,
+    expected and actual duration, relevant date and household facts remain unknown. Statutory
+    reconciliation and the DMG 04642 supersession cross-reference remain open.
+  aliases: []
+  source_candidates: []
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol2-ch7-part6
+    page: 8
+    anchor: '077001'
+  - family: dmg
+    document_id: dmg-vol2-ch7-part6
+    page: 9
+    anchor: '077002'
+  - family: dmg
+    document_id: dmg-vol2-ch7-part6
+    page: 10
+    anchor: '077004'
+  - family: dmg
+    document_id: dmg-vol2-ch7-part6
+    page: 11
+    anchor: form of treatment
+  required_source_ids:
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0008
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0009
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0010
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0011
+  required_concepts:
+  - intl-spc-household-absence
+  - intl-spc-absence-transition-2016
+  - intl-spc-non-export
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-spc-household-absence
+  route: term/intl-spc-household-absence
+  key: intl-spc-household-absence
+  '@type':
+  - skos:Concept
+  - dwp:DecisionRule
+  label: SPC household membership during temporary absence
+  definition: DMG 077005–077007 describe when a temporarily absent person is treated as a member of
+    the claimant’s household. This is a separate question from the claimant-payment provision at
+    077001. Keep the household branch’s own expected-duration, specified death connection, Secretary
+    of State reasonableness and sole-purpose treatment/accompanying conditions; the twenty-six-week
+    provision continues onto page 12. Do not transfer the claimant’s list of people or invent
+    household facts. Where a qualifying young person matters, DMG 077008–077014 span pages 12–13,
+    including education/training, age, continuity and benefit-receipt qualifications and references to
+    ADM E2092/F1093. Those cross-references and current legal applicability remain unreconciled.
+  aliases: []
+  source_candidates: []
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol2-ch7-part6
+    page: 11
+    anchor: '077005'
+  - family: dmg
+    document_id: dmg-vol2-ch7-part6
+    page: 12
+    anchor: '077008'
+  - family: dmg
+    document_id: dmg-vol2-ch7-part6
+    page: 13
+    anchor: '077010'
+  required_source_ids:
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0011
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0012
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0013
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-spc-absence-transition-2016
+  route: term/intl-spc-absence-transition-2016
+  key: intl-spc-absence-transition-2016
+  '@type':
+  - skos:Concept
+  - dwp:DecisionRule
+  label: The stated 28 July 2016 SPC absence transition
+  definition: DMG 077015 states that a person already temporarily absent on 28 July 2016 remains
+    subject to the previous regulations until return to Great Britain; further absences use the new
+    rules. This is a dated source-described transition, not a finding that it applies to the question
+    or a claim that the captured guidance is current law. The relevant absence date and
+    previous-regulation provisions remain to be established.
+  aliases: []
+  source_candidates: []
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol2-ch7-part6
+    page: 13
+    anchor: '077015'
+  required_source_ids:
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0013
+  review_status: unreviewed-specialist-review-required
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/term/intl-spc-non-export
+  route: term/intl-spc-non-export
+  key: intl-spc-non-export
+  '@type':
+  - skos:Concept
+  - dwp:DecisionRule
+  label: SPC non-export in the cited EC classification
+  definition: DMG 077025 describes SPC as a special non-contributory benefit in its cited EC-law
+    classification and distinguishes payment in the state of habitual residence from export to
+    claimants living abroad. Its citation continues onto page 14. DMG 077026 states that SPC is
+    outside the reciprocal agreements described there. Keep the source’s regime, territory and date
+    limits; no post-exit or present-day legal applicability is established by this classification. The
+    adjacent overseas-resident State Pension provisions beginning at 077027 concern a different
+    benefit and must not be treated as Pension Credit rules.
+  aliases: []
+  source_candidates: []
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol2-ch7-part6
+    page: 13
+    anchor: '077025'
+  - family: dmg
+    document_id: dmg-vol2-ch7-part6
+    page: 14
+    anchor: '077026'
+  required_source_ids:
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0013
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0014
   review_status: unreviewed-specialist-review-required
 - '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home
   route: staff-domain/care-home
@@ -1468,6 +1615,34 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
     page: 21
     anchor: '78076'
 relationships:
+- source: abroad
+  target: intl-spc-claimant-absence
+  predicate: skos:related
+  statement: Pension Credit-specific absence branch for investigation; selecting abroad alone does not
+    select this benefit or establish applicability.
+  source_candidates:
+  - source-c002
+- source: intl-spc-claimant-absence
+  target: intl-spc-household-absence
+  predicate: skos:related
+  statement: Review the separate household-membership and qualifying-young-person conditions when
+    relevant; no household facts are assumed.
+  source_candidates: []
+  source_concept_evidence: intl-spc-household-absence
+- source: intl-spc-claimant-absence
+  target: intl-spc-absence-transition-2016
+  predicate: skos:related
+  statement: Review the source-stated 28 July 2016 transition against the actual absence date; its
+    applicability is unknown.
+  source_candidates: []
+  source_concept_evidence: intl-spc-absence-transition-2016
+- source: intl-spc-claimant-absence
+  target: intl-spc-non-export
+  predicate: skos:related
+  statement: Distinguish temporary claimant absence from the captured non-export classification and
+    reciprocal-agreement boundary; legal regime remains unresolved.
+  source_candidates: []
+  source_concept_evidence: intl-spc-non-export
 - source: guarantee-credit
   target: pension-credit
   predicate: skos:broader

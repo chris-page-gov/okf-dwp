@@ -162,7 +162,7 @@ class CombinedReaderTests(unittest.TestCase):
         catalogue = json.loads((ROOT / "evaluation/semantic-expansion/catalogue.json").read_bytes())
         required_ids = set(catalogue["qualification_assertion_ids"])
         edges = [row for row in self.edges if row["id"] in required_ids]
-        self.assertEqual(len(edges), 61)
+        self.assertEqual(len(edges), 74)
         self.assertEqual({row["id"] for row in edges}, required_ids)
         by_source = {}
         for row in edges:
@@ -177,6 +177,10 @@ class CombinedReaderTests(unittest.TestCase):
             "staff-domain/partner-disability-addition": 11,
             "staff-domain/severe-disability-ignored-persons": 15,
             "staff-domain/severe-disability-normal-residence": 5,
+            "term/intl-spc-claimant-absence": 7,
+            "term/intl-spc-household-absence": 3,
+            "term/intl-spc-absence-transition-2016": 1,
+            "term/intl-spc-non-export": 2,
         })
         for row in edges:
             self.assertEqual(row["predicate"], "http://purl.org/dc/terms/requires")
@@ -187,6 +191,19 @@ class CombinedReaderTests(unittest.TestCase):
             self.assertEqual(row["authority"]["class"], "model-assisted")
             self.assertEqual(row["review_status"], "unreviewed-specialist-review-required")
             self.assertTrue(row["evidence"])
+
+    def test_reused_international_concepts_keep_prior_narrative_and_current_definition(self):
+        source = json.loads((ROOT / "evaluation/semantic-expansion/assembly-index.json").read_bytes())
+        by_id = {row["id"]: row for row in source["records"]}
+        for key in ("intl-spc-claimant-absence", "intl-spc-household-absence",
+                    "intl-spc-absence-transition-2016", "intl-spc-non-export"):
+            record = self.by_route["term/" + key]
+            current = by_id[record["id"]]
+            self.assertEqual(record["context_semantics"]["text"], current["text"])
+            self.assertEqual(record["context_semantics"]["provenance"], current["provenance"])
+            self.assertIn("## Authored interpretation", record["narrative"]["body"])
+            self.assertIn("## Current context definition — unreviewed", record["narrative"]["body"])
+            self.assertIn(current["text"], record["narrative"]["body"])
 
     def test_all_routes_resolve_through_hash_bound_locator(self):
         locator = self.read("data/locator/manifest.json")

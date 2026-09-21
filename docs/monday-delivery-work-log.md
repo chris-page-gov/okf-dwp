@@ -543,3 +543,57 @@ the old 0.6.0 selection failed with “A newer successful deployment is not
 represented”. Pinning the receipts at immutable commit `a13a291f…` produced the
 0.6.1 status and passed check mode plus 19 controls. The before/after client
 records and all older SDK failures remain separately retained.
+
+## Abroad semantic audit and reusable question diagnostics, 21 September
+
+Root traced the reported five-page result to the 19 September pre-fix observation, then ran ten offline packages against exact source and engine identities. The published 723 source resolves the exact abroad question at 32 KiB, retaining two records and one relationship; overseas paraphrases remain unresolved. This is a local replay, not a new public or model observation.
+
+Separate agents own the additive DWP international graph and its source/path tests, the reusable Explorer question-scaffolding classifier, and independent whole-passage review. Root owns integration, backlog, documentation and release boundaries. The existing four international IDs are reused; no frozen source, engine, receipt, trial or private email is rewritten. The [audit](abroad-semantic-audit.md) names cross-benefit and graph-budget work still outstanding. The [Data Analytics guide](data-agent-semantic-review.md) proposes a controlled semantic-proposal exercise; it is not a completed new model trial.
+
+The bounded source repair passed independent agent review, 67 semantic tests,
+21 combined Reader tests and the current 40-case replay. Its separate comparison
+retains 24 complete packages and 10 negative controls. Four Pension Credit cases
+retain 7/7 whole pages and 14/14 required paths at 512 KiB; the general 32 KiB result
+regresses to one concept and no source evidence. The regression is explicit in
+the [retained report](../validation/abroad-context/2026-09-21/README.md).
+Public-service admission and generic capacity repair remain separate; all 203
+obligations stay open. Explorer's shared-classifier change passes 607 tests and
+has its own reviewed PR; frozen MCP engines are not rewritten.
+
+At the owner's request, a separate ChatGPT Work task returned a frozen-file
+semantic review and proposal summary for source `723bcc5b…`. Its reported
+workflow used local Git and file/PDF inspection after raw web reads failed;
+it reported no callable Ask OKF tools or separate nested Data Agent call. The
+local task inspected the returned messages and proposal summary, not the two
+complete cloud artefacts. Their reported hashes remain unverified locally.
+Novel proposals await full artefact import and independent source review; the
+[method guide](data-agent-semantic-review.md) records this boundary rather than
+claiming native MCP acceptance or an accuracy benchmark.
+
+## Case-level wider semantic audit, 21 September 2026
+
+A read-only audit inspected all 40 retained current `after` packages (39 distinct
+questions) and verified their decoded hashes against the evaluation at source
+commit `c203a4bd621e57c99273b3933df0207e101c5a85`. The packages use the pinned
+`c4f2de0a…` engine, a 512 KiB limit and semantic index SHA-256
+`92a8871b8f1f2e51f1feace0b1f57c67dfd0ddcb0434cf4574795e5942e95fd6`.
+No assembly rerun, model call or public-service test was made for this audit.
+
+The [wider-work section](abroad-semantic-audit.md#wider-work-that-remains) now
+names the remaining work: 27/38 ADM-containing packages have no ADM relationship
+path (27/40 overall); 24/40 activate multiple profiles; and 23/40 retain
+unresolved tokens, including both domain constraints and ordinary wording.
+It distinguishes duplicated and broad profile triggers from missing evidence.
+Only cases 012/013 lose declared required paths: 118/776 path occurrences across
+the 40 packages, or 62/463 after deduplicating identical paths within each
+package. Separately, 15/40 have 86 support-dependency diagnostics, all pointing
+to records present in the index. Existing backlog packages cover these findings.
+All 40 packages remain insufficient and all 203 obligations stay open. These
+checks describe recorded selection and diagnostics, not specialist acceptance
+or a new legal answer-quality result.
+
+The local browser review of the committed learning website exposed two stale
+learning-path descriptions: the returned Data review still read as unrun, and
+the dated 0.6.0 baseline was called current. Both are corrected. Mutable service
+status now points to the generated, receipt-checked record; historical counts
+retain their own dated observation. No service deployment was performed.

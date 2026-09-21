@@ -2,9 +2,10 @@
 
 This stage addresses **DWP-BL-005** (neutral domain concepts) and **DWP-BL-007**
 (task-specific evidence requirements). It implements the reviewable modelling
-work for the supplied questions. Independent specialist approval and complete
-legal applicability remain outstanding. These are separate acceptance gates,
-not missing implementation hidden behind a general “semantic modelling” label.
+work for the supplied questions. Broader benefit/variant coverage, task
+discrimination and bounded qualification retention remain unfinished
+implementation. Independent specialist approval and complete legal
+applicability are separate outstanding acceptance gates.
 
 ## Start with the practical difference
 
@@ -47,8 +48,8 @@ status. That increment has 29 support dependencies, with two captured pages newl
 into the semantic index.
 
 The [partner follow-up](partner-addition-qualification-review.md) adds ten more
-dependencies and conditional paths for Staff 012, 013, 014 and 017. The current
-census is 39 dependencies and four qualification profiles. A source-backed
+dependencies and conditional paths for Staff 012, 013, 014 and 017. That increment had
+39 dependencies and four qualification profiles. A source-backed
 navigation route invites investigation; it does not infer continuing couple
 status or satisfaction of any disability or caring condition.
 
@@ -67,25 +68,31 @@ Later source increments need their own publication observations.
 
 | Item | Delivered scope |
 | --- | --- |
-| Authored concepts | 53, including neutral benefits, variants, components and circumstances |
-| Source-grounded conceptual associations | 316, including directed source references, qualified concept relationships and 61 explicit support dependencies |
-| Selected exact source pages | 106 across DMG and ADM, with PDF/extraction hashes and page locators |
+| Authored concepts | 57, including neutral benefits, variants, components and circumstances |
+| Source-grounded conceptual associations | 343, including directed source references, qualified concept relationships and 74 explicit support dependencies |
+| Selected exact source pages | 112 across DMG and ADM, with PDF/extraction hashes and page locators |
 | Legislative references in Ask | 44 staff-linked provision identities, 62 source-page citation links and one separately recorded metadata bridge |
 | Selected statutory bodies | 20 complete selected units and 43 evidence-bearing navigation links; derived and unreviewed |
 | Staff task profiles | 40 occurrences, preserving all 39 distinct questions and the repeated DLA/PIP question |
 | Explicit open obligations | 203, across five named categories |
 | Existing discovery graph | All 712 original record identities and 1,105 assertion identities retained |
-| Current source candidate index | 913 records and 1,526 assertions; 4,929,466 bytes, within the 8 MiB semantic-index limit |
+| Current source candidate index | 916 records and 1,553 assertions; 4,993,066 bytes, within the 8 MiB semantic-index limit |
 
-The current source candidate is `dwp-staff-semantics-86ddda5d6272f6b65b33`, with
-index SHA-256 `5cba980ec155a5fdc20610aaa95898374a933abf084f94cb72ef71657ab882a6`.
-Its current 40-case evaluation retains 177 of 177 candidate occurrences at
-512 KiB. The new ignored-person requirements no longer all fit even 512 KiB;
-at 256 KiB some earlier candidate passages are also omitted. The separate
-[comparison](../validation/ignored-person-context/2026-09-21/README.md) records
-the required-path losses and named missing support. The partner source remains
-the separately frozen Monday service/trial input. The earlier four-cell comparison above retains
-its separate 901-record source and does not attest this larger increment.
+The current source candidate is `dwp-staff-semantics-613fa1c1c1cc682e9853`, with
+index SHA-256 `92a8871b8f1f2e51f1feace0b1f57c67dfd0ddcb0434cf4574795e5942e95fd6`.
+Its current 40-case evaluation retains 177 of 177 known candidate occurrences
+at 512 KiB. All contexts remain insufficient. The
+[abroad increment](abroad-semantic-audit.md) reuses four international concept
+identifiers and retains all seven supporting Pension Credit pages for four
+specific questions at 512 KiB. Its [separate comparison](../validation/abroad-context/2026-09-21/README.md)
+also preserves the loss of source evidence for the general question at 32 KiB.
+The preceding [ignored-person comparison](../validation/ignored-person-context/2026-09-21/README.md)
+retains its own measured path losses and exact source identity.
+
+The partner source remains the separately frozen service/trial input; consult
+[recorded service status](service-publication.md) for deployment observations.
+The earlier four-cell comparison above binds its separate 901-record source
+and does not attest these later increments.
 The initial household-dependency checkpoint had 1,435 assertions. The earlier
 public service source `3ef0e786…` had 1,427 assertions and a 4,581,721-byte index;
 its immutable linked evaluation remains an observation of those earlier bytes.
@@ -207,7 +214,9 @@ local evaluation. The current candidate retains all 177 occurrences, including
 the formerly omitted Staff 005 page, while all 43 evidence-closure obligations
 remain open. These are distinct development comparisons, not accuracy scores.
 
-Every after-run also contains ADM pages and reports truncation. **ADM presence
+Thirty-eight of the 40 current after-runs contain ADM pages; all report
+truncation. The earlier projection had ADM pages in all 40. This change reflects
+bounded selection, not removal of ADM from the corpus. **ADM presence
 is not a relevance score.** The lexical stage finds broad matches in both
 manuals, and traversal may supply additional source paths. The receipt separates
 all ADM pages from those reached by a semantic path and reports actual truncation
