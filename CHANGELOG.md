@@ -34,6 +34,8 @@ Implementation ownership and handovers belong in the
 - Fetch the receipt's immutable historical source before the complete unit-test
   suite in shallow CI checkouts. Preserve the initial failed run rather than
   treating a local checkout with complete history as proof of CI readiness.
+- Use the resolved platform temporary directory for the new receipt controls,
+  preserving symlink checks while allowing the same tests on macOS and Linux.
 
 ## Learning publication verified — 21 September 2026
 
