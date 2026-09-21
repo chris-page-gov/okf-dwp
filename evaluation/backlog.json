@@ -173,7 +173,11 @@
         "docs/monday-delivery-work-log.md",
         "docs/household-evidence-expansion.md",
         "validation/qualification-context/2026-09-21/README.md",
-        "docs/carehome-component-dependency-review.md"
+        "docs/carehome-component-dependency-review.md",
+        "docs/partner-addition-qualification-review.md",
+        "validation/partner-context/2026-09-21/README.md",
+        "validation/partner-context/2026-09-21/protocol.json",
+        "validation/partner-context/2026-09-21/attempt-01/comparison.json"
       ],
       "acceptance_checks": [
         "Benefit/variant/circumstance terms have sources, aliases, confusions and scope; existing custody-specific meanings are not silently broadened."
@@ -197,13 +201,17 @@
           "kind": "research",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Neutral Income Support, household concepts and 15 explicit household/housing/temporary support dependencies are implemented and jointly tested. Continue remaining task families and the larger no-partner/severe-disability support sets, preserving deemed-receipt, exception and temporal/territorial distinctions. The departmental domain remains incomplete.",
+          "next_action": "Neutral benefit and household concepts now include 39 explicit support dependencies across household, housing, temporary residence, overview, no-partner and partner components. Continue remaining task families and conditional ignored-person/normal-residence work, preserving receipt qualifications, exceptions and temporal/territorial distinctions. The departmental domain remains incomplete.",
           "evidence": [
             "evaluation/semantic-expansion/profiles.json",
             "docs/monday-delivery-work-log.md",
             "docs/household-evidence-expansion.md",
             "validation/qualification-context/2026-09-21/README.md",
-            "docs/carehome-component-dependency-review.md"
+            "docs/carehome-component-dependency-review.md",
+            "docs/partner-addition-qualification-review.md",
+            "validation/partner-context/2026-09-21/README.md",
+            "validation/partner-context/2026-09-21/protocol.json",
+            "validation/partner-context/2026-09-21/attempt-01/comparison.json"
           ]
         },
         {
@@ -307,12 +315,16 @@
         "validation/disability-context/2026-09-21/README.md",
         "validation/disability-context/2026-09-21/protocol.json",
         "validation/disability-context/2026-09-21/attempt-01/comparison.json",
-        "validation/household-reader-public/7f9feb96-c4f2de0a/README.md"
+        "validation/household-reader-public/7f9feb96-c4f2de0a/README.md",
+        "docs/partner-addition-qualification-review.md",
+        "validation/partner-context/2026-09-21/README.md",
+        "validation/partner-context/2026-09-21/protocol.json",
+        "validation/partner-context/2026-09-21/attempt-01/comparison.json"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
       ],
-      "scope_note": "Forty executable development profiles and 203 named open obligations are delivered. The frozen 901-record qualification source retains 433/433 declared paths at 256/512 KiB. The separately reviewed 903-record disability increment retains 497/497 at 512 KiB but 407/497 at 256 KiB, despite 177/177 candidate overlap. All contexts stay insufficient. Partner support, legal/evidence closure, service publication and specialist acceptance are separately tracked; this is not a held-out accuracy benchmark.",
+      "scope_note": "Forty executable development profiles and 203 named open obligations are delivered. Separate frozen comparisons preserve 901-record qualification, 903-record disability and903-record partner increments. The latest current engine retains 585/585 declared paths at 512 KiB but 449/585 at 256 KiB, despite 177/177 candidate overlap. All contexts stay insufficient. Ignored-person/normal-residence work, legal/evidence closure, service publication and specialist acceptance remain separately tracked.",
       "work_packages": [
         {
           "id": "DWP-BL-007.delivery",
@@ -331,7 +343,7 @@
           "kind": "implementation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Continue the 43 source-closure obligations. The 903-record disability increment adds receipt and scope qualifications, but complete 497-path retention requires 512 KiB; 256 KiB preserves candidate overlap while omitting qualifications. Both sizes explicitly retain their gaps. Reconcile controlling continuations, exceptions, legal dependencies and question scope, then obtain separate specialist acceptance.",
+          "next_action": "Continue the 43 source-closure obligations. The partner increment declares 585 activated path occurrences, retained completely at 512 KiB but 449 at 256 KiB despite 177/177 original candidate overlap. Reconcile ignored-person/normal-residence continuations, remaining exceptions, legal dependencies and question scope; do not convert retention into specialist acceptance.",
           "evidence": [
             "evaluation/semantic-expansion/profiles.json",
             "docs/monday-delivery-work-log.md",
@@ -342,7 +354,11 @@
             "docs/disability-addition-qualification-review.md",
             "validation/disability-context/2026-09-21/README.md",
             "validation/disability-context/2026-09-21/protocol.json",
-            "validation/disability-context/2026-09-21/attempt-01/comparison.json"
+            "validation/disability-context/2026-09-21/attempt-01/comparison.json",
+            "docs/partner-addition-qualification-review.md",
+            "validation/partner-context/2026-09-21/README.md",
+            "validation/partner-context/2026-09-21/protocol.json",
+            "validation/partner-context/2026-09-21/attempt-01/comparison.json"
           ]
         },
         {
@@ -368,7 +384,7 @@
           "kind": "live_observation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Qualification source 7f9 is merged through PR17; Explorer 9cf passed canonical/Pages validation and actual public Chrome verification against app manifest 9fc8 and 270 immutable corpus files. Complete DWP post-merge/learning checks and later disability-source/service publication separately. Public service 0.5.0 and earlier model/browser observations retain their own versions; no old receipt is relabelled.",
+          "next_action": "Qualification source 7f9 passed protected-main validation, Pages and actual public Chrome checks; learning revision 91b also passed its actual 123-response byte/link audit. Disability PR 18 and its actual immutable-candidate Chrome observation are separate. Complete protected publication and fresh public/source/service checks for later increments; preserve every earlier receipt and live 0.5.0 identity.",
           "evidence": [
             "validation/qualification-context/2026-09-21/README.md",
             "validation/qualification-context/2026-09-21/protocol.json",
@@ -394,20 +410,24 @@
         {
           "id": "DWP-BL-007.partner-qualification",
           "kind": "implementation",
-          "status": "in_progress",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Independently review the isolated partner component: ten support pages and a conditional care-home route, with Staff 012/013/014/017 profile paths and unchanged 018. Then measure actual 256/512 KiB retention in a separately frozen source, update combined Reader/evaluation/docs and publish through reviewed PR. Do not presume continued household or qualifying-benefit facts.",
+          "next_action": "The bounded partner increment is independently source-reviewed: ten dependencies, conditional Staff 012/013/014/017 paths and unchanged 018. Combined Reader, 40-case evaluation, 52 semantic and 20 Reader controls pass. Frozen 320-assembly comparison and exact replay retain 585/585 declared path occurrences at 512 KiB and 449/585 at 256 KiB. All 203 obligations remain open; publication and specialist acceptance are separate.",
           "evidence": [
             "docs/disability-addition-qualification-review.md",
-            "docs/carehome-component-dependency-review.md"
+            "docs/carehome-component-dependency-review.md",
+            "docs/partner-addition-qualification-review.md",
+            "validation/partner-context/2026-09-21/README.md",
+            "validation/partner-context/2026-09-21/protocol.json",
+            "validation/partner-context/2026-09-21/attempt-01/comparison.json"
           ]
         },
         {
           "id": "DWP-BL-007.ignored-person-qualification",
           "kind": "implementation",
-          "status": "not_started",
+          "status": "in_progress",
           "executor": "agent",
-          "next_action": "Review a bounded conditional ignored-person component using whole pages 78/21–24 and the relevant dated memo. Preserve first-time caring purpose, prior qualification, twelve-week limit, commercial/close-relative/shared-lives restrictions, and distinguish ignored residents from people not normally residing together. Do not require the entire branch for every funding-only question; missing judgments/statutory dependencies remain explicit.",
+          "next_action": "Source discovery has identified distinct ignored-person and normal-residence meanings and 17 already captured whole-page dependencies. Review the concrete proposal, then author a separately tested conditional component. Preserve first-time caring purpose, prior qualification, twelve-week limit, commercial/close-relative/shared-lives restrictions. Measure the larger evidence budget before adoption; statutory/judgment gaps stay explicit.",
           "evidence": [
             "docs/disability-addition-qualification-review.md",
             "docs/carehome-component-dependency-review.md"

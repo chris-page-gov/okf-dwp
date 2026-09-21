@@ -54,11 +54,15 @@ is also implemented and independently reviewed: 29 dependencies in a 903-record
 index, with a [separate frozen comparison](../validation/disability-context/2026-09-21/README.md).
 All 497 declared path occurrences survive 512 KiB; only 407 survive 256 KiB,
 despite unchanged 177/177 candidate overlap. Its bounded implementation is
-recorded complete. The partner extension is explicitly in progress; the
-conditional ignored-person extension is a separate not-started package.
+recorded complete. The [partner extension](partner-addition-qualification-review.md)
+is now also implemented and independently source-reviewed: 39 dependencies,
+585/585 retained path occurrences at 512 KiB and 449/585 at 256 KiB. Its source,
+combined projection and [separate comparison](../validation/partner-context/2026-09-21/README.md)
+are distinct from public delivery. The conditional ignored-person and
+normal-residence extension is now in discovery, with a concrete source proposal.
 Exact-version publication and public observation retain a separate in-progress
 package: the qualification Reader has a new public Chrome receipt, while the
-larger disability source and MCP service still need their own release checks.
+later source increments and MCP service still need their own release checks.
 All 43 evidence-closure checks and
 all 203 total obligations remain open. At 64 KiB, Staff 012 correctly refuses
 because its obligation metadata does not fit; a small refusal does not erase

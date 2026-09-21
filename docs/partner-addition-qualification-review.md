@@ -126,6 +126,13 @@ byte-identical because their four labels changed.
 
 ## Provenance and version boundaries
 
+The subsequent [frozen source/assembler comparison](../validation/partner-context/2026-09-21/README.md)
+passes all 320 assemblies and exact replay. The current assembler retains
+585/585 declared path occurrences at 512 KiB and 449/585 at 256 KiB. Whole source
+records remain unchanged; all contexts remain insufficient. The combined Reader
+has 20,044 records and 21,242 relationships, with 20 focused controls passing.
+These later engineering checks do not change the source review's authority.
+
 The [captured Chapter 78 PDF](https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf)
 has SHA-256 `d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8`.
 The [whole-page extraction](../source/pages/dmg-vol13-ch78.json) has SHA-256
@@ -191,7 +198,8 @@ source identity and must not be presented as measurements of these declarations.
 - Hospital and funding-specific cessation rules, household facts, territorial
   scope, benefit-specific qualifications and memo wording remain to reconcile.
 - Ten declared support pages do not guarantee their retention in a bounded
-  assembled package. Actual 256/512 KiB delivery must be measured against the
-  newly frozen source and engine. Missing support must remain visible.
+  assembled package. The separate offline 256/512 KiB comparison above measures
+  the frozen source and engine; actual public service delivery remains a separate
+  check. Missing support must remain visible.
 - No source-closure, legal, factual-scope or specialist-review obligation is
   closed by this increment or by passing the engineering tests.

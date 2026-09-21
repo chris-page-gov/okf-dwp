@@ -145,6 +145,15 @@ qualification evidence. This is a measured limit, not an answer-quality score.
 Independent source review and 66 focused source/Reader controls pass; the new
 source's full publication and compact delivery remain separate work.
 
+The [partner qualification follow-up](docs/partner-addition-qualification-review.md)
+adds ten further dependencies, with conditional paths for Staff 012, 013, 014
+and 017. The current index has **903 records, 1,482 assertions and 39 support
+dependencies**. Its [separate comparison](validation/partner-context/2026-09-21/README.md)
+retains all 585 declared path occurrences at 512 KiB and 449 at 256 KiB, with
+177/177 candidate overlap at both sizes. The care-home packages contain
+55 records and 115 relationships at 512 KiB and remain insufficient. Retention
+does not establish household facts, legal applicability or entitlement.
+
 The earlier public service **0.4.0** used the staff corpus at `9de52acf…`. Its
 [0.4.0 SDK observation](validation/compact-delivery/v0.4.0/sdk-receipt.json) passed
 five exact-engine cases and compact reconstruction for all three source versions.

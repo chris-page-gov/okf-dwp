@@ -8,6 +8,21 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Partner qualification support — 21 September 2026
+
+- Preserve the separate partner lower- and higher-rate branches, actual caring
+  payment, complete treated-receipt provisions and dated memo changes. Correct
+  the interpretation of a flattened superscript without changing source text.
+- Add ten supporting dependencies and conditional routes for Staff 012, 013,
+  014 and 017. Keep Staff 018's unbounded question unchanged. The semantic index
+  now has 903 records, 1,482 assertions and 39 support dependencies; all 203
+  obligation identities and statuses remain open.
+- Rebuild the combined Reader and all 40 development cases. Independent source
+  review, 52 semantic and 20 Reader controls pass. A separate 320-assembly
+  comparison and exact replay retain 585/585 declared path occurrences at
+  512 KiB and 449/585 at 256 KiB. Preserve missing evidence, all earlier receipts
+  and the distinction between source consistency and specialist acceptance.
+
 ## Disability-addition qualification support — 21 September 2026
 
 - Distinguish the limited severe-disability overview from the detailed no-partner

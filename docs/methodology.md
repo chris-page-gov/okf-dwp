@@ -140,6 +140,16 @@ the exact source and engine identities; a later engine can produce a different
 package from the same source. A historical replay must reproduce its expected
 identity or report the mismatch.
 
+Give every metric its unit. Required source records, intermediate concepts,
+relationship identifiers and repeated path occurrences are different things.
+An omitted path can produce several diagnostic identifiers; do not report their
+union as a count of missing documents. A graph edge can name a budget-omitted
+target without supplying that target's evidence. The
+[public qualification receipt](../validation/household-reader-public/7f9feb96-c4f2de0a/README.md)
+and [partner comparison](../validation/partner-context/2026-09-21/README.md)
+make these distinctions explicit. Count obligations independently of whichever
+diagnostics fit in a returned package.
+
 ## 6. Transfer the method to HMRC
 
 Use the [HMRC discovery brief](templates/hmrc-discovery-brief.md), selecting a

@@ -1,0 +1,48 @@
+{
+  "schema": "okf-qualification-context-protocol.v1",
+  "status": "ready-for-frozen-source-comparison",
+  "old_dwp_commit": "8ea4465a4cb5a867d82c87e635f2ef1d1df18d8a",
+  "new_dwp_commit": "7e5fdb9b906052914b307c17c0fd19feb2d008a7",
+  "baseline_explorer_commit": "b9a3b68b6dbf222f9a73cc8f450dd53f126e1b55",
+  "engine_sha256": {
+    "baseline": {
+      "index.ts": "bade207cbc414b9a057778fdc28564d1c0f9c03e7548b3644a3fb9ec9b8731e6",
+      "corpus.ts": "72fec179d1015df39fd16834d5876740b95a6477f70b6013821f24398a69eb65",
+      "types.ts": "248b7db16fa1faf2cb6c5c07c8347b926ae649a528b79e92bca3816829938b65"
+    },
+    "candidate": {
+      "index.ts": "cc9fe1c162e1ad505f080712b6eacf0bad843f0e32d6f953b697b8349b2c4ca8",
+      "corpus.ts": "72fec179d1015df39fd16834d5876740b95a6477f70b6013821f24398a69eb65",
+      "types.ts": "d9eff934ec504c3fbd2afff672ae1d3a8a275e84cc11b71fed8a3e1b0edfdcf3"
+    }
+  },
+  "budgets": [
+    262144,
+    524288
+  ],
+  "case_occurrences": 40,
+  "focus_cases": [
+    "staff-012",
+    "staff-013"
+  ],
+  "household_routes": [
+    "page/77/0007",
+    "page/77/0019",
+    "page/77/0021",
+    "page/77/0023",
+    "page/77/0024",
+    "page/77/0025",
+    "page/78/0025"
+  ],
+  "expected_open_obligations": 203,
+  "limitations": [
+    "Offline known development cases; no model calls, public-host calls or accuracy ranking.",
+    "Two-by-two source/engine comparison separates engine-only, source-only and joint changes; historical observations remain unchanged.",
+    "Whole selected source records are hash-checked; path retention does not establish current legal applicability or specialist acceptance.",
+    "All source bytes come from immutable Git commits; no changing worktree sources or private correspondence are read.",
+    "Both engine sets are pinned by exact containing commits and three module hashes; candidate publication status is separate from this offline observation.",
+    "This successor compares the disability source with the partner-qualification source, both containing 903 records. Earlier protocols and observations remain unchanged; all 40 cases include the four affected profiles."
+  ],
+  "new_index_sha256": "685353567b90db880f1bd1ba33b57ae7ecc430673332ce69e47512a9ae606886",
+  "candidate_explorer_commit": "c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e"
+}

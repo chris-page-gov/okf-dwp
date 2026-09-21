@@ -397,3 +397,34 @@ The partner-component increment passed a separate source review: 38 staff and
 categories and statuses of all 203 obligations are preserved. Four conditional
 labels are intentionally clearer. Combined projection, bounded context retention
 and public delivery for that next increment remain separate work.
+
+## Partner retention checkpoint, 21 September at 02:06 BST
+
+The reviewed partner source is frozen at
+`7e5fdb9b906052914b307c17c0fd19feb2d008a7`. Root rebuilt and checked all 4,758
+combined outputs: 20,044 records, 21,242 relationships and snapshot
+`dwp-combined-a769a75d999ffd48afb0`. All 402 Python controls, the 40-case current
+staff evaluation and exact replay pass. All 203 obligations remain open.
+
+The separate partner comparison runs 320 assemblies and exact replay. The legal
+agent independently checked 380 immutable input bindings, archived code, the
+497-to-585 path denominator and eight exact focus-package reconstructions.
+Fourteen admission/census controls pass. At 512 KiB the current assembler
+retains all 585 declared path occurrences; at 256 KiB it retains 449. Candidate
+overlap is 177/177 at both budgets. Staff 012/013 retain 93/93 paths at the larger
+size and 25/93 at the smaller size. Missing qualifications remain visible.
+
+The learning site at revision `91b99078…` passed a new actual HTTP observation
+at 01:53 BST: 123 matching responses, 1,777,711 bytes, 120 HTML pages and 2,382
+internal links. The executed verifier and receipt are retained separately while
+the next publication record is prepared. The disability candidate `df352daa…`
+also passed six actual public Chrome journeys against application manifest
+`9fc8cb1b…`, with 270 distinct corpus files and no console/network errors. Its
+own source/receipt identity is separate from the earlier qualification check.
+
+The service replay verifier passed independent review after stricter error-only
+response checks and pre-open special-file checks. All 77 service controls pass;
+no new public service call has occurred. The direct-JSON model runner has 24
+offline controls and is under independent review; no provider has been called.
+Ignored-person discovery has produced a concrete source proposal, with its
+normal-residence distinction and remaining statutory/judgment gaps explicit.
