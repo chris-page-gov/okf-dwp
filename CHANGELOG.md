@@ -8,6 +8,12 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Paired fixed-evidence responses — 21 September 2026
+
+- Retain four direct-v4 subscription attempts: two empty controls and both Staff 012 care-home answers. All pass mechanical checks with zero observed tools; the substantive answers contain six claims and seven exact citations.
+- Preserve identical complete evidence, authored prompt and schema for both clients. Both answers retain insufficient status and refuse to decide whether the whole Pension Credit award stops or continues.
+- Keep all older failures and separate agent claim review from specialist acceptance. One paired question does not establish comparative accuracy, affordability or complete legal answerability.
+
 ## Direct trial v4 preparation — 21 September 2026
 
 - Prepare a separately versioned client-format successor using documented installed CLI fields and retained value-free observations. Keep the original authored prompt, answer schema and complete public packages identical.

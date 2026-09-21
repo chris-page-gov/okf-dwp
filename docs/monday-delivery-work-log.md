@@ -502,3 +502,9 @@ Node's `tmpdir()`. Literal private paths in older negative tests are synthetic
 rejection/redaction inputs, not directories to create. Only the fixture and
 these documentation notes changed; frozen executable inputs and recorded
 provider outcomes remain untouched.
+
+## Paired direct responses, 21 September shortly after 09:00 BST
+
+The separately reviewed v4 freeze preserved the complete v3 packages, prompt and answer schema. Its parser adds documented installed-client metadata recognition, bounded structural diagnostics and strict numeric usage fields. Thirty-nine controls and independent review passed before any provider call.
+
+Both actual empty controls passed and abstained. The root then made exactly one Staff 012 call per subscription client: both passed mechanical checks with complete event census and zero observed tools. The two answers contain six claims and seven exact citations. Both distinguish the whole award from additional amounts and decline a whole-award conclusion. Independent agent claim review is separate; specialist acceptance, model identity parity, comparative accuracy and affordability remain unestablished. No trial was retried or earlier failure overwritten.

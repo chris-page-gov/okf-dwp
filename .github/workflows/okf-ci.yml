@@ -29,6 +29,7 @@ jobs:
       DWP_HOUSEHOLD_TRIAL_COMMIT: 3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84
       DWP_COMPACT_TRIAL_COMMIT: 78a8beea97242d646eb9159860dea190ca5e2998
       DWP_DIRECT_TRIAL_COMMIT: d0251f0c9c757e082ac36ade47892a7c3d272a6d
+      DWP_DIRECT_V4_TRIAL_COMMIT: afeb78d1241c03c73adb593a07614cf53634eb0b
       DWP_DIRECT_SOURCE_COMMIT: 723bcc5b015ab38a026625c2148edbd784edf7c7
       EXPLORER_DIRECT_RUNTIME_COMMIT: 0472b75a9dd353d6094a83ca9f752c4d78914168
       EXPLORER_DIRECT_VERIFIER_COMMIT: 03d0264c02a6d59d75013df4bffba279b3d4aa9c
@@ -190,6 +191,11 @@ jobs:
           uv run --locked python scripts/run_monday_direct_trials.py --explorer-root .ci/okf-explorer-qualification
           uv run --locked python -m unittest discover -s scripts -p test_monday_direct_observations.py
           uv run --locked python scripts/check_monday_direct_observations.py --explorer-root .ci/okf-explorer-qualification
+      - name: Verify the v4 paired outputs without calling a provider
+        run: |
+          git fetch --no-tags --depth=1 origin "$DWP_DIRECT_V4_TRIAL_COMMIT"
+          uv run --locked python scripts/run_monday_direct_v4_trials.py --explorer-root .ci/okf-explorer-qualification
+          uv run --locked python scripts/check_monday_direct_v4_observations.py --explorer-root .ci/okf-explorer-qualification
       - name: Replay the independent source and allocator comparison offline
         run: |
           node --test validation/qualification-context/2026-09-21/admission.test.mjs validation/qualification-context/2026-09-21/metrics.test.mjs

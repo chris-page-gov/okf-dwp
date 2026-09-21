@@ -1,0 +1,539 @@
+{
+  "accounting_models": [
+    {
+      "model": {
+        "sha256": "f9ef6eedd766691f041bc3387784d8ddf620e282f9997a00e4d54059e1f12f59",
+        "status": "reported",
+        "value": "claude-opus-5"
+      },
+      "usage": {
+        "cacheCreationInputTokens": 240712,
+        "cacheReadInputTokens": 0,
+        "contextWindow": 1000000,
+        "costUSD": 2.5008049999999997,
+        "inputTokens": 2,
+        "maxOutputTokens": 128000,
+        "outputTokens": 3747,
+        "thinkingTokens": 968,
+        "webSearchRequests": 0
+      }
+    }
+  ],
+  "advertised_catalogue": {
+    "agents": {
+      "count": 4,
+      "sha256": "4686a3af118f98d5f73cd0b3516be43ca1f5ae9915d3f618a71c7fc72413957b"
+    },
+    "capabilities": {
+      "count": 3,
+      "sha256": "2113984b7d791485193759720b9d39731cfbe7103af50eb3527bfabbec54c1b5"
+    },
+    "plugins": {
+      "count": 1,
+      "sha256": "9b01d1877ce37d4fcfc59cbb4e50629524b364f8518c05004560e1f28bb09cd3"
+    }
+  },
+  "answer_text_bytes": 8063,
+  "answer_text_sha256": "836b2ccde71fbfbfef729f2c89e8ebe357bc042fa59c7200bc9778bb1578824b",
+  "assistant_confirmation": "canonical-values-agree",
+  "event_count": 11,
+  "host_context_boundary": "Advertised agents/plugins are catalogues, not observed calls; safe mode does not prove identical or empty provider system context.",
+  "issues": [],
+  "last_validated_event_index": 10,
+  "model_identity_boundary": "Reported identities only; no inferred or controlled single-model identity.",
+  "model_identity_status": "reported-identity-see-response-and-accounting-roles",
+  "observed_tool_events": 0,
+  "response_models": [
+    {
+      "sha256": "f9ef6eedd766691f041bc3387784d8ddf620e282f9997a00e4d54059e1f12f59",
+      "status": "reported",
+      "value": "claude-opus-5"
+    }
+  ],
+  "schema": "okf-direct-cli-events.v4",
+  "stream_completed": true,
+  "structural_diagnostic": {
+    "event_count": 11,
+    "events": [
+      {
+        "field_count": 22,
+        "object_fields": {
+          "agents": {
+            "array_length": 4,
+            "item_shapes": [
+              "str",
+              "str",
+              "str",
+              "str"
+            ]
+          },
+          "analytics_disabled": "bool",
+          "apiKeySource": "str",
+          "capabilities": {
+            "array_length": 3,
+            "item_shapes": [
+              "str",
+              "str",
+              "str"
+            ]
+          },
+          "claude_code_version": "str",
+          "cwd": "str",
+          "fast_mode_disabled_reason": "str",
+          "fast_mode_state": "str",
+          "mcp_servers": {
+            "array_length": 0,
+            "item_shapes": []
+          },
+          "messaging_socket_path": "str",
+          "model": "str",
+          "output_style": "str",
+          "permissionMode": "str",
+          "plugins": {
+            "array_length": 1,
+            "item_shapes": [
+              {
+                "field_count": 4,
+                "object_fields": {
+                  "name": "str",
+                  "path": "str",
+                  "source": "str",
+                  "version": "str"
+                }
+              }
+            ]
+          },
+          "product_feedback_disabled": "bool",
+          "session_id": "str",
+          "skills": {
+            "array_length": 0,
+            "item_shapes": []
+          },
+          "slash_commands": {
+            "array_length": 0,
+            "item_shapes": []
+          },
+          "subtype": "str",
+          "tools": {
+            "array_length": 0,
+            "item_shapes": []
+          },
+          "type": "str",
+          "uuid": "str"
+        }
+      },
+      {
+        "field_count": 6,
+        "object_fields": {
+          "estimated_tokens": "int",
+          "estimated_tokens_delta": "int",
+          "session_id": "str",
+          "subtype": "str",
+          "type": "str",
+          "uuid": "str"
+        }
+      },
+      {
+        "field_count": 6,
+        "object_fields": {
+          "estimated_tokens": "int",
+          "estimated_tokens_delta": "int",
+          "session_id": "str",
+          "subtype": "str",
+          "type": "str",
+          "uuid": "str"
+        }
+      },
+      {
+        "field_count": 6,
+        "object_fields": {
+          "estimated_tokens": "int",
+          "estimated_tokens_delta": "int",
+          "session_id": "str",
+          "subtype": "str",
+          "type": "str",
+          "uuid": "str"
+        }
+      },
+      {
+        "field_count": 6,
+        "object_fields": {
+          "estimated_tokens": "int",
+          "estimated_tokens_delta": "int",
+          "session_id": "str",
+          "subtype": "str",
+          "type": "str",
+          "uuid": "str"
+        }
+      },
+      {
+        "field_count": 6,
+        "object_fields": {
+          "estimated_tokens": "int",
+          "estimated_tokens_delta": "int",
+          "session_id": "str",
+          "subtype": "str",
+          "type": "str",
+          "uuid": "str"
+        }
+      },
+      {
+        "field_count": 6,
+        "object_fields": {
+          "estimated_tokens": "int",
+          "estimated_tokens_delta": "int",
+          "session_id": "str",
+          "subtype": "str",
+          "type": "str",
+          "uuid": "str"
+        }
+      },
+      {
+        "field_count": 7,
+        "object_fields": {
+          "message": {
+            "field_count": 13,
+            "object_fields": {
+              "container": "NoneType",
+              "content": {
+                "array_length": 1,
+                "item_shapes": [
+                  {
+                    "field_count": 3,
+                    "object_fields": {
+                      "signature": "str",
+                      "thinking": "str",
+                      "type": "str"
+                    }
+                  }
+                ]
+              },
+              "context_management": "NoneType",
+              "diagnostics": "NoneType",
+              "id": "str",
+              "input_transformations": {
+                "array_length": 0,
+                "item_shapes": []
+              },
+              "model": "str",
+              "role": "str",
+              "stop_details": "NoneType",
+              "stop_reason": "NoneType",
+              "stop_sequence": "NoneType",
+              "type": "str",
+              "usage": {
+                "field_count": 7,
+                "object_fields": {
+                  "cache_creation": {
+                    "field_count": 2,
+                    "object_fields": {
+                      "ephemeral_1h_input_tokens": "int",
+                      "ephemeral_5m_input_tokens": "int"
+                    }
+                  },
+                  "cache_creation_input_tokens": "int",
+                  "cache_read_input_tokens": "int",
+                  "inference_geo": "str",
+                  "input_tokens": "int",
+                  "output_tokens": "int",
+                  "service_tier": "str"
+                }
+              }
+            }
+          },
+          "parent_tool_use_id": "NoneType",
+          "request_id": "str",
+          "session_id": "str",
+          "timestamp": "str",
+          "type": "str",
+          "uuid": "str"
+        }
+      },
+      {
+        "field_count": 7,
+        "object_fields": {
+          "message": {
+            "field_count": 13,
+            "object_fields": {
+              "container": "NoneType",
+              "content": {
+                "array_length": 1,
+                "item_shapes": [
+                  {
+                    "field_count": 2,
+                    "object_fields": {
+                      "text": "str",
+                      "type": "str"
+                    }
+                  }
+                ]
+              },
+              "context_management": "NoneType",
+              "diagnostics": "NoneType",
+              "id": "str",
+              "input_transformations": {
+                "array_length": 0,
+                "item_shapes": []
+              },
+              "model": "str",
+              "role": "str",
+              "stop_details": "NoneType",
+              "stop_reason": "NoneType",
+              "stop_sequence": "NoneType",
+              "type": "str",
+              "usage": {
+                "field_count": 7,
+                "object_fields": {
+                  "cache_creation": {
+                    "field_count": 2,
+                    "object_fields": {
+                      "ephemeral_1h_input_tokens": "int",
+                      "ephemeral_5m_input_tokens": "int"
+                    }
+                  },
+                  "cache_creation_input_tokens": "int",
+                  "cache_read_input_tokens": "int",
+                  "inference_geo": "str",
+                  "input_tokens": "int",
+                  "output_tokens": "int",
+                  "service_tier": "str"
+                }
+              }
+            }
+          },
+          "parent_tool_use_id": "NoneType",
+          "request_id": "str",
+          "session_id": "str",
+          "timestamp": "str",
+          "type": "str",
+          "uuid": "str"
+        }
+      },
+      {
+        "field_count": 4,
+        "object_fields": {
+          "rate_limit_info": {
+            "field_count": 7,
+            "object_fields": {
+              "isUsingOverage": "bool",
+              "overageResetsAt": "int",
+              "overageStatus": "str",
+              "rateLimitType": "str",
+              "resetsAt": "int",
+              "status": "str",
+              "unifiedWindows": {
+                "field_count": 2,
+                "object_fields": {
+                  "five_hour": {
+                    "field_count": 2,
+                    "object_fields": {
+                      "resetsAt": "int",
+                      "utilization": "float"
+                    }
+                  },
+                  "seven_day": {
+                    "field_count": 2,
+                    "object_fields": {
+                      "resetsAt": "int",
+                      "utilization": "float"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "session_id": "str",
+          "type": "str",
+          "uuid": "str"
+        }
+      },
+      {
+        "field_count": 25,
+        "object_fields": {
+          "api_error_status": "NoneType",
+          "duration_api_ms": "int",
+          "duration_ms": "int",
+          "fast_mode_disabled_reason": "str",
+          "fast_mode_state": "str",
+          "first_content_frame_ms": "int",
+          "is_error": "bool",
+          "modelUsage": {
+            "field_count": 1,
+            "object_fields": {
+              "key_sha256_f9ef6eedd766691f041bc3387784d8ddf620e282f9997a00e4d54059e1f12f59": {
+                "field_count": 12,
+                "object_fields": {
+                  "key_sha256_0da4ce733ba6e9db9308a23a0f07e884251aece568f912ae9b9cd24943559eb7": "str",
+                  "key_sha256_4a5aade914fd51212ae812a449ae46917922e8b52d6549d9ff1a61e8b45d9e70": "int",
+                  "key_sha256_595923d8fd8612eb841b2c1926865273cd66ccf34f6fbbb0563c731cd8bcdd31": "int",
+                  "key_sha256_5c4c1964340aca5b65393bbe9d3249cdd71be26665b3320ad694f034f2743283": "str",
+                  "key_sha256_75e07f44cdbd8325a6244a2bfb3bf12d073a43d98b7a09beba2c7464ba3c268d": "int",
+                  "key_sha256_7c07bdeeda1a274745e5a8d5344dfe59cd91b757cba25f7cb27d0a0eecbec985": "int",
+                  "key_sha256_a2e4e0a2a80c8fe7cae561d611252f253c0adc67bdf514a752b0223209414f15": "str",
+                  "key_sha256_b37b389678e981c849a0b6741962650c1895eb580675cd8521bb714ff22240e8": "int",
+                  "key_sha256_ba83ce552b2f8f66d27ac74c0f61f5ac680ade26059437e088c3f1b71d10fec8": "int",
+                  "key_sha256_bdd7512bf1bb4672cf42098a6c67b04f27479e1603bf904aa282f5768ea0999e": "int",
+                  "key_sha256_f6d215aeb276925886a69db25213ba48a545e4346e87c4a1c643e74542ac4878": "float",
+                  "key_sha256_f9e109bbd99633f9c9e365af5d8f3ddd5d7dbed9af711d0318471540f1978f1f": "int"
+                }
+              }
+            }
+          },
+          "num_turns": "int",
+          "permission_denials": {
+            "array_length": 0,
+            "item_shapes": []
+          },
+          "queued_turn_count": "int",
+          "result": "str",
+          "result_index": "int",
+          "session_id": "str",
+          "stop_reason": "str",
+          "subagent_stats": {
+            "field_count": 10,
+            "object_fields": {
+              "by_type": {
+                "field_count": 0,
+                "object_fields": {}
+              },
+              "completed": "int",
+              "failed": "int",
+              "killed": {
+                "field_count": 3,
+                "object_fields": {
+                  "parent": "int",
+                  "system": "int",
+                  "user": "int"
+                }
+              },
+              "max_depth": "int",
+              "refused": {
+                "field_count": 3,
+                "object_fields": {
+                  "budget": "int",
+                  "concurrency_limit": "int",
+                  "depth_limit": "int"
+                }
+              },
+              "requested": {
+                "field_count": 3,
+                "object_fields": {
+                  "background": "int",
+                  "foreground": "int",
+                  "unset": "int"
+                }
+              },
+              "spawned": "int",
+              "spawned_by_subagents": "int",
+              "started_in_background": "int"
+            }
+          },
+          "subtype": "str",
+          "terminal_reason": "str",
+          "time_to_request_ms": "int",
+          "total_cost_usd": "float",
+          "ttft_ms": "int",
+          "ttft_stream_ms": "int",
+          "type": "str",
+          "usage": {
+            "field_count": 11,
+            "object_fields": {
+              "cache_creation": {
+                "field_count": 2,
+                "object_fields": {
+                  "ephemeral_1h_input_tokens": "int",
+                  "ephemeral_5m_input_tokens": "int"
+                }
+              },
+              "cache_creation_input_tokens": "int",
+              "cache_read_input_tokens": "int",
+              "inference_geo": "str",
+              "input_tokens": "int",
+              "iterations": {
+                "array_length": 1,
+                "item_shapes": [
+                  {
+                    "field_count": 6,
+                    "object_fields": {
+                      "cache_creation": {
+                        "field_count": 2,
+                        "object_fields": {
+                          "ephemeral_1h_input_tokens": "int",
+                          "ephemeral_5m_input_tokens": "int"
+                        }
+                      },
+                      "cache_creation_input_tokens": "int",
+                      "cache_read_input_tokens": "int",
+                      "input_tokens": "int",
+                      "output_tokens": "int",
+                      "type": "str"
+                    }
+                  }
+                ]
+              },
+              "output_tokens": "int",
+              "output_tokens_details": {
+                "field_count": 1,
+                "object_fields": {
+                  "thinking_tokens": "int"
+                }
+              },
+              "server_tool_use": {
+                "field_count": 2,
+                "object_fields": {
+                  "web_fetch_requests": "int",
+                  "web_search_requests": "int"
+                }
+              },
+              "service_tier": "str",
+              "speed": "str"
+            }
+          },
+          "uuid": "str"
+        }
+      }
+    ],
+    "schema": "okf-cli-value-free-shapes.v1",
+    "truncated": false
+  },
+  "telemetry": [
+    "thinking-token-counter",
+    "thinking-token-counter",
+    "thinking-token-counter",
+    "thinking-token-counter",
+    "thinking-token-counter",
+    "thinking-token-counter",
+    "rate-limit-counter"
+  ],
+  "tool_event_census": "complete-zero-observed-tools",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 240712,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 240712,
+    "cache_read_input_tokens": 0,
+    "input_tokens": 2,
+    "iterations": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 240712,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 240712,
+        "cache_read_input_tokens": 0,
+        "input_tokens": 2,
+        "output_tokens": 3747
+      }
+    ],
+    "output_tokens": 3747,
+    "output_tokens_details": {
+      "thinking_tokens": 968
+    },
+    "server_tool_use": {
+      "web_fetch_requests": 0,
+      "web_search_requests": 0
+    }
+  },
+  "warnings": []
+}

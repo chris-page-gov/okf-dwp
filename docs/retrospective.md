@@ -270,3 +270,9 @@ For an HMRC repeat, freeze both the source version and requirement denominator,
 measure whole evidence and repeated metadata separately, and investigate staged
 component context or reversible delivery before enlarging a demonstration claim.
 Keep the prior approved experiment fixed while evaluating a richer successor.
+
+### Freeze the client protocol as well as the evidence
+
+The direct-v3 run delivered no accepted answer because both empty controls exposed client metadata outside its frozen allowlist. We retained those failures and made no substantive calls. Direct-v4 kept the exact complete packages, prompt and answer schema, recognised documented installed-client fields in separately reviewed code, then reran the control-first experiment. Both controls and the one paired care-home question passed mechanical checks.
+
+This demonstrates a portable engineering lesson for HMRC: a protocol compatibility failure is not a model reasoning failure. Keep immutable experiments, bounded value-free diagnostics, explicit event census and separate source/engine/client identities. Review scalar accounting fields as scalars; accepting an object in a numeric tool counter can conceal activity. Finally, inspect every claim and qualification: matching quotations, successful transport and a completed pair do not establish legal accuracy or affordable production operation.
