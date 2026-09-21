@@ -59,7 +59,11 @@ is now also implemented and independently source-reviewed: 39 dependencies,
 585/585 retained path occurrences at 512 KiB and 449/585 at 256 KiB. Its source,
 combined projection and [separate comparison](../validation/partner-context/2026-09-21/README.md)
 are distinct from public delivery. The conditional ignored-person and
-normal-residence extension is now in discovery, with a concrete source proposal.
+normal-residence extension is now authored and independently source-reviewed:
+913 records, 53 concepts and 61 support dependencies. Its larger declared closure
+exceeds even 512 KiB; this measured retention regression is tracked separately
+from its completed source modelling. See the [source review](ignored-person-qualification-review.md)
+and [separate comparison](../validation/ignored-person-context/2026-09-21/README.md).
 Exact-version publication and public observation retain a separate in-progress
 package: the qualification Reader has a new public Chrome receipt, while the
 later source increments and MCP service still need their own release checks.

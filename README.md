@@ -137,7 +137,7 @@ disability-benefit receipt qualifications and preserves the partner-only patient
 scope. The care-home profiles investigate possible branches without assuming
 that a claimant has no partner. All 203 obligations remain open.
 
-Its current 40-case development evaluation and deterministic replay pass,
+Its recorded 40-case development evaluation and deterministic replay pass,
 retaining 177 of 177 known candidate occurrences at the default 512 KiB budget.
 The larger care-home packages retain 61 records and 124 relationships at that
 budget. At 256 KiB they retain only 15 records and explicitly report missing
@@ -147,12 +147,24 @@ source's full publication and compact delivery remain separate work.
 
 The [partner qualification follow-up](docs/partner-addition-qualification-review.md)
 adds ten further dependencies, with conditional paths for Staff 012, 013, 014
-and 017. The current index has **903 records, 1,482 assertions and 39 support
+and 017. That separate index has **903 records, 1,482 assertions and 39 support
 dependencies**. Its [separate comparison](validation/partner-context/2026-09-21/README.md)
 retains all 585 declared path occurrences at 512 KiB and 449 at 256 KiB, with
 177/177 candidate overlap at both sizes. The care-home packages contain
 55 records and 115 relationships at 512 KiB and remain insufficient. Retention
 does not establish household facts, legal applicability or entitlement.
+
+The [ignored-person and normal-residence increment](docs/ignored-person-qualification-review.md)
+adds two conditional concepts and eight newly selected whole pages. The current
+index has **913 records, 53 concepts, 1,526 assertions and 61 support dependencies**.
+All 520 previous evidence records and 203 open obligations are unchanged.
+Independent source review and 61 focused controls pass. The broader declared
+requirements exceed the tested context budgets: candidate discovery still finds
+177/177 at 512 KiB, but required-path retention is incomplete. The separate
+[frozen comparison](validation/ignored-person-context/2026-09-21/README.md) records
+this regression; it must not be presented as a complete evidence package. The
+Monday service/trial candidate remains fixed to the separately reviewed partner
+source while this larger closure is investigated.
 
 The earlier public service **0.4.0** used the staff corpus at `9de52acf…`. Its
 [0.4.0 SDK observation](validation/compact-delivery/v0.4.0/sdk-receipt.json) passed

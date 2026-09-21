@@ -1,5 +1,5 @@
 schema: okf-dwp-staff-semantic-authoring.v1
-authored_at: '2026-09-21T00:02:39Z'
+authored_at: '2026-09-21T01:19:43Z'
 author: Codex model-assisted proposal; no human or specialist approval
 assertion_status: model-derived
 scope: Frozen-source staff-question research. Source text is not current-law assurance and proposed meaning is
@@ -959,6 +959,8 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003
   - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009
   - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003
+  required_concepts:
+  - severe-disability-ignored-persons
   additional_sources:
   - family: dmg
     document_id: dmg-vol13-ch78
@@ -1045,6 +1047,8 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
   - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009
   - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003
   review_status: unreviewed-specialist-review-required
+  required_concepts:
+  - severe-disability-ignored-persons
   additional_sources:
   - family: dmg
     document_id: dmg-vol13-ch78
@@ -1290,6 +1294,179 @@ scope: Frozen-source staff-question research. Source text is not current-law ass
     document_id: dmg-vol4-ch20
     page: 11
     anchor: '20022'
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-ignored-persons
+  route: staff-domain/severe-disability-ignored-persons
+  key: severe-disability-ignored-persons
+  '@type':
+  - skos:Concept
+  - dwp:Applicability
+  label: People whose presence is ignored for the Pension Credit disability addition
+  definition: 'A limited disregard for the residence condition of the Pension Credit severe-disability additional
+    amount, not a finding that a person is absent from the household for every purpose. Assess normal residence
+    separately. The captured DMG 78077 categories are: a person aged under 18; a person receiving source-defined
+    “AA”, highest- or middle-rate DLA care, standard- or enhanced-rate PIP or ADP daily living, or AFIP; a
+    person certified as blind or severely sight impaired by a consultant ophthalmologist or treated as such;
+    a person living with the claimant to care for the claimant or partner who is engaged by a charitable or
+    voluntary organisation which charges the claimant or partner for their services; that carer’s partner;
+    and a source-defined qualifying young person, or a child for Child Benefit purposes. DMG 78008 limits treated blindness
+    to 28 weeks after regained eyesight and no longer being certified. A voluntary organisation is non-profit
+    and is not a public authority or local authority. Named young-person definitions have age, education,
+    training, benefit-receipt and interruption conditions; neither education alone nor being under 20 is enough.
+    DMG 78078(1) requires first joining the household to care for the claimant or partner, with the claimant
+    or partner satisfying the additional-amount conditions immediately beforehand, and applies only for the
+    first 12 weeks after joining. Its commercial-payment route concerns a person who is not a close relative:
+    payment liability runs either from that person to the claimant or partner for occupation of their dwelling,
+    or from the claimant or partner to that person for occupation of that person’s dwelling; it also covers
+    membership of that person’s household. DMG 78079 requires legal liability and a payment broadly comparable
+    to a lodger’s similar accommodation and facilities. The joint-occupation route requires co-ownership or
+    joint liability to the same landlord, with its non-close-relative condition and the person’s-partner branch.
+    The close-relative exception requires satisfying DMG 78078(3) or (4) as well as the timing condition:
+    the claimant or partner’s co-ownership or joint liability must have arisen before 11 April 1988 or,
+    if later, on or before first occupation; the note uses the right-to-occupy
+    date, not a later moving-in date. Close relative has the captured legal, adoptive and half-sibling meanings.
+    DMG 78080’s registered shared-lives route must retain the accommodation/support and commercial licence
+    conditions and the exclusion where other people cannot be ignored; its completed example is not a general
+    award rule or a current rate. Memo 02/25 paragraph 15 adds Pension Age Disability Payment to the ignored-person
+    benefit list from 21 October 2024, separately from the memo’s claimant/partner and housing-deduction propositions.
+    The dated statutory paragraph 2 also contains Scottish Adult Disability Living Allowance wording requiring
+    separate legal reconciliation; this concept does not consolidate it. Receipt conditions need the full
+    DMG 78060 continuation: its partner-patient item must not be transferred automatically to a third person.
+    Residence, receipt and component, age, care arrangements, relationship, liability and relevant dates remain
+    unknown until evidenced. No staff question establishes these facts or that this component is payable.'
+  aliases:
+  - people whose presence is ignored
+  - ignored persons for the severe-disability addition
+  source_candidates: []
+  required_source_ids:
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0005
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0006
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0015
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0016
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0017
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0021
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0022
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0023
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0024
+  - https://chris-page-gov.github.io/okf-dwp/id/page/77/0007
+  - https://chris-page-gov.github.io/okf-dwp/id/page/77/0009
+  - https://chris-page-gov.github.io/okf-dwp/id/page/77/0010
+  - https://chris-page-gov.github.io/okf-dwp/id/page/77/0011
+  - https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 5
+    anchor: '78006'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 6
+    anchor: '78008'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 15
+    anchor: '78055'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 16
+    anchor: '78060'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 17
+    anchor: which the award is first paid
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 21
+    anchor: '78077'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 22
+    anchor: '78078'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 23
+    anchor: '78080'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 24
+    anchor: household facilities
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 7
+    anchor: '77011'
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 9
+    anchor: '77019'
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 10
+    anchor: '77021'
+  - family: dmg
+    document_id: dmg-vol13-ch77
+    page: 11
+    anchor: '77027'
+  - family: dmg
+    document_id: dmg-memo-02-25-e03b36ce3e
+    page: 5
+    anchor: '15.'
+  required_concepts:
+  - severe-disability-normal-residence
+- '@id': https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-normal-residence
+  route: staff-domain/severe-disability-normal-residence
+  key: severe-disability-normal-residence
+  '@type':
+  - skos:Concept
+  - dwp:Applicability
+  label: Normal residence and sharing accommodation for the disability addition
+  definition: 'Source-bounded navigation through DMG 78065–78076, separate from ignoring a person’s presence
+    under 78077–78080 and from deciding whether partners remain one household. Normal residence is where a
+    person usually lives: exceptional visits or absences are disregarded, and temporary absence does not itself
+    change the normal home. DMG 78067 requires factual consideration of time, frequency, permanence, intentions,
+    circumstances, degree of sharing, services, other accommodation and liabilities. An address, university
+    term or overnight stay alone does not settle that assessment. Sharing only a bathroom, lavatory or communal
+    area, or separate legal payment liabilities to the same landlord, has the captured sharing exceptions.
+    Kitchen sharing can exist without entering or using it when personal items are stored or meals prepared
+    there; merely passing through to a self-contained flat is different. DMG 78072–78075 require the contractual
+    capacity and intention to create legal relations, an obligation for occupation from a recognised source
+    of law, and the stipulated connection between non-payment and ending the licence or lease; another liability
+    to a third party is not the same-landlord condition. Retain the England-and-Wales scope and presumption
+    in the captured capacity passage rather than infer incapacity from a diagnosis. For an overnight carer,
+    establish the separate address, actual use and frequency, postal address and Council Tax registration.
+    All residence and contractual facts remain unknown until evidenced. A finding about this residence condition
+    is not a finding of benefit entitlement, ignored-person status or continuing couple membership.'
+  aliases:
+  - normal residence for the disability addition
+  - sharing accommodation for the disability addition
+  source_candidates: []
+  required_source_ids:
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0017
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0018
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0019
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0020
+  - https://chris-page-gov.github.io/okf-dwp/id/page/78/0021
+  review_status: unreviewed-specialist-review-required
+  additional_sources:
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 17
+    anchor: '78065'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 18
+    anchor: '78067'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 19
+    anchor: '78069'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 20
+    anchor: '78072'
+  - family: dmg
+    document_id: dmg-vol13-ch78
+    page: 21
+    anchor: '78076'
 relationships:
 - source: guarantee-credit
   target: pension-credit
@@ -1661,6 +1838,30 @@ relationships:
   source_candidates:
   - source-c028
   source_concept_evidence: partner-disability-addition
+- source: no-partner-disability-addition
+  target: severe-disability-ignored-persons
+  predicate: skos:related
+  statement: The conditional disability-addition branch requires the limited ignored-person rules and
+    their qualifications; this evidence dependency does not establish another resident, a qualifying
+    category or an award.
+  source_candidates: []
+  source_concept_evidence: severe-disability-ignored-persons
+- source: partner-disability-addition
+  target: severe-disability-ignored-persons
+  predicate: skos:related
+  statement: The conditional disability-addition branch requires the limited ignored-person rules and
+    their qualifications; this evidence dependency does not establish another resident, a qualifying
+    category or an award.
+  source_candidates: []
+  source_concept_evidence: severe-disability-ignored-persons
+- source: severe-disability-ignored-persons
+  target: severe-disability-normal-residence
+  predicate: skos:related
+  statement: Assess whether people normally reside together before applying a limited disregard for this
+    disability-addition condition; sharing accommodation, household membership and ignored presence are
+    different questions.
+  source_candidates: []
+  source_concept_evidence: severe-disability-normal-residence
 alias_reassignments:
   term/pc-prisoner-credit-rates:
   - State Pension Credit
