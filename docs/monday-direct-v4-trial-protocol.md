@@ -1,9 +1,8 @@
 # Direct-JSON evidence trial v4: metadata compatibility candidate
 
-21 September 2026. **Offline candidate only. No source package is frozen for this
-trial, no provider has been called and no new model success is claimed.** The
-protocol remains `pending-final-source-package-runner-freeze`; execution refuses
-before binary discovery, version checks or authentication.
+21 September 2026. **Reviewed and frozen experiment; all four authorised calls are complete.** The [retained outcomes](../validation/model-comparison/household-direct-v4/README.md) include two successful empty controls, the paired care-home responses and a separate agent critique. Mechanical acceptance does not establish specialist acceptance.
+
+The draft originally refused execution with `pending-final-source-package-runner-freeze`. The later committed freeze binds the ready protocol and exact input bytes. The preparation and refusal procedures below describe that transition; they do not authorise another run or overwrite any completed attempt.
 
 ## Purpose and scope
 
