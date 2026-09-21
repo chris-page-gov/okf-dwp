@@ -31,6 +31,9 @@ Implementation ownership and handovers belong in the
   complete source passages and directed paths offline with 14 failure controls;
   distinguish selected evidence from references to explicitly omitted targets.
   This receipt does not attest the later disability source or remote service.
+- Fetch the receipt's immutable historical source before the complete unit-test
+  suite in shallow CI checkouts. Preserve the initial failed run rather than
+  treating a local checkout with complete history as proof of CI readiness.
 
 ## Learning publication verified — 21 September 2026
 

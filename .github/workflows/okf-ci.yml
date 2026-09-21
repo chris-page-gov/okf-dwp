@@ -105,6 +105,10 @@ jobs:
         run: uv sync --locked --project .ci/okf-explorer
       - name: Install source verification tools
         run: sudo apt-get update && sudo apt-get install --yes poppler-utils
+      - name: Fetch the public observation source before receipt unit tests
+        run: |
+          git fetch --no-tags --depth=1 origin "$DWP_QUALIFICATION_COMMIT"
+          git cat-file -e "$DWP_QUALIFICATION_COMMIT^{commit}"
       - name: Check acquisition and evidence boundaries
         run: uv run --locked python -m unittest discover -s scripts -p 'test_*.py'
       - name: Verify all full-DMG source identities and measured pages
@@ -153,7 +157,6 @@ jobs:
           git cat-file -e "$DWP_COMPACT_TRIAL_COMMIT^{commit}"
       - name: Fetch the frozen qualification comparison inputs
         run: |
-          git fetch --no-tags --depth=1 origin "$DWP_QUALIFICATION_COMMIT"
           git cat-file -e "$DWP_QUALIFICATION_COMMIT^{commit}"
           git fetch --no-tags --depth=1 origin "$DWP_DISABILITY_COMMIT"
           git cat-file -e "$DWP_DISABILITY_COMMIT^{commit}"

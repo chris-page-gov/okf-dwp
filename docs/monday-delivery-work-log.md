@@ -397,3 +397,13 @@ The partner-component increment passed a separate source review: 38 staff and
 categories and statuses of all 203 obligations are preserved. Four conditional
 labels are intentionally clearer. Combined projection, bounded context retention
 and public delivery for that next increment remain separate work.
+
+### CI ordering correction
+
+PR 18 run `35548995209` failed because the new receipt test executed before CI
+fetched its immutable `7f9feb96…` source. The local checkout already contained
+that commit, so its 396 passing tests did not expose the shallow-checkout
+dependency. The workflow now fetches that exact source before the unit suite;
+the later comparison step reuses it. No test, receipt or source is weakened or
+rewritten. The failed run remains visible; the corrected commit needs a fresh
+required CI pass before merge.
