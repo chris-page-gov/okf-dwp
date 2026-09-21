@@ -19,6 +19,8 @@ source, terminology, legal and ontology discovery before building its own bundle
 
 For a guided group session, use the [Monday handover and ten-minute demonstration](monday-handover-2026-09-21.md).
 It connects the combined Reader, small evidence deliveries and separately recorded model trials.
+For a short explanation of manifests, exact parts, hashes and AI checks, follow
+[Learn by opening one retained evidence package](evidence-delivery-learning.md).
 
 The public service now runs **0.5.0** with the household evidence release. Its
 [dated observation](../validation/compact-delivery/v0.5.0/README.md) records what

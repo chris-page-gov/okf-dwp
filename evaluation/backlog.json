@@ -470,7 +470,8 @@
         "docs/household-service-verification.md",
         "validation/compact-delivery/v0.5.0/README.md",
         "validation/qualification-context/2026-09-21/README.md",
-        "docs/methodology.md"
+        "docs/methodology.md",
+        "docs/retained-evidence-publication.md"
       ],
       "acceptance_checks": [
         "Unchanged ask_okf preserved; small manifest plus paginated exact reads; original version/question/budget/context identity replayed; stale/unknown IDs rejected; all slices reconstruct exactly; actual host check."
@@ -516,12 +517,13 @@
         {
           "id": "DWP-BL-008.retained-evidence-resources",
           "kind": "implementation",
-          "status": "not_started",
+          "status": "in_progress",
           "executor": "agent",
-          "next_action": "Prepare explicitly approved public evidence snapshots with full canonical-package hashes and bounded manifest/record reads, so selected audit examples can remain readable after an assembler retires. Keep anonymous questions unrecorded and distinguish retained evidence from an AI-answer audit log.",
+          "next_action": "The independently reviewed generic exporter and DWP publisher now preserve bounded, hash-checked complete packages and small resource reads. Eleven exporter and 23 publisher controls pass, with a separate local Chrome observation. Publish the three explicitly approved examples, verify their public bytes and retain the observed boundary; anonymous questions are not recorded.",
           "evidence": [
             "docs/compact-evidence-demo.md",
-            "docs/methodology.md"
+            "docs/methodology.md",
+            "docs/retained-evidence-publication.md"
           ]
         }
       ]
