@@ -1,20 +1,22 @@
-# Ask OKF demonstration: Monday 21 September 2026
+# Ask OKF demonstration: recorded full-corpus journey
 
 [What changed](../CHANGELOG.md) · [Current work log](work-log-2026-09-19.md) · [Backlog](backlog.md)
 
-For the newer small catalogue and exact-read interface, start with
-[the compact-evidence demonstration](compact-evidence-demo.md). Service 0.3.0
-is deployed and SDK-verified. The full-package, ChatGPT and published Explorer
-observations below retain their recorded versions and scope.
+For the **[latest recorded service status](service-publication.md)**, use the
+single generated DWP status page. For the current meeting route, follow the
+[Monday handover](monday-handover-2026-09-21.md). Deployment, SDK verification,
+browser checks and AI-answer review have separate evidence; no page claims
+real-time health merely because a past call succeeded.
 
-**The current candidate extends Ask OKF to both captured DWP manuals: 513 PDFs,
-19,090 pages and 18,197 pages with nonempty extracted text.** The deployed service
-has passed the official SDK checks and all 43 remote evaluation cases against the
-shared engine. ChatGPT also inspected the bounded abroad result: six source
-pages, 31,312 bytes, with no host truncation reported. The result remains
-`insufficient`. Published Explorer and native WebMCP journeys also passed, with
-the same bounded package available in the UI and through both tool interfaces. Earlier custody
-observations are preserved separately below.
+## Historical full-corpus observation: 19 September 2026
+
+The journey below preserves the recorded full-corpus and compact-interface
+observations and their exact source versions. Service 0.3.0's later compact
+observation is linked in the [compact-evidence demonstration](compact-evidence-demo.md).
+These historical counts do not describe the latest deployed source or engine.
+Both manuals contain 513 captured PDFs, 19,090 pages and 18,197 pages with
+nonempty extracted text. The 43-case evaluation, bounded ChatGPT abroad result,
+published Explorer and native WebMCP checks below retain their own dates and scope.
 
 The public test endpoint is:
 
@@ -22,7 +24,7 @@ The public test endpoint is:
 
 The service returns a governed evidence package. ChatGPT, or another connected AI, supplies any subsequent explanation. It is an independent experimental publication, not an official DWP service, an entitlement decision or a benefits calculator. Use generic demonstration questions without claimant personal information.
 
-## Current full-corpus candidate
+## Preserved full-corpus candidate
 
 Use version **`bf50ef8d91b9f1ccc2cbdb354198eae74c9ed752`** explicitly. Its
 [additive Explorer descriptor](../full-dmg/okf-corpus-context.json) preserves the

@@ -191,6 +191,14 @@ jobs:
           uv run --locked python scripts/run_monday_direct_trials.py --explorer-root .ci/okf-explorer-qualification
           uv run --locked python -m unittest discover -s scripts -p test_monday_direct_observations.py
           uv run --locked python scripts/check_monday_direct_observations.py --explorer-root .ci/okf-explorer-qualification
+      - name: Verify the latest recorded service status offline
+        run: |
+          uv run --locked python scripts/build_service_publication.py --receipt-commits > "$RUNNER_TEMP/service-publication-commits"
+          while IFS= read -r receipt_commit; do
+            git fetch --no-tags --depth=1 origin "$receipt_commit"
+          done < "$RUNNER_TEMP/service-publication-commits"
+          uv run --locked python scripts/build_service_publication.py --check
+          uv run --locked python -m unittest discover -s scripts -p test_service_publication.py
       - name: Verify the v4 paired outputs without calling a provider
         run: |
           git fetch --no-tags --depth=1 origin "$DWP_DIRECT_V4_TRIAL_COMMIT"
