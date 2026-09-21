@@ -18,8 +18,8 @@ An **immutable commit** identifies an exact saved repository version. A **receip
 
 | Surface | Verified position at this handover | Where to inspect it |
 | --- | --- | --- |
-| Household evidence and concepts | Merged through [DWP PR 15](https://github.com/chris-page-gov/okf-dwp/pull/15), merge `5ec1a158b107e3932ffcd1cd3a75e31494ee07db`. The fixed household source used by the trials is `3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84`. | [Household expansion](household-evidence-expansion.md), [build counts](../evaluation/semantic-expansion/build.json) |
-| Household Reader and Ask OKF | A real public Chrome journey passed against 270 immutable corpus files, with no console or network errors. Separate local Chrome, Firefox and WebKit journeys cover all 20 statutory extracts. | [Public verification and screenshots](household-reader-public-verification.md), [local cross-browser checks](household-reader-verification.md) |
+| Required qualification evidence | [DWP PR 17](https://github.com/chris-page-gov/okf-dwp/pull/17) merged as `91b9907836c8a340d974dd958969f4f8cbb3a0c6`. Its immutable source is `7f9feb9634e3d94004853b838462aca132c505a5`. Earlier trials retain source `3ef0e786…`; the larger disability increment is a separate candidate. | [Qualification comparison](../validation/qualification-context/2026-09-21/README.md), [disability candidate](disability-addition-qualification-review.md) |
+| Household Reader and Ask OKF | A fresh public Chrome journey passed on 21 September at 01:23 BST against source `7f9feb96…` and application manifest `9fc8cb1b…`, checking 270 immutable corpus files without console or network errors. | [Current public receipt and screenshots](../validation/household-reader-public/7f9feb96-c4f2de0a/README.md), [earlier local cross-browser checks](household-reader-verification.md) |
 | Public compact evidence service | **0.5.0 is deployed and verified**, using source `3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84`. Seven full-package and four compact SDK cases passed. The care-home evidence journey passed in all three browsers; strict console checks passed in Chrome and WebKit, with two Firefox hosting-cookie warnings retained. | [Service home](https://ask-okf.crpage.chatgpt.site/), [0.5.0 deployment, SDK and browser evidence](../validation/compact-delivery/v0.5.0/README.md) |
 | Household model trials | The first experiment retains five unsuccessful attempts. A separate successor retains nine attempts: seven parser-accepted responses, including both empty-evidence controls; six pass mechanical citation checks. All five substantive responses are Codex outputs; one has a defective locator, and model review identifies scope concerns. No successful substantive provider pair or specialist acceptance is established. | [Trial guide](monday-model-trials.md), [successor outcomes and critique](../validation/model-comparison/household-compact-v2/README.md) |
 
@@ -29,11 +29,11 @@ The [SDK receipt](../validation/compact-delivery/v0.5.0/sdk-receipt.json), [host
 
 ## What the household increment adds
 
-The authored semantic layer now has **51 concepts**, **96 selected source pages** and **20 selected statutory units**. A **concept** names a meaning, such as a couple or a benefit component. A **statutory unit** is a selected section, regulation or schedule paragraph; the count does not mean 20 complete Acts. The source manuals remain much larger than these deliberately modelled selections.
+The next authored source candidate has **51 concepts**, **98 selected source pages** and **20 selected statutory units**. The published qualification source has 96 selected source pages; all source versions retain their own counts. A **concept** names a meaning, such as a couple or a benefit component. A **statutory unit** is a selected section, regulation or schedule paragraph; the count does not mean 20 complete Acts. The source manuals remain much larger than these deliberately modelled selections.
 
 The [current development check](../evaluation/semantic-expansion/evaluation.json) retrieves **177 of 177 expected candidate occurrences** across **40 supplied question occurrences, representing 39 unique questions**, using the separate qualification source and revised engine. These are candidate passages chosen for investigation, not 177 correct answers. All 40 question packages still report **insufficient**; there are no AI answers or independent specialist approvals in this retrieval evaluation. The earlier public source and engine retrieved 176 occurrences; their [retained result](https://github.com/chris-page-gov/okf-dwp/blob/3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84/evaluation/semantic-expansion/evaluation.json) remains unchanged.
 
-### Next qualification release: measured separately
+### Qualification release: measured separately from the service
 
 The new source declares 15 support dependencies, including whole passages that
 qualify household, housing-cost and temporary-residence summaries. A dependency
@@ -41,7 +41,7 @@ says which material must accompany an interpretation; it does not make that
 interpretation official. The [joint comparison](../validation/qualification-context/2026-09-21/README.md)
 freezes source `7f9feb9634e3d94004853b838462aca132c505a5` and Explorer
 `c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e` independently of the public 0.5.0
-demonstration above. Publication and live checks for that pair remain separate.
+demonstration above. Explorer PR 131 has merged and passed its canonical and Pages checks. A fresh public Chrome observation verifies the qualification source on that application; the MCP service upgrade remains separate.
 
 At both 256 KiB and 512 KiB, the pair retains all 433 declared path occurrences.
 Both care-home questions retain all seven household-support pages through their
@@ -54,7 +54,7 @@ cannot hold the expanded care-home requirement metadata: it returns an explicit
 All 203 obligations remain open. None of these new observations repairs an
 earlier model response or establishes specialist acceptance. Use the
 [component review](carehome-component-dependency-review.md) to inspect the exact
-wording corrections and the remaining disability-addition modelling work.
+wording corrections. The separate [disability increment](disability-addition-qualification-review.md) now declares 29 dependencies in a 903-record index. Its 40-case replay retains all 177 candidate occurrences at 512 KiB; at 256 KiB the richer care-home support does not all fit, and the package explicitly names missing evidence. Source review, 46 semantic controls and 20 combined Reader controls pass. Publication and new compact delivery of that larger source remain pending.
 
 There are **203 open obligations**: 43 evidence-closure requirements and 40 each for applicability, legal version, independent review and question scope. An **open obligation** names something that has not been established. It prevents the system from turning a promising source trail into a false claim of completeness. The [profiles](../evaluation/semantic-expansion/profiles.json) retain these requirements; the [legal-body guide](legal-body-evidence.md) records the statutory extraction and its remaining limits, including 12 units with unknown extent.
 
@@ -62,7 +62,7 @@ There are **203 open obligations**: 43 evidence-closure requirements and 40 each
 
 ### 0–2 minutes: explain the three jobs
 
-Open the learning website, then [the fixed household source in Explorer](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84%2Fcombined%2Fokf-explorer.json#overview). This link fixes the bundle version; it does not freeze the deployed Explorer application. The [public journey and screenshots](household-reader-public-verification.md) bind the application actually checked. If a later preflight differs, use the labelled retained observation and state that limitation.
+Open the learning website, then [the fixed qualification source in Explorer](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7f9feb9634e3d94004853b838462aca132c505a5%2Fcombined%2Fokf-explorer.json#overview). This link fixes the bundle version; it does not freeze the deployed Explorer application. The [public journey and screenshots](../validation/household-reader-public/7f9feb96-c4f2de0a/README.md) bind the application actually checked. If a later preflight differs, use the labelled retained observation and state that limitation.
 
 - **Search** finds possible records, using repeatable matching.
 - **Ask OKF** assembles a limited evidence package and explains why records were included.
@@ -76,7 +76,7 @@ Paste the original staff wording into Ask OKF, including its recorded typo:
 
 Select **Build evidence package**, inspect its insufficient status and open the source passage containing DMG 78088. Read the preceding heading: **“Claimants who have no partner (including self- funders)”** in the retained extraction. This limits the branch being discussed. Self-funding alone does not justify applying that paragraph to every household or every component of Pension Credit.
 
-The checked public package contains 64 records and 118 relationships, with truncation. **Truncation** means the limits caused some material to be omitted. Some housing-cost statutory units are omitted here, so this is a demonstration of a preserved qualification and a visible gap, not a complete answer. The [retained package](../validation/household-reader-public/3ef0e786/attempt-02-chrome/care-home-context.json) lets a reviewer inspect the same result afterwards.
+The checked public package contains 62 records and 124 relationships, with truncation. **Truncation** means the limits caused some material to be omitted. Some housing-cost statutory units are omitted here, so this is a demonstration of a preserved qualification and a visible gap, not a complete answer. The [retained package](../validation/household-reader-public/7f9feb96-c4f2de0a/attempt-01-chrome/care-home-context.json) lets a reviewer inspect the same result afterwards.
 
 ### 4–6 minutes: keep an ambiguous abbreviation unresolved
 
@@ -84,13 +84,13 @@ Ask:
 
 > What was the SDA amount over the last five years?
 
-Show the two labelled alternatives: **Severe Disablement Allowance** and a **severe-disability additional amount**. The latter is a component of an award, not the same benefit. Ask OKF displays both possible evidence branches without choosing the intended meaning. The [retained package](../validation/household-reader-public/3ef0e786/attempt-02-chrome/sda-context.json) remains insufficient and truncated; it does not claim a complete five-year rate history.
+Show the two labelled alternatives: **Severe Disablement Allowance** and a **severe-disability additional amount**. The latter is a component of an award, not the same benefit. Ask OKF displays both possible evidence branches without choosing the intended meaning. The [retained package](../validation/household-reader-public/7f9feb96-c4f2de0a/attempt-01-chrome/sda-context.json) remains insufficient and truncated; it does not claim a complete five-year rate history.
 
 ### 6–8 minutes: follow the source and its relationships
 
 Use the **Legislation** filter. It keeps the same 20-record scope in Reader, Graph and Timeline. Open regulation 5 of the State Pension Credit Regulations 2002 and inspect its official dated HTML link. **Provenance** records where the text came from and which version was acquired; it is separate from the reason Ask OKF selected it.
 
-In Graph, inspect the incoming guidance references and outgoing reference to the Universal Credit Regulations 2013 couple definition. A relationship is a route for investigation, not proof of legal applicability. In Timeline, compare source and audit dates: the requested statutory version, 20 September 2026, is not a publication or commencement event. See the [statutory graph screenshot](../validation/household-reader-public/3ef0e786/attempt-02-chrome/statutory-graph.png).
+In Graph, inspect the incoming guidance references and outgoing reference to the Universal Credit Regulations 2013 couple definition. A relationship is a route for investigation, not proof of legal applicability. In Timeline, compare source and audit dates: the requested statutory version, 20 September 2026, is not a publication or commencement event. See the [statutory graph screenshot](../validation/household-reader-public/7f9feb96-c4f2de0a/attempt-01-chrome/statutory-graph.png).
 
 <a id="compact-evidence-demo"></a>
 

@@ -18,9 +18,19 @@ Implementation ownership and handovers belong in the
   separate memo dates explicit; retain both unresolved meanings of SDA.
 - Add conditional support paths for Staff 012 and 013 without presuming that the
   claimant has no partner. Preserve all 203 obligation identifiers and statuses.
-- Independently review the source changes and pass 35 staff and 11 household
-  controls. The 903-record, 1,464-assertion semantic index is prepared; combined
-  Reader integration, bounded context retention and publication remain separate.
+- Independently review the source changes; pass 35 staff, 11 household and
+  20 combined Reader controls. Rebuild the 903-record, 1,464-assertion index and
+  21,224-relationship combined Reader without changing captured source bytes.
+- Retain a separate 320-assembly comparison and exact replay: all 497 declared
+  path occurrences survive 512 KiB, while only 407 survive 256 KiB even though
+  original candidate overlap remains 177/177. Preserve the visible missing
+  qualifications, 64 KiB metadata refusal and every earlier observation.
+  Publication and model-answer acceptance remain separate checks.
+- Preserve the separate public Chrome observation of qualification source
+  `7f9feb96…` and the published allocator. Verify its 273 immutable inputs,
+  complete source passages and directed paths offline with 14 failure controls;
+  distinguish selected evidence from references to explicitly omitted targets.
+  This receipt does not attest the later disability source or remote service.
 
 ## Learning publication verified — 21 September 2026
 

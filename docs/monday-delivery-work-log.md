@@ -334,3 +334,66 @@ retains its recorded completion; the aggregate item is now in progress because
 this additional work has started. Public retained evidence resources have their
 own pending package. Neither workstream has deployed a new service or rerun the
 frozen model trials.
+
+## Qualification publication and disability follow-up, 21 September at 01:35 BST
+
+Explorer PR 131 merged as `9cf67adb12cd39c6c008336de92929a08972a440`.
+Canonical run `35546895467` and Pages run `35546875345` both passed. A fresh
+public Chrome observation at 01:23 BST bound the deployed application manifest
+`9fc8cb1bbf10e4e5182efd69d56f2b5ed39a2e6ecf942dce64357c4a529d1ce8` to the
+qualification source `7f9feb9634e3d94004853b838462aca132c505a5`. Six journeys
+passed, with 270 exact corpus files, 294 responses and no console/network errors.
+The care-home package has 62 records and 124 relationships; SDA retains both
+unresolved meanings. This is a new observation, not a relabelled earlier receipt.
+
+DWP PR 17 merged as `91b9907836c8a340d974dd958969f4f8cbb3a0c6` after both required
+validation runs passed. A merge commit preserves the source/evaluation commits.
+Canonical validation `35547851197` and the subsequent learning-site publication
+are separate checks still under observation at this checkpoint.
+
+The legal agent authored and the semantic agent independently reviewed the
+[disability increment](disability-addition-qualification-review.md). Root retained
+both receipt qualifiers identified in review and the stricter existing housing
+wording control when integrating the two overlapping edits. All 46 semantic and
+20 Reader controls pass. The semantic index has 903 records, 1,464 assertions,
+98 selected pages and 29 support dependencies. All 203 obligation identifiers
+and statuses remain open; two source-closure labels are intentionally clearer.
+
+Root rebuilt all 4,758 combined outputs and the current 40-case evaluation,
+then verified exact regeneration/replay. The combined Reader has 20,044 records
+and 21,224 relationships. The separate [disability comparison](../validation/disability-context/2026-09-21/README.md)
+uses source `8ea4465a4cb5a867d82c87e635f2ef1d1df18d8a`, two archived engines,
+two budgets and all 40 question occurrences. Its 320 assemblies and exact replay
+pass, with 14 admission/denominator controls. The current engine retains
+497/497 paths at 512 KiB but 407/497 at 256 KiB. Candidate overlap remains 177/177
+at both sizes; it cannot establish qualification coverage. All contexts remain
+insufficient. The 64 KiB care-home request explicitly refuses without evidence.
+
+The next partner-component source work is isolated and tracked separately.
+The service's explicit-engine replay implementation has passed independent
+runtime review after a shared-deadline correction; its final build/browser
+checks and deployment remain separate. A new direct-JSON subscription trial
+protocol has been proposed but no calls or new answer freeze have occurred.
+All earlier model failures, trial receipts and the live 0.5.0 service are preserved.
+
+## Publication checkpoint, 21 September at 01:50 BST
+
+The qualification merge `91b9907836c8a340d974dd958969f4f8cbb3a0c6` now has
+successful canonical validation `35547851197` and learning Pages publication
+`35548811691`. The retained learning-site receipt still identifies the earlier
+`7815b17b…` release; a successful hosting workflow is not a new HTTP observation.
+
+Root reviewed and ran the new qualification public-receipt checker and all
+14 controls. It verified 273 immutable source inputs, 21 application materials
+and 90 whole-evidence occurrences across the care-home and SDA packages. Every
+selected and returned required path is retained. Separately, 42 and 35 returned
+relationship rows point to 37 and 31 unselected targets with explicit budget
+omissions. The documentation now explains that those references do not supply
+the omitted evidence. All 11 original browser files remain unchanged.
+
+The partner-component increment passed a separate source review: 38 staff and
+14 household controls pass; the 903-record index has 1,482 assertions and
+39 support dependencies. All 520 pre-existing evidence records and the identities,
+categories and statuses of all 203 obligations are preserved. Four conditional
+labels are intentionally clearer. Combined projection, bounded context retention
+and public delivery for that next increment remain separate work.

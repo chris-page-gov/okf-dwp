@@ -61,7 +61,7 @@ warnings. The care-home package contains 35 records and 50 relationships at a
 generated. The separate historical browser journey suite was **not run** for
 0.5.0; the earlier version's observations remain historical.
 
-A [real public Chrome journey](docs/household-reader-public-verification.md)
+An earlier [real public Chrome journey](docs/household-reader-public-verification.md)
 verified conceptual filtering, statutory text and graph links, source/audit dates,
 the care-home heading and unresolved SDA branches against 270 immutable corpus
 files. It had no console or network errors. Both assembled packages remained
@@ -87,6 +87,14 @@ passed the declared navigation, evidence and keyboard journeys, verifying actual
 application and corpus bytes. These are reviewable research outputs. All supplied tasks retain explicit gaps;
 no specialist acceptance or complete benefits answer is claimed.
 
+The later [qualification-source public Chrome observation](validation/household-reader-public/7f9feb96-c4f2de0a/README.md)
+checks the deployed application against source `7f9feb96…`. Six journeys pass,
+including the seven household support pages, conceptual filtering and the
+statutory graph. The retained care-home package has 62 records and 124
+relationships. Its checker verifies 273 immutable input files and distinguishes
+selected evidence from graph references whose target was omitted by the budget.
+This observation predates the disability increment described below.
+
 The [Monday handover](docs/monday-handover-2026-09-21.md) links the current
 demonstration and remaining semantic work. The
 [20 September team handover](docs/team-handover-2026-09-20.md) preserves the
@@ -97,14 +105,14 @@ work. The bounded staff concepts/relationships (BL005) and task profiles (BL007)
 are delivered. Broader domain expansion and evidence closure remain explicit
 implementation packages; mention classifications do not complete those packages.
 
-The verified [qualification candidate](docs/carehome-component-dependency-review.md)
+The preceding verified [qualification candidate](docs/carehome-component-dependency-review.md)
 declares **15 explicit support relationships**: the initial eight household
 dependencies, five housing-cost dependencies and two temporary-residence
 dependencies. Seven captured pages support the complete household summary,
 including the distinction between one and both partners living in a care home.
 Staff 012 and 013 require the household and housing-cost paths. The temporary
 summary keeps its own support requirements without being made mandatory for
-every permanent-care-home question. The source index now has 901 records and
+every permanent-care-home question. That source index has 901 records and
 1,442 assertions. Source text and all 203 open obligations are preserved.
 The [joint source/engine comparison](validation/qualification-context/2026-09-21/README.md)
 now passes all 320 assemblies and exact replay, using DWP `7f9feb9634e3d94004853b838462aca132c505a5`
@@ -117,10 +125,25 @@ temporary-care-home dependency. All contexts remain insufficient and truncated.
 
 A smaller 64 KiB Staff 012 request legitimately returns a 1,926-byte
 `metadata_budget` refusal with no records: even its interpretation and obligation
-metadata cannot fit. Larger no-partner and severe-disability support sets remain
-[explicit backlog work](docs/backlog.md). Protected publication and new public
-service/browser checks are pending; the public links above retain their verified
-source versions. No earlier model trial has been rerun or regraded.
+metadata cannot fit. Its public service update remains separate from the
+website and offline checks; the service links above retain their verified source
+versions. No earlier model trial has been rerun or regraded.
+
+The [next disability-addition increment](docs/disability-addition-qualification-review.md)
+adds two already captured whole pages and 14 support relationships. Its semantic
+index has **903 records, 1,464 assertions, 98 selected source pages and 29 support
+dependencies**. It distinguishes actual carer-benefit payment from the specified
+disability-benefit receipt qualifications and preserves the partner-only patient
+scope. The care-home profiles investigate possible branches without assuming
+that a claimant has no partner. All 203 obligations remain open.
+
+Its current 40-case development evaluation and deterministic replay pass,
+retaining 177 of 177 known candidate occurrences at the default 512 KiB budget.
+The larger care-home packages retain 61 records and 124 relationships at that
+budget. At 256 KiB they retain only 15 records and explicitly report missing
+qualification evidence. This is a measured limit, not an answer-quality score.
+Independent source review and 66 focused source/Reader controls pass; the new
+source's full publication and compact delivery remain separate work.
 
 The earlier public service **0.4.0** used the staff corpus at `9de52acf…`. Its
 [0.4.0 SDK observation](validation/compact-delivery/v0.4.0/sdk-receipt.json) passed
