@@ -597,7 +597,7 @@
       "category": "evidence_closure_unverified",
       "id": "source-requirement-1",
       "is_source_evidence": false,
-      "label": "Conditional branch investigation only; inspecting the no-partner branch does not establish that the claimant has no partner. Separate permanent residence with no partner (DMG 78088 heading), one partner leaving the household, both partners in a home, qualifying-benefit receipt and housing-cost exclusions; self-funding alone is insufficient.",
+      "label": "Conditional branch investigation only; inspecting the no-partner branch does not establish that the claimant has no partner. Inspecting the partner branch does not establish that partner status persists after care-home admission or that qualifying facts are satisfied. Separate permanent residence with no partner (DMG 78088 heading), one partner leaving the household, both partners in a home, qualifying-benefit receipt and housing-cost exclusions; self-funding alone is insufficient.",
       "resolution": "New authored paths include DMG 77117–77130, 78034–78089 and 78240–78270 plus dated Scottish-benefit memos. Check benefit-specific funding/payment cessation, the memo component wording, all cross-references and statutory applicability before closing this requirement.",
       "status": "candidate-evidence-only"
     },
@@ -647,7 +647,7 @@
       "category": "evidence_closure_unverified",
       "id": "source-requirement-1",
       "is_source_evidence": false,
-      "label": "Conditional branch investigation only; inspecting the no-partner branch does not establish that the claimant has no partner. Establish the funding arrangement and qualifying-benefit receipt, including the captured treated-as-receipt qualifications; separate the no-partner disability-addition branch, household change and housing costs from the basic Pension Credit award.",
+      "label": "Conditional branch investigation only; inspecting the no-partner branch does not establish that the claimant has no partner. Inspecting the partner branch does not establish that partner status persists after care-home admission or that qualifying facts are satisfied. Establish the funding arrangement and qualifying-benefit receipt, including the captured treated-as-receipt qualifications; separate the no-partner disability-addition branch, household change and housing costs from the basic Pension Credit award.",
       "resolution": "DMG 78088 states normally self-funders and the initial four-week continuation, subject to all conditions and its no-partner heading. Added adjacent source branches do not establish cessation rules for every AA/DLA/PIP/Scottish-benefit funding arrangement; those and legal scope remain to reconcile.",
       "status": "candidate-evidence-only"
     },
@@ -697,7 +697,7 @@
       "category": "evidence_closure_unverified",
       "id": "source-requirement-1",
       "is_source_evidence": false,
-      "label": "Resolve the couple/household definition, one-versus-both permanent-care branches, mixed-age protections and dated migration exception, before applying component or aggregation rules.",
+      "label": "Conditional partner-component investigation only; qualifying disability-benefit receipt, residence and caring facts remain unknown. Inspecting this branch does not establish entitlement to an additional amount. Resolve the couple/household definition, one-versus-both permanent-care branches, mixed-age protections and dated migration exception, before applying component or aggregation rules.",
       "resolution": "Inspect DMG 77013, 77102, 77117–77130 and 77140–77184 with DMG memo 04/24 paragraphs 15–17. Remaining work includes the ADM counterpart, legislation, aggregation/component completeness and the case-specific date and facts.",
       "status": "candidate-evidence-only"
     },
@@ -847,7 +847,7 @@
       "category": "evidence_closure_unverified",
       "id": "source-requirement-1",
       "is_source_evidence": false,
-      "label": "Resolve the couple/household definition, one-versus-both permanent-care branches, mixed-age protections and dated migration exception, before applying component or aggregation rules.",
+      "label": "Conditional partner-component investigation only; qualifying disability-benefit receipt, residence and caring facts remain unknown. Inspecting this branch does not establish entitlement to an additional amount. Resolve the couple/household definition, one-versus-both permanent-care branches, mixed-age protections and dated migration exception, before applying component or aggregation rules.",
       "resolution": "Inspect DMG 77013, 77102, 77117–77130 and 77140–77184 with DMG memo 04/24 paragraphs 15–17. Remaining work includes the ADM counterpart, legislation, aggregation/component completeness and the case-specific date and facts.",
       "status": "candidate-evidence-only"
     },
@@ -3658,6 +3658,136 @@
             "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
           ],
           "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/4ac977d4b8566d67d6c1e60c2e87ea9cfb00f01232ea02b8664a9cb1e115e425"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3f9eb9087340c5aefa9694689f4850107c871b06ce0ed53ade39c42e57c5b6cc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0013"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9efc84b39d4c058715c488e7cf443c31d0dcbe1509de1c1da561f3ec9522106f"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0014"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/bb47b2371996e54e477833a9528debfa98be8abe147f05779ea3e42e9e6b03fc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0015"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/84ad25d974f6c1aadf8dd267825c9eb62a4d40c5eff58a75e005198407b272a7"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0016"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d29679cdd0fbdb1947969a2ab87072ae2ce4ac23e3734e37010595c023c5f85c"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0017"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/7bea7bb1580e4fb41ef30828871b772d2e398f32123c871cee2c113431c977b4"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/203f050ca844f2f4011cfe1140b6bbae0ecca4150f18138a420259869a7c99c9"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50593e0f8838611f28a97993170f96e31f410c93f71ac14df7c54879be14d34e"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50ef74f46ded3311cb5f2fbc8e9bfa69b5b864b868cc0c9c6575a9eb07d85186"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
         }
       ],
       "obligation_ids": [
@@ -3671,7 +3801,8 @@
         "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/household-separation",
         "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home-housing-costs",
         "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-addition",
-        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/no-partner-disability-addition"
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/no-partner-disability-addition",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition"
       ],
       "qualification_evidence_ids": [
         "https://chris-page-gov.github.io/okf-dwp/id/page/77/0007",
@@ -3695,7 +3826,9 @@
         "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003",
         "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005",
         "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003",
-        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0013",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0014"
       ],
       "qualification_paths": [
         {
@@ -4046,6 +4179,136 @@
           "records": [
             "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
             "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/no-partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/4ac977d4b8566d67d6c1e60c2e87ea9cfb00f01232ea02b8664a9cb1e115e425"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3f9eb9087340c5aefa9694689f4850107c871b06ce0ed53ade39c42e57c5b6cc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0013"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9efc84b39d4c058715c488e7cf443c31d0dcbe1509de1c1da561f3ec9522106f"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0014"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/bb47b2371996e54e477833a9528debfa98be8abe147f05779ea3e42e9e6b03fc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0015"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/84ad25d974f6c1aadf8dd267825c9eb62a4d40c5eff58a75e005198407b272a7"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0016"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d29679cdd0fbdb1947969a2ab87072ae2ce4ac23e3734e37010595c023c5f85c"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0017"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/7bea7bb1580e4fb41ef30828871b772d2e398f32123c871cee2c113431c977b4"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/203f050ca844f2f4011cfe1140b6bbae0ecca4150f18138a420259869a7c99c9"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50593e0f8838611f28a97993170f96e31f410c93f71ac14df7c54879be14d34e"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50ef74f46ded3311cb5f2fbc8e9bfa69b5b864b868cc0c9c6575a9eb07d85186"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
             "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
           ],
           "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
@@ -4487,6 +4750,136 @@
             "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
           ],
           "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/4ac977d4b8566d67d6c1e60c2e87ea9cfb00f01232ea02b8664a9cb1e115e425"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3f9eb9087340c5aefa9694689f4850107c871b06ce0ed53ade39c42e57c5b6cc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0013"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9efc84b39d4c058715c488e7cf443c31d0dcbe1509de1c1da561f3ec9522106f"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0014"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/bb47b2371996e54e477833a9528debfa98be8abe147f05779ea3e42e9e6b03fc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0015"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/84ad25d974f6c1aadf8dd267825c9eb62a4d40c5eff58a75e005198407b272a7"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0016"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d29679cdd0fbdb1947969a2ab87072ae2ce4ac23e3734e37010595c023c5f85c"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0017"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/7bea7bb1580e4fb41ef30828871b772d2e398f32123c871cee2c113431c977b4"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/203f050ca844f2f4011cfe1140b6bbae0ecca4150f18138a420259869a7c99c9"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50593e0f8838611f28a97993170f96e31f410c93f71ac14df7c54879be14d34e"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50ef74f46ded3311cb5f2fbc8e9bfa69b5b864b868cc0c9c6575a9eb07d85186"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
         }
       ],
       "obligation_ids": [
@@ -4500,7 +4893,8 @@
         "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/household-separation",
         "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home-housing-costs",
         "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-addition",
-        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/no-partner-disability-addition"
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/no-partner-disability-addition",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition"
       ],
       "qualification_evidence_ids": [
         "https://chris-page-gov.github.io/okf-dwp/id/page/77/0007",
@@ -4524,7 +4918,9 @@
         "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003",
         "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005",
         "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003",
-        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0013",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0014"
       ],
       "qualification_paths": [
         {
@@ -4878,6 +5274,136 @@
             "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
           ],
           "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/4ac977d4b8566d67d6c1e60c2e87ea9cfb00f01232ea02b8664a9cb1e115e425"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3f9eb9087340c5aefa9694689f4850107c871b06ce0ed53ade39c42e57c5b6cc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0013"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9efc84b39d4c058715c488e7cf443c31d0dcbe1509de1c1da561f3ec9522106f"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0014"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/bb47b2371996e54e477833a9528debfa98be8abe147f05779ea3e42e9e6b03fc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0015"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/84ad25d974f6c1aadf8dd267825c9eb62a4d40c5eff58a75e005198407b272a7"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0016"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d29679cdd0fbdb1947969a2ab87072ae2ce4ac23e3734e37010595c023c5f85c"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0017"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/7bea7bb1580e4fb41ef30828871b772d2e398f32123c871cee2c113431c977b4"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/203f050ca844f2f4011cfe1140b6bbae0ecca4150f18138a420259869a7c99c9"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50593e0f8838611f28a97993170f96e31f410c93f71ac14df7c54879be14d34e"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/16b532920dc7c95268faa858d075c0a96a5f941eb3a95f13e774e7c9783cfb48",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50ef74f46ded3311cb5f2fbc8e9bfa69b5b864b868cc0c9c6575a9eb07d85186"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
         }
       ],
       "question": "Does Pension Credit stop is a citizen moves into a care home permanently if they are not self-funding?",
@@ -4988,6 +5514,136 @@
             "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033"
           ],
           "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/4ac977d4b8566d67d6c1e60c2e87ea9cfb00f01232ea02b8664a9cb1e115e425"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3f9eb9087340c5aefa9694689f4850107c871b06ce0ed53ade39c42e57c5b6cc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0013"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9efc84b39d4c058715c488e7cf443c31d0dcbe1509de1c1da561f3ec9522106f"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0014"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/bb47b2371996e54e477833a9528debfa98be8abe147f05779ea3e42e9e6b03fc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0015"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/84ad25d974f6c1aadf8dd267825c9eb62a4d40c5eff58a75e005198407b272a7"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0016"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d29679cdd0fbdb1947969a2ab87072ae2ce4ac23e3734e37010595c023c5f85c"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0017"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/7bea7bb1580e4fb41ef30828871b772d2e398f32123c871cee2c113431c977b4"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/203f050ca844f2f4011cfe1140b6bbae0ecca4150f18138a420259869a7c99c9"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50593e0f8838611f28a97993170f96e31f410c93f71ac14df7c54879be14d34e"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50ef74f46ded3311cb5f2fbc8e9bfa69b5b864b868cc0c9c6575a9eb07d85186"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
         }
       ],
       "obligation_ids": [
@@ -4996,6 +5652,153 @@
         "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-014/legal_version_unreconciled/legal-version",
         "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-014/independent_review_pending/meaning-review",
         "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-014/question_scope_unresolved/question-scope"
+      ],
+      "qualification_concept_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition"
+      ],
+      "qualification_evidence_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0013",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0014",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0015",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0016",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0017",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
+      ],
+      "qualification_paths": [
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/4ac977d4b8566d67d6c1e60c2e87ea9cfb00f01232ea02b8664a9cb1e115e425"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3f9eb9087340c5aefa9694689f4850107c871b06ce0ed53ade39c42e57c5b6cc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0013"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9efc84b39d4c058715c488e7cf443c31d0dcbe1509de1c1da561f3ec9522106f"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0014"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/bb47b2371996e54e477833a9528debfa98be8abe147f05779ea3e42e9e6b03fc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0015"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/84ad25d974f6c1aadf8dd267825c9eb62a4d40c5eff58a75e005198407b272a7"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0016"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d29679cdd0fbdb1947969a2ab87072ae2ce4ac23e3734e37010595c023c5f85c"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0017"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/7bea7bb1580e4fb41ef30828871b772d2e398f32123c871cee2c113431c977b4"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/203f050ca844f2f4011cfe1140b6bbae0ecca4150f18138a420259869a7c99c9"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50593e0f8838611f28a97993170f96e31f410c93f71ac14df7c54879be14d34e"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50ef74f46ded3311cb5f2fbc8e9bfa69b5b864b868cc0c9c6575a9eb07d85186"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        }
       ],
       "question": "What is the impact of someone’s partner on their Pension Credit?",
       "required_evidence": [
@@ -5313,6 +6116,136 @@
             "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033"
           ],
           "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/4ac977d4b8566d67d6c1e60c2e87ea9cfb00f01232ea02b8664a9cb1e115e425"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3f9eb9087340c5aefa9694689f4850107c871b06ce0ed53ade39c42e57c5b6cc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0013"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9efc84b39d4c058715c488e7cf443c31d0dcbe1509de1c1da561f3ec9522106f"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0014"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/bb47b2371996e54e477833a9528debfa98be8abe147f05779ea3e42e9e6b03fc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0015"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/84ad25d974f6c1aadf8dd267825c9eb62a4d40c5eff58a75e005198407b272a7"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0016"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d29679cdd0fbdb1947969a2ab87072ae2ce4ac23e3734e37010595c023c5f85c"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0017"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/7bea7bb1580e4fb41ef30828871b772d2e398f32123c871cee2c113431c977b4"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/203f050ca844f2f4011cfe1140b6bbae0ecca4150f18138a420259869a7c99c9"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50593e0f8838611f28a97993170f96e31f410c93f71ac14df7c54879be14d34e"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50ef74f46ded3311cb5f2fbc8e9bfa69b5b864b868cc0c9c6575a9eb07d85186"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
         }
       ],
       "obligation_ids": [
@@ -5321,6 +6254,153 @@
         "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-017/legal_version_unreconciled/legal-version",
         "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-017/independent_review_pending/meaning-review",
         "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-017/question_scope_unresolved/question-scope"
+      ],
+      "qualification_concept_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition"
+      ],
+      "qualification_evidence_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0013",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0014",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0015",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0016",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0017",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
+      ],
+      "qualification_paths": [
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/4ac977d4b8566d67d6c1e60c2e87ea9cfb00f01232ea02b8664a9cb1e115e425"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3f9eb9087340c5aefa9694689f4850107c871b06ce0ed53ade39c42e57c5b6cc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0013"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9efc84b39d4c058715c488e7cf443c31d0dcbe1509de1c1da561f3ec9522106f"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0014"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/bb47b2371996e54e477833a9528debfa98be8abe147f05779ea3e42e9e6b03fc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0015"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/84ad25d974f6c1aadf8dd267825c9eb62a4d40c5eff58a75e005198407b272a7"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0016"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d29679cdd0fbdb1947969a2ab87072ae2ce4ac23e3734e37010595c023c5f85c"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/78/0017"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/7bea7bb1580e4fb41ef30828871b772d2e398f32123c871cee2c113431c977b4"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/203f050ca844f2f4011cfe1140b6bbae0ecca4150f18138a420259869a7c99c9"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50593e0f8838611f28a97993170f96e31f410c93f71ac14df7c54879be14d34e"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/87d25eb55ecb54ec03a153d7c5efda0a019d8776abdd96558ac743c403422c5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50ef74f46ded3311cb5f2fbc8e9bfa69b5b864b868cc0c9c6575a9eb07d85186"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+            "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner-disability-addition",
+            "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+        }
       ],
       "question": "What difference to Pension Credit does having a partner make?",
       "required_evidence": [

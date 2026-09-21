@@ -558,6 +558,7 @@ profiles:
   - care-home-housing-costs
   - severe-disability-addition
   - no-partner-disability-addition
+  - partner-disability-addition
   candidate_ids:
   - source-c028
   - source-c030
@@ -566,8 +567,10 @@ profiles:
   - id: source-requirement-1
     category: evidence_closure_unverified
     label: Conditional branch investigation only; inspecting the no-partner branch does not establish that
-      the claimant has no partner. Separate permanent residence with no partner (DMG 78088 heading), one partner leaving the
-      household, both partners in a home, qualifying-benefit receipt and housing-cost exclusions; self-funding
+      the claimant has no partner. Inspecting the partner branch does not establish that
+      partner status persists after care-home admission or that qualifying facts are satisfied. Separate
+      permanent residence with no partner (DMG 78088 heading), one partner leaving the household, both
+      partners in a home, qualifying-benefit receipt and housing-cost exclusions; self-funding
       alone is insufficient.
     status: candidate-evidence-only
     resolution: New authored paths include DMG 77117–77130, 78034–78089 and 78240–78270 plus dated
@@ -610,6 +613,7 @@ profiles:
   - care-home-housing-costs
   - severe-disability-addition
   - no-partner-disability-addition
+  - partner-disability-addition
   candidate_ids:
   - source-c028
   - source-c030
@@ -618,7 +622,9 @@ profiles:
   - id: source-requirement-1
     category: evidence_closure_unverified
     label: Conditional branch investigation only; inspecting the no-partner branch does not establish that
-      the claimant has no partner. Establish the funding arrangement and qualifying-benefit receipt, including
+      the claimant has no partner. Inspecting the partner branch does not establish that
+      partner status persists after care-home admission or that qualifying facts are satisfied. Establish
+      the funding arrangement and qualifying-benefit receipt, including
       the captured treated-as-receipt qualifications; separate the no-partner
       disability-addition branch, household change and housing costs from the basic Pension Credit award.
     status: candidate-evidence-only
@@ -657,6 +663,8 @@ profiles:
   when_all:
   - pension-credit
   - partner
+  qualification_concepts:
+  - partner-disability-addition
   candidate_ids:
   - source-c009
   - source-c010
@@ -666,8 +674,11 @@ profiles:
   obligations:
   - id: source-requirement-1
     category: evidence_closure_unverified
-    label: Resolve the couple/household definition, one-versus-both permanent-care branches, mixed-age
-      protections and dated migration exception, before applying component or aggregation rules.
+    label: Conditional partner-component investigation only; qualifying disability-benefit receipt,
+      residence and caring facts remain unknown. Inspecting this branch does not establish entitlement to
+      an additional amount. Resolve the couple/household definition, one-versus-both permanent-care
+      branches, mixed-age protections and dated migration exception, before applying component or
+      aggregation rules.
     status: candidate-evidence-only
     resolution: Inspect DMG 77013, 77102, 77117–77130 and 77140–77184 with DMG memo 04/24 paragraphs 15–17.
       Remaining work includes the ADM counterpart, legislation, aggregation/component completeness and the
@@ -794,6 +805,8 @@ profiles:
   when_all:
   - pension-credit
   - partner
+  qualification_concepts:
+  - partner-disability-addition
   candidate_ids:
   - source-c009
   - source-c010
@@ -803,8 +816,11 @@ profiles:
   obligations:
   - id: source-requirement-1
     category: evidence_closure_unverified
-    label: Resolve the couple/household definition, one-versus-both permanent-care branches, mixed-age
-      protections and dated migration exception, before applying component or aggregation rules.
+    label: Conditional partner-component investigation only; qualifying disability-benefit receipt,
+      residence and caring facts remain unknown. Inspecting this branch does not establish entitlement to
+      an additional amount. Resolve the couple/household definition, one-versus-both permanent-care
+      branches, mixed-age protections and dated migration exception, before applying component or
+      aggregation rules.
     status: candidate-evidence-only
     resolution: Inspect DMG 77013, 77102, 77117–77130 and 77140–77184 with DMG memo 04/24 paragraphs 15–17.
       Remaining work includes the ADM counterpart, legislation, aggregation/component completeness and the

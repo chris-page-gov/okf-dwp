@@ -414,3 +414,38 @@ which does not exist on Ubuntu. The test now resolves Python's platform temporar
 directory before constructing its isolated fixtures. The symlink checks and
 frozen checker/receipt bytes are unchanged; all 14 focused controls and the
 offline receipt check pass locally. A new Linux CI run remains required.
+
+## Partner retention checkpoint, 21 September shortly after 02:00 BST
+
+The reviewed partner source is frozen at
+`7e5fdb9b906052914b307c17c0fd19feb2d008a7`. Root rebuilt and checked all 4,758
+combined outputs: 20,044 records, 21,242 relationships and snapshot
+`dwp-combined-a769a75d999ffd48afb0`. All 402 Python controls, the 40-case current
+staff evaluation and exact replay pass. All 203 obligations remain open.
+
+The separate partner comparison runs 320 assemblies and exact replay. The legal
+agent independently checked 380 immutable input bindings, archived code, the
+497-to-585 path denominator and eight exact focus-package reconstructions.
+Fourteen admission/census controls pass. At 512 KiB the current assembler
+retains all 585 declared path occurrences; at 256 KiB it retains 449. Candidate
+overlap is 177/177 at both budgets. Staff 012/013 retain 93/93 paths at the larger
+size and 25/93 at the smaller size. Missing qualifications remain visible.
+
+The learning site at revision `91b99078…` passed a new actual HTTP observation
+at 01:53 BST: 123 matching responses, 1,777,711 bytes, 120 HTML pages and 2,382
+internal links. The executed verifier and receipt are retained separately while
+the next publication record is prepared. The disability candidate `df352daa…`
+also passed six actual public Chrome journeys against application manifest
+`9fc8cb1b…`, with 270 distinct corpus files and no console/network errors. Its
+own source/receipt identity is separate from the earlier qualification check.
+
+The service replay verifier passed independent review after stricter error-only
+response checks and pre-open special-file checks. All 77 service controls pass;
+no new public service call has occurred. The direct-JSON model runner has 24
+offline controls and is under independent review; no provider has been called.
+Ignored-person discovery has produced a concrete source proposal, with its
+normal-residence distinction and remaining statutory/judgment gaps explicit.
+
+## Retained later public observations, 21 September
+
+Root preserved the 01:53 BST learning-site check for exact source `91b99078…`: 123 HTTP 200 responses, 120 HTML pages and 2,382 internal links. The separate 01:55 BST public Chrome observation of disability source `df352daa…` passed six journeys and retained the complete packages. Its offline admission checks 273 immutable source inputs, 71/71 returned required care-home paths and 12/12 returned required SDA paths; frontier relationships remain separately reported. Six new local checker-admission controls cover altered bytes, file bounds, symlinks and non-regular files. These observations do not attest the later partner source or the undeployed MCP successor. Historical files and `.email.md` remain untouched.

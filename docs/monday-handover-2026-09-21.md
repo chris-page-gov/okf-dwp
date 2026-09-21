@@ -10,7 +10,13 @@ Open the [learning website](https://chris-page-gov.github.io/okf-dwp/) and follo
 
 **DWP** is the Department for Work and Pensions. Its **Decision makers’ guide (DMG)** and **Advice for decision making (ADM)** are separate staff guidance collections. The captured collections contain 513 PDFs and 19,090 pages. A **bundle** brings source records, named concepts and relationships together so people and software can inspect them.
 
-The website was checked against exact source commit `7815b17bb3db3903738c745d3fb9508919ebab15` on 21 September at 00:52 BST. Its manifest and all 121 listed output files matched: 122 successful HTTPS responses. All 2,320 internal links resolved, including section anchors. This is a dated publication check, not a guarantee that the website can never change. The [receipt](../validation/learning-site/public-7815b17bb3db3903738c745d3fb9508919ebab15/README.md) records every response and explains the check’s limits; the [earlier observation](../validation/learning-site/public-3f72ebc30128c2a3171951050a566d3ed8db7c16/README.md) remains unchanged.
+The website was checked against exact source commit `91b9907836c8a340d974dd958969f4f8cbb3a0c6` on 21 September at 01:53 BST. Its manifest and all 122 listed output files matched: 123 successful HTTPS responses. All 2,382 internal links resolved, including section anchors. This is a dated publication check. The [latest receipt](../validation/learning-site/public-91b9907836c8a340d974dd958969f4f8cbb3a0c6/README.md) records the check's limits; the [earlier observation](../validation/learning-site/public-7815b17bb3db3903738c745d3fb9508919ebab15/README.md) remains unchanged.
+
+### Later candidate checks
+
+A separate public Chrome check at **01:55 BST** passed six journeys against disability source `df352daa…`. Its care-home context retained 61 records and 124 relationships in 520,494 bytes; the package remained insufficient and truncated. The [source-bound receipt and screenshots](../validation/household-reader-public/df352daa-c4f2de0a/README.md) distinguish this public candidate from the earlier qualification demonstration below.
+
+The subsequent partner increment has 903 authored records, 1,482 assertions and 39 declared support dependencies. Its [frozen comparison](../validation/partner-context/2026-09-21/README.md) retains 585/585 declared path occurrences at 512 KiB and 449/585 at 256 KiB. These are offline source/assembler checks, not fresh public-service or AI-answer observations. Publication and remote replay are tracked separately; the live MCP service remains version 0.5.0 until its successor is deployed and checked.
 
 ## Which version are we demonstrating?
 

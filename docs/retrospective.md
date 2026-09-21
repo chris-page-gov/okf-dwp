@@ -54,6 +54,15 @@ Do not promote a navigation overview into a complete rule. Preserve unsuccessful
 observations and keep candidate overlap, path retention and claim accuracy as
 different measures.
 
+The separate [partner increment](../validation/partner-context/2026-09-21/README.md)
+extends that lesson: 177/177 candidate occurrences survive both budgets, but
+449/585 declared paths survive 256 KiB and all 585 survive 512 KiB. The care-home
+packages come close to the larger limit. A richer model can therefore expose
+new omissions even when a headline discovery score stays unchanged. Preserve
+the denominator, whole qualifications and every failed observation; use bounded
+progressive reads for delivery rather than treating a smaller response as a
+complete answer.
+
 ### 1. A search failure can be several different failures
 
 The imprisonment question needed benefit resolution, the payment/entitlement

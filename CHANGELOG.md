@@ -8,6 +8,27 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Later public observations — 21 September 2026
+
+- Preserve a separate [learning-site observation](validation/learning-site/public-91b9907836c8a340d974dd958969f4f8cbb3a0c6/README.md): exact source `91b99078…`, 123 successful responses and 2,382 checked internal links.
+- Preserve six actual [public Chrome journeys](validation/household-reader-public/df352daa-c4f2de0a/README.md) for disability candidate `df352daa…`, with complete care-home and unresolved-SDA packages. Add offline source/hash/path admission and six controls; retain every original observation unchanged.
+- Keep public browser observations, offline comparison, protected publication, remote delivery and model trials separately labelled in the Monday handover.
+
+## Partner qualification support — 21 September 2026
+
+- Preserve the separate partner lower- and higher-rate branches, actual caring
+  payment, complete treated-receipt provisions and dated memo changes. Correct
+  the interpretation of a flattened superscript without changing source text.
+- Add ten supporting dependencies and conditional routes for Staff 012, 013,
+  014 and 017. Keep Staff 018's unbounded question unchanged. The semantic index
+  now has 903 records, 1,482 assertions and 39 support dependencies; all 203
+  obligation identities and statuses remain open.
+- Rebuild the combined Reader and all 40 development cases. Independent source
+  review, 52 semantic and 20 Reader controls pass. A separate 320-assembly
+  comparison and exact replay retain 585/585 declared path occurrences at
+  512 KiB and 449/585 at 256 KiB. Preserve missing evidence, all earlier receipts
+  and the distinction between source consistency and specialist acceptance.
+
 ## Disability-addition qualification support — 21 September 2026
 
 - Distinguish the limited severe-disability overview from the detailed no-partner

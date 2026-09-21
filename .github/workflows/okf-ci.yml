@@ -23,6 +23,8 @@ jobs:
       EXPLORER_QUALIFICATION_BASELINE_COMMIT: b9a3b68b6dbf222f9a73cc8f450dd53f126e1b55
       DWP_QUALIFICATION_COMMIT: 7f9feb9634e3d94004853b838462aca132c505a5
       DWP_DISABILITY_COMMIT: 8ea4465a4cb5a867d82c87e635f2ef1d1df18d8a
+      DWP_DISABILITY_PUBLIC_COMMIT: df352daa5d1d6a99a30fddcb2db341f74c6473e5
+      DWP_PARTNER_COMMIT: 7e5fdb9b906052914b307c17c0fd19feb2d008a7
       DWP_HOUSEHOLD_TRIAL_COMMIT: 3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84
       DWP_COMPACT_TRIAL_COMMIT: 78a8beea97242d646eb9159860dea190ca5e2998
     steps:
@@ -49,6 +51,8 @@ jobs:
           uv run --locked python scripts/check_learning_site_observation.py
           uv run --locked python validation/learning-site/public-7815b17bb3db3903738c745d3fb9508919ebab15/check_observation.py
           uv run --locked python -m unittest discover -s validation/learning-site/public-7815b17bb3db3903738c745d3fb9508919ebab15 -p test_verify_public.py
+          uv run --locked python validation/learning-site/public-91b9907836c8a340d974dd958969f4f8cbb3a0c6/check_observation.py
+          uv run --locked python -m unittest discover -s validation/learning-site/public-91b9907836c8a340d974dd958969f4f8cbb3a0c6 -p test_verify_public.py
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: '26.7.0'
@@ -160,6 +164,10 @@ jobs:
           git cat-file -e "$DWP_QUALIFICATION_COMMIT^{commit}"
           git fetch --no-tags --depth=1 origin "$DWP_DISABILITY_COMMIT"
           git cat-file -e "$DWP_DISABILITY_COMMIT^{commit}"
+          git fetch --no-tags --depth=1 origin "$DWP_DISABILITY_PUBLIC_COMMIT"
+          git cat-file -e "$DWP_DISABILITY_PUBLIC_COMMIT^{commit}"
+          git fetch --no-tags --depth=1 origin "$DWP_PARTNER_COMMIT"
+          git cat-file -e "$DWP_PARTNER_COMMIT^{commit}"
           git -C .ci/okf-explorer-qualification fetch --no-tags --depth=1 origin "$EXPLORER_QUALIFICATION_BASELINE_COMMIT"
           git -C .ci/okf-explorer-qualification cat-file -e "$EXPLORER_QUALIFICATION_BASELINE_COMMIT^{commit}"
       - name: Replay the independent source and allocator comparison offline
@@ -170,6 +178,10 @@ jobs:
         run: |
           node --test validation/disability-context/2026-09-21/admission.test.mjs validation/disability-context/2026-09-21/metrics.test.mjs
           node --experimental-strip-types validation/disability-context/2026-09-21/compare.mjs --dwp-root . --explorer-root .ci/okf-explorer-qualification --check validation/disability-context/2026-09-21/attempt-01
+      - name: Replay the separate partner qualification comparison offline
+        run: |
+          node --test validation/partner-context/2026-09-21/admission.test.mjs validation/partner-context/2026-09-21/metrics.test.mjs
+          node --experimental-strip-types validation/partner-context/2026-09-21/compare.mjs --dwp-root . --explorer-root .ci/okf-explorer-qualification --check validation/partner-context/2026-09-21/attempt-01
       - name: Verify portable performance evidence and new trial controls offline
         run: |
           node validation/context-performance/2026-09-21/verify.mjs
@@ -193,6 +205,8 @@ jobs:
           uv run --locked python -m unittest discover -s scripts -p test_public_household_observations.py
           uv run --locked python scripts/check_pinned_public_household_observation.py
           uv run --locked python scripts/test_pinned_public_household_observation.py
+          uv run --locked python scripts/check_disability_public_observation.py
+          uv run --locked python scripts/test_disability_public_observation.py
       - name: Check the public backlog and retained answer trials offline
         run: |
           uv run --locked python scripts/check_backlog.py
