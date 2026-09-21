@@ -25,9 +25,10 @@ class DirectObservationChecks(unittest.TestCase):
                                         cls.bound[check.SPEC + 'answer.schema.json'], cls.freeze_raw)
 
     def setUp(self):
-        self.temp = tempfile.TemporaryDirectory(dir='/private/tmp')
+        self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.root = Path(self.temp.name)
+        # macOS may expose its temporary directory through a symlinked ancestor.
+        self.root = Path(self.temp.name).resolve(strict=True)
         out = self.root / check.OUTPUT
         out.mkdir(parents=True)
         (out / 'README.md').write_text('Synthetic temporary test copy of recorded public observations.\n')

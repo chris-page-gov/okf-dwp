@@ -10,6 +10,7 @@ Implementation ownership and handovers belong in the
 
 ## Recorded Monday delivery checkpoint — 21 September 2026
 
+- Make the eight retained direct-v3 observation tests portable across macOS and Linux by using the system temporary directory and resolving its path. Preserve all frozen executables, inputs and outcomes.
 - Export three actual public-service examples into 225 bounded static files, preserving complete package hashes, source and engine identity, insufficient status and historical limits.
 - Retain both rejected direct-v3 empty controls and hold substantive calls. Record client-format failures without claiming AI correctness or retrying the frozen attempts.
 - Add thirteen offline controls for the fixed-origin v2 website verifier, including late-response rejection, and update the beginner learning route and Monday handover.
