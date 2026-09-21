@@ -65,6 +65,7 @@ jobs:
         run: |
           uv run --locked --project tools/learning-site python scripts/build_learning_site.py --commit "$GITHUB_SHA" --check-examples
           node --test scripts/test_learning_site_v2.mjs
+          node --test scripts/test_retained_examples_browser.mjs
       - name: Require an immutable context consumer commit
         run: >-
           uv run --locked python -c

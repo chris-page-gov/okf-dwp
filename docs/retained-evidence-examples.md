@@ -21,3 +21,5 @@ The 225-file archive contains 2,766,291 bytes. The browser does not download eve
 ## Publication boundary
 
 These fixed public questions are explicitly approved demonstration examples. The service does not retain anonymous visitors' questions. This archive is not an AI-answer audit log, a new evidence assembly or a finding that the evidence is complete. The retained public SDK check and the separate website publication check have different scopes.
+
+The [public browser procedure](retained-evidence-browser-verification.md) checks the actual reader after publication. Its nine offline controls do not by themselves establish a live browser pass.
