@@ -438,3 +438,28 @@ no new public service call has occurred. The direct-JSON model runner has 24
 offline controls and is under independent review; no provider has been called.
 Ignored-person discovery has produced a concrete source proposal, with its
 normal-residence distinction and remaining statutory/judgment gaps explicit.
+
+## Ignored-person coverage and capacity checkpoint, 21 September at 08:10 BST
+
+The separately reviewed ignored-person source `c44bc3a1…` adds two conditional
+concepts and eight already captured source pages. Root rebuilt and checked all
+4,758 combined files: 20,046 records, 21,286 relationships and 19,912 resources.
+All 411 Python controls and the 40-case current evaluation/replay pass. The
+original 520 evidence records and 203 obligation objects remain unchanged.
+
+The separate frozen comparison preserves 320 assemblies and exact replay.
+Eighteen admission/census controls pass. At 512 KiB the new source retains
+177/177 candidate occurrences but only 647/765 declared path occurrences; at
+256 KiB these fall to 171/177 and 393/765. The care-home cases lose one of seven
+household support pages even at 512 KiB. The byte census reproduces each measured
+package hash: Staff 012 contains only 45,608 JSON bytes of source evidence text,
+while requirements and relationships occupy 124,383 and 170,815 bytes. This
+identifies representational overhead for investigation; it does not justify
+silently dropping dependencies or declaring an answer complete.
+
+The source modelling increment is separately recorded complete. Its capacity
+regression has a named open work package. The Monday service and model trial
+remain fixed to the partner source `723bcc5b…`. Work was interrupted overnight
+by usage limits; on resumption, source PR 19 passed and merged normally, and the
+reviewed service passed all protected checks. New live observations and model
+attempts are separate from these offline measurements.

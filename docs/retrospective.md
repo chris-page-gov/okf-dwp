@@ -259,3 +259,14 @@ Pages publication. The correction checks documentation lockstep before selecting
 expensive CI jobs. For an HMRC repeat, classify assurance requirements separately
 from expensive test selection: a cheap mandatory publication check must remain
 mandatory even when the app or corpus has not changed.
+
+### More complete modelling can expose less complete context
+
+The ignored-person increment makes previously implicit conditions explicit. It
+preserves source text and open obligations, but its larger required evidence set
+does not fit the same 512 KiB package. Candidate overlap remains 177/177 there.
+This is a capacity regression, not proof that the new modelling is unnecessary.
+For an HMRC repeat, freeze both the source version and requirement denominator,
+measure whole evidence and repeated metadata separately, and investigate staged
+component context or reversible delivery before enlarging a demonstration claim.
+Keep the prior approved experiment fixed while evaluating a richer successor.
