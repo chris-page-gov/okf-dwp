@@ -445,3 +445,7 @@ no new public service call has occurred. The direct-JSON model runner has 24
 offline controls and is under independent review; no provider has been called.
 Ignored-person discovery has produced a concrete source proposal, with its
 normal-residence distinction and remaining statutory/judgment gaps explicit.
+
+## Retained later public observations, 21 September
+
+Root preserved the 01:53 BST learning-site check for exact source `91b99078…`: 123 HTTP 200 responses, 120 HTML pages and 2,382 internal links. The separate 01:55 BST public Chrome observation of disability source `df352daa…` passed six journeys and retained the complete packages. Its offline admission checks 273 immutable source inputs, 71/71 returned required care-home paths and 12/12 returned required SDA paths; frontier relationships remain separately reported. Six new local checker-admission controls cover altered bytes, file bounds, symlinks and non-regular files. These observations do not attest the later partner source or the undeployed MCP successor. Historical files and `.email.md` remain untouched.
