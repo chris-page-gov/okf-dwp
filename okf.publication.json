@@ -2519,6 +2519,32 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 5
+      },
+      {
+        "id": "retained-site-public-check",
+        "kind": "check",
+        "planes": [
+          "documentation"
+        ],
+        "command": "node scripts/verify_learning_site_v2.mjs --repo REPOSITORY --site BUILT_SITE --commit FULL_COMMIT --output FRESH_OBSERVATION_DIRECTORY",
+        "source": "docs/retained-evidence-publication.md",
+        "review_status": "unreviewed",
+        "network": "bounded-read",
+        "mutates": "generated-only",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "test-retained-site-public-check",
+        "kind": "check",
+        "planes": [
+          "documentation"
+        ],
+        "command": "node --test scripts/test_learning_site_v2.mjs",
+        "source": "docs/retained-evidence-publication.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
       }
     ]
   },

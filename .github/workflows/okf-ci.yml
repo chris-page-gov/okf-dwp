@@ -56,6 +56,10 @@ jobs:
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: '26.7.0'
+      - name: Verify approved retained examples and bounded public-verifier controls offline
+        run: |
+          uv run --locked --project tools/learning-site python scripts/build_learning_site.py --commit "$GITHUB_SHA" --check-examples
+          node --test scripts/test_learning_site_v2.mjs
       - name: Require an immutable context consumer commit
         run: >-
           uv run --locked python -c

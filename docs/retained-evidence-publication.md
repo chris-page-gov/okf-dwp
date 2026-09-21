@@ -99,3 +99,14 @@ Without a committed approval registry, the existing Markdown-only site keeps the
 With approved examples, the publisher writes `okf-dwp-learning-site.v2`. Its existing `source_pages` and `page_count` still describe Markdown pages. The new `retained_evidence` field lists the approval, releases and every admitted input hash. The existing `files` list covers the exact copied archive assets as well as rendered documentation. HTML, JavaScript, CSS and JSON archive bytes are preserved unchanged.
 
 Authored Markdown links to explicitly copied archive files become local website links. Other evidence links remain bound to the declared Git commit. A future public-site observation must verify the v2 manifest and exact published files; earlier v1 observations remain historical and unchanged. An offline build alone is not a live browser or deployment verification.
+
+## Checking the public v2 site
+
+The successor checker first admits the exact local build and every declared source input against its full Git commit. Only then does it fetch the fixed public GitHub Pages origin, checking the manifest and every listed output hash. It has four concurrent readers, a 20-second request deadline, a three-minute overall deadline and a 32 MiB received-byte ceiling. It follows no redirects and makes no retries. A failed observation is preserved in its own fresh directory.
+
+```sh
+node scripts/verify_learning_site_v2.mjs --repo REPOSITORY --site BUILT_SITE --commit FULL_COMMIT --output FRESH_OBSERVATION_DIRECTORY
+node --test scripts/test_learning_site_v2.mjs
+```
+
+Thirteen offline controls and independent review pass. This checker establishes byte delivery for an already reviewed build; it does not independently render the HTML, fetch the exporter repository, exercise the browser reader or approve legal interpretation. Earlier v1 scripts and observations are unchanged.
