@@ -175,7 +175,11 @@ def inputs(p, manifest, explorer_root):
         name = relative(entry['path']); require(name in expected and name not in bound, 'unknown-or-duplicate-input')
         commit = manifest['source_commit'] if name in SOURCE_FILES else manifest['trial_commit']
         require(entry['commit'] == commit, 'input-commit-mismatch')
-        raw = read(name, 1024 * 1024 if name in received else 16 * 1024 * 1024)
+        # Historical data comes from its explicit immutable source, even after
+        # the current bundle advances. Executable and trial inputs still have
+        # to match the reviewed working files and their frozen Git commit.
+        raw = (git_bytes(ROOT, commit, name) if name in SOURCE_FILES
+               else read(name, 1024 * 1024 if name in received else 16 * 1024 * 1024))
         require(type(entry['bytes']) is int and len(raw) == entry['bytes'] and events.sha(raw) == entry['sha256'], 'input-hash-mismatch')
         require(git_bytes(ROOT, commit, name) == raw, 'input-differs-from-commit')
         bound[name] = raw

@@ -378,6 +378,21 @@ class DirectTrials(unittest.TestCase):
             with patch.object(trial, 'git_bytes', return_value=b'changed'):
                 with self.assertRaisesRegex(ValueError, 'differs-from-commit'): trial.inputs(self.ready, manifest, Path('/fixture'))
 
+    def test_historical_source_data_is_read_from_frozen_git_not_current_bundle(self):
+        blobs, manifest, git, _ = self.freeze_fixture()
+        def working(name, *args):
+            self.assertNotIn(name, trial.SOURCE_FILES)
+            return blobs[name]
+        with patch.object(trial, 'read', side_effect=working), patch.object(trial, 'git_bytes', side_effect=git):
+            trial.inputs(self.ready, manifest, Path('/fixture'))
+        def altered_git(root, commit, name, *args):
+            if name in trial.SOURCE_FILES:
+                return b'changed frozen source'
+            return git(root, commit, name, *args)
+        with patch.object(trial, 'read', side_effect=working), patch.object(trial, 'git_bytes', side_effect=altered_git):
+            with self.assertRaisesRegex(ValueError, 'input-hash-mismatch'):
+                trial.inputs(self.ready, manifest, Path('/fixture'))
+
     def test_versioned_compact_observation_and_hosting_are_separate_boundaries(self):
         changes = [lambda s: s.update(schema='legacy'), lambda s: s.update(deployed_worker_bytes_independently_verified=True),
             lambda s: s.update(full_ask_okf_calls=1), lambda s: s.update(runner_sha256='f' * 64),

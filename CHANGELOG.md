@@ -11,7 +11,7 @@ Implementation ownership and handovers belong in the
 ## Direct JSON model-trial harness — 21 September 2026
 
 - Add a separately reviewed fixed-evidence trial harness for the original Staff 012 care-home question and an independently assembled unknown-term control. Both subscription clients receive identical, complete governed evidence; every tool event is rejected.
-- Add 29 offline controls and strict source, engine, service, compact-reconstruction and hosting bindings. Limit execution to one attempt per provider and case, with successful empty controls required before substantive attempts.
+- Add 30 offline controls and strict source, engine, service, compact-reconstruction and hosting bindings. Limit execution to one attempt per provider and case, with successful empty controls required before substantive attempts.
 - Keep the protocol pending until the exact public service observations and final inputs are frozen. This entry records the harness, not new provider calls, answer success or specialist approval. Earlier trials remain unchanged.
 
 ## Partner qualification support — 21 September 2026

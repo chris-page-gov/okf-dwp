@@ -127,7 +127,10 @@ files, `pyproject.toml` and `uv.lock`. `SOURCE_FILES` includes
 `combined/context/corpus/manifest.json`, its `base-index.json` and the original
 staff-question register. The actual corpus bundle identity differs from the
 authored semantic index identity; the trial uses the corpus identity. Every file must
-match its declared digest, size and immutable Git blob. The loaded Python files
+match its declared digest, size and immutable Git blob. Historical corpus and
+question-register data are read from their explicit source commit, so a later
+working-tree bundle cannot substitute newer evidence. Executable and trial
+inputs additionally have to match the reviewed working files. The loaded Python files
 must still match those frozen bytes. Root/parent/member symlinks and oversized
 files are rejected before bounded reads.
 
@@ -196,7 +199,7 @@ forecast. Executable hashes do not freeze dynamically loaded provider internals.
 
 ## Offline verification
 
-**29 controls pass** using synthetic fixtures and local Python child processes.
+**30 controls pass** using synthetic fixtures and local Python child processes.
 They exercise stream and answer bounds, malformed wrappers, duplicate JSON,
 terminal success, unknown events, zero formatter exceptions, model-identity
 privacy, literal/source checks, changed freeze bindings, immutable commit checks,
