@@ -152,6 +152,10 @@ jobs:
           uv run --locked python scripts/check_combined_reader_observations.py
       - name: Replay staff semantic development cases and failure controls
         run: node --experimental-strip-types scripts/evaluate_staff_semantic.mjs --check --explorer-root .ci/okf-explorer-qualification
+      - name: Check abroad paraphrases, scope and whole-passage retention
+        run: |
+          git fetch --no-tags --depth=1 origin "$DWP_DIRECT_SOURCE_COMMIT"
+          node --experimental-strip-types scripts/evaluate_abroad_semantic.mjs --explorer-root .ci/okf-explorer-qualification
       - name: Check the portable public-reader verifier without network
         run: |
           node --test scripts/test_staff_service_browser.mjs

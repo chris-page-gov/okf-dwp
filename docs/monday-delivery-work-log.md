@@ -543,3 +543,26 @@ the old 0.6.0 selection failed with “A newer successful deployment is not
 represented”. Pinning the receipts at immutable commit `a13a291f…` produced the
 0.6.1 status and passed check mode plus 19 controls. The before/after client
 records and all older SDK failures remain separately retained.
+
+## Abroad semantic audit and reusable question diagnostics, 21 September
+
+Root traced the reported five-page result to the 19 September pre-fix observation, then ran ten offline packages against exact source and engine identities. The published 723 source resolves the exact abroad question at 32 KiB, retaining two records and one relationship; overseas paraphrases remain unresolved. This is a local replay, not a new public or model observation.
+
+Separate agents own the additive DWP international graph and its source/path tests, the reusable Explorer question-scaffolding classifier, and independent whole-passage review. Root owns integration, backlog, documentation and release boundaries. The existing four international IDs are reused; no frozen source, engine, receipt, trial or private email is rewritten. The [audit](abroad-semantic-audit.md) names cross-benefit and graph-budget work still outstanding. The [Data Analytics guide](data-agent-semantic-review.md) proposes a controlled semantic-proposal exercise; it is not a completed new model trial.
+
+The bounded source repair passed independent agent review, 67 semantic tests,
+21 combined Reader tests and the current 40-case replay. Its separate comparison
+retains 24 complete packages and 10 negative controls. Four Pension Credit cases
+retain 7/7 whole pages and 14/14 required paths at 512 KiB; the general 32 KiB result
+regresses to one concept and no source evidence. The regression is explicit in
+the [retained report](../validation/abroad-context/2026-09-21/README.md).
+Public-service admission and generic capacity repair remain separate; all 203
+obligations stay open. Explorer's shared-classifier change passes 607 tests and
+has its own reviewed PR; frozen MCP engines are not rewritten.
+
+At the owner's request, a separate ChatGPT Work task was submitted for a
+source-bound Data agent semantic review. Creation first returned a pending client
+identity; the new Work conversation was subsequently observed active with the
+complete submitted brief. No inspected sources or completed result have yet
+been observed. The [method guide](data-agent-semantic-review.md) remains a
+proposed protocol until that task supplies inputs, tool observations and results.

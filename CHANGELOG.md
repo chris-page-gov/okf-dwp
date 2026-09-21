@@ -8,6 +8,13 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Abroad semantics and question diagnostics — 21 September 2026
+
+- Trace the reported five weak lexical matches to the historical 19 September client observation and distinguish it from a fresh offline replay of the published source and engine.
+- Reuse international concept identifiers, add overseas wording and declare whole-page Pension Credit qualification support. Preserve broad-benefit ambiguity, historical limits and open obligations.
+- Add focused source, paraphrase and budget checks; track cross-benefit coverage, task discrimination and historical source competition as separate unfinished work.
+- Add beginner explanations of Voice/client boundaries and the proposed use of Data Analytics for source-linked semantic proposals. No new Voice acceptance, Data Agent trial or legal answer-quality result is implied.
+
 ## Service 0.6.1 and native connector checks — 21 September 2026
 
 - Publish the question-schema compatibility patch as Sites version 11, preserving the five source versions, two engines and all earlier observations. The new SDK run reconstructed 11 cases in 121 requests with no retries or model calls.

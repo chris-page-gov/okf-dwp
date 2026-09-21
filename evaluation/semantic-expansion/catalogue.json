@@ -1040,11 +1040,18 @@
       "aliases": [
         "abroad",
         "moves abroad",
-        "go abroad"
+        "go abroad",
+        "overseas",
+        "travel abroad",
+        "travel overseas",
+        "living abroad",
+        "living overseas",
+        "outside Great Britain",
+        "outside GB"
       ],
       "assertion_status": "model-derived",
       "authority": "model-assisted",
-      "definition": "Temporary absence, permanent residence abroad and exportability are separate benefit-specific questions; duration, purpose, destination and dates matter.",
+      "definition": "Temporary absence from Great Britain, permanent residence abroad and exportability are separate benefit-specific questions; duration, purpose, destination and dates matter. Overseas wording identifies a research topic, not an applicable rule or a benefit. Great Britain and the United Kingdom are not interchangeable territorial tests. Domestic temporary absence and a holiday without a stated destination do not establish travel abroad. The linked SPC branch concerns Pension Credit only; it does not establish rules for JSA, ESA, PIP, Universal Credit, State Pension or all benefits.",
       "evidence_ids": [
         "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part1/0116",
         "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0008"
@@ -1057,6 +1064,179 @@
         "source-c001",
         "source-c002"
       ]
+    },
+    {
+      "@id": "https://chris-page-gov.github.io/okf-dwp/id/term/intl-spc-claimant-absence",
+      "@type": [
+        "skos:Concept",
+        "dwp:DecisionRule"
+      ],
+      "additional_sources": [
+        {
+          "anchor": "077001",
+          "document_id": "dmg-vol2-ch7-part6",
+          "family": "dmg",
+          "page": 8
+        },
+        {
+          "anchor": "077002",
+          "document_id": "dmg-vol2-ch7-part6",
+          "family": "dmg",
+          "page": 9
+        },
+        {
+          "anchor": "077004",
+          "document_id": "dmg-vol2-ch7-part6",
+          "family": "dmg",
+          "page": 10
+        },
+        {
+          "anchor": "form of treatment",
+          "document_id": "dmg-vol2-ch7-part6",
+          "family": "dmg",
+          "page": 11
+        }
+      ],
+      "aliases": [],
+      "assertion_status": "model-derived",
+      "authority": "model-assisted",
+      "definition": "Source-bounded Pension Credit research through DMG 077001–077004, not a rule for all benefits. Other entitlement conditions must continue. The captured four-week branch requires an absence not expected to exceed four weeks; the examples distinguish expected duration from an early return or later extension. The eight-week branch requires the specified death connection, an absence not expected to exceed eight weeks and the Secretary of State considering return within four weeks unreasonable. The twenty-six-week branch requires an absence not expected to exceed twenty-six weeks and solely for the specified treatment, medically approved convalescence or care, or accompanying the specified person. Preserve the practitioner, pre-existing-condition and accompanying-person qualifications exactly as stated on pages 9–11; being abroad when an accident occurs is not itself the stated purpose condition. The qualified-practitioner definition continues onto page 11. Household membership, qualifying young person, the dated 2016 transition and the source-described non-export boundary need separate conditional review. Destination, purpose, expected and actual duration, relevant date and household facts remain unknown. Statutory reconciliation and the DMG 04642 supersession cross-reference remain open.",
+      "evidence_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0008",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0009",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0010",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0011"
+      ],
+      "key": "intl-spc-claimant-absence",
+      "label": "SPC claimant temporary absence in the source",
+      "required_concepts": [
+        "intl-spc-household-absence",
+        "intl-spc-absence-transition-2016",
+        "intl-spc-non-export"
+      ],
+      "required_source_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0008",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0009",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0010",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0011"
+      ],
+      "review_status": "unreviewed-specialist-review-required",
+      "route": "term/intl-spc-claimant-absence",
+      "source_candidates": []
+    },
+    {
+      "@id": "https://chris-page-gov.github.io/okf-dwp/id/term/intl-spc-household-absence",
+      "@type": [
+        "skos:Concept",
+        "dwp:DecisionRule"
+      ],
+      "additional_sources": [
+        {
+          "anchor": "077005",
+          "document_id": "dmg-vol2-ch7-part6",
+          "family": "dmg",
+          "page": 11
+        },
+        {
+          "anchor": "077008",
+          "document_id": "dmg-vol2-ch7-part6",
+          "family": "dmg",
+          "page": 12
+        },
+        {
+          "anchor": "077010",
+          "document_id": "dmg-vol2-ch7-part6",
+          "family": "dmg",
+          "page": 13
+        }
+      ],
+      "aliases": [],
+      "assertion_status": "model-derived",
+      "authority": "model-assisted",
+      "definition": "DMG 077005–077007 describe when a temporarily absent person is treated as a member of the claimant’s household. This is a separate question from the claimant-payment provision at 077001. Keep the household branch’s own expected-duration, specified death connection, Secretary of State reasonableness and sole-purpose treatment/accompanying conditions; the twenty-six-week provision continues onto page 12. Do not transfer the claimant’s list of people or invent household facts. Where a qualifying young person matters, DMG 077008–077014 span pages 12–13, including education/training, age, continuity and benefit-receipt qualifications and references to ADM E2092/F1093. Those cross-references and current legal applicability remain unreconciled.",
+      "evidence_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0012",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0013"
+      ],
+      "key": "intl-spc-household-absence",
+      "label": "SPC household membership during temporary absence",
+      "required_source_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0012",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0013"
+      ],
+      "review_status": "unreviewed-specialist-review-required",
+      "route": "term/intl-spc-household-absence",
+      "source_candidates": []
+    },
+    {
+      "@id": "https://chris-page-gov.github.io/okf-dwp/id/term/intl-spc-absence-transition-2016",
+      "@type": [
+        "skos:Concept",
+        "dwp:DecisionRule"
+      ],
+      "additional_sources": [
+        {
+          "anchor": "077015",
+          "document_id": "dmg-vol2-ch7-part6",
+          "family": "dmg",
+          "page": 13
+        }
+      ],
+      "aliases": [],
+      "assertion_status": "model-derived",
+      "authority": "model-assisted",
+      "definition": "DMG 077015 states that a person already temporarily absent on 28 July 2016 remains subject to the previous regulations until return to Great Britain; further absences use the new rules. This is a dated source-described transition, not a finding that it applies to the question or a claim that the captured guidance is current law. The relevant absence date and previous-regulation provisions remain to be established.",
+      "evidence_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0013"
+      ],
+      "key": "intl-spc-absence-transition-2016",
+      "label": "The stated 28 July 2016 SPC absence transition",
+      "required_source_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0013"
+      ],
+      "review_status": "unreviewed-specialist-review-required",
+      "route": "term/intl-spc-absence-transition-2016",
+      "source_candidates": []
+    },
+    {
+      "@id": "https://chris-page-gov.github.io/okf-dwp/id/term/intl-spc-non-export",
+      "@type": [
+        "skos:Concept",
+        "dwp:DecisionRule"
+      ],
+      "additional_sources": [
+        {
+          "anchor": "077025",
+          "document_id": "dmg-vol2-ch7-part6",
+          "family": "dmg",
+          "page": 13
+        },
+        {
+          "anchor": "077026",
+          "document_id": "dmg-vol2-ch7-part6",
+          "family": "dmg",
+          "page": 14
+        }
+      ],
+      "aliases": [],
+      "assertion_status": "model-derived",
+      "authority": "model-assisted",
+      "definition": "DMG 077025 describes SPC as a special non-contributory benefit in its cited EC-law classification and distinguishes payment in the state of habitual residence from export to claimants living abroad. Its citation continues onto page 14. DMG 077026 states that SPC is outside the reciprocal agreements described there. Keep the source’s regime, territory and date limits; no post-exit or present-day legal applicability is established by this classification. The adjacent overseas-resident State Pension provisions beginning at 077027 concern a different benefit and must not be treated as Pension Credit rules.",
+      "evidence_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0013",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0014"
+      ],
+      "key": "intl-spc-non-export",
+      "label": "SPC non-export in the cited EC classification",
+      "required_source_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0013",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0014"
+      ],
+      "review_status": "unreviewed-specialist-review-required",
+      "route": "term/intl-spc-non-export",
+      "source_candidates": []
     },
     {
       "@id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
@@ -2485,6 +2665,16 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/5c1d8fb481867bba04f9d3f87a79c65262b6ee5d890ebd207570ed6eb09e0c76",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/64505ddcf78661f8e81b571012bb206475d388141aaad8ebd92e501dc2270b22",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/be7ffc94408b06da1c545fbfc854d798a17bb4b3dc24ad6dc8e8812205130da4",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3f1ad7f859d2db6db7bd242fb2c5969bfecef83cc07496eaf51c0afdc5e5b8a3",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/23e458e9fc0a290452bc4b74714d614cddf33c0d873c68d7455f635ce5d7149f",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/03db2352be8e3556c78b5a2ad475000332896aa991dfb99e36fd2f0d42a7de0c",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/c2ecb226bf2abb8272cef26f6e49937dbe383417b6a1e68a217aa46c58b0c3bf",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9fbe69f0a911f04ef89722c98e8958436ede7a17c149402f2010261d1fe41af7",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/0fa18ceeae8c3a916125a58bcfc865a8e7e5d1f8358a2e8e09425f2d452daec3",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/7ffa0dff49d926929e26da08db7bfe69dea3a1a5c973159bf0c26e037d540e78",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d413a58ba3d1b73251e27af89231597488de20e10a1b7efe6b2ad83d0cb4b5cb",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/57a0b471be2d2868d33db1efb8ea3169dd9ab99b6a0de53ee96d416bae8d307e",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/dd922768c31a44a287ab836c33a4446c556371d7ced92ab6e895067a5a1ea35c",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/c83f8f41fa34efb4f1dd155c0b0d942a76fb65da6160f47ffbed1f9f98fab504",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/5676ec381f894b4abefee84a4a290e8260c6447b466a1838bf4b101779534441",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/730fd984d9384a97ef8bc646f39d22f5b0a2307131d550b9e4b22f1347195e7f",
@@ -2607,6 +2797,10 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/4dc4b713d62df390a58a7e684b72373281e1fe5b449dd036c4d705e2dffad5be",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/8b1aed045462250827e5914d6d9b223ec58282a0b2b049d0361370177981c509",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3436cf9a7c318fb1bb6a7dc4b8593ef7f4cb6c69c5427e47d34ecd7c8c40a4c5",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f71b42594ebd3eeacc4067c60123b7f662d75d1533b002208470460d547ddb0c",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/33458bae4d56d07b2c16181648c087137cad3f61b4a5a268d10c1a60c6c5d1da",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/a30949cd0af229eaf9eb7dcf11931cc4ed5462e3c20cff2146498510759e3c1f",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/13d64009d5bde568580e5d5a78731a9a599447895883061900c24be9a9bd3d09",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/8b44d637915d680eee438161bb540109525a2b8ca164d2dda7cf15a3c6c26324",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d0908c90ae7e0244fc1d6c05206212f8dfd9c1673be7271d11ee8c5d087cf8c9",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3790e37f5c3177b7c2dccf5862ebca1d8624e191b452da2e82c0a53521d1e152",
@@ -2724,7 +2918,20 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3e89244cfd49666c1aeb59f9ef2a4e8502ef11fe11064c8b754e61a8c7c86f9b",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/96bb9f52ac49a0a38414d0bf4703c9fbf67a3b8275c7bbb93fe70c86b14e111e",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9163c9c6aaa208690ae63e39619efc55196ef0f9d33d7e3c105279673d2657db",
-    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f39de992e2dd7c37e1767dd9d2fed4737f71ed53d1b4194e28ac0fa062891445"
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f39de992e2dd7c37e1767dd9d2fed4737f71ed53d1b4194e28ac0fa062891445",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/b1b13a40ef2cfde72d928081bb3eab33b42041828d4f23f24b4413a805d11a9e",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/ccd431a227cfa56d31dfe57f74be767da3a4ee91c133ca51c2639bf4f2534805",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/b5a7877d403ab2dc65184f42e2e1f41c4496172530e7f7601280fb9535c53c6b",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/47bc01d061b268104318f52902c80b9b46cc904d339fb7a83a95c2325e15369a",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f98173a0344bb9e365dda59b2ddd7aecb68e7ede798d0b70bd3bbe22f80b00a1",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/4017711fed38c867568f7a36ac2a829e5be38287e1b935cb496fac3a8309ec2e",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3a28b240aae5e04f044961f68b41ec634b36b59bf3cc6443f90959017f582634",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/a1b5ba7a5deffc5c8f9490aeb605d0c403d620b70bf337cd83da281e5e00751f",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/a5c17ff43a17261ae507e1e044575bed63330501a6d035f1b2698f164227965c",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/6ba6423c06214b8636174c2bee5da5c1e4337b08eb538e2f81d48d342b6df6f4",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/48d7c718c330955bfcb855afe4d028d9cd310dbacebd2e38b1639a463a84065c",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/70de638aee2140e06b50bef99fd64b304187a5a52f5fa69fb7dc3baba585c8d2",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/b46f050480a7b230cb340240f5631da9f7909b1c36f17ed1603e8584cfdcb0d4"
   ],
   "qualification_assertion_ids": [
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/013c61140270ce511879a6cdd38319bf61db384e8d5547437725671269840ab8",
@@ -2737,10 +2944,14 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/26f51ffafc5d3c529feaa266539560243fb3504b2893756e1a97322ecb97131a",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3093de9ecc54b03e6c9cedcdac79387670e894323c41c41ba9370c130f92ee28",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3321674ef0a1a47069adeb28b38cce0c1b95bffb47e4f78ff3262adcdfab0bc4",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3a28b240aae5e04f044961f68b41ec634b36b59bf3cc6443f90959017f582634",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3c4e521474fdedb463f80eec3a2bc2b82fc8e2b92e29f5129cb1b9ee8d794275",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3e89244cfd49666c1aeb59f9ef2a4e8502ef11fe11064c8b754e61a8c7c86f9b",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3f9eb9087340c5aefa9694689f4850107c871b06ce0ed53ade39c42e57c5b6cc",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/4017711fed38c867568f7a36ac2a829e5be38287e1b935cb496fac3a8309ec2e",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/47bc01d061b268104318f52902c80b9b46cc904d339fb7a83a95c2325e15369a",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/4833e61d4e46bda9fb97840fa755fed914bb9e183740077e2492eb6136f11fe6",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/48d7c718c330955bfcb855afe4d028d9cd310dbacebd2e38b1639a463a84065c",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/4ac977d4b8566d67d6c1e60c2e87ea9cfb00f01232ea02b8664a9cb1e115e425",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50593e0f8838611f28a97993170f96e31f410c93f71ac14df7c54879be14d34e",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/50ef74f46ded3311cb5f2fbc8e9bfa69b5b864b868cc0c9c6575a9eb07d85186",
@@ -2750,8 +2961,10 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/5e898f9d50db21e9ac0a930adeff49a0730d3ead8b56b2aa76fe4d646733aaf8",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/62c2011561a12540b40a48735c54b7f8d1bc352d6d460c6737a188712fef3f9e",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/66e5431d33af3fe30f1730bfc79e1ea31497078b3707b51d4327d3e8820ccca7",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/6ba6423c06214b8636174c2bee5da5c1e4337b08eb538e2f81d48d342b6df6f4",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/6bdbb430a2d84c4166fb5f5004ca57aee549838dd25d15d9ea60cffc13ba9777",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/6c7427057da098cfa9da859be4a6f40d90b61c587ef2cf2e9bd9c6c58596c125",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/70de638aee2140e06b50bef99fd64b304187a5a52f5fa69fb7dc3baba585c8d2",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/7a7117c25c4a25c475dea0f609f56d3cbc58633c73f876f89d845292c68309fb",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/7bea7bb1580e4fb41ef30828871b772d2e398f32123c871cee2c113431c977b4",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/84ad25d974f6c1aadf8dd267825c9eb62a4d40c5eff58a75e005198407b272a7",
@@ -2765,13 +2978,19 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/96d4e3d439874d4af718decbca9a2d307c017d4f700943ff7982f851037e71e9",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9ae23ccea9b555e25774eb82ccefa2be7a5d68e7d9fd951367a77399e8b3c9a6",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9efc84b39d4c058715c488e7cf443c31d0dcbe1509de1c1da561f3ec9522106f",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/a1b5ba7a5deffc5c8f9490aeb605d0c403d620b70bf337cd83da281e5e00751f",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/a5278d1b76f2a7f9131256aa41424e4c5fe8022b96a3847fdc89a885b6715544",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/a5c17ff43a17261ae507e1e044575bed63330501a6d035f1b2698f164227965c",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/ab309e7dcd4473f5292a1dc7afe062168f2ffd5a8905a7a49655a0d1986bfb30",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/ac2e20e468daca9c7bafaf9460def1486a3d2e61ba50f0b213bc42188bcec909",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/ad5f290f6e57057ad6f2c4b95ddc1ba8cfcdd49e3650a9abdb260b752d9ca36f",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/b1b13a40ef2cfde72d928081bb3eab33b42041828d4f23f24b4413a805d11a9e",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/b2f240e42d7eb40d1777663f4c2e4f3f218faceac58e48241dcbfa16e4eb01da",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/b46f050480a7b230cb340240f5631da9f7909b1c36f17ed1603e8584cfdcb0d4",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/b5a7877d403ab2dc65184f42e2e1f41c4496172530e7f7601280fb9535c53c6b",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/b70529a58429aa2abcc5eaebed953969404d27ebe7f88ca6e3ab2d7b89947dae",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/bb47b2371996e54e477833a9528debfa98be8abe147f05779ea3e42e9e6b03fc",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/ccd431a227cfa56d31dfe57f74be767da3a4ee91c133ca51c2639bf4f2534805",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/cf5f40a6b49fc1c0a2835f375c2015b0baa20efcea742a7688d44a630e695f07",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d06362566b7adf5ee538ec4f73a917530f893cafed37166b8d39e647be688fe0",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d1623cdc9e50b9c0c51ba9234c0e4fba4adf7d9b0a883e6c529a1de85bd4eef9",
@@ -2787,7 +3006,8 @@
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/ee3a2d1af8c1fc64ab10a700e15fc4b358bd4c2b6857337e7f1d47489e589c04",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f0541b9851cc0684d4a43380c22402223c012aa45ae70414e825f5d8acc02e18",
     "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f39de992e2dd7c37e1767dd9d2fed4737f71ed53d1b4194e28ac0fa062891445",
-    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f7ad9bf3b7e705219f4b7bb15b575e3f17c92c82fad67f52e445b7fa036ce83b"
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f7ad9bf3b7e705219f4b7bb15b575e3f17c92c82fad67f52e445b7fa036ce83b",
+    "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f98173a0344bb9e365dda59b2ddd7aecb68e7ede798d0b70bd3bbe22f80b00a1"
   ],
   "refined_records": [
     {
@@ -2803,6 +3023,26 @@
     {
       "id": "https://chris-page-gov.github.io/okf-dwp/id/term/savings-credit",
       "previous_record_sha256": "45a842c0663fd063507429a34b908cb14428a26ff24c4c69874fb9db83ba762f",
+      "reason": "Refined neutral definition/aliases in additive projection only"
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/term/intl-spc-claimant-absence",
+      "previous_record_sha256": "2069d01580a9d9c1c398d08bba79077863af24576e80baf6b3fd689aef365f6e",
+      "reason": "Refined neutral definition/aliases in additive projection only"
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/term/intl-spc-household-absence",
+      "previous_record_sha256": "5818932999163a3189e6d0f2ab39cf16e845619144f476b2c8fa22d24a7ee701",
+      "reason": "Refined neutral definition/aliases in additive projection only"
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/term/intl-spc-absence-transition-2016",
+      "previous_record_sha256": "8b2f34871a37bd9d59cb8cf2ab8a81d2170e524f87d3ce8104ec33d328293cce",
+      "reason": "Refined neutral definition/aliases in additive projection only"
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/term/intl-spc-non-export",
+      "previous_record_sha256": "d6ec4aa3f749c03f07d8937c1b9fef057fb7076caa29932ed449df37c0f9770b",
       "reason": "Refined neutral definition/aliases in additive projection only"
     },
     {
@@ -7002,6 +7242,198 @@
       "source_role": "substantive",
       "source_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
       "source_url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=8"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 8,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=8"
+        },
+        {
+          "page": 10,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=10"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:20.305518Z",
+      "document_id": "dmg-vol2-ch7-part6",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0009",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "3a94d0cb29aa8d065d8f78c1bf71f1c61884d67c7e2abb6bda9a57d75cd3ef60",
+      "page": 9,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part6.json",
+      "pages_sha256": "efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9",
+      "route": "page/dmg-vol2-ch7-part6/0009",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=9"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 9,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=9"
+        },
+        {
+          "page": 11,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=11"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:20.305518Z",
+      "document_id": "dmg-vol2-ch7-part6",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0010",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "199512eb495b9bbc2d4258286467dc276be7b138c3ec95775c3ecf919f8ee1e5",
+      "page": 10,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part6.json",
+      "pages_sha256": "efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9",
+      "route": "page/dmg-vol2-ch7-part6/0010",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=10"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 10,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=10"
+        },
+        {
+          "page": 12,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=12"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:20.305518Z",
+      "document_id": "dmg-vol2-ch7-part6",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0011",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "4eb38c961292a9d0153dd3814ec7596069af482e446e25725b69d309a0284ca4",
+      "page": 11,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part6.json",
+      "pages_sha256": "efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9",
+      "route": "page/dmg-vol2-ch7-part6/0011",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=11"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 11,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=11"
+        },
+        {
+          "page": 13,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=13"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:20.305518Z",
+      "document_id": "dmg-vol2-ch7-part6",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0012",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "b66b8387726629b8ffd22b58276d333c86d74664347b8c679d51838411d42e31",
+      "page": 12,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part6.json",
+      "pages_sha256": "efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9",
+      "route": "page/dmg-vol2-ch7-part6/0012",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=12"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 12,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=12"
+        },
+        {
+          "page": 14,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=14"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:20.305518Z",
+      "document_id": "dmg-vol2-ch7-part6",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0013",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "9833893c746a23c6c507aa502cbeced60d9013a257c01817f2d3077f8d0032c7",
+      "page": 13,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part6.json",
+      "pages_sha256": "efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9",
+      "route": "page/dmg-vol2-ch7-part6/0013",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=13"
+    },
+    {
+      "adjacent_pages": [
+        {
+          "page": 13,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=13"
+        },
+        {
+          "page": 15,
+          "status": "available-in-full-corpus-not-assumed-selected",
+          "url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=15"
+        }
+      ],
+      "captured_at": "2026-09-15T19:45:20.305518Z",
+      "document_id": "dmg-vol2-ch7-part6",
+      "family": "dmg",
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0014",
+      "legal_status": "Departmental guidance, not legislation. Listed in the frozen collection; current legal applicability and supersession have not been reviewed.",
+      "literal_sha256": "3b6345d1b5833d5c1abb2e6aafc66582cbb77f07b6b5368f9ff9d68d39b87868",
+      "page": 14,
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part6.json",
+      "pages_sha256": "efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9",
+      "route": "page/dmg-vol2-ch7-part6/0014",
+      "source_dates": {
+        "limitation": "Dates in titles, collection metadata, HTTP headers and PDF technical metadata are not inferred document publication or legal effective dates.",
+        "published_at": null,
+        "status": "not-declared-in-frozen-attachment-metadata"
+      },
+      "source_role": "substantive",
+      "source_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=14"
     },
     {
       "adjacent_pages": [

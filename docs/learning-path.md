@@ -334,6 +334,12 @@ Smaller packages might eventually reduce AI input, but bytes are not
 **[tokens](glossary.md#llm-rag-and-token)** and fewer bytes do not prove lower cost
 or equal answer quality. Those claims need a separate measured comparison.
 
+### Why a natural question may still miss the right evidence
+
+The [abroad-question review](abroad-semantic-audit.md) separates an older word-ranking bug from current gaps in concepts, connected passages and budget capacity. Follow the question from everyday wording to the source pages and check which conditions were actually retained.
+
+A [Data Analytics proposal exercise](data-agent-semantic-review.md) could help extend this modelling. It describes what an analysis workflow adds beyond connectors, and why source checks and specialist review remain separate. The proposed exercise has not been run.
+
 ## 7. Explore how the bundle is built
 
 An **[OKF+ bundle](glossary.md#okf-and-okf-plus)** packages knowledge with explicit
