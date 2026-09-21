@@ -194,9 +194,21 @@ An independent read-only review verified the source qualifications, whole-page
 bindings, acyclic support groups and conditional paths, and repeated all 46
 controls successfully. This is agent review, not specialist acceptance.
 
-Only the four semantic producer outputs were regenerated. Combined Reader
-integration, new 256/512 KiB context-retention comparisons, publication and any
-model-answer run remain separate work. Earlier observations
+The combined Reader now carries this increment: 20,044 records and 21,224
+relationships, snapshot `dwp-combined-872f2476a6e8e5ce6d55`. All 4,758 generated
+files reproduce exactly; 20 Reader controls pass alongside the 46 semantic
+controls. The 40-case development evaluation and exact replay retain 177 of
+177 original candidate occurrences at the default 512 KiB budget.
+
+The separate [frozen comparison](../validation/disability-context/2026-09-21/README.md)
+compares this source at `8ea4465a4cb5a867d82c87e635f2ef1d1df18d8a` with the earlier
+qualification source. All 320 assemblies and exact replay pass. The current
+allocator retains 497 of 497 declared path occurrences at 512 KiB, but only
+407 at 256 KiB. Each care-home package retains all 71 activated paths at 512 KiB;
+at 256 KiB it retains only 26. Missing qualifications are explicitly reported.
+The 64 KiB request still refuses with `metadata_budget` and zero records.
+
+Publication and any model-answer run remain separate work. Earlier observations
 retain their original source and engine bindings.
 
 ## Still unresolved

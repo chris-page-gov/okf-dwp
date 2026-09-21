@@ -38,6 +38,14 @@ paths explicitly. Temporary-residence support stays attached to its own summary,
 without becoming mandatory for every permanent-care-home question. These
 declarations remain project-authored and unreviewed.
 
+The [disability-addition increment](disability-addition-qualification-review.md)
+adds 14 dependencies: four pages for the limited overview and ten for the
+no-partner explanation. These groups preserve receipt exceptions, partner-only
+patient scope and dated memo qualifications. Staff 012 and 013 investigate the
+branch conditionally; its inclusion does not establish the claimant's household
+status. The support census is now 29, with two captured pages newly selected
+into the semantic index.
+
 The [joint comparison](../validation/qualification-context/2026-09-21/README.md)
 verifies that the generic allocator retains the declared paths within its budget.
 It runs DWP `7f9feb9634e3d94004853b838462aca132c505a5` with Explorer
@@ -52,17 +60,21 @@ remain open; protected publication and fresh public checks remain pending.
 | Item | Delivered scope |
 | --- | --- |
 | Authored concepts | 51, including neutral benefits, variants, components and circumstances |
-| Source-grounded conceptual associations | 232, including directed source references, qualified concept relationships and 15 explicit support dependencies |
-| Selected exact source pages | 96 across DMG and ADM, with PDF/extraction hashes and page locators |
+| Source-grounded conceptual associations | 254, including directed source references, qualified concept relationships and 29 explicit support dependencies |
+| Selected exact source pages | 98 across DMG and ADM, with PDF/extraction hashes and page locators |
 | Legislative references in Ask | 44 staff-linked provision identities, 62 source-page citation links and one separately recorded metadata bridge |
 | Selected statutory bodies | 20 complete selected units and 43 evidence-bearing navigation links; derived and unreviewed |
 | Staff task profiles | 40 occurrences, preserving all 39 distinct questions and the repeated DLA/PIP question |
 | Explicit open obligations | 203, across five named categories |
 | Existing discovery graph | All 712 original record identities and 1,105 assertion identities retained |
-| Current source candidate index | 901 records and 1,442 assertions; 4,622,241 bytes, within the 8 MiB semantic-index limit |
+| Current source candidate index | 903 records and 1,464 assertions; 4,683,061 bytes, within the 8 MiB semantic-index limit |
 
-The current source candidate is `dwp-staff-semantics-fc2ad1545adcbeeb2243`, with
-index SHA-256 `7ffc9d00e71fef6aed5531373510df82998123e89fdb28091cfb82384adf2876`.
+The current source candidate is `dwp-staff-semantics-91e16565bd7c97e72f3b`, with
+index SHA-256 `8aea634f7623a61475156a116fcebf2ae64cbb4b17507a731a7de73edee0ddd7`.
+Its current 40-case evaluation retains 177 of 177 candidate occurrences at
+512 KiB. The richer care-home requirements no longer all fit 256 KiB: the
+package exposes missing support. The earlier four-cell comparison above retains
+its separate 901-record source and does not attest this larger increment.
 The initial household-dependency checkpoint had 1,435 assertions. The earlier
 public service source `3ef0e786…` had 1,427 assertions and a 4,581,721-byte index;
 its immutable linked evaluation remains an observation of those earlier bytes.

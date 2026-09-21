@@ -363,6 +363,18 @@ recorded separately from specialist answer review and Voice support.
 
 ### Compare answers against fixed evidence
 
+A **qualification** is a condition or exception that limits a statement. For
+example, a paragraph about people with no partner must not become a rule for
+every household. The [disability-addition example](disability-addition-qualification-review.md)
+shows why the surrounding heading, a continued paragraph and dated amendments
+may all be needed alongside one quotation.
+
+The bundle can declare those pages as **required support**. This helps Ask OKF
+keep them together, but a small size limit can still prevent them fitting. In
+that case the package names the missing support. A link to further evidence is
+useful only if the reader or AI actually opens it and checks its version; the
+link itself is not a substitute for reading the qualification.
+
 Use the [staff model trial guide](staff-model-trials.md) to follow one question
 from its bounded evidence package to two original answers and a claim-by-claim
 critique. A correct quotation can still omit an important condition. Start with

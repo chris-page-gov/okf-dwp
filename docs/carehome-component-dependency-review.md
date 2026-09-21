@@ -2,6 +2,12 @@
 
 21 September 2026. **Model-authored source review; not specialist acceptance, current legal advice or an entitlement decision.** The original investigation was read-only. The implementation section records the subsequently authorised housing and temporary-care changes. The larger disability-addition options remain proposals. No frozen source, trial or review obligation changed.
 
+This is the earlier component review. The separate
+[disability-addition increment](disability-addition-qualification-review.md)
+records the subsequently implemented overview and no-partner support groups,
+including the receipt qualifications and their remaining limits. The proposal
+and measurement below retain their original scope.
+
 ## Result and proposed order
 
 1. **Housing costs:** correct two scope phrases before declaring dependencies. The source concerns housing-cost treatment during an absence, not permission to stay in a care home. It excludes Housing Benefit expenditure defined as an element for which Housing Benefit **may be payable**, rather than only expenditure actually met by Housing Benefit. Five already-modelled whole pages support a bounded summary.

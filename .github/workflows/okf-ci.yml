@@ -22,6 +22,7 @@ jobs:
       EXPLORER_QUALIFICATION_COMMIT: c4f2de0a99b7bc2f8b8c8a06a3c715fb56b66d8e
       EXPLORER_QUALIFICATION_BASELINE_COMMIT: b9a3b68b6dbf222f9a73cc8f450dd53f126e1b55
       DWP_QUALIFICATION_COMMIT: 7f9feb9634e3d94004853b838462aca132c505a5
+      DWP_DISABILITY_COMMIT: 8ea4465a4cb5a867d82c87e635f2ef1d1df18d8a
       DWP_HOUSEHOLD_TRIAL_COMMIT: 3ef0e786e9a18e76fa17c7d925ff509d6d6c9f84
       DWP_COMPACT_TRIAL_COMMIT: 78a8beea97242d646eb9159860dea190ca5e2998
     steps:
@@ -154,12 +155,18 @@ jobs:
         run: |
           git fetch --no-tags --depth=1 origin "$DWP_QUALIFICATION_COMMIT"
           git cat-file -e "$DWP_QUALIFICATION_COMMIT^{commit}"
+          git fetch --no-tags --depth=1 origin "$DWP_DISABILITY_COMMIT"
+          git cat-file -e "$DWP_DISABILITY_COMMIT^{commit}"
           git -C .ci/okf-explorer-qualification fetch --no-tags --depth=1 origin "$EXPLORER_QUALIFICATION_BASELINE_COMMIT"
           git -C .ci/okf-explorer-qualification cat-file -e "$EXPLORER_QUALIFICATION_BASELINE_COMMIT^{commit}"
       - name: Replay the independent source and allocator comparison offline
         run: |
           node --test validation/qualification-context/2026-09-21/admission.test.mjs validation/qualification-context/2026-09-21/metrics.test.mjs
           node --experimental-strip-types validation/qualification-context/2026-09-21/compare.mjs --dwp-root . --explorer-root .ci/okf-explorer-qualification --check validation/qualification-context/2026-09-21/attempt-01
+      - name: Replay the separate disability qualification comparison offline
+        run: |
+          node --test validation/disability-context/2026-09-21/admission.test.mjs validation/disability-context/2026-09-21/metrics.test.mjs
+          node --experimental-strip-types validation/disability-context/2026-09-21/compare.mjs --dwp-root . --explorer-root .ci/okf-explorer-qualification --check validation/disability-context/2026-09-21/attempt-01
       - name: Verify portable performance evidence and new trial controls offline
         run: |
           node validation/context-performance/2026-09-21/verify.mjs
@@ -181,6 +188,8 @@ jobs:
           node --test scripts/test_public_household_reader.mjs
           uv run --locked python scripts/check_public_household_observations.py
           uv run --locked python -m unittest discover -s scripts -p test_public_household_observations.py
+          uv run --locked python scripts/check_pinned_public_household_observation.py
+          uv run --locked python scripts/test_pinned_public_household_observation.py
       - name: Check the public backlog and retained answer trials offline
         run: |
           uv run --locked python scripts/check_backlog.py
