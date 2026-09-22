@@ -27,6 +27,7 @@ RANGE_TAIL = re.compile(r"^\s*[-–—]\s*(?P<high>" + LABEL + r")\s*$")
 BODY = re.compile(r"^[ \t]+[A-Za-z\[‘“(]")
 CITATION_TAIL = re.compile(r"^\s+(?:et seq|for guidance|and\s+(?:\d|[A-Z]\d))\b", re.I)
 WRAPPED_REFERENCE_RANGE = re.compile(r"\b(?:DMG|ADM|paras?|paragraphs?)\s+(?P<low>" + LABEL + r")\s*[-–—]\s*$", re.I)
+APPENDIX_HEADING = re.compile(r"^A\s*p\s*p\s*e\s*n\s*d\s*i\s*x\s+(?:[A-Z]|\d{1,3})(?:\s*[-–—:]\s*.+)?\s*$", re.I)
 EXAMPLE = re.compile(r"^\s*Example(?:\s+\d+)?\s*$", re.I)
 NOTE = re.compile(r"^\s*Note(?:\s+\d+)?(?:\s*:|\s|$)", re.I)
 
@@ -94,6 +95,10 @@ def discover_structure(family, doc, pages):
             continue
         match = PARAGRAPH.fullmatch(line.text.rstrip("\r\n"))
         if match and accepts_label(match["label"], family, chapter):
+            if doc.get("kind") == "memo":
+                rejected.append({"start": line.start, "page": line.page, "label": match["label"],
+                                 "reason": "chapter-number-in-memo-is-reference-or-quotation-not-main-numbering"})
+                continue
             previous = next((lines[at] for at in range(index - 1, -1, -1) if lines[at].stripped), None)
             continuation = WRAPPED_REFERENCE_RANGE.search(previous.stripped) if previous else None
             if continuation and contains(continuation["low"].upper(), match["label"], match["label"]):
@@ -268,7 +273,7 @@ def special_regions(family, doc, structure, pages):
     if doc.get("kind") == "abbreviations" and doc.get("role", "").startswith("reference"):
         regions.append({"start": 0, "end": total, "role": "reference-table", "heading_path": [doc.get("title", "Abbreviations")]})
     if doc.get("kind") == "memo":
-        body = next((line.start for line in lines if re.match(r"1\.\s+[A-Z]", line.stripped)), None)
+        body = next((line.start for line in lines if re.match(r"1\.?\s+[A-Z]", line.stripped)), None)
         if body is not None:
             contents = next((line.start for line in lines if line.start < body and re.match(r"Contents\b", line.stripped)), None)
             intro = [line.start for line in lines if line.start < body and line.stripped.casefold() == "introduction"]
@@ -288,6 +293,32 @@ def special_regions(family, doc, structure, pages):
                             "start_utf8": len(text[:match.start()].encode()), "end_utf8": len(text[:match.end()].encode())})
                 regions.append(region)
     return regions
+
+
+def separate_section_events(doc, structure):
+    """Recognise source sections without inventing memo paragraph numbering.
+
+    An explicit appendix title ends a preceding chapter paragraph. In a memo,
+    unambiguously aligned source headings give section candidates; examples and
+    notes stay attached to their containing passage. None establishes a whole
+    legal rule or converts a quoted chapter identifier into local numbering.
+    """
+    found = {}
+    for line in structure["lines"]:
+        if APPENDIX_HEADING.fullmatch(line.stripped):
+            found[line.start] = {"start": line.start, "boundary_start": line.start,
+                "role": "section", "page": line.page, "heading_path": [line.stripped],
+                "heading_context": [], "basis": "standalone-literal-appendix-heading"}
+    if doc.get("kind") == "memo":
+        stack = []
+        for heading in structure.get("tagged_headings", []):
+            while stack and stack[-1]["level"] >= heading["level"]:
+                stack.pop()
+            stack.append(heading)
+            found[heading["start"]] = {"start": heading["start"], "boundary_start": heading["start"],
+                "role": "section", "page": heading["page"], "heading_path": [h["title"] for h in stack],
+                "heading_context": [], "basis": "unambiguous-source-declared-memo-heading"}
+    return list(sorted(found.values(), key=lambda event: event["start"]))
 
 def segment_source(family, doc, pages, authored=()):
     """Return a complete byte partition with explicit unsupported material.
@@ -310,7 +341,8 @@ def segment_source(family, doc, pages, authored=()):
             # into the next paragraph or suppress the paragraph event.
             item["boundary_start"] = item["start"]
     structure["regions"].extend(special)
-    events = {p["boundary_start"]: p for p in structure["paragraphs"]
+    structure["section_candidates"] = separate_section_events(doc, structure)
+    events = {p["boundary_start"]: p for p in [*structure["section_candidates"], *structure["paragraphs"]]
               if not any(r["start"] <= p["boundary_start"] < r["end"] for r in special)}
     total = structure["source_bytes"]
     endpoints = {0, total, *events}
@@ -325,7 +357,10 @@ def segment_source(family, doc, pages, authored=()):
         if start == end or any(start >= u["start"] and end <= u["end"] for u in authored):
             continue
         event = events.get(start)
-        region = next((r for r in special if r["start"] <= start < r["end"]), None)
+        # A bounded literal notice is distinct even inside an administrative
+        # tail. Number ranges inside annotations/tables keep that richer role.
+        region = next((r for r in auxiliary if r["role"] == "document-notice" and r["start"] <= start < r["end"]), None)
+        region = region or next((r for r in special if r["start"] <= start < r["end"]), None)
         default_role = "reference-material" if doc.get("role", "").startswith("reference") else "unresolved-fragment"
         role = region["role"] if region else event["role"] if event else default_role
         for chunk_index, spans in enumerate(split_interval(pages, start, end)):
@@ -333,9 +368,9 @@ def segment_source(family, doc, pages, authored=()):
             source_size = sum(s["end_utf8"] - s["start_utf8"] for s in spans)
             fragmented = source_size != end - start
             unit = {"key": f"source-{start:010d}-{chunk_index:03d}", "role": role,
-                    "paragraph_labels": [event["label"]] if event and event["role"] != "reserved" else [], "heading_path": region.get("heading_path", []) if region else event["heading_path"] if event else [],
+                    "paragraph_labels": [event["label"]] if event and event.get("label") else [], "heading_path": region.get("heading_path", []) if region else event["heading_path"] if event else [],
                     "heading_context": event["heading_context"] if event else [],
-                    "rejected_range_headings": event["rejected_range_headings"] if event else [],
+                    "rejected_range_headings": event.get("rejected_range_headings", []) if event else [],
                     "spans": spans, "text_sha256": sha(literal.encode()), "text_bytes": len(literal.encode()),
                     "text": literal, "review_status": "machine-structure-proposal", "specialist_review": "not-reviewed",
                     "boundary_status": "bounded-fragment" if fragmented else "source-structure-candidate",

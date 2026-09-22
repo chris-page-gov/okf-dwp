@@ -25,7 +25,7 @@ def compile_units(root=ROOT):
     config = json.loads(inputs.read('context/corpus-sources.json'))
     overrides = load_overrides(inputs)
     specs = {(d['family'], d['document_id']): d for d in overrides['documents']}
-    for path in ('scripts/build_structured_units.py','scripts/manual_structure.py','scripts/manual_references.py','scripts/manual_auxiliary_structure.py',
+    for path in ('scripts/build_structured_units.py','scripts/manual_structure.py','scripts/manual_references.py','scripts/manual_auxiliary_structure.py','scripts/structured_projection_output.py',
                  'scripts/pdf_structure_alignment.py','scripts/build_logical_units.py',
                  'scripts/build_context_corpus.py','manual-guide/manifest.json',STRUCTURE_OUTPUT+'/manifest.json','uv.lock'):
         inputs.read(path)
@@ -119,12 +119,8 @@ def compile_units(root=ROOT):
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--check',action='store_true');args=parser.parse_args()
     outputs=compile_units();directory=ROOT/OUTPUT
-    for name,data in outputs.items():
-        path=admitted_output(directory,name)
-        if args.check:require(path.is_file() and path.read_bytes()==data,'Stale structured unit output: '+name)
-        else:path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(data)
-    actual={p.relative_to(directory).as_posix() for p in directory.rglob('*') if p.is_file()}
-    require(actual==set(outputs),'Unbound structured unit output')
+    from structured_projection_output import install_projection
+    install_projection(directory,outputs,check=args.check,mode='units')
     print(json.dumps({'status':'verified' if args.check else 'built',**json.loads(outputs['manifest.json'])['counts']}))
 
 if __name__=='__main__':main()

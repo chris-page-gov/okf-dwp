@@ -95,6 +95,23 @@ class ManualStructureControls(unittest.TestCase):
         result = discover_structure("adm", {"chapter": "A1"}, source)
         self.assertEqual([p["label"] for p in result["paragraphs"]], ["A1001", "A1002"])
 
+    def test_appendix_heading_ends_chapter_paragraph_but_keeps_its_example(self):
+        source = pages("44001 A source rule.\nExample\nAn example continues", " here.\nA p p e n di x 3\n1 A separate appendix.\n")
+        units, _ = segment_source("dmg", {"chapter": "44"}, source)
+        rule = next(u for u in units if u["paragraph_labels"] == ["44001"])
+        self.assertIn("here.", rule["text"])
+        self.assertNotIn("Appendix", rule["text"].replace(" ", ""))
+        appendix = next(u for u in units if u["role"] == "section")
+        self.assertIn("separate appendix", appendix["text"])
+        self.assertEqual(appendix["paragraph_labels"], [])
+
+    def test_memo_chapter_reference_is_not_its_main_numbering(self):
+        source = pages("Introduction\n1 A memo passage.\nC2130 and C2150 need consideration.\n2 The next memo passage.\n")
+        units, structure = segment_source("adm", {"kind": "memo"}, source)
+        self.assertEqual(structure["paragraphs"], [])
+        self.assertTrue(all(not u["paragraph_labels"] for u in units))
+        self.assertTrue(any("C2130" in u["text"] for u in units))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,23 @@
+{
+  "scope": "Independent read-only review of generated-projection replacement and its two fixed output callers. No corpus build, removal or projection installation was performed by this reviewer.",
+  "observed_utc": "2026-09-22T23:31:32.208878+00:00",
+  "result": "no-blocker-in-bounded-generated-output-retirement",
+  "files": {
+    "scripts/structured_projection_output.py": "09da6a41c9998561bbe0029aaafe10b6cf034c532420af7243f6c39dc8029d56",
+    "scripts/test_structured_projection_output.py": "93f4ff58833ee5dbf4edb4896239d8954bf0ce100e637b23dc820587036857eb",
+    "scripts/build_structured_units.py": "584b07a0daa9dbd4d54f6388d28a5c321692de51d380c2eec2be4cda201e1691",
+    "scripts/build_structured_context.py": "e7871b69f879fd1c9d065187168a688c2e8cc1f8b0c6f8d041d58d10457a7e14",
+    "scripts/build_logical_units.py": "364be1718db1697baa8af62362e8d4f65178dd9506f7cba5b8d16ff5f3aece38"
+  },
+  "findings": [
+    "Both callers use fixed additive structured-units/structured-context roots; source and historical release roots are not passed.",
+    "Mode, output/root type, path traversal and symlink checks precede writes; unknown or changed surplus files reject without overwriting the declaration.",
+    "A retired file must appear in the prior declaration and match both exact byte length and SHA-256. It is rehashed immediately before removal.",
+    "Read-only check mode never retires files. Prior declarations are replaced last, and publication remains a separate verified release.",
+    "Six existing controls cover exact retirement, unknown/changed surplus, check-only behaviour, directory symlink and context-root escape. Source producer identities include the new helper."
+  ],
+  "limitations": [
+    "This helper is not a transactional filesystem commit. A write failure or concurrent mutation may leave an incomplete generated checkout, requiring check/rebuild before publication. It never claims such a checkout is deployable.",
+    "Review covers local fixed-root callers, not permission to use this utility on arbitrary directories."
+  ]
+}

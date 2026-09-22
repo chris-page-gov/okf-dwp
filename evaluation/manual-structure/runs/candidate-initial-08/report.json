@@ -1,0 +1,147 @@
+{
+  "stage": "initial",
+  "case_denominator": 4,
+  "passed_cases": 4,
+  "cases": [
+    {
+      "case_id": "dmg-77031-heading",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "case_id": "adm-p4087-heading",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "case_id": "dmg-077001-cross-page-examples",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "case_id": "adm-c1988-cross-page-examples",
+      "passed": true,
+      "failures": []
+    }
+  ],
+  "specialist_review": "not-reviewed",
+  "legal_answerability": "not-established",
+  "schema": "okf-dwp-manual-structure-run.v1",
+  "engine": "candidate",
+  "protocol_sha256": "1cf9fa21f48a97ffd5551caa58293f1f97fc8dcfe26d1857afd141bdb8ea8d92",
+  "source_baseline_commit": "908adc45a4e22eb72ed13fe8943877307b732850",
+  "runtime_seconds": 0.542814,
+  "adapter_errors": {},
+  "baseline_document_bindings": [],
+  "implementation_bindings": [
+    {
+      "path": "scripts/test_manual_structure_acceptance.py",
+      "sha256": "28cb4860e88dddf3b015b902e826ed1674c030471fdc1ab22d9e2b43e07ae26d"
+    },
+    {
+      "path": "scripts/manual_structure.py",
+      "sha256": "bec04854e14d4229898971be7d673c3fac062186855f52a9f06589a04727b9d0"
+    },
+    {
+      "path": "scripts/pdf_structure_alignment.py",
+      "sha256": "6a4abddea15b923f824196a621a3a1228d63078dd8848376abdcd4b09c1f94c9"
+    },
+    {
+      "path": "scripts/build_logical_units.py",
+      "sha256": "364be1718db1697baa8af62362e8d4f65178dd9506f7cba5b8d16ff5f3aece38"
+    },
+    {
+      "path": "scripts/manual_references.py",
+      "sha256": "27d02e4a1244f8102ebf6abb6ce5a8a014edcf87225ca0556ba5a9814f6af8d0"
+    },
+    {
+      "path": "scripts/manual_auxiliary_structure.py",
+      "sha256": "8210d197c9d8e644bcf8f3bf13c43f89f3c6460ad4b82e7c11c783c6be80f35b"
+    },
+    {
+      "path": "scripts/build_pdf_structure.py",
+      "sha256": "50fa018b684ed4721d8e77fd8e4d634be50768b3563d785813163299af913a0f"
+    },
+    {
+      "path": "profiles/pdf-structure/v1/document.schema.json",
+      "sha256": "137847d73405eaa209d078a65240ab831cf27d6bec14e2b0805ca97367556d0e"
+    }
+  ],
+  "consumed_pdf_structure_bindings": [
+    {
+      "path": "pdf-structure/adm/adm-chapter-c1.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "pdf-structure/adm/adm-chapter-c1.tree.txt",
+      "sha256": "32727788fe24b8a3840b6af92a3b38812a7676ac61f337eb0667979bb845fbfa",
+      "bytes": 522330
+    },
+    {
+      "path": "pdf-structure/adm/adm-chapter-p4.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "pdf-structure/adm/adm-chapter-p4.tree.txt",
+      "sha256": "fffca3b6d508ac9eaef114863b431da8813ceb9686d7aba211e746fb68f65565",
+      "bytes": 67338
+    },
+    {
+      "path": "pdf-structure/bounded-v2/adm/adm-chapter-c1.structure.json",
+      "sha256": "31544e9f22144ce69a22008b0331e4c0eb7c3451a7addaa87e2d77bbcbb13199",
+      "bytes": 397124
+    },
+    {
+      "path": "pdf-structure/bounded-v2/adm/adm-chapter-p4.structure.json",
+      "sha256": "bea8ae54d0a28a0f169bdc6dfe4d350ea2fd88edb2987d4e23bc946d26581ddd",
+      "bytes": 56969
+    },
+    {
+      "path": "pdf-structure/bounded-v2/dmg/dmg-vol13-ch77.structure.json",
+      "sha256": "0917a5acb23f5d3bf430e501b01700bdcb0a6d64e955fc15179979f5b60a5322",
+      "bytes": 343347
+    },
+    {
+      "path": "pdf-structure/bounded-v2/dmg/dmg-vol2-ch7-part6.structure.json",
+      "sha256": "2bb5482c20b9c0396ab5bd9b74a0d37301e32bdacdaf1786a94619326b4879ce",
+      "bytes": 185679
+    },
+    {
+      "path": "pdf-structure/bounded-v2/manifest.json",
+      "sha256": "1639ad479e882d6a4d20a09e859f872a58060e2250f14c0702cfa20ff0b7f61b",
+      "bytes": 605232
+    },
+    {
+      "path": "pdf-structure/dmg/dmg-vol13-ch77.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "pdf-structure/dmg/dmg-vol13-ch77.tree.txt",
+      "sha256": "121998b65cb61aec55e0d2a768018fa43dada94dd59a02357c84f577a17ee2fa",
+      "bytes": 382971
+    },
+    {
+      "path": "pdf-structure/dmg/dmg-vol2-ch7-part6.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "pdf-structure/dmg/dmg-vol2-ch7-part6.tree.txt",
+      "sha256": "d939909b282656d29d20f2c27d714607b29ab7ffd21a40f287af9fb691800db3",
+      "bytes": 207168
+    }
+  ],
+  "implementation_changed_during_run": [],
+  "pdf_structure_changed_during_run": [],
+  "registration_note": "Fixtures predate source-case execution/results; parser drafting occurred concurrently. These are not blinded held-out cases.",
+  "review_boundary": "Structural acceptance only; legal applicability, specialist review and answer quality remain unestablished.",
+  "observations": {
+    "path": "observations.json.gz",
+    "decoded_sha256": "5abd76b9d5f89ffc8b1d44aaee3386f75b9d4fea2c2f0ab889ab30d7c3a11224",
+    "decoded_bytes": 1188913,
+    "sha256": "162de7cae13e44d8a30e8a124766fd0aaf4cfb7683e2a9df943e755af94e674b"
+  }
+}
