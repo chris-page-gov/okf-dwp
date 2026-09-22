@@ -1,0 +1,55 @@
+{
+  "schema": "okf-dwp-discovery-probe-protocol.v1",
+  "status": "pre-implementation diagnostic protocol; no runtime adoption",
+  "source_commit": "7412d1d02e023794ebb1d5a5f385f08f59be7ee2",
+  "cases": "all 40 unchanged supplied question occurrences; known development cases, not held out",
+  "inputs": [
+    {
+      "path": "logical-context/manifest.json",
+      "sha256": "c040b484c4a73dffce7d542fd6089677fc626a286c6004b8570c79f2b296bdc6",
+      "bytes": 724857
+    },
+    {
+      "path": "logical-context/base-index.json",
+      "sha256": "e1a77e9fb72daf9d9c3856b1c0ec0d0ee285798b1cacc632e71e6b8bc4025356",
+      "bytes": 1507302
+    },
+    {
+      "path": "evaluation/logical-units/engine.json",
+      "sha256": "ff8d21d3249ae791f66ab9fced72f7e69e299405907ff12ba28a9127decc2823",
+      "bytes": 533
+    },
+    {
+      "path": "evaluation/staff-questions/cases.json",
+      "sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a",
+      "bytes": 205988
+    },
+    {
+      "path": "evaluation/semantic-coverage/closure-2026-09-22/audit.json",
+      "sha256": "17c634dc413cfcb214478676d2ae4d898c73b7e27527718bcbeaf450cc99330b",
+      "bytes": 939587
+    }
+  ],
+  "arms": {
+    "A": "Exact current literal-token IDF ranking; validate candidate order against approved engine.",
+    "B0": "Same ranking plus label/alias tokens from already resolved declared concepts. Original query terms weight2; expansion terms weight1; no new aliases or profiles."
+  },
+  "limits": {
+    "candidates": 16,
+    "query_tokens": 24,
+    "additional_alias_tokens": 12
+  },
+  "expansion_order": "Distinct eligible extra tokens sorted by canonical lexical order, limited to remaining query-token capacity. Each token retains declaring concept IDs.",
+  "measures": [
+    "Per-case candidate-location overlap with the earlier incomplete source-candidate register, explicitly not relevance or answer accuracy.",
+    "Top16 whole-source bytes and candidate identity changes.",
+    "Exact-baseline agreement with actual pinned engine candidate order."
+  ],
+  "boundaries": [
+    "No new source, summary generation, provider call or live engine change.",
+    "No wrong-heading metadata is used. This isolates terminology before structural/summary card experiments.",
+    "Source-candidate locations are incomplete review leads, not an exhaustive correct-answer set.",
+    "Retain every case, regressions and null outcomes. No thresholds or weights tuned after observing results.",
+    "No claim of full-unit dependency closure or answerability from ranking alone."
+  ]
+}

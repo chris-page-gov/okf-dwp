@@ -416,7 +416,15 @@
         "domain-profile/logical-units/closure-pip-transition.yamlld",
         "domain-profile/logical-units/closure-profile-dependencies.yamlld",
         "docs/discovery-cards-experiment.md",
-        "evaluation/semantic-coverage/discovery-card-diagnosis.json"
+        "evaluation/semantic-coverage/discovery-card-diagnosis.json",
+        "evaluation/discovery-probe/README.md",
+        "evaluation/discovery-probe/protocol.json",
+        "evaluation/discovery-probe/independent-review.md",
+        "evaluation/discovery-probe/length-ranking.md",
+        "evaluation/discovery-probe/length-protocol.json",
+        "evaluation/discovery-probe/length-independent-review.md",
+        "scripts/probe_discovery_terminology.mjs",
+        "scripts/probe_discovery_length.mjs"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
@@ -623,6 +631,23 @@
           "evidence": [
             "docs/discovery-cards-experiment.md",
             "evaluation/semantic-coverage/discovery-card-diagnosis.json"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.discovery-ranking-probes",
+          "kind": "research",
+          "status": "recorded_complete",
+          "executor": "agent",
+          "next_action": "Retain both preregistered fixed-source diagnostics and independent arithmetic checks. Token-level alias expansion loses two earlier candidate locations; BM25 gains four without losses and reduces candidate bytes, but 626/640 selections remain unresolved and wrong-subject matches persist. Independently judge relevance and qualification retention before any runtime adoption. Summary cards remain unimplemented.",
+          "evidence": [
+            "evaluation/discovery-probe/README.md",
+            "evaluation/discovery-probe/protocol.json",
+            "evaluation/discovery-probe/independent-review.md",
+            "evaluation/discovery-probe/length-ranking.md",
+            "evaluation/discovery-probe/length-protocol.json",
+            "evaluation/discovery-probe/length-independent-review.md",
+            "scripts/probe_discovery_terminology.mjs",
+            "scripts/probe_discovery_length.mjs"
           ]
         }
       ]

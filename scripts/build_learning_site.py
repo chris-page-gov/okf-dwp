@@ -363,7 +363,7 @@ def retained_examples(root: Path, tracked: set[str], committed: dict) -> tuple[d
     return outputs, {"approval": file_identity(EXAMPLE_REGISTRY, approval_raw), "releases": releases,
                      "inputs": [inputs[p] for p in sorted(inputs)],
                      "exporter_identity_check": "Module hashes match the Git-approved declaration; the remote Explorer commit is declared provenance, not independently fetched or attested by this build."}
-CSS = """html{font:18px/1.6 system-ui,sans-serif;color:#172b3a;background:#fff}body{margin:0}a{color:#075a9c;text-underline-offset:.15em}a:focus-visible,summary:focus-visible{outline:3px solid #111;background:#ffdd00;color:#111}header,footer{background:#eff4f7;padding:1rem max(1rem,calc((100% - 72rem)/2))}header strong{font-size:1.5rem}nav{display:flex;gap:.7rem 1.3rem;flex-wrap:wrap}main{max-width:72rem;margin:2rem auto;padding:0 1rem;overflow-wrap:anywhere}article{max-width:52rem}h1{font-size:2.2rem;line-height:1.15}h2{margin-top:2rem}h3{margin-top:1.5rem}p,li{max-width:75ch}pre{overflow:auto;background:#f3f5f7;padding:1rem;max-width:100%}code{font-size:.9em}table{border-collapse:collapse;display:block;overflow:auto;max-width:100%}th,td{padding:.55rem;border:1px solid #b5c3ce;text-align:left;vertical-align:top}img{max-width:100%;height:auto}.notice{background:#fff5bf;border-left:.4rem solid #645700;padding:1rem}.skip{position:absolute;left:-10000px}.skip:focus{position:static}details{margin:1.5rem 0}summary{cursor:pointer;font-weight:bold}footer{margin-top:3rem;font-size:.85rem}.source{font-size:.85rem}h1,h2,h3,h4,[id]{scroll-margin-top:1rem}@media(max-width:40rem){html{font-size:16px}h1{font-size:1.8rem}main{margin:1rem auto}}"""
+CSS = """html{font:18px/1.6 system-ui,sans-serif;color:#172b3a;background:#fff}body{margin:0}a{color:#075a9c;text-underline-offset:.15em}a:focus-visible,summary:focus-visible{outline:3px solid #111;background:#ffdd00;color:#111}header,footer{background:#eff4f7;padding:1rem max(1rem,calc((100% - 72rem)/2))}header strong{font-size:1.5rem}nav{display:flex;gap:.7rem 1.3rem;flex-wrap:wrap}main{max-width:72rem;margin:2rem auto;padding:0 1rem;overflow-wrap:anywhere}article{max-width:52rem}h1{font-size:2.2rem;line-height:1.15}h2{margin-top:2rem}h3{margin-top:1.5rem}p,li{max-width:75ch}pre{overflow:auto;background:#f3f5f7;padding:1rem;max-width:100%}code{font-size:.9em}table{border-collapse:collapse;display:block;overflow:auto;max-width:100%}th,td{padding:.55rem;border:1px solid #b5c3ce;text-align:left;vertical-align:top}img{max-width:100%;height:auto}.table-align-left{text-align:left}.table-align-center{text-align:center}.table-align-right{text-align:right}.notice{background:#fff5bf;border-left:.4rem solid #645700;padding:1rem}.skip{position:absolute;left:-10000px}.skip:focus{left:1rem;top:.5rem;z-index:1;padding:.25rem .5rem;background:#ffdd00;color:#111}details{margin:1.5rem 0}summary{cursor:pointer;font-weight:bold}footer{margin-top:3rem;font-size:.85rem}.source{font-size:.85rem}h1,h2,h3,h4,[id]{scroll-margin-top:1rem}@media(max-width:40rem){html{font-size:16px}h1{font-size:1.8rem}main{margin:1rem auto}}"""
 
 
 def tracked_files(root: Path) -> set[str]:
@@ -416,6 +416,19 @@ def rewrite_link(href: str, source: str, pages: set[str], tracked: set[str], com
     return urlunsplit(("", "", path, parsed.query, parsed.fragment))
 
 
+def normalise_table_alignment(token) -> None:
+    """Move only parser-generated table alignment into our external stylesheet."""
+    if token.type not in {"th_open", "td_open"}:
+        return
+    style = token.attrs.pop("style", None)
+    if style is None:
+        return
+    classes = {f"text-align:{value}": f"table-align-{value}" for value in ("left", "center", "right")}
+    if style not in classes:
+        raise ValueError("Unsupported table alignment style")
+    token.attrJoin("class", classes[style])
+
+
 def render(source: str, text: str, pages: set[str], tracked: set[str], commit: str, published: set[str] | None = None) -> tuple[str, str]:
     if text.startswith("---\n"):
         end = text.find("\n---\n", 4)
@@ -435,6 +448,7 @@ def render(source: str, text: str, pages: set[str], tracked: set[str], commit: s
     headings = []
     title = source
     for i, token in enumerate(tokens):
+        normalise_table_alignment(token)
         if token.type == "heading_open":
             label = tokens[i + 1].content
             slug = re.sub(r"[^\w\- ]", "", label.lower()).replace(" ", "-")

@@ -1,11 +1,39 @@
 # Discovery cards and broader semantic coverage
 
-**Status: diagnosis and proposed experiment, not implemented.** This document
-does not change a source unit, profile, retrieval run or answer. It is an
+**Status: two offline ranking probes completed; structural and semantic cards
+remain proposed and unimplemented.** These probes do not change a production
+source unit, profile, retrieval run or answer. This is an
 independent experimental proposal, not official DWP guidance or specialist
 acceptance. Read the [current delivery record](semantic-closure-and-compact-delivery.md)
 and the [hash-bound diagnosis](../evaluation/semantic-coverage/discovery-card-diagnosis.json)
 alongside it.
+
+## What we tested before generating summaries
+
+Two fixed-source probes use all 40 unchanged staff question occurrences. Each
+protocol was committed before its implementation and observation, and a separate
+agent independently recomputed the rankings. These are known development cases.
+
+| Discovery method | Earlier candidate-location overlaps | Median text in 16 candidates |
+| --- | ---: | ---: |
+| Current literal ranking | 4 | 367,376 bytes |
+| Additional tokens from declared aliases | 2 | 469,267 bytes |
+| Length-aware BM25 ranking | 8 | 13,617 bytes |
+
+BM25 is a lexical ranking formula which accounts for term frequency and passage
+length. The alias shortcut is rejected for adoption. Length-aware ranking is a
+useful lead for the next experiment, with four cases gaining a previously
+identified location and none losing one. The 42 earlier locations are incomplete
+review leads: their overlap is not an independently judged relevance or answer
+score. Most shorter candidates still have unreviewed boundaries, and the Carer's
+Allowance question still selects citizenship fragments. No live ranker changed.
+
+The [alias probe](../evaluation/discovery-probe/README.md) and
+[length-aware probe](../evaluation/discovery-probe/length-ranking.md) retain
+protocols, every case, exact inputs, runners and independent reviews. Neither
+experiment tests summary cards, graph closure or AI answers. The next comparison
+must retain these simple baselines so that any improvement from summaries is
+measured separately from an improvement in ranking.
 
 ## Would short summaries help?
 

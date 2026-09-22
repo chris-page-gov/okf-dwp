@@ -186,3 +186,44 @@ headroom for the expanded corpus and learning checks; it neither changes source
 bytes nor weakens an evidence assertion. Keep the cancelled run available.
 The repair's PR handover records its exact checks, merge and subsequent Pages
 verification separately; changing this limit alone does not claim publication.
+
+## Separate discovery probes — 22 September 2026
+
+- Root owns the isolated `codex/discovery-cards-pilot` branch. These diagnostics
+  preserve source candidate `7412d1d0`, the approved engine `2e557f4b`, all 40
+  question occurrences and every existing source/profile/context output.
+- Alias protocol `f00d299a` was frozen before implementation. Its reconstructed
+  baseline agrees with the real engine on all 40 lexical candidate orders.
+  Expansion recovers no earlier candidate location and loses two. Reject this
+  shortcut for adoption. The initial unsupported `max_edges` call and correction
+  remain recorded; no validator was relaxed.
+- Length-aware protocol `e1654a4f` was frozen before implementation. BM25 with
+  fixed `k1=1.2`, `b=0.75` recovers earlier candidate locations for four cases,
+  loses none, and reduces median text in the first 16 candidates from 367,376
+  to 13,617 bytes. These are pre-graph ranking observations, not complete
+  delivered evidence or correct answers. 626/640 selected occurrences retain
+  unresolved machine boundaries; wrong-subject and historical matches remain.
+- The coverage-review agent independently verified both probes' bound inputs
+  and recomputed every ranking. Reviews are retained beside the runners and
+  observations. No source acquisition, provider calls or runtime changes were
+  made. Structural and semantic cards remain separate unimplemented work.
+- Exact protected publication of this research increment is a separate gate.
+  Do not interrupt the preceding DWP source release's merged-CI/Pages verification.
+
+## Learning-site reliability correction — 22 September 2026
+
+The preceding `548557f2` publication passed exact merged CI, automatic Pages,
+all 377 public-byte checks and its three retained evidence examples. Its later
+learning-page check exposed two defects: the focused skip link moved navigation
+before pointer activation, and aligned table cells produced 16 CSP errors.
+Those failures remain recorded; successful byte verification is not complete
+browser acceptance.
+
+The independently reviewed repair is incorporated into the research follow-on
+PR. It keeps the focused skip link outside layout and converts supported table
+alignment to stylesheet classes, retaining the original CSP and inert source
+HTML. The [regression guide](learning-pages-regressions.md) records 26 renderer
+tests, eight browser checks at desktop/mobile widths and separate negative
+controls for both original defects. Fresh exact-head CI and public replay are
+required after integration. No source, probe result, profile, ranking or
+answerability status changed.

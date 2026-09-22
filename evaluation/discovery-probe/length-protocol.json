@@ -1,0 +1,67 @@
+{
+  "schema": "okf-dwp-length-ranking-probe-protocol.v1",
+  "status": "pre-implementation diagnostic protocol; no runtime adoption",
+  "source_commit": "7412d1d02e023794ebb1d5a5f385f08f59be7ee2",
+  "inputs": [
+    {
+      "path": "logical-context/manifest.json",
+      "sha256": "c040b484c4a73dffce7d542fd6089677fc626a286c6004b8570c79f2b296bdc6",
+      "bytes": 724857
+    },
+    {
+      "path": "logical-context/base-index.json",
+      "sha256": "e1a77e9fb72daf9d9c3856b1c0ec0d0ee285798b1cacc632e71e6b8bc4025356",
+      "bytes": 1507302
+    },
+    {
+      "path": "evaluation/logical-units/engine.json",
+      "sha256": "ff8d21d3249ae791f66ab9fced72f7e69e299405907ff12ba28a9127decc2823",
+      "bytes": 533
+    },
+    {
+      "path": "evaluation/staff-questions/cases.json",
+      "sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a",
+      "bytes": 205988
+    },
+    {
+      "path": "evaluation/semantic-coverage/closure-2026-09-22/audit.json",
+      "sha256": "17c634dc413cfcb214478676d2ae4d898c73b7e27527718bcbeaf450cc99330b",
+      "bytes": 939587
+    },
+    {
+      "path": "evaluation/discovery-probe/protocol.json",
+      "bytes": 2565,
+      "sha256": "f4dab58f1a0559a1e0a7063242f2b12f32fd5bf33d5e4761e3faa50a097897b3"
+    },
+    {
+      "path": "evaluation/discovery-probe/run/comparison.json",
+      "bytes": 2979703,
+      "sha256": "ac80a2f939112a30cc4b6cc9da2589dea051c981f49d6909e2e1deb5773694fe"
+    }
+  ],
+  "cases": "all 40 unchanged supplied question occurrences; known development cases, not held out",
+  "arm": "B1: BM25 over original full source-unit text with original query tokens only; no expansion, heading fields, card summaries, benefit-specific weighting or filtering.",
+  "parameters": {
+    "k1": 1.2,
+    "b": 0.75,
+    "candidates": 16
+  },
+  "tokenisation": "Use the approved corpusTokens normalisation/regex, retaining repeated document tokens for term frequencies and length. Query tokens are the same unique scaffold-filtered tokens retained in A.",
+  "score": "Sum ln(1 + (N - df + 0.5)/(df + 0.5)) * (tf * (k1 + 1)) / (tf + k1 * (1 - b + b * dl/avgdl)) for original query terms; ties use ascending canonical ordinal. N, df and avgdl cover all source-unit records, including uncertain candidates.",
+  "baseline": "Reuse the hash-bound A result whose 40 candidate orders were checked against the approved engine; independently reconstruct A from the corpus during this probe.",
+  "measures": [
+    "Per-case candidate-location overlap with the earlier incomplete source-candidate register, explicitly not relevance or answer accuracy.",
+    "Top16 whole-source bytes and candidate identity changes.",
+    "Change in candidate lengths, all gains and losses, and status of every selected unit."
+  ],
+  "boundaries": [
+    "No new source, summary generation, provider call or live engine change.",
+    "No wrong-heading metadata is used. This isolates terminology before structural/summary card experiments.",
+    "Source-candidate locations are incomplete review leads, not an exhaustive correct-answer set.",
+    "Retain every case, regressions and null outcomes. No thresholds or weights tuned after observing results.",
+    "No claim of full-unit dependency closure or answerability from ranking alone.",
+    "This later development experiment is motivated by the observed long-fragment failure; it is not held out.",
+    "Freeze this protocol in Git before implementation and execution. Do not tune parameters after seeing the results.",
+    "Any positive candidate overlap remains a lead for independent relevance review, not grounds for changing production ranking."
+  ]
+}
