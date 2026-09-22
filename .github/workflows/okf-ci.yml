@@ -15,7 +15,7 @@ jobs:
     timeout-minutes: 30
     env:
       # Reviewed immutable consumer source; execution receipts bind its bytes too.
-      EXPLORER_LOGICAL_UNIT_COMMIT: 982010e760573be5bc7aaa94b255541b5541ab08
+      EXPLORER_LOGICAL_UNIT_COMMIT: 2e557f4b78db10cf69471e4a106a98d3a6c43c5b
       EXPLORER_CONTEXT_COMMIT: 97f13d22b689d92cd785de04758fe932d4a4d369
       EXPLORER_CORPUS_COMMIT: 31ee08ec259e165a478e9c36826fe3721643631d
       EXPLORER_STAFF_COMMIT: f8daf84a4c04afb4839695d38a97cbf21b0ed0a0
@@ -135,6 +135,7 @@ jobs:
           uv run --locked python scripts/build_logical_context.py --check
           uv run --locked python -m unittest discover -s scripts -p 'test_logical*.py'
           node --experimental-strip-types scripts/evaluate_logical_context.mjs --check --explorer-root .ci/okf-explorer-logical-units
+          uv run --locked python scripts/build_semantic_coverage.py --output evaluation/semantic-coverage/closure-2026-09-22 --check
       - name: Install locked context evaluator dependencies
         run: uv sync --locked --project .ci/okf-explorer
       - name: Install source verification tools

@@ -1,6 +1,22 @@
 # Repository status
 
-## Latest additive source review: 21 September 2026
+## Current semantic and delivery increment: 22 September 2026
+
+The [source-review and compact-delivery report](docs/semantic-closure-and-compact-delivery.md)
+records 75 authored unit boundaries and 49,551 uncertain candidates. Seven
+profiles activate for eight of 40 supplied question occurrences, including two
+broader DLA/PIP matches with explicit task ambiguity; 32 do not activate a unit
+profile. The 184-context replay remains insufficient throughout. All 203 earlier
+obligations, frozen sources and combined learning routes are preserved.
+
+Read the [coverage ledger](evaluation/semantic-coverage/closure-2026-09-22/audit.md)
+for exact question, source, profile and lesson mappings. Local compact checks
+reconstruct the five larger packages through bounded responses; all five small
+inline packages still contain no source evidence. The [work log](docs/logical-units-work-log.md)
+keeps implementation, CI, merge and public observation separate. No new remote
+service default, specialist acceptance or improved AI-answer score is claimed.
+
+## Earlier additive source review: 21 September 2026
 
 The [abroad audit](docs/abroad-semantic-audit.md) distinguishes a historical
 lexical failure from current semantic and capacity gaps. The additive source

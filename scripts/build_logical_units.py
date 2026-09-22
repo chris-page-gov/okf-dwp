@@ -448,9 +448,8 @@ def compile_units(root=ROOT):
     require(config.get("schema") == "okf-dwp-context-corpus-sources.v1", "Unknown source configuration")
     require(isinstance(config.get("sources"), list) and {s["id"] for s in config["sources"]} == {"dmg", "adm"}
             and len(config["sources"]) == 2, "Full declared DMG and ADM source census is required")
-    override_file = Path(root) / OVERRIDES
-    overrides = strict_json(inputs.read(OVERRIDES, limit=4 * 1024 * 1024)) if override_file.exists() else {"schema": "okf-dwp-logical-unit-overrides.v1", "documents": []}
-    require(overrides.get("schema") == "okf-dwp-logical-unit-overrides.v1", "Unknown logical-unit overrides")
+    from logical_unit_authoring import load_overrides
+    overrides = load_overrides(inputs)
     specifications = {}
     for item in overrides.get("documents", []):
         key = (item["family"], item["document_id"])

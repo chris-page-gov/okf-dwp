@@ -1,0 +1,468 @@
+{
+  "schema": "okf-dwp-semantic-coverage-plan.v1",
+  "scope": "Source-backed triage clusters, not legal rules or specialist acceptance. Preserve uncertainty and earlier page requirements.",
+  "question_registry_sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a",
+  "clusters": [
+    {
+      "id": "pc-core",
+      "priority": 1,
+      "label": "Pension Credit entitlement, inputs and capital",
+      "case_ids": [
+        "staff-006",
+        "staff-010",
+        "staff-015",
+        "staff-016",
+        "staff-019",
+        "staff-020",
+        "staff-021",
+        "staff-022"
+      ],
+      "existing_candidate_ids": [
+        "source-c008",
+        "source-c012",
+        "source-c013",
+        "source-c031",
+        "source-c032"
+      ],
+      "present_authored_unit_keys": [],
+      "next_work": [
+        "Review 77031–77035 gateways with complete adjacent definitions; then 77301–77304 and 77330 onward, 84911/84921/84922 and Chapter 85 income treatment.",
+        "Separate Guarantee Credit, Savings Credit, capital, deemed income, actual income and additional amounts. Do not treat examples or thresholds as a present-day calculator.",
+        "Use composable scoped evidence requirements across eight questions; retain unresolved input context in staff-016."
+      ],
+      "status": "triage-proposal; not a claim of complete source or legal review"
+    },
+    {
+      "id": "pc-household",
+      "priority": 2,
+      "label": "Pension Credit partner, mixed-age and household scope",
+      "case_ids": [
+        "staff-014",
+        "staff-017",
+        "staff-018"
+      ],
+      "existing_candidate_ids": [
+        "source-c009",
+        "source-c010",
+        "source-c011"
+      ],
+      "present_authored_unit_keys": [
+        "spc-permanent-78087",
+        "spc-permanent-78088",
+        "spc-permanent-78089"
+      ],
+      "next_work": [
+        "Review 77013/77034/77035, 77115–77117 and 77140 onward, including explicit ADM 05/24 and DMG 04/24 pointers.",
+        "Create directional household/partner effects and conditional branches; staff-018 does not name a benefit in its exact standalone question, so do not silently inject Pension Credit from the registry section."
+      ],
+      "status": "triage-proposal; not a claim of complete source or legal review"
+    },
+    {
+      "id": "care-home",
+      "priority": 3,
+      "label": "Care-home source closure for the existing bounded profiles",
+      "case_ids": [
+        "staff-012",
+        "staff-013"
+      ],
+      "existing_candidate_ids": [
+        "source-c028",
+        "source-c030",
+        "source-c010"
+      ],
+      "present_authored_unit_keys": [
+        "spc-aa-78006",
+        "spc-permanent-78087",
+        "spc-permanent-78088",
+        "spc-permanent-78089",
+        "pip-p4016",
+        "pip-p4018",
+        "pip-p4019",
+        "pip-p4021"
+      ],
+      "next_work": [
+        "Existing four path requirements are retained, but funding, continuing qualifying payment, household and housing-cost dependencies remain distinct.",
+        "Review Chapter 78 78270 and Chapter 77 household evidence before claiming self-funding/non-self-funding questions complete. PIP evidence applies only if PIP is the actual qualifying payment, not to every care-home case."
+      ],
+      "status": "triage-proposal; not a claim of complete source or legal review"
+    },
+    {
+      "id": "carer",
+      "priority": 4,
+      "label": "Carer’s Allowance conditions and multiple caring",
+      "case_ids": [
+        "staff-038",
+        "staff-040"
+      ],
+      "existing_candidate_ids": [
+        "source-c036",
+        "source-c037",
+        "source-c038"
+      ],
+      "present_authored_unit_keys": [],
+      "next_work": [
+        "Review complete 60025 cross-page gateway, 60033 definition, 60035–60044 caring condition, 60051–60052 employment, 60058 age and 60068–60081 education.",
+        "Distinguish one carer/multiple people at 60044 from multiple carers/one person at 60026. Follow the named memo and residence dependencies; leave current territory/version unresolved."
+      ],
+      "status": "triage-proposal; not a claim of complete source or legal review"
+    },
+    {
+      "id": "pip-transition",
+      "priority": 5,
+      "label": "Child DLA to PIP transition",
+      "case_ids": [
+        "staff-026",
+        "staff-033"
+      ],
+      "existing_candidate_ids": [
+        "source-c039"
+      ],
+      "present_authored_unit_keys": [
+        "pip-p1011",
+        "pip-p1013",
+        "pip-transfer-p5093-5097",
+        "pip-transfer-p5106",
+        "pip-rollout-appendix2"
+      ],
+      "next_work": [
+        "Review P5004–P5012 definitions, P5018–P5020 child invitation conditions and P5025; then the notification, claim, continuity and termination dependencies.",
+        "P5093–P5097 is only an institutional transfer branch; P5106 only an abroad branch. Neither replaces general child transfer evidence. Retain duplicate question identity and identical package expectations."
+      ],
+      "status": "triage-proposal; not a claim of complete source or legal review"
+    },
+    {
+      "id": "pip-age",
+      "priority": 6,
+      "label": "PIP pension-age continuation and further claims",
+      "case_ids": [
+        "staff-032"
+      ],
+      "existing_candidate_ids": [
+        "source-c039",
+        "source-c004"
+      ],
+      "present_authored_unit_keys": [
+        "pip-p1011",
+        "pip-p1013"
+      ],
+      "next_work": [
+        "Review ADM P4 P4076–P4086 and P4087–P4097 alongside P1013 and the DMG 74022 schedule.",
+        "Keep existing award continuation, new claim, further claim and mobility component revision separate; P4080 expressly cites memo ADM 6/25. Existing authored P4 institutional-payment units do not cover these age rules."
+      ],
+      "status": "triage-proposal; not a claim of complete source or legal review"
+    },
+    {
+      "id": "state-pension",
+      "priority": 7,
+      "label": "State Pension regime, age and components",
+      "case_ids": [
+        "staff-002",
+        "staff-004"
+      ],
+      "existing_candidate_ids": [
+        "source-c003",
+        "source-c004",
+        "source-c005",
+        "source-c006",
+        "source-c007"
+      ],
+      "present_authored_unit_keys": [],
+      "next_work": [
+        "Review DMG 74001, 74022 and the actual Appendix date schedule, 74103 and 74202 in context.",
+        "Separate pension age from entitlement, claiming, payment date, pre/post-2016 regime and transitional records. Do not calculate a personal entitlement date."
+      ],
+      "status": "triage-proposal; not a claim of complete source or legal review"
+    },
+    {
+      "id": "rates",
+      "priority": 8,
+      "label": "Dated rates, additional amounts and acronym ambiguity",
+      "case_ids": [
+        "staff-007",
+        "staff-008",
+        "staff-009"
+      ],
+      "existing_candidate_ids": [
+        "source-c014",
+        "source-c015",
+        "source-c016",
+        "source-c017",
+        "source-c018",
+        "source-c019",
+        "source-c020",
+        "source-c021",
+        "source-c022",
+        "source-c023",
+        "source-c024",
+        "source-c025",
+        "source-c026",
+        "source-c027",
+        "source-c029",
+        "source-c035"
+      ],
+      "present_authored_unit_keys": [],
+      "next_work": [
+        "Review full source tables with headers, units, dates and footnotes before unit authoring. Define the last-five-years reference period explicitly.",
+        "SDA remains ambiguous; Chapter 57 benefit is not interchangeable with the Chapter 78 severe-disability addition. Frozen memo 02/26 routes to a separate rates schedule; do not infer missing current rates from historical examples."
+      ],
+      "status": "triage-proposal; not a claim of complete source or legal review"
+    },
+    {
+      "id": "abroad",
+      "priority": 9,
+      "label": "Benefit-specific abroad scope and bounded overview",
+      "case_ids": [
+        "staff-001",
+        "staff-023"
+      ],
+      "existing_candidate_ids": [
+        "source-c001",
+        "source-c002",
+        "source-c008",
+        "source-c009"
+      ],
+      "present_authored_unit_keys": [
+        "spc-077001",
+        "spc-077002",
+        "spc-077003",
+        "spc-077004",
+        "spc-077015",
+        "spc-077025",
+        "spc-077026",
+        "uc-c1986",
+        "uc-c1987",
+        "uc-c1988",
+        "uc-c1989",
+        "uc-c1990",
+        "state-pension-077027",
+        "state-pension-077028",
+        "state-pension-077029",
+        "state-pension-077030",
+        "pip-transfer-p5106"
+      ],
+      "next_work": [
+        "Preserve staff-023’s existing PC profile while reviewing its unresolved dependencies separately.",
+        "For generic staff-001, expose benefit/variant and temporary/permanent/destination ambiguities; a scoped branch catalogue may reference existing units but must not claim all-benefit coverage."
+      ],
+      "status": "triage-proposal; not a claim of complete source or legal review"
+    },
+    {
+      "id": "iidb-age",
+      "priority": 10,
+      "label": "IIDB and pension-age distinction",
+      "case_ids": [
+        "staff-025"
+      ],
+      "existing_candidate_ids": [
+        "source-c040",
+        "source-c042",
+        "source-c003",
+        "source-c034"
+      ],
+      "present_authored_unit_keys": [],
+      "next_work": [
+        "Review IIDB gateway in Chapter 69 separately from Chapter 71 71747 Reduced Earnings Allowance retirement material.",
+        "Do not transfer one industrial benefit’s age effects to another. Reconcile source role, dates and variants before adding a pension-age edge."
+      ],
+      "status": "triage-proposal; not a claim of complete source or legal review"
+    },
+    {
+      "id": "interaction-matrix",
+      "priority": 11,
+      "label": "Directional interactions and passported additions",
+      "case_ids": [
+        "staff-003",
+        "staff-005",
+        "staff-011",
+        "staff-024",
+        "staff-027",
+        "staff-028",
+        "staff-029",
+        "staff-030",
+        "staff-031",
+        "staff-034",
+        "staff-035",
+        "staff-036",
+        "staff-037",
+        "staff-039"
+      ],
+      "existing_candidate_ids": [
+        "source-c003",
+        "source-c008",
+        "source-c009",
+        "source-c027",
+        "source-c029",
+        "source-c030",
+        "source-c032",
+        "source-c033",
+        "source-c034",
+        "source-c036",
+        "source-c037",
+        "source-c039",
+        "source-c040",
+        "source-c041"
+      ],
+      "present_authored_unit_keys": [
+        "pip-p1011",
+        "pip-p1013"
+      ],
+      "next_work": [
+        "Split by claimant/cared-for person, entitlement/payment/income treatment, benefit variant and component; an undirected related-to edge is not an interaction rule.",
+        "Start bounded pairs using Chapter 17, Chapter 60, Chapters 69/71, Chapters 78/85 and relevant ADM bodies; never copy legacy JSA/ESA treatment to New Style variants.",
+        "War Pensions Constant Allowance remains an unresolved scheme name; rates/variant enumeration needs scope. Staff-005/024/029/031/036/039 ask open-ended sets, so preserve bounded-inventory omissions."
+      ],
+      "status": "triage-proposal; not a claim of complete source or legal review"
+    }
+  ],
+  "reviewed_source_locations": [
+    {
+      "document_id": "dmg-vol13-ch77",
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "page": 14,
+      "text_sha256": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "dmg-vol13-ch77",
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "page": 15,
+      "text_sha256": "3c97a680ad9014e99f75e863f64fe299d6f50bc5e476a4ed433543150f89f6ac",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "dmg-vol13-ch77",
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "page": 20,
+      "text_sha256": "7b180a03e1223b3342815309993eb83ff72a1d74523509cf4a711e869d7376f1",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "dmg-vol13-ch77",
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "page": 26,
+      "text_sha256": "fb85bf7a3bba8a29a887748211745fab47b6d5121676138942d6cf7e5e826335",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "dmg-vol13-ch77",
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "page": 33,
+      "text_sha256": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "dmg-vol13-ch77",
+      "pages_path": "source/pages/dmg-vol13-ch77.json",
+      "page": 35,
+      "text_sha256": "e46f68c7eb118a7ea16618740f519ccf78d0afd8b38c5d8185e81ed28a669440",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "dmg-vol10-ch60",
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch60.json",
+      "page": 3,
+      "text_sha256": "97f524ef78657a456deb3a2712b72bc34e933c4624b2102f2961bb21aecbb999",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "dmg-vol10-ch60",
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch60.json",
+      "page": 4,
+      "text_sha256": "da32faef31e491cbc565d0d34edba35e594321f26361ac8f6822a7c3e12b9edb",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "dmg-vol10-ch60",
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch60.json",
+      "page": 7,
+      "text_sha256": "c29b3ae10c0d0c2470155e6b7d2f4a3732fd07ec9d59e7add5b9a51f4158e1fc",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "adm-chapter-p4",
+      "pages_path": "source/adm-2026-09-19/pages/adm-chapter-p4.json",
+      "page": 1,
+      "text_sha256": "f8e780a14744355a7b8a08187a27498ff865712f10b7e18322717e3c10ec412b",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "adm-chapter-p4",
+      "pages_path": "source/adm-2026-09-19/pages/adm-chapter-p4.json",
+      "page": 13,
+      "text_sha256": "b20cf7b76cb5743781021fa2a16999b06f2090ec6d340f97c907c648a7f8050f",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "adm-chapter-p4",
+      "pages_path": "source/adm-2026-09-19/pages/adm-chapter-p4.json",
+      "page": 14,
+      "text_sha256": "db0ea7e878d1faa01182c880add438663fed34aba093f36bbf3182fce1299e3c",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "adm-chapter-p4",
+      "pages_path": "source/adm-2026-09-19/pages/adm-chapter-p4.json",
+      "page": 15,
+      "text_sha256": "454445d5f5779b60c2db9e21e93a443407516bb0c41fb721272e2326fa3ff41a",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "adm-chapter-p4",
+      "pages_path": "source/adm-2026-09-19/pages/adm-chapter-p4.json",
+      "page": 18,
+      "text_sha256": "ff8cd3aa69669c4a0da24aa9bfb49b997f483d87165746f3f3c0f1ae9d6954b0",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "adm-chapter-p4",
+      "pages_path": "source/adm-2026-09-19/pages/adm-chapter-p4.json",
+      "page": 19,
+      "text_sha256": "8d7ac227dbd0e5f43651240967e6e2ef9cd53529e43af47fb506f11989bd8884",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "adm-chapter-p5",
+      "pages_path": "source/adm-2026-09-19/pages/adm-chapter-p5.json",
+      "page": 1,
+      "text_sha256": "ae1041890f0112dd0c1eabfec8f8dd6e8c9527e349641626b75bd274f0411975",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "adm-chapter-p5",
+      "pages_path": "source/adm-2026-09-19/pages/adm-chapter-p5.json",
+      "page": 3,
+      "text_sha256": "740a2e7d5b7fce59fcf4b75d903857f3418ccf9763f9c6fadc56ae4197a1ff20",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "adm-chapter-p5",
+      "pages_path": "source/adm-2026-09-19/pages/adm-chapter-p5.json",
+      "page": 4,
+      "text_sha256": "1eb1979603cfca998b7ef3a47b4e945e3b38b137126b0e8e3a3f431bcc5e6fc9",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "adm-chapter-p5",
+      "pages_path": "source/adm-2026-09-19/pages/adm-chapter-p5.json",
+      "page": 5,
+      "text_sha256": "d7e665b2d1ab8ac078e58ca525d814aab2308fd5e89b436ff052348e84f2b95d",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    },
+    {
+      "document_id": "adm-chapter-p5",
+      "pages_path": "source/adm-2026-09-19/pages/adm-chapter-p5.json",
+      "page": 6,
+      "text_sha256": "5c093e17bbc53bd2869eabad0a9df58c953e0b34a67b2c7e9c32a2603f637f87",
+      "status": "machine text read for structural triage; PDF layout and legal interpretation not newly reviewed"
+    }
+  ],
+  "boundaries": [
+    "Triage identifies exact frozen pointers, not complete guidance closure or a legal answer.",
+    "No fresh evaluator/model/service call; observations are the retained current summary at the bound hash.",
+    "Candidate excerpt-to-unit mapping is verified UTF-8 span overlap; it is not semantic equivalence or a new authority assertion.",
+    "Existing authored unit source spans and notes were inspected; specialist acceptance remains not-reviewed.",
+    "Eight unresolved references are assigned separately and are not closed by this audit.",
+    "Historical page-profile scope-gap wording is preserved as evidence of an older state; do not repeat historical source-not-acquired claims as a present-day census.",
+    "Proposed profile names/scopes are planning data only, not production aliases or graph edges."
+  ]
+}

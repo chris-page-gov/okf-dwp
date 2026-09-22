@@ -102,7 +102,7 @@ def compile_context(root=ROOT):
     semantic["limitations"] = LIMITATIONS
     semantic["scope"] = "Frozen DMG and ADM logical source units with separately authored, unreviewed semantic routes."
     outputs["base-index.json"] = canonical(semantic)
-    outputs["semantic-proposals.yamlld"] = inputs.read(AUTHORING + "/concepts.yamlld")
+    outputs["semantic-proposals.yamlld"] = canonical(declarations)
     shards, ordinal = [], 0
     postings = {f"{n:02x}": defaultdict(list) for n in range(256)}
     for ref in manifest["records"]["shards"]:

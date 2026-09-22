@@ -202,7 +202,9 @@ they do not decide whether a domain or acceptance review has passed.
 The [logical-unit guide](logical-evidence-units.md) records the completed source
 producer, scoped qualification fixtures and reusable corpus v2 integration.
 These are bounded implementation packages, not completion of broader semantic
-modelling. Separate packages now name the 49,634 uncertain boundaries, remaining
-staff-profile migration and compact-delivery admission. The five small-budget
-focused packages currently retain no source evidence; the larger packages retain
-24 of 24 declared paths and remain insufficient.
+modelling. The [current increment](semantic-closure-and-compact-delivery.md) records
+75 authored and 49,551 uncertain boundaries, with 32 of 40 staff occurrences
+still lacking a unit profile. Separate packages track profile migration and
+compact-delivery admission. The five small-budget focused packages retain no
+source evidence; the larger packages retain 37 of 37 declared paths and remain
+insufficient. Bounded delivery of those larger packages is a separate checked capability.

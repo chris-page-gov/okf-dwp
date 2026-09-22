@@ -33,12 +33,22 @@ concrete modelling error: one retrieved PDF page stopped halfway through an
 example. Exact source spans now join the complete example and preserve its
 qualifications, while dependencies remain separate authored relationships.
 
-The additive build accounts for all frozen extracted bytes and supplies 46
+The first additive build accounted for all frozen extracted bytes and supplied 46
 explicitly authored excerpts among 49,680 units. The other 49,634 boundaries
-remain uncertain. Its 184 assemblies all remain insufficient; a denser graph or
+remained uncertain. Its 184 assemblies all remained insufficient; a denser graph or
 a complete excerpt is not a legal answer. Five new profiles do not migrate all
 previous staff requirements, and small-budget delivery still fails to retain
 source evidence in the focused cases.
+
+The [next source-review increment](semantic-closure-and-compact-delivery.md) adds
+29 boundaries and a case-level ledger. It still leaves 32 of 40 staff occurrences
+without a unit profile. The owner challenged that limited useful coverage:
+profiles written one question at a time cannot be the corpus-wide discovery
+strategy. Compare source-linked discovery cards, validated headings and concept
+aliases against the literal-text baseline, while retaining complete evidence
+and its qualifications. Measure relevant evidence and supported claims separately
+from profile activation. Compact transport fixes response size; it does not fix
+selection quality.
 
 Real-browser checks also found two producer-scale errors missed by the first
 local checks: duplicated PDF resources exceeded the endpoint catalogue bound,

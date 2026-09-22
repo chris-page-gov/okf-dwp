@@ -15,11 +15,8 @@ def project(inputs, manifest, units):
     previous = json.loads(inputs.read("combined/context/corpus/base-index.json"))
     concepts = {r["id"]: deepcopy(r) for r in previous["records"] if r["kind"] == "concept"}
     edges = {r["id"]: deepcopy(r) for r in previous["assertions"] if r["source"] in concepts and r["target"] in concepts}
-    overrides = json.loads(inputs.read(AUTHORING + "overrides.json"))
-    # This authored YAML-LD source uses the JSON-compatible YAML subset.
-    declarations = json.loads(inputs.read(AUTHORING + "concepts.yamlld"))
-    profile_raw = inputs.read(AUTHORING + "profiles.json")
-    profiles = json.loads(profile_raw)
+    from logical_unit_authoring import load_semantics
+    overrides, declarations, profiles, reference_review, dispositions = load_semantics(inputs)
     require(profiles["schema"] == "okf-dwp-logical-task-profiles.v1", "Unsupported unit profiles")
     index = {r["id"]: r for r in units}
     declarations_by_key, catalogue_by_key, owners_by_key = {}, {}, {}
@@ -53,7 +50,7 @@ def project(inputs, manifest, units):
         evidence = list({canonical(p): p for p in evidence}.values())
         concepts[row["@id"]] = {"id": row["@id"], "route": row["@id"].removeprefix(BASE + "id/"),
             "label": row["label"], "kind": "concept", "text": row["definition"], "aliases": row["aliases"],
-            "assertion_status": "model-derived", "authority": {"class": "model-assisted", "label": "Source-backed project concept; specialist review pending", "source": REPO + "/blob/main/" + AUTHORING + "concepts.yamlld"},
+            "assertion_status": "model-derived", "authority": {"class": "model-assisted", "label": "Source-backed project concept; specialist review pending", "source": REPO + "/blob/main/" + row["authoring_path"]},
             "scope": profiles["scope"], "provenance": evidence, "rights": REPO + "/blob/main/NOTICE.md", "access": "public", "review_status": REVIEW}
     for row in declarations.get("alias_additions", []):
         require(row["id"] in concepts and row["review_status"] == REVIEW and row["scope"].strip(), "Unknown alias concept or review scope")
@@ -90,7 +87,7 @@ def project(inputs, manifest, units):
             return authored_pairs[pair]
         iri = BASE + "id/assertion/logical-unit/" + digest(canonical(pair))
         value = {"id": iri, "source": source, "target": target, "predicate": predicate, "label": label,
-            "assertion_status": "model-derived", "authority": {"class": "model-assisted", "label": "Agent source review; specialist interpretation unreviewed", "source": REPO + "/blob/main/" + AUTHORING + "overrides.json"},
+            "assertion_status": "model-derived", "authority": {"class": "model-assisted", "label": "Agent source review; specialist interpretation unreviewed", "source": REPO + "/blob/main/" + proposal["authoring_path"]},
             "scope": " ".join(str(proposal[k]) for k in ("assertion_scope", "conditional_scope", "reason", "review_note") if proposal.get(k)) + " Specialist acceptance and current applicability are not established.",
             "provenance": evidence}
         require(iri not in edges, "Assertion identity collision")
@@ -113,15 +110,18 @@ def project(inputs, manifest, units):
         unit = catalogue_by_key[source]
         edge(unit["id"], catalogue_by_key[target]["id"], predicate,
              "requires supporting source unit" if predicate == DCT + "requires" else "references related source unit", proposal, unit["provenance"])
-    reference_review = json.loads(inputs.read(AUTHORING + "reference-review.json"))
     for row in reference_review["references"]:
         require(row["status"] == "unresolved" and row["source_unit_key"] in catalogue_by_key, "Unknown unresolved reference")
         require(owners_by_key[row["source_unit_key"]][1] == row["document_id"], "Reference-review document owner differs")
         require(row["evidence_spans"] == declarations_by_key[row["source_unit_key"]]["spans"], "Reference-review source spans differ")
+    for row in dispositions:
+        require(all(key in catalogue_by_key for key in row["target_unit_keys"]), "Reference disposition target was not admitted")
     requirements = []
     for row in profiles["profiles"]:
         require(row["assertion_status"] == "model-derived" and row["review_status"] == REVIEW and row["missing_obligations"], "Profile cannot silently upgrade answerability")
         require(set(row["when_all"]) <= set(concepts) and set(row["covers"]) <= set(row["when_all"]), "Unknown profile concept")
+        require(len(set(r["id"] for r in row["missing_obligations"])) == len(row["missing_obligations"]), "Duplicate missing-obligation identity")
+        require(len(set(row["required_unit_keys"])) == len(row["required_unit_keys"]), "Duplicate profile required unit")
         required = [catalogue_by_key[key]["id"] for key in row["required_unit_keys"]]
         paths = []
         for path in row["required_paths"]:
@@ -139,6 +139,8 @@ def project(inputs, manifest, units):
             "when_all": row["when_all"], "covers": row["covers"], "required": required + obligations,
             "required_paths": paths, "scope": row["scope"],
             "limitations": [r["category"] + ": " + r["label"] for r in row["missing_obligations"]]
-                + ["unresolved_reference: " + r["literal_reference"] + ": " + r["note"] for r in reference_review["references"] if r["source_unit_key"] in row["required_unit_keys"]]})
+                + ["unresolved_reference: " + r["literal_reference"] + ": " + r["note"] for r in reference_review["references"] if r["source_unit_key"] in row["required_unit_keys"]]
+                + ["reference_target_review: " + r["literal_reference"] + ": " + r["target_status"] + ": " + r["note"]
+                   for r in dispositions if r["source_unit_key"] in row["required_unit_keys"]]})
     return {"schema": "okf-context-index.v1", "records": sorted(concepts.values(), key=lambda r: r["id"]),
         "assertions": sorted(edges.values(), key=lambda r: r["id"]), "requirements": requirements}, declarations
