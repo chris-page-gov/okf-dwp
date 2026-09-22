@@ -170,3 +170,19 @@ acceptance, model-quality improvement or new public service default is claimed.
 - Independent review found a ledger-only identity defect: dictionary field order let an authored short obligation ID overwrite its canonical identifier. Preserved the affected report under `evaluation/semantic-coverage/history/pre-canonical-obligation-ids-2026-09-22/`, repaired the field order, retained both IDs and verified exact membership of all 203 unique canonical obligations in their earlier requirement sets. Eight coverage controls pass; the source and context packages were unaffected.
 
 - Owner feedback challenged the limited 8/40 profile activation. A parallel diagnosis records the literal-text/alias gap and 16 heading-range mismatches in a bounded 26-candidate sample. The discovery-card experiment is a separate, unimplemented backlog package, not a claim that the wider retrieval problem is fixed. All 32 unprofiled cases return candidate evidence; that does not establish relevance or answer support.
+
+## Learning-release continuation and CI capacity
+
+The subsequent learning release merged as `bd94537742aeab0dcd016efaf04f898ef84c7f8e`.
+Its reviewed-head checks passed, but [merged run 35758898949](https://github.com/chris-page-gov/okf-dwp/actions/runs/35758898949)
+was cancelled by the runner's 30-minute limit; the annotation states that the
+maximum execution time was exceeded. The remaining checks were skipped and
+the dependent Pages publication did not run. A passing PR is therefore not
+recorded as a successful publication of the exact merge.
+
+Increase the bounded aggregate job allowance to 45 minutes, retaining every
+source, semantic, replay, private-input and publication check. This adds timing
+headroom for the expanded corpus and learning checks; it neither changes source
+bytes nor weakens an evidence assertion. Keep the cancelled run available.
+The repair's PR handover records its exact checks, merge and subsequent Pages
+verification separately; changing this limit alone does not claim publication.

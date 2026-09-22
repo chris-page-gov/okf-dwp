@@ -16,6 +16,8 @@ Implementation ownership and handovers belong in the
 - Preserve the earlier logical evaluation before replaying 184 assemblies with 11 scope controls and the reviewed compact engine. Add a reproducible 40-occurrence coverage ledger: eight activate a unit profile, 32 do not, and all remain insufficient. Explain assembly and delivery budgets separately in the beginner documentation.
 
 
+- Allow 45 minutes for the complete source and consumer replay after the merged learning release exceeded the previous 30-minute CI limit. Keep every validation step and publication gate; the cancelled run remains recorded.
+
 - Rebind the logical-context projection after the combined descriptor changes, exclude combined-only learning routes from that Reader, and replay all 184 contexts. Preserve the prior evaluation under `evaluation/logical-units/history/pre-learning-2026-09-22/`; semantic-review limitations remain unchanged.
 
 - Add 12 demonstration learning paths and 112 activities to the combined Reader, covering all 40 supplied question occurrences. Bind authored objectives, source locators, prerequisites and facilitator public keys into the generated snapshot. Preserve the separate logical-unit corpus and all frozen pilot/source projections.
