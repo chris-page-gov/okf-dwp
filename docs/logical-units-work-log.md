@@ -1,5 +1,26 @@
 # Logical-unit implementation work log
 
+## Source-led manual structure and discovery cards, 22 September 2026
+
+The owner authorised a complete DMG/ADM source-led build and an explicit active
+goal. The [process plan](manual-structure-process.md) records the scope and gates.
+The independent DWP worktree starts at `908adc45`; the Explorer adapter worktree
+starts at `ea485af6`. Existing releases, private files and source captures remain
+untouched. The old Monday heartbeat is not restarted.
+
+Root owns source structure and integration. The manual-guide agent owns exact
+source-supported reading conventions and the document-role census. The coverage
+agent independently freezes four source-bound acceptance cases and their doubled
+eight-case set before observations. The Explorer agent owns a scalable generic
+discovery-card and relationship adapter, keeping older corpus versions stable.
+Publication will have one owner while independent work continues separately.
+
+The starting defect is broader than missing question profiles: inherited
+headings can be wrong, large literal-text candidates dominate ranking, and
+small delivery budgets omit evidence. Card descriptions remain distinct from
+domain concepts, full source passages and necessary legal support. No new result
+or improved answerability is claimed by recording this plan.
+
 Started 22 September 2026 following the owner's explicit unattended implementation
 request. The earlier Monday deadline and paused heartbeat remain historical.
 

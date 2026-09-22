@@ -10,6 +10,8 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Start the source-led manual-guide build: record the reading-convention discovery process, a four-case structural gate followed by eight cases after a pass, and the separate full-corpus/staff-question evaluation. Track manual guides, structural repair and discovery cards as active work; no new semantic or answer-quality result is claimed yet.
+
 - Fix two learning-site defects found during the preceding public check: keep the focused skip link outside page layout so pointer navigation stays stable, and render table alignment through external stylesheet classes without weakening the content security policy. Retain the failed observations and add renderer and desktop/mobile browser regressions; publication acceptance remains a separate exact-commit check.
 
 - Retain two independently checked offline ranking probes on the same 40 questions. Token-level alias expansion loses tracked candidate locations; length-aware BM25 gains four without losses but still selects incomplete or wrong-subject fragments. Preserve fixed protocols, exact inputs and all results. The live ranker, source units and answerability statuses are unchanged; summary-card implementation remains open.

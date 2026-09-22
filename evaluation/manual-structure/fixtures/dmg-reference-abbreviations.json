@@ -1,0 +1,93 @@
+{
+  "schema": "okf-dwp-manual-structure-fixture.v1",
+  "id": "dmg-reference-abbreviations",
+  "stage": "expanded",
+  "source": {
+    "document_id": "dmg-abbreviations-0db6c476b0",
+    "family": "dmg",
+    "title": "DMG abbreviations",
+    "role": "reference",
+    "url": "https://assets.publishing.service.gov.uk/media/67ffac49b73354468d13553f/dmg-abbreviations.pdf",
+    "observed_at": "2026-09-15T19:45:17.731955Z",
+    "inventory": {
+      "path": "source/full-dmg-2026-09-15/inventory.json",
+      "bytes": 2240547,
+      "sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a"
+    },
+    "pdf": {
+      "path": "source/full-dmg-2026-09-15/pdf/dmg-abbreviations-0db6c476b0.pdf",
+      "bytes": 112115,
+      "sha256": "aaa72d19e16b8817b5af5d90f3f7bdeb9921f4d226a929313641deae784b439b"
+    },
+    "pages": {
+      "path": "source/full-dmg-2026-09-15/pages/dmg-abbreviations-0db6c476b0.json",
+      "bytes": 18760,
+      "sha256": "e4d371537977803f6d2496099638d63d372a9445399f3570a76b1900951becf3"
+    },
+    "page_count": 17
+  },
+  "purpose": "Retain a reference-only abbreviation table and its distinction between DLA, DM, DMA and DMG without promoting the lookup to a benefit rule.",
+  "review": {
+    "method": "agent inspection of frozen extraction and rendered frozen PDF pages",
+    "status": "source-boundary-and-role-expectation-only",
+    "specialist_review": "not-reviewed",
+    "legal_answerability": "not-established"
+  },
+  "regions": {
+    "primary": {
+      "spans": [
+        {
+          "page": 3,
+          "start_byte": 0,
+          "end_byte": 682,
+          "page_text_sha256": "f4ea9cfc80f794266b96888409cd86bc1feb8174b598c1e17146f5ec96c5a143",
+          "span_sha256": "f4ea9cfc80f794266b96888409cd86bc1feb8174b598c1e17146f5ec96c5a143",
+          "url": "https://assets.publishing.service.gov.uk/media/67ffac49b73354468d13553f/dmg-abbreviations.pdf#page=3"
+        }
+      ],
+      "bytes": 682,
+      "sha256": "f4ea9cfc80f794266b96888409cd86bc1feb8174b598c1e17146f5ec96c5a143",
+      "first_text": "CPen    Civil Penalty\n\n\nCSM     Child Support Maintenance\n\n\nCSP     Carer's Support Payment\n\n\nCT      Council ",
+      "last_text": "Allowance\n\n\nDM      Decision Maker\n\n\nDMA     Decision Making and Appeals\n\n\nDMG     Decision Makers Guide\n\n\nDO      District Office\n\n\nDP      Disability premium\n"
+    },
+    "document_heading": {
+      "spans": [
+        {
+          "page": 1,
+          "start_byte": 0,
+          "end_byte": 22,
+          "page_text_sha256": "c08456d313fd39c770dd8afc80f23c94c8bb46c8cb069b60cd6e64aa2730988b",
+          "span_sha256": "0652e18292d813aa487eddcd6a2c73cb6390fb6a26fb27114b22fa8eee49f9a5",
+          "url": "https://assets.publishing.service.gov.uk/media/67ffac49b73354468d13553f/dmg-abbreviations.pdf#page=1"
+        }
+      ],
+      "bytes": 22,
+      "sha256": "0652e18292d813aa487eddcd6a2c73cb6390fb6a26fb27114b22fa8eee49f9a5",
+      "first_text": "DMG Abbreviations\n\n\n\n\n",
+      "last_text": "DMG Abbreviations\n\n\n\n\n"
+    }
+  },
+  "expectations": {
+    "target_label": "abbreviations-page-3",
+    "primary_role": "reference-table",
+    "must_contain": [
+      "DLA     Disability Living Allowance",
+      "DM      Decision Maker",
+      "DMA     Decision Making and Appeals",
+      "DMG     Decision Makers Guide"
+    ],
+    "document_role": "reference",
+    "forbidden_body_labels": [
+      "DLA",
+      "DM",
+      "DMA",
+      "DMG"
+    ],
+    "references": [],
+    "must_not_infer": [
+      "An abbreviation expansion establishes eligibility, scope or entitlement.",
+      "A reference-only dictionary is a substantive guidance chapter."
+    ],
+    "completeness_scope": "The source-bound test covers one continuation page, not acceptance of every abbreviation in the document."
+  }
+}

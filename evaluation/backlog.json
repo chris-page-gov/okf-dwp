@@ -424,7 +424,8 @@
         "evaluation/discovery-probe/length-protocol.json",
         "evaluation/discovery-probe/length-independent-review.md",
         "scripts/probe_discovery_terminology.mjs",
-        "scripts/probe_discovery_length.mjs"
+        "scripts/probe_discovery_length.mjs",
+        "docs/manual-structure-process.md"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
@@ -625,12 +626,13 @@
         {
           "id": "DWP-BL-007.discovery-cards",
           "kind": "implementation",
-          "status": "not_started",
+          "status": "in_progress",
           "executor": "agent",
-          "next_action": "Implement the diagnosed corpus-wide discovery experiment: compare current literal ranking with validated hierarchy and declared concept aliases, then source-grounded summary cards linked to full units. Keep all 40 questions, source snapshot and budgets fixed; measure independently judged relevance, qualifications, unresolved scope and supported claims separately. Diagnose heading-range mismatches before using machine headings. A per-question profile count is not the success metric.",
+          "next_action": "Implement source-linked discovery cards after the source-led four-case structure gate, repeat with eight cases after a pass, and evaluate the full captured corpus and unchanged staff questions. Keep cards separate from evidence and domain concepts; do not upgrade source or answer completeness.",
           "evidence": [
             "docs/discovery-cards-experiment.md",
-            "evaluation/semantic-coverage/discovery-card-diagnosis.json"
+            "evaluation/semantic-coverage/discovery-card-diagnosis.json",
+            "docs/manual-structure-process.md"
           ]
         },
         {
@@ -648,6 +650,26 @@
             "evaluation/discovery-probe/length-independent-review.md",
             "scripts/probe_discovery_terminology.mjs",
             "scripts/probe_discovery_length.mjs"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.manual-guide",
+          "kind": "implementation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Build a source-backed machine-readable guide to each manual, its document roles, numbering, reading conventions, reference aids and updates; account for all 513 captured documents and expose unsupported conventions.",
+          "evidence": [
+            "docs/manual-structure-process.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.structured-corpus",
+          "kind": "implementation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Repair logical boundaries and governing headings using declared manual conventions; preserve all source bytes, generate additive units and scoped reference proposals, and pass the preregistered four-case then eight-case gates before the complete corpus evaluation.",
+          "evidence": [
+            "docs/manual-structure-process.md"
           ]
         }
       ]
