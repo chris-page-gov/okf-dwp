@@ -141,6 +141,8 @@ def validate_case(case: dict, observation: dict, pages: list[dict]) -> list[str]
                 raise ValueError("Unit source content hash mismatch")
             if unit.get("specialist_review") != "not-reviewed":
                 raise ValueError("Machine structure promoted to specialist review")
+            if unit.get("legal_effect_status") is None:
+                raise ValueError("Missing explicit unresolved legal boundary")
             if unit.get("legal_effect_status") != "unresolved":
                 raise ValueError("Machine structure promoted to legal resolution")
             valid_units.append((unit, data))
@@ -308,7 +310,7 @@ def adapt_parser_output(case: dict, pages: list[dict], units: list[dict], struct
             if all(key in heading for key in ("title", "low", "high")):
                 suffix = heading["low"] if heading["low"] == heading["high"] else f"{heading['low']} - {heading['high']}"
                 headings.append(heading["title"] + " " + suffix)
-        status = unit.get("legal_effect_status")
+        status = unit.get("legal_effect_status", structure.get("legal_effect_status"))
         if status is None and unit.get("completeness") == "unresolved":
             status = "unresolved"
         converted.append({"id": unit.get("id", unit.get("key")), "source_spans": spans,
@@ -382,7 +384,13 @@ def evaluate_source_cases(stage: str, engine: str, output: Path, initial_report:
                 if record["sha256"] != digest(data):
                     raise ValueError("Baseline document is not bound by frozen manifest")
                 old = json.loads(gzip.decompress(data))
-                units, structure = old["units"], {"source_instructions_inert": True}
+                units = old["units"]
+                limitations = old.get("limitations", [])
+                structure = {"source_instructions_inert": any("Source instructions remain inert data." in item for item in limitations)}
+                if (any("Author-declared completeness means complete within the declared excerpt boundary only." in item for item in limitations)
+                        and any("it does not establish complete rules, legal applicability or semantic dependency closure." in item for item in limitations)):
+                    structure["legal_effect_status"] = "unresolved"
+                structure["retained_catalogue_limitations"] = limitations
                 inputs.append({"path": str(path.relative_to(ROOT)), "sha256": digest(data), "bytes": len(data)})
             else:
                 raise ValueError("Unknown engine")
@@ -493,6 +501,15 @@ class FrozenStructureProtocolTests(unittest.TestCase):
         errors = validate_case(case, observation, pages)
         self.assertTrue(any(error.startswith("provenance:") for error in errors))
         self.assertIn("reference_scope:source instructions not explicitly inert", errors)
+
+    def test_declared_boundary_completeness_does_not_promote_legal_review(self):
+        case, pages, observation = self.control("dmg-077001-cross-page-examples")
+        unit = observation["units"][0]
+        self.assertEqual(unit["legal_effect_status"], "unresolved")
+        unit["completeness"] = "complete-within-declared-boundary"
+        self.assertEqual(validate_case(case, observation, pages), [])
+        del unit["legal_effect_status"]
+        self.assertTrue(any("Missing explicit unresolved legal boundary" in error for error in validate_case(case, observation, pages)))
 
     def test_memo_navigation_and_contacts_cannot_disappear(self):
         case, pages, observation = self.control("adm-memo-contents-examples-annotations")

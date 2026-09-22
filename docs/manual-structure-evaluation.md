@@ -40,7 +40,7 @@ Each case must pass every applicable check:
 
 The denominator is **four source cases**, then **eight source cases**. Multiple checks within a case do not increase it. Passing these cases does not establish current law, specialist acceptance, legal dependency closure, answer relevance or answer quality.
 
-At protocol registration, the validator had passed 13 control tests. These include synthetic correct observations and deliberate errors; they do **not** demonstrate that a parser passed the eight cases. Source-case results must be read from separately retained run reports.
+The initial validator passed 13 control tests; an additional control separates declared excerpt completeness from legal acceptance. These include synthetic correct observations and deliberate errors; they do **not** demonstrate that a parser passed the eight cases. Source-case results must be read from separately retained run reports.
 
 ## How to reproduce the checks
 
