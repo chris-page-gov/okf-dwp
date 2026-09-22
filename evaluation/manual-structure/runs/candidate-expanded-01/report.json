@@ -1,0 +1,88 @@
+{
+  "stage": "expanded",
+  "case_denominator": 8,
+  "passed_cases": 5,
+  "cases": [
+    {
+      "case_id": "dmg-77031-heading",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "case_id": "adm-p4087-heading",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "case_id": "dmg-077001-cross-page-examples",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "case_id": "adm-c1988-cross-page-examples",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "case_id": "dmg-capital-table-continuation",
+      "passed": false,
+      "failures": [
+        "complete_passage:no complete unit with expected role",
+        "roles:missing disclaimer"
+      ]
+    },
+    {
+      "case_id": "adm-reserved-range",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "case_id": "dmg-reference-abbreviations",
+      "passed": false,
+      "failures": [
+        "complete_passage:no complete unit with expected role"
+      ]
+    },
+    {
+      "case_id": "adm-memo-contents-examples-annotations",
+      "passed": false,
+      "failures": [
+        "complete_passage:no complete unit with expected role",
+        "roles:missing navigation",
+        "roles:missing annotations",
+        "roles:missing contacts"
+      ]
+    }
+  ],
+  "specialist_review": "not-reviewed",
+  "legal_answerability": "not-established",
+  "schema": "okf-dwp-manual-structure-run.v1",
+  "engine": "candidate",
+  "protocol_sha256": "1cf9fa21f48a97ffd5551caa58293f1f97fc8dcfe26d1857afd141bdb8ea8d92",
+  "source_baseline_commit": "908adc45a4e22eb72ed13fe8943877307b732850",
+  "runtime_seconds": 0.319581,
+  "adapter_errors": {},
+  "baseline_document_bindings": [],
+  "implementation_bindings": [
+    {
+      "path": "scripts/test_manual_structure_acceptance.py",
+      "sha256": "8a5f55bfe31f46ce68536d6b68183d80537dd672b08f4bbf0aec2691d4c28bc0"
+    },
+    {
+      "path": "scripts/manual_structure.py",
+      "sha256": "1b94d979f7857c8272c69bd66e74afd0e5ba909710c3fcbb9b30cff22fd622a2"
+    },
+    {
+      "path": "scripts/build_logical_units.py",
+      "sha256": "364be1718db1697baa8af62362e8d4f65178dd9506f7cba5b8d16ff5f3aece38"
+    }
+  ],
+  "registration_note": "Fixtures predate source-case execution/results; parser drafting occurred concurrently. These are not blinded held-out cases.",
+  "review_boundary": "Structural acceptance only; legal applicability, specialist review and answer quality remain unestablished.",
+  "observations": {
+    "path": "observations.json.gz",
+    "decoded_sha256": "513f05e1398969fd3d5a87dfc31406cc48da3c644673023395bd2d2387931a20",
+    "decoded_bytes": 1834325,
+    "sha256": "67ba330fa709f462f302246a969a676cfcc5ba5d84d44a629806dc0ef0828a5d"
+  }
+}

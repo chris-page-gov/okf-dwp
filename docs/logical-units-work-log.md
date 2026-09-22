@@ -24,6 +24,27 @@ or improved answerability is claimed by recording this plan.
 Started 22 September 2026 following the owner's explicit unattended implementation
 request. The earlier Monday deadline and paused heartbeat remain historical.
 
+## Source-led implementation checkpoint
+
+The new feature branch has a source-supported manual guide and a separate
+bounded PDF-structure observation layer. All 513 PDFs were inspected locally;
+the raw observation history and a corrected bounded parser replay are retained.
+One observation reached its output bound and remains an explicit fallback.
+
+The first complete candidate unit build accounts for 19,090 pages and
+35,143,443 source bytes, with 49,491 non-empty units and all 75 authored records
+preserved. These are development build counts, not published-release acceptance.
+The initial context projection contains one separate discovery card per unit,
+331 existing concepts and 20,632 graph assertions; 26,472 reference observations
+remain unresolved. Full Reader integration and the fixed forty-question
+comparison follow before any default changes.
+
+The final bounded structural experiment passed four cases and then eight.
+Earlier failed attempts and additional independent generalisation failures are
+retained. Repeated-heading ambiguity, notice boundaries, fragment-local
+reference offsets and raw-tree/sidecar binding received regression controls.
+No legal, specialist or model-answer acceptance is inferred from these results.
+
 ## Starting state and ownership
 
 DWP main: `82bd0a18e9941752798e5f4446eaa8bfb8b46936`.

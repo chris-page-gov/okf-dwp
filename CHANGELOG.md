@@ -10,6 +10,8 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Build an additive source-led manual guide, PDF-structure observations, complete source-byte unit catalogue and separate discovery-card corpus. Preserve authored unit identities and obligations; use explicit source references for navigation only. Retain the four-to-eight structural experiment, failed attempts and independent boundary/integrity controls. Full question comparison and public adoption remain separate gates.
+
 - Start the source-led manual-guide build: record the reading-convention discovery process, a four-case structural gate followed by eight cases after a pass, and the separate full-corpus/staff-question evaluation. Track manual guides, structural repair and discovery cards as active work; no new semantic or answer-quality result is claimed yet.
 
 - Fix two learning-site defects found during the preceding public check: keep the focused skip link outside page layout so pointer navigation stays stable, and render table alignment through external stylesheet classes without weakening the content security policy. Retain the failed observations and add renderer and desktop/mobile browser regressions; publication acceptance remains a separate exact-commit check.

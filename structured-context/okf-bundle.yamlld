@@ -1,0 +1,186 @@
+'@context':
+- https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/context.jsonld
+- rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  body: schema:text
+  page_number: schema:pagination
+  RelationshipAssertion:
+    '@id': okf:RelationshipAssertion
+    '@context':
+      source:
+        '@id': rdf:subject
+        '@type': '@id'
+      predicate:
+        '@id': rdf:predicate
+        '@type': '@id'
+      target:
+        '@id': rdf:object
+        '@type': '@id'
+      kind: rdfs:label
+      label: rdfs:label
+      inverse_label: okf:inverseLabel
+      assertion_status:
+        '@id': okf:assertionStatus
+        '@type': '@vocab'
+      assertion_scope:
+        '@id': okf:assertionScope
+        '@type': '@vocab'
+      official: okf:OfficialAssertion
+      normalized: okf:NormalizedAssertion
+      inferred: okf:InferredAssertion
+      model-derived: okf:ModelDerivedAssertion
+      real-world: okf:RealWorldScope
+      synthetic-fixture: okf:SyntheticFixtureScope
+      authority:
+        '@id': okf:authority
+        '@context':
+          class:
+            '@id': okf:authorityClass
+            '@type': '@vocab'
+          official: okf:OfficialAuthority
+          derived: okf:DerivedAuthority
+          model-assisted: okf:ModelAssistedAuthority
+          synthetic: okf:SyntheticAuthority
+          unclassified: okf:UnclassifiedAuthority
+          label: rdfs:label
+          source:
+            '@id': http://purl.org/dc/terms/source
+            '@type': '@id'
+      derivation:
+        '@id': okf:derivationMethod
+        '@type': '@id'
+      derivation_activity:
+        '@id': prov:wasGeneratedBy
+        '@type': '@id'
+      rule:
+        '@id': okf:rule
+        '@type': '@id'
+      supporting_assertions:
+        '@id': prov:wasDerivedFrom
+        '@type': '@id'
+        '@container': '@set'
+      confidence_score:
+        '@id': okf:confidenceScore
+        '@type': xsd:decimal
+      strength:
+        '@id': okf:strength
+        '@type': xsd:decimal
+      count:
+        '@id': okf:count
+        '@type': xsd:integer
+      observed_at:
+        '@id': prov:generatedAtTime
+        '@type': xsd:dateTime
+      stale_after:
+        '@id': okf:staleAfter
+        '@type': xsd:dateTime
+      review_status: okf:reviewStatus
+      evidence:
+        '@id': prov:hadPrimarySource
+        '@container': '@set'
+        '@context':
+          type: okf:evidenceType
+          url:
+            '@id': https://schema.org/url
+            '@type': '@id'
+          resource:
+            '@id': http://purl.org/dc/terms/source
+            '@type': '@id'
+          source_artifact: okf:sourceArtifact
+          source_sha256: okf:sourceSha256
+          source_field: okf:sourceField
+          field_provenance: okf:fieldProvenance
+          source_value: okf:sourceValue
+          source_value_sha256: okf:sourceValueSha256
+          source_value_hash_canonicalization: okf:sourceValueHashCanonicalization
+          literal_sha256: okf:literalSha256
+          locator: okf:sourceLocator
+          normalization:
+            '@id': okf:normalizationRule
+            '@type': '@id'
+          rule_id:
+            '@id': okf:rule
+            '@type': '@id'
+          rationale: okf:rationale
+          retrieved_at:
+            '@id': prov:generatedAtTime
+            '@type': xsd:dateTime
+      rights:
+        '@id': okf:rights
+        '@context':
+          source:
+            '@id': http://purl.org/dc/terms/license
+            '@type': '@id'
+          assertion: okf:assertionRights
+'@id': https://chris-page-gov.github.io/okf-dwp/id/bundle/structured-context
+'@type': okf:Bundle
+title: 'DWP guidance: source-led manual structure'
+description: Independent experimental source navigation, not official DWP guidance or individual
+  benefits advice.
+version: 0.1.0
+status: experimental
+descriptor:
+  '@id': https://chris-page-gov.github.io/okf-dwp/structured-context/okf-explorer.json
+semanticDescriptor:
+  '@id': https://chris-page-gov.github.io/okf-dwp/structured-context/okf-bundle.yamlld
+home:
+  '@id': https://github.com/chris-page-gov/okf-dwp
+profile:
+  '@id': https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/
+publisher:
+  '@id': https://github.com/chris-page-gov
+license:
+  '@id': https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md
+snapshot_id: dwp-structured-context-0b5a057d058a9d1838f4
+semantic_manifest:
+  path: data/semantic/manifest.json
+  bytes: 241134
+  sha256: cca43c7ac01f3cd01e3e7c7d28b2ddd5885b9368e265bcbf66acc856132898e4
+counts:
+  nodes: 50335
+  assertions: 20632
+  distinct_direct_triples: 20623
+assertion_scope: real-world
+exploratory_publication:
+  applicable_plane_roots:
+    source: e2b42b226c29c52e2430f8047c96437aeaf11949c86aa365239b83c6b8338cde
+    semantic: d63772ff1f26d2f719ed5046b9a015ab1ea1067f5a8d4d1798e15ade4a23f1f8
+    data: 49d37a8ae08e26ecb6539edc60b5286c95b78c30b6fbd0e2fdfa0aa4ee906771
+    search: 67b18ef0fe1e67013a55978202f66cf0d199adb37ff9a035cea1d8a714bc758d
+    presentation: bda3cea27af5919d4d5e908e2eaf9cfb3349acd98a28e55fab88431564e4dc9e
+  banner:
+    feedback_url: https://github.com/chris-page-gov/okf-dwp/issues/new
+    label: Exploratory
+    message: This is an incomplete research view, not an authoritative service or released data
+      product. Content and links may change. Check the cited official source before making a
+      decision.
+    preserve_route: true
+  generated_at: '2026-09-21T20:49:04Z'
+  indexing_policy: noindex
+  limitations:
+  - Independent experimental source navigation, not official DWP guidance or individual benefits
+    advice.
+  - Discovery cards contain source headings and an extractive preview. They are neither evidence
+    requirements nor legal summaries; read the linked complete source unit.
+  - PDF tags and literal number ranges propose boundaries. Exact source-byte accounting does not
+    establish complete rules, current applicability or specialist acceptance.
+  - Directed source references are navigation observations. They do not become prerequisite,
+    applicability or legal-dependency assertions.
+  - Only separately authored task profiles declare evidence requirements. Original open obligations,
+    unreviewed semantics and all source roles remain visible.
+  - Missing, ambiguous and out-of-corpus reference targets remain unresolved. No external source or
+    model knowledge is silently acquired.
+  - Historic amendments and source capture dates do not establish current law. Source instructions
+    are inert data.
+  permitted_claims:
+  - Exact source-byte accounting, source-led candidate units, separate discovery metadata and
+    explicit relationship provenance; no complete legal answerability.
+  prohibited_claims:
+  - Official endorsement, entitlement decisions, current-law assurance or specialist validation.
+  promotion_rule: Specialist review and fresh assurance are required for policy claims.
+  publication_state: exploratory
+  publisher:
+    authority_status: independent-research
+    name: Chris Page — independent research
+    url: https://github.com/chris-page-gov/okf-dwp
+  schema: okf-exploratory-publication.v1
+  snapshot_id: dwp-structured-context-0b5a057d058a9d1838f4
