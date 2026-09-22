@@ -137,7 +137,9 @@ index is `logical-context/manifest.json`.
 with the compatible Explorer build from
 [PR 140](https://github.com/chris-page-gov/okf-explorer/pull/140).
 The source pin identifies unchanged logical data from this implementation;
-public application verification is separate from local checks. The existing combined Reader and remote
+exact public application and CI observations are recorded in the
+[DWP PR handover](https://github.com/chris-page-gov/okf-dwp/pull/28), separately
+from the checked-in local browser receipt. The existing combined Reader and remote
 service keep their separately recorded versions. Do not describe this build as
 a new default deployment of `ask-okf.crpage.chatgpt.site`.
 

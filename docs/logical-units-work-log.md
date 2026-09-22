@@ -105,8 +105,9 @@ acceptance, model-quality improvement or new public service default is claimed.
   new focused paths are retained; this does not establish complete legal scope
   or migrate all older profiles. These limits are explicit backlog packages.
 - `.email.md` remains ignored and untracked. Frozen source, pilot, full-DMG and
-  combined projections remain unchanged. Public CI and deployment verification
-  will be appended after the reviewed PRs complete.
+  combined projections remain unchanged. Exact public CI and deployment verification are recorded in the
+  [DWP PR handover](https://github.com/chris-page-gov/okf-dwp/pull/28), separately
+  from the checked-in local observation.
 
 - Full DWP Python regression suite: **578 tests passed**, including expected negative
   CLI controls. Canonical repository contracts, private-input check and exact
@@ -118,3 +119,13 @@ acceptance, model-quality improvement or new public service default is claimed.
   temporary/permanent alternatives; the ADM memo is an unresolved reference,
   not a resolved graph destination. These corrections do not change the source
   or evaluated projection.
+
+- Delivery PRs: [DWP 28](https://github.com/chris-page-gov/okf-dwp/pull/28)
+  and [Explorer 140](https://github.com/chris-page-gov/okf-explorer/pull/140).
+  The pinned DWP Reader source is `adfa7137d3b24033d7265123c739a9ffcfb06584`;
+  later documentation corrections preserve its unit and context bytes. Exact
+  merge/deployment observations belong to the PR handover, not an inferred
+  deployment status from this source document.
+- Updated the portable methodology and retrospective: establish source-bound
+  logical units before semantic generation; keep boundary accuracy, dependency
+  completeness, source census and answer quality as separate checks.
