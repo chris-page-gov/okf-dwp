@@ -67,3 +67,33 @@ The original failed classifications, source experiments and frozen projections
 remain unchanged. The correction may increase explicitly unresolved material;
 it does not establish legal applicability, complete semantic modelling or
 specialist acceptance. Final rebuilt-corpus results are recorded separately.
+
+## Further source finding: a wrapped reference is not a paragraph
+
+Independent household source reading found `77161` ending a line with
+`See DMG 77162 -`, followed by `77164 for further details.` on original chapter
+77 PDF page 28. The second line continues the reference. The earlier parser
+mistook it for a new paragraph, separating the following note and citation from
+77161. The actual next standalone range is `77162 - 77169`.
+
+The [source fixture](wrapped-reference-fixture-v2.json) retains the complete
+expected 77161 passage. Its [original registration](wrapped-reference-fixture.json)
+is also retained: one unused label in that first record incorrectly named the
+next page's 77172. The corrected one-page expectation is 77161, 77170 and 77171;
+the exact expected passage and source hashes did not change. The first
+[boundary check failed](wrapped-reference-before-fix.json), while the
+[post-repair check passes](wrapped-reference-after-fix.json) and reconstructs
+all original page bytes. These expectations and parser implementation were
+prepared concurrently; this is an independent regression, not an experiment
+preregistered before all implementation.
+
+The generic repair recognises an explicit manual or paragraph-reference range
+ending on the preceding nonblank line. It does not encode these paragraph
+numbers. Run the bounded source control with:
+
+```sh
+uv run --locked python -m unittest discover -s scripts -p 'test_manual_wrapped_reference.py'
+```
+
+[The follow-on manifest](wrapped-reference-artifact-manifest.json) binds these
+additional receipts. The original auxiliary evidence manifest is unchanged.
