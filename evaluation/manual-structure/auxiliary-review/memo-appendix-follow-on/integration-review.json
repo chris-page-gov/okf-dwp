@@ -1,0 +1,33 @@
+{
+  "observed_utc": "2026-09-22T23:27:50.088271+00:00",
+  "result": "No blocker in the bounded generic repair for these two source defects.",
+  "reviewed_files": {
+    "scripts/manual_structure.py": "bec04854e14d4229898971be7d673c3fac062186855f52a9f06589a04727b9d0",
+    "scripts/manual_auxiliary_structure.py": "8210d197c9d8e644bcf8f3bf13c43f89f3c6460ad4b82e7c11c783c6be80f35b",
+    "scripts/manual_references.py": "27d02e4a1244f8102ebf6abb6ce5a8a014edcf87225ca0556ba5a9814f6af8d0",
+    "scripts/pdf_structure_alignment.py": "6a4abddea15b923f824196a621a3a1228d63078dd8848376abdcd4b09c1f94c9",
+    "scripts/build_pdf_structure.py": "50fa018b684ed4721d8e77fd8e4d634be50768b3563d785813163299af913a0f",
+    "pdf-structure/bounded-v2/manifest.json": "1639ad479e882d6a4d20a09e859f872a58060e2250f14c0702cfa20ff0b7f61b",
+    "pdf-structure/bounded-v2/adm/adm-memo-06-21.structure.json": "063ba62572ffcf85713c6774daae45e6053c041b48e9bfb63a786c8c85beaef2",
+    "scripts/test_manual_memo_appendix_sources.py": "4f484e7132fa2ac0cc70b1ec200f291eef897d6d7166fe8ce06d4910bc9b1464"
+  },
+  "findings": [
+    "The literal chapter-style identifier C2130 on memo PDF page5 continues see ADM in memo paragraph11; it is not a memo paragraph. No chapter-style memo body is admitted.",
+    "Only exact source-declared aligned Hn titles become memo section candidates. Plain numbered P/LI observations remain candidates and cannot establish main numbering.",
+    "The actual annotation list on page21 remains separate, with update observations and legal_dependency=not-established.",
+    "A standalone Appendix heading, including extraction-spaced letters, stops the prior paragraph at the original source line. The paragraph retains its full following example on page108.",
+    "Source byte partition checks cover the complete memo and three unchanged historical amendment pages; no bytes are rewritten or omitted."
+  ],
+  "limits": [
+    "These are regression controls developed concurrently with the repair, not preregistered or blinded results.",
+    "A mistaken reviewer expectation for a specific Hn heading is retained with its initial failing test. Source-supported Introduction/Background expectations replace it.",
+    "ADM06/21 still has broad source-tagged sections, including Background from pages2\u20138; memo paragraph and dependency completeness remain unresolved.",
+    "Historical amendment content remains historical; source tags, structural boundaries and exact byte identity do not establish applicability or specialist approval."
+  ],
+  "implementation_review": [
+    "Memo label rejection is gated by source inventory kind=memo, not document ID or cited benefit.",
+    "Appendix recogniser anchors the complete standalone literal and permits intra-word whitespace; inline see Appendix references do not match.",
+    "The change adds boundary events, not an overriding whole-appendix region; prior examples remain before the new boundary.",
+    "The existing immutable-source partition and span hash checks remain active."
+  ]
+}

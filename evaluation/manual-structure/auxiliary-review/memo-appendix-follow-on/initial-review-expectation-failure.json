@@ -1,0 +1,16 @@
+{
+  "scope": "Reviewer expectation failure, not an uncorrected parser failure. The test incorrectly expected Past presence test to be an admitted Hn source heading; the retained PDF tree/alignment does not establish that.",
+  "command": ".venv/bin/python -m unittest discover -s scripts -p 'test_manual_memo_appendix_sources.py' -v",
+  "parser_sha256": "bec04854e14d4229898971be7d673c3fac062186855f52a9f06589a04727b9d0",
+  "test_sha256": "7bee23d1969f82b7a596981824c3dc890404e7ac99d78adfe0d10aad60d77ade",
+  "tests_run": 3,
+  "passes": 2,
+  "failures": [
+    {
+      "test": "test_memo_annotations_and_source_headings_remain_separate",
+      "line": 75,
+      "error": "AssertionError: False is not true"
+    }
+  ],
+  "correction": "Require the genuine admitted Introduction and Background headings on page2 instead. Broad Background section covering pages2\u20138 remains an explicit unresolved granularity limit."
+}
