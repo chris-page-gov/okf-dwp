@@ -12,7 +12,9 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # The complete frozen-source and consumer replay exceeded 30 minutes on
+    # merged learning release bd945377. Keep every check with bounded headroom.
+    timeout-minutes: 45
     env:
       # Reviewed immutable consumer source; execution receipts bind its bytes too.
       EXPLORER_LOGICAL_UNIT_COMMIT: 982010e760573be5bc7aaa94b255541b5541ab08
