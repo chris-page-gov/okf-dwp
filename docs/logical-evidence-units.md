@@ -12,9 +12,10 @@ condition or citation. It can also contain several unrelated rules. The source
 pages remain the immutable record of what was captured; they are not sufficient
 boundaries for retrieving meaning.
 
-A **logical evidence unit** is a complete source passage with its governing
-heading, list, notes, citations and attached examples. It can cross several
-pages. A separate **dependency** names other evidence needed to interpret it,
+The intended **logical evidence unit** is a complete source passage with its
+governing heading, list, notes, citations and attached examples. It can cross
+several pages. Automatically detected candidates remain explicitly uncertain
+until their boundaries have been reviewed. A separate **dependency** names other evidence needed to interpret it,
 such as a definition, exception or update memo. An example needs its parent rule;
 finding its concluding sentence does not establish a general rule.
 
@@ -73,7 +74,7 @@ A **task profile** declares which concepts activate a question scope and which
 source paths it needs. It is authored knowledge, not an instruction that the
 retriever may use as a hidden answer key. The new profiles cover Pension Credit
 absence, Universal Credit temporary absence, household absence, temporary
-care-home residence and permanent care-home alternatives. Earlier page-based
+care-home residence and temporary/permanent care-home alternatives. Earlier page-based
 profiles remain in their original projection; they have not all been migrated.
 
 The Reader contains 50,524 records: the units, 331 concepts and 513 source
@@ -94,7 +95,7 @@ The unresolved supersession reference stays visible. Household and
 qualifying-young-person passages have separate, conditional scope.
 
 ADM source fixtures retain the Universal Credit absence passages, their
-cross-page qualifications and a memo route. **Boundary review by an agent is not
+cross-page qualifications and an unresolved memo reference. **Boundary review by an agent is not
 specialist legal acceptance**, and the memo’s applicability remains unresolved.
 
 ## Recorded comparison
@@ -131,7 +132,12 @@ performance improvement, relevance score or model-answer accuracy result**.
 ## Demonstration and reproduction
 
 The additive Reader descriptor is `logical-context/okf-explorer.json`; its Ask
-index is `logical-context/manifest.json`. The existing combined Reader and remote
+index is `logical-context/manifest.json`.
+[Open the pinned logical-unit Reader](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fadfa7137d3b24033d7265123c739a9ffcfb06584%2Flogical-context%2Fokf-explorer.json#overview)
+with the compatible Explorer build from
+[PR 140](https://github.com/chris-page-gov/okf-explorer/pull/140).
+The source pin identifies unchanged logical data from this implementation;
+public application verification is separate from local checks. The existing combined Reader and remote
 service keep their separately recorded versions. Do not describe this build as
 a new default deployment of `ask-okf.crpage.chatgpt.site`.
 

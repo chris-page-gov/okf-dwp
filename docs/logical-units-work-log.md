@@ -112,3 +112,9 @@ acceptance, model-quality improvement or new public service default is claimed.
   CLI controls. Canonical repository contracts, private-input check and exact
   4,900-file logical-context rebuild pass. The [local browser observation](../validation/logical-context/browser-local.json)
   records separate source/app bindings; it is not a public deployment receipt.
+
+- Final independent editorial review corrected three claims before publication:
+  machine candidates are not all complete passages; the care-home profile keeps
+  temporary/permanent alternatives; the ADM memo is an unresolved reference,
+  not a resolved graph destination. These corrections do not change the source
+  or evaluated projection.

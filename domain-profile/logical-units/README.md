@@ -46,7 +46,8 @@ The earlier bounded review inspected the DMG and ADM overseas PDF layouts, inclu
 Run the offline source controls from the repository root:
 
 ```sh
-python3 -m unittest discover -s scripts -p 'test_logical_unit_sources.py'
+uv sync --locked
+uv run --locked python -m unittest discover -s scripts -p 'test_logical_unit_sources.py'
 ```
 
 The 12 tests verify source hashes and date roles; exact, disjoint cross-page spans; complete examples and citations; expected qualifiers after a deliberately rehashed footnote deletion; missing-continuation and hash mutations; duplicate identities; directed required paths; distinct benefit/household/institution scopes; unresolved update effects; and navigation/table/empty-page roles.
