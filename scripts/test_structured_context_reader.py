@@ -11,7 +11,7 @@ import unittest
 from build_bundle import BASE, ROOT, canonical, digest, source_text_block
 from build_full_dmg import bucket
 from build_logical_units import make_record
-from structured_context_reader import bound_cards, emit_reader
+from structured_context_reader import bound_cards, declare_postings_completeness, emit_reader
 
 
 def fixture():
@@ -111,6 +111,33 @@ class StructuredReaderTests(unittest.TestCase):
         self.assertEqual(32, postings["zztagalias"][0][2])
         self.assertEqual(32, postings["travel"][0][2])
         self.assertTrue(any(mask & 8 for _, _, mask in postings["qualification"]))
+
+    def test_common_term_above_consumer_threshold_keeps_every_posting(self):
+        rows = [[n, 5, 8] for n in range(50_001)]
+        search = {"manifest": {"counts": {"documents": 50_001}},
+                  "postings": {"common": rows, "rarer": [[50_000, 5, 8]]}}
+        before = digest(canonical(search["postings"]))
+        outputs = {}
+        report = declare_postings_completeness(search, lambda path, value: outputs.update({path: value}))
+        self.assertEqual(before, digest(canonical(search["postings"])))
+        self.assertEqual(50_001, len(search["postings"]["common"]))
+        self.assertEqual([50_000, 5, 8], search["postings"]["common"][-1])
+        self.assertEqual(50_000, search["manifest"]["counts"]["max_postings_per_token"])
+        self.assertEqual(50_001, search["manifest"]["counts"]["actual_max_postings_per_token"])
+        self.assertEqual([{"token": "common", "document_frequency": 50_001}], report["tokens_above_threshold"])
+        self.assertEqual(50_002, report["stored_postings"])
+        self.assertEqual(0, report["dropped_postings"])
+        self.assertEqual(report, outputs[search["manifest"]["postings_completeness"]])
+
+    def test_postings_completeness_report_is_part_of_hash_bound_search_inventory(self):
+        search = decoded(self.outputs, "data/search/manifest.json")
+        report_path = search["postings_completeness"]
+        report = decoded(self.outputs, report_path)
+        shard_index = decoded(self.outputs, "data/search/shards.json")
+        binding = next(row for row in shard_index["shards"]["search"] if row["path"] == report_path)
+        self.assertEqual(digest(self.outputs[report_path]), binding["sha256"])
+        self.assertEqual([], report["tokens_above_threshold"])
+        self.assertEqual(0, report["dropped_postings"])
 
     def test_actual_assertion_shard_is_the_projection_provenance(self):
         edges = [r for s in self.manifest["shards"]["relationships"] for r in decoded(self.outputs, s["path"])]

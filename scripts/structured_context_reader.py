@@ -27,6 +27,34 @@ FACETS = {
     "unit_kind": "Unit kind",
 }
 NO_HEADING = "No source heading recorded"
+READER_POSTINGS_COMPLETENESS_THRESHOLD = 50_000
+
+
+def declare_postings_completeness(search, put):
+    """Preserve the whole index under the consumer's conservative threshold.
+
+    Explorer's max_postings_per_token marks common-term completeness; it does
+    not reject larger bound arrays. True lexicon frequencies and every posting
+    remain intact. Such queries receive the consumer's existing uncertainty.
+    """
+    actual = max((len(rows) for rows in search["postings"].values()), default=0)
+    overflow = [{"token": token, "document_frequency": len(rows)}
+                for token, rows in sorted(search["postings"].items())
+                if len(rows) > READER_POSTINGS_COMPLETENESS_THRESHOLD]
+    counts = search["manifest"]["counts"]
+    counts.update(max_postings_per_token=max(1, min(actual, READER_POSTINGS_COMPLETENESS_THRESHOLD)),
+                  actual_max_postings_per_token=actual,
+                  tokens_above_postings_completeness_threshold=len(overflow))
+    report = {"schema": "okf-reader-postings-completeness.v1",
+              "consumer_completeness_threshold": READER_POSTINGS_COMPLETENESS_THRESHOLD,
+              "actual_max_postings_per_token": actual,
+              "stored_postings": sum(len(rows) for rows in search["postings"].values()),
+              "dropped_postings": 0, "tokens_above_threshold": overflow,
+              "meaning": "All records, postings and true lexicon frequencies are retained. Explorer conservatively marks queries using an above-threshold term as capped-postings with uncertain totals. This is a Reader search boundary, not evidence deletion or an Ask OKF completeness claim."}
+    path = "data/search/postings-completeness.json"
+    put(path, report)
+    search["manifest"]["postings_completeness"] = path
+    return report
 
 
 def bound_cards(units, card_metadata):
@@ -188,12 +216,7 @@ def emit_reader(inputs, corpus, units, semantic, declarations, corpus_outputs, c
     put("data/adjacency/manifest.json", {"schema": "okf-relationship-adjacency.v1", "algorithm": "fnv1a32-prefix-2", "snapshot": snapshot,
         "routes": sum(map(len, adjacent.values())), "relationships": len(edges), "buckets": {k: f"data/adjacency/{k}.json.gz" for k in sorted(adjacent)}, "shards": adjacency_shards})
     search = build_search(records, full_text, snapshot, put)
-    # The consumer bounds postings per token, not the total document census.
-    # Declare the actual maximum; no token or posting is discarded.
-    largest_posting = max((len(rows) for rows in search["postings"].values()), default=1)
-    if largest_posting > 50_000:
-        raise ValueError("Structured Reader token exceeds the supported postings bound")
-    search["manifest"]["counts"]["max_postings_per_token"] = largest_posting
+    declare_postings_completeness(search, put)
     facets = search["facets"]
     for key in FACETS:
         values = defaultdict(list)
