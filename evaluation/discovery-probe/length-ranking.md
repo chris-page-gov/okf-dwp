@@ -87,11 +87,19 @@ remains unimplemented. Summary generation cannot substitute for those checks.
 
 ## Reproduce
 
+Use a separate isolated scratch checkout of this research revision. Preserve
+the already committed `length-run/` outside it before executing; leave `run/`
+in place because its alias-probe baseline is a hash-bound input to this trial.
+Run these commands from the scratch repository root:
+
 ```sh
+probe_archive="$(mktemp -d)"
+mv evaluation/discovery-probe/length-run "$probe_archive/length-run"
 node --experimental-strip-types scripts/probe_discovery_length.mjs --explorer-root /path/to/approved/okf-explorer
 ```
 
-Use a fresh output leaf; the runner refuses to overwrite an earlier observation.
+Keep the preserved original for comparison; do not delete or amend the original
+research checkout. The runner refuses to overwrite an earlier observation.
 It verifies protocol inputs, all consumed source shards and the four approved
 engine modules. The exact executed runner is retained with the result. No
 network or provider calls are made.

@@ -84,14 +84,22 @@ that structured cards had been tested.
 
 ## Reproduction and retained failure
 
+Use an isolated scratch checkout of this research revision. A clean checkout
+already contains the committed `run/` observation, so preserve that directory
+outside the scratch checkout before replaying. The runner deliberately refuses
+to overwrite it. Run these commands from the scratch repository root:
+
 ```sh
+probe_archive="$(mktemp -d)"
+mv evaluation/discovery-probe/run "$probe_archive/run"
 node --experimental-strip-types scripts/probe_discovery_terminology.mjs --explorer-root /path/to/approved/okf-explorer
 ```
 
 The runner verifies the fixed protocol inputs and four immutable engine modules
 before execution. It uses confined, hash-bound local corpus reads. Its output
-leaf must not exist: preserve an earlier run before reproducing in a clean
-checkout. `run/runner.mjs` preserves the exact executed script.
+leaf must not exist. Keep the original directory in `probe_archive` for the
+byte comparison; do not delete or amend the original research checkout.
+`run/runner.mjs` preserves the exact executed script.
 
 An initial probe attempted the unsupported budget key `max_edges`. The engine
 rejected it before any observation was written. The corrected baseline call
