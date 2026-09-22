@@ -41,7 +41,6 @@ for (const [file, hash] of Object.entries(approved.files)) {
 const {canonicalJson, resolveConcepts} = await import(pathToFileURL(resolve(engine, 'index.ts')));
 const {assembleCorpusContext, validateContextCorpusManifest} = await import(pathToFileURL(resolve(engine, 'corpus.ts')));
 const registry = JSON.parse(source('evaluation/staff-questions/cases.json'));
-const profileRows = JSON.parse(source('domain-profile/logical-units/profiles.json')).profiles;
 const focussed = [
   ['logical-pc-abroad', 'What happens to Pension Credit if I go abroad?'],
   ['logical-uc-temporary-absence', 'Explain Universal Credit during temporary absence abroad.'],
@@ -81,6 +80,16 @@ for (const question of ['JSA abroad', 'ESA abroad', 'PIP abroad', 'Universal Cre
   assert(!candidate.base.requirements.some(r => r.id.endsWith('/logical-pc-abroad') && r.when_all.every(id => ids.has(id))));
   controls.push({question, result: 'pension-credit-profile-not-inferred', passed: true});
 }
+// The generated index is authoritative for the additive profile census. These
+// negative controls do not infer a transition or age regime from one benefit.
+for (const [question, forbidden] of [
+  ['DLA', 'logical-dla-pip-transition'], ['PIP', 'logical-dla-pip-transition'],
+  ['Pension Credit pension age', 'logical-pip-pension-age'], ['PIP abroad', 'logical-pip-pension-age'],
+]) {
+  const ids = new Set(resolveConcepts(candidate.base, question).resolved.map(r => r.id));
+  assert(!candidate.base.requirements.some(r => r.id.endsWith('/' + forbidden) && r.when_all.every(id => ids.has(id))));
+  controls.push({question, result: forbidden + '-not-inferred', passed: true});
+}
 const rows = [], packages = new Map(), timing = [];
 for (const test of cases) for (const run of sources) for (const max_bytes of [32768, 524288]) {
   const start = performance.now();
@@ -119,6 +128,16 @@ for (const test of cases) for (const run of sources) for (const max_bytes of [32
     assert(!pack.missing_evidence.some(r => r.code === 'authority_mismatch'), `${test.id}: authored authority contract differs`);
     assert.equal(retained.length, paths.length, `${test.id}: required source path missing at512KiB`);
   }
+  const staffProfile = {'staff-026': 'logical-dla-pip-transition', 'staff-033': 'logical-dla-pip-transition',
+    'staff-032': 'logical-pip-pension-age'}[test.id];
+  if (run.stage === 'units' && staffProfile && max_bytes === 524288) {
+    const requirement = requirements.find(r => r.id.endsWith('/' + staffProfile));
+    assert(requirement, `${test.id}: new source-backed profile was not resolved`);
+    assert(requirement.required_paths.length > 0, `${test.id}: missing declared source routes`);
+    assert(requirement.required_paths.every(p => p.records.every(id => chosen.has(id)) && p.assertions.every(id => selectedEdges.has(id))),
+      `${test.id}: new PIP source path missing at512KiB`);
+    assert(!pack.missing_evidence.some(r => r.code === 'authority_mismatch'), `${test.id}: source authority contract differs`);
+  }
   const raw = Buffer.from(canonicalJson(pack)), archive = `${run.stage}-${test.id}-${max_bytes}.json.gz`;
   if (test.id.startsWith('logical-')) packages.set(archive, gzipSync(raw, {level: 9, mtime: 0}));
   rows.push({case_id: test.id, question: test.question, stage: run.stage, max_bytes, context_id: pack.context_id,
@@ -136,7 +155,7 @@ for (const test of cases) for (const run of sources) for (const max_bytes of [32
 const report = {schema: 'okf-dwp-logical-context-evaluation.v1', engine: approved,
   inputs: [...inputs.values()].sort((a, b) => a.path.localeCompare(b.path, 'en')),
   runner_sha256: sha(read(fileURLToPath(import.meta.url))), network_calls: 0, model_calls: 0,
-  controls, rows, profiles: profileRows.map(r => r.id),
+  controls, rows, profiles: candidate.base.requirements.map(r => r.id.split('/').at(-1)),
   limitations: ['Same frozen sources and questions; development cases, not an independent held-out answer-accuracy study.',
     'Page and logical-unit modes have different explicitly declared profiles. Path counts have different denominators and are not a consecutive funnel.',
     'Every result remains insufficient. All legal, applicability and specialist-review obligations remain open.',

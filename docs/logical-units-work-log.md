@@ -151,6 +151,26 @@ acceptance, model-quality improvement or new public service default is claimed.
   run remains available; successful unit/source checks are not represented as
   an overall successful CI run.
 
+
+## Additive closure and compact-delivery increment, 22 September 2026
+
+- Isolated DWP branch `codex/semantic-compact-closure` starts at merged `bd945377`; Explorer compact branch starts at merged `bf38d835`. Learning sources, combined teaching descriptor, public assessor roster and private correspondence remain unchanged.
+- Source reviewer owns dependency destinations; a separate reviewer owns the PIP transition slice and coverage ledger; Explorer agent owns generic compact delivery; root integrates producers, evaluation and documentation. Independent reviews found no blocking implementation issues; a duplicate-obligation-ID control was strengthened.
+- Added 29 excerpts across existing frozen sources, retaining 73,338 additional exact source bytes. The current 75 authored units and 49,551 uncertain candidates account for every source byte. Twelve references remain legally unresolved; target identification is a separate status.
+- Preserved the active 184-context baseline and engine bytes under `evaluation/logical-units/history/pre-closure-2026-09-22/` before a fresh run. Retained source, earlier projections, evaluations and trial receipts are not relabelled.
+- The initial regeneration correctly refused obsolete generated shard `records/0390.json.gz` after whole-unit grouping reduced the record census. Superseded generated files were hash-checked and preserved in a separate local temporary archive; historical committed bytes remain available. The exact new unit producer check then passed.
+- One negative test initially expected the later document-owner error. The registered loader now rejects the deliberately altered reference earlier as an unknown disposition; the test recognises that fail-closed error without allowing the mutation.
+- Fresh evaluation passes 184 assemblies and 11 controls, with 20 exact focused archives, no network and no models. All results remain insufficient. Focused 512 KiB paths are 10/10, 9/9, 12/12, 2/2 and 4/4; all five focused 32 KiB inline packages still retain zero evidence after source expansion.
+- The coverage ledger records 8/40 staff occurrences activating a profile and 32/40 without one; 22/40 large staff contexts have no returned relationships. All 203 earlier obligations remain recorded. These are separate measures, not an answer-quality score.
+- Exact protected CI, merge and live publication checks follow independently; implementation and local results above are not a claim of a new remote-service default.
+
+- Independent review asked for positive assertions for Staff 026/033 and 032, beyond the existing five focused cases. Added exact profile activation, non-empty required paths, path retention and authority checks. Preserved the preceding run and coverage ledger under `pre-positive-controls-2026-09-22` before replaying; the source and context identities did not change.
+- The eight profile activations include broad Staff 029/036 DLA/PIP mentions. Their relationship-scope gap remains explicit. Activation is reported separately from intended task coverage.
+
+- Independent review found a ledger-only identity defect: dictionary field order let an authored short obligation ID overwrite its canonical identifier. Preserved the affected report under `evaluation/semantic-coverage/history/pre-canonical-obligation-ids-2026-09-22/`, repaired the field order, retained both IDs and verified exact membership of all 203 unique canonical obligations in their earlier requirement sets. Eight coverage controls pass; the source and context packages were unaffected.
+
+- Owner feedback challenged the limited 8/40 profile activation. A parallel diagnosis records the literal-text/alias gap and 16 heading-range mismatches in a bounded 26-candidate sample. The discovery-card experiment is a separate, unimplemented backlog package, not a claim that the wider retrieval problem is fixed. All 32 unprofiled cases return candidate evidence; that does not establish relevance or answer support.
+
 ## Learning-release continuation and CI capacity
 
 The subsequent learning release merged as `bd94537742aeab0dcd016efaf04f898ef84c7f8e`.

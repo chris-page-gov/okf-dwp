@@ -41,9 +41,8 @@ class LogicalContextTests(unittest.TestCase):
     def setUpClass(cls):
         cls.inputs = Inputs(ROOT)
         cls.manifest = json.loads(cls.inputs.read('logical-units/manifest.json'))
-        cls.overrides = json.loads(cls.inputs.read(PREFIX + 'overrides.json'))
-        cls.profile_author = json.loads(cls.inputs.read(PREFIX + 'profiles.json'))
-        cls.refs = json.loads(cls.inputs.read(PREFIX + 'reference-review.json'))
+        from logical_unit_authoring import load_semantics
+        cls.overrides, _, cls.profile_author, cls.refs, _ = load_semantics(cls.inputs)
         cls.catalogue = {}
         docrefs = {(d['family'], d['document_id']): d for d in cls.manifest['documents']}
         for d in cls.overrides['documents']:
@@ -183,7 +182,7 @@ class LogicalContextTests(unittest.TestCase):
                                    ('overrides.json', wrong_source_owner),
                                    ('reference-review.json', wrong_reference_owner)]:
             with self.subTest(filename=filename, mutation=mutation.__name__):
-                with self.assertRaisesRegex(ValueError, '[Dd]ocument|owner'):
+                with self.assertRaisesRegex(ValueError, '[Dd]ocument|owner|reference disposition'):
                     self.compile_mutation(filename, mutation)
 
     def test_source_backed_alias_addition_preserves_original_identity_and_meaning(self):

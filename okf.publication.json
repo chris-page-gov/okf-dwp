@@ -1,6 +1,6 @@
 {
   "schema": "okf-repository-publication-contract.v1",
-  "modified": "2026-09-21",
+  "modified": "2026-09-22",
   "locale": "en-GB",
   "time_zone": "Europe/London",
   "repository": {
@@ -1540,7 +1540,9 @@
         "scripts/build_logical_context.py",
         "scripts/logical_context_*.py",
         "scripts/test_logical*.py",
-        "scripts/evaluate_logical_context.mjs"
+        "scripts/evaluate_logical_context.mjs",
+        "scripts/logical_unit_authoring.py",
+        "scripts/build_semantic_coverage.py"
       ],
       "command_ids": [
         "build-check",
@@ -1571,7 +1573,8 @@
         "logical-unit-check",
         "logical-context-build",
         "logical-context-check",
-        "logical-unit-controls"
+        "logical-unit-controls",
+        "semantic-coverage-check"
       ]
     },
     {
@@ -1643,7 +1646,9 @@
         "scripts/evaluate_logical_context.mjs",
         "scripts/build_learning_paths.py",
         "domain-profile/learning/**",
-        "scripts/test_learning_paths.py"
+        "scripts/test_learning_paths.py",
+        "scripts/logical_unit_authoring.py",
+        "scripts/build_semantic_coverage.py"
       ],
       "command_ids": [
         "context-discovery-build-check",
@@ -1657,7 +1662,8 @@
         "logical-unit-check",
         "logical-context-build",
         "logical-context-check",
-        "logical-unit-controls"
+        "logical-unit-controls",
+        "semantic-coverage-check"
       ]
     },
     {
@@ -2832,6 +2838,20 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 20
+      },
+      {
+        "id": "semantic-coverage-check",
+        "kind": "check",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_semantic_coverage.py --output evaluation/semantic-coverage/closure-2026-09-22 --check",
+        "source": "docs/logical-evidence-units.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
       }
     ]
   },

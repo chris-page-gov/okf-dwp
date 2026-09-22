@@ -103,6 +103,8 @@ public deployment or complete legal applicability.
 
 ## Team handover and current work
 
+The [current semantic closure report](docs/semantic-closure-and-compact-delivery.md) records 75 authored boundaries, seven bounded profiles and 8/40 staff occurrences activating a profile. All 184 contexts remain insufficient; the 32 uncovered staff occurrences remain in the reproducible coverage ledger.
+
 The [logical evidence unit work](docs/logical-evidence-units.md) separates PDF
 page locations from the passages Ask OKF retrieves. It adds exact source spans,
 explicit supporting passages and a separate Reader/corpus projection. See its

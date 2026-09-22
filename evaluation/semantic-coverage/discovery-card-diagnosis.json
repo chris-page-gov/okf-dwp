@@ -1,0 +1,1073 @@
+{
+  "schema": "okf-dwp-discovery-card-diagnosis.v1",
+  "status": "diagnosis-and-proposed-experiment; discovery cards not implemented",
+  "source_snapshot": "dwp-logical-context-2653e68ba636b1e9d537",
+  "network_calls": 0,
+  "model_calls": 0,
+  "inputs": [
+    {
+      "path": "evaluation/logical-units/engine.json",
+      "bytes": 533,
+      "sha256": "ff8d21d3249ae791f66ab9fced72f7e69e299405907ff12ba28a9127decc2823"
+    },
+    {
+      "path": "evaluation/logical-units/run/summary.json",
+      "bytes": 349372,
+      "sha256": "1065fb41977029d5aeaaf285814694f612feef09e07fdefc92fce5e42b6ff211"
+    },
+    {
+      "path": "evaluation/semantic-coverage/closure-2026-09-22/audit.json",
+      "bytes": 939587,
+      "sha256": "17c634dc413cfcb214478676d2ae4d898c73b7e27527718bcbeaf450cc99330b"
+    },
+    {
+      "path": "evaluation/staff-review/evidence/source-c008.json",
+      "bytes": 3844,
+      "sha256": "0ff195807e6f84bf3ab3360cb550f819a2018c982bd58b92c9f08f7794755404"
+    },
+    {
+      "path": "evaluation/staff-review/evidence/source-c012.json",
+      "bytes": 3991,
+      "sha256": "e54d76468a7262824c38687d386e86e6e09109e7bf346d640d88ebd5ccb3fbad"
+    },
+    {
+      "path": "evaluation/staff-review/evidence/source-c031.json",
+      "bytes": 4585,
+      "sha256": "25bc542b68c082b5b3e5b528384edd2eb3601b62be1752f8495166f68eaed579"
+    },
+    {
+      "path": "evaluation/staff-review/evidence/source-c032.json",
+      "bytes": 3595,
+      "sha256": "893c5923448733299bad5b7aa9aea56b525b8cc3618a67d477ce3cc513f8bca7"
+    },
+    {
+      "path": "logical-context/base-index.json",
+      "bytes": 1507302,
+      "sha256": "e1a77e9fb72daf9d9c3856b1c0ec0d0ee285798b1cacc632e71e6b8bc4025356"
+    },
+    {
+      "path": "logical-context/manifest.json",
+      "bytes": 724857,
+      "sha256": "c040b484c4a73dffce7d542fd6089677fc626a286c6004b8570c79f2b296bdc6"
+    },
+    {
+      "path": "logical-units/documents/adm/adm-chapter-c1.json.gz",
+      "bytes": 122224,
+      "sha256": "4d3052335f64f9d1451e55d0bdcd3839487169ca5328b509bb0c6eebc7c854b3"
+    },
+    {
+      "path": "logical-units/documents/adm/adm-chapter-p1.json.gz",
+      "bytes": 9039,
+      "sha256": "6a11d52358b5a49fed50ad45f47c2fc43eb172e09b9dc58e9245d0407fed4d42"
+    },
+    {
+      "path": "logical-units/documents/adm/adm-chapter-p4.json.gz",
+      "bytes": 18734,
+      "sha256": "306ba800aabe522a97497579cb4a5f0c04f3ca28ae626d9ddbd8a1abd6f2f66c"
+    },
+    {
+      "path": "logical-units/documents/dmg/dmg-vol13-ch77.json.gz",
+      "bytes": 48892,
+      "sha256": "9343abf499148d0ab9d3c78f19f366d64c56071363e6c550b81c9ed9192d5847"
+    },
+    {
+      "path": "logical-units/manifest.json",
+      "bytes": 794070,
+      "sha256": "7735719c1cc1b63a8e477f46d4e5f7c5e44664359568d5a2deb62a9953f9a55c"
+    },
+    {
+      "path": "scripts/build_logical_context.py",
+      "bytes": 10570,
+      "sha256": "672559644221d6a690671fe640716c829cb74535c292e436a9731e6c46d29164"
+    },
+    {
+      "path": "scripts/build_logical_units.py",
+      "bytes": 35977,
+      "sha256": "364be1718db1697baa8af62362e8d4f65178dd9506f7cba5b8d16ff5f3aece38"
+    },
+    {
+      "path": "source/adm-2026-09-19/pages/adm-chapter-c1.json",
+      "bytes": 273247,
+      "sha256": "117c20e6810738228c3161f5989e528ae84ce9fd09bec3d473573dcfb9ba6b09"
+    },
+    {
+      "path": "source/adm-2026-09-19/pages/adm-chapter-p1.json",
+      "bytes": 15239,
+      "sha256": "8b4ef5c512170a1f8ecee2c2da35aeea9e77a9050b29dabe33ab5103bcb9ada0"
+    },
+    {
+      "path": "source/adm-2026-09-19/pages/adm-chapter-p4.json",
+      "bytes": 38140,
+      "sha256": "c6cd2d4bee6482859ca3cbfdb183ab016ee9bfcc76eb0e05616e8af971b7f9b0"
+    },
+    {
+      "path": "source/pages/dmg-vol13-ch77.json",
+      "bytes": 118124,
+      "sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19"
+    }
+  ],
+  "engine_bindings": [
+    {
+      "repository": "https://github.com/chris-page-gov/okf-explorer",
+      "commit": "2e557f4b78db10cf69471e4a106a98d3a6c43c5b",
+      "path": "apps/okf-explorer/src/lib/context/corpus.ts",
+      "bytes": 19579,
+      "sha256": "6c53e69bb70f55039315cac3e1e43380392e1b7d234608c95e2358201db423b8"
+    },
+    {
+      "repository": "https://github.com/chris-page-gov/okf-explorer",
+      "commit": "2e557f4b78db10cf69471e4a106a98d3a6c43c5b",
+      "path": "apps/okf-explorer/src/lib/context/index.ts",
+      "bytes": 42292,
+      "sha256": "39b6b0de58b1075356b7cd2ceaf2ef31824c02047164dcd26fa15066f8547496"
+    }
+  ],
+  "counts": {
+    "staff_occurrences": 40,
+    "unprofiled_staff_occurrences": 32,
+    "unprofiled_with_candidate_evidence": 32,
+    "unprofiled_with_relationships": 10,
+    "machine_heading_range_candidates_in_four_documents": 26,
+    "outside_range_in_four_documents": 16
+  },
+  "discovery_mechanism": {
+    "producer": "Postings index only complete unit text; record labels and catalogue heading_path are not indexed.",
+    "ranking": "Question tokens after shared question-scaffolding removal; reproducible integer inverse document frequency; no declared-concept alias expansion; 16 highest-ranked candidates.",
+    "traversal": "Actual directed authored edges from resolved concepts and lexical candidates; required endpoints do not become seeds.",
+    "range_check": "For machine candidates in four named documents only, compare the first paragraph label with a single inherited heading containing a same-prefix 4/5-digit numeric range. A mismatch is a review flag, not a repaired heading.",
+    "limits": "No new retrieval run, source review of all candidates, answer grading, model call or source acquisition. Existing staff packages are represented by retained summary identities, not newly archived complete packages."
+  },
+  "declared_terminology_examples": [
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/term/capital",
+      "label": "Capital",
+      "aliases": [
+        "savings"
+      ],
+      "text": "Actual and notional capital, ownership, valuation and disregards precede any deemed-income assessment. Savings is not a complete capital definition."
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+      "label": "State Pension Credit",
+      "aliases": [
+        "Pension Credit",
+        "SPC",
+        {
+          "case_sensitive": true,
+          "label": "PC"
+        }
+      ],
+      "text": "A benefit with Guarantee Credit and Savings Credit components; the captured entitlement conditions, household rules and financial assessment must be read together."
+    }
+  ],
+  "pc_source_examples": [
+    {
+      "candidate_id": "source-c008",
+      "source_pages_path": "source/pages/dmg-vol13-ch77.json",
+      "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+      "page": 14,
+      "anchor": "77031",
+      "page_record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014",
+      "exact_candidate_excerpt_sha256": "529f4470031f1fd5e41bad5686e5881fe456fa3b1bc49e62c680f2d4895fbb30",
+      "overlapping_unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch77/v1-95655a991c928075/section-0050-guidance-77031-occurrence-0001-babfad13d447"
+      ],
+      "status": "Candidate source for the experiment, not a validated answer requirement or exhaustive answer key."
+    },
+    {
+      "candidate_id": "source-c012",
+      "source_pages_path": "source/pages/dmg-vol13-ch77.json",
+      "source_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+      "page": 33,
+      "anchor": "77303",
+      "page_record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033",
+      "exact_candidate_excerpt_sha256": "613d1c91e8dacf3dde348329f0af577c372dd0e2a4b52202b955e0929a251ee0",
+      "overlapping_unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch77/v1-95655a991c928075/section-0122-guidance-77303-occurrence-0001-046d6e90e25d",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch77/v1-95655a991c928075/section-0123-guidance-77304-occurrence-0001-18e46a4539bf",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch77/v1-95655a991c928075/section-0123-guidance-77305-occurrence-0001-dee1a869becf"
+      ],
+      "status": "Candidate source for the experiment, not a validated answer requirement or exhaustive answer key."
+    },
+    {
+      "candidate_id": "source-c031",
+      "source_pages_path": "source/pages/dmg-vol14-ch84.json",
+      "source_sha256": "f5c610b29bdb81e11736409b7f33ccf7917a4d8945f2821802801073e0d753ee",
+      "page": 128,
+      "anchor": "84911",
+      "page_record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+      "exact_candidate_excerpt_sha256": "5db9740f6d2b93575d67759e253923e8a4ab6fadbb4ba685aa73042fdcaf9587",
+      "overlapping_unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-ch84/v1-c101961586e5e7a1/section-0548-guidance-84911-occurrence-0001-c3194a9925f8",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-ch84/v1-c101961586e5e7a1/section-0548-guidance-84912-occurrence-0001-69175c5edb4d",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-ch84/v1-c101961586e5e7a1/section-0550-guidance-84921-occurrence-0001-2c00de5e993f",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-ch84/v1-c101961586e5e7a1/section-0551-guidance-84922-occurrence-0001-9059c82e5a6d"
+      ],
+      "status": "Candidate source for the experiment, not a validated answer requirement or exhaustive answer key."
+    },
+    {
+      "candidate_id": "source-c032",
+      "source_pages_path": "source/pages/dmg-vol14-ch85.json",
+      "source_sha256": "fe6fe79a4ff52271d6edf97af6b01ebd4290867b30d6288c38eb5e3a6d613c74",
+      "page": 30,
+      "anchor": "85091",
+      "page_record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030",
+      "exact_candidate_excerpt_sha256": "5d146e4d1526b2302b87309e16367c8f4982ec4a309adc7f60e1d899e753f087",
+      "overlapping_unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-ch85/v1-b1b3456b6161b7e5/section-0135-guidance-85091-occurrence-0001-ab0462adebf2"
+      ],
+      "status": "Candidate source for the experiment, not a validated answer requirement or exhaustive answer key."
+    }
+  ],
+  "unprofiled_cases": [
+    {
+      "case_id": "staff-001",
+      "question": "What happens to your benefits if you go abroad?",
+      "question_sha256": "b83ccc014a01f3d04d9d233f0953702a46f46a79d6594a29a39eb8d412395b46",
+      "cluster": "abroad",
+      "evidence_records": 21,
+      "relationships": 14,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/abroad"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:55ff5580a887b900c37f16aa707cc28cc6e7aee873ed06be625633f7bb130036",
+      "context_sha256": "194a5cca7427e25408a32a15142096d336218284848ac632b64f281877957ce5",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-002",
+      "question": "If your birthday is 30th May 1960, what is the first date you will be entitled to State Pension?",
+      "question_sha256": "a63fa10cf0fcbc3444611871036114c6f89a6a12c7af85074ebe0fd04dcf98f8",
+      "cluster": "state-pension",
+      "evidence_records": 10,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/entitlement",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pension-age",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/state-pension"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:828c6c32a45dad08cd4532c8229707265604967b49c03eda15878c5e29c83dd4",
+      "context_sha256": "9519efef7f7ae216d7cfd7c61f2ceb98ba927b3bca3b4fdb93015d2cd12f99d5",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-003",
+      "question": "How does State Pension interact with PIP?",
+      "question_sha256": "a250146759b6591708efd4f6598d8cf6c3250dec90823ac31538fe48dc43a0ac",
+      "cluster": "interaction-matrix",
+      "evidence_records": 13,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/overlap",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pip",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/state-pension"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:0733532298727c1e7c48bdf33a1f2772c7b75d0dbd645d0d9399eaf974877e8c",
+      "context_sha256": "02495f4a79acfa9f77853def84d0f1f84e795da2c26c11b0062230f21c54ae44",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-004",
+      "question": "What are the components which make up State Pension and how do you qualify for them?",
+      "question_sha256": "1010557c1a690f0b438ce648e8ffac416204bce826bb146c7ec0a1b5721bd963",
+      "cluster": "state-pension",
+      "evidence_records": 6,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/eligibility",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/state-pension"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:a79bb724c1ae0e026ce0007a909528fdac69ff69d67160def04b258d6b5e475b",
+      "context_sha256": "df2efa45fed0e8c0425bb1ca7d7aea06af43a3e89e887169f44021cf22eb671b",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-005",
+      "question": "What other benefits could you receive in addition to State Pension, and under what circumstances would you be entitled to them?",
+      "question_sha256": "33df714f957199eb8759ef7f5d9f228c6dd64337268ce87638f27da8a66852bc",
+      "cluster": "interaction-matrix",
+      "evidence_records": 7,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/additional-benefits",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/entitlement",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/state-pension"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:5f05a8c38b32fad8f98f9701438c9b61b31c439302e14696026936e6d242fcf3",
+      "context_sha256": "bfaaac421abfb2bb14a978beed0bbc8356ffdbf90859c35665ebdfca5a72c30d",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-006",
+      "question": "What is the maximum you can have in savings to still qualify for Pension Credit?",
+      "question_sha256": "37f169bd12095be1bcfafb17664853f1aea310c0a7de01661e7244db78d8a39a",
+      "cluster": "pc-core",
+      "evidence_records": 12,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/eligibility",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/capital",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:ac518b36cc72e2745b1860ceedea73808754fea72dfca494661f42e1a70b3a2a",
+      "context_sha256": "1ee4d7505479f70b2f70289044022fa49ab51b12981e120243cefa791bfc4b93",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-007",
+      "question": "What were the Pension Credit weekly rates over the last five years?",
+      "question_sha256": "b7197deb3952ba14537c88d40bd66f03a20c1991f9a776c4842cf6158ddf5236",
+      "cluster": "rates",
+      "evidence_records": 10,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/rates",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:cff6712b4cf878ece9854326785dfe6978706bc6b0b107a55361ba6bbb637699",
+      "context_sha256": "853c5a593883f0ded68e9affd274ac0744744c63f77dafba9c19875ed4dddedc",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-008",
+      "question": "What was the SDA amount over the last five years?",
+      "question_sha256": "c426baed523c962745925bb03d6055bd731323cdc40a54573c896e7c2c595ab4",
+      "cluster": "rates",
+      "evidence_records": 7,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/rates"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:fd2ee309493eb30c60c8965dcbfe5dd2ca49f0d874ba2ddb61c7690d30084bb5",
+      "context_sha256": "c2275b905ee587ee1891685984cbd97e3a3feb998e9a13284b9501c52d0d402a",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-009",
+      "question": "Besides SDA, what are the other additional payments which you can receive in addition to basic Pension Credit, and what have been their rates over the last five years?",
+      "question_sha256": "687e7ccdb36ada278293ea085379dcc70d103950ee039456ae469222e9c571e3",
+      "cluster": "rates",
+      "evidence_records": 9,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/additional-benefits",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/rates",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/additional-amounts",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:523c9cc8c6b545daba1fa75cc2292efbf868d0c756873f9a8112767eb195a66b",
+      "context_sha256": "19885cd36e7332501e5f61127c07374d0d712327467458fd708817f11cb87db5",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-010",
+      "question": "What is used in the Pension Credit calculation to assess eligibility and what is the threshold for each element?",
+      "question_sha256": "f864a8f851ed8ff4de0b640d83df7b58713098e38d994b22b83dbf94f580e47a",
+      "cluster": "pc-core",
+      "evidence_records": 7,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/calculation",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/eligibility",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:0b31d37254db2411553d2dbdb34b7b8e4882add098ccdd5ed8d1176e4c3541eb",
+      "context_sha256": "5c319b8b648b4318c1c6c249aea483b57ebe753c0ed903e9c95c99e7dc05ecee",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-011",
+      "question": "How does Housing Benefit impact Pension Credit?",
+      "question_sha256": "8f8165252872ddc28ea3d195181b5c3facfd446d6ff676706703ac39a2be12a9",
+      "cluster": "interaction-matrix",
+      "evidence_records": 9,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/housing-benefit",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/overlap",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:6d79cfbffd3515ac07a5f817cecf18d75ced9f21d5583732d66f1ce6ea69325f",
+      "context_sha256": "3c35b174d4698db26836dcbb7694c853fc1cfddd3ea21fe0ff441a9d7aabb46d",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-014",
+      "question": "What is the impact of someone’s partner on their Pension Credit?",
+      "question_sha256": "ba61540e8802d03d4466feedbce8ad2cd3199ce85cfbf8c85ef50ca0d93b7bda",
+      "cluster": "pc-household",
+      "evidence_records": 11,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/overlap",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:b8d1e7c8537cce1f91e723ab1b000a9070a2b442f4f0538bcf7ca9f909ee024e",
+      "context_sha256": "937da1514b7d6165939911af61df6b081fdaa4de8d1ab810b20c03dc6ef85c53",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-015",
+      "question": "What inputs are required for the Pension Credit calculation?",
+      "question_sha256": "670f61e6a1d2e6a74e4e6d709939c265fb159e558a43c28799b6e93ef2f4adeb",
+      "cluster": "pc-core",
+      "evidence_records": 8,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/calculation",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:50f24b59a06dbbe9d6c25d8157a00a34e4b910092c4b7d4420939b1e1f5232ae",
+      "context_sha256": "a61cdd7f0191c0c11cc617c412ebe37e58fa3b3f5933e84cd58f28e8d2b1e8c4",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-016",
+      "question": "Given these inputs what is the formula for calculating Pension Credit?",
+      "question_sha256": "ea757deacb5c196a8740f4ef67dcb88768e1883314a831f9ad7488d273b88073",
+      "cluster": "pc-core",
+      "evidence_records": 21,
+      "relationships": 11,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/calculation",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:9b36121bd516fc6bca4f900ffe84065e804266454aec78fe6c28dff905c10fe8",
+      "context_sha256": "ffcb78880311fdaa2bf9c45025b7adf901bd3a86225b7c1ff0499007179047e5",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-017",
+      "question": "What difference to Pension Credit does having a partner make?",
+      "question_sha256": "26fc8817696d4bc5ff965f7a8ccefe0a6aaaff16a8439d7e7b708e4b11ac3c1c",
+      "cluster": "pc-household",
+      "evidence_records": 14,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:44c62aedb013c30ed48416e2a9ca6f3b6a2f2b1262dd466c4f1b78aaf89f68b0",
+      "context_sha256": "4e9eb3556fcd2ba1f919ede68a0b1869469f746b1d013778c9b873cd17494383",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-018",
+      "question": "What happens if someone with a partner goes permanently into a Care Home (please give all scenarios)?",
+      "question_sha256": "48f3c41fa3ab34097c5141cf972be69b6fc82e580cbd90cb6eed99d8d1224c65",
+      "cluster": "pc-household",
+      "evidence_records": 21,
+      "relationships": 28,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:a6708b5ef35e9b2243135d3f7bd33207c90d450de848f8805813237ac565594c",
+      "context_sha256": "b237bdad83d4e808d9aef5363ed2277754101703d449ff6adc1201a6fde93c0c",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-019",
+      "question": "How does Pension Credit work?",
+      "question_sha256": "214d21f943a7f2bd243d3a1838c7f54231ef1af84f6d2919dfd85622d61ebf83",
+      "cluster": "pc-core",
+      "evidence_records": 34,
+      "relationships": 31,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:0d4dd483e6afbacec799d2598c9bc348ba198b19dc82427d799a68780189eef9",
+      "context_sha256": "a4436c503f4ce652c785f8b8f5855b185b1731f27b14d0ec1fd0e5dda49ee2d8",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-020",
+      "question": "How does a citizen qualify for Pension Credit?",
+      "question_sha256": "482f5c5cf08337980056722127f283ae2fbf9f7f0b8060b4809e35c2168a78ac",
+      "cluster": "pc-core",
+      "evidence_records": 13,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/eligibility",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:047ce65d22cbb06a59ce8975593ba21f0e26b0593b4e58a4c96b32dadb219c5a",
+      "context_sha256": "4a78fb8229e837fc3ffcb55bdd663caebfed502cc0fd71a1295e82477085e448",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-021",
+      "question": "What are the eligibility rules and entitlement rate for PC?",
+      "question_sha256": "1262a71d9d5e24d79c2adcdecc20fa03a96a108bc589d570aa4bac236eb9a7b4",
+      "cluster": "pc-core",
+      "evidence_records": 8,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/eligibility",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/entitlement",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/rates",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:d2db7b86ef70e4c1a6e6c9a20e1e1f1f680ea368094270760489c68e7ca9802a",
+      "context_sha256": "d76bab3b49351451020bca8e718a5e41469b985a125f1c99d6f1e716e7f2830d",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-022",
+      "question": "How do State Pension and Pension Credit fit together. For example: If someone receives State Pension, could they also be entitled to Pension Credit?",
+      "question_sha256": "c5456f92055daee31607ee2ba8ed9680d39a431cf0917cbf3fa6617c4b53827b",
+      "cluster": "pc-core",
+      "evidence_records": 10,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/entitlement",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/overlap",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/state-pension",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:936f2a2ab61687b84e8037ddfeb8642c30939b2dfe1e83dbd1160686be81fc2f",
+      "context_sha256": "7bdd7d01611838df72c8e6ea1b0dfb606e8b16e02006db85e346040ae5b6bb4c",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-024",
+      "question": "What additional benefits would you be entitled to if you are entitled to IIDB?",
+      "question_sha256": "9a7cd6e8f4f21f87a6aef96d8e45abd2979936f4f709c762f1663692affad81c",
+      "cluster": "interaction-matrix",
+      "evidence_records": 15,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/additional-benefits",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/entitlement",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/iidb"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:3ba340ffa678e3e7b95cbf80b63652703cb0fcb9d6d793c3848b08f3cffc23bd",
+      "context_sha256": "eabf37b625b1b8b9f9dadc03770028c59570f07f3df0577f81a7e8af47b17a2b",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-025",
+      "question": "What happens if you are on IIDB when you reach State Pension Age?",
+      "question_sha256": "07f7779ac6440de54d4b594590128065efafb5ab26470dd22430fa9ffe08ab13",
+      "cluster": "iidb-age",
+      "evidence_records": 22,
+      "relationships": 22,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/iidb",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pension-age"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:08a61132f460e97c35cde4e7c8b44ae2f8a84bc014a4e04d034718ec61bc97b9",
+      "context_sha256": "06b2238289278295bf45de1b15cb7d4bbba07f85aa682a10c4890ecd4b8321d6",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-027",
+      "question": "Can you receive both IIDB and JSA?",
+      "question_sha256": "79b08531085c51e67b60d8f7ff4696e4a3c7b9c27bef7fe75eb925bc7675d96d",
+      "cluster": "interaction-matrix",
+      "evidence_records": 16,
+      "relationships": 5,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/iidb",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/jsa",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/overlap"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:1c565bfe9c5bcc959a67ea08a6eae1135b317d38cdb68fe3de16ac4449eb1e05",
+      "context_sha256": "5eb17e4fdcf5a5be99195f18d47baca5ccb1ae0cded288c5cc3d91a59daf6906",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-028",
+      "question": "Can you receive both IIDB and ESA?",
+      "question_sha256": "a2ff075a0b947210359105277fe047f84f88dc654787058cc5aaf096e76350e7",
+      "cluster": "interaction-matrix",
+      "evidence_records": 16,
+      "relationships": 5,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/esa",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/iidb",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/overlap"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:c0e016dff2749c59fa286f8b1ee3d227483f8ddf05cd8ea8ea19f40099abb9f5",
+      "context_sha256": "1b0298afccc03e8bc310242dc4efb228379260c71eee482fbe12245059678b89",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-030",
+      "question": "How does IIDB relate to PIP?",
+      "question_sha256": "5848921d50ee8eb2b2131dc4264f1d4b2a252a5fde7438aa45bcf8283c90b207",
+      "cluster": "interaction-matrix",
+      "evidence_records": 16,
+      "relationships": 2,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/iidb",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/overlap",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pip"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:f83737652d7e54d803ce6b1754fd6b3aca0ff4974e58b86388dcfac7647f58b4",
+      "context_sha256": "ba2ed3e102b55f0b1873745c9d3d2755af0ae467ea238f545dfe0e49be2698f1",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-031",
+      "question": "What additional benefits would you be entitled to if you are entitled to PIP?",
+      "question_sha256": "889ee7955d5d9c2acd1eafb64519501cd341c30a5810828cc3feef2c234f6576",
+      "cluster": "interaction-matrix",
+      "evidence_records": 9,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/additional-benefits",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/entitlement",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pip"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:57a2329030ab97c5cd3d022c34d00332f4d301bb1767aa6b6de160c1aeeeb29f",
+      "context_sha256": "907a92640173423877015724a5560adfd5646291352b3cd2b820e24b0a452254",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-034",
+      "question": "Can you receive both PIP and JSA?",
+      "question_sha256": "d75c54502fcbc9f8b6b286949d09c3ee6986557a302bd5b17347370fa0d43b5d",
+      "cluster": "interaction-matrix",
+      "evidence_records": 37,
+      "relationships": 28,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/jsa",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/overlap",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pip"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:3274c4c071451d61ab2cbde22ccf52606cf6042c500902831ede43c3ab63de43",
+      "context_sha256": "422b8e1fed98e39f499fd41caf55b0bf20e4be7dc7af66300543a9138203b097",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-035",
+      "question": "Can you receive both PIP and ESA?",
+      "question_sha256": "3769a361119d22871109be121fed0b88a0fac60e533fefaa31b76d383b92f1d3",
+      "cluster": "interaction-matrix",
+      "evidence_records": 37,
+      "relationships": 28,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/esa",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/overlap",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pip"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:5abecb2132875693b4b94d57fdb40891f618c8ee6da7d1a95e9ee7259efe1ab4",
+      "context_sha256": "c9c374f610b1a272afdb46984d140c96d71360969efb334d921083e0a06c9dd0",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-037",
+      "question": "If you receive PIP and War Pensions Constant Allowance, how much would you get each week (please provide all variations)?",
+      "question_sha256": "bcf412999ba0a3e613fe4cf2ef1be7dc0bfb9ced784df2659e1b1f6b54ab6eba",
+      "cluster": "interaction-matrix",
+      "evidence_records": 11,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pip",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/war-caa"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:b68ef689aebefb24aaae5a583df05d8bc3fed2f39b112f1c6849083b7f987b23",
+      "context_sha256": "9f3276216efb9dbdc02e74b0917160492b8eac4b933bfa61eb580bbb6af90891",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-038",
+      "question": "Under what circumstances can a Citizen claim Carers Allowance?",
+      "question_sha256": "544b01ef7f093d08b1858d5dbcf796366cc8392736fa7ee396afc0e2552fee0e",
+      "cluster": "carer",
+      "evidence_records": 7,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/carers-allowance"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:5e3e4747a9629eb3867510d58b9fd67b32cce2b637df752ba048efbfe50943eb",
+      "context_sha256": "37b5fa1ae9bac5525e8fa0f730a5552fca29c5309e12ca12a623e1d3a57d4c3b",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-039",
+      "question": "What impact does Carers Allowance have on other benefits which are being claimed?",
+      "question_sha256": "36b556907ea994ccb2a40ec2ccecb14f7ff60843d1e8de285cf38de4b7d6660f",
+      "cluster": "interaction-matrix",
+      "evidence_records": 10,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/carers-allowance",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/overlap"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:aba5a23786ebd52c722b28a95270be212b508fc274510e7e3368d31251d03529",
+      "context_sha256": "711ef730a94e30ac866f7bca00b987d9022c1075e20af9b17a4759ba0e5d5abc",
+      "retained_summary_only": true
+    },
+    {
+      "case_id": "staff-040",
+      "question": "What happens to Carers Allowance if someone is caring for two or more people?",
+      "question_sha256": "964475634718c98716ce1f52f64e78eca3a6ec99437201d840b6d991df31cdc3",
+      "cluster": "carer",
+      "evidence_records": 8,
+      "relationships": 0,
+      "resolved_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/carers-allowance",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/multiple-care"
+      ],
+      "evidence_status": "insufficient",
+      "context_id": "urn:sha256:a5382415c94ea15715283c5836c6044efc1e4e3f77bd2c46c98ec1ae2853198b",
+      "context_sha256": "419f74522d6e82a7298dd7ad79e6e5fb7e387936445770cdc5a89524a40ef12d",
+      "retained_summary_only": true
+    }
+  ],
+  "heading_range_checks": [
+    {
+      "document_id": "dmg-vol13-ch77",
+      "catalogue_path": "logical-units/documents/dmg/dmg-vol13-ch77.json.gz",
+      "frozen_pages_path": "source/pages/dmg-vol13-ch77.json",
+      "machine_candidates_with_comparable_heading_range": 5,
+      "outside_range_count": 5,
+      "findings": [
+        {
+          "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch77/v1-95655a991c928075/section-0021-guidance-77004-occurrence-0001-c74579d0d399",
+          "key": "section-0021-guidance-77004-occurrence-0001",
+          "paragraph_label": "77004",
+          "heading_candidate": "Determining claims 77029 - 77030",
+          "spans": [
+            {
+              "end_utf8": 507,
+              "literal_sha256": "e11f16d897670e3abf6cefc7a926967240c1077ecdf8f8ab47825ea1fca07862",
+              "page": 5,
+              "start_utf8": 376
+            }
+          ],
+          "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=5",
+          "finding": "Paragraph label lies outside the numeric range of its inherited heading candidate; governing heading requires review."
+        },
+        {
+          "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch77/v1-95655a991c928075/section-0050-guidance-77031-occurrence-0001-babfad13d447",
+          "key": "section-0050-guidance-77031-occurrence-0001",
+          "paragraph_label": "77031",
+          "heading_candidate": "Qualifying income and savings credit threshold 77053 - 77099",
+          "spans": [
+            {
+              "end_utf8": 1056,
+              "literal_sha256": "529f4470031f1fd5e41bad5686e5881fe456fa3b1bc49e62c680f2d4895fbb30",
+              "page": 14,
+              "start_utf8": 315
+            },
+            {
+              "end_utf8": 24,
+              "literal_sha256": "127f9a43dc08816de7dec0335046703383684010cabeb21e7e156fa91fcf4fd2",
+              "page": 15,
+              "start_utf8": 0
+            }
+          ],
+          "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=14",
+          "finding": "Paragraph label lies outside the numeric range of its inherited heading candidate; governing heading requires review."
+        },
+        {
+          "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch77/v1-95655a991c928075/section-0068-guidance-77100-occurrence-0001-5a9d7ab09c7b",
+          "key": "section-0068-guidance-77100-occurrence-0001",
+          "paragraph_label": "77100",
+          "heading_candidate": "Meaning of household 77102 - 77114",
+          "spans": [
+            {
+              "end_utf8": 295,
+              "literal_sha256": "a483000defacf2dfc9578c0e7a40f801eecd7a7a2d7161c01a9a4d22b8fc1d0b",
+              "page": 19,
+              "start_utf8": 69
+            }
+          ],
+          "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=19",
+          "finding": "Paragraph label lies outside the numeric range of its inherited heading candidate; governing heading requires review."
+        },
+        {
+          "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch77/v1-95655a991c928075/section-0068-guidance-77101-occurrence-0001-7d7ebea8818b",
+          "key": "section-0068-guidance-77101-occurrence-0001",
+          "paragraph_label": "77101",
+          "heading_candidate": "Meaning of household 77102 - 77114",
+          "spans": [
+            {
+              "end_utf8": 453,
+              "literal_sha256": "6be4c0b02e5cbb1784faa08ede1e4427daa798e782f697ec88702317303d4644",
+              "page": 19,
+              "start_utf8": 295
+            }
+          ],
+          "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=19",
+          "finding": "Paragraph label lies outside the numeric range of its inherited heading candidate; governing heading requires review."
+        },
+        {
+          "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch77/v1-95655a991c928075/section-0119-guidance-77300-occurrence-0001-0de4ca6d10db",
+          "key": "section-0119-guidance-77300-occurrence-0001",
+          "paragraph_label": "77300",
+          "heading_candidate": "Elements of calculation 77302 - 77329",
+          "spans": [
+            {
+              "end_utf8": 493,
+              "literal_sha256": "75f5855fde5a5bbb5e2c9b8aa3ccc65349229c449f27f41cf7ab44181d27c952",
+              "page": 32,
+              "start_utf8": 105
+            }
+          ],
+          "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=32",
+          "finding": "Paragraph label lies outside the numeric range of its inherited heading candidate; governing heading requires review."
+        }
+      ]
+    },
+    {
+      "document_id": "adm-chapter-c1",
+      "catalogue_path": "logical-units/documents/adm/adm-chapter-c1.json.gz",
+      "frozen_pages_path": "source/adm-2026-09-19/pages/adm-chapter-c1.json",
+      "machine_candidates_with_comparable_heading_range": 9,
+      "outside_range_count": 6,
+      "findings": [
+        {
+          "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-c1/v1-fb385129c32daa67/section-0083-guidance-c1279-occurrence-0001-5854a68abe1f",
+          "key": "section-0083-guidance-c1279-occurrence-0001",
+          "paragraph_label": "C1279",
+          "heading_candidate": "Continuation of leave C1385 - C1402",
+          "spans": [
+            {
+              "end_utf8": 1280,
+              "literal_sha256": "3be935f423632f4818b4871d4ba519fc985aa3a713cfbb7192066cc53e68b2fe",
+              "page": 18,
+              "start_utf8": 655
+            }
+          ],
+          "source_url": "https://assets.publishing.service.gov.uk/media/693ac62a33c7ace9c4a42029/adm-c1.pdf#page=18",
+          "finding": "Paragraph label lies outside the numeric range of its inherited heading candidate; governing heading requires review."
+        },
+        {
+          "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-c1/v1-fb385129c32daa67/section-0254-guidance-c1596-occurrence-0001-10a8b7fcad0c",
+          "key": "section-0254-guidance-c1596-occurrence-0001",
+          "paragraph_label": "C1596",
+          "heading_candidate": "Section 67 Leave to remain C1680 - C1689",
+          "spans": [
+            {
+              "end_utf8": 1052,
+              "literal_sha256": "cfbd6b9c1ee3a3fd77377ec44912e1466b6675ab8e51ef22a9f03b2c8adb2f8f",
+              "page": 55,
+              "start_utf8": 500
+            }
+          ],
+          "source_url": "https://assets.publishing.service.gov.uk/media/693ac62a33c7ace9c4a42029/adm-c1.pdf#page=55",
+          "finding": "Paragraph label lies outside the numeric range of its inherited heading candidate; governing heading requires review."
+        },
+        {
+          "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-c1/v1-fb385129c32daa67/section-0414-guidance-c1851-occurrence-0001-580cde504c60",
+          "key": "section-0414-guidance-c1851-occurrence-0001",
+          "paragraph_label": "C1851",
+          "heading_candidate": "EU Citizenship rights C1863 - C1869",
+          "spans": [
+            {
+              "end_utf8": 765,
+              "literal_sha256": "022bbeb113da40dad23e93dc2fdda7d6c7fa58a72f295725c76c86d19d6495da",
+              "page": 94,
+              "start_utf8": 279
+            }
+          ],
+          "source_url": "https://assets.publishing.service.gov.uk/media/693ac62a33c7ace9c4a42029/adm-c1.pdf#page=94",
+          "finding": "Paragraph label lies outside the numeric range of its inherited heading candidate; governing heading requires review."
+        },
+        {
+          "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-c1/v1-fb385129c32daa67/section-0498-guidance-c1946-occurrence-0001-d67adb7f9511",
+          "key": "section-0498-guidance-c1946-occurrence-0001",
+          "paragraph_label": "C1946",
+          "heading_candidate": "Meaning in EU Law C1961 - C1975",
+          "spans": [
+            {
+              "end_utf8": 455,
+              "literal_sha256": "fae480bba7f74752de8384402bbe1b2fc059b1303a79a593e74eb15cd2eab9b8",
+              "page": 112,
+              "start_utf8": 144
+            }
+          ],
+          "source_url": "https://assets.publishing.service.gov.uk/media/693ac62a33c7ace9c4a42029/adm-c1.pdf#page=112",
+          "finding": "Paragraph label lies outside the numeric range of its inherited heading candidate; governing heading requires review."
+        },
+        {
+          "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-c1/v1-fb385129c32daa67/section-0498-guidance-c1947-occurrence-0001-8ffcea07d9d9",
+          "key": "section-0498-guidance-c1947-occurrence-0001",
+          "paragraph_label": "C1947",
+          "heading_candidate": "Meaning in EU Law C1961 - C1975",
+          "spans": [
+            {
+              "end_utf8": 855,
+              "literal_sha256": "f275fdc6a90e3e225466af5e7d30cafc45afebe9bc5a6d378eb4b35ee757fbf1",
+              "page": 112,
+              "start_utf8": 455
+            }
+          ],
+          "source_url": "https://assets.publishing.service.gov.uk/media/693ac62a33c7ace9c4a42029/adm-c1.pdf#page=112",
+          "finding": "Paragraph label lies outside the numeric range of its inherited heading candidate; governing heading requires review."
+        },
+        {
+          "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-c1/v1-fb385129c32daa67/section-0498-guidance-c1948-occurrence-0001-de82f3985c77",
+          "key": "section-0498-guidance-c1948-occurrence-0001",
+          "paragraph_label": "C1948",
+          "heading_candidate": "Meaning in EU Law C1961 - C1975",
+          "spans": [
+            {
+              "end_utf8": 1084,
+              "literal_sha256": "0cc61d106a2260c739aa64add456d7efba4cd1de3068bf59e38aafee44c7525e",
+              "page": 112,
+              "start_utf8": 855
+            }
+          ],
+          "source_url": "https://assets.publishing.service.gov.uk/media/693ac62a33c7ace9c4a42029/adm-c1.pdf#page=112",
+          "finding": "Paragraph label lies outside the numeric range of its inherited heading candidate; governing heading requires review."
+        }
+      ]
+    },
+    {
+      "document_id": "adm-chapter-p1",
+      "catalogue_path": "logical-units/documents/adm/adm-chapter-p1.json.gz",
+      "frozen_pages_path": "source/adm-2026-09-19/pages/adm-chapter-p1.json",
+      "machine_candidates_with_comparable_heading_range": 8,
+      "outside_range_count": 4,
+      "findings": [
+        {
+          "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-p1/v1-5ed9340f56c6a937/section-0015-guidance-p1021-occurrence-0001-722860622991",
+          "key": "section-0015-guidance-p1021-occurrence-0001",
+          "paragraph_label": "P1021",
+          "heading_candidate": "Prescribed date P1032 -P1999",
+          "spans": [
+            {
+              "end_utf8": 401,
+              "literal_sha256": "3ab5ee588d50567098b74b49a1357f18585880a684bcf910c8718665c58b8167",
+              "page": 5,
+              "start_utf8": 119
+            }
+          ],
+          "source_url": "https://assets.publishing.service.gov.uk/media/691f03c52b1627c20b7107f4/adm_p1.pdf#page=5",
+          "finding": "Paragraph label lies outside the numeric range of its inherited heading candidate; governing heading requires review."
+        },
+        {
+          "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-p1/v1-5ed9340f56c6a937/section-0015-guidance-p1022-occurrence-0001-3ddb400c4d17",
+          "key": "section-0015-guidance-p1022-occurrence-0001",
+          "paragraph_label": "P1022",
+          "heading_candidate": "Prescribed date P1032 -P1999",
+          "spans": [
+            {
+              "end_utf8": 736,
+              "literal_sha256": "69304061ecafc9b8a3ff20a60b53d962d006a8ca95e7ffea428e8332f68b5b46",
+              "page": 5,
+              "start_utf8": 401
+            }
+          ],
+          "source_url": "https://assets.publishing.service.gov.uk/media/691f03c52b1627c20b7107f4/adm_p1.pdf#page=5",
+          "finding": "Paragraph label lies outside the numeric range of its inherited heading candidate; governing heading requires review."
+        },
+        {
+          "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-p1/v1-5ed9340f56c6a937/section-0015-guidance-p1023-occurrence-0001-7f130d402060",
+          "key": "section-0015-guidance-p1023-occurrence-0001",
+          "paragraph_label": "P1023",
+          "heading_candidate": "Prescribed date P1032 -P1999",
+          "spans": [
+            {
+              "end_utf8": 1002,
+              "literal_sha256": "806a82f675fc5d198068a170cae705773dacf4418824d5788609bde03b7a61de",
+              "page": 5,
+              "start_utf8": 736
+            }
+          ],
+          "source_url": "https://assets.publishing.service.gov.uk/media/691f03c52b1627c20b7107f4/adm_p1.pdf#page=5",
+          "finding": "Paragraph label lies outside the numeric range of its inherited heading candidate; governing heading requires review."
+        },
+        {
+          "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-p1/v1-5ed9340f56c6a937/section-0015-guidance-p1024-occurrence-0001-ad121dd95e54",
+          "key": "section-0015-guidance-p1024-occurrence-0001",
+          "paragraph_label": "P1024",
+          "heading_candidate": "Prescribed date P1032 -P1999",
+          "spans": [
+            {
+              "end_utf8": 1048,
+              "literal_sha256": "cf0daf3263bf7164e47d116f485bfedfe4522cd9aa3bba1c7357c57a53169688",
+              "page": 5,
+              "start_utf8": 1002
+            }
+          ],
+          "source_url": "https://assets.publishing.service.gov.uk/media/691f03c52b1627c20b7107f4/adm_p1.pdf#page=5",
+          "finding": "Paragraph label lies outside the numeric range of its inherited heading candidate; governing heading requires review."
+        }
+      ]
+    },
+    {
+      "document_id": "adm-chapter-p4",
+      "catalogue_path": "logical-units/documents/adm/adm-chapter-p4.json.gz",
+      "frozen_pages_path": "source/adm-2026-09-19/pages/adm-chapter-p4.json",
+      "machine_candidates_with_comparable_heading_range": 4,
+      "outside_range_count": 1,
+      "findings": [
+        {
+          "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-p4/v1-4526cdd336ab80fd/section-0058-guidance-p4087-occurrence-0002-7433d0c22e3f",
+          "key": "section-0058-guidance-p4087-occurrence-0002",
+          "paragraph_label": "P4087",
+          "heading_candidate": "Residence and Presence conditions P4097 - P4999",
+          "spans": [
+            {
+              "end_utf8": 995,
+              "literal_sha256": "07408c28502423da3fd19506d00fc58de1e5964a5425a9be04e9b32f77d95268",
+              "page": 18,
+              "start_utf8": 157
+            }
+          ],
+          "source_url": "https://assets.publishing.service.gov.uk/media/67f670a332b0da5c2a09e23d/adm_p4.pdf#page=18",
+          "finding": "Paragraph label lies outside the numeric range of its inherited heading candidate; governing heading requires review."
+        }
+      ]
+    }
+  ],
+  "experiment_arms": [
+    {
+      "id": "A",
+      "description": "Frozen current full-text lexical discovery and authored graph."
+    },
+    {
+      "id": "B",
+      "description": "Validated structural discovery cards and governed declared-alias expansion, retaining original full-text channel."
+    },
+    {
+      "id": "C",
+      "description": "B plus source-grounded, separately labelled summary cards made from source context without evaluation questions."
+    }
+  ],
+  "acceptance_boundaries": [
+    "Card match is discovery only; hydration of exact complete source units and dependency inspection remains necessary.",
+    "No discovery summary, mention tag or detected heading satisfies a source obligation or activates legal applicability.",
+    "Separate candidate relevance, complete-unit retrieval, required dependency retention, missing evidence, claim support, bytes, latency and provider cost.",
+    "Use all 40 unchanged staff occurrences for comparison, keep staff026/033 duplicate disclosure, and independently author held-out controls after freezing cards/ranking.",
+    "All current run and source outputs remain unchanged."
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "@context": {
+    "@vocab": "https://chris-page-gov.github.io/okf-dwp/vocab/logical-closure/",
+    "dct": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@id": "https://chris-page-gov.github.io/okf-dwp/id/authoring/logical-closure/profile-dependencies-2026-09-22",
+  "schema": "okf-dwp-logical-closure-authoring.v1",
+  "review_status": "agent-reviewed-boundary-and-target-only",
+  "specialist_review": "not-reviewed",
+  "scope": "Additive source-retention requirements for the two existing claimant-absence profiles. Original scopes, missing obligations and insufficient answerability statuses remain unchanged. Required passages support inspection of expressly referenced rules and conditional alternatives; they do not establish that any exception or extension applies.",
+  "profile_additions": [
+    {
+      "id": "logical-pc-abroad",
+      "required_unit_keys": [
+        "spc-supersession-04642",
+        "spc-supersession-04640-041",
+        "spc-supersession-04643-044",
+        "spc-supersession-04655"
+      ],
+      "required_paths": [
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+          "unit_keys": [
+            "spc-077001",
+            "spc-supersession-04642"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+          "unit_keys": [
+            "spc-077001",
+            "spc-supersession-04642",
+            "spc-supersession-04640-041"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+          "unit_keys": [
+            "spc-077001",
+            "spc-supersession-04642",
+            "spc-supersession-04643-044"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+          "unit_keys": [
+            "spc-077001",
+            "spc-supersession-04642",
+            "spc-supersession-04655"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "logical-uc-temporary-absence",
+      "required_unit_keys": [
+        "adm-memo-09-25-absence",
+        "adm-memo-09-25-introduction",
+        "adm-memo-09-25-benefit-scopes",
+        "adm-memo-09-25-example-uc",
+        "uc-qyp-e2090-095"
+      ],
+      "required_paths": [
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/universal-credit",
+          "unit_keys": [
+            "uc-c1988",
+            "adm-memo-09-25-absence"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/universal-credit",
+          "unit_keys": [
+            "uc-c1988",
+            "adm-memo-09-25-absence",
+            "adm-memo-09-25-introduction"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/universal-credit",
+          "unit_keys": [
+            "uc-c1988",
+            "adm-memo-09-25-absence",
+            "adm-memo-09-25-benefit-scopes"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/universal-credit",
+          "unit_keys": [
+            "uc-c1988",
+            "adm-memo-09-25-absence",
+            "adm-memo-09-25-example-uc"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/universal-credit",
+          "unit_keys": [
+            "uc-c1987",
+            "uc-qyp-e2090-095"
+          ]
+        }
+      ],
+      "missing_obligations": [
+        {
+          "id": "conditional-absence-branches",
+          "category": "question_scope_unresolved",
+          "label": "A general UC absence question does not establish medical purpose, a death-related child/QYP branch, emergency advice or evacuation, prior absence, benefit entitlement at the relevant time, or unreasonable-return conditions. Retained alternatives require their own facts and applicable law before use.",
+          "status": "not-established"
+        }
+      ]
+    }
+  ]
+}

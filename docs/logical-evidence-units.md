@@ -31,6 +31,14 @@ flowchart TD
     Units -. page locations and hashes .-> Source
 ```
 
+## Current increment
+
+The [semantic closure and compact-delivery report](semantic-closure-and-compact-delivery.md)
+records the next bounded source review: 75 authored boundaries, seven profiles
+and a reproducible ledger covering all 40 staff question occurrences. The
+implementation and comparison below describe the earlier 46-unit baseline;
+the current report gives the new results and separates them from public checks.
+
 ## Source integrity and uncertainty
 
 Each unit records ordered source spans, explicit UTF-8 byte offsets, source and
@@ -50,7 +58,7 @@ does not automatically acquire a benefit concept, a task route or current legal
 applicability. Old page-based requirements and frozen evaluations retain their
 original identities. New unit-based requirements need their own reviewed scope.
 
-## What is implemented
+## Earlier implemented baseline
 
 The new additive projection covers both frozen manuals: **DMG**, the Decision
 makers’ guide, and **ADM**, Advice for decision making. These manuals concern
@@ -98,9 +106,9 @@ ADM source fixtures retain the Universal Credit absence passages, their
 cross-page qualifications and an unresolved memo reference. **Boundary review by an agent is not
 specialist legal acceptance**, and the memo’s applicability remains unresolved.
 
-## Recorded comparison
+## Earlier recorded comparison
 
-[Machine-readable results](../evaluation/logical-units/run/summary.json) compare
+[Preserved baseline results](../evaluation/logical-units/history/pre-closure-2026-09-22/run/summary.json) compare
 40 staff questions, five focused cases and one unknown-term control in both
 modes at 32 KiB and 512 KiB: **184 assemblies**, plus seven scope controls. KiB
 means 1,024 bytes. The run used the same frozen sources and questions, no network
@@ -173,12 +181,12 @@ call an AI provider or overwrite earlier observations.
 
 ## What remains open
 
-- Review the other 49,634 machine boundaries and difficult layout, table and
+- Review the remaining 49,551 machine boundaries and difficult layout, table and
   heading cases. Full byte accounting proves preservation, not correct meaning.
 - Migrate the remaining staff profiles with explicit concept and qualification
-  routes. This increment supplies five scoped profiles, not full semantic
+  routes. The current increment supplies seven scoped profiles, not full semantic
   coverage of the 40 staff questions or every DMG/ADM benefit.
-- Resolve the eight references, current legal versions, territorial and
+- Resolve the twelve recorded references, current legal versions, territorial and
   claimant applicability, and obtain specialist review.
 - Reduce unrelated lexical candidates and metadata overhead; prove useful
   compact delivery before adopting a new remote-service source version.

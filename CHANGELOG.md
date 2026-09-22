@@ -10,6 +10,12 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Record the source-bound discovery diagnosis and a separate summary-card experiment: literal ranking does not use declared aliases, while a bounded sample exposes incorrect inherited headings. Broader retrieval improvement remains unimplemented and explicitly tracked.
+
+- Add 29 source-bound logical excerpts, scoped dependency routes and two PIP profiles through an explicit additive authoring registry; preserve old inputs and all unresolved legal obligations. Keep the F1093 reserved-range and P4019/P4051 scope mismatches visible.
+- Preserve the earlier logical evaluation before replaying 184 assemblies with 11 scope controls and the reviewed compact engine. Add a reproducible 40-occurrence coverage ledger: eight activate a unit profile, 32 do not, and all remain insufficient. Explain assembly and delivery budgets separately in the beginner documentation.
+
+
 - Allow 45 minutes for the complete source and consumer replay after the merged learning release exceeded the previous 30-minute CI limit. Keep every validation step and publication gate; the cancelled run remains recorded.
 
 - Rebind the logical-context projection after the combined descriptor changes, exclude combined-only learning routes from that Reader, and replay all 184 contexts. Preserve the prior evaluation under `evaluation/logical-units/history/pre-learning-2026-09-22/`; semantic-review limitations remain unchanged.
