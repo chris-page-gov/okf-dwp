@@ -120,7 +120,7 @@ The eight review controls now pass. They also check exact Unicode byte offsets, 
 
 The separate PDF observer review found an ancestor-text memory amplification risk. Its bounded reparse now counts retained text and joiners before appending them and preserves both the original observations and the genuine bounded failure. See [the PDF observation record](../pdf-structure/README.md).
 
-Independent production controls in [test_structured_context.py](../scripts/test_structured_context.py) check complete-record card commitments, original authored identities, exact reference offsets, global ranking totals, and both copies of directed relationship entries. These are delivery and integrity tests. A source reference remains a navigation observation; it does not establish that the target is legally applicable or closes an evidence requirement.
+Independent production controls in [test_structured_context.py](../scripts/test_structured_context.py) check complete-record card commitments, original authored identities, exact reference offsets, global ranking totals, and both copies of directed relationship entries. The [final-generation check](../evaluation/manual-structure/review-controls/corpus-integrity-final-result.json) passed all seven controls, with unchanged manifest, producer and test bindings before and after the run. These are delivery and integrity tests. A source reference remains a navigation observation; it does not establish that the target is legally applicable or closes an evidence requirement.
 
 ## What follows the structural experiment
 
