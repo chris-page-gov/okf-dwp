@@ -8,6 +8,16 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## Unreleased
+
+## Logical evidence units — 22 September 2026
+
+- Add a source-preserving logical-unit projection across 513 frozen DMG/ADM documents: 49,680 units, exact UTF-8 source spans and complete byte accounting. Retain 49,634 machine boundaries as uncertain; 46 excerpts have explicit agent-reviewed boundaries.
+- Add five scoped profiles and 28 source-backed relationship proposals, including complete cross-page examples, definitions and conditional household/absence support. Preserve eight unresolved references and all earlier review obligations.
+- Add a separate indexed Reader and corpus v2 for reusable Explorer context assembly. Share PDF resources per document, preserve source dates and roles, expose boundary/concept facets, and validate actual posting bounds without dropping evidence.
+- Retain the 184-assembly fixed-source comparison and seven negative controls. All results remain insufficient; the five 32 KiB focused packages retain no source evidence. At 512 KiB the five new profiles retain 24 of 24 declared paths. Do not compare those paths directly with the old profile denominator or claim improved model answers.
+- Keep frozen page projections, remote-service defaults and replay observations unchanged. Add source, consumer, browser and publication checks, a beginner guide and separate outstanding semantic-review packages.
+
 ## Abroad semantics and question diagnostics — 21 September 2026
 
 - Trace the reported five weak lexical matches to the historical 19 September client observation and distinguish it from a fresh offline replay of the published source and engine.

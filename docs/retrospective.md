@@ -26,6 +26,27 @@ from concepts, assertions, questions and answerable tasks.
 
 ## Findings that changed the design
 
+### Later evidence: a page is a location, not a semantic boundary
+
+The 22 September [logical-unit work](logical-evidence-units.md) addresses a
+concrete modelling error: one retrieved PDF page stopped halfway through an
+example. Exact source spans now join the complete example and preserve its
+qualifications, while dependencies remain separate authored relationships.
+
+The additive build accounts for all frozen extracted bytes and supplies 46
+explicitly authored excerpts among 49,680 units. The other 49,634 boundaries
+remain uncertain. Its 184 assemblies all remain insufficient; a denser graph or
+a complete excerpt is not a legal answer. Five new profiles do not migrate all
+previous staff requirements, and small-budget delivery still fails to retain
+source evidence in the focused cases.
+
+Real-browser checks also found two producer-scale errors missed by the first
+local checks: duplicated PDF resources exceeded the endpoint catalogue bound,
+and a search maximum described total documents instead of actual token
+postings. Sharing resources and measuring actual postings fixed those errors
+without raising consumer limits or dropping records. The lesson is to verify
+full-corpus consumer behaviour and exact counts as well as the source parser.
+
 ### Later evidence: qualifications need modelling and allocation
 
 The [21 September comparison](../validation/qualification-context/2026-09-21/README.md)

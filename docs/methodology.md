@@ -26,7 +26,8 @@ flowchart TD
     Standards --> Profile
     Profile --> Fixture[Tiny producer and real-consumer fixture]
     Fixture --> Capture[Frozen acquisition and extraction]
-    Capture --> Proposals[Evidence-backed semantic proposals]
+    Capture --> Units[Source-bound logical units and unresolved boundaries]
+    Units --> Proposals[Evidence-backed semantic proposals]
     Proposals --> Review[Independent review and explicit unresolved cases]
     Review --> Delivery[Search, governed context and human evidence review]
     Delivery --> Evaluation[Separate retrieval, answer and usability evaluations]
@@ -93,6 +94,32 @@ Only then generate asserted relationships from their single authored source.
 Keep projected JSON, JSON-LD, YAML-LD and runtime relationships aligned. Validate
 the standard schemas unchanged; put useful local descriptive extensions in a
 separate named format rather than silently extending a closed contract.
+
+### Establish source boundaries before retrieval
+
+A page, HTML screen or download is a location and acquisition unit. It is not
+a safe default unit of meaning. Recover numbered paragraphs, heading scope,
+complete lists, tables, examples, notes and citations before declaring retrieval
+units. Keep attached continuations across page breaks. Treat definitions,
+exceptions and updates as explicit supporting or conditional references, not as
+an arbitrary number of neighbouring pages.
+
+The [logical-unit implementation](logical-evidence-units.md) adds a reusable
+source-span contract and a DWP-specific producer. Transfer the contract and
+checks to HMRC; discover HMRC’s actual structure instead of copying DWP paragraph
+patterns. Each unit needs exact source offsets and hashes, a boundary status,
+a source/version identifier and a clear explanation of anything unresolved.
+Keep the physical-page census separate from unit counts and semantic coverage.
+
+Check three different properties: all source bytes remain accounted for; the
+retrieved passage is internally complete within its declared boundary; and its
+interpretation has the required external evidence. A successful check of one
+does not establish the others. Retain machine candidates as uncertain until
+reviewed, and evaluate old/new profiles with their different denominators.
+
+The DWP increment retained 24 of 24 focused paths at 512 KiB but no source
+evidence in its five focused 32 KiB packages. This illustrates why segmentation
+alone does not solve ranking, metadata cost, compact delivery or answer quality.
 
 ## 4. Deliver evidence progressively
 

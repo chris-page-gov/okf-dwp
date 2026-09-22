@@ -15,6 +15,7 @@ jobs:
     timeout-minutes: 30
     env:
       # Reviewed immutable consumer source; execution receipts bind its bytes too.
+      EXPLORER_LOGICAL_UNIT_COMMIT: 982010e760573be5bc7aaa94b255541b5541ab08
       EXPLORER_CONTEXT_COMMIT: 97f13d22b689d92cd785de04758fe932d4a4d369
       EXPLORER_CORPUS_COMMIT: 31ee08ec259e165a478e9c36826fe3721643631d
       EXPLORER_STAFF_COMMIT: f8daf84a4c04afb4839695d38a97cbf21b0ed0a0
@@ -50,6 +51,10 @@ jobs:
         run: uv run --locked python scripts/check_private_inputs.py
       - name: Validate the canonical repository contracts
         run: uv run --locked python scripts/check_semantic_contract.py
+      - name: Check backlog references before expensive corpus verification
+        run: |
+          uv run --locked python scripts/check_backlog.py
+          uv run --locked python scripts/build_backlog_work_packages.py --check
       - name: Verify retained public-browser evidence offline
         run: uv run --locked python scripts/check_browser_evidence.py
       - name: Verify the retained learning-site publication offline
@@ -116,6 +121,20 @@ jobs:
           persist-credentials: false
       - name: Verify the qualification consumer checkout identity
         run: test "$(git -C .ci/okf-explorer-qualification rev-parse HEAD)" = "$EXPLORER_QUALIFICATION_COMMIT"
+      - name: Check out the separate logical-unit consumer
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: chris-page-gov/okf-explorer
+          ref: ${{ env.EXPLORER_LOGICAL_UNIT_COMMIT }}
+          path: .ci/okf-explorer-logical-units
+          persist-credentials: false
+      - name: Verify logical evidence units and fixed-source context comparison
+        run: |
+          test "$(git -C .ci/okf-explorer-logical-units rev-parse HEAD)" = "$EXPLORER_LOGICAL_UNIT_COMMIT"
+          uv run --locked python scripts/build_logical_units.py --check
+          uv run --locked python scripts/build_logical_context.py --check
+          uv run --locked python -m unittest discover -s scripts -p 'test_logical*.py'
+          node --experimental-strip-types scripts/evaluate_logical_context.mjs --check --explorer-root .ci/okf-explorer-logical-units
       - name: Install locked context evaluator dependencies
         run: uv sync --locked --project .ci/okf-explorer
       - name: Install source verification tools
@@ -249,10 +268,8 @@ jobs:
           uv run --locked python scripts/test_pinned_public_household_observation.py
           uv run --locked python scripts/check_disability_public_observation.py
           uv run --locked python scripts/test_disability_public_observation.py
-      - name: Check the public backlog and retained answer trials offline
+      - name: Check retained answer trials offline
         run: |
-          uv run --locked python scripts/check_backlog.py
-          uv run --locked python scripts/build_backlog_work_packages.py --check
           uv run --locked python scripts/evaluate_fixed_answers.py
           uv run --locked python scripts/check_answer_review.py
           uv run --locked python scripts/check_compact_client.py

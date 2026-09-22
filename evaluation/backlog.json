@@ -1,6 +1,6 @@
 {
   "schema": "okf-dwp-backlog.v1",
-  "updated_on": "2026-09-21",
+  "updated_on": "2026-09-22",
   "status_meanings": {
     "recorded_complete": "Named bounded result has retained evidence, not perpetual assurance.",
     "in_progress": "Work is being prepared or implemented; publication/acceptance is not implied.",
@@ -186,7 +186,12 @@
         "docs/data-agent-semantic-review.md",
         "domain-profile/staff-semantic/concepts.yamlld",
         "scripts/test_abroad_semantic.py",
-        "validation/abroad-context/2026-09-21/README.md"
+        "validation/abroad-context/2026-09-21/README.md",
+        "docs/logical-evidence-units.md",
+        "docs/logical-units-work-log.md",
+        "logical-units/manifest.json",
+        "evaluation/logical-units/run/summary.json",
+        "scripts/test_logical_context.py"
       ],
       "acceptance_checks": [
         "Benefit/variant/circumstance terms have sources, aliases, confusions and scope; existing custody-specific meanings are not silently broadened."
@@ -259,6 +264,31 @@
           "executor": "human",
           "next_action": "Review definitions, confusions, qualifications and assertion meanings; publication of proposals is not acceptance.",
           "evidence": []
+        },
+        {
+          "id": "DWP-BL-005.logical-units",
+          "kind": "implementation",
+          "status": "recorded_complete",
+          "executor": "agent",
+          "next_action": "Retain the verified additive implementation and its explicit limits; broader boundary review, profile migration, compact delivery and specialist acceptance remain separate unfinished packages.",
+          "evidence": [
+            "docs/logical-evidence-units.md",
+            "docs/logical-units-work-log.md",
+            "logical-units/manifest.json",
+            "evaluation/logical-units/run/summary.json",
+            "scripts/test_logical_context.py"
+          ]
+        },
+        {
+          "id": "DWP-BL-005.remaining-unit-boundaries",
+          "kind": "research",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Review 49,634 uncertain machine boundaries, including contents, headings, tables and layout cases. Prioritise staff questions; source byte preservation is not semantic or specialist acceptance.",
+          "evidence": [
+            "logical-units/manifest.json",
+            "docs/logical-evidence-units.md"
+          ]
         }
       ]
     },
@@ -365,7 +395,14 @@
         "docs/abroad-semantic-audit.md",
         "docs/data-agent-semantic-review.md",
         "scripts/test_abroad_semantic.py",
-        "validation/abroad-context/2026-09-21/README.md"
+        "validation/abroad-context/2026-09-21/README.md",
+        "docs/logical-evidence-units.md",
+        "docs/logical-units-work-log.md",
+        "logical-units/manifest.json",
+        "evaluation/logical-units/run/summary.json",
+        "scripts/test_logical_context.py",
+        "domain-profile/logical-units/profiles.json",
+        "domain-profile/logical-units/reference-review.json"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
@@ -530,6 +567,32 @@
           "executor": "human",
           "next_action": "Accept the evidence requirements and qualifications independently before marking broader answers sufficient.",
           "evidence": []
+        },
+        {
+          "id": "DWP-BL-007.unit-qualification",
+          "kind": "implementation",
+          "status": "recorded_complete",
+          "executor": "agent",
+          "next_action": "Retain the verified additive implementation and its explicit limits; broader boundary review, profile migration, compact delivery and specialist acceptance remain separate unfinished packages.",
+          "evidence": [
+            "docs/logical-evidence-units.md",
+            "docs/logical-units-work-log.md",
+            "logical-units/manifest.json",
+            "evaluation/logical-units/run/summary.json",
+            "scripts/test_logical_context.py"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.remaining-unit-profiles",
+          "kind": "research",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Migrate remaining staff task profiles from pages to reviewed logical units; resolve eight declared references and preserve conditional benefit/household scope. Five new profiles do not close 203 earlier obligations.",
+          "evidence": [
+            "domain-profile/logical-units/profiles.json",
+            "domain-profile/logical-units/reference-review.json",
+            "evaluation/logical-units/run/summary.json"
+          ]
         }
       ]
     },
@@ -565,7 +628,9 @@
         "validation/compact-delivery/v0.6.0/README.md",
         "docs/chatgpt-connection.md",
         "validation/compact-delivery/v0.6.1/README.md",
-        "validation/client-connection/2026-09-21/README.md"
+        "validation/client-connection/2026-09-21/README.md",
+        "evaluation/logical-units/run/summary.json",
+        "docs/logical-evidence-units.md"
       ],
       "acceptance_checks": [
         "Unchanged ask_okf preserved; small manifest plus paginated exact reads; original version/question/budget/context identity replayed; stale/unknown IDs rejected; all slices reconstruct exactly; actual host check."
@@ -632,6 +697,17 @@
             "docs/methodology.md",
             "docs/retained-evidence-publication.md"
           ]
+        },
+        {
+          "id": "DWP-BL-008.logical-compact-admission",
+          "kind": "implementation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Reduce candidate and metadata overhead, verify manifest/exact-read delivery for source-bound units and run source-version admission before any remote default change. All five focused 32 KiB unit packages currently retain zero evidence.",
+          "evidence": [
+            "evaluation/logical-units/run/summary.json",
+            "docs/logical-evidence-units.md"
+          ]
         }
       ]
     },
@@ -653,7 +729,12 @@
         "validation/navigation/browser/public/deployment.json",
         "evaluation/staff-review/manifest.json",
         "docs/abroad-semantic-audit.md",
-        "docs/data-agent-semantic-review.md"
+        "docs/data-agent-semantic-review.md",
+        "docs/logical-evidence-units.md",
+        "docs/logical-units-work-log.md",
+        "logical-units/manifest.json",
+        "evaluation/logical-units/run/summary.json",
+        "scripts/test_logical_context.py"
       ],
       "acceptance_checks": [
         "All 19,090 DMG and ADM pages accounted for by conceptual classification with unknown explicit; authored concepts and literal classifications distinguished; actual DMG Reader and combined-corpus Ask journeys checked within their separate scopes."
@@ -685,6 +766,20 @@
             "validation/navigation/browser/public/observation.json",
             "validation/navigation/browser/public/deployment.json",
             "evaluation/staff-review/manifest.json"
+          ]
+        },
+        {
+          "id": "DWP-BL-009.logical-corpus",
+          "kind": "implementation",
+          "status": "recorded_complete",
+          "executor": "agent",
+          "next_action": "Retain the verified additive implementation and its explicit limits; broader boundary review, profile migration, compact delivery and specialist acceptance remain separate unfinished packages.",
+          "evidence": [
+            "docs/logical-evidence-units.md",
+            "docs/logical-units-work-log.md",
+            "logical-units/manifest.json",
+            "evaluation/logical-units/run/summary.json",
+            "scripts/test_logical_context.py"
           ]
         }
       ]

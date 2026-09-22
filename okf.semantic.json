@@ -31,7 +31,9 @@
       "source/legal-bodies-2026-09-21/manifest.json",
       "source/legal-bodies-2026-09-21-v2/manifest.json",
       "domain-profile/legal-bodies/seeds.json",
-      "domain-profile/legal-bodies/navigation.json"
+      "domain-profile/legal-bodies/navigation.json",
+      "domain-profile/logical-units/*.yamlld",
+      "domain-profile/logical-units/*.json"
     ],
     "outputs": [
       {
@@ -168,6 +170,31 @@
         "path": "domain-profile/legal-bodies/context-overlay.json",
         "role": "explorer-runtime",
         "generated": true
+      },
+      {
+        "path": "logical-units/manifest.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "logical-context/manifest.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "logical-context/okf-explorer.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "logical-context/okf-bundle.yamlld",
+        "role": "semantic-yaml-ld",
+        "generated": true
+      },
+      {
+        "path": "logical-context/data/semantic/*.jsonld.gz",
+        "role": "semantic-json-ld-shards",
+        "generated": true
       }
     ],
     "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
@@ -180,7 +207,8 @@
       "The preserved custody context and its immutable acceptance receipts retain their original source and consumer versions.",
       "The additive combined Reader and staff semantic projection preserve earlier releases. Forty development profiles contain named unmet obligations; none establishes a complete answer or independent specialist acceptance.",
       "Verified provision reference metadata is navigation only. It does not contain statutory body evidence or establish commencement, extent for an individual case, or legal applicability.",
-      "The additive household candidate includes 20 selected dated statutory units as derived, unreviewed extractions; this does not resolve complete legal dependencies, commencement, applicability or specialist review. Earlier reference-only outputs and receipts keep their original scope."
+      "The additive household candidate includes 20 selected dated statutory units as derived, unreviewed extractions; this does not resolve complete legal dependencies, commencement, applicability or specialist review. Earlier reference-only outputs and receipts keep their original scope.",
+      "Logical-unit mode is additive. All extracted bytes are accounted, but machine boundaries remain uncertain; separately authored dependencies and profiles are unreviewed and do not satisfy frozen page-level obligations."
     ]
   },
   "relationship_contract": {
@@ -223,7 +251,9 @@
       "uv run --locked python scripts/build_legal_body_evidence.py",
       "uv run --locked python scripts/build_staff_semantic.py",
       "uv run --locked python scripts/build_combined_reader.py",
-      "uv run --locked python scripts/compare_source_census.py"
+      "uv run --locked python scripts/compare_source_census.py",
+      "uv run --locked python scripts/build_logical_units.py",
+      "uv run --locked python scripts/build_logical_context.py"
     ],
     "check": [
       "uv run --locked python scripts/check_semantic_contract.py",
@@ -249,7 +279,10 @@
       "uv run --locked python scripts/build_combined_reader.py --check",
       "uv run --locked python scripts/compare_source_census.py --check",
       "uv run --locked python scripts/check_combined_reader_observations.py",
-      "uv run --locked python scripts/build_legal_body_evidence.py --check"
+      "uv run --locked python scripts/build_legal_body_evidence.py --check",
+      "uv run --locked python scripts/build_logical_units.py --check",
+      "uv run --locked python scripts/build_logical_context.py --check",
+      "uv run --locked python -m unittest discover -s scripts -p 'test_logical*.py'"
     ]
   },
   "reader": {

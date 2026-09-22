@@ -103,6 +103,13 @@ public deployment or complete legal applicability.
 
 ## Team handover and current work
 
+The [logical evidence unit work](docs/logical-evidence-units.md) separates PDF
+page locations from the passages Ask OKF retrieves. It adds exact source spans,
+explicit supporting passages and a separate Reader/corpus projection. See its
+[implementation log](docs/logical-units-work-log.md) for tested progress and
+publication status; frozen page releases and service observations retain their
+original scope.
+
 The additive staff increment provides [projected personas and journeys](evaluation/staff-needs/README.md),
 [source-backed concepts and task requirements](docs/semantic-expansion.md),
 [legal reference reconciliation](docs/legal-reconciliation.md),

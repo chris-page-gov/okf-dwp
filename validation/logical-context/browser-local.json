@@ -1,0 +1,58 @@
+{
+  "schema": "okf-logical-unit-browser-observation.v1",
+  "observed_at": "2026-09-22T14:11:55Z",
+  "environment": "local IAB, loopback server; not a public deployment or ChatGPT client acceptance",
+  "explorer_core_commit": "982010e760573be5bc7aaa94b255541b5541ab08",
+  "explorer_app_tree_sha256": "243c7db5ed7b216bd63606ce4928e5ed308e6f63493558a6f3234b1749b50f3b",
+  "inputs": [
+    {
+      "path": "logical-context/okf-explorer.json",
+      "bytes": 7599,
+      "sha256": "8c89799beffd7b45c7b3bfe6817f5ed5f328beb5b79d3efd8217f41e7783c875"
+    },
+    {
+      "path": "logical-context/manifest.json",
+      "bytes": 724855,
+      "sha256": "a801eeb4c021b1b0cb7e0d4c0dd7385d4976faaad9f2c507da0bd2892d520980"
+    },
+    {
+      "path": "logical-units/manifest.json",
+      "bytes": 793955,
+      "sha256": "538165ceb5d293e28741f53c116a1f9d2c37d74bfed60f26265fe96dfdebab1f"
+    }
+  ],
+  "reader": {
+    "records": 50524,
+    "resources": 513,
+    "relationships": 523,
+    "search_query": "077006",
+    "matching_records": 3
+  },
+  "context": {
+    "question": "What happens to Pension Credit if I go abroad?",
+    "budget_bytes": 524288,
+    "actual_bytes": 440189,
+    "context_id": "urn:sha256:1b2956a94a155075f86b9bae7019edc953fdddf4423ac81396ebe905c5aef025",
+    "evidence_status": "insufficient",
+    "ai_answer": null,
+    "selected_records": 18,
+    "relationships": 8,
+    "ui_and_webmcp_context_id_equal": true,
+    "webmcp_build_context_called": true,
+    "webmcp_explain_context_called": true,
+    "cross_page_example_verified": "DMG077001 complete Jason and Nicola examples, PDF pages8\u20139; source spans/hashes visible",
+    "directed_relationships_verified": [
+      "http://purl.org/dc/terms/references",
+      "http://purl.org/dc/terms/requires"
+    ]
+  },
+  "console": {
+    "new_warnings_or_errors_after_final_reload": 0,
+    "retained_earlier_warning": "Search manifest counts.max_postings_per_token outside supported range on earlier build; corrected by actual maximum49635, no bound increase"
+  },
+  "limitations": [
+    "Binding URLs differ between local browser and offline comparison, so context IDs differ across those environments. UI and WebMCP used the same local binding.",
+    "No model answer, remote MCP deployment or client acceptance claimed.",
+    "Earlier failed browser state retained in work log; final public verification is separate."
+  ]
+}

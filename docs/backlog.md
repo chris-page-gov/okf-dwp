@@ -97,6 +97,16 @@ nor the SDK pass establishes Data Agent or Voice acceptance.
 
 The [21 September audit](abroad-semantic-audit.md) traces the reported five irrelevant pages to the preserved 19 September pre-fix result, then tests the published source and engine. The exact question now resolves abroad, but overseas paraphrases, disconnected international concepts, incomplete passage continuations and broad profile activation expose remaining gaps. The machine register names separate connectivity, qualification, cross-benefit coverage, task-discrimination and historical-version competition packages; none declares the broader domain complete.
 
+## Logical retrieval units — 22 September 2026
+
+The owner has authorised implementation of the reviewed RQ02 correction.
+[Logical evidence units](logical-evidence-units.md) and the
+[implementation log](logical-units-work-log.md) track three active packages:
+`DWP-BL-005.logical-units`, `DWP-BL-007.unit-qualification` and
+`DWP-BL-009.logical-corpus`. Source capture, semantic coverage and specialist
+acceptance remain separate. Existing page-based releases and service defaults
+retain their recorded scope until new checks justify publication.
+
 ## Current register
 
 | ID | Priority | Work | Status | Depends on |
@@ -186,3 +196,13 @@ with `uv run --locked python scripts/build_backlog_work_packages.py`; validate i
 with the same command followed by `--check`. Regression controls run with
 `uv run --locked python scripts/test_backlog.py`. These are structural checks;
 they do not decide whether a domain or acceptance review has passed.
+
+## Logical-unit implementation — 22 September 2026
+
+The [logical-unit guide](logical-evidence-units.md) records the completed source
+producer, scoped qualification fixtures and reusable corpus v2 integration.
+These are bounded implementation packages, not completion of broader semantic
+modelling. Separate packages now name the 49,634 uncertain boundaries, remaining
+staff-profile migration and compact-delivery admission. The five small-budget
+focused packages currently retain no source evidence; the larger packages retain
+24 of 24 declared paths and remain insufficient.

@@ -1,0 +1,396 @@
+{
+  "schema": "okf-dwp-logical-task-profiles.v1",
+  "scope": "Additive logical evidence mode; does not silently satisfy or rewrite earlier whole-page requirements. Requirements are bounded source-retention proposals, not official rules.",
+  "profiles": [
+    {
+      "id": "logical-pc-abroad",
+      "when_all": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/abroad"
+      ],
+      "covers": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/abroad"
+      ],
+      "required_unit_keys": [
+        "spc-077001",
+        "spc-077002",
+        "spc-077003",
+        "spc-077004",
+        "spc-077015",
+        "spc-077025",
+        "spc-077026"
+      ],
+      "required_paths": [
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+          "unit_keys": [
+            "spc-077001"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+          "unit_keys": [
+            "spc-077001",
+            "spc-077002"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+          "unit_keys": [
+            "spc-077001",
+            "spc-077003",
+            "spc-077004"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+          "unit_keys": [
+            "spc-077015"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+          "unit_keys": [
+            "spc-077025"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+          "unit_keys": [
+            "spc-077026"
+          ]
+        }
+      ],
+      "missing_obligations": [
+        {
+          "id": "legal-version",
+          "category": "legal_version_unreconciled",
+          "label": "Applicable amended legislation and relevant-date versions have not been reconciled.",
+          "status": "not-established"
+        },
+        {
+          "id": "applicability",
+          "category": "applicability_unresolved",
+          "label": "Relevant date, destination, benefit regime and claimant facts remain unresolved.",
+          "status": "not-established"
+        },
+        {
+          "id": "specialist-review",
+          "category": "independent_review_pending",
+          "label": "Source boundary review by an agent is not specialist acceptance of meaning or completeness.",
+          "status": "not-reviewed"
+        },
+        {
+          "id": "supersession",
+          "category": "evidence_closure_unverified",
+          "label": "DMG 04642 effective-date/supersession reference is not reconciled.",
+          "status": "not-established"
+        },
+        {
+          "id": "coordination",
+          "category": "evidence_closure_unverified",
+          "label": "Frozen EC and reciprocal-agreement text is not present-day post-exit assurance.",
+          "status": "not-established"
+        }
+      ],
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed-specialist-review-required",
+      "scope": "SPC claimant absence/non-export evidence only. Household-member and qualifying-young-person definitions are conditional branches, not universal claimant requirements.",
+      "answerability": "insufficient-until-open-obligations-resolved"
+    },
+    {
+      "id": "logical-uc-temporary-absence",
+      "when_all": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/universal-credit",
+        "https://chris-page-gov.github.io/okf-dwp/id/logical-concept/temporary-absence"
+      ],
+      "covers": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/universal-credit",
+        "https://chris-page-gov.github.io/okf-dwp/id/logical-concept/temporary-absence"
+      ],
+      "required_unit_keys": [
+        "uc-c1986",
+        "uc-c1987",
+        "uc-c1988",
+        "uc-c1989",
+        "uc-c1990"
+      ],
+      "required_paths": [
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/universal-credit",
+          "unit_keys": [
+            "uc-c1986"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/universal-credit",
+          "unit_keys": [
+            "uc-c1987",
+            "uc-c1986"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/universal-credit",
+          "unit_keys": [
+            "uc-c1988",
+            "uc-c1989"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/universal-credit",
+          "unit_keys": [
+            "uc-c1988",
+            "uc-c1990"
+          ]
+        }
+      ],
+      "missing_obligations": [
+        {
+          "id": "legal-version",
+          "category": "legal_version_unreconciled",
+          "label": "Applicable amended legislation and relevant-date versions have not been reconciled.",
+          "status": "not-established"
+        },
+        {
+          "id": "applicability",
+          "category": "applicability_unresolved",
+          "label": "Relevant date, destination, benefit regime and claimant facts remain unresolved.",
+          "status": "not-established"
+        },
+        {
+          "id": "specialist-review",
+          "category": "independent_review_pending",
+          "label": "Source boundary review by an agent is not specialist acceptance of meaning or completeness.",
+          "status": "not-reviewed"
+        },
+        {
+          "id": "memo-adm-09-25",
+          "category": "evidence_closure_unverified",
+          "label": "C1988 explicitly points to acquired ADM memo 09/25; the update effect has not been reconciled.",
+          "status": "not-established"
+        },
+        {
+          "id": "uc-qyp",
+          "category": "evidence_closure_unverified",
+          "label": "Chapter E2 qualifying-young-person definition is referenced but not reconciled for any child/QYP branch.",
+          "status": "not-established"
+        }
+      ],
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed-specialist-review-required",
+      "scope": "UC in-GB temporary-absence conditions and their stated alternatives. This is not every UC entitlement condition or a general rule for permanent residence abroad.",
+      "answerability": "insufficient-until-open-obligations-resolved"
+    },
+    {
+      "id": "logical-pc-household-abroad",
+      "when_all": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/abroad",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+      ],
+      "covers": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/abroad",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/partner"
+      ],
+      "required_unit_keys": [
+        "spc-077005",
+        "spc-077006",
+        "spc-077007",
+        "spc-077004"
+      ],
+      "required_paths": [
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+          "unit_keys": [
+            "spc-077005",
+            "spc-077006"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+          "unit_keys": [
+            "spc-077005",
+            "spc-077007",
+            "spc-077004"
+          ]
+        }
+      ],
+      "missing_obligations": [
+        {
+          "id": "legal-version",
+          "category": "legal_version_unreconciled",
+          "label": "Applicable amended legislation and relevant-date versions have not been reconciled.",
+          "status": "not-established"
+        },
+        {
+          "id": "applicability",
+          "category": "applicability_unresolved",
+          "label": "Relevant date, destination, benefit regime and claimant facts remain unresolved.",
+          "status": "not-established"
+        },
+        {
+          "id": "specialist-review",
+          "category": "independent_review_pending",
+          "label": "Source boundary review by an agent is not specialist acceptance of meaning or completeness.",
+          "status": "not-reviewed"
+        },
+        {
+          "id": "qyp-reference",
+          "category": "evidence_closure_unverified",
+          "label": "Any child/QYP branch requires separate definition review, including literal unclear “falls within 12 above”.",
+          "status": "not-established"
+        }
+      ],
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed-specialist-review-required",
+      "scope": "Additional household-membership evidence only when the task explicitly includes a partner. The claimant payment branch remains distinct.",
+      "answerability": "insufficient-until-open-obligations-resolved"
+    },
+    {
+      "id": "logical-pc-temporary-care",
+      "when_all": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/temporary-care-home"
+      ],
+      "covers": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/temporary-care-home"
+      ],
+      "required_unit_keys": [
+        "spc-temporary-78084",
+        "spc-temporary-78085",
+        "spc-temporary-78086"
+      ],
+      "required_paths": [
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/temporary-care-home",
+          "unit_keys": [
+            "spc-temporary-78084"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/temporary-care-home",
+          "unit_keys": [
+            "spc-temporary-78085",
+            "spc-temporary-78086"
+          ]
+        }
+      ],
+      "missing_obligations": [
+        {
+          "id": "legal-version",
+          "category": "legal_version_unreconciled",
+          "label": "Applicable amended legislation and relevant-date versions have not been reconciled.",
+          "status": "not-established"
+        },
+        {
+          "id": "applicability",
+          "category": "applicability_unresolved",
+          "label": "Relevant date, destination, benefit regime and claimant facts remain unresolved.",
+          "status": "not-established"
+        },
+        {
+          "id": "specialist-review",
+          "category": "independent_review_pending",
+          "label": "Source boundary review by an agent is not specialist acceptance of meaning or completeness.",
+          "status": "not-reviewed"
+        },
+        {
+          "id": "qualifying-benefit",
+          "category": "evidence_closure_unverified",
+          "label": "Additional-amount qualifying benefits, current payment and linked exceptions require separate source closure.",
+          "status": "not-established"
+        }
+      ],
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed-specialist-review-required",
+      "scope": "Temporary care-home residence: retain no-partner and partner alternatives and the DLA-payability qualification. These are not permanent-residence rules.",
+      "answerability": "insufficient-until-open-obligations-resolved"
+    },
+    {
+      "id": "logical-pc-care-home-alternatives",
+      "when_all": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+      ],
+      "covers": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home"
+      ],
+      "required_unit_keys": [
+        "spc-temporary-78084",
+        "spc-temporary-78085",
+        "spc-temporary-78086",
+        "spc-permanent-78087",
+        "spc-permanent-78088",
+        "spc-permanent-78089"
+      ],
+      "required_paths": [
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+          "unit_keys": [
+            "spc-permanent-78088",
+            "spc-permanent-78087"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+          "unit_keys": [
+            "spc-permanent-78089"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+          "unit_keys": [
+            "spc-temporary-78084"
+          ]
+        },
+        {
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/care-home",
+          "unit_keys": [
+            "spc-temporary-78085",
+            "spc-temporary-78086"
+          ]
+        }
+      ],
+      "missing_obligations": [
+        {
+          "id": "legal-version",
+          "category": "legal_version_unreconciled",
+          "label": "Applicable amended legislation and relevant-date versions have not been reconciled.",
+          "status": "not-established"
+        },
+        {
+          "id": "applicability",
+          "category": "applicability_unresolved",
+          "label": "Relevant date, destination, benefit regime and claimant facts remain unresolved.",
+          "status": "not-established"
+        },
+        {
+          "id": "specialist-review",
+          "category": "independent_review_pending",
+          "label": "Source boundary review by an agent is not specialist acceptance of meaning or completeness.",
+          "status": "not-reviewed"
+        },
+        {
+          "id": "qualifying-benefit",
+          "category": "evidence_closure_unverified",
+          "label": "Current qualifying-benefit payment, carers, household facts and all additional-amount conditions remain unresolved.",
+          "status": "not-established"
+        },
+        {
+          "id": "temporary-or-permanent",
+          "category": "question_scope_unresolved",
+          "label": "A mention of care home does not establish permanent residence. Select the applicable temporary/permanent and partner/no-partner branch from evidence.",
+          "status": "not-established"
+        }
+      ],
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed-specialist-review-required",
+      "scope": "The existing care-home concept includes broad care-home wording. This profile supplies temporary and permanent alternatives without deciding which applies. Duration, normal residence and partner status must be established before any conclusion.",
+      "answerability": "insufficient-until-open-obligations-resolved"
+    }
+  ]
+}
