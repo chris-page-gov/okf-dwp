@@ -1,6 +1,6 @@
 {
   "schema": "okf-dwp-structured-context-probe.v1",
-  "status": "fixed-before-full-corpus-context-results",
+  "status": "fixed-before-final-source-and-semantic-increment-results",
   "cases": {
     "path": "evaluation/staff-questions/cases.json",
     "bytes": 205988,
@@ -35,13 +35,22 @@
     "card_diagnostic_bytes",
     "truncation",
     "integrity",
-    "local_time"
+    "local_time",
+    "inherited_path_retention",
+    "source_read_selection_paths",
+    "location_navigation_restored",
+    "location_navigation_inferred",
+    "unchanged_legacy_obligations",
+    "delivered_vs_declared_concept_resolution"
   ],
   "limits": [
     "Known development questions; no independent relevance or answer-accuracy claim.",
     "Existing obligations and all insufficient results remain visible.",
     "No model or network calls; no ranking tuning on these results.",
-    "Source structure tests are distinct from this forty-question census."
+    "Source structure tests are distinct from this forty-question census.",
+    "This increment changes source segmentation and additive semantic selection. Attempt02 isolates the earlier runtime repair on unchanged sources; these denominators must not be conflated.",
+    "Location overlap routes do not satisfy old page requirements; all203 original obligations remain open.",
+    "Guarded routes use only resolved public concepts. Lexical matches retain separate reasons and do not establish benefit applicability."
   ],
   "source_bindings": [
     {
@@ -51,8 +60,98 @@
     },
     {
       "path": "structured-context/manifest.json",
-      "bytes": 457546,
-      "sha256": "3955a4b4cee596a5c7fde339bee81f21332c6d969567b9ae5dccdc3b686db1ec"
+      "bytes": 485301,
+      "sha256": "a5b3af091bfcd624ef035a78d8e674881c399e617c2f51b80d1545fa102ac7fd"
+    }
+  ],
+  "comparison_mode": "additive-source-and-semantic-increment",
+  "metrics_helper": {
+    "path": "scripts/structured_context_metrics.mjs",
+    "bytes": 7372,
+    "sha256": "93a1f04e24794480237d1814b91f6da4f571cdfa3cabd7622b83b091c7387f21"
+  },
+  "location_ledger": {
+    "path": "structured-context/location-migration.json",
+    "bytes": 633496,
+    "sha256": "315bcddf4ee2c5882fbfcdd7dea111b1bfdd503b2a2e4bcc196f8863ec38169a"
+  },
+  "legacy_requirements": {
+    "source": {
+      "path": "combined/context/corpus/base-index.json",
+      "bytes": 4993059,
+      "sha256": "547623cd08ca6b2ab59ff7bc52ddbdabea4ead6e1aa26ad1f7983b63b91b71d4"
+    },
+    "count": 40
+  },
+  "requirement_groups": [
+    {
+      "id": "inherited-logical-source-selections",
+      "requirement_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/logical-dla-pip-transition",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/logical-pc-abroad",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/logical-pc-care-home-alternatives",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/logical-pc-household-abroad",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/logical-pc-temporary-care",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/logical-pip-pension-age",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/logical-uc-temporary-absence"
+      ]
+    },
+    {
+      "id": "additional-source-read-selections",
+      "requirement_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/pc-calculation",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/pc-capital",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/pc-eligibility",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/pc-foundation",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/pc-household-routing",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/pc-housing-benefit-direction",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/pc-state-pension-income"
+      ]
+    },
+    {
+      "id": "unchanged-legacy-page-requirements",
+      "requirement_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-001",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-002",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-003",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-004",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-005",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-006",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-007",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-008",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-009",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-010",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-011",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-012",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-013",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-014",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-015",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-016",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-017",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-018",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-019",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-020",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-021",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-022",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-023",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-024",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-025",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-026",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-027",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-028",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-029",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-030",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-031",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-032",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-033",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-034",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-035",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-036",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-037",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-038",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-039",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-040"
+      ]
     }
   ]
 }

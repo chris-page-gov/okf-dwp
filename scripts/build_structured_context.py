@@ -95,6 +95,11 @@ def compile_context(root=ROOT):
     from logical_context_profiles import project
     old=json.loads(inputs.read('logical-units/manifest.json'))
     semantic,declarations=project(inputs,old,rows)
+    from structured_context_profiles import project as project_selections
+    from structured_location_migration import project as project_locations
+    semantic=project_selections(inputs,semantic,rows,units)
+    semantic,migration=project_locations(inputs,semantic,rows,units)
+    outputs['location-migration.json']=canonical(migration)
     edges={e['id']:e for e in semantic['assertions']}
     by_label=defaultdict(list);local=defaultdict(list)
     for record in rows:
@@ -126,7 +131,7 @@ def compile_context(root=ROOT):
                 resolved+=1
     # Stable producer identity includes all source bindings, inherited authored
     # semantics, cards/ranking parameters and the concrete parser versions.
-    for path in ('scripts/build_structured_context.py','scripts/build_structured_units.py','scripts/manual_structure.py','scripts/manual_references.py','scripts/manual_auxiliary_structure.py',
+    for path in ('scripts/build_structured_context.py','scripts/build_structured_units.py','scripts/manual_structure.py','scripts/manual_references.py','scripts/manual_auxiliary_structure.py','scripts/structured_projection_output.py',
                  'scripts/pdf_structure_alignment.py','scripts/structured_context_reader.py',
                  'scripts/build_full_dmg.py','scripts/build_combined_reader.py','scripts/build_bundle.py',
                  'combined/okf-explorer.json','profiles/bundle-wiki/v1/context.jsonld',
@@ -191,7 +196,8 @@ def compile_context(root=ROOT):
     outputs.update(emit_reader(inputs,corpus,rows,reader_semantics,declarations,outputs,cards))
     report={'schema':'okf-dwp-structured-context-build.v1','snapshot':snapshot,
         'counts':{'evidence':len(rows),'cards':len(cards),'concepts':sum(r['kind']=='concept' for r in semantic['records']),
-                  'assertions':len(edges),'normalised_paragraph_references':resolved,'unresolved_references':len(unresolved)},
+                  'assertions':len(edges),'normalised_paragraph_references':resolved,'unresolved_references':len(unresolved),
+                  'requirements':len(semantic['requirements']),'location_navigation':migration['counts']},
         'ranking':corpus['search']['ranking'],'total_tokens':dict(totals),'inputs':sorted(inputs.files.values(),key=lambda r:r['path']),
         'unresolved_references':unresolved,'limitations':LIMITATIONS,
         'outputs':[{'path':OUTPUT+'/'+p,'bytes':len(raw),'sha256':digest(raw)} for p,raw in sorted(outputs.items())]}
@@ -201,12 +207,8 @@ def compile_context(root=ROOT):
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--check',action='store_true');args=parser.parse_args()
     outputs,report=compile_context();outputs['build-review.json']=canonical(report)
-    for name,data in outputs.items():
-        path=admitted_output(ROOT/OUTPUT,name)
-        if args.check:require(path.is_file() and path.read_bytes()==data,'Stale structured context: '+name)
-        else:path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(data)
-    actual={p.relative_to(ROOT/OUTPUT).as_posix() for p in (ROOT/OUTPUT).rglob('*') if p.is_file()}
-    require(actual==set(outputs),'Unbound structured context output')
+    from structured_projection_output import install_projection
+    install_projection(ROOT/OUTPUT,outputs,check=args.check,mode='context')
     print(json.dumps({'status':'verified' if args.check else 'built',**report['counts']}))
 
 if __name__=='__main__':main()
