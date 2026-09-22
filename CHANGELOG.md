@@ -10,6 +10,8 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Fix two learning-site defects found during the preceding public check: keep the focused skip link outside page layout so pointer navigation stays stable, and render table alignment through external stylesheet classes without weakening the content security policy. Retain the failed observations and add renderer and desktop/mobile browser regressions; publication acceptance remains a separate exact-commit check.
+
 - Retain two independently checked offline ranking probes on the same 40 questions. Token-level alias expansion loses tracked candidate locations; length-aware BM25 gains four without losses but still selects incomplete or wrong-subject fragments. Preserve fixed protocols, exact inputs and all results. The live ranker, source units and answerability statuses are unchanged; summary-card implementation remains open.
 
 - Record the source-bound discovery diagnosis and a separate summary-card experiment: literal ranking does not use declared aliases, while a bounded sample exposes incorrect inherited headings. Broader retrieval improvement remains unimplemented and explicitly tracked.

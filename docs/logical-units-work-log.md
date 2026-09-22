@@ -209,3 +209,21 @@ verification separately; changing this limit alone does not claim publication.
   made. Structural and semantic cards remain separate unimplemented work.
 - Exact protected publication of this research increment is a separate gate.
   Do not interrupt the preceding DWP source release's merged-CI/Pages verification.
+
+## Learning-site reliability correction — 22 September 2026
+
+The preceding `548557f2` publication passed exact merged CI, automatic Pages,
+all 377 public-byte checks and its three retained evidence examples. Its later
+learning-page check exposed two defects: the focused skip link moved navigation
+before pointer activation, and aligned table cells produced 16 CSP errors.
+Those failures remain recorded; successful byte verification is not complete
+browser acceptance.
+
+The independently reviewed repair is incorporated into the research follow-on
+PR. It keeps the focused skip link outside layout and converts supported table
+alignment to stylesheet classes, retaining the original CSP and inert source
+HTML. The [regression guide](learning-pages-regressions.md) records 26 renderer
+tests, eight browser checks at desktop/mobile widths and separate negative
+controls for both original defects. Fresh exact-head CI and public replay are
+required after integration. No source, probe result, profile, ranking or
+answerability status changed.
