@@ -10,6 +10,10 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Rebind the logical-context projection after the combined descriptor changes, exclude combined-only learning routes from that Reader, and replay all 184 contexts. Preserve the prior evaluation under `evaluation/logical-units/history/pre-learning-2026-09-22/`; semantic-review limitations remain unchanged.
+
+- Add 12 demonstration learning paths and 112 activities to the combined Reader, covering all 40 supplied question occurrences. Bind authored objectives, source locators, prerequisites and facilitator public keys into the generated snapshot. Preserve the separate logical-unit corpus and all frozen pilot/source projections.
+
 ## Logical evidence units — 22 September 2026
 
 - Add a source-preserving logical-unit projection across 513 frozen DMG/ADM documents: 49,680 units, exact UTF-8 source spans and complete byte accounting. Retain 49,634 machine boundaries as uncertain; 46 excerpts have explicit agent-reviewed boundaries.

@@ -21,6 +21,7 @@ from build_context_discovery import Inputs, require
 from build_full_dmg import (CHUNK, bucket, build_search, deterministic_gzip,
                             new_node, observed, role, role_label, source_assertion, source_dates, utc_key)
 from build_review_navigation import DIMENSIONS, UNKNOWN, load_pages
+from build_learning_paths import add_learning
 
 OUTPUT = "combined"
 SEMANTIC = "evaluation/semantic-expansion/assembly-index.json"
@@ -182,6 +183,7 @@ def compile_combined(root=ROOT, semantic_path=SEMANTIC):
             concept = semantic_concepts[edge["source"]]
             semantic_references[edge["target"]].append({"value_id": concept["id"], "label": concept["label"], "assertion_id": edge["id"],
                 "method": "curated-reference", "review_status": concept.get("review_status", "unreviewed")})
+    learning = add_learning(inputs, records, full_text, when)
     for record in records:
         assignment = assignments.get(record["route"])
         for key in DIMENSIONS:
@@ -289,6 +291,7 @@ def compile_combined(root=ROOT, semantic_path=SEMANTIC):
     put("data/manifest.json", new_manifest)
     semantic_manifest = emit_semantics(records, edges, semantic, declarations, snapshot, when, put, outputs, bind)
     descriptor = deepcopy(old)
+    descriptor["learning_presentation"] = learning
     descriptor.update(title=TITLE, description=LIMITATIONS[0], snapshot=snapshot, snapshot_id=snapshot, counts=counts, generated_at=when)
     descriptor["consumer"] = {"repository": "https://github.com/chris-page-gov/okf-explorer", "commit": CONSUMER_COMMIT}
     descriptor["semantic_descriptor"] = "okf-bundle.yamlld"
@@ -320,7 +323,7 @@ def compile_combined(root=ROOT, semantic_path=SEMANTIC):
         "statutory_retained_files": sorted(statutory_source_files.values(), key=lambda row: row["path"])}
     put("data/source-identity.json", source_identity)
     descriptor["plane_roots"] = {"source": digest(canonical(source_identity)),
-        "semantic": semantic_manifest["semantic_identity"]["sha256"], "data": digest(canonical(dataset_shards)), "search": digest(canonical(search_shards)), "presentation": digest(canonical(descriptor["extensions"]))}
+        "semantic": semantic_manifest["semantic_identity"]["sha256"], "data": digest(canonical(dataset_shards)), "search": digest(canonical(search_shards)), "presentation": digest(canonical({"extensions": descriptor["extensions"], "learning_presentation": learning}))}
     descriptor["exploratory_publication"].update(snapshot_id=snapshot, generated_at=when, applicable_plane_roots=descriptor["plane_roots"], limitations=LIMITATIONS)
     descriptor["source"] = {"url": REPO, "inventory": "context/corpus-sources.json", "sha256": digest(inputs.read("context/corpus-sources.json")), "observed_at": when}
     descriptor["source"].update(identity=bind("data/source-identity.json"), statutory_inventories=statutory_inventories,

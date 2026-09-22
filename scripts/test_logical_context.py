@@ -71,6 +71,12 @@ class LogicalContextTests(unittest.TestCase):
         cls.bound_reader.update({s['path']: s for s in cls.adjacency['shards']})
         cls.reader_cache = {}
 
+    def test_unit_reader_does_not_inherit_combined_learning_routes(self):
+        combined = json.loads((ROOT / "combined/okf-explorer.json").read_bytes())
+        units = json.loads((ROOT / "logical-context/okf-explorer.json").read_bytes())
+        self.assertIn("learning_presentation", combined)
+        self.assertNotIn("learning_presentation", units)
+
     def id(self, key):
         return self.catalogue[key]['id']
 
