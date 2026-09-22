@@ -72,6 +72,12 @@ retention improvement.
 
 ## Next decision
 
+An [independent review](length-independent-review.md) checked all 399 input
+bindings and recomputed corpus statistics, term frequencies and both rankings
+for every case. Scores matched within `1e-12`; the reported gains, bytes and
+unresolved-unit counts were reproduced. The review endorses the diagnostic's
+arithmetic and stated limits, not runtime adoption.
+
 The evidence supports testing length-aware ranking as a baseline in the
 structural/card experiment. It does not justify replacing the live ranker yet.
 The next comparison needs checked unit boundaries, principal subject and benefit
