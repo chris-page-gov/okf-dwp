@@ -1,0 +1,263 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chris-page-gov.github.io/okf-dwp/profiles/pdf-structure/v1/document.schema.json",
+  "title": "Retained Poppler observation of declared PDF structure",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "okf-dwp-pdf-structure.v1"
+    },
+    "document_key": {
+      "type": "string",
+      "pattern": "^(dmg|adm):[a-z0-9-]+$"
+    },
+    "family": {
+      "enum": [
+        "dmg",
+        "adm"
+      ]
+    },
+    "document_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "pdf_path": {
+      "type": "string",
+      "pattern": "^source/"
+    },
+    "pdf_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_url": {
+      "type": "string",
+      "pattern": "^https://assets\\.publishing\\.service\\.gov\\.uk/"
+    },
+    "frozen_tagged_flag": {
+      "enum": [
+        "yes",
+        "no",
+        null
+      ]
+    },
+    "tool": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "pdfinfo"
+        },
+        "version_output": {
+          "type": "string",
+          "maxLength": 16384
+        },
+        "version_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "executable_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "name",
+        "version_output",
+        "version_sha256",
+        "executable_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "command": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "status": {
+      "enum": [
+        "tagged",
+        "tagged-with-unparsed-lines",
+        "untagged",
+        "no-structure",
+        "error",
+        "timeout",
+        "output-limit",
+        "parse-error"
+      ]
+    },
+    "bounds": {
+      "type": "object",
+      "properties": {
+        "timeout_seconds": {
+          "const": 45
+        },
+        "stdout_bytes": {
+          "const": 16777216
+        },
+        "stderr_bytes": {
+          "const": 65536
+        }
+      },
+      "required": [
+        "timeout_seconds",
+        "stdout_bytes",
+        "stderr_bytes"
+      ],
+      "additionalProperties": false
+    },
+    "observation": {
+      "type": "object",
+      "properties": {
+        "returncode": {
+          "type": "integer"
+        },
+        "elapsed_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "capture_complete": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "returncode",
+        "elapsed_seconds",
+        "capture_complete"
+      ],
+      "additionalProperties": false
+    },
+    "tree": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^pdf-structure/"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "bytes"
+      ],
+      "additionalProperties": false
+    },
+    "stderr": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^pdf-structure/"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "bytes"
+      ],
+      "additionalProperties": false
+    },
+    "blocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "enum": [
+              "H1",
+              "H2",
+              "H3",
+              "H4",
+              "H5",
+              "H6",
+              "P",
+              "Table",
+              "TR",
+              "TH",
+              "TD",
+              "L",
+              "LI"
+            ]
+          },
+          "depth": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1024
+          },
+          "text": {
+            "type": "string"
+          },
+          "tree_line_start": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "tree_line_end": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "role",
+          "depth",
+          "text",
+          "tree_line_start",
+          "tree_line_end"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 200000
+    },
+    "diagnostics": {
+      "type": "object"
+    },
+    "source_instructions_inert": {
+      "const": true
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "document_key",
+    "family",
+    "document_id",
+    "pdf_path",
+    "pdf_sha256",
+    "source_url",
+    "frozen_tagged_flag",
+    "tool",
+    "command",
+    "status",
+    "bounds",
+    "observation",
+    "tree",
+    "stderr",
+    "blocks",
+    "diagnostics",
+    "source_instructions_inert",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

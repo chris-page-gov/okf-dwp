@@ -2,7 +2,7 @@
 
 This generated orientation guide accounts for every document in the two frozen inventories. It is an independent project reading aid, not official guidance or legal acceptance.
 
-513 documents; 19090 PDF pages; 20 source-supported, explicitly scoped conventions.
+513 documents; 19090 PDF pages; 21 source-supported, explicitly scoped conventions.
 
 ## Files
 

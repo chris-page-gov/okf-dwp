@@ -111,7 +111,8 @@
               "cross-references",
               "memos-and-updates",
               "abbreviations",
-              "legislation-references"
+              "legislation-references",
+              "source-embedded-structure"
             ]
           },
           "statement": {
@@ -130,7 +131,8 @@
           "confidence": {
             "enum": [
               "direct-source-statement",
-              "observed-extracted-layout"
+              "observed-extracted-layout",
+              "observed-declared-pdf-structure"
             ]
           },
           "scope": {
@@ -159,48 +161,139 @@
           "source_support": {
             "type": "array",
             "items": {
-              "type": "object",
-              "properties": {
-                "document_key": {
-                  "type": "string",
-                  "pattern": "^(dmg|adm):[a-z0-9-]+$"
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "document_key": {
+                      "type": "string",
+                      "pattern": "^(dmg|adm):[a-z0-9-]+$"
+                    },
+                    "page": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "start_utf8": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "end_utf8": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 18000
+                    },
+                    "source_url": {
+                      "type": "string",
+                      "pattern": "^https://assets\\.publishing\\.service\\.gov\\.uk/[^ ]+#page=[1-9][0-9]*$"
+                    }
+                  },
+                  "required": [
+                    "document_key",
+                    "page",
+                    "start_utf8",
+                    "end_utf8",
+                    "sha256",
+                    "quote",
+                    "source_url"
+                  ],
+                  "additionalProperties": false
                 },
-                "page": {
-                  "type": "integer",
-                  "minimum": 1
-                },
-                "start_utf8": {
-                  "type": "integer",
-                  "minimum": 0
-                },
-                "end_utf8": {
-                  "type": "integer",
-                  "minimum": 1
-                },
-                "sha256": {
-                  "type": "string",
-                  "pattern": "^[a-f0-9]{64}$"
-                },
-                "quote": {
-                  "type": "string",
-                  "minLength": 1,
-                  "maxLength": 18000
-                },
-                "source_url": {
-                  "type": "string",
-                  "pattern": "^https://assets\\.publishing\\.service\\.gov\\.uk/[^ ]+#page=[1-9][0-9]*$"
+                {
+                  "type": "object",
+                  "properties": {
+                    "evidence_kind": {
+                      "const": "pdf-structure"
+                    },
+                    "document_key": {
+                      "type": "string",
+                      "pattern": "^(dmg|adm):[a-z0-9-]+$"
+                    },
+                    "manifest_path": {
+                      "const": "pdf-structure/bounded-v2/manifest.json"
+                    },
+                    "manifest_sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "structure_path": {
+                      "type": "string",
+                      "pattern": "^pdf-structure/bounded-v2/(adm|dmg)/[a-z0-9-]+\\.structure\\.json$"
+                    },
+                    "structure_sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "tree_path": {
+                      "type": "string",
+                      "pattern": "^pdf-structure/(adm|dmg)/[a-z0-9-]+\\.tree\\.txt$"
+                    },
+                    "tree_sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "pdf_sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "tree_line_start": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "tree_line_end": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "start_utf8": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "end_utf8": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 18000
+                    },
+                    "source_url": {
+                      "type": "string",
+                      "pattern": "^https://assets\\.publishing\\.service\\.gov\\.uk/[^ #]+$"
+                    }
+                  },
+                  "required": [
+                    "evidence_kind",
+                    "document_key",
+                    "manifest_path",
+                    "manifest_sha256",
+                    "structure_path",
+                    "structure_sha256",
+                    "tree_path",
+                    "tree_sha256",
+                    "pdf_sha256",
+                    "tree_line_start",
+                    "tree_line_end",
+                    "start_utf8",
+                    "end_utf8",
+                    "sha256",
+                    "quote",
+                    "source_url"
+                  ],
+                  "additionalProperties": false
                 }
-              },
-              "required": [
-                "document_key",
-                "page",
-                "start_utf8",
-                "end_utf8",
-                "sha256",
-                "quote",
-                "source_url"
-              ],
-              "additionalProperties": false
+              ]
             },
             "minItems": 1,
             "maxItems": 16

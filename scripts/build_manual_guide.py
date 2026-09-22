@@ -145,12 +145,41 @@ def load_manual_guide(root=ROOT):
             document["observed_features"] = observe(document, pages["pages"])
             documents[key] = document
             page_sets[key] = {page["page"]: page for page in pages["pages"]}
-    validate_guide_evidence(guide, documents, page_sets)
+    validate_guide_evidence(guide, documents, page_sets, inputs)
     return {"guide": guide, "documents": [documents[key] for key in sorted(documents)],
             "inputs": sorted(inputs.files.values(), key=lambda value: value["path"])}
 
 
-def validate_guide_evidence(guide, documents, page_sets):
+def pdf_structure_span(inputs, document, support):
+    """Bind a declared-tree quotation separately from any PDF-page quotation."""
+    require(inputs is not None, "PDF-structure support requires confined input validation")
+    manifest = strict_json(inputs.read(support["manifest_path"], support["manifest_sha256"]))
+    entries = [entry for entry in manifest["documents"] if entry["document_key"] == document["key"]]
+    require(len(entries) == 1 and entries[0]["pdf_sha256"] == document["source"]["pdf_sha256"], "Structure manifest/PDF mismatch")
+    entry = entries[0]
+    require(entry["status"] in ("tagged", "tagged-with-unparsed-lines"), "Incomplete or unavailable structure cannot support a tag convention")
+    require(entry["structure"]["path"] == support["structure_path"] and entry["structure"]["sha256"] == support["structure_sha256"], "Structure sidecar binding mismatch")
+    record = strict_json(inputs.read(entry["structure"]["path"], entry["structure"]["sha256"], entry["structure"]["bytes"]))
+    require(record["pdf_sha256"] == document["source"]["pdf_sha256"] and record["document_key"] == document["key"], "Structure source identity mismatch")
+    require(record["status"] == entry["status"] and record["tool"] == manifest["tool"]
+            and record["observation"]["capture_complete"] and record["observation"]["returncode"] == 0
+            and record["source_instructions_inert"] is True, "Structure tool or observation mismatch")
+    raw = inputs.read(record["tree"]["path"], record["tree"]["sha256"], record["tree"]["bytes"])
+    lines = raw.splitlines(keepends=True)
+    first, last = support["tree_line_start"], support["tree_line_end"]
+    require(1 <= first <= last <= len(lines), "Invalid structure tree line interval")
+    start = sum(len(line) for line in lines[:first - 1])
+    end = start + sum(len(line) for line in lines[first - 1:last])
+    return {"evidence_kind": "pdf-structure", "document_key": document["key"],
+            "manifest_path": support["manifest_path"], "manifest_sha256": support["manifest_sha256"],
+            "structure_path": entry["structure"]["path"], "structure_sha256": entry["structure"]["sha256"],
+            "tree_path": record["tree"]["path"], "tree_sha256": record["tree"]["sha256"],
+            "pdf_sha256": document["source"]["pdf_sha256"], "tree_line_start": first, "tree_line_end": last,
+            "start_utf8": start, "end_utf8": end, "sha256": sha(raw[start:end]),
+            "quote": raw[start:end].decode("utf-8"), "source_url": document["source"]["url"]}
+
+
+def validate_guide_evidence(guide, documents, page_sets, inputs=None):
     """Validate scoped assertions independently of census and marker production."""
     ids = set()
     for convention in guide["conventions"]:
@@ -161,8 +190,11 @@ def validate_guide_evidence(guide, documents, page_sets):
         for support in convention["source_support"]:
             key = support["document_key"]
             require(key in documents, "Unknown evidence document")
-            require(support["page"] in page_sets[key], "Unknown evidence page")
-            actual = source_span(documents[key], page_sets[key][support["page"]], support["start_utf8"], support["end_utf8"])
+            if support.get("evidence_kind") == "pdf-structure":
+                actual = pdf_structure_span(inputs, documents[key], support)
+            else:
+                require(support["page"] in page_sets[key], "Unknown evidence page")
+                actual = source_span(documents[key], page_sets[key][support["page"]], support["start_utf8"], support["end_utf8"])
             require(support == actual, "Exact convention evidence mismatch")
             support_keys.add(key)
         require(set(convention["scope"]["document_keys"]) <= support_keys,

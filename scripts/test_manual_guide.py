@@ -28,7 +28,7 @@ class ManualGuideTests(unittest.TestCase):
 
     def validate_evidence(self, authoring):
         # Validation may append convention IDs; never mutate the shared fixture.
-        guide.validate_guide_evidence(authoring, deepcopy(self.docs), self.pages)
+        guide.validate_guide_evidence(authoring, deepcopy(self.docs), self.pages, guide.Inputs(guide.ROOT))
 
     def test_every_frozen_document_has_one_original_role(self):
         expected = {}
@@ -119,7 +119,39 @@ class ManualGuideTests(unittest.TestCase):
             self.fail("Manual guide attempted a remote context fetch")
         expanded = jsonld.expand(self.authoring, options={"documentLoader": no_remote_context})
         self.assertEqual(expanded[0]["@id"], self.authoring["id"])
-        self.assertEqual(len(expanded[0]["https://chris-page-gov.github.io/okf-dwp/vocab/manual-guide/conventions"]), 20)
+        self.assertEqual(len(expanded[0]["https://chris-page-gov.github.io/okf-dwp/vocab/manual-guide/conventions"]), 21)
+
+    def test_declared_tree_evidence_is_separate_from_pdf_page_evidence(self):
+        convention = self.authoring["conventions"][-1]
+        self.assertEqual(convention["confidence"], "observed-declared-pdf-structure")
+        self.assertEqual(len(convention["source_support"]), 4)
+        for support in convention["source_support"]:
+            self.assertEqual(support["evidence_kind"], "pdf-structure")
+            self.assertNotIn("page", support)
+            self.assertNotIn("#page=", support["source_url"])
+            self.assertIn("tree_line_start", support)
+        self.assertEqual(convention["legal_effect"], "not-established")
+
+    def test_changed_tree_receipt_or_line_range_rejected(self):
+        for field, value in (("manifest_sha256", "0" * 64), ("tree_sha256", "0" * 64), ("tree_line_end", 999999999)):
+            changed = deepcopy(self.authoring)
+            changed["conventions"][-1]["source_support"][0][field] = value
+            with self.subTest(field=field), self.assertRaises(ValueError):
+                self.validate_evidence(changed)
+
+    def test_incomplete_structure_record_cannot_support_convention(self):
+        support = self.authoring["conventions"][-1]["source_support"][0]
+        inputs = guide.Inputs(guide.ROOT)
+        class Reader:
+            def read(self, path, *args, **kwargs):
+                raw = inputs.read(path, *args, **kwargs)
+                if path == support["structure_path"]:
+                    record = json.loads(raw)
+                    record["observation"]["capture_complete"] = False
+                    return guide.canonical(record)
+                return raw
+        with self.assertRaisesRegex(ValueError, "observation mismatch"):
+            guide.pdf_structure_span(Reader(), self.docs[support["document_key"]], support)
 
     def test_quoted_abbreviations_and_conflicting_footer_statements_survive(self):
         by_name = {c["id"].rsplit("/", 1)[-1]: c for c in self.authoring["conventions"]}

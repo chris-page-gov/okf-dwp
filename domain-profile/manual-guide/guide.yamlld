@@ -716,6 +716,103 @@
       "unknowns": [
         "This observation does not establish a general grammar, current legal applicability or complete dependency closure."
       ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/manual-guide/convention/source-embedded-structure",
+      "category": "source-embedded-structure",
+      "statement": "The retained Poppler observations of these four PDFs contain declared heading, paragraph and list roles. These role-labelled trees are a separate source representation from the frozen page-text layout.",
+      "reading_implication": "Use declared roles as source-backed structural candidates, then separately match their text to exact frozen page locations. Keep unmatched or ambiguous alignment, unparsed tree lines and unavailable structure visible. Parent and child blocks overlap and must not be counted as separate evidence.",
+      "assertion_status": "project-authored-source-linked",
+      "confidence": "observed-declared-pdf-structure",
+      "scope": {
+        "application": "cited-documents-and-excerpts-only",
+        "document_keys": [
+          "adm:adm-chapter-c1",
+          "adm:adm-chapter-p4",
+          "dmg:dmg-vol13-ch77",
+          "dmg:dmg-vol2-ch7-part6"
+        ]
+      },
+      "source_support": [
+        {
+          "evidence_kind": "pdf-structure",
+          "document_key": "dmg:dmg-vol13-ch77",
+          "manifest_path": "pdf-structure/bounded-v2/manifest.json",
+          "manifest_sha256": "1639ad479e882d6a4d20a09e859f872a58060e2250f14c0702cfa20ff0b7f61b",
+          "structure_path": "pdf-structure/bounded-v2/dmg/dmg-vol13-ch77.structure.json",
+          "structure_sha256": "0917a5acb23f5d3bf430e501b01700bdcb0a6d64e955fc15179979f5b60a5322",
+          "tree_path": "pdf-structure/dmg/dmg-vol13-ch77.tree.txt",
+          "tree_sha256": "121998b65cb61aec55e0d2a768018fa43dada94dd59a02357c84f577a17ee2fa",
+          "pdf_sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708",
+          "tree_line_start": 1,
+          "tree_line_end": 65,
+          "start_utf8": 0,
+          "end_utf8": 1570,
+          "sha256": "fcb83ec659b9c76dd6cfc810864cf752adc6d3235d7cf04bb9696312077304c0",
+          "quote": "Document\n  H2 (block):\n     /Placement /Block\n     /SpaceBefore 0.2\n    \"DMG Chapter 77: Conditions of entitlement, membership of the \"\n    \"household and normal amount payable\"\n  Sect\n    P (block):\n       /Placement /Block\n      \" \"\n    P (block):\n       /Placement /Block\n       /SpaceBefore 0.393\n      \" \"\n    P (block):\n       /Placement /Block\n       /SpaceBefore 0.11\n      \" \"\n    P (block):\n       /Placement /Block\n       /SpaceBefore 0.11\n      \" \"\n    P (block):\n       /Placement /Block\n       /SpaceBefore 0.11\n      \" \"\n    H3 (block):\n       /Placement /Block\n       /SpaceBefore 0.533\n      \"Subpages\"\n    L (block)\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.291\n             /StartIndent 0.424\n            \"•\"\n            \"General 77001 - 77030 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n            \"Conditions of entitlement 77031 - 77099 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n            \"Membership of the household 77100 - 77299 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n            \"Normal amount payable 77300 - 77999 \"\n      LI (block)\n        LBody (block)\n",
+          "source_url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf"
+        },
+        {
+          "evidence_kind": "pdf-structure",
+          "document_key": "adm:adm-chapter-p4",
+          "manifest_path": "pdf-structure/bounded-v2/manifest.json",
+          "manifest_sha256": "1639ad479e882d6a4d20a09e859f872a58060e2250f14c0702cfa20ff0b7f61b",
+          "structure_path": "pdf-structure/bounded-v2/adm/adm-chapter-p4.structure.json",
+          "structure_sha256": "bea8ae54d0a28a0f169bdc6dfe4d350ea2fd88edb2987d4e23bc946d26581ddd",
+          "tree_path": "pdf-structure/adm/adm-chapter-p4.tree.txt",
+          "tree_sha256": "fffca3b6d508ac9eaef114863b431da8813ceb9686d7aba211e746fb68f65565",
+          "pdf_sha256": "96c446f7bbb9b2b65ec1b4eba5170858988875c57e188ac9927e8dd2e820bc84",
+          "tree_line_start": 1,
+          "tree_line_end": 65,
+          "start_utf8": 0,
+          "end_utf8": 1874,
+          "sha256": "02a0f954a9f34b9cdc39bf024dcfd8d26894238d2454d1141ffe1431e673594a",
+          "quote": "Document\n  H2 (block):\n     /Placement /Block\n     /SpaceBefore 0.2\n    \"ADM Chapter P4: Exceptions to normal payability rules\"\n  Sect\n    P (block):\n       /Placement /Block\n      \" \"\n    H2 (block):\n       /Placement /Block\n       /SpaceBefore 0.593\n      Span (inline)\n        \"Introduction\"\n    P (block):\n       /Placement /Block\n       /SpaceBefore 0.307\n      \"P4001 This chapter is about payability of PIP and also the exceptions to payability and entitlement.\"\n    H3 (block):\n       /Placement /Block\n       /SpaceBefore 0.533\n      \"Subpages\"\n    L (block)\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.291\n             /StartIndent 0.424\n            \"•\"\n            \"Hospitals (or Similar institutions), Care Homes and Prisons P4002 - P4030 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n            \"Payment at daily rate P4031-P4050 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n            \"Payability of the mobility component P4051-P4075 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n            \"New claims and entitlement to PIP when reaching the relevant age P4076-P4086 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n            \"Revision and supersession when claimant has reached the relevant age - mobility component \"\n            \"P4087-P4999 \"\n  H2 (block):\n",
+          "source_url": "https://assets.publishing.service.gov.uk/media/67f670a332b0da5c2a09e23d/adm_p4.pdf"
+        },
+        {
+          "evidence_kind": "pdf-structure",
+          "document_key": "dmg:dmg-vol2-ch7-part6",
+          "manifest_path": "pdf-structure/bounded-v2/manifest.json",
+          "manifest_sha256": "1639ad479e882d6a4d20a09e859f872a58060e2250f14c0702cfa20ff0b7f61b",
+          "structure_path": "pdf-structure/bounded-v2/dmg/dmg-vol2-ch7-part6.structure.json",
+          "structure_sha256": "2bb5482c20b9c0396ab5bd9b74a0d37301e32bdacdaf1786a94619326b4879ce",
+          "tree_path": "pdf-structure/dmg/dmg-vol2-ch7-part6.tree.txt",
+          "tree_sha256": "d939909b282656d29d20f2c27d714607b29ab7ffd21a40f287af9fb691800db3",
+          "pdf_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
+          "tree_line_start": 1,
+          "tree_line_end": 65,
+          "start_utf8": 0,
+          "end_utf8": 1835,
+          "sha256": "f392f6c9e8ef300c43ab9e5ad57e65f1ea7d05cded9e3220b805ceca9e5b14f4",
+          "quote": "Document\n  H2 (block):\n     /Placement /Block\n     /SpaceBefore 0.2\n    \"DMG Chapter 07 - Part 06: Severe disablement allowance, SPC, \"\n    \"Widow’s Benefit, Bereavement Benefit and Winter Fuel Payments \"\n    \"076960 - 078059\"\n  Sect\n    H3 (block):\n       /Placement /Block\n      \"Subpages\"\n    L (block)\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.291\n             /StartIndent 0.424\n            \"•\"\n            \"European legislation referred to in Chapter 07 - Part 6 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n            \"Agreements referred to in Chapter 07 - Part 6 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n            \"Severe disablement allowance and SPC 076960 - 077029 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n            \"Widow's or Bereavement Payment 077030 - 077234 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n            \"Winter Fuel Payments 077235 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n            \"Appendix 1 WFPs – pre 21.7.11 Guidance \"\n  H2 (block):\n     /Placement /Block\n     /SpaceBefore 0.2\n    \"European legislation referred to in Chapter 07 - Part 6\"\n  Sect\n",
+          "source_url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf"
+        },
+        {
+          "evidence_kind": "pdf-structure",
+          "document_key": "adm:adm-chapter-c1",
+          "manifest_path": "pdf-structure/bounded-v2/manifest.json",
+          "manifest_sha256": "1639ad479e882d6a4d20a09e859f872a58060e2250f14c0702cfa20ff0b7f61b",
+          "structure_path": "pdf-structure/bounded-v2/adm/adm-chapter-c1.structure.json",
+          "structure_sha256": "31544e9f22144ce69a22008b0331e4c0eb7c3451a7addaa87e2d77bbcbb13199",
+          "tree_path": "pdf-structure/adm/adm-chapter-c1.tree.txt",
+          "tree_sha256": "32727788fe24b8a3840b6af92a3b38812a7676ac61f337eb0667979bb845fbfa",
+          "pdf_sha256": "05e2c02fad77e7d7a21d77de410639fa38984fa330a7f8fb48aabc815c7d3a91",
+          "tree_line_start": 1,
+          "tree_line_end": 65,
+          "start_utf8": 0,
+          "end_utf8": 1672,
+          "sha256": "4930651237356cd9747b5fbe93ec1fe001274a610a2a0c5ba6c23848b309ede1",
+          "quote": "Document\n  H2 (block):\n     /Placement /Block\n     /SpaceBefore 0.2\n    \"ADM Chapter C1: Universal Credit - International Issues\"\n  Sect\n    P (block):\n       /Placement /Block\n      \" \"\n    P (block):\n       /Placement /Block\n       /SpaceBefore 0.393\n      \" \"\n    H3 (block):\n       /Placement /Block\n       /SpaceBefore 0.533\n      \"Subpages\"\n    L (block)\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.291\n             /StartIndent 0.424\n            \"•\"\n            \"Introduction C1001 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n            \"Overview of the Rules C1002 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n            \"Definitions C1003 - C1039 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n            \"Persons Subject to Immigration control, Asylum Seekers & Dual Nationals C1040 - C1119 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n            \"The Presence Condition C1120 - C1165 \"\n      LI (block)\n        LBody (block)\n          P (block):\n             /Placement /Block\n             /SpaceBefore 0.114\n             /StartIndent 0.424\n            \"•\"\n",
+          "source_url": "https://assets.publishing.service.gov.uk/media/693ac62a33c7ace9c4a42029/adm-c1.pdf"
+        }
+      ],
+      "legal_effect": "not-established",
+      "unknowns": [
+        "Declared PDF roles can be incomplete or incorrectly used; this is not rendered-PDF, accessibility, coherent-unit or specialist acceptance.",
+        "Poppler tree line numbers are not PDF page locators. The four quoted trees do not establish a universal grammar or verified coverage of all captured documents.",
+        "The separate 513-document observation includes untagged and bounded-failure outcomes; no unavailable or partial tree is promoted to a complete heading model."
+      ]
     }
   ],
   "learning_paths": [
@@ -749,7 +846,8 @@
             "https://chris-page-gov.github.io/okf-dwp/manual-guide/convention/adm-lettered-identifiers",
             "https://chris-page-gov.github.io/okf-dwp/manual-guide/convention/memo-local-numbering",
             "https://chris-page-gov.github.io/okf-dwp/manual-guide/convention/mixed-contents-and-body",
-            "https://chris-page-gov.github.io/okf-dwp/manual-guide/convention/nested-contents"
+            "https://chris-page-gov.github.io/okf-dwp/manual-guide/convention/nested-contents",
+            "https://chris-page-gov.github.io/okf-dwp/manual-guide/convention/source-embedded-structure"
           ]
         },
         {
