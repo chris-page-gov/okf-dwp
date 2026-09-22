@@ -208,3 +208,12 @@ still lacking a unit profile. Separate packages track profile migration and
 compact-delivery admission. The five small-budget focused packages retain no
 source evidence; the larger packages retain 37 of 37 declared paths and remain
 insufficient. Bounded delivery of those larger packages is a separate checked capability.
+
+## Discovery ranking diagnostics — 22 September 2026
+
+`DWP-BL-007.discovery-ranking-probes` records two completed offline probes with
+independent arithmetic checks. The [retained results](../evaluation/discovery-probe/README.md)
+reject simple alias expansion and identify length-aware ranking as a lead.
+They do not close `DWP-BL-007.discovery-cards`, task discrimination, unit boundary
+review or answerability. Summary cards and their independent relevance evaluation
+remain unimplemented; no production ranking change is claimed.

@@ -10,6 +10,8 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Retain two independently checked offline ranking probes on the same 40 questions. Token-level alias expansion loses tracked candidate locations; length-aware BM25 gains four without losses but still selects incomplete or wrong-subject fragments. Preserve fixed protocols, exact inputs and all results. The live ranker, source units and answerability statuses are unchanged; summary-card implementation remains open.
+
 - Record the source-bound discovery diagnosis and a separate summary-card experiment: literal ranking does not use declared aliases, while a bounded sample exposes incorrect inherited headings. Broader retrieval improvement remains unimplemented and explicitly tracked.
 
 - Add 29 source-bound logical excerpts, scoped dependency routes and two PIP profiles through an explicit additive authoring registry; preserve old inputs and all unresolved legal obligations. Keep the F1093 reserved-range and P4019/P4051 scope mismatches visible.
