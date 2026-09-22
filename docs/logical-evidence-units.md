@@ -2,7 +2,7 @@
 
 [Learning path](learning-path.md) · [Backlog](backlog.md) · [Earlier abroad review](abroad-semantic-audit.md)
 
-**Implemented and locally verified, 22 September 2026; public verification recorded separately.** This is an independent research
+**Implemented and verified in the public Reader, 22 September 2026.** This is an independent research
 publication, not an official DWP service or an entitlement decision.
 
 ## Why a page is not enough
@@ -137,9 +137,11 @@ index is `logical-context/manifest.json`.
 with the compatible Explorer build from
 [PR 140](https://github.com/chris-page-gov/okf-explorer/pull/140).
 The source pin identifies unchanged logical data from this implementation;
-exact public application and CI observations are recorded in the
-[DWP PR handover](https://github.com/chris-page-gov/okf-dwp/pull/28), separately
-from the checked-in local browser receipt. The existing combined Reader and remote
+the [public browser and WebMCP observation](../validation/logical-context/public-adfa7137/browser-observation.json)
+verifies this pinned source with Explorer commit `69d38b1c`. UI, JSON and actual
+WebMCP build/explain calls agree on the context ID; no public console warnings
+or errors were recorded. Exact merged CI and documentation deployment status
+remain in the [DWP PR handover](https://github.com/chris-page-gov/okf-dwp/pull/28). The existing combined Reader and remote
 service keep their separately recorded versions. Do not describe this build as
 a new default deployment of `ask-okf.crpage.chatgpt.site`.
 

@@ -51,6 +51,10 @@ jobs:
         run: uv run --locked python scripts/check_private_inputs.py
       - name: Validate the canonical repository contracts
         run: uv run --locked python scripts/check_semantic_contract.py
+      - name: Check backlog references before expensive corpus verification
+        run: |
+          uv run --locked python scripts/check_backlog.py
+          uv run --locked python scripts/build_backlog_work_packages.py --check
       - name: Verify retained public-browser evidence offline
         run: uv run --locked python scripts/check_browser_evidence.py
       - name: Verify the retained learning-site publication offline
@@ -264,10 +268,8 @@ jobs:
           uv run --locked python scripts/test_pinned_public_household_observation.py
           uv run --locked python scripts/check_disability_public_observation.py
           uv run --locked python scripts/test_disability_public_observation.py
-      - name: Check the public backlog and retained answer trials offline
+      - name: Check retained answer trials offline
         run: |
-          uv run --locked python scripts/check_backlog.py
-          uv run --locked python scripts/build_backlog_work_packages.py --check
           uv run --locked python scripts/evaluate_fixed_answers.py
           uv run --locked python scripts/check_answer_review.py
           uv run --locked python scripts/check_compact_client.py

@@ -129,3 +129,24 @@ acceptance, model-quality improvement or new public service default is claimed.
 - Updated the portable methodology and retrospective: establish source-bound
   logical units before semantic generation; keep boundary accuracy, dependency
   completeness, source census and answer quality as separate checks.
+
+## Public Reader verification and CI correction
+
+- [Explorer PR 140](https://github.com/chris-page-gov/okf-explorer/pull/140) merged
+  as `69d38b1c3c17939236f880e391746bf794623dda`; all required head checks passed.
+  [Pages run 35741046500](https://github.com/chris-page-gov/okf-explorer/actions/runs/35741046500)
+  rebuilt and publicly verified that exact merge.
+- The [separate DWP public observation](../validation/logical-context/public-adfa7137/browser-observation.json)
+  verified 50,524 Reader records, 513 sources, seven Search results for 077001,
+  complete cross-page examples and directed support. The public UI JSON equals
+  the actual WebMCP build result; explain returns the same context ID. The
+  440,273-byte package remains insufficient, with 18 records and eight edges.
+  Exact public HTTP hashes and the Explorer deployment receipt are retained
+  beside that observation. Old local warnings are identified separately.
+- [DWP CI 35740413305](https://github.com/chris-page-gov/okf-dwp/actions/runs/35740413305)
+  caught unregistered work-package evidence: child entries referenced new files
+  missing from their parent evidence lists. Registered those same existing files
+  at the parent level; the validator was not weakened. Moved its cheap check
+  before expensive corpus validation so future errors fail promptly. The failed
+  run remains available; successful unit/source checks are not represented as
+  an overall successful CI run.
