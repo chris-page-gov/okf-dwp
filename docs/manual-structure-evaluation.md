@@ -118,6 +118,10 @@ Independent synthetic review controls exercise failure modes beyond those eight 
 
 After the scoped reference and auxiliary-region follow-ups, [candidate-initial-06](../evaluation/manual-structure/runs/candidate-initial-06/report.json) passed **4/4**, followed by [candidate-expanded-05](../evaluation/manual-structure/runs/candidate-expanded-05/report.json) at **8/8**. Both new helper modules are included in those implementation bindings; earlier reports remain unchanged. A later independent source review found a wrapped citation, 77164, being mistaken for a new paragraph inside 77161. The generic cue-based repair then passed [candidate-initial-07](../evaluation/manual-structure/runs/candidate-initial-07/report.json) at **4/4**, followed by [candidate-expanded-06](../evaluation/manual-structure/runs/candidate-expanded-06/report.json) at **8/8**. The original source-bound failure and corrected observation remain in [the auxiliary review records](../evaluation/manual-structure/auxiliary-review/).
 
+The complete-corpus outlier review then found two further source structures: a wrapped chapter citation inside ADM memo 06/21, and a spaced Appendix 3 heading after the complete cross-page example in historical DMG volume 8 amendment 27. The generic repair passed [candidate-initial-08](../evaluation/manual-structure/runs/candidate-initial-08/report.json) at **4/4**, followed by [candidate-expanded-07](../evaluation/manual-structure/runs/candidate-expanded-07/report.json) at **8/8**, with the same implementation and matching bindings for the source observations shared with the initial run. No bindings changed during those runs.
+
+The [memo and appendix follow-on](../evaluation/manual-structure/auxiliary-review/memo-appendix-follow-on/README.md) adds **three separate source regression controls**, all passing after the repair and all failing against the retained previous parser. They check that the memo citation remains a reference, actual memo sections and annotations remain separate, and the appendix starts after the complete example. They do not change the four/eight-case denominator. The reviewer initially expected an additional PDF heading that the retained alignment did not support; that failed expectation and the corrected control are both preserved. The memo's broad Background section still spans pages 2–8, with its complete legal dependencies unresolved. These follow-on expectations and the repair were developed concurrently, not as a blinded experiment.
+
 The eight review controls now pass. They also check exact Unicode byte offsets, untagged byte conservation, misleading out-of-range headings and nested memo list numbers. They increase confidence in these particular invariants; they do not turn the eight source cases into a representative legal or whole-corpus quality sample.
 
 The separate PDF observer review found an ancestor-text memory amplification risk. Its bounded reparse now counts retained text and joiners before appending them and preserves both the original observations and the genuine bounded failure. See [the PDF observation record](../pdf-structure/README.md).
@@ -140,7 +144,18 @@ For the staff questions, keep these measures separate:
 - **Profile activation:** did an authored task profile activate? This measures declared routing, not answer accuracy. An unprofiled question may still retrieve useful evidence.
 - **Whole-unit delivery:** did the consumer receive the complete passage, including examples and qualifications?
 - **Relationship and dependency coverage:** were the declared paths preserved, and which referenced definitions, exceptions or other obligations remain unresolved?
+- **Location navigation:** were the original candidate source locations mapped to full new units, and were their navigation routes actually delivered? Report restored original routes and newly inferred profile-to-candidate routes separately. A unit selected lexically is not a delivered relationship path. Neither kind of route fulfils the original page-based evidence requirements or closes any of their 203 open obligations.
 - **Claim support:** can an answer's individual statements be traced to sufficient applicable evidence? This needs a separately governed answer evaluation.
 - **Delivery size and performance:** what are the selected source bytes, transported bytes, latency and truncation boundaries?
 
 Retain ambiguous-benefit, unknown-benefit, reserved-range, abbreviation-only and conflicting-version controls. If model answers are tested, use a separate fixed-evidence protocol. Neither summary cards nor structural acceptance alone demonstrate better answers or lower cost.
+
+### Keeping navigation and support scores separate
+
+The pure [context metrics helper](../scripts/structured_context_metrics.mjs) observes an assembled package without changing it. It checks every path's actual directed endpoints, selected records and concept guards, then measures location routes separately from required evidence paths. A guard is a declared set of concepts that must all resolve from the question before a route is applicable.
+
+The helper retains the declared obligation denominator even when a small output budget refuses all records or metadata. It verifies the complete record fingerprint for selected mapped units and rejects a claimed closure of an original obligation-bearing requirement. Its [negative controls](../scripts/test_structured_context_metrics.mjs) include wrong endpoints, mismatched guards, changed records, missing paths and an unrelated benefit. Passing these scoring controls does not mean any staff question is answerable; that finding belongs in a separately bound corpus evaluation.
+
+```sh
+node --test scripts/test_structured_context_metrics.mjs
+```
