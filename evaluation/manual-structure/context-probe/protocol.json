@@ -1,0 +1,58 @@
+{
+  "schema": "okf-dwp-structured-context-probe.v1",
+  "status": "fixed-before-full-corpus-context-results",
+  "cases": {
+    "path": "evaluation/staff-questions/cases.json",
+    "bytes": 205988,
+    "sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a"
+  },
+  "denominator": 40,
+  "stages": [
+    "logical-context",
+    "structured-context"
+  ],
+  "budgets": [
+    32768,
+    524288
+  ],
+  "ranking": {
+    "schema": "okf-bm25.v1",
+    "k1": 1.2,
+    "b": 0.75,
+    "score_scale": 1000000,
+    "fields": [
+      "source",
+      "discovery"
+    ]
+  },
+  "measures": [
+    "retained_source_units",
+    "retained_source_text_bytes",
+    "retained_authored_paths",
+    "open_requirements",
+    "resolved_concepts",
+    "source_and_discovery_ranking",
+    "card_diagnostic_bytes",
+    "truncation",
+    "integrity",
+    "local_time"
+  ],
+  "limits": [
+    "Known development questions; no independent relevance or answer-accuracy claim.",
+    "Existing obligations and all insufficient results remain visible.",
+    "No model or network calls; no ranking tuning on these results.",
+    "Source structure tests are distinct from this forty-question census."
+  ],
+  "source_bindings": [
+    {
+      "path": "logical-context/manifest.json",
+      "bytes": 724857,
+      "sha256": "c040b484c4a73dffce7d542fd6089677fc626a286c6004b8570c79f2b296bdc6"
+    },
+    {
+      "path": "structured-context/manifest.json",
+      "bytes": 457546,
+      "sha256": "3955a4b4cee596a5c7fde339bee81f21332c6d969567b9ae5dccdc3b686db1ec"
+    }
+  ]
+}
