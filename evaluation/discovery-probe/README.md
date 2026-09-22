@@ -82,6 +82,11 @@ recomputed every candidate ranking and checked the interpretation. It found no
 blocker for this diagnostic scope. It did not endorse runtime adoption or claim
 that structured cards had been tested.
 
+A separate [publication review](publication-review.md) checked preservation,
+confinement and documentation. Its minor reproduction clarification is addressed
+in `6acb36d1`: the instructions below explicitly preserve existing outputs in an
+isolated scratch checkout.
+
 ## Reproduction and retained failure
 
 Use an isolated scratch checkout of this research revision. A clean checkout
