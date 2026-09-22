@@ -203,3 +203,19 @@ comparisons remain in the [work log](logical-units-work-log.md).
    receipts. Admit a new service version only after its own checks pass.
 7. Keep the beginner guide, machine backlog, changelog and publication status in
    step with the actual implementation and observed results.
+
+## Learning-programme integration
+
+The combined descriptor is a template input to the logical-context Reader.
+Adding learning metadata therefore changes the dependent build identity even
+when all source-unit text, boundaries and semantic relationships are unchanged.
+The logical Reader explicitly excludes the combined corpus's teaching overlay:
+its lesson routes do not exist in the separate unit corpus.
+
+The integration rebuild replays the same 184 contexts and seven negative
+controls, with no network or model calls. Every result still reports insufficient
+evidence. The earlier evaluation is retained unchanged under
+[evaluation history](../evaluation/logical-units/history/pre-learning-2026-09-22/summary.json).
+Historical public observations continue to identify their original builds;
+they do not certify this new snapshot. The learning programme does not resolve
+corpus-wide review, compact evidence delivery or remote-service adoption.

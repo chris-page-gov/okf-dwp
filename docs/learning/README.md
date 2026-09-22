@@ -10,7 +10,7 @@ The authoritative curriculum is [programme.yamlld](../../domain-profile/learning
 The combined builder generates real `learning/pNN/sNN` records, bounded search
 and locator entries, semantic identities and the Reader's v2 teaching overlay.
 Teaching references link existing evidence without creating legal assertions.
-The preserved pilot, full-DMG release and logical-unit corpus are not rebuilt.
+The pilot, full-DMG release and authored logical units remain unchanged. The dependent logical-context Reader is rebound and its evaluation replayed when its combined-descriptor input changes.
 
 This branch builds on DWP `311f7ff9`, including the parallel logical-evidence-unit
 work. Source-page anchors remain valid. The curriculum explicitly distinguishes

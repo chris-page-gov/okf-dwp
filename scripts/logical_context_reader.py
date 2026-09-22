@@ -165,6 +165,8 @@ def emit_reader(inputs, corpus, units, semantic, declarations, corpus_outputs):
     put("data/semantic/manifest.json", semantic_manifest)
     # Keep the existing large-corpus wire format, replacing every data binding.
     descriptor = deepcopy(json.loads(inputs.read("combined/okf-explorer.json")))
+    # Teaching routes belong to the combined corpus, not this separate unit corpus.
+    descriptor.pop("learning_presentation", None)
     descriptor.update(title=TITLE, description=corpus["limitations"][0], snapshot=snapshot, snapshot_id=snapshot, counts=counts, generated_at=when)
     descriptor.pop("consumer", None)  # Exact tested engine identity is bound by the evaluation receipt.
     descriptor["entrypoints"] = {"markdown_index": "index.md"}
