@@ -1,0 +1,57 @@
+{
+  "schema": "okf-local-bounded-code-source-review.v1",
+  "status": "no-blocker-in-reviewed-scope",
+  "review_scope": "Auxiliary helper/source-bound controls and root parser integration; no full corpus rebuild, legal interpretation or specialist acceptance.",
+  "files": [
+    {
+      "path": "scripts/manual_auxiliary_structure.py",
+      "bytes": 8662,
+      "sha256": "8210d197c9d8e644bcf8f3bf13c43f89f3c6460ad4b82e7c11c783c6be80f35b"
+    },
+    {
+      "path": "scripts/test_manual_auxiliary_structure.py",
+      "bytes": 12639,
+      "sha256": "9cd30406a850a38cda2e3630acd0b66dcf94cc39bbc0443ec0aa8e325f39566e"
+    },
+    {
+      "path": "scripts/manual_structure.py",
+      "bytes": 21396,
+      "sha256": "9c572807b14b6aa2fe623db9966cac804d60cd0ee52300d1b0f9f9f8a68fa712"
+    },
+    {
+      "path": "scripts/test_manual_structure.py",
+      "bytes": 5036,
+      "sha256": "9688b66becad95f949abc5e36231b5f7ab9a65e1237958634abd347230e4e4a5"
+    }
+  ],
+  "source_fixtures": {
+    "path": "/Users/crpage/tmp/okf-auxiliary-source-review/registered-fixtures.json",
+    "sha256": "7f2004aac5787cbafd8a800eec1e418704be0082b748a4268422e746f76b51d9"
+  },
+  "literal_census": {
+    "path": "/Users/crpage/tmp/okf-auxiliary-source-review/literal-region-census.json",
+    "sha256": "cacbf85fef754cb115096199def0db5f45fc09b1f9da1e96d5471c319895fecc"
+  },
+  "visual_source_checks": [
+    "DMG67 PDF152:67956-67999 is a standalone line; PDF153 is Appendix1 table.",
+    "DMG42 PDF112: illustrative-examples notice is a separate two-line footer; PDF113 starts Appendix2 memo."
+  ],
+  "controls": {
+    "helper_tests": 13,
+    "result": "passed",
+    "parent_reported_integrated_parser_controls": 10,
+    "parent_reported_result": "passed; not rerun by reviewer"
+  },
+  "integration_findings": [
+    "Reserved lines are removed from continuing paragraph starts and represented as explicitly ended regions.",
+    "Old next-numbered-paragraph notice region removed.",
+    "Next paragraph cannot pull its preceding heading across an auxiliary region.",
+    "Memo numbering remains diagnostic candidate-only, never paragraph events.",
+    "Exact original byte partition/reconstruction checks retained."
+  ],
+  "limitations": [
+    "Broader source structure and references remain machine proposals with unresolved legal dependencies.",
+    "A smaller correctly labelled notice/reserved census can increase honestly unresolved material; it does not establish complete semantic coverage.",
+    "Earlier generated outputs and source experiment receipts were not rebuilt or replaced."
+  ]
+}
