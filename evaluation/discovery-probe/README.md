@@ -69,6 +69,12 @@ This does not change the current release's `insufficient` results. It also does
 not justify bulk generation of unchecked summaries. The proposed structural and
 semantic-card arms remain unimplemented.
 
+## Separate length-aware experiment
+
+A subsequent [fixed-parameter ranking probe](length-ranking.md) tests the
+long-fragment diagnosis. It retains its own protocol and observation. Its
+results do not change this alias probe or validate summary cards.
+
 ## Independent check
 
 The [independent review](independent-review.md) verified all 234 input bindings,
