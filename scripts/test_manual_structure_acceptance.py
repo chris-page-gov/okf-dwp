@@ -368,7 +368,7 @@ def evaluate_source_cases(stage: str, engine: str, output: Path, initial_report:
             current = {row["path"]: row["sha256"] for row in gate.get("implementation_bindings", [])}
             required = {"scripts/test_manual_structure_acceptance.py", "scripts/manual_structure.py",
                         "scripts/pdf_structure_alignment.py", "scripts/build_logical_units.py",
-                        "scripts/build_pdf_structure.py", "profiles/pdf-structure/v1/document.schema.json"}
+                        "scripts/manual_references.py", "scripts/build_pdf_structure.py", "profiles/pdf-structure/v1/document.schema.json"}
             if not required <= current.keys():
                 raise ValueError("Expanded gate lacks complete current implementation bindings")
     selected = next(row["case_ids"] for row in protocol["stages"] if row["id"] == stage)
@@ -376,7 +376,7 @@ def evaluate_source_cases(stage: str, engine: str, output: Path, initial_report:
     consumed_structure = {}
     implementation_paths = ["scripts/test_manual_structure_acceptance.py", "scripts/manual_structure.py",
                             "scripts/pdf_structure_alignment.py", "scripts/build_logical_units.py",
-                            "scripts/build_pdf_structure.py", "profiles/pdf-structure/v1/document.schema.json"]
+                            "scripts/manual_references.py", "scripts/build_pdf_structure.py", "profiles/pdf-structure/v1/document.schema.json"]
     before_implementation = [{"path": path, "sha256": digest((ROOT / path).read_bytes())} for path in implementation_paths]
     started = time.perf_counter()
     for case in cases:

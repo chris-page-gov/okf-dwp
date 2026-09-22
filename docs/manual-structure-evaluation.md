@@ -126,6 +126,10 @@ Independent production controls in [test_structured_context.py](../scripts/test_
 
 The full **513-document census** and **40 unchanged staff questions** are a separate corpus evaluation. They are not another small experiment with cases added until the score improves.
 
+The [remaining-task review](../evaluation/manual-structure/remaining-task-review.json) maps the 32 previously unprofiled staff questions and their 163 outstanding obligations to the new source locations. All 203 original obligations remain. Eight profile activations out of 40 measures declared task routing; it does not mean that the other 32 questions retrieve no evidence. The location maps are migration leads, not semantic equivalence or automatic closure. Bounded, source-read authoring proposals prioritise PC foundations, household/Housing Benefit direction, and Carer conditions.
+
+That further source reading found memo word-order, paragraph-range and chapter-part references that the first parser missed or narrowed. The separate `manual_references.py` follow-up retains ranges without expanding them, preserves unsupported/multiple qualifiers as unresolved, and inherits list scope only from explicit compatible references. Nineteen controls cover these forms, including financial numbers after an unsupported “at” cue. This follow-up does not retrospectively alter the frozen source-case or corpus results above; its integration requires a new four/eight-case run.
+
 For the whole corpus, measure bytes conserved, document roles, uncertain boundaries, unsupported structures, unresolved headings and references, processing time and output size. Processing a document is not semantic or specialist review.
 
 For the staff questions, keep these measures separate:
