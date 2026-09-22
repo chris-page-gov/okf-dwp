@@ -1114,6 +1114,77 @@
         "browser",
         "release"
       ]
+    },
+    {
+      "id": "logical-source-unit-proposals",
+      "label": "Logical source units and explicitly authored boundaries",
+      "kind": "structured-data-folder",
+      "paths": [
+        "domain-profile/logical-units/**",
+        "logical-units/**",
+        "logical-context/**"
+      ],
+      "origin": "mixed",
+      "authority": "mixed",
+      "snapshot_policy": "content-addressed",
+      "rights": {
+        "status": "mixed",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md",
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/LICENSE",
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/docs/adm-acquisition.md"
+        ],
+        "limitations": [
+          "MIT-original-structure; OGL-source-passages-with-exceptions",
+          "Licence and source-level exceptions remain as documented in the linked evidence; this classification is not a new rights clearance."
+        ]
+      },
+      "limitations": [
+        "All source bytes are accounted against frozen DMG and ADM inventories. Machine structural candidates and agent-reviewed boundaries are not specialist semantic acceptance.",
+        "Old corpus modes and evidence obligations remain frozen; logical mode has separate scoped proposals."
+      ],
+      "formats": [
+        "application/ld+yaml",
+        "application/json",
+        "application/gzip",
+        "text/markdown"
+      ],
+      "inventory": {
+        "method": "content-addressed-manifest",
+        "manifest_path": "logical-units/manifest.json",
+        "identity": [
+          "relative-path",
+          "bytes",
+          "sha256",
+          "source-identifier",
+          "source-version"
+        ]
+      },
+      "extraction": {
+        "mode": "deterministic-local",
+        "network_access": "prohibited",
+        "command_ids": [
+          "logical-unit-build",
+          "logical-context-build"
+        ],
+        "limitations": [
+          "Deterministic projection of frozen local sources and public evaluation data; no network, source refresh, model inference or personal case data."
+        ]
+      },
+      "sensitivity": {
+        "status": "not-assessed",
+        "assessment": "Only public guidance, catalogue metadata and project-authored research are in this declared family. No claimant case files are acquired. An exhaustive personal-data assessment of all public source content is not claimed.",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md"
+        ]
+      },
+      "invalidates": [
+        "semantic",
+        "runtime",
+        "documentation",
+        "browser",
+        "release"
+      ]
     }
   ],
   "boundaries": {
@@ -1398,7 +1469,15 @@
         "domain-profile/legal-bodies/**",
         "scripts/build_legal_body_evidence.py",
         "scripts/test_legal_body_evidence.py",
-        "scripts/test_household_semantic.py"
+        "scripts/test_household_semantic.py",
+        "logical-units/**",
+        "logical-context/**",
+        "domain-profile/logical-units/**",
+        "scripts/build_logical_units.py",
+        "scripts/build_logical_context.py",
+        "scripts/logical_context_*.py",
+        "scripts/test_logical*.py",
+        "scripts/evaluate_logical_context.mjs"
       ],
       "command_ids": [
         "build-check",
@@ -1424,7 +1503,12 @@
         "staff-semantic-check",
         "staff-semantic-evaluation",
         "legal-body-build",
-        "legal-body-check"
+        "legal-body-check",
+        "logical-unit-build",
+        "logical-unit-check",
+        "logical-context-build",
+        "logical-context-check",
+        "logical-unit-controls"
       ]
     },
     {
@@ -1485,7 +1569,15 @@
         "scripts/test_review_navigation.py",
         "combined/**",
         "scripts/build_combined_reader.py",
-        "scripts/test_combined_reader.py"
+        "scripts/test_combined_reader.py",
+        "logical-units/**",
+        "logical-context/**",
+        "domain-profile/logical-units/**",
+        "scripts/build_logical_units.py",
+        "scripts/build_logical_context.py",
+        "scripts/logical_context_*.py",
+        "scripts/test_logical*.py",
+        "scripts/evaluate_logical_context.mjs"
       ],
       "command_ids": [
         "context-discovery-build-check",
@@ -1494,7 +1586,12 @@
         "review-navigation-controls",
         "combined-reader-build",
         "combined-reader-check",
-        "context-performance-check"
+        "context-performance-check",
+        "logical-unit-build",
+        "logical-unit-check",
+        "logical-context-build",
+        "logical-context-check",
+        "logical-unit-controls"
       ]
     },
     {
@@ -2599,6 +2696,76 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 5
+      },
+      {
+        "id": "logical-unit-build",
+        "kind": "build",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_logical_units.py",
+        "source": "docs/logical-evidence-units.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "logical-unit-check",
+        "kind": "check",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_logical_units.py --check",
+        "source": "docs/logical-evidence-units.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "logical-context-build",
+        "kind": "build",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_logical_context.py",
+        "source": "docs/logical-evidence-units.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "logical-context-check",
+        "kind": "check",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_logical_context.py --check",
+        "source": "docs/logical-evidence-units.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "logical-unit-controls",
+        "kind": "test",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python -m unittest discover -s scripts -p 'test_logical*.py'",
+        "source": "docs/logical-evidence-units.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 20
       }
     ]
   },
@@ -2626,7 +2793,9 @@
       "docs/publication-contract-details.json",
       "combined/**",
       "tools/learning-site/**",
-      "evidence-examples/**"
+      "evidence-examples/**",
+      "logical-units/**",
+      "logical-context/**"
     ],
     "documentation_paths": [
       "README.md",
@@ -2788,6 +2957,7 @@
     "The original project-authored and pinned-consumer command labels describe origin rather than review. They map to unreviewed; existing reviewed-local-guidance labels are preserved only for the prior AGENTS.md commands.",
     "The 20 September additive increment preserves frozen source/runtime releases. Fresh listing metadata is not a fresh PDF-body verification; reference-only legal metadata is not substantive legal evidence.",
     "The household candidate adds bounded statutory body evidence without closing the 203 recorded obligations. Earlier model trials and browser observations retain their exact source and engine bindings; fresh candidate verification is separate.",
-    "Retained evidence archives require a Git-bound publication declaration and input/output hashes. Their exporter commit is declared review provenance; the offline publisher checks the approved module hashes rather than fetching or independently attesting a remote Explorer checkout. Delivery integrity is not legal applicability, specialist acceptance or AI answer correctness."
+    "Retained evidence archives require a Git-bound publication declaration and input/output hashes. Their exporter commit is declared review provenance; the offline publisher checks the approved module hashes rather than fetching or independently attesting a remote Explorer checkout. Delivery integrity is not legal applicability, specialist acceptance or AI answer correctness.",
+    "The additive logical-unit build separates page locations from bounded retrieval units, retains source byte accounting and treats automatic boundaries as uncertain. No service default or specialist acceptance is implied by generating these projections."
   ]
 }

@@ -1,0 +1,121 @@
+{
+  "schema": "okf-dwp-logical-concept-authoring.v1",
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dwp": "https://chris-page-gov.github.io/okf-dwp/ns#"
+  },
+  "assertion_status": "model-derived",
+  "review_status": "unreviewed-specialist-review-required",
+  "@graph": [
+    {
+      "@id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/universal-credit",
+      "@type": [
+        "skos:Concept",
+        "dwp:Benefit"
+      ],
+      "label": "Universal Credit",
+      "definition": "Universal Credit is the distinct benefit named in the captured ADM C1 in-GB conditions. Its temporary-absence conditions use months and must not be substituted with Pension Credit weeks. This is not a complete statement of entitlement.",
+      "aliases": [
+        {
+          "label": "UC",
+          "case_sensitive": true
+        }
+      ],
+      "source_unit_keys": [
+        "uc-c1986",
+        "uc-c1988"
+      ],
+      "provenance": [
+        {
+          "source_url": "https://assets.publishing.service.gov.uk/media/693ac62a33c7ace9c4a42029/adm-c1.pdf#page=120",
+          "source_document": "adm-chapter-c1",
+          "source_sha256": "05e2c02fad77e7d7a21d77de410639fa38984fa330a7f8fb48aabc815c7d3a91",
+          "source_artifact": "source/adm-2026-09-19/pages/adm-chapter-c1.json",
+          "artifact_sha256": "117c20e6810738228c3161f5989e528ae84ce9fd09bec3d473573dcfb9ba6b09",
+          "source_field": "pages[119].text",
+          "source_locator": "['C1986']; PDF page 120; UTF-8 bytes 212–654",
+          "span_sha256": "0b4900d9b3787eba9e47a65957340af29b5f0589d433248e47fcf2da59ec3353",
+          "observed_at": "2026-09-19T16:30:36.462471Z",
+          "authority": "Official departmental guidance source; this concept is a model-derived interpretation."
+        }
+      ],
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed-specialist-review-required"
+    },
+    {
+      "@id": "https://chris-page-gov.github.io/okf-dwp/id/logical-concept/temporary-absence",
+      "@type": [
+        "skos:Concept",
+        "dwp:Circumstance"
+      ],
+      "label": "Temporary absence",
+      "definition": "A temporary absence is a circumstance whose consequences depend on the benefit, purpose, expected and actual duration, household role and relevant date. The captured SPC and UC sources have separate conditions; this concept asserts no equivalence between them.",
+      "aliases": [
+        "temporary absence",
+        "temporarily absent",
+        "temporary travel"
+      ],
+      "source_unit_keys": [
+        "spc-077001",
+        "uc-c1986"
+      ],
+      "provenance": [
+        {
+          "source_url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=8",
+          "source_document": "dmg-vol2-ch7-part6",
+          "source_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
+          "source_artifact": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part6.json",
+          "artifact_sha256": "efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9",
+          "source_field": "pages[7].text",
+          "source_locator": "['077001']; PDF page 8; UTF-8 bytes 353–1110",
+          "span_sha256": "5d586c5644de2dfb329939cffa97ec106ac47f6b435c5bbed66c3e553344bfa8",
+          "observed_at": "2026-09-15T19:45:20.305518Z",
+          "authority": "Official departmental guidance source; this concept is a model-derived interpretation."
+        },
+        {
+          "source_url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=9",
+          "source_document": "dmg-vol2-ch7-part6",
+          "source_sha256": "098f0a1af89aca1994aa2e294ba6b98a88bf0bfc324de981d41f5943fe9e9790",
+          "source_artifact": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part6.json",
+          "artifact_sha256": "efc949413b8b364b5cdf7740c9cbd8dd80e4d8d6f6b06b6a001cb395124aaae9",
+          "source_field": "pages[8].text",
+          "source_locator": "['077001']; PDF page 9; UTF-8 bytes 0–458",
+          "span_sha256": "dac7fe4914ff9bb1ef00da9215d21dd63143ca6959d49bd08ebc559174bae50c",
+          "observed_at": "2026-09-15T19:45:20.305518Z",
+          "authority": "Official departmental guidance source; this concept is a model-derived interpretation."
+        },
+        {
+          "source_url": "https://assets.publishing.service.gov.uk/media/693ac62a33c7ace9c4a42029/adm-c1.pdf#page=120",
+          "source_document": "adm-chapter-c1",
+          "source_sha256": "05e2c02fad77e7d7a21d77de410639fa38984fa330a7f8fb48aabc815c7d3a91",
+          "source_artifact": "source/adm-2026-09-19/pages/adm-chapter-c1.json",
+          "artifact_sha256": "117c20e6810738228c3161f5989e528ae84ce9fd09bec3d473573dcfb9ba6b09",
+          "source_field": "pages[119].text",
+          "source_locator": "['C1986']; PDF page 120; UTF-8 bytes 212–654",
+          "span_sha256": "0b4900d9b3787eba9e47a65957340af29b5f0589d433248e47fcf2da59ec3353",
+          "observed_at": "2026-09-19T16:30:36.462471Z",
+          "authority": "Official departmental guidance source; this concept is a model-derived interpretation."
+        }
+      ],
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed-specialist-review-required"
+    }
+  ],
+  "alias_additions": [
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/temporary-care-home",
+      "aliases": [
+        "temporary care home residence",
+        "temporary care-home residence",
+        "temporary care home stay"
+      ],
+      "source_unit_keys": [
+        "spc-temporary-78084",
+        "spc-temporary-78085",
+        "spc-temporary-78086"
+      ],
+      "scope": "Source-backed wording for the distinct temporary residence/stay described in DMG 78084–78086. These aliases do not establish permanent residence or determine household status, benefit payment or entitlement. Earlier aliases and source release remain unchanged.",
+      "review_status": "unreviewed-specialist-review-required"
+    }
+  ]
+}

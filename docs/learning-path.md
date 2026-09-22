@@ -49,6 +49,16 @@ is useful: it tells a reviewer what to check next. It is not source evidence.
 See the [semantic guide](semantic-expansion.md) for examples and the measured
 before/after retrieval results.
 
+### New route: understand why evidence crosses pages
+
+A **page locator** says where to check the original PDF. A **logical evidence
+unit** keeps a passage together, including an example or citation that continues
+onto the next page. A **dependency** names a separate definition or exception
+that must accompany it. Follow [logical evidence units](logical-evidence-units.md)
+to see the implementation, its source checks and remaining uncertainty. The
+earlier page-based evidence and recorded service versions remain separately
+available; a newly generated unit is not specialist acceptance.
+
 Follow a legal citation only after reading its surrounding guidance. A verified
 provision identifier tells you which section or regulation was found; it does
 not prove how it applies. The [legal-reference guide](legal-reconciliation.md)
