@@ -1,0 +1,20 @@
+{
+  "schema": "okf-review-addendum.v1",
+  "prior_receipts": [
+    "pc-and-household-source-review.json",
+    "location-migration-independent-review.json"
+  ],
+  "scope": "Narrow later additions: explicit PC+household default registry and immutable logical-index test fixture; full migration text reconstructed from exact source spans with newline joiner. Earlier review hashes are not rewritten.",
+  "reviewer_observation": "Independent reviewer accepted the direct source-conservation strengthening after inspecting it; no concern in the narrow change.",
+  "checks": {
+    "selection_controls": 16,
+    "migration_controls": 12
+  },
+  "current_files": {
+    "scripts/structured_context_profiles.py": "2b5baaf8f9ef47aa9ec230ee17d54a55fd009e9b040ab587037d9f3f6d15668a",
+    "scripts/test_structured_context_profiles.py": "31c827e83815d0b3e358b45c65242ddac5b35486b5a25a7293c54930038c78a6",
+    "scripts/structured_location_migration.py": "702aa07aba42e3e6c1216d4ecb0535b75204ac382bbe14d378a7f33b800907fd",
+    "scripts/test_structured_location_migration.py": "128b390fd4d82df2b759351983c4d8ea26abf18a3ccff6c11aa165ac60a35517"
+  },
+  "runtime_activation": false
+}

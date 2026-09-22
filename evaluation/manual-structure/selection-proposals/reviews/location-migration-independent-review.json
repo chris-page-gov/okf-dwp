@@ -1,0 +1,54 @@
+{
+  "observed_utc": "2026-09-22T23:34:44.406907+00:00",
+  "scope": "Independent read-only code/test/policy review and bounded in-memory graph integrity checks; no corpus activation or model calls.",
+  "result": "no-blocker-after-missing-prefix-and-local-context-repair",
+  "files": {
+    "scripts/structured_location_migration.py": "702aa07aba42e3e6c1216d4ecb0535b75204ac382bbe14d378a7f33b800907fd",
+    "scripts/test_structured_location_migration.py": "128b390fd4d82df2b759351983c4d8ea26abf18a3ccff6c11aa165ac60a35517",
+    "domain-profile/structured-units/legacy-location-policy.yamlld": "dd4cae01ff2538ed735285326d4152f11d8685046f27eb0ed3e656136f3c02a7",
+    "structured-units/manifest.json": "8b620634bf686566d30c0cf4cd12f69535af7ef546a356333e3b0f9011d15741",
+    "structured-context/manifest.json": "3955a4b4cee596a5c7fde339bee81f21332c6d969567b9ae5dccdc3b686db1ec",
+    "logical-context/manifest.json": "c040b484c4a73dffce7d542fd6089677fc626a286c6004b8570c79f2b296bdc6",
+    "logical-context/base-index.json": "e1a77e9fb72daf9d9c3856b1c0ec0d0ee285798b1cacc632e71e6b8bc4025356"
+  },
+  "counts": {
+    "legacy_requirements": 40,
+    "original_obligations": 203,
+    "candidates": 42,
+    "locations_fully_mapped": 39,
+    "locations_unresolved_or_partial": 3,
+    "location_navigation_assertions": 344,
+    "missing_original_profile_candidate_routes": 28,
+    "profiles_with_location_navigation": 40,
+    "unresolved_original_prefixes": 0,
+    "restored_navigation_routes": 312,
+    "inferred_navigation_routes": 32,
+    "requirements_closed_by_migration": 0
+  },
+  "fully_connected_navigation_paths_checked": 344,
+  "missing_prefix_negative": {
+    "unresolved_original_prefixes": 25,
+    "no_false_connected_routes": true,
+    "old_requirements_preserved": true
+  },
+  "original_review_finding": "The original empty-base fixture was admitted with55 terminal navigation paths containing absent prefix assertion IDs. This exposed a compiler precondition it had not checked; it was not an observed deployment defect. The final fixture uses the complete hash-bound immutable logical context. Independently, the compiler now reports25 affected original paths as unresolved when their prefix assertions are removed, and emits no complete routes for them.",
+  "findings": [
+    "All40 original requirements and203 distinct open obligations are preserved; location overlap never replaces required page IDs or original paths.",
+    "42 hash-bound original candidates convert Unicode-codepoint offsets to exact UTF-8 extents and verify all full-unit continuation spans.",
+    "Location and logical support remain separate:39 complete location mappings and3 partial whitespace gaps do not establish relevance or requirement satisfaction.",
+    "Every emitted route has present edges with the expected endpoints; every new terminal edge carries all original profile trigger concepts.",
+    "28 missing original candidate associations remain visible;32 inferred terminal navigation routes remain labelled model-derived/inferred and do not become old required paths.",
+    "Unknown source hashes, excerpts, record identities, changed spans, weakened authority controls and duplicate application fail closed under the reviewed tests.",
+    "Local authoring context/ID and literal registered source paths/hashes are checked; source YAML tags/aliases/anchors remain prohibited."
+  ],
+  "limits": [
+    "No runtime guard invocation was performed in this review; actual guarded assembly acceptance is separate.",
+    "Navigation over whole proposed units does not upgrade machine boundaries, close dependencies or establish legal answerability or specialist acceptance."
+  ],
+  "source_fixture": "Exact hash-bound earlier logical-context/base-index.json supplies the complete immutable inherited graph; later structured output is not reused or stripped.",
+  "supersedes_review_receipt": {
+    "path": "okf-location-migration-independent-review-2026-09-23.json",
+    "sha256": "685f2436dbd71f58be767d41963f6971c5623bea08b1a2309a9657747268daa5",
+    "reason": "Final test fixture uses the hash-bound frozen logical context directly, rather than reconstructing separately sharded structured adjacency. Original review receipt retained."
+  }
+}
