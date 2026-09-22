@@ -1,0 +1,23 @@
+test_document_notice_cannot_absorb_later_numbered_guidance (test_manual_structure_review.ManualStructureIndependentReviewTests.test_document_notice_cannot_absorb_later_numbered_guidance) ... ok
+test_fragmented_annotation_references_belong_to_each_exact_fragment (test_manual_structure_review.ManualStructureIndependentReviewTests.test_fragmented_annotation_references_belong_to_each_exact_fragment) ... FAIL
+test_memo_nested_list_numbers_are_not_body_paragraph_labels (test_manual_structure_review.ManualStructureIndependentReviewTests.test_memo_nested_list_numbers_are_not_body_paragraph_labels) ... ok
+test_out_of_range_navigation_heading_does_not_govern (test_manual_structure_review.ManualStructureIndependentReviewTests.test_out_of_range_navigation_heading_does_not_govern) ... ok
+test_reclassified_sidecar_cannot_override_unchanged_raw_tree (test_manual_structure_review.ManualStructureIndependentReviewTests.test_reclassified_sidecar_cannot_override_unchanged_raw_tree) ... ok
+test_repeated_heading_without_disambiguating_context_remains_unknown (test_manual_structure_review.ManualStructureIndependentReviewTests.test_repeated_heading_without_disambiguating_context_remains_unknown) ... ok
+test_unique_heading_keeps_exact_original_utf8_offsets (test_manual_structure_review.ManualStructureIndependentReviewTests.test_unique_heading_keeps_exact_original_utf8_offsets) ... ok
+test_untagged_source_remains_complete_partition_and_unreviewed (test_manual_structure_review.ManualStructureIndependentReviewTests.test_untagged_source_remains_complete_partition_and_unreviewed) ... ok
+
+======================================================================
+FAIL: test_fragmented_annotation_references_belong_to_each_exact_fragment (test_manual_structure_review.ManualStructureIndependentReviewTests.test_fragmented_annotation_references_belong_to_each_exact_fragment)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/crpage/tmp/okf-dwp-manual-structure/scripts/test_manual_structure_review.py", line 93, in test_fragmented_annotation_references_belong_to_each_exact_fragment
+    self.assertEqual(actual, reference["literal"], unit["key"])
+AssertionError: '' != 'C1002'
++ C1002
+ : source-0000000040-000
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.019s
+
+FAILED (failures=1)

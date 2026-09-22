@@ -335,7 +335,16 @@ def adapt_parser_output(case: dict, pages: list[dict], units: list[dict], struct
     partition.sort(key=lambda span: (span["page"], span["start_byte"]))
     return {"source": copy.deepcopy(case["source"]), "partition": partition,
             "units": converted, "structures": structures,
+            "structure_provenance": copy.deepcopy(structure.get("pdf_structure", {})),
             "source_instructions_inert": structure.get("source_instructions_inert", False)}
+
+
+def verify_retained_bindings(bindings, root=ROOT):
+    """A passing gate is reusable only with the same consumed source inputs."""
+    for binding in bindings:
+        raw = (root / binding["path"]).read_bytes()
+        if digest(raw) != binding["sha256"] or ("bytes" in binding and len(raw) != binding["bytes"]):
+            raise ValueError("Retained run binding changed: " + binding["path"])
 
 
 def evaluate_source_cases(stage: str, engine: str, output: Path, initial_report: Path | None = None) -> dict:
@@ -354,12 +363,21 @@ def evaluate_source_cases(stage: str, engine: str, output: Path, initial_report:
         if gate.get("protocol_sha256") != digest(PROTOCOL.read_bytes()):
             raise ValueError("Expanded gate belongs to a different frozen protocol")
         if engine == "candidate":
+            verify_retained_bindings(gate.get("implementation_bindings", []))
+            verify_retained_bindings(gate.get("consumed_pdf_structure_bindings", []))
             current = {row["path"]: row["sha256"] for row in gate.get("implementation_bindings", [])}
-            for path in ("scripts/manual_structure.py", "scripts/build_logical_units.py"):
-                if current.get(path) != digest((ROOT / path).read_bytes()):
-                    raise ValueError("Candidate changed after initial pass; retain and rerun initial cases")
+            required = {"scripts/test_manual_structure_acceptance.py", "scripts/manual_structure.py",
+                        "scripts/pdf_structure_alignment.py", "scripts/build_logical_units.py",
+                        "scripts/build_pdf_structure.py", "profiles/pdf-structure/v1/document.schema.json"}
+            if not required <= current.keys():
+                raise ValueError("Expanded gate lacks complete current implementation bindings")
     selected = next(row["case_ids"] for row in protocol["stages"] if row["id"] == stage)
     observations, errors, inputs = {}, {}, []
+    consumed_structure = {}
+    implementation_paths = ["scripts/test_manual_structure_acceptance.py", "scripts/manual_structure.py",
+                            "scripts/pdf_structure_alignment.py", "scripts/build_logical_units.py",
+                            "scripts/build_pdf_structure.py", "profiles/pdf-structure/v1/document.schema.json"]
+    before_implementation = [{"path": path, "sha256": digest((ROOT / path).read_bytes())} for path in implementation_paths]
     started = time.perf_counter()
     for case in cases:
         if case["id"] not in selected:
@@ -372,6 +390,22 @@ def evaluate_source_cases(stage: str, engine: str, output: Path, initial_report:
             if engine == "candidate":
                 from manual_structure import segment_source
                 units, structure = segment_source(source["family"], document, pages)
+                observed_source = structure.get("pdf_structure", {}).get("source")
+                if observed_source:
+                    path = observed_source["path"]
+                    raw_sidecar = (ROOT / path).read_bytes()
+                    if digest(raw_sidecar) != observed_source["sha256"]:
+                        raise ValueError("Consumed PDF structure changed during evaluation")
+                    sidecar = json.loads(raw_sidecar)
+                    related = [path, sidecar["tree"]["path"], sidecar["stderr"]["path"]]
+                    # Bind the exact retained observation manifest when present.
+                    observation_root = Path(path).parent.parent
+                    manifest_path = str(observation_root / "manifest.json")
+                    if (ROOT / manifest_path).is_file():
+                        related.append(manifest_path)
+                    for dependency in related:
+                        data = (ROOT / dependency).read_bytes()
+                        consumed_structure[dependency] = {"path": dependency, "sha256": digest(data), "bytes": len(data)}
             elif engine == "baseline":
                 path = ROOT / f"logical-units/documents/{source['family']}/{source['document_id']}.json.gz"
                 data = path.read_bytes()
@@ -403,11 +437,17 @@ def evaluate_source_cases(stage: str, engine: str, output: Path, initial_report:
                    "source_baseline_commit": protocol["source_baseline_commit"],
                    "runtime_seconds": round(time.perf_counter() - started, 6),
                    "adapter_errors": errors, "baseline_document_bindings": inputs,
-                   "implementation_bindings": [
-                       {"path": path, "sha256": digest((ROOT / path).read_bytes())}
-                       for path in ("scripts/test_manual_structure_acceptance.py", "scripts/manual_structure.py", "scripts/build_logical_units.py")],
+                   "implementation_bindings": before_implementation,
+                   "consumed_pdf_structure_bindings": [consumed_structure[path] for path in sorted(consumed_structure)],
+                   "implementation_changed_during_run": [row["path"] for row in before_implementation if digest((ROOT / row["path"]).read_bytes()) != row["sha256"]],
+                   "pdf_structure_changed_during_run": [path for path, row in consumed_structure.items() if digest((ROOT / path).read_bytes()) != row["sha256"]],
                    "registration_note": "Fixtures predate source-case execution/results; parser drafting occurred concurrently. These are not blinded held-out cases.",
                    "review_boundary": "Structural acceptance only; legal applicability, specialist review and answer quality remain unestablished."})
+    if report["implementation_changed_during_run"] or report["pdf_structure_changed_during_run"]:
+        report["passed_cases"] = 0
+        for row in report["cases"]:
+            row["passed"] = False
+            row["failures"].append("reproducibility:implementation or consumed PDF structure changed during run")
     output.mkdir(parents=True, exist_ok=False)
     encoded = json.dumps(observations, ensure_ascii=False, separators=(",", ":")).encode()
     (output / "observations.json.gz").write_bytes(gzip.compress(encoded, mtime=0))
@@ -422,6 +462,17 @@ class FrozenStructureProtocolTests(unittest.TestCase):
     def setUpClass(cls):
         cls.protocol, cls.cases = load_cases()
         cls.by_id = {case["id"]: case for case in cls.cases}
+
+    def test_changed_consumed_binding_invalidates_reuse(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "sidecar.json").write_bytes(b"original")
+            binding = {"path": "sidecar.json", "sha256": digest(b"original"), "bytes": 8}
+            verify_retained_bindings([binding], root)
+            (root / "sidecar.json").write_bytes(b"modified")
+            with self.assertRaisesRegex(ValueError, "Retained run binding changed"):
+                verify_retained_bindings([binding], root)
 
     def test_case_membership_is_four_then_eight(self):
         initial, expanded = self.protocol["stages"]

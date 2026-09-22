@@ -81,7 +81,7 @@ uv run --frozen python scripts/test_manual_structure_acceptance.py \
   --output evaluation/manual-structure/runs/candidate-expanded-01
 ```
 
-A report records each case's failures, the fixed denominator, source baseline, implementation hashes, time and observations hash. The compressed observations contain inspectable spans, headings, roles and references. Raw source conservation and joined display text are checked separately: a newline inserted between page spans is not an original source byte.
+A report records each case's failures, the fixed denominator, source baseline, implementation hashes, time and observations hash. New runs also bind the imported PDF-alignment/observer modules and every consumed PDF-structure sidecar, raw tree, diagnostics and observation manifest. The active observation manifest and its declared raw-tree paths are used, including bounded reparses that retain the original observations. A module or consumed observation changed during a run invalidates its pass claim. The eight-case gate requires the same implementation and retained observations as its preceding four-case pass. Earlier retained reports remain unchanged; their less complete binding is a recorded limitation. The compressed observations contain inspectable spans, headings, roles and references. Raw source conservation and joined display text are checked separately: a newline inserted between page spans is not an original source byte.
 
 ### Observation contract for another parser
 
@@ -94,6 +94,33 @@ The validator can also accept another implementation through an explicit adapter
 - `source_instructions_inert`: an explicit boundary protecting consumers from instructions embedded in source material.
 
 Spans use one-based PDF page numbers and zero-based UTF-8 byte offsets, with the end excluded. References record a target, kind and unresolved legal effect. Assertions of success supplied by a parser are not accepted as evidence of a passing case.
+
+## Retained results and independent review
+
+Every attempt remains under [the experiment runs](../evaluation/manual-structure/runs/), including failures. The [attempt notes](../evaluation/manual-structure/runs/attempt-notes.md) distinguish a validator correction from changes to the candidate parser.
+
+| Retained attempt | Result | What the observation establishes |
+| --- | --- | --- |
+| `baseline-initial-01` | 0/4 | The first baseline adapter also misread an absent per-unit field as legal promotion. This diagnostic mistake is retained and corrected in the next baseline run. |
+| [baseline-initial-02](../evaluation/manual-structure/runs/baseline-initial-02/report.json) | 0/4 | The frozen earlier catalogue retains complete excerpts but lacks required governing headings, explicit reference kinds or navigation roles. This is not evidence that all source text was missing. |
+| `candidate-initial-01` | 0/4 | Whole passages and governing headings passed, but source citations, navigation classification and the explicit inert-source boundary were incomplete. |
+| `candidate-initial-02` then `candidate-expanded-01` | 4/4, then 5/8 | The doubled set exposed unsupported table, abbreviation-table and memo-section structures. |
+| `candidate-initial-03` then `candidate-expanded-02` | 4/4, then 8/8 | The text-based fallback met all registered structural expectations. |
+| `candidate-initial-04` then `candidate-expanded-03` | 4/4, then 8/8 | The candidate using declared PDF structure met the same expectations. The older report format binds fewer imported inputs. |
+| [candidate-initial-05](../evaluation/manual-structure/runs/candidate-initial-05/report.json) then [candidate-expanded-04](../evaluation/manual-structure/runs/candidate-expanded-04/report.json) | **4/4, then 8/8** | After independent review repairs, the same frozen cases passed with complete implementation and consumed-observation bindings; no binding changed during either run. |
+
+Independent synthetic review controls exercise failure modes beyond those eight cases. They found and led to repairs for:
+
+- repeated heading text being assigned to the first occurrence without enough source context;
+- a sidecar's changed role being trusted without replaying its retained raw tree;
+- an illustrative notice swallowing a later numbered passage;
+- annotations split by the size limit inheriting references and offsets from a different fragment.
+
+The eight review controls now pass. They also check exact Unicode byte offsets, untagged byte conservation, misleading out-of-range headings and nested memo list numbers. They increase confidence in these particular invariants; they do not turn the eight source cases into a representative legal or whole-corpus quality sample.
+
+The separate PDF observer review found an ancestor-text memory amplification risk. Its bounded reparse now counts retained text and joiners before appending them and preserves both the original observations and the genuine bounded failure. See [the PDF observation record](../pdf-structure/README.md).
+
+Independent production controls in [test_structured_context.py](../scripts/test_structured_context.py) check complete-record card commitments, original authored identities, exact reference offsets, global ranking totals, and both copies of directed relationship entries. These are delivery and integrity tests. A source reference remains a navigation observation; it does not establish that the target is legally applicable or closes an evidence requirement.
 
 ## What follows the structural experiment
 

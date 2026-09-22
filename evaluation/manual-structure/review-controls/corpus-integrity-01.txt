@@ -1,0 +1,20 @@
+test_every_catalogue_reference_is_present_at_its_exact_unit_byte_offsets (test_structured_context.StructuredContextArtefactControls.test_every_catalogue_reference_is_present_at_its_exact_unit_byte_offsets) ... ok
+test_every_incident_commitment_has_exact_matching_opposite_endpoint (test_structured_context.StructuredContextArtefactControls.test_every_incident_commitment_has_exact_matching_opposite_endpoint) ... ok
+test_exact_card_census_and_complete_evidence_commitments (test_structured_context.StructuredContextArtefactControls.test_exact_card_census_and_complete_evidence_commitments) ... ok
+test_existing_authored_id_and_record_bytes_are_retained (test_structured_context.StructuredContextArtefactControls.test_existing_authored_id_and_record_bytes_are_retained) ... FAIL
+test_global_ranking_totals_and_posting_frequencies_are_bound (test_structured_context.StructuredContextArtefactControls.test_global_ranking_totals_and_posting_frequencies_are_bound) ... ok
+test_all_unicode_mark_categories_match_consumer_tokens (test_structured_context.StructuredContextHelperControls.test_all_unicode_mark_categories_match_consumer_tokens) ... ok
+test_runtime_commitment_is_canonical_json_without_file_newline (test_structured_context.StructuredContextHelperControls.test_runtime_commitment_is_canonical_json_without_file_newline) ... ok
+
+======================================================================
+FAIL: test_existing_authored_id_and_record_bytes_are_retained (test_structured_context.StructuredContextArtefactControls.test_existing_authored_id_and_record_bytes_are_retained)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/crpage/tmp/okf-dwp-manual-structure/scripts/test_structured_context.py", line 161, in test_existing_authored_id_and_record_bytes_are_retained
+    self.assertEqual(authored, 75)
+AssertionError: 0 != 75
+
+----------------------------------------------------------------------
+Ran 7 tests in 12.655s
+
+FAILED (failures=1)
