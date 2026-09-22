@@ -597,3 +597,7 @@ The earlier Explorer links remain pinned to their original snapshots. Stage-two
 browser verification and publication state are recorded in [repository status](REPOSITORY_STATUS.md).
 
 [Open the stage-two semantic graph in Explorer](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7d3c69df0571b8d5206c8edce92963d99979cb5c%2Fbundle%2Fokf-bundle.yamlld&view=graph#term/capital-disregards). The [pilot browser receipt](validation/cpag-timeline-browser.json) binds this graph and the corrected CPAG Timeline to the checked content commit; the [earlier semantic receipt](validation/stage-two-browser.json) records the detailed relationship journeys.
+
+## Demonstration learning paths
+
+The [demonstration learning programme](docs/learning/README.md) adds 12 paths and 112 activities to the combined Reader, with assessed prerequisites and inspectable evidence. It is independent teaching material, not official DWP training.
