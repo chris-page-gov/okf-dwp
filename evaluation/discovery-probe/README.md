@@ -69,6 +69,13 @@ This does not change the current release's `insufficient` results. It also does
 not justify bulk generation of unchecked summaries. The proposed structural and
 semantic-card arms remain unimplemented.
 
+## Independent check
+
+The [independent review](independent-review.md) verified all 234 input bindings,
+recomputed every candidate ranking and checked the interpretation. It found no
+blocker for this diagnostic scope. It did not endorse runtime adoption or claim
+that structured cards had been tested.
+
 ## Reproduction and retained failure
 
 ```sh
