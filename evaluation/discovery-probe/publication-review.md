@@ -43,3 +43,7 @@ This review is not a new arithmetic replay, full security audit, source-PDF layo
 - `evaluation/discovery-probe/run/runner.mjs`: `ebb976a1f398692c308bd34c23639d2e80a80d34aff4e8985aaa1eab06262ece`
 - `scripts/probe_discovery_length.mjs`: `b24442457c64926d3662ebaaa49b1e32714f75e6acc667a003965a497d8ad76f`
 - `scripts/probe_discovery_terminology.mjs`: `ebb976a1f398692c308bd34c23639d2e80a80d34aff4e8985aaa1eab06262ece`
+
+## Follow-up: reproduction clarification resolved
+
+Reviewed commit `6acb36d181200c0708c52e1cb10adf4bd69a6a85`. Both reproduction sections now explicitly require isolated scratch checkouts and move only the relevant existing output directory to a unique `mktemp` archive. The length run retains its hash-bound alias baseline in place. No script, protocol or result changed. The minor reproduction-documentation recommendation is resolved; no publication blocker remains within this review scope.
