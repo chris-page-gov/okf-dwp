@@ -84,7 +84,26 @@ Existing authored concepts, evidence requirements, paths and open obligations
 are preserved. A new source-reference graph does not silently certify a staff
 question as answerable.
 
-## 5. Understand the four checks
+## 5. Assemble first, deliver in bounded reads
+
+The **assembly budget** limits how much context can be selected together. The
+**delivery budget** limits each response sent to a browser or AI client. They
+need not have the same size. A question with several conditions and exceptions
+may need a larger assembly, delivered through several smaller exact reads.
+
+In the first forty-question experiment, a 32 KiB assembly contained no source
+evidence in the new corpus: the explanations and unresolved obligations already
+used the available space. That result is retained as a failure. A short card
+cannot stand in for the missing evidence. Hash-bound metadata references reduce
+duplication, while the selected source, relationships and unresolved obligations
+remain inspectable. The build still reports when the chosen assembly budget is
+too small.
+
+**KiB** means 1,024 bytes. An **exact read** requests identified content from a
+specific source version and checks its hash. It does not ask an AI to fill in
+an omitted passage from memory.
+
+## 6. Understand the four checks
 
 | Check | What it establishes | What it does not establish |
 | --- | --- | --- |

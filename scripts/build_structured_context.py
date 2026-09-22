@@ -126,7 +126,7 @@ def compile_context(root=ROOT):
                 resolved+=1
     # Stable producer identity includes all source bindings, inherited authored
     # semantics, cards/ranking parameters and the concrete parser versions.
-    for path in ('scripts/build_structured_context.py','scripts/build_structured_units.py','scripts/manual_structure.py',
+    for path in ('scripts/build_structured_context.py','scripts/build_structured_units.py','scripts/manual_structure.py','scripts/manual_references.py','scripts/manual_auxiliary_structure.py',
                  'scripts/pdf_structure_alignment.py','scripts/structured_context_reader.py',
                  'scripts/build_full_dmg.py','scripts/build_combined_reader.py','scripts/build_bundle.py',
                  'combined/okf-explorer.json','profiles/bundle-wiki/v1/context.jsonld',

@@ -1,6 +1,6 @@
 {
   "schema": "okf-dwp-backlog.v1",
-  "updated_on": "2026-09-22",
+  "updated_on": "2026-09-23",
   "status_meanings": {
     "recorded_complete": "Named bounded result has retained evidence, not perpetual assurance.",
     "in_progress": "Work is being prepared or implemented; publication/acceptance is not implied.",
@@ -435,7 +435,10 @@
         "scripts/test_manual_guide.py",
         "scripts/test_pdf_structure.py",
         "structured-units/manifest.json",
-        "scripts/test_manual_structure_review.py"
+        "scripts/test_manual_structure_review.py",
+        "evaluation/manual-structure/context-probe/runs/attempt-01/README.md",
+        "evaluation/manual-structure/runs/candidate-expanded-06/report.json",
+        "evaluation/manual-structure/auxiliary-review/README.md"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
@@ -638,13 +641,14 @@
           "kind": "implementation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "A generic Explorer corpus v3 implementation is independently reviewed with backward replay; DWP has a separate card for each source unit and directed explicit paragraph-reference navigation. Complete the preregistered forty-question comparison, small-budget metadata measurements and public acceptance. Keep authored concepts, cards and evidence distinct; missing obligations remain open.",
+          "next_action": "The first full forty-question v3 comparison is retained and fails acceptance: zero evidence for all 32 KiB assemblies and 40/47 inherited paths at 512 KiB. Complete and independently review concept-first file allocation and hash-bound metadata references, then repeat the fixed-source trial before adoption. Keep cards, concepts, exact evidence and unresolved obligations distinct.",
           "evidence": [
             "docs/discovery-cards-experiment.md",
             "evaluation/semantic-coverage/discovery-card-diagnosis.json",
             "docs/manual-structure-process.md",
             "docs/source-led-manual-guide.md",
-            "evaluation/manual-structure/context-probe/protocol.json"
+            "evaluation/manual-structure/context-probe/protocol.json",
+            "evaluation/manual-structure/context-probe/runs/attempt-01/README.md"
           ]
         },
         {
@@ -683,12 +687,14 @@
           "kind": "implementation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Final bounded source experiments pass four then eight cases; independent ambiguity, provenance, notice and fragment-reference controls pass. First full build preserves 75 authored units and accounts for every source byte. Finish source-led Reader, forty-question comparison, reviewed publication and measured public performance before claiming adoption.",
+          "next_action": "Fresh source-bound gates pass four then eight cases after bounded reserved/notice regions and wrapped-reference continuation repair. Rebuild and review all 513 documents without changing source bytes or 75 authored units. Complete question comparison and publication; memo numbering and unclassified appendix structures remain explicitly unresolved.",
           "evidence": [
             "docs/manual-structure-evaluation.md",
             "evaluation/manual-structure/runs/candidate-expanded-04/report.json",
             "structured-units/manifest.json",
-            "scripts/test_manual_structure_review.py"
+            "scripts/test_manual_structure_review.py",
+            "evaluation/manual-structure/runs/candidate-expanded-06/report.json",
+            "evaluation/manual-structure/auxiliary-review/README.md"
           ]
         }
       ]

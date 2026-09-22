@@ -45,6 +45,60 @@ retained. Repeated-heading ambiguity, notice boundaries, fragment-local
 reference offsets and raw-tree/sidecar binding received regression controls.
 No legal, specialist or model-answer acceptance is inferred from these results.
 
+## Delivery and source-boundary corrections, 23 September 2026
+
+The first full forty-question comparison is retained at
+[`context-probe/runs/attempt-01`](../evaluation/manual-structure/context-probe/runs/attempt-01/README.md).
+It failed acceptance: at 32 KiB the new projection retained no evidence for any
+of the forty staff occurrences; at 512 KiB it retained more source units but
+only 40 of 47 previously declared paths. Eager discovery reads consumed the
+shared file allowance before concept routes, and full card/incident metadata
+consumed payload space. This is a delivery regression, not an answer-quality
+gain. The original engine and corpus remain recoverable at the recorded commits.
+The repair gives resolved-concept routes priority and uses exact hash-bound
+metadata references. The full comparison must be rerun before adoption.
+
+A separate corpus-wide role census found reserved-number ranges and short
+illustrative notices carrying their labels into later appendices. Four exact
+source regressions and independent visual checks now support explicitly ended
+regions. Unclassified following material stays visible as unresolved source;
+it is not discarded or renamed a rule. Memo numbering remains a separate
+candidate observation because PDF paragraph tags alone also label nested points.
+
+After these parser and literal-reference changes, the new
+[`candidate-initial-06`](../evaluation/manual-structure/runs/candidate-initial-06/report.json)
+gate passed 4/4, followed by
+[`candidate-expanded-05`](../evaluation/manual-structure/runs/candidate-expanded-05/report.json)
+at 8/8. These are the same fixed development cases, with the new helper modules
+included in their implementation bindings. Earlier runs remain unchanged.
+
+The runtime comparison retains the same source and authored semantics. New
+Pension Credit and household selection proposals are prepared separately so
+their gains or losses cannot be confused with a ranking or delivery repair.
+
+The [second runtime comparison](../evaluation/manual-structure/context-probe/runs/attempt-02/README.md)
+completed all 164 assemblies with no network/model calls. At 512 KiB the new
+engine restores 47/47 declared paths and reduces median discovery diagnostics
+from 51,339 to 16,447.5 bytes. The 82 legacy-projection packages are byte-identical.
+At 32 KiB all forty new-corpus contexts still contain no evidence; every staff
+result remains insufficient. This repairs a measured regression without making
+an answer-quality claim.
+
+Further source reading found a wrapped range endpoint being misread as paragraph
+77164. A generic continuation check preserves the preceding paragraph's note and
+citation. Source regression, before/after identities and the concurrent fixture
+registration boundary are retained in the auxiliary review. Fresh gates
+`candidate-initial-07` and `candidate-expanded-06` pass 4/4 then 8/8. The corrected
+catalogue has 52,841 units, including all 75 unchanged authored units, and exactly
+35,143,443 original source bytes. More unresolved fragments are now visible
+because erroneous reserved/notice labels no longer conceal the following text.
+
+The unit-count reduction exposed a stale final generated shard. The failed
+post-write admission and exact surplus bytes are retained in
+[`build-history`](../evaluation/manual-structure/build-history/obsolete-shard-2026-09-23/report.json).
+Only that verified generated surplus was removed; deterministic producer replay
+then passed. No frozen source or earlier logical/page projection changed.
+
 ## Starting state and ownership
 
 DWP main: `82bd0a18e9941752798e5f4446eaa8bfb8b46936`.

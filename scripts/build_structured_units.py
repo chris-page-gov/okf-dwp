@@ -25,7 +25,7 @@ def compile_units(root=ROOT):
     config = json.loads(inputs.read('context/corpus-sources.json'))
     overrides = load_overrides(inputs)
     specs = {(d['family'], d['document_id']): d for d in overrides['documents']}
-    for path in ('scripts/build_structured_units.py','scripts/manual_structure.py',
+    for path in ('scripts/build_structured_units.py','scripts/manual_structure.py','scripts/manual_references.py','scripts/manual_auxiliary_structure.py',
                  'scripts/pdf_structure_alignment.py','scripts/build_logical_units.py',
                  'scripts/build_context_corpus.py','manual-guide/manifest.json',STRUCTURE_OUTPUT+'/manifest.json','uv.lock'):
         inputs.read(path)

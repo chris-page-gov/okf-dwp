@@ -10,6 +10,8 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Retain the failed forty-question discovery-corpus comparison and its exact engine/source identities. Repair source-role boundaries after a full-corpus census found reserved ranges and short notices absorbing appendices; rerun the fixed four-case gate and doubled eight-case gate successfully. Evaluate runtime delivery and new semantic profiles separately before adoption.
+
 - Build an additive source-led manual guide, PDF-structure observations, complete source-byte unit catalogue and separate discovery-card corpus. Preserve authored unit identities and obligations; use explicit source references for navigation only. Retain the four-to-eight structural experiment, failed attempts and independent boundary/integrity controls. Full question comparison and public adoption remain separate gates.
 
 - Start the source-led manual-guide build: record the reading-convention discovery process, a four-case structural gate followed by eight cases after a pass, and the separate full-corpus/staff-question evaluation. Track manual guides, structural repair and discovery cards as active work; no new semantic or answer-quality result is claimed yet.

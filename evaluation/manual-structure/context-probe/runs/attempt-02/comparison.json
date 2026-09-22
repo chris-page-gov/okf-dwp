@@ -1,0 +1,115 @@
+{
+  "schema": "okf-dwp-runtime-repair-comparison.v1",
+  "scope": "Same frozen source projections, known questions, source semantics and budgets; generic engine repair only. This is not an answer-quality or independent relevance experiment.",
+  "source_commit": "9736d30c",
+  "unchanged_legacy_packages": 82,
+  "rows": [
+    {
+      "attempt": "attempt-01",
+      "stage": "logical-context",
+      "budget": 32768,
+      "cases": 40,
+      "zero_evidence": 34,
+      "median_evidence_records": 0.0,
+      "retained_paths": 0,
+      "declared_paths": 47,
+      "median_discovery_diagnostic_bytes": 4.0
+    },
+    {
+      "attempt": "attempt-01",
+      "stage": "logical-context",
+      "budget": 524288,
+      "cases": 40,
+      "zero_evidence": 0,
+      "median_evidence_records": 13.5,
+      "retained_paths": 47,
+      "declared_paths": 47,
+      "median_discovery_diagnostic_bytes": 4.0
+    },
+    {
+      "attempt": "attempt-01",
+      "stage": "structured-context",
+      "budget": 32768,
+      "cases": 40,
+      "zero_evidence": 40,
+      "median_evidence_records": 0.0,
+      "retained_paths": 0,
+      "declared_paths": 47,
+      "median_discovery_diagnostic_bytes": 4.0
+    },
+    {
+      "attempt": "attempt-01",
+      "stage": "structured-context",
+      "budget": 524288,
+      "cases": 40,
+      "zero_evidence": 0,
+      "median_evidence_records": 33.5,
+      "retained_paths": 40,
+      "declared_paths": 47,
+      "median_discovery_diagnostic_bytes": 51339.0
+    },
+    {
+      "attempt": "attempt-02",
+      "stage": "logical-context",
+      "budget": 32768,
+      "cases": 40,
+      "zero_evidence": 34,
+      "median_evidence_records": 0.0,
+      "retained_paths": 0,
+      "declared_paths": 47,
+      "median_discovery_diagnostic_bytes": 4.0
+    },
+    {
+      "attempt": "attempt-02",
+      "stage": "logical-context",
+      "budget": 524288,
+      "cases": 40,
+      "zero_evidence": 0,
+      "median_evidence_records": 13.5,
+      "retained_paths": 47,
+      "declared_paths": 47,
+      "median_discovery_diagnostic_bytes": 4.0
+    },
+    {
+      "attempt": "attempt-02",
+      "stage": "structured-context",
+      "budget": 32768,
+      "cases": 40,
+      "zero_evidence": 40,
+      "median_evidence_records": 0.0,
+      "retained_paths": 0,
+      "declared_paths": 47,
+      "median_discovery_diagnostic_bytes": 4.0
+    },
+    {
+      "attempt": "attempt-02",
+      "stage": "structured-context",
+      "budget": 524288,
+      "cases": 40,
+      "zero_evidence": 0,
+      "median_evidence_records": 35.0,
+      "retained_paths": 47,
+      "declared_paths": 47,
+      "median_discovery_diagnostic_bytes": 16447.5
+    }
+  ],
+  "inputs": [
+    {
+      "path": "evaluation/manual-structure/context-probe/runs/attempt-01/report.json",
+      "bytes": 820506,
+      "sha256": "3c0ddc4245463122bcf10aa6baa5f1d6363ea9feb7760088546766b00e64789d"
+    },
+    {
+      "path": "evaluation/manual-structure/context-probe/runs/attempt-02/report.json",
+      "bytes": 735619,
+      "sha256": "55f763c9caecf5c8f2416bda97841aca0b01fd67a273a92160cb205af1a7eca1"
+    }
+  ],
+  "status": "large-budget-path-regression-repaired; small-assembly-limit-remains",
+  "limitations": [
+    "All forty staff occurrences remain insufficient at both budgets.",
+    "At 32 KiB all forty structured contexts retain zero evidence.",
+    "Use a larger assembly with separately bounded delivery reads; do not substitute summaries for evidence.",
+    "New source boundaries and semantic profiles require a separate comparison."
+  ]
+}

@@ -11,6 +11,8 @@ from dataclasses import dataclass
 import re
 
 from pdf_structure_alignment import load_alignment
+from manual_references import paragraph_references
+from manual_auxiliary_structure import literal_auxiliary_regions, memo_paragraph_candidates
 
 from build_logical_units import require, sha, source_spans, split_interval
 
@@ -24,6 +26,7 @@ RANGE_HEADING = re.compile(
 RANGE_TAIL = re.compile(r"^\s*[-–—]\s*(?P<high>" + LABEL + r")\s*$")
 BODY = re.compile(r"^[ \t]+[A-Za-z\[‘“(]")
 CITATION_TAIL = re.compile(r"^\s+(?:et seq|for guidance|and\s+(?:\d|[A-Z]\d))\b", re.I)
+WRAPPED_REFERENCE_RANGE = re.compile(r"\b(?:DMG|ADM|paras?|paragraphs?)\s+(?P<low>" + LABEL + r")\s*[-–—]\s*$", re.I)
 EXAMPLE = re.compile(r"^\s*Example(?:\s+\d+)?\s*$", re.I)
 NOTE = re.compile(r"^\s*Note(?:\s+\d+)?(?:\s*:|\s|$)", re.I)
 
@@ -91,11 +94,18 @@ def discover_structure(family, doc, pages):
             continue
         match = PARAGRAPH.fullmatch(line.text.rstrip("\r\n"))
         if match and accepts_label(match["label"], family, chapter):
+            previous = next((lines[at] for at in range(index - 1, -1, -1) if lines[at].stripped), None)
+            continuation = WRAPPED_REFERENCE_RANGE.search(previous.stripped) if previous else None
+            if continuation and contains(continuation["low"].upper(), match["label"], match["label"]):
+                rejected.append({"start": line.start, "page": line.page, "label": match["label"],
+                                 "reason": "wrapped-reference-range-end-not-paragraph"})
+                continue
             tail = match["tail"]
             reserved = RANGE_TAIL.fullmatch(tail)
             if reserved and contains(match["label"], reserved["high"], match["label"]):
-                starts.append({"start": line.start, "label": match["label"], "range_end": reserved["high"],
-                               "role": "reserved", "page": line.page})
+                # Reserved numbering labels this line, not every following byte
+                # up to another paragraph. It becomes an explicitly ended region.
+                continue
             elif BODY.match(tail) and not CITATION_TAIL.match(tail) and not re.search(r"\.{4,}", tail):
                 starts.append({"start": line.start, "label": match["label"], "role": "paragraph", "page": line.page})
             else:
@@ -171,39 +181,6 @@ def discover_structure(family, doc, pages):
             "range_headings": headings, "literal_headings": literal_headings, "rejected_number_lines": rejected}
 
 
-def paragraph_references(text, family):
-    """Literal navigation references only; no automatic legal requires edges."""
-    found = []
-    expression = re.compile(r"\b(?:(?P<manual>DMG|ADM)\s+)?(?P<cue>Chapter\s+|(?:see|at|paragraphs?|paras?)\s+)?"
-                            r"(?P<label>" + LABEL + r"|[A-Z]\d{1,2}|\d{1,2})\b", re.I)
-    for hit in expression.finditer(text):
-        manual, cue, label = hit["manual"], hit["cue"] or "", hit["label"].upper()
-        if not manual and not cue:
-            continue
-        is_chapter = cue.lower().startswith("chapter")
-        if not is_chapter and not re.fullmatch(LABEL, label):
-            continue
-        if is_chapter and not re.fullmatch(r"[A-Z]?\d{1,2}", label):
-            continue
-        found.append({"manual": manual.lower() if manual else family, "target_kind": "chapter" if is_chapter else "paragraph",
-                      "target_label": label, "literal": hit[0],
-                      "start_utf8": len(text[:hit.start()].encode()), "end_utf8": len(text[:hit.end()].encode()),
-                      "relationship_role": "source-reference", "legal_dependency": "not-established"})
-    # Updates and legal citations are literal source references, never an
-    # inferred amendment effect or an acquired legislative body.
-    memo = re.compile(r"\b(?:Memo(?:randum)?\s+)(DMG|ADM)\s+(\d{1,2}[-/]\d{2,4})", re.I)
-    legislation = re.compile(r"\b([A-Z][A-Za-z]*(?:[ \t]+(?:[A-Za-z]+|\([A-Z]+\))){0,5}[ \t]+(?:Regs|Act)(?:[ \t]+\d{2,4})?)[ \t]*,[ \t]*((?:reg|s|art)\s+\d+[A-Za-z]?(?:\([0-9A-Za-z]+\))*)")
-    for pattern, kind in ((memo, "memo"), (legislation, "legislation")):
-        for hit in pattern.finditer(text):
-            target = hit[2] if kind == "memo" else re.sub(r"\s+", " ", hit[0])
-            found.append({"manual": hit[1].lower() if kind == "memo" else family,
-                          "target_kind": kind, "target_label": target, "literal": hit[0],
-                          "start_utf8": len(text[:hit.start()].encode()), "end_utf8": len(text[:hit.end()].encode()),
-                          "relationship_role": "source-reference", "legal_dependency": "not-established"})
-    return found
-
-
-
 def apply_pdf_structure(family, doc, pages, structure):
     """Use aligned source-declared headings, preserving fallback uncertainty."""
     alignment = load_alignment(family, doc, pages)
@@ -277,9 +254,6 @@ def special_regions(family, doc, structure, pages):
     regions = []
     raw = b"".join(p["text"].encode() for p in pages)
     for index, line in enumerate(lines):
-        if re.match(r"The content of the examples in this document\b", line.stripped):
-            following = [p["boundary_start"] for p in structure["paragraphs"] if p["boundary_start"] > line.start]
-            regions.append({"start": line.start, "end": min(following, default=total), "role": "document-notice", "heading_path": []})
         if re.match(r"Appendix\s+[A-Z0-9]+\s*[-–—:]", line.stripped):
             # A declared appendix plus explicit table columns supports a table
             # candidate; the heading alone does not establish tabular structure.
@@ -323,10 +297,18 @@ def segment_source(family, doc, pages, authored=()):
     retained as reference/fallback material until its separate conventions apply.
     """
     structure = discover_structure(family, doc, pages)
-    apply_pdf_structure(family, doc, pages, structure)
+    alignment = apply_pdf_structure(family, doc, pages, structure)
+    structure["memo_numbering_candidates"] = memo_paragraph_candidates(doc, pages, alignment["blocks"])
     structure["source_instructions_inert"] = True
     structure["regions"] = structure_regions(structure)
     special = special_regions(family, doc, structure, pages)
+    auxiliary = literal_auxiliary_regions(pages, family, doc.get("chapter"))
+    special.extend(auxiliary)
+    for item in structure["paragraphs"]:
+        if any(item["boundary_start"] < region["end"] <= item["start"] for region in auxiliary):
+            # A heading before a separate notice/range cannot pull that region
+            # into the next paragraph or suppress the paragraph event.
+            item["boundary_start"] = item["start"]
     structure["regions"].extend(special)
     events = {p["boundary_start"]: p for p in structure["paragraphs"]
               if not any(r["start"] <= p["boundary_start"] < r["end"] for r in special)}
@@ -363,6 +345,8 @@ def segment_source(family, doc, pages, authored=()):
                     "references": scoped_references(literal, family, role),
                     "unknowns": ["Legal applicability and required dependency closure are not established",
                                  "Machine structure has not received specialist review"]}
+            if region and region.get("boundary_status"):
+                unit["source_boundary_observation"] = region["boundary_status"]
             if not event:
                 unit["unknowns"].append("No admitted numbered paragraph boundary; retain original source locations")
             if fragmented:

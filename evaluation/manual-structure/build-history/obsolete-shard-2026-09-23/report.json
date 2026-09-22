@@ -1,0 +1,18 @@
+{
+  "schema": "okf-dwp-producer-recovery.v1",
+  "observed_at": "2026-09-22T23:16:18.894757+00:00",
+  "status": "retained-failed-build-output-admission",
+  "failure": "Unbound structured unit output",
+  "cause": "The corrected wrapped-reference parser reduced the unit count from 52873 to 52841; the previous final shard remained after the producer wrote the new projection. Source acquisition and earlier frozen corpus/trial snapshots are unchanged.",
+  "surplus": {
+    "path": "structured-units/records/0413.json.gz",
+    "bytes": 11906,
+    "sha256": "f404ca68a145489f206cb1de2ba339cadf3d897228e61d5aa7ce0611c28fb499",
+    "retained_as": "0413.json.gz"
+  },
+  "manifest_after_failure": {
+    "bytes": 931750,
+    "sha256": "0c3545fb33f52cf3063cbc84fe64cc1586f6b102b4d6029e3687644c5ec116a3"
+  },
+  "recovery": "Retain exact surplus bytes and remove only this verified generated shard, then run deterministic producer --check. No source file was removed."
+}

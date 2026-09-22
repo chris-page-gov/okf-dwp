@@ -44,6 +44,18 @@ class ManualStructureControls(unittest.TestCase):
         self.assertEqual(units[1]["role"], "reserved")
         self.assertEqual(units[1]["completeness"], "unresolved")
 
+    def test_auxiliary_role_ends_before_appendix_or_next_rule(self):
+        source = pages("A1001 A rule.\nA1002 - A1099\nAppendix 1\nOther source material.\n"
+                       "The content of the examples in this document is for illustrative purposes only.\n"
+                       "Appendix 2\nAdditional material.\nA1100 Another rule.\n")
+        units, _ = segment_source("adm", {"chapter": "A1"}, source)
+        reserved = next(u for u in units if u["role"] == "reserved")
+        notice = next(u for u in units if u["role"] == "document-notice")
+        self.assertEqual(reserved["text"], "A1002 - A1099\n")
+        self.assertNotIn("Appendix", notice["text"])
+        self.assertTrue(any(u["paragraph_labels"] == ["A1100"] for u in units))
+        self.assertEqual("".join(u["text"] for u in units), source[0]["text"])
+
     def test_multiline_heading_and_range(self):
         source = pages("An applicable section\n- a qualification A1001-A1099\n\nDifferent subject A1050-A1099\nA1001 A rule.\n")
         result = discover_structure("adm", {"chapter": "A1"}, source)
@@ -66,6 +78,22 @@ class ManualStructureControls(unittest.TestCase):
         source = pages("77031 Quoted from another manual.\nB1001 Quoted from another chapter.\nA1001 The local rule.\n")
         result = discover_structure("adm", {"chapter": "A1"}, source)
         self.assertEqual([p["label"] for p in result["paragraphs"]], ["A1001"])
+
+    def test_wrapped_reference_range_end_does_not_cut_off_notes(self):
+        source = pages("A1001 The rule. See ADM A1002 -\nA1004 for further details.\n"
+                       "Note: The original qualification.\n1 Act, s 2\nA1002 - A1009\nA1010 Next rule.\n")
+        units, structure = segment_source("adm", {"chapter": "A1"}, source)
+        first = next(u for u in units if u["paragraph_labels"] == ["A1001"])
+        self.assertIn("Note: The original qualification.", first["text"])
+        self.assertIn("1 Act, s 2", first["text"])
+        self.assertNotIn("A1004", [label for u in units for label in u["paragraph_labels"]])
+        self.assertTrue(any(p["reason"] == "wrapped-reference-range-end-not-paragraph" for p in structure["rejected_number_lines"]))
+        self.assertTrue(any(u["paragraph_labels"] == ["A1010"] for u in units))
+
+    def test_hyphen_without_reference_cue_does_not_suppress_paragraph(self):
+        source = pages("A1001 A heading-like sentence -\nA1002 A real source paragraph.\n")
+        result = discover_structure("adm", {"chapter": "A1"}, source)
+        self.assertEqual([p["label"] for p in result["paragraphs"]], ["A1001", "A1002"])
 
 
 if __name__ == "__main__":
