@@ -6,7 +6,8 @@ import unittest
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 
-from build_learning_site import build, eligible, render, rewrite_link
+from build_learning_site import build, eligible, render, rewrite_link, normalise_table_alignment
+from markdown_it.token import Token
 
 COMMIT = "a" * 40
 
@@ -35,6 +36,29 @@ class LearningSiteTests(unittest.TestCase):
         self.assertNotIn("<script>", output)
         self.assertNotIn('href="javascript:', output)
         self.assertIn('<a id="scope"></a>', output)
+
+    def test_table_alignment_preserves_meaning_without_inline_styles(self):
+        text = "# Figures\n\n| Left | Centre | Right | Default |\n| :--- | :---: | ---: | --- |\n| 1 | 2 | 3 | 4 |\n"
+        _, output = render("docs/a.md", text, set(), set(), COMMIT)
+        self.assertNotIn(' style=', output)
+        for alignment in ("left", "center", "right"):
+            self.assertIn(f'<th class="table-align-{alignment}">', output)
+            self.assertIn(f'<td class="table-align-{alignment}">', output)
+        self.assertIn('<th>Default</th>', output)
+        self.assertIn("style-src 'self'", output)
+        self.assertNotIn("unsafe-inline", output)
+
+    def test_unexpected_table_styles_fail_closed(self):
+        for style in ("text-align:justify", "text-align:right;color:red", "background:url(https://example.invalid)", ""):
+            with self.subTest(style=style):
+                token = Token("td_open", "td", 1, attrs={"style": style})
+                with self.assertRaisesRegex(ValueError, "Unsupported table alignment"):
+                    normalise_table_alignment(token)
+
+    def test_table_alignment_retains_existing_classes(self):
+        token = Token("th_open", "th", 1, attrs={"style": "text-align:right", "class": "existing"})
+        normalise_table_alignment(token)
+        self.assertEqual(token.attrs, {"class": "existing table-align-right"})
 
     def test_duplicate_heading_ids_are_distinct(self):
         _, output = render("docs/a.md", "# A\n\n## Scope\n\n## Scope\n", set(), set(), COMMIT)
