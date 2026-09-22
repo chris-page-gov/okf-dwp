@@ -1,0 +1,116 @@
+{
+  "schema": "okf-dwp-ci-integration-review.v1",
+  "observed_utc": "2026-09-22T23:59:36.455348+00:00",
+  "review_scope": "Local contract and workflow integration; no GitHub candidate execution or runtime/public adoption",
+  "files": {
+    ".github/workflows/okf-ci.yml": "f50f26bbd8a954edb5339ea9d5d15081c493fb5e1d5460f31579526230f23139",
+    "okf.semantic.json": "8c7db9b507828d01e0170ae376b7e6aa547237df6057d41a4a67bc2f9aa97301",
+    "okf.publication.json": "1b4187f632d7a9d71cc63a50c6554d349bf7b9cc0cebba978fcfa00d96425a56",
+    "README.md": "9a80d4565cd6c1b51443fbf784cab4f5fcf3a91f0e5511d4913e8634426a23d5",
+    "docs/learning-path.md": "8bccc8a2587a142a87644d1680349c95b0c2991f3871b062c9bf8c0b43663e45",
+    "scripts/report_structured_context.mjs": "589a9430e325b8b18158855b080ef545cdb00441db24dfe9047fd7b77885d098",
+    "scripts/test_report_structured_context.mjs": "4127d12ab244d66fabf37079101b6ea395f64e1f589559fdfff7c9ca6c599cc1"
+  },
+  "legacy_job_semantically_unchanged": true,
+  "legacy_steps": 76,
+  "protected_gate_status_cases": [
+    {
+      "legacy": "success",
+      "structured": "success",
+      "passes": true
+    },
+    {
+      "legacy": "success",
+      "structured": "failure",
+      "passes": false
+    },
+    {
+      "legacy": "success",
+      "structured": "skipped",
+      "passes": false
+    },
+    {
+      "legacy": "success",
+      "structured": "cancelled",
+      "passes": false
+    },
+    {
+      "legacy": "failure",
+      "structured": "success",
+      "passes": false
+    },
+    {
+      "legacy": "failure",
+      "structured": "failure",
+      "passes": false
+    },
+    {
+      "legacy": "failure",
+      "structured": "skipped",
+      "passes": false
+    },
+    {
+      "legacy": "failure",
+      "structured": "cancelled",
+      "passes": false
+    },
+    {
+      "legacy": "skipped",
+      "structured": "success",
+      "passes": false
+    },
+    {
+      "legacy": "skipped",
+      "structured": "failure",
+      "passes": false
+    },
+    {
+      "legacy": "skipped",
+      "structured": "skipped",
+      "passes": false
+    },
+    {
+      "legacy": "skipped",
+      "structured": "cancelled",
+      "passes": false
+    },
+    {
+      "legacy": "cancelled",
+      "structured": "success",
+      "passes": false
+    },
+    {
+      "legacy": "cancelled",
+      "structured": "failure",
+      "passes": false
+    },
+    {
+      "legacy": "cancelled",
+      "structured": "skipped",
+      "passes": false
+    },
+    {
+      "legacy": "cancelled",
+      "structured": "cancelled",
+      "passes": false
+    }
+  ],
+  "controls": {
+    "canonical_contract": "passed: 53 output declarations",
+    "semantic_contract_unit_tests": 13,
+    "report_summariser_unit_tests": 3,
+    "diff_check": "passed"
+  },
+  "independent_review": {
+    "agent": "coverage_audit",
+    "finding": "No blocker. The original job body is unchanged apart from its key. Both bounded planes must succeed; failed, skipped and cancelled states cannot pass the preserved validate context. Pages still waits for successful workflow completion.",
+    "scope": "Read-only code and local gate review; not executed GitHub CI"
+  },
+  "release_status": "Acceptance pointer current.json is parent-owned and still pending; exact accepted trial, candidate CI, merged CI and public verification remain separate gates.",
+  "source_status": "Frozen source and prior projections unchanged by this integration patch.",
+  "limitations": [
+    "Historical timings are prior main runs, not a benchmark of the new parallel jobs.",
+    "Report summariser review does not substitute for evaluator/replay source and archive identity validation.",
+    "The report summariser test command was added after its separate three-control review."
+  ]
+}

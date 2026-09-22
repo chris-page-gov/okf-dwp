@@ -59,6 +59,33 @@ to see the implementation, its source checks and remaining uncertainty. The
 earlier page-based evidence and recorded service versions remain separately
 available; a newly generated unit is not specialist acceptance.
 
+### New route: learn how the manuals organise their guidance
+
+Follow the [source-led manual guide](source-led-manual-guide.md) to see how a
+chapter, heading, numbered paragraph, example, note and citation fit together.
+A **manual convention** is a pattern the publisher uses, such as a numbering
+scheme. The guide shows exact supporting passages and which documents each
+observation covers. A pattern found in one chapter need not apply everywhere.
+
+Some PDFs also declare headings and lists inside the file. These **structure
+tags** help propose a passage boundary, but can be absent, incomplete or wrong.
+The original text, page locations and uncertainty stay available for checking.
+A **discovery card** then provides a short route to the whole proposed passage.
+It helps find evidence; it does not replace that evidence or decide which rule
+applies. The new guide separates this structural work from missing concepts,
+legal dependencies and the staff questions that still need review.
+
+A **context guard** keeps a source route conditional on all its declared concepts.
+For example, a route requiring both Pension Credit and a household topic should
+not apply merely because a question about another benefit mentions a partner.
+That controls evidence selection; it does not decide legal applicability.
+
+A **location-migration ledger** records where an earlier page excerpt falls
+inside newer source units. Finding that location can help a reader continue
+through the passage. It does not prove that the passage answers the question.
+The ledger distinguishes restored routes from newly inferred associations and
+keeps the 40 original staff requirements and 203 unresolved obligations intact.
+
 Follow a legal citation only after reading its surrounding guidance. A verified
 provision identifier tells you which section or regulation was found; it does
 not prove how it applies. The [legal-reference guide](legal-reconciliation.md)

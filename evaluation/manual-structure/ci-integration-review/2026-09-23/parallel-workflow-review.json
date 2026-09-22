@@ -1,0 +1,116 @@
+{
+  "observed_utc": "2026-09-22T23:53:59.646093+00:00",
+  "scope": "Read-only public CI timings/protection plus local workflow/contract validation; no CI run, policy change or deployment.",
+  "workflow_sha256": "4d72bac334c67ef7bdc24a1e196b338641b3a3ac01b57c358ecb049528e88761",
+  "previous_workflow_sha256": "b0eb208f8a259d1d6d3344ef5cd114193d4ffa3378448a0b1997562da061b94c",
+  "parsed_legacy_job_identical": true,
+  "legacy_step_count": 76,
+  "live_required_check": "validate",
+  "live_required_check_strict": true,
+  "parallel_job_timeout_minutes": 45,
+  "previous_timeout_minutes": 45,
+  "final_gate_timeout_minutes": 5,
+  "gate_status_truth_table": [
+    {
+      "legacy": "success",
+      "structured": "success",
+      "passes": true
+    },
+    {
+      "legacy": "success",
+      "structured": "failure",
+      "passes": false
+    },
+    {
+      "legacy": "success",
+      "structured": "skipped",
+      "passes": false
+    },
+    {
+      "legacy": "success",
+      "structured": "cancelled",
+      "passes": false
+    },
+    {
+      "legacy": "failure",
+      "structured": "success",
+      "passes": false
+    },
+    {
+      "legacy": "failure",
+      "structured": "failure",
+      "passes": false
+    },
+    {
+      "legacy": "failure",
+      "structured": "skipped",
+      "passes": false
+    },
+    {
+      "legacy": "failure",
+      "structured": "cancelled",
+      "passes": false
+    },
+    {
+      "legacy": "skipped",
+      "structured": "success",
+      "passes": false
+    },
+    {
+      "legacy": "skipped",
+      "structured": "failure",
+      "passes": false
+    },
+    {
+      "legacy": "skipped",
+      "structured": "skipped",
+      "passes": false
+    },
+    {
+      "legacy": "skipped",
+      "structured": "cancelled",
+      "passes": false
+    },
+    {
+      "legacy": "cancelled",
+      "structured": "success",
+      "passes": false
+    },
+    {
+      "legacy": "cancelled",
+      "structured": "failure",
+      "passes": false
+    },
+    {
+      "legacy": "cancelled",
+      "structured": "skipped",
+      "passes": false
+    },
+    {
+      "legacy": "cancelled",
+      "structured": "cancelled",
+      "passes": false
+    }
+  ],
+  "measured_latest_main_job_seconds": [
+    1330,
+    1450,
+    1453
+  ],
+  "measured_run_ids": [
+    35783325490,
+    35775509239,
+    35771441775
+  ],
+  "timings_note": "Historical job observations are22m10s,24m10s and24m13s; new parallel-job elapsed time still needs exact candidateCI.",
+  "schema_and_contract_controls": {
+    "contract": "passed canonical schemas,53 declared outputs",
+    "unit_controls": 13,
+    "results": "passed"
+  },
+  "original_source_and_frozen_release_paths_diff_from_908adc45": [],
+  "limitations": [
+    "This validates local job structure and shell gate semantics, not execution by GitHub Actions. Exact candidate and merged CI remain required.",
+    "The final accepted context pointer remains owned by the parent task; no unaccepted trial is adopted by this workflow edit."
+  ]
+}

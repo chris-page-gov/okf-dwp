@@ -34,7 +34,17 @@
       "domain-profile/legal-bodies/navigation.json",
       "domain-profile/logical-units/*.yamlld",
       "domain-profile/logical-units/*.json",
-      "domain-profile/learning/*.yamlld"
+      "domain-profile/learning/*.yamlld",
+      "domain-profile/manual-guide/*.yamlld",
+      "profiles/manual-guide/v1/*.json",
+      "profiles/pdf-structure/v1/*.json",
+      "pdf-structure/bounded-v2/manifest.json",
+      "pdf-structure/bounded-v2/**/*.structure.json",
+      "pdf-structure/dmg/*.tree.txt",
+      "pdf-structure/adm/*.tree.txt",
+      "pdf-structure/dmg/*.stderr.txt",
+      "pdf-structure/adm/*.stderr.txt",
+      "domain-profile/structured-units/*.yamlld"
     ],
     "outputs": [
       {
@@ -196,6 +206,111 @@
         "path": "logical-context/data/semantic/*.jsonld.gz",
         "role": "semantic-json-ld-shards",
         "generated": true
+      },
+      {
+        "path": "manual-guide/manifest.json",
+        "role": "semantic-manifest",
+        "generated": true
+      },
+      {
+        "path": "manual-guide/guide.json",
+        "role": "semantic-validation",
+        "generated": true
+      },
+      {
+        "path": "manual-guide/documents.jsonl",
+        "role": "semantic-validation",
+        "generated": true
+      },
+      {
+        "path": "pdf-structure/bounded-v2/manifest.json",
+        "role": "semantic-manifest",
+        "generated": true
+      },
+      {
+        "path": "pdf-structure/bounded-v2/**/*.structure.json",
+        "role": "semantic-validation",
+        "generated": true
+      },
+      {
+        "path": "structured-units/manifest.json",
+        "role": "semantic-manifest",
+        "generated": true
+      },
+      {
+        "path": "structured-units/documents/**/*.json.gz",
+        "role": "semantic-validation",
+        "generated": true
+      },
+      {
+        "path": "structured-units/records/*.json.gz",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "structured-context/manifest.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "structured-context/base-index.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "structured-context/okf-explorer.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "structured-context/build-review.json",
+        "role": "semantic-validation",
+        "generated": true
+      },
+      {
+        "path": "structured-context/discovery/*.json.gz",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "structured-context/search/*.json.gz",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "structured-context/relationships/*.json.gz",
+        "role": "relationship-runtime",
+        "generated": true
+      },
+      {
+        "path": "structured-context/okf-bundle.yamlld",
+        "role": "semantic-yaml-ld",
+        "generated": true
+      },
+      {
+        "path": "structured-context/okf-bundle.jsonld",
+        "role": "semantic-json-ld",
+        "generated": true
+      },
+      {
+        "path": "structured-context/data/semantic/manifest.json",
+        "role": "semantic-manifest",
+        "generated": true
+      },
+      {
+        "path": "structured-context/data/semantic/*.jsonld.gz",
+        "role": "semantic-json-ld-shards",
+        "generated": true
+      },
+      {
+        "path": "structured-context/data/relationships-*.json.gz",
+        "role": "relationship-runtime",
+        "generated": true
+      },
+      {
+        "path": "structured-context/location-migration.json",
+        "role": "semantic-validation",
+        "generated": true
       }
     ],
     "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
@@ -209,7 +324,11 @@
       "The additive combined Reader and staff semantic projection preserve earlier releases. Forty development profiles contain named unmet obligations; none establishes a complete answer or independent specialist acceptance.",
       "Verified provision reference metadata is navigation only. It does not contain statutory body evidence or establish commencement, extent for an individual case, or legal applicability.",
       "The additive household candidate includes 20 selected dated statutory units as derived, unreviewed extractions; this does not resolve complete legal dependencies, commencement, applicability or specialist review. Earlier reference-only outputs and receipts keep their original scope.",
-      "Logical-unit mode is additive. All extracted bytes are accounted, but machine boundaries remain uncertain; separately authored dependencies and profiles are unreviewed and do not satisfy frozen page-level obligations."
+      "Logical-unit mode is additive. All extracted bytes are accounted, but machine boundaries remain uncertain; separately authored dependencies and profiles are unreviewed and do not satisfy frozen page-level obligations.",
+      "The manual guide records local conventions with exact frozen source support. Its 513-document census retains original roles; a convention observed in one document is not asserted across the manuals.",
+      "Retained PDF tag trees are source-declared structural observations, not accepted semantic or legal interpretations. Bounded replay preserves original observations, unparsed lines and failed or absent structures; normal checks do not invoke Poppler or acquire sources.",
+      "The additive structured-unit and structured-context candidates separate source locations, proposed content boundaries and compact discovery cards. A card supplies navigation, not evidence or a complete rule; dependency matches and better segmentation do not establish legal applicability or complete answerability.",
+      "Guarded source-selection profiles are model-derived research proposals. The separate location-migration ledger preserves the 40 earlier staff requirements and 203 open obligations; exact overlap provides navigation only and never substitutes for an original required page or relationship path."
     ]
   },
   "relationship_contract": {
@@ -254,7 +373,11 @@
       "uv run --locked python scripts/build_combined_reader.py",
       "uv run --locked python scripts/compare_source_census.py",
       "uv run --locked python scripts/build_logical_units.py",
-      "uv run --locked python scripts/build_logical_context.py"
+      "uv run --locked python scripts/build_logical_context.py",
+      "uv run --locked python scripts/build_pdf_structure.py --check",
+      "uv run --locked python scripts/build_manual_guide.py",
+      "uv run --locked python scripts/build_structured_units.py",
+      "uv run --locked python scripts/build_structured_context.py"
     ],
     "check": [
       "uv run --locked python scripts/check_semantic_contract.py",
@@ -283,7 +406,18 @@
       "uv run --locked python scripts/build_legal_body_evidence.py --check",
       "uv run --locked python scripts/build_logical_units.py --check",
       "uv run --locked python scripts/build_logical_context.py --check",
-      "uv run --locked python -m unittest discover -s scripts -p 'test_logical*.py'"
+      "uv run --locked python -m unittest discover -s scripts -p 'test_logical*.py'",
+      "uv run --locked python scripts/build_pdf_structure.py --check",
+      "uv run --locked python scripts/build_manual_guide.py --check",
+      "uv run --locked python scripts/build_structured_units.py --check",
+      "uv run --locked python scripts/build_structured_context.py --check",
+      "uv run --locked python -m unittest discover -s scripts -p 'test_manual*.py'",
+      "uv run --locked python -m unittest discover -s scripts -p 'test_pdf_structure*.py'",
+      "uv run --locked python -m unittest discover -s scripts -p 'test_structured*.py'",
+      "node --experimental-strip-types scripts/test_structured_corpus.mjs --explorer-root .ci/okf-explorer-structured",
+      "node --experimental-strip-types scripts/check_structured_replay.mjs --explorer-root .ci/okf-explorer-structured",
+      "node --test scripts/test_structured_context_metrics.mjs",
+      "node --test scripts/test_report_structured_context.mjs"
     ]
   },
   "reader": {
