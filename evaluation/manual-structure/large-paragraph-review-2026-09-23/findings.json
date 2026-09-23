@@ -1,0 +1,1767 @@
+{
+  "schema": "okf-dwp-large-paragraph-review.v1",
+  "status": "review-leads-no-parser-change",
+  "source_baseline": {
+    "path": "structured-units/manifest.json",
+    "bytes": 940722,
+    "sha256": "8b620634bf686566d30c0cf4cd12f69535af7ef546a356333e3b0f9011d15741"
+  },
+  "scope": {
+    "candidates": 28,
+    "current_chapter_candidates": 0,
+    "historical_amendment_candidates": 28,
+    "confirmed_mixed_structural_units": 27,
+    "uncertain_excerpt_transition": 1,
+    "coherent_large_passages_established": 0,
+    "visual_pages": 15,
+    "network_calls": 0,
+    "source_acquisitions": 0,
+    "model_calls": 0
+  },
+  "classification_counts": {
+    "missed-contents-boundary": 7,
+    "amendment-front-matter-absorbed": 17,
+    "missed-appendix-and-table-boundary": 1,
+    "amendment-summary-reference-promoted": 1,
+    "uncertain-excerpt-transition-and-extraction": 1,
+    "missed-contents-and-reference-table-boundary": 1
+  },
+  "items": [
+    {
+      "number": 1,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-amendment26/manual-structure-v1/source-0000031756-000-8afb1fa2d095",
+      "document_id": "dmg-vol9-amendment26",
+      "paragraph_labels": [
+        "50018"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "missed-contents-boundary",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "50018 ends on page 16; pages 17–30 are contents for later income sections. The new heading on page 31 is also wrongly carried by 50018.",
+      "text_bytes": 46393,
+      "record_sha256": "fb3997a423d0d6e62f40de80412cd9905eb10ddf6859a9e5d235be14f5c75adc",
+      "unit_text_sha256": "d12efa70d9c7f7bc7febd4e054071e9d1171b5b170de01d9574e613995111da9",
+      "evidence": [
+        {
+          "page": 16,
+          "start_utf8": 2217,
+          "end_utf8": 2252,
+          "literal": "50018   S/E earnings do not include",
+          "literal_sha256": "44077a2e23d838179ab9b0bcd7219e33b278570dd15976bf4c94e8f4322dfca3",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol9-amendment26.json",
+          "source_pages_sha256": "9fea2320ced72e7f7f8296316794008d7484f35382a979fcc88bbe6f6dd7d01b",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa8fb03e5274a3e391e3e5b/v9am26.pdf#page=16"
+        },
+        {
+          "page": 17,
+          "start_utf8": 8,
+          "end_utf8": 24,
+          "literal": "Residence orders",
+          "literal_sha256": "50870e85ad168f42c47e1cc455c79fb93acc54ed0c9397d32fa2c2f464f1bcff",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol9-amendment26.json",
+          "source_pages_sha256": "9fea2320ced72e7f7f8296316794008d7484f35382a979fcc88bbe6f6dd7d01b",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa8fb03e5274a3e391e3e5b/v9am26.pdf#page=17"
+        },
+        {
+          "page": 31,
+          "start_utf8": 8,
+          "end_utf8": 40,
+          "literal": "Other payments for housing costs",
+          "literal_sha256": "3367109c4f983c7a6eb480edae2e51e96c571a807c3bdb1f570b46fc74efa67a",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol9-amendment26.json",
+          "source_pages_sha256": "9fea2320ced72e7f7f8296316794008d7484f35382a979fcc88bbe6f6dd7d01b",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa8fb03e5274a3e391e3e5b/v9am26.pdf#page=31"
+        }
+      ],
+      "visual_checks": [
+        {
+          "page": 16,
+          "path": "evaluation/manual-structure/large-paragraph-review-2026-09-23/visual/dmg-vol9-amendment26-page-16.png",
+          "sha256": "5104d15aec2450f595969030f97b7f12e6b2add1fed67f4e6c02022174aecb55"
+        },
+        {
+          "page": 17,
+          "path": "evaluation/manual-structure/large-paragraph-review-2026-09-23/visual/dmg-vol9-amendment26-page-17.png",
+          "sha256": "8a08d0bb3ae9a549c959687ada09c3c890549f45a76a644d2250cef51529fd9b"
+        }
+      ],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R1",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 2,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol5-amendment53/manual-structure-v1/source-0000137670-000-ffef883e6a9e",
+      "document_id": "dmg-vol5-amendment53",
+      "paragraph_labels": [
+        "28684"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "missed-contents-boundary",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "28684 ends the captured page after item 2 and the word and. Pages 67–78 are capital contents; page 79 starts a different heading. Do not invent the missing numbered continuation.",
+      "text_bytes": 38526,
+      "record_sha256": "98df74581e656eba49df6c1c71fa8b733d72647f12872f4b4eb65fafff0f5925",
+      "unit_text_sha256": "ffea02e8ddd7eeb9477158fd7a6981ae8bdb925d7841f1425eb975fcbd885d85",
+      "evidence": [
+        {
+          "page": 66,
+          "start_utf8": 1664,
+          "end_utf8": 1694,
+          "literal": "28684   The DM should consider",
+          "literal_sha256": "d026d94d9ed1eda57cfcb1d9cb0627c34b34e285c51c271761de75af8fb17042",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-amendment53.json",
+          "source_pages_sha256": "d28b4d7bdf9dd0ad8a35fa94ccf8fc92b62a94c57cb9fd0f36bf8b06b791c342",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa8f55bed915d4f563b740b/v5am53.pdf#page=66"
+        },
+        {
+          "page": 67,
+          "start_utf8": 8,
+          "end_utf8": 34,
+          "literal": "Real or heritable property",
+          "literal_sha256": "38e9c2e01a5f18ba6ee47c44dbf59c3f7f91a99c07b9e595bfe4722afe13b192",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-amendment53.json",
+          "source_pages_sha256": "d28b4d7bdf9dd0ad8a35fa94ccf8fc92b62a94c57cb9fd0f36bf8b06b791c342",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa8f55bed915d4f563b740b/v5am53.pdf#page=67"
+        },
+        {
+          "page": 79,
+          "start_utf8": 8,
+          "end_utf8": 34,
+          "literal": "Can capital be disregarded",
+          "literal_sha256": "40dd250eebb365f01479fbbff85f239fbab2779eb60945749608843eda3d96a4",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-amendment53.json",
+          "source_pages_sha256": "d28b4d7bdf9dd0ad8a35fa94ccf8fc92b62a94c57cb9fd0f36bf8b06b791c342",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa8f55bed915d4f563b740b/v5am53.pdf#page=79"
+        },
+        {
+          "page": 66,
+          "start_utf8": 1742,
+          "end_utf8": 1780,
+          "literal": "2.    how often the income is paid and",
+          "literal_sha256": "5525623341942e5357253f31599ed9c9d482fbc4d3c61030eff6287ddc03c03f",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-amendment53.json",
+          "source_pages_sha256": "d28b4d7bdf9dd0ad8a35fa94ccf8fc92b62a94c57cb9fd0f36bf8b06b791c342",
+          "evidence_relation": "within-unit"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R1",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 3,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol2-amendment35/manual-structure-v1/source-0000000005-000-aeff3edffa4a",
+      "document_id": "dmg-vol2-amendment35",
+      "paragraph_labels": [
+        "072842"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The unit labelled 072842 begins with the cover letter, remove/insert table, statutory-instrument lists and contents. The actual 072842 passage is only on page 15, preceded there by an unlabelled continuation.",
+      "text_bytes": 37139,
+      "record_sha256": "74328025e8156d6a4859eb344a2cb8244d91b1034bca6ddcc80d7b6a901cf0eb",
+      "unit_text_sha256": "c0f58a9f169184a2808c6b14942d7eaef193d5e587fe4a6201d49dd25655ac5d",
+      "evidence": [
+        {
+          "page": 1,
+          "start_utf8": 5,
+          "end_utf8": 37,
+          "literal": "Department for Work and Pensions",
+          "literal_sha256": "f82eb393809976d4005bb463802db6cb40c8f198be7c56c4fb13cec720b478a7",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-amendment35.json",
+          "source_pages_sha256": "8ddf0b13f6ab02b1ae6ad3dcd509d5ff1f9ebee6607c39ab5590cc5a46d4c726",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a7ff8eded915d74e33f7afa/v2am35.pdf#page=1"
+        },
+        {
+          "page": 2,
+          "start_utf8": 0,
+          "end_utf8": 40,
+          "literal": "Remove                            Insert",
+          "literal_sha256": "37354e6f5886cca48416eed98bdd44fe947ae6c7dc2f345617d13a7c64a65e36",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-amendment35.json",
+          "source_pages_sha256": "8ddf0b13f6ab02b1ae6ad3dcd509d5ff1f9ebee6607c39ab5590cc5a46d4c726",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a7ff8eded915d74e33f7afa/v2am35.pdf#page=2"
+        },
+        {
+          "page": 15,
+          "start_utf8": 9,
+          "end_utf8": 93,
+          "literal": "In addition self-employed earners derive their right to move and reside from article",
+          "literal_sha256": "a4f34ee09a32cef8d21b63980605a9e1afb1c126fad8ffbf28cd24d38971ee5f",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-amendment35.json",
+          "source_pages_sha256": "8ddf0b13f6ab02b1ae6ad3dcd509d5ff1f9ebee6607c39ab5590cc5a46d4c726",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a7ff8eded915d74e33f7afa/v2am35.pdf#page=15"
+        }
+      ],
+      "visual_checks": [
+        {
+          "page": 2,
+          "path": "evaluation/manual-structure/large-paragraph-review-2026-09-23/visual/dmg-vol2-amendment35-page-2.png",
+          "sha256": "6f38892496df16f6268ca56fb7163b3ceab0f54ba997326dbad5ad21f136492e"
+        },
+        {
+          "page": 15,
+          "path": "evaluation/manual-structure/large-paragraph-review-2026-09-23/visual/dmg-vol2-amendment35-page-15.png",
+          "sha256": "104f02988ea6a352908f66240968aba6685d4cb5b2288a26ac9f376fb41d8172"
+        }
+      ],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 4,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol6-amendment47/manual-structure-v1/source-0000000207-000-49fb99421a21",
+      "document_id": "dmg-vol6-amendment47",
+      "paragraph_labels": [
+        "30110"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The unit labelled 30110 starts in the amendment notice and absorbs instrument tables and student/household contents before the actual rule on page 15.",
+      "text_bytes": 34275,
+      "record_sha256": "2ac89e946383c78d0e5bd4601220c2207764be7a1de7446bdc56095928f62ef1",
+      "unit_text_sha256": "400acad19addf7acb8f9a9753201cf5ef2fae24d9270c2b0723cd11210e7d32a",
+      "evidence": [
+        {
+          "page": 1,
+          "start_utf8": 207,
+          "end_utf8": 215,
+          "literal": "Volume 6",
+          "literal_sha256": "79b2ae9cebb98636f48140a116c068d86f92708838a7d8ae55c1d3460fe7b560",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol6-amendment47.json",
+          "source_pages_sha256": "5032862674add943fbb98a85e10e8a2782c4a73dce0095be73dd68199b381504",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a80c374ed915d74e33fc45b/v6am47.pdf#page=1"
+        },
+        {
+          "page": 2,
+          "start_utf8": 0,
+          "end_utf8": 49,
+          "literal": "Remove                                     Insert",
+          "literal_sha256": "1fb28b20597e6e5aac0fbf32757fdc75403cae8d013fe6e10d4acd57d7f8536d",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol6-amendment47.json",
+          "source_pages_sha256": "5032862674add943fbb98a85e10e8a2782c4a73dce0095be73dd68199b381504",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a80c374ed915d74e33fc45b/v6am47.pdf#page=2"
+        },
+        {
+          "page": 15,
+          "start_utf8": 8,
+          "end_utf8": 48,
+          "literal": "Meaning of student and full-time student",
+          "literal_sha256": "f2c95a8eb32b29dd76ca3a10d36db46f3df157fe8d7febb82eb8b8e6800f27a7",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol6-amendment47.json",
+          "source_pages_sha256": "5032862674add943fbb98a85e10e8a2782c4a73dce0095be73dd68199b381504",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a80c374ed915d74e33fc45b/v6am47.pdf#page=15"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 5,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-amendment57/manual-structure-v1/source-0000001329-000-39fc53334637",
+      "document_id": "dmg-vol4-amendment57",
+      "paragraph_labels": [
+        "23001"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The unit labelled 23001 begins inside the remove/insert table on page 1, contains ten contents pages, and reaches the actual chapter scope on page 13.",
+      "text_bytes": 31255,
+      "record_sha256": "9171db78a7043ae5136836e29347b7f1fdaf818785ae3d61d6b0b506683bc91d",
+      "unit_text_sha256": "959d04ba88873501804ea6adb748820297f1f77831b08e0d68bcdfc1ac47e36a",
+      "evidence": [
+        {
+          "page": 1,
+          "start_utf8": 1329,
+          "end_utf8": 1380,
+          "literal": "Chapter 23                               Chapter 23",
+          "literal_sha256": "8a81c953b0a155b0712b9b627d669278765ed881c04ed44b19d97549bb75d2e2",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol4-amendment57.json",
+          "source_pages_sha256": "dd7adc6441d710189327623e0220f69daebfcd5c04bb0e8d6132f7c2d7c618da",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5c921d68ed915d07b1a25c4d/v4am57.pdf#page=1"
+        },
+        {
+          "page": 3,
+          "start_utf8": 8,
+          "end_utf8": 42,
+          "literal": "Chapter 23 - Normal amount payable",
+          "literal_sha256": "a5ec6ccd210774b8690c250b86ac3752f03224bfdba716e67ad932ae71b814cf",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol4-amendment57.json",
+          "source_pages_sha256": "dd7adc6441d710189327623e0220f69daebfcd5c04bb0e8d6132f7c2d7c618da",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5c921d68ed915d07b1a25c4d/v4am57.pdf#page=3"
+        },
+        {
+          "page": 13,
+          "start_utf8": 8,
+          "end_utf8": 42,
+          "literal": "Chapter 23 - Normal amount payable",
+          "literal_sha256": "a5ec6ccd210774b8690c250b86ac3752f03224bfdba716e67ad932ae71b814cf",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol4-amendment57.json",
+          "source_pages_sha256": "dd7adc6441d710189327623e0220f69daebfcd5c04bb0e8d6132f7c2d7c618da",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5c921d68ed915d07b1a25c4d/v4am57.pdf#page=13"
+        }
+      ],
+      "visual_checks": [
+        {
+          "page": 1,
+          "path": "evaluation/manual-structure/large-paragraph-review-2026-09-23/visual/dmg-vol4-amendment57-page-1.png",
+          "sha256": "1d196d829cb957a78d5bcd2bcca835dabe6e30af00fef442d86afc155c35973a"
+        }
+      ],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 6,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol12-amendment34/manual-structure-v1/source-0000035630-000-1677a3ef8621",
+      "document_id": "dmg-vol12-amendment34",
+      "paragraph_labels": [
+        "74350"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "missed-contents-boundary",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "74350 is a choice-of-payment paragraph on page 18. Retirement-pension contents on pages 19–27 and the fresh chapter heading on page 29 are not that paragraph.",
+      "text_bytes": 31074,
+      "record_sha256": "1f51fc5663db6ada3b6c50403003d1a2e6674430cabf08d345d188b5e7ca331a",
+      "unit_text_sha256": "edcaddfd006504653c5645040ef38ab70147ceb199a2b0be1cd783b6416e21dc",
+      "evidence": [
+        {
+          "page": 18,
+          "start_utf8": 1651,
+          "end_utf8": 1704,
+          "literal": "74350   A person makes a choice for a lump sum or SP1",
+          "literal_sha256": "beb8626059064020a8bc4f2aea9e9b9ac02e7b0c3286e15087a507bcf71b62a3",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol12-amendment34.json",
+          "source_pages_sha256": "d8693a7def617f2dbd7e627eafad3b6bee83dc03d66bdcb464af13a4e375e0cd",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a7f2df4ed915d74e33f4d21/v12am34.pdf#page=18"
+        },
+        {
+          "page": 19,
+          "start_utf8": 8,
+          "end_utf8": 39,
+          "literal": "Chapter 75 - Retirement Pension",
+          "literal_sha256": "fe56c0f29753a20e56cc8c81c0fffbd7908c4165f2b25c946351b556a290d0d2",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol12-amendment34.json",
+          "source_pages_sha256": "d8693a7def617f2dbd7e627eafad3b6bee83dc03d66bdcb464af13a4e375e0cd",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a7f2df4ed915d74e33f4d21/v12am34.pdf#page=19"
+        },
+        {
+          "page": 29,
+          "start_utf8": 8,
+          "end_utf8": 39,
+          "literal": "Chapter 75 - Retirement pension",
+          "literal_sha256": "e1e2b44294495c615f506f5a02747421c7b19f1fc257a198348d2921f24d1fd6",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol12-amendment34.json",
+          "source_pages_sha256": "d8693a7def617f2dbd7e627eafad3b6bee83dc03d66bdcb464af13a4e375e0cd",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a7f2df4ed915d74e33f4d21/v12am34.pdf#page=29"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R1",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 7,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol5-amendment51/manual-structure-v1/source-0000088795-000-1d95356bb68c",
+      "document_id": "dmg-vol5-amendment51",
+      "paragraph_labels": [
+        "28684"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "missed-contents-boundary",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "28684 includes numbered factors and the beginning of Example 1 on page 46. Capital contents on pages 47–56 and adoption heading on page 57 are separate; the example cannot be declared complete.",
+      "text_bytes": 30924,
+      "record_sha256": "e3448ae2da0001bca053014520391fee6d075c7d18d4ad97d4e54f37b3c9cf52",
+      "unit_text_sha256": "0c437c4e12273e718e2d5df9ccc6a1f7d2061a9d13ac4869ff263d6b4b8506a1",
+      "evidence": [
+        {
+          "page": 46,
+          "start_utf8": 1155,
+          "end_utf8": 1185,
+          "literal": "28684   The DM should consider",
+          "literal_sha256": "d026d94d9ed1eda57cfcb1d9cb0627c34b34e285c51c271761de75af8fb17042",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-amendment51.json",
+          "source_pages_sha256": "4e11d7b543691b332767178b3bc97a1f24ae1f80d525b0c75aa91d2d414c7c88",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a81fb72e5274a2e87dc0865/v5am51.pdf#page=46"
+        },
+        {
+          "page": 47,
+          "start_utf8": 12,
+          "end_utf8": 126,
+          "literal": "The law .................................................................................................... 29421",
+          "literal_sha256": "78372724ca3ad3451d7255c5f2a1edfa36055f8690e3be1f060202fce0bb454e",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-amendment51.json",
+          "source_pages_sha256": "4e11d7b543691b332767178b3bc97a1f24ae1f80d525b0c75aa91d2d414c7c88",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a81fb72e5274a2e87dc0865/v5am51.pdf#page=47"
+        },
+        {
+          "page": 57,
+          "start_utf8": 8,
+          "end_utf8": 40,
+          "literal": "Capital disregarded indefinitely",
+          "literal_sha256": "3ea65236812298be6f518c9f0fc33a8ef78a8c0c6801fb2c54bf6c3444f1bab5",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-amendment51.json",
+          "source_pages_sha256": "4e11d7b543691b332767178b3bc97a1f24ae1f80d525b0c75aa91d2d414c7c88",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a81fb72e5274a2e87dc0865/v5am51.pdf#page=57"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R1",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 8,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol5-amendment53/manual-structure-v1/source-0000026568-000-8c3716f53c27",
+      "document_id": "dmg-vol5-amendment53",
+      "paragraph_labels": [
+        "27014"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "missed-contents-boundary",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "27014 is a board-and-lodging definition with nested conditions. Later housing/income contents and a new income-disregard heading are joined to it without a semantic boundary.",
+      "text_bytes": 26795,
+      "record_sha256": "b7e056dac8a8cb06005555a00a7df8c5f6b8ca0d4125e4ba3a9858f8e49311ce",
+      "unit_text_sha256": "46123e1a45c0988e88220c679be9622949fc8e040d646638253d685e6d24686c",
+      "evidence": [
+        {
+          "page": 14,
+          "start_utf8": 2147,
+          "end_utf8": 2188,
+          "literal": "27014   BL accommodation is accommodation",
+          "literal_sha256": "156aeef96359ea788211fb33d2f41f88e8814ef64e7c6987ba57eedcae610648",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-amendment53.json",
+          "source_pages_sha256": "d28b4d7bdf9dd0ad8a35fa94ccf8fc92b62a94c57cb9fd0f36bf8b06b791c342",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa8f55bed915d4f563b740b/v5am53.pdf#page=14"
+        },
+        {
+          "page": 15,
+          "start_utf8": 8,
+          "end_utf8": 40,
+          "literal": "Other payments for housing costs",
+          "literal_sha256": "3367109c4f983c7a6eb480edae2e51e96c571a807c3bdb1f570b46fc74efa67a",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-amendment53.json",
+          "source_pages_sha256": "d28b4d7bdf9dd0ad8a35fa94ccf8fc92b62a94c57cb9fd0f36bf8b06b791c342",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa8f55bed915d4f563b740b/v5am53.pdf#page=15"
+        },
+        {
+          "page": 23,
+          "start_utf8": 8,
+          "end_utf8": 34,
+          "literal": "Income disregarded in part",
+          "literal_sha256": "826fcd2e8f8d5baf5eff70dfa40a28bfb506579f3d9782043b17b266e1c38afa",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-amendment53.json",
+          "source_pages_sha256": "d28b4d7bdf9dd0ad8a35fa94ccf8fc92b62a94c57cb9fd0f36bf8b06b791c342",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa8f55bed915d4f563b740b/v5am53.pdf#page=23"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R1",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 9,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-amendment37/manual-structure-v1/source-0000000005-000-bf85488b5101",
+      "document_id": "dmg-vol13-amendment37",
+      "paragraph_labels": [
+        "78030"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The 78030 severe-disability paragraph is preceded inside its unit by the amendment letter, abbreviation tables and chapter contents. These are navigation/reference material, not its conditions.",
+      "text_bytes": 25219,
+      "record_sha256": "389aa6fbbd565f91af86c33b04d6cb2224c0bf221e6ea1886405b4ae1ee806b0",
+      "unit_text_sha256": "6a70398f89fa81a47af8a999c74a430bd31be191f0204aa03d25514d953f1f8c",
+      "evidence": [
+        {
+          "page": 1,
+          "start_utf8": 5,
+          "end_utf8": 37,
+          "literal": "Department for Work and Pensions",
+          "literal_sha256": "f82eb393809976d4005bb463802db6cb40c8f198be7c56c4fb13cec720b478a7",
+          "source_pages_path": "source/pages/dmg-vol13-amendment37.json",
+          "source_pages_sha256": "667b01b4cdc6b800ff6e3ad57f90f01cdea6dafe296af7e6aa9e73bcde7a0b86",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a81636ced915d74e6231fcd/v13am37.pdf#page=1"
+        },
+        {
+          "page": 3,
+          "start_utf8": 9,
+          "end_utf8": 50,
+          "literal": "LCW           Limited capability for work",
+          "literal_sha256": "ce4dd4a099af8329ce3c3a2495f8ed742f2f4285c816c993e3d45c89fb204e46",
+          "source_pages_path": "source/pages/dmg-vol13-amendment37.json",
+          "source_pages_sha256": "667b01b4cdc6b800ff6e3ad57f90f01cdea6dafe296af7e6aa9e73bcde7a0b86",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a81636ced915d74e6231fcd/v13am37.pdf#page=3"
+        },
+        {
+          "page": 13,
+          "start_utf8": 8,
+          "end_utf8": 51,
+          "literal": "Additional amount for the severely disabled",
+          "literal_sha256": "afaa566b55ec9ab498582b1743ab5d4f69c54c8babd25f7d46abcb202f4d3ee2",
+          "source_pages_path": "source/pages/dmg-vol13-amendment37.json",
+          "source_pages_sha256": "667b01b4cdc6b800ff6e3ad57f90f01cdea6dafe296af7e6aa9e73bcde7a0b86",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a81636ced915d74e6231fcd/v13am37.pdf#page=13"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 10,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol11-amendment38/manual-structure-v1/source-0000000006-000-489ef5c88406",
+      "document_id": "dmg-vol11-amendment38",
+      "paragraph_labels": [
+        "67181"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The 67181 disease-causation unit absorbs the cover letter, amendment table and contents for later disease sections before the actual short passage on page 10.",
+      "text_bytes": 25037,
+      "record_sha256": "243792227919399b6de9d53e2eebb15f87324ffa373c6496c00b35a5248d73ac",
+      "unit_text_sha256": "30d5c72562a36b856fdfde6b3f3032fd34d6b5a044aa670325919c626543ba61",
+      "evidence": [
+        {
+          "page": 1,
+          "start_utf8": 6,
+          "end_utf8": 38,
+          "literal": "Department for Work and Pensions",
+          "literal_sha256": "f82eb393809976d4005bb463802db6cb40c8f198be7c56c4fb13cec720b478a7",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol11-amendment38.json",
+          "source_pages_sha256": "3e62a87d199cb80d16e2bc8d0dd043334413b90f3403a207e2120f8c603a38ec",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a80f3f8ed915d74e6231610/v11am38.pdf#page=1"
+        },
+        {
+          "page": 3,
+          "start_utf8": 8,
+          "end_utf8": 124,
+          "literal": "Prescription ..................................................................................................67502",
+          "literal_sha256": "33e9c27cbf0604fde30c6bf8e6d11ca210174541705480cc3fbe568df09d6c3b",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol11-amendment38.json",
+          "source_pages_sha256": "3e62a87d199cb80d16e2bc8d0dd043334413b90f3403a207e2120f8c603a38ec",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a80f3f8ed915d74e6231610/v11am38.pdf#page=3"
+        },
+        {
+          "page": 10,
+          "start_utf8": 8,
+          "end_utf8": 52,
+          "literal": "Due to the nature of the employed earner’s",
+          "literal_sha256": "a641849d784b5012ec09b61e749945849980e937fdb3329a5aaa77548ed0b224",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol11-amendment38.json",
+          "source_pages_sha256": "3e62a87d199cb80d16e2bc8d0dd043334413b90f3403a207e2120f8c603a38ec",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a80f3f8ed915d74e6231610/v11am38.pdf#page=10"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 11,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol2-amendment38/manual-structure-v1/source-0000028032-000-a2e05e733ee8",
+      "document_id": "dmg-vol2-amendment38",
+      "paragraph_labels": [
+        "070333"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "missed-appendix-and-table-boundary",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "070333 governs the reciprocal-agreement benefit table and its note on page 16. The separately titled APPENDIX on page 17 has its own paragraphs 1–25 and an article-equivalence table from page 23; these cannot all be labelled 070333.",
+      "text_bytes": 24170,
+      "record_sha256": "61ff0f84418c42adab031f3891e2b21dab70b956bea9991f1a421d96b710cc8f",
+      "unit_text_sha256": "20153a843e9f2a9a54706e85ef212c1d77b555ddda8915697305c15bd1af800f",
+      "evidence": [
+        {
+          "page": 16,
+          "start_utf8": 45,
+          "end_utf8": 129,
+          "literal": "070333 [See memo DMG 15/17] The following table shows the benefits which are covered",
+          "literal_sha256": "9276908dfb046f0653461530a6d5727cec770bad8c48f2afff365f6bb562858e",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-amendment38.json",
+          "source_pages_sha256": "bc783d1f7d5beea31d6c7488d107c3c8998c170868b913133590f3003fff7c0f",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a81e3a640f0b62305b915b2/v2am38.pdf#page=16"
+        },
+        {
+          "page": 17,
+          "start_utf8": 5,
+          "end_utf8": 13,
+          "literal": "APPENDIX",
+          "literal_sha256": "c7d7d0ad74ae42888b3524491d03621282b5c64962027fe533fda12d7640e5fb",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-amendment38.json",
+          "source_pages_sha256": "bc783d1f7d5beea31d6c7488d107c3c8998c170868b913133590f3003fff7c0f",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a81e3a640f0b62305b915b2/v2am38.pdf#page=17"
+        },
+        {
+          "page": 23,
+          "start_utf8": 0,
+          "end_utf8": 87,
+          "literal": "24.   There are no substantive changes in the operation of the coordinating Regulations",
+          "literal_sha256": "6228b7756b75743eb4e57d4c7a8695a890c78177b17014a355f8163f0cce9161",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-amendment38.json",
+          "source_pages_sha256": "bc783d1f7d5beea31d6c7488d107c3c8998c170868b913133590f3003fff7c0f",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a81e3a640f0b62305b915b2/v2am38.pdf#page=23"
+        }
+      ],
+      "visual_checks": [
+        {
+          "page": 16,
+          "path": "evaluation/manual-structure/large-paragraph-review-2026-09-23/visual/dmg-vol2-amendment38-page-16.png",
+          "sha256": "fc1b872a0644eb3d973f0aa2fe4348dae019b953664888761343e444e043c6ea"
+        },
+        {
+          "page": 17,
+          "path": "evaluation/manual-structure/large-paragraph-review-2026-09-23/visual/dmg-vol2-amendment38-page-17.png",
+          "sha256": "f2c594f23a09a23a03f1b2fb684dfa5be22416f091f8068abc7142e524453192"
+        },
+        {
+          "page": 23,
+          "path": "evaluation/manual-structure/large-paragraph-review-2026-09-23/visual/dmg-vol2-amendment38-page-23.png",
+          "sha256": "f2358d3fdc34a60863ee7baca2236623f53f8a5911b24564a3085b09580f2c3c"
+        }
+      ],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R5",
+        "R2"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 12,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol10-amendment47/manual-structure-v1/source-0000000167-000-43710d8d563b",
+      "document_id": "dmg-vol10-amendment47",
+      "paragraph_labels": [
+        "59052"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The unit labelled 59052 (meaning of child) contains the cover letter, abbreviation tables, unlabelled conditions and five examples belonging to earlier passage content. Preserve those fragment boundaries instead of treating them as the child definition.",
+      "text_bytes": 23478,
+      "record_sha256": "6127d3432779a1693d730cc7de7ea345e12e79633813db94cb92a6617ca3e039",
+      "unit_text_sha256": "123c8896ab0559a6c6a9108f614bcf402aaa52abe3384fc3ff20d1243065478d",
+      "evidence": [
+        {
+          "page": 1,
+          "start_utf8": 167,
+          "end_utf8": 176,
+          "literal": "Volume 10",
+          "literal_sha256": "7dc4888db0e640b6aca85ecff52ebd77468a91ec9a280d01ce0e665ba711fc2a",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-amendment47.json",
+          "source_pages_sha256": "a668ff9444fa7e52e5c5d14b678c830adc337fa00ac1d80228f75bd80e505e61",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa8ff2540f0b66b625e2c42/v10am47.pdf#page=1"
+        },
+        {
+          "page": 3,
+          "start_utf8": 8,
+          "end_utf8": 21,
+          "literal": "Abbreviations",
+          "literal_sha256": "e05e2aeff5c60d2adf4d8541cd92e829ef16ade6198c4874b4975b44cc93bedb",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-amendment47.json",
+          "source_pages_sha256": "a668ff9444fa7e52e5c5d14b678c830adc337fa00ac1d80228f75bd80e505e61",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa8ff2540f0b66b625e2c42/v10am47.pdf#page=3"
+        },
+        {
+          "page": 14,
+          "start_utf8": 8,
+          "end_utf8": 17,
+          "literal": "Example 5",
+          "literal_sha256": "7ce5a933ca4355074564547305eaf5946c52f78124ee4acd87fde2975c5164c1",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-amendment47.json",
+          "source_pages_sha256": "a668ff9444fa7e52e5c5d14b678c830adc337fa00ac1d80228f75bd80e505e61",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa8ff2540f0b66b625e2c42/v10am47.pdf#page=14"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 13,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-amendment43/manual-structure-v1/source-0000000202-000-512c031c435e",
+      "document_id": "dmg-vol14-amendment43",
+      "paragraph_labels": [
+        "85067"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-summary-reference-promoted",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "85067 appears in the cover-letter change summary (added BSP to list and renumbered), not as a governing paragraph here. The unit absorbs chapter 84 contents and ends before the actual 84374 business-assets paragraph. Its paragraph identity is false.",
+      "text_bytes": 23039,
+      "record_sha256": "7550edf01c39bf4c8a34b8aa26519d00a769b0a9e92fa3109c01819a25d4d6d8",
+      "unit_text_sha256": "9c68355dd5d48c5b60382af974e7c444ee0212ae376a014e3cfb8d31f524e13a",
+      "evidence": [
+        {
+          "page": 1,
+          "start_utf8": 202,
+          "end_utf8": 211,
+          "literal": "Volume 14",
+          "literal_sha256": "1db9d8841ca74a682cd8ba8216f4a4fd5ed435215fac7520afd711d0a5f6e21b",
+          "source_pages_path": "source/pages/dmg-vol14-amendment43.json",
+          "source_pages_sha256": "bdcdd8384cd804f711b3a54e8a1240e988c1e8db3a75aeab107624dc94a9822a",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a74f6b9e5274a59fa716567/v14am43.pdf#page=1"
+        },
+        {
+          "page": 3,
+          "start_utf8": 12,
+          "end_utf8": 122,
+          "literal": "Resulting trust .........................................................................................84307",
+          "literal_sha256": "5045b3c247279495c61bfc810c9fc0dfa30099547773835de86cb6b6cb8f11d7",
+          "source_pages_path": "source/pages/dmg-vol14-amendment43.json",
+          "source_pages_sha256": "bdcdd8384cd804f711b3a54e8a1240e988c1e8db3a75aeab107624dc94a9822a",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a74f6b9e5274a59fa716567/v14am43.pdf#page=3"
+        },
+        {
+          "page": 9,
+          "start_utf8": 8,
+          "end_utf8": 34,
+          "literal": "Meaning of business assets",
+          "literal_sha256": "be4b1b6bdce58a687e54d863bfa035281fba2c2487a4b1d2a9ea45f623d5d32e",
+          "source_pages_path": "source/pages/dmg-vol14-amendment43.json",
+          "source_pages_sha256": "bdcdd8384cd804f711b3a54e8a1240e988c1e8db3a75aeab107624dc94a9822a",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a74f6b9e5274a59fa716567/v14am43.pdf#page=9"
+        },
+        {
+          "page": 1,
+          "start_utf8": 1291,
+          "end_utf8": 1329,
+          "literal": "85067 added BSP to list and renumbered",
+          "literal_sha256": "ff2301eb25fbd4c1c256beb2ae6d76726fab8f762700506cbda474815edc2b48",
+          "source_pages_path": "source/pages/dmg-vol14-amendment43.json",
+          "source_pages_sha256": "bdcdd8384cd804f711b3a54e8a1240e988c1e8db3a75aeab107624dc94a9822a",
+          "evidence_relation": "within-unit"
+        },
+        {
+          "page": 9,
+          "start_utf8": 36,
+          "end_utf8": 124,
+          "literal": "84374   Business assets include standard items such as machinery, vehicles, fixtures and",
+          "literal_sha256": "d75793a29ee28251a321cae0b79f96f6c4ea591dadb51411a73fcdb99b2b2826",
+          "source_pages_path": "source/pages/dmg-vol14-amendment43.json",
+          "source_pages_sha256": "bdcdd8384cd804f711b3a54e8a1240e988c1e8db3a75aeab107624dc94a9822a",
+          "evidence_relation": "adjacent-source-outside-unit"
+        }
+      ],
+      "visual_checks": [
+        {
+          "page": 1,
+          "path": "evaluation/manual-structure/large-paragraph-review-2026-09-23/visual/dmg-vol14-amendment43-page-1.png",
+          "sha256": "4e5e0502575b2fb61b66b83ec08bd9361fe5ab9967708435b36981d50b708979"
+        },
+        {
+          "page": 9,
+          "path": "evaluation/manual-structure/large-paragraph-review-2026-09-23/visual/dmg-vol14-amendment43-page-9.png",
+          "sha256": "7519a799fac92af82f3ad861f34d9aef22e1d8ede09f3feb0d7fb176d2d43e5a"
+        }
+      ],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 14,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol2-amendment40/manual-structure-v1/source-0000085636-000-6bc94c050cdb",
+      "document_id": "dmg-vol2-amendment40",
+      "paragraph_labels": [
+        "071920"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "uncertain-excerpt-transition-and-extraction",
+      "finding_status": "uncertain-mechanism-explicit",
+      "finding": "The PDF shows 071920 ending with the second list item and or on page 28; page 29 begins independently numbered item 10 about different exported benefits and a named example. Extraction inserts spaces inside words. There is no visible new heading at this boundary; preserve separate uncertain fragments pending a source-led numbering/layout rule.",
+      "text_bytes": 22916,
+      "record_sha256": "26253016abdad0df22b9e538f09aaef84ed746b5d96e32707b3e6b4472e7f0c7",
+      "unit_text_sha256": "350a8c3b9111b0f681cb2d765036991e833d2d74b55a7699798193a3f35cd770",
+      "evidence": [
+        {
+          "page": 28,
+          "start_utf8": 3410,
+          "end_utf8": 3532,
+          "literal": "071920       Cl ai m a nt s t o E S A( C o nt) r el ati n g t o y o ut h, w h o ar e a b s e nt fr o m G B o n a n y d a y",
+          "literal_sha256": "f81d3f0e2d0eca6b8352c9e7c03c2859c80a6b214c206043ad5043a82e373a54",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-amendment40.json",
+          "source_pages_sha256": "eb87bf88344f4c2c971489f2085bcff53bd7d744ac0b278f82a960eeffaf598e",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5b3b3a1140f0b64603fc1822/v2am40.pdf#page=28"
+        },
+        {
+          "page": 29,
+          "start_utf8": 0,
+          "end_utf8": 138,
+          "literal": "1 0.        Cl ai m a nt s w h o s ati sf y all t h e c o n diti o n s i n D M G 0 7 1 7 4 1 ar e tr a n siti o n all y pr ot e ct e d t o",
+          "literal_sha256": "c85fd45f010ab7602de1f2e9eaf93f12d13a3bdb5fb16de89d1406f3d34219d0",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-amendment40.json",
+          "source_pages_sha256": "eb87bf88344f4c2c971489f2085bcff53bd7d744ac0b278f82a960eeffaf598e",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5b3b3a1140f0b64603fc1822/v2am40.pdf#page=29"
+        },
+        {
+          "page": 33,
+          "start_utf8": 13,
+          "end_utf8": 104,
+          "literal": "3.        t h e d at e t h e cl ai m c a n b e c o n si d er e d fr o m f or a C A cl ai m.",
+          "literal_sha256": "fef918a65637ad6454422f992abed364771ffae5f1cf80dc0b92c07da1d363d6",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-amendment40.json",
+          "source_pages_sha256": "eb87bf88344f4c2c971489f2085bcff53bd7d744ac0b278f82a960eeffaf598e",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5b3b3a1140f0b64603fc1822/v2am40.pdf#page=33"
+        }
+      ],
+      "visual_checks": [
+        {
+          "page": 28,
+          "path": "evaluation/manual-structure/large-paragraph-review-2026-09-23/visual/dmg-vol2-amendment40-page-28.png",
+          "sha256": "15b75544e6f1a088e6ede728156f98a5e10768957f9449af6ac2c671a6099347"
+        },
+        {
+          "page": 29,
+          "path": "evaluation/manual-structure/large-paragraph-review-2026-09-23/visual/dmg-vol2-amendment40-page-29.png",
+          "sha256": "2f6c38b8f9d4ece154c411b72ed5513eb122f38e20ca668483ccf5d1e0edacc3"
+        }
+      ],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R4",
+        "R6"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 15,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol6-amendment50/manual-structure-v1/source-0000000213-000-1e53758c0bbd",
+      "document_id": "dmg-vol6-amendment50",
+      "paragraph_labels": [
+        "30273"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The 30273 eligibility paragraph on page 13 is prefixed by the amendment cover, remove/insert rows, nine abbreviation pages and an unlabelled continuation of the preceding conditions.",
+      "text_bytes": 22260,
+      "record_sha256": "5435c5cff326f13760ffb1f4aa237db5b669fab8dddce53928153e42f7f470e7",
+      "unit_text_sha256": "f57c197fbfd3a5a86ec8fed05e3e3b801d3916f0eba40f1963adb08498dd7058",
+      "evidence": [
+        {
+          "page": 1,
+          "start_utf8": 213,
+          "end_utf8": 221,
+          "literal": "Volume 6",
+          "literal_sha256": "79b2ae9cebb98636f48140a116c068d86f92708838a7d8ae55c1d3460fe7b560",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol6-amendment50.json",
+          "source_pages_sha256": "5d52209ab72a36cb61dca4d8cbd6850ee56e55c785bb3d7ea0e405956a6a349e",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa8f58fed915d4f563b740c/v6am50.pdf#page=1"
+        },
+        {
+          "page": 3,
+          "start_utf8": 8,
+          "end_utf8": 21,
+          "literal": "Abbreviations",
+          "literal_sha256": "e05e2aeff5c60d2adf4d8541cd92e829ef16ade6198c4874b4975b44cc93bedb",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol6-amendment50.json",
+          "source_pages_sha256": "5d52209ab72a36cb61dca4d8cbd6850ee56e55c785bb3d7ea0e405956a6a349e",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa8f58fed915d4f563b740c/v6am50.pdf#page=3"
+        },
+        {
+          "page": 13,
+          "start_utf8": 8,
+          "end_utf8": 86,
+          "literal": "2.     throughout the three years before the first day of the course have been",
+          "literal_sha256": "ea1974a47cb68d538cb757960551330bc17f784423259c00c6202beeddc5744b",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol6-amendment50.json",
+          "source_pages_sha256": "5d52209ab72a36cb61dca4d8cbd6850ee56e55c785bb3d7ea0e405956a6a349e",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa8f58fed915d4f563b740c/v6am50.pdf#page=13"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 16,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-amendment45/manual-structure-v1/source-0000000212-000-71edd728d3c1",
+      "document_id": "dmg-vol14-amendment45",
+      "paragraph_labels": [
+        "83039"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The 83039 new-claims passage is joined to cover-letter and abbreviation material. Its ending also carries the standalone 83040 marker and the next heading; the marker needs explicit reserved/unknown handling, not inferred missing prose.",
+      "text_bytes": 21176,
+      "record_sha256": "8bfb563ef729d33c6721761fefd29e6cb57be290e4f60faf172d8ad3b42a3d1e",
+      "unit_text_sha256": "1c458ebc43957589f97fb3fb783e802e1ae1b8e7fb20aee9c5fd9b797e982b82",
+      "evidence": [
+        {
+          "page": 1,
+          "start_utf8": 212,
+          "end_utf8": 221,
+          "literal": "Volume 14",
+          "literal_sha256": "1db9d8841ca74a682cd8ba8216f4a4fd5ed435215fac7520afd711d0a5f6e21b",
+          "source_pages_path": "source/pages/dmg-vol14-amendment45.json",
+          "source_pages_sha256": "0620c820287987cbb5ae85e6ae8544098d15f4b9c725a29a00674518c0f0c7ba",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa903eeed915d4f595c58c6/v14am45.pdf#page=1"
+        },
+        {
+          "page": 3,
+          "start_utf8": 8,
+          "end_utf8": 21,
+          "literal": "Abbreviations",
+          "literal_sha256": "e05e2aeff5c60d2adf4d8541cd92e829ef16ade6198c4874b4975b44cc93bedb",
+          "source_pages_path": "source/pages/dmg-vol14-amendment45.json",
+          "source_pages_sha256": "0620c820287987cbb5ae85e6ae8544098d15f4b9c725a29a00674518c0f0c7ba",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa903eeed915d4f595c58c6/v14am45.pdf#page=3"
+        },
+        {
+          "page": 13,
+          "start_utf8": 8,
+          "end_utf8": 30,
+          "literal": "New Claims from 6.4.16",
+          "literal_sha256": "cac672395e220e4ade4867c985bd8d91fb83622d20f69a90fe4b517d73fcbb78",
+          "source_pages_path": "source/pages/dmg-vol14-amendment45.json",
+          "source_pages_sha256": "0620c820287987cbb5ae85e6ae8544098d15f4b9c725a29a00674518c0f0c7ba",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa903eeed915d4f595c58c6/v14am45.pdf#page=13"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [
+        14,
+        15,
+        21
+      ],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 17,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol12-amendment37/manual-structure-v1/source-0000000167-000-86bb56b74693",
+      "document_id": "dmg-vol12-amendment37",
+      "paragraph_labels": [
+        "75164"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The 75164 passage is prefixed by cover and abbreviation tables and earlier unlabelled conditions. The trailing 75165 marker/new heading needs separate uncertain handling.",
+      "text_bytes": 21009,
+      "record_sha256": "e89ec2a4a5e5ecad40f02767cc1b0f11438d163a51b2eeb7d5d58ec3b1c2c5bb",
+      "unit_text_sha256": "e02529cdf60c9b2a76aa4b7283d4e8085aa06ce0241cdaa7a53cb352ce79a9f2",
+      "evidence": [
+        {
+          "page": 1,
+          "start_utf8": 167,
+          "end_utf8": 176,
+          "literal": "Volume 12",
+          "literal_sha256": "4c69b5acb8b8a63e0500303021a192ed5cb0ee54269bdd6a569052780ffe927b",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol12-amendment37.json",
+          "source_pages_sha256": "18361c4ea7ea2fb76491a7d6e1bcdda5c72a090cab4944b18d31c62eee0bbfac",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa900efed915d4f595c58bb/v12am37.pdf#page=1"
+        },
+        {
+          "page": 3,
+          "start_utf8": 8,
+          "end_utf8": 21,
+          "literal": "Abbreviations",
+          "literal_sha256": "e05e2aeff5c60d2adf4d8541cd92e829ef16ade6198c4874b4975b44cc93bedb",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol12-amendment37.json",
+          "source_pages_sha256": "18361c4ea7ea2fb76491a7d6e1bcdda5c72a090cab4944b18d31c62eee0bbfac",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa900efed915d4f595c58bb/v12am37.pdf#page=3"
+        },
+        {
+          "page": 13,
+          "start_utf8": 8,
+          "end_utf8": 52,
+          "literal": "1.      on the same terms and conditions and",
+          "literal_sha256": "5544a4dbc29c6dac4cb11f68e894479c2b86b981edc2462afc4539e104f68571",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol12-amendment37.json",
+          "source_pages_sha256": "18361c4ea7ea2fb76491a7d6e1bcdda5c72a090cab4944b18d31c62eee0bbfac",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa900efed915d4f595c58bb/v12am37.pdf#page=13"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 18,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-amendment45/manual-structure-v1/source-0000023454-000-16544d975782",
+      "document_id": "dmg-vol14-amendment45",
+      "paragraph_labels": [
+        "83042"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "missed-contents-boundary",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "83042 and its note are complete on page 14. Pages 15–20 are capital contents; page 21 begins the tail of a different cottage-interest example and a qualification. That qualification is not part of 83042.",
+      "text_bytes": 20675,
+      "record_sha256": "35e5e9bb84111533d78c7fe5472f249a07edd9dbacba624461bdf697aeed94ad",
+      "unit_text_sha256": "08b8af37d26aface6f5f5bad836db90bf7bec5fcde1db3076206b7056c8c4f40",
+      "evidence": [
+        {
+          "page": 14,
+          "start_utf8": 110,
+          "end_utf8": 204,
+          "literal": "83042   In deciding whether the current retirement provision is going to be typical throughout",
+          "literal_sha256": "047d39eefba1b1922365b2558ca28e8b37a9c29c04ee5a8a835afbd173ebf46c",
+          "source_pages_path": "source/pages/dmg-vol14-amendment45.json",
+          "source_pages_sha256": "0620c820287987cbb5ae85e6ae8544098d15f4b9c725a29a00674518c0f0c7ba",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa903eeed915d4f595c58c6/v14am45.pdf#page=14"
+        },
+        {
+          "page": 15,
+          "start_utf8": 8,
+          "end_utf8": 42,
+          "literal": "The Independent Living Fund (2006)",
+          "literal_sha256": "bfef4df3d495c00ac74037173f476f907877abd232bbcbf0ecfacc5abdf3ab85",
+          "source_pages_path": "source/pages/dmg-vol14-amendment45.json",
+          "source_pages_sha256": "0620c820287987cbb5ae85e6ae8544098d15f4b9c725a29a00674518c0f0c7ba",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa903eeed915d4f595c58c6/v14am45.pdf#page=15"
+        },
+        {
+          "page": 21,
+          "start_utf8": 15,
+          "end_utf8": 90,
+          "literal": "The value of Charlotte’s right to the rents is disregarded until she dies",
+          "literal_sha256": "4ce38bacf3f8c430daa080a56f1786bc734873b665dabca2520be8301d0e47f5",
+          "source_pages_path": "source/pages/dmg-vol14-amendment45.json",
+          "source_pages_sha256": "0620c820287987cbb5ae85e6ae8544098d15f4b9c725a29a00674518c0f0c7ba",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5aa903eeed915d4f595c58c6/v14am45.pdf#page=21"
+        }
+      ],
+      "visual_checks": [
+        {
+          "page": 14,
+          "path": "evaluation/manual-structure/large-paragraph-review-2026-09-23/visual/dmg-vol14-amendment45-page-14.png",
+          "sha256": "cc1680ea86da2b62422399810ca50c3f79c08db9ebc70e65fc223a8032229e2a"
+        },
+        {
+          "page": 15,
+          "path": "evaluation/manual-structure/large-paragraph-review-2026-09-23/visual/dmg-vol14-amendment45-page-15.png",
+          "sha256": "63fd09dcb08a5f355a31c293ba50c1cef40a9127e75ab665d09a90fdaea149a1"
+        },
+        {
+          "page": 21,
+          "path": "evaluation/manual-structure/large-paragraph-review-2026-09-23/visual/dmg-vol14-amendment45-page-21.png",
+          "sha256": "7d2904cc16e279e78635fd7975ae11b20cb77937f6206375cd51f52f81a91dbe"
+        }
+      ],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R1",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 19,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol2-amendment34/manual-structure-v1/source-0000057636-000-9ee7cd1a678b",
+      "document_id": "dmg-vol2-amendment34",
+      "paragraph_labels": [
+        "070594"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "missed-contents-and-reference-table-boundary",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "070594 lists three countries on page 35. Page 36 is an overlap reference table, followed by habitual-residence contents and a new heading. Their paragraph numbers are table cross-references, not a continuation of the country list.",
+      "text_bytes": 20632,
+      "record_sha256": "8db3ad52147dcf3477e5c9b309ed427ca862fab33c63d6dd83c1dcc63382338e",
+      "unit_text_sha256": "fbe409ee28d964b49d5e6b923f90431906b33bce8c3edfbb7685f7eb581287a1",
+      "evidence": [
+        {
+          "page": 35,
+          "start_utf8": 1430,
+          "end_utf8": 1513,
+          "literal": "070594 Pro rata IBLT is only paid under the agreements with the following countries",
+          "literal_sha256": "bc87e3a014fe709f971e756894124a1ddc25748ee48bcc9b5ba10ee7c2a638fc",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-amendment34.json",
+          "source_pages_sha256": "3337b9b6c537064c04f1a2b9fc22d06114297572f675a9586b63149c788bc7df",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a8012d7e5274a2e87db7b2b/v2am34.pdf#page=35"
+        },
+        {
+          "page": 36,
+          "start_utf8": 8,
+          "end_utf8": 85,
+          "literal": "The table below summarises the effects of overlap under Reciprocal Agreements",
+          "literal_sha256": "6c5749c99957704ed0794a597720aa9eaa5f969b831fd3fced07dc0211f0165c",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-amendment34.json",
+          "source_pages_sha256": "3337b9b6c537064c04f1a2b9fc22d06114297572f675a9586b63149c788bc7df",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a8012d7e5274a2e87db7b2b/v2am34.pdf#page=36"
+        },
+        {
+          "page": 37,
+          "start_utf8": 12,
+          "end_utf8": 118,
+          "literal": "On entry jobseeker ................................................................................ 073143",
+          "literal_sha256": "dfe0b97a74dcb5ca50485661b4229399a25219c6d60d34ded1de1bb2b63940ff",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-amendment34.json",
+          "source_pages_sha256": "3337b9b6c537064c04f1a2b9fc22d06114297572f675a9586b63149c788bc7df",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a8012d7e5274a2e87db7b2b/v2am34.pdf#page=37"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R1",
+        "R2",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 20,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-amendment50/manual-structure-v1/source-0000000200-000-1b8a92520dfa",
+      "document_id": "dmg-vol4-amendment50",
+      "paragraph_labels": [
+        "23221"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The 23221 commercial-liability paragraph is prefixed by amendment and statutory-instrument tables, housing contents and preceding numbered exceptions. Its own cross-reference to 23220 should remain a reference, not a reason to merge all front matter.",
+      "text_bytes": 19843,
+      "record_sha256": "f36af78bb0a2f09807303908db00451afae2dab8af208cb3f2405402dd7442b0",
+      "unit_text_sha256": "39c53ca988374f6a9e31244730d99345c39d6942360bc4493b22bed415d34c97",
+      "evidence": [
+        {
+          "page": 1,
+          "start_utf8": 200,
+          "end_utf8": 208,
+          "literal": "Volume 4",
+          "literal_sha256": "5eb8c628cb25e5db843e8152d9949a5b575e7034ed6258d59c6c49da3ee23453",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol4-amendment50.json",
+          "source_pages_sha256": "d431f9d20b2bdec0732940c498fc2260c994dea4e3c27b23cd5a1c481a51a83c",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a7f4ff640f0b6230268ebd1/v4am50.pdf#page=1"
+        },
+        {
+          "page": 3,
+          "start_utf8": 0,
+          "end_utf8": 21,
+          "literal": "Statutory Instruments",
+          "literal_sha256": "83f47f34b4fb4cb0d0cf86f6abd5350c17694a0ccf11801316bd45c891c7a2c5",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol4-amendment50.json",
+          "source_pages_sha256": "d431f9d20b2bdec0732940c498fc2260c994dea4e3c27b23cd5a1c481a51a83c",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a7f4ff640f0b6230268ebd1/v4am50.pdf#page=3"
+        },
+        {
+          "page": 10,
+          "start_utf8": 19,
+          "end_utf8": 100,
+          "literal": "10.1 joins the claimant’s household for the first time to care for the claimant",
+          "literal_sha256": "78ee160fbef881ecf0bffe97304e402ce6e5ca06457063a32993d7f2bee07eee",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol4-amendment50.json",
+          "source_pages_sha256": "d431f9d20b2bdec0732940c498fc2260c994dea4e3c27b23cd5a1c481a51a83c",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a7f4ff640f0b6230268ebd1/v4am50.pdf#page=10"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 21,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-amendment42/manual-structure-v1/source-0000000206-000-657b87b167ca",
+      "document_id": "dmg-vol14-amendment42",
+      "paragraph_labels": [
+        "85015"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The unit labelled 85015 begins in the cover letter and contains income contents before the actual gross-income paragraph on page 9.",
+      "text_bytes": 19387,
+      "record_sha256": "bb213a4e491aec409bc97398a225156f88c08d0d9ce9c41d5b91c88b7761c6fd",
+      "unit_text_sha256": "92a99b1c860c8dc9a2434e66f2e7134178e7961dd87a1bde3e988a681db62513",
+      "evidence": [
+        {
+          "page": 1,
+          "start_utf8": 206,
+          "end_utf8": 215,
+          "literal": "Volume 14",
+          "literal_sha256": "1db9d8841ca74a682cd8ba8216f4a4fd5ed435215fac7520afd711d0a5f6e21b",
+          "source_pages_path": "source/pages/dmg-vol14-amendment42.json",
+          "source_pages_sha256": "8f18807a14dd06047a0a8d6a40052afd3d26fbfb4b26176a694107ff052ccb50",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a759277e5274a545822c8ea/v14am42.pdf#page=1"
+        },
+        {
+          "page": 3,
+          "start_utf8": 8,
+          "end_utf8": 123,
+          "literal": "Carer’s allowance ......................................................................................... 85103",
+          "literal_sha256": "2927ecf132142559208ad5e062cdd92022bfce3d65ff1972c07f4dab2a1be2ac",
+          "source_pages_path": "source/pages/dmg-vol14-amendment42.json",
+          "source_pages_sha256": "8f18807a14dd06047a0a8d6a40052afd3d26fbfb4b26176a694107ff052ccb50",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a759277e5274a545822c8ea/v14am42.pdf#page=3"
+        },
+        {
+          "page": 9,
+          "start_utf8": 8,
+          "end_utf8": 44,
+          "literal": "How much income should be taken into",
+          "literal_sha256": "60ba83f80bf81b8d9b721da7a4344b15b9f2d049f9c4883c925c712790c6ab54",
+          "source_pages_path": "source/pages/dmg-vol14-amendment42.json",
+          "source_pages_sha256": "8f18807a14dd06047a0a8d6a40052afd3d26fbfb4b26176a694107ff052ccb50",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a759277e5274a545822c8ea/v14am42.pdf#page=9"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 22,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol10-amendment44/manual-structure-v1/source-0000000209-000-378c70339d88",
+      "document_id": "dmg-vol10-amendment44",
+      "paragraph_labels": [
+        "61332"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The 61332 mobility rule is preceded by amendment instructions, a short Ch fragment, instrument tables and unrelated chapter contents.",
+      "text_bytes": 19110,
+      "record_sha256": "678967f9ea1318bed11f3fe9ffed3f2505571328c95615b05a3bd682b1ae5068",
+      "unit_text_sha256": "e2119a03f5a40b7f3cd639e591511ffdfb51b03bb3c1e243c26ef6cd1a4b6d15",
+      "evidence": [
+        {
+          "page": 1,
+          "start_utf8": 209,
+          "end_utf8": 218,
+          "literal": "Volume 10",
+          "literal_sha256": "7dc4888db0e640b6aca85ecff52ebd77468a91ec9a280d01ce0e665ba711fc2a",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-amendment44.json",
+          "source_pages_sha256": "985a8a6c4349a0cedd01c0ef849b69ee70bf90ad09e56d6422f67706a7c0f8be",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a807a8fe5274a2e87dba0ab/v10am44.pdf#page=1"
+        },
+        {
+          "page": 5,
+          "start_utf8": 0,
+          "end_utf8": 21,
+          "literal": "Statutory Instruments",
+          "literal_sha256": "83f47f34b4fb4cb0d0cf86f6abd5350c17694a0ccf11801316bd45c891c7a2c5",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-amendment44.json",
+          "source_pages_sha256": "985a8a6c4349a0cedd01c0ef849b69ee70bf90ad09e56d6422f67706a7c0f8be",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a807a8fe5274a2e87dba0ab/v10am44.pdf#page=5"
+        },
+        {
+          "page": 13,
+          "start_utf8": 8,
+          "end_utf8": 57,
+          "literal": "DLA mobility component - people without both legs",
+          "literal_sha256": "3c3615d3e3eee36478c004725e0d20c317265d102f7302769e00d93e2066fbc4",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-amendment44.json",
+          "source_pages_sha256": "985a8a6c4349a0cedd01c0ef849b69ee70bf90ad09e56d6422f67706a7c0f8be",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a807a8fe5274a2e87dba0ab/v10am44.pdf#page=13"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 23,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol1-amendment55/manual-structure-v1/source-0000001485-000-0452cebf85de",
+      "document_id": "dmg-vol1-amendment55",
+      "paragraph_labels": [
+        "06078"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The 06078 appeal unit starts in a remove/insert table, absorbs abbreviation pages, then includes a preceding appeal-condition fragment before the actual interests-of-justice paragraph.",
+      "text_bytes": 18972,
+      "record_sha256": "732e5748fa65568f4fe66571c4f6c2e3816e8f2d623dda0abc2d0ab874561da2",
+      "unit_text_sha256": "c6f77812dc03546d4f863902b46bfd8cc2b5794a5d82b4bb7d775239bd4046cb",
+      "evidence": [
+        {
+          "page": 2,
+          "start_utf8": 0,
+          "end_utf8": 31,
+          "literal": "Remove                   Insert",
+          "literal_sha256": "fccead8cfc7c31ea9f6ca9735acbd4ea13586b0c22365679f930d60bf924ade5",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol1-amendment55.json",
+          "source_pages_sha256": "d91a4f5afdb6e42455c6f092e93d550626953d96872c7e43acd30eb4ce034d96",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a82b596e5274a2e8ab58f11/v1am55.pdf#page=2"
+        },
+        {
+          "page": 3,
+          "start_utf8": 8,
+          "end_utf8": 21,
+          "literal": "Abbreviations",
+          "literal_sha256": "e05e2aeff5c60d2adf4d8541cd92e829ef16ade6198c4874b4975b44cc93bedb",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol1-amendment55.json",
+          "source_pages_sha256": "d91a4f5afdb6e42455c6f092e93d550626953d96872c7e43acd30eb4ce034d96",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a82b596e5274a2e8ab58f11/v1am55.pdf#page=3"
+        },
+        {
+          "page": 13,
+          "start_utf8": 8,
+          "end_utf8": 85,
+          "literal": "2.    the DM considers that the appeal was made more than 12 months after the",
+          "literal_sha256": "8150b34bff9b61ff9547724a7ad85a8e330f69746610e92cfc62f24d10b817da",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol1-amendment55.json",
+          "source_pages_sha256": "d91a4f5afdb6e42455c6f092e93d550626953d96872c7e43acd30eb4ce034d96",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a82b596e5274a2e8ab58f11/v1am55.pdf#page=13"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 24,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-amendment59/manual-structure-v1/source-0000040048-000-d98084fe544c",
+      "document_id": "dmg-vol4-amendment59",
+      "paragraph_labels": [
+        "20917"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "missed-contents-boundary",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "20917 concerns employment officers and ends on page 19. The following chapter 23 contents and chapter-scope heading are separate navigation, not part of the statutory-body passage.",
+      "text_bytes": 17491,
+      "record_sha256": "8d256407db788f99bd64ad866663c056cfb1220e96155da83fc3222edb54bff4",
+      "unit_text_sha256": "662aef38544d256721a51f8ce5b12acb3c0cff9edbcdc02f53d7d631b63d6929",
+      "evidence": [
+        {
+          "page": 19,
+          "start_utf8": 1804,
+          "end_utf8": 1887,
+          "literal": "20917   References to the Secretary of State can also include a reference to people",
+          "literal_sha256": "52b26a0a8f11d129befb2a9b2ef6846f1d08acbc461b5f0493cfed038b7b076c",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol4-amendment59.json",
+          "source_pages_sha256": "b3bb7f5c334aa0919a747984acfd586c5c29128cb7615b610a81aee8e67e8498",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5dbac763e5274a4a98a51269/vol-4-amd-59-oct-2019.pdf#page=19"
+        },
+        {
+          "page": 21,
+          "start_utf8": 8,
+          "end_utf8": 42,
+          "literal": "Chapter 23 - Normal amount payable",
+          "literal_sha256": "a5ec6ccd210774b8690c250b86ac3752f03224bfdba716e67ad932ae71b814cf",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol4-amendment59.json",
+          "source_pages_sha256": "b3bb7f5c334aa0919a747984acfd586c5c29128cb7615b610a81aee8e67e8498",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5dbac763e5274a4a98a51269/vol-4-amd-59-oct-2019.pdf#page=21"
+        },
+        {
+          "page": 27,
+          "start_utf8": 8,
+          "end_utf8": 42,
+          "literal": "Chapter 23 - Normal amount payable",
+          "literal_sha256": "a5ec6ccd210774b8690c250b86ac3752f03224bfdba716e67ad932ae71b814cf",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol4-amendment59.json",
+          "source_pages_sha256": "b3bb7f5c334aa0919a747984acfd586c5c29128cb7615b610a81aee8e67e8498",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5dbac763e5274a4a98a51269/vol-4-amd-59-oct-2019.pdf#page=27"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R1",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 25,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol2-amendment34/manual-structure-v1/source-0000000005-000-e8325c251aed",
+      "document_id": "dmg-vol2-amendment34",
+      "paragraph_labels": [
+        "070020"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The 070020 principles paragraph is prefixed by cover/remove–insert material, abbreviations and an agreements reference table.",
+      "text_bytes": 16348,
+      "record_sha256": "1549cc03af86f25c0962d41b714300ecfc46f85c3261ed34fb03b6692c79d876",
+      "unit_text_sha256": "6a4291b031b9ae2ef1496b339b44373b7a46bf4692fd3da3dba6ca55d1322197",
+      "evidence": [
+        {
+          "page": 1,
+          "start_utf8": 5,
+          "end_utf8": 37,
+          "literal": "Department for Work and Pensions",
+          "literal_sha256": "f82eb393809976d4005bb463802db6cb40c8f198be7c56c4fb13cec720b478a7",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-amendment34.json",
+          "source_pages_sha256": "3337b9b6c537064c04f1a2b9fc22d06114297572f675a9586b63149c788bc7df",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a8012d7e5274a2e87db7b2b/v2am34.pdf#page=1"
+        },
+        {
+          "page": 3,
+          "start_utf8": 9,
+          "end_utf8": 50,
+          "literal": "LCW           Limited capability for work",
+          "literal_sha256": "ce4dd4a099af8329ce3c3a2495f8ed742f2f4285c816c993e3d45c89fb204e46",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-amendment34.json",
+          "source_pages_sha256": "3337b9b6c537064c04f1a2b9fc22d06114297572f675a9586b63149c788bc7df",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a8012d7e5274a2e87db7b2b/v2am34.pdf#page=3"
+        },
+        {
+          "page": 11,
+          "start_utf8": 9,
+          "end_utf8": 27,
+          "literal": "General principles",
+          "literal_sha256": "05dac12732d691f0f97edc730236ff6e7b341337cfe6b44d61924b9e0d2837f6",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-amendment34.json",
+          "source_pages_sha256": "3337b9b6c537064c04f1a2b9fc22d06114297572f675a9586b63149c788bc7df",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a8012d7e5274a2e87db7b2b/v2am34.pdf#page=11"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 26,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol5-amendment48/manual-structure-v1/source-0000002978-000-b37b9f5528ca",
+      "document_id": "dmg-vol5-amendment48",
+      "paragraph_labels": [
+        "25001"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The 25001 claimant-definition unit starts with a chapter 28 remove/insert continuation, absorbs abbreviation and chapter 25 contents, then reaches the definition on page 11.",
+      "text_bytes": 15537,
+      "record_sha256": "a55050b583c09219ee641dac6b974a8bc4e65b34477d62f79b9525e9f4656c74",
+      "unit_text_sha256": "24dae07cf678f0836f6fd8ac3520461531e22e1b4a391ac3a2be9880363073b6",
+      "evidence": [
+        {
+          "page": 2,
+          "start_utf8": 743,
+          "end_utf8": 784,
+          "literal": "Chapter 28                     Chapter 28",
+          "literal_sha256": "fbbd599f3b3c1883e5684561f39419018c7ffc5a2a34b00fa01e203a02fd2106",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-amendment48.json",
+          "source_pages_sha256": "4dffa68d46c4efabc48f977b56391982e6de61cf832b24283959a9f53fd47848",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a74b14140f0b61df4777b42/v5am48.pdf#page=2"
+        },
+        {
+          "page": 3,
+          "start_utf8": 9,
+          "end_utf8": 50,
+          "literal": "LCW           Limited capability for work",
+          "literal_sha256": "ce4dd4a099af8329ce3c3a2495f8ed742f2f4285c816c993e3d45c89fb204e46",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-amendment48.json",
+          "source_pages_sha256": "4dffa68d46c4efabc48f977b56391982e6de61cf832b24283959a9f53fd47848",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a74b14140f0b61df4777b42/v5am48.pdf#page=3"
+        },
+        {
+          "page": 11,
+          "start_utf8": 8,
+          "end_utf8": 37,
+          "literal": "Chapter 25 - Income (General)",
+          "literal_sha256": "4654b41b67a8c989b0ac28feffe299854a7409df6202948805c5b823f6d7b2f2",
+          "source_pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-amendment48.json",
+          "source_pages_sha256": "4dffa68d46c4efabc48f977b56391982e6de61cf832b24283959a9f53fd47848",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a74b14140f0b61df4777b42/v5am48.pdf#page=11"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 27,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-amendment40/manual-structure-v1/source-0000002267-000-9a36a9981cf3",
+      "document_id": "dmg-vol14-amendment40",
+      "paragraph_labels": [
+        "83000"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The 83000 introduction begins inside a remove/insert table and includes abbreviations and assessed-income-period contents before its actual paragraph.",
+      "text_bytes": 15379,
+      "record_sha256": "698181874ca8f20381cb2bfed58ca2bc9e7d98cabd2cae02305ba5a9d93a25cf",
+      "unit_text_sha256": "308c1cd9b9d553b90518469dbdcc9504c9a7ebb333b686588d22d9507c7a590f",
+      "evidence": [
+        {
+          "page": 2,
+          "start_utf8": 0,
+          "end_utf8": 42,
+          "literal": "Remove                              Insert",
+          "literal_sha256": "f22c83517d349b3112d7e17bd2364a1d0dc7837ef925e7560462d515c3cb620e",
+          "source_pages_path": "source/pages/dmg-vol14-amendment40.json",
+          "source_pages_sha256": "39c366b75d5f1b8bc17981fabec6d678d63eb605bf5f83eb02df99cf34e3e3cc",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a80780240f0b62305b8b55d/v14am40.pdf#page=2"
+        },
+        {
+          "page": 3,
+          "start_utf8": 9,
+          "end_utf8": 50,
+          "literal": "LCW           Limited capability for work",
+          "literal_sha256": "ce4dd4a099af8329ce3c3a2495f8ed742f2f4285c816c993e3d45c89fb204e46",
+          "source_pages_path": "source/pages/dmg-vol14-amendment40.json",
+          "source_pages_sha256": "39c366b75d5f1b8bc17981fabec6d678d63eb605bf5f83eb02df99cf34e3e3cc",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a80780240f0b62305b8b55d/v14am40.pdf#page=3"
+        },
+        {
+          "page": 11,
+          "start_utf8": 8,
+          "end_utf8": 44,
+          "literal": "Chapter 83 - Assessed income periods",
+          "literal_sha256": "6ac6a2b5df6e4012267cf5de8612a064220c67bcc90630a5857372d6d4d43859",
+          "source_pages_path": "source/pages/dmg-vol14-amendment40.json",
+          "source_pages_sha256": "39c366b75d5f1b8bc17981fabec6d678d63eb605bf5f83eb02df99cf34e3e3cc",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a80780240f0b62305b8b55d/v14am40.pdf#page=11"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    },
+    {
+      "number": 28,
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-amendment41/manual-structure-v1/source-0000000207-000-68a4a678c8cb",
+      "document_id": "dmg-vol14-amendment41",
+      "paragraph_labels": [
+        "86011"
+      ],
+      "source_role": "historical-amendment-not-current-rules",
+      "classification": "amendment-front-matter-absorbed",
+      "finding_status": "confirmed-mixed-structure-in-source",
+      "finding": "The 86011 earnings-period paragraph is preceded by the cover letter, instrument list, contents and unlabelled timing conditions from the preceding rule.",
+      "text_bytes": 15359,
+      "record_sha256": "3835ca87304669834a082bc31b760730fc54aa953feb7414398e225fbd4795a1",
+      "unit_text_sha256": "ea61a5b961bfab32a301e6dc9fb374e513671df1c01169dfb2aa1bf3cfef8e0d",
+      "evidence": [
+        {
+          "page": 1,
+          "start_utf8": 207,
+          "end_utf8": 216,
+          "literal": "Volume 14",
+          "literal_sha256": "1db9d8841ca74a682cd8ba8216f4a4fd5ed435215fac7520afd711d0a5f6e21b",
+          "source_pages_path": "source/pages/dmg-vol14-amendment41.json",
+          "source_pages_sha256": "075fa4c448e97c5d2b8fd000ba3c939e882c34c616dfa9ae833932a3490fe79a",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a7f7083e5274a2e8ab4c309/v14am41.pdf#page=1"
+        },
+        {
+          "page": 3,
+          "start_utf8": 0,
+          "end_utf8": 21,
+          "literal": "Statutory Instruments",
+          "literal_sha256": "83f47f34b4fb4cb0d0cf86f6abd5350c17694a0ccf11801316bd45c891c7a2c5",
+          "source_pages_path": "source/pages/dmg-vol14-amendment41.json",
+          "source_pages_sha256": "075fa4c448e97c5d2b8fd000ba3c939e882c34c616dfa9ae833932a3490fe79a",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a7f7083e5274a2e8ab4c309/v14am41.pdf#page=3"
+        },
+        {
+          "page": 9,
+          "start_utf8": 8,
+          "end_utf8": 94,
+          "literal": "1.       the first day of the benefit week in which the earnings become payable or the",
+          "literal_sha256": "72381092fbc9ff39d96077903729b404c018b0ce5f3324adc86f8cdf6ec6e424",
+          "source_pages_path": "source/pages/dmg-vol14-amendment41.json",
+          "source_pages_sha256": "075fa4c448e97c5d2b8fd000ba3c939e882c34c616dfa9ae833932a3490fe79a",
+          "official_source": "https://assets.publishing.service.gov.uk/media/5a7f7083e5274a2e8ab4c309/v14am41.pdf#page=9"
+        }
+      ],
+      "visual_checks": [],
+      "other_same_document_visual_checks": [],
+      "proposed_rules": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "follow_up": "Add source-bound positive and negative boundary controls before any parser change; preserve original bytes, role distinctions, fragment uncertainty and existing authored-unit identities.",
+      "review_depth": "Full unit bytes and all source spans checked mechanically; every included page opening/closing and marker profile inspected. This is structural triage, not line-by-line legal review. Visual scope is exactly the listed pages.",
+      "specialist_review": "not-reviewed",
+      "current_projection_modified": false
+    }
+  ],
+  "limits": [
+    "The size filter is a triage population, not a corpus error rate.",
+    "All candidates retain machine boundary/completeness uncertainty. This review does not make any passage legally complete.",
+    "No source, parser, projection, profile or previous evaluation was changed.",
+    "Unknown preceding/following amendment fragments must not be reconstructed from another edition without a separate reviewed source dependency."
+  ]
+}
