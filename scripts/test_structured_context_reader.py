@@ -11,7 +11,7 @@ import unittest
 from build_bundle import BASE, ROOT, canonical, digest, source_text_block
 from build_full_dmg import bucket
 from build_logical_units import make_record
-from structured_context_reader import bound_cards, declare_postings_completeness, emit_reader
+from structured_context_reader import bound_cards, declare_postings_completeness, emit_reader, validate_endpoint_label_budget
 
 
 def fixture():
@@ -111,6 +111,37 @@ class StructuredReaderTests(unittest.TestCase):
         self.assertEqual(32, postings["zztagalias"][0][2])
         self.assertEqual(32, postings["travel"][0][2])
         self.assertTrue(any(mask & 8 for _, _, mask in postings["qualification"]))
+
+    def test_alias_search_does_not_inflate_conceptual_endpoints(self):
+        card = self.args[6][0]
+        self.assertEqual(card["search_aliases"], self.record["discovery_aliases"])
+        self.assertEqual(card, self.record["extras"]["discovery_card"])
+        self.assertNotIn("zztagalias", self.record["tags"])
+        labels = decoded(self.outputs, "data/endpoint-labels.json.gz")
+        self.assertNotIn("tag/zztagalias", {r["route"] for r in labels["entries"]})
+        self.assertIn("tag/Travel%20conditions", {r["route"] for r in labels["entries"]})
+        search = decoded(self.outputs, "data/search/manifest.json")
+        rows = [r for p in search["entrypoints"]["result_docs"] for r in decoded(self.outputs, p)]
+        result = next(r for r in rows if r["open"] == self.record["route"])
+        self.assertEqual(self.record["tags"], result["tags"])
+        self.assertEqual(card["search_aliases"], result["discovery_aliases"])
+        self.assertEqual(["tags", "discovery_aliases"], search["navigation_metadata"]["fields"])
+        budget = decoded(self.outputs, "data/endpoint-label-budget.json")
+        self.assertEqual(len(labels["entries"]), budget["entries"])
+        self.assertLessEqual(budget["entries"], budget["entry_limit"])
+
+    def test_endpoint_catalogue_limit_fails_before_truncation(self):
+        row = {"route": "unit/a", "iri": "urn:test:a", "label": "A", "language": "en-GB", "type": "Unit",
+               "label_authority": {"class": "editorial", "source": "https://example.org"}}
+        labels = [row] * 100_000
+        self.assertEqual(100_000, validate_endpoint_label_budget(labels)["entries"])
+        labels.append(row)
+        with self.assertRaisesRegex(ValueError, "entry limit"):
+            validate_endpoint_label_budget(labels)
+        self.assertEqual(100_001, len(labels))
+        row["label"] = "𐀀" * (24 * 1024 * 1024)
+        with self.assertRaisesRegex(ValueError, "text limit"):
+            validate_endpoint_label_budget([row])
 
     def test_common_term_above_consumer_threshold_keeps_every_posting(self):
         rows = [[n, 5, 8] for n in range(50_001)]

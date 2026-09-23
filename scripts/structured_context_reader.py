@@ -28,6 +28,8 @@ FACETS = {
 }
 NO_HEADING = "No source heading recorded"
 READER_POSTINGS_COMPLETENESS_THRESHOLD = 50_000
+READER_ENDPOINT_LABEL_LIMIT = 100_000
+READER_ENDPOINT_TEXT_LIMIT = 48 * 1024 * 1024
 
 
 def declare_postings_completeness(search, put):
@@ -55,6 +57,38 @@ def declare_postings_completeness(search, put):
     put(path, report)
     search["manifest"]["postings_completeness"] = path
     return report
+
+
+def validate_endpoint_label_budget(labels):
+    """Match the existing Reader catalogue ceilings before emitting a release."""
+    require(len(labels) <= READER_ENDPOINT_LABEL_LIMIT, "Reader endpoint label catalogue exceeds supported entry limit")
+    # JavaScript measures UTF-16 code units, including two units for astral text.
+    fields = (value for row in labels for value in
+              [row["route"], row["iri"], row["label"], row["language"], row["type"],
+               row["label_authority"]["class"], row["label_authority"]["source"]])
+    text_units = sum(len(value.encode("utf-16-le")) // 2 for value in fields)
+    require(text_units <= READER_ENDPOINT_TEXT_LIMIT, "Reader endpoint label catalogue exceeds supported text limit")
+    return {"entries": len(labels), "retained_text_units": text_units,
+            "entry_limit": READER_ENDPOINT_LABEL_LIMIT, "retained_text_limit": READER_ENDPOINT_TEXT_LIMIT}
+
+
+def build_reader_search(records, full_text, snapshot, put):
+    """Index aliases as navigation metadata without creating tag endpoints.
+
+    The wire format's mask 32 denotes navigation metadata. Alias-only matches
+    remain separate from source-text mask 8; result tags retain actual tags.
+    """
+    searchable = [{**row, "tags": list(dict.fromkeys([*row["tags"], *row.get("discovery_aliases", [])]))}
+                  for row in records]
+    search = build_search(searchable, full_text, snapshot, put)
+    for result in search["results"]:
+        row = records[result["ordinal"]]
+        result["tags"] = list(row["tags"])
+        result["discovery_aliases"] = list(row.get("discovery_aliases", []))
+    search["manifest"]["navigation_metadata"] = {
+        "field_mask": 32, "fields": ["tags", "discovery_aliases"],
+        "meaning": "Tags and source-bound discovery aliases are indexed as navigation metadata, separately from source text. Aliases remain metadata, not conceptual tags or evidence."}
+    return search
 
 
 def bound_cards(units, card_metadata):
@@ -156,7 +190,8 @@ def emit_reader(inputs, corpus, units, semantic, declarations, corpus_outputs, c
             source_heading=headings or [NO_HEADING], source_kind=doc.get("kind") or "Not recorded",
             document_id=document_id, volume="See source document",
             formats=["PDF"], tags=list(dict.fromkeys([family, unit["kind"], unit["boundary_status"], captured_role,
-                                                     *headings, *(card["search_aliases"] if card else [])])),
+                                                     *headings])),
+            discovery_aliases=list(card["search_aliases"]) if card else [],
             resource_ids=[resource_id], resource_count=1, url=source["url"],
             license_id="uk-ogl", license_title="Open Government Licence v3.0", license_source_id=item["rights"])
         # This is source text with an authored/machine boundary, not authored prose.
@@ -215,7 +250,7 @@ def emit_reader(inputs, corpus, units, semantic, declarations, corpus_outputs, c
     adjacency_shards = [put(f"data/adjacency/{key}.json.gz", rows) for key, rows in sorted(adjacent.items())]
     put("data/adjacency/manifest.json", {"schema": "okf-relationship-adjacency.v1", "algorithm": "fnv1a32-prefix-2", "snapshot": snapshot,
         "routes": sum(map(len, adjacent.values())), "relationships": len(edges), "buckets": {k: f"data/adjacency/{k}.json.gz" for k in sorted(adjacent)}, "shards": adjacency_shards})
-    search = build_search(records, full_text, snapshot, put)
+    search = build_reader_search(records, full_text, snapshot, put)
     declare_postings_completeness(search, put)
     facets = search["facets"]
     for key in FACETS:
@@ -231,6 +266,8 @@ def emit_reader(inputs, corpus, units, semantic, declarations, corpus_outputs, c
         rows = json.loads(gzip.decompress(outputs[path]))
         for row in rows:
             row.update({key: records[row["ordinal"]][key] for key in FACETS})
+            row["tags"] = records[row["ordinal"]]["tags"]
+            row["discovery_aliases"] = records[row["ordinal"]].get("discovery_aliases", [])
         put(path, rows)
     put("data/facets.json", facets)
     search_shards = {"search": [{**bind(p), "snapshot": snapshot} for p in sorted(outputs) if p.startswith("data/search/") or p == "data/facets.json"]}
@@ -246,6 +283,9 @@ def emit_reader(inputs, corpus, units, semantic, declarations, corpus_outputs, c
     put("data/overview.json", {"schema": "okf-large-overview.v1", "title": TITLE, "generated_at": when, "counts": counts,
         "recent_datasets": search["results"][:12], "notices": corpus["limitations"], "facet_previews": {k: v[:15] for k, v in facets.items()}})
     labels = endpoint_labels(records, resources, publishers, facets)
+    put("data/endpoint-label-budget.json", {"schema": "okf-reader-endpoint-label-budget.v1",
+        "snapshot": snapshot, **validate_endpoint_label_budget(labels),
+        "policy": "No endpoint rows are truncated. Discovery aliases remain separately labelled and searchable metadata; they do not create conceptual tag endpoints."})
     put("data/endpoint-labels.json.gz", {"schema": "okf-explorer-endpoint-label-index.v1", "snapshot": snapshot, "generated_at": when,
         "default_language": "en-GB", "opaque_identifier_patterns": [], "entries": labels, "counts": {"entries": len(labels)}})
     put("data/analysis.json", {"schema": "okf-analysis.v1", "snapshot": snapshot, "facet_analysis": []})
@@ -295,6 +335,6 @@ def emit_reader(inputs, corpus, units, semantic, declarations, corpus_outputs, c
     outputs["okf-bundle.yamlld"] = yaml_bytes(control)
     put("okf-bundle.jsonld", control)
     outputs["index.md"] = ("# " + TITLE + "\n\n" + "\n\n".join(corpus["limitations"])
-        + "\n\nSource headings and document roles are navigation metadata; only explicitly authored domain concepts appear in the concept facet. Discovery cards are previews of bound complete evidence units, not extra evidence. Reader search indexes source text, labels and visible navigation tags; Ask OKF applies its separately versioned two-channel ranking.\n"
+        + "\n\nSource headings and document roles are navigation metadata; only explicitly authored domain concepts appear in the concept facet. Discovery cards are previews of bound complete evidence units, not extra evidence. Reader search indexes source text, labels, navigation tags and separately retained source-bound discovery aliases; Ask OKF applies its separately versioned two-channel ranking.\n"
         + "\n[Reader descriptor](okf-explorer.json) · [Ask corpus](manifest.json) · [Logical-unit boundaries](../docs/logical-evidence-units.md).\n").encode()
     return outputs

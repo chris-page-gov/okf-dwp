@@ -1,0 +1,25 @@
+{
+  "schema": "okf-independent-review.v1",
+  "scope": "Producer-only Reader alias-channel and endpoint-budget repair; no corpus generation or runtime test repeated",
+  "result": "no-blocker-in-reviewed-scope",
+  "bindings": [
+    {
+      "path": "scripts/structured_context_reader.py",
+      "sha256": "1207904e172d8b0d29929b629d5e6f64bc1bd3ab67dcef1ddb135c591217b0e2"
+    },
+    {
+      "path": "scripts/test_structured_context_reader.py",
+      "sha256": "7bcf82d14f47f091378fb3caffc4389a2ef55e93ae28b970300b944f396777e7"
+    }
+  ],
+  "findings": [
+    "Discovery aliases remain exact card metadata and separately retained discovery_aliases; navigation search mask32 still indexes them, separately from source-text mask8.",
+    "Original Reader record/result tags exclude alias-only labels. Generic build_search facets do not derive from that temporary tag array, so aliases do not leak into conceptual tag endpoints.",
+    "Endpoint preflight uses the same100000entry and48MiB UTF16code-unit ceilings and the same seven string fields as the existing consumer. It does not truncate source, cards, search postings or endpoint rows."
+  ],
+  "owner_reported_controls": 15,
+  "limitations": [
+    "Browser integration and final corpus projection must still be checked separately.",
+    "The original108412endpoint failure remains retained; this code review does not rewrite that failure."
+  ]
+}
