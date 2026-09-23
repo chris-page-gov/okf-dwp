@@ -45,7 +45,9 @@ checking. It is not a complete legal answer rubric. All three path groups must
 stay separate when comparing earlier trials.
 
 At **32 KiB**, the new corpus retains **no source evidence in any of the 40
-staff packages**. Explanations and unresolved obligations consume that budget.
+staff packages**. This is a deliberately smaller-budget control; the current
+Explorer's assembly default is 512 KiB. Explanations and unresolved obligations
+consume the smaller budget.
 A smaller discovery card must not stand in for omitted evidence. Use a larger
 assembly with bounded exact delivery when the compatible service release is
 admitted. That separates total selected evidence from the size of each reply.

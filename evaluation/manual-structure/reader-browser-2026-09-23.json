@@ -1,0 +1,48 @@
+{
+  "schema": "okf-structured-reader-browser-observation.v1",
+  "status": "reader-and-visible-assembly-observed-native-tool-reconstruction-unverified",
+  "browser": "Native Microsoft Edge extension surface; no API shim",
+  "origin": "http://127.0.0.1:8032",
+  "descriptor": "/dwp/structured-context/okf-explorer.json",
+  "app_tree_sha256": "430fbf5477e0d8f7597ac745e1d84b289e4c519751a12c6c9ee42d459196c662",
+  "app_manifest_sha256": "57a05e96c5d8e4265ab22b0c2f5fc5a5d4d942ce950ffee7c1e6c118f06f940e",
+  "context_manifest_sha256": "7438256b35f5fcb612282b7a496b63db543e1411e1de28b6edea89969b309d51",
+  "snapshot": "dwp-structured-context-1ae125233cc51fed6f80",
+  "reader": {
+    "loaded": true,
+    "records": 54578,
+    "sources": 513,
+    "relationships": 19193,
+    "visible_facets": ["Source headings", "Authored concept references", "Source family", "Source document role", "Source document kind", "Boundary status", "Unit kind"],
+    "endpoint_labels": 78145,
+    "endpoint_label_limit": 100000,
+    "previous_failure": "build-history/reader-endpoint-label-limit-2026-09-23/failure.json"
+  },
+  "visible_ask": {
+    "question": "What happens to Pension Credit if I go abroad?",
+    "requested_bytes": 524288,
+    "context_id": "urn:sha256:97259e5362862e6578e392564f7b092431ca489a56b3c60820144d9980738568",
+    "used_bytes": 522870,
+    "records": 48,
+    "relationships": 82,
+    "resolved_concepts": ["Absence abroad", "State Pension Credit"],
+    "evidence_status": "insufficient",
+    "retrieval_truncated": true,
+    "assembly_truncated": true,
+    "observed": ["Whole source passages", "Exact source spans", "Selection reasons and provenance", "Explicit missing evidence and boundary warnings", "Package limits", "Machine-readable package disclosure", "Read-only page tools registered notice"]
+  },
+  "console": {"error_or_warning_entries_observed": 0},
+  "native_tool_attempt": {
+    "operation": "Read native document.modelContext.getTools catalogue through tab-scoped CDP Runtime.evaluate",
+    "status": "interrupted-without-result",
+    "elapsed_seconds_reported_by_tool": 802.1,
+    "context_reconstruction_observed": false,
+    "note": "The browser tool call stalled and was interrupted. It did not return a catalogue or execute a bounded manifest/read reconstruction. No browser or account permissions were changed."
+  },
+  "limitations": [
+    "This is a local Reader and visible Ask observation, not complete graph navigation or native bounded tool acceptance.",
+    "The query was a browser smoke check, separate from the independently retained full staff and original acceptance evaluations.",
+    "The old Reader loading failure is preserved. Discovery alias metadata and all source passages remain intact after its producer repair.",
+    "No remote service, ChatGPT, Data Agent or Voice-client adoption was observed."
+  ]
+}

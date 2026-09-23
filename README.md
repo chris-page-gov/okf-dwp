@@ -6,6 +6,9 @@ okf_version: "0.2"
 
 # DWP guidance as an OKF+ bundle
 
+[Demo 1 freeze plan for 23 September](docs/demo-one-freeze-2026-09-23.md):
+tested source-led evidence, forty-question gaps and a four-call comparison cap.
+
 **An independent, unofficial experimental exemplar. Not an official DWP document, benefits advice or an entitlement calculator.**
 
 **[What changed: changelog](CHANGELOG.md)** · [Current work log](docs/monday-delivery-work-log.md)

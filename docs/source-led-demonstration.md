@@ -35,9 +35,10 @@ Search for a subject such as `abroad`. Search finds candidate records.
 
 Then open Ask OKF and paste a complete question from the
 [staff-question matrix](../evaluation/staff-needs/README.md). Keep its wording,
-including missing facts. Open **Evidence limits** and use **Package bytes**
-`524288` for the large-budget comparison, then **Build evidence package**.
-This is 512 KiB: 512 times 1,024 bytes. The recorded 32 KiB assemblies retain no
+including missing facts. The current Explorer starts with **Package bytes**
+`524288` (512 KiB). Check this under **Evidence limits** if you changed a limit
+earlier, then use **Build evidence package**. This is 512 times 1,024 bytes.
+The recorded 32 KiB assemblies are smaller-budget controls and retain no
 source evidence; selecting that budget is a useful refusal control, not a
 shorter benefits answer.
 
@@ -67,6 +68,9 @@ deliver the package in small parts. **Delivery size** is the size of one reply;
 **assembly size** is the total evidence selected. Small replies cannot recover
 evidence excluded during assembly. Verify the source version, engine version,
 complete-package hash and every part before claiming a complete reconstruction.
+The current page tools default to 16 KiB per delivery response while keeping
+the separate 512 KiB assembly default. A historical remote release may have
+different defaults; check its recorded version instead of assuming parity.
 See the [client-check guide](chatgpt-connection.md). A configured connection is
 not proof that a particular ChatGPT, Data Agent or Voice session has its tools.
 
