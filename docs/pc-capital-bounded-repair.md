@@ -8,7 +8,7 @@ The authoritative material is the captured [Chapter 84 PDF](../source/pdf/dmg-vo
 
 The [repair receipt](../capital-pilot/repair-receipt.json) accounts for every source byte while separating two genuinely mixed boundaries: paragraph 84356 from following contents material, and paragraph 84699 from reserved paragraph 84700 and the next contents section. The candidate also carries ten composite passage groups, separate unreviewed discovery summaries, a typed 21-row Appendix 1 representation and a literal reference from paragraph 84924 to Appendix 1. Typed rows are a reading aid; the original table and source text remain the evidence. All 11 named external dependencies remain unresolved. The candidate has had no new source acquisition and no specialist legal review.
 
-The [original Data Agent review](data-agent-semantic-review.md) reported **4.042% overlap** with a static Pension Credit core profile. That is a comparison with that small profile's coverage, not a retrieval score and not this trial's improvement measure.
+The [original Data Agent comparison](../evaluation/capital-pilot/input/pension-credit-capital-logical-unit-proposals.json) reported **4.042% overlap** with a static Pension Credit core profile. That is a comparison with that small profile's coverage, not a retrieval score and not this trial's improvement measure.
 
 ## Retained offline comparison
 
