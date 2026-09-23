@@ -1,0 +1,45 @@
+{
+  "schema": "okf-independent-source-selection-review.v1",
+  "reviewer": "compact_engine",
+  "result": "no-remaining-blocker-in-bounded-source-selection-scope",
+  "bindings": [
+    {
+      "path": "domain-profile/structured-units/benefit-interactions.yamlld",
+      "sha256": "c127082068a273b1bba4fd9a68b26b4f1db9a975ce9ca9b93afd07c486cd2a89"
+    },
+    {
+      "path": "evaluation/manual-structure/benefit-interactions-source-review/source-read.json",
+      "sha256": "3e5daf4ba8b48939a415b516ca7b0ac55cfa892f41c4d36d49a3b67c1f25b277"
+    },
+    {
+      "path": "scripts/test_structured_benefit_interactions.py",
+      "sha256": "6fac8f9fefae471310e1260efeb936bdd1fe773a3a6881a5c3f5e1b488488119"
+    }
+  ],
+  "reviewed_counts": {
+    "source_units": 78,
+    "source_documents": 10,
+    "conditional_profiles": 12,
+    "declared_guarded_paths": 132
+  },
+  "checks": [
+    "Independently read all 78 complete source texts, compared them with the frozen unit documents, and checked every text hash, source span and declared full-record hash.",
+    "Visually inspected original DMG Chapter 17 PDF pages 10 and 11, confirming the continued RP/ESA/CA row and the precise PIP daily-living/attendance row. No wider industrial-benefit pairing is inferred.",
+    "Confirmed JSA(IB), ESA(IR) and UC income scopes remain distinct from Chapter 17 payment adjustment and New Style inclusion within its stated definition.",
+    "Confirmed basic IIDB and its conditional CAA/REA/RA/US components remain distinct; historical REA branches, full six-example unit, frozen-REA qualification and first-claim exception remain visible.",
+    "Confirmed PIP additional-benefit selection is limited to carer qualifying benefit and no-partner PC leads; no automatic entitlement or exhaustive passporting is claimed.",
+    "Confirmed CA source selection keeps one carer/multiple people separate from multiple carers/one person, actual payment separate from underlying entitlement, and carer/cared-for household effects separate.",
+    "The 18092/17092 reference discrepancy is preserved explicitly, as are historical source amounts, pending memos, current-law reconciliation and specialist review."
+  ],
+  "finding_and_resolution": {
+    "finding": "DMG 64020 says no new US claims from 8.4.87, while 28065 and 51033 describe removal from 6.4.87. These may describe different events; neither can silently replace the other.",
+    "resolution": "Author added a source-read note and explicit us-date-wording open obligation to industrial additional-benefit, JSA and ESA profiles; the source text is unchanged.",
+    "verification": "Updated metadata inspected; author reports all four final source-selection controls pass. No duplicate assembly or test run by reviewer."
+  },
+  "limits": [
+    "Independent agent source-selection review is not specialist acceptance, full legal closure or a benefit award decision.",
+    "Machine boundaries and all unanswered obligations remain unresolved.",
+    "No source acquisition, network query, provider-model call or benefits calculation was performed."
+  ],
+  "recorded_date": "2026-09-23"
+}
