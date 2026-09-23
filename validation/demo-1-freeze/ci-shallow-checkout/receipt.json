@@ -1,0 +1,25 @@
+{
+  "schema": "okf-demo-one-ci-repair.v1",
+  "failed_run": 35831081610,
+  "failed_job": 107083582935,
+  "failed_step": "Check acquisition and evidence boundaries",
+  "failure": "Five new tests could not read the frozen 9f6e3169 source commit in the separate shallow legacy checkout. The new structured job fetched it, but Git objects are not shared between jobs.",
+  "clean_reproduction": {
+    "checkout_head": "6fd9f093edf8b235e756326f07a9e0a6e947a128",
+    "depth": 1,
+    "before": "5 tests, 5 missing-object errors",
+    "repair": "git fetch --no-tags --depth=1 origin 9f6e316925f1550559733e34d8d91cd7a245c94b",
+    "after": "5 tests passed"
+  },
+  "scope": "CI setup only; no frozen runner, protocol, source, answer or acceptance condition changed. No model calls.",
+  "logs": {
+    "before.txt": {
+      "bytes": 9055,
+      "sha256": "8bf6c7035c0a4aa7ed903a47308ca8664d25056e96d347373c326df09df91390"
+    },
+    "after.txt": {
+      "bytes": 103,
+      "sha256": "eeadcf5288d904278f0106c11d5f698f9ac9b1b26e0da0cbe3002c03abc7cd24"
+    }
+  }
+}

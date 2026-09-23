@@ -432,3 +432,11 @@ answerability status changed.
 - Separate imprisonment allocation and historical-amendment repairs remain parked
   on their own branches. The question ledger, claim review and freeze landing page
   are the demonstration handover; retained answers avoid rehearsal model calls.
+
+The Demo 1 follow-up initially failed in the legacy job because its shallow
+checkout lacked the frozen source commit required by the five new tests. The
+structured job's fetch does not populate another job's Git objects. An isolated
+shallow clone reproduced five failures; the same pinned fetch made all five pass.
+The workflow setup is repaired without changing source, protocol, answers or
+acceptance criteria. The failure and reproduction remain under
+`validation/demo-1-freeze/ci-shallow-checkout/`.

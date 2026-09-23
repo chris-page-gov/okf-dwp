@@ -146,6 +146,8 @@ jobs:
         run: |
           git fetch --no-tags --depth=1 origin "$DWP_QUALIFICATION_COMMIT"
           git cat-file -e "$DWP_QUALIFICATION_COMMIT^{commit}"
+      - name: Fetch the frozen Demo 1 source for legacy test discovery
+        run: git fetch --no-tags --depth=1 origin 9f6e316925f1550559733e34d8d91cd7a245c94b
       - name: Check acquisition and evidence boundaries
         run: uv run --locked python -m unittest discover -s scripts -p 'test_*.py'
       - name: Verify all full-DMG source identities and measured pages
