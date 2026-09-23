@@ -10,6 +10,13 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Repair the observed discovery delivery regression with a same-source comparison:
+  all 47 inherited paths now remain at 512 KiB. Preserve the 32 KiB limitation,
+  earlier failure and all insufficient results. Add generic conjunctive route
+  guards, seven source-read selection profiles and separately labelled legacy
+  location navigation; keep all 203 original obligations open. Final integrated
+  evaluation and publication are still separate gates.
+
 - Retain the failed forty-question discovery-corpus comparison and its exact engine/source identities. Repair source-role boundaries after a full-corpus census found reserved ranges and short notices absorbing appendices; rerun the fixed four-case gate and doubled eight-case gate successfully. Evaluate runtime delivery and new semantic profiles separately before adoption.
 
 - Build an additive source-led manual guide, PDF-structure observations, complete source-byte unit catalogue and separate discovery-card corpus. Preserve authored unit identities and obligations; use explicit source references for navigation only. Retain the four-to-eight structural experiment, failed attempts and independent boundary/integrity controls. Full question comparison and public adoption remain separate gates.

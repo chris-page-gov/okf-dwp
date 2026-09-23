@@ -84,6 +84,21 @@ Existing authored concepts, evidence requirements, paths and open obligations
 are preserved. A new source-reference graph does not silently certify a staff
 question as answerable.
 
+### Keep conditional routes conditional
+
+A topic such as capital can occur in several benefits. A route selected for
+Pension Credit and capital should require both concepts to be resolved. The
+new **context guard** records that condition explicitly. It controls navigation;
+it is not a legal eligibility test. A literal search can still find another
+benefit's passage, with its separate search reason and source scope.
+
+The older page-based research profiles are also valuable leads. The migration
+maps their exact source locations to complete new units and labels those routes
+**location overlap only**. A new route inferred from a profile's candidate
+selection is distinguished from an existing authored route. Neither closes an
+old evidence requirement merely because some text overlaps. The original
+requirements and unresolved obligations remain available for review.
+
 ## 5. Assemble first, deliver in bounded reads
 
 The **assembly budget** limits how much context can be selected together. The
@@ -155,3 +170,15 @@ uv run --locked python scripts/build_structured_context.py --check
 The [process plan](manual-structure-process.md) explains ownership and release
 gates. The [PDF observation record](../pdf-structure/README.md) documents the
 bounded parser correction and the retained failed observation. The [learning path](learning-path.md) provides wider project context.
+The [ontology guide](ontology-use.md) shows the vocabularies actually used and
+explains the difference between a declared namespace and an implemented model.
+
+## What still needs review
+
+Complete source accounting is achieved for this captured corpus. Boundary and
+semantic review remain incomplete. A [concrete review queue](../evaluation/manual-structure/final-source-review/large-paragraph-triage.json)
+identifies 28 paragraph candidates larger than 15 KB; a large table or example
+may be legitimate, so size alone is not an error verdict. Fine memo numbering,
+ambiguous headings, literal reference destinations and legal qualifications
+also remain explicit review work. The [backlog](backlog-work-packages.md) keeps
+these tasks separate from source processing and public publication.

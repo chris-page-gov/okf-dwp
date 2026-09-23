@@ -323,3 +323,45 @@ tests, eight browser checks at desktop/mobile widths and separate negative
 controls for both original defects. Fresh exact-head CI and public replay are
 required after integration. No source, probe result, profile, ranking or
 answerability status changed.
+
+
+## Manual-led complete-corpus increment, 23 September 2026
+
+- Preserved the failed first discovery comparison. The second, using the exact
+  same source and authored semantics, restores all 47 declared paths at 512 KiB;
+  all 82 legacy packages are byte-identical. Median discovery diagnostic bytes
+  fall from 51,339 to 16,447.5. All 40 small 32 KiB assemblies still retain no
+  evidence, and every result remains insufficient. These are delivery results,
+  not answer-accuracy results.
+- The final source-parser candidate accounts for all 513 documents, 19,090
+  pages and 35,143,443 extracted source bytes in 53,727 units. All 75 authored
+  units retain their identities and bytes. Source-backed repairs keep reserved
+  ranges, short notices, wrapped references, memo sections and appendices from
+  being absorbed into unrelated paragraph units. Initial gate 08 passes 4/4,
+  then expanded gate 07 passes 8/8; three extra memo/appendix controls and the
+  earlier failed outputs remain separate. This is not perfect segmentation.
+- Add seven agent-source-read selection profiles and 55 conjunctively guarded
+  edges. Add a separate location-only migration of the earlier 42 research
+  candidate locations: 39 fully mapped, three with explicit whitespace gaps.
+  Its 344 navigation routes comprise 312 restored routes and 32 inferred
+  profile associations. All 40 original requirements and 203 obligations stay
+  unchanged and open. Exact location overlap does not establish relevance,
+  semantic equivalence, legal prerequisites or requirement support.
+- The first final-context build stopped before writing outputs because the
+  Reader's postings limit did not admit the larger unit catalogue. Retain that
+  failure, repair the generic producer/consumer contract, and run a separately
+  bound full-question evaluation before adoption. Do not reuse the earlier
+  runtime-only comparison as evidence for these new semantics.
+
+- The repaired Reader retains all 3,037,000 postings and their true frequencies.
+  Two metadata tokens exceed the existing 50,000 completeness threshold; their
+  exact counts are recorded and Explorer retains conservative uncertainty. No
+  source record or posting is dropped. The next context build succeeds with
+  53,727 cards, 18,904 assertions and 54 separately grouped requirements.
+- Full trial 03 retains all 47 inherited paths and 139/181 additional source-read
+  path occurrences at 512 KiB. Source-read profiles activate for 21/40 question
+  occurrences; the separate legacy/location plane activates for all 40. All
+  203 original obligations remain open. One large-budget case returns no source
+  evidence after metadata pressure and trimming, so adoption remains held.
+  Frozen trial 03 and its independent report preserve this new allocation
+  regression before a same-source runtime repair.

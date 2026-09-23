@@ -57,6 +57,31 @@ postings. Sharing resources and measuring actual postings fixed those errors
 without raising consumer limits or dropping records. The lesson is to verify
 full-corpus consumer behaviour and exact counts as well as the source parser.
 
+### Later evidence: the manual helps define its retrieval structure
+
+The 23 September [manual-led build](source-led-manual-guide.md) uses reading
+instructions, exact numbered passages and retained PDF heading observations.
+It processes all 513 captured documents, preserving every extracted source byte.
+The four-case structural gate and doubled eight-case gate pass, while broader
+boundary uncertainty remains explicit. Reserved ranges, wrapped references and
+appendix headings revealed different failure mechanisms from ordinary page
+continuations; their failed observations and later regression controls remain.
+
+An initial full-corpus discovery trial lost seven previously retained paths.
+A separately measured generic runtime repair, on the same frozen source and
+semantics, restores all 47. Discovery metadata was competing with source and
+relationship reads. Compact, hash-bound metadata references and concept-first
+allocation repair that regression; they do not establish better model answers.
+The 32 KiB assembly still contains no source evidence for the 40 questions.
+
+The next source/profile increment keeps source-read selection and legacy
+location navigation in different evaluation groups. The 203 old obligations
+cannot disappear when pages are replaced by better retrieval units. This
+prevents apparent coverage gains caused solely by changing the denominator.
+See the [work log](logical-units-work-log.md) for current integration and
+publication status rather than treating this retrospective as a deployment
+receipt.
+
 ### Later evidence: qualifications need modelling and allocation
 
 The [21 September comparison](../validation/qualification-context/2026-09-21/README.md)

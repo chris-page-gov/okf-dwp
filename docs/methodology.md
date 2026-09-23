@@ -95,6 +95,29 @@ Keep projected JSON, JSON-LD, YAML-LD and runtime relationships aligned. Validat
 the standard schemas unchanged; put useful local descriptive extensions in a
 separate named format rather than silently extending a closed contract.
 
+### Read the publisher's instructions before designing units
+
+Treat a manual's introduction, user guide, contents, abbreviations, legal
+reference key and update instructions as first-class source material. Record
+each convention with its scope and exact supporting passage. A convention
+observed in one chapter must not silently apply to every memo or annex. Where
+PDF tags are missing, ambiguous or too large to inspect within the declared
+bound, retain the failure and an uncertain fallback.
+
+The [source-led process](manual-structure-process.md) provides the repeatable
+sequence and [beginner guide](source-led-manual-guide.md). Its inputs and
+experiments are reusable patterns for HMRC; DWP paragraph syntax and benefit
+concepts are not a template to copy into another department. Use four minimal
+source-backed structural cases, then double to eight after a pass. Freeze
+membership, expected passages, sources and engine identity before measuring
+results; distinguish known development cases from independent evaluation.
+
+Keep four different artefacts: complete source units; short source-bound
+discovery cards; authored semantic selections; and an evaluation ledger. When
+old evidence locations move to new units, preserve old obligations and label
+location-overlap navigation separately. It does not prove that the new unit
+meets the old evidence requirement.
+
 ### Establish source boundaries before retrieval
 
 A page, HTML screen or download is a location and acquisition unit. It is not

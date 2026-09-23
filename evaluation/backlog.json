@@ -438,7 +438,17 @@
         "scripts/test_manual_structure_review.py",
         "evaluation/manual-structure/context-probe/runs/attempt-01/README.md",
         "evaluation/manual-structure/runs/candidate-expanded-06/report.json",
-        "evaluation/manual-structure/auxiliary-review/README.md"
+        "evaluation/manual-structure/auxiliary-review/README.md",
+        "evaluation/manual-structure/context-probe/runs/attempt-02/README.md",
+        "evaluation/manual-structure/context-probe/runs/attempt-02/comparison.json",
+        "domain-profile/structured-units/pc-core.yamlld",
+        "domain-profile/structured-units/household-routing.yamlld",
+        "domain-profile/structured-units/legacy-location-policy.yamlld",
+        "scripts/test_structured_context_profiles.py",
+        "scripts/test_structured_location_migration.py",
+        "evaluation/manual-structure/runs/candidate-expanded-07/report.json",
+        "evaluation/manual-structure/final-source-review/large-paragraph-triage.json",
+        "evaluation/manual-structure/final-source-review/manifest-review.json"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
@@ -588,12 +598,17 @@
         {
           "id": "DWP-BL-007.task-discrimination",
           "kind": "implementation",
-          "status": "not_started",
+          "status": "in_progress",
           "executor": "agent",
-          "next_action": "Review broad overview-profile activation and graph expansion: a mention of Pension Credit should not consume the budget with unrelated household/capital evidence. Test explicit task discrimination across known and held-out questions, preserve required paths and record any regression before admitting a generic selector change.",
+          "next_action": "Reviewed generic conjunctive guards use only actual resolved concepts. Seven new source-read profiles and legacy location routes apply them. Measure full40-question source/path retention and negative scope controls; lexical matches remain separately labelled and do not gain applicability from guards.",
           "evidence": [
             "docs/abroad-semantic-audit.md",
-            "docs/data-agent-semantic-review.md"
+            "docs/data-agent-semantic-review.md",
+            "domain-profile/structured-units/pc-core.yamlld",
+            "domain-profile/structured-units/household-routing.yamlld",
+            "domain-profile/structured-units/legacy-location-policy.yamlld",
+            "scripts/test_structured_context_profiles.py",
+            "scripts/test_structured_location_migration.py"
           ]
         },
         {
@@ -623,7 +638,7 @@
           "kind": "research",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Seven unit profiles now activate for 8/40 staff occurrences; 32/40 have none and 22/40 large staff contexts have no returned relationships. New DLA/PIP pair activation retains task ambiguity, not proof that transfer is intended. Continue reviewed source/profile migration using the exact case ledger. Twelve references remain legally unresolved, including the F1093 reserved range and P4019/P4051 scope mismatch. Preserve all 203 earlier obligations.",
+          "next_action": "Integrate seven additional source-read selection profiles and location-only routes for40 earlier research profiles. Preserve original40 requirements/203 obligations, and distinguish new source selection, exact-location navigation and legal evidence closure. Run a separate54-requirement evaluation without regrading the earlier8/40 result.",
           "evidence": [
             "domain-profile/logical-units/profiles.json",
             "domain-profile/logical-units/reference-review.json",
@@ -633,7 +648,12 @@
             "domain-profile/logical-units/authoring-registry.json",
             "domain-profile/logical-units/closure-dependencies.yamlld",
             "domain-profile/logical-units/closure-pip-transition.yamlld",
-            "domain-profile/logical-units/closure-profile-dependencies.yamlld"
+            "domain-profile/logical-units/closure-profile-dependencies.yamlld",
+            "domain-profile/structured-units/pc-core.yamlld",
+            "domain-profile/structured-units/household-routing.yamlld",
+            "domain-profile/structured-units/legacy-location-policy.yamlld",
+            "scripts/test_structured_context_profiles.py",
+            "scripts/test_structured_location_migration.py"
           ]
         },
         {
@@ -641,14 +661,16 @@
           "kind": "implementation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "The first full forty-question v3 comparison is retained and fails acceptance: zero evidence for all 32 KiB assemblies and 40/47 inherited paths at 512 KiB. Complete and independently review concept-first file allocation and hash-bound metadata references, then repeat the fixed-source trial before adoption. Keep cards, concepts, exact evidence and unresolved obligations distinct.",
+          "next_action": "Same-source runtime repair restores47/47 inherited paths at512 KiB and preserves82 exact legacy packages;32 KiB still retains no evidence. Complete the separately bound53,727-unit source/semantic increment, preserve all requirement planes, and verify publication. Cards remain discovery metadata, never substitute source evidence.",
           "evidence": [
             "docs/discovery-cards-experiment.md",
             "evaluation/semantic-coverage/discovery-card-diagnosis.json",
             "docs/manual-structure-process.md",
             "docs/source-led-manual-guide.md",
             "evaluation/manual-structure/context-probe/protocol.json",
-            "evaluation/manual-structure/context-probe/runs/attempt-01/README.md"
+            "evaluation/manual-structure/context-probe/runs/attempt-01/README.md",
+            "evaluation/manual-structure/context-probe/runs/attempt-02/README.md",
+            "evaluation/manual-structure/context-probe/runs/attempt-02/comparison.json"
           ]
         },
         {
@@ -687,14 +709,27 @@
           "kind": "implementation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Fresh source-bound gates pass four then eight cases after bounded reserved/notice regions and wrapped-reference continuation repair. Rebuild and review all 513 documents without changing source bytes or 75 authored units. Complete question comparison and publication; memo numbering and unclassified appendix structures remain explicitly unresolved.",
+          "next_action": "Candidate source build now accounts for53,727 units, all513 documents and every extracted byte, preserving75 authored units. Fixed4-case then8-case gates pass, with memo/appendix and wrapped-reference controls. Verify new Reader capacity, integrated question results and public publication; fine memo structure and broader semantic segmentation remain unresolved.",
           "evidence": [
             "docs/manual-structure-evaluation.md",
             "evaluation/manual-structure/runs/candidate-expanded-04/report.json",
             "structured-units/manifest.json",
             "scripts/test_manual_structure_review.py",
             "evaluation/manual-structure/runs/candidate-expanded-06/report.json",
-            "evaluation/manual-structure/auxiliary-review/README.md"
+            "evaluation/manual-structure/auxiliary-review/README.md",
+            "evaluation/manual-structure/runs/candidate-expanded-07/report.json"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.remaining-structural-review",
+          "kind": "research",
+          "status": "not_started",
+          "executor": "agent",
+          "next_action": "Review the28 source-bound paragraph candidates over15KB, beginning with historical amendments, and the explicitly unresolved memo numbering/headings. Size is a triage cue, not proof of an error. Add independent source-backed controls for each actual failure, preserve all originalbytes and75 authoredunits, then rerun the four/eight structural gates and frozen question comparison before publication. Do not claim the rest of the53,727 machine catalogue has specialist-approved boundaries.",
+          "evidence": [
+            "evaluation/manual-structure/final-source-review/large-paragraph-triage.json",
+            "evaluation/manual-structure/final-source-review/manifest-review.json",
+            "docs/source-led-manual-guide.md"
           ]
         }
       ]

@@ -1,6 +1,6 @@
 # Build from the manual's own structure
 
-**Status: active implementation, 22 September 2026.** This is an independent
+**Status: implemented; integrated context and publication checks in progress, 23 September 2026.** This is an independent
 research process, not official DWP guidance or specialist acceptance.
 
 ## Goal and scope
