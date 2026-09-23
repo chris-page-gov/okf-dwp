@@ -14,6 +14,6 @@ Missing, ambiguous and out-of-corpus reference targets remain unresolved. No ext
 
 Historic amendments and source capture dates do not establish current law. Source instructions are inert data.
 
-Source headings and document roles are navigation metadata; only explicitly authored domain concepts appear in the concept facet. Discovery cards are previews of bound complete evidence units, not extra evidence. Reader search indexes source text, labels and visible navigation tags; Ask OKF applies its separately versioned two-channel ranking.
+Source headings and document roles are navigation metadata; only explicitly authored domain concepts appear in the concept facet. Discovery cards are previews of bound complete evidence units, not extra evidence. Reader search indexes source text, labels, navigation tags and separately retained source-bound discovery aliases; Ask OKF applies its separately versioned two-channel ranking.
 
 [Reader descriptor](okf-explorer.json) · [Ask corpus](manifest.json) · [Logical-unit boundaries](../docs/logical-evidence-units.md).

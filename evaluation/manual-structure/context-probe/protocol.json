@@ -1,6 +1,6 @@
 {
   "schema": "okf-dwp-structured-context-probe.v1",
-  "status": "fixed-before-final-source-and-semantic-increment-results",
+  "status": "fixed-before-expanded-source-selection-results",
   "cases": {
     "path": "evaluation/staff-questions/cases.json",
     "bytes": 205988,
@@ -50,7 +50,8 @@
     "Source structure tests are distinct from this forty-question census.",
     "This increment changes source segmentation and additive semantic selection. Attempt02 isolates the earlier runtime repair on unchanged sources; these denominators must not be conflated.",
     "Location overlap routes do not satisfy old page requirements; all203 original obligations remain open.",
-    "Guarded routes use only resolved public concepts. Lexical matches retain separate reasons and do not establish benefit applicability."
+    "Guarded routes use only resolved public concepts. Lexical matches retain separate reasons and do not establish benefit applicability.",
+    "Trial06 adds source-read State Pension/benefit interactions and restores original custody expectations in separate evaluation planes. The runtime, original question wording and fixed ranking are unchanged from trial05. Newly admitted historical scope records are exactly bound, not new source evidence."
   ],
   "source_bindings": [
     {
@@ -60,8 +61,8 @@
     },
     {
       "path": "structured-context/manifest.json",
-      "bytes": 485301,
-      "sha256": "a5b3af091bfcd624ef035a78d8e674881c399e617c2f51b80d1545fa102ac7fd"
+      "bytes": 485302,
+      "sha256": "7438256b35f5fcb612282b7a496b63db543e1411e1de28b6edea89969b309d51"
     }
   ],
   "comparison_mode": "additive-source-and-semantic-increment",
@@ -152,6 +153,71 @@
         "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-039",
         "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-040"
       ]
+    },
+    {
+      "id": "expanded-staff-source-read-selections",
+      "requirement_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/carers-allowance-foundation",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/carers-allowance-interactions",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/carers-allowance-multiple-people",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/iidb-additional-benefit-routes",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/iidb-esa-income-and-overlap",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/iidb-jsa-income-and-overlap",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/iidb-pension-age-routes",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/iidb-pip-components-and-adjustment",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/pip-additional-benefit-routes",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/pip-esa-disregard-route",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/pip-jsa-disregard-route",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/pip-war-attendance-adjustment",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/state-pension-age",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/state-pension-pip-scope",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/state-pension-qualification",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/structured/state-pension-regime"
+      ]
+    },
+    {
+      "id": "unchanged-original-custody-requirements",
+      "requirement_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/esa-contributory-custody-v1",
+        "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/esa-custody-regimes-v1",
+        "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/esa-income-related-custody-v1",
+        "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/is-prisoner-applicable-amount-v1",
+        "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/legacy-jsa-custody-availability-v1",
+        "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/pc-prisoner-credit-rates-v1"
+      ]
+    },
+    {
+      "id": "translated-custody-unit-selections",
+      "requirement_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/custody-units/esa-contributory-custody-v1",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/custody-units/esa-custody-regimes-v1",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/custody-units/esa-income-related-custody-v1",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/custody-units/is-prisoner-applicable-amount-v1",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/custody-units/legacy-jsa-custody-availability-v1",
+        "https://chris-page-gov.github.io/okf-dwp/id/requirement/custody-units/pc-prisoner-credit-rates-v1"
+      ]
     }
-  ]
+  ],
+  "custody_restoration": {
+    "helper": {
+      "path": "scripts/structured_restoration_admission.mjs",
+      "bytes": 3526,
+      "sha256": "224b70bc9533da637e504735960c02a76460c330663753d72c4a5e2f75f852f2"
+    },
+    "author": {
+      "path": "domain-profile/structured-units/custody-restoration.yamlld",
+      "bytes": 170200,
+      "sha256": "0bbc0fa0e24df580f18ce7d500f4a0e4d72bdc11ce80007ea0550449cc99ba95"
+    },
+    "ledger": {
+      "path": "structured-context/custody-migration.json",
+      "bytes": 170254,
+      "sha256": "e6c662ec5add3cb44bbec4ca6ee2df3b2d9ad3e66196c672ddef28e44ac511a1"
+    },
+    "original": {
+      "path": "full-dmg/context/assembly-index.json",
+      "bytes": 416647,
+      "sha256": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54"
+    }
+  }
 }
