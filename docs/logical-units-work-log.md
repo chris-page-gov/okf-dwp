@@ -412,3 +412,23 @@ answerability status changed.
 - Explorer PR 144 merged through the normal protected squash route at
   `dc54fac4f98fa5bc9db38bf843854ce24a4c130d`. The five tested runtime modules
   remain byte-identical to the separately pinned `8a5b8d11` engine.
+
+## 23 September 2026: budget-limited Demo 1 freeze
+
+- The supplied public brief exactly matches the forty existing question occurrences.
+  The source candidate is in PR 33; its accepted staff replay reproduces all 164
+  assemblies without network or model calls.
+- The owner authorised two paired questions, four new answer calls total. The
+  frozen protocol and all four outcomes are retained. No calls remain. Twelve
+  exact source quotations do not erase three format failures, ambiguous wording
+  or the model confusing unmet requirements with absent profiles. No token-saving
+  or specialist-acceptance claim is supported.
+- Public Explorer loaded the pinned 53,727-unit corpus. Native in-app WebMCP
+  returned two catalogue pages and one complete care-home source passage matching
+  the human-visible context and frozen literal hash. Other clients remain
+  separately unverified; the remote-service default was not changed.
+- Local documentation rendered 193 pages; eight desktop/mobile journey checks
+  passed. Exact merged CI and public Pages remain separate release gates.
+- Separate imprisonment allocation and historical-amendment repairs remain parked
+  on their own branches. The question ledger, claim review and freeze landing page
+  are the demonstration handover; retained answers avoid rehearsal model calls.

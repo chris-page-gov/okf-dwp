@@ -10,6 +10,8 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Retain the four authorised Demo 1 answers without retries: 12 exact source quotations, three format failures and explicit interpretation concerns. No token saving or specialist acceptance is established. Add the forty-question ledger and observe matching human-visible/WebMCP source text from the pinned public corpus.
+
 - Freeze a two-question, four-call subscription comparison protocol. Retain complete selected records in a labelled reading view, preserve the full audit packages and test the projection offline before any model invocation.
 
 - Fix the Demo 1 scope against the supplied GitHub brief: all 40 questions match exactly. Prepare a 15:00 BST freeze with the tested engine/source pair, explicit coverage gaps and a hard cap of four new answer calls. Park separate custody and historical-amendment repairs; do not infer answer improvements or token savings from retrieval results.

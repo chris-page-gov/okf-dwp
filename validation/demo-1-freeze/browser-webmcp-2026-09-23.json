@@ -1,0 +1,75 @@
+{
+  "schema": "okf-demo-one-browser-webmcp-observation.v1",
+  "observed_on": "2026-09-23",
+  "source_commit": "9f6e316925f1550559733e34d8d91cd7a245c94b",
+  "explorer_deployment_commit": "dc54fac4f98fa5bc9db38bf843854ce24a4c130d",
+  "browser": "Codex in-app browser",
+  "source_manifest_sha256": "7438256b35f5fcb612282b7a496b63db543e1411e1de28b6edea89969b309d51",
+  "reader": {
+    "records": 54578,
+    "sources": 513,
+    "relationships": 19193
+  },
+  "question": "Does Pension Credit stop is a citizen moves into a care home permanently if they are self-funding?",
+  "context_id": "urn:sha256:b1cfc15e2e5306d6e88a5684b6809132c90b5acae26681fdc695e035bd909686",
+  "assembly": {
+    "source_records": 16,
+    "records": 25,
+    "relationships": 44,
+    "used_bytes": 516082,
+    "max_bytes": 524288,
+    "evidence_status": "insufficient",
+    "retrieval_truncated": true,
+    "assembly_truncated": true
+  },
+  "webmcp": {
+    "tools_observed": [
+      "okf_build_context",
+      "okf_explain_context",
+      "okf_context_manifest",
+      "okf_read_evidence"
+    ],
+    "tools_called": [
+      "okf_context_manifest",
+      "okf_read_evidence"
+    ],
+    "catalogue_pages": [
+      {
+        "offset": 0,
+        "next_offset": 23,
+        "returned": 23,
+        "total": 25,
+        "used_bytes": 16210,
+        "max_bytes": 16384
+      },
+      {
+        "offset": 23,
+        "next_offset": null,
+        "returned": 2,
+        "total": 25,
+        "used_bytes": 2824,
+        "max_bytes": 16384
+      }
+    ],
+    "whole_record_read": {
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/v1-c7f24aafefd355c2/spc-permanent-78088-6bbece132cda",
+      "content_sha256": "c14ad2e638624be95e663922a7a304ad6d69c69bd2ae7d0a28b22e338a518a81",
+      "total_characters": 1378,
+      "text_bytes": 1382,
+      "next_offset": null,
+      "used_bytes": 2095,
+      "exact_ui_text_equal": true,
+      "same_context_id": true,
+      "local_frozen_literal_hash_equal": true
+    }
+  },
+  "console_errors_observed": [],
+  "limitations": [
+    "Public candidate source tested before its protected merge; exact merged CI and Pages remain separate gates.",
+    "Two catalogue pages and one complete source read were tested, not a full remote reconstruction.",
+    "This native in-app WebMCP observation does not prove tools are exposed in ChatGPT Voice or Data Agent.",
+    "The earlier failed native CDP catalogue attempt remains recorded separately.",
+    "The Inspector reset after the tool request; reopening it allowed exact UI/source-text comparison.",
+    "Clipboard copy was not verified; inspection used the visible JSON field."
+  ]
+}

@@ -24,6 +24,16 @@ class DemoOnePairTests(unittest.TestCase):
         self.assertEqual(len(protocol['cases']) * len(protocol['arms']), 4)
         self.assertEqual(protocol['tools'], [])
         self.assertEqual(protocol['max_turns'], 1)
+    def test_observer_retains_failures_and_cache_accounting(self):
+        import check_demo_one_pair
+        result = check_demo_one_pair.observe()
+        self.assertEqual(result['new_answer_invocations'], 4)
+        self.assertEqual(result['additional_calls_permitted'], 0)
+        rows = result['results']
+        self.assertEqual(sum(len(r['citations']) for r in rows), 12)
+        self.assertEqual(sum(bool(r['format_violations']) for r in rows), 3)
+        self.assertTrue(all(r['total_input_tokens'] > r['input_tokens'] for r in rows))
+        self.assertTrue(all(r['tool_events'] == 0 for r in rows))
     def test_tampering_changes_binding(self):
         name, raw, package = demo.load_package('staff-006')
         self.assertNotEqual(demo.identity(raw), demo.identity(raw + b' '))
