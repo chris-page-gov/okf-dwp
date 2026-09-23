@@ -1,0 +1,31 @@
+{
+  "observed_at": "2026-09-22T23:45:08.705907+00:00",
+  "status": "failed-before-projection-write",
+  "command": ".venv/bin/python scripts/build_structured_context.py",
+  "error": "ValueError: Structured Reader token exceeds the supported postings bound",
+  "units": 53727,
+  "source_bytes": 35143443,
+  "projection_written": false,
+  "inputs": [
+    {
+      "path": "scripts/build_structured_context.py",
+      "sha256": "23ccbf6480b5be07654f731b5576e9bf07d68c742fffe7c02b91c364ba6c5f94",
+      "bytes": 14680
+    },
+    {
+      "path": "scripts/structured_context_reader.py",
+      "sha256": "fa2cff14a88cd8040628c93c42bedf1b98d83b4a0c744f130eddd6351b6d542d",
+      "bytes": 21571
+    },
+    {
+      "path": "structured-units/manifest.json",
+      "sha256": "8b620634bf686566d30c0cf4cd12f69535af7ef546a356333e3b0f9011d15741",
+      "bytes": 940722
+    },
+    {
+      "path": "structured-context/manifest.json",
+      "sha256": "3955a4b4cee596a5c7fde339bee81f21332c6d969567b9ae5dccdc3b686db1ec",
+      "bytes": 457546
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "schema": "okf-dwp-manual-structure-fixture.v1",
+  "id": "dmg-77031-heading",
+  "stage": "initial",
+  "source": {
+    "document_id": "dmg-vol13-ch77",
+    "family": "dmg",
+    "title": "DMG Vol 13 Ch 77: Conditions of entitlement, membership of the household and normal amount payable",
+    "role": "substantive",
+    "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf",
+    "observed_at": "2026-09-15T14:21:01Z",
+    "inventory": {
+      "path": "source/full-dmg-2026-09-15/inventory.json",
+      "bytes": 2240547,
+      "sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a"
+    },
+    "pdf": {
+      "path": "source/pdf/dmg-vol13-ch77.pdf",
+      "bytes": 357396,
+      "sha256": "0528f2fb95ac3bd71bdff0d91cdaba5df76ab4260396ca99608c840004ff5708"
+    },
+    "pages": {
+      "path": "source/pages/dmg-vol13-ch77.json",
+      "bytes": 118124,
+      "sha256": "f7c34c30310a5e1f4700fb00b291e2bdec89554a89d4c244a9762c16c7448f19"
+    },
+    "page_count": 84
+  },
+  "purpose": "Reject a linked mini-contents item as the governing heading of the first entitlement paragraph.",
+  "review": {
+    "method": "agent inspection of frozen extraction and rendered frozen PDF pages",
+    "status": "source-boundary-and-role-expectation-only",
+    "specialist_review": "not-reviewed",
+    "legal_answerability": "not-established"
+  },
+  "regions": {
+    "primary": {
+      "spans": [
+        {
+          "page": 14,
+          "start_byte": 315,
+          "end_byte": 1056,
+          "page_text_sha256": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+          "span_sha256": "529f4470031f1fd5e41bad5686e5881fe456fa3b1bc49e62c680f2d4895fbb30",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=14"
+        }
+      ],
+      "bytes": 741,
+      "sha256": "529f4470031f1fd5e41bad5686e5881fe456fa3b1bc49e62c680f2d4895fbb30",
+      "first_text": "77031 A claimant is entitled to SPC if they1\n\n\n1. are in GB and\n\n\n2. have reached the qualifying age and\n\n\n3. ",
+      "last_text": "the NI provisions (see DMG Chapter 02) 3.\n\n\n           1 SPC Act 02, s 1(2) & 4(1) & (1A); SPC Regs, Sch III, para 1(3); 2 SS A Act 92, s 1(1) & (4); 3 s 1(1A)\n"
+    },
+    "navigation": {
+      "spans": [
+        {
+          "page": 14,
+          "start_byte": 53,
+          "end_byte": 315,
+          "page_text_sha256": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+          "span_sha256": "1410653dd851658710e387dbe9ab7dadf24ee2a28876de6aaa45128929954b40",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=14"
+        }
+      ],
+      "bytes": 262,
+      "sha256": "1410653dd851658710e387dbe9ab7dadf24ee2a28876de6aaa45128929954b40",
+      "first_text": "Being in Great Britain 77032\n\n\nQualifying age 77033\n\n\nCouple 77034\n\n\nMixed-age couple 77035\n\n\nGuarantee credit",
+      "last_text": "e credit 77041 - 77050\n\n\nSavings credit 77051\n\n\nSavings credit in polygamous marriages 77052\n\n\nQualifying income and savings credit threshold 77053 - 77099\n\n\n\n\n"
+    },
+    "heading": {
+      "spans": [
+        {
+          "page": 14,
+          "start_byte": 0,
+          "end_byte": 53,
+          "page_text_sha256": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+          "span_sha256": "3acf2e9603a46f8a96e3f360875e66fae36a11e739e8fc486ce6a45aeb4d79ff",
+          "url": "https://assets.publishing.service.gov.uk/media/68401a731d85c6606009cce4/dmgch77.pdf#page=14"
+        }
+      ],
+      "bytes": 53,
+      "sha256": "3acf2e9603a46f8a96e3f360875e66fae36a11e739e8fc486ce6a45aeb4d79ff",
+      "first_text": "Entitlement to State Pension Credit 77031 - 77099\n\n\n\n",
+      "last_text": "Entitlement to State Pension Credit 77031 - 77099\n\n\n\n"
+    }
+  },
+  "expectations": {
+    "target_label": "77031",
+    "primary_role": "guidance-passage",
+    "governing_heading": "Entitlement to State Pension Credit 77031 - 77099",
+    "forbidden_governing_headings": [
+      "Qualifying income and savings credit threshold 77053 - 77099"
+    ],
+    "navigation_role": "contents-navigation",
+    "must_contain": [
+      "4.1 couple",
+      "4.2 mixed-age couple",
+      "4.3 polygamous marriage",
+      "5. have made a valid claim",
+      "6. where relevant",
+      "1 SPC Act 02"
+    ],
+    "references": [
+      {
+        "target": "77140",
+        "kind": "guidance-reference",
+        "legal_effect_status": "unresolved"
+      },
+      {
+        "target": "DMG Chapter 02",
+        "kind": "guidance-reference",
+        "legal_effect_status": "unresolved"
+      },
+      {
+        "target": "SPC Act 02, s 1(2)",
+        "kind": "legislation-citation",
+        "legal_effect_status": "unresolved"
+      }
+    ],
+    "must_not_infer": [
+      "A linked table-of-contents range governs the preceding entitlement conditions.",
+      "Source extraction is specialist-reviewed legal guidance."
+    ]
+  }
+}

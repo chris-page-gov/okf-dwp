@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  validate:
+  legacy_validation:
     runs-on: ubuntu-latest
     # The complete frozen-source and consumer replay exceeded 30 minutes on
     # merged learning release bd945377. Keep every check with bounded headroom.
@@ -330,3 +330,94 @@ jobs:
         run: python3 source/discovery-2026-09-15/acquire_metadata.py --check
       - name: Check whitespace
         run: git diff --check
+
+  structured_validation:
+    runs-on: ubuntu-latest
+    # Separate resources keep the new full-source checks outside the measured
+    # 22–25 minute legacy replay. Neither job may bypass the validate gate.
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version-file: .python-version
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9
+        with:
+          version: '0.12.2'
+      - run: uv sync --locked
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '26.7.0'
+      - name: Replay retained source structure and additive projections offline
+        run: |
+          uv run --locked python scripts/build_pdf_structure.py --check
+          uv run --locked python scripts/build_manual_guide.py --check
+          uv run --locked python scripts/build_structured_units.py --check
+          uv run --locked python scripts/build_structured_context.py --check
+          uv run --locked python -m unittest discover -s scripts -p 'test_manual*.py'
+          uv run --locked python -m unittest discover -s scripts -p 'test_pdf_structure*.py'
+          uv run --locked python -m unittest discover -s scripts -p 'test_structured*.py'
+          uv run --locked python -m unittest discover -s scripts -p 'test_state_pension*.py'
+          node --test scripts/test_structured_context_metrics.mjs
+          node --test scripts/test_report_structured_context.mjs
+          node --test scripts/test_structured_restoration_admission.mjs
+          node --test scripts/test_original_acceptance_metrics.mjs scripts/test_original_acceptance_runner.mjs
+      - name: Read the admitted structured-context consumer identity
+        id: structured-consumer
+        run: |
+          uv run --locked python - <<'PY'
+          import json, os, re
+          from pathlib import Path
+          admission = json.loads(Path('evaluation/manual-structure/context-probe/engine.json').read_text())
+          commit = admission['commit']
+          assert re.fullmatch(r'[0-9a-f]{40}', commit), 'An immutable reviewed consumer is required'
+          for name in ('index.ts', 'corpus.ts', 'corpusV3.ts', 'types.ts', 'unit.ts'):
+              assert re.fullmatch(r'[0-9a-f]{64}', admission['files'][name]), 'Every runtime module must be pinned'
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write(f'commit={commit}\n')
+          PY
+      - name: Check out the separately admitted structured-context consumer
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: chris-page-gov/okf-explorer
+          ref: ${{ steps.structured-consumer.outputs.commit }}
+          path: .ci/okf-explorer-structured
+          persist-credentials: false
+      - name: Verify the whole structured corpus and replay the accepted staff comparison
+        env:
+          STRUCTURED_CONSUMER_COMMIT: ${{ steps.structured-consumer.outputs.commit }}
+        run: |
+          test "$(git -C .ci/okf-explorer-structured rev-parse HEAD)" = "$STRUCTURED_CONSUMER_COMMIT"
+          node --experimental-strip-types scripts/test_structured_corpus.mjs --explorer-root .ci/okf-explorer-structured --receipt ".ci/structured-corpus-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.json"
+          node --experimental-strip-types scripts/check_structured_replay.mjs --explorer-root .ci/okf-explorer-structured
+      - name: Preserve the original-case source and evaluator freeze
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: 0e82d9ef32b08510bb5dbddd8c56252f9adffe09
+          path: .ci/okf-dwp-original-acceptance
+          persist-credentials: false
+      - name: Preserve the original-case engine independently of later admission
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: chris-page-gov/okf-explorer
+          ref: 8a5b8d11a2d99935efca4ba8366812844061d928
+          path: .ci/okf-explorer-original-acceptance
+          persist-credentials: false
+      - name: Replay the retained original-case failure without relabelling it
+        run: node .ci/okf-dwp-original-acceptance/scripts/evaluate_original_acceptance.mjs --explorer-root .ci/okf-explorer-original-acceptance --attempt acceptance-01 --check
+
+  validate:
+    # Preserve the existing protected check name and fail for skipped,
+    # cancelled or failed prerequisite jobs, including setup failures.
+    if: ${{ always() }}
+    needs: [legacy_validation, structured_validation]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Require both independent validation planes
+        env:
+          LEGACY_RESULT: ${{ needs.legacy_validation.result }}
+          STRUCTURED_RESULT: ${{ needs.structured_validation.result }}
+        run: |
+          test "$LEGACY_RESULT" = success
+          test "$STRUCTURED_RESULT" = success

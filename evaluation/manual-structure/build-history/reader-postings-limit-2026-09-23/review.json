@@ -1,0 +1,30 @@
+{
+  "schema": "okf-independent-review.v1",
+  "scope": "Reader common-term completeness declaration only; no engine changes or new corpus run by reviewer",
+  "result": "no-blocker-in-reviewed-scope",
+  "reviewed_files": [
+    {
+      "path": "scripts/structured_context_reader.py",
+      "sha256": "5475f6ac365c3ded87befd31be4190192ee5afa86eeda15da61eed583faee949"
+    },
+    {
+      "path": "scripts/test_structured_context_reader.py",
+      "sha256": "818234386766243a0b85dd1d53f14bdf51cd3de8d109516a37869fa39e9e0cce"
+    },
+    {
+      "path": "scripts/build_full_dmg.py",
+      "sha256": "3d2d91071358e2e15099132a94354a4689be97284a5baac91bf1bed0be95e76a"
+    }
+  ],
+  "observations": [
+    "build_search retains complete postings and true lexicon df, with unchanged atomic token/shard byte bounds.",
+    "declare_postings_completeness changes only manifest counts and emits a hash-bound diagnostic; it does not mutate posting arrays.",
+    "Existing consumer validates max_postings_per_token <= 50000, iterates every supplied posting, and uses df above the declared threshold to retain capped-postings uncertainty.",
+    "The separate actual maximum and token census prevent mistaking the conservative threshold for the stored census.",
+    "Focused producer test verifies all 50001 rows and final ordinal retained; sibling reports 13 producer plus 61 consumer controls passing, not rerun by reviewer."
+  ],
+  "limitations": [
+    "Counts may conservatively report unknown/gte although no postings were discarded. This is not evidence truncation or Ask OKF completeness.",
+    "Full regenerated corpus and live browser acceptance remain separate."
+  ]
+}

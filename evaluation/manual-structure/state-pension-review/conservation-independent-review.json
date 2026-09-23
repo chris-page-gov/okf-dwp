@@ -1,0 +1,37 @@
+{
+  "schema": "okf-independent-review.v1",
+  "reviewer": "dependency_review",
+  "status": "no-blocker-after-conservation-repair",
+  "scope": "Bounded read-only review of standalone source-selection admission extension and conservation checks, not State Pension legal assessment or runtime adoption.",
+  "files": [
+    {
+      "path": "scripts/structured_context_profiles.py",
+      "sha256": "5c5d1962fe127ac5e8d646c28ca1650be1c21242b62616fb17c9c20437d438c8"
+    },
+    {
+      "path": "scripts/test_state_pension_selection.py",
+      "sha256": "75f2880336c9af416b225155c987d006081691d1e59dbc904dd172c3baa4248e"
+    }
+  ],
+  "findings": [
+    {
+      "status": "resolved",
+      "finding": "Changing record text and rehashing record/catalogue metadata must not replace original source content. Appended bytes outside all span ranges must also be rejected.",
+      "repair": "Require exact catalogue text and text hash, validate literal source byte hashes for every span and reconstruct complete content with the explicitly declared newline joiner. Author-declared units preserve their exact original completeness without upgrading machine units."
+    }
+  ],
+  "checks": {
+    "command": ".venv/bin/python -m unittest discover -s scripts -p 'test_state_pension_selection.py' -v",
+    "passed": 9,
+    "failed": 0,
+    "independently_executed": true,
+    "negative_control_note": "Paired in-span mutation rewrites catalogue text and its hash as well as record hash; it reaches literal source byte verification. Separate unbound suffix mutation rewrites all text metadata and fails complete-span conservation.",
+    "output_sha256": "cbcf616f4c10b6b7c51cc9eb0adc5d5e2679652695b44d357445118b22cfea27",
+    "output_path": "evaluation/manual-structure/state-pension-review/conservation-independent-tests.txt"
+  },
+  "limits": [
+    "Frozen producer hash admission remains separate from this pure-helper review.",
+    "No full-corpus rebuild, new acquisition, model calls, runtime context assembly or publication performed.",
+    "Source semantics of the four additional PIP units are reviewed separately by compact_engine."
+  ]
+}

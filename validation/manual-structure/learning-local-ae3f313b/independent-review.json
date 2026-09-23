@@ -1,0 +1,136 @@
+{
+  "schema": "okf-learning-source-led-independent-review.v1",
+  "reviewer": "dependency_review",
+  "source_commit": "ae3f313b1c146f786925760a401b270a063428cc",
+  "status": "no-current-documentation-or-local-observation-blocker-with-historical-replay-follow-on-required",
+  "scope": "Read-only review plus explicitly authorised documentation command clarification; no assemblies, browser runs or network calls.",
+  "checks": {
+    "retained_artifact_hashes_verified": 8,
+    "observed_input_bindings_match_site_manifest": 5,
+    "source_markdown_pages_verified_against_source_commit": 4,
+    "retained_successful_browser_checks": 8,
+    "retained_browser_requests_checked_against_fixed_GET_allowlist": 20,
+    "browser_errors": 0,
+    "browser_warnings": 0,
+    "desktop_mobile_screenshots_visually_read": 2,
+    "site_source_pages": 186,
+    "site_output_files": 414
+  },
+  "findings": [
+    {
+      "severity": "resolved-editorial",
+      "finding": "The new-attempt example used already-existing acceptance-01 and would refuse to run.",
+      "resolution": "Example now replays acceptance-01 with --check, states exact 8a5 engine and preserved historical runner/protocol/input requirement, and gives a different fresh-attempt example."
+    },
+    {
+      "severity": "required-before-new-engine-adoption",
+      "finding": "Current CI checks historical acceptance-01 with the checkout selected from current staff engine admission; a future repaired engine will fail its frozen 8a5 identity.",
+      "disposition": "Root agreed separate immutable historical checkout and runner/protocol/input access; later candidate acceptance stays separate. This review does not mark that future CI repair complete."
+    },
+    {
+      "severity": "non-blocking-observation",
+      "finding": "Harness external_requests is initialised to zero rather than incremented on rejected external requests.",
+      "disposition": "The passed observation independently lists 20 GET requests all within its fixed five-file allowlist, and unexpected requests produce errors that fail the run. No false zero-network claim in this retained pass; an attempted-external-request counter would improve failed observations."
+    }
+  ],
+  "conclusions": [
+    "Staff 40, original two plus unknown, source census and structural experiment remain separate denominators.",
+    "Trial06 profile/path improvements, route trade-offs, 203 open obligations and 32 KiB zero-evidence are explicit.",
+    "Original imprisonment 20/53 unit and 43/89 path delivery failure remains clear; no inference of acceptance from staff results.",
+    "The docs label source-led corpus a research candidate and compatible remote release as pending; the local journey is not claimed as public deployment or full accessibility acceptance.",
+    "The site manifest binds five observed inputs to the exact source build; retained unsuccessful harness attempt is preserved.",
+    "Protected validate still requires both legacy and structured jobs to succeed. CI accepted current pointer remains an intentional pending gate."
+  ],
+  "limitations": [
+    "No browser or assembly replay by reviewer. Retained successful browser observations are checked as artefacts, not new live observations.",
+    "Screenshots show the top of the results page; table presence/viewport fit is established by retained browser checks, not a visual table screenshot.",
+    "No current law, specialist acceptance, full accessibility, external-client compatibility, public deployment or model-answer claim."
+  ],
+  "bindings": [
+    {
+      "path": "tools/learning-site/check_source_led_journey.mjs",
+      "bytes": 5919,
+      "sha256": "6a64a2ee97728208fe2bf3c411f46f83a1d316a3149544c9bdbefcf6773783e9"
+    },
+    {
+      "path": "docs/source-led-results.md",
+      "bytes": 6132,
+      "sha256": "875e0c4cf28dc16796ba94bbe1313ad16ebe0fe985480e975ce38bf5f88cb500"
+    },
+    {
+      "path": "docs/source-led-manual-guide.md",
+      "bytes": 10144,
+      "sha256": "fce4c83a6099f92c1f436aba4104cb507f138e402c837cda46bde58480063345"
+    },
+    {
+      "path": "docs/source-led-demonstration.md",
+      "bytes": 6621,
+      "sha256": "32adad45a928f20f7f7fb6f022638985ea7e51ca456ecd2292532f3e7ee974d9"
+    },
+    {
+      "path": "docs/original-acceptance-restoration.md",
+      "bytes": 8963,
+      "sha256": "d0f1387dc524b023ab0ddd2acd00d3baa0496a8611575de556b775272ecbf887"
+    },
+    {
+      "path": "README.md",
+      "bytes": 53019,
+      "sha256": "a38035f105a0a48779086d0a302c5f50f5273b6f39c846f1a216c35683b8a3e0"
+    },
+    {
+      "path": "okf.semantic.json",
+      "bytes": 17998,
+      "sha256": "d0ca3ce4973fb40886a56d72ddd7d888a5401873661e40d76544360ca7c9139c"
+    },
+    {
+      "path": "okf.publication.json",
+      "bytes": 132039,
+      "sha256": "61dbbdbdd6192f8885a167231c0da11d6648898f1656386d93af4c97b1519d8d"
+    },
+    {
+      "path": ".github/workflows/okf-ci.yml",
+      "bytes": 28202,
+      "sha256": "f60042c43613c337b27e61973f8fd5ab555531cbfdc276d6f9eab1ca107af7c7"
+    },
+    {
+      "path": "validation/manual-structure/learning-local-ae3f313b/README.md",
+      "bytes": 1359,
+      "sha256": "23621c0947580906944e43c38fa4c80d510890c94ecd4fb35b6ec8d4b5708532"
+    },
+    {
+      "path": "validation/manual-structure/learning-local-ae3f313b/artifact-manifest.json",
+      "bytes": 1414,
+      "sha256": "8c9d00dafa351b7c85d7c76697e958a9e4124f239bf866066e299b065873c9a7"
+    },
+    {
+      "path": "validation/manual-structure/learning-local-ae3f313b/site-manifest.json",
+      "bytes": 212470,
+      "sha256": "5c4b40a85e330a4856a900f6632720d15c93f7a839726a7d27b72ab9e509a093"
+    },
+    {
+      "path": "validation/manual-structure/learning-local-ae3f313b/attempt-01/observation.json",
+      "bytes": 8532,
+      "sha256": "85dfd76ae06d3979eb33aca53aad5fe71a87a341ef8e3eed7a37ebb6adaedac2"
+    },
+    {
+      "path": "validation/manual-structure/learning-local-ae3f313b/attempt-02/observation.json",
+      "bytes": 4964,
+      "sha256": "c2e0cd9e1e3c014c7b86bbb10854cc00e3a43852694214f2301d152af4f3faa3"
+    },
+    {
+      "path": "validation/manual-structure/learning-local-ae3f313b/attempt-02/executed-harness.mjs",
+      "bytes": 5919,
+      "sha256": "6a64a2ee97728208fe2bf3c411f46f83a1d316a3149544c9bdbefcf6773783e9"
+    },
+    {
+      "path": "validation/manual-structure/learning-local-ae3f313b/attempt-02/results-1280.png",
+      "bytes": 149119,
+      "sha256": "069e548ce9039a0873975783cd3237ed0a837e622b9d82e48baf4846f6b19785"
+    },
+    {
+      "path": "validation/manual-structure/learning-local-ae3f313b/attempt-02/results-390.png",
+      "bytes": 80316,
+      "sha256": "4d324d80c83695137517ef382a411101616742709e58b4ec2214a68fbd140f7f"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "observed_utc": "2026-09-22T23:25:27.893661+00:00",
+  "registration": "Independent source controls developed after the parent reported the defects and concurrently with its generic parser repair; not preregistered or blinded. Original source and earlier corpus/trial outputs unchanged.",
+  "previous_parser": {
+    "path": "evaluation/manual-structure/auxiliary-review/memo-appendix-follow-on/previous-parser.py",
+    "sha256": "99ba34d41f10ed6363d82a5ab9bc97a3f7591f6be292ad4fbb241b685d3d3a99",
+    "git_commit": "73c82842dcfef2e8ff099cc53eeb106a06a73d30",
+    "original_path": "scripts/manual_structure.py"
+  },
+  "current_parser_at_source_freeze": {
+    "path": "scripts/manual_structure.py",
+    "sha256": "126c4b7efed3dbac217f3617df99317c66061edf337ea15477916f3ba8f94634"
+  },
+  "fixtures": [
+    {
+      "family": "adm",
+      "document_id": "adm-memo-06-21",
+      "record_path": "source/adm-2026-09-19/records/adm-memo-06-21.json",
+      "record_sha256": "9131e65c4284fc3967b969f9952f6813c20846e5e248dc2f4c5e7781675bbb2f",
+      "pages_path": "source/adm-2026-09-19/pages/adm-memo-06-21.json",
+      "pages_sha256": "111d078161d4ce5d878df58128e6493044005d76a6a7359675c77a71cf613bb1",
+      "pdf_path": "source/adm-2026-09-19/pdf/adm-memo-06-21.pdf",
+      "pdf_sha256": "19c5ddf502300c611a09e52c6272d91e1cbe725a6b112a4b798918d90d6eed63",
+      "source_url": "https://assets.publishing.service.gov.uk/media/609cf35fe90e07357144db60/adm6-21.pdf",
+      "source_kind": "memo",
+      "source_role": "supplementary-guidance-applicability-unreviewed",
+      "subject": "Chapter identifier in a wrapped memo reference is not local memo numbering",
+      "source_page": 5,
+      "expected_reference_context": {
+        "start_utf8": 538,
+        "end_utf8": 1144,
+        "literal_sha256": "8ec981d8b0220bbfc1b888ea8dc98d6b65bdd6d847126065e34a18bcffca06ba",
+        "literal": "11   Persons within the scope of the EU Social Security Coordination Regulations\n     claiming PIP do not have to satisfy the past presence test (ADM C2026), if they\n     can show that they have a genuine and sufficient link to the UK (see ADM\n     C2130 and ADM Memo 11/19). However, a person within the personal scope of\n     the above legislation who moves to the UK, or returns to the UK, from another\n     EEA Member State who does not have a genuine and sufficient link as at\n     the first day of potential entitlement may nonetheless be able to satisfy the past\n     presence test by other means.\n\n"
+      },
+      "forbidden_main_label": "C2130",
+      "expected_reference_label": "C2130",
+      "annotation_page": 21,
+      "annotation_labels": [
+        "C2119",
+        "C2120",
+        "C2134",
+        "C1290",
+        "C1294",
+        "C1314"
+      ],
+      "expected_main_chapter_labels": [],
+      "acceptance_boundary": "Retain complete memo source text and declared aligned section headings; plain memo numbering and chapter citations remain unaccepted as paragraph boundaries. Annotation references remain update observations, never established legal dependencies."
+    },
+    {
+      "family": "dmg",
+      "document_id": "dmg-vol8-amendment27",
+      "record_path": "source/full-dmg-2026-09-15/records/dmg-vol8-amendment27.json",
+      "record_sha256": "6bd983712fc2147c983e66f114d051cb4e2d50eafa2413c1aa46e97179a0d64d",
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol8-amendment27.json",
+      "pages_sha256": "47861457bdda23aeec37bae04275fa8bfe8b4d99ccd20cf9ef678246be403f25",
+      "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol8-amendment27.pdf",
+      "pdf_sha256": "b14c3165f6ed91e0c115a1e45fab6a109d9cf5f4de40e467cc1ec86d8fb61816",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5caf2d9aed915d02879c6901/vol08am27.pdf",
+      "source_kind": "historical-amendment",
+      "source_role": "historical-amendment-not-current-rules",
+      "subject": "A spaced standalone appendix heading ends the prior paragraph after its continuation example",
+      "main_label": "44650",
+      "expected_paragraph_spans": [
+        {
+          "page": 107,
+          "start_utf8": 2102,
+          "end_utf8": 3578,
+          "literal_sha256": "184886f0a645bd029e1252155d0205faa1b87d75921152c236545985519f0c4d"
+        },
+        {
+          "page": 108,
+          "start_utf8": 0,
+          "end_utf8": 573,
+          "literal_sha256": "3791899150e4208b9367e80b101e103de94711412d16d089168a1254f15e677a"
+        }
+      ],
+      "required_continuation_page": 108,
+      "required_continuation_marker": "Example 2",
+      "appendix_page": 109,
+      "appendix_literal": "A p p e n di x 3",
+      "appendix_line_start_utf8": 0,
+      "acceptance_boundary": "Preserve historical and extraction limitations. Appendix is a separate unresolved section candidate; no table or legal completeness is inferred. Paragraph44650 retains its full second example on page108."
+    }
+  ]
+}

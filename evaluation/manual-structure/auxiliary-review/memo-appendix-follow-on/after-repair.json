@@ -1,0 +1,19 @@
+{
+  "observed_utc": "2026-09-22T23:27:50.087958+00:00",
+  "phase": "after-repair",
+  "scope": "Bounded frozen-source regression only; no corpus generation or source acquisition. Repair and independent source controls were prepared concurrently.",
+  "parser": {
+    "path": "scripts/manual_structure.py",
+    "sha256": "bec04854e14d4229898971be7d673c3fac062186855f52a9f06589a04727b9d0"
+  },
+  "test": {
+    "path": "scripts/test_manual_memo_appendix_sources.py",
+    "sha256": "4f484e7132fa2ac0cc70b1ec200f291eef897d6d7166fe8ce06d4910bc9b1464"
+  },
+  "fixture_sha256": "c84bc35405343cdfca0784f3adf6da888f99d90f09ea889a3ac4c8bdcf6e2828",
+  "tests": 3,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "output": "test_memo_annotations_and_source_headings_remain_separate (test_manual_memo_appendix_sources.MemoAppendixSourceControls.test_memo_annotations_and_source_headings_remain_separate) ... ok\ntest_memo_reference_is_not_main_numbering (test_manual_memo_appendix_sources.MemoAppendixSourceControls.test_memo_reference_is_not_main_numbering) ... ok\ntest_spaced_appendix_stops_prior_paragraph_after_full_example (test_manual_memo_appendix_sources.MemoAppendixSourceControls.test_spaced_appendix_stops_prior_paragraph_after_full_example) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.070s\n\nOK\n"
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "okf-independent-source-selection-review.v1",
+  "recorded_date": "2026-09-23",
+  "reviewer": "compact_engine",
+  "result": "no-blocker-for-additional-source-selection-scope",
+  "previous_review": "okf-state-pension-source-review-2026-09-23.json",
+  "new_units_read": [
+    "dmg-74-appendix-1",
+    "dmg-74-appendix-2",
+    "dmg-74-appendix-4"
+  ],
+  "selected_units_after_increment": 21,
+  "bindings": [
+    {
+      "path": "domain-profile/structured-units/state-pension-routing.yamlld",
+      "sha256": "152da3af27e5ca754e98e0a7922af318a9c5700ba77877b14238db7982b2b99c"
+    },
+    {
+      "path": "evaluation/manual-structure/state-pension-review/source-reading.json",
+      "sha256": "83d1a79d95d15e45fd2d42c00bd38c90396846806458b81d12ac62ee4dafff42"
+    },
+    {
+      "path": "structured-units/documents/dmg/dmg-vol12-ch74.json.gz",
+      "sha256": "e74dfbf09494d6cda62a7b43b8663c5ecf0db8b337417dd3c92cac7c28702b2a"
+    }
+  ],
+  "checks": [
+    "Independently read all three additional complete source-unit tables and checked their IDs, declared record hashes, exact spans and text hashes against the updated ledger and frozen unit document.",
+    "Appendix 1 preserves its women-only 1953 cohort heading. Appendices 2 and 4 preserve their distinct person/cohort headings and complete rows.",
+    "The age profile now selects all four appendices referenced in 74022. It does not select a table from a question-specific birth date.",
+    "The previous Appendix 3 end-of-month note remains in the selection. Source applicability, legal-version, individual-payment and specialist-review obligations remain unresolved."
+  ],
+  "limits": [
+    "This records bounded independent agent source-selection review, not specialist acceptance or current-law certification.",
+    "The previous 18-unit review remains separate and unchanged.",
+    "No network, model-provider, assembly or individual-benefit calculation was performed."
+  ]
+}

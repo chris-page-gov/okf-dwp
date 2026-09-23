@@ -1,0 +1,52 @@
+test_document_notice_cannot_absorb_later_numbered_guidance (test_manual_structure_review.ManualStructureIndependentReviewTests.test_document_notice_cannot_absorb_later_numbered_guidance) ... FAIL
+test_memo_nested_list_numbers_are_not_body_paragraph_labels (test_manual_structure_review.ManualStructureIndependentReviewTests.test_memo_nested_list_numbers_are_not_body_paragraph_labels) ... ok
+test_out_of_range_navigation_heading_does_not_govern (test_manual_structure_review.ManualStructureIndependentReviewTests.test_out_of_range_navigation_heading_does_not_govern) ... ok
+test_reclassified_sidecar_cannot_override_unchanged_raw_tree (test_manual_structure_review.ManualStructureIndependentReviewTests.test_reclassified_sidecar_cannot_override_unchanged_raw_tree) ... FAIL
+test_repeated_heading_without_disambiguating_context_remains_unknown (test_manual_structure_review.ManualStructureIndependentReviewTests.test_repeated_heading_without_disambiguating_context_remains_unknown) ... FAIL
+test_unique_heading_keeps_exact_original_utf8_offsets (test_manual_structure_review.ManualStructureIndependentReviewTests.test_unique_heading_keeps_exact_original_utf8_offsets) ... ok
+test_untagged_source_remains_complete_partition_and_unreviewed (test_manual_structure_review.ManualStructureIndependentReviewTests.test_untagged_source_remains_complete_partition_and_unreviewed) ... ok
+
+======================================================================
+FAIL: test_document_notice_cannot_absorb_later_numbered_guidance (test_manual_structure_review.ManualStructureIndependentReviewTests.test_document_notice_cannot_absorb_later_numbered_guidance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/crpage/tmp/okf-dwp-manual-structure/scripts/test_manual_structure_review.py", line 61, in test_document_notice_cannot_absorb_later_numbered_guidance
+    self.assertEqual(len(matching), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_reclassified_sidecar_cannot_override_unchanged_raw_tree (test_manual_structure_review.ManualStructureIndependentReviewTests.test_reclassified_sidecar_cannot_override_unchanged_raw_tree)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/crpage/tmp/okf-dwp-manual-structure/scripts/test_manual_structure_review.py", line 52, in test_reclassified_sidecar_cannot_override_unchanged_raw_tree
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_repeated_heading_without_disambiguating_context_remains_unknown (test_manual_structure_review.ManualStructureIndependentReviewTests.test_repeated_heading_without_disambiguating_context_remains_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/crpage/tmp/okf-dwp-manual-structure/scripts/test_manual_structure_review.py", line 31, in test_repeated_heading_without_disambiguating_context_remains_unknown
+    self.assertEqual(result["blocks"], [])
+AssertionError: Lists differ: [{'role': 'H2', 'text': 'Repeated heading'[126 chars]ct'}] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+{'role': 'H2', 'text': 'Repeated heading', 'tree_line_start': 2, 'tree_line_end': 3, 'index': 0, 'start': 9, 'end': 25, 'page': 1, 'alignment': 'ordered-normalised-exact'}
+
++ []
+- [{'alignment': 'ordered-normalised-exact',
+-   'end': 25,
+-   'index': 0,
+-   'page': 1,
+-   'role': 'H2',
+-   'start': 9,
+-   'text': 'Repeated heading',
+-   'tree_line_end': 3,
+-   'tree_line_start': 2}]
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.003s
+
+FAILED (failures=3)

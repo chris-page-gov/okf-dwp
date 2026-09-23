@@ -1,0 +1,78 @@
+{
+  "stage": "expanded",
+  "case_denominator": 8,
+  "passed_cases": 8,
+  "cases": [
+    {
+      "case_id": "dmg-77031-heading",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "case_id": "adm-p4087-heading",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "case_id": "dmg-077001-cross-page-examples",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "case_id": "adm-c1988-cross-page-examples",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "case_id": "dmg-capital-table-continuation",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "case_id": "adm-reserved-range",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "case_id": "dmg-reference-abbreviations",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "case_id": "adm-memo-contents-examples-annotations",
+      "passed": true,
+      "failures": []
+    }
+  ],
+  "specialist_review": "not-reviewed",
+  "legal_answerability": "not-established",
+  "schema": "okf-dwp-manual-structure-run.v1",
+  "engine": "candidate",
+  "protocol_sha256": "1cf9fa21f48a97ffd5551caa58293f1f97fc8dcfe26d1857afd141bdb8ea8d92",
+  "source_baseline_commit": "908adc45a4e22eb72ed13fe8943877307b732850",
+  "runtime_seconds": 0.601535,
+  "adapter_errors": {},
+  "baseline_document_bindings": [],
+  "implementation_bindings": [
+    {
+      "path": "scripts/test_manual_structure_acceptance.py",
+      "sha256": "8a5f55bfe31f46ce68536d6b68183d80537dd672b08f4bbf0aec2691d4c28bc0"
+    },
+    {
+      "path": "scripts/manual_structure.py",
+      "sha256": "4333170eee72d724a60014112c6b92a2f8c069d9263545b2c1561d74d8592b27"
+    },
+    {
+      "path": "scripts/build_logical_units.py",
+      "sha256": "364be1718db1697baa8af62362e8d4f65178dd9506f7cba5b8d16ff5f3aece38"
+    }
+  ],
+  "registration_note": "Fixtures predate source-case execution/results; parser drafting occurred concurrently. These are not blinded held-out cases.",
+  "review_boundary": "Structural acceptance only; legal applicability, specialist review and answer quality remain unestablished.",
+  "observations": {
+    "path": "observations.json.gz",
+    "decoded_sha256": "c64314e6ba0e1b50e53b85bafeb34fa2d72b8e7610203f29da91563bbcd37798",
+    "decoded_bytes": 1945319,
+    "sha256": "daee781e5eec0211270b47e6f34027c195ebebe3957b0ca5f097b64a4a2d2a2f"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "okf-independent-source-selection-review.v1",
+  "recorded_date": "2026-09-23",
+  "reviewer": "compact_engine",
+  "result": "no-blocker-for-pip-source-addition-and-boundary-preserving-admission",
+  "previous_reviews": [
+    "okf-state-pension-source-review-2026-09-23.json",
+    "okf-state-pension-appendices-review-2026-09-23.json"
+  ],
+  "new_units_read": [
+    "adm-p1001",
+    "adm-p1011",
+    "adm-p1013",
+    "adm-p4076-4086"
+  ],
+  "selected_units_after_increment": 25,
+  "bindings": [
+    {
+      "path": "domain-profile/structured-units/state-pension-routing.yamlld",
+      "sha256": "eed96070fa0aa700786f6b226b8020643d0fa70389f98381ae15100d15c69ab7"
+    },
+    {
+      "path": "evaluation/manual-structure/state-pension-review/source-reading.json",
+      "sha256": "4a31cdbc838d2fe1d8efc28ad67694210c2f95eeba10030c17896a0bf57be724"
+    },
+    {
+      "path": "scripts/structured_context_profiles.py",
+      "sha256": "4d82bec8ef3ebb6f1a449d2cef8400b8dc1e1c3a3a8290164bb0dce16eca270f"
+    },
+    {
+      "path": "scripts/test_state_pension_selection.py",
+      "sha256": "a363485efafff705da60f82d43e904c74e04a8a96b86a5cf08e16f7c33083e6e"
+    }
+  ],
+  "checks": [
+    "Read all four additional complete PIP unit texts and independently checked frozen document hashes, selected IDs, declared record hashes, exact spans and text hashes against the updated ledger.",
+    "P1001 stays a machine-derived unresolved boundary. The other three records preserve their already-authored exact boundaries and complete-within-declared-boundary status; source authority remains derived.",
+    "P1011 retains cumulative age/residence/devolved-exclusion/assessment/period conditions. P1013 retains first-claim age and DLA scope; P4076\u2013P4086 retain distinct existing-award, pre-age claim, further-claim and ADP-linked branches and examples.",
+    "The added State Pension/PIP profile requires both concepts, does not infer unrestricted overlapping awards from introductory silence, and retains remaining mobility, required-period, residence, memo and legal closure obligations.",
+    "The admission helper compares declared boundary/completeness with the bound record, requires an actual boolean authored origin, permits only the pre-existing supported origin/status combinations and still checks complete-record hashes, source identity, paragraph identity, all exact spans and span counts.",
+    "Seven source-specific controls cover preserved original authored metadata and reject changed origin, boundary, completeness and source text. The owner reports those and the existing sixteen profile controls pass; no duplicate assembly was run."
+  ],
+  "limits": [
+    "This agent review is source-selection and integrity review, not specialist acceptance, complete legal answerability or an individual benefit decision.",
+    "The captured P4083 cross-reference and extraction wording are preserved; this change does not certify them as legally correct.",
+    "Previous source-review receipts remain separate and unchanged."
+  ]
+}

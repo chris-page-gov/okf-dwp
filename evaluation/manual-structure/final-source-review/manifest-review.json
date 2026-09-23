@@ -1,0 +1,58 @@
+{
+  "observed_utc": "2026-09-22T23:46:39.987120+00:00",
+  "scope": "Independent read-only final manifest and exact source-span accounting audit; no producer regeneration, source acquisition, PDF process or runtime evaluation.",
+  "manifest_sha256": "8b620634bf686566d30c0cf4cd12f69535af7ef546a356333e3b0f9011d15741",
+  "snapshot": "dwp-structured-units-9d7908c23642199bb048",
+  "source_inventory_bindings": [
+    {
+      "family": "dmg",
+      "inventory": "source/full-dmg-2026-09-15/inventory.json",
+      "sha256": "9bcba9a8e379670c16542802709ffbe5b7151340e81a2172cbf3f97e0b33af9a"
+    },
+    {
+      "family": "adm",
+      "inventory": "source/adm-2026-09-19/inventory.json",
+      "sha256": "c274173a59d7792004f372fea7db19e018a4d0c1de6111ed65a57fc0c622896c"
+    }
+  ],
+  "verified": {
+    "source_text_bytes": 35143443,
+    "documents": 513,
+    "pages": 19090,
+    "units": 53727,
+    "empty_text_spans": 2066,
+    "authored_units": 75
+  },
+  "record_shards": 420,
+  "record_shard_rows": 53727,
+  "record_ids_unique_and_equal_to_catalogues": true,
+  "original_inventory_kind_role_preserved": true,
+  "exact_span_hashes_and_gap_free_page_accounting": true,
+  "manifest_unchanged_during_review": true,
+  "retrievable_unit_roles": {
+    "annotation": 132,
+    "contact": 140,
+    "contents": 118,
+    "definition": 11,
+    "document-notice": 297,
+    "example-group": 8,
+    "exception": 1,
+    "navigation": 2,
+    "paragraph": 42377,
+    "reference": 1,
+    "reference-material": 3,
+    "reference-table": 2,
+    "reserved": 5717,
+    "rule": 37,
+    "rule-group": 18,
+    "section": 1071,
+    "table": 4,
+    "unresolved-fragment": 3788
+  },
+  "role_counter_note": "Manifest role_* counters include the2066 empty text regions as well as53727 retrievable units. Their55793 total is not an additional unit or legal-rule count.",
+  "limits": [
+    "PDF source identifiers match the hash-bound inventory and current extraction metadata; this audit did not rehash every original PDF file.",
+    "Exact coverage includes explicitly retained whitespace spans; it does not accept machine boundaries, semantic completeness, legal applicability or specialist review.",
+    "Structured context/runtime results remain a separate acceptance plane."
+  ]
+}

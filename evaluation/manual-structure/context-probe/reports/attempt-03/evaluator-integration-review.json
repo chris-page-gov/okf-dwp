@@ -1,0 +1,36 @@
+{
+  "schema": "okf-independent-review.v1",
+  "scope": "Bounded read-only review of additive fixed-source evaluator and location metrics integration; no rerun by reviewer",
+  "result": "no-blocker-in-reviewed-scope",
+  "bindings": [
+    {
+      "path": "scripts/evaluate_structured_context.mjs",
+      "sha256": "fd1712c217d08431618fd6a8ec98bd29ce46cbeabf1ade15ca1e036d94a261db"
+    },
+    {
+      "path": "scripts/structured_context_metrics.mjs",
+      "sha256": "93a1f04e24794480237d1814b91f6da4f571cdfa3cabd7622b83b091c7387f21"
+    },
+    {
+      "path": "evaluation/manual-structure/context-probe/protocol.json",
+      "sha256": "b9251007c8f1ea3ab2968a276384c7373c10a3c5e6b38bd73ab0b571be7ae319"
+    },
+    {
+      "path": "evaluation/manual-structure/context-probe/engine.json",
+      "sha256": "d57529c65d0541bb4515523624aea8ca6e328e1f609644d878bcf5798cbe29fe"
+    }
+  ],
+  "findings": [
+    "Additive mode preserves exact inherited concept/scope records and requirements, and separately binds unchanged original40requirements.",
+    "Additional semantic records restricted to exact original concept/scope nodes, not imported page evidence.",
+    "Explicit requirement-group partition covers every candidate requirement without overlapping identifiers.",
+    "Retained paths check exact selected endpoints, actual edge direction and guards; migration terminal guard must retain exact authoring declaration.",
+    "Closing checks rehash all consumed inputs, engine files and runner before a successful result.",
+    "Base-resolved concepts are separately retained from delivered concepts removed during output refusal.",
+    "Location-route incidences and mapped-unit selection remain separate from old required paths and all203original obligations."
+  ],
+  "limitations": [
+    "Review does not demonstrate adequate allocation, legal answerability or output relevance. Retained trial03 has a real zero-evidence regression.",
+    "Full archive replay, producer integrity, runtime tests and publication are separate gates."
+  ]
+}

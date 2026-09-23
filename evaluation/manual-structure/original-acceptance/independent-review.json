@@ -1,0 +1,52 @@
+{
+  "schema": "okf-independent-review.v1",
+  "reviewer": "dependency_review",
+  "status": "no-blocker-after-conservation-repair",
+  "scope": "Bounded source-selection and pure-admission review; not legal or specialist acceptance, corpus assembly, model answer quality or deployment.",
+  "reviewed_files": [
+    {
+      "path": "scripts/structured_custody_restoration.py",
+      "sha256": "4d77102011614ebc53d6d3cd5457ad358daa4f38ecf5451913d8c5116d6b81cd"
+    },
+    {
+      "path": "scripts/test_structured_custody_restoration.py",
+      "sha256": "49d5e48d12b5dda9ccb63bc4f498fabc7d194fc738b4f17c0c657e48f49c14e3"
+    },
+    {
+      "path": "domain-profile/structured-units/custody-restoration.yamlld",
+      "sha256": "0bbc0fa0e24df580f18ce7d500f4a0e4d72bdc11ce80007ea0550449cc99ba95"
+    }
+  ],
+  "source_read": {
+    "selected_complete_units": 53,
+    "complete_text_bytes_read": 32010,
+    "mapped_units_not_all_selected": 137,
+    "old_page_locations": 33,
+    "original_requirements_retained": 6,
+    "scope_records": 7,
+    "explicit_chapter_routes": 4,
+    "source_context_dependency": "DMG12003 refers to these benefits, retaining DMG12002 list; not a blanket rule for the four benefits."
+  },
+  "findings": [
+    {
+      "status": "resolved",
+      "finding": "Paired record.text/hash rewrite passed initial admission while frozen catalogue text/spans stayed unchanged. Independently reproduced before repair.",
+      "repair": "Require exact catalogue text and boundary status, verify original extraction hash, reconstruct every whole unit from exact UTF-8 spans using the declared newline joiner; changed record/catalogue and extraction negatives reject."
+    },
+    {
+      "status": "preserved-unknowns",
+      "finding": "Original six page requirements, seven unmatched selector observations, dated catalogue scope, omitted qualification branches, machine boundaries and specialist/legal review remain visible. No page overlap is promoted to legal dependency closure."
+    }
+  ],
+  "checks": {
+    "command": ".venv/bin/python -m unittest discover -s scripts -p 'test_structured_custody_restoration.py' -v",
+    "independently_executed": true,
+    "passed": 16,
+    "failed": 0
+  },
+  "limits": [
+    "Read complete retained extracted text for the53 selected units; no new PDF visual review performed in this custody pass.",
+    "New compiler independently rehashes/exactly reconstructs all137 mapped whole units from frozen extraction bytes; no new acquisition.",
+    "Pure-helper checks do not establish actual engine traversal/delivery budgets, source applicability, answerability or an external-client connection."
+  ]
+}

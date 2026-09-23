@@ -1,0 +1,59 @@
+{
+  "schema": "okf-live-deployment-verification-receipt.v1",
+  "observed_at": "2026-09-23T01:02:09.539Z",
+  "repository": {
+    "name": "okf-explorer",
+    "url": "https://github.com/chris-page-gov/okf-explorer",
+    "role": "profile-and-consumer",
+    "root_index": "index.md",
+    "lifecycle": "active"
+  },
+  "expected_commit": "dc54fac4f98fa5bc9db38bf843854ce24a4c130d",
+  "candidate_identity": {
+    "bytes": 1138,
+    "commit": "dc54fac4f98fa5bc9db38bf843854ce24a4c130d",
+    "path": "okf-publication-identity.json",
+    "sha256": "753ca065ef6d004613d9f303a091d139ad93625b06948d58c0d6d36869ff91a2"
+  },
+  "deployed_identity": {
+    "url": "https://chris-page-gov.github.io/okf-explorer/okf-publication-identity.json",
+    "sha256": "753ca065ef6d004613d9f303a091d139ad93625b06948d58c0d6d36869ff91a2",
+    "commit": "dc54fac4f98fa5bc9db38bf843854ce24a4c130d"
+  },
+  "deployed_contract": {
+    "url": "https://chris-page-gov.github.io/okf-explorer/okf.publication.json",
+    "sha256": "331c021c3a9104c26f00205d88fe42fae382908f2b38183e7649ad812b0fde0d"
+  },
+  "browser": {
+    "channel": "chrome",
+    "version": "152.0.7977.82",
+    "console_policy": "no-errors",
+    "console_errors": [],
+    "page_errors": []
+  },
+  "journey": {
+    "id": "estate-registry",
+    "url": "https://chris-page-gov.github.io/okf-explorer/registry/estate/index.html",
+    "title": "OKF estate registry",
+    "status": 200,
+    "expected_identity": "OKF estate registry",
+    "identity_matched": true,
+    "checks": [
+      {
+        "id": "machine-registry",
+        "kind": "linked-json",
+        "href": "https://chris-page-gov.github.io/okf-explorer/okf-estate-registry.json",
+        "status": "passed",
+        "schema": "okf-estate-registry.v1",
+        "sha256": "fa9de8396731206a0005b0c4acf6de4e2403dce6cf94a267ed6203ad8936e742"
+      },
+      {
+        "id": "publication-profile",
+        "kind": "link",
+        "href": "https://chris-page-gov.github.io/okf-explorer/profile/publication-method/v1/",
+        "status": "passed"
+      }
+    ]
+  },
+  "result": "passed"
+}

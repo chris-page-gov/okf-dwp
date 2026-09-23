@@ -1,6 +1,6 @@
 {
   "schema": "okf-repository-publication-contract.v1",
-  "modified": "2026-09-22",
+  "modified": "2026-09-23",
   "locale": "en-GB",
   "time_zone": "Europe/London",
   "repository": {
@@ -1192,7 +1192,8 @@
       "kind": "mixed",
       "paths": [
         "domain-profile/learning/*.yamlld",
-        "docs/learning/**"
+        "docs/learning/**",
+        "docs/source-led-manual-guide.md"
       ],
       "authority": "editorial",
       "rights": {
@@ -1248,6 +1249,216 @@
         "release"
       ],
       "description": "Project-authored teaching objectives, evidence locators and assessor public keys; no private keys or claimant records."
+    },
+    {
+      "id": "manual-orientation-proposals",
+      "label": "Source-linked manual orientation proposals",
+      "kind": "structured-data-folder",
+      "paths": [
+        "domain-profile/manual-guide/**",
+        "manual-guide/**"
+      ],
+      "origin": "mixed",
+      "authority": "mixed",
+      "snapshot_policy": "content-addressed",
+      "rights": {
+        "status": "mixed",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md",
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/LICENSE",
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/docs/adm-acquisition.md"
+        ],
+        "limitations": [
+          "MIT-original-structure; OGL-source-passages-with-exceptions",
+          "Licence and source-level exceptions remain as documented in the linked evidence; this classification is not a new rights clearance."
+        ]
+      },
+      "limitations": [
+        "Source-linked editorial conventions and an original-role census cover the same 513 captured documents, not a new acquisition or a legal interpretation.",
+        "Exact supporting excerpts scope each convention to named documents. Learning prerequisites remain separate from legal dependencies."
+      ],
+      "formats": [
+        "application/ld+yaml",
+        "application/json",
+        "application/x-ndjson",
+        "text/markdown"
+      ],
+      "inventory": {
+        "method": "content-addressed-manifest",
+        "manifest_path": "manual-guide/manifest.json",
+        "identity": [
+          "relative-path",
+          "bytes",
+          "sha256",
+          "source-identifier",
+          "source-version"
+        ]
+      },
+      "extraction": {
+        "mode": "deterministic-local",
+        "network_access": "prohibited",
+        "command_ids": [
+          "manual-guide-build"
+        ],
+        "limitations": [
+          "Deterministic projection of frozen local sources and public evaluation data; no network, source refresh, model inference or personal case data."
+        ]
+      },
+      "sensitivity": {
+        "status": "not-assessed",
+        "assessment": "Only public guidance, catalogue metadata and project-authored research are in this declared family. No claimant case files are acquired. An exhaustive personal-data assessment of all public source content is not claimed.",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md"
+        ]
+      },
+      "invalidates": [
+        "semantic",
+        "runtime",
+        "documentation",
+        "browser",
+        "release"
+      ]
+    },
+    {
+      "id": "pdf-structure-observations",
+      "label": "Retained PDF-declared structure observations",
+      "kind": "structured-data-folder",
+      "paths": [
+        "pdf-structure/**"
+      ],
+      "origin": "mixed",
+      "authority": "mixed",
+      "snapshot_policy": "content-addressed",
+      "rights": {
+        "status": "mixed",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md",
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/LICENSE",
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/docs/adm-acquisition.md"
+        ],
+        "limitations": [
+          "MIT-original-structure; OGL-source-passages-with-exceptions",
+          "Licence and source-level exceptions remain as documented in the linked evidence; this classification is not a new rights clearance."
+        ]
+      },
+      "limitations": [
+        "Read-only local Poppler observations are retained beside original producer identities; bounded-v2 is an offline reparse of those exact trees, not a new capture.",
+        "Normal verification replays saved bytes without invoking Poppler or network access. Incomplete, absent and partly unparsed structure remains explicit and is not promoted to an accepted heading or legal dependency.",
+        "Original observations and failed attempts are immutable history; changes require a new named output set. Source instructions remain inert."
+      ],
+      "formats": [
+        "application/json",
+        "text/plain",
+        "text/markdown"
+      ],
+      "inventory": {
+        "method": "content-addressed-manifest",
+        "manifest_path": "pdf-structure/bounded-v2/manifest.json",
+        "identity": [
+          "relative-path",
+          "bytes",
+          "sha256",
+          "source-identifier",
+          "source-version"
+        ]
+      },
+      "extraction": {
+        "mode": "deterministic-local",
+        "network_access": "prohibited",
+        "command_ids": [
+          "pdf-structure-check"
+        ],
+        "limitations": [
+          "Deterministic projection of frozen local sources and public evaluation data; no network, source refresh, model inference or personal case data."
+        ]
+      },
+      "sensitivity": {
+        "status": "not-assessed",
+        "assessment": "Only public guidance, catalogue metadata and project-authored research are in this declared family. No claimant case files are acquired. An exhaustive personal-data assessment of all public source content is not claimed.",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md"
+        ]
+      },
+      "invalidates": [
+        "semantic",
+        "runtime",
+        "documentation",
+        "browser",
+        "release"
+      ]
+    },
+    {
+      "id": "source-led-unit-proposals",
+      "label": "Source-led content units and compact discovery candidates",
+      "kind": "structured-data-folder",
+      "paths": [
+        "structured-units/**",
+        "structured-context/**",
+        "domain-profile/structured-units/**"
+      ],
+      "origin": "mixed",
+      "authority": "mixed",
+      "snapshot_policy": "content-addressed",
+      "rights": {
+        "status": "mixed",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md",
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/LICENSE",
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/docs/adm-acquisition.md"
+        ],
+        "limitations": [
+          "MIT-original-structure; OGL-source-passages-with-exceptions",
+          "Licence and source-level exceptions remain as documented in the linked evidence; this classification is not a new rights clearance."
+        ]
+      },
+      "limitations": [
+        "Additive structural and discovery candidates retain exact frozen source spans and the 513-document source denominator. They do not replace earlier page-based or logical-unit releases.",
+        "A compact discovery card nominates source evidence; it is not an answer, a complete rule or an authority decision. Candidate dependencies and unresolved references remain unreviewed.",
+        "Retained staff comparisons test assembly and boundaries separately from source coverage, legal answerability, specialist review and public service adoption.",
+        "Source-selection proposals and the legacy location policy are explicitly authored, model-derived and unreviewed by specialists. A guard requires every declared task concept; location overlap never closes original evidence requirements or legal dependencies."
+      ],
+      "formats": [
+        "application/json",
+        "application/gzip",
+        "text/markdown",
+        "application/ld+yaml"
+      ],
+      "inventory": {
+        "method": "content-addressed-manifest",
+        "manifest_path": "structured-units/manifest.json",
+        "identity": [
+          "relative-path",
+          "bytes",
+          "sha256",
+          "source-identifier",
+          "source-version"
+        ]
+      },
+      "extraction": {
+        "mode": "deterministic-local",
+        "network_access": "prohibited",
+        "command_ids": [
+          "structured-unit-build",
+          "structured-context-build"
+        ],
+        "limitations": [
+          "Deterministic projection of frozen local sources and public evaluation data; no network, source refresh, model inference or personal case data."
+        ]
+      },
+      "sensitivity": {
+        "status": "not-assessed",
+        "assessment": "Only public guidance, catalogue metadata and project-authored research are in this declared family. No claimant case files are acquired. An exhaustive personal-data assessment of all public source content is not claimed.",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md"
+        ]
+      },
+      "invalidates": [
+        "semantic",
+        "runtime",
+        "documentation",
+        "browser",
+        "release"
+      ]
     }
   ],
   "boundaries": {
@@ -1335,6 +1546,38 @@
       {
         "path": "evidence-examples/registry.json",
         "role": "release-authorisation"
+      },
+      {
+        "path": "profiles/manual-guide/**",
+        "role": "schema"
+      },
+      {
+        "path": "profiles/pdf-structure/**",
+        "role": "schema"
+      },
+      {
+        "path": "pdf-structure/README.md",
+        "role": "documentation"
+      },
+      {
+        "path": "pdf-structure/producer-snapshots/**",
+        "role": "source-envelope",
+        "source_family_id": "pdf-structure-observations"
+      },
+      {
+        "path": "pdf-structure/manifest.json",
+        "role": "source-envelope",
+        "source_family_id": "pdf-structure-observations"
+      },
+      {
+        "path": "pdf-structure/dmg/**",
+        "role": "source-envelope",
+        "source_family_id": "pdf-structure-observations"
+      },
+      {
+        "path": "pdf-structure/adm/**",
+        "role": "source-envelope",
+        "source_family_id": "pdf-structure-observations"
       }
     ],
     "generated": [
@@ -1486,6 +1729,54 @@
           "retained-evidence-check",
           "learning-site-test"
         ]
+      },
+      {
+        "path": "manual-guide/**",
+        "role": "registry-projection",
+        "plane": "semantic",
+        "required": true,
+        "build_command_ids": [
+          "manual-guide-build"
+        ],
+        "check_command_ids": [
+          "manual-guide-check"
+        ]
+      },
+      {
+        "path": "pdf-structure/bounded-v2/**",
+        "role": "validation-receipt",
+        "plane": "source",
+        "required": true,
+        "build_command_ids": [],
+        "check_command_ids": [
+          "pdf-structure-check"
+        ]
+      },
+      {
+        "path": "structured-units/**",
+        "role": "explorer-runtime",
+        "plane": "semantic",
+        "required": true,
+        "build_command_ids": [
+          "structured-unit-build"
+        ],
+        "check_command_ids": [
+          "structured-unit-check"
+        ]
+      },
+      {
+        "path": "structured-context/**",
+        "role": "explorer-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "structured-context-build"
+        ],
+        "check_command_ids": [
+          "structured-context-check",
+          "structured-corpus-controls",
+          "structured-context-replay"
+        ]
       }
     ]
   },
@@ -1498,7 +1789,11 @@
         "domain-profile/source-refresh-policy.json",
         "scripts/compare_source_census.py",
         "scripts/test_source_census.py",
-        "scripts/acquire_legal_bodies.py"
+        "scripts/acquire_legal_bodies.py",
+        "pdf-structure/**",
+        "profiles/pdf-structure/**",
+        "scripts/build_pdf_structure.py",
+        "scripts/test_pdf_structure.py"
       ],
       "command_ids": [
         "validate",
@@ -1506,7 +1801,9 @@
         "adm-source-check",
         "adm-acquisition-controls",
         "source-refresh-build",
-        "source-refresh-check"
+        "source-refresh-check",
+        "pdf-structure-check",
+        "pdf-structure-controls"
       ]
     },
     {
@@ -1542,7 +1839,36 @@
         "scripts/test_logical*.py",
         "scripts/evaluate_logical_context.mjs",
         "scripts/logical_unit_authoring.py",
-        "scripts/build_semantic_coverage.py"
+        "scripts/build_semantic_coverage.py",
+        "domain-profile/manual-guide/**",
+        "manual-guide/**",
+        "profiles/manual-guide/**",
+        "structured-units/**",
+        "scripts/build_manual_guide.py",
+        "scripts/test_manual_guide.py",
+        "scripts/manual_structure.py",
+        "scripts/test_manual*.py",
+        "scripts/pdf_structure_alignment.py",
+        "scripts/test_pdf_structure_alignment.py",
+        "scripts/build_structured_units.py",
+        "domain-profile/structured-units/**",
+        "scripts/structured_context_profiles.py",
+        "scripts/structured_location_migration.py",
+        "scripts/structured_projection_output.py",
+        "scripts/manual_references.py",
+        "scripts/manual_auxiliary_structure.py",
+        "scripts/test_structured*.py",
+        "scripts/structured_context_metrics.mjs",
+        "scripts/test_structured_context_metrics.mjs",
+        "scripts/report_structured_context.mjs",
+        "scripts/test_report_structured_context.mjs",
+        "scripts/structured_custody_restoration.py",
+        "scripts/structured_restoration_admission.mjs",
+        "scripts/test_structured_restoration_admission.mjs",
+        "scripts/test_state_pension*.py",
+        "scripts/evaluate_original_acceptance.mjs",
+        "scripts/original_acceptance_metrics.mjs",
+        "scripts/test_original_acceptance*.mjs"
       ],
       "command_ids": [
         "build-check",
@@ -1574,7 +1900,25 @@
         "logical-context-build",
         "logical-context-check",
         "logical-unit-controls",
-        "semantic-coverage-check"
+        "semantic-coverage-check",
+        "pdf-structure-check",
+        "manual-guide-build",
+        "manual-guide-check",
+        "structured-unit-build",
+        "structured-unit-check",
+        "structured-context-build",
+        "structured-context-check",
+        "manual-source-controls",
+        "pdf-structure-controls",
+        "structured-context-controls",
+        "structured-corpus-controls",
+        "structured-context-replay",
+        "structured-metrics-controls",
+        "structured-report-controls",
+        "structured-restoration-admission-controls",
+        "original-acceptance-controls",
+        "original-acceptance-replay",
+        "state-pension-selection-controls"
       ]
     },
     {
@@ -1648,7 +1992,30 @@
         "domain-profile/learning/**",
         "scripts/test_learning_paths.py",
         "scripts/logical_unit_authoring.py",
-        "scripts/build_semantic_coverage.py"
+        "scripts/build_semantic_coverage.py",
+        "structured-units/**",
+        "structured-context/**",
+        "scripts/build_structured_context.py",
+        "scripts/structured_context_reader.py",
+        "scripts/test_structured*.py",
+        "scripts/evaluate_structured_context.mjs",
+        "scripts/test_structured_corpus.mjs",
+        "scripts/check_structured_replay.mjs",
+        "domain-profile/structured-units/**",
+        "scripts/structured_context_profiles.py",
+        "scripts/structured_location_migration.py",
+        "scripts/structured_projection_output.py",
+        "scripts/structured_context_metrics.mjs",
+        "scripts/test_structured_context_metrics.mjs",
+        "scripts/report_structured_context.mjs",
+        "scripts/test_report_structured_context.mjs",
+        "scripts/structured_custody_restoration.py",
+        "scripts/structured_restoration_admission.mjs",
+        "scripts/test_structured_restoration_admission.mjs",
+        "scripts/test_state_pension*.py",
+        "scripts/evaluate_original_acceptance.mjs",
+        "scripts/original_acceptance_metrics.mjs",
+        "scripts/test_original_acceptance*.mjs"
       ],
       "command_ids": [
         "context-discovery-build-check",
@@ -1663,7 +2030,20 @@
         "logical-context-build",
         "logical-context-check",
         "logical-unit-controls",
-        "semantic-coverage-check"
+        "semantic-coverage-check",
+        "structured-unit-build",
+        "structured-unit-check",
+        "structured-context-build",
+        "structured-context-check",
+        "structured-context-controls",
+        "structured-corpus-controls",
+        "structured-context-replay",
+        "structured-metrics-controls",
+        "structured-report-controls",
+        "structured-restoration-admission-controls",
+        "original-acceptance-controls",
+        "original-acceptance-replay",
+        "state-pension-selection-controls"
       ]
     },
     {
@@ -1697,7 +2077,9 @@
         "scripts/check_combined_reader_observations.py",
         "evaluation/service-publication.json",
         "scripts/build_service_publication.py",
-        "scripts/test_service_publication.py"
+        "scripts/test_service_publication.py",
+        "profiles/manual-guide/**",
+        "profiles/pdf-structure/**"
       ],
       "command_ids": [
         "private-input-check",
@@ -2852,6 +3234,255 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 2
+      },
+      {
+        "id": "pdf-structure-check",
+        "kind": "check",
+        "planes": [
+          "source",
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/build_pdf_structure.py --check",
+        "source": "docs/source-led-manual-guide.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "manual-guide-build",
+        "kind": "build",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/build_manual_guide.py",
+        "source": "docs/source-led-manual-guide.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "manual-guide-check",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/build_manual_guide.py --check",
+        "source": "docs/source-led-manual-guide.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "structured-unit-build",
+        "kind": "build",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_structured_units.py",
+        "source": "docs/source-led-manual-guide.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "structured-unit-check",
+        "kind": "check",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_structured_units.py --check",
+        "source": "docs/source-led-manual-guide.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "structured-context-build",
+        "kind": "build",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_structured_context.py",
+        "source": "docs/source-led-manual-guide.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "structured-context-check",
+        "kind": "check",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_structured_context.py --check",
+        "source": "docs/source-led-manual-guide.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "manual-source-controls",
+        "kind": "test",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python -m unittest discover -s scripts -p 'test_manual*.py'",
+        "source": "docs/source-led-manual-guide.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "pdf-structure-controls",
+        "kind": "test",
+        "planes": [
+          "source",
+          "semantic"
+        ],
+        "command": "uv run --locked python -m unittest discover -s scripts -p 'test_pdf_structure*.py'",
+        "source": "docs/source-led-manual-guide.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "structured-context-controls",
+        "kind": "test",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python -m unittest discover -s scripts -p 'test_structured*.py'",
+        "source": "docs/source-led-manual-guide.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "structured-corpus-controls",
+        "kind": "test",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "node --experimental-strip-types scripts/test_structured_corpus.mjs --explorer-root .ci/okf-explorer-structured",
+        "source": "docs/source-led-manual-guide.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "structured-context-replay",
+        "kind": "check",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "node --experimental-strip-types scripts/check_structured_replay.mjs --explorer-root .ci/okf-explorer-structured",
+        "source": "docs/source-led-manual-guide.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "structured-metrics-controls",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "node --test scripts/test_structured_context_metrics.mjs",
+        "source": "docs/source-led-manual-guide.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5,
+        "kind": "test"
+      },
+      {
+        "id": "structured-report-controls",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "node --test scripts/test_report_structured_context.mjs",
+        "source": "docs/source-led-manual-guide.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5,
+        "kind": "test"
+      },
+      {
+        "id": "structured-restoration-admission-controls",
+        "kind": "test",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "node --test scripts/test_structured_restoration_admission.mjs",
+        "source": "docs/original-acceptance-restoration.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "original-acceptance-controls",
+        "kind": "test",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "node --test scripts/test_original_acceptance_metrics.mjs scripts/test_original_acceptance_runner.mjs",
+        "source": "docs/original-acceptance-restoration.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "original-acceptance-replay",
+        "kind": "check",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "node .ci/okf-dwp-original-acceptance/scripts/evaluate_original_acceptance.mjs --explorer-root .ci/okf-explorer-original-acceptance --attempt acceptance-01 --check",
+        "source": "docs/original-acceptance-restoration.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "state-pension-selection-controls",
+        "kind": "test",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python -m unittest discover -s scripts -p 'test_state_pension*.py'",
+        "source": "docs/source-led-results.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
       }
     ]
   },
@@ -2881,7 +3512,13 @@
       "tools/learning-site/**",
       "evidence-examples/**",
       "logical-units/**",
-      "logical-context/**"
+      "logical-context/**",
+      "manual-guide/**",
+      "pdf-structure/**",
+      "structured-units/**",
+      "structured-context/**",
+      "profiles/manual-guide/**",
+      "profiles/pdf-structure/**"
     ],
     "documentation_paths": [
       "README.md",
@@ -2891,7 +3528,11 @@
       "docs/staff-model-trials.md",
       "docs/combined-reader.md",
       "docs/staff-service-browser-verification.md",
-      "docs/monday-demo-2026-09-21.md"
+      "docs/monday-demo-2026-09-21.md",
+      "docs/source-led-manual-guide.md",
+      "docs/learning-path.md",
+      "pdf-structure/README.md",
+      "domain-profile/manual-guide/README.md"
     ],
     "changelog_path": "CHANGELOG.md",
     "check_command_id": "diff-check",
@@ -2905,7 +3546,7 @@
       ".github/workflows/pages.yml"
     ],
     "impact_routing": "full-suite",
-    "parallelism": "serial",
+    "parallelism": "independent-planes",
     "unknown_path_policy": "full-suite",
     "browser": {
       "ordinary": {
@@ -3055,6 +3696,11 @@
     "The 20 September additive increment preserves frozen source/runtime releases. Fresh listing metadata is not a fresh PDF-body verification; reference-only legal metadata is not substantive legal evidence.",
     "The household candidate adds bounded statutory body evidence without closing the 203 recorded obligations. Earlier model trials and browser observations retain their exact source and engine bindings; fresh candidate verification is separate.",
     "Retained evidence archives require a Git-bound publication declaration and input/output hashes. Their exporter commit is declared review provenance; the offline publisher checks the approved module hashes rather than fetching or independently attesting a remote Explorer checkout. Delivery integrity is not legal applicability, specialist acceptance or AI answer correctness.",
-    "The additive logical-unit build separates page locations from bounded retrieval units, retains source byte accounting and treats automatic boundaries as uncertain. No service default or specialist acceptance is implied by generating these projections."
+    "The additive logical-unit build separates page locations from bounded retrieval units, retains source byte accounting and treats automatic boundaries as uncertain. No service default or specialist acceptance is implied by generating these projections.",
+    "The source-led pipeline is additive. Its retained source-declared structures, scoped guide conventions, unit proposals and compact discovery cards do not imply complete semantic modelling, specialist approval, new source capture or deployment of a service.",
+    "The source-led manual guide is generated into the static learning site from committed Markdown by the existing learning-site renderer. Publication and browser acceptance remain exact-commit checks; generated HTML is never authored directly.",
+    "The separate structured-context/location-migration.json ledger distinguishes exact source-location overlap, restored navigation and explicitly inferred associations. It retains all 40 original staff requirements and 203 open obligations without asserting semantic equivalence or complete answerability.",
+    "CI keeps every legacy replay step in a separate job and runs the source-led checks independently. The existing protected validate check runs after both jobs and fails unless both succeeded; Pages still requires the whole exact-commit workflow to succeed.",
+    "The original custody acceptance migration has its own source-bound ledger and evaluation, separate from the 40 staff occurrences. A source-read profile, retained historical scope or complete declared passage does not establish all legal qualifications or a correct AI answer."
   ]
 }

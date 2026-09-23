@@ -1,0 +1,109 @@
+{
+  "schema": "okf-dwp-manual-structure-fixture.v1",
+  "id": "adm-reserved-range",
+  "stage": "expanded",
+  "source": {
+    "document_id": "adm-chapter-f1",
+    "family": "adm",
+    "title": "Chapter F1: Child element",
+    "role": "substantive",
+    "url": "https://assets.publishing.service.gov.uk/media/6a86fe84c9205b515d421f44/adm-ch-f1-child-element.pdf",
+    "observed_at": "2026-09-19T16:30:37.500998Z",
+    "inventory": {
+      "path": "source/adm-2026-09-19/inventory.json",
+      "bytes": 1046475,
+      "sha256": "c274173a59d7792004f372fea7db19e018a4d0c1de6111ed65a57fc0c622896c"
+    },
+    "pdf": {
+      "path": "source/adm-2026-09-19/pdf/adm-chapter-f1.pdf",
+      "bytes": 177894,
+      "sha256": "124b7e41af2b491209f694941482e6e4bb69e78692a84a343299dc53f25b8731"
+    },
+    "pages": {
+      "path": "source/adm-2026-09-19/pages/adm-chapter-f1.json",
+      "bytes": 66059,
+      "sha256": "c5b5c405f2c77cece7da418826dbcf298a89323a3788bda3cfebf1136dc6cf27"
+    },
+    "page_count": 33
+  },
+  "purpose": "Preserve an unfilled paragraph range as a range marker and keep it distinct from surrounding substantive guidance.",
+  "review": {
+    "method": "agent inspection of frozen extraction and rendered frozen PDF pages",
+    "status": "source-boundary-and-role-expectation-only",
+    "specialist_review": "not-reviewed",
+    "legal_answerability": "not-established"
+  },
+  "regions": {
+    "primary": {
+      "spans": [
+        {
+          "page": 14,
+          "start_byte": 1840,
+          "end_byte": 1856,
+          "page_text_sha256": "d02a3bec4e32a8f8f02892f64de81760c88a1335d7bdbbf8ddc0d3de600af06e",
+          "span_sha256": "cd7ab219c5868afe1d2d1bacdb86222cc0294fbf366689bbc9ff3f69539b87fd",
+          "url": "https://assets.publishing.service.gov.uk/media/6a86fe84c9205b515d421f44/adm-ch-f1-child-element.pdf#page=14"
+        }
+      ],
+      "bytes": 16,
+      "sha256": "cd7ab219c5868afe1d2d1bacdb86222cc0294fbf366689bbc9ff3f69539b87fd",
+      "first_text": "F1085 – F1099\n",
+      "last_text": "F1085 – F1099\n"
+    },
+    "previous_rule": {
+      "spans": [
+        {
+          "page": 14,
+          "start_byte": 1053,
+          "end_byte": 1840,
+          "page_text_sha256": "d02a3bec4e32a8f8f02892f64de81760c88a1335d7bdbbf8ddc0d3de600af06e",
+          "span_sha256": "2220da64b8a8e14fd483594d4264f6319554592cc0b78c7eac20a9b789c980e0",
+          "url": "https://assets.publishing.service.gov.uk/media/6a86fe84c9205b515d421f44/adm-ch-f1-child-element.pdf#page=14"
+        }
+      ],
+      "bytes": 787,
+      "sha256": "2220da64b8a8e14fd483594d4264f6319554592cc0b78c7eac20a9b789c980e0",
+      "first_text": "F1084 The absence period in F1082 can also be for a duration of up to 6 months 1 where that absence is\nin conn",
+      "last_text": " means1 certified by a medical practitioner\n\n\n                                                                                           1 UC Regs, reg 11(5)\n\n\n"
+    },
+    "next_rule": {
+      "spans": [
+        {
+          "page": 15,
+          "start_byte": 85,
+          "end_byte": 545,
+          "page_text_sha256": "0a92304bc2affc03d0729791d120037aade8452260f27e23bbbedf354ff00489",
+          "span_sha256": "9175ed3f2852d696c4664f0ecdfa84e51542bd0a4c27fa38618e0f1c3ad48330",
+          "url": "https://assets.publishing.service.gov.uk/media/6a86fe84c9205b515d421f44/adm-ch-f1-child-element.pdf#page=15"
+        }
+      ],
+      "bytes": 460,
+      "sha256": "9175ed3f2852d696c4664f0ecdfa84e51542bd0a4c27fa38618e0f1c3ad48330",
+      "first_text": "F1100 Where\n\n\n1. a claimant’s award of UC includes an amount for a child or qualifying young person for whom t",
+      "last_text": "e assessment period in which the death occured 1.\n\n\n                                                                                        1 UC Regs, reg 37\n\n\n"
+    }
+  },
+  "expectations": {
+    "target_label": "F1085–F1099",
+    "primary_role": "reserved-range",
+    "range_start": "F1085",
+    "range_end": "F1099",
+    "must_contain": [
+      "F1085 – F1099"
+    ],
+    "forbidden_body_labels": [
+      "F1085",
+      "F1093",
+      "F1099"
+    ],
+    "forbidden_primary_text": [
+      "F1084 The absence",
+      "F1100 Where"
+    ],
+    "references": [],
+    "must_not_infer": [
+      "The blank range supplies a rule for F1093.",
+      "A search for F1093 supplies substantive guidance solely because it lies in this reserved range."
+    ]
+  }
+}

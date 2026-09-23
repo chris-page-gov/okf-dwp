@@ -1,6 +1,6 @@
 {
   "schema": "okf-dwp-backlog.v1",
-  "updated_on": "2026-09-22",
+  "updated_on": "2026-09-23",
   "status_meanings": {
     "recorded_complete": "Named bounded result has retained evidence, not perpetual assurance.",
     "in_progress": "Work is being prepared or implemented; publication/acceptance is not implied.",
@@ -424,7 +424,45 @@
         "evaluation/discovery-probe/length-protocol.json",
         "evaluation/discovery-probe/length-independent-review.md",
         "scripts/probe_discovery_terminology.mjs",
-        "scripts/probe_discovery_length.mjs"
+        "scripts/probe_discovery_length.mjs",
+        "docs/manual-structure-process.md",
+        "docs/source-led-manual-guide.md",
+        "docs/manual-structure-evaluation.md",
+        "evaluation/manual-structure/runs/candidate-expanded-04/report.json",
+        "evaluation/manual-structure/context-probe/protocol.json",
+        "manual-guide/manifest.json",
+        "pdf-structure/bounded-v2/manifest.json",
+        "scripts/test_manual_guide.py",
+        "scripts/test_pdf_structure.py",
+        "structured-units/manifest.json",
+        "scripts/test_manual_structure_review.py",
+        "evaluation/manual-structure/context-probe/runs/attempt-01/README.md",
+        "evaluation/manual-structure/runs/candidate-expanded-06/report.json",
+        "evaluation/manual-structure/auxiliary-review/README.md",
+        "evaluation/manual-structure/context-probe/runs/attempt-02/README.md",
+        "evaluation/manual-structure/context-probe/runs/attempt-02/comparison.json",
+        "domain-profile/structured-units/pc-core.yamlld",
+        "domain-profile/structured-units/household-routing.yamlld",
+        "domain-profile/structured-units/legacy-location-policy.yamlld",
+        "scripts/test_structured_context_profiles.py",
+        "scripts/test_structured_location_migration.py",
+        "evaluation/manual-structure/runs/candidate-expanded-07/report.json",
+        "evaluation/manual-structure/final-source-review/large-paragraph-triage.json",
+        "evaluation/manual-structure/final-source-review/manifest-review.json",
+        "evaluation/manual-structure/context-probe/runs/attempt-05/README.md",
+        "evaluation/manual-structure/context-probe/reports/attempt-05/README.md",
+        "docs/source-led-demonstration.md",
+        "docs/source-led-results.md",
+        "evaluation/manual-structure/context-probe/runs/attempt-06/report.json",
+        "evaluation/manual-structure/context-probe/analysis-06/comparison.json",
+        "evaluation/manual-structure/context-probe/corpus-check-04.json",
+        "domain-profile/structured-units/state-pension-routing.yamlld",
+        "domain-profile/structured-units/benefit-interactions.yamlld",
+        "domain-profile/structured-units/custody-restoration.yamlld",
+        "docs/original-acceptance-restoration.md",
+        "evaluation/manual-structure/large-paragraph-review-2026-09-23/README.md",
+        "evaluation/manual-structure/large-paragraph-review-2026-09-23/findings.json",
+        "evaluation/manual-structure/context-probe/analysis-06/independent-reading.md"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
@@ -574,12 +612,25 @@
         {
           "id": "DWP-BL-007.task-discrimination",
           "kind": "implementation",
-          "status": "not_started",
+          "status": "in_progress",
           "executor": "agent",
-          "next_action": "Review broad overview-profile activation and graph expansion: a mention of Pension Credit should not consume the budget with unrelated household/capital evidence. Test explicit task discrimination across known and held-out questions, preserve required paths and record any regression before admitting a generic selector change.",
+          "next_action": "Trial 06 applies reviewed conjunctive guards and activates source-read selection for 37/40 unchanged staff occurrences. Retain missing-benefit and ambiguous-SDA cases 001/008/018; do not infer legal applicability from lexical matches or a guard. Scope and specialist review remain open.",
           "evidence": [
             "docs/abroad-semantic-audit.md",
-            "docs/data-agent-semantic-review.md"
+            "docs/data-agent-semantic-review.md",
+            "domain-profile/structured-units/pc-core.yamlld",
+            "domain-profile/structured-units/household-routing.yamlld",
+            "domain-profile/structured-units/legacy-location-policy.yamlld",
+            "scripts/test_structured_context_profiles.py",
+            "scripts/test_structured_location_migration.py",
+            "docs/source-led-results.md",
+            "evaluation/manual-structure/context-probe/runs/attempt-06/report.json",
+            "evaluation/manual-structure/context-probe/analysis-06/comparison.json",
+            "evaluation/manual-structure/context-probe/corpus-check-04.json",
+            "domain-profile/structured-units/state-pension-routing.yamlld",
+            "domain-profile/structured-units/benefit-interactions.yamlld",
+            "domain-profile/structured-units/custody-restoration.yamlld",
+            "docs/original-acceptance-restoration.md"
           ]
         },
         {
@@ -609,7 +660,7 @@
           "kind": "research",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Seven unit profiles now activate for 8/40 staff occurrences; 32/40 have none and 22/40 large staff contexts have no returned relationships. New DLA/PIP pair activation retains task ambiguity, not proof that transfer is intended. Continue reviewed source/profile migration using the exact case ledger. Twelve references remain legally unresolved, including the F1093 reserved range and P4019/P4051 scope mismatch. Preserve all 203 earlier obligations.",
+          "next_action": "Source-read State Pension, IIDB/PIP/overlap and carer increments bring source-read activation to 37/40, retaining 47/47 inherited, 181/181 previous and 208/208 expanded paths at 512 KiB. Complete independent trial review and publication. Resolve the three remaining underspecified task families only with explicit scope. All 203 earlier obligations remain open.",
           "evidence": [
             "domain-profile/logical-units/profiles.json",
             "domain-profile/logical-units/reference-review.json",
@@ -619,18 +670,48 @@
             "domain-profile/logical-units/authoring-registry.json",
             "domain-profile/logical-units/closure-dependencies.yamlld",
             "domain-profile/logical-units/closure-pip-transition.yamlld",
-            "domain-profile/logical-units/closure-profile-dependencies.yamlld"
+            "domain-profile/logical-units/closure-profile-dependencies.yamlld",
+            "domain-profile/structured-units/pc-core.yamlld",
+            "domain-profile/structured-units/household-routing.yamlld",
+            "domain-profile/structured-units/legacy-location-policy.yamlld",
+            "scripts/test_structured_context_profiles.py",
+            "scripts/test_structured_location_migration.py",
+            "docs/source-led-results.md",
+            "evaluation/manual-structure/context-probe/runs/attempt-06/report.json",
+            "evaluation/manual-structure/context-probe/analysis-06/comparison.json",
+            "evaluation/manual-structure/context-probe/corpus-check-04.json",
+            "domain-profile/structured-units/state-pension-routing.yamlld",
+            "domain-profile/structured-units/benefit-interactions.yamlld",
+            "domain-profile/structured-units/custody-restoration.yamlld",
+            "docs/original-acceptance-restoration.md"
           ]
         },
         {
           "id": "DWP-BL-007.discovery-cards",
           "kind": "implementation",
-          "status": "not_started",
+          "status": "in_progress",
           "executor": "agent",
-          "next_action": "Implement the diagnosed corpus-wide discovery experiment: compare current literal ranking with validated hierarchy and declared concept aliases, then source-grounded summary cards linked to full units. Keep all 40 questions, source snapshot and budgets fixed; measure independently judged relevance, qualifications, unresolved scope and supported claims separately. Diagnose heading-range mismatches before using machine headings. A per-question profile count is not the success metric.",
+          "next_action": "Trial 06 retains source and relationships in 40/40 large packages and 436/436 declared source-selection path incidences. Preserve 32 KiB zero evidence and location trade-offs: 469/765 restored and 34/87 inferred. Original custody delivery has a separate failure; complete its bounded repair and public adoption. Cards remain literal previews, not legal summaries.",
           "evidence": [
             "docs/discovery-cards-experiment.md",
-            "evaluation/semantic-coverage/discovery-card-diagnosis.json"
+            "evaluation/semantic-coverage/discovery-card-diagnosis.json",
+            "docs/manual-structure-process.md",
+            "docs/source-led-manual-guide.md",
+            "evaluation/manual-structure/context-probe/protocol.json",
+            "evaluation/manual-structure/context-probe/runs/attempt-01/README.md",
+            "evaluation/manual-structure/context-probe/runs/attempt-02/README.md",
+            "evaluation/manual-structure/context-probe/runs/attempt-02/comparison.json",
+            "evaluation/manual-structure/context-probe/runs/attempt-05/README.md",
+            "evaluation/manual-structure/context-probe/reports/attempt-05/README.md",
+            "docs/source-led-results.md",
+            "evaluation/manual-structure/context-probe/runs/attempt-06/report.json",
+            "evaluation/manual-structure/context-probe/analysis-06/comparison.json",
+            "evaluation/manual-structure/context-probe/corpus-check-04.json",
+            "domain-profile/structured-units/state-pension-routing.yamlld",
+            "domain-profile/structured-units/benefit-interactions.yamlld",
+            "domain-profile/structured-units/custody-restoration.yamlld",
+            "docs/original-acceptance-restoration.md",
+            "evaluation/manual-structure/context-probe/analysis-06/independent-reading.md"
           ]
         },
         {
@@ -638,7 +719,7 @@
           "kind": "research",
           "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Retain both preregistered fixed-source diagnostics and independent arithmetic checks. Token-level alias expansion loses two earlier candidate locations; BM25 gains four without losses and reduces candidate bytes, but 626/640 selections remain unresolved and wrong-subject matches persist. Independently judge relevance and qualification retention before any runtime adoption. Summary cards remain unimplemented.",
+          "next_action": "Both diagnostic probes and independent checks remain frozen. Token alias expansion regressed two locations; fixed BM25 improved four candidate locations but did not establish relevance. The later source-led implementation has extractive discovery cards and its own tests; do not relabel this earlier probe as a model-summary or answer-quality result.",
           "evidence": [
             "evaluation/discovery-probe/README.md",
             "evaluation/discovery-probe/protocol.json",
@@ -648,6 +729,77 @@
             "evaluation/discovery-probe/length-independent-review.md",
             "scripts/probe_discovery_terminology.mjs",
             "scripts/probe_discovery_length.mjs"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.manual-guide",
+          "kind": "implementation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Local implementation and independent review complete: 21 scoped conventions, 30 source-page and four PDF-tree excerpts, all 513 documents accounted for. Complete contract/CI/publication acceptance; preserve the 25 untagged observations and one output-limit fallback. This guide does not certify legal applicability.",
+          "evidence": [
+            "docs/source-led-manual-guide.md",
+            "manual-guide/manifest.json",
+            "pdf-structure/bounded-v2/manifest.json",
+            "scripts/test_manual_guide.py",
+            "scripts/test_pdf_structure.py"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.structured-corpus",
+          "kind": "implementation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "All 53,727 units and original text from 513 documents are accounted for. Global check 04 passes 1,355 input bindings. The Reader alias/index repair loads 54,578 records and 19,193 relationships within existing limits. Complete exact CI, publication and browser verification; machine boundaries remain uncertain.",
+          "evidence": [
+            "docs/manual-structure-evaluation.md",
+            "evaluation/manual-structure/runs/candidate-expanded-04/report.json",
+            "structured-units/manifest.json",
+            "scripts/test_manual_structure_review.py",
+            "evaluation/manual-structure/runs/candidate-expanded-06/report.json",
+            "evaluation/manual-structure/auxiliary-review/README.md",
+            "evaluation/manual-structure/runs/candidate-expanded-07/report.json",
+            "docs/source-led-results.md",
+            "evaluation/manual-structure/context-probe/runs/attempt-06/report.json",
+            "evaluation/manual-structure/context-probe/analysis-06/comparison.json",
+            "evaluation/manual-structure/context-probe/corpus-check-04.json",
+            "domain-profile/structured-units/state-pension-routing.yamlld",
+            "domain-profile/structured-units/benefit-interactions.yamlld",
+            "domain-profile/structured-units/custody-restoration.yamlld",
+            "docs/original-acceptance-restoration.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.remaining-structural-review",
+          "kind": "research",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "All 28 large candidates have been source-bound and reviewed for structure: 27 mixed-structure defects and one uncertain transition, all historical amendments. A separate feature branch is testing generic contents, front-matter, local-heading and bare-appendix boundaries. Preserve damaged extraction uncertainty, all original bytes, the 75 authored units and earlier failures; require reviewed controls, four/eight gates and a final full-corpus/question comparison before adoption.",
+          "evidence": [
+            "evaluation/manual-structure/final-source-review/large-paragraph-triage.json",
+            "evaluation/manual-structure/final-source-review/manifest-review.json",
+            "docs/source-led-manual-guide.md",
+            "evaluation/manual-structure/large-paragraph-review-2026-09-23/README.md",
+            "evaluation/manual-structure/large-paragraph-review-2026-09-23/findings.json"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.original-acceptance-migration",
+          "kind": "implementation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Source migration is independently reviewed and preserves 6 original requirements, 53 narrowly selected units and 4 chapter routes. The first six-assembly evaluation (three questions, two budgets) retains only 20/53 units and 43/89 paths for imprisonment at 512 KiB; all 4 complete chapter paths and the 12003-to-12002 dependency relationship are lost, although both complete source records survive. Retain this failure, diagnose retrieval and metadata pressure and repair generically before claiming original demo closure. Hospital remains an insufficiency control.",
+          "evidence": [
+            "docs/logical-units-work-log.md",
+            "docs/source-led-demonstration.md",
+            "docs/source-led-results.md",
+            "evaluation/manual-structure/context-probe/runs/attempt-06/report.json",
+            "evaluation/manual-structure/context-probe/analysis-06/comparison.json",
+            "evaluation/manual-structure/context-probe/corpus-check-04.json",
+            "domain-profile/structured-units/state-pension-routing.yamlld",
+            "domain-profile/structured-units/benefit-interactions.yamlld",
+            "domain-profile/structured-units/custody-restoration.yamlld",
+            "docs/original-acceptance-restoration.md"
           ]
         }
       ]

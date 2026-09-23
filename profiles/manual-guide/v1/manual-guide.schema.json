@@ -1,0 +1,430 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chris-page-gov.github.io/okf-dwp/profiles/manual-guide/v1/manual-guide.schema.json",
+  "title": "Source-linked DWP manual orientation authoring and compiled guide",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "const": {
+        "@vocab": "https://chris-page-gov.github.io/okf-dwp/vocab/manual-guide/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "prov": "http://www.w3.org/ns/prov#",
+        "id": "@id",
+        "source_support": "prov:wasDerivedFrom",
+        "statement": "dcterms:description"
+      }
+    },
+    "id": {
+      "const": "https://chris-page-gov.github.io/okf-dwp/manual-guide"
+    },
+    "schema": {
+      "enum": [
+        "okf-dwp-manual-guide-authoring.v1",
+        "okf-dwp-manual-guide.v1"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "const": "source-linked-project-proposal"
+    },
+    "source_instructions_inert": {
+      "const": true
+    },
+    "source_sets": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "const": "dmg"
+              },
+              "inventory": {
+                "const": "source/full-dmg-2026-09-15/inventory.json"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "expected_documents": {
+                "const": 331
+              }
+            },
+            "required": [
+              "id",
+              "inventory",
+              "sha256",
+              "expected_documents"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "const": "adm"
+              },
+              "inventory": {
+                "const": "source/adm-2026-09-19/inventory.json"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "expected_documents": {
+                "const": 182
+              }
+            },
+            "required": [
+              "id",
+              "inventory",
+              "sha256",
+              "expected_documents"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "conventions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^https://chris-page-gov\\.github\\.io/okf-dwp/manual-guide(?:/|$)"
+          },
+          "category": {
+            "enum": [
+              "document-role",
+              "benefit-and-regime-scope",
+              "numbering",
+              "headings-and-contents",
+              "conditions-notes-and-examples",
+              "cross-references",
+              "memos-and-updates",
+              "abbreviations",
+              "legislation-references",
+              "source-embedded-structure"
+            ]
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 3000
+          },
+          "reading_implication": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 3000
+          },
+          "assertion_status": {
+            "const": "project-authored-source-linked"
+          },
+          "confidence": {
+            "enum": [
+              "direct-source-statement",
+              "observed-extracted-layout",
+              "observed-declared-pdf-structure"
+            ]
+          },
+          "scope": {
+            "type": "object",
+            "properties": {
+              "application": {
+                "const": "cited-documents-and-excerpts-only"
+              },
+              "document_keys": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^(dmg|adm):[a-z0-9-]+$"
+                },
+                "minItems": 1,
+                "maxItems": 12,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "application",
+              "document_keys"
+            ],
+            "additionalProperties": false
+          },
+          "source_support": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "document_key": {
+                      "type": "string",
+                      "pattern": "^(dmg|adm):[a-z0-9-]+$"
+                    },
+                    "page": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "start_utf8": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "end_utf8": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 18000
+                    },
+                    "source_url": {
+                      "type": "string",
+                      "pattern": "^https://assets\\.publishing\\.service\\.gov\\.uk/[^ ]+#page=[1-9][0-9]*$"
+                    }
+                  },
+                  "required": [
+                    "document_key",
+                    "page",
+                    "start_utf8",
+                    "end_utf8",
+                    "sha256",
+                    "quote",
+                    "source_url"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "evidence_kind": {
+                      "const": "pdf-structure"
+                    },
+                    "document_key": {
+                      "type": "string",
+                      "pattern": "^(dmg|adm):[a-z0-9-]+$"
+                    },
+                    "manifest_path": {
+                      "const": "pdf-structure/bounded-v2/manifest.json"
+                    },
+                    "manifest_sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "structure_path": {
+                      "type": "string",
+                      "pattern": "^pdf-structure/bounded-v2/(adm|dmg)/[a-z0-9-]+\\.structure\\.json$"
+                    },
+                    "structure_sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "tree_path": {
+                      "type": "string",
+                      "pattern": "^pdf-structure/(adm|dmg)/[a-z0-9-]+\\.tree\\.txt$"
+                    },
+                    "tree_sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "pdf_sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "tree_line_start": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "tree_line_end": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "start_utf8": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "end_utf8": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "quote": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 18000
+                    },
+                    "source_url": {
+                      "type": "string",
+                      "pattern": "^https://assets\\.publishing\\.service\\.gov\\.uk/[^ #]+$"
+                    }
+                  },
+                  "required": [
+                    "evidence_kind",
+                    "document_key",
+                    "manifest_path",
+                    "manifest_sha256",
+                    "structure_path",
+                    "structure_sha256",
+                    "tree_path",
+                    "tree_sha256",
+                    "pdf_sha256",
+                    "tree_line_start",
+                    "tree_line_end",
+                    "start_utf8",
+                    "end_utf8",
+                    "sha256",
+                    "quote",
+                    "source_url"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            },
+            "minItems": 1,
+            "maxItems": 16
+          },
+          "legal_effect": {
+            "const": "not-established"
+          },
+          "unknowns": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 3000
+            },
+            "minItems": 1,
+            "maxItems": 10
+          },
+          "source_scope_terms": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "minItems": 1,
+            "maxItems": 16,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "category",
+          "statement",
+          "reading_implication",
+          "assertion_status",
+          "confidence",
+          "scope",
+          "source_support",
+          "legal_effect",
+          "unknowns"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 200
+    },
+    "learning_paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^https://chris-page-gov\\.github\\.io/okf-dwp/manual-guide(?:/|$)"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "relation_kind": {
+            "const": "learning-prerequisite"
+          },
+          "status": {
+            "const": "project-authored-pedagogic-proposal"
+          },
+          "legal_dependency_assertion": {
+            "const": false
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "convention_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^https://chris-page-gov\\.github\\.io/okf-dwp/manual-guide(?:/|$)"
+                  },
+                  "minItems": 1,
+                  "maxItems": 30,
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "label",
+                "convention_ids"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "maxItems": 30
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "relation_kind",
+          "status",
+          "legal_dependency_assertion",
+          "steps"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 20
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "maxItems": 20
+    }
+  },
+  "required": [
+    "@context",
+    "id",
+    "schema",
+    "title",
+    "status",
+    "source_instructions_inert",
+    "source_sets",
+    "conventions",
+    "learning_paths"
+  ],
+  "additionalProperties": false
+}

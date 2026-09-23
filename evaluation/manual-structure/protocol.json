@@ -1,0 +1,214 @@
+{
+  "schema": "okf-dwp-manual-structure-protocol.v1",
+  "status": "frozen-before-candidate-experiment",
+  "source_baseline_commit": "908adc45a4e22eb72ed13fe8943877307b732850",
+  "authored_at": "2026-09-22",
+  "selection_basis": "Source-led structural variety and documented defects, fixed before candidate source-case execution and results; parser drafting occurred concurrently. No staff-question tuning. All eight fixtures frozen together.",
+  "stages": [
+    {
+      "id": "initial",
+      "case_ids": [
+        "dmg-77031-heading",
+        "adm-p4087-heading",
+        "dmg-077001-cross-page-examples",
+        "adm-c1988-cross-page-examples"
+      ],
+      "denominator": 4
+    },
+    {
+      "id": "expanded",
+      "case_ids": [
+        "dmg-77031-heading",
+        "adm-p4087-heading",
+        "dmg-077001-cross-page-examples",
+        "adm-c1988-cross-page-examples",
+        "dmg-capital-table-continuation",
+        "adm-reserved-range",
+        "dmg-reference-abbreviations",
+        "adm-memo-contents-examples-annotations"
+      ],
+      "denominator": 8,
+      "execution_gate": "Run only after every initial case passes. Preserve initial results; double the fixed set, without replacing failures or adding tuned cases."
+    }
+  ],
+  "baseline_bindings": [
+    {
+      "path": "scripts/build_logical_units.py",
+      "bytes": 35977,
+      "sha256": "364be1718db1697baa8af62362e8d4f65178dd9506f7cba5b8d16ff5f3aece38"
+    },
+    {
+      "path": "scripts/logical_context_profiles.py",
+      "bytes": 11779,
+      "sha256": "8af788ddd6c2bcc884b9f9dc995b09c1f6cfab60dc540e722e5cf6833a597d1f"
+    },
+    {
+      "path": "logical-units/manifest.json",
+      "bytes": 794070,
+      "sha256": "7735719c1cc1b63a8e477f46d4e5f7c5e44664359568d5a2deb62a9953f9a55c"
+    },
+    {
+      "path": "evaluation/staff-questions/cases.json",
+      "bytes": 205988,
+      "sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a"
+    },
+    {
+      "path": "evaluation/logical-units/run/summary.json",
+      "bytes": 349372,
+      "sha256": "1065fb41977029d5aeaaf285814694f612feef09e07fdefc92fce5e42b6ff211"
+    },
+    {
+      "path": "evaluation/semantic-coverage/closure-2026-09-22/audit.json",
+      "bytes": 939587,
+      "sha256": "17c634dc413cfcb214478676d2ae4d898c73b7e27527718bcbeaf450cc99330b"
+    },
+    {
+      "path": "evaluation/semantic-coverage/discovery-card-diagnosis.json",
+      "bytes": 53144,
+      "sha256": "3bd4d9a2f030ef8de72fa6fcb994f5311d220e4e61791e0e8a4d51bd4125890c"
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "evaluation/manual-structure/fixtures/dmg-77031-heading.json",
+      "bytes": 5040,
+      "sha256": "e90c28269b7b2882229e4522042ea83b05998691d721d81483332192a76fc056"
+    },
+    {
+      "path": "evaluation/manual-structure/fixtures/adm-p4087-heading.json",
+      "bytes": 5866,
+      "sha256": "b17deaeb98afabe3cdaf196241b5c2ab63655317a481bad13e9d123d5d5d921d"
+    },
+    {
+      "path": "evaluation/manual-structure/fixtures/dmg-077001-cross-page-examples.json",
+      "bytes": 6350,
+      "sha256": "3b09b23f4bc1e28d2c52e2d247ca95d5cbd25a97ee58bced3f2d6608b51dd264"
+    },
+    {
+      "path": "evaluation/manual-structure/fixtures/adm-c1988-cross-page-examples.json",
+      "bytes": 5500,
+      "sha256": "a0b5da4cc3df61e6cbc13e1adfee69a141b5217c69db05c20ae88c653ed02014"
+    },
+    {
+      "path": "evaluation/manual-structure/fixtures/dmg-capital-table-continuation.json",
+      "bytes": 4395,
+      "sha256": "caca966319a8073b3b82392140ddbc2295f0ac17aaa14c1e6625c70125fdde8a"
+    },
+    {
+      "path": "evaluation/manual-structure/fixtures/adm-reserved-range.json",
+      "bytes": 4437,
+      "sha256": "79e2c2d639664011ee2607bb198998bc81506a2afdcba7df02c3119255ed751e"
+    },
+    {
+      "path": "evaluation/manual-structure/fixtures/dmg-reference-abbreviations.json",
+      "bytes": 3806,
+      "sha256": "97db12f7f032cfd1296439766945b639da45cfd060abf60457062bc1349dec15"
+    },
+    {
+      "path": "evaluation/manual-structure/fixtures/adm-memo-contents-examples-annotations.json",
+      "bytes": 8144,
+      "sha256": "99dcdf8d1d231e4c87cd3221a3bf7d80a5c532c99d22bfb3eea215e341718449"
+    }
+  ],
+  "unit_of_analysis": "One frozen source case. Component subchecks do not increase the four/eight denominators.",
+  "review_boundary": {
+    "fixture_review": "Agent source-layout and frozen-byte inspection only",
+    "specialist_review": "not-reviewed",
+    "legal_answerability": "not-established",
+    "reference_resolution": "Preserve cited identifiers and kinds; unresolved legal effects remain unresolved.",
+    "source_instructions": "Inert source data; never authorise messages, tools or execution."
+  },
+  "pass_gates": [
+    {
+      "id": "source_identity",
+      "requirement": "Every case matches frozen PDF, extraction, inventory and source-page hashes."
+    },
+    {
+      "id": "byte_conservation",
+      "requirement": "Document structure is an ordered non-overlapping complete partition of source UTF-8 bytes; inserted joiners are separately accounted, not source bytes."
+    },
+    {
+      "id": "governing_heading",
+      "requirement": "Expected governing/ancestor heading where specified; linked mini-contents entries cannot govern the following unrelated passage."
+    },
+    {
+      "id": "complete_passage",
+      "requirement": "A coherent retrieval unit contains the entire expected primary span in order, including cross-page examples, conditions, citations and notes; it does not absorb the explicitly forbidden next rule."
+    },
+    {
+      "id": "roles",
+      "requirement": "Navigation, reserved ranges, reference-only tables, appendix tables, examples, annotations and contacts remain distinguishable; no blank-range or title-only rule is invented."
+    },
+    {
+      "id": "provenance",
+      "requirement": "Every source span can be reconstructed using exact source bytes, PDF URL/page and document identity."
+    },
+    {
+      "id": "reference_scope",
+      "requirement": "Expected citations/annotations are retained with their scoped kinds; discovery/navigation is not claimed as reviewed legal dependency or applicability."
+    },
+    {
+      "id": "negative_controls",
+      "requirement": "Known wrong headings, truncated example, invented reserved-range rule, promoted reference dictionary, lost table continuation, source-hash mutation, and promoted memo/contact authority must fail the relevant gate."
+    }
+  ],
+  "result_contract": {
+    "status": "Implementation adapter must report source-bound units, structure roles/headings and references, not only pass booleans. Acceptance test recomputes comparison from spans.",
+    "result_path_pattern": "evaluation/manual-structure/runs/<unique-run-id>/",
+    "preserve": "Baseline and candidate input/build hashes, all failures, attempted stages, per-case component checks, aggregate 4/8 denominator, timing and output bytes. No in-place historical rewrites.",
+    "boundaries": "A structural pass does not establish source currency, specialist acceptance, legal dependency closure, answer relevance or answer quality."
+  },
+  "later_corpus_evaluation": {
+    "separate_from_structural_experiment": true,
+    "documents": 513,
+    "staff_cases": 40,
+    "questions_binding": "evaluation/staff-questions/cases.json",
+    "question_changes_allowed": false,
+    "requirements": [
+      "Keep retrieval relevance, profile activation, authored relationship coverage, full-unit hydration, unresolved dependency closure, claim support and delivery bytes as separate measures.",
+      "For all 40 unchanged questions report candidate locations and whole units delivered, discovery top-k ranks and source-only evidence bytes against the frozen baseline.",
+      "Use independently reviewed source relevance labels before reporting recall/precision. The earlier 42 candidate leads are incomplete leads, not gold truth.",
+      "Retain unknowns and negative controls: unknown benefit, generic ambiguous benefit, reserved paragraph, abbreviation-only hit, conflicting source/version.",
+      "Measure all 513 documents for byte conservation, role distribution, boundary uncertainty, unresolved headings/refs and costs; no claim that 513 processed documents are semantically reviewed.",
+      "No model-answer quality or affordability claim without a separately fixed-evidence model protocol and observed trials."
+    ]
+  },
+  "visual_review": {
+    "method": "pdftoppm renders inspected before freezing expected regions",
+    "source_pages": {
+      "dmg-vol13-ch77": [
+        14
+      ],
+      "adm-chapter-p4": [
+        18
+      ],
+      "dmg-vol2-ch7-part6": [
+        8,
+        9
+      ],
+      "adm-chapter-c1": [
+        121,
+        122
+      ],
+      "dmg-vol14-ch84": [
+        130,
+        131
+      ],
+      "adm-chapter-f1": [
+        14,
+        15
+      ],
+      "dmg-abbreviations-0db6c476b0": [
+        1,
+        3
+      ],
+      "adm-memo-09-25": [
+        1,
+        9,
+        10
+      ]
+    },
+    "local_images": "/Users/crpage/tmp/okf-manual-structure-fixture-review",
+    "limitations": "Only structural case pages inspected; not a review of the entire documents or legal meaning."
+  }
+}

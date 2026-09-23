@@ -1,7 +1,103 @@
 # Logical-unit implementation work log
 
+## Source-led manual structure and discovery cards, 22 September 2026
+
+The owner authorised a complete DMG/ADM source-led build and an explicit active
+goal. The [process plan](manual-structure-process.md) records the scope and gates.
+The independent DWP worktree starts at `908adc45`; the Explorer adapter worktree
+starts at `ea485af6`. Existing releases, private files and source captures remain
+untouched. The old Monday heartbeat is not restarted.
+
+Root owns source structure and integration. The manual-guide agent owns exact
+source-supported reading conventions and the document-role census. The coverage
+agent independently freezes four source-bound acceptance cases and their doubled
+eight-case set before observations. The Explorer agent owns a scalable generic
+discovery-card and relationship adapter, keeping older corpus versions stable.
+Publication will have one owner while independent work continues separately.
+
+The starting defect is broader than missing question profiles: inherited
+headings can be wrong, large literal-text candidates dominate ranking, and
+small delivery budgets omit evidence. Card descriptions remain distinct from
+domain concepts, full source passages and necessary legal support. No new result
+or improved answerability is claimed by recording this plan.
+
 Started 22 September 2026 following the owner's explicit unattended implementation
 request. The earlier Monday deadline and paused heartbeat remain historical.
+
+## Source-led implementation checkpoint
+
+The new feature branch has a source-supported manual guide and a separate
+bounded PDF-structure observation layer. All 513 PDFs were inspected locally;
+the raw observation history and a corrected bounded parser replay are retained.
+One observation reached its output bound and remains an explicit fallback.
+
+The first complete candidate unit build accounts for 19,090 pages and
+35,143,443 source bytes, with 49,491 non-empty units and all 75 authored records
+preserved. These are development build counts, not published-release acceptance.
+The initial context projection contains one separate discovery card per unit,
+331 existing concepts and 20,632 graph assertions; 26,472 reference observations
+remain unresolved. Full Reader integration and the fixed forty-question
+comparison follow before any default changes.
+
+The final bounded structural experiment passed four cases and then eight.
+Earlier failed attempts and additional independent generalisation failures are
+retained. Repeated-heading ambiguity, notice boundaries, fragment-local
+reference offsets and raw-tree/sidecar binding received regression controls.
+No legal, specialist or model-answer acceptance is inferred from these results.
+
+## Delivery and source-boundary corrections, 23 September 2026
+
+The first full forty-question comparison is retained at
+[`context-probe/runs/attempt-01`](../evaluation/manual-structure/context-probe/runs/attempt-01/README.md).
+It failed acceptance: at 32 KiB the new projection retained no evidence for any
+of the forty staff occurrences; at 512 KiB it retained more source units but
+only 40 of 47 previously declared paths. Eager discovery reads consumed the
+shared file allowance before concept routes, and full card/incident metadata
+consumed payload space. This is a delivery regression, not an answer-quality
+gain. The original engine and corpus remain recoverable at the recorded commits.
+The repair gives resolved-concept routes priority and uses exact hash-bound
+metadata references. The full comparison must be rerun before adoption.
+
+A separate corpus-wide role census found reserved-number ranges and short
+illustrative notices carrying their labels into later appendices. Four exact
+source regressions and independent visual checks now support explicitly ended
+regions. Unclassified following material stays visible as unresolved source;
+it is not discarded or renamed a rule. Memo numbering remains a separate
+candidate observation because PDF paragraph tags alone also label nested points.
+
+After these parser and literal-reference changes, the new
+[`candidate-initial-06`](../evaluation/manual-structure/runs/candidate-initial-06/report.json)
+gate passed 4/4, followed by
+[`candidate-expanded-05`](../evaluation/manual-structure/runs/candidate-expanded-05/report.json)
+at 8/8. These are the same fixed development cases, with the new helper modules
+included in their implementation bindings. Earlier runs remain unchanged.
+
+The runtime comparison retains the same source and authored semantics. New
+Pension Credit and household selection proposals are prepared separately so
+their gains or losses cannot be confused with a ranking or delivery repair.
+
+The [second runtime comparison](../evaluation/manual-structure/context-probe/runs/attempt-02/README.md)
+completed all 164 assemblies with no network/model calls. At 512 KiB the new
+engine restores 47/47 declared paths and reduces median discovery diagnostics
+from 51,339 to 16,447.5 bytes. The 82 legacy-projection packages are byte-identical.
+At 32 KiB all forty new-corpus contexts still contain no evidence; every staff
+result remains insufficient. This repairs a measured regression without making
+an answer-quality claim.
+
+Further source reading found a wrapped range endpoint being misread as paragraph
+77164. A generic continuation check preserves the preceding paragraph's note and
+citation. Source regression, before/after identities and the concurrent fixture
+registration boundary are retained in the auxiliary review. Fresh gates
+`candidate-initial-07` and `candidate-expanded-06` pass 4/4 then 8/8. The corrected
+catalogue has 52,841 units, including all 75 unchanged authored units, and exactly
+35,143,443 original source bytes. More unresolved fragments are now visible
+because erroneous reserved/notice labels no longer conceal the following text.
+
+The unit-count reduction exposed a stale final generated shard. The failed
+post-write admission and exact surplus bytes are retained in
+[`build-history`](../evaluation/manual-structure/build-history/obsolete-shard-2026-09-23/report.json).
+Only that verified generated surplus was removed; deterministic producer replay
+then passed. No frozen source or earlier logical/page projection changed.
 
 ## Starting state and ownership
 
@@ -227,3 +323,92 @@ tests, eight browser checks at desktop/mobile widths and separate negative
 controls for both original defects. Fresh exact-head CI and public replay are
 required after integration. No source, probe result, profile, ranking or
 answerability status changed.
+
+
+## Manual-led complete-corpus increment, 23 September 2026
+
+- Preserved the failed first discovery comparison. The second, using the exact
+  same source and authored semantics, restores all 47 declared paths at 512 KiB;
+  all 82 legacy packages are byte-identical. Median discovery diagnostic bytes
+  fall from 51,339 to 16,447.5. All 40 small 32 KiB assemblies still retain no
+  evidence, and every result remains insufficient. These are delivery results,
+  not answer-accuracy results.
+- The final source-parser candidate accounts for all 513 documents, 19,090
+  pages and 35,143,443 extracted source bytes in 53,727 units. All 75 authored
+  units retain their identities and bytes. Source-backed repairs keep reserved
+  ranges, short notices, wrapped references, memo sections and appendices from
+  being absorbed into unrelated paragraph units. Initial gate 08 passes 4/4,
+  then expanded gate 07 passes 8/8; three extra memo/appendix controls and the
+  earlier failed outputs remain separate. This is not perfect segmentation.
+- Add seven agent-source-read selection profiles and 55 conjunctively guarded
+  edges. Add a separate location-only migration of the earlier 42 research
+  candidate locations: 39 fully mapped, three with explicit whitespace gaps.
+  Its 344 navigation routes comprise 312 restored routes and 32 inferred
+  profile associations. All 40 original requirements and 203 obligations stay
+  unchanged and open. Exact location overlap does not establish relevance,
+  semantic equivalence, legal prerequisites or requirement support.
+- The first final-context build stopped before writing outputs because the
+  Reader's postings limit did not admit the larger unit catalogue. Retain that
+  failure, repair the generic producer/consumer contract, and run a separately
+  bound full-question evaluation before adoption. Do not reuse the earlier
+  runtime-only comparison as evidence for these new semantics.
+
+- The repaired Reader retains all 3,037,000 postings and their true frequencies.
+  Two metadata tokens exceed the existing 50,000 completeness threshold; their
+  exact counts are recorded and Explorer retains conservative uncertainty. No
+  source record or posting is dropped. The next context build succeeds with
+  53,727 cards, 18,904 assertions and 54 separately grouped requirements.
+- Full trial 03 retains all 47 inherited paths and 139/181 additional source-read
+  path occurrences at 512 KiB. Source-read profiles activate for 21/40 question
+  occurrences; the separate legacy/location plane activates for all 40. All
+  203 original obligations remain open. One large-budget case returns no source
+  evidence after metadata pressure and trimming, so adoption remains held.
+  Frozen trial 03 and its independent report preserve this new allocation
+  regression before a same-source runtime repair.
+
+- Trial 04 fixes the zero-source large package but regresses required paths:
+  all 40 cases retain source, yet inherited paths fall to 46/47 and additional
+  paths to 137/181. All 82 legacy packages remain byte-identical. The full
+  result and independent analysis are retained; adoption stays held. A further
+  reviewed runtime repair prioritises only paths actually observed from resolved
+  seeds. A requirement cannot invent a seed or an edge. Its new 2,000-prefix
+  work bound reports truncation and falls back to ordinary priority. Boundary
+  uncertainty continues to make the package insufficient, while exact source
+  can still be retained for review. Trial 05 holds the corpus, questions,
+  protocol and ranking parameters fixed.
+- A separate original-acceptance audit finds that the source-led projection
+  retains imprisonment concepts but omits the earlier custody requirements.
+  Literal chapter references are not yet resolved by the paragraph-only
+  reference producer. This migration gap is separate from the 40 staff cases;
+  it must be restored and tested before claiming that all earlier hard cases
+  work in the new projection. The earlier hospital case is an insufficiency
+  control, not a previously completed legal answer.
+
+## Expanded source selections and original-case check — 23 September 2026
+
+- The final expanded corpus accounts for all 53,727 units and now has 19,193
+  relationships and 82 separately grouped requirements. Global check 04 verifies
+  every card/unit pair, source span, relationship and 1,355 input bindings.
+- Trial 06 keeps the same engine, questions, ranking and budgets. At 512 KiB,
+  all 40 staff occurrences retain source and relationships. Source-read
+  activation rises to 37/40; 47 inherited, 181 earlier and 208 new declared
+  source-selection path occurrences all survive. The three underspecified
+  tasks and all 203 old obligations remain open. At 32 KiB no staff package
+  retains source evidence.
+- Location navigation remains a separate, less favourable measure: 469/765
+  restored and 34/87 inferred route incidences survive, compared with 490/765
+  and 35/87 in trial 05. The original page requirements are unchanged.
+- Independent source review restores six original custody requirements,
+  53 narrowly selected units and four chapter routes. The separate first
+  imprisonment assembly retains only 20/53 units and 43/89 paths at 512 KiB;
+  all four complete chapter paths and the 12003-to-12002 dependency are lost.
+  Retain this failure and diagnose its allocation boundary before claiming
+  original-case acceptance. Hospital remains an insufficiency control.
+- The Reader endpoint failure is repaired by indexing discovery aliases in
+  their existing metadata channel rather than duplicating them as generic
+  tags. No alias, source text, posting or conceptual facet was discarded and
+  no limit was raised. The full Reader now loads 54,578 records and 19,193
+  relationships in the actual browser. Public acceptance remains separate.
+- Explorer PR 144 merged through the normal protected squash route at
+  `dc54fac4f98fa5bc9db38bf843854ce24a4c130d`. The five tested runtime modules
+  remain byte-identical to the separately pinned `8a5b8d11` engine.

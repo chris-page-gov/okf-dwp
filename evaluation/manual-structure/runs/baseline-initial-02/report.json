@@ -1,0 +1,104 @@
+{
+  "stage": "initial",
+  "case_denominator": 4,
+  "passed_cases": 0,
+  "cases": [
+    {
+      "case_id": "dmg-77031-heading",
+      "passed": false,
+      "failures": [
+        "governing_heading:missing governing_heading",
+        "governing_heading:mini-contents promoted",
+        "reference_scope:missing or promoted 77140",
+        "reference_scope:missing or promoted DMG Chapter 02",
+        "reference_scope:missing or promoted SPC Act 02, s 1(2)",
+        "roles:missing navigation"
+      ]
+    },
+    {
+      "case_id": "adm-p4087-heading",
+      "passed": false,
+      "failures": [
+        "governing_heading:missing governing_heading",
+        "governing_heading:mini-contents promoted",
+        "reference_scope:missing or promoted P1013",
+        "reference_scope:missing or promoted DMG 74022",
+        "reference_scope:missing or promoted SS (PIP) Regs, reg 27(2)",
+        "roles:missing navigation"
+      ]
+    },
+    {
+      "case_id": "dmg-077001-cross-page-examples",
+      "passed": false,
+      "failures": [
+        "governing_heading:missing governing_heading",
+        "governing_heading:missing ancestor_heading",
+        "reference_scope:missing or promoted 077002",
+        "reference_scope:missing or promoted 077003",
+        "reference_scope:missing or promoted DMG 04642",
+        "roles:missing navigation"
+      ]
+    },
+    {
+      "case_id": "adm-c1988-cross-page-examples",
+      "passed": false,
+      "failures": [
+        "governing_heading:missing governing_heading",
+        "reference_scope:missing or promoted ADM 09-25",
+        "reference_scope:missing or promoted UC Regs, reg 11(3)(a)"
+      ]
+    }
+  ],
+  "specialist_review": "not-reviewed",
+  "legal_answerability": "not-established",
+  "schema": "okf-dwp-manual-structure-run.v1",
+  "engine": "baseline",
+  "protocol_sha256": "1cf9fa21f48a97ffd5551caa58293f1f97fc8dcfe26d1857afd141bdb8ea8d92",
+  "source_baseline_commit": "908adc45a4e22eb72ed13fe8943877307b732850",
+  "runtime_seconds": 0.048983,
+  "adapter_errors": {},
+  "baseline_document_bindings": [
+    {
+      "path": "logical-units/documents/dmg/dmg-vol13-ch77.json.gz",
+      "sha256": "9343abf499148d0ab9d3c78f19f366d64c56071363e6c550b81c9ed9192d5847",
+      "bytes": 48892
+    },
+    {
+      "path": "logical-units/documents/adm/adm-chapter-p4.json.gz",
+      "sha256": "306ba800aabe522a97497579cb4a5f0c04f3ca28ae626d9ddbd8a1abd6f2f66c",
+      "bytes": 18734
+    },
+    {
+      "path": "logical-units/documents/dmg/dmg-vol2-ch7-part6.json.gz",
+      "sha256": "851dc90787411217cf412085482812ece7b1ef4ddb92b76e0d43186f7f6ed70a",
+      "bytes": 54541
+    },
+    {
+      "path": "logical-units/documents/adm/adm-chapter-c1.json.gz",
+      "sha256": "4d3052335f64f9d1451e55d0bdcd3839487169ca5328b509bb0c6eebc7c854b3",
+      "bytes": 122224
+    }
+  ],
+  "implementation_bindings": [
+    {
+      "path": "scripts/test_manual_structure_acceptance.py",
+      "sha256": "8a5f55bfe31f46ce68536d6b68183d80537dd672b08f4bbf0aec2691d4c28bc0"
+    },
+    {
+      "path": "scripts/manual_structure.py",
+      "sha256": "835e1d535042bf990c648c9a8ea97813d4964246d75116d5d69d628cc3a1ac78"
+    },
+    {
+      "path": "scripts/build_logical_units.py",
+      "sha256": "364be1718db1697baa8af62362e8d4f65178dd9506f7cba5b8d16ff5f3aece38"
+    }
+  ],
+  "registration_note": "Fixtures predate source-case execution/results; parser drafting occurred concurrently. These are not blinded held-out cases.",
+  "review_boundary": "Structural acceptance only; legal applicability, specialist review and answer quality remain unestablished.",
+  "observations": {
+    "path": "observations.json.gz",
+    "decoded_sha256": "0e37780cb6781c13dfedea02a91718f4828e41b0c94c281d17b0d60a6eff28c0",
+    "decoded_bytes": 878744,
+    "sha256": "162e3d9f70e1b3846c47112103cad66620f2b7492158d108c08d0422709ce311"
+  }
+}

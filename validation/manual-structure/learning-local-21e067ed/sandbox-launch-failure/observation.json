@@ -1,0 +1,39 @@
+{
+  "schema": "okf-learning-browser-regression.v1",
+  "outcome": "failed",
+  "started_at": "2026-09-23T00:02:25.555Z",
+  "inputs": [
+    {
+      "path": "index.html",
+      "bytes": 36616,
+      "sha256": "a0ea5e299f47c446882aeb0a0170785a8f1dc4d7baa5af9111543a4e5838c6aa"
+    },
+    {
+      "path": "docs/glossary.html",
+      "bytes": 22479,
+      "sha256": "41da9ba9f4d15c07baa34ce22167a8aef16ea2135680175d6e2cab27d01975eb"
+    },
+    {
+      "path": "docs/semantic-closure-and-compact-delivery.html",
+      "bytes": 15998,
+      "sha256": "c1761072a9028349aba977156a7aa58b4271df1b9455fc9e9415550e69d9bb8e"
+    },
+    {
+      "path": "assets/learning.css",
+      "bytes": 1413,
+      "sha256": "8da46a56c30f5811f26f02d59379c6b1aa4e0255526901f4a4859bc049248ead"
+    }
+  ],
+  "harness_sha256": "7944c39c58baa85c2026764597a4ba1d9a7cfdecf24c1c5d75e9d8881fba2ecc",
+  "checks": [],
+  "requests": [],
+  "errors": [],
+  "warnings": [],
+  "external_requests": 0,
+  "scope": "Local rendered-site regression, not public deployment verification or full accessibility acceptance.",
+  "failure": {
+    "name": "Error",
+    "message": "browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/Users/crpage/tmp/playwright_chromiumdev_profile-lMUsoB --remote-debugging-pipe --no-startup-window\n<launched> pid=13075\nCall log:\n\u001b[2m  - <launching> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/Users/crpage/tmp/playwright_chromiumdev_profile-lMUsoB --remote-debugging-pipe --no-startup-window\u001b[22m\n\u001b[2m  - <launched> pid=13075\u001b[22m\n\u001b[2m  - [pid=13075] <gracefully close start>\u001b[22m\n\u001b[2m  - [pid=13075] <kill>\u001b[22m\n\u001b[2m  - [pid=13075] <will force kill>\u001b[22m\n\u001b[2m  - [pid=13075] exception while trying to kill process: Error: kill EPERM\u001b[22m\n\u001b[2m  - [pid=13075] <process did exit: exitCode=null, signal=SIGABRT>\u001b[22m\n\u001b[2m  - [pid=13075] starting temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=13075] finished temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=13075] <gracefully close end>\u001b[22m\n"
+  },
+  "completed_at": "2026-09-23T00:02:25.806Z"
+}

@@ -10,6 +10,25 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Fix the Demo 1 scope against the supplied GitHub brief: all 40 questions match exactly. Prepare a 15:00 BST freeze with the tested engine/source pair, explicit coverage gaps and a hard cap of four new answer calls. Park separate custody and historical-amendment repairs; do not infer answer improvements or token savings from retrieval results.
+- Expand source-read selection to 37/40 unchanged staff question occurrences, with complete retention of 47 inherited, 181 earlier and 208 new declared source-selection paths at 512 KiB. Preserve the three ambiguous questions, all 203 original obligations, 32 KiB refusal and reduced location-route retention. Restore original custody requirements in a separate evaluation plane. This is evidence preparation and delivery, not an AI-answer or specialist-acceptance result.
+- Repair the Reader's endpoint capacity failure without deleting aliases or raising its limit: index discovery aliases through their dedicated metadata channel. The full 53,727-unit corpus now loads with 19,193 relationships; exact source text, pages and historical classifications remain preserved.
+
+- Retain the successful fixed-source allocation trial: all 40 large staff packages contain source, with 47/47 inherited and 181/181 new source-read paths. Independent checking preserves 82 exact legacy results. Keep the location-navigation trade-offs, 32 KiB refusal and all 203 original obligations explicit; no model-answer improvement is inferred. Track the separately discovered original-imprisonment migration and Reader label-capacity gaps before source publication.
+
+- Repair the observed discovery delivery regression with a same-source comparison:
+  all 47 inherited paths now remain at 512 KiB. Preserve the 32 KiB limitation,
+  earlier failure and all insufficient results. Add generic conjunctive route
+  guards, seven source-read selection profiles and separately labelled legacy
+  location navigation; keep all 203 original obligations open. Final integrated
+  evaluation and publication are still separate gates.
+
+- Retain the failed forty-question discovery-corpus comparison and its exact engine/source identities. Repair source-role boundaries after a full-corpus census found reserved ranges and short notices absorbing appendices; rerun the fixed four-case gate and doubled eight-case gate successfully. Evaluate runtime delivery and new semantic profiles separately before adoption.
+
+- Build an additive source-led manual guide, PDF-structure observations, complete source-byte unit catalogue and separate discovery-card corpus. Preserve authored unit identities and obligations; use explicit source references for navigation only. Retain the four-to-eight structural experiment, failed attempts and independent boundary/integrity controls. Full question comparison and public adoption remain separate gates.
+
+- Start the source-led manual-guide build: record the reading-convention discovery process, a four-case structural gate followed by eight cases after a pass, and the separate full-corpus/staff-question evaluation. Track manual guides, structural repair and discovery cards as active work; no new semantic or answer-quality result is claimed yet.
+
 - Fix two learning-site defects found during the preceding public check: keep the focused skip link outside page layout so pointer navigation stays stable, and render table alignment through external stylesheet classes without weakening the content security policy. Retain the failed observations and add renderer and desktop/mobile browser regressions; publication acceptance remains a separate exact-commit check.
 
 - Retain two independently checked offline ranking probes on the same 40 questions. Token-level alias expansion loses tracked candidate locations; length-aware BM25 gains four without losses but still selects incomplete or wrong-subject fragments. Preserve fixed protocols, exact inputs and all results. The live ranker, source units and answerability statuses are unchanged; summary-card implementation remains open.
