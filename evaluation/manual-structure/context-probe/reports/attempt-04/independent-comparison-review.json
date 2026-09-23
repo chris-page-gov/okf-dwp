@@ -1,0 +1,43 @@
+{
+  "schema": "okf-dwp-context-attempt-comparison-review.v1",
+  "reports": [
+    {
+      "path": "evaluation/manual-structure/context-probe/runs/attempt-03/report.json",
+      "sha256": "a1c48c7eb2f57ef76c7b4814fc13dde98fe466786d7ce0dac036cf3ca47c43a5"
+    },
+    {
+      "path": "evaluation/manual-structure/context-probe/runs/attempt-04/report.json",
+      "sha256": "06fc6104ab48f2c52eaf3c7888aebf410625e58cf8334991b571a8fa32726d09"
+    }
+  ],
+  "same_protocol": true,
+  "same_runner": true,
+  "same_source_bindings": true,
+  "legacy_packages_byte_identical": 82,
+  "selected_paths_checked": 2685,
+  "explicit_unused_relationship_omissions_checked": 359,
+  "no_selected_path_broken_by_omission": true,
+  "no_applicable_required_assertion_removed_by_relationship_omission": true,
+  "regressions": [
+    {
+      "case_id": "staff-010",
+      "plane": "additional-source-read-selections",
+      "before": 19,
+      "after": 4,
+      "declared": 27
+    },
+    {
+      "case_id": "staff-029",
+      "plane": "inherited-logical-source-selections",
+      "before": 7,
+      "after": 6,
+      "declared": 7
+    }
+  ],
+  "adoption_status": "hold-inherited-path-regression",
+  "limitations": [
+    "Required source records can still be omitted under byte pressure even when no protected assertion is explicitly pruned.",
+    "Source-read/location counts are not legal completeness.",
+    "No new assembly or model call by reviewer."
+  ]
+}
