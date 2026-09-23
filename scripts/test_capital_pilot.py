@@ -28,6 +28,29 @@ class CapitalPilotControls(unittest.TestCase):
         select = lambda arm: [r for r in self.arms[arm]['records'] if r['kind'] == 'concept']
         self.assertEqual(select('baseline'), select('candidate'))
 
+    def test_authored_summaries_bind_their_own_literal_and_author_file(self):
+        path = ROOT / 'domain-profile/capital-pilot/capital.yamlld'
+        records = {r['id']: r for r in self.arms['candidate']['records']}
+        for i, group in enumerate(self.author['groups']):
+            concept = records[group['concept_id']]
+            self.assertEqual(concept['text'], group['summary'])
+            self.assertEqual(len(concept['provenance']), 1)
+            provenance = concept['provenance'][0]
+            self.assertEqual(provenance['source_sha256'], hashlib.sha256(path.read_bytes()).hexdigest())
+            self.assertEqual(provenance['literal_sha256'], hashlib.sha256(concept['text'].encode()).hexdigest())
+            self.assertEqual(provenance['locator'], f'/groups/{i}/summary (JSON Pointer)')
+            self.assertNotIn('PDF page', provenance['locator'])
+            self.assertTrue(concept['rights'].endswith('/LICENSE'))
+
+    def test_reserved_ranges_are_not_substantive_group_labels(self):
+        groups = {g['key']: g for g in self.author['groups']}
+        self.assertEqual(groups['pc-capital-u10']['paragraph_labels'], ['84911', '84921', '84922', '84923', '84924'])
+        self.assertNotIn('84700', groups['pc-capital-u06']['paragraph_labels'])
+        self.assertNotIn('84693', groups['pc-capital-u06']['paragraph_labels'])
+        parts = {part['key']: part for repair in self.author['repairs'] for part in repair['parts']}
+        self.assertEqual(parts['capital-reserved-84700']['role'], 'reserved')
+        self.assertEqual(parts['capital-valuation-contents']['role'], 'contents')
+
     def test_corrected_paragraphs_exclude_following_contents(self):
         by_id = {r['id']: r for r in self.arms['candidate']['records']}
         first = next(r for r in by_id.values() if '/capital-84356-' in r['id'])

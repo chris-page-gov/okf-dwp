@@ -147,7 +147,7 @@ def compile_pilot(root=ROOT):
                  for unit in corrected if unit['text'].strip()]
     corrected = [unit for unit in corrected if unit['text'].strip()]
     exclusions = [span for unit in corrected if unit['role'] in {'reserved', 'document-notice'}
-                  or unit['key'] == 'capital-reserved-84700' for span in unit['spans']]
+                  for span in unit['spans']]
     groups, group_units = {}, {}
     for definition, proposal in zip(author['groups'], proposals['proposals']):
         require(definition['key'] == proposal['id'] and definition['source_segments'] == proposal['source_segments'], 'Proposal boundary drift')
@@ -155,6 +155,10 @@ def compile_pilot(root=ROOT):
         spans = [{'page': s['pdf_page_index'], 'start_utf8': s['start_utf8'], 'end_utf8': s['end_utf8'],
                   'literal_sha256': s['segment_sha256']} for s in definition['source_segments']]
         spans = subtract_spans(spans, exclusions, pages)
+        labels = list(dict.fromkeys(label for part in corrected
+                      if part['role'] == 'paragraph' and overlaps(spans, part['spans'])
+                      for label in part['paragraph_labels']))
+        require(definition['paragraph_labels'] == labels, 'Group labels differ from retained substantive paragraphs')
         unit = {'key': definition['key'], 'label': definition['label'], 'kind': 'compound', 'role': 'evidence-group',
                 'paragraph_labels': definition['paragraph_labels'], 'heading_path': definition['heading_path'],
                 'spans': spans, 'authored': True, 'completeness': 'unresolved'}
@@ -164,14 +168,20 @@ def compile_pilot(root=ROOT):
     inherited = json.loads(inputs.read('structured-context/base-index.json'))
     inherited_by_id = {row['id']: row for row in inherited['records']}
     concepts = {key: deepcopy(inherited_by_id[key]) for key in [PC, CAPITAL]}
-    for definition in author['groups']:
+    for position, definition in enumerate(author['groups']):
         identifier = definition['concept_id']
         prototype = groups[definition['key']]
         concept = deepcopy(inherited_by_id.get(identifier, {key: value for key, value in prototype.items() if key != 'evidence_unit'}))
         concept.update(id=identifier, route=identifier.removeprefix(BASE + 'id/'), kind='concept',
                        label=definition['label'], text=definition['summary'], aliases=definition['aliases'],
                        assertion_status='model-derived', authority={'class': 'model-assisted', 'label': 'Pilot topic proposal', 'source': REPO + '/blob/main/' + AUTHOR},
-                       scope='Bounded discovery topic; not legal applicability.', review_status='unreviewed-specialist-review-required')
+                       scope='Bounded discovery topic; not legal applicability.', review_status='unreviewed-specialist-review-required',
+                       rights=REPO + '/blob/main/LICENSE',
+                       provenance=[{'url': REPO + '/blob/main/' + AUTHOR,
+                                    'source_sha256': digest(inputs.read(AUTHOR)),
+                                    'literal_sha256': digest(definition['summary'].encode()),
+                                    'locator': f'/groups/{position}/summary (JSON Pointer)',
+                                    'captured_at': author['authored_at']}])
         concepts[identifier] = concept
     for name in ['scripts/build_capital_pilot.py', 'scripts/capital_pilot_source.py', 'scripts/build_logical_units.py',
                  'scripts/build_context_corpus.py', 'scripts/build_structured_context.py', 'uv.lock']:
