@@ -1,0 +1,1319 @@
+{
+  "schema": "okf-dwp-original-delivery-diagnosis.v1",
+  "status": "source-integrity-and-boundary-controls-pass-original-demo-delivery-incomplete",
+  "report": {
+    "path": "evaluation/manual-structure/original-acceptance/runs/acceptance-01/report.json",
+    "bytes": 506680,
+    "sha256": "a0afa7d0e3d34f2f964d11552eee1bec92e3458eda13d81325691246b2714a10"
+  },
+  "question": "A claimant is imprisoned. Explain the effect on JSA, IS, State Pension Credit and ESA, distinguishing loss of payment from loss of entitlement, and trace each conclusion to the relevant DMG guidance.",
+  "max_bytes": 524288,
+  "context_bytes": 521558,
+  "source_units": 20,
+  "source_text_bytes": 12236,
+  "top_level_component_bytes": {
+    "ai_answer": 4,
+    "ambiguities": 2,
+    "binding": 223,
+    "budget": 25842,
+    "bundle": 192,
+    "conflicts": 2,
+    "context_id": 77,
+    "engine": 25,
+    "evidence_status": 14,
+    "limitations": 2275,
+    "missing_evidence": 30319,
+    "question": 201,
+    "relationships": 113304,
+    "requirements": 96726,
+    "resolved_concepts": 1755,
+    "retrieval": 31611,
+    "routing_guards": 101943,
+    "schema": 25,
+    "scope": 95,
+    "selected": 116622,
+    "unresolved_terms": 2
+  },
+  "selected_component_bytes": {
+    "record": 78582,
+    "paths": 22677,
+    "reasons": 14594
+  },
+  "selected_kinds": {
+    "concept": 1,
+    "scope": 3,
+    "evidence": 20
+  },
+  "guard_decisions": {
+    "matched": 97,
+    "unmatched": 66
+  },
+  "fetched_files": 64,
+  "omission_groups": {
+    "retrieval_candidate_budget": 1,
+    "retrieval_resource_budget": 70,
+    "node_budget": 1,
+    "relationship_byte_budget": 14,
+    "byte_budget": 1
+  },
+  "custody": {
+    "original_requirements_preserved": [
+      "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/esa-contributory-custody-v1",
+      "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/esa-custody-regimes-v1",
+      "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/esa-income-related-custody-v1",
+      "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/is-prisoner-applicable-amount-v1",
+      "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/legacy-jsa-custody-availability-v1",
+      "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/pc-prisoner-credit-rates-v1"
+    ],
+    "active_translated_requirement_ids": [
+      "https://chris-page-gov.github.io/okf-dwp/id/requirement/custody-units/esa-custody-regimes-v1",
+      "https://chris-page-gov.github.io/okf-dwp/id/requirement/custody-units/is-prisoner-applicable-amount-v1",
+      "https://chris-page-gov.github.io/okf-dwp/id/requirement/custody-units/legacy-jsa-custody-availability-v1",
+      "https://chris-page-gov.github.io/okf-dwp/id/requirement/custody-units/pc-prisoner-credit-rates-v1"
+    ],
+    "translated_selection": {
+      "declared_union_count": 53,
+      "active_unit_count": 53,
+      "retained_active_unit_count": 20,
+      "retained_active_unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000152040-000-9ca1b2da0700",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000157970-000-4bd182be5b57",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000161815-000-2b1e402e291f",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000162817-000-d339f948de7d",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001401-000-b59002efa8b9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001704-000-2f0f0ecb1cec",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002725-000-7ccc36ebf542",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000050274-000-8b53eaaa3b55",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000054300-000-e6e2e2d11327",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059335-000-902ee8f29e3e",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000060712-000-4e4e263efa53",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000194908-000-dcf662fd9b4f",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000198634-000-75d45e24fa24",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000157109-000-befb607b50c5",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000158032-000-9ea6ac982f35",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101137-000-28fbb28525ab",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000102782-000-e22b25a83eb7",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045807-000-a32e1960e55e",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000046953-000-abe41e72e07b"
+      ],
+      "omitted_active_units": [
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000152373-000-4b846b1add6c",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: State Pension Credit prisoner credit rates evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000153186-000-955e28ca62ee",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: State Pension Credit prisoner credit rates evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000158443-000-e7938993b2ca",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: State Pension Credit prisoner credit rates evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000158816-000-d51e0915f7ec",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: State Pension Credit prisoner credit rates evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000159381-000-f10796f6dd1b",
+          "reasons": [
+            {
+              "code": "relationship_byte_budget",
+              "message": "An assertion outside the retained paths was omitted whole to preserve source evidence within the byte budget. Its exact incident metadata remains source-bound."
+            },
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: State Pension Credit prisoner credit rates evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000159884-000-d8e45fe1e7ce",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: State Pension Credit prisoner credit rates evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000160382-000-88447d945a9b",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: State Pension Credit prisoner credit rates evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000161082-000-d0bfcf190c26",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: State Pension Credit prisoner credit rates evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000161550-000-149a3c553618",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: State Pension Credit prisoner credit rates evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000162402-000-e76433022882",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: State Pension Credit prisoner credit rates evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000162566-000-26f6f01c6aef",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: State Pension Credit prisoner credit rates evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000000807-000-3e0592ea53dd",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Both captured ESA components evidence profile v1 was absent, omitted or lacked governance."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Income Support prisoner applicable amount evidence profile v1 was absent, omitted or lacked governance."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Legacy JSA availability during custody evidence profile v1 was absent, omitted or lacked governance."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: State Pension Credit prisoner credit rates evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000049990-000-8e7341cc0909",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Legacy JSA availability during custody evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000050634-000-f48ab7881f92",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Legacy JSA availability during custody evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000055590-000-4bd7eee94baf",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Income Support prisoner applicable amount evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059601-000-745281ebbba7",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Income Support prisoner applicable amount evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059873-000-29e5413bef73",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Income Support prisoner applicable amount evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000060256-000-cf42fe92bb5d",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Income Support prisoner applicable amount evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000061456-000-0c2d32f1df60",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Income Support prisoner applicable amount evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000061987-000-2837253bb094",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Income Support prisoner applicable amount evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000155810-000-30e865473bf9",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Both captured ESA components evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101678-000-1c49726d47ba",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Both captured ESA components evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101965-000-ec2d0fb1c02a",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Both captured ESA components evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000102383-000-d03aa0d90ce5",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Both captured ESA components evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000105783-000-8dc2976f80f8",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Both captured ESA components evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000107015-000-389e10d58756",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Both captured ESA components evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000112898-000-170190b396e6",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Both captured ESA components evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000113180-000-dca23f1935f2",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Both captured ESA components evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000113538-000-920502724ba9",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Both captured ESA components evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000042145-000-fa6132ed72e1",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Both captured ESA components evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000043230-000-08beb513cb73",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Both captured ESA components evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000046594-000-78db81b437aa",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Both captured ESA components evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        },
+        {
+          "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000047808-000-1ab1634f5c6f",
+          "reasons": [
+            {
+              "code": "byte_budget",
+              "message": "A whole item was omitted to meet the package byte budget."
+            },
+            {
+              "code": "unresolved_unit_boundary",
+              "message": "The detected unit boundary or fallback does not establish a complete source passage."
+            },
+            {
+              "code": "missing_required_evidence",
+              "message": "Evidence required by Whole-unit research selection: Both captured ESA components evidence profile v1 was absent, omitted or lacked governance."
+            }
+          ]
+        }
+      ],
+      "selected_union_units_without_active_profile": [],
+      "required_path_count": 89,
+      "retained_required_path_count": 43,
+      "omitted_required_paths": [
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/bc10688524a491167e2a98d4d63ebde36a2dabf9e0d64836c4d9049c9a8ed992"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000000807-000-3e0592ea53dd"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/55a31fc17299f56eadd96359b0b00b021bb4991230a2434cb9f0bd619b8eb2c3"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000155810-000-30e865473bf9"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/daa020623f36ad083fd4e2f9b5cc4fc672a8d574a7499be04f758b66d50077f8"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101678-000-1c49726d47ba"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/a27d5ab0cf091dbd3877921b2eb90f2e973f9552ced8dee070686a70dbe9bc23"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101965-000-ec2d0fb1c02a"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/e72de859dfc677b645f7004c6d6ceca20c098fc587f70076398e0ed536ae6766"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000102383-000-d03aa0d90ce5"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/62132ccc33533fa5e3a0e63a347207c4f211b095c0d9464167d08a1c01207cfe"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000105783-000-8dc2976f80f8"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/ba2f872d65256feefa5f75878300ec9a0646d0d0c3bd7fb73977d1edae0c0d14"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000107015-000-389e10d58756"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/7a37422cbbd94a4322f64319a32dacfe2411d5b47179720b4ea2d2afbc9ea821"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000112898-000-170190b396e6"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/a9b532f98b8067b7690c1d6a7393d81462c9e11eb5fdb0df2b280688aed4ee0b"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000113180-000-dca23f1935f2"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/c49306c03896fa5f03c0460180193a3a824a22f4e5de4ce4087e4de2bc059908"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000113538-000-920502724ba9"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/f36e6c6653d64642c5a4e2b93f5bad9c910ff4de00756214d1dda1025e8f9bcd"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000042145-000-fa6132ed72e1"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/5ddeb0f38973daa686766e5da30ab903e163f94ff3fdb7529cbb58a4f0eefc57"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000043230-000-08beb513cb73"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/aed9cb39832865a3d421c9ddbc9dab2ab8aebc6637ff06698e2ec211c172d132"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000046594-000-78db81b437aa"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/c4958467b3e41e67e3f8fee3d8ed82a2027e16a53708f462beae55fdc880dd57"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000047808-000-1ab1634f5c6f"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/537714c81f28f7b80ca812edeafdeb35a285f783c43af827298ce0c84a6b6c9d"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/b3b4cb2d9eb3f571fe0c007cd602ca5cf0633dc56c704bece5a7484becf130fc"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/3ccf35ba36321831fbfb397f20f540a9f1f625811dc29f5fff708c1b1ddadd74",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/3f326670b460a1b844d01662142c124b20a8b860039254c3c4913cc2d20fcdbe"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+            "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/3ccf35ba36321831fbfb397f20f540a9f1f625811dc29f5fff708c1b1ddadd74",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/09eca6cf65bfbc712fc5ec5c837868089c9f6895509deb8e1a5370bac29c2df0"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+            "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/bcbb3c14629161ef5c81664a1f632db5058132b2b29187d38dc9696fb19b99d1"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000000807-000-3e0592ea53dd"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/63514e51caa80fc443b16b1b3d61f19798df2f14c250a9f9c391fdf8ffc19842"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000055590-000-4bd7eee94baf"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/bde293c4f80794c19deb5cdcc6b2e4f3db29b95e9d77a6b45017b3300f5ae6e6"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059601-000-745281ebbba7"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/b15a4e6078dec31a4c6ea107781f005727471b394795aa380d3cd89a4d740f6b"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059873-000-29e5413bef73"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/92d38ab9336672fffd1396ba4ac1a5aee1270fcc273cb8ef5514dfeded8bcb77"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000060256-000-cf42fe92bb5d"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/b6f1564d3793f598d2ca0babda322c0888d81aec6b781697f2f4a7c65b9d71de"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000061456-000-0c2d32f1df60"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/e1002911f75ac56b99eba8f79affd453fd9e797a13ab0158273662ded1633ea2"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000061987-000-2837253bb094"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/b6d12e62ad958c454c01598c57f70faa5c1c24027451dee4e44487418176a3d1"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/41eedec5785e82c30a4469c7b3d0eaea7de2320946286ef2afbcfcb72be7e47a",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/7e298531c2c8433db52ddd2990516dac38da05326a3a410bba6ca79b84cd312d"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+            "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/aa4a498e90f6518385fcced53f074971d31bb6724c1923af2ebf652bbf4440ca"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000000807-000-3e0592ea53dd"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/ac45ebf074bc0243c9dda530857a91627c7b5038ae065cf8b376acbd582a7b1f"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000049990-000-8e7341cc0909"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/854e21bf417404a990b464760ef5124166cf06895fec5f49b1c3993aa0e9a71e"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000050634-000-f48ab7881f92"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/d27fb940714e2b0be0e6ef677cf12b1d22ed0eec8d75d1764b0e1fadd024b372"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/b918431cf6470192873abbc14ba6d565b5baf206fff693d3545c80da9246e109",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/7e298531c2c8433db52ddd2990516dac38da05326a3a410bba6ca79b84cd312d"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+            "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/b311ef90076653e4c9c00e079803992f8eaa4ef7518d954224edc61b3bf52877"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000152373-000-4b846b1add6c"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/8e2d96a0a0627f168168a241e4bb824673b4eb1e58a2713f5d30ec79d30c2a5e"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000153186-000-955e28ca62ee"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/93bd4f5b904f9dd40cdcf9306dfbca131914ec41015ef3ae5665ab2a9ff968c8"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000158443-000-e7938993b2ca"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/c7f987e746544aa57d987e1ecf76337121d572a5d8182b34472a9aa3d1558725"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000158816-000-d51e0915f7ec"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/693d10b9d77cb6bdb31ae56d27512f87ce3546502885037c54dd1122cde9ca70"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000159381-000-f10796f6dd1b"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/a4fd82127334f4e413e124c663babd167d4f931c0ed46f7e94fc327718c14f26"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000159884-000-d8e45fe1e7ce"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/80ff7a80b7feee061aa96afa75560d5ce3854ae8f71013800ae25d5a058470a2"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000160382-000-88447d945a9b"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/79a828cd85aae380d68b8d515baac6e2925e79b60d53a81bb8a58ce5ef03c8ea"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000161082-000-d0bfcf190c26"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/ae1f3aaa6862743e454314617c3a0e3a5313838cbc8693a719e3d67bb2fb2e45"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000161550-000-149a3c553618"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/ccff069b04e644b74095e08e1d78e17bd99156698fa3e58978cfed5c4400e607"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000162402-000-e76433022882"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/69002db17eec7e80635e42cbde188814d36c7308fce28c3d7e11af389cd4b363"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000162566-000-26f6f01c6aef"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/eb291a3ce33c3155e1a3884d3a0df192d3ca3aafd102779f0b0aa9e17b6ace46"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000000807-000-3e0592ea53dd"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/eb05b070af0f4bf7b1cc1b596238ef4680c223a11b3a8a5443386b32d33af9c3"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/chapter/78"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        },
+        {
+          "assertions": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/98894631636b2801c8fc98a305df9da3f08c9358fd54be4077ff726807b34985",
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/127b6cd87cdb9d435d807d2ba7b0f8da6c565175ccdeac0b61648149222a3ff6"
+          ],
+          "records": [
+            "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+            "https://chris-page-gov.github.io/okf-dwp/id/chapter/78"
+          ],
+          "seed": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+        }
+      ]
+    },
+    "source_context_dependencies": [
+      {
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001704-000-2f0f0ecb1cec",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001401-000-b59002efa8b9",
+        "assertion_id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/28d48e34f73b1768236b92ca902f67200a2a899d18409af71c9fcffdff04ae46",
+        "guard_matched": true,
+        "source_selected": true,
+        "target_selected": true,
+        "relationship_retained": false,
+        "whole_endpoints_and_relationship_retained": false,
+        "omission_reasons": [
+          {
+            "code": "relationship_byte_budget",
+            "message": "An assertion outside the retained paths was omitted whole to preserve source evidence within the byte budget. Its exact incident metadata remains source-bound."
+          }
+        ]
+      }
+    ],
+    "literal_chapter_routes": [
+      {
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+        "assertion_id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/7e298531c2c8433db52ddd2990516dac38da05326a3a410bba6ca79b84cd312d",
+        "guard_matched": true,
+        "source_selected": true,
+        "target_selected": false,
+        "relationship_retained": false,
+        "whole_endpoints_and_relationship_retained": false,
+        "omission_reasons": [
+          {
+            "code": "missing_required_evidence",
+            "message": "Evidence required by Whole-unit research selection: Income Support prisoner applicable amount evidence profile v1 was absent, omitted or lacked governance."
+          },
+          {
+            "code": "missing_required_evidence",
+            "message": "Evidence required by Whole-unit research selection: Legacy JSA availability during custody evidence profile v1 was absent, omitted or lacked governance."
+          }
+        ]
+      },
+      {
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53",
+        "assertion_id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/3f326670b460a1b844d01662142c124b20a8b860039254c3c4913cc2d20fcdbe",
+        "guard_matched": true,
+        "source_selected": true,
+        "target_selected": false,
+        "relationship_retained": false,
+        "whole_endpoints_and_relationship_retained": false,
+        "omission_reasons": [
+          {
+            "code": "missing_required_evidence",
+            "message": "Evidence required by Whole-unit research selection: Both captured ESA components evidence profile v1 was absent, omitted or lacked governance."
+          }
+        ]
+      },
+      {
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54",
+        "assertion_id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/09eca6cf65bfbc712fc5ec5c837868089c9f6895509deb8e1a5370bac29c2df0",
+        "guard_matched": true,
+        "source_selected": true,
+        "target_selected": false,
+        "relationship_retained": false,
+        "whole_endpoints_and_relationship_retained": false,
+        "omission_reasons": [
+          {
+            "code": "missing_required_evidence",
+            "message": "Evidence required by Whole-unit research selection: Both captured ESA components evidence profile v1 was absent, omitted or lacked governance."
+          }
+        ]
+      },
+      {
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/chapter/78",
+        "assertion_id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/custody-restoration/127b6cd87cdb9d435d807d2ba7b0f8da6c565175ccdeac0b61648149222a3ff6",
+        "guard_matched": true,
+        "source_selected": true,
+        "target_selected": false,
+        "relationship_retained": false,
+        "whole_endpoints_and_relationship_retained": false,
+        "omission_reasons": [
+          {
+            "code": "missing_required_evidence",
+            "message": "Evidence required by Whole-unit research selection: State Pension Credit prisoner credit rates evidence profile v1 was absent, omitted or lacked governance."
+          }
+        ]
+      }
+    ],
+    "open_obligation_ids": [
+      "https://chris-page-gov.github.io/okf-dwp/id/obligation/custody-units/esa-custody-regimes-v1/legacy-regime-date",
+      "https://chris-page-gov.github.io/okf-dwp/id/obligation/custody-units/esa-custody-regimes-v1/remaining-qualifications",
+      "https://chris-page-gov.github.io/okf-dwp/id/obligation/custody-units/esa-custody-regimes-v1/source-boundaries",
+      "https://chris-page-gov.github.io/okf-dwp/id/obligation/custody-units/esa-custody-regimes-v1/specialist-and-law",
+      "https://chris-page-gov.github.io/okf-dwp/id/obligation/custody-units/is-prisoner-applicable-amount-v1/legacy-regime-date",
+      "https://chris-page-gov.github.io/okf-dwp/id/obligation/custody-units/is-prisoner-applicable-amount-v1/remaining-qualifications",
+      "https://chris-page-gov.github.io/okf-dwp/id/obligation/custody-units/is-prisoner-applicable-amount-v1/source-boundaries",
+      "https://chris-page-gov.github.io/okf-dwp/id/obligation/custody-units/is-prisoner-applicable-amount-v1/specialist-and-law",
+      "https://chris-page-gov.github.io/okf-dwp/id/obligation/custody-units/legacy-jsa-custody-availability-v1/legacy-regime-date",
+      "https://chris-page-gov.github.io/okf-dwp/id/obligation/custody-units/legacy-jsa-custody-availability-v1/remaining-qualifications",
+      "https://chris-page-gov.github.io/okf-dwp/id/obligation/custody-units/legacy-jsa-custody-availability-v1/source-boundaries",
+      "https://chris-page-gov.github.io/okf-dwp/id/obligation/custody-units/legacy-jsa-custody-availability-v1/specialist-and-law",
+      "https://chris-page-gov.github.io/okf-dwp/id/obligation/custody-units/pc-prisoner-credit-rates-v1/legacy-regime-date",
+      "https://chris-page-gov.github.io/okf-dwp/id/obligation/custody-units/pc-prisoner-credit-rates-v1/remaining-qualifications",
+      "https://chris-page-gov.github.io/okf-dwp/id/obligation/custody-units/pc-prisoner-credit-rates-v1/source-boundaries",
+      "https://chris-page-gov.github.io/okf-dwp/id/obligation/custody-units/pc-prisoner-credit-rates-v1/specialist-and-law"
+    ],
+    "unmatched_original_selector_observations": [
+      {
+        "limitation": "Retained original selector observation only; it may be a reference or reserved label. No paragraph identity or legal dependency is inferred.",
+        "original_declared_label": "24213",
+        "original_page_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0041",
+        "status": "not-a-matched-governing-paragraph-label"
+      },
+      {
+        "limitation": "Retained original selector observation only; it may be a reference or reserved label. No paragraph identity or legal dependency is inferred.",
+        "original_declared_label": "44561",
+        "original_page_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0131",
+        "status": "not-a-matched-governing-paragraph-label"
+      },
+      {
+        "limitation": "Retained original selector observation only; it may be a reference or reserved label. No paragraph identity or legal dependency is inferred.",
+        "original_declared_label": "42867",
+        "original_page_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0077",
+        "status": "not-a-matched-governing-paragraph-label"
+      },
+      {
+        "limitation": "Retained original selector observation only; it may be a reference or reserved label. No paragraph identity or legal dependency is inferred.",
+        "original_declared_label": "42579",
+        "original_page_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0077",
+        "status": "not-a-matched-governing-paragraph-label"
+      },
+      {
+        "limitation": "Retained original selector observation only; it may be a reference or reserved label. No paragraph identity or legal dependency is inferred.",
+        "original_declared_label": "42600",
+        "original_page_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0079",
+        "status": "not-a-matched-governing-paragraph-label"
+      },
+      {
+        "limitation": "Retained original selector observation only; it may be a reference or reserved label. No paragraph identity or legal dependency is inferred.",
+        "original_declared_label": "78656",
+        "original_page_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0102",
+        "status": "not-a-matched-governing-paragraph-label"
+      },
+      {
+        "limitation": "Retained original selector observation only; it may be a reference or reserved label. No paragraph identity or legal dependency is inferred.",
+        "original_declared_label": "78030",
+        "original_page_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0105",
+        "status": "not-a-matched-governing-paragraph-label"
+      }
+    ],
+    "original_obligations_closed": 0,
+    "scope_warning": "The historical page expectations and this bounded unit selection are separate. Source delivery, exact paths and catalogue metadata do not establish current ADM applicability, complete qualifications, specialist acceptance or an individual benefit decision."
+  },
+  "conclusions": [
+    "The evaluator finished six source-bound assemblies with no integrity error. That is not acceptance of the original demonstration delivery.",
+    "The imprisonment package retains 20 of 53 active selected source units and 43 of 89 declared path occurrences at 512 KiB.",
+    "DMG 12002, 12003, 12015 and 12016 complete source records are selected. The explicit 12003-to-12002 requires edge is nevertheless omitted as relationship_byte_budget.",
+    "None of the four declared 12015 chapter paths has both complete endpoints and its relationship retained. All four chapter scope endpoints are absent.",
+    "The 64-file retrieval budget is exhausted, and node/byte limits also truncate. This is a mixture of retrieval/allocation and repeated metadata, not missing source text or a source-integrity failure.",
+    "Requirement and guard metadata alone occupy 198669 bytes. Full source assertions and explanatory paths also repeat provenance and routing detail.",
+    "At 32 KiB both known questions contain no source evidence. Hospital at 512 KiB contains 38 source units without activating custody profiles. The unknown control contains no source evidence at either budget.",
+    "All results remain insufficient. No new assembly, model or network call was made to diagnose the retained archives."
+  ],
+  "next_step": "Review a generic runtime allocation/metadata correction against this retained failure. Do not weaken source completeness, guards, original expectations or insufficiency. Freeze any new engine/protocol as a separate attempt."
+}

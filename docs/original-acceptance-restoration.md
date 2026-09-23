@@ -60,3 +60,9 @@ node scripts/evaluate_original_acceptance.mjs --explorer-root /path/to/pinned/ok
 Add `--check` to replay that exact attempt against its pinned source and engine. A fresh run refuses to overwrite an existing attempt. Failures preserve their completed rows and input identities.
 
 The report separates all six original requirements from active translated profiles, retained and omitted whole units, exact paths, the 12003-to-12002 dependency and the four literal chapter routes. It also retains budget omissions, source-boundary warnings, the dated ADM scope caveat and unmatched original selectors. An integrity error is a failed evaluation, not an acceptable insufficient answer. All three questions are expected to remain insufficient; the hospital question must not activate custody profiles, and unrelated vocabulary must not acquire source evidence.
+
+### First retained result
+
+The [first six-assembly run](../evaluation/manual-structure/original-acceptance/runs/acceptance-01/README.md) passes source-integrity and boundary controls but does **not** deliver the complete original demonstration chain. At 512 KiB, imprisonment retains 20 of 53 selected source units and 43 of 89 declared path occurrences. DMG 12002, 12003, 12015 and 12016 are present, but the explicit 12003-to-12002 dependency is pruned and all four chapter scope routes are incomplete. Retrieval and allocation limits remain visible. At 32 KiB no source evidence fits.
+
+The hospital control retains 38 source units at 512 KiB without acquiring custody profiles; unrelated vocabulary retains none. All packages remain insufficient. A later generic runtime correction must be evaluated separately and preserve this result.
