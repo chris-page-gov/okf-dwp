@@ -1,0 +1,3394 @@
+{
+  "@context": {
+    "@vocab": "https://chris-page-gov.github.io/okf-dwp/vocab/structured-custody-restoration/",
+    "dct": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@id": "https://chris-page-gov.github.io/okf-dwp/id/authoring/structured-units/custody-restoration",
+  "chapter_routes": [
+    {
+      "literal": "DMG Chapter 24",
+      "original_assertion_id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/c5b3b2176c402e6ff6ae21fe92301e5cab0ba63e6eb004e7ca5ac0346110998a",
+      "source": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+      "target": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+      "when_all": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ]
+    },
+    {
+      "literal": "DMG Chapter 53",
+      "original_assertion_id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/10a3cdb0a56d15d8a3953d914e17ce53010f4924c58aca4d44876495c23133a6",
+      "source": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+      "target": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53",
+      "when_all": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ]
+    },
+    {
+      "literal": "DMG Chapter 54",
+      "original_assertion_id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/2df2b62054c06896e19dc0fb46b5ed04c6918cb8c9416e991397d63d6fc9472b",
+      "source": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+      "target": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54",
+      "when_all": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ]
+    },
+    {
+      "literal": "DMG Chapter 78",
+      "original_assertion_id": "https://chris-page-gov.github.io/okf-dwp/id/assertion/a181621cec3dcfd62a3ed6dd4c18d568827816a5b80814feaf1f629907e1fedb",
+      "source": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+      "target": "https://chris-page-gov.github.io/okf-dwp/id/chapter/78",
+      "when_all": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "literal": "these benefits",
+      "reason": "12003 explicitly refers to these benefits: retain the 12002 list as its source context. The list is not a blanket four-benefit entitlement rule. This is a source-context dependency, not a legal conclusion.",
+      "source": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001704-000-2f0f0ecb1cec",
+      "target": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001401-000-b59002efa8b9",
+      "when_all": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ]
+    }
+  ],
+  "legacy_inputs": [
+    {
+      "bytes": 416647,
+      "path": "full-dmg/context/assembly-index.json",
+      "sha256": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54"
+    },
+    {
+      "bytes": 65872,
+      "path": "knowledge/full-dmg/imprisonment/context-profile.yamlld",
+      "sha256": "fa215e840e15672fc24bdaa52656e8e80fbeb392bc535f09c152a1c27f179514"
+    },
+    {
+      "bytes": 56752,
+      "path": "evaluation/context-assembly/imprisonment-case.json",
+      "sha256": "9eab17eb3a01fb8e3e7137d4440386da752d31e1f6a746713a02cd1ebe9108fd"
+    },
+    {
+      "bytes": 1347,
+      "path": "evaluation/context-assembly/source-selectors.json",
+      "sha256": "7fade04ede5af33eee070023faa4a504d60b05690ac608fe74fb2fa99ce91310"
+    },
+    {
+      "bytes": 2418,
+      "path": "evaluation/remote-mcp/hospital-case.json",
+      "sha256": "73e64cc295735bce164ea3d7c2dd6c69579d9fed09da9420d2ce2d1cd48dd2f5"
+    }
+  ],
+  "limitations": [
+    "Independent experimental source navigation and model-assisted selection; no specialist acceptance or individual benefit decision.",
+    "Original six custody requirements and original acceptance expectations remain exact and separate. New unit selections do not satisfy old page IDs by substitution.",
+    "Historical 15 September profile wording that ADM bodies were absent describes that old release. The later corpus includes ADM;12016 routes remain evidence for separate contemporary-regime review.",
+    "The two captured catalogue observations retain their exact dated source text; neither is a memo body or current-law assurance.",
+    "The 33 page locations map to 137 whole units; only the narrower source-read subset is made required by a translated selection profile. Overlap and a matched paragraph label do not establish completeness.",
+    "Not every original page dependency is safely translatable to individual units; none is expanded into Cartesian legal dependencies. Missing qualification branches, source boundaries, scope and legal checks remain explicit."
+  ],
+  "page_mappings": [
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0002",
+      "original_record_sha256": "ddf60f9cf1597a468a8480a64c64211d40af1fb6ed4d5d9993b41e86b3333fcd",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000000000-000-3e50b10190b4",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000000807-000-3e0592ea53dd",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001401-000-b59002efa8b9"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+      "original_record_sha256": "6ed79a81663c749625651efc5d9763e972dad406c7c0e1cc7ff0e5e056d1e975",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001401-000-b59002efa8b9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001704-000-2f0f0ecb1cec",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002433-000-4e5023b882cd",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002725-000-7ccc36ebf542"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0037",
+      "original_record_sha256": "e6ff82813ee4d17cb5ead6e08c39bcccd410f142608245848268406a9cb4f6fa",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000049888-000-d3509b60fb96",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000049990-000-8e7341cc0909",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000050274-000-8b53eaaa3b55",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000050634-000-f48ab7881f92",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000051706-000-49de9ee5a9b4",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000051728-000-57e75a1a1522",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000051816-000-0bbd6c576c3d"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0039",
+      "original_record_sha256": "7c55075c24cd2d1e4dbd934fbe8e71f92cd80725719f26481d077b24d23a19db",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000053668-000-1af3f4ac03a5",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000054300-000-e6e2e2d11327",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000055590-000-4bd7eee94baf"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0040",
+      "original_record_sha256": "a0b1799cdcde8144e00b12f96879311c0369e26dc4d1ec0edf214f71f4332495",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000055590-000-4bd7eee94baf",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000056467-000-cf1fcc9a489e",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000057149-000-1ce7197fdc57",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000057462-000-0de86c21a52b",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000057614-000-75d006833e13",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000058051-000-ab8fd0ec9140"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0041",
+      "original_record_sha256": "41492584df10e835f4f1139c842c0131e5ee5be9c0ba7201dbec29de25004fa4",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000058748-000-0d4f7886aa96",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059271-000-76c7a59dafa9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059293-000-0b53119ff691",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059335-000-902ee8f29e3e",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059601-000-745281ebbba7",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059873-000-29e5413bef73",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000060256-000-cf42fe92bb5d"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0042",
+      "original_record_sha256": "2cf4805aa52d33d8b0bea5358868861e3ebff3773c44bb5b5d8b3b1b36ea3ad6",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000060256-000-cf42fe92bb5d",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000060712-000-4e4e263efa53",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000061456-000-0c2d32f1df60",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000061987-000-2837253bb094",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000062617-000-682c6909cf3e",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000062639-000-f8c4a68d5b96",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000062728-000-b43dee1d2ab7"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0043",
+      "original_record_sha256": "b388a99a6b526a38c900610b5d32888d9492068c59579fbb77aecaa340297f59",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000062728-000-b43dee1d2ab7",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000063957-000-73e124c38066",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000064312-000-e01b0343ca8d",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000064822-000-5cee7c23a7c5",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000065477-000-469e5e98ffdd",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000065499-000-2eaca2839fdd"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0129",
+      "original_record_sha256": "be27c03601fd4f1f41f884ed549cdbe8cdd16d6c2d7075485b22625d5638f0e2",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000194574-000-aeb76e24ad03",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000194908-000-dcf662fd9b4f",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000195362-000-b134ba928b04"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0131",
+      "original_record_sha256": "539428addf92c429eb8c6c093aac46effde64b599421b04721876035be51f788",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000197683-000-56ddb8a48045",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000198634-000-75d45e24fa24",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000199573-000-05d0176d1ad1"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0077",
+      "original_record_sha256": "26a0c5f67cdbe05af6365328e0373132a50259c1453be0d8ed98ebe3e1263fda",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000154125-000-ac681b52cf70",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000154655-000-4d82d10235e4",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000154846-000-97815af5a959",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000154989-000-b9918770d389",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000155810-000-30e865473bf9"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0078",
+      "original_record_sha256": "af06b76b0989f7dec43db78a90c01f33972ee7b7d7e0c7d18d3f4ad63250bd9d",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000155810-000-30e865473bf9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000157109-000-befb607b50c5",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000158032-000-9ea6ac982f35"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0079",
+      "original_record_sha256": "42045f9c3344450d5ae0c35c8d9a77bdf74ebdc3b2d575285debb08acdef85a3",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000158032-000-9ea6ac982f35",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000159087-000-005a79ebccea",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000159104-000-d73b0d9cf17c",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000159634-000-0191c45a601f",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000160154-000-12429b9df600"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0053",
+      "original_record_sha256": "6b54e0e8cecc3e46a31d76ed718c80e163ee0918f15f106cf1e3d334d5a3e424",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000100278-000-6464ffd39cde",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101137-000-28fbb28525ab",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101678-000-1c49726d47ba"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0054",
+      "original_record_sha256": "a73e8577b5968ff03cbca78fa48d5a3c71413dfcaf7e7d7aca0e2fe1e7f554b8",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101678-000-1c49726d47ba",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101965-000-ec2d0fb1c02a",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000102383-000-d03aa0d90ce5",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000102782-000-e22b25a83eb7",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000103136-000-0f11e1e31cb7"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0055",
+      "original_record_sha256": "105ff05fbe0aee9bf6e86f6ef117e640307ee1db6a3f0573afa7f30bbee77eb6",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000103136-000-0f11e1e31cb7",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000103529-000-5fb71646586a",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000103899-000-2bd1b3d1ca96",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000104261-000-cc69ca99fcae"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0056",
+      "original_record_sha256": "efb559e990daea33657504a65dd2a223ea5de9e17acd6b56cb180eb304eb6b58",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000104793-000-7f5b84bdd622",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000105033-000-ee58a892d6e1",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000105287-000-f9cb41f468b7",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000105783-000-8dc2976f80f8",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000106284-000-5afc5ad777ff"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0057",
+      "original_record_sha256": "2d2b2338d402a08186350937d511f4615904591a06f40ea74873d1923c6a3f79",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000106284-000-5afc5ad777ff",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000106688-000-10b8a68190d7",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000107015-000-389e10d58756",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000107900-000-0327dcc66fe9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000108224-000-0a3b8336a82e",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000108414-000-a06e345b1f30",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000108763-000-6c7ac077dbb8"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0058",
+      "original_record_sha256": "4194185e22f9cb9d13825ec34479039d91ed65217e5d7b1a9065ca3922e5659b",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000108763-000-6c7ac077dbb8",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000109190-000-9d40f4a9e9d4",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000109481-000-518da4c5aad5",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000109888-000-5b13eab636a6",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000110104-000-e8567e046860",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000110817-000-594a54dc0184",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000110945-000-407a081f36a4",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000111278-000-6617276d2d18"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0059",
+      "original_record_sha256": "d9f7b55dc5d55540dd5db588d370fd5683962e89abb58ab763850590f7027763",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000111278-000-6617276d2d18",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000111659-000-b680ae2edfb1",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000112348-000-f412369df86e",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000112898-000-170190b396e6",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000113180-000-dca23f1935f2",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000113538-000-920502724ba9"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0060",
+      "original_record_sha256": "90d6780da17772a6054a0d1ef86de6271deb98b25ac12ec8e615acf63e5bb666",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000113538-000-920502724ba9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000114226-000-7410ad87b836"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0031",
+      "original_record_sha256": "601af5111917d96ad754a33fa37b9ed44b578c10533ec14190e35b5c0805aaf2",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000042028-000-09101ce2530f",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000042145-000-fa6132ed72e1",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000043230-000-08beb513cb73"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0032",
+      "original_record_sha256": "3f55e6ee3c9e0c3dcaa9e4ed9761d368d30048c7eb9814a07bf74d9877b6283a",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000043230-000-08beb513cb73",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000044104-000-8109797de6e1",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000044775-000-a17fdfcff472",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045080-000-e6b7d309e756",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045209-000-3e41b33dd258",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045231-000-593ebc9bc8c2",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045272-000-b347af7fb067",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045534-000-1fa0918f2530"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0033",
+      "original_record_sha256": "8f6110ae49d7755f7bde876c14c008e7f91ee44e4117f2004ac2cb3660c867c2",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045534-000-1fa0918f2530",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045807-000-a32e1960e55e"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0035",
+      "original_record_sha256": "ab1f202136b38d9279299402892c375ab9170bf1a974010ab268ec7d2148a984",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045807-000-a32e1960e55e",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000046594-000-78db81b437aa",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000046953-000-abe41e72e07b",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000047808-000-1ab1634f5c6f",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000048942-000-4fae6f5e244e",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000048964-000-f78b8449698c"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0100",
+      "original_record_sha256": "d6adf961fae8f473b9e0f94514051085372b941e54f792d40eccc5926bdd5cc0",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000151628-000-6e802d003b87",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000152040-000-9ca1b2da0700",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000152373-000-4b846b1add6c"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0101",
+      "original_record_sha256": "5921d8e7cea2b71bcb1b0141be38564f9499918e66d76db6cc9ec0a95787b89c",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000152373-000-4b846b1add6c",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000153186-000-955e28ca62ee",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000153889-000-1feb9195aa09"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0102",
+      "original_record_sha256": "5cb645a27a1ef91d4eb7f2c5fbf2b1698a581bf3d654a1c8702ef59c2499fa88",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000153889-000-1feb9195aa09",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000154396-000-a0caf2b18415",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000154679-000-f6dae404d8e3",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000154805-000-0e7582f0af75",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000155310-000-fa90296b84f9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000155652-000-16be936fb430"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0103",
+      "original_record_sha256": "427b55a05a2416ed7d82f13eefd5aa0accd5ae5eef46a0e62b3289f0344a5c50",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000155652-000-16be936fb430",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000156152-000-be74d4d63e78",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000156377-000-59943020685f",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000156647-000-f99d96444925",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000156825-000-6a2912e2b93a",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000157461-000-7c2bf82c4fc6"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0104",
+      "original_record_sha256": "e1689b7eeec1f7e30ebd46f094ad02c94098137c948268b9c19ecac594685e60",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000157461-000-7c2bf82c4fc6",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000157970-000-4bd182be5b57",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000158443-000-e7938993b2ca",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000158816-000-d51e0915f7ec",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000159381-000-f10796f6dd1b"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0105",
+      "original_record_sha256": "f9f6e4200cbef54a7405113d5e071e3de8d520bf83525a99dc16f41ab76c0013",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000159381-000-f10796f6dd1b",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000159884-000-d8e45fe1e7ce",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000160382-000-88447d945a9b",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000161082-000-d0bfcf190c26"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0106",
+      "original_record_sha256": "6114b6a436d89e6514b31c6139d4998b34d5db5d8285fc42e98608b606fa76b6",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000161082-000-d0bfcf190c26",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000161550-000-149a3c553618",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000161815-000-2b1e402e291f",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000162402-000-e76433022882",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000162566-000-26f6f01c6aef",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000162817-000-d339f948de7d"
+      ]
+    },
+    {
+      "mapping_status": "exact-source-location-overlap-only",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0107",
+      "original_record_sha256": "143f32f78c1da5eada44fac75aaa71169292564a598001cbe5a363a381fa778f",
+      "unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000162817-000-d339f948de7d",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000163395-000-6001fb962e24",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000163780-000-7ae379ce9a92",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000164393-000-4367a1751bf0"
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "covers": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/esa-contributory",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ],
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/requirement/custody-units/esa-contributory-custody-v1",
+      "label": "Whole-unit research selection: Contributory ESA disqualification and custody evidence profile v1",
+      "legacy_requirement_id": "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/esa-contributory-custody-v1",
+      "missing_obligations": [
+        {
+          "key": "legacy-regime-date",
+          "label": "Establish applicable benefit variant/date separately;12016 routes contemporary and other regimes to ADM. No current individual applicability is established.",
+          "status": "unresolved"
+        },
+        {
+          "key": "remaining-qualifications",
+          "label": "ESA(Cont) distinguishes suspension/disqualification, more-than-six-week LCW and entitlement-day consequences, the no-penalty/mental-disorder branches and relevant whole examples. Other fine-default/court-order/suspension qualifications and stale internal paragraph references remain unreconciled. Selection is bounded and cannot satisfy the entire original page evidence profile.",
+          "status": "unresolved"
+        },
+        {
+          "key": "source-boundaries",
+          "label": "Whole retained source-unit text and exact spans are available, but machine passage boundaries and printed cross-reference anomalies remain unresolved.",
+          "status": "unresolved"
+        },
+        {
+          "key": "specialist-and-law",
+          "label": "Specialist legal review, operative legislation/case law, source version reconciliation and absent memo bodies remain outstanding.",
+          "status": "unresolved"
+        }
+      ],
+      "selected_unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000000807-000-3e0592ea53dd",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001401-000-b59002efa8b9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001704-000-2f0f0ecb1cec",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002725-000-7ccc36ebf542",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000194908-000-dcf662fd9b4f",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000198634-000-75d45e24fa24",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000155810-000-30e865473bf9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000157109-000-befb607b50c5",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000158032-000-9ea6ac982f35",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101137-000-28fbb28525ab",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101678-000-1c49726d47ba",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101965-000-ec2d0fb1c02a",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000102383-000-d03aa0d90ce5",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000102782-000-e22b25a83eb7",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000105783-000-8dc2976f80f8",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000107015-000-389e10d58756",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000112898-000-170190b396e6",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000113180-000-dca23f1935f2",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000113538-000-920502724ba9"
+      ],
+      "source_read_note": "ESA(Cont) distinguishes suspension/disqualification, more-than-six-week LCW and entitlement-day consequences, the no-penalty/mental-disorder branches and relevant whole examples. Other fine-default/court-order/suspension qualifications and stale internal paragraph references remain unreconciled.",
+      "when_all": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/esa-contributory",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ]
+    },
+    {
+      "covers": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/esa",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ],
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/requirement/custody-units/esa-custody-regimes-v1",
+      "label": "Whole-unit research selection: Both captured ESA components evidence profile v1",
+      "legacy_requirement_id": "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/esa-custody-regimes-v1",
+      "missing_obligations": [
+        {
+          "key": "legacy-regime-date",
+          "label": "Establish applicable benefit variant/date separately;12016 routes contemporary and other regimes to ADM. No current individual applicability is established.",
+          "status": "unresolved"
+        },
+        {
+          "key": "remaining-qualifications",
+          "label": "The broad ESA wording routes to separately retained legacy contributory and income-related passages, including their different entitlement/payment mechanisms and complete examples. It does not resolve which regime applies or translate to New Style ESA. Selection is bounded and cannot satisfy the entire original page evidence profile.",
+          "status": "unresolved"
+        },
+        {
+          "key": "source-boundaries",
+          "label": "Whole retained source-unit text and exact spans are available, but machine passage boundaries and printed cross-reference anomalies remain unresolved.",
+          "status": "unresolved"
+        },
+        {
+          "key": "specialist-and-law",
+          "label": "Specialist legal review, operative legislation/case law, source version reconciliation and absent memo bodies remain outstanding.",
+          "status": "unresolved"
+        }
+      ],
+      "selected_unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000000807-000-3e0592ea53dd",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001401-000-b59002efa8b9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001704-000-2f0f0ecb1cec",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002725-000-7ccc36ebf542",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000194908-000-dcf662fd9b4f",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000198634-000-75d45e24fa24",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000155810-000-30e865473bf9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000157109-000-befb607b50c5",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000158032-000-9ea6ac982f35",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101137-000-28fbb28525ab",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101678-000-1c49726d47ba",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101965-000-ec2d0fb1c02a",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000102383-000-d03aa0d90ce5",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000102782-000-e22b25a83eb7",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000105783-000-8dc2976f80f8",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000107015-000-389e10d58756",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000112898-000-170190b396e6",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000113180-000-dca23f1935f2",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000113538-000-920502724ba9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000042145-000-fa6132ed72e1",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000043230-000-08beb513cb73",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045807-000-a32e1960e55e",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000046594-000-78db81b437aa",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000046953-000-abe41e72e07b",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000047808-000-1ab1634f5c6f"
+      ],
+      "source_read_note": "The broad ESA wording routes to separately retained legacy contributory and income-related passages, including their different entitlement/payment mechanisms and complete examples. It does not resolve which regime applies or translate to New Style ESA.",
+      "when_all": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/esa",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ]
+    },
+    {
+      "covers": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/esa-income-related",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ],
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/requirement/custody-units/esa-income-related-custody-v1",
+      "label": "Whole-unit research selection: Income-related ESA prisoner applicable amount evidence profile v1",
+      "legacy_requirement_id": "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/esa-income-related-custody-v1",
+      "missing_obligations": [
+        {
+          "key": "legacy-regime-date",
+          "label": "Establish applicable benefit variant/date separately;12016 routes contemporary and other regimes to ADM. No current individual applicability is established.",
+          "status": "unresolved"
+        },
+        {
+          "key": "remaining-qualifications",
+          "label": "ESA(IR) prisoner/exception definitions, hospital branch, nil applicable amount, remand housing branch and complete Jackie/Christian examples, including LCW consequences. Other detention definitions and housing eligibility remain unreconciled. Selection is bounded and cannot satisfy the entire original page evidence profile.",
+          "status": "unresolved"
+        },
+        {
+          "key": "source-boundaries",
+          "label": "Whole retained source-unit text and exact spans are available, but machine passage boundaries and printed cross-reference anomalies remain unresolved.",
+          "status": "unresolved"
+        },
+        {
+          "key": "specialist-and-law",
+          "label": "Specialist legal review, operative legislation/case law, source version reconciliation and absent memo bodies remain outstanding.",
+          "status": "unresolved"
+        }
+      ],
+      "selected_unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000000807-000-3e0592ea53dd",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001401-000-b59002efa8b9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001704-000-2f0f0ecb1cec",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002725-000-7ccc36ebf542",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000157109-000-befb607b50c5",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000158032-000-9ea6ac982f35",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000042145-000-fa6132ed72e1",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000043230-000-08beb513cb73",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045807-000-a32e1960e55e",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000046594-000-78db81b437aa",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000046953-000-abe41e72e07b",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000047808-000-1ab1634f5c6f"
+      ],
+      "source_read_note": "ESA(IR) prisoner/exception definitions, hospital branch, nil applicable amount, remand housing branch and complete Jackie/Christian examples, including LCW consequences. Other detention definitions and housing eligibility remain unreconciled.",
+      "when_all": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/esa-income-related",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ]
+    },
+    {
+      "covers": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/income-support",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ],
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/requirement/custody-units/is-prisoner-applicable-amount-v1",
+      "label": "Whole-unit research selection: Income Support prisoner applicable amount evidence profile v1",
+      "legacy_requirement_id": "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/is-prisoner-applicable-amount-v1",
+      "missing_obligations": [
+        {
+          "key": "legacy-regime-date",
+          "label": "Establish applicable benefit variant/date separately;12016 routes contemporary and other regimes to ADM. No current individual applicability is established.",
+          "status": "unresolved"
+        },
+        {
+          "key": "remaining-qualifications",
+          "label": "IS prisoner definition, exceptions, custody days, nil applicable amount and explicit no-entitlement note, remand housing branch and the hospital/technical-lifer qualifications. Civil/overseas/remaining definition branches and housing eligibility remain unreconciled. Selection is bounded and cannot satisfy the entire original page evidence profile.",
+          "status": "unresolved"
+        },
+        {
+          "key": "source-boundaries",
+          "label": "Whole retained source-unit text and exact spans are available, but machine passage boundaries and printed cross-reference anomalies remain unresolved.",
+          "status": "unresolved"
+        },
+        {
+          "key": "specialist-and-law",
+          "label": "Specialist legal review, operative legislation/case law, source version reconciliation and absent memo bodies remain outstanding.",
+          "status": "unresolved"
+        }
+      ],
+      "selected_unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000000807-000-3e0592ea53dd",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001401-000-b59002efa8b9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001704-000-2f0f0ecb1cec",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002725-000-7ccc36ebf542",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000054300-000-e6e2e2d11327",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000055590-000-4bd7eee94baf",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059335-000-902ee8f29e3e",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059601-000-745281ebbba7",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059873-000-29e5413bef73",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000060256-000-cf42fe92bb5d",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000060712-000-4e4e263efa53",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000061456-000-0c2d32f1df60",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000061987-000-2837253bb094"
+      ],
+      "source_read_note": "IS prisoner definition, exceptions, custody days, nil applicable amount and explicit no-entitlement note, remand housing branch and the hospital/technical-lifer qualifications. Civil/overseas/remaining definition branches and housing eligibility remain unreconciled.",
+      "when_all": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/income-support",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ]
+    },
+    {
+      "covers": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/jsa",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ],
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/requirement/custody-units/legacy-jsa-custody-availability-v1",
+      "label": "Whole-unit research selection: Legacy JSA availability during custody evidence profile v1",
+      "legacy_requirement_id": "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/legacy-jsa-custody-availability-v1",
+      "missing_obligations": [
+        {
+          "key": "legacy-regime-date",
+          "label": "Establish applicable benefit variant/date separately;12016 routes contemporary and other regimes to ADM. No current individual applicability is established.",
+          "status": "unresolved"
+        },
+        {
+          "key": "remaining-qualifications",
+          "label": "Legacy JSA availability, the 96-hour non-prisoner exception and its whole example. Chapter 21 availability definitions, partner/housing branches and current regime remain unreconciled. Selection is bounded and cannot satisfy the entire original page evidence profile.",
+          "status": "unresolved"
+        },
+        {
+          "key": "source-boundaries",
+          "label": "Whole retained source-unit text and exact spans are available, but machine passage boundaries and printed cross-reference anomalies remain unresolved.",
+          "status": "unresolved"
+        },
+        {
+          "key": "specialist-and-law",
+          "label": "Specialist legal review, operative legislation/case law, source version reconciliation and absent memo bodies remain outstanding.",
+          "status": "unresolved"
+        }
+      ],
+      "selected_unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000000807-000-3e0592ea53dd",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001401-000-b59002efa8b9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001704-000-2f0f0ecb1cec",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002725-000-7ccc36ebf542",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000049990-000-8e7341cc0909",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000050274-000-8b53eaaa3b55",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000050634-000-f48ab7881f92"
+      ],
+      "source_read_note": "Legacy JSA availability, the 96-hour non-prisoner exception and its whole example. Chapter 21 availability definitions, partner/housing branches and current regime remain unreconciled.",
+      "when_all": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/jsa",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ]
+    },
+    {
+      "covers": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ],
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/requirement/custody-units/pc-prisoner-credit-rates-v1",
+      "label": "Whole-unit research selection: State Pension Credit prisoner credit rates evidence profile v1",
+      "legacy_requirement_id": "https://chris-page-gov.github.io/okf-dwp/id/context-requirement/pc-prisoner-credit-rates-v1",
+      "missing_obligations": [
+        {
+          "key": "legacy-regime-date",
+          "label": "Establish applicable benefit variant/date separately;12016 routes contemporary and other regimes to ADM. No current individual applicability is established.",
+          "status": "unresolved"
+        },
+        {
+          "key": "remaining-qualifications",
+          "label": "SPC distinguishes Guarantee Credit and Savings Credit mechanisms, prisoner/remand/bail definitions and 52-week limits, additional amounts and claimant/partner revisions. Remaining detention definitions, underlying housing/addition tests and legal currency remain unreconciled. Selection is bounded and cannot satisfy the entire original page evidence profile.",
+          "status": "unresolved"
+        },
+        {
+          "key": "source-boundaries",
+          "label": "Whole retained source-unit text and exact spans are available, but machine passage boundaries and printed cross-reference anomalies remain unresolved.",
+          "status": "unresolved"
+        },
+        {
+          "key": "specialist-and-law",
+          "label": "Specialist legal review, operative legislation/case law, source version reconciliation and absent memo bodies remain outstanding.",
+          "status": "unresolved"
+        }
+      ],
+      "selected_unit_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000152040-000-9ca1b2da0700",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000152373-000-4b846b1add6c",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000153186-000-955e28ca62ee",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000157970-000-4bd182be5b57",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000158443-000-e7938993b2ca",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000158816-000-d51e0915f7ec",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000159381-000-f10796f6dd1b",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000159884-000-d8e45fe1e7ce",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000160382-000-88447d945a9b",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000161082-000-d0bfcf190c26",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000161550-000-149a3c553618",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000161815-000-2b1e402e291f",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000162402-000-e76433022882",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000162566-000-26f6f01c6aef",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000162817-000-d339f948de7d",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000000807-000-3e0592ea53dd",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001401-000-b59002efa8b9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001704-000-2f0f0ecb1cec",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002725-000-7ccc36ebf542"
+      ],
+      "source_read_note": "SPC distinguishes Guarantee Credit and Savings Credit mechanisms, prisoner/remand/bail definitions and 52-week limits, additional amounts and claimant/partner revisions. Remaining detention definitions, underlying housing/addition tests and legal currency remain unreconciled.",
+      "when_all": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability"
+      ]
+    }
+  ],
+  "review_status": "unreviewed-specialist-review-required",
+  "schema": "okf-dwp-structured-custody-restoration.v1",
+  "scope": "Additive translation of the original frozen custody acceptance profile to exact whole source units. Preserve historical source, derived interpretation and current legal applicability as separate matters. The old page mapping is location-only; a narrower explicitly source-read selection supplies initial explanatory context without asserting complete rules.",
+  "scope_records": [
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/chapter/78",
+      "mode": "exact-historical-scope",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/chapter/78",
+      "original_record_sha256": "22bf12f371ef47367cfac481105adc58edf9caa60f553ce128444f2d71999075"
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+      "mode": "exact-historical-scope",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24",
+      "original_record_sha256": "d83c7400a88ea5bd46da4f05b958795cabc46d102fd3b9ab716f55b356ebf422"
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53",
+      "mode": "exact-historical-scope",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53",
+      "original_record_sha256": "948464851d6d92dc5b7cfbab94474ba2ccb5d88031c11ac60fb1be1134143082"
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54",
+      "mode": "exact-historical-scope",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54",
+      "original_record_sha256": "8596665a0cf7eb45acc838b77f021f497b22afc8a2ca92aecd477214a8574845"
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/scope/custody-capture/adm-m1-spare",
+      "mode": "dated-catalogue-observation",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-adm-m1-spare",
+      "original_record_sha256": "2ba2c28b0c730be35252bd0490f8801388797d5a85a8508eb963fab2403ab6c5"
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/scope/custody-capture/memo-07-20-removal",
+      "mode": "dated-catalogue-observation",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-memo-07-20-removal",
+      "original_record_sha256": "505ba67ad92c93944aebe5ee656b90acdf6b59fbaaecd8a2e40d94d8278c2637"
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/scope/legacy-imprisonment-guidance",
+      "mode": "exact-historical-scope",
+      "original_id": "https://chris-page-gov.github.io/okf-dwp/id/scope/legacy-imprisonment-guidance",
+      "original_record_sha256": "ac0107308118385ec91993db73882b10bbd393e21ba9a7eb3adc9b398e7986b9"
+    }
+  ],
+  "source_units": [
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000151628-000-6e802d003b87",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [],
+      "record_sha256": "824a999aeee912947470a601d7fc7a82533c62b3741006cdaa71ef3810c6c35b",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 412,
+          "literal_sha256": "67fa17d043acadedab34306e06e713bca9ee238bfd0c9b843b479ce60ac5e840",
+          "page": 100,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000152040-000-9ca1b2da0700",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78650"
+      ],
+      "record_sha256": "e7d591fd483a4a8fc7cb6279a07b718754aa91a283789b478db97e5aa4ddfb8d",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 745,
+          "literal_sha256": "7508c5af23da9246684020ac20cc84d71908e621c50c2d91fa6df2ee0398eebb",
+          "page": 100,
+          "start_utf8": 412
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000152373-000-4b846b1add6c",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78651"
+      ],
+      "record_sha256": "96dcedfb2c4eb5fff151b807b71c20f63deeeb809dbbdfb40d856cc28cfc185e",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1104,
+          "literal_sha256": "022c524f0a85c84fba3d85099a4d4edd9369e1be828a39aec9086516176d3107",
+          "page": 100,
+          "start_utf8": 745
+        },
+        {
+          "end_utf8": 454,
+          "literal_sha256": "5b6d7e2a33a303a46c01ce5e8dd891e3b784a699996cec60e26d76aba5206f50",
+          "page": 101,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000153186-000-955e28ca62ee",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78652"
+      ],
+      "record_sha256": "44ac27711dc1f5e1b804bcdd9fcfb432cc89f9e9388da70054c30e6b855b740a",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1157,
+          "literal_sha256": "1618515bf1b8f0ed4567a962875979bba785ec5250663476e2db7a122028035e",
+          "page": 101,
+          "start_utf8": 454
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000153889-000-1feb9195aa09",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78653"
+      ],
+      "record_sha256": "9d396800acab894fb341b7e7768ec610b0aeeedd2cb5b8e338e66a6f6827d535",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1444,
+          "literal_sha256": "c74da42013bbb8f738ae809532084f913ee41937c20d1bf17b88167119acc3d1",
+          "page": 101,
+          "start_utf8": 1157
+        },
+        {
+          "end_utf8": 220,
+          "literal_sha256": "2a8672640b6ff20d4a6e48e2e8eb0e5faa49ef25dbd0634fc0d887e3aae3ba7a",
+          "page": 102,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000154396-000-a0caf2b18415",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78654"
+      ],
+      "record_sha256": "944939b2f74b3783c80c464684a07cee73d146fa2c3ee9a88922b7596c1372b6",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 503,
+          "literal_sha256": "ff541cc95fea40d27a2873ff794e66cd1ab82f644f4a74cc70a205de34abfe1f",
+          "page": 102,
+          "start_utf8": 220
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000154679-000-f6dae404d8e3",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78655"
+      ],
+      "record_sha256": "c94f64df7d1eaf09fc61105a4fbe64cbf958fc221ff43c8295c8e6cbd9e3dda9",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 629,
+          "literal_sha256": "0bbbaafd3d8c794e11660d2dbb9fd732c824008662920d381d8aae28bdf802dc",
+          "page": 102,
+          "start_utf8": 503
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000154805-000-0e7582f0af75",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78657"
+      ],
+      "record_sha256": "6e2af311170be8a5a4637ad762c0600e79ea438b029bd83c91badeb5173cc9f0",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1134,
+          "literal_sha256": "8eec44fd373b7cf697b7245695f3d16d6ece544a951c99dc9e674bf74d36155a",
+          "page": 102,
+          "start_utf8": 629
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000155310-000-fa90296b84f9",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78658"
+      ],
+      "record_sha256": "7bb88bf4da704dee66f82bb5080d14f693b43fb15d05579ff4faedc7a345c603",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1476,
+          "literal_sha256": "9f1ca8a8dfd36b670da1d1c1db5e312cbc62488f024c9448637d990b198896d8",
+          "page": 102,
+          "start_utf8": 1134
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000155652-000-16be936fb430",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78659"
+      ],
+      "record_sha256": "2f4d10a25c0f9808a7acf074df97f2597c988fa6027ded617ae36e5534a9d33e",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1788,
+          "literal_sha256": "f717b50b3f950cc7db52558b940b1776c61c5aa9dfc2af46ed82f8e6ca58228a",
+          "page": 102,
+          "start_utf8": 1476
+        },
+        {
+          "end_utf8": 188,
+          "literal_sha256": "aa35b7973c10fa5d87355cae9c376561a0048e3f8a88e953db01ad83d1139f12",
+          "page": 103,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000156152-000-be74d4d63e78",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78660"
+      ],
+      "record_sha256": "3b021fc89ebcb0cba692f0b3e6e139c5143f5c9d88e3f8ebcd3a368003ea8c2f",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 413,
+          "literal_sha256": "d84315242bc4a78bbc4f28b956f93f1116d1ba1a8755a7e8e02da14b921f5b8e",
+          "page": 103,
+          "start_utf8": 188
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000156377-000-59943020685f",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78661"
+      ],
+      "record_sha256": "a50843c295ece18557c53816d91dbcbd81d22f2b513ea225178287a8e6c7b7b5",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 683,
+          "literal_sha256": "95f73a72d782b1b6867d5d73e2ce5e8f1d6b5f695b2ef63c3dc4f8c97688e6ad",
+          "page": 103,
+          "start_utf8": 413
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000156647-000-f99d96444925",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78662"
+      ],
+      "record_sha256": "f9e179113447cb8fa8a7de5aacb05500a40f0e2b8e35b65c556228b0deb50d06",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 861,
+          "literal_sha256": "7009363fb8bad4ed0fbaad6c903be150143bf745cf167ad8ad8cb6009b48c3bc",
+          "page": 103,
+          "start_utf8": 683
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000156825-000-6a2912e2b93a",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78663"
+      ],
+      "record_sha256": "767e41e81b32607f37de6b567d1238fc492be8f92f3ffff15dce8ad479d56f3f",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1497,
+          "literal_sha256": "22f6cafb48552740e50b75ccf54039180341d84a5015152d4ee0632829aba94c",
+          "page": 103,
+          "start_utf8": 861
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000157461-000-7c2bf82c4fc6",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78664"
+      ],
+      "record_sha256": "53464692b6704a90071603369ef81dcd734c9566b054f99f7d9b4d6304919536",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1902,
+          "literal_sha256": "743a3dc6fe17b31504c5f282a88ab259bfc40cda3bc09b86363d60634d8f7084",
+          "page": 103,
+          "start_utf8": 1497
+        },
+        {
+          "end_utf8": 104,
+          "literal_sha256": "5c0c2bf275ad42c0e834a8a9db4d1abd2c924736c585525012f51626d84198a6",
+          "page": 104,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000157970-000-4bd182be5b57",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78665"
+      ],
+      "record_sha256": "e1fc6ebf5751779fe9ca32d91f3e7a2373a36074823dccc57a567cb8aa0be6b2",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 577,
+          "literal_sha256": "ca39a71d0f290ca9e50f1b24970d718bb2c369fde0372f5a00862ba45b99739a",
+          "page": 104,
+          "start_utf8": 104
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000158443-000-e7938993b2ca",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78666"
+      ],
+      "record_sha256": "28e0a639814f5577c1b93d96b708988757c2ac6b8c4e60e52e43f17273182106",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 950,
+          "literal_sha256": "37df9fb534fa952c0ecbfdeed0a48a32293ab3fb6a51524bd3450db53f2d96b3",
+          "page": 104,
+          "start_utf8": 577
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000158816-000-d51e0915f7ec",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78667"
+      ],
+      "record_sha256": "6cf25ccb9f7d0c9ffd6bcc4fa600e68c19ba34ce335b2ec189a60c0db48d0fd1",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1515,
+          "literal_sha256": "48bc961b4263cc66a53465fabb7c00ff1b487027c94e8f1b0e343142177161c5",
+          "page": 104,
+          "start_utf8": 950
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000159381-000-f10796f6dd1b",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78668"
+      ],
+      "record_sha256": "e946fa172360f055c73a83e576f83195821aeb86ed233c5cc24c1d8883e5dddc",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1775,
+          "literal_sha256": "f7d0a6bafbc5556579704cfdf9502ddf52600ce3c09079158d6780dc08d27df6",
+          "page": 104,
+          "start_utf8": 1515
+        },
+        {
+          "end_utf8": 243,
+          "literal_sha256": "0564e3a3f3fd8f5bcc36ba2bbae19058ab11af13833cd8f0d817b5e232f735f8",
+          "page": 105,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000159884-000-d8e45fe1e7ce",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78669"
+      ],
+      "record_sha256": "7034f960d27c93ff99b7ffe29055e402dfe7cef4d145f590b8a7f7570163ae5f",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 741,
+          "literal_sha256": "748bdac7152530ac75706fcf018a798a12f0589a8faf2ab70d756642d71fc3ea",
+          "page": 105,
+          "start_utf8": 243
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000160382-000-88447d945a9b",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78670"
+      ],
+      "record_sha256": "ceed33bb21c1c92d7e845dfa23b88e9f03879da021567cb281a73cfaee831999",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1441,
+          "literal_sha256": "6832c8f248dddd7852a6e57fabc1bd5227fa61175c833da9fe2ec8c173d1239e",
+          "page": 105,
+          "start_utf8": 741
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000161082-000-d0bfcf190c26",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78671"
+      ],
+      "record_sha256": "6227b671b25fdbc8260bf1cc1e639a5e135fb4725a3d65552a0bbe7298953344",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1565,
+          "literal_sha256": "9f1108082f3c3b393faea243e16a72640db686eec238089382514215c5df0d2c",
+          "page": 105,
+          "start_utf8": 1441
+        },
+        {
+          "end_utf8": 344,
+          "literal_sha256": "bb03958eec555aa0354056697429281c4ce609a196f0928827f5a1e672b8e628",
+          "page": 106,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000161550-000-149a3c553618",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78672"
+      ],
+      "record_sha256": "fd850ebf4592a5ef63af0f5c171a9f5bf0b06ff8034290175b660a0ef8cee330",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 609,
+          "literal_sha256": "1877a28969501c646d5b53adc35521e1893f7599d4ad850ff41df4bd180eaa5c",
+          "page": 106,
+          "start_utf8": 344
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000161815-000-2b1e402e291f",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78673"
+      ],
+      "record_sha256": "926cb7b72ead1502b31d6ae8eaeeda31ebf39ae2184d000d5921c75be8c782d7",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1196,
+          "literal_sha256": "225369f4428144a2fb5d75e83b53f4f8149db7b1947d05ab8466f80e6ddd76bd",
+          "page": 106,
+          "start_utf8": 609
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000162402-000-e76433022882",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78674"
+      ],
+      "record_sha256": "3bdefde7c21c23212829def273244f1c0d34a07c84b02e96405c601c6bd7504b",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1360,
+          "literal_sha256": "b3fb17e2dbfcf9168d0647c3a621164a41f21ace6d45ccfe077d622e3a10a03d",
+          "page": 106,
+          "start_utf8": 1196
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000162566-000-26f6f01c6aef",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78675"
+      ],
+      "record_sha256": "e6a7934bb04420d2befb8491f3f5aae4f6a0e0600505ff01c99fc65e7d370652",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1611,
+          "literal_sha256": "78ecffad6824399582be418c93aa4225b88222306f9401ebc6d6e911ffe1d829",
+          "page": 106,
+          "start_utf8": 1360
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000162817-000-d339f948de7d",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78676"
+      ],
+      "record_sha256": "86b353827012ac1a439e6cfe3395596f950cfdaa7f2bc48f626d5ae97bbf48ed",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 2028,
+          "literal_sha256": "3d267afacdbf746ba3bb2b2b6ff53d0d779f1926df3f1b9bc95865206f593372",
+          "page": 106,
+          "start_utf8": 1611
+        },
+        {
+          "end_utf8": 161,
+          "literal_sha256": "bf1145310c2e885ad197fbb2b792500879b2b2a5fdcfb7c4826f9a7fb6c0a0bc",
+          "page": 107,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000163395-000-6001fb962e24",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78677"
+      ],
+      "record_sha256": "760a51d2eb734f2a3b6232af0ab5838a3205b438cce09c59c7d4b86001f98317",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 546,
+          "literal_sha256": "8bcc298ca0b2151ddad827b555918e7f533f0499736835747166278eb95d88d5",
+          "page": 107,
+          "start_utf8": 161
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000163780-000-7ae379ce9a92",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78678"
+      ],
+      "record_sha256": "3bc5148e554b1980e6c0a3f99922bd483a9e99fa5d00c8afe98e86aa7a340e10",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1159,
+          "literal_sha256": "d466908bab489b96b11d728894e86d8594959faadcf5bf30cd0b15db427ce6c7",
+          "page": 107,
+          "start_utf8": 546
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch78/manual-structure-v1/source-0000164393-000-4367a1751bf0",
+      "pages_sha256": "f90fb5e92c5aebf4c07fb3383ca8bc0bb1ded55448949d987ed87e360c6b4894",
+      "paragraph_labels": [
+        "78679"
+      ],
+      "record_sha256": "f2b2510afba30418c37477a5b327dcaa7367b8138f9a7537771fcfc159f6c5e8",
+      "source_sha256": "d5e17de1d343fc6a6498089897b222a4989914fa53f85af9ddc8c9c05471e2b8",
+      "spans": [
+        {
+          "end_utf8": 1653,
+          "literal_sha256": "efc918a60c70214dc78bdd31b499810ff240f17cc18369b4c774b5e0b244685f",
+          "page": 107,
+          "start_utf8": 1159
+        },
+        {
+          "end_utf8": 173,
+          "literal_sha256": "e8c35c5e02b41f4948fc06b159ff8b7b4ead63e58b136d3dbe88217c20b9a45b",
+          "page": 108,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000000000-000-3e50b10190b4",
+      "pages_sha256": "989a5b292ba1f6129362ddc7ee736133798156d58c3539be2d0232fad5c92660",
+      "paragraph_labels": [],
+      "record_sha256": "93761a4aaf267c1e19ae210a9f2732744cf3a17e3a560f3237c2259b25611cd9",
+      "source_sha256": "be79f9d6f8baf23290b8d6af5f384d31c2435b960fe3a59c14febd510fbaa9fe",
+      "spans": [
+        {
+          "end_utf8": 401,
+          "literal_sha256": "4c6b66018b4a72bce2a215e8e3b546de4323649516c0f6a4a7f2eaa1b6ef0094",
+          "page": 1,
+          "start_utf8": 0
+        },
+        {
+          "end_utf8": 406,
+          "literal_sha256": "af5fbf2c7c0fb9c7ac4170e4729be028c31c308aaedbfa541b3173600ee7d253",
+          "page": 2,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000000807-000-3e0592ea53dd",
+      "pages_sha256": "989a5b292ba1f6129362ddc7ee736133798156d58c3539be2d0232fad5c92660",
+      "paragraph_labels": [
+        "12001"
+      ],
+      "record_sha256": "dc8f160549bd510a1ec6d163c7d5c8d1879e396fad87601f9d2bcbf80db7693f",
+      "source_sha256": "be79f9d6f8baf23290b8d6af5f384d31c2435b960fe3a59c14febd510fbaa9fe",
+      "spans": [
+        {
+          "end_utf8": 1000,
+          "literal_sha256": "5c46d61a3bf3fa6419feff96e6fa2ef4f9f6b8524d203ebc67744277286cbb8b",
+          "page": 2,
+          "start_utf8": 406
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001401-000-b59002efa8b9",
+      "pages_sha256": "989a5b292ba1f6129362ddc7ee736133798156d58c3539be2d0232fad5c92660",
+      "paragraph_labels": [
+        "12002"
+      ],
+      "record_sha256": "7c96a37690bd4ec6dd84bc7fc6eb66cc19f38048783de82411f0b5f9320dd263",
+      "source_sha256": "be79f9d6f8baf23290b8d6af5f384d31c2435b960fe3a59c14febd510fbaa9fe",
+      "spans": [
+        {
+          "end_utf8": 1103,
+          "literal_sha256": "67fde7bad9e178913cffa1cef1ac0c234eb6d7905f48597940750e1092e19cfe",
+          "page": 2,
+          "start_utf8": 1000
+        },
+        {
+          "end_utf8": 200,
+          "literal_sha256": "c401ee6a550e1a797c7bcd0d828b4ca2ab5a1bab3d2a7a313a3e345bcefe80ca",
+          "page": 3,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000001704-000-2f0f0ecb1cec",
+      "pages_sha256": "989a5b292ba1f6129362ddc7ee736133798156d58c3539be2d0232fad5c92660",
+      "paragraph_labels": [
+        "12003"
+      ],
+      "record_sha256": "c2a0334a57487fac568fc200ee8f1a8dbe48554462172718824e22caae699a8b",
+      "source_sha256": "be79f9d6f8baf23290b8d6af5f384d31c2435b960fe3a59c14febd510fbaa9fe",
+      "spans": [
+        {
+          "end_utf8": 929,
+          "literal_sha256": "427085bfbfbfb0da414109ccfa5b912af2f947c89e442c26cda2cda0c31a7fda",
+          "page": 3,
+          "start_utf8": 200
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002433-000-4e5023b882cd",
+      "pages_sha256": "989a5b292ba1f6129362ddc7ee736133798156d58c3539be2d0232fad5c92660",
+      "paragraph_labels": [],
+      "record_sha256": "1246e4bdff9739ef8fa64ae589ff06f8753df55336a1b69d8ff67d64d0fabb14",
+      "source_sha256": "be79f9d6f8baf23290b8d6af5f384d31c2435b960fe3a59c14febd510fbaa9fe",
+      "spans": [
+        {
+          "end_utf8": 943,
+          "literal_sha256": "9093a4b07e27883aa39d4a90c19fdb53fdaeca166827f6cea6c51a3edd95dd68",
+          "page": 3,
+          "start_utf8": 929
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002450-000-eebbfbc27e17",
+      "pages_sha256": "989a5b292ba1f6129362ddc7ee736133798156d58c3539be2d0232fad5c92660",
+      "paragraph_labels": [
+        "12015"
+      ],
+      "record_sha256": "55aeddc7342b3fcd6ad16a036cae7b3692ebd04f90caba82bebb8ee9a073c983",
+      "source_sha256": "be79f9d6f8baf23290b8d6af5f384d31c2435b960fe3a59c14febd510fbaa9fe",
+      "spans": [
+        {
+          "end_utf8": 1221,
+          "literal_sha256": "379dfc5e80ab2b95af0910adfed7ee8fd55bd531c0839b8bdc8f7667b84a635f",
+          "page": 3,
+          "start_utf8": 946
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol3-ch12/manual-structure-v1/source-0000002725-000-7ccc36ebf542",
+      "pages_sha256": "989a5b292ba1f6129362ddc7ee736133798156d58c3539be2d0232fad5c92660",
+      "paragraph_labels": [
+        "12016"
+      ],
+      "record_sha256": "9b98af1b533021c2dad37d3630b1b50d9613938b92e22f99f173aa849868a0d1",
+      "source_sha256": "be79f9d6f8baf23290b8d6af5f384d31c2435b960fe3a59c14febd510fbaa9fe",
+      "spans": [
+        {
+          "end_utf8": 1607,
+          "literal_sha256": "ca3c32e415ad362ba7b393ef4a932cabd04cd5ae6a20a58303baafa1c28d6f52",
+          "page": 3,
+          "start_utf8": 1221
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000049888-000-d3509b60fb96",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [],
+      "record_sha256": "2db1ea351a4edceec5b152c6b136b744559e2c07d94d36977613caf9a4800ed1",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 1278,
+          "literal_sha256": "2909c0b3a70fe5a7f78c9dcae6b1fa221b0a69ea72e02366b8f76f56577747c8",
+          "page": 36,
+          "start_utf8": 1242
+        },
+        {
+          "end_utf8": 66,
+          "literal_sha256": "0d2358e726e6b917eacfda4df82e1ec5d50f0bb2d9ad061112821c3ed4b114bd",
+          "page": 37,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000049990-000-8e7341cc0909",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24185"
+      ],
+      "record_sha256": "1472c60169b2120988487feaa6f65a2805c1718f095aa9028a66d6ec2bef4f19",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 350,
+          "literal_sha256": "4958cf3d1d7c6896c1682e313ecb48308f7a0efc57c7909df89aab978ed9d700",
+          "page": 37,
+          "start_utf8": 66
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000050274-000-8b53eaaa3b55",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24186"
+      ],
+      "record_sha256": "607db4b7e7a465a28f57add5aab1b92f3b4f9559e8cd5136cf417f0d216241c5",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 710,
+          "literal_sha256": "3b2b620f661c62004963b13ae3570f0d442c78b8807c49d2a0e7ccd24eca46fd",
+          "page": 37,
+          "start_utf8": 350
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000050634-000-f48ab7881f92",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24187"
+      ],
+      "record_sha256": "6b21b2a4efb5d00c9fa1bfb183f546673afb1130630a644d99fc4c47d47fc59a",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 1782,
+          "literal_sha256": "bbf38847bf7a4079d6732b11e8f115b96c5cf876e062b3199550a3256e1d60a0",
+          "page": 37,
+          "start_utf8": 710
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000051706-000-49de9ee5a9b4",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [],
+      "record_sha256": "0c569e871792bd651b730251a3490caea5b387d177ec6a16a8d27fc0df9358bf",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 1804,
+          "literal_sha256": "c9ea6f49b514a58d5721cd5c00b11f9170d8cb7fb837d21f513ebc04dcd6bc7a",
+          "page": 37,
+          "start_utf8": 1782
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000051728-000-57e75a1a1522",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [],
+      "record_sha256": "0b750fc0a4d5db4fee41589692d868b7906c6e480f28fac5c73a802c3ab32b64",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 1892,
+          "literal_sha256": "3b2a9734854e73b22f5e5cee60d24f52f6e94264ffe3d8f64a0d94fc3357ee2a",
+          "page": 37,
+          "start_utf8": 1804
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000051816-000-0bbd6c576c3d",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24192"
+      ],
+      "record_sha256": "2bcfd6b62d56553d59f0c971ed00aa6396fb09d562b00ea0e30855241743bfbd",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 2100,
+          "literal_sha256": "df75fb59829499ffbc1c9157ba3222410aadc079004d0c1edb80f926af855d82",
+          "page": 37,
+          "start_utf8": 1892
+        },
+        {
+          "end_utf8": 573,
+          "literal_sha256": "942f617cf3f8f37b0ebe7323f43fa6efd40596dea809c02383ab22addd7da40d",
+          "page": 38,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000053668-000-1af3f4ac03a5",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24196"
+      ],
+      "record_sha256": "5ce43cf43d9fb39dec746bedb64b6f7514df9e0ba35bffd949681992dc2c52c2",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 2235,
+          "literal_sha256": "1b0e0c1800b76f2db9c53c8731ec8f0c4e6e73c7d3ca8e278b147bc5b8ac5548",
+          "page": 38,
+          "start_utf8": 1644
+        },
+        {
+          "end_utf8": 41,
+          "literal_sha256": "fe252ec6764e74bc0a662581ea56be79c076d5e506f554541dd403bdc7ae4b74",
+          "page": 39,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000054300-000-e6e2e2d11327",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24197"
+      ],
+      "record_sha256": "55c2eddf4b87c8898a8fe2e35c6a83645eba6d76eb59e014e6cb0f129d5e2322",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 1331,
+          "literal_sha256": "3f49d0537edb38f9e2113910a51506be4f87d21b29030b2816eb105de841a2a1",
+          "page": 39,
+          "start_utf8": 41
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000055590-000-4bd7eee94baf",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24198"
+      ],
+      "record_sha256": "64a46ed07174bd354c639beb388f394f04b6402bdb6e7be4142575aa0e48db15",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 2168,
+          "literal_sha256": "c478eccc28e451dd13e5454a1524dd81f2ea77b19ef0afc9cad72017d2ffa465",
+          "page": 39,
+          "start_utf8": 1331
+        },
+        {
+          "end_utf8": 40,
+          "literal_sha256": "48a21377a29568d5ff179e8372c5b04377818962026454cf2eba7d4d9080163f",
+          "page": 40,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000056467-000-cf1fcc9a489e",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24199"
+      ],
+      "record_sha256": "14044f33c3e5ad63ebadfc7989b59e98f85a92b61a1d83ebdd77ef0fa8261792",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 722,
+          "literal_sha256": "050caf0854c6867b87d03f8c047bebf81a1e2d84d85f5e0772ca0c160973f7b7",
+          "page": 40,
+          "start_utf8": 40
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000057149-000-1ce7197fdc57",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24200"
+      ],
+      "record_sha256": "aa01da62e8f05e14bdd9d64ee4befd58b6517c782f50f59906b404c13d95a833",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 1035,
+          "literal_sha256": "0eef85cebd23b2beb15e4837bc6347aef6c7a46742b8cb4448b914b61205f0d3",
+          "page": 40,
+          "start_utf8": 722
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000057462-000-0de86c21a52b",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24201"
+      ],
+      "record_sha256": "0425826303331baa59f4c550ed6071fa3a03eb9406c92dc56440cd5abf0653df",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 1187,
+          "literal_sha256": "f876dc934ba6d27093e2488d33cf65f94f7899652ca73ec83db9010706f51d1f",
+          "page": 40,
+          "start_utf8": 1035
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000057614-000-75d006833e13",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24202"
+      ],
+      "record_sha256": "4679bb2cd5bb6f4f301278fa2729e16a2640183a3dcdc0ccacd4389e7752745e",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 1624,
+          "literal_sha256": "f6bb42776c02dcf7ef735a54c5f67b8f57b3ea4f57b47169fa809dea3eed4a02",
+          "page": 40,
+          "start_utf8": 1187
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000058051-000-ab8fd0ec9140",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24203"
+      ],
+      "record_sha256": "5a2f1aa0a8274fab35811ba0abb3fc3c4f89c4f0232766fd0507ffd35e51ac54",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 2321,
+          "literal_sha256": "50aee39355e6d32e415e44022cda54430bb0e46f49a4989ced42be1d87de788b",
+          "page": 40,
+          "start_utf8": 1624
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000058748-000-0d4f7886aa96",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24204"
+      ],
+      "record_sha256": "94c65192a4c420bc950153887bf7a2ef42eb42eb68da22a01228b34e91ed98fb",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 523,
+          "literal_sha256": "43b49e252b642aba434860c63d6767323ad90a3cabb6e591b8a5c5ed166fce26",
+          "page": 41,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059271-000-76c7a59dafa9",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [],
+      "record_sha256": "51d79e66be5813ac13af1398a7cda484fc163fa2cd25e0ccc249d1c2adf74325",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 545,
+          "literal_sha256": "b8c8653a8e089622175492743f94923866c854b3b9a62edf79294f00aec197c8",
+          "page": 41,
+          "start_utf8": 523
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059293-000-0b53119ff691",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [],
+      "record_sha256": "c8c9d390b35051809414a644bb624a9198e39b27289530ef5909c69a8b9d5624",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 587,
+          "literal_sha256": "9bc2da1e2c4b8aee9731f2ef18be5f7817c3b9b2ca1864cb99091fff1bc37191",
+          "page": 41,
+          "start_utf8": 545
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059335-000-902ee8f29e3e",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24210"
+      ],
+      "record_sha256": "c337fed25d50f56f9becc185a7ded775a12521b3dac5b40f072786b82c366583",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 853,
+          "literal_sha256": "42a468cfc2bbb84c707fa39f1cd13941b42b6b628831dcc57416ea8ee2006e4d",
+          "page": 41,
+          "start_utf8": 587
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059601-000-745281ebbba7",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24211"
+      ],
+      "record_sha256": "cca680cc262a8bdf224147d948c415343adeb902950427fdd6e7e200c8a0fc20",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 1125,
+          "literal_sha256": "38ecb5b89ecf214c3b434b0170f8e6df14ac1c4c98cdcde1d55a09c773819f30",
+          "page": 41,
+          "start_utf8": 853
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000059873-000-29e5413bef73",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24212"
+      ],
+      "record_sha256": "43e7670232bc79f76d7c885ae7a957b8231aab46eb2c7ecc80536f1b87bb07ed",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 1508,
+          "literal_sha256": "e83e2a6eefc65a3f299e392030131c1ad8b51556b528f365effbf12315cfc45d",
+          "page": 41,
+          "start_utf8": 1125
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000060256-000-cf42fe92bb5d",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24214"
+      ],
+      "record_sha256": "ffe87e653ad5fb58ad3a9eb190c4f1e8dcc0f10bf95a7921ff66879dbe506a00",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 1925,
+          "literal_sha256": "0e97111dde7a3d4ac3ccebe7ff6c40cbd177d7141e1da889e35f2a278cc387b0",
+          "page": 41,
+          "start_utf8": 1508
+        },
+        {
+          "end_utf8": 39,
+          "literal_sha256": "5d4c663e3986a376e108c748b62f5b607472aec0def21ec589c5b3d63b1a1324",
+          "page": 42,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000060712-000-4e4e263efa53",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24215"
+      ],
+      "record_sha256": "237736d5513e83faaab307800de516eac36f5f9a3b0066deaf884bb2a0a6444f",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 783,
+          "literal_sha256": "4f541ab33243336ccb38624d7d5c444b68d8f57f5e2bd14c02bef557e218fddc",
+          "page": 42,
+          "start_utf8": 39
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000061456-000-0c2d32f1df60",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24216"
+      ],
+      "record_sha256": "67830f69a6c5d0876436170b4e7938a7be5e7e167c5c7412a07cefa03387c196",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 1314,
+          "literal_sha256": "1d11f70bb8953179c4c3ba319380155977cdd02a6c685c668d204c555945bb09",
+          "page": 42,
+          "start_utf8": 783
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000061987-000-2837253bb094",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24217"
+      ],
+      "record_sha256": "24784907386ecea50324da02b00b46d9ed610232ff495ae0ab855714ddd92461",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 1944,
+          "literal_sha256": "a9d4e599cdfd1c4ec43454d40570a9e48d22e4cbefd029a4f0cab68d2570842b",
+          "page": 42,
+          "start_utf8": 1314
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000062617-000-682c6909cf3e",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [],
+      "record_sha256": "e02e67da212316608acba78c582dc9fec9a288b7df2360af02278a6b9e5c5968",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 1966,
+          "literal_sha256": "e5866cd58f2b67bb22f1fc57e708968f6aa4ac0f830b932db3deef34c0263458",
+          "page": 42,
+          "start_utf8": 1944
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000062639-000-f8c4a68d5b96",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [],
+      "record_sha256": "999c5e74974a71d8aa5bad44e020c0760ab3d607fd86401f1ebb98129ac67886",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 2055,
+          "literal_sha256": "2eba122d996ff806d4555ad919d5c8143636f79886870644c97500edd74f1535",
+          "page": 42,
+          "start_utf8": 1966
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000062728-000-b43dee1d2ab7",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24225"
+      ],
+      "record_sha256": "1e7868445202e396b1faf312810740e18adecc2281abe711495499f535fb446f",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 2585,
+          "literal_sha256": "5aef68bbac7fe508355a3ab2be1f3601e1698273d06fc356fb9f7485982b845f",
+          "page": 42,
+          "start_utf8": 2055
+        },
+        {
+          "end_utf8": 699,
+          "literal_sha256": "d221cf3eeea6865dbce357ed3bba3cf6a60b38818fa42eaafa999bb526ff6191",
+          "page": 43,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000063957-000-73e124c38066",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24226"
+      ],
+      "record_sha256": "a753066e506c8eace3445aec1db829003f399f0c8a9212bb707ab2bb1bd66788",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 1054,
+          "literal_sha256": "22d7177b5e762f240f2a00368e11f01380fdbee85d41793baca8853a3238a160",
+          "page": 43,
+          "start_utf8": 699
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000064312-000-e01b0343ca8d",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24227"
+      ],
+      "record_sha256": "b3d7da2d181ccab808f11582591b8bd691c318e4fd4a8bf1cc0d349a7ba2ebe2",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 1564,
+          "literal_sha256": "f6efae279a20ccd2ad6e115cfd189e76be208b19fc4dd1b994e462e39fa3d879",
+          "page": 43,
+          "start_utf8": 1054
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000064822-000-5cee7c23a7c5",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [
+        "24228"
+      ],
+      "record_sha256": "161ad50d4d7a9d1c44a7749f67272577a5caa2ffe3cb4fd89fe28f2eb7f5f276",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 2219,
+          "literal_sha256": "b1f637044a667023087bc81a0a5c315b24393e76b99be1817a1ea3e55a8dc99c",
+          "page": 43,
+          "start_utf8": 1564
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000065477-000-469e5e98ffdd",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [],
+      "record_sha256": "f2b5c707a1f5acf9cc180d82972c96fc2eae7c220d9bbe483370ef8cf83231ba",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 2241,
+          "literal_sha256": "f0e090d02b4df6175f11b5861865f7bee6e7ab2cefb2cbbf915ee891a2b54b2d",
+          "page": 43,
+          "start_utf8": 2219
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol4-ch24/manual-structure-v1/source-0000065499-000-2eaca2839fdd",
+      "pages_sha256": "91863ddf195bf30158383f17cb2653f1ba498551a695c8ec0ba1e138d00a222c",
+      "paragraph_labels": [],
+      "record_sha256": "035e1fe45d06d62ebb6fd1cca5e14127bd58a858545f34efd9e06bf7b47457d7",
+      "source_sha256": "2827c11c3ce95e852073142524e0410c6534f7bf140d885be18cad09f6ece98a",
+      "spans": [
+        {
+          "end_utf8": 2276,
+          "literal_sha256": "e3d96a8381cd5ed1089d66fc409d684c6e669583fc79d88540b6ffdb0462c9fb",
+          "page": 43,
+          "start_utf8": 2241
+        },
+        {
+          "end_utf8": 136,
+          "literal_sha256": "67a74d7099b947af5ba53fa7d39c129a055e73ceb22f68f7145f4d103fd97e56",
+          "page": 45,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000194574-000-aeb76e24ad03",
+      "pages_sha256": "039044b6fddda8d3476d3fa9fce766d7da6b12508704fc4fd2a1b97dd870a227",
+      "paragraph_labels": [
+        "41822"
+      ],
+      "record_sha256": "9b387e1cc19ac255843a8fd78bf8d49e410f697728132096a4e420a5c238d242",
+      "source_sha256": "bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418",
+      "spans": [
+        {
+          "end_utf8": 334,
+          "literal_sha256": "009b218ea13a0d1890a2f0d7ed9af0917c332ab969205c28bee504feb47c427d",
+          "page": 129,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000194908-000-dcf662fd9b4f",
+      "pages_sha256": "039044b6fddda8d3476d3fa9fce766d7da6b12508704fc4fd2a1b97dd870a227",
+      "paragraph_labels": [
+        "41823"
+      ],
+      "record_sha256": "2899e5da7fa2df2536cecd9ebff9106a06379fa740968107e5161721752cafa4",
+      "source_sha256": "bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418",
+      "spans": [
+        {
+          "end_utf8": 788,
+          "literal_sha256": "76dd1adb33ff56d610400d239f16e1bfee2e65d08c190b15e24b6d57c449b15e",
+          "page": 129,
+          "start_utf8": 334
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000195362-000-b134ba928b04",
+      "pages_sha256": "039044b6fddda8d3476d3fa9fce766d7da6b12508704fc4fd2a1b97dd870a227",
+      "paragraph_labels": [],
+      "record_sha256": "6905de73d1b5d7310f88b9ba12fdbc1ced765b67f7c0c7b7d9fd69b5a539f177",
+      "source_sha256": "bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418",
+      "spans": [
+        {
+          "end_utf8": 804,
+          "literal_sha256": "19c0a7ba63bfcb20de6b6d156cdea5e993cdc4c48f9b586b52c75751975dfb52",
+          "page": 129,
+          "start_utf8": 788
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000197683-000-56ddb8a48045",
+      "pages_sha256": "039044b6fddda8d3476d3fa9fce766d7da6b12508704fc4fd2a1b97dd870a227",
+      "paragraph_labels": [
+        "41831"
+      ],
+      "record_sha256": "f8d5028e317878349c340115b9764feb7360e4eb354609e969683d955dea5283",
+      "source_sha256": "bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418",
+      "spans": [
+        {
+          "end_utf8": 2740,
+          "literal_sha256": "89b810a206c825a157fb1e3a1a9a607b49fff10f8514671463002db12a672ef8",
+          "page": 130,
+          "start_utf8": 2305
+        },
+        {
+          "end_utf8": 516,
+          "literal_sha256": "c8fade247b87be4bbb83d4c95e64dd09ca2c2af1bb7ab61a18c3c1c1baad0fa7",
+          "page": 131,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000198634-000-75d45e24fa24",
+      "pages_sha256": "039044b6fddda8d3476d3fa9fce766d7da6b12508704fc4fd2a1b97dd870a227",
+      "paragraph_labels": [
+        "41832"
+      ],
+      "record_sha256": "c83e5f282f7630059dc0182e2a8ec88d9de287ad6b10335cf290e4529fa9febe",
+      "source_sha256": "bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418",
+      "spans": [
+        {
+          "end_utf8": 1455,
+          "literal_sha256": "688acf13034694d2e270fdad35cc96461276a2c8baa3bfd3ca8dbd1c092f5eab",
+          "page": 131,
+          "start_utf8": 516
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch41/manual-structure-v1/source-0000199573-000-05d0176d1ad1",
+      "pages_sha256": "039044b6fddda8d3476d3fa9fce766d7da6b12508704fc4fd2a1b97dd870a227",
+      "paragraph_labels": [],
+      "record_sha256": "1d39e641c55849c962f8fc1a143b9858fc4b02b17162ba9b8c88c31e0162595b",
+      "source_sha256": "bdc14ecf8afb33d755b7a0e3a8bc96fc5ecca15702c8bed98019677e1973c418",
+      "spans": [
+        {
+          "end_utf8": 1471,
+          "literal_sha256": "7af3460fcfce8d2db27348284b79c84b332ea5537120c67c48790328100ee51b",
+          "page": 131,
+          "start_utf8": 1455
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000154125-000-ac681b52cf70",
+      "pages_sha256": "76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5",
+      "paragraph_labels": [
+        "42575"
+      ],
+      "record_sha256": "6048c765815f868a3690522ae1dc7ab111fa124c11189aefd7860e31fcd1655a",
+      "source_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110",
+      "spans": [
+        {
+          "end_utf8": 1370,
+          "literal_sha256": "2c2b3a1e48ab95fef1106158069b0f527ac109d6184cc82bc0244f673d321016",
+          "page": 76,
+          "start_utf8": 977
+        },
+        {
+          "end_utf8": 137,
+          "literal_sha256": "61f63d9caad2ac8e90fce3dca4db1e406d8c506a80d17d6953e86bcd68acb09c",
+          "page": 77,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000154655-000-4d82d10235e4",
+      "pages_sha256": "76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5",
+      "paragraph_labels": [
+        "42576"
+      ],
+      "record_sha256": "4418c5f08cc0d975544a6f6dff7487f1b44569797e1a02bc4337f8f6a64e5733",
+      "source_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110",
+      "spans": [
+        {
+          "end_utf8": 328,
+          "literal_sha256": "59421dc1881e8497643a2641433653955ca66436c6a404aa9a25a4c451e451c7",
+          "page": 77,
+          "start_utf8": 137
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000154846-000-97815af5a959",
+      "pages_sha256": "76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5",
+      "paragraph_labels": [
+        "42577"
+      ],
+      "record_sha256": "cc857b42a018b66096c947a65ac801bdbb511b21f290e4bf711f3e432738b112",
+      "source_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110",
+      "spans": [
+        {
+          "end_utf8": 471,
+          "literal_sha256": "16c2ca2b11ec082475cc071a033139cca3488cc6d04858004abb710e5fb4d099",
+          "page": 77,
+          "start_utf8": 328
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000154989-000-b9918770d389",
+      "pages_sha256": "76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5",
+      "paragraph_labels": [
+        "42578"
+      ],
+      "record_sha256": "57bb5e8a5623ea0a4a6e8a40db9c353b26f5adb34ef4fbb43823663616826ff4",
+      "source_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110",
+      "spans": [
+        {
+          "end_utf8": 1292,
+          "literal_sha256": "d73d9d6927d2c39ab1f113ff419be85f7a37ce716da277cb502b236ec16fbac7",
+          "page": 77,
+          "start_utf8": 471
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000155810-000-30e865473bf9",
+      "pages_sha256": "76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5",
+      "paragraph_labels": [
+        "42580"
+      ],
+      "record_sha256": "d5705a584aa06432ab71be51af7cb85e4dccbea330db24457adc0196b6ac004b",
+      "source_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110",
+      "spans": [
+        {
+          "end_utf8": 2079,
+          "literal_sha256": "a093a8e82d35228279ea9da1273bb12650d3cf5fcdce9287a72296f64f20a8e4",
+          "page": 77,
+          "start_utf8": 1292
+        },
+        {
+          "end_utf8": 512,
+          "literal_sha256": "2d1a763f693b79a58e07f00d11ab305e678d09b9309e903378d0187749e23751",
+          "page": 78,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000157109-000-befb607b50c5",
+      "pages_sha256": "76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5",
+      "paragraph_labels": [
+        "42581"
+      ],
+      "record_sha256": "ce799b45f9b97725d5e1c36a950d06c6e2b9d3dd566fdfad64fa7d0ed609180c",
+      "source_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110",
+      "spans": [
+        {
+          "end_utf8": 1435,
+          "literal_sha256": "5f3e229a21ed6c4aae93d0a6aee18b194dbb8dd3ed668dad8fad2438f077cf7b",
+          "page": 78,
+          "start_utf8": 512
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000158032-000-9ea6ac982f35",
+      "pages_sha256": "76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5",
+      "paragraph_labels": [
+        "42582"
+      ],
+      "record_sha256": "32715847b4cdc79b140ee6f5af981fa89c638f72199b147025f827f94a19ccf5",
+      "source_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110",
+      "spans": [
+        {
+          "end_utf8": 2375,
+          "literal_sha256": "c203dd59c148bca34363e86fa85f93cbc41a8077eb3f1467430ed1429b508eed",
+          "page": 78,
+          "start_utf8": 1435
+        },
+        {
+          "end_utf8": 115,
+          "literal_sha256": "d6fcb45d1d683b473e1b2c0366141e7f8beea075b90cc7356d367df0d9e724b3",
+          "page": 79,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000159087-000-005a79ebccea",
+      "pages_sha256": "76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5",
+      "paragraph_labels": [],
+      "record_sha256": "c3390414932eb59e66b4d899eb1c4318d59256cd9a84522ba0c1528455a622a1",
+      "source_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110",
+      "spans": [
+        {
+          "end_utf8": 129,
+          "literal_sha256": "62373e0c90fa62c58f0553341d5928ce23b73d9e23bc4d53b7ae7cb41d4e7f36",
+          "page": 79,
+          "start_utf8": 115
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000159104-000-d73b0d9cf17c",
+      "pages_sha256": "76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5",
+      "paragraph_labels": [
+        "42601"
+      ],
+      "record_sha256": "5a05ed95203ce3bed1fb98a333d63e8eb613aad97d6480e5137a4c39a0f807e6",
+      "source_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110",
+      "spans": [
+        {
+          "end_utf8": 662,
+          "literal_sha256": "9d4cb0718d053a506de305849a3eb55851318beafe3ca3fcbd392eb10ccc527b",
+          "page": 79,
+          "start_utf8": 132
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000159634-000-0191c45a601f",
+      "pages_sha256": "76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5",
+      "paragraph_labels": [
+        "42602"
+      ],
+      "record_sha256": "7ce2007feb709afc1dcbcc05945d2134f954768133aaae935f02e581bda7147a",
+      "source_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110",
+      "spans": [
+        {
+          "end_utf8": 1182,
+          "literal_sha256": "d30642efa14e091ff3121fd84d9285adf3cec737a151fa7b88a130dcd56a3a7b",
+          "page": 79,
+          "start_utf8": 662
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol8-ch42/manual-structure-v1/source-0000160154-000-12429b9df600",
+      "pages_sha256": "76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5",
+      "paragraph_labels": [
+        "42603"
+      ],
+      "record_sha256": "4552bbba40d32eada90ad5ae699d0bf00f6109e08776e55ee114304c623b8833",
+      "source_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110",
+      "spans": [
+        {
+          "end_utf8": 1645,
+          "literal_sha256": "f57c40c0045887457f434f03d6b43a9c1618a82cba7442ef6f91111959e298d1",
+          "page": 79,
+          "start_utf8": 1182
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000100278-000-6464ffd39cde",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53255"
+      ],
+      "record_sha256": "cb8d07aaf2258cfedefc12f71d03b191771a62c9fa8383a14ef4af0a1d877705",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 2165,
+          "literal_sha256": "fc27fe133ce1430516483c07462cba12400583c4c6e0510569dfcd546181c937",
+          "page": 51,
+          "start_utf8": 1945
+        },
+        {
+          "end_utf8": 639,
+          "literal_sha256": "aee875d7f24838ef68ca13b63e3ffd87c0edf27de3c4a8f3943c3b69b6e50ea3",
+          "page": 53,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101137-000-28fbb28525ab",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53256"
+      ],
+      "record_sha256": "351b055972b5350e0117c4e068255c80b6ea9a75cbe8d896fbcae9a14dea878a",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 1180,
+          "literal_sha256": "dff621251ab967320f37ac0438b56f3f623bd42a96b77dcac66ca85b66a7177b",
+          "page": 53,
+          "start_utf8": 639
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101678-000-1c49726d47ba",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53257"
+      ],
+      "record_sha256": "d894d1ecf273ffb114654f78a280cd88b96eb4f073722b7fcad3f1beb6b40617",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 1378,
+          "literal_sha256": "d01499ecd0d98907c399559c639de839fceacf97e652ad6118f064142f6da941",
+          "page": 53,
+          "start_utf8": 1180
+        },
+        {
+          "end_utf8": 89,
+          "literal_sha256": "2462fee936c0915f3ea2293ed95fc9a621b8032a94f1c2cf543a7d035cba038a",
+          "page": 54,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000101965-000-ec2d0fb1c02a",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53258"
+      ],
+      "record_sha256": "827184b538338823192279ba3c5dc74ab9cd515ba1228bedaf76f84a644c888e",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 507,
+          "literal_sha256": "3a1d945ab26bd1c4e6b381ef6a0bd1803f61eb9650de4d877ce7aba017aa17b7",
+          "page": 54,
+          "start_utf8": 89
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000102383-000-d03aa0d90ce5",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53259"
+      ],
+      "record_sha256": "22770309ba87ccb6b5003ad6d66db0ca117d81c8524c85580d659893c8928220",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 906,
+          "literal_sha256": "c0433f02c168c6a739bb53f707004554d0d47c53a5b1722d1bb74be0e152f437",
+          "page": 54,
+          "start_utf8": 507
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000102782-000-e22b25a83eb7",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53260"
+      ],
+      "record_sha256": "6ad54e20bed6bfca78f86f9da8b6590f80da129e3ec79a3f05b977858070f458",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 1260,
+          "literal_sha256": "a48947ac92a2612e3a15bf3eabe656cccf8fc6f8a0a8e8c307ac289793b17ea9",
+          "page": 54,
+          "start_utf8": 906
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000103136-000-0f11e1e31cb7",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "531261"
+      ],
+      "record_sha256": "4b203a263462c342b79e102ecda7381ca73ae2e607ddcc1a24cbd16385b1822e",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 1446,
+          "literal_sha256": "b5399e463a3bfcff66bb768cb7645abdd62346744df32bdcb127faeb455d18a7",
+          "page": 54,
+          "start_utf8": 1260
+        },
+        {
+          "end_utf8": 207,
+          "literal_sha256": "b049a5a82f3400857dd92ac04fc9ecb375f15beb2c71c3ecd226188d9f3ada16",
+          "page": 55,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000103529-000-5fb71646586a",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53262"
+      ],
+      "record_sha256": "6916541e70b169ec1e7e61a2d05771a27c7330346da142353e9be430f1f77d85",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 577,
+          "literal_sha256": "32c7d7f1d91040f550ef9c81e8b03af0e9a14e04236fc110f828558ea9f7226e",
+          "page": 55,
+          "start_utf8": 207
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000103899-000-2bd1b3d1ca96",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53263"
+      ],
+      "record_sha256": "a289571415f1818a33753a895cddbe98f75bdc2b016df9503e9d1381b75c215a",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 939,
+          "literal_sha256": "da0e2c163aa3fa9494b01627c8df62625dc789e484fa4404378adb13d9d17298",
+          "page": 55,
+          "start_utf8": 577
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000104261-000-cc69ca99fcae",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53264"
+      ],
+      "record_sha256": "6f311cbcf00aa918aa608f759f990c2fd10d2650870ff9516b14101b2805a8b5",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 1471,
+          "literal_sha256": "5ca9d16a8c7d28f0fc29b9727728aa0cd312bf5508e6930f4b960df0226d1b29",
+          "page": 55,
+          "start_utf8": 939
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000104793-000-7f5b84bdd622",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53265"
+      ],
+      "record_sha256": "8fcc297eeafd4f577a569673d3306cbe0fe796c412659d220357a557f1de6f32",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 240,
+          "literal_sha256": "9f71fa9a95c171855f186b9b16a84a11f9a7664cf7cb8870a76ad51617257a23",
+          "page": 56,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000105033-000-ee58a892d6e1",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53266"
+      ],
+      "record_sha256": "ccb110b287540eb4644cf16648accae17432ca62ba337847b5ebff2e75a344ef",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 494,
+          "literal_sha256": "afba15a6420ab958f45148975ce9e807210cb4e672c348dd4abe1bb8e286c714",
+          "page": 56,
+          "start_utf8": 240
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000105287-000-f9cb41f468b7",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53267"
+      ],
+      "record_sha256": "189214ee06e35d808b01eeda87ebd2462d73d988f63281e3095cf76dee941d5b",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 990,
+          "literal_sha256": "88bada2197ec737ac9c9e5814e4bbce1ab9c24753b20644e019b0e8a1a232fd5",
+          "page": 56,
+          "start_utf8": 494
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000105783-000-8dc2976f80f8",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53268"
+      ],
+      "record_sha256": "834878e4804efebd1691d820fea519173e29b313c662ba09f9ebe1d061ce7739",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 1491,
+          "literal_sha256": "cc0eda191a942190901a55ea3f54fc094af6e84f03c011b15574adc9895dcdd2",
+          "page": 56,
+          "start_utf8": 990
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000106284-000-5afc5ad777ff",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53269"
+      ],
+      "record_sha256": "3797e893a76b8a24ce52f50f03d12489133c081571167c0779076b7a01546c31",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 1764,
+          "literal_sha256": "152d7687eb31de30fcba504953323054762d18edf7356dd2c1d91a06b30c3417",
+          "page": 56,
+          "start_utf8": 1491
+        },
+        {
+          "end_utf8": 131,
+          "literal_sha256": "72b2c53b56aae24d3c9912c7b71987ab4f7e862b1b6dcf36b353327741f94356",
+          "page": 57,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000106688-000-10b8a68190d7",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53270"
+      ],
+      "record_sha256": "5938b9f917cbe3fb0de31841153d7993bb72bbbcdd006a41251ef4acea710da6",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 458,
+          "literal_sha256": "72398cef9b5cc851637b5e0f226193598760a933b907c2cc9235a00dae4da977",
+          "page": 57,
+          "start_utf8": 131
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000107015-000-389e10d58756",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53271"
+      ],
+      "record_sha256": "7f666f0b95b7631c17ceca85c83bf712569fafe8994709f9a00681ade06d5c6e",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 1343,
+          "literal_sha256": "1d4cc2506b192b593f420161338d1d7bd84ecd25537f3ff71f5f186868d7dddf",
+          "page": 57,
+          "start_utf8": 458
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000107900-000-0327dcc66fe9",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53272"
+      ],
+      "record_sha256": "53afbae532ceb9e2cfe2ae3d9b893f67f244426351c5b260b590c0db3483c50b",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 1667,
+          "literal_sha256": "75123155fcc25b6ffca7aab32b7dc5ff349f7625f5c883573c29e192544138ff",
+          "page": 57,
+          "start_utf8": 1343
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000108224-000-0a3b8336a82e",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53273"
+      ],
+      "record_sha256": "9422f4ae83336a418c7f607eebb1d6f8c91d6f14140d4e8bf6d3cb129b3c2734",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 1857,
+          "literal_sha256": "30e3e94a7235652f25937eb807fa6822fd6bd6e52f23ea0dd368effbc547162c",
+          "page": 57,
+          "start_utf8": 1667
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000108414-000-a06e345b1f30",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53274"
+      ],
+      "record_sha256": "fbd7e36fb1c2437bf6b54feb1a2c6ae902c236e0a70c94bc67485fbc3aa2a2f8",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 2206,
+          "literal_sha256": "10cef8a7a6d52d2a79f065d1e96c5ad3e3a508bee6a39ec3a50d24339ff5768a",
+          "page": 57,
+          "start_utf8": 1857
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000108763-000-6c7ac077dbb8",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53275"
+      ],
+      "record_sha256": "8c8e09c740281de76b65f2733ff187a6d0c04e2136e041356f319bc899c6dbe9",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 2519,
+          "literal_sha256": "4a7f0eb4ae2626afb0be2cfea8151bddbb276d852fe0c0275d9f144db4f676a4",
+          "page": 57,
+          "start_utf8": 2206
+        },
+        {
+          "end_utf8": 114,
+          "literal_sha256": "d0c1b12c373127482da3b627728a79f27676828ac87e8ba2656731c5043ac489",
+          "page": 58,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000109190-000-9d40f4a9e9d4",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53276"
+      ],
+      "record_sha256": "0106c0515e4c1ba696dd944abc126e68dd25fe6e6672b90cede7dcf52e808a33",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 405,
+          "literal_sha256": "7cbb1b0e7d82d481191f05f0618d7e511786a40997fa5980048bbf165c7a808c",
+          "page": 58,
+          "start_utf8": 114
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000109481-000-518da4c5aad5",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53277"
+      ],
+      "record_sha256": "c097e742ce0c2804776e8e5cf1c481a431677fc5fde02f1170487119f4e5fe3d",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 812,
+          "literal_sha256": "8b46d7cc07b14e45d558c5a30a5b522438ff05ec18812be9e498ba31305900e8",
+          "page": 58,
+          "start_utf8": 405
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000109888-000-5b13eab636a6",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53278"
+      ],
+      "record_sha256": "fd8f8d3fd7bde450ddf324c5f7d74a1a16972e5f0546df5bee5d04a5e71b2b47",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 1028,
+          "literal_sha256": "42b49fc9239ee729b1850d7009a6cd3b1247016b5488c9c3d92ce2b4a9a5cb54",
+          "page": 58,
+          "start_utf8": 812
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000110104-000-e8567e046860",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53279"
+      ],
+      "record_sha256": "66d7d8f95e4a649f7e08c98f3b21f59212bad56fd634f3fe8df38fdefc0acc7b",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 1741,
+          "literal_sha256": "0c15b3873869c5aaa5eddc867f89f2259bc6266c6706721703b74ec493adec31",
+          "page": 58,
+          "start_utf8": 1028
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000110817-000-594a54dc0184",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53280"
+      ],
+      "record_sha256": "e85795d7fb95dc0271453c0d3dc38a853ab9c36b6519f6a874e2f83ed5260738",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 1869,
+          "literal_sha256": "9621262a2525a10063e37562c9ba810d3f3379e355bb3fdd10eaf7cb2b761065",
+          "page": 58,
+          "start_utf8": 1741
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000110945-000-407a081f36a4",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53281"
+      ],
+      "record_sha256": "d6b7a093925cb064f2898b78e1711945dc1889d8b9d0d9bf41013e546b081cc2",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 2202,
+          "literal_sha256": "b3fb32659ae7398a99b0f97e76d9b1cabeac510a51589f3264eb2fee5aee2223",
+          "page": 58,
+          "start_utf8": 1869
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000111278-000-6617276d2d18",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53282"
+      ],
+      "record_sha256": "e30f642c58f53b27664342e63304dd03a65116e58b4b04ad2c4a5ab1b351fbe7",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 2418,
+          "literal_sha256": "57075336dca28c6371015e361d43761e492e2afe8fef9d9b13e5a3565f24daef",
+          "page": 58,
+          "start_utf8": 2202
+        },
+        {
+          "end_utf8": 165,
+          "literal_sha256": "1a3c3b46cf4fee52082bb751827e92617a44d669355446b8ed8c9535caf7fca8",
+          "page": 59,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000111659-000-b680ae2edfb1",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53283"
+      ],
+      "record_sha256": "841533c57f29cc8bd7481001782c4c40a12870d7d674c00f94c277c03f0b9d4f",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 854,
+          "literal_sha256": "230d553759e83f9bd3cf0c623c17d0f30b7398afac8b58a7f85aaca7505df777",
+          "page": 59,
+          "start_utf8": 165
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000112348-000-f412369df86e",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53284"
+      ],
+      "record_sha256": "4976c50e52910d85a2221568a8d5b2651007213c4f00848b34ac44a0ff20b468",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 1404,
+          "literal_sha256": "67ce18e8f2a1a5c2d9f271e5cddf35cdc32fd6b4a82b15e289830e6f1fa5bd1b",
+          "page": 59,
+          "start_utf8": 854
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000112898-000-170190b396e6",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53285"
+      ],
+      "record_sha256": "2e047d04dfba7b0e563217179d194506ee4c902e030c0b09ab9b1757a9acf76e",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 1686,
+          "literal_sha256": "7d021c8fd9b9aa6fefd45b62eae925693617686806368103dc24fbc31a6ffa60",
+          "page": 59,
+          "start_utf8": 1404
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000113180-000-dca23f1935f2",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53286"
+      ],
+      "record_sha256": "0339552f03a7288f8a7e87493cbc7d2a6345727868786c573ada5ef6f256bb5b",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 2044,
+          "literal_sha256": "c8b79e231915d8b6671604e129fa26a8027756152658cc586cc15ab25fb31f0a",
+          "page": 59,
+          "start_utf8": 1686
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000113538-000-920502724ba9",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [
+        "53287"
+      ],
+      "record_sha256": "82c414b6144144ea1788e0e837578bc6e6dc5ca4b7f87500ee6597649e15e3df",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 2351,
+          "literal_sha256": "6ab4a549bba0ab11f3ca99662cc1389e0835e2c825cfa884f3a8d49488a36529",
+          "page": 59,
+          "start_utf8": 2044
+        },
+        {
+          "end_utf8": 381,
+          "literal_sha256": "946282cbe782b96b9a8b429680142c6e840a44c3e29989e20628a044201d6654",
+          "page": 60,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch53/manual-structure-v1/source-0000114226-000-7410ad87b836",
+      "pages_sha256": "739b59d6776396167d90799a859535c519e2b8951f499c6a8f41fef26a8bfea1",
+      "paragraph_labels": [],
+      "record_sha256": "a9b25edd7db2dbafd4855533c354cb547066ecc61c0c9fa06a176ddcc4bbf8f7",
+      "source_sha256": "4b9c8120725784d31f5bac9b68bcc843203ee3023f6f9151535effd1f7b9c3a8",
+      "spans": [
+        {
+          "end_utf8": 395,
+          "literal_sha256": "b54d8681a5ce2267ec9fef96331147116a07993e0815e5143f59eff2ab88f617",
+          "page": 60,
+          "start_utf8": 381
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000042028-000-09101ce2530f",
+      "pages_sha256": "904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e",
+      "paragraph_labels": [],
+      "record_sha256": "bf1a81c0eadd890686d21cbb352850458bff6256e8f74b4917d8188859ef5e95",
+      "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+      "spans": [
+        {
+          "end_utf8": 878,
+          "literal_sha256": "904681d33bda7a3c82df96dde239878d9892eca61522b851c1ce922e217cd722",
+          "page": 29,
+          "start_utf8": 846
+        },
+        {
+          "end_utf8": 85,
+          "literal_sha256": "8254966a1ca0563ce6c9930b62195d60c3448da8c03d8755314b974ea7a412fb",
+          "page": 31,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000042145-000-fa6132ed72e1",
+      "pages_sha256": "904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e",
+      "paragraph_labels": [
+        "54197"
+      ],
+      "record_sha256": "21ecb3e83b2d1858f3bb452bc56772cd5bfd4b7ee2cbaa1856310df88cd610c1",
+      "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+      "spans": [
+        {
+          "end_utf8": 1170,
+          "literal_sha256": "666e43b8357c36b8a2193c4d729c6f3d5f91e3fcdd1470bf6a6f3cfe20db1d48",
+          "page": 31,
+          "start_utf8": 85
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000043230-000-08beb513cb73",
+      "pages_sha256": "904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e",
+      "paragraph_labels": [
+        "54198"
+      ],
+      "record_sha256": "969a9efdc9676a623820c82e67f1fc15562fe14cb5e732dd0de918d4bff0a754",
+      "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+      "spans": [
+        {
+          "end_utf8": 2004,
+          "literal_sha256": "799b66ea564752fab32a6ce01f452b2c7b4dd084c0e2388f89fdffdf55f66a0d",
+          "page": 31,
+          "start_utf8": 1170
+        },
+        {
+          "end_utf8": 40,
+          "literal_sha256": "48a21377a29568d5ff179e8372c5b04377818962026454cf2eba7d4d9080163f",
+          "page": 32,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000044104-000-8109797de6e1",
+      "pages_sha256": "904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e",
+      "paragraph_labels": [
+        "54199"
+      ],
+      "record_sha256": "b00dbbc406eddd44671a8fdc09e2ca721eb59f05bb7488b481ef0762c5a4407b",
+      "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+      "spans": [
+        {
+          "end_utf8": 711,
+          "literal_sha256": "49859f70111602bf1382a6dc785dc24d5a40e4d45c5c340b0205f71e3899f1c9",
+          "page": 32,
+          "start_utf8": 40
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000044775-000-a17fdfcff472",
+      "pages_sha256": "904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e",
+      "paragraph_labels": [
+        "54200"
+      ],
+      "record_sha256": "fc803ded539e613ea90e3171dbc44e623eb231652d716e7d910ad32efe8ccdc7",
+      "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+      "spans": [
+        {
+          "end_utf8": 1016,
+          "literal_sha256": "447f8e2f0fb5e270e575f1f7f0645abcd05c5f4fec02782544675f14b66d75ac",
+          "page": 32,
+          "start_utf8": 711
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045080-000-e6b7d309e756",
+      "pages_sha256": "904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e",
+      "paragraph_labels": [
+        "54201"
+      ],
+      "record_sha256": "b1affa9a9feb263728df448a5afe6144f531c65dd0fd24421c0e9e969df1cab0",
+      "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+      "spans": [
+        {
+          "end_utf8": 1145,
+          "literal_sha256": "1ddffca2dc42041cfb68b9c54ebdc641cecd7a5119e57387949111501e7e4f9b",
+          "page": 32,
+          "start_utf8": 1016
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045209-000-3e41b33dd258",
+      "pages_sha256": "904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e",
+      "paragraph_labels": [],
+      "record_sha256": "c81423fac0ae95be8ce151dfcc28ef216bd3be0f77a253fbc62cdea68b389d77",
+      "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+      "spans": [
+        {
+          "end_utf8": 1167,
+          "literal_sha256": "e3f59258ea39786f7f14e8b0141ea01dddbebc7921b7463d591cde9b58f9d54e",
+          "page": 32,
+          "start_utf8": 1145
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045231-000-593ebc9bc8c2",
+      "pages_sha256": "904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e",
+      "paragraph_labels": [],
+      "record_sha256": "e23fbf4f177f7b7b7775c66d7a416495ea42b626fb9416b1f8470bc220f0ec8f",
+      "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+      "spans": [
+        {
+          "end_utf8": 1208,
+          "literal_sha256": "981440a433168d98e12f370ba2bcceedf2b6d813d594ac083887d2e3b1f54a3e",
+          "page": 32,
+          "start_utf8": 1167
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045272-000-b347af7fb067",
+      "pages_sha256": "904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e",
+      "paragraph_labels": [
+        "54210"
+      ],
+      "record_sha256": "a92c282f57fbecbbf374df67511f20f0c2bef97a1f581d4b5e882a4466d41c9e",
+      "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+      "spans": [
+        {
+          "end_utf8": 1470,
+          "literal_sha256": "5c20951e2b7c90fc94be7baaa10bf490ba7b5f574e56b653e452f99ef44face5",
+          "page": 32,
+          "start_utf8": 1208
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045534-000-1fa0918f2530",
+      "pages_sha256": "904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e",
+      "paragraph_labels": [
+        "54211"
+      ],
+      "record_sha256": "a2590fb031739c402be0709b3a57cf16a00f2c9b938073ee050f76f6b467c87f",
+      "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+      "spans": [
+        {
+          "end_utf8": 1704,
+          "literal_sha256": "26e343a11b3a17001925a869ae78004315d4cf08b1dff6ef1c336173ff7a36ef",
+          "page": 32,
+          "start_utf8": 1470
+        },
+        {
+          "end_utf8": 39,
+          "literal_sha256": "5d4c663e3986a376e108c748b62f5b607472aec0def21ec589c5b3d63b1a1324",
+          "page": 33,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000045807-000-a32e1960e55e",
+      "pages_sha256": "904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e",
+      "paragraph_labels": [
+        "54212"
+      ],
+      "record_sha256": "c9fbc651ccd93dcab77e8d789f7af91287d7908463de27ac01e4552f646568a4",
+      "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+      "spans": [
+        {
+          "end_utf8": 757,
+          "literal_sha256": "c140d31993d0fb48a59c82d985c39dea27283b3751b6433f2d66b886f4fd61dc",
+          "page": 33,
+          "start_utf8": 39
+        },
+        {
+          "end_utf8": 69,
+          "literal_sha256": "6b7fea53c21e10150aecc027ac98b751e9eefe6613a640e468df13eb5399982e",
+          "page": 35,
+          "start_utf8": 0
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000046594-000-78db81b437aa",
+      "pages_sha256": "904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e",
+      "paragraph_labels": [
+        "54213"
+      ],
+      "record_sha256": "78a5d11a3977889bfdd88738375506c4ba92fe47df8a275fc5507c583775642d",
+      "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+      "spans": [
+        {
+          "end_utf8": 428,
+          "literal_sha256": "e829847948072e5c02e1e9861bc39ae5d5ff59a3f68c69d90be54c9178ff67f8",
+          "page": 35,
+          "start_utf8": 69
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000046953-000-abe41e72e07b",
+      "pages_sha256": "904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e",
+      "paragraph_labels": [
+        "54214"
+      ],
+      "record_sha256": "3d106692a1aea55f708c109e9d51797f92bd1457d107241fe59eadc62015c9f1",
+      "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+      "spans": [
+        {
+          "end_utf8": 1283,
+          "literal_sha256": "3e841437e06c444d84542cedae87427ab7c96da2fc29697d379d5d10909fa272",
+          "page": 35,
+          "start_utf8": 428
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000047808-000-1ab1634f5c6f",
+      "pages_sha256": "904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e",
+      "paragraph_labels": [
+        "54215"
+      ],
+      "record_sha256": "0bff451885040a523319c39d81287b82f0061bd1113714c88fa1b2f39dc744c5",
+      "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+      "spans": [
+        {
+          "end_utf8": 2417,
+          "literal_sha256": "37cf160197a5e0f176fd7958035c5ce0c676be42df1ce3fedcec4ebf73002619",
+          "page": 35,
+          "start_utf8": 1283
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000048942-000-4fae6f5e244e",
+      "pages_sha256": "904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e",
+      "paragraph_labels": [],
+      "record_sha256": "6fd7807d9ed6ee0a43bc7e6305b709fd2657df61cebbf1cdf99700f397080328",
+      "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+      "spans": [
+        {
+          "end_utf8": 2439,
+          "literal_sha256": "976cea1ac589dc41967c210f19d3033dde3b01e4e85583cb45d3eb59eb15452f",
+          "page": 35,
+          "start_utf8": 2417
+        }
+      ]
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol9-ch54/manual-structure-v1/source-0000048964-000-f78b8449698c",
+      "pages_sha256": "904cbefd2c8ab13eb95204cc7c1add399f25616646876f54faad22c76857978e",
+      "paragraph_labels": [],
+      "record_sha256": "968961fb5d800de63b2a4d9b3f0ca0b4f7fcc7894ca4ea5b52dc9d227c703afe",
+      "source_sha256": "7148b787bec3c8901a22f69e1eac655b1710ef212e421fc04fc7a4bd39a176a0",
+      "spans": [
+        {
+          "end_utf8": 2470,
+          "literal_sha256": "b9c57d06d130f84d609420d66e543faaef19db88d2304fa38471f8fe83765c54",
+          "page": 35,
+          "start_utf8": 2439
+        },
+        {
+          "end_utf8": 64,
+          "literal_sha256": "a3ad4ec1f0750a7243768ce4d5c43f98a103136b99d51f9ad0acca116f937c6a",
+          "page": 36,
+          "start_utf8": 0
+        }
+      ]
+    }
+  ],
+  "specialist_review": "not-reviewed",
+  "unresolved_selectors": [
+    {
+      "limitation": "Retained original selector observation only; it may be a reference or reserved label. No paragraph identity or legal dependency is inferred.",
+      "original_declared_label": "24213",
+      "original_page_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0041",
+      "status": "not-a-matched-governing-paragraph-label"
+    },
+    {
+      "limitation": "Retained original selector observation only; it may be a reference or reserved label. No paragraph identity or legal dependency is inferred.",
+      "original_declared_label": "44561",
+      "original_page_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0131",
+      "status": "not-a-matched-governing-paragraph-label"
+    },
+    {
+      "limitation": "Retained original selector observation only; it may be a reference or reserved label. No paragraph identity or legal dependency is inferred.",
+      "original_declared_label": "42867",
+      "original_page_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0077",
+      "status": "not-a-matched-governing-paragraph-label"
+    },
+    {
+      "limitation": "Retained original selector observation only; it may be a reference or reserved label. No paragraph identity or legal dependency is inferred.",
+      "original_declared_label": "42579",
+      "original_page_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0077",
+      "status": "not-a-matched-governing-paragraph-label"
+    },
+    {
+      "limitation": "Retained original selector observation only; it may be a reference or reserved label. No paragraph identity or legal dependency is inferred.",
+      "original_declared_label": "42600",
+      "original_page_id": "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0079",
+      "status": "not-a-matched-governing-paragraph-label"
+    },
+    {
+      "limitation": "Retained original selector observation only; it may be a reference or reserved label. No paragraph identity or legal dependency is inferred.",
+      "original_declared_label": "78656",
+      "original_page_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0102",
+      "status": "not-a-matched-governing-paragraph-label"
+    },
+    {
+      "limitation": "Retained original selector observation only; it may be a reference or reserved label. No paragraph identity or legal dependency is inferred.",
+      "original_declared_label": "78030",
+      "original_page_id": "https://chris-page-gov.github.io/okf-dwp/id/page/78/0105",
+      "status": "not-a-matched-governing-paragraph-label"
+    }
+  ]
+}
