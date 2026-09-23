@@ -125,6 +125,8 @@ and 203 open obligations. Runtime acceptance and public adoption are separate.
 
 The [earlier logical-unit closure report](docs/semantic-closure-and-compact-delivery.md) records its frozen baseline: 75 authored boundaries, seven bounded profiles and 8/40 staff occurrences activating a profile. Its 184 contexts remain insufficient. The newer structured candidate adds 23 source-read profiles, bringing source-read activation to **37/40 staff occurrences** in trial 06. At 512 KiB all 40 retain source passages and relationships; all 436 declared source-selection path occurrences survive. The separate location-navigation layer activates for all 40. These measures do not establish semantic closure or answerability: all results remain insufficient and the 32 KiB packages contain no source evidence. See the [results and remaining work](docs/source-led-results.md) and [source-led demonstration](docs/source-led-demonstration.md).
 
+The [bounded Pension Credit capital repair](docs/pc-capital-bounded-repair.md) records an additive Chapter 84 candidate and its 52 offline assemblies. All packages remain insufficient; compact delivery, dependency closure and production promotion remain open.
+
 The [logical evidence unit work](docs/logical-evidence-units.md) separates PDF
 page locations from the passages Ask OKF retrieves. It adds exact source spans,
 explicit supporting passages and a separate Reader/corpus projection. See its

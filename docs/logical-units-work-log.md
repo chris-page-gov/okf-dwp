@@ -440,3 +440,11 @@ shallow clone reproduced five failures; the same pinned fetch made all five pass
 The workflow setup is repaired without changing source, protocol, answers or
 acceptance criteria. The failure and reproduction remain under
 `validation/demo-1-freeze/ci-shallow-checkout/`.
+
+## Bounded Pension Credit capital candidate, 23 September 2026
+
+The [capital repair report](pc-capital-bounded-repair.md) records two exact source-boundary corrections, ten composite groups and a retained 52-package offline comparison. At 512 KiB the candidate retains 11/11 declared groups, compared with 9/11 for a newly authored topic-routing baseline; the apparent difference is six whitespace bytes. Both arms retain Staff 006 paragraph 84911 in full, and all packages remain insufficient. At 32 KiB neither arm delivers source evidence. The 11 external dependencies, compact delivery, specialist acceptance and production promotion remain open. No model calls or new source acquisition were made.
+
+### Capital pilot review follow-up, 23 September 2026
+
+Retained all three fixed-question attempts. Corrected authored-summary provenance and reserved paragraph labels after agent review; the final 52-assembly replay retains the same substantive coverage and 32 KiB failure. The ten groups are a separately versioned experiment, not a production migration. See the [repair report and reproduction commands](pc-capital-bounded-repair.md).
