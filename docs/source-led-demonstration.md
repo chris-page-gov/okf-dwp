@@ -126,3 +126,13 @@ absence means adoption is still held; do not create a pointer merely to bypass
 that gate. For an individual earlier trial, use its retained runner, engine and
 source identities. See the [work log](logical-units-work-log.md) and
 [backlog](backlog-work-packages.md) for the exact remaining work.
+
+## Frozen Demo 1 comparison
+
+Use the [forty-question ledger](demo-one-question-ledger.md) and
+[four-answer review](demo-one-pair-results.md) for the 29 September presentation.
+The current care-home source was checked through both the public UI and native
+in-app WebMCP. The source text and context identity matched. A separate remote
+MCP, Voice or Data Agent session still needs its own observed connection test.
+The four authorised answer calls are complete; rehearse with the retained answers
+rather than spending more model allowance.

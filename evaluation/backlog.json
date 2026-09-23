@@ -774,7 +774,7 @@
           "kind": "research",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "All 28 large candidates have been source-bound and reviewed for structure: 27 mixed-structure defects and one uncertain transition, all historical amendments. A separate feature branch is testing generic contents, front-matter, local-heading and bare-appendix boundaries. Preserve damaged extraction uncertainty, all original bytes, the 75 authored units and earlier failures; require reviewed controls, four/eight gates and a final full-corpus/question comparison before adoption.",
+          "next_action": "Parked for the 23 September Demo 1 freeze: retain the 28-outlier source review and separate amendment parser branch. Complete independent review and full-context evaluation before adoption; the frozen candidate retains known historical-amendment defects.",
           "evidence": [
             "evaluation/manual-structure/final-source-review/large-paragraph-triage.json",
             "evaluation/manual-structure/final-source-review/manifest-review.json",
@@ -788,7 +788,7 @@
           "kind": "implementation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Source migration is independently reviewed and preserves 6 original requirements, 53 narrowly selected units and 4 chapter routes. The first six-assembly evaluation (three questions, two budgets) retains only 20/53 units and 43/89 paths for imprisonment at 512 KiB; all 4 complete chapter paths and the 12003-to-12002 dependency relationship are lost, although both complete source records survive. Retain this failure, diagnose retrieval and metadata pressure and repair generically before claiming original demo closure. Hospital remains an insufficiency control.",
+          "next_action": "Parked for the 23 September Demo 1 freeze: preserve the original imprisonment failure and separate continuation-allocation patch. It is outside the supplied forty-question brief and must pass its own new fixed-source evaluation before adoption.",
           "evidence": [
             "docs/logical-units-work-log.md",
             "docs/source-led-demonstration.md",
@@ -1024,7 +1024,10 @@
         "validation/model-comparison/household-direct-v3/README.md",
         "validation/model-comparison/household-direct-v4/README.md",
         "validation/model-comparison/household-direct-v4/independent-claim-review.md",
-        "validation/model-comparison/household-direct-v4/independent-claim-review.json"
+        "validation/model-comparison/household-direct-v4/independent-claim-review.json",
+        "docs/demo-one-pair-results.md",
+        "validation/demo-1-freeze/comparison/observations.json",
+        "docs/demo-one-pair-protocol.md"
       ],
       "acceptance_checks": [
         "Retain identical fixed inputs/prompts and real model outputs; verify IDs/quotes/locators; independently assess entailment/exceptions/abstention; no self-graded gold or engineering-score substitution."
@@ -1070,6 +1073,18 @@
           "executor": "human",
           "next_action": "Assess entailment, exceptions, dates and abstention independently; model review is not human acceptance.",
           "evidence": []
+        },
+        {
+          "id": "DWP-BL-010.demo-one-pair",
+          "kind": "research",
+          "status": "recorded_complete",
+          "executor": "agent",
+          "next_action": "Four authorised answers are retained with exact citations, format failures and claim-review concerns. No more calls in this freeze. A later experiment must separately test smaller model-facing diagnostics and complete quotation/qualification retention; no general accuracy or cost claim is established.",
+          "evidence": [
+            "docs/demo-one-pair-protocol.md",
+            "docs/demo-one-pair-results.md",
+            "validation/demo-1-freeze/comparison/observations.json"
+          ]
         }
       ]
     },

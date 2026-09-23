@@ -1,0 +1,103 @@
+fatal: path 'evaluation/manual-structure/context-probe/runs/attempt-06/structured-context-staff-006-524288.json.gz' does not exist in '9f6e316925f1550559733e34d8d91cd7a245c94b'
+Efatal: path 'evaluation/manual-structure/context-probe/runs/attempt-06/structured-context-staff-006-524288.json.gz' does not exist in '9f6e316925f1550559733e34d8d91cd7a245c94b'
+Efatal: path 'evaluation/manual-structure/context-probe/runs/attempt-06/structured-context-staff-006-524288.json.gz' does not exist in '9f6e316925f1550559733e34d8d91cd7a245c94b'
+Efatal: path 'evaluation/manual-structure/context-probe/runs/attempt-06/structured-context-staff-012-524288.json.gz' does not exist in '9f6e316925f1550559733e34d8d91cd7a245c94b'
+Efatal: path 'evaluation/manual-structure/context-probe/runs/attempt-06/structured-context-staff-006-524288.json.gz' does not exist in '9f6e316925f1550559733e34d8d91cd7a245c94b'
+E
+======================================================================
+ERROR: test_every_selected_record_and_source_byte_is_preserved (test_demo_one_pair.DemoOnePairTests.test_every_selected_record_and_source_byte_is_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/crpage/tmp/okf-demo1-shallow-check/scripts/test_demo_one_pair.py", line 9, in test_every_selected_record_and_source_byte_is_preserved
+    name, raw, package = demo.load_package(case)
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/crpage/tmp/okf-demo1-shallow-check/scripts/demo_one_pair.py", line 47, in load_package
+    archive = subprocess.check_output(['git', 'show', SOURCE_COMMIT + ':' + name], cwd=ROOT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/crpage/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/crpage/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'show', '9f6e316925f1550559733e34d8d91cd7a245c94b:evaluation/manual-structure/context-probe/runs/attempt-06/structured-context-staff-006-524288.json.gz']' returned non-zero exit status 128.
+
+======================================================================
+ERROR: test_frozen_scope_and_input_hashes (test_demo_one_pair.DemoOnePairTests.test_frozen_scope_and_input_hashes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/crpage/tmp/okf-demo1-shallow-check/scripts/test_demo_one_pair.py", line 23, in test_frozen_scope_and_input_hashes
+    protocol = demo.check()
+               ^^^^^^^^^^^^
+  File "/Users/crpage/tmp/okf-demo1-shallow-check/scripts/demo_one_pair.py", line 112, in check
+    name, raw, p = load_package(case)
+                   ^^^^^^^^^^^^^^^^^^
+  File "/Users/crpage/tmp/okf-demo1-shallow-check/scripts/demo_one_pair.py", line 47, in load_package
+    archive = subprocess.check_output(['git', 'show', SOURCE_COMMIT + ':' + name], cwd=ROOT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/crpage/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/crpage/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'show', '9f6e316925f1550559733e34d8d91cd7a245c94b:evaluation/manual-structure/context-probe/runs/attempt-06/structured-context-staff-006-524288.json.gz']' returned non-zero exit status 128.
+
+======================================================================
+ERROR: test_observer_retains_failures_and_cache_accounting (test_demo_one_pair.DemoOnePairTests.test_observer_retains_failures_and_cache_accounting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/crpage/tmp/okf-demo1-shallow-check/scripts/test_demo_one_pair.py", line 29, in test_observer_retains_failures_and_cache_accounting
+    result = check_demo_one_pair.observe()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/crpage/tmp/okf-demo1-shallow-check/scripts/check_demo_one_pair.py", line 9, in observe
+    demo.check()
+  File "/Users/crpage/tmp/okf-demo1-shallow-check/scripts/demo_one_pair.py", line 112, in check
+    name, raw, p = load_package(case)
+                   ^^^^^^^^^^^^^^^^^^
+  File "/Users/crpage/tmp/okf-demo1-shallow-check/scripts/demo_one_pair.py", line 47, in load_package
+    archive = subprocess.check_output(['git', 'show', SOURCE_COMMIT + ':' + name], cwd=ROOT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/crpage/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/crpage/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'show', '9f6e316925f1550559733e34d8d91cd7a245c94b:evaluation/manual-structure/context-probe/runs/attempt-06/structured-context-staff-006-524288.json.gz']' returned non-zero exit status 128.
+
+======================================================================
+ERROR: test_projection_does_not_mutate_audit (test_demo_one_pair.DemoOnePairTests.test_projection_does_not_mutate_audit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/crpage/tmp/okf-demo1-shallow-check/scripts/test_demo_one_pair.py", line 18, in test_projection_does_not_mutate_audit
+    name, raw, package = demo.load_package('staff-012')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/crpage/tmp/okf-demo1-shallow-check/scripts/demo_one_pair.py", line 47, in load_package
+    archive = subprocess.check_output(['git', 'show', SOURCE_COMMIT + ':' + name], cwd=ROOT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/crpage/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/crpage/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'show', '9f6e316925f1550559733e34d8d91cd7a245c94b:evaluation/manual-structure/context-probe/runs/attempt-06/structured-context-staff-012-524288.json.gz']' returned non-zero exit status 128.
+
+======================================================================
+ERROR: test_tampering_changes_binding (test_demo_one_pair.DemoOnePairTests.test_tampering_changes_binding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/crpage/tmp/okf-demo1-shallow-check/scripts/test_demo_one_pair.py", line 38, in test_tampering_changes_binding
+    name, raw, package = demo.load_package('staff-006')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/crpage/tmp/okf-demo1-shallow-check/scripts/demo_one_pair.py", line 47, in load_package
+    archive = subprocess.check_output(['git', 'show', SOURCE_COMMIT + ':' + name], cwd=ROOT)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/crpage/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/crpage/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'show', '9f6e316925f1550559733e34d8d91cd7a245c94b:evaluation/manual-structure/context-probe/runs/attempt-06/structured-context-staff-006-524288.json.gz']' returned non-zero exit status 128.
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.032s
+
+FAILED (errors=5)
