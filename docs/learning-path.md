@@ -54,7 +54,7 @@ before/after retrieval results.
 A **page locator** says where to check the original PDF. A **logical evidence
 unit** keeps a passage together, including an example or citation that continues
 onto the next page. A **dependency** names a separate definition or exception
-that must accompany it. The [latest source-review and compact-delivery report](semantic-closure-and-compact-delivery.md) explains the current counts, unresolved gaps and how a client reads a larger package through small responses. Follow [logical evidence units](logical-evidence-units.md)
+that must accompany it. The [earlier source-review and compact-delivery report](semantic-closure-and-compact-delivery.md) explains its frozen baseline, unresolved gaps and how a client reads a larger package through small responses. The [source-led demonstration](source-led-demonstration.md) explains the newer candidate and its separate acceptance gates. Follow [logical evidence units](logical-evidence-units.md)
 to see the implementation, its source checks and remaining uncertainty. The
 earlier page-based evidence and recorded service versions remain separately
 available; a newly generated unit is not specialist acceptance.

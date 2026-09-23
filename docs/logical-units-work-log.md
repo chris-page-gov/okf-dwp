@@ -365,3 +365,21 @@ answerability status changed.
   evidence after metadata pressure and trimming, so adoption remains held.
   Frozen trial 03 and its independent report preserve this new allocation
   regression before a same-source runtime repair.
+
+- Trial 04 fixes the zero-source large package but regresses required paths:
+  all 40 cases retain source, yet inherited paths fall to 46/47 and additional
+  paths to 137/181. All 82 legacy packages remain byte-identical. The full
+  result and independent analysis are retained; adoption stays held. A further
+  reviewed runtime repair prioritises only paths actually observed from resolved
+  seeds. A requirement cannot invent a seed or an edge. Its new 2,000-prefix
+  work bound reports truncation and falls back to ordinary priority. Boundary
+  uncertainty continues to make the package insufficient, while exact source
+  can still be retained for review. Trial 05 holds the corpus, questions,
+  protocol and ranking parameters fixed.
+- A separate original-acceptance audit finds that the source-led projection
+  retains imprisonment concepts but omits the earlier custody requirements.
+  Literal chapter references are not yet resolved by the paragraph-only
+  reference producer. This migration gap is separate from the 40 staff cases;
+  it must be restored and tested before claiming that all earlier hard cases
+  work in the new projection. The earlier hospital case is an insufficiency
+  control, not a previously completed legal answer.
