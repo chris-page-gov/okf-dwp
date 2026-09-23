@@ -1,0 +1,104 @@
+{
+  "schema": "okf-dwp-original-acceptance-protocol.v1",
+  "status": "frozen-before-original-case-experiment",
+  "engine": {
+    "schema": "okf-context-engine-admission.v1",
+    "commit": "8a5b8d11a2d99935efca4ba8366812844061d928",
+    "status": "Independently reviewed observed-path allocation repair; fixed-final-source comparison required before adoption",
+    "files": {
+      "index.ts": "689f8b8ab1cfb5ccc21b6dd9b5527fcad04de01f5876b44cbb2dc0240fceb010",
+      "corpus.ts": "a770352c6e4628f0c391b0c12bbdaf185b476a714ca212e99459d135f8f57f6f",
+      "corpusV3.ts": "77f18b685d261e4a9d76b5c63214cb8dcdac0e38ce5ecaf4d60ff4ed77dec2f3",
+      "types.ts": "10215859405c3c6b0856af02f7fe48af7d23c0e8a272563512991fcd6e41a807",
+      "unit.ts": "7cd989c00564ad2e0469073c66685ffb5111809e7f598dc42b6f3df1bf693aa6"
+    }
+  },
+  "case_fixtures": [
+    {
+      "path": "evaluation/context-assembly/imprisonment-case.json",
+      "bytes": 56752,
+      "sha256": "9eab17eb3a01fb8e3e7137d4440386da752d31e1f6a746713a02cd1ebe9108fd"
+    },
+    {
+      "path": "evaluation/remote-mcp/hospital-case.json",
+      "bytes": 2418,
+      "sha256": "73e64cc295735bce164ea3d7c2dd6c69579d9fed09da9420d2ce2d1cd48dd2f5"
+    }
+  ],
+  "unknown_control": {
+    "id": "unknown-control",
+    "question": "xylophonicquasarteleportation"
+  },
+  "budgets": [
+    32768,
+    524288
+  ],
+  "helpers": [
+    {
+      "path": "scripts/original_acceptance_metrics.mjs",
+      "bytes": 4407,
+      "sha256": "c87ac5649aa86b80dfb13095f40c8f97d8c6fb9e66e6f408b467b31ba23043ad"
+    },
+    {
+      "path": "scripts/structured_context_metrics.mjs",
+      "bytes": 7372,
+      "sha256": "93a1f04e24794480237d1814b91f6da4f571cdfa3cabd7622b83b091c7387f21"
+    },
+    {
+      "path": "scripts/structured_restoration_admission.mjs",
+      "bytes": 3526,
+      "sha256": "224b70bc9533da637e504735960c02a76460c330663753d72c4a5e2f75f852f2"
+    }
+  ],
+  "author": {
+    "path": "domain-profile/structured-units/custody-restoration.yamlld",
+    "bytes": 170200,
+    "sha256": "0bbc0fa0e24df580f18ce7d500f4a0e4d72bdc11ce80007ea0550449cc99ba95"
+  },
+  "original_index": {
+    "path": "full-dmg/context/assembly-index.json",
+    "bytes": 416647,
+    "sha256": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54"
+  },
+  "source": {
+    "path": "structured-context/manifest.json",
+    "bytes": 485302,
+    "sha256": "7438256b35f5fcb612282b7a496b63db543e1411e1de28b6edea89969b309d51"
+  },
+  "ledger": {
+    "path": "structured-context/custody-migration.json",
+    "bytes": 170254,
+    "sha256": "e6c662ec5add3cb44bbec4ca6ee2df3b2d9ad3e66196c672ddef28e44ac511a1"
+  },
+  "measures": [
+    "exact_six_historical_requirements",
+    "active_translated_profiles",
+    "declared_53_unit_union",
+    "retained_and_omitted_active_units",
+    "retained_and_omitted_exact_paths",
+    "12003_requires_12002",
+    "12015_literal_chapter_routes",
+    "dated_catalogue_scope",
+    "contemporary_adm_scope_warning",
+    "unresolved_selectors",
+    "retained_open_obligations",
+    "source_identity",
+    "explicit_truncation"
+  ],
+  "gates": [
+    "Source and engine identities must be frozen before an assembly.",
+    "Preserve both original question strings and original expectations unchanged as historical source-bound fixtures.",
+    "Integrity/admission failures are failed runs, not acceptable insufficient evidence.",
+    "All context packages must remain within their budgets and contain no model answer.",
+    "All cases remain insufficient; unknown vocabulary has no source evidence; hospital does not activate custody profiles.",
+    "Report every omitted declared unit/path explicitly; retaining a path or whole source does not establish legal support."
+  ],
+  "limitations": [
+    "Known development acceptance cases, not independent held-out questions or a model answer-quality experiment.",
+    "The original staff40 trial is a separate denominator and remains unchanged.",
+    "The original page expectations and newer bounded whole-unit selection are separately reported, never silently substituted.",
+    "No source acquisition, external network or model calls.",
+    "The old hospital fixture is an evidence-gap control, not a formerly sufficient hospital answer.",
+    "Current ADM regime applicability, source boundaries, omitted qualification branches, legal versions and specialist review remain unresolved."
+  ]
+}

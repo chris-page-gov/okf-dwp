@@ -40,3 +40,23 @@ The original hospital fixture was explicitly an evidence-gap control for the cus
 The pure [compiler](../scripts/structured_custody_restoration.py) returns an additive semantic index and a translation ledger. Its focused tests check exact source and record bindings, unchanged inherited concepts and requirements, guarded routing, explicit chapter paths, dated scope records, unresolved obligations and rejection of altered inputs. Tests do not grade a legal answer.
 
 The integration hook is `project(inputs, semantic, records, units) -> (semantic, ledger)`. The ledger includes the exact added scope records for explicit admission in the evaluation protocol. Two catalogue-derived scope records have new identities; the other five scopes are unchanged historical records. This authoring increment must be built, separately frozen and evaluated before its runtime or browser delivery is claimed. Earlier failed and accepted trials remain unchanged.
+
+## Separate original-case evaluation
+
+The [original-case protocol](../evaluation/manual-structure/original-acceptance/protocol.json) binds the exact two original question fixtures, engine, new source manifest, translation ledger and independent helpers before execution. It adds an unrelated-vocabulary control and runs each question at 32 KiB and 512 KiB: six assemblies in total. The 40 staff questions keep their separate evaluation.
+
+Run the focused controls without assembling a corpus:
+
+```sh
+node --test scripts/test_original_acceptance_metrics.mjs scripts/test_original_acceptance_runner.mjs
+```
+
+Run a new retained attempt only after freezing its source protocol:
+
+```sh
+node scripts/evaluate_original_acceptance.mjs --explorer-root /path/to/pinned/okf-explorer --attempt acceptance-01
+```
+
+Add `--check` to replay that exact attempt against its pinned source and engine. A fresh run refuses to overwrite an existing attempt. Failures preserve their completed rows and input identities.
+
+The report separates all six original requirements from active translated profiles, retained and omitted whole units, exact paths, the 12003-to-12002 dependency and the four literal chapter routes. It also retains budget omissions, source-boundary warnings, the dated ADM scope caveat and unmatched original selectors. An integrity error is a failed evaluation, not an acceptable insufficient answer. All three questions are expected to remain insufficient; the hospital question must not activate custody profiles, and unrelated vocabulary must not acquire source evidence.

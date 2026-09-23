@@ -1,0 +1,64 @@
+{
+  "schema": "okf-independent-review.v1",
+  "reviewer": "dependency_review",
+  "status": "no-blocker-after-two-bounded-repairs",
+  "scope": "Read-only review of the separate original imprisonment/hospital/unknown acceptance harness before its first assemblies; not execution or legal acceptance.",
+  "files": [
+    {
+      "path": "scripts/evaluate_original_acceptance.mjs",
+      "bytes": 11800,
+      "sha256": "5d5bb98133690c2609f4690a0bd371d929a68fcacffa64ecf39296dec1e0eeec"
+    },
+    {
+      "path": "scripts/original_acceptance_metrics.mjs",
+      "bytes": 4407,
+      "sha256": "c87ac5649aa86b80dfb13095f40c8f97d8c6fb9e66e6f408b467b31ba23043ad"
+    },
+    {
+      "path": "scripts/test_original_acceptance_metrics.mjs",
+      "bytes": 4096,
+      "sha256": "419293671253762e7156f7603e0bdcb2c341a4c2cdabed7b692d24ecf68abdd1"
+    },
+    {
+      "path": "scripts/test_original_acceptance_runner.mjs",
+      "bytes": 2825,
+      "sha256": "722e3d008db19deab6d0dd559d014c24e7872b96aa8a5a51c6eeda5d895a97a7"
+    },
+    {
+      "path": "evaluation/manual-structure/original-acceptance/protocol.json",
+      "bytes": 4375,
+      "sha256": "5bb6d17572ad9f789f91b37de03c6cfdd5c8df1a370c579a99b6406dfeb3e945"
+    }
+  ],
+  "findings": [
+    {
+      "status": "resolved",
+      "finding": "Required-path primary relationships were counted through endpoint/guard matching without exact declared-edge comparison; a weakened guard could count as retained.",
+      "repair": "Every active required-path assertion is admitted against the unique declared assertion and any returned edge must deep-equal it, including the guard. Missing/empty primary guards reject."
+    },
+    {
+      "status": "resolved",
+      "finding": "Fresh output creation could follow a symlinked ancestor before protocol/source admission.",
+      "repair": "Every existing output ancestor is checked with lstat and realpath before any write; symlink-parent negative proves the external directory remains empty."
+    }
+  ],
+  "reviewed_properties": [
+    "Exact original two question fixtures and all six historical custody requirements remain bound and unchanged.",
+    "Hash-bound final source manifest7438256b and five engine modules8a5 are admitted with helper/source checks repeated at run closure.",
+    "No hidden retrieval seeds; declared-edge census is metric preflight only; assembler receives the question and byte budget.",
+    "Original page expectations, translated source-unit selection, retained paths, source-context dependencies and open obligations are separate measures.",
+    "Unknown vocabulary receives no evidence and hospital cannot activate custody requirements. All packages must remain insufficient with no AI answer.",
+    "Integrity failures become retained failed runs, not accepted insufficiency. Fresh output and replay checks preserve previous receipts."
+  ],
+  "tests": {
+    "command": "node --test scripts/test_original_acceptance_metrics.mjs scripts/test_original_acceptance_runner.mjs",
+    "independently_executed": true,
+    "passed": 9,
+    "failed": 0
+  },
+  "limits": [
+    "No original-case or staff assemblies run by the reviewer.",
+    "No network, acquisition, provider/model, deployment or claimant-level legal assessment.",
+    "The known source-bound original cases are not held-out answer-quality evidence."
+  ]
+}
