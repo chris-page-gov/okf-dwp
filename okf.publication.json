@@ -1861,7 +1861,14 @@
         "scripts/structured_context_metrics.mjs",
         "scripts/test_structured_context_metrics.mjs",
         "scripts/report_structured_context.mjs",
-        "scripts/test_report_structured_context.mjs"
+        "scripts/test_report_structured_context.mjs",
+        "scripts/structured_custody_restoration.py",
+        "scripts/structured_restoration_admission.mjs",
+        "scripts/test_structured_restoration_admission.mjs",
+        "scripts/test_state_pension*.py",
+        "scripts/evaluate_original_acceptance.mjs",
+        "scripts/original_acceptance_metrics.mjs",
+        "scripts/test_original_acceptance*.mjs"
       ],
       "command_ids": [
         "build-check",
@@ -1907,7 +1914,11 @@
         "structured-corpus-controls",
         "structured-context-replay",
         "structured-metrics-controls",
-        "structured-report-controls"
+        "structured-report-controls",
+        "structured-restoration-admission-controls",
+        "original-acceptance-controls",
+        "original-acceptance-replay",
+        "state-pension-selection-controls"
       ]
     },
     {
@@ -1997,7 +2008,14 @@
         "scripts/structured_context_metrics.mjs",
         "scripts/test_structured_context_metrics.mjs",
         "scripts/report_structured_context.mjs",
-        "scripts/test_report_structured_context.mjs"
+        "scripts/test_report_structured_context.mjs",
+        "scripts/structured_custody_restoration.py",
+        "scripts/structured_restoration_admission.mjs",
+        "scripts/test_structured_restoration_admission.mjs",
+        "scripts/test_state_pension*.py",
+        "scripts/evaluate_original_acceptance.mjs",
+        "scripts/original_acceptance_metrics.mjs",
+        "scripts/test_original_acceptance*.mjs"
       ],
       "command_ids": [
         "context-discovery-build-check",
@@ -2021,7 +2039,11 @@
         "structured-corpus-controls",
         "structured-context-replay",
         "structured-metrics-controls",
-        "structured-report-controls"
+        "structured-report-controls",
+        "structured-restoration-admission-controls",
+        "original-acceptance-controls",
+        "original-acceptance-replay",
+        "state-pension-selection-controls"
       ]
     },
     {
@@ -3405,6 +3427,62 @@
         "mutates": "none",
         "timeout_minutes": 5,
         "kind": "test"
+      },
+      {
+        "id": "structured-restoration-admission-controls",
+        "kind": "test",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "node --test scripts/test_structured_restoration_admission.mjs",
+        "source": "docs/original-acceptance-restoration.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "original-acceptance-controls",
+        "kind": "test",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "node --test scripts/test_original_acceptance_metrics.mjs scripts/test_original_acceptance_runner.mjs",
+        "source": "docs/original-acceptance-restoration.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "original-acceptance-replay",
+        "kind": "check",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "node scripts/evaluate_original_acceptance.mjs --explorer-root .ci/okf-explorer-structured --attempt acceptance-01 --check",
+        "source": "docs/original-acceptance-restoration.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 20
+      },
+      {
+        "id": "state-pension-selection-controls",
+        "kind": "test",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python -m unittest discover -s scripts -p 'test_state_pension*.py'",
+        "source": "docs/source-led-results.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
       }
     ]
   },

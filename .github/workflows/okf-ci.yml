@@ -357,9 +357,11 @@ jobs:
           uv run --locked python -m unittest discover -s scripts -p 'test_manual*.py'
           uv run --locked python -m unittest discover -s scripts -p 'test_pdf_structure*.py'
           uv run --locked python -m unittest discover -s scripts -p 'test_structured*.py'
+          uv run --locked python -m unittest discover -s scripts -p 'test_state_pension*.py'
           node --test scripts/test_structured_context_metrics.mjs
           node --test scripts/test_report_structured_context.mjs
           node --test scripts/test_structured_restoration_admission.mjs
+          node --test scripts/test_original_acceptance_metrics.mjs scripts/test_original_acceptance_runner.mjs
       - name: Read the admitted structured-context consumer identity
         id: structured-consumer
         run: |
@@ -388,6 +390,7 @@ jobs:
           test "$(git -C .ci/okf-explorer-structured rev-parse HEAD)" = "$STRUCTURED_CONSUMER_COMMIT"
           node --experimental-strip-types scripts/test_structured_corpus.mjs --explorer-root .ci/okf-explorer-structured --receipt ".ci/structured-corpus-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.json"
           node --experimental-strip-types scripts/check_structured_replay.mjs --explorer-root .ci/okf-explorer-structured
+          node scripts/evaluate_original_acceptance.mjs --explorer-root .ci/okf-explorer-structured --attempt acceptance-01 --check
 
   validate:
     # Preserve the existing protected check name and fail for skipped,

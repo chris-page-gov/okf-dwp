@@ -383,3 +383,32 @@ answerability status changed.
   it must be restored and tested before claiming that all earlier hard cases
   work in the new projection. The earlier hospital case is an insufficiency
   control, not a previously completed legal answer.
+
+## Expanded source selections and original-case check — 23 September 2026
+
+- The final expanded corpus accounts for all 53,727 units and now has 19,193
+  relationships and 82 separately grouped requirements. Global check 04 verifies
+  every card/unit pair, source span, relationship and 1,355 input bindings.
+- Trial 06 keeps the same engine, questions, ranking and budgets. At 512 KiB,
+  all 40 staff occurrences retain source and relationships. Source-read
+  activation rises to 37/40; 47 inherited, 181 earlier and 208 new declared
+  source-selection path occurrences all survive. The three underspecified
+  tasks and all 203 old obligations remain open. At 32 KiB no staff package
+  retains source evidence.
+- Location navigation remains a separate, less favourable measure: 469/765
+  restored and 34/87 inferred route incidences survive, compared with 490/765
+  and 35/87 in trial 05. The original page requirements are unchanged.
+- Independent source review restores six original custody requirements,
+  53 narrowly selected units and four chapter routes. The separate first
+  imprisonment assembly retains only 20/53 units and 43/89 paths at 512 KiB;
+  all four complete chapter paths and the 12003-to-12002 dependency are lost.
+  Retain this failure and diagnose its allocation boundary before claiming
+  original-case acceptance. Hospital remains an insufficiency control.
+- The Reader endpoint failure is repaired by indexing discovery aliases in
+  their existing metadata channel rather than duplicating them as generic
+  tags. No alias, source text, posting or conceptual facet was discarded and
+  no limit was raised. The full Reader now loads 54,578 records and 19,193
+  relationships in the actual browser. Public acceptance remains separate.
+- Explorer PR 144 merged through the normal protected squash route at
+  `dc54fac4f98fa5bc9db38bf843854ce24a4c130d`. The five tested runtime modules
+  remain byte-identical to the separately pinned `8a5b8d11` engine.

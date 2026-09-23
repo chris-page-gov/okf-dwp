@@ -2,6 +2,12 @@
 
 Deadline: **21 September 2026, 10:00 Europe/London** (09:00 UTC).
 
+This is the retained Monday work log. For the later source-led DMG/ADM build,
+use the [current results and gaps](source-led-results.md) and
+[implementation log](logical-units-work-log.md). The dated service observations
+below remain historical; [service publication status](service-publication.md)
+selects the latest recorded public receipt.
+
 ## Starting point, 20 September at 22:18 BST
 
 DWP main `8d3349e7be91112fdc81ada1c9dda5ccdfcef60d` and Explorer main

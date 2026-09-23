@@ -120,6 +120,11 @@ an omitted passage from memory.
 
 ## 6. Understand the four checks
 
+For the latest measured results, read [source-led results and remaining
+work](source-led-results.md). It keeps source accounting, staff-question
+selection and the original imprisonment case separate, including retained
+failures and unresolved obligations.
+
 | Check | What it establishes | What it does not establish |
 | --- | --- | --- |
 | Source accounting | All captured documents, pages and original text bytes are accounted for | Complete acquisition of every relevant law or future update |

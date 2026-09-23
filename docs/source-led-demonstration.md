@@ -83,10 +83,20 @@ captured document and extracted byte.
 
 The [question trials](../evaluation/manual-structure/context-probe/) retain all
 40 staff occurrences plus an unknown-term control, in two projections and at
-two budgets. Source-read profiles activate for 21/40 occurrences. Location
-navigation activates for all 40, but does not close their 203 original open
-obligations. All results remain insufficient. Failed allocation attempts are
-kept alongside later repairs.
+two budgets. In trial 06, source-read profiles activate for **37/40 occurrences**,
+up from 8 in the earlier logical-unit baseline. At 512 KiB, all 40 retain source
+passages and relationships. All 47 inherited, 181 previously added and 208 newly
+added source-selection path occurrences are retained. These are routes through
+evidence, not counts of correct answers.
+
+Three questions still lack a suitably scoped source-read profile: unspecified
+benefits abroad, an ambiguous use of SDA, and an unnamed benefit in a care home.
+Their existing research leads stay available; the system does not guess the
+missing facts. Location navigation activates for all 40, but does not close
+their **203 original open obligations**. All results remain insufficient. The
+32 KiB limit still retains no source evidence. Failed allocation attempts and
+location-route trade-offs are kept alongside later repairs. See the
+[separate measures and remaining work](source-led-results.md).
 
 The original imprisonment and hospital acceptance cases are a separate check;
 they must not disappear merely because the staff-question census passes.

@@ -10,6 +10,9 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Expand source-read selection to 37/40 unchanged staff question occurrences, with complete retention of 47 inherited, 181 earlier and 208 new declared source-selection paths at 512 KiB. Preserve the three ambiguous questions, all 203 original obligations, 32 KiB refusal and reduced location-route retention. Restore original custody requirements in a separate evaluation plane. This is evidence preparation and delivery, not an AI-answer or specialist-acceptance result.
+- Repair the Reader's endpoint capacity failure without deleting aliases or raising its limit: index discovery aliases through their dedicated metadata channel. The full 53,727-unit corpus now loads with 19,193 relationships; exact source text, pages and historical classifications remain preserved.
+
 - Retain the successful fixed-source allocation trial: all 40 large staff packages contain source, with 47/47 inherited and 181/181 new source-read paths. Independent checking preserves 82 exact legacy results. Keep the location-navigation trade-offs, 32 KiB refusal and all 203 original obligations explicit; no model-answer improvement is inferred. Track the separately discovered original-imprisonment migration and Reader label-capacity gaps before source publication.
 
 - Repair the observed discovery delivery regression with a same-source comparison:

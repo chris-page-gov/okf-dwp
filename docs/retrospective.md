@@ -82,6 +82,15 @@ See the [work log](logical-units-work-log.md) for current integration and
 publication status rather than treating this retrospective as a deployment
 receipt.
 
+The later trial activates source-read profiles for 37/40 staff occurrences and
+retains all 436 declared source-selection path incidences at 512 KiB. A separate
+rerun of the original imprisonment question still loses required routes under
+metadata and retrieval pressure. This is a useful testing lesson: improving a
+larger question set does not prove that earlier acceptance cases still work.
+Keep every original hard case in the regression suite, and measure delivered
+source, relationship paths and unresolved obligations separately. See
+[the results and gaps](source-led-results.md) for the exact denominators.
+
 ### Later evidence: qualifications need modelling and allocation
 
 The [21 September comparison](../validation/qualification-context/2026-09-21/README.md)
