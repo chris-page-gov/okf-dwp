@@ -390,7 +390,21 @@ jobs:
           test "$(git -C .ci/okf-explorer-structured rev-parse HEAD)" = "$STRUCTURED_CONSUMER_COMMIT"
           node --experimental-strip-types scripts/test_structured_corpus.mjs --explorer-root .ci/okf-explorer-structured --receipt ".ci/structured-corpus-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.json"
           node --experimental-strip-types scripts/check_structured_replay.mjs --explorer-root .ci/okf-explorer-structured
-          node scripts/evaluate_original_acceptance.mjs --explorer-root .ci/okf-explorer-structured --attempt acceptance-01 --check
+      - name: Preserve the original-case source and evaluator freeze
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: 0e82d9ef32b08510bb5dbddd8c56252f9adffe09
+          path: .ci/okf-dwp-original-acceptance
+          persist-credentials: false
+      - name: Preserve the original-case engine independently of later admission
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: chris-page-gov/okf-explorer
+          ref: 8a5b8d11a2d99935efca4ba8366812844061d928
+          path: .ci/okf-explorer-original-acceptance
+          persist-credentials: false
+      - name: Replay the retained original-case failure without relabelling it
+        run: node .ci/okf-dwp-original-acceptance/scripts/evaluate_original_acceptance.mjs --explorer-root .ci/okf-explorer-original-acceptance --attempt acceptance-01 --check
 
   validate:
     # Preserve the existing protected check name and fail for skipped,

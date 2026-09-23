@@ -459,7 +459,10 @@
         "domain-profile/structured-units/state-pension-routing.yamlld",
         "domain-profile/structured-units/benefit-interactions.yamlld",
         "domain-profile/structured-units/custody-restoration.yamlld",
-        "docs/original-acceptance-restoration.md"
+        "docs/original-acceptance-restoration.md",
+        "evaluation/manual-structure/large-paragraph-review-2026-09-23/README.md",
+        "evaluation/manual-structure/large-paragraph-review-2026-09-23/findings.json",
+        "evaluation/manual-structure/context-probe/analysis-06/independent-reading.md"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
@@ -707,7 +710,8 @@
             "domain-profile/structured-units/state-pension-routing.yamlld",
             "domain-profile/structured-units/benefit-interactions.yamlld",
             "domain-profile/structured-units/custody-restoration.yamlld",
-            "docs/original-acceptance-restoration.md"
+            "docs/original-acceptance-restoration.md",
+            "evaluation/manual-structure/context-probe/analysis-06/independent-reading.md"
           ]
         },
         {
@@ -768,13 +772,15 @@
         {
           "id": "DWP-BL-007.remaining-structural-review",
           "kind": "research",
-          "status": "not_started",
+          "status": "in_progress",
           "executor": "agent",
-          "next_action": "Review the28 source-bound paragraph candidates over15KB, beginning with historical amendments, and the explicitly unresolved memo numbering/headings. Size is a triage cue, not proof of an error. Add independent source-backed controls for each actual failure, preserve all originalbytes and75 authoredunits, then rerun the four/eight structural gates and frozen question comparison before publication. Do not claim the rest of the53,727 machine catalogue has specialist-approved boundaries.",
+          "next_action": "All 28 large candidates have been source-bound and reviewed for structure: 27 mixed-structure defects and one uncertain transition, all historical amendments. A separate feature branch is testing generic contents, front-matter, local-heading and bare-appendix boundaries. Preserve damaged extraction uncertainty, all original bytes, the 75 authored units and earlier failures; require reviewed controls, four/eight gates and a final full-corpus/question comparison before adoption.",
           "evidence": [
             "evaluation/manual-structure/final-source-review/large-paragraph-triage.json",
             "evaluation/manual-structure/final-source-review/manifest-review.json",
-            "docs/source-led-manual-guide.md"
+            "docs/source-led-manual-guide.md",
+            "evaluation/manual-structure/large-paragraph-review-2026-09-23/README.md",
+            "evaluation/manual-structure/large-paragraph-review-2026-09-23/findings.json"
           ]
         },
         {

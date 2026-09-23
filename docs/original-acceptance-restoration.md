@@ -51,13 +51,21 @@ Run the focused controls without assembling a corpus:
 node --test scripts/test_original_acceptance_metrics.mjs scripts/test_original_acceptance_runner.mjs
 ```
 
-Run a new retained attempt only after freezing its source protocol:
+Replay the existing first attempt with its exact source, protocol and engine:
 
 ```sh
-node scripts/evaluate_original_acceptance.mjs --explorer-root /path/to/pinned/okf-explorer --attempt acceptance-01
+node scripts/evaluate_original_acceptance.mjs --explorer-root /path/to/pinned/okf-explorer --attempt acceptance-01 --check
 ```
 
-Add `--check` to replay that exact attempt against its pinned source and engine. A fresh run refuses to overwrite an existing attempt. Failures preserve their completed rows and input identities.
+`acceptance-01` already exists. Its engine is
+`8a5b8d11a2d99935efca4ba8366812844061d928`; a newer checkout is not a substitute.
+Preserve its frozen runner, protocol, inputs and result when evaluating a later
+candidate.
+
+For a new experiment, freeze the candidate protocol separately and choose a
+fresh attempt name, for example `--attempt acceptance-next`, without `--check`.
+The runner refuses to overwrite an existing attempt. Failures preserve their
+completed rows and input identities.
 
 The report separates all six original requirements from active translated profiles, retained and omitted whole units, exact paths, the 12003-to-12002 dependency and the four literal chapter routes. It also retains budget omissions, source-boundary warnings, the dated ADM scope caveat and unmatched original selectors. An integrity error is a failed evaluation, not an acceptable insufficient answer. All three questions are expected to remain insufficient; the hospital question must not activate custody profiles, and unrelated vocabulary must not acquire source evidence.
 
