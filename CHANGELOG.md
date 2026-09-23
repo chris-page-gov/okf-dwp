@@ -10,6 +10,8 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Freeze a two-question, four-call subscription comparison protocol. Retain complete selected records in a labelled reading view, preserve the full audit packages and test the projection offline before any model invocation.
+
 - Fix the Demo 1 scope against the supplied GitHub brief: all 40 questions match exactly. Prepare a 15:00 BST freeze with the tested engine/source pair, explicit coverage gaps and a hard cap of four new answer calls. Park separate custody and historical-amendment repairs; do not infer answer improvements or token savings from retrieval results.
 - Expand source-read selection to 37/40 unchanged staff question occurrences, with complete retention of 47 inherited, 181 earlier and 208 new declared source-selection paths at 512 KiB. Preserve the three ambiguous questions, all 203 original obligations, 32 KiB refusal and reduced location-route retention. Restore original custody requirements in a separate evaluation plane. This is evidence preparation and delivery, not an AI-answer or specialist-acceptance result.
 - Repair the Reader's endpoint capacity failure without deleting aliases or raising its limit: index discovery aliases through their dedicated metadata channel. The full 53,727-unit corpus now loads with 19,193 relationships; exact source text, pages and historical classifications remain preserved.

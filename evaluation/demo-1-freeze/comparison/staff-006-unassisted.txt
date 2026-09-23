@@ -1,0 +1,9 @@
+Answer the question below as accurately as this arm permits. Do not calculate an award or assume missing household facts. Distinguish the whole benefit from additional amounts, conditions from exceptions, and historical guidance from current law. If a conclusion cannot be established, say why; a useful partial answer is permitted. Do not invent sources or quotations. No tools, browsing or follow-up questions.
+
+Return one JSON object, no fences, with: summary (at most 1400 characters), claims (at most 4 objects, each containing statement, qualification, and citations), gaps (at most 8 strings), limitations (at most 8 strings). Each citation must contain record_id and an exact contiguous quote from its supplied record text. If there is no supplied evidence, citations must be empty: mark the answer as unverified model knowledge. Keep the entire answer under 12 KiB. Literal citation matching does not prove that a claim follows from a source.
+
+Question: What is the maximum you can have in savings to still qualify for Pension Credit?
+
+Arm instructions: No bundle or other sources are supplied. Use your existing knowledge, but label it unverified; do not invent a citation or imply current source verification.
+
+Supplied evidence: None.

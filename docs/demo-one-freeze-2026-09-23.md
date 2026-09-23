@@ -52,6 +52,9 @@ promise. A result showing no improvement must be retained just as clearly.
 - Preserve every failure. Do not rerun a model merely to obtain a better result.
 - Do not purchase services, consume reset credits or change account permissions.
 
+The [frozen pair protocol](demo-one-pair-protocol.md) defines the exact inputs,
+assessment boundary and no-retry execution policy.
+
 ## Release sequence and stop points
 
 1. Confirm the brief mapping and name the exact candidate source and engine.
