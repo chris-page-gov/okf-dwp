@@ -10,6 +10,8 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Retain the successful fixed-source allocation trial: all 40 large staff packages contain source, with 47/47 inherited and 181/181 new source-read paths. Independent checking preserves 82 exact legacy results. Keep the location-navigation trade-offs, 32 KiB refusal and all 203 original obligations explicit; no model-answer improvement is inferred. Track the separately discovered original-imprisonment migration and Reader label-capacity gaps before source publication.
+
 - Repair the observed discovery delivery regression with a same-source comparison:
   all 47 inherited paths now remain at 512 KiB. Preserve the 32 KiB limitation,
   earlier failure and all insufficient results. Add generic conjunctive route

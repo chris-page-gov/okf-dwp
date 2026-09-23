@@ -100,6 +100,9 @@ def compile_context(root=ROOT):
     semantic=project_selections(inputs,semantic,rows,units)
     semantic,migration=project_locations(inputs,semantic,rows,units)
     outputs['location-migration.json']=canonical(migration)
+    from structured_custody_restoration import project as project_custody
+    semantic,custody_migration=project_custody(inputs,semantic,rows,units)
+    outputs['custody-migration.json']=canonical(custody_migration)
     edges={e['id']:e for e in semantic['assertions']}
     by_label=defaultdict(list);local=defaultdict(list)
     for record in rows:

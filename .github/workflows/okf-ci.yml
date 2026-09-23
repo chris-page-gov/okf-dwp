@@ -359,6 +359,7 @@ jobs:
           uv run --locked python -m unittest discover -s scripts -p 'test_structured*.py'
           node --test scripts/test_structured_context_metrics.mjs
           node --test scripts/test_report_structured_context.mjs
+          node --test scripts/test_structured_restoration_admission.mjs
       - name: Read the admitted structured-context consumer identity
         id: structured-consumer
         run: |

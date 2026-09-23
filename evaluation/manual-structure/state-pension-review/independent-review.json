@@ -1,0 +1,39 @@
+{
+  "schema": "okf-independent-source-selection-review.v1",
+  "recorded_date": "2026-09-23",
+  "reviewer": "compact_engine",
+  "result": "no-blocker-for-bounded-source-selection-scope",
+  "bindings": [
+    {
+      "path": "domain-profile/structured-units/state-pension-routing.yamlld",
+      "sha256": "10572ea8f166c9fdc96e46ede0f00b385589f09f135f2513ef0a51f883cf8812"
+    },
+    {
+      "path": "evaluation/manual-structure/state-pension-review/source-reading.json",
+      "sha256": "f3f3b4f1e31f7739912ba7abb5dcd5154602c602f2e4a12ccb5d9b39e331dee1"
+    },
+    {
+      "path": "structured-units/manifest.json",
+      "sha256": "8b620634bf686566d30c0cf4cd12f69535af7ef546a356333e3b0f9011d15741"
+    },
+    {
+      "path": "structured-units/documents/dmg/dmg-vol12-ch74.json.gz",
+      "sha256": "e74dfbf09494d6cda62a7b43b8663c5ecf0db8b337417dd3c92cac7c28702b2a"
+    }
+  ],
+  "checks": [
+    "Independently read all 18 selected exact unit texts and checked each unit ID, record SHA declaration, source spans and text hash against the source-reading ledger and frozen unit document.",
+    "74001 distinguishes legislative new State Pension from retirement pension and refers the latter to Chapter 75; the profile scope retains that distinction.",
+    "74011 and 74012 support the three rate branches and National Insurance/HMRC record-dispute orientation.",
+    "74022 and the full Appendix 3 retain cohort scope, table heading and end-of-month qualification; no individual date was calculated.",
+    "74101/74151 retain no-pre-commencement scope around their conditions. 74201/74202/74204 retain transitional scope and exclusion from the other branches. 74406 retains the reduced-rate-election exception and whole example.",
+    "74154 foreign contributions remains a lead with unresolved boundaries and international/legal closure, not a complete coordination rule.",
+    "All three profiles remain model-derived and specialist-unreviewed, with explicit applicability, legal-version and task-closure obligations.",
+    "Broad cases 001/008/018 remain ambiguous and do not acquire a guessed benefit or scenario."
+  ],
+  "limits": [
+    "This is independent agent review of source selection, not specialist or legal acceptance.",
+    "The source-led machine boundaries remain unresolved; source coverage and recorded paths do not establish full answerability.",
+    "No network, model-provider or individual-benefit calculation was performed."
+  ]
+}

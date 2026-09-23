@@ -11,7 +11,9 @@ from build_bundle import BASE, REPO, canonical, digest
 from build_logical_units import require, strict_json
 
 AUTHORING = 'domain-profile/structured-units/pc-core.yamlld'
-AUTHORING_PATHS = (AUTHORING, 'domain-profile/structured-units/household-routing.yamlld')
+AUTHORING_PATHS = (AUTHORING, 'domain-profile/structured-units/household-routing.yamlld',
+                   'domain-profile/structured-units/state-pension-routing.yamlld',
+                   'domain-profile/structured-units/benefit-interactions.yamlld')
 SCHEMA = 'okf-dwp-structured-selection.v1'
 CONTEXT = {'@vocab': BASE + 'vocab/structured-context-selection/', 'dct': 'http://purl.org/dc/terms/', 'prov': 'http://www.w3.org/ns/prov#'}
 REVIEW = 'unreviewed-specialist-review-required'
@@ -47,17 +49,32 @@ def compile_selection(author, semantic, evidence_records, unit_catalogue, author
         require(record['kind'] == 'evidence' and record['assertion_status'] == 'normalized'
                 and record['authority']['class'] == 'derived', 'Selected source authority differs')
         require(record['route'].split('/')[1:3] == [entry['family'], entry['document_id']], 'Selected source document differs')
-        require(record['evidence_unit']['boundary_status'] == entry['boundary_status'] == 'machine-detected'
-                and record['evidence_unit']['completeness'] == entry['boundary_completeness'] == 'unresolved', 'Selection cannot upgrade a machine boundary')
-        require(not unit.get('authored') and unit['spans'] == entry['spans']
-                and unit['paragraph_labels'] == entry['paragraph_labels'], 'Selected boundary or paragraph identity differs')
+        boundary = record['evidence_unit']['boundary_status']
+        completeness = record['evidence_unit']['completeness']
+        require(boundary == entry['boundary_status'] and completeness == entry['boundary_completeness'],
+                'Selection cannot change the source boundary or completeness')
+        require((unit.get('authored') is False and boundary == 'machine-detected' and completeness == 'unresolved')
+                or (unit.get('authored') is True and boundary == 'author-declared'
+                    and completeness in {'complete-within-declared-boundary', 'unresolved'}),
+                'Selection must preserve an admitted machine or authored boundary')
+        require(unit['spans'] == entry['spans'] and unit['paragraph_labels'] == entry['paragraph_labels'],
+                'Selected boundary or paragraph identity differs')
         require(digest(canonical(record)) == entry['record_sha256'] == unit['record_sha256'], 'Selected complete-record identity differs')
+        literal = record['text'].encode('utf-8')
+        require(record['text'] == unit['text'] and digest(literal) == unit['text_sha256'],
+                'Selected whole-source text identity differs')
         for span, declared in zip(record['evidence_unit']['spans'], entry['spans']):
             require(span['source_sha256'] == entry['source_sha256'] and span['extraction_sha256'] == entry['pages_sha256'], 'Selected frozen source identity differs')
             require(span['source_start'] == declared['start_utf8'] and span['source_end'] == declared['end_utf8']
                     and span['literal_sha256'] == declared['literal_sha256']
                     and span['source_url'].endswith('#page=' + str(declared['page'])), 'Selected exact span differs')
+            require(0 <= span['unit_start'] < span['unit_end'] <= len(literal)
+                    and digest(literal[span['unit_start']:span['unit_end']]) == declared['literal_sha256'],
+                    'Selected literal source bytes differ')
         require(len(record['evidence_unit']['spans']) == len(entry['spans']), 'Selected span count differs')
+        require(record['evidence_unit']['joiner'] == '\n' and b'\n'.join(
+                    literal[s['unit_start']:s['unit_end']] for s in record['evidence_unit']['spans']) == literal,
+                'Selected source contains unbound bytes')
         selected[key] = record
     require(len({r['id'] for r in selected.values()}) == len(selected), 'Duplicate source selection identity')
     new_edges, new_requirements, pairs = {}, [], {}

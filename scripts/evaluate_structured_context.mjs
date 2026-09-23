@@ -80,9 +80,19 @@ else {
  const original=JSON.parse(read(preservation.source.path,preservation.source));
  assert.equal(original.requirements.length,preservation.count);
  const previousRecords=new Map(original.records.map(r=>[r.id,r])),inheritedRecordIds=new Set(sources[0].base.records.map(r=>r.id));
+ let restoredScopes=new Map();
+ if(protocol.custody_restoration){
+  const admission=protocol.custody_restoration;
+  assert.equal(admission.helper.path,'scripts/structured_restoration_admission.mjs');
+  read(admission.helper.path,admission.helper);
+  const {admitRestoredScopes}=await import(pathToFileURL(resolve(ROOT,admission.helper.path)));
+  restoredScopes=admitRestoredScopes({author:JSON.parse(read(admission.author.path,admission.author)),
+   ledger:JSON.parse(read(admission.ledger.path,admission.ledger)),
+   original:JSON.parse(read(admission.original.path,admission.original)),candidate:sources[1].base,canonicalJson});
+ }
  for(const record of sources[1].base.records.filter(r=>!inheritedRecordIds.has(r.id))){
   assert(['concept','scope'].includes(record.kind),'Location migration cannot insert a page as source evidence');
-  assert.deepEqual(record,previousRecords.get(record.id),'Additional navigation record differs from original');
+  assert.deepEqual(record,restoredScopes.get(record.id)||previousRecords.get(record.id),'Additional navigation record differs from an explicitly bound original');
  }
  for(const requirement of original.requirements)assert.deepEqual(candidate.get(requirement.id),requirement,'Legacy page requirement/obligation changed');
  const groups=protocol.requirement_groups;assert(Array.isArray(groups)&&groups.length>0);

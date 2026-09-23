@@ -184,20 +184,40 @@ class StructuredSelectionTests(unittest.TestCase):
             with self.subTest(paths=paths), self.assertRaises(ValueError):
                 project(None, self.args[1], self.args[2], self.args[3], paths)
 
-    def test_explicit_default_registry_combines_pc_and_household_without_source_changes(self):
+    def test_original_registered_pc_and_household_slice_preserves_source_changes(self):
         from build_logical_units import Inputs
         from structured_context_profiles import AUTHORING_PATHS, project
         household=fixture(AUTHORING_PATHS[1])
         records={r['id']:r for r in self.args[2]+household[2]}
         units={**self.args[3],**household[3]}
         inputs=Inputs(ROOT)
-        result=project(inputs,self.args[1],list(records.values()),units)
+        result=project(inputs,self.args[1],list(records.values()),units,AUTHORING_PATHS[:2])
         self.assertEqual(len(result['requirements'])-len(self.args[1]['requirements']),7)
         self.assertEqual(result['records'],self.args[1]['records'])
-        self.assertTrue(all(path in inputs.files for path in AUTHORING_PATHS))
+        self.assertTrue(all(path in inputs.files for path in AUTHORING_PATHS[:2]))
         edges=[e for e in result['assertions'] if '/assertion/structured-selection/' in e['id']]
         self.assertEqual(len(edges),55)
         self.assertTrue(all(e['context_guard']['when_all'] for e in edges))
+
+    def test_full_registered_selection_preserves_inputs_and_explicit_scope(self):
+        from build_logical_units import Inputs
+        from structured_context_profiles import AUTHORING_PATHS, project
+        self.assertEqual(tuple(p.rsplit('/', 1)[-1] for p in AUTHORING_PATHS),
+                         ('pc-core.yamlld', 'household-routing.yamlld',
+                          'state-pension-routing.yamlld', 'benefit-interactions.yamlld'))
+        fixtures = [fixture(p) for p in AUTHORING_PATHS]
+        records = {r['id']: r for f in fixtures for r in f[2]}
+        units = {key: value for f in fixtures for key, value in f[3].items()}
+        before = deepcopy((records, units, self.args[1]))
+        inputs = Inputs(ROOT)
+        result = project(inputs, self.args[1], list(records.values()), units)
+        self.assertEqual(before, (records, units, self.args[1]))
+        self.assertEqual(result['records'], self.args[1]['records'])
+        self.assertEqual(len(result['requirements']) - len(self.args[1]['requirements']), 23)
+        self.assertTrue(all(path in inputs.files for path in AUTHORING_PATHS))
+        for requirement in result['requirements'][len(self.args[1]['requirements']):]:
+            self.assertTrue(any('/obligation/structured/' in x for x in requirement['required']))
+            self.assertFalse(any('/obligation/structured/' in x for x in records))
 
     def test_unknown_concept_duplicate_requirement_and_closed_obligation_fail(self):
         for mutate in (lambda a:a[0]['profiles'][0].update(when_all=['https://example.invalid/new-concept']),
