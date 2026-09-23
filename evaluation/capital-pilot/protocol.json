@@ -1,0 +1,155 @@
+{
+  "schema": "okf-capital-pilot-evaluation.v1",
+  "scope": "Fixed Chapter84 development cases; not an independent or whole-corpus benchmark",
+  "source_commit": "e4a27a52e9e397a86832a3e9a8cc80893f5b74aa",
+  "engine": {
+    "schema": "okf-context-engine-admission.v1",
+    "commit": "8a5b8d11a2d99935efca4ba8366812844061d928",
+    "status": "Independently reviewed observed-path allocation repair; fixed-final-source comparison required before adoption",
+    "files": {
+      "index.ts": "689f8b8ab1cfb5ccc21b6dd9b5527fcad04de01f5876b44cbb2dc0240fceb010",
+      "corpus.ts": "a770352c6e4628f0c391b0c12bbdaf185b476a714ca212e99459d135f8f57f6f",
+      "corpusV3.ts": "77f18b685d261e4a9d76b5c63214cb8dcdac0e38ce5ecaf4d60ff4ed77dec2f3",
+      "types.ts": "10215859405c3c6b0856af02f7fe48af7d23c0e8a272563512991fcd6e41a807",
+      "unit.ts": "7cd989c00564ad2e0469073c66685ffb5111809e7f598dc42b6f3df1bf693aa6"
+    }
+  },
+  "arms": [
+    "baseline",
+    "candidate"
+  ],
+  "budgets": [
+    32768,
+    524288
+  ],
+  "budget_controls": {
+    "max_nodes": 64,
+    "max_relationships": 128,
+    "max_depth": 6
+  },
+  "cases": [
+    {
+      "id": "capital-01",
+      "question": "What are the steps in a Pension Credit capital assessment?",
+      "required_groups": [
+        "pc-capital-u01"
+      ],
+      "scope": "development-source-selection; not legal answerability"
+    },
+    {
+      "id": "capital-02",
+      "question": "For Pension Credit, what counts as capital and how is it distinguished from income?",
+      "required_groups": [
+        "pc-capital-u02"
+      ],
+      "scope": "development-source-selection; not legal answerability"
+    },
+    {
+      "id": "capital-03",
+      "question": "For Pension Credit, how do beneficial ownership and legal ownership differ?",
+      "required_groups": [
+        "pc-capital-u03"
+      ],
+      "scope": "development-source-selection; not legal answerability"
+    },
+    {
+      "id": "capital-04",
+      "question": "What qualifications govern Pension Credit capital disregards?",
+      "required_groups": [
+        "pc-capital-u04"
+      ],
+      "scope": "development-source-selection; not legal answerability"
+    },
+    {
+      "id": "capital-05",
+      "question": "For Pension Credit, when is property occupied by a relative disregarded?",
+      "required_groups": [
+        "pc-capital-u05"
+      ],
+      "scope": "development-source-selection; not legal answerability"
+    },
+    {
+      "id": "capital-06",
+      "question": "How does Pension Credit capital valuation deal with overseas capital and joint ownership?",
+      "required_groups": [
+        "pc-capital-u06"
+      ],
+      "scope": "development-source-selection; not legal answerability"
+    },
+    {
+      "id": "capital-07",
+      "question": "What is the Pension Credit notional capital gateway and what exceptions does it mention?",
+      "required_groups": [
+        "pc-capital-u07"
+      ],
+      "scope": "development-source-selection; not legal answerability"
+    },
+    {
+      "id": "capital-08",
+      "question": "For Pension Credit deprivation of capital, how are significant purpose and evidence considered?",
+      "required_groups": [
+        "pc-capital-u08"
+      ],
+      "scope": "development-source-selection; not legal answerability"
+    },
+    {
+      "id": "capital-09",
+      "question": "How does advice about spending capital affect the purpose evidence for Pension Credit?",
+      "required_groups": [
+        "pc-capital-u09"
+      ],
+      "scope": "development-source-selection; not legal answerability"
+    },
+    {
+      "id": "capital-10",
+      "question": "How is Pension Credit deemed weekly income derived from capital, including the source table?",
+      "required_groups": [
+        "pc-capital-u10"
+      ],
+      "scope": "development-source-selection; not legal answerability"
+    },
+    {
+      "id": "staff-006",
+      "question": "What is the maximum you can have in savings to still qualify for Pension Credit?",
+      "required_groups": [
+        "pc-capital-u01"
+      ],
+      "required_paragraphs": [
+        "84911"
+      ],
+      "scope": "partial Chapter84 support only; a sufficient complete benefits answer is not asserted"
+    },
+    {
+      "id": "unknown",
+      "question": "xylophonicquasarteleportation",
+      "required_groups": [],
+      "must_select_no_evidence": true
+    },
+    {
+      "id": "other-benefit",
+      "question": "How do Universal Credit savings affect entitlement?",
+      "required_groups": [],
+      "must_remain_insufficient": true,
+      "scope": "out-of-scope benefit; lexical discovery alone cannot establish applicability"
+    }
+  ],
+  "metrics": [
+    "required_source_span_union_coverage",
+    "complete_declared_group_coverage",
+    "selected_source_bytes_outside_declared_spans",
+    "retained_relationships",
+    "package_bytes",
+    "source_text_bytes",
+    "truncation",
+    "insufficient_status",
+    "integrity"
+  ],
+  "limits": [
+    "Expected source spans derive from the ten supplied proposals and agent review, not a benefits specialist.",
+    "Both arms use the same topic aliases and source-selection intent; baseline routing selects component records and candidate routing selects groups.",
+    "The candidate adds grouped discovery summaries and guarded navigation; this is not an isolated summary-only causal experiment.",
+    "Source text outside declared expectations is reported as additional context, not automatically irrelevant.",
+    "No model answers, live source fetches, changed source versions or complete legal answerability claims.",
+    "Retain failures; do not tune the test questions after observing results."
+  ]
+}
