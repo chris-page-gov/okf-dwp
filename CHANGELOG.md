@@ -10,6 +10,8 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Repair two Chapter 84 source boundaries, add ten proposed evidence groups and a source-linked typed table, and retain the final 52-assembly comparison. Correct summary provenance and reserved labels after agent review, preserving earlier trials. At 512 KiB it retains 11/11 declared groups against the newly authored baseline’s 9/11, a six-whitespace-byte difference; at 32 KiB neither arm delivers source evidence. All packages remain insufficient. Keep dependency closure, compact delivery, specialist review and production promotion open; no model calls or new source acquisition.
+
 - Repair the Demo 1 CI setup after the legacy job discovered the new tests in its own shallow checkout: fetch the same frozen source commit before test discovery. Preserve the five-error failure and a clean shallow-clone reproduction showing all five tests pass after the fetch; do not alter trial inputs or weaken the gate.
 
 - Retain the four authorised Demo 1 answers without retries: 12 exact source quotations, three format failures and explicit interpretation concerns. No token saving or specialist acceptance is established. Add the forty-question ledger and observe matching human-visible/WebMCP source text from the pinned public corpus.

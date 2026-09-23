@@ -392,6 +392,12 @@ jobs:
           ref: ${{ steps.structured-consumer.outputs.commit }}
           path: .ci/okf-explorer-structured
           persist-credentials: false
+      - name: Verify the bounded capital repair and replay its fixed questions offline
+        run: |
+          uv run --locked python scripts/build_capital_pilot.py --check
+          uv run --locked python -m unittest discover -s scripts -p 'test_capital_pilot*.py'
+          node --test scripts/test_capital_pilot_metrics.mjs
+          node scripts/evaluate_capital_pilot.mjs --explorer-root .ci/okf-explorer-structured --attempt attempt-03 --check
       - name: Verify the whole structured corpus and replay the accepted staff comparison
         env:
           STRUCTURED_CONSUMER_COMMIT: ${{ steps.structured-consumer.outputs.commit }}

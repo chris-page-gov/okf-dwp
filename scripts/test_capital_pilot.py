@@ -38,7 +38,7 @@ class CapitalPilotControls(unittest.TestCase):
             provenance = concept['provenance'][0]
             self.assertEqual(provenance['source_sha256'], hashlib.sha256(path.read_bytes()).hexdigest())
             self.assertEqual(provenance['literal_sha256'], hashlib.sha256(concept['text'].encode()).hexdigest())
-            self.assertEqual(provenance['locator'], f'/groups/{i}/summary (JSON Pointer)')
+            self.assertEqual(provenance['locator'], f'/groups/{i}/summary')
             self.assertNotIn('PDF page', provenance['locator'])
             self.assertTrue(concept['rights'].endswith('/LICENSE'))
 

@@ -1394,7 +1394,9 @@
       "paths": [
         "structured-units/**",
         "structured-context/**",
-        "domain-profile/structured-units/**"
+        "domain-profile/structured-units/**",
+        "capital-pilot/**",
+        "domain-profile/capital-pilot/**"
       ],
       "origin": "mixed",
       "authority": "mixed",
@@ -1415,7 +1417,8 @@
         "Additive structural and discovery candidates retain exact frozen source spans and the 513-document source denominator. They do not replace earlier page-based or logical-unit releases.",
         "A compact discovery card nominates source evidence; it is not an answer, a complete rule or an authority decision. Candidate dependencies and unresolved references remain unreviewed.",
         "Retained staff comparisons test assembly and boundaries separately from source coverage, legal answerability, specialist review and public service adoption.",
-        "Source-selection proposals and the legacy location policy are explicitly authored, model-derived and unreviewed by specialists. A guard requires every declared task concept; location overlap never closes original evidence requirements or legal dependencies."
+        "Source-selection proposals and the legacy location policy are explicitly authored, model-derived and unreviewed by specialists. A guard requires every declared task concept; location overlap never closes original evidence requirements or legal dependencies.",
+        "The ten-group Chapter 84 experiment is an additive development comparison with its own newly authored routing in both arms. It is not production adoption, a general benchmark or an AI-answer accuracy result."
       ],
       "formats": [
         "application/json",
@@ -1439,7 +1442,8 @@
         "network_access": "prohibited",
         "command_ids": [
           "structured-unit-build",
-          "structured-context-build"
+          "structured-context-build",
+          "capital-pilot-build"
         ],
         "limitations": [
           "Deterministic projection of frozen local sources and public evaluation data; no network, source refresh, model inference or personal case data."
@@ -1777,6 +1781,21 @@
           "structured-corpus-controls",
           "structured-context-replay"
         ]
+      },
+      {
+        "path": "capital-pilot/**",
+        "role": "explorer-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "capital-pilot-build"
+        ],
+        "check_command_ids": [
+          "capital-pilot-check",
+          "capital-pilot-controls",
+          "capital-pilot-metrics",
+          "capital-pilot-replay"
+        ]
       }
     ]
   },
@@ -1868,7 +1887,15 @@
         "scripts/test_state_pension*.py",
         "scripts/evaluate_original_acceptance.mjs",
         "scripts/original_acceptance_metrics.mjs",
-        "scripts/test_original_acceptance*.mjs"
+        "scripts/test_original_acceptance*.mjs",
+        "capital-pilot/**",
+        "domain-profile/capital-pilot/**",
+        "scripts/build_capital_pilot.py",
+        "scripts/capital_pilot_source.py",
+        "scripts/test_capital_pilot*.py",
+        "scripts/capital_pilot_metrics.mjs",
+        "scripts/test_capital_pilot_metrics.mjs",
+        "scripts/evaluate_capital_pilot.mjs"
       ],
       "command_ids": [
         "build-check",
@@ -1918,7 +1945,12 @@
         "structured-restoration-admission-controls",
         "original-acceptance-controls",
         "original-acceptance-replay",
-        "state-pension-selection-controls"
+        "state-pension-selection-controls",
+        "capital-pilot-build",
+        "capital-pilot-check",
+        "capital-pilot-controls",
+        "capital-pilot-metrics",
+        "capital-pilot-replay"
       ]
     },
     {
@@ -2015,7 +2047,15 @@
         "scripts/test_state_pension*.py",
         "scripts/evaluate_original_acceptance.mjs",
         "scripts/original_acceptance_metrics.mjs",
-        "scripts/test_original_acceptance*.mjs"
+        "scripts/test_original_acceptance*.mjs",
+        "capital-pilot/**",
+        "domain-profile/capital-pilot/**",
+        "scripts/build_capital_pilot.py",
+        "scripts/capital_pilot_source.py",
+        "scripts/test_capital_pilot*.py",
+        "scripts/capital_pilot_metrics.mjs",
+        "scripts/test_capital_pilot_metrics.mjs",
+        "scripts/evaluate_capital_pilot.mjs"
       ],
       "command_ids": [
         "context-discovery-build-check",
@@ -2043,7 +2083,12 @@
         "structured-restoration-admission-controls",
         "original-acceptance-controls",
         "original-acceptance-replay",
-        "state-pension-selection-controls"
+        "state-pension-selection-controls",
+        "capital-pilot-build",
+        "capital-pilot-check",
+        "capital-pilot-controls",
+        "capital-pilot-metrics",
+        "capital-pilot-replay"
       ]
     },
     {
@@ -3483,6 +3528,76 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 5
+      },
+      {
+        "id": "capital-pilot-build",
+        "kind": "build",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_capital_pilot.py",
+        "source": "docs/pc-capital-bounded-repair.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "capital-pilot-check",
+        "kind": "check",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_capital_pilot.py --check",
+        "source": "docs/pc-capital-bounded-repair.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "capital-pilot-controls",
+        "kind": "test",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python -m unittest discover -s scripts -p 'test_capital_pilot*.py'",
+        "source": "docs/pc-capital-bounded-repair.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "capital-pilot-metrics",
+        "kind": "test",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "node --test scripts/test_capital_pilot_metrics.mjs",
+        "source": "docs/pc-capital-bounded-repair.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "capital-pilot-replay",
+        "kind": "check",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "node scripts/evaluate_capital_pilot.mjs --explorer-root .ci/okf-explorer-structured --attempt attempt-03 --check",
+        "source": "docs/pc-capital-bounded-repair.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
       }
     ]
   },
@@ -3518,7 +3633,8 @@
       "structured-units/**",
       "structured-context/**",
       "profiles/manual-guide/**",
-      "profiles/pdf-structure/**"
+      "profiles/pdf-structure/**",
+      "capital-pilot/**"
     ],
     "documentation_paths": [
       "README.md",

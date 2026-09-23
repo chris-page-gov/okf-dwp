@@ -462,7 +462,14 @@
         "docs/original-acceptance-restoration.md",
         "evaluation/manual-structure/large-paragraph-review-2026-09-23/README.md",
         "evaluation/manual-structure/large-paragraph-review-2026-09-23/findings.json",
-        "evaluation/manual-structure/context-probe/analysis-06/independent-reading.md"
+        "evaluation/manual-structure/context-probe/analysis-06/independent-reading.md",
+        "docs/pc-capital-bounded-repair.md",
+        "evaluation/capital-pilot/protocol.json",
+        "evaluation/capital-pilot/runs/attempt-01/report.json",
+        "capital-pilot/repair-receipt.json",
+        "capital-pilot/groups.json",
+        "evaluation/capital-pilot/runs/attempt-03/report.json",
+        "scripts/test_capital_pilot.py"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
@@ -800,6 +807,62 @@
             "domain-profile/structured-units/benefit-interactions.yamlld",
             "domain-profile/structured-units/custody-restoration.yamlld",
             "docs/original-acceptance-restoration.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.capital-pilot",
+          "kind": "implementation",
+          "status": "recorded_complete",
+          "executor": "agent",
+          "next_action": "Bounded source repair, 21 Python controls and fixed-question attempt-03 delivered: ten groups, two boundary repairs and typed Appendix 1. Larger packages retain all declared spans; the baseline misses only six whitespace bytes. No answer gain is established. Production migration, 32 KiB delivery, 11 dependency groups and specialist review remain separate open work.",
+          "evidence": [
+            "docs/pc-capital-bounded-repair.md",
+            "evaluation/capital-pilot/protocol.json",
+            "evaluation/capital-pilot/runs/attempt-01/report.json",
+            "capital-pilot/repair-receipt.json",
+            "capital-pilot/groups.json",
+            "evaluation/capital-pilot/runs/attempt-03/report.json",
+            "scripts/test_capital_pilot.py"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.capital-delivery",
+          "kind": "implementation",
+          "status": "not_started",
+          "executor": "agent",
+          "next_action": "Test compact manifest and exact evidence reads for these groups; do not equate a 32 KiB delivery part with a 32 KiB total assembly or conceal truncation.",
+          "evidence": [
+            "docs/pc-capital-bounded-repair.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.capital-dependencies",
+          "kind": "research",
+          "status": "not_started",
+          "executor": "agent",
+          "next_action": "Resolve the eleven declared external dependency groups from frozen sources; retain unknown applicability and exceptions.",
+          "evidence": [
+            "docs/pc-capital-bounded-repair.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.capital-adoption",
+          "kind": "implementation",
+          "status": "not_started",
+          "executor": "agent",
+          "next_action": "Only consider full-corpus/service migration after fixed-source selection and bounded delivery checks. Keep the existing default and frozen trials intact until a separately reviewed change.",
+          "evidence": [
+            "docs/pc-capital-bounded-repair.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.capital-specialist-review",
+          "kind": "independent_review",
+          "status": "not_started",
+          "executor": "human",
+          "next_action": "Review proposed groups, summaries, dependencies and typed table for legal applicability; engineering checks do not establish complete benefits answers.",
+          "evidence": [
+            "docs/pc-capital-bounded-repair.md"
           ]
         }
       ]

@@ -180,7 +180,7 @@ def compile_pilot(root=ROOT):
                        provenance=[{'url': REPO + '/blob/main/' + AUTHOR,
                                     'source_sha256': digest(inputs.read(AUTHOR)),
                                     'literal_sha256': digest(definition['summary'].encode()),
-                                    'locator': f'/groups/{position}/summary (JSON Pointer)',
+                                    'locator': f'/groups/{position}/summary',
                                     'captured_at': author['authored_at']}])
         concepts[identifier] = concept
     for name in ['scripts/build_capital_pilot.py', 'scripts/capital_pilot_source.py', 'scripts/build_logical_units.py',

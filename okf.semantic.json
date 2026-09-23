@@ -44,7 +44,10 @@
       "pdf-structure/adm/*.tree.txt",
       "pdf-structure/dmg/*.stderr.txt",
       "pdf-structure/adm/*.stderr.txt",
-      "domain-profile/structured-units/*.yamlld"
+      "domain-profile/structured-units/*.yamlld",
+      "domain-profile/capital-pilot/*.yamlld",
+      "evaluation/capital-pilot/input/manifest.json",
+      "evaluation/capital-pilot/protocol.json"
     ],
     "outputs": [
       {
@@ -321,6 +324,61 @@
         "path": "structured-context/data/endpoint-label-budget.json",
         "role": "semantic-validation",
         "generated": true
+      },
+      {
+        "path": "capital-pilot/*/manifest.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "capital-pilot/*/index.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "capital-pilot/*/base-index.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "capital-pilot/*/records/*.json.gz",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "capital-pilot/*/discovery/*.json.gz",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "capital-pilot/*/search/*.json.gz",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "capital-pilot/*/relationships/*.json.gz",
+        "role": "relationship-runtime",
+        "generated": true
+      },
+      {
+        "path": "capital-pilot/build.json",
+        "role": "semantic-validation",
+        "generated": true
+      },
+      {
+        "path": "capital-pilot/groups.json",
+        "role": "semantic-validation",
+        "generated": true
+      },
+      {
+        "path": "capital-pilot/repair-receipt.json",
+        "role": "semantic-validation",
+        "generated": true
+      },
+      {
+        "path": "capital-pilot/appendix-1.json",
+        "role": "semantic-validation",
+        "generated": true
       }
     ],
     "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
@@ -388,7 +446,8 @@
       "uv run --locked python scripts/build_pdf_structure.py --check",
       "uv run --locked python scripts/build_manual_guide.py",
       "uv run --locked python scripts/build_structured_units.py",
-      "uv run --locked python scripts/build_structured_context.py"
+      "uv run --locked python scripts/build_structured_context.py",
+      "uv run --locked python scripts/build_capital_pilot.py"
     ],
     "check": [
       "uv run --locked python scripts/check_semantic_contract.py",
@@ -428,7 +487,11 @@
       "node --experimental-strip-types scripts/test_structured_corpus.mjs --explorer-root .ci/okf-explorer-structured",
       "node --experimental-strip-types scripts/check_structured_replay.mjs --explorer-root .ci/okf-explorer-structured",
       "node --test scripts/test_structured_context_metrics.mjs",
-      "node --test scripts/test_report_structured_context.mjs"
+      "node --test scripts/test_report_structured_context.mjs",
+      "uv run --locked python scripts/build_capital_pilot.py --check",
+      "uv run --locked python -m unittest discover -s scripts -p 'test_capital_pilot*.py'",
+      "node --test scripts/test_capital_pilot_metrics.mjs",
+      "node scripts/evaluate_capital_pilot.mjs --explorer-root .ci/okf-explorer-structured --attempt attempt-03 --check"
     ]
   },
   "reader": {
