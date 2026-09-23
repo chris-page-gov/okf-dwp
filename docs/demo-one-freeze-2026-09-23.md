@@ -48,7 +48,7 @@ promise. A result showing no improvement must be retained just as clearly.
 | Component | Verified state | Remaining freeze work |
 | --- | --- | --- |
 | Captured source | 513 DMG/ADM PDFs and 19,090 pages accounted for | Preserve the captured version and source limitations |
-| Source-led candidate | 53,727 units; complete byte/span checks; four-case and doubled eight-case structural gates pass | Publish the exact tested candidate |
+| Source-led candidate | 53,727 units; complete byte/span checks; four-case and doubled eight-case structural gates pass | Merged through [PR 33](https://github.com/chris-page-gov/okf-dwp/pull/33); exact merged CI and Pages remain release gates |
 | Staff questions | 40 exact brief matches; 37 activate source-read profiles | Present the three scope ambiguities and all open obligations |
 | Larger evidence packages | 40/40 retain source and relationships; 436/436 declared source-selection path incidences retained | Verify the chosen public source/engine pair |
 | Answer sufficiency | All 40 still report insufficient; 203 original obligations remain open | Do not present discovery measures as complete benefits answers |
@@ -84,6 +84,12 @@ actual token usage, exact citations, failures and interpretation concerns.
 
 The [frozen pair protocol](demo-one-pair-protocol.md) defines the exact inputs,
 assessment boundary and no-retry execution policy.
+
+The source implementation merged as `58a68b57637fc5b901e321ffa3bcaad5117675f3`.
+Its [candidate validation](https://github.com/chris-page-gov/okf-dwp/actions/runs/35829004795)
+passed both required planes. Follow-up documentation and each exact merged
+[CI run](https://github.com/chris-page-gov/okf-dwp/actions/workflows/okf-ci.yml)
+remain separately observable; a merged pull request alone is not deployment evidence.
 
 ## Release sequence and stop points
 
