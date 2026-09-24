@@ -20,7 +20,9 @@ console errors or page-level horizontal overflow.
 The Markdown files in this repository remain the authored source. The build
 renders Git-tracked files in `docs/`, `evaluation/` and a small explicit set of
 root documents. It excludes private correspondence, untracked research and the
-large corpus bodies. A source link on each page opens that exact Git version.
+large corpus bodies. The separately admitted Evidence workbench catalogue
+also publishes 40 selected evidence packages and their checked delivery parts.
+It does not copy arbitrary evaluation folders. A source link on each page opens that exact Git version.
 Links between published guides stay on the website; evidence files open their
 commit-bound repository location. The page footer links a manifest listing the
 source and output hashes. A **hash** is a fingerprint used to detect changed bytes.
@@ -56,3 +58,22 @@ uv run --locked python scripts/check_learning_site_observation.py
 Publication of a guide does not establish complete answerability, specialist
 acceptance or a source document's current legal applicability. Read the
 [notice](../NOTICE.md) and [remaining work](backlog.md).
+
+## Verify a workbench publication
+
+The current exporter uses a version 3 manifest when the 40-question workbench
+is present. It admits only the declared public packages and parts, within a
+64 MiB total website limit. The older version 2 verifier remains available for
+its historical publications.
+
+```sh
+node --test scripts/test_learning_site_v3.mjs
+node scripts/verify_learning_site_v3.mjs --repo REPOSITORY --site BUILT_SITE --commit FULL_COMMIT --output FRESH_OBSERVATION_DIRECTORY
+```
+
+The version 3 check compares the live files with an exact local build and its
+immutable Git inputs. It reads at most four public resources concurrently,
+bounds downloads and records failures without silently retrying. This checks
+publication identity; the separately pinned all-question reconstruction test
+checks the delivery contract, and browser journeys check actual use. None
+establishes a correct benefits answer.

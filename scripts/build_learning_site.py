@@ -500,7 +500,10 @@ def build(root: Path, out: Path, commit: str) -> dict:
     source_records = []
     committed = committed_tree(root, commit)
     examples, retained = retained_examples(root, tracked, committed)
-    outputs: dict[str, bytes] = {"assets/learning.css": CSS.encode(), ".nojekyll": b"", **examples}
+    from workbench_publication import publish_workbench
+    workbench, workbench_receipt = publish_workbench(
+        lambda path, cap: committed_member(root, path, cap, committed), committed, strict_json, verify_context_budget)
+    outputs: dict[str, bytes] = {"assets/learning.css": CSS.encode(), ".nojekyll": b"", **examples, **workbench}
     for path in sorted(pages):
         full = root / path
         if full.is_symlink() or not full.resolve().is_relative_to(root.resolve()):
@@ -511,12 +514,16 @@ def build(root: Path, out: Path, commit: str) -> dict:
             raise ValueError(f"Source differs from the declared commit: {path}")
         if len(raw) > 2 * 1024 * 1024:
             raise ValueError(f"Markdown page exceeds 2 MiB: {path}")
-        _, rendered = render(path, raw.decode(), pages, tracked, commit, set(examples))
-        outputs[page_path(path)] = rendered.encode()
+        _, rendered = render(path, raw.decode(), pages, tracked, commit, set(examples) | set(workbench))
+        destination = page_path(path)
+        if destination in outputs:
+            raise ValueError(f"Publication output collision: {destination}")
+        outputs[destination] = rendered.encode()
         source_records.append({"path": path, "sha256": hashlib.sha256(raw).hexdigest(), "bytes": len(raw)})
     outputs["index.html"] = outputs["docs/learning-path.html"]
-    if sum(map(len, outputs.values())) > 32 * 1024 * 1024:
-        raise ValueError("Static documentation exceeds 32 MiB")
+    publication_limit = (64 if workbench_receipt else 32) * 1024 * 1024
+    if sum(map(len, outputs.values())) > publication_limit:
+        raise ValueError("Static documentation and declared evidence exceed the publication limit")
     manifest = {"schema": "okf-dwp-learning-site.v1", "source_commit": commit,
                 "source_pages": source_records, "page_count": len(pages),
                 "files": [{"path": p, "sha256": hashlib.sha256(raw).hexdigest(), "bytes": len(raw)} for p, raw in sorted(outputs.items())],
@@ -524,6 +531,9 @@ def build(root: Path, out: Path, commit: str) -> dict:
     if retained is not None:
         manifest.update(schema="okf-dwp-learning-site.v2", retained_evidence=retained,
                         scope="Tracked public project documentation and explicitly approved, bounded retained evidence examples. Excludes private correspondence, untracked research and unlisted corpus files. Retained examples do not establish legal applicability or AI answer correctness.")
+    if workbench_receipt is not None:
+        manifest.update(schema="okf-dwp-learning-site.v3", evidence_workbench=workbench_receipt,
+                        scope="Tracked public documentation, approved retained examples and declared public staff-question workbench evidence. Excludes private correspondence and unlisted corpus files. No legal applicability or AI answer acceptance is implied.")
     outputs["site-manifest.json"] = (json.dumps(manifest, indent=2) + "\n").encode()
     for path, raw in outputs.items():
         destination = out / path

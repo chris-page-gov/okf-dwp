@@ -1,0 +1,106 @@
+{
+  "accepted_at": "2026-09-24T07:01:54.943Z",
+  "explorer_git_sha": "1bf3d1327756348f66177699c1daf0dc057146a9",
+  "dwp_git_sha": "601fc43cdaf65169c392cc0fd9d7989c1be00461",
+  "app_build_manifest_sha256": "cd0dee2684841ba5bdd638e19ac804c3f6411ab135f9139c7c291835b5b82f49",
+  "app_tree_sha256": "f99db46b30ec310473589d1aecd98956bbeb067c2c9b990cd3511e1eeb65bbcf",
+  "schema": "okf-workbench-local-acceptance.v1",
+  "explorer_checkout": "/Users/crpage/tmp/okf-explorer-evidence-integration",
+  "dwp_checkout": "/Users/crpage/tmp/okf-dwp-evidence-workbench",
+  "manifest_sha256": "c35281ba39d6ea5dcdd8bc760259ff498acf05d65607dd967d1602fa60c54b5b",
+  "corpus_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519",
+  "question_count": 40,
+  "browser": "Chrome",
+  "origin": "http://127.0.0.1:8003",
+  "cases": [
+    {
+      "id": "staff-001",
+      "question": "What happens to your benefits if you go abroad?",
+      "review_brief_items": 5,
+      "pdf_iframe": true,
+      "selected_records": 47,
+      "selected_kind": "evidence · normalized",
+      "source_href": "https://assets.publishing.service.gov.uk/media/5a7f4bc3ed915d74e6229983/v2am36.pdf#page=18",
+      "passage_characters": 445,
+      "ontology_visible": true,
+      "trace_visible": true,
+      "status_text": "Declared evidence status: insufficient. This is an assembly result within the declared scope, not an answer or legal decision.",
+      "part_requests": 15
+    },
+    {
+      "id": "staff-018",
+      "question": "What happens if someone with a partner goes permanently into a Care Home (please give all scenarios)?",
+      "review_brief_items": 5,
+      "pdf_iframe": true,
+      "selected_records": 49,
+      "selected_kind": "evidence · normalized",
+      "source_href": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=25",
+      "passage_characters": 227,
+      "ontology_visible": true,
+      "trace_visible": true,
+      "status_text": "Declared evidence status: insufficient. This is an assembly result within the declared scope, not an answer or legal decision.",
+      "part_requests": 17
+    },
+    {
+      "id": "staff-023",
+      "question": "What happens to Pension Credit if someone moves abroad?",
+      "review_brief_items": 3,
+      "pdf_iframe": true,
+      "selected_records": 48,
+      "selected_kind": "evidence · normalized",
+      "source_href": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=8",
+      "passage_characters": 1212,
+      "ontology_visible": true,
+      "trace_visible": true,
+      "status_text": "Declared evidence status: insufficient. This is an assembly result within the declared scope, not an answer or legal decision.",
+      "part_requests": 17
+    }
+  ],
+  "console_errors": [],
+  "page_errors": [],
+  "failed_requests": [
+    {
+      "url": "https://assets.publishing.service.gov.uk/media/5a7f4bc3ed915d74e6229983/v2am36.pdf",
+      "failure": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT"
+    },
+    {
+      "url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf",
+      "failure": "net::ERR_ABORTED"
+    }
+  ],
+  "screenshots": [
+    "staff-001-trace-final.png",
+    "staff-018-trace-final.png",
+    "staff-023-trace-final.png",
+    "staff-023-narrow-final.png"
+  ],
+  "narrow": {
+    "viewport": "390x844",
+    "scroll_width": 390,
+    "client_width": 390
+  },
+  "review_export": {
+    "filename": "evidence-review-staff-023.json",
+    "question_id": "staff-023",
+    "authority": "local-unreviewed-proposal",
+    "record_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol2-ch7-part6/v1-6856ae01407984fc/spc-077001-16a64dc4da2d",
+    "comment": "Local acceptance review: check the cited source passage and dependency scope."
+  },
+  "requests": {
+    "total": 50,
+    "manifest": 1,
+    "raw_packages": 0,
+    "parts": 49
+  },
+  "back_forward": {
+    "before": "?manifest=http%3A%2F%2F127.0.0.1%3A8003%2Fevaluation%2Fevidence-workbench%2Fmanifest.json&case=staff-023&record=https%3A%2F%2Fchris-page-gov.github.io%2Fokf-dwp%2Fid%2Funit%2Fdmg%2Fdmg-vol2-ch7-part6%2Fv1-6856ae01407984fc%2Fspc-077001-16a64dc4da2d&tab=definitions",
+    "after": "?manifest=http%3A%2F%2F127.0.0.1%3A8003%2Fevaluation%2Fevidence-workbench%2Fmanifest.json&case=staff-023&record=https%3A%2F%2Fchris-page-gov.github.io%2Fokf-dwp%2Fid%2Funit%2Fdmg%2Fdmg-vol2-ch7-part6%2Fv1-6856ae01407984fc%2Fspc-077001-16a64dc4da2d&tab=passage",
+    "back_restored": true,
+    "forward_restored": true
+  },
+  "passed": true
+}

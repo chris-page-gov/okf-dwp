@@ -135,6 +135,7 @@ retain their recorded scope until new checks justify publication.
 | DWP-BL-022 | P1 | Retrospective and visible multi-agent change history | `recorded_complete` | — |
 | DWP-BL-023 | P1 | Hosting and Content Security Policy integration | `in_progress` | DWP-BL-008 |
 | DWP-BL-024 | P1 | ADM Reader and cross-manual navigation | `recorded_complete` | DWP-BL-004, DWP-BL-009 |
+| DWP-BL-025 | P0 | Evidence workbench and all-question inspection | `in_progress` | DWP-BL-005, DWP-BL-007, DWP-BL-008 |
 
 ## Acceptance before closure
 
@@ -217,3 +218,11 @@ reject simple alias expansion and identify length-aware ranking as a lead.
 They do not close `DWP-BL-007.discovery-cards`, task discrimination, unit boundary
 review or answerability. Summary cards and their independent relevance evaluation
 remain unimplemented; no production ranking change is claimed.
+
+## Evidence workbench — 24 September 2026
+
+[BL025](evidence-workbench.md) tracks all-40 question inspection separately from
+source-bound selection (BL005), dependency closure (BL007), delivery (BL008)
+and specialist acceptance. The [current work log](evidence-workbench-work-log.md)
+records ownership, tested milestones and publication gates. Familiar-question
+repair and prospective paraphrase results remain separate.

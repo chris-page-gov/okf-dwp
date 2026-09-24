@@ -2,7 +2,7 @@
 
 [About the web edition](learning-website.md) · [Markdown source and project](../README.md)
 
-[What changed](../CHANGELOG.md) · [Work in progress](monday-delivery-work-log.md) · [Remaining work](backlog.md)
+[What changed](../CHANGELOG.md) · [Work in progress](evidence-workbench-work-log.md) · [Remaining work](backlog.md)
 
 OKF-DWP is an independent experiment in making published benefits guidance easier
 to find, connect and inspect. It is not a DWP service, an entitlement decision or
@@ -32,6 +32,16 @@ Use the [shared service status](service-publication.md) for the latest recorded
 publication. The [0.6.0 public verification report](../validation/compact-delivery/v0.6.0/README.md) records 121 requests checking 11 evidence cases, including current, historical and empty results. Both client libraries returned matching tool definitions. The first failed verification remains recorded. These are delivery checks, not evidence of complete benefits answers or AI accuracy.
 
 The earlier [0.5.0 browser observations](../validation/compact-delivery/v0.5.0/README.md) retain their own sources and results, including Firefox hosting-cookie warnings. The [full public Reader check](household-reader-public-verification.md) separately verified conceptual filters, a statutory relationship graph and source/audit dates in Chrome. No new 0.6.0 public browser or Voice acceptance is implied.
+
+### Inspect any of the 40 staff questions
+
+Use the [Evidence workbench guide](evidence-workbench.md) to compare a question’s
+original evidence needs with the selected passages and remaining gaps. Its tabs
+show source locations, extraction, complete passages, concepts and relationships,
+dependencies, selection reasons and a local review proposal. A PDF source may
+require opening in a separate tab because its publisher blocks embedding.
+The 40-question catalogue is an inspection surface, not a claim that 40 benefits
+answers have been completed.
 
 ### New route: follow a supplied staff question
 

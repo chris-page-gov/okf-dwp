@@ -1,0 +1,437 @@
+{
+  "schema": "okf-dwp-reader-ask-evidence-connect-acceptance.v1",
+  "accepted_at": "2026-09-24T07:06:53.101Z",
+  "explorer_git_sha": "a560405478a4834e43eac880749aed477ede1923",
+  "dwp_git_sha": "6aaf696f44bcd66d972e7663f8ca1cce646733c0",
+  "app_build_manifest_sha256": "cd0dee2684841ba5bdd638e19ac804c3f6411ab135f9139c7c291835b5b82f49",
+  "app_tree_sha256": "f99db46b30ec310473589d1aecd98956bbeb067c2c9b990cd3511e1eeb65bbcf",
+  "descriptor_sha256": "749c19b034df38e6d7b745f38d743ba688a79ca782de2e25eb3060717d272f68",
+  "origin": "http://127.0.0.1:8003",
+  "combined_requests": [
+    "structured-context/evidence-connect-explorer.json",
+    "structured-context/data/manifest.json",
+    "structured-context/data/overview.json",
+    "structured-context/data/analysis.json",
+    "structured-context/data/endpoint-labels.json.gz",
+    "structured-context/data/facets.json",
+    "structured-context/data/search/manifest.json",
+    "structured-context/data/search/shards.json",
+    "structured-context/evidence-connect-manifest.json",
+    "structured-context/evidence-connect/base-index.json",
+    "structured-context/evidence-connect/search/bd.json.gz",
+    "structured-context/evidence-connect/search/e9.json.gz",
+    "structured-context/evidence-connect/search/23.json.gz",
+    "structured-context/evidence-connect/search/e1.json.gz",
+    "structured-context/evidence-connect/search/c8.json.gz",
+    "structured-context/evidence-connect/search/24.json.gz",
+    "structured-context/evidence-connect/search/1b.json.gz",
+    "structured-context/evidence-connect/search/b4.json.gz",
+    "structured-context/evidence-connect/search/58.json.gz",
+    "structured-context/evidence-connect/search/41.json.gz",
+    "structured-context/evidence-connect/search/b8.json.gz",
+    "structured-context/evidence-connect/search/94.json.gz",
+    "structured-context/evidence-connect/records.json.gz",
+    "structured-context/evidence-connect/discovery.json.gz",
+    "structured-context/evidence-connect/relationships/b2.json.gz",
+    "structured-context/records/0197.json.gz",
+    "structured-context/discovery/0197.json.gz",
+    "structured-context/evidence-connect/relationships/54.json.gz",
+    "structured-context/evidence-connect/relationships/bf.json.gz",
+    "structured-context/records/0093.json.gz",
+    "structured-context/discovery/0093.json.gz",
+    "structured-context/evidence-connect/relationships/f1.json.gz",
+    "structured-context/records/0097.json.gz",
+    "structured-context/discovery/0097.json.gz",
+    "structured-context/evidence-connect/relationships/e1.json.gz",
+    "structured-context/evidence-connect/relationships/2b.json.gz",
+    "structured-context/evidence-connect/relationships/c0.json.gz",
+    "structured-context/evidence-connect/relationships/64.json.gz",
+    "structured-context/relationships/91.json.gz",
+    "structured-context/records/0194.json.gz",
+    "structured-context/discovery/0194.json.gz",
+    "structured-context/relationships/a9.json.gz",
+    "structured-context/records/0181.json.gz",
+    "structured-context/discovery/0181.json.gz",
+    "structured-context/relationships/3a.json.gz",
+    "structured-context/relationships/41.json.gz",
+    "structured-context/relationships/ef.json.gz",
+    "structured-context/relationships/5c.json.gz",
+    "structured-context/records/0198.json.gz",
+    "structured-context/discovery/0198.json.gz",
+    "structured-context/relationships/4f.json.gz",
+    "structured-context/relationships/d7.json.gz",
+    "structured-context/relationships/5a.json.gz",
+    "structured-context/relationships/2d.json.gz",
+    "structured-context/relationships/6b.json.gz",
+    "structured-context/records/0180.json.gz",
+    "structured-context/discovery/0180.json.gz",
+    "structured-context/relationships/af.json.gz",
+    "structured-context/relationships/b7.json.gz",
+    "structured-context/relationships/fc.json.gz",
+    "structured-context/relationships/9f.json.gz",
+    "structured-context/relationships/c8.json.gz",
+    "structured-context/relationships/e6.json.gz",
+    "structured-context/relationships/cf.json.gz",
+    "structured-context/records/0234.json.gz",
+    "structured-context/discovery/0234.json.gz",
+    "structured-context/relationships/d1.json.gz",
+    "structured-context/relationships/a2.json.gz",
+    "structured-context/relationships/1f.json.gz",
+    "structured-context/relationships/cc.json.gz",
+    "structured-context/relationships/ce.json.gz",
+    "structured-context/relationships/29.json.gz",
+    "structured-context/relationships/c2.json.gz"
+  ],
+  "console_errors": [],
+  "page_errors": [],
+  "failed_requests": [],
+  "reader_loaded": true,
+  "ask": {
+    "question": "Can Pension Credit treat capital as still held after someone has got rid of it, and are there exceptions?",
+    "evidence_status": "Insufficient evidence",
+    "context_id": "urn:sha256:3393c62ac2ae68c7dcf94296a5ad17dd8442e73968cdf1748bf9e1fdb2a5350a",
+    "selected_count": 44,
+    "budget": {
+      "max_nodes": 64,
+      "max_relationships": 128,
+      "max_depth": 6,
+      "max_bytes": 524288,
+      "used_nodes": 44,
+      "used_relationships": 68,
+      "used_bytes": 522919,
+      "reached_depth": 3,
+      "truncated": true,
+      "omissions": [
+        {
+          "code": "retrieval_candidate_budget",
+          "message": "Only the highest-ranked source-bound units fit the fixed lexical candidate limit.",
+          "ids": []
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "relationships/0b.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "relationships/4c.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "relationships/50.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "relationships/9b.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "records/0115.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "relationships/e0.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "relationships/aa.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "evidence-connect/relationships/b4.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "relationships/fd.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "records/0114.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "discovery/0114.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "records/0312.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "discovery/0312.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "records/0414.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "discovery/0414.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "records/0196.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "discovery/0196.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "records/0033.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "discovery/0033.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "records/0032.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "discovery/0032.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "records/0195.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "discovery/0195.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "records/0314.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "discovery/0314.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "records/0416.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "discovery/0416.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "records/0398.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "discovery/0398.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "records/0037.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "discovery/0037.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "records/0239.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "discovery/0239.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "records/0375.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "discovery/0375.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "records/0307.json.gz"
+          ]
+        },
+        {
+          "code": "retrieval_resource_budget",
+          "message": "A bound discovery, evidence or relationship file exceeded the retrieval resource limit.",
+          "ids": [
+            "discovery/0307.json.gz"
+          ]
+        },
+        {
+          "code": "relationship_byte_budget",
+          "message": "An assertion outside the retained paths was omitted whole to preserve source evidence within the byte budget. Its exact incident metadata remains source-bound.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/source-reference/b00b68920502572bdbf9f9f993d72c67e8645eb62df4f1daa635b271f2cd6e5b",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol2-ch7-part6/v1-6856ae01407984fc/spc-077001-16a64dc4da2d",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol1-ch4/v1-edb8bd0e46e5d94b/spc-supersession-04642-ff882bce33d6"
+          ]
+        },
+        {
+          "code": "relationship_byte_budget",
+          "message": "An assertion outside the retained paths was omitted whole to preserve source evidence within the byte budget. Its exact incident metadata remains source-bound.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/assertion/logical-unit/b42f1cb24d6bbc36dacf59939646976f93b61ce88b187f0a904c2d68ca083986",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol2-ch7-part6/v1-6856ae01407984fc/spc-077001-16a64dc4da2d",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol1-ch4/v1-edb8bd0e46e5d94b/spc-supersession-04642-ff882bce33d6"
+          ]
+        },
+        {
+          "code": "byte_budget",
+          "message": "A whole item was omitted to meet the package byte budget.",
+          "ids": [
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol2-ch7-part6/v1-6856ae01407984fc/spc-qyp-077008-014-870ddab241ae",
+            "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-ch85/manual-structure-v1/source-0000036852-000-422a97253cf5"
+          ]
+        }
+      ]
+    },
+    "u07_selected": [
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/zz-evidence-connect/pc-capital-u07",
+        "label": "DMG Vol 14 Ch 84: Deemed weekly income from capital — Notional capital and the general deprivation rule",
+        "locator": "PDF page 110; PDF page 111; PDF page 112; Ordered page-text spans in evidence_unit"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/zz-evidence-connect/pc-capital-u08",
+        "label": "DMG Vol 14 Ch 84: Deemed weekly income from capital — Significant purpose and evidence for deprivation",
+        "locator": "PDF page 114; PDF page 115; PDF page 116; Ordered page-text spans in evidence_unit"
+      },
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/zz-evidence-connect/pc-capital-u09",
+        "label": "DMG Vol 14 Ch 84: Deemed weekly income from capital — Further factors bearing on the purpose of deprivation",
+        "locator": "PDF page 116; PDF page 117; Ordered page-text spans in evidence_unit"
+      }
+    ],
+    "dependency_84861_selected": [
+      {
+        "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-ch84/manual-structure-v1/source-0000200424-000-606242ace072",
+        "label": "DMG Vol 14 Ch 84: Deemed weekly income from capital — 84861 — What is the amount of notional capital",
+        "locator": "PDF page 122; Ordered page-text spans in evidence_unit"
+      }
+    ],
+    "package_selected_count": 44,
+    "relationships_matching": [
+      {
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/unit/zz-evidence-connect/pc-capital-u07",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-ch84/manual-structure-v1/source-0000200424-000-606242ace072",
+        "label": "Captured source entry: DMG 84861 et seq"
+      },
+      {
+        "source": "https://chris-page-gov.github.io/okf-dwp/id/unit/zz-evidence-connect/pc-capital-u07",
+        "target": "https://chris-page-gov.github.io/okf-dwp/id/unit/zz-evidence-connect/pc-capital-u08",
+        "label": "Pilot relationship proposal: is specialised by"
+      }
+    ]
+  },
+  "screenshot": "reader-ask-evidence-connect-2026-09-24.png",
+  "passed": true
+}
