@@ -1,0 +1,266 @@
+{
+  "schema": "okf-evidence-connect-authoring.v1",
+  "status": "project-authored-source-led-research; specialist review required",
+  "source_pilot": "capital-pilot/candidate/index.json",
+  "source_groups": "capital-pilot/groups.json",
+  "source_full_corpus": "structured-context/manifest.json",
+  "groups": [
+    {
+      "key": "pc-capital-u01",
+      "search_aliases": [
+        "assessing savings",
+        "deciding what capital counts"
+      ],
+      "alias_scope": "Discovery wording only; not a concept resolution or applicability claim."
+    },
+    {
+      "key": "pc-capital-u02",
+      "search_aliases": [
+        "money and property that count as capital",
+        "capital or income"
+      ],
+      "alias_scope": "Discovery wording only; not a concept resolution or applicability claim."
+    },
+    {
+      "key": "pc-capital-u03",
+      "search_aliases": [
+        "who owns the money",
+        "jointly owned capital"
+      ],
+      "alias_scope": "Discovery wording only; not a concept resolution or applicability claim."
+    },
+    {
+      "key": "pc-capital-u04",
+      "search_aliases": [
+        "savings that can be ignored",
+        "capital that is disregarded"
+      ],
+      "alias_scope": "Discovery wording only; not a concept resolution or applicability claim."
+    },
+    {
+      "key": "pc-capital-u05",
+      "search_aliases": [
+        "home occupied by a relative",
+        "property where a relative lives"
+      ],
+      "alias_scope": "Discovery wording only; not a concept resolution or applicability claim."
+    },
+    {
+      "key": "pc-capital-u06",
+      "search_aliases": [
+        "value of savings or property",
+        "capital held abroad",
+        "jointly owned savings"
+      ],
+      "alias_scope": "Discovery wording only; not a concept resolution or applicability claim."
+    },
+    {
+      "key": "pc-capital-u07",
+      "search_aliases": [
+        "treated as having money they no longer have",
+        "given away capital",
+        "money given away",
+        "gave away money",
+        "savings given away",
+        "disposed of capital",
+        "capital transferred to someone else",
+        "transferred savings",
+        "capital still counted after disposal",
+        "exceptions to treating disposed capital as held",
+        "capital given away but still treated as held",
+        "paying a debt from capital",
+        "reasonable purchase of goods or services"
+      ],
+      "alias_scope": "Discovery wording only; not a concept resolution or applicability claim.",
+      "route_patterns": [
+        {
+          "id": "pc-capital-disposal-v1",
+          "scope_group": 0,
+          "all_of": [
+            [
+              "Pension Credit",
+              "State Pension Credit"
+            ],
+            [
+              "capital",
+              "savings",
+              "money",
+              "lump sum",
+              "property"
+            ],
+            [
+              "deprived",
+              "deprivation",
+              "disposed",
+              "gave away",
+              "given away",
+              "spent"
+            ]
+          ]
+        }
+      ],
+      "pattern_scope": "Unreviewed discovery navigation to source text covering disposal and deprivation. It neither resolves a legal concept nor declares applicability or sufficient evidence."
+    },
+    {
+      "key": "pc-capital-u08",
+      "search_aliases": [
+        "why capital was given away",
+        "getting more Pension Credit by disposing of capital"
+      ],
+      "alias_scope": "Discovery wording only; not a concept resolution or applicability claim."
+    },
+    {
+      "key": "pc-capital-u09",
+      "search_aliases": [
+        "advice about spending savings",
+        "reason for giving away money"
+      ],
+      "alias_scope": "Discovery wording only; not a concept resolution or applicability claim."
+    },
+    {
+      "key": "pc-capital-u10",
+      "search_aliases": [
+        "weekly income assumed from savings",
+        "deemed income from capital"
+      ],
+      "alias_scope": "Discovery wording only; not a concept resolution or applicability claim."
+    }
+  ],
+  "linked_captured_dependencies": [
+    {
+      "id": "dep-chapter-77-definitions",
+      "needed_for_units": [
+        "pc-capital-u03",
+        "pc-capital-u05"
+      ],
+      "source_reference": "DMG Chapter 77, including 77010 et seq",
+      "target_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch77/manual-structure-v1/source-0000004738-000-e71c08bd6931",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch77/manual-structure-v1/source-0000004914-000-4a7aaf4fa8e9",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch77/manual-structure-v1/source-0000005369-000-dd4def97652a",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch77/manual-structure-v1/source-0000005926-000-007d488af631",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol13-ch77/manual-structure-v1/source-0000006825-000-30d1b4ceb8a1"
+      ],
+      "relationship_status": "authored-navigation-proposal; legal dependency unreviewed"
+    },
+    {
+      "id": "dep-income-definition",
+      "needed_for_units": [
+        "pc-capital-u02"
+      ],
+      "source_reference": "DMG 85003-85004",
+      "target_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-ch85/manual-structure-v1/source-0000001806-000-81d14f927f14",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-ch85/manual-structure-v1/source-0000002197-000-e550709d408d"
+      ],
+      "relationship_status": "authored-navigation-proposal; legal dependency unreviewed"
+    },
+    {
+      "id": "dep-diminishing-notional-capital",
+      "needed_for_units": [
+        "pc-capital-u07",
+        "pc-capital-u10"
+      ],
+      "source_reference": "DMG 84861 et seq",
+      "target_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol14-ch84/manual-structure-v1/source-0000200424-000-606242ace072"
+      ],
+      "relationship_status": "authored-navigation-proposal; legal dependency unreviewed"
+    },
+    {
+      "id": "dep-abbreviation-context",
+      "needed_for_units": [
+        "pc-capital-u01",
+        "pc-capital-u04",
+        "pc-capital-u05",
+        "pc-capital-u08",
+        "pc-capital-u09",
+        "pc-capital-u10"
+      ],
+      "source_reference": "DMG abbreviation and legislation-reference tables",
+      "target_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-abbreviations-0db6c476b0/manual-structure-v1/source-0000000000-000-3c355ba67515",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-statutes-23bca4e6a8/manual-structure-v1/source-0000000000-000-e052e5c18dfb",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-si-abbreviations-eeb52291df/manual-structure-v1/source-0000000000-000-3713ba7ee8eb"
+      ],
+      "relationship_status": "authored-navigation-proposal; legal dependency unreviewed"
+    }
+  ],
+  "limitations": [
+    "Exact source spans and existing source classifications are retained.",
+    "New aliases and links are unreviewed navigation proposals; they do not establish legal applicability or complete answers.",
+    "Four captured dependency groups are linked only to identified entry records, not expanded et seq sections."
+  ],
+  "authored_at": "2026-09-24T06:22:57Z",
+  "dependency_census": [
+    {
+      "id": "dep-chapter-77-definitions",
+      "prior_classification": "captured but unlinked",
+      "overlay_navigation": "entry-record-link-added; scope unresolved"
+    },
+    {
+      "id": "dep-income-definition",
+      "prior_classification": "captured but unlinked",
+      "overlay_navigation": "entry-record-link-added; scope unresolved"
+    },
+    {
+      "id": "dep-dmg-memo-11-20",
+      "prior_classification": "requiring specialist interpretation",
+      "overlay_navigation": "unchanged; obligation retained"
+    },
+    {
+      "id": "dep-disregard-detail-routes",
+      "prior_classification": "ambiguous",
+      "overlay_navigation": "unchanged; obligation retained"
+    },
+    {
+      "id": "dep-capital-location-reference",
+      "prior_classification": "captured and reachable",
+      "overlay_navigation": "unchanged; obligation retained"
+    },
+    {
+      "id": "dep-joint-ownership-guidance",
+      "prior_classification": "captured and reachable",
+      "overlay_navigation": "unchanged; obligation retained"
+    },
+    {
+      "id": "dep-attorney-exception",
+      "prior_classification": "captured and reachable",
+      "overlay_navigation": "unchanged; obligation retained"
+    },
+    {
+      "id": "dep-diminishing-notional-capital",
+      "prior_classification": "captured but unlinked",
+      "overlay_navigation": "entry-record-link-added; scope unresolved"
+    },
+    {
+      "id": "dep-downstream-income-treatment",
+      "prior_classification": "captured and reachable",
+      "overlay_navigation": "unchanged; obligation retained"
+    },
+    {
+      "id": "dep-primary-law-and-case-material",
+      "prior_classification": "not captured",
+      "overlay_navigation": "unchanged; obligation retained"
+    },
+    {
+      "id": "dep-abbreviation-context",
+      "prior_classification": "captured but unlinked",
+      "overlay_navigation": "entry-record-link-added; scope unresolved"
+    }
+  ],
+  "not_closed": [
+    "dep-chapter-77-definitions",
+    "dep-income-definition",
+    "dep-dmg-memo-11-20",
+    "dep-disregard-detail-routes",
+    "dep-capital-location-reference",
+    "dep-joint-ownership-guidance",
+    "dep-attorney-exception",
+    "dep-diminishing-notional-capital",
+    "dep-downstream-income-treatment",
+    "dep-primary-law-and-case-material",
+    "dep-abbreviation-context"
+  ],
+  "projected_at": "2026-09-24T06:31:06Z"
+}
