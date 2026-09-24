@@ -10,6 +10,11 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Separate the current status and ordered remaining work from historical
+  checkpoints. Record the completed bounded model-inspection implementation,
+  retain its separate client and specialist gates, and close superseded PR 23
+  without removing its history or the unfinished amendment work.
+
 - Record the branch/worktree merge audit, preserve the unfinished amendment
   parser and superseded handover separately, and document the observed Edge
   sidebar demonstration. Correct the workbench launch link and stale

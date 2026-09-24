@@ -510,7 +510,8 @@
         "validation/evidence-workbench/2026-09-24/local-final/reader-ask.json",
         "evaluation/out-of-sample/uc-disabled-child-supersession-001.json",
         "docs/uc-disabled-child-supersession-follow-up.md",
-        "scripts/replay_uc_supersession_case.mjs"
+        "scripts/replay_uc_supersession_case.mjs",
+        "docs/unmerged-work-review-2026-09-24.md"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
@@ -834,13 +835,14 @@
           "kind": "research",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Parked for the 23 September Demo 1 freeze: retain the 28-outlier source review and separate amendment parser branch. Complete independent review and full-context evaluation before adoption; the frozen candidate retains known historical-amendment defects.",
+          "next_action": "Retain the separate amendment parser branch after the 23 September freeze. Review all 28 outlier probes and the nine affected substantive chapters within its 134-document change; reconcile changed unit IDs and run full-context evaluation before adoption. The frozen candidate retains known historical-amendment defects.",
           "evidence": [
             "evaluation/manual-structure/final-source-review/large-paragraph-triage.json",
             "evaluation/manual-structure/final-source-review/manifest-review.json",
             "docs/source-led-manual-guide.md",
             "evaluation/manual-structure/large-paragraph-review-2026-09-23/README.md",
-            "evaluation/manual-structure/large-paragraph-review-2026-09-23/findings.json"
+            "evaluation/manual-structure/large-paragraph-review-2026-09-23/findings.json",
+            "docs/unmerged-work-review-2026-09-24.md"
           ]
         },
         {
@@ -848,7 +850,7 @@
           "kind": "implementation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Parked for the 23 September Demo 1 freeze: preserve the original imprisonment failure and separate continuation-allocation patch. It is outside the supplied forty-question brief and must pass its own new fixed-source evaluation before adoption.",
+          "next_action": "Preserve the original imprisonment failure and the separate continuation-allocation patch retained after the 23 September freeze. This work is outside the supplied forty-question brief and must pass its own new fixed-source evaluation before adoption.",
           "evidence": [
             "docs/logical-units-work-log.md",
             "docs/source-led-demonstration.md",
@@ -1886,7 +1888,9 @@
         "validation/evidence-workbench/2026-09-24/public-release/site/observation.json",
         "validation/evidence-workbench/2026-09-24/public-release/browser/receipt.json",
         "validation/evidence-workbench/2026-09-24/public-release/files.json",
-        "docs/evidence-workbench-handover.md"
+        "docs/evidence-workbench-handover.md",
+        "docs/workbench-sidebar-demo.md",
+        "docs/remaining-work.md"
       ],
       "acceptance_checks": [
         "All 40 public question occurrences can be opened lazily with their exact package identity and explicit gaps.",
@@ -1929,15 +1933,16 @@
         {
           "id": "DWP-BL-025.model-inspection",
           "kind": "implementation",
-          "status": "in_progress",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Review and integrate the additive blocked calculation-inspection manifest in Explorer. Verify exact source bindings and tool/UI behaviour; no award calculation or specialist acceptance follows from this model.",
+          "next_action": "Bounded implementation delivered in DWP PR 39 and Explorer PR 146: source-bound interaction and blocked calculation-inspection views are available through the reviewed manifest. Preserve exact source bindings and the observed sidebar developer-connection route; specialist acceptance, universal client support and award calculation are not established.",
           "evidence": [
             "domain-profile/workbench-models/inspection.json",
             "evaluation/evidence-workbench/tools-manifest.json",
             "docs/workbench-model-inspection.md",
             "scripts/build_workbench_models.py",
-            "scripts/test_workbench_models.py"
+            "scripts/test_workbench_models.py",
+            "docs/workbench-sidebar-demo.md"
           ]
         },
         {
@@ -1948,6 +1953,16 @@
           "next_action": "Use the workbench to review interpretation, source boundaries and open obligations; engineering acceptance must not be relabelled as legal or specialist acceptance.",
           "evidence": [
             "docs/evidence-workbench.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-025.sidebar-repeatability",
+          "kind": "live_observation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Retain the observed Edge sidebar Requirements and Interactions calls. Recheck a fresh intended session before the demonstration; automatic discovery through a dedicated WebMCP connection remains unverified. Do not equate the developer connection with Voice or room-audio acceptance.",
+          "evidence": [
+            "docs/workbench-sidebar-demo.md"
           ]
         }
       ]

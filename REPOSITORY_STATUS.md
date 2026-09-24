@@ -1,6 +1,27 @@
 # Repository status
 
-## Current semantic and delivery increment: 22 September 2026
+## Current overview: 24 September 2026
+
+Start with [remaining work and next priorities](docs/remaining-work.md), the
+[Evidence workbench](docs/evidence-workbench.md) and the
+[unmerged-work review](docs/unmerged-work-review-2026-09-24.md).
+The full declared DMG/ADM source capture, source-led discovery, bounded delivery
+and 40-question workbench are implemented. DWP PR 39 also delivered the optional
+interaction and blocked calculation-inspection models; the
+[sidebar demonstration](docs/workbench-sidebar-demo.md) records its tested
+developer-connection route.
+
+All 40 retained packages remain insufficient. The known capital transfer-wording
+and UC selection failures, unreviewed unit boundaries, legal dependencies,
+specialist acceptance and room rehearsal remain open. Broader semantic modelling
+is incomplete implementation as well as incomplete review. A source count,
+successful page or delivered inspection model does not establish answer quality.
+
+The sections below are historical checkpoints with their own versions and
+denominators. In particular, the eight-profile result from 22 September must
+not be read as the coverage of every later source-selection increment.
+
+## Earlier semantic and delivery increment: 22 September 2026
 
 The [source-review and compact-delivery report](docs/semantic-closure-and-compact-delivery.md)
 records 75 authored unit boundaries and 49,551 uncertain candidates. Seven

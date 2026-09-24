@@ -39,7 +39,7 @@ tips are ancestors of `main`. No branch or worktree was deleted.
 | Work | Finding | Next action |
 | --- | --- | --- |
 | Historical amendment parser, `codex/amendment-structure`, `6ae66224` | Unique implementation plus untracked experiment outputs. The retained census changes 134 documents: 125 historical amendments and nine substantive chapters. Unit count changes from 53,727 to 54,581; 283 identifiers disappear and 1,137 appear. | Continue `DWP-BL-007.remaining-structural-review`; do not merge the parser directly. |
-| [PR 23: Monday handover](https://github.com/chris-page-gov/okf-dwp/pull/23), `54eb15f7` | Open and conflicting at review. It records a 21 September deadline checkpoint as though validation and public checks were still pending. Later handovers supersede those instructions. | Preserve its historical narrative in the PR. Recommend closing it as superseded, rather than merging stale current-status wording. This review does not close it. |
+| [PR 23: Monday handover](https://github.com/chris-page-gov/okf-dwp/pull/23), `54eb15f7` | Open and conflicting at the initial review; closed as superseded during the owner's requested tidy-up on 24 September. Its pending-publication statements belong to the 21 September checkpoint. | Preserve the PR history and branch. Use the later handovers and current status rather than merging stale current-status wording. |
 | Earlier direct-trial working files | The disability worktree contains duplicates and older versions of the runner, tests, protocol and documentation. Current tracked versions add freeze and verification controls. | Preserve locally; do not copy them over current files or launch new trials. |
 
 The amendment experiment's retained four-case and eight-case reports pass, and
