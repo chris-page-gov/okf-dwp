@@ -482,7 +482,7 @@ def render(source: str, text: str, pages: set[str], tracked: set[str], commit: s
     result = f'''<!doctype html>
 <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Independent OKF-DWP learning, evidence and research documentation.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src https:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' https:; base-uri 'none'; form-action 'none'">
 <title>{html.escape(title)} — OKF-DWP</title><link rel="stylesheet" href="{BASE}assets/learning.css"></head>
 <body><a class="skip" href="#main">Skip to content</a><header><strong>OKF-DWP</strong>
 <nav aria-label="Main"><a href="{BASE}index.html">Start learning</a><a href="{BASE}docs/glossary.html">Glossary</a><a href="{BASE}docs/monday-demo-2026-09-21.html">Try the demonstration</a><a href="{BASE}docs/backlog.html">Remaining work</a><a href="https://ask-okf.crpage.chatgpt.site/">Ask OKF</a></nav></header>

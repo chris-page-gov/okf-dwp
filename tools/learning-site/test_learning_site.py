@@ -37,6 +37,7 @@ class LearningSiteTests(unittest.TestCase):
         _, output = render("docs/learning-path.md", markdown, set(), set(), COMMIT,
                            {source_roles_diagram.PUBLISHED_SVG})
         self.assertIn('src="/okf-dwp/assets/source-roles-diagram.svg"', output)
+        self.assertIn("img-src 'self' https:", output)
         self.assertIn("How legislation, tribunal decisions", output)
         self.assertIn("<table>", output)
         self.assertNotIn("LAW[&quot;Legislation.gov.uk", output)
