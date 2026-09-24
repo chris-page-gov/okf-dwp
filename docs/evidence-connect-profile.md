@@ -10,7 +10,7 @@ Four previously captured but unlinked dependency groups now have directed links 
 
 The U07 card has one explicitly scoped discovery pattern. It requires a Pension Credit phrase, an asset phrase and a disposal or deprivation phrase. This affects source navigation only: it does not resolve a legal concept, assert applicability or upgrade the package's evidence status. Unscoped aliases remain in the scored discovery card but cannot bypass the candidate shortlist. The generic v2 engine checks the pattern against the hash-bound card and gates lexical selection of this card by the declared benefit scope.
 
-`structured-context/evidence-connect-explorer.json` is an additive Reader descriptor with a hash-bound successor context manifest and base index. The old descriptor and service defaults stay unchanged. A live Ask OKF view can load this descriptor through an immutable repository commit URL; the learning Pages workbench needs only the fixed 40 packages and bounded delivery parts. It does not need a second copy of the full corpus.
+`structured-context/evidence-connect-explorer.json` is an additive Reader descriptor with a hash-bound successor context manifest and base index. It keeps the original Reader snapshot because the data, overview, presentation and endpoint-label planes are unchanged. The new context manifest has its own overlay bundle snapshot and names that Reader snapshot as `semantic_source_snapshot`; its base index is bound to the Reader snapshot as Explorer requires. The old descriptor and service defaults stay unchanged. A live Ask OKF view can load this descriptor through an immutable repository commit URL; the learning Pages workbench needs only the fixed 40 packages and bounded delivery parts. It does not need a second copy of the full corpus.
 
 ## Reproduce and check
 
@@ -21,12 +21,13 @@ uv sync --locked
 uv run --locked python scripts/build_evidence_connect.py
 node scripts/build_evidence_workbench.mjs --explorer-root /path/to/pinned/okf-explorer
 node scripts/check_evidence_workbench.mjs --explorer-root /path/to/pinned/okf-explorer
+node scripts/test_evidence_connect_descriptor.mjs --explorer-root /path/to/pinned/okf-explorer
 node scripts/compare_evidence_connect.mjs --explorer-root /path/to/pinned/okf-explorer
 node scripts/probe_evidence_connect.mjs --explorer-root /path/to/pinned/okf-explorer --pattern
 node scripts/probe_evidence_connect.mjs --explorer-root /path/to/pinned/okf-explorer --confirmation
 ```
 
-Use `scripts/build_evidence_connect.py --check`, `scripts/build_evidence_workbench.mjs --check`, `scripts/compare_evidence_connect.mjs --check` and the two probe commands with `--check` for exact retained-output replay. The workbench producer binds the registry, corpus manifest, engine files and delivery code; no network or answer-model call is made. The independent checker reads all 40 raw contexts and bounded part responses, verifies each SHA-256 and reconstructs the exact canonical context through the Explorer delivery helper.
+Use `scripts/build_evidence_connect.py --check`, `scripts/build_evidence_workbench.mjs --check`, `scripts/compare_evidence_connect.mjs --check` and the two probe commands with `--check` for exact retained-output replay. The descriptor test checks unchanged Reader bindings, then calls Explorer's actual `loadLargeCorpus` and `assembleCorpusContext` with a local source-backed fetcher. Its temporary Vitest file is removed after the run. The workbench producer binds the registry, corpus manifest, engine files and delivery code; no network or answer-model call is made. The independent checker reads all 40 raw contexts and bounded part responses, verifies each SHA-256 and reconstructs the exact canonical context through the Explorer delivery helper.
 
 ## Measured development boundary
 

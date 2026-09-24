@@ -45,6 +45,10 @@ def compile_connect(root: Path = ROOT) -> dict[str, bytes]:
     groups_raw = content(root, authored['source_groups'])
     capital_raw = content(root, 'domain-profile/capital-pilot/capital.yamlld')
     capital_author = json.loads(capital_raw)
+    reader_descriptor = json.loads(content(root, 'structured-context/okf-explorer.json'))
+    reader_snapshot = reader_descriptor['snapshot']
+    require(reader_descriptor['snapshot_id'] == reader_snapshot,
+            'Original Reader snapshot identity differs')
     producer_files = {name: digest(content(root, name)) for name in (
         'scripts/build_evidence_connect.py', 'scripts/build_structured_context.py',
         'scripts/build_context_corpus.py', 'scripts/build_bundle.py')}
@@ -172,11 +176,12 @@ def compile_connect(root: Path = ROOT) -> dict[str, bytes]:
             for key in dependency['needed_for_units']:
                 edge(by_key[key], target, 'Captured source entry: ' + dependency['source_reference'], [],
                      pilot_groups[key]['provenance'][:1])
-    base['bundle'] = {'id': BASE + 'id/bundle/evidence-connect',
-                      'snapshot': 'evidence-connect-' + digest(canonical({
+    overlay_snapshot = 'evidence-connect-' + digest(canonical({
                           'profile': digest(authored_raw), 'full_corpus': digest(original_raw),
                           'pilot_index': digest(pilot_raw), 'pilot_groups': digest(groups_raw),
-                          'pilot_author': digest(capital_raw), 'producer_files': producer_files}))[:20],
+                          'pilot_author': digest(capital_raw), 'producer_files': producer_files}))[:20]
+    base['bundle'] = {'id': BASE + 'id/bundle/evidence-connect-base',
+                      'snapshot': reader_snapshot,
                       'source_url': REPO}
     base['scope'] += ' Additive capital discovery groups over the full DMG and ADM structured corpus.'
     base['limitations'] += authored['limitations']
@@ -199,10 +204,11 @@ def compile_connect(root: Path = ROOT) -> dict[str, bytes]:
     base_raw = canonical(base)
     outputs[PREFIX + 'base-index.json'] = base_raw
     manifest['base_index'] = binding(PREFIX + 'base-index.json', base_raw)
-    manifest['bundle'] = base['bundle']
+    manifest['bundle'] = {'id': BASE + 'id/bundle/evidence-connect',
+                          'snapshot': overlay_snapshot, 'source_url': REPO}
     manifest['scope'] = base['scope']
     manifest['limitations'] += authored['limitations']
-    manifest['semantic_source_snapshot'] = base['bundle']['snapshot']
+    manifest['semantic_source_snapshot'] = reader_snapshot
 
     changed = defaultdict(list)
     for item in edges:
@@ -235,21 +241,19 @@ def compile_connect(root: Path = ROOT) -> dict[str, bytes]:
         'pilot_author_sha256': digest(capital_raw),
         'producer_files': producer_files,
         'new_group_count': 10, 'new_dependency_link_count': len(edges),
+        'reader_snapshot': reader_snapshot, 'overlay_snapshot': overlay_snapshot,
         'pilot_group_ids': {key: pilot_groups[key]['id'] for key in sorted(by_key)}}}
     outputs['evidence-connect-manifest.json'] = canonical(manifest)
-    descriptor = json.loads(content(root, 'structured-context/okf-explorer.json'))
+    descriptor = deepcopy(reader_descriptor)
     descriptor['title'] = 'DWP guidance: source-led evidence connect research'
     descriptor['description'] = ('Independent experimental source navigation with additive capital groups '
                                  'over the frozen full DMG and ADM corpus; specialist review is open.')
-    descriptor['snapshot'] = base['bundle']['snapshot']
-    descriptor['snapshot_id'] = base['bundle']['snapshot']
     descriptor['generated_at'] = authored['projected_at']
     descriptor['entrypoints']['context_corpus'] = binding('evidence-connect-manifest.json',
                                                            outputs['evidence-connect-manifest.json'])
     descriptor['entrypoint_integrity']['context_corpus'] = descriptor['entrypoints']['context_corpus']
     descriptor['entrypoints']['context_assembly'] = binding(PREFIX + 'base-index.json', base_raw)
     descriptor['entrypoint_integrity']['context_assembly'] = descriptor['entrypoints']['context_assembly']
-    descriptor['exploratory_publication']['snapshot_id'] = base['bundle']['snapshot']
     descriptor['exploratory_publication']['generated_at'] = authored['projected_at']
     descriptor['exploratory_publication']['limitations'] += authored['limitations']
     outputs['evidence-connect-explorer.json'] = canonical(descriptor)
@@ -258,6 +262,7 @@ def compile_connect(root: Path = ROOT) -> dict[str, bytes]:
         'pilot_groups_sha256': digest(groups_raw),
         'pilot_author_sha256': digest(capital_raw),
         'producer_files': producer_files,
+        'reader_snapshot': reader_snapshot, 'overlay_snapshot': overlay_snapshot,
         'authoring_sha256': digest(authored_raw), 'group_count': 10,
         'dependency_groups_linked': [d['id'] for d in authored['linked_captured_dependencies']],
         'not_closed': authored['not_closed'], 'dependency_census': authored['dependency_census'],
