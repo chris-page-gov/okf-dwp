@@ -10,17 +10,6 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
-- Add an additive full-corpus capital evidence overlay, source-backed dependency
-  links and all-40 question packages for the Explorer Evidence workbench. Keep
-  earlier corpus releases and failed trials frozen. Separate semantic navigation,
-  evidence selection, bounded delivery and specialist acceptance.
-- Publish only explicitly public, hash-bound staff evidence through the learning
-  site, with <=32 KiB package parts, question/source identity checks and output
-  collision rejection. Add the beginner guide, current work log and BL025.
-  Verify the exact version 3 publication independently, preserving older
-  publication checkers and receipts; keep the frozen-base and successor
-  validation namespaces separate.
-
 - Repair two Chapter 84 source boundaries, add ten proposed evidence groups and a source-linked typed table, and retain the final 52-assembly comparison. Correct summary provenance and reserved labels after agent review, preserving earlier trials. At 512 KiB it retains 11/11 declared groups against the newly authored baseline’s 9/11, a six-whitespace-byte difference; at 32 KiB neither arm delivers source evidence. All packages remain insufficient. Keep dependency closure, compact delivery, specialist review and production promotion open; no model calls or new source acquisition.
 
 - Repair the Demo 1 CI setup after the legacy job discovered the new tests in its own shallow checkout: fetch the same frozen source commit before test discovery. Preserve the five-error failure and a clean shallow-clone reproduction showing all five tests pass after the fetch; do not alter trial inputs or weaken the gate.
@@ -63,6 +52,20 @@ Implementation ownership and handovers belong in the
 - Rebind the logical-context projection after the combined descriptor changes, exclude combined-only learning routes from that Reader, and replay all 184 contexts. Preserve the prior evaluation under `evaluation/logical-units/history/pre-learning-2026-09-22/`; semantic-review limitations remain unchanged.
 
 - Add 12 demonstration learning paths and 112 activities to the combined Reader, covering all 40 supplied question occurrences. Bind authored objectives, source locators, prerequisites and facilitator public keys into the generated snapshot. Preserve the separate logical-unit corpus and all frozen pilot/source projections.
+
+## Evidence workbench — 24 September 2026
+
+- Publish the additive full-DMG/ADM capital overlay, ten repaired source passages,
+  source-backed links for four captured dependency groups, and exact bounded
+  packages for all 40 public staff-question occurrences. Preserve frozen source
+  and earlier trials; all 40 contexts remain insufficient and 11 dependency
+  groups remain open overall.
+- Merge Explorer PR145 and DWP PR36 after protected checks, then verify the
+  version 3 learning site against merged DWP commit `7eeded763` in 1,141 exact
+  public requests. The deployed workbench opens all 40 cases and supports source
+  inspection, deep links and local review export. The live capital Reader-to-Ask
+  journey selects U07, DMG 84861 and their direct link, but remains truncated
+  and insufficient. Specialist and legal acceptance remain open.
 
 ## Logical evidence units — 22 September 2026
 

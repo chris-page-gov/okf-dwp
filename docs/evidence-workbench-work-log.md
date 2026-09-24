@@ -176,3 +176,36 @@ exactly matches the reviewed candidate. DWP's new workbench CI now pins that
 protected-main consumer commit; the recorded engine and delivery file hashes
 are unchanged. This is merge evidence, separate from the subsequent public
 deployment observation.
+
+## Merged and public verification — 24 September 2026
+
+Explorer PR145 merged as `e6084059f9b09633cfb8385be20099b952915e82`.
+DWP PR36 merged as `7eeded763042ddd0070f4fed834c6074149e8e2f`;
+the reviewed candidate had the same Git tree. All protected checks passed.
+The subsequent DWP main validation run `35972890182` and Pages deployment
+`35975520154` succeeded. Explorer's Pages run `35969493742` also passed;
+these run identities are separate from browser and content acceptance.
+
+The version 3 public-site verifier matched **1,141 of 1,141** declared public
+responses against a locally rebuilt site bound to merged commit `7eeded763`:
+the site manifest and 1,140 listed outputs. The [site receipt](../validation/evidence-workbench/2026-09-24/public-release/site/observation.json)
+records the immutable Git inputs, exact bytes, fixed host, bounded concurrency
+and zero retries. The [public browser receipt](../validation/evidence-workbench/2026-09-24/public-release/browser/receipt.json)
+records the 40-entry workbench catalogue, three representative case inspections, deep
+links, a locally exported unreviewed proposal and the live Reader-to-Ask
+journey. External GOV.UK PDF embeds did not render reliably; the source page
+links remain the intended way to open those documents.
+
+In the public capital journey, the original question selects U07, the DMG
+84861 source entry and their direct dependency. The package contains 44 records
+and 68 relationships, uses 522,995 of 524,288 bytes, and reports truncation
+and `insufficient` evidence. The earlier local journey's 522,919 bytes belong
+to its separate receipt and are not a substitute for this public observation.
+
+Capital delivery and additive-overlay adoption, bounded workbench delivery,
+and BL025 public verification are now recorded complete for these exact
+revisions. Eleven declared capital dependency groups remain open overall,
+even though four captured groups gained exact entry links. BL025 remains in
+progress because independent specialist review is open. See the
+[handover](evidence-workbench-handover.md) for source, engine, site and browser
+identities and the continuing limitations.

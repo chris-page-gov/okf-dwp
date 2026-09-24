@@ -8,7 +8,8 @@ okf_version: "0.2"
 
 [Evidence workbench guide](docs/evidence-workbench.md): inspect the 40 public
 staff questions, their selected source passages, relationships and explicit gaps.
-See the work log for the exact implementation and publication state.
+Read the [24 September handover](docs/evidence-workbench-handover.md) for the
+verified public release, demonstration steps and remaining limitations.
 
 [Demo 1 freeze plan for 23 September](docs/demo-one-freeze-2026-09-23.md):
 tested source-led evidence, forty-question gaps and a four-call comparison cap.
