@@ -10,6 +10,13 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Record a new, anonymised UC disabled-child question outside the frozen 40.
+  The SHA-bound offline replay selects ADM F1123 but misses A4361's
+  effective-date branch and remains `insufficient`. Add conditional source
+  reading, unknown assessment-period dates, statutory and specialist gates,
+  and separately labelled Demo 2 and hospital leads; do not change source,
+  runtime ranking, public packages or answer status.
+
 - Add a beginner source-and-roles map to the learning path, with separate law, tribunal decisions, DWP staff guidance, independent CPAG handbook and claimant/adviser/decision-maker routes. The diagram and text keep source authority, editions and appeal routes distinct; no handbook content is copied.
 
 - Add an opt-in, source-bound workbench inspection model for Pension Credit dependencies and directional Carer’s Allowance interactions. The producer verifies exact retained package, record, page, hash and text bindings; execution stays blocked because rates, applicability, exceptions and independent review remain unresolved. Existing 40 packages and the public learning-site allowlist are unchanged.

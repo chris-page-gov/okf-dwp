@@ -1,0 +1,120 @@
+{
+  "schema": "okf-dwp-out-of-sample-evidence-case.v1",
+  "id": "uc-disabled-child-supersession-001",
+  "status": "prospective-follow-up-after-initial-observation",
+  "question": "Where a child is awarded the highest-rate care component of DLA from 26 January 2025, but the change is reported to Universal Credit on 28 March 2026, what is the effective date of the higher disabled-child addition, and from which assessment period should it be paid?",
+  "question_sha256": "c224ca359a090e29fbca4e58127f5e94968aab1808e2e1ae3801b395a39eb3e8",
+  "scope": {
+    "benefit": "Universal Credit",
+    "topic": "higher disabled-child addition after DLA highest-care award",
+    "not_in_frozen_staff_40": true,
+    "personal_data": "none; hypothetical dates only"
+  },
+  "source_binding": {
+    "corpus_manifest": "structured-context/evidence-connect-manifest.json",
+    "corpus_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519",
+    "engine_files": {
+      "index.ts": "689f8b8ab1cfb5ccc21b6dd9b5527fcad04de01f5876b44cbb2dc0240fceb010",
+      "corpus.ts": "a770352c6e4628f0c391b0c12bbdaf185b476a714ca212e99459d135f8f57f6f",
+      "corpusV3.ts": "944617e1630362b7a41d60da92651007b96252eff3075eb4c4b852f420f5a5c0",
+      "types.ts": "febf83b5c65153fd2e49ac070b6117525463034fb1b33534a086a1cc7bbb42cc"
+    },
+    "model_calls": 0,
+    "network_calls_in_replay": 0
+  },
+  "source_targets": [
+    {
+      "role": "higher-rate condition",
+      "document": "adm-chapter-f1",
+      "pdf_page": 18,
+      "source_sha256": "124b7e41af2b491209f694941482e6e4bb69e78692a84a343299dc53f25b8731",
+      "paragraph": "F1123",
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1",
+      "observed_selected": true
+    },
+    {
+      "role": "child addition context",
+      "document": "adm-chapter-f1",
+      "pdf_page": 17,
+      "source_sha256": "124b7e41af2b491209f694941482e6e4bb69e78692a84a343299dc53f25b8731",
+      "paragraph": "F1120–F1121",
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000023318-000-bec866c4cfa0",
+      "observed_selected": false
+    },
+    {
+      "role": "ordinary late notification and explicit exception pointer",
+      "document": "adm-chapter-a4",
+      "pdf_page": 34,
+      "source_sha256": "4933d66a1cd118687bbc10e30faf9ee8214d09b3e465e58efdbd9b832a58a8e8",
+      "paragraph": "A4352",
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000055420-000-9e9c31f56b39",
+      "observed_selected": false
+    },
+    {
+      "role": "other-benefit effective-date branch and examples",
+      "document": "adm-chapter-a4",
+      "pdf_pages": [
+        36,
+        37
+      ],
+      "source_sha256": "4933d66a1cd118687bbc10e30faf9ee8214d09b3e465e58efdbd9b832a58a8e8",
+      "paragraph": "A4361",
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6",
+      "observed_selected": false
+    }
+  ],
+  "observed_replay": {
+    "method": "one deterministic file-backed assembleCorpusContext call; manifest-listed bytes and hashes checked; no model or network calls",
+    "budget": {
+      "max_bytes": 524288,
+      "max_nodes": 64,
+      "max_relationships": 128,
+      "max_depth": 6
+    },
+    "context_id": "urn:sha256:43f4938a16557acbdb593e9f74687b682e7630a08bcd7a5be8185bf9bad9fcf2",
+    "used_bytes": 522141,
+    "selected_evidence_count": 35,
+    "retrieval_candidate_count": 24158,
+    "evidence_status": "insufficient",
+    "omission_codes_observed": [
+      "retrieval_query_budget",
+      "retrieval_candidate_budget",
+      "retrieval_resource_budget"
+    ],
+    "unrelated_requirement_id": "https://chris-page-gov.github.io/okf-dwp/id/requirement/staff/staff-008",
+    "interpretation": "F1123 source discovery succeeds; A4361 and the late-rule exception are absent. The unrelated requirement and budgets make this a navigation and task-routing gap, not an answer-quality score.",
+    "replay_command": "node scripts/replay_uc_supersession_case.mjs --explorer-root /path/to/pinned-okf-explorer"
+  },
+  "conditional_source_reading": {
+    "if": "DLA highest-care entitlement legally began 26 January 2025; the child was a UC family member and otherwise qualified; A4361 governs this change",
+    "then": "first day of the UC assessment period containing 26 January 2025",
+    "exact_calendar_date": "unknown: assessment-period start and end absent",
+    "payment_period": "the assessment period containing the established DLA entitlement date, conditional on applicability and award review",
+    "decision_status": "not established"
+  },
+  "required_unknowns": [
+    "UC assessment-period boundaries and UC award throughout the retrospective period",
+    "Legal start date of highest-rate DLA entitlement, distinct from administrative award date",
+    "Responsibility for the child and child-element/addition conditions, including age, absence and looked-after qualifications",
+    "Other UC notifications, intervening decisions or changes, jurisdiction and operative statutory version",
+    "Independent review of Schedule 1 paragraph 31 and UC regulation 24 and their application to this addition"
+  ],
+  "acceptance_boundary": {
+    "navigation_next": "Test source-bound A4361, A4352 and F1120 selection with the F1123 hit, exact spans and bounded delivery, on frozen positive and negative controls. Record omissions and task-profile activation separately.",
+    "answerability": "Keep insufficient and null answer until legal-body, scope, dependency and specialist review are complete. Do not infer entitlement or arrears.",
+    "negative_controls": [
+      "DLA entitlement starts later than asserted",
+      "Only lower-rate DLA care",
+      "Child outside claimant UC family",
+      "Notification within the change assessment period",
+      "Other change governed by ordinary late rule"
+    ]
+  },
+  "limitations": [
+    "The initial question is now a development case; freeze independent future wording before tuning.",
+    "A4361 examples include DLA and the UC carer element, not a specific disabled-child addition determination.",
+    "The official A4 PDF was read on 24 September 2026. The official F1 URL was not accessible through the web reader; its retained 19 September PDF was read.",
+    "Live legislation.gov.uk provision requests returned HTTP 429; statutory bodies were not verified in this investigation.",
+    "Machine-detected unit boundaries and retained source capture do not establish current legal applicability."
+  ]
+}
