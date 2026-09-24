@@ -10,6 +10,8 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Add a beginner source-and-roles map to the learning path, with separate law, tribunal decisions, DWP staff guidance, independent CPAG handbook and claimant/adviser/decision-maker routes. The diagram and text keep source authority, editions and appeal routes distinct; no handbook content is copied.
+
 - Add an opt-in, source-bound workbench inspection model for Pension Credit dependencies and directional Carer’s Allowance interactions. The producer verifies exact retained package, record, page, hash and text bindings; execution stays blocked because rates, applicability, exceptions and independent review remain unresolved. Existing 40 packages and the public learning-site allowlist are unchanged.
 
 - Repair two Chapter 84 source boundaries, add ten proposed evidence groups and a source-linked typed table, and retain the final 52-assembly comparison. Correct summary provenance and reserved labels after agent review, preserving earlier trials. At 512 KiB it retains 11/11 declared groups against the newly authored baseline’s 9/11, a six-whitespace-byte difference; at 32 KiB neither arm delivers source evidence. All packages remain insufficient. Keep dependency closure, compact delivery, specialist review and production promotion open; no model calls or new source acquisition.

@@ -7,6 +7,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 
 from build_learning_site import build, eligible, render, rewrite_link, normalise_table_alignment
+import source_roles_diagram
 from markdown_it.token import Token
 
 COMMIT = "a" * 40
@@ -30,6 +31,28 @@ class LearningSiteTests(unittest.TestCase):
     def test_local_images_use_raw_commit_bound_assets(self):
         _, output = render('docs/a.md', '# A\n\n![Result](../validation/screenshot.png)', set(), {'validation/screenshot.png'}, COMMIT)
         self.assertIn(f'src="https://raw.githubusercontent.com/chris-page-gov/okf-dwp/{COMMIT}/validation/screenshot.png"', output)
+
+    def test_named_mermaid_uses_local_static_image_on_pages(self):
+        markdown = (Path(__file__).resolve().parents[2] / source_roles_diagram.MARKDOWN).read_text()
+        _, output = render("docs/learning-path.md", markdown, set(), set(), COMMIT,
+                           {source_roles_diagram.PUBLISHED_SVG})
+        self.assertIn('src="/okf-dwp/assets/source-roles-diagram.svg"', output)
+        self.assertIn("How legislation, tribunal decisions", output)
+        self.assertIn("<table>", output)
+        self.assertNotIn("LAW[&quot;Legislation.gov.uk", output)
+        _, other = render("docs/other.md", "# Other\n\n```mermaid\nflowchart TD\nA --> B\n```", set(), set(), COMMIT,
+                          {source_roles_diagram.PUBLISHED_SVG})
+        self.assertIn("flowchart TD", other)
+
+    def test_static_diagram_bound_to_source_and_inert(self):
+        root = Path(__file__).resolve().parents[2]
+        markdown = (root / source_roles_diagram.MARKDOWN).read_text()
+        svg = (root / source_roles_diagram.SVG).read_bytes()
+        source_roles_diagram.check(markdown, svg)
+        with self.assertRaisesRegex(ValueError, "differs from the Mermaid source"):
+            source_roles_diagram.check(markdown.replace("may seek advice", "asks for advice"), svg)
+        with self.assertRaisesRegex(ValueError, "active or external"):
+            source_roles_diagram.check(markdown, svg.replace(b"</svg>", b"<script>alert(1)</script></svg>"))
 
     def test_raw_html_inert_and_anchors_retained(self):
         _, output = render("docs/a.md", '# Heading\n\n<a id="scope"></a>\n<script>alert(1)</script>\n\n[x](javascript:alert(1))', set(), set(), COMMIT)

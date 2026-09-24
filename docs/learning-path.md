@@ -33,6 +33,61 @@ publication. The [0.6.0 public verification report](../validation/compact-delive
 
 The earlier [0.5.0 browser observations](../validation/compact-delivery/v0.5.0/README.md) retain their own sources and results, including Firefox hosting-cookie warnings. The [full public Reader check](household-reader-public-verification.md) separately verified conceptual filters, a statutory relationship graph and source/audit dates in Chrome. No new 0.6.0 public browser or Voice acceptance is implied.
 
+### How law, guidance and people fit together
+
+This map shows where different kinds of material come from and who uses them.
+An arrow means “may inform” or “is used by”; it does **not** mean that one
+publication updates another automatically or has the same legal authority.
+
+```mermaid
+flowchart TD
+    LAW["Legislation.gov.uk<br/>Acts and regulations"]
+    CASES["Published tribunal decisions<br/>relevant case law"]
+    DMG["DWP DMG and ADM<br/>staff guidance"]
+    CPAG["CPAG Welfare Benefits Handbook<br/>independent adviser resource"]
+    CITIZEN["Claimant or citizen"]
+    DM["DWP decision maker"]
+    ADVISER["Welfare rights adviser"]
+
+    LAW -->|may inform; separate update| DMG
+    CASES -->|may inform; separate review| DMG
+    LAW -->|may inform; independent edit| CPAG
+    CASES -->|may inform; independent edit| CPAG
+    LAW -->|applies law| DM
+    DMG -->|guides| DM
+    CPAG -->|informs advice| ADVISER
+    LAW -->|checks law| ADVISER
+    CITIZEN -->|claims| DM
+    DM -->|decision| CITIZEN
+    CITIZEN -->|may seek advice| ADVISER
+    ADVISER -->|explains options| CITIZEN
+
+    classDef source fill:#f2eefb,stroke:#604b8d,color:#231a35
+    classDef guidance fill:#f3f5f7,stroke:#59636e,color:#17212b
+    classDef citizen fill:#dbeafe,stroke:#1d4ed8,color:#102f65
+    classDef decisionmaker fill:#ffedd5,stroke:#c2410c,color:#7c2d12
+    classDef adviser fill:#dcfce7,stroke:#15803d,color:#14532d
+    class LAW,CASES source
+    class DMG,CPAG guidance
+    class CITIZEN citizen
+    class DM decisionmaker
+    class ADVISER adviser
+```
+
+| Part of the map | What it means | Where to check |
+| --- | --- | --- |
+| Law | Acts and regulations are made by Parliament, devolved legislatures or authorised rule-makers. The National Archives publishes enacted and revised legislation; check the relevant version, area and date. | [How legislation works](https://www.legislation.gov.uk/understanding-legislation) |
+| Tribunal decisions | A relevant Upper Tribunal decision can clarify a legal point. A person normally challenges a benefit decision through reconsideration and then the First-tier Tribunal; an Upper Tribunal appeal concerns a legal error in a tribunal decision. | [Administrative Appeals Chamber decisions](https://caselaw.nationalarchives.gov.uk/courts-and-tribunals/ukut/aac) · [appeal route](https://www.gov.uk/appeal-benefit-decision) |
+| DWP guidance | The [DMG](https://www.gov.uk/government/collections/decision-makers-guide-staff-guide) and [ADM](https://www.gov.uk/government/publications/advice-for-decision-making-staff-guide) are staff guidance for different benefit decisions. They help decision makers apply law but are not the legislation itself. | Open the numbered paragraph and its cited law. |
+| Independent adviser resource | CPAG's [Welfare Benefits Handbook](https://cpag.org.uk/welfare-rights) is a separately maintained resource for advisers. It is not DWP guidance or legislation. This project links to its description only; it does not reproduce handbook text. | Check the edition and its own source references. |
+| People | The claimant supplies facts or asks for a decision; the DWP decision maker decides the claim; a welfare rights adviser can help the person understand evidence and challenge a decision. These are separate roles. | [Benefit appeal steps](https://www.gov.uk/appeal-benefit-decision) |
+
+In this project, always follow a citation back to its **own** source, paragraph,
+version and scope. A link from guidance or a handbook to law or case law is a
+lead for checking, not proof that the current wording applies to a particular
+person. [Source and legal-reference review](legal-reconciliation.md) keeps
+these boundaries visible.
+
 ### Inspect any of the 40 staff questions
 
 Use the [Evidence workbench guide](evidence-workbench.md) to compare a question’s
