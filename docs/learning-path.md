@@ -41,7 +41,8 @@ show source locations, extraction, complete passages, concepts and relationships
 dependencies, selection reasons and a local review proposal. A PDF source may
 require opening in a separate tab because its publisher blocks embedding.
 The 40-question catalogue is an inspection surface, not a claim that 40 benefits
-answers have been completed.
+answers have been completed. The [24 September handover](evidence-workbench-handover.md)
+gives the verified release and a short meeting walkthrough.
 
 ### New route: follow a supplied staff question
 

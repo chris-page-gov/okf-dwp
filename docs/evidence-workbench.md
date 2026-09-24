@@ -92,6 +92,14 @@ missing requirement and the machine-readable package. This demonstrates an
 inspectable grounding process, without turning an incomplete package into a
 complete benefits answer.
 
+## Ask a new question against the repair
+
+[Open the updated DMG and ADM source in Explorer](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7eeded763042ddd0070f4fed834c6074149e8e2f%2Fstructured-context%2Fevidence-connect-explorer.json),
+then select Ask OKF. This link fixes the source version to the reviewed release.
+Earlier pinned bundle links keep their original data; they do not silently
+acquire this repair. The 40-question workbench opens retained results, whereas
+Ask OKF assembles a new package for the words you enter.
+
 ## Reproduce the retained evidence
 
 The producer and the Explorer consumer must use the versions recorded in the
@@ -111,6 +119,12 @@ every byte, then independently reconstruct all retained packages without
 rerunning retrieval. The loader check also needs Explorer's locked JavaScript
 dependencies installed with `pnpm install --frozen-lockfile`. None calls an answer model.
 See the [source connection profile and measured tests](evidence-connect-profile.md).
+
+The retained offline replay uses a virtual `example.invalid` index address.
+That address is an identity within the replay, not a public download link; the
+manifest's corpus path and checksum bind the committed source. Use the updated
+Explorer link above for a new live assembly, or the documented producer commands
+for byte-for-byte replay.
 
 The new live Ask OKF entry uses `structured-context/evidence-connect-explorer.json`
 from an immutable GitHub revision. In Ask OKF, the retained-case comparison
