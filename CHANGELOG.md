@@ -17,6 +17,9 @@ Implementation ownership and handovers belong in the
 - Publish only explicitly public, hash-bound staff evidence through the learning
   site, with <=32 KiB package parts, question/source identity checks and output
   collision rejection. Add the beginner guide, current work log and BL025.
+  Verify the exact version 3 publication independently, preserving older
+  publication checkers and receipts; keep the frozen-base and successor
+  validation namespaces separate.
 
 - Repair two Chapter 84 source boundaries, add ten proposed evidence groups and a source-linked typed table, and retain the final 52-assembly comparison. Correct summary provenance and reserved labels after agent review, preserving earlier trials. At 512 KiB it retains 11/11 declared groups against the newly authored baseline’s 9/11, a six-whitespace-byte difference; at 32 KiB neither arm delivers source evidence. All packages remain insufficient. Keep dependency closure, compact delivery, specialist review and production promotion open; no model calls or new source acquisition.
 

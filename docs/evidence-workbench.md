@@ -113,6 +113,8 @@ dependencies installed with `pnpm install --frozen-lockfile`. None calls an answ
 See the [source connection profile and measured tests](evidence-connect-profile.md).
 
 The new live Ask OKF entry uses `structured-context/evidence-connect-explorer.json`
-from an immutable GitHub revision. The workbench consumes only its retained
+from an immutable GitHub revision. In Ask OKF, the retained-case comparison
+uses limits of 64 records, 128 relationships, depth 6 and 524,288 bytes; a
+32 KiB delivery part is a different limit. The workbench consumes only its retained
 public question packages. Remote MCP service admission and an observed ChatGPT
 client journey are separate from this browser release.

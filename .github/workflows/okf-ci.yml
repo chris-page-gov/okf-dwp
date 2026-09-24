@@ -459,6 +459,7 @@ jobs:
           node --test scripts/test_evidence_workbench_paths.mjs
           node scripts/build_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench --check
           node scripts/check_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench
+          node --test scripts/test_learning_site_v3.mjs
           uv sync --locked --project tools/learning-site
           uv run --locked --project tools/learning-site python -m unittest discover -s scripts -p test_workbench_publication.py
           uv run --locked --project tools/learning-site python scripts/build_learning_site.py --commit "$GITHUB_SHA" --output "$RUNNER_TEMP/workbench-site"

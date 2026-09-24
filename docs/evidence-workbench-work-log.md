@@ -159,3 +159,13 @@ separate wrapper verifies every successor byte, temporarily sets aside only its
 288 declared files for the exact base check, restores them and verifies them
 again. The full 53,727-record base check and five restoration/containment controls
 pass. CI runs the base and successor planes independently.
+
+The final local Reader-to-Ask browser journey loaded the new
+`structured-context/evidence-connect-explorer.json`, asked the exact original
+capital question, and selected U07, the DMG 84861 entry and their direct link.
+At 64 records, 128 relationships, depth 6 and 524,288 bytes, the result contains
+44 records and 68 relationships using 522,919 bytes. It reports budget
+truncation and remains insufficient. Browser console, page and request errors
+were absent. The receipt and screenshot are in `local-final/reader-ask.json`
+and `local-final/reader-ask.png`; the earlier combined-descriptor check is
+retained separately and is not used as evidence of the successor working.

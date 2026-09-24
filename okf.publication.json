@@ -3442,11 +3442,11 @@
           "semantic",
           "runtime"
         ],
-        "command": "uv run --locked python scripts/build_structured_context.py --check",
-        "source": "docs/source-led-manual-guide.md",
+        "command": "uv run --locked python scripts/check_structured_context_with_successor.py",
+        "source": "docs/evidence-connect-profile.md",
         "review_status": "unreviewed",
         "network": "none",
-        "mutates": "none",
+        "mutates": "generated-only",
         "timeout_minutes": 20
       },
       {
@@ -3763,6 +3763,48 @@
         "review_status": "unreviewed",
         "network": "none",
         "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "workbench-site-public-check",
+        "kind": "check",
+        "planes": [
+          "documentation",
+          "runtime"
+        ],
+        "command": "node scripts/verify_learning_site_v3.mjs --repo REPOSITORY --site BUILT_SITE --commit FULL_COMMIT --output FRESH_OBSERVATION_DIRECTORY",
+        "source": "docs/learning-website.md",
+        "review_status": "unreviewed",
+        "network": "bounded-read",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "test-workbench-site-public-check",
+        "kind": "check",
+        "planes": [
+          "documentation",
+          "runtime"
+        ],
+        "command": "node --test scripts/test_learning_site_v3.mjs",
+        "source": "docs/learning-website.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "evidence-connect-descriptor-check",
+        "kind": "check",
+        "planes": [
+          "documentation",
+          "runtime"
+        ],
+        "command": "node scripts/test_evidence_connect_descriptor.mjs --explorer-root .ci/okf-explorer-workbench",
+        "source": "docs/evidence-workbench.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
         "timeout_minutes": 5
       }
     ]
