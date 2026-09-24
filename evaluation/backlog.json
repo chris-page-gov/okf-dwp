@@ -1,6 +1,6 @@
 {
   "schema": "okf-dwp-backlog.v1",
-  "updated_on": "2026-09-23",
+  "updated_on": "2026-09-24",
   "status_meanings": {
     "recorded_complete": "Named bounded result has retained evidence, not perpetual assurance.",
     "in_progress": "Work is being prepared or implemented; publication/acceptance is not implied.",
@@ -194,7 +194,14 @@
         "scripts/test_logical_context.py",
         "docs/semantic-closure-and-compact-delivery.md",
         "evaluation/semantic-coverage/closure-2026-09-22/audit.json",
-        "domain-profile/logical-units/authoring-registry.json"
+        "domain-profile/logical-units/authoring-registry.json",
+        "docs/evidence-workbench.md",
+        "docs/evidence-workbench-work-log.md",
+        "domain-profile/evidence-connect/profile.json",
+        "structured-context/evidence-connect-manifest.json",
+        "evaluation/evidence-workbench/manifest.json",
+        "scripts/build_evidence_connect.py",
+        "scripts/build_evidence_workbench.mjs"
       ],
       "acceptance_checks": [
         "Benefit/variant/circumstance terms have sources, aliases, confusions and scope; existing custody-specific meanings are not silently broadened."
@@ -294,6 +301,22 @@
             "docs/semantic-closure-and-compact-delivery.md",
             "evaluation/semantic-coverage/closure-2026-09-22/audit.json",
             "domain-profile/logical-units/authoring-registry.json"
+          ]
+        },
+        {
+          "id": "DWP-BL-005.source-bound-navigation",
+          "kind": "implementation",
+          "executor": "agent",
+          "status": "in_progress",
+          "next_action": "Complete independently tested source-bound everyday-wording routes for existing logical units; keep navigation proposals distinct from legal applicability. Preserve initial failed prospective probes and require fresh paraphrases and wrong-benefit controls before claiming generalisation.",
+          "evidence": [
+            "docs/evidence-workbench.md",
+            "docs/evidence-workbench-work-log.md",
+            "domain-profile/evidence-connect/profile.json",
+            "structured-context/evidence-connect-manifest.json",
+            "evaluation/evidence-workbench/manifest.json",
+            "scripts/build_evidence_connect.py",
+            "scripts/build_evidence_workbench.mjs"
           ]
         }
       ]
@@ -469,7 +492,14 @@
         "capital-pilot/repair-receipt.json",
         "capital-pilot/groups.json",
         "evaluation/capital-pilot/runs/attempt-03/report.json",
-        "scripts/test_capital_pilot.py"
+        "scripts/test_capital_pilot.py",
+        "docs/evidence-workbench.md",
+        "docs/evidence-workbench-work-log.md",
+        "domain-profile/evidence-connect/profile.json",
+        "structured-context/evidence-connect-manifest.json",
+        "evaluation/evidence-workbench/manifest.json",
+        "scripts/build_evidence_connect.py",
+        "scripts/build_evidence_workbench.mjs"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
@@ -828,31 +858,49 @@
         {
           "id": "DWP-BL-007.capital-delivery",
           "kind": "implementation",
-          "status": "not_started",
+          "status": "in_progress",
           "executor": "agent",
-          "next_action": "Test compact manifest and exact evidence reads for these groups; do not equate a 32 KiB delivery part with a 32 KiB total assembly or conceal truncation.",
+          "next_action": "Reconstruct retained packages exactly through <=32 KiB parts, with the assembly limit separate. Finish all-40 integrity, browser and publication checks; no answer-quality claim.",
           "evidence": [
-            "docs/pc-capital-bounded-repair.md"
+            "docs/evidence-workbench.md",
+            "docs/evidence-workbench-work-log.md",
+            "domain-profile/evidence-connect/profile.json",
+            "structured-context/evidence-connect-manifest.json",
+            "evaluation/evidence-workbench/manifest.json",
+            "scripts/build_evidence_connect.py",
+            "scripts/build_evidence_workbench.mjs"
           ]
         },
         {
           "id": "DWP-BL-007.capital-dependencies",
           "kind": "research",
-          "status": "not_started",
+          "status": "in_progress",
           "executor": "agent",
-          "next_action": "Resolve the eleven declared external dependency groups from frozen sources; retain unknown applicability and exceptions.",
+          "next_action": "Verify source-backed links to captured dependency units and preserve ambiguous, incomplete and specialist-only groups. Leading-source dependency expansion is tested separately from broad conceptual fan-out. Complete final fixed-source comparison and reviewer checks.",
           "evidence": [
-            "docs/pc-capital-bounded-repair.md"
+            "docs/evidence-workbench.md",
+            "docs/evidence-workbench-work-log.md",
+            "domain-profile/evidence-connect/profile.json",
+            "structured-context/evidence-connect-manifest.json",
+            "evaluation/evidence-workbench/manifest.json",
+            "scripts/build_evidence_connect.py",
+            "scripts/build_evidence_workbench.mjs"
           ]
         },
         {
           "id": "DWP-BL-007.capital-adoption",
           "kind": "implementation",
-          "status": "not_started",
+          "status": "in_progress",
           "executor": "agent",
-          "next_action": "Only consider full-corpus/service migration after fixed-source selection and bounded delivery checks. Keep the existing default and frozen trials intact until a separately reviewed change.",
+          "next_action": "The additive full-corpus overlay now contains the ten repaired capital passages while reusing frozen shards. Complete reviewed integration and exact-public verification; do not replace frozen pilot or legacy service defaults.",
           "evidence": [
-            "docs/pc-capital-bounded-repair.md"
+            "docs/evidence-workbench.md",
+            "docs/evidence-workbench-work-log.md",
+            "domain-profile/evidence-connect/profile.json",
+            "structured-context/evidence-connect-manifest.json",
+            "evaluation/evidence-workbench/manifest.json",
+            "scripts/build_evidence_connect.py",
+            "scripts/build_evidence_workbench.mjs"
           ]
         },
         {
@@ -904,7 +952,14 @@
         "docs/logical-evidence-units.md",
         "docs/semantic-closure-and-compact-delivery.md",
         "evaluation/semantic-coverage/closure-2026-09-22/audit.json",
-        "domain-profile/logical-units/authoring-registry.json"
+        "domain-profile/logical-units/authoring-registry.json",
+        "docs/evidence-workbench.md",
+        "docs/evidence-workbench-work-log.md",
+        "domain-profile/evidence-connect/profile.json",
+        "structured-context/evidence-connect-manifest.json",
+        "evaluation/evidence-workbench/manifest.json",
+        "scripts/build_evidence_connect.py",
+        "scripts/build_evidence_workbench.mjs"
       ],
       "acceptance_checks": [
         "Unchanged ask_okf preserved; small manifest plus paginated exact reads; original version/question/budget/context identity replayed; stale/unknown IDs rejected; all slices reconstruct exactly; actual host check."
@@ -984,6 +1039,22 @@
             "docs/semantic-closure-and-compact-delivery.md",
             "evaluation/semantic-coverage/closure-2026-09-22/audit.json",
             "domain-profile/logical-units/authoring-registry.json"
+          ]
+        },
+        {
+          "id": "DWP-BL-008.workbench-delivery",
+          "kind": "implementation",
+          "executor": "agent",
+          "status": "in_progress",
+          "next_action": "Publish only the approved 40 staff-question occurrences and bound public evidence. Verify every retained package with the same reconstruction routine as Explorer, then verify exact live publication. No private question logging.",
+          "evidence": [
+            "docs/evidence-workbench.md",
+            "docs/evidence-workbench-work-log.md",
+            "domain-profile/evidence-connect/profile.json",
+            "structured-context/evidence-connect-manifest.json",
+            "evaluation/evidence-workbench/manifest.json",
+            "scripts/build_evidence_connect.py",
+            "scripts/build_evidence_workbench.mjs"
           ]
         }
       ]
@@ -1747,6 +1818,72 @@
           "evidence": [
             "validation/combined-reader/public/README.md",
             "validation/combined-reader/public/artifacts.json"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DWP-BL-025",
+      "title": "Evidence workbench and all-question inspection",
+      "status": "in_progress",
+      "priority": "P0",
+      "depends_on": [
+        "DWP-BL-005",
+        "DWP-BL-007",
+        "DWP-BL-008"
+      ],
+      "owner_role": "Explorer maintainer and DWP evidence producer",
+      "evidence": [
+        "docs/evidence-workbench.md",
+        "docs/evidence-workbench-work-log.md",
+        "domain-profile/evidence-connect/profile.json",
+        "structured-context/evidence-connect-manifest.json",
+        "evaluation/evidence-workbench/manifest.json",
+        "scripts/build_evidence_connect.py",
+        "scripts/build_evidence_workbench.mjs"
+      ],
+      "acceptance_checks": [
+        "All 40 public question occurrences can be opened lazily with their exact package identity and explicit gaps.",
+        "A reviewer can compare cited PDF locations, extracted text, logical boundaries, concepts, relationships and dependencies, and export a local proposal without mutating sources.",
+        "Bounded parts reconstruct the whole retained package; fail closed on tampering, path escapes, private records or identity mismatch.",
+        "Reviewed commits, exact merged CI and public browser journeys are recorded separately from specialist acceptance."
+      ],
+      "scope_note": "Implementation and local browser controls are progressing in isolated parallel branches. This is an evidence review and proposal environment, not a benefits decision engine or proof of complete answerability.",
+      "work_packages": [
+        {
+          "id": "DWP-BL-025.implementation",
+          "kind": "implementation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Integrate the reusable Explorer UI and bounded delivery helper, regenerate all 40 cases and complete regression checks.",
+          "evidence": [
+            "docs/evidence-workbench.md",
+            "docs/evidence-workbench-work-log.md",
+            "domain-profile/evidence-connect/profile.json",
+            "structured-context/evidence-connect-manifest.json",
+            "evaluation/evidence-workbench/manifest.json",
+            "scripts/build_evidence_connect.py",
+            "scripts/build_evidence_workbench.mjs"
+          ]
+        },
+        {
+          "id": "DWP-BL-025.public-verification",
+          "kind": "live_observation",
+          "status": "not_started",
+          "executor": "agent",
+          "next_action": "After reviewed merges, verify deployed consumer identity, all 40 bound resources and representative source/passage/review journeys; retain console and failure observations.",
+          "evidence": [
+            "docs/evidence-workbench-work-log.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-025.specialist-review",
+          "kind": "independent_review",
+          "status": "not_started",
+          "executor": "human",
+          "next_action": "Use the workbench to review interpretation, source boundaries and open obligations; engineering acceptance must not be relabelled as legal or specialist acceptance.",
+          "evidence": [
+            "docs/evidence-workbench.md"
           ]
         }
       ]

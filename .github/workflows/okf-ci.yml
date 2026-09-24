@@ -421,18 +421,53 @@ jobs:
       - name: Replay the retained original-case failure without relabelling it
         run: node .ci/okf-dwp-original-acceptance/scripts/evaluate_original_acceptance.mjs --explorer-root .ci/okf-explorer-original-acceptance --attempt acceptance-01 --check
 
+  workbench_validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version-file: .python-version
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9
+        with:
+          version: '0.12.2'
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '26.7.0'
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: chris-page-gov/okf-explorer
+          ref: 775404aac08763477cdf42057327853199352277
+          path: .ci/okf-explorer-workbench
+          persist-credentials: false
+      - name: Verify source connection and retained delivery without models or network
+        run: |
+          test "$(git -C .ci/okf-explorer-workbench rev-parse HEAD)" = 775404aac08763477cdf42057327853199352277
+          uv sync --locked
+          uv run --locked python scripts/build_evidence_connect.py --check
+          uv run --locked python -m unittest discover -s scripts -p 'test_evidence_connect*.py'
+          node --test scripts/test_evidence_workbench_paths.mjs
+          node scripts/build_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench --check
+          node scripts/check_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench
+          uv sync --locked --project tools/learning-site
+          uv run --locked --project tools/learning-site python -m unittest discover -s scripts -p test_workbench_publication.py
+          uv run --locked --project tools/learning-site python scripts/build_learning_site.py --commit "$GITHUB_SHA" --output "$RUNNER_TEMP/workbench-site"
+
   validate:
     # Preserve the existing protected check name and fail for skipped,
     # cancelled or failed prerequisite jobs, including setup failures.
     if: ${{ always() }}
-    needs: [legacy_validation, structured_validation]
+    needs: [legacy_validation, structured_validation, workbench_validation]
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Require both independent validation planes
+      - name: Require every independent validation plane
         env:
           LEGACY_RESULT: ${{ needs.legacy_validation.result }}
           STRUCTURED_RESULT: ${{ needs.structured_validation.result }}
+          WORKBENCH_RESULT: ${{ needs.workbench_validation.result }}
         run: |
           test "$LEGACY_RESULT" = success
           test "$STRUCTURED_RESULT" = success
+          test "$WORKBENCH_RESULT" = success

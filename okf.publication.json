@@ -1,6 +1,6 @@
 {
   "schema": "okf-repository-publication-contract.v1",
-  "modified": "2026-09-23",
+  "modified": "2026-09-24",
   "locale": "en-GB",
   "time_zone": "Europe/London",
   "repository": {
@@ -1396,7 +1396,9 @@
         "structured-context/**",
         "domain-profile/structured-units/**",
         "capital-pilot/**",
-        "domain-profile/capital-pilot/**"
+        "domain-profile/capital-pilot/**",
+        "domain-profile/evidence-connect/**",
+        "evaluation/evidence-workbench/**"
       ],
       "origin": "mixed",
       "authority": "mixed",
@@ -1418,7 +1420,8 @@
         "A compact discovery card nominates source evidence; it is not an answer, a complete rule or an authority decision. Candidate dependencies and unresolved references remain unreviewed.",
         "Retained staff comparisons test assembly and boundaries separately from source coverage, legal answerability, specialist review and public service adoption.",
         "Source-selection proposals and the legacy location policy are explicitly authored, model-derived and unreviewed by specialists. A guard requires every declared task concept; location overlap never closes original evidence requirements or legal dependencies.",
-        "The ten-group Chapter 84 experiment is an additive development comparison with its own newly authored routing in both arms. It is not production adoption, a general benchmark or an AI-answer accuracy result."
+        "The ten-group Chapter 84 experiment is an additive development comparison with its own newly authored routing in both arms. It is not production adoption, a general benchmark or an AI-answer accuracy result.",
+        "The additive evidence-connect projection imports the repaired groups into the full corpus without rewriting frozen predecessors. Workbench packages cover the approved 40 public occurrences; completeness and model-answer quality remain separately evaluated."
       ],
       "formats": [
         "application/json",
@@ -1443,7 +1446,8 @@
         "command_ids": [
           "structured-unit-build",
           "structured-context-build",
-          "capital-pilot-build"
+          "capital-pilot-build",
+          "evidence-connect-build"
         ],
         "limitations": [
           "Deterministic projection of frozen local sources and public evaluation data; no network, source refresh, model inference or personal case data."
@@ -1582,6 +1586,11 @@
         "path": "pdf-structure/adm/**",
         "role": "source-envelope",
         "source_family_id": "pdf-structure-observations"
+      },
+      {
+        "path": "domain-profile/evidence-connect/**",
+        "role": "profile",
+        "source_family_id": "source-led-unit-proposals"
       }
     ],
     "generated": [
@@ -1796,6 +1805,43 @@
           "capital-pilot-metrics",
           "capital-pilot-replay"
         ]
+      },
+      {
+        "path": "structured-context/evidence-connect/**",
+        "role": "explorer-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "evidence-connect-build"
+        ],
+        "check_command_ids": [
+          "evidence-connect-check"
+        ]
+      },
+      {
+        "path": "structured-context/evidence-connect-manifest.json",
+        "role": "explorer-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "evidence-connect-build"
+        ],
+        "check_command_ids": [
+          "evidence-connect-check"
+        ]
+      },
+      {
+        "path": "evaluation/evidence-workbench/**",
+        "role": "explorer-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "evidence-workbench-build"
+        ],
+        "check_command_ids": [
+          "evidence-workbench-check",
+          "evidence-workbench-delivery-check"
+        ]
       }
     ]
   },
@@ -1895,7 +1941,15 @@
         "scripts/test_capital_pilot*.py",
         "scripts/capital_pilot_metrics.mjs",
         "scripts/test_capital_pilot_metrics.mjs",
-        "scripts/evaluate_capital_pilot.mjs"
+        "scripts/evaluate_capital_pilot.mjs",
+        "domain-profile/evidence-connect/**",
+        "scripts/build_evidence_connect.py",
+        "scripts/build_evidence_workbench.mjs",
+        "scripts/check_evidence_workbench.mjs",
+        "scripts/compare_evidence_connect.mjs",
+        "scripts/probe_evidence_connect.mjs",
+        "scripts/test_evidence_connect.py",
+        "evaluation/evidence-workbench/**"
       ],
       "command_ids": [
         "build-check",
@@ -1950,7 +2004,9 @@
         "capital-pilot-check",
         "capital-pilot-controls",
         "capital-pilot-metrics",
-        "capital-pilot-replay"
+        "capital-pilot-replay",
+        "evidence-connect-build",
+        "evidence-connect-check"
       ]
     },
     {
@@ -1975,7 +2031,9 @@
         "evidence-examples/**",
         "evaluation/service-publication.json",
         "scripts/build_service_publication.py",
-        "scripts/test_service_publication.py"
+        "scripts/test_service_publication.py",
+        "scripts/workbench_publication.py",
+        "scripts/test_workbench_publication.py"
       ],
       "command_ids": [
         "diff-check",
@@ -1988,7 +2046,8 @@
         "retained-evidence-check",
         "service-publication-build",
         "service-publication-check",
-        "service-publication-controls"
+        "service-publication-controls",
+        "workbench-publication-controls"
       ]
     },
     {
@@ -2055,7 +2114,15 @@
         "scripts/test_capital_pilot*.py",
         "scripts/capital_pilot_metrics.mjs",
         "scripts/test_capital_pilot_metrics.mjs",
-        "scripts/evaluate_capital_pilot.mjs"
+        "scripts/evaluate_capital_pilot.mjs",
+        "domain-profile/evidence-connect/**",
+        "scripts/build_evidence_connect.py",
+        "scripts/build_evidence_workbench.mjs",
+        "scripts/check_evidence_workbench.mjs",
+        "scripts/compare_evidence_connect.mjs",
+        "scripts/probe_evidence_connect.mjs",
+        "scripts/test_evidence_connect.py",
+        "evaluation/evidence-workbench/**"
       ],
       "command_ids": [
         "context-discovery-build-check",
@@ -2088,7 +2155,13 @@
         "capital-pilot-check",
         "capital-pilot-controls",
         "capital-pilot-metrics",
-        "capital-pilot-replay"
+        "capital-pilot-replay",
+        "evidence-connect-build",
+        "evidence-connect-check",
+        "evidence-workbench-build",
+        "evidence-workbench-check",
+        "evidence-workbench-delivery-check",
+        "evidence-workbench-path-controls"
       ]
     },
     {
@@ -3598,6 +3671,99 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 5
+      },
+      {
+        "id": "evidence-connect-build",
+        "kind": "build",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_evidence_connect.py",
+        "source": "docs/evidence-workbench.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "evidence-connect-check",
+        "kind": "check",
+        "planes": [
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_evidence_connect.py --check",
+        "source": "docs/evidence-workbench.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "evidence-workbench-build",
+        "kind": "build",
+        "planes": [
+          "runtime"
+        ],
+        "command": "node scripts/build_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench",
+        "source": "docs/evidence-workbench.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "evidence-workbench-check",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "node scripts/build_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench --check",
+        "source": "docs/evidence-workbench.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "workbench-publication-controls",
+        "kind": "test",
+        "planes": [
+          "documentation"
+        ],
+        "command": "uv run --locked --project tools/learning-site python -m unittest discover -s scripts -p test_workbench_publication.py",
+        "source": "docs/evidence-workbench.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "evidence-workbench-delivery-check",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "node scripts/check_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench",
+        "source": "docs/evidence-workbench.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "evidence-workbench-path-controls",
+        "kind": "test",
+        "planes": [
+          "runtime"
+        ],
+        "command": "node --test scripts/test_evidence_workbench_paths.mjs",
+        "source": "docs/evidence-workbench.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
       }
     ]
   },
@@ -3634,7 +3800,9 @@
       "structured-context/**",
       "profiles/manual-guide/**",
       "profiles/pdf-structure/**",
-      "capital-pilot/**"
+      "capital-pilot/**",
+      "domain-profile/evidence-connect/**",
+      "evaluation/evidence-workbench/**"
     ],
     "documentation_paths": [
       "README.md",

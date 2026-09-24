@@ -47,7 +47,8 @@
       "domain-profile/structured-units/*.yamlld",
       "domain-profile/capital-pilot/*.yamlld",
       "evaluation/capital-pilot/input/manifest.json",
-      "evaluation/capital-pilot/protocol.json"
+      "evaluation/capital-pilot/protocol.json",
+      "domain-profile/evidence-connect/*.json"
     ],
     "outputs": [
       {
@@ -379,6 +380,26 @@
         "path": "capital-pilot/appendix-1.json",
         "role": "semantic-validation",
         "generated": true
+      },
+      {
+        "path": "structured-context/evidence-connect-manifest.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "structured-context/evidence-connect/**/*.json.gz",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "evaluation/evidence-workbench/manifest.json",
+        "role": "semantic-validation",
+        "generated": true
+      },
+      {
+        "path": "structured-context/evidence-connect-explorer.json",
+        "role": "explorer-runtime",
+        "generated": true
       }
     ],
     "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
@@ -397,7 +418,8 @@
       "Retained PDF tag trees are source-declared structural observations, not accepted semantic or legal interpretations. Bounded replay preserves original observations, unparsed lines and failed or absent structures; normal checks do not invoke Poppler or acquire sources.",
       "The additive structured-unit and structured-context candidates separate source locations, proposed content boundaries and compact discovery cards. A card supplies navigation, not evidence or a complete rule; dependency matches and better segmentation do not establish legal applicability or complete answerability.",
       "Guarded source-selection profiles are model-derived research proposals. The separate location-migration ledger preserves the 40 earlier staff requirements and 203 open obligations; exact overlap provides navigation only and never substitutes for an original required page or relationship path.",
-      "The separate custody-migration ledger preserves six original acceptance requirements and distinguishes location-only mappings from narrower source-read selections. New scope records preserve exact historical source text; chapter routes and uncertain boundaries are not legal completeness."
+      "The separate custody-migration ledger preserves six original acceptance requirements and distinguishes location-only mappings from narrower source-read selections. New scope records preserve exact historical source text; chapter routes and uncertain boundaries are not legal completeness.",
+      "The evidence-connect overlay and workbench retain public question packages for inspection. Everyday-wording routes are authored navigation proposals, not legal applicability. Bounded delivery preserves incomplete status and cannot supply missing evidence."
     ]
   },
   "relationship_contract": {
@@ -447,7 +469,8 @@
       "uv run --locked python scripts/build_manual_guide.py",
       "uv run --locked python scripts/build_structured_units.py",
       "uv run --locked python scripts/build_structured_context.py",
-      "uv run --locked python scripts/build_capital_pilot.py"
+      "uv run --locked python scripts/build_capital_pilot.py",
+      "uv run --locked python scripts/build_evidence_connect.py"
     ],
     "check": [
       "uv run --locked python scripts/check_semantic_contract.py",
@@ -491,7 +514,8 @@
       "uv run --locked python scripts/build_capital_pilot.py --check",
       "uv run --locked python -m unittest discover -s scripts -p 'test_capital_pilot*.py'",
       "node --test scripts/test_capital_pilot_metrics.mjs",
-      "node scripts/evaluate_capital_pilot.mjs --explorer-root .ci/okf-explorer-structured --attempt attempt-03 --check"
+      "node scripts/evaluate_capital_pilot.mjs --explorer-root .ci/okf-explorer-structured --attempt attempt-03 --check",
+      "uv run --locked python scripts/build_evidence_connect.py --check"
     ]
   },
   "reader": {

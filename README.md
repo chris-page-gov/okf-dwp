@@ -6,12 +6,16 @@ okf_version: "0.2"
 
 # DWP guidance as an OKF+ bundle
 
+[Evidence workbench guide](docs/evidence-workbench.md): inspect the 40 public
+staff questions, their selected source passages, relationships and explicit gaps.
+See the work log for the exact implementation and publication state.
+
 [Demo 1 freeze plan for 23 September](docs/demo-one-freeze-2026-09-23.md):
 tested source-led evidence, forty-question gaps and a four-call comparison cap.
 
 **An independent, unofficial experimental exemplar. Not an official DWP document, benefits advice or an entitlement calculator.**
 
-**[What changed: changelog](CHANGELOG.md)** · [Current work log](docs/monday-delivery-work-log.md)
+**[What changed: changelog](CHANGELOG.md)** · [Current work log](docs/evidence-workbench-work-log.md)
 · [Backlog and acceptance checks](docs/backlog.md) · [How to repeat the method](docs/methodology.md)
 · [What we learned](docs/retrospective.md)
 · [Monday handover and demonstration](docs/monday-handover-2026-09-21.md)
