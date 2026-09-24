@@ -439,7 +439,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           repository: chris-page-gov/okf-explorer
-          ref: 775404aac08763477cdf42057327853199352277
+          ref: e6084059f9b09633cfb8385be20099b952915e82
           path: .ci/okf-explorer-workbench
           persist-credentials: false
       - uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6
@@ -452,7 +452,7 @@ jobs:
           pnpm exec svelte-kit sync
       - name: Verify source connection and retained delivery without models or network
         run: |
-          test "$(git -C .ci/okf-explorer-workbench rev-parse HEAD)" = 775404aac08763477cdf42057327853199352277
+          test "$(git -C .ci/okf-explorer-workbench rev-parse HEAD)" = e6084059f9b09633cfb8385be20099b952915e82
           uv sync --locked
           uv run --locked python scripts/build_evidence_connect.py --check
           node scripts/test_evidence_connect_descriptor.mjs --explorer-root .ci/okf-explorer-workbench

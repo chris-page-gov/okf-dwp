@@ -169,3 +169,10 @@ truncation and remains insufficient. Browser console, page and request errors
 were absent. The receipt and screenshot are in `local-final/reader-ask.json`
 and `local-final/reader-ask.png`; the earlier combined-descriptor check is
 retained separately and is not used as evidence of the successor working.
+
+Explorer PR145 merged as `e6084059f9b09633cfb8385be20099b952915e82`
+after all required checks, including Chrome, Firefox and WebKit. Its Git tree
+exactly matches the reviewed candidate. DWP's new workbench CI now pins that
+protected-main consumer commit; the recorded engine and delivery file hashes
+are unchanged. This is merge evidence, separate from the subsequent public
+deployment observation.
