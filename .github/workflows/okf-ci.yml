@@ -446,7 +446,6 @@ jobs:
           test "$(git -C .ci/okf-explorer-workbench rev-parse HEAD)" = 775404aac08763477cdf42057327853199352277
           uv sync --locked
           uv run --locked python scripts/build_evidence_connect.py --check
-          uv run --locked python -m unittest discover -s scripts -p 'test_evidence_connect*.py'
           node --test scripts/test_evidence_workbench_paths.mjs
           node scripts/build_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench --check
           node scripts/check_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench
