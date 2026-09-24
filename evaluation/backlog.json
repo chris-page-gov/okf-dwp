@@ -338,12 +338,14 @@
         "docs/legal-reconciliation.md",
         "docs/monday-delivery-work-log.md",
         "docs/legal-body-evidence.md",
-        "domain-profile/legal-bodies/coverage.json"
+        "domain-profile/legal-bodies/coverage.json",
+        "evaluation/out-of-sample/uc-disabled-child-supersession-001.json",
+        "docs/uc-disabled-child-supersession-follow-up.md"
       ],
       "acceptance_checks": [
         "Verify work/provision/version identities, effects, commencement and territory; record unresolved citations; catalogue links are not legal completeness."
       ],
-      "scope_note": "Official provision identities, citation mappings and 20 selected statutory units are implemented. Complete dependencies, commencement, extent, judgment evidence and substantive applicability remain open; no accepted legal proposition.",
+      "scope_note": "Official provision identities, citation mappings and 20 selected statutory units are implemented. Complete dependencies, commencement, extent, judgment evidence and substantive applicability remain open; no accepted legal proposition. The out-of-sample UC disabled-child case additionally needs a dated statutory check of the 2013 Decisions and Appeals Regulations Schedule 1 paragraph 31 and UC regulation 24; the live provision requests returned HTTP 429, so no provision-body or applicability acceptance is recorded.",
       "work_packages": [
         {
           "id": "DWP-BL-006.delivery",
@@ -362,12 +364,14 @@
           "kind": "research",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Twenty selected statutory units and 43 navigation relationships are implemented with dated sources and retained failures. Next resolve remaining statutory dependencies, 12 unknown extents, commencement/effects and the missing judgment bodies; do not promote extraction to applicability.",
+          "next_action": "Twenty selected statutory units and 43 navigation relationships are implemented with dated sources and retained failures. Next resolve remaining statutory dependencies, 12 unknown extents, commencement/effects and the missing judgment bodies; do not promote extraction to applicability. For the new UC/DLA case, obtain and verify the exact operative Schedule 1 paragraph 31 and UC regulation 24 bodies, amendments, territory and effective dates; then test whether A4361 governs this disabled-child addition, rather than inferring it from the carer-element example.",
           "evidence": [
             "docs/legal-reconciliation.md",
             "docs/monday-delivery-work-log.md",
             "docs/legal-body-evidence.md",
-            "domain-profile/legal-bodies/coverage.json"
+            "domain-profile/legal-bodies/coverage.json",
+            "evaluation/out-of-sample/uc-disabled-child-supersession-001.json",
+            "docs/uc-disabled-child-supersession-follow-up.md"
           ]
         },
         {
@@ -503,12 +507,15 @@
         "validation/evidence-workbench/2026-09-24/public-release/site/observation.json",
         "validation/evidence-workbench/2026-09-24/public-release/browser/receipt.json",
         "docs/evidence-workbench-handover.md",
-        "validation/evidence-workbench/2026-09-24/local-final/reader-ask.json"
+        "validation/evidence-workbench/2026-09-24/local-final/reader-ask.json",
+        "evaluation/out-of-sample/uc-disabled-child-supersession-001.json",
+        "docs/uc-disabled-child-supersession-follow-up.md",
+        "scripts/replay_uc_supersession_case.mjs"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
       ],
-      "scope_note": "Forty executable development profiles and 203 named open obligations remain. Frozen qualification, disability, partner and ignored-person comparisons retain their own denominators. The richer ignored-person closure exceeds 512 KiB despite complete candidate overlap; all contexts stay insufficient. Source modelling is complete only for each explicitly bounded increment. Capacity, legal/evidence closure, publication and specialist acceptance remain separately tracked.",
+      "scope_note": "Forty executable development profiles and 203 named open obligations remain. Frozen qualification, disability, partner and ignored-person comparisons retain their own denominators. The richer ignored-person closure exceeds 512 KiB despite complete candidate overlap; all contexts stay insufficient. Source modelling is complete only for each explicitly bounded increment. Capacity, legal/evidence closure, publication and specialist acceptance remain separately tracked. A separately observed out-of-sample UC question selected F1123 but missed A4361, A4352 and F1120; it remains insufficient with unknown assessment-period boundaries.",
       "work_packages": [
         {
           "id": "DWP-BL-007.delivery",
@@ -672,6 +679,18 @@
             "domain-profile/structured-units/benefit-interactions.yamlld",
             "domain-profile/structured-units/custody-restoration.yamlld",
             "docs/original-acceptance-restoration.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.uc-supersession-classification",
+          "kind": "implementation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Keep the failed UC/DLA replay intact. Classify the change as a conditional other-benefit supersession candidate only after BL006 checks the dated law; map F1123 and child-responsibility conditions to A4352’s explicit A4361 exception and A4361’s full examples with source-bound dependencies. Freeze independent positive phrasings and negative controls for lower DLA rate, changed entitlement date, child outside the UC family, within-period notice and ordinary late change. Replay selection, exact spans, task activation and bounded delivery separately; leave assessment-period dates unknown and evidence_status insufficient until complete source closure and specialist review.",
+          "evidence": [
+            "evaluation/out-of-sample/uc-disabled-child-supersession-001.json",
+            "docs/uc-disabled-child-supersession-follow-up.md",
+            "scripts/replay_uc_supersession_case.mjs"
           ]
         },
         {

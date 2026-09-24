@@ -223,3 +223,6 @@ published workbench and model trials were not changed. BL007 selection/profile
 repair, BL006 statutory reconciliation and independent specialist acceptance
 remain open. Demo 2 and the hospital question are separately labelled leads;
 no live WebMCP response or new hospital provision is claimed.
+The authored backlog now cites the exact case under BL006 and BL007, with an
+open agent package for UC source classification and controls. Its generated
+work-package page retains the completed historical packages unchanged.

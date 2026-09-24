@@ -14,8 +14,9 @@ Implementation ownership and handovers belong in the
   The SHA-bound offline replay selects ADM F1123 but misses A4361's
   effective-date branch and remains `insufficient`. Add conditional source
   reading, unknown assessment-period dates, statutory and specialist gates,
-  and separately labelled Demo 2 and hospital leads; do not change source,
-  runtime ranking, public packages or answer status.
+  and separately labelled Demo 2 and hospital leads. Track the open BL006
+  legal check and BL007 source-classification repair in the machine backlog;
+  do not change source, runtime ranking, public packages or answer status.
 
 - Add a beginner source-and-roles map to the learning path, with separate law, tribunal decisions, DWP staff guidance, independent CPAG handbook and claimant/adviser/decision-maker routes. The diagram and text keep source authority, editions and appeal routes distinct; no handbook content is copied.
 
