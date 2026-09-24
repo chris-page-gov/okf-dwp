@@ -355,7 +355,8 @@ jobs:
           uv run --locked python scripts/build_pdf_structure.py --check
           uv run --locked python scripts/build_manual_guide.py --check
           uv run --locked python scripts/build_structured_units.py --check
-          uv run --locked python scripts/build_structured_context.py --check
+          uv run --locked python scripts/check_structured_context_with_successor.py
+          uv run --locked python scripts/test_check_structured_context_with_successor.py
           uv run --locked python -m unittest discover -s scripts -p 'test_manual*.py'
           uv run --locked python -m unittest discover -s scripts -p 'test_pdf_structure*.py'
           uv run --locked python -m unittest discover -s scripts -p 'test_structured*.py'
@@ -441,11 +442,20 @@ jobs:
           ref: 775404aac08763477cdf42057327853199352277
           path: .ci/okf-explorer-workbench
           persist-credentials: false
+      - uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6
+        with:
+          version: 10
+      - name: Install the locked Reader test dependencies
+        working-directory: .ci/okf-explorer-workbench/apps/okf-explorer
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm exec svelte-kit sync
       - name: Verify source connection and retained delivery without models or network
         run: |
           test "$(git -C .ci/okf-explorer-workbench rev-parse HEAD)" = 775404aac08763477cdf42057327853199352277
           uv sync --locked
           uv run --locked python scripts/build_evidence_connect.py --check
+          node scripts/test_evidence_connect_descriptor.mjs --explorer-root .ci/okf-explorer-workbench
           node --test scripts/test_evidence_workbench_paths.mjs
           node scripts/build_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench --check
           node scripts/check_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench

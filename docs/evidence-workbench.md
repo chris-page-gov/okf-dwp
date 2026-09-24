@@ -10,12 +10,18 @@ numbers identify where text was printed. Neither manual is itself legislation.
 
 ## Start with one question
 
+[Open the Evidence workbench](https://chris-page-gov.github.io/okf-explorer/evidence/?manifest=https%3A%2F%2Fchris-page-gov.github.io%2Fokf-dwp%2Fevaluation%2Fevidence-workbench%2Fmanifest.json&case=staff-001).
+This link uses the current published review catalogue; each downloaded package
+is checked against that catalogue's recorded fingerprint.
+
 1. Choose one of the 40 public staff-question occurrences. One question is
    repeated in the register, so there are 39 distinct wordings.
 2. Check the evidence status. **Insufficient** means the package cannot establish
    that all evidence needed for the task is present. It does not mean every
    selected paragraph is irrelevant.
-3. Open a selected passage and its cited PDF page. Compare the extracted text
+3. Open a selected passage and its cited PDF page. GOV.UK blocks embedded PDF
+   display, so use the page-linked original-document button to open a separate
+   browser tab. Compare the extracted text
    with the original, including qualifications and examples.
 4. Inspect the interpretation tabs: passage boundaries, concepts and
    relationships, dependencies, and the explanation of why the text was selected.
@@ -94,13 +100,16 @@ workbench manifest. With a checkout containing the integrated delivery helper:
 ```sh
 uv sync --locked
 uv run --locked python scripts/build_evidence_connect.py --check
+node scripts/test_evidence_connect_descriptor.mjs --explorer-root /path/to/okf-explorer
 node scripts/build_evidence_workbench.mjs --explorer-root /path/to/okf-explorer --check
 node scripts/check_evidence_workbench.mjs --explorer-root /path/to/okf-explorer
 ```
 
-The first command checks the corpus projection. The second repeats the 40
-assemblies and compares every byte. The third independently reconstructs all
-retained packages without rerunning retrieval. None calls an answer model.
+After dependency setup, these commands check the corpus projection, exercise
+Explorer's actual Reader-to-Ask loader, repeat the 40 assemblies and compare
+every byte, then independently reconstruct all retained packages without
+rerunning retrieval. The loader check also needs Explorer's locked JavaScript
+dependencies installed with `pnpm install --frozen-lockfile`. None calls an answer model.
 See the [source connection profile and measured tests](evidence-connect-profile.md).
 
 The new live Ask OKF entry uses `structured-context/evidence-connect-explorer.json`

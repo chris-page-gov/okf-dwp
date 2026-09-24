@@ -1,0 +1,95 @@
+{
+  "schema": "okf-workbench-local-acceptance.v1",
+  "explorer_checkout": "/Users/crpage/tmp/okf-explorer-evidence-integration",
+  "dwp_checkout": "/Users/crpage/tmp/okf-dwp-evidence-workbench",
+  "manifest_sha256": "46832aea1cf99132907dc9d863f1906743856cf637264c901109216343ac2290",
+  "corpus_sha256": "72b791416e7368008a60c8d1f96b648feccc511288d524baca1089478b7fa546",
+  "question_count": 40,
+  "browser": "Chrome",
+  "origin": "http://127.0.0.1:4176",
+  "cases": [
+    {
+      "id": "staff-001",
+      "question": "What happens to your benefits if you go abroad?",
+      "review_brief_items": 5,
+      "pdf_iframe": true,
+      "selected_records": 47,
+      "selected_kind": "evidence · normalized",
+      "source_href": "https://assets.publishing.service.gov.uk/media/5a7f4bc3ed915d74e6229983/v2am36.pdf#page=18",
+      "passage_characters": 445,
+      "ontology_visible": true,
+      "trace_visible": true,
+      "status_text": "Declared evidence status: insufficient. This is an assembly result within the declared scope, not an answer or legal decision.",
+      "part_requests": 15
+    },
+    {
+      "id": "staff-018",
+      "question": "What happens if someone with a partner goes permanently into a Care Home (please give all scenarios)?",
+      "review_brief_items": 5,
+      "pdf_iframe": true,
+      "selected_records": 49,
+      "selected_kind": "evidence · normalized",
+      "source_href": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf#page=25",
+      "passage_characters": 227,
+      "ontology_visible": true,
+      "trace_visible": true,
+      "status_text": "Declared evidence status: insufficient. This is an assembly result within the declared scope, not an answer or legal decision.",
+      "part_requests": 17
+    },
+    {
+      "id": "staff-023",
+      "question": "What happens to Pension Credit if someone moves abroad?",
+      "review_brief_items": 3,
+      "pdf_iframe": true,
+      "selected_records": 48,
+      "selected_kind": "evidence · normalized",
+      "source_href": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf#page=8",
+      "passage_characters": 1212,
+      "ontology_visible": true,
+      "trace_visible": true,
+      "status_text": "Declared evidence status: insufficient. This is an assembly result within the declared scope, not an answer or legal decision.",
+      "part_requests": 17
+    }
+  ],
+  "console_errors": [],
+  "page_errors": [],
+  "failed_requests": [
+    {
+      "url": "https://assets.publishing.service.gov.uk/media/5a7f4bc3ed915d74e6229983/v2am36.pdf",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT"
+    },
+    {
+      "url": "https://assets.publishing.service.gov.uk/media/69e10327f5069cdc54868955/dmg-Ch-78.pdf",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT"
+    },
+    {
+      "url": "https://assets.publishing.service.gov.uk/media/6426e57e7de82b000c3133eb/dmg-ch07-06.pdf",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT"
+    }
+  ],
+  "screenshots": [
+    "staff-001-trace.png",
+    "staff-018-trace.png",
+    "staff-023-trace.png",
+    "staff-023-narrow.png"
+  ],
+  "narrow": {
+    "viewport": "390x844",
+    "scroll_width": 390,
+    "client_width": 390
+  },
+  "review_export": {
+    "filename": "evidence-review-staff-023.json",
+    "question_id": "staff-023",
+    "authority": "local-unreviewed-proposal",
+    "record_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol2-ch7-part6/v1-6856ae01407984fc/spc-077001-16a64dc4da2d",
+    "comment": "Local acceptance review: check the cited source passage and dependency scope."
+  },
+  "requests": {
+    "total": 50,
+    "manifest": 1,
+    "raw_packages": 0,
+    "parts": 49
+  },
+  "passed": true
+}

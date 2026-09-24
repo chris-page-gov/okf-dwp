@@ -124,3 +124,38 @@ The required CI now includes a separately pinned workbench job: deterministic
 projection, all-40 reassembly, independent exact reconstruction, output-path and
 publication controls, and an exact-commit static-site build. The protected
 aggregate check requires this job alongside both earlier validation planes.
+
+## Final local integration checks
+
+The successor descriptor now retains the original Reader snapshot while binding
+the additive context overlay separately. An actual Reader-to-Ask loader test
+caught the previous snapshot mismatch; the corrected descriptor selects U07
+without changing the source Reader. All 40 packages and the comparison/probes
+were regenerated against context manifest
+`4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519`.
+
+Local Chrome journeys cover the abroad, care-home and Pension Credit abroad
+questions, original review briefs, source links, passage and relationship views,
+local proposal export and a 390-pixel layout. GOV.UK PDFs reject embedded
+display: the page-linked source document opens separately. An iframe element is
+not proof that a PDF rendered. The earlier local receipt is preserved under
+`validation/evidence-workbench/2026-09-24/local-before-descriptor-fix/`, including
+its absent timestamp/build identity and failed PDF requests.
+
+Review also corrected a double browser-history entry when following a passage
+from a relationship. Explorer's required CI exposed an obsolete Heritage app
+fingerprint; its old acceptance files are preserved. The new deterministic app build passed
+the actual 100-question browser acceptance and all three Heritage journeys. The non-DWP
+study-club trial has a separate new execution receipt; its old receipt remains
+unchanged. These checks test reuse and regression, not DWP legal completeness.
+
+Public deployment remains pending at this checkpoint. The workbench's
+implementation package is recorded complete; its public-verification and
+specialist-review packages remain separate and open.
+
+The older structured-corpus checker initially rejected the new additive namespace
+as unbound surplus. Its source inputs and frozen outputs were not rewritten. A
+separate wrapper verifies every successor byte, temporarily sets aside only its
+288 declared files for the exact base check, restores them and verifies them
+again. The full 53,727-record base check and five restoration/containment controls
+pass. CI runs the base and successor planes independently.
