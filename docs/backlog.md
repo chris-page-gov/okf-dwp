@@ -226,3 +226,13 @@ source-bound selection (BL005), dependency closure (BL007), delivery (BL008)
 and specialist acceptance. The [current work log](evidence-workbench-work-log.md)
 records ownership, tested milestones and publication gates. Familiar-question
 repair and prospective paraphrase results remain separate.
+
+The [out-of-sample UC disabled-child follow-up](uc-disabled-child-supersession-follow-up.md)
+records a new question outside the frozen 40. The first bounded replay found the
+higher-rate condition but missed ADM A4361's effective-date branch; it remained
+`insufficient` and the assessment-period dates were unknown. BL007 must address
+source-bound selection and task discrimination without treating a topical hit
+as a complete rule. BL006 must verify the governing statutory provisions and
+temporal/territorial scope; BL025 specialist review remains open. The separate
+Demo 2 application idea and hospital-source/transport leads are recorded in the
+same follow-up, with no claim-submission or hospital-answer milestone inferred.

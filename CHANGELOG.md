@@ -10,6 +10,18 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Record a new, anonymised UC disabled-child question outside the frozen 40.
+  The SHA-bound offline replay selects ADM F1123 but misses A4361's
+  effective-date branch and remains `insufficient`. Add conditional source
+  reading, unknown assessment-period dates, statutory and specialist gates,
+  and separately labelled Demo 2 and hospital leads. Track the open BL006
+  legal check and BL007 source-classification repair in the machine backlog;
+  do not change source, runtime ranking, public packages or answer status.
+
+- Add a beginner source-and-roles map to the learning path, with separate law, tribunal decisions, DWP staff guidance, independent CPAG handbook and claimant/adviser/decision-maker routes. The diagram and text keep source authority, editions and appeal routes distinct; no handbook content is copied.
+
+- Add an opt-in, source-bound workbench inspection model for Pension Credit dependencies and directional Carer’s Allowance interactions. The producer verifies exact retained package, record, page, hash and text bindings; execution stays blocked because rates, applicability, exceptions and independent review remain unresolved. Existing 40 packages and the public learning-site allowlist are unchanged.
+
 - Repair two Chapter 84 source boundaries, add ten proposed evidence groups and a source-linked typed table, and retain the final 52-assembly comparison. Correct summary provenance and reserved labels after agent review, preserving earlier trials. At 512 KiB it retains 11/11 declared groups against the newly authored baseline’s 9/11, a six-whitespace-byte difference; at 32 KiB neither arm delivers source evidence. All packages remain insufficient. Keep dependency closure, compact delivery, specialist review and production promotion open; no model calls or new source acquisition.
 
 - Repair the Demo 1 CI setup after the legacy job discovered the new tests in its own shallow checkout: fetch the same frozen source commit before test discovery. Preserve the five-error failure and a clean shallow-clone reproduction showing all five tests pass after the fetch; do not alter trial inputs or weaken the gate.

@@ -48,6 +48,7 @@ jobs:
       - name: Validate the isolated learning-site renderer
         run: |
           uv sync --locked --project tools/learning-site
+          uv run --locked python scripts/source_roles_diagram.py --check
           uv run --locked --project tools/learning-site python -m unittest discover -s tools/learning-site -p test_learning_site.py
       - name: Keep private correspondence outside Git
         run: uv run --locked python scripts/check_private_inputs.py
@@ -450,7 +451,7 @@ jobs:
         run: |
           pnpm install --frozen-lockfile
           pnpm exec svelte-kit sync
-      - name: Verify source connection and retained delivery without models or network
+      - name: Verify source connection, retained delivery and blocked model without model calls
         run: |
           test "$(git -C .ci/okf-explorer-workbench rev-parse HEAD)" = e6084059f9b09633cfb8385be20099b952915e82
           uv sync --locked
@@ -459,6 +460,8 @@ jobs:
           node --test scripts/test_evidence_workbench_paths.mjs
           node scripts/build_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench --check
           node scripts/check_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench
+          uv run --locked python scripts/build_workbench_models.py --check
+          uv run --locked python -m unittest discover -s scripts -p test_workbench_models.py
           node --test scripts/test_learning_site_v3.mjs
           uv sync --locked --project tools/learning-site
           uv run --locked --project tools/learning-site python -m unittest discover -s scripts -p test_workbench_publication.py

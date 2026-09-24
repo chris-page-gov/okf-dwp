@@ -209,3 +209,20 @@ even though four captured groups gained exact entry links. BL025 remains in
 progress because independent specialist review is open. See the
 [handover](evidence-workbench-handover.md) for source, engine, site and browser
 identities and the continuing limitations.
+
+## Additive out-of-sample follow-up — 24 September 2026
+
+The [UC disabled-child case](../evaluation/out-of-sample/uc-disabled-child-supersession-001.json)
+preserves one SHA-bound, offline replay of a new hypothetical question. It selected
+ADM F1123 but not A4361, A4352 or F1120, returned `insufficient` and exhausted
+query, candidate and resource budgets. The unrelated Staff 008 requirement also
+activated. The [plain-English source review](uc-disabled-child-supersession-follow-up.md)
+explains why the conditional effective-date wording cannot yield a calendar date
+without UC assessment-period boundaries. The original 40 cases, source snapshots,
+published workbench and model trials were not changed. BL007 selection/profile
+repair, BL006 statutory reconciliation and independent specialist acceptance
+remain open. Demo 2 and the hospital question are separately labelled leads;
+no live WebMCP response or new hospital provision is claimed.
+The authored backlog now cites the exact case under BL006 and BL007, with an
+open agent package for UC source classification and controls. Its generated
+work-package page retains the completed historical packages unchanged.

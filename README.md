@@ -10,6 +10,9 @@ okf_version: "0.2"
 staff questions, their selected source passages, relationships and explicit gaps.
 Read the [24 September handover](docs/evidence-workbench-handover.md) for the
 verified public release, demonstration steps and remaining limitations.
+The [blocked calculation inspection guide](docs/workbench-model-inspection.md)
+explains the opt-in, source-bound Pension Credit model and directional carer
+interactions. It does not calculate an award.
 
 [Demo 1 freeze plan for 23 September](docs/demo-one-freeze-2026-09-23.md):
 tested source-led evidence, forty-question gaps and a four-call comparison cap.

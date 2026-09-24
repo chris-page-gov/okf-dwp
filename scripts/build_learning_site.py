@@ -18,6 +18,7 @@ import stat
 from urllib.parse import quote, unquote, urlsplit, urlunsplit
 
 from markdown_it import MarkdownIt
+import source_roles_diagram
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "/okf-dwp/"
@@ -434,6 +435,12 @@ def render(source: str, text: str, pages: set[str], tracked: set[str], commit: s
         end = text.find("\n---\n", 4)
         if end >= 0:
             text = text[end + 5:]
+    # Pages has no Mermaid runtime. Replace only this reviewed diagram with its
+    # static, hash-checked asset; retain all other Mermaid source blocks.
+    if source == "docs/learning-path.md" and source_roles_diagram.PUBLISHED_SVG in (published or set()):
+        diagram = source_roles_diagram.mermaid(text)
+        fence = f"```mermaid\n{diagram}```"
+        text = text.replace(fence, "![How legislation, tribunal decisions, staff guidance, independent advice and people connect](../assets/source-roles-diagram.svg)", 1)
     # Preserve only simple explicit heading anchors from Markdown HTML. All other
     # HTML remains escaped; source content cannot install scripts or event handlers.
     anchors: dict[str, str] = {}
@@ -475,7 +482,7 @@ def render(source: str, text: str, pages: set[str], tracked: set[str], commit: s
     result = f'''<!doctype html>
 <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Independent OKF-DWP learning, evidence and research documentation.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src https:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' https:; base-uri 'none'; form-action 'none'">
 <title>{html.escape(title)} — OKF-DWP</title><link rel="stylesheet" href="{BASE}assets/learning.css"></head>
 <body><a class="skip" href="#main">Skip to content</a><header><strong>OKF-DWP</strong>
 <nav aria-label="Main"><a href="{BASE}index.html">Start learning</a><a href="{BASE}docs/glossary.html">Glossary</a><a href="{BASE}docs/monday-demo-2026-09-21.html">Try the demonstration</a><a href="{BASE}docs/backlog.html">Remaining work</a><a href="https://ask-okf.crpage.chatgpt.site/">Ask OKF</a></nav></header>
@@ -504,6 +511,12 @@ def build(root: Path, out: Path, commit: str) -> dict:
     workbench, workbench_receipt = publish_workbench(
         lambda path, cap: committed_member(root, path, cap, committed), committed, strict_json, verify_context_budget)
     outputs: dict[str, bytes] = {"assets/learning.css": CSS.encode(), ".nojekyll": b"", **examples, **workbench}
+    learning_path = committed_member(root, "docs/learning-path.md", 2 * 1024 * 1024, committed).decode()
+    if source_roles_diagram.HEADING in learning_path:
+        diagram_svg = committed_member(root, str(source_roles_diagram.SVG), 65536, committed)
+        source_roles_diagram.check(learning_path, diagram_svg)
+        outputs[source_roles_diagram.PUBLISHED_SVG] = diagram_svg
+    published_assets = set(examples) | set(workbench) | ({source_roles_diagram.PUBLISHED_SVG} if source_roles_diagram.PUBLISHED_SVG in outputs else set())
     for path in sorted(pages):
         full = root / path
         if full.is_symlink() or not full.resolve().is_relative_to(root.resolve()):
@@ -514,7 +527,7 @@ def build(root: Path, out: Path, commit: str) -> dict:
             raise ValueError(f"Source differs from the declared commit: {path}")
         if len(raw) > 2 * 1024 * 1024:
             raise ValueError(f"Markdown page exceeds 2 MiB: {path}")
-        _, rendered = render(path, raw.decode(), pages, tracked, commit, set(examples) | set(workbench))
+        _, rendered = render(path, raw.decode(), pages, tracked, commit, published_assets)
         destination = page_path(path)
         if destination in outputs:
             raise ValueError(f"Publication output collision: {destination}")

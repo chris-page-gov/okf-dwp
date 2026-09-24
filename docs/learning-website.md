@@ -27,16 +27,19 @@ Links between published guides stay on the website; evidence files open their
 commit-bound repository location. The page footer links a manifest listing the
 source and output hashes. A **hash** is a fingerprint used to detect changed bytes.
 
-The renderer escapes source HTML and runs no page scripts. Mermaid diagram
-blocks remain readable diagram source in this initial script-free documentation
-view; the GitHub source view can render those diagrams. Browser keyboard and
-narrow-screen checks are reported separately from publication success.
+The renderer escapes source HTML and runs no page scripts. The learning path's
+source-roles Mermaid diagram has a checked static SVG for this website, with its
+full explanation and links in the table below it. GitHub can render the authored
+Mermaid diagram. Other Mermaid blocks remain readable diagram source on the
+website. Browser keyboard and narrow-screen checks are reported separately
+from publication success.
 
 ## Rebuild and publish
 
 ```sh
 uv sync --locked --project tools/learning-site
 uv run --locked --project tools/learning-site python -m unittest discover -s tools/learning-site -p test_learning_site.py
+uv run --locked python scripts/source_roles_diagram.py --check
 uv run --locked --project tools/learning-site python scripts/build_learning_site.py --commit "$(git rev-parse HEAD)"
 ```
 
