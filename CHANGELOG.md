@@ -10,6 +10,11 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Record the branch/worktree merge audit, preserve the unfinished amendment
+  parser and superseded handover separately, and document the observed Edge
+  sidebar demonstration. Correct the workbench launch link and stale
+  pre-publication wording without changing evidence or browser permissions.
+
 - Record a new, anonymised UC disabled-child question outside the frozen 40.
   The SHA-bound offline replay selects ADM F1123 but misses A4361's
   effective-date branch and remains `insufficient`. Add conditional source

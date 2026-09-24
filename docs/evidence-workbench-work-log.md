@@ -226,3 +226,20 @@ no live WebMCP response or new hospital provision is claimed.
 The authored backlog now cites the exact case under BL006 and BL007, with an
 open agent package for UC source classification and controls. Its generated
 work-package page retains the completed historical packages unchanged.
+
+## Branch review and sidebar handover — 24 September 2026
+
+The [unmerged-work review](unmerged-work-review-2026-09-24.md) distinguishes
+squash-merged work from the unfinished amendment parser, stale local trial
+files and the superseded PR 23 checkpoint. Three independent bounded reviews
+checked the parser, learning-page fix/trial files and PR 23. No old source
+projection or working file was copied over current `main`.
+
+The [sidebar demonstration](workbench-sidebar-demo.md) records actual page-tool
+calls from Edge's ChatGPT sidebar: staff-016 Requirements, then a plain-English
+follow-up opening staff-039 Interactions. Restricted inspection had incorrectly
+suggested the native interface was absent. The working route uses the existing
+developer connection; dedicated WebMCP discovery remains a separate gate.
+The guide now distinguishes itself from the interactive Explorer page and
+links the reviewed model manifest. No evidence status or calculation boundary
+has changed.
