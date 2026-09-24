@@ -22,12 +22,15 @@ uv run --locked python scripts/build_evidence_connect.py
 node scripts/build_evidence_workbench.mjs --explorer-root /path/to/pinned/okf-explorer
 node scripts/check_evidence_workbench.mjs --explorer-root /path/to/pinned/okf-explorer
 node scripts/test_evidence_connect_descriptor.mjs --explorer-root /path/to/pinned/okf-explorer
+uv run --locked python scripts/check_structured_context_with_successor.py
 node scripts/compare_evidence_connect.mjs --explorer-root /path/to/pinned/okf-explorer
 node scripts/probe_evidence_connect.mjs --explorer-root /path/to/pinned/okf-explorer --pattern
 node scripts/probe_evidence_connect.mjs --explorer-root /path/to/pinned/okf-explorer --confirmation
 ```
 
 Use `scripts/build_evidence_connect.py --check`, `scripts/build_evidence_workbench.mjs --check`, `scripts/compare_evidence_connect.mjs --check` and the two probe commands with `--check` for exact retained-output replay. The descriptor test checks unchanged Reader bindings, then calls Explorer's actual `loadLargeCorpus` and `assembleCorpusContext` with a local source-backed fetcher. Its temporary Vitest file is removed after the run. The workbench producer binds the registry, corpus manifest, engine files and delivery code; no network or answer-model call is made. The independent checker reads all 40 raw contexts and bounded part responses, verifies each SHA-256 and reconstructs the exact canonical context through the Explorer delivery helper.
+
+The structured-context base checker owns the frozen projection tree and rejects unknown files. The wrapper verifies each successor file against its independent producer, sets only those exact files aside while running the unchanged base checker, restores them even if that check fails, and verifies them again. It leaves the base projection and producer hashes unchanged.
 
 ## Measured development boundary
 
