@@ -10,9 +10,12 @@ numbers identify where text was printed. Neither manual is itself legislation.
 
 ## Start with one question
 
-[Open the Evidence workbench](https://chris-page-gov.github.io/okf-explorer/evidence/?manifest=https%3A%2F%2Fchris-page-gov.github.io%2Fokf-dwp%2Fevaluation%2Fevidence-workbench%2Fmanifest.json&case=staff-001).
-This link uses the current published review catalogue; each downloaded package
-is checked against that catalogue's recorded fingerprint.
+This page is a guide. [Open the interactive Evidence workbench in Explorer](https://chris-page-gov.github.io/okf-explorer/evidence/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fd31f16fb7143d04b9de73e14cd493cfb832ae83e%2Fevaluation%2Fevidence-workbench%2Ftools-manifest.json&case=staff-001).
+This link uses the reviewed, immutable catalogue with the optional inspection
+models; each downloaded package is checked against its recorded fingerprint.
+The [original catalogue](https://chris-page-gov.github.io/okf-explorer/evidence/?manifest=https%3A%2F%2Fchris-page-gov.github.io%2Fokf-dwp%2Fevaluation%2Fevidence-workbench%2Fmanifest.json&case=staff-001)
+remains available. For an AI-led walkthrough, use the
+[tested sidebar demonstration](workbench-sidebar-demo.md).
 
 1. Choose one of the 40 public staff-question occurrences. One question is
    repeated in the register, so there are 39 distinct wordings.

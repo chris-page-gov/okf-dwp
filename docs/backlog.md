@@ -2,6 +2,10 @@
 
 [What changed](../CHANGELOG.md) · [Current work log](monday-delivery-work-log.md) · [Retrospective](retrospective.md) · [Portable method](methodology.md)
 
+Start with [remaining work and next priorities](remaining-work.md) for the
+24 September overview. The detailed historical increments below retain their
+own versions and measured scope.
+
 This register keeps stable IDs for the owner’s original ideas and later findings.
 **DWP-BL-001, DWP-BL-002 and DWP-BL-003 preserve the original three backlog items.**
 Dates, exact dependencies and acceptance checks are in the
@@ -28,8 +32,8 @@ independent review, external permission and live observation. A pending human
 review does not prevent implementation of source-backed, clearly unreviewed
 proposals. A completed implementation does not close the human review.
 
-See the [team handover](team-handover-2026-09-20.md) for the published baseline
-and the ordered work continuing towards Monday 21 September.
+The [20 September team handover](team-handover-2026-09-20.md) preserves the
+baseline and plan for the earlier Monday demonstration.
 
 The 20 September increment now supplies bounded implementation for BL001/005/006/007/013/020.
 Their bounded delivery packages link actual outputs. Separate agent work packages

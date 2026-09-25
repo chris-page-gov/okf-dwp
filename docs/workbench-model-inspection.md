@@ -17,7 +17,7 @@ The `calculation_models` and `interaction_proposals` fields follow Explorer's `C
 
 ## Try the five data tabs
 
-Load the opt-in `tools-manifest.json` through a compatible Explorer Evidence workbench after both repositories have reviewed revisions. Until then, the existing public workbench continues to use its original manifest. An immutable raw GitHub URL at the reviewed DWP commit can serve the new manifest and its unchanged `packages/` and `parts/` neighbours; this is separate from the bounded learning-site publication.
+The reviewed model manifest was merged in [DWP PR 39](https://github.com/chris-page-gov/okf-dwp/pull/39), and the compatible Explorer workbench in [Explorer PR 146](https://github.com/chris-page-gov/okf-explorer/pull/146). Use the [workbench launch link](evidence-workbench.md#start-with-one-question) to load the immutable `tools-manifest.json` and its unchanged `packages/` and `parts/` neighbours. Older links retain their original catalogue. This raw GitHub delivery is separate from the bounded learning-site publication.
 
 1. Open **staff-016** (“Given these inputs what is the formula for calculating Pension Credit?”). The package itself says `insufficient`; the model is blocked.
 2. Use **Graph** to inspect directed retained relationships and their source references. An edge is not automatically a calculation dependency.
@@ -34,7 +34,12 @@ In a compatible browser, a page may register seven WebMCP tools. Start with `okf
 
 For example, a reviewer can search for “Pension Credit formula”, open `staff-016`, request the calculation data view, then call `okf_get_calculation` with model ID `pension-credit-source-inspection-v1` and section `inputs` or `stages`. The result should identify evidence and gaps, **not** an award. A separate `staff-039` journey can show why Carer’s Allowance effects must be read by direction and by person. Each tool response should be checked against its snapshot ID and source links; a compact response may require continuation.
 
-Registration or local tool tests do not prove that an assistant panel can discover or invoke the page tools. Native browser registration, actual host invocation, rendered page state and any panel visualisation need separate observations. The workbench remains usable through its ordinary controls when WebMCP is unavailable.
+On their own, registration or local tool tests do not prove that an assistant panel can discover or invoke the page tools. Native browser registration, actual host invocation, rendered page state and any panel visualisation need separate observations. The workbench remains usable through its ordinary controls when WebMCP is unavailable.
+
+The [24 September sidebar demonstration](workbench-sidebar-demo.md) records
+successful native tool calls and visible page changes from Edge's ChatGPT
+sidebar through its existing developer connection. That observed route is
+separate from automatic discovery through a dedicated WebMCP connection.
 
 ## Source-led inspection stages
 
