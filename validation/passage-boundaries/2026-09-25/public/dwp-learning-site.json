@@ -1,0 +1,38 @@
+{
+  "schema": "okf-dwp-passage-guide-public-observation.v1",
+  "status": "passed",
+  "observed_at": "2026-09-25T19:13:24.060082+00:00",
+  "source_commit": "c971e4cdf63f8784e355621aa6e667cbc60a2d00",
+  "method": "Compare public bytes against a clean locked build of the exact source commit; redirects rejected.",
+  "scope": "Four named publication files only; other publication pages are not independently fetched by this check.",
+  "files": [
+    {
+      "path": "site-manifest.json",
+      "url": "https://chris-page-gov.github.io/okf-dwp/site-manifest.json",
+      "status": 200,
+      "bytes": 355991,
+      "sha256": "cc5d6d66b31840c5fadeeb256a1734737b3fdc2c2d22d763112ea868840d3878"
+    },
+    {
+      "path": "docs/passage-boundary-review.html",
+      "url": "https://chris-page-gov.github.io/okf-dwp/docs/passage-boundary-review.html",
+      "status": 200,
+      "bytes": 14963,
+      "sha256": "347a25352985b36b37269eff97005d1f7d4cabc250c326c0f2c75ac7cd93a155"
+    },
+    {
+      "path": "docs/learning-path.html",
+      "url": "https://chris-page-gov.github.io/okf-dwp/docs/learning-path.html",
+      "status": 200,
+      "bytes": 41052,
+      "sha256": "9687a6d5f5dd728bb3fe3fc528191c86555fb35f9fb32a04197756c5e4bdf471"
+    },
+    {
+      "path": "docs/backlog-work-packages.html",
+      "url": "https://chris-page-gov.github.io/okf-dwp/docs/backlog-work-packages.html",
+      "status": 200,
+      "bytes": 108910,
+      "sha256": "ca26866d96b31633d64c1b68c246e994eb62a7a1b55b4a3be4030a00632939fb"
+    }
+  ]
+}

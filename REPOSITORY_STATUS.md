@@ -15,7 +15,12 @@ The [passage-boundary review increment](docs/passage-boundary-review.md) adds
 source-bound before/after evidence for the 28 known historical-amendment cases
 and an isolated successor parser. It preserves the original corpus and records
 structural outcomes separately from retrieval and legal answerability. Its
-implementation, CI and public-browser observations are separate release gates.
+implementation is merged in DWP PR 44 and Explorer PR 155. The live workbench
+passed all 28 case previews, PDF rendering and review export; its 34 application
+files match the reviewed build. The [release record](validation/passage-boundaries/2026-09-25/README.md)
+keeps CI, publication and source acceptance separate. Fifteen target boundaries
+are corrected, twelve are partial and one remains unresolved; the 40-question
+replay establishes no improved expected-page coverage.
 
 All 40 retained packages remain insufficient. The known capital transfer-wording
 and UC selection failures, unreviewed unit boundaries, legal dependencies,
