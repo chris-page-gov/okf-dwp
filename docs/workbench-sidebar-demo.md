@@ -38,6 +38,18 @@ sidebar looks empty after a successful run.
 
 ## Starting a fresh conversation
 
+If the assistant reports `Capability is not available: webmcp`, it has checked
+the dedicated interface only. In the tested Edge profile the available
+developer connection (`cdp`) could still invoke the page's native registered
+tools. That error alone does not establish that a browser setting needs to be
+enabled. Reloading the page does not add a missing host capability, and a
+prompt that says to stop at that check will still stop after a refresh.
+
+The starter below includes the observed fallback. It must respect the actual
+developer connection's permissions; it does not install or inject a substitute
+tool registry. When that connection is unavailable or denied too, report that
+specific blocker.
+
 Use this starter when the existing connection supports developer access:
 
 > Use this Evidence Workbench page's registered tools to show the Requirements
