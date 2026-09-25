@@ -1,0 +1,13 @@
+{
+  "schema": "okf-dwp-passage-boundary-replay-protocol.v1",
+  "scope": "Forty fixed staff questions at unchanged source scope, engine, delivery and resource budgets; no model or network calls",
+  "baseline": "Run node scripts/build_evidence_workbench.mjs --explorer-root <matching-explorer-checkout> --check in the DWP feature worktree.",
+  "candidate_scratch": [
+    "Create a disposable copy-on-write checkout from the DWP review worktree with the same frozen source inventory. Copy scripts/passage_boundary_parser.py over scratch/scripts/manual_structure.py and scripts/manual_navigation_regions.py over the matching scratch path. These are the only producer substitutions; the retained manifest and report bind their exact hashes.",
+    "Run scratch/.venv/bin/python scripts/build_structured_units.py, then build_structured_context.py, then build_evidence_connect.py, then node scripts/build_evidence_workbench.mjs --explorer-root <matching-explorer-checkout>.",
+    "The structural-unit manifest must have 54,577 units and its record shards and decoded document hashes must equal evaluation/passage-boundary-candidate/structured-units/manifest.json.",
+    "If a scratch rerun encounters the projection surplus guard, move only generated scratch evidence-connect outputs or .DS_Store files aside, then repeat the unchanged producer. The guard was encountered during this replay and was not disabled."
+  ],
+  "retention": "Run .venv/bin/python scripts/retain_passage_boundary_replay.py --candidate-root <scratch-checkout>, then .venv/bin/python scripts/compare_passage_boundary_replay.py --candidate-root evaluation/passage-boundary-candidate/replay-projection --check.",
+  "limits": "The replay measures selected evidence, page overlap, omissions and delivery bytes. It does not establish answerability, current law, legal applicability or specialist acceptance."
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "okf-dwp-passage-boundary-held-out-controls.v1",
+  "status": "fixed-before-successor-adoption-check",
+  "selection": "Source cases outside the 28 known outliers and the original eight development fixtures. These are structural controls, not a blinded accuracy estimate or legal review.",
+  "cross_page_controls": [
+    {
+      "family": "dmg",
+      "document_id": "dmg-vol1-ch1",
+      "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol1-ch1.json",
+      "pdf_sha256": "58b168c7b0a01f54713f6cfa60953549ebc099cbe568ffaeea551d0b756495d2",
+      "pages_sha256": "cf7a000e2c54c5361a03ec4ad73fa22cc14e8cdb0d4f03b53919a4a509a6eacb",
+      "paragraph_label": "01013",
+      "pages": [3, 4],
+      "text_sha256": "32cbf961a2fdc8fea527e8364fd7093784ac85853548c5d0b1a4bd012ee4cf18",
+      "reason": "A numbered paragraph and its example continue over the page break."
+    },
+    {
+      "family": "adm",
+      "document_id": "adm-chapter-a2",
+      "pages_path": "source/adm-2026-09-19/pages/adm-chapter-a2.json",
+      "pdf_sha256": "e5e5b99dac44670dc8e6c50094bd669edc565e7dc61694a72928070e8ee4c9bc",
+      "pages_sha256": "57bfd43edf37dc9f3c0cfec0967a8fd1103599cd9e9eee86a544bd1a2f7e2690",
+      "paragraph_label": "A2022",
+      "pages": [8, 9],
+      "text_sha256": "39a91f3c6e955359d0be84e6df36da846528642b7c861697982fd4b3cf6b7736",
+      "reason": "A condition list and its example continue across pages."
+    }
+  ],
+  "amendment_control": {
+    "family": "dmg",
+    "document_id": "dmg-vol1-amendment50",
+    "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol1-amendment50.json",
+    "pdf_sha256": "68506ff29d9616f3415192fec4836c91ab0f23137627f535d5900287f6121d03",
+    "pages_sha256": "98fa0bed99787767aa00634b0c815794914b5a806c9243d3c6c4448ed819e51a",
+    "page": 2,
+    "start_utf8": 0,
+    "end_utf8": 1201,
+    "literal_sha256": "53af922f3e8b6ec70d224d0d5ad9fd2731739b79bd751871ac2ad7683794454a",
+    "expected_role": "reference-table",
+    "reason": "The remove-and-insert sheet is source navigation; its paragraph references are not governing body text."
+  },
+  "limits": "Controls test retained source structure only; they do not establish legal applicability or answer quality."
+}

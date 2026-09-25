@@ -20,7 +20,7 @@ class PassageBoundaryReviewTests(unittest.TestCase):
             case = json.loads(raw)
             extraction = outputs[case["document"]["extraction"]["url"]]
             self.assertEqual(digest(extraction), case["document"]["extraction"]["sha256"])
-            for unit in case["before"] + case["after"]:
+            for unit in case["before"] + case["after"] + case.get("successor_after", []):
                 parts = []
                 for span in unit["spans"]:
                     literal = extraction[span["start_utf8"]:span["end_utf8"]]
@@ -31,6 +31,15 @@ class PassageBoundaryReviewTests(unittest.TestCase):
                 self.assertEqual(digest(rebuilt), unit["text_sha256"])
             self.assertEqual(case["coverage"]["old_passage_bytes"], case["coverage"]["covered_once_bytes"])
             self.assertEqual(case["review"]["status"], "pending-independent-review")
+            self.assertEqual(case["technical_outcome"]["legal_answerability"], "not-established")
+        observed = {row["id"]: json.loads(outputs[row["url"]]) for row in manifest["cases"]}
+        self.assertEqual(manifest["successor_case_differences"], ["case-019"])
+        self.assertEqual(sum(case["technical_outcome"]["status"] == "corrected" for case in observed.values()), 15)
+        self.assertEqual(sum(case["technical_outcome"]["status"] == "partial" for case in observed.values()), 12)
+        self.assertEqual(observed["case-014"]["technical_outcome"]["status"], "unresolved")
+        self.assertEqual(next(unit for unit in observed["case-019"]["successor_after"]
+                              if unit["role"] == "reference-table")["text_bytes"], 3369)
+        self.assertNotIn("reference-table", {unit["role"] for unit in observed["case-019"]["after"]})
 
     def test_lost_or_duplicated_candidate_bytes_are_rejected(self):
         before = [{"page": 1, "start_utf8": 0, "end_utf8": 10}]
