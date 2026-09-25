@@ -1,0 +1,71 @@
+{
+  "schema": "okf-workbench-sidebar-observation.v1",
+  "classification": "public-safe-ui-and-tool-trace-observation",
+  "observation_date": "2026-09-25",
+  "surface": "Edge ChatGPT sidebar controlling the public Explorer Evidence workbench",
+  "workbench": {
+    "origin": "https://chris-page-gov.github.io/okf-explorer",
+    "manifest_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/d31f16fb7143d04b9de73e14cd493cfb832ae83e/evaluation/evidence-workbench/tools-manifest.json",
+    "manifest_sha256": "294c665de0060769fe05c8e4774d864c540f9b24678791771ee9ed5054b3a65f"
+  },
+  "initial_attempt": {
+    "outcome": "not_accepted",
+    "observed_limit": "The native interface repeatedly appeared blank or unavailable; clipboard/window errors interrupted the interaction.",
+    "prompt_sent": false,
+    "model_calls": 0,
+    "page_tool_calls": 0,
+    "cause_determined": false
+  },
+  "fresh_conversation": {
+    "id": "01a0d8be-2f0d-73a2-8d12-322e8057dfcd",
+    "sidebar_requests": 1,
+    "prompt": "Show staff-016 requirements gaps",
+    "displayed_model": "5.6 Sol Medium",
+    "capability": {
+      "dedicated_webmcp_advertised": false,
+      "route": "Existing user-authorised CDP connection to native document.modelContext.getTools() and executeTool()",
+      "new_permissions_or_settings": false,
+      "initial_tool_descriptor_serialisation_errors": true
+    },
+    "successful_page_tools": [
+      "okf_get_state",
+      "okf_get_view_data",
+      "okf_show_view"
+    ],
+    "view_data": {
+      "initial_response_bounded": true,
+      "repeat_max_bytes": 32768,
+      "case_id": "staff-016",
+      "view": "requirements"
+    },
+    "show_view": {
+      "result_id": "v-8a0d7bd9-e5c8-44d0-9c4d-8d2002d3b43a",
+      "expected_revision": 2,
+      "observed_revision": 3
+    },
+    "independent_page_observation": {
+      "view_changed_from": "calculation",
+      "view_changed_to": "requirements",
+      "visible_rows": 3,
+      "total_rows_reported": 6
+    },
+    "sidebar_explanation": {
+      "related_cases": ["staff-010", "staff-015", "staff-016"],
+      "evidence_status": "insufficient",
+      "source_references_supplied_in_result": false,
+      "award_calculated": false
+    }
+  },
+  "preservation": {
+    "other_sidebar_draft_untouched": true,
+    "complete_tool_payloads_archived": false,
+    "independent_payload_or_package_hash_verification": false,
+    "screenshot_archived": false
+  },
+  "limits": [
+    "This records observed sidebar tool activity and a verified page change, not a complete returned-payload archive.",
+    "The manifest digest was an observed session identity; this observation did not independently rehash the delivered manifest or source packages.",
+    "Initial descriptor errors and the earlier failed interaction remain part of the observation; no cause is inferred from them.",
+    "One successful developer-assisted session does not establish automatic discovery through a dedicated WebMCP connection, universal host support, Voice, room audio, legal completeness or answer quality."
+  ]
+}

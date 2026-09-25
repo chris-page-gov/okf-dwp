@@ -12,6 +12,28 @@ material came from and which version was used. An AI's explanation is a separate
 output. This is an independent experiment, not an official DWP service or an
 individual entitlement decision. Use only the public demonstration questions.
 
+## Choose the right route
+
+| Route | What it reads | What it can do |
+| --- | --- | --- |
+| [Saved Evidence workbench](evidence-workbench.md) | Forty retained, hash-checked question packages from the immutable [inspection manifest](https://raw.githubusercontent.com/chris-page-gov/okf-dwp/d31f16fb7143d04b9de73e14cd493cfb832ae83e/evaluation/evidence-workbench/tools-manifest.json). | A person can inspect saved evidence. A compatible browser can expose seven **page tools** to inspect it or change the displayed view. Opening a package does not assemble a new answer. |
+| [Explorer Reader and Ask OKF](evidence-workbench.md) | The additive [source descriptor](https://raw.githubusercontent.com/chris-page-gov/okf-dwp/7eeded763042ddd0070f4fed834c6074149e8e2f/structured-context/evidence-connect-explorer.json), which points to the reviewed full DMG and ADM corpus. | Assemble **fresh evidence** for a general question in the browser, then inspect its source text and gaps. This is separate from the saved forty cases. |
+| [Remote Ask OKF MCP service](service-publication.md) | Only source and engine versions admitted by that deployment. | Three read-only tools can assemble and deliver versioned evidence to a connected client. This service has its own publication and client checks; page tools and a Reader link do not update it. |
+
+The saved inspection manifest at `d31f16fb…` reuses packages produced from the
+additive `7eeded763…` source. Those Git commits identify different artefacts,
+not two interchangeable service versions. The **recorded** remote publication
+is on the [shared service status page](service-publication.md); a newer service
+must pass its own release and client checks before this guide can describe it as
+available. None of these routes determines entitlement or calculates an award.
+
+For the saved workbench route, the [Edge sidebar observations](workbench-sidebar-demo.md)
+include a successful, developer-assisted staff-016 Requirements view in a fresh
+conversation on 25 September. An earlier attempt that day failed before a
+prompt could be sent. The success used authorised native page tools through
+the existing CDP connection; it did not discover the remote MCP tools or prove
+automatic WebMCP availability in other clients.
+
 ## What was observed on 21 September 2026
 
 | Surface | Observation | What remains unproved |
@@ -34,11 +56,11 @@ Agent or Voice acceptance is claimed here. The [paired model trials](monday-mode
 used a different, explicitly recorded workflow. Private broker metadata is
 excluded from the client observations.
 
-## 1. Refresh the existing connection after release
+## 1. Refresh the existing remote connection after a recorded release
 
-Service 0.6.1 has a recorded publication. Check the connection in the account
-and conversation you intend to use; the earlier refresh does not update every
-already-open task.
+Check the [shared service status](service-publication.md), then inspect the
+connection in the account and conversation you intend to use. The earlier
+0.6.1 refresh does not update every already-open task or admit a later source.
 
 1. Open [ChatGPT Plugins](https://chatgpt.com/plugins) in the intended account.
 2. Open **Ask OKF → Plugin actions → Manage**. This was the observed route for
@@ -58,10 +80,15 @@ connection setup is a separate step subject to the account's policy.
 | `read_okf_evidence` | Read exact parts of that package, including source text, relationships and diagnostics. |
 | `ask_okf` | Return the complete package at once; this can be too large for a client. |
 
-For this release family, check for five approved source versions, including
+For the recorded 0.6.1 observation, five approved source versions included
 `723bcc5b015ab38a026625c2148edbd784edf7c7`, and an `engine_id` field.
 The expected corrected question pattern is `^[\s\S]*\S[\s\S]*$`.
-These checks establish advertised capability, not a successful call.
+These are historical schema checks, not a promise about a later release. If a
+new [recorded service publication](service-publication.md) has different
+source/engine versions but this conversation still shows the older schema,
+refresh the existing connection and use a new conversation before testing.
+An older cached schema cannot admit a newer corpus. A refresh establishes
+advertised capability, not a successful call; do not broaden permissions.
 
 ## 2. Start a new Work conversation
 
@@ -71,6 +98,46 @@ and select **Ask OKF**. This is the test route in OpenAI's
 Mentioning only Data, or pasting a service URL, does not establish that Ask OKF's
 tools are callable in that task. If Work or Ask OKF is unavailable, record the
 visible limitation. Do not substitute browsing or model knowledge for this test.
+
+### A short remote evidence read
+
+After starting a new conversation and confirming that it exposes both compact
+tools, this starter uses an ordinary, non-personal example question. It asks
+for a fresh package from the service's **advertised default**; it makes no
+claim that a later source has already been deployed. This phrasing is
+illustrative, not a frozen acceptance case.
+
+```text
+Use only this conversation's Ask OKF tools. For this general question
+"What DWP guidance is relevant when someone receiving Pension Credit moves
+permanently into a care home and pays their own fees?", call
+ask_okf_manifest with bundle "okf-dwp" and budget
+{"max_nodes":64,"max_relationships":128,"max_depth":6,"max_bytes":524288},
+and delivery_bytes 16384.
+Omit version and engine_id only for this new default-engine question.
+
+Preserve the returned question, version, engine_id, context_id and exact
+replay budget. Follow catalogue delivery.next_offset until null with those
+same identities. Call read_okf_evidence for diagnostics and the relevant
+selected passages, source metadata and qualifications with delivery_bytes
+16384; follow each read result's next_offset until null. For record_text and
+record_metadata, use the exact selected record_id from the catalogue. If a
+tool is unavailable or a read cannot be completed, report that and stop
+rather than filling gaps from memory.
+
+Explain only what the received guidance supports. Name the source locators,
+evidence_status, missing evidence and any budget omissions. Do not decide an
+individual's entitlement, invent a current legal version or call another
+plugin. List the actual tools and identities used.
+```
+
+This is a **low-context inspection**, not proof that the complete package was
+delivered or independently hash-verified. The longer controlled journey below
+shows how to read every package slice when that is required. The [OpenAI site
+tools guide](https://help.openai.com/en/articles/20001423-using-site-tools-in-the-chatgpt-desktop-app)
+and [browser extension guide](https://learn.chatgpt.com/docs/chrome-extension)
+describe different host routes; check the tools actually available in this
+conversation rather than assuming one host's support transfers to another.
 
 ## 3. Run the empty-evidence control first
 

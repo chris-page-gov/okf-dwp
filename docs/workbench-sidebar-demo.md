@@ -6,6 +6,13 @@ Evidence workbench view and explained the returned evidence on 24 September
 Automatic discovery through a dedicated WebMCP connection remains unverified
 in that host.
 
+This demonstration uses the **saved Evidence workbench** and its seven page
+tools. For a new evidence assembly, use [Explorer Reader and Ask OKF](evidence-workbench.md).
+For the separate three-tool remote MCP service, use the [connection guide](chatgpt-connection.md)
+and its [recorded publication status](service-publication.md). The workbench
+manifest at `d31f16fb…` contains saved packages from the additive source at
+`7eeded763…`; neither link admits that source to the remote service.
+
 ## Open the interactive page
 
 [Open the reviewed workbench](https://chris-page-gov.github.io/okf-explorer/evidence/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fd31f16fb7143d04b9de73e14cd493cfb832ae83e%2Fevaluation%2Fevidence-workbench%2Ftools-manifest.json&case=staff-016&tab=requirements).
@@ -76,3 +83,39 @@ does not prove universal client support, a custom visualisation inside the
 sidebar, complete legal evidence or correct award calculations. All 40 saved
 packages remain **insufficient**. Interaction rows are unreviewed proposals;
 partial tables and source references requiring further checks remain explicit.
+
+## Fresh-session checks on 25 September
+
+An initial attempt to repeat the journey in a fresh session did **not** reach
+an accepted tool test. The native interface repeatedly appeared blank or
+unavailable, and clipboard/window errors interrupted the browser interaction.
+No demonstration prompt was sent and no model or page-tool call followed. The
+user's existing sidebar draft was left untouched. This records the observed
+limit only; it does not diagnose its cause.
+
+A later fresh conversation succeeded after the interaction used field setting
+instead of the failing clipboard path. The user asked, “Show staff-016
+requirements gaps.” The sidebar displayed **5.6 Sol Medium**, found no
+dedicated `webmcp` capability and, with the existing authorised CDP connection,
+used native `document.modelContext.getTools()` and `executeTool()`. Initial
+tool-descriptor serialisation attempts failed; the subsequent calls to
+`okf_get_state`, `okf_get_view_data` and `okf_show_view` succeeded. The first
+view-data response was bounded, so the sidebar repeated it with
+`max_bytes: 32768`.
+
+The view result `v-8a0d7bd9-e5c8-44d0-9c4d-8d2002d3b43a` was shown with
+`expected_revision: 2`; the returned page revision was 3. The DWP manifest
+snapshot was `sha256:294c665de0060769fe05c8e4774d864c540f9b24678791771ee9ed5054b3a65f`.
+Independent page inspection saw the URL move from **Calculation stages** to
+**Requirements** and rows 1–3 of six. The sidebar explained gaps associated
+with staff-010, staff-015 and staff-016, kept the package `insufficient`, said
+the response supplied no source references and calculated no award. The
+conversation was `01a0d8be-2f0d-73a2-8d12-322e8057dfcd`; its result ID and
+revision are session-local, not reusable inputs.
+
+This is one successful fresh-session, developer-assisted page-tool journey,
+not an answer-quality trial. It supports scoped repeatability of the 24
+September route. Automatic discovery through a dedicated WebMCP connection,
+universal host support, Voice and room audio remain unverified. No new
+permissions or browser settings were introduced; the user's other sidebar
+draft was untouched.

@@ -10,6 +10,14 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Separate saved workbench inspection, fresh Explorer evidence assembly and
+  the versioned remote MCP connection in the client guide. Add a short remote
+  catalogue/read starter and cache-refresh check. Retain the accepted 24
+  September sidebar observation, the initially unaccepted fresh-session
+  attempt and the later scoped 25 September staff-016 native page-tool success.
+  Neither sidebar run establishes dedicated WebMCP discovery, Voice, room audio
+  or answer quality.
+
 - Separate the current status and ordered remaining work from historical
   checkpoints. Record the completed bounded model-inspection implementation,
   retain its separate client and specialist gates, and close superseded PR 23
