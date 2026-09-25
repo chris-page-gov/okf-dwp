@@ -517,7 +517,9 @@
         "evaluation/passage-boundary-review/manifest.json",
         "evaluation/passage-boundary-review/identity-migration.json",
         "scripts/build_passage_boundary_review.py",
-        "scripts/test_passage_boundary_review.py"
+        "scripts/test_passage_boundary_review.py",
+        "evaluation/passage-boundary-candidate/question-replay.json",
+        "domain-profile/passage-boundary-review/replay-protocol.json"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
@@ -841,7 +843,7 @@
           "kind": "research",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Implementation underway in Explorer #150 and DWP #42: all 28 source-bound cases are generated with before/after text and verified source identities. The broad parked parser was rejected for substantive chapters after a PDF-confirmed false split; the explicit narrowed successor preserves the frozen baseline. Finish browser acceptance and identical-budget replay of all 40 staff questions, then record technical delivery separately from independent human structural and specialist/legal review. Original parked proposals and source snapshots remain preserved.",
+          "next_action": "The isolated successor and 40-case equal-budget replay are implemented: 15 target boundaries corrected, 12 partial and one unresolved. Matched declared candidate-page coverage and requirements do not improve; all packages remain insufficient. Review the residual structural findings and source-bound suggestions independently before any separate adoption. The broad parked proposal, frozen sources and earlier replay are preserved.",
           "evidence": [
             "evaluation/manual-structure/final-source-review/large-paragraph-triage.json",
             "evaluation/manual-structure/final-source-review/manifest-review.json",
@@ -854,7 +856,9 @@
             "evaluation/passage-boundary-review/manifest.json",
             "evaluation/passage-boundary-review/identity-migration.json",
             "scripts/build_passage_boundary_review.py",
-            "scripts/test_passage_boundary_review.py"
+            "scripts/test_passage_boundary_review.py",
+            "evaluation/passage-boundary-candidate/question-replay.json",
+            "domain-profile/passage-boundary-review/replay-protocol.json"
           ]
         },
         {
@@ -961,7 +965,7 @@
           "kind": "implementation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Complete generic Explorer inspection and isolated-preview browser acceptance for the 28 hash-bound DWP cases; publish the beginner guide and separate review exports from adoption.",
+          "next_action": "Generic Explorer inspection and isolated previews are implemented and locally checked for all 28 cases, including hash-verified PDF rendering. Finish protected PR CI and public browser verification; export suggestions for separate review and adoption. Technical delivery does not close the remaining structural or specialist/legal review.",
           "evidence": [
             "docs/passage-boundary-review.md",
             "domain-profile/passage-boundary-review/protocol.json",

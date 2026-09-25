@@ -17,6 +17,9 @@ Implementation ownership and handovers belong in the
   Reject the broad bare-Appendix rule after PDF review found it split a
   sentence. Preserve the frozen baseline and record corpus, identifier and
   qualification checks separately from retrieval and specialist acceptance.
+- Retain all 40 candidate evidence packages and an offline equal-budget replay
+  check. Selection changes in 21 cases; expected page coverage and requirements
+  do not improve. All results remain insufficient, with no new model calls.
 
 - Publish service 0.7.0 with the Evidence Connect corpus and source-compatible
   assembler, preserving older replay pairs. The exact merged public SDK check

@@ -32,7 +32,7 @@ and frozen source observations remain available.
    page locator. Compare the before and proposed after passages, including
    examples, qualifications, references and unfinished fragments.
 3. Open **How this passage was built**. A parser is the program that recognises
-   document structure. Its version, rules, settings fingerprint and source
+   document structure. Its version, rules, recorded settings, settings fingerprint and source
    evidence explain the proposal. A hash (SHA-256) is a fingerprint of exact
    bytes; matching hashes do not establish that the interpretation is correct.
 4. Use **Isolated correction preview** to inspect a proposed split, join or
@@ -98,6 +98,32 @@ DMG 01013's example and ADM A2022's conditions and examples. Independent PDF
 inspection confirmed both continuations. Source-byte preservation alone would
 not have established that those passages stayed together.
 
+## What changed in the 40-question replay
+
+The [retained comparison](../evaluation/passage-boundary-candidate/question-replay.json)
+uses the same 40 questions, source scope, assembler and delivery code. Both arms
+have a 512 KiB package budget, 64 records, 128 relationships and traversal depth
+six. It uses no answer-model calls. The exact candidate packages and their
+hashes are retained, so verification does not depend on temporary local files.
+
+| Observation | Result |
+| --- | --- |
+| Questions whose selected evidence identifiers changed | 21 of 40 |
+| Questions whose evidence order changed | 22 of 40 |
+| Questions whose selected traversal paths changed | 4 of 40 |
+| Text or source-span changes for an identifier retained in both arms | None |
+| Changes in matched declared candidate pages | None |
+| Changes to evidence requirements | None |
+| Packages whose byte size changed | 34 of 40; 2,709 bytes larger in total |
+| Complete answers established | None; all 40 remain `insufficient` |
+
+The new structural units affect selection and omission reports, but this replay
+**does not demonstrate improved retrieval of the declared expected pages**.
+Page overlap is a limited coverage measure, not a claim-level answer score.
+The report preserves gains, losses, order and traversal changes, and both kinds
+of omission: candidates outside retrieval limits and records outside assembly
+limits. The earlier 54,576-unit replay remains separately archived.
+
 ## Separate the three decisions
 
 | Decision | What would support it? |
@@ -123,6 +149,7 @@ uv run --locked python -m unittest discover -s scripts -p 'test_passage_boundary
 uv run --locked python -m unittest discover -s scripts -p 'test_passage_boundary*.py'
 uv run --locked python scripts/build_passage_boundary_units.py --profile passage-boundary-v1
 uv run --locked python scripts/build_passage_boundary_units.py --profile passage-boundary-v1 --check
+uv run --locked python scripts/compare_passage_boundary_replay.py --candidate-root evaluation/passage-boundary-candidate/replay-projection --check
 ```
 
 The producer checks the original PDF, extracted text, baseline passages and
@@ -133,6 +160,18 @@ The successor parser is explicitly selected by `passage-boundary-v1`. Its
 output lives under `evaluation/passage-boundary-candidate/structured-units/`.
 The original `scripts/build_structured_units.py --check` still checks the frozen
 baseline. This makes the before/after comparison repeatable.
+
+The [versioned replay protocol](../domain-profile/passage-boundary-review/replay-protocol.json)
+explains how to regenerate the candidate in a disposable checkout. It substitutes
+only the explicitly identified parser and navigation module, checks their hashes
+and the resulting structural catalogue, and retains the exact 40 packages.
+Normal surplus-output guards stay enabled. The scratch rerun initially found
+an unrelated `.DS_Store` and older generated projection files; those were moved
+aside only in the disposable copy before the unchanged producer passed.
+
+The offline comparison above validates the retained receipt, exact packages,
+questions, source and implementation identities. It does not rerun an AI or
+change the normal published evidence selection.
 
 See the [40-question workbench guide](evidence-workbench.md),
 [authored delivery register](../evaluation/backlog.json) and

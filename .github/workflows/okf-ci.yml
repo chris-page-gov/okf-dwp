@@ -380,6 +380,7 @@ jobs:
           uv run --locked python scripts/build_passage_boundary_review.py --check
           uv run --locked python scripts/build_passage_boundary_units.py --profile passage-boundary-v1 --check
           uv run --locked python -m unittest discover -s scripts -p 'test_passage_boundary*.py'
+          uv run --locked python scripts/compare_passage_boundary_replay.py --candidate-root evaluation/passage-boundary-candidate/replay-projection --check
       - name: Read the admitted structured-context consumer identity
         id: structured-consumer
         run: |
