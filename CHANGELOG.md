@@ -20,6 +20,11 @@ Implementation ownership and handovers belong in the
 - Retain all 40 candidate evidence packages and an offline equal-budget replay
   check. Selection changes in 21 cases; expected page coverage and requirements
   do not improve. All results remain insufficient, with no new model calls.
+- Retain a [user-supplied Claude repository-access transcript](evaluation/ai-client-evals/claude-okf-access.md)
+  with separated prompt, commands, outputs and final answer. Record its missing
+  model/revision metadata and prior exposure to the development case; preserve
+  unreviewed answer claims without treating the example as Ask OKF access,
+  independent evaluation or specialist acceptance.
 
 - Publish service 0.7.0 with the Evidence Connect corpus and source-compatible
   assembler, preserving older replay pairs. The exact merged public SDK check
