@@ -11,7 +11,9 @@ tools. For a new evidence assembly, use [Explorer Reader and Ask OKF](evidence-w
 For the separate three-tool remote MCP service, use the [connection guide](chatgpt-connection.md)
 and its [recorded publication status](service-publication.md). The workbench
 manifest at `d31f16fb…` contains saved packages from the additive source at
-`7eeded763…`; neither link admits that source to the remote service.
+`7eeded763…`. Service 0.7.0 separately admits that source; its
+[release checks](../validation/compact-delivery/v0.7.0/README.md) and connector
+metadata refresh are independent of the page-tool demonstration.
 
 ## Open the interactive page
 

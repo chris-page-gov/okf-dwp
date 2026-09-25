@@ -277,3 +277,21 @@ references and made no award calculation. This is one scoped repeatability
 observation, not a dedicated WebMCP-discovery, Voice, room-audio or answer-quality
 acceptance. No permissions or settings changed; the user's other draft was
 untouched.
+
+## Service admission and scheduled boundary review — 25 September 2026
+
+The earlier preparation checkpoint above is superseded by the recorded
+[service 0.7.0 publication](../validation/compact-delivery/v0.7.0/README.md).
+Explorer PR149 merged after required checks; its exact build passed the public
+12-case, 135-request SDK check. The native connector's initial stale-schema
+rejection, metadata refresh and complete hash-checked diagnostics read are
+preserved separately. The sidebar result remains scoped to its saved manifest.
+
+[Explorer #150](https://github.com/chris-page-gov/okf-explorer/issues/150),
+[design PR151](https://github.com/chris-page-gov/okf-explorer/pull/151) and
+[DWP #42](https://github.com/chris-page-gov/okf-dwp/issues/42) schedule the next
+boundary-review increment under BL007.remaining-structural-review. The first
+usable increment inspects all 28 known cases. Generic controls stay in Explorer;
+DWP owns source fixtures, nine-chapter impact and all-40 equal-budget replay.
+No duplicate parser implementation, source acquisition or model trials were
+started. Optional 12/24 defect-detector experiments need an agreed budget first.

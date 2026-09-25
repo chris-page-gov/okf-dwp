@@ -34,6 +34,21 @@ prompt could be sent. The success used authorised native page tools through
 the existing CDP connection; it did not discover the remote MCP tools or prove
 automatic WebMCP availability in other clients.
 
+## What was observed on 25 September 2026
+
+Service 0.7.0 admits the additive Evidence Connect source at `7eeded763…`.
+Its exact merged build passed twelve public SDK cases in 135 requests,
+including older replay combinations. See the [release evidence](../validation/compact-delivery/v0.7.0/README.md).
+
+The existing Codex task could call the compact catalogue immediately, but its
+exact read was rejected because the connector still advertised older source
+and engine values. Refreshing the existing connection, with permissions
+unchanged, admitted those values. The same task then reconstructed and
+hash-checked all diagnostics in eleven bounded reads. The
+[before/after record](../validation/client-connection/2026-09-25/remote/README.md)
+retains both outcomes. This is separate from the successful sidebar page-tool
+demonstration and does not prove Voice or a complete benefits answer.
+
 ## What was observed on 21 September 2026
 
 | Surface | Observation | What remains unproved |

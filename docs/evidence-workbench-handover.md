@@ -65,8 +65,9 @@ and select Ask OKF. Enter:
 
 Use 64 records, 128 relationships, depth 6 and 524,288 bytes to match the recorded
 run. Earlier pinned bundle links remain historical snapshots; use this new
-source descriptor for the repair. The remote MCP service has a separate source
-admission process.
+source descriptor for the repair. The remote MCP service admitted this source
+in the separately verified [0.7.0 release](../validation/compact-delivery/v0.7.0/README.md).
+Older connected clients may need the [metadata refresh](chatgpt-connection.md).
 
 The [beginner guide](evidence-workbench.md) explains the terms as they arise.
 Search finds possible records; Ask OKF assembles evidence; the workbench inspects
