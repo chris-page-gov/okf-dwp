@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compare all 40 fixed workbench packages across frozen and scratch projections."""
+"""Compare all 40 fixed workbench packages with retained candidate evidence."""
 import argparse
 import gzip
 import hashlib
@@ -8,6 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "evaluation/passage-boundary-candidate/question-replay.json"
+RETAINED_ROOT = ROOT / "evaluation/passage-boundary-candidate/replay-projection"
 EXPECTED_BUDGET = {"max_bytes": 524288, "max_nodes": 64, "max_relationships": 128, "max_depth": 6}
 
 
@@ -34,11 +35,14 @@ def digest_list(rows: object) -> str:
     return sha(canonical(rows))
 
 
-def verify_retained(candidate: Path) -> None:
+def verify_retained(candidate: Path, *, scratch: bool) -> str | None:
     receipt_path = candidate / "receipt.json"
     if not receipt_path.is_file():
-        return
-    receipt = json.loads(receipt_path.read_bytes())
+        require(scratch and candidate.resolve() != RETAINED_ROOT.resolve(),
+                "Retained replay receipt is missing; use --scratch only for an external scratch projection")
+        return None
+    receipt_raw = receipt_path.read_bytes()
+    receipt = json.loads(receipt_raw)
     require(receipt["schema"] == "okf-dwp-passage-boundary-replay-retention.v1"
             and receipt["cases"] == 40 and len(receipt["files"]) == 48,
             "Retained replay receipt scope differs")
@@ -55,6 +59,7 @@ def verify_retained(candidate: Path) -> None:
                 "Retained replay decoded bytes differ")
     actual = {p.relative_to(candidate).as_posix() for p in candidate.rglob("*") if p.is_file()}
     require(actual == expected, "Retained replay file set differs")
+    return sha(receipt_raw)
 
 
 def evidence(pack: dict) -> dict[str, dict]:
@@ -92,8 +97,8 @@ def details(pack: dict) -> dict:
         "budget": {key: pack["budget"][key] for key in (*EXPECTED_BUDGET, "used_bytes", "used_nodes", "used_relationships", "truncated")}}
 
 
-def compare(base: Path, candidate: Path) -> dict:
-    verify_retained(candidate)
+def compare(base: Path, candidate: Path, *, scratch: bool = False) -> dict:
+    receipt_sha256 = verify_retained(candidate, scratch=scratch)
     base_registry_raw, base_registry = read(base, "evaluation/staff-questions/cases.json")
     candidate_registry_raw, candidate_registry = read(candidate, "evaluation/staff-questions/cases.json")
     require(base_registry_raw == candidate_registry_raw and len(base_registry["cases"]) == 40, 'Replay evidence invariant failed: base_registry_raw == candidate_registry_raw and len(base_registry["cases"]) == 40')
@@ -169,6 +174,7 @@ def compare(base: Path, candidate: Path) -> dict:
     return {"schema": "okf-dwp-passage-boundary-question-replay.v1",
         "status": "offline-equal-budget-structural-candidate-comparison",
         "source": {"registry_sha256": sha(base_registry_raw),
+                   "retained_receipt_sha256": receipt_sha256,
                    "comparison_script_sha256": sha(Path(__file__).read_bytes()),
                    "retention_script_sha256": sha((base / "scripts/retain_passage_boundary_replay.py").read_bytes()),
                    "baseline_workbench_manifest_sha256": sha(base_workbench_raw),
@@ -208,9 +214,10 @@ def compare(base: Path, candidate: Path) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--candidate-root", type=Path, required=True)
+    parser.add_argument("--scratch", action="store_true", help="Compare an unretained disposable projection")
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
-    report = compare(ROOT, args.candidate_root.resolve())
+    report = compare(ROOT, args.candidate_root.resolve(), scratch=args.scratch)
     raw = canonical(report)
     if args.check:
         require(OUTPUT.read_bytes() == raw, "Question replay comparison drift")
