@@ -4,6 +4,11 @@
 
 [What changed](../CHANGELOG.md) · [Work in progress](evidence-workbench-work-log.md) · [Remaining work](backlog.md)
 
+For a practical introduction to source preparation, follow
+[Review how a passage was built](passage-boundary-review.md). It explains the
+28-case inspection queue, source fingerprints and the difference between a
+structural correction and a complete benefits answer.
+
 OKF-DWP is an independent experiment in making published benefits guidance easier
 to find, connect and inspect. It is not a DWP service, an entitlement decision or
 a benefits calculator. You do not need to understand the technology before

@@ -10,6 +10,12 @@ numbers identify where text was printed. Neither manual is itself legislation.
 
 ## Start with one question
 
+To investigate how a passage was divided, use the separate
+[28-case passage-boundary review](passage-boundary-review.md). It compares the
+source PDF, exact extraction and proposed boundaries, and exports a local
+suggestion for separate review. It does not replace the 40-question evidence
+packages described below.
+
 This page is a guide. [Open the interactive Evidence workbench in Explorer](https://chris-page-gov.github.io/okf-explorer/evidence/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fd31f16fb7143d04b9de73e14cd493cfb832ae83e%2Fevaluation%2Fevidence-workbench%2Ftools-manifest.json&case=staff-001).
 This link uses the reviewed, immutable catalogue with the optional inspection
 models; each downloaded package is checked against its recorded fingerprint.

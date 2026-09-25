@@ -511,7 +511,13 @@
         "evaluation/out-of-sample/uc-disabled-child-supersession-001.json",
         "docs/uc-disabled-child-supersession-follow-up.md",
         "scripts/replay_uc_supersession_case.mjs",
-        "docs/unmerged-work-review-2026-09-24.md"
+        "docs/unmerged-work-review-2026-09-24.md",
+        "docs/passage-boundary-review.md",
+        "domain-profile/passage-boundary-review/protocol.json",
+        "evaluation/passage-boundary-review/manifest.json",
+        "evaluation/passage-boundary-review/identity-migration.json",
+        "scripts/build_passage_boundary_review.py",
+        "scripts/test_passage_boundary_review.py"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
@@ -835,14 +841,20 @@
           "kind": "research",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Next after the current service and sidebar release: use Explorer issue #150 (https://github.com/chris-page-gov/okf-explorer/issues/150) for generic passage-boundary inspection and DWP issue #42 (https://github.com/chris-page-gov/okf-dwp/issues/42) for source-bound acceptance. First make the 28 known historical-amendment candidates reviewable with synced PDF, exact extracted text and before/after passages. Freeze source hashes and controls; validate byte retention, incomplete fragments, structural roles, IDs and dependencies, then compare the 28 cases, nine substantive chapters and all 40 staff question occurrences at fixed evidence budgets. Keep structural, retrieval and specialist/legal findings separate. Adopt only through a later reviewed producer PR; retain the frozen candidate and earlier results. Preserve the separate amendment parser branch and inspect the nine substantive chapters within its 134-document change.",
+          "next_action": "Implementation underway in Explorer #150 and DWP #42: all 28 source-bound cases are generated with before/after text and verified source identities. The broad parked parser was rejected for substantive chapters after a PDF-confirmed false split; the explicit narrowed successor preserves the frozen baseline. Finish browser acceptance and identical-budget replay of all 40 staff questions, then record technical delivery separately from independent human structural and specialist/legal review. Original parked proposals and source snapshots remain preserved.",
           "evidence": [
             "evaluation/manual-structure/final-source-review/large-paragraph-triage.json",
             "evaluation/manual-structure/final-source-review/manifest-review.json",
             "docs/source-led-manual-guide.md",
             "evaluation/manual-structure/large-paragraph-review-2026-09-23/README.md",
             "evaluation/manual-structure/large-paragraph-review-2026-09-23/findings.json",
-            "docs/unmerged-work-review-2026-09-24.md"
+            "docs/unmerged-work-review-2026-09-24.md",
+            "docs/passage-boundary-review.md",
+            "domain-profile/passage-boundary-review/protocol.json",
+            "evaluation/passage-boundary-review/manifest.json",
+            "evaluation/passage-boundary-review/identity-migration.json",
+            "scripts/build_passage_boundary_review.py",
+            "scripts/test_passage_boundary_review.py"
           ]
         },
         {
@@ -942,6 +954,21 @@
           "next_action": "Review proposed groups, summaries, dependencies and typed table for legal applicability; engineering checks do not establish complete benefits answers.",
           "evidence": [
             "docs/pc-capital-bounded-repair.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.passage-review-workbench",
+          "kind": "implementation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Complete generic Explorer inspection and isolated-preview browser acceptance for the 28 hash-bound DWP cases; publish the beginner guide and separate review exports from adoption.",
+          "evidence": [
+            "docs/passage-boundary-review.md",
+            "domain-profile/passage-boundary-review/protocol.json",
+            "evaluation/passage-boundary-review/manifest.json",
+            "evaluation/passage-boundary-review/identity-migration.json",
+            "scripts/build_passage_boundary_review.py",
+            "scripts/test_passage_boundary_review.py"
           ]
         }
       ]

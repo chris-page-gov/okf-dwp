@@ -373,6 +373,13 @@ jobs:
           uv run --locked python scripts/check_demo_one_pair.py --check
           uv run --locked python scripts/build_demo_one_ledger.py --check
           uv run --locked python -m unittest discover -s scripts -p test_demo_one_pair.py
+      - name: Verify additive passage reviews and the isolated parser profile
+        # Keep the additive review queue and successor profile separate from
+        # frozen structured-unit and context projections above.
+        run: |
+          uv run --locked python scripts/build_passage_boundary_review.py --check
+          uv run --locked python scripts/build_passage_boundary_units.py --profile passage-boundary-v1 --check
+          uv run --locked python -m unittest discover -s scripts -p 'test_passage_boundary*.py'
       - name: Read the admitted structured-context consumer identity
         id: structured-consumer
         run: |

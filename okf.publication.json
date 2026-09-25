@@ -1,6 +1,6 @@
 {
   "schema": "okf-repository-publication-contract.v1",
-  "modified": "2026-09-24",
+  "modified": "2026-09-25",
   "locale": "en-GB",
   "time_zone": "Europe/London",
   "repository": {
@@ -1398,7 +1398,16 @@
         "capital-pilot/**",
         "domain-profile/capital-pilot/**",
         "domain-profile/evidence-connect/**",
-        "evaluation/evidence-workbench/**"
+        "evaluation/evidence-workbench/**",
+        "domain-profile/passage-boundary-review/**",
+        "scripts/build_passage_boundary_review.py",
+        "scripts/test_passage_boundary_review.py",
+        "scripts/passage_boundary_parser.py",
+        "scripts/manual_navigation_regions.py",
+        "scripts/build_passage_boundary_units.py",
+        "scripts/test_passage_boundary*.py",
+        "evaluation/passage-boundary-review/**",
+        "evaluation/passage-boundary-candidate/**"
       ],
       "origin": "mixed",
       "authority": "mixed",
@@ -1842,6 +1851,32 @@
           "evidence-workbench-check",
           "evidence-workbench-delivery-check"
         ]
+      },
+      {
+        "path": "evaluation/passage-boundary-review/**",
+        "role": "explorer-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "passage-review-build"
+        ],
+        "check_command_ids": [
+          "passage-review-check",
+          "passage-review-controls"
+        ]
+      },
+      {
+        "path": "evaluation/passage-boundary-candidate/structured-units/**",
+        "role": "explorer-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "passage-candidate-build"
+        ],
+        "check_command_ids": [
+          "passage-candidate-check",
+          "passage-review-controls"
+        ]
       }
     ]
   },
@@ -2122,7 +2157,16 @@
         "scripts/compare_evidence_connect.mjs",
         "scripts/probe_evidence_connect.mjs",
         "scripts/test_evidence_connect.py",
-        "evaluation/evidence-workbench/**"
+        "evaluation/evidence-workbench/**",
+        "domain-profile/passage-boundary-review/**",
+        "scripts/build_passage_boundary_review.py",
+        "scripts/test_passage_boundary_review.py",
+        "scripts/passage_boundary_parser.py",
+        "scripts/manual_navigation_regions.py",
+        "scripts/build_passage_boundary_units.py",
+        "scripts/test_passage_boundary*.py",
+        "evaluation/passage-boundary-review/**",
+        "evaluation/passage-boundary-candidate/**"
       ],
       "command_ids": [
         "context-discovery-build-check",
@@ -2161,7 +2205,12 @@
         "evidence-workbench-build",
         "evidence-workbench-check",
         "evidence-workbench-delivery-check",
-        "evidence-workbench-path-controls"
+        "evidence-workbench-path-controls",
+        "passage-review-build",
+        "passage-review-check",
+        "passage-review-controls",
+        "passage-candidate-build",
+        "passage-candidate-check"
       ]
     },
     {
@@ -3806,6 +3855,71 @@
         "network": "none",
         "mutates": "generated-only",
         "timeout_minutes": 5
+      },
+      {
+        "id": "passage-review-build",
+        "kind": "build",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_passage_boundary_review.py",
+        "source": "docs/passage-boundary-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "passage-review-check",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_passage_boundary_review.py --check",
+        "source": "docs/passage-boundary-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "passage-review-controls",
+        "kind": "test",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python -m unittest discover -s scripts -p 'test_passage_boundary*.py'",
+        "source": "docs/passage-boundary-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "passage-candidate-build",
+        "kind": "build",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_passage_boundary_units.py --profile passage-boundary-v1",
+        "source": "docs/passage-boundary-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "passage-candidate-check",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_passage_boundary_units.py --profile passage-boundary-v1 --check",
+        "source": "docs/passage-boundary-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
       }
     ]
   },

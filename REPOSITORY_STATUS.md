@@ -1,6 +1,6 @@
 # Repository status
 
-## Current overview: 24 September 2026
+## Current overview: 25 September 2026
 
 Start with [remaining work and next priorities](docs/remaining-work.md), the
 [Evidence workbench](docs/evidence-workbench.md) and the
@@ -10,6 +10,12 @@ and 40-question workbench are implemented. DWP PR 39 also delivered the optional
 interaction and blocked calculation-inspection models; the
 [sidebar demonstration](docs/workbench-sidebar-demo.md) records its tested
 developer-connection route.
+
+The [passage-boundary review increment](docs/passage-boundary-review.md) adds
+source-bound before/after evidence for the 28 known historical-amendment cases
+and an isolated successor parser. It preserves the original corpus and records
+structural outcomes separately from retrieval and legal answerability. Its
+implementation, CI and public-browser observations are separate release gates.
 
 All 40 retained packages remain insufficient. The known capital transfer-wording
 and UC selection failures, unreviewed unit boundaries, legal dependencies,

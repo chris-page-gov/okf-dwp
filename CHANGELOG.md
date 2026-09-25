@@ -10,6 +10,14 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Add a source-bound passage review queue for the 28 known historical-amendment
+  outliers, exact PDF and extraction identities, before/after spans and a
+  beginner review guide. Preserve the parked proposal and its uncertainties.
+- Separate a narrowed amendment parser into an explicit successor profile.
+  Reject the broad bare-Appendix rule after PDF review found it split a
+  sentence. Preserve the frozen baseline and record corpus, identifier and
+  qualification checks separately from retrieval and specialist acceptance.
+
 - Publish service 0.7.0 with the Evidence Connect corpus and source-compatible
   assembler, preserving older replay pairs. The exact merged public SDK check
   passes twelve cases in 135 requests. Record the initial stale connector
