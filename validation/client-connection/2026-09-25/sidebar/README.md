@@ -26,3 +26,12 @@ The [connection guide](../../../../docs/chatgpt-connection.md) separates this
 saved-package page control from fresh Reader assembly and the independently
 published remote MCP service. The [sidebar guide](../../../../docs/workbench-sidebar-demo.md)
 retains the practical prompt and limits.
+
+## Owner's separate reproduction
+
+The owner subsequently reported that the same documented CDP fallback worked
+after a dedicated `webmcp` capability check had stopped their first attempt.
+The separate [reported observation](user-reproduction.json) records the new
+result and revision identifiers. It retains the partial 3-of-6 result, unknown
+dates, absent provenance/source references and insufficient status. This is
+labelled as a user report, not another independently captured tool payload.

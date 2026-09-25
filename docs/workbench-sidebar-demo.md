@@ -125,7 +125,13 @@ the response supplied no source references and calculated no award. The result
 ID and revision are session-local, not reusable inputs. The public observation
 omits the private conversation identifier.
 
-This is one successful fresh-session, developer-assisted page-tool journey,
+The owner later reported a separate successful reproduction using the same
+fallback, after their first prompt had stopped at the missing `webmcp`
+capability. That [user-reported observation](https://github.com/chris-page-gov/okf-dwp/blob/main/validation/client-connection/2026-09-25/sidebar/user-reproduction.json)
+retains its own result identifier and partial-response limits; it is separate
+from the independently inspected observation above.
+
+This is one independently inspected fresh-session, developer-assisted page-tool journey,
 not an answer-quality trial. It supports scoped repeatability of the 24
 September route. Automatic discovery through a dedicated WebMCP connection,
 universal host support, Voice and room audio remain unverified. No new
