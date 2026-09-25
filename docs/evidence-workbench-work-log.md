@@ -243,3 +243,55 @@ developer connection; dedicated WebMCP discovery remains a separate gate.
 The guide now distinguishes itself from the interactive Explorer page and
 links the reviewed model manifest. No evidence status or calculation boundary
 has changed.
+
+## Connection routes and repeatability — 25 September 2026
+
+The [connection guide](chatgpt-connection.md) now separates three routes:
+saved, hash-checked workbench packages with seven page tools; fresh evidence
+assembled in Explorer Reader and Ask OKF; and the separately versioned remote
+MCP service with three read-only tools. The saved inspection manifest at
+`d31f16fb…` and additive source descriptor at `7eeded763…` have different
+roles. The remote service's latest **recorded** deployment remains on the
+generated [service status page](service-publication.md); preparing a newer
+service does not itself publish or admit its source.
+At this checkpoint, the separate 0.7.0 service implementation is being prepared
+to admit immutable DWP source `7eeded763…` with Explorer engine source
+`d6930bbc…`. It is **not a recorded public deployment** or a change to the
+saved `d31f16fb…` inspection packages.
+
+A low-context remote starter now begins with a normal public question and the
+small evidence catalogue, then reads selected passages and diagnostics using
+the returned version, engine, context and budget. A complete-package read and
+independent byte check are a separate, longer acceptance journey. An older
+cached connector schema may require refresh and a new conversation after a
+recorded service release; tool discovery and actual calls still need checking.
+
+The [sidebar guide](workbench-sidebar-demo.md) preserves both fresh-session
+attempts. The first encountered a blank or unavailable native interface and
+clipboard/window errors before any prompt or model call. A later conversation
+successfully used the existing authorised CDP connection to call the native
+page tools and show staff-016 Requirements. Independent page inspection saw
+the move from Calculation stages to Requirements and three of six visible
+rows. The sidebar kept the result `insufficient`, identified missing source
+references and made no award calculation. This is one scoped repeatability
+observation, not a dedicated WebMCP-discovery, Voice, room-audio or answer-quality
+acceptance. No permissions or settings changed; the user's other draft was
+untouched.
+
+## Service admission and scheduled boundary review — 25 September 2026
+
+The earlier preparation checkpoint above is superseded by the recorded
+[service 0.7.0 publication](../validation/compact-delivery/v0.7.0/README.md).
+Explorer PR149 merged after required checks; its exact build passed the public
+12-case, 135-request SDK check. The native connector's initial stale-schema
+rejection, metadata refresh and complete hash-checked diagnostics read are
+preserved separately. The sidebar result remains scoped to its saved manifest.
+
+[Explorer #150](https://github.com/chris-page-gov/okf-explorer/issues/150),
+[design PR151](https://github.com/chris-page-gov/okf-explorer/pull/151) and
+[DWP #42](https://github.com/chris-page-gov/okf-dwp/issues/42) schedule the next
+boundary-review increment under BL007.remaining-structural-review. The first
+usable increment inspects all 28 known cases. Generic controls stay in Explorer;
+DWP owns source fixtures, nine-chapter impact and all-40 equal-budget replay.
+No duplicate parser implementation, source acquisition or model trials were
+started. Optional 12/24 defect-detector experiments need an agreed budget first.

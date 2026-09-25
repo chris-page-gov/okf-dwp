@@ -1,6 +1,6 @@
 {
   "schema": "okf-dwp-backlog.v1",
-  "updated_on": "2026-09-24",
+  "updated_on": "2026-09-25",
   "status_meanings": {
     "recorded_complete": "Named bounded result has retained evidence, not perpetual assurance.",
     "in_progress": "Work is being prepared or implemented; publication/acceptance is not implied.",
@@ -835,7 +835,7 @@
           "kind": "research",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Retain the separate amendment parser branch after the 23 September freeze. Review all 28 outlier probes and the nine affected substantive chapters within its 134-document change; reconcile changed unit IDs and run full-context evaluation before adoption. The frozen candidate retains known historical-amendment defects.",
+          "next_action": "Next after the current service and sidebar release: use Explorer issue #150 (https://github.com/chris-page-gov/okf-explorer/issues/150) for generic passage-boundary inspection and DWP issue #42 (https://github.com/chris-page-gov/okf-dwp/issues/42) for source-bound acceptance. First make the 28 known historical-amendment candidates reviewable with synced PDF, exact extracted text and before/after passages. Freeze source hashes and controls; validate byte retention, incomplete fragments, structural roles, IDs and dependencies, then compare the 28 cases, nine substantive chapters and all 40 staff question occurrences at fixed evidence budgets. Keep structural, retrieval and specialist/legal findings separate. Adopt only through a later reviewed producer PR; retain the frozen candidate and earlier results. Preserve the separate amendment parser branch and inspect the nine substantive chapters within its 134-document change.",
           "evidence": [
             "evaluation/manual-structure/final-source-review/large-paragraph-triage.json",
             "evaluation/manual-structure/final-source-review/manifest-review.json",
@@ -994,12 +994,18 @@
         "validation/evidence-workbench/2026-09-24/public-release/site/observation.json",
         "validation/evidence-workbench/2026-09-24/public-release/browser/receipt.json",
         "validation/evidence-workbench/2026-09-24/public-release/files.json",
-        "docs/evidence-workbench-handover.md"
+        "docs/evidence-workbench-handover.md",
+        "validation/compact-delivery/v0.7.0/README.md",
+        "validation/compact-delivery/v0.7.0/deployment.json",
+        "validation/compact-delivery/v0.7.0/sdk/attempt-01/observation.json",
+        "validation/client-connection/2026-09-25/remote/README.md",
+        "validation/client-connection/2026-09-25/remote/observation.json",
+        "validation/client-connection/2026-09-25/remote/after-refresh.json"
       ],
       "acceptance_checks": [
         "Unchanged ask_okf preserved; small manifest plus paginated exact reads; original version/question/budget/context identity replayed; stale/unknown IDs rejected; all slices reconstruct exactly; actual host check."
       ],
-      "scope_note": "Public service 0.6.1 preserves five source versions and two explicitly compatible assemblers. Its actual SDK observation verifies 11 cases in 121 requests, including nine source/engine pairs, an empty control and exact historical care-home replay. The same native multi-character control rejected before the schema patch now succeeds. A 16 KiB Staff 012 smoke check returns zero records with an explicit byte-budget omission; it is not useful answerability. The intended Data Agent and compact-client journey remain unaccepted. Earlier receipts and paired model observations retain their own versions and scope.",
+      "scope_note": "Public service 0.7.0 admits the additive Evidence Connect corpus and retains six source versions, three engines and ten permitted source/engine pairs. The exact merged public SDK run passed twelve cases in 135 requests, including the historical replay and unknown-term control. An existing native Codex task reconstructed exact diagnostics after an unchanged-permission schema refresh; the initial stale-schema rejection is preserved. Fresh Work/Data Agent and Voice acceptance remain open. Retrieval, evidence sufficiency and specialist acceptance are separate.",
       "work_packages": [
         {
           "id": "DWP-BL-008.delivery",
@@ -1043,11 +1049,14 @@
           "kind": "live_observation",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Service 0.6.1 is published and SDK-verified. The refreshed ChatGPT connection advertises three read-only tools, the corrected question pattern, five sources and two engines, with permissions unchanged. The same existing Codex task now accepts the previously rejected multi-character control; its 16 KiB Staff 012 smoke check returns zero records with an explicit byte-budget omission. That task still exposes only full ask_okf. Test the intended new Work/Data Agent session for its own compact tools, empty control and complete exact-read journey at the fixed comparison budget. Retain identities, actual errors, gaps and hash-verification limits; nested tool propagation and Voice remain unproved.",
+          "next_action": "The existing native task now calls compact tools: after metadata refresh with permissions unchanged, eleven contiguous diagnostics reads reconstruct the returned hash. Preserve the earlier stale-schema rejection and initial catalogue. Test the intended fresh Work/Data Agent task and Voice separately; a transport pass is not an evidence-completeness or answer-quality result.",
           "evidence": [
             "docs/chatgpt-connection.md",
             "validation/compact-delivery/v0.6.1/README.md",
-            "validation/client-connection/2026-09-21/README.md"
+            "validation/client-connection/2026-09-21/README.md",
+            "validation/client-connection/2026-09-25/remote/README.md",
+            "validation/client-connection/2026-09-25/remote/observation.json",
+            "validation/client-connection/2026-09-25/remote/after-refresh.json"
           ]
         },
         {
@@ -1065,15 +1074,18 @@
         {
           "id": "DWP-BL-008.logical-compact-admission",
           "kind": "implementation",
-          "status": "in_progress",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "The reviewed Explorer browser tools now reconstruct current large logical packages through at most 32 KiB responses, retaining whole units, spans, relationships, diagnostics and context identity. Source expansion still leaves all five focused 32 KiB inline assemblies with zero evidence; this is separate from delivery. Complete exact public/browser checks and remote source-version admission before any service default change. External ChatGPT/Voice use and specialist acceptance remain unproved.",
+          "next_action": "Service 0.7.0 admits the immutable Evidence Connect source with its compatible frozen engine. The exact merged build passed twelve public SDK cases in 135 requests across ten permitted pairs, preserving historical replay and bounded exact reconstruction. Keep inline assembly omissions, source boundaries and insufficient status explicit. Client-specific acceptance remains in client-connection; specialist acceptance is not implied.",
           "evidence": [
             "evaluation/logical-units/run/summary.json",
             "docs/logical-evidence-units.md",
             "docs/semantic-closure-and-compact-delivery.md",
             "evaluation/semantic-coverage/closure-2026-09-22/audit.json",
-            "domain-profile/logical-units/authoring-registry.json"
+            "domain-profile/logical-units/authoring-registry.json",
+            "validation/compact-delivery/v0.7.0/README.md",
+            "validation/compact-delivery/v0.7.0/deployment.json",
+            "validation/compact-delivery/v0.7.0/sdk/attempt-01/observation.json"
           ]
         },
         {
@@ -1890,7 +1902,9 @@
         "validation/evidence-workbench/2026-09-24/public-release/files.json",
         "docs/evidence-workbench-handover.md",
         "docs/workbench-sidebar-demo.md",
-        "docs/remaining-work.md"
+        "docs/remaining-work.md",
+        "validation/client-connection/2026-09-25/sidebar/observation.json",
+        "validation/client-connection/2026-09-25/sidebar/README.md"
       ],
       "acceptance_checks": [
         "All 40 public question occurrences can be opened lazily with their exact package identity and explicit gaps.",
@@ -1958,11 +1972,13 @@
         {
           "id": "DWP-BL-025.sidebar-repeatability",
           "kind": "live_observation",
-          "status": "in_progress",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Retain the observed Edge sidebar Requirements and Interactions calls. Recheck a fresh intended session before the demonstration; automatic discovery through a dedicated WebMCP connection remains unverified. Do not equate the developer connection with Voice or room-audio acceptance.",
+          "next_action": "Retain the 24 September Requirements and Interactions observation and the separate 25 September fresh-session success after an initial failed attempt. The authorised CDP route called native page tools and changed the visible staff-016 Requirements view; only UI/tool trace was retained, not complete payloads or an independent package hash check. Recheck the intended session before a live demonstration. Automatic discovery through a dedicated WebMCP connection, universal client support, Voice and room audio remain separate gates.",
           "evidence": [
-            "docs/workbench-sidebar-demo.md"
+            "docs/workbench-sidebar-demo.md",
+            "validation/client-connection/2026-09-25/sidebar/observation.json",
+            "validation/client-connection/2026-09-25/sidebar/README.md"
           ]
         }
       ]

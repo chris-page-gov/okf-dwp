@@ -10,6 +10,26 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Publish service 0.7.0 with the Evidence Connect corpus and source-compatible
+  assembler, preserving older replay pairs. The exact merged public SDK check
+  passes twelve cases in 135 requests. Record the initial stale connector
+  schema, unchanged-permission refresh and hash-checked native diagnostics read;
+  retain sidebar, transport and specialist-acceptance boundaries separately.
+
+- Schedule passage-boundary inspection after the service/sidebar release in
+  linked Explorer #150 and DWP #42, under the existing BL007 structural-review
+  package. The first increment covers 28 known cases; later gates require
+  nine-chapter impact review, all 40 fixed-budget replays and held-out controls.
+  Model detection remains optional and requires an agreed call budget.
+
+- Separate saved workbench inspection, fresh Explorer evidence assembly and
+  the versioned remote MCP connection in the client guide. Add a short remote
+  catalogue/read starter and cache-refresh check. Retain the accepted 24
+  September sidebar observation, the initially unaccepted fresh-session
+  attempt and the later scoped 25 September staff-016 native page-tool success.
+  Neither sidebar run establishes dedicated WebMCP discovery, Voice, room audio
+  or answer quality.
+
 - Separate the current status and ordered remaining work from historical
   checkpoints. Record the completed bounded model-inspection implementation,
   retain its separate client and specialist gates, and close superseded PR 23
