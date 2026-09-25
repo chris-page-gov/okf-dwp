@@ -1,0 +1,74 @@
+{
+  "schema": "okf-client-connection-observation.v1",
+  "observed_at": "2026-09-25",
+  "scope": "Existing Codex task; remote Ask OKF connector, separately from browser sidebar page tools",
+  "manifest": {
+    "passed": true,
+    "context_id": "urn:sha256:b4d7ae65a9c0db00dda64462da364506c131e663a4a459eaa4e2fa35c3ec25b0",
+    "replay": {
+      "bundle": "okf-dwp",
+      "version": "7eeded763042ddd0070f4fed834c6074149e8e2f",
+      "budget": {
+        "max_nodes": 64,
+        "max_relationships": 128,
+        "max_depth": 6,
+        "max_bytes": 524288
+      },
+      "engine_id": "urn:okf:context-engine:sha256:256b19d6d8a2e16191866ead0ffd48d9edb7f705143bd8a91597b19f242c0968"
+    },
+    "delivery": {
+      "offset": 0,
+      "returned": 21,
+      "total": 25,
+      "next_offset": 21,
+      "max_bytes": 14965,
+      "used_bytes": 14926
+    },
+    "summary": {
+      "selected_records": 25,
+      "relationships": 44,
+      "full_package_bytes": 517473,
+      "context_truncated": true,
+      "retrieval_truncated": true,
+      "resolved_concepts": 2,
+      "ambiguities": 0,
+      "unresolved_terms": 5,
+      "missing_evidence": 8,
+      "conflicts": 0,
+      "requirements": 5,
+      "missing_evidence_codes": [
+        "missing_record",
+        "missing_required_evidence",
+        "unresolved_terms",
+        "unresolved_unit_boundary"
+      ],
+      "ai_answer": null
+    },
+    "evidence_status": "insufficient"
+  },
+  "exact_diagnostics_read": {
+    "passed": false,
+    "error_code": "INVALID_ARGUMENT",
+    "error": "Parameters failed connector schema validation: version [enum]: Value '7eeded763042ddd0070f4fed834c6074149e8e2f' not in allowed enum (does not match constraints configured by your ChatGPT workspace admin. If the issue persists, instruct the user to contact their workspace admin.); engine_id [enum]: Value 'urn:okf:context-engine:sha256:256b19d6d8a2e16191866ead0ffd48d9edb7f705143bd8a91597b19f242c0968' not in allowed enum (does not match constraints configured by your ChatGPT workspace admin. If the issue persists, instruct the user to contact their workspace admin.)",
+    "reason": "INVALID_PARAMETERS",
+    "clamp_errors": [
+      {
+        "path": [
+          "version"
+        ],
+        "message": "Value '7eeded763042ddd0070f4fed834c6074149e8e2f' not in allowed enum (does not match constraints configured by your ChatGPT workspace admin. If the issue persists, instruct the user to contact their workspace admin.)",
+        "keyword": "enum",
+        "value": "7eeded763042ddd0070f4fed834c6074149e8e2f"
+      },
+      {
+        "path": [
+          "engine_id"
+        ],
+        "message": "Value 'urn:okf:context-engine:sha256:256b19d6d8a2e16191866ead0ffd48d9edb7f705143bd8a91597b19f242c0968' not in allowed enum (does not match constraints configured by your ChatGPT workspace admin. If the issue persists, instruct the user to contact their workspace admin.)",
+        "keyword": "enum",
+        "value": "urn:okf:context-engine:sha256:256b19d6d8a2e16191866ead0ffd48d9edb7f705143bd8a91597b19f242c0968"
+      }
+    ]
+  },
+  "boundary": "The service default returns new identities, but this existing client still validates calls against an older connector schema. No continuation with omitted identities was attempted; no substantive answer or complete native-client evidence journey is established. Private broker metadata is excluded."
+}
