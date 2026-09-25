@@ -121,9 +121,9 @@ snapshot was `sha256:294c665de0060769fe05c8e4774d864c540f9b24678791771ee9ed5054b
 Independent page inspection saw the URL move from **Calculation stages** to
 **Requirements** and rows 1–3 of six. The sidebar explained gaps associated
 with staff-010, staff-015 and staff-016, kept the package `insufficient`, said
-the response supplied no source references and calculated no award. The
-conversation was `01a0d8be-2f0d-73a2-8d12-322e8057dfcd`; its result ID and
-revision are session-local, not reusable inputs.
+the response supplied no source references and calculated no award. The result
+ID and revision are session-local, not reusable inputs. The public observation
+omits the private conversation identifier.
 
 This is one successful fresh-session, developer-assisted page-tool journey,
 not an answer-quality trial. It supports scoped repeatability of the 24
