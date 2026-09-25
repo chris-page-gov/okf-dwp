@@ -82,8 +82,12 @@ amendment branch remains separate; the successor has its own versioned output.
 Documentation and backlog corrections from
 [PR 40](https://github.com/chris-page-gov/okf-dwp/pull/40) are merged and published.
 The service/sidebar follow-up and boundary-review design were merged in
-[PR 41](https://github.com/chris-page-gov/okf-dwp/pull/41). The subsequent
-implementation's checks and Pages publication remain separate release gates.
+[PR 41](https://github.com/chris-page-gov/okf-dwp/pull/41). The passage-review
+implementation is merged in [DWP PR 44](https://github.com/chris-page-gov/okf-dwp/pull/44)
+and [Explorer PR 155](https://github.com/chris-page-gov/okf-explorer/pull/155).
+Its [public observation](../validation/passage-boundaries/2026-09-25/README.md)
+checks all 28 cases; the partial/unresolved source findings and separate parser
+adoption remain open.
 
 Future progress should update the authored [backlog JSON](../evaluation/backlog.json),
 regenerate its work-package page and record the exact tests and release in the

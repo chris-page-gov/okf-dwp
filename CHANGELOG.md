@@ -10,16 +10,6 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
-- Add a source-bound passage review queue for the 28 known historical-amendment
-  outliers, exact PDF and extraction identities, before/after spans and a
-  beginner review guide. Preserve the parked proposal and its uncertainties.
-- Separate a narrowed amendment parser into an explicit successor profile.
-  Reject the broad bare-Appendix rule after PDF review found it split a
-  sentence. Preserve the frozen baseline and record corpus, identifier and
-  qualification checks separately from retrieval and specialist acceptance.
-- Retain all 40 candidate evidence packages and an offline equal-budget replay
-  check. Selection changes in 21 cases; expected page coverage and requirements
-  do not improve. All results remain insufficient, with no new model calls.
 - Retain a [user-supplied Claude repository-access transcript](evaluation/ai-client-evals/claude-okf-access.md)
   with separated prompt, commands, outputs and final answer. Record its missing
   model/revision metadata and prior exposure to the development case; preserve
@@ -110,6 +100,28 @@ Implementation ownership and handovers belong in the
 - Rebind the logical-context projection after the combined descriptor changes, exclude combined-only learning routes from that Reader, and replay all 184 contexts. Preserve the prior evaluation under `evaluation/logical-units/history/pre-learning-2026-09-22/`; semantic-review limitations remain unchanged.
 
 - Add 12 demonstration learning paths and 112 activities to the combined Reader, covering all 40 supplied question occurrences. Bind authored objectives, source locators, prerequisites and facilitator public keys into the generated snapshot. Preserve the separate logical-unit corpus and all frozen pilot/source projections.
+
+## Passage review workbench — 25 September 2026
+
+- Add a source-bound passage review queue for the 28 known historical-amendment
+  outliers, exact PDF and extraction identities, before/after spans and a
+  beginner review guide. Preserve the parked proposal and its uncertainties.
+- Separate a narrowed amendment parser into an explicit successor profile.
+  Reject the broad bare-Appendix rule after PDF review found it split a
+  sentence. Preserve the frozen baseline and record corpus, identifier and
+  qualification checks separately from retrieval and specialist acceptance.
+- Retain all 40 candidate evidence packages and an offline equal-budget replay
+  check. Selection changes in 21 cases; expected page coverage and requirements
+  do not improve. All results remain insufficient, with no new model calls.
+- Publish and verify the generic workbench at Explorer `4d76cddb`: all 28
+  public cases, exact hashes for 34 app files, PDF rendering/page synchronisation
+  and local review export pass. Record DWP merge `c971e4cd` and protected CI
+  separately from specialist acceptance.
+- Mark the bounded workbench implementation delivered in the authored backlog
+  and regenerate its report. Keep 12 partial boundaries, one unresolved source
+  extraction and separate parser adoption open; full-corpus preview impacts
+  remain unknown until a wider producer replay. See the
+  [release record](validation/passage-boundaries/2026-09-25/README.md).
 
 ## Evidence workbench — 24 September 2026
 

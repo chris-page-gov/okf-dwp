@@ -519,7 +519,8 @@
         "scripts/build_passage_boundary_review.py",
         "scripts/test_passage_boundary_review.py",
         "evaluation/passage-boundary-candidate/question-replay.json",
-        "domain-profile/passage-boundary-review/replay-protocol.json"
+        "domain-profile/passage-boundary-review/replay-protocol.json",
+        "validation/passage-boundaries/2026-09-25/README.md"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
@@ -858,7 +859,8 @@
             "scripts/build_passage_boundary_review.py",
             "scripts/test_passage_boundary_review.py",
             "evaluation/passage-boundary-candidate/question-replay.json",
-            "domain-profile/passage-boundary-review/replay-protocol.json"
+            "domain-profile/passage-boundary-review/replay-protocol.json",
+            "validation/passage-boundaries/2026-09-25/README.md"
           ]
         },
         {
@@ -963,16 +965,17 @@
         {
           "id": "DWP-BL-007.passage-review-workbench",
           "kind": "implementation",
-          "status": "in_progress",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Generic Explorer inspection and isolated previews are implemented and locally checked for all 28 cases, including hash-verified PDF rendering. Finish protected PR CI and public browser verification; export suggestions for separate review and adoption. Technical delivery does not close the remaining structural or specialist/legal review.",
+          "next_action": "Merged Explorer PR 155 and DWP PR 44 deliver the generic 28-case inspection and isolated-preview workflow. Public checks verify all 34 app files, all 28 case previews, PDF rendering/page synchronisation, explicit unresolved status, successor reference table and local suggestion export. Full document/corpus impacts of an edited correction remain unknown without wider replay. Structural residuals and separate reviewed adoption remain open.",
           "evidence": [
             "docs/passage-boundary-review.md",
             "domain-profile/passage-boundary-review/protocol.json",
             "evaluation/passage-boundary-review/manifest.json",
             "evaluation/passage-boundary-review/identity-migration.json",
             "scripts/build_passage_boundary_review.py",
-            "scripts/test_passage_boundary_review.py"
+            "scripts/test_passage_boundary_review.py",
+            "validation/passage-boundaries/2026-09-25/README.md"
           ]
         }
       ]

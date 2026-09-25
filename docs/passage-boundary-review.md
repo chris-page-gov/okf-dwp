@@ -21,7 +21,9 @@ separate parser impact checks.
 
 [Open the 28-case passage review](https://chris-page-gov.github.io/okf-explorer/evidence/passages/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F65924955745c4ed1b8ce66252c4748902b5403ba%2Fevaluation%2Fpassage-boundary-review%2Fmanifest.json&case=case-001). This link pins the DWP review
 data to `65924955` and opens Explorer's **Evidence workbench → Passage boundaries** view. The generic route
-requires the companion Explorer implementation to be published. The
+is published and verified at Explorer commit `4d76cddb`. The
+[release record](../validation/passage-boundaries/2026-09-25/README.md) retains
+all 28 public case checks, exact application-file hashes and review export. The
 [review manifest](../evaluation/passage-boundary-review/manifest.json) is also
 available for local inspection.
 The manifest is the small catalogue of cases and their fingerprints. The viewer

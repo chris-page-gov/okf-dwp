@@ -3,7 +3,7 @@
 [What changed](../CHANGELOG.md) · [Current work log](monday-delivery-work-log.md) · [Retrospective](retrospective.md) · [Portable method](methodology.md)
 
 Start with [remaining work and next priorities](remaining-work.md) for the
-24 September overview. The detailed historical increments below retain their
+25 September overview. The detailed historical increments below retain their
 own versions and measured scope.
 
 This register keeps stable IDs for the owner’s original ideas and later findings.
