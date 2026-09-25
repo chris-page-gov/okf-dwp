@@ -1,0 +1,22 @@
+{
+  "schema": "okf-dwp-passage-boundary-review-protocol.v1",
+  "status": "frozen-inputs-pending-independent-source-review",
+  "baseline_commit": "68c34d6ff9c82b9c7795c44bad39b57424fc4c95",
+  "case_source": "evaluation/manual-structure/large-paragraph-review-2026-09-23/findings.json",
+  "case_denominator": 28,
+  "candidate_source": "domain-profile/passage-boundary-review/amendment-candidate-census.json",
+  "candidate_commit": "6ae66224d83532289aaef2d71e1d73349b1077c8",
+  "checks": [
+    "Bind each original PDF, extracted-page JSON and baseline document by SHA-256 before presenting a passage.",
+    "Render exact UTF-8 source bytes with declared newline joiners and page-offset maps.",
+    "Account for every byte of each selected old passage exactly once in the overlapping proposed units; disclose bytes outside that old passage.",
+    "Preserve incomplete fragments, source roles and structural uncertainty; no automatic boundary adoption follows from a shorter unit.",
+    "Review the nine changed substantive chapters and every removed, added or changed identifier separately.",
+    "Replay all 40 original staff-question occurrences at equal source scope and resource budgets after structural source review."
+  ],
+  "limits": [
+    "The parked census is an unreviewed parser candidate with zero context assemblies.",
+    "The known outlier queue is selected and does not estimate corpus error rates.",
+    "Structural source review does not establish current legal applicability, specialist acceptance or answer quality."
+  ]
+}

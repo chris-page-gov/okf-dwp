@@ -10,6 +10,16 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Add a source-bound passage review queue for the 28 known historical-amendment
+  outliers, exact PDF and extraction identities, before/after spans and a
+  beginner review guide. Preserve the parked proposal and its uncertainties.
+- Separate a narrowed amendment parser into an explicit successor profile.
+  Reject the broad bare-Appendix rule after PDF review found it split a
+  sentence. Preserve the frozen baseline and record corpus, identifier and
+  qualification checks separately from retrieval and specialist acceptance.
+- Retain all 40 candidate evidence packages and an offline equal-budget replay
+  check. Selection changes in 21 cases; expected page coverage and requirements
+  do not improve. All results remain insufficient, with no new model calls.
 - Retain a [user-supplied Claude repository-access transcript](evaluation/ai-client-evals/claude-okf-access.md)
   with separated prompt, commands, outputs and final answer. Record its missing
   model/revision metadata and prior exposure to the development case; preserve

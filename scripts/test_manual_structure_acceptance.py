@@ -366,17 +366,17 @@ def evaluate_source_cases(stage: str, engine: str, output: Path, initial_report:
             verify_retained_bindings(gate.get("implementation_bindings", []))
             verify_retained_bindings(gate.get("consumed_pdf_structure_bindings", []))
             current = {row["path"]: row["sha256"] for row in gate.get("implementation_bindings", [])}
-            required = {"scripts/test_manual_structure_acceptance.py", "scripts/manual_structure.py",
+            required = {"scripts/test_manual_structure_acceptance.py", "scripts/passage_boundary_parser.py",
                         "scripts/pdf_structure_alignment.py", "scripts/build_logical_units.py",
-                        "scripts/manual_references.py", "scripts/manual_auxiliary_structure.py", "scripts/build_pdf_structure.py", "profiles/pdf-structure/v1/document.schema.json"}
+                        "scripts/manual_references.py", "scripts/manual_auxiliary_structure.py", "scripts/manual_navigation_regions.py", "scripts/build_pdf_structure.py", "profiles/pdf-structure/v1/document.schema.json"}
             if not required <= current.keys():
                 raise ValueError("Expanded gate lacks complete current implementation bindings")
     selected = next(row["case_ids"] for row in protocol["stages"] if row["id"] == stage)
     observations, errors, inputs = {}, {}, []
     consumed_structure = {}
-    implementation_paths = ["scripts/test_manual_structure_acceptance.py", "scripts/manual_structure.py",
+    implementation_paths = ["scripts/test_manual_structure_acceptance.py", "scripts/passage_boundary_parser.py",
                             "scripts/pdf_structure_alignment.py", "scripts/build_logical_units.py",
-                            "scripts/manual_references.py", "scripts/manual_auxiliary_structure.py", "scripts/build_pdf_structure.py", "profiles/pdf-structure/v1/document.schema.json"]
+                            "scripts/manual_references.py", "scripts/manual_auxiliary_structure.py", "scripts/manual_navigation_regions.py", "scripts/build_pdf_structure.py", "profiles/pdf-structure/v1/document.schema.json"]
     before_implementation = [{"path": path, "sha256": digest((ROOT / path).read_bytes())} for path in implementation_paths]
     started = time.perf_counter()
     for case in cases:
@@ -388,7 +388,7 @@ def evaluate_source_cases(stage: str, engine: str, output: Path, initial_report:
         document = next(row for row in inventory["documents"] if row["id"] == source["document_id"])
         try:
             if engine == "candidate":
-                from manual_structure import segment_source
+                from passage_boundary_parser import segment_source
                 units, structure = segment_source(source["family"], document, pages)
                 observed_source = structure.get("pdf_structure", {}).get("source")
                 if observed_source:
@@ -587,4 +587,3 @@ if __name__ == "__main__":
         sys.exit(0 if report["passed_cases"] == report["case_denominator"] else 1)
     else:
         unittest.main()
-

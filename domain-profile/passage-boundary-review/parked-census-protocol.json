@@ -1,0 +1,29 @@
+{
+  "schema": "okf-dwp-amendment-structure-protocol.v1",
+  "status": "frozen-before-candidate-source-experiment",
+  "baseline_commit": "556892b1",
+  "source_manifest": {
+    "path": "structured-units/manifest.json",
+    "bytes": 940722,
+    "sha256": "8b620634bf686566d30c0cf4cd12f69535af7ef546a356333e3b0f9011d15741"
+  },
+  "reviewed_expectations": {
+    "path": "evaluation/manual-structure/large-paragraph-review-2026-09-23/findings.json",
+    "bytes": 99895,
+    "sha256": "fa9972aa3029fefd897c2c7cde6abaed38b9fb5cd4f07e28688e1f9731b44ea6"
+  },
+  "scope": "Small source-led historical-amendment repair, generic bare-appendix boundary. No question tuning or source rewrite.",
+  "gates": [
+    "Existing initial four then doubled eight source cases pass with exact implementation bindings.",
+    "Every source byte remains in exactly one span; all75 authored units remain unchanged.",
+    "The28 review candidates have individual before/after spans, roles and remaining uncertainties; size reduction alone is not success.",
+    "No chapter paragraph identity may originate from the confirmed amendment cover summary.",
+    "Substantive rules after contents remain recognised, and contents references never become rule bodies.",
+    "Damaged extraction and missing amendment continuations remain explicit unknowns."
+  ],
+  "controls": "scripts/test_manual_navigation_regions.py",
+  "limitations": [
+    "Known source defects, not a blinded experiment. Protocol follows implementation drafting and synthetic controls but precedes candidate source-case execution.",
+    "No main staff/original context assembly rerun. Source integration remains separate and requires peer review."
+  ]
+}
