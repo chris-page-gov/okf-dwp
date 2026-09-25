@@ -19,8 +19,11 @@ us the error rate of the whole corpus. **Advice for decision making (ADM)** is
 the other DWP manual in the wider corpus; its chapters are included in the
 separate parser impact checks.
 
-Use Explorer's **Evidence workbench → Passage boundaries** view with the
-[review manifest](../evaluation/passage-boundary-review/manifest.json).
+[Open the 28-case passage review](https://chris-page-gov.github.io/okf-explorer/evidence/passages/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F65924955745c4ed1b8ce66252c4748902b5403ba%2Fevaluation%2Fpassage-boundary-review%2Fmanifest.json&case=case-001). This link pins the DWP review
+data to `65924955` and opens Explorer's **Evidence workbench → Passage boundaries** view. The generic route
+requires the companion Explorer implementation to be published. The
+[review manifest](../evaluation/passage-boundary-review/manifest.json) is also
+available for local inspection.
 The manifest is the small catalogue of cases and their fingerprints. The viewer
 loads a case and its extraction only when selected. The original
 [findings](../evaluation/manual-structure/large-paragraph-review-2026-09-23/findings.json)
