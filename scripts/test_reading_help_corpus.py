@@ -1,0 +1,116 @@
+#!/usr/bin/env python3
+"""Frozen direct-source controls for the additive reading-help projection."""
+from __future__ import annotations
+
+from collections import Counter, defaultdict
+import gzip
+import hashlib
+import json
+from pathlib import Path
+import tempfile
+import unittest
+from reading_help_chat import export, import_replies
+
+ROOT = Path(__file__).resolve().parents[1]
+CONTROLS = ROOT / "evaluation/reading-help-rollout/source-controls.json"
+
+
+def digest(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+class CorpusChecks(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.controls = json.loads(CONTROLS.read_text())
+        cls.catalogue = json.loads((ROOT / "reading-help-corpus/manifest.json").read_text())
+        cls.docs = {(row["family"], row["document_id"]): row for row in cls.catalogue["documents"]}
+
+    def check_group(self, name, expected):
+        rows = self.controls[name]
+        self.assertEqual(len(rows), expected)
+        self.assertEqual(Counter(row["family"] for row in rows), {"dmg": expected // 2,
+                                                                  "adm": expected // 2})
+        for row in rows:
+            with self.subTest(name=name, document=row["document_id"]):
+                ref = self.docs[(row["family"], row["document_id"])]
+                index_raw = (ROOT / ref["path"]).read_bytes()
+                self.assertEqual(digest(index_raw), ref["sha256"])
+                index = json.loads(index_raw)
+                self.assertEqual(index["source"]["sha256"], row["source_pdf_sha256"])
+                self.assertEqual(index["extraction"]["sha256"], row["extraction_sha256"])
+                extraction = json.loads((ROOT / index["extraction"]["path"]).read_text())
+                source = extraction["pages"][row["page"] - 1]["text"].encode()
+                literal = source[row["start_utf8"]:row["end_utf8"]]
+                self.assertEqual(literal.decode(), row["literal"])
+                self.assertEqual(digest(literal), row["literal_sha256"])
+                # Inspect the bounded leaves independently of the candidate
+                # detector. The fixed literal must survive the projection.
+                found = False
+                parts = defaultdict(dict)
+                for leaf in index["leaves"]:
+                    packed = (ROOT / leaf["path"]).read_bytes()
+                    self.assertEqual(len(packed), leaf["bytes"])
+                    self.assertEqual(digest(packed), leaf["sha256"])
+                    decoded = gzip.decompress(packed)
+                    self.assertLessEqual(len(decoded), 256 * 1024)
+                    self.assertEqual(digest(decoded), leaf["decoded_sha256"])
+                    for passage in json.loads(decoded)["passages"]:
+                        parts[passage["id"]][passage["segment"]["ordinal"]] = passage["segment"]["text"]
+                        for span in passage["source_spans"]:
+                            if (span["page"] == row["page"] and span["start_utf8"] <= row["start_utf8"]
+                                    and row["end_utf8"] <= span["end_utf8"]):
+                                found = True
+                self.assertTrue(found, "Source control is not covered by a passage")
+
+    def test_initial_twelve_frozen_source_controls(self):
+        self.check_group("initial", 12)
+
+    def test_fresh_twenty_four_heldout_source_controls(self):
+        self.check_group("heldout", 24)
+
+    def test_full_census_and_scoped_ambiguity(self):
+        counts = self.catalogue["counts"]
+        self.assertEqual((counts["documents"], counts["pages"], counts["passages"],
+                          counts["extraction_blocked_pages"]), (513, 19090, 53727, 893))
+        self.assertEqual(counts["detected_occurrences"], counts["occurrences"])
+        self.assertEqual(counts["unsupported_segments"], 0)
+        for family, docid in (("dmg", "dmg-vol10-ch60"), ("adm", "adm-chapter-a1")):
+            ref = self.docs[(family, docid)]
+            index = json.loads((ROOT / ref["path"]).read_text())
+            for leaf in index["leaves"]:
+                for passage in json.loads(gzip.decompress((ROOT / leaf["path"]).read_bytes()))["passages"]:
+                    for card in passage["cards"]:
+                        if card["kind"] == "expansion":
+                            self.assertEqual(card["scope"]["target_document_id"], docid)
+                    for footer in passage["reference_list_segments"]:
+                        self.assertEqual(footer["body_occurrence_ids"], [])
+                        self.assertEqual(footer["status"], "unresolved")
+
+    def test_chat_pack_rejects_forged_current_card(self):
+        with tempfile.TemporaryDirectory(dir="/Users/crpage/tmp") as directory:
+            directory = Path(directory)
+            pack_path, forged_path = directory / "pack.json", directory / "forged.json"
+            export("dmg-vol10-ch60", 1, pack_path)
+            pack = json.loads(pack_path.read_text())
+            self.assertEqual(len(pack["requests"]), 1)
+            passage = pack["passages"][pack["requests"][0]["passage_id"]]
+            self.assertEqual(digest(passage["text"].encode()), passage["text_sha256"])
+            pack["requests"][0]["card"]["status"] = "source_verified"
+            forged_path.write_bytes(json.dumps(pack).encode())
+            request = pack["requests"][0]
+            reply = {"schema": pack["schema"], "request_id": request["request_id"],
+                     "occurrence_id": request["occurrence"]["id"],
+                     "literal_sha256": request["occurrence"]["literal_sha256"],
+                     "status": "unresolved", "proposal": "Review required."}
+            reply_path = directory / "reply.jsonl"
+            reply_path.write_text(json.dumps(reply) + "\n")
+            with self.assertRaisesRegex(ValueError, "Request/card/source passage differs"):
+                import_replies(forged_path, digest(forged_path.read_bytes()), reply_path,
+                               directory / "quarantine.jsonl")
+            with self.assertRaisesRegex(ValueError, "Output must stay"):
+                export("dmg-vol10-ch60", 1, ROOT / "source/forbidden.json")
+
+
+if __name__ == "__main__":
+    unittest.main()

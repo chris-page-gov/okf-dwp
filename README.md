@@ -668,6 +668,8 @@ browser verification and publication state are recorded in [repository status](R
 
 [Open the stage-two semantic graph in Explorer](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7d3c69df0571b8d5206c8edce92963d99979cb5c%2Fbundle%2Fokf-bundle.yamlld&view=graph#term/capital-disregards). The [pilot browser receipt](validation/cpag-timeline-browser.json) binds this graph and the corrected CPAG Timeline to the checked content commit; the [earlier semantic receipt](validation/stage-two-browser.json) records the detailed relationship journeys.
 
+The [additive corpus reading-help catalogue](docs/reading-help-corpus-contract.md) accounts for all adopted DMG/ADM structured passages and exposes bounded, hash-bound source segments and candidate annotations. Run `PYTHONDONTWRITEBYTECODE=1 python3 scripts/build_reading_help_corpus.py --check` to rebuild and verify it from frozen inputs. The 12 initial and 24 held-out direct-source controls run with `uv run --locked python -m unittest discover -s scripts -p test_reading_help_corpus.py`. This remains unreviewed reading assistance, with extraction gaps and uncertain references visible.
+
 The [bounded Chapter 60 reading aid](docs/reading-help-ch60.md) gives occurrence-specific help for paragraphs 60025 and 60033. Its [generated manifest](reading-help-ch60.json) keeps the frozen source, abbreviation expansion, local citation and unreviewed explanation separate. It does not alter the combined Reader programme or establish legal answerability.
 
 ## Demonstration learning paths

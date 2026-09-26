@@ -6,6 +6,8 @@ benefits questions can all be answered. No new model trial was run for this plan
 
 ## Start from what we already have
 
+The deterministic first stage now has a separate [corpus wire contract](reading-help-corpus-contract.md) and [generated catalogue](../reading-help-corpus/manifest.json). It accounts for all adopted structured passages with source-bound candidate annotations and explicit extraction gaps. The 12 initial and 24 held-out cases are frozen direct-source integrity controls, not specialist judgements on explanations. Model comparison, legal review and the 40-question retrieval replay remain separate.
+
 The Decision makers’ guide (DMG) and Advice for decision making (ADM) are two DWP
 staff manuals. The frozen capture already contains **513 PDFs and 19,090 measured
 pages**, including **893 pages without extracted text**. The [source-led manual
