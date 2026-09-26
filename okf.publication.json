@@ -1773,6 +1773,14 @@
         ]
       },
       {
+        "path": "reading-help-ch60.json",
+        "role": "registry-projection",
+        "plane": "semantic",
+        "required": true,
+        "build_command_ids": ["reading-help-build"],
+        "check_command_ids": ["reading-help-check"]
+      },
+      {
         "path": "pdf-structure/bounded-v2/**",
         "role": "validation-receipt",
         "plane": "source",
@@ -1950,7 +1958,12 @@
         "scripts/logical_unit_authoring.py",
         "scripts/build_semantic_coverage.py",
         "domain-profile/manual-guide/**",
+        "domain-profile/reading-help/**",
         "manual-guide/**",
+        "reading-help-ch60.json",
+        "scripts/build_reading_help.py",
+        "scripts/test_reading_help.py",
+        "docs/reading-help-ch60.md",
         "profiles/manual-guide/**",
         "structured-units/**",
         "scripts/build_manual_guide.py",
@@ -2029,6 +2042,8 @@
         "pdf-structure-check",
         "manual-guide-build",
         "manual-guide-check",
+        "reading-help-build",
+        "reading-help-check",
         "structured-unit-build",
         "structured-unit-check",
         "structured-context-build",
@@ -3457,6 +3472,28 @@
         "timeout_minutes": 20
       },
       {
+        "id": "reading-help-build",
+        "kind": "build",
+        "planes": ["source", "semantic", "runtime"],
+        "command": "uv run --locked python scripts/build_reading_help.py",
+        "source": "docs/reading-help-ch60.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "reading-help-check",
+        "kind": "check",
+        "planes": ["source", "semantic", "runtime"],
+        "command": "uv run --locked python scripts/build_reading_help.py --check",
+        "source": "docs/reading-help-ch60.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
+      },
+      {
         "id": "structured-unit-build",
         "kind": "build",
         "planes": [
@@ -4192,6 +4229,7 @@
     "The additive logical-unit build separates page locations from bounded retrieval units, retains source byte accounting and treats automatic boundaries as uncertain. No service default or specialist acceptance is implied by generating these projections.",
     "The source-led pipeline is additive. Its retained source-declared structures, scoped guide conventions, unit proposals and compact discovery cards do not imply complete semantic modelling, specialist approval, new source capture or deployment of a service.",
     "The source-led manual guide is generated into the static learning site from committed Markdown by the existing learning-site renderer. Publication and browser acceptance remain exact-commit checks; generated HTML is never authored directly.",
+    "The root-level Chapter 60 reading-help manifest is a bounded generated candidate for two passages. Offline source-span checks do not establish public Explorer delivery, specialist review, legal applicability or whole-chapter highlighting.",
     "The separate structured-context/location-migration.json ledger distinguishes exact source-location overlap, restored navigation and explicitly inferred associations. It retains all 40 original staff requirements and 203 open obligations without asserting semantic equivalence or complete answerability.",
     "CI keeps every legacy replay step in a separate job and runs the source-led checks independently. The existing protected validate check runs after both jobs and fails unless both succeeded; Pages still requires the whole exact-commit workflow to succeed.",
     "The original custody acceptance migration has its own source-bound ledger and evaluation, separate from the 40 staff occurrences. A source-read profile, retained historical scope or complete declared passage does not establish all legal qualifications or a correct AI answer."

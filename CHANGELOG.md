@@ -10,6 +10,8 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Add a [bounded Chapter 60 reading aid](docs/reading-help-ch60.md) for paragraphs 60025 and 60033. Its exact occurrence spans, source-backed expansions, local references and unresolved printed defects are checked deterministically; original model-authored proposals remain unchanged. Broader highlighting and specialist review remain open.
+
 - Complete a [bounded LiteParse 2.14.6 experiment](docs/liteparse-pilot.md):
   freeze 12 initial and 24 conditional source windows before outcomes, retain
   the first 12 paired extractions and their failed source-quality gate, and
