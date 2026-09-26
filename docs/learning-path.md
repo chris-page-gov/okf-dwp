@@ -7,7 +7,9 @@
 For a practical introduction to source preparation, follow
 [Review how a passage was built](passage-boundary-review.md). It explains the
 28-case inspection queue, source fingerprints and the difference between a
-structural correction and a complete benefits answer.
+structural correction and a complete benefits answer. The
+[LiteParse comparison](liteparse-pilot.md) explains how we test whether another
+PDF reader preserves text and table structure before building passages.
 
 OKF-DWP is an independent experiment in making published benefits guidance easier
 to find, connect and inspect. It is not a DWP service, an entitlement decision or

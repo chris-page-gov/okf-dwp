@@ -515,7 +515,9 @@
       "uv run --locked python -m unittest discover -s scripts -p 'test_capital_pilot*.py'",
       "node --test scripts/test_capital_pilot_metrics.mjs",
       "node scripts/evaluate_capital_pilot.mjs --explorer-root .ci/okf-explorer-structured --attempt attempt-03 --check",
-      "uv run --locked python scripts/build_evidence_connect.py --check"
+      "uv run --locked python scripts/build_evidence_connect.py --check",
+      "uv run --locked python scripts/run_liteparse_pilot.py --check --output evaluation/liteparse-pilot/stage-1-001",
+      "uv run --locked python -m unittest discover -s scripts -p test_liteparse_pilot.py"
     ]
   },
   "reader": {

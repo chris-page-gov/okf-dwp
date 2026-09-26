@@ -463,6 +463,8 @@ jobs:
         run: |
           test "$(git -C .ci/okf-explorer-workbench rev-parse HEAD)" = e6084059f9b09633cfb8385be20099b952915e82
           uv sync --locked
+          uv run --locked python scripts/run_liteparse_pilot.py --check --output evaluation/liteparse-pilot/stage-1-001
+          uv run --locked python -m unittest discover -s scripts -p test_liteparse_pilot.py
           uv run --locked python scripts/build_evidence_connect.py --check
           node scripts/test_evidence_connect_descriptor.mjs --explorer-root .ci/okf-explorer-workbench
           node --test scripts/test_evidence_workbench_paths.mjs

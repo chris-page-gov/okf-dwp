@@ -1,6 +1,6 @@
 {
   "schema": "okf-repository-publication-contract.v1",
-  "modified": "2026-09-25",
+  "modified": "2026-09-26",
   "locale": "en-GB",
   "time_zone": "Europe/London",
   "repository": {
@@ -1604,6 +1604,10 @@
         "path": "domain-profile/evidence-connect/**",
         "role": "profile",
         "source_family_id": "source-led-unit-proposals"
+      },
+      {
+        "path": "tools/liteparse-pilot/**",
+        "role": "generator"
       }
     ],
     "generated": [
@@ -3943,6 +3947,32 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 10
+      },
+      {
+        "id": "liteparse-retained-check",
+        "kind": "check",
+        "planes": [
+          "source"
+        ],
+        "command": "uv run --locked python scripts/run_liteparse_pilot.py --check --output evaluation/liteparse-pilot/stage-1-001",
+        "source": "docs/liteparse-pilot.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "liteparse-pilot-controls",
+        "kind": "test",
+        "planes": [
+          "source"
+        ],
+        "command": "uv run --locked python -m unittest discover -s scripts -p test_liteparse_pilot.py",
+        "source": "docs/liteparse-pilot.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
       }
     ]
   },

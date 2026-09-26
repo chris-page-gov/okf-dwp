@@ -10,6 +10,14 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Complete a [bounded LiteParse 2.14.6 experiment](docs/liteparse-pilot.md):
+  freeze 12 initial and 24 conditional source windows before outcomes, retain
+  the first 12 paired extractions and their failed source-quality gate, and
+  verify results offline in CI. Numeric table rows and coordinates are useful,
+  but complete table associations and exact-anchor preservation do not pass.
+  Stop expansion; preserve all corpus defaults and distinguish punctuation
+  differences from missing guidance. No answer-model comparisons were run.
+
 - Retain a [user-supplied Claude repository-access transcript](evaluation/ai-client-evals/claude-okf-access.md)
   with separated prompt, commands, outputs and final answer. Record its missing
   model/revision metadata and prior exposure to the development case; preserve
