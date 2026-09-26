@@ -55,7 +55,8 @@
       "domain-profile/reading-help-law/seeds.json",
       "source/reading-help-law-2026-09-26/manifest.json",
       "source/reading-help-law-2026-09-26-v2/manifest.json",
-      "domain-profile/reading-help-law/reference-links.json"
+      "domain-profile/reading-help-law/reference-links.json",
+      "domain-profile/reading-help-law/citation-admission.json"
     ],
     "outputs": [
       {
@@ -427,6 +428,24 @@
         "path": "reading-help-ch60-references.json",
         "role": "explorer-runtime",
         "generated": true
+      },
+      {
+        "path": "domain-profile/reading-help-law/assembly-index.json",
+        "role": "explorer-runtime",
+        "generated": true,
+        "required": true
+      },
+      {
+        "path": "domain-profile/reading-help-law/admission.json",
+        "role": "semantic-validation",
+        "generated": true,
+        "required": true
+      },
+      {
+        "path": "reading-help-ch60-law.json",
+        "role": "explorer-runtime",
+        "generated": true,
+        "required": true
       }
     ],
     "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
@@ -501,7 +520,8 @@
       "uv run --locked python scripts/build_capital_pilot.py",
       "uv run --locked python scripts/build_evidence_connect.py",
       "uv run --locked python scripts/build_reading_help_law.py",
-      "uv run --locked python scripts/build_reading_help_references.py"
+      "uv run --locked python scripts/build_reading_help_references.py",
+      "uv run --locked python scripts/build_reading_help_law_context.py"
     ],
     "check": [
       "uv run --locked python scripts/check_semantic_contract.py",
@@ -554,7 +574,8 @@
       "uv run --locked python scripts/build_reading_help_law.py --check",
       "uv run --locked python -m unittest discover -s scripts -p test_reading_help_law.py",
       "uv run --locked python scripts/build_reading_help_references.py --check",
-      "uv run --locked python -m unittest discover -s scripts -p test_reading_help_references.py"
+      "uv run --locked python -m unittest discover -s scripts -p test_reading_help_references.py",
+      "uv run --locked python scripts/build_reading_help_law_context.py --check"
     ]
   },
   "reader": {

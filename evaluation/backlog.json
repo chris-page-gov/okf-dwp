@@ -1,6 +1,6 @@
 {
   "schema": "okf-dwp-backlog.v1",
-  "updated_on": "2026-09-26",
+  "updated_on": "2026-09-27",
   "status_meanings": {
     "recorded_complete": "Named bounded result has retained evidence, not perpetual assurance.",
     "in_progress": "Work is being prepared or implemented; publication/acceptance is not implied.",
@@ -343,7 +343,10 @@
         "docs/uc-disabled-child-supersession-follow-up.md",
         "docs/reading-help-legislation-bridge.md",
         "domain-profile/reading-help-law/bridge.json",
-        "docs/reading-help-rollout-work-log.md"
+        "docs/reading-help-rollout-work-log.md",
+        "domain-profile/reading-help-law/admission.json",
+        "evaluation/reading-help-rollout/law-context-probe.json",
+        "reading-help-ch60-law.json"
       ],
       "acceptance_checks": [
         "Verify work/provision/version identities, effects, commencement and territory; record unresolved citations; catalogue links are not legal completeness."
@@ -2069,7 +2072,8 @@
         "validation/reading-help/2026-09-26-v1/reading-help-public-browser-receipt.json",
         "validation/reading-help/2026-09-26-v1/reading-help-ci-deployment-receipt.json",
         "validation/reading-help/2026-09-26-v1/provenance.json",
-        "docs/reading-help-rollout-work-log.md"
+        "docs/reading-help-rollout-work-log.md",
+        "evaluation/reading-help-rollout/replays/reading-help-20260927-01/report.json"
       ],
       "acceptance_checks": [
         "The bounded paragraphs 60025 and 60033 display exact source-bound occurrences across their continuation pages, including all 20 body citation markers and unresolved printed defects.",
@@ -2109,9 +2113,10 @@
           "kind": "research",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Implement the authorised deterministic 513-document catalogue and bounded consumer. Freeze 12 source-backed cases; only after passing, test 24 fresh cases. Keep the 893 empty pages and ambiguous meanings explicit. No new content-processing model calls.",
+          "next_action": "Implement the authorised deterministic 513-document catalogue and bounded consumer. Freeze 12 source-backed cases; only after passing, test 24 fresh cases. Keep the 893 empty pages and ambiguous meanings explicit. No new content-processing model calls. The 40-question cold/warm replay is unchanged at the exact package level; all 40 remain insufficient. This is non-regression, not improved answerability.",
           "evidence": [
-            "docs/reading-help-rollout-work-log.md"
+            "docs/reading-help-rollout-work-log.md",
+            "evaluation/reading-help-rollout/replays/reading-help-20260927-01/report.json"
           ]
         },
         {

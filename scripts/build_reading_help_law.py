@@ -65,7 +65,7 @@ def build(root=ROOT):
             'text':work['abbreviation']+' — '+work['title'],'assertion_status':'normalized',
             'authority':{'class':'derived','label':'Source-backed abbreviation and work identity; unreviewed applicability','source':work['dated_official_url']},
             'scope':'Work identity and citation navigation only; full title comes from the frozen DWP abbreviation table.',
-            'provenance':provenance,'review_status':'unreviewed','access':'public'})
+            'provenance':provenance,'rights':OGL,'review_status':'unreviewed','access':'public'})
     projections=[]
     for target in seeds['targets']:
         path=PROJECTED+'/provisions/'+target.replace('/','--')+'.json';raw=read_safe(root,path);d=json.loads(raw)
@@ -88,7 +88,7 @@ def build(root=ROOT):
                 'source_date':date,'source_date_kind':'requested point-in-time version; not applicability'},
                 {'url':REPO+path,'source_sha256':sha(raw),'locator':'Retained tree at source XML target ordinal '+str(unit['source_xml_ordinal'])}]
             work='/'.join(target.split('/')[:3]);label=next(w['title'] for w in seeds['works'] if w['target']==work)+' — '+target.split('/',3)[-1]+' ('+unit['variant']+')'
-            records.append({'id':ident,'route':'reading-help-law/body/'+target+'/'+unit['variant'],'label':label,'kind':'evidence','text':text,
+            records.append({'id':ident,'route':'reading-help-law/body/'+target+'/'+unit['variant'].replace('+','-and-'),'label':label,'kind':'evidence','text':text,
                 'assertion_status':'normalized','authority':{'class':'derived','label':'Machine extraction of official source; applicability unreviewed','source':unit['version_url']},
                 'scope':'Complete observed variant; not a complete legal dependency set. '+unit['applicability'],
                 'provenance':provenance,'rights':OGL,'review_status':'unreviewed','access':'public'})

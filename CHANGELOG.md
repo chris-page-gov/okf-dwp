@@ -12,6 +12,9 @@ Implementation ownership and handovers belong in the
 
 ### Reading-help legislation bridge
 
+- Add a separately selected statutory context and 16 source-checked dated citation mappings. Preserve unresolved references, all earlier requirements and the failed fixed-budget natural-language selection probe.
+- Retain an 80-invocation offline replay of all 40 staff occurrences: cold and warm packages match the frozen baseline exactly, with latency and cache measurements. This is non-regression, not an answer-quality improvement.
+
 - Add a separate v1-compatible Chapter 60 manifest with 20 exact body/reference-row occurrence pairs. Keep the earlier manifest and unresolved citation meanings unchanged.
 
 - Add four source-span-bound work-title mappings and a separately validated statutory context overlay. Reuse the existing 20 statutory units and 43 navigation relationships.

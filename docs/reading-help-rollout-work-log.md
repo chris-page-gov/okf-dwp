@@ -35,3 +35,14 @@ Both agent launches initially failed because of model capacity. One retry succee
 8. Verify exact merged commits, public Pages, workbench and service separately. Tag only a passing paired consumer/data release, retaining the earlier demo fallback.
 
 The term **full processing coverage** means that every captured document has a recorded outcome. It does not mean every passage has an explanation or every question has a legally complete answer. Completed stages must link to retained checks and receipts before their backlog status changes.
+
+## 27 September 2026: retained checks and limitations
+
+- Explorer Reader repair is under review in [PR 158](https://github.com/chris-page-gov/okf-explorer/pull/158). CI initially found the new browser suite missing from the impact registry; the correction is separately committed.
+- All 40 staff occurrences replayed with the frozen source, engine and 512 KiB/64-record/128-relationship/depth-six budget in both cold and warm runs. Exact packages were unchanged. The [report](../evaluation/reading-help-rollout/replays/reading-help-20260927-01/report.json) measures local latency, fetched bytes and cache reuse. This is non-regression, not improved retrieval or a legal-answer benchmark.
+- The optional Chapter 60 statutory context validates against the actual Explorer context schema. Its first broader natural-language probe failed selection under its fixed budget; see the [bridge report](reading-help-legislation-bridge.md#optional-admission-and-measured-limits). The failure remains visible and no default service data was replaced.
+- The dirty legislation migration was preserved as a 2,532-file, hash-inventoried archive on EXTSSD before selectively importing 30 authored/producer files into an isolated branch based on current remote main. Frozen generated source evidence and v0.3.0 remain preserved.
+
+Publication and paired browser gates remain outstanding until their exact receipts are recorded.
+
+The 28-case passage review was rechecked from its frozen inputs on 27 September: 28 cases, 55 files, manifest SHA-256 `488df312d1672270e9d458ad0944a30e07d2fc56062896ad3d9e8ca2ad0a21f2`. Its recorded nine-chapter review is retained. Case 014 remains unresolved; this check does not turn that finding into acceptance.
