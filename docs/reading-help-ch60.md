@@ -14,7 +14,7 @@ The manifest binds every displayed occurrence to the frozen document SHA-256, PD
 
 ## Release verification
 
-The reader URL pins the DWP manifest, but source integrity alone does not prove that a compatible Explorer version is publicly delivered. Check the [release notes for `demo-2026-09-30-reading-help-v1`](https://github.com/chris-page-gov/okf-dwp/releases/tag/demo-2026-09-30-reading-help-v1) for the paired Explorer revision and dated browser receipt. Until that tag and receipt are published, treat the URL as a candidate. A successful browser check establishes this bounded display at those versions; it does not establish specialist acceptance or legal answerability.
+The reader URL pins the DWP manifest, but source integrity alone does not prove that a compatible Explorer version is publicly delivered. Check the [release notes for `demo-2026-09-30-reading-help-v1`](https://github.com/chris-page-gov/okf-dwp/releases/tag/demo-2026-09-30-reading-help-v1) for the paired Explorer revision and dated browser receipt. The paired prerelease and receipts were published on 26 September 2026; the tag preserves the demonstrated versions. A successful browser check establishes this bounded display at those versions; it does not establish specialist acceptance or legal answerability.
 
 ## What the review changed
 
@@ -31,3 +31,5 @@ uv run --locked python -m unittest discover -s scripts -p test_reading_help.py
 ```
 
 The tests reject changed hashes, duplicate passage identity and wrong-context occurrence anchors, including CA, AP, “living with” and “prescribed”. Before extending beyond this pilot, freeze a held-out passage set, test occurrence and citation selection independently, inspect the excluded corrections with a qualified reviewer, and retain a public browser check for each released manifest and Explorer pair. Broader passage structure and all 40 staff-question evidence obligations remain open work.
+
+The [full-manual rollout proposal](reading-help-rollout.md) sets out a cached, deterministic-first route to broader coverage, with bounded model experiments and separate acceptance gates.

@@ -622,6 +622,8 @@ Source acquisition and bounded research attempts are complete for the declared f
 
 [Open the CPAG reference in Explorer](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F7d3c69df0571b8d5206c8edce92963d99979cb5c%2Fbundle%2Fokf-bundle.yamlld&view=timeline&q=CPAG#resource/cpag-welfare-benefits-handbook).
 
+The [beginner research guide](docs/research-index.md) and [file-level index](research/README.md) separate the public CPAG contents navigation, unvalidated UC evaluation starter, client-access conversations and historical calculation design prompt from the authoritative source and published bundle.
+
 The [CPAG handbook access review](docs/cpag-handbook.md) explains the new
 searchable external reference and the permission required before handbook
 content could be processed or redistributed. Search **CPAG** in the updated

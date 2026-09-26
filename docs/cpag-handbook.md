@@ -15,12 +15,13 @@ These are navigation relationships, not evidence of any particular benefit rule.
 
 CPAG's [catalogue](https://cpag.org.uk/welfare-rights/online-handbooks) marks this
 handbook as a subscriber resource. The catalogue's current link names 2026/27;
-the subscriber edition and contents were not inspected. Its public
+the subscriber edition was not inspected. A separate [public contents navigation capture](../research/cpag-contents-2026-27/README.md) records 90 visible labels and links, with no chapter body. Its public
 [housing-costs index](https://cpag.org.uk/welfare-rights/key-topics/housing-costs)
 links a Pension Credit chapter, establishing relevance without acquiring it.
 
-**No handbook text, pages, tables or rule interpretations are included.**
-The DWP source inventory remains 36 PDFs and 1,524 pages. CPAG is counted as
+**No handbook chapter body, tables or rule interpretations are included.** The public contents navigation is retained separately as observed metadata, outside the bundle.
+The original Pension Credit pilot inventory remains 36 PDFs and 1,524 pages;
+the later full DMG and ADM acquisitions have their own inventories. CPAG is counted as
 an external reference, never as an acquired source document or searchable
 handbook corpus. The CLI continues to search only the captured DWP pages.
 

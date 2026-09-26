@@ -1,0 +1,60 @@
+{
+  "status": "proposed, unreviewed",
+  "ratings": [
+    "pass",
+    "fail",
+    "unknown",
+    "not_applicable"
+  ],
+  "aggregate_policy": "report each criterion and all critical errors separately; no single average establishes correctness",
+  "criteria": [
+    {
+      "id": "qualification",
+      "criterion": "Uses the qualifying care component and distinguishes it from mobility or other benefit rates."
+    },
+    {
+      "id": "event_date",
+      "criterion": "Distinguishes DLA entitlement date, award-decision date, notification date and UC decision date."
+    },
+    {
+      "id": "applicable_rule",
+      "criterion": "Finds the operative relevant-benefit exception rather than applying ordinary late-change treatment indiscriminately."
+    },
+    {
+      "id": "assessment_period",
+      "criterion": "Selects the assessment period containing the qualifying event under the stated assumptions."
+    },
+    {
+      "id": "missing_facts",
+      "criterion": "Does not invent assessment-period boundaries or other absent claimant facts."
+    },
+    {
+      "id": "award_scope",
+      "criterion": "Does not imply UC payment before entitlement or without the required child responsibility."
+    },
+    {
+      "id": "citation_support",
+      "criterion": "Each material legal claim is supported by a read source of the appropriate scope and version."
+    },
+    {
+      "id": "evidence_faithfulness",
+      "criterion": "Does not silently substitute outside knowledge for missing package evidence."
+    },
+    {
+      "id": "temporal_validity",
+      "criterion": "Separates historical applicability from source capture, current rates and current manual publication."
+    },
+    {
+      "id": "delivery_integrity",
+      "criterion": "Preserves identities, continuations and explicit truncation or inspection limitations."
+    }
+  ],
+  "critical_error_examples": [
+    "notification AP substituted without applying the relevant-benefit rule",
+    "generic late-reporting cap treated as decisive for the special route",
+    "invented exact AP dates",
+    "highest mobility rate treated as highest care rate",
+    "payment implied before UC entitlement",
+    "controlling citation absent or contradicted by read evidence"
+  ]
+}
