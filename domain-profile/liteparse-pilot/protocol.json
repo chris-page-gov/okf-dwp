@@ -1,0 +1,55 @@
+{
+  "schema": "okf-dwp-liteparse-source-protocol.v1",
+  "status": "fixed-before-liteparse-outcomes",
+  "candidate": {
+    "name": "LiteParse",
+    "version": "2.14.6",
+    "use": "deterministic PDF extraction only",
+    "authoring_model_provenance": "GPT-6 Sol, medium reasoning, selected source-bound fixtures before parser outcomes; Codex root visually checked three PDF pages using model-assisted inspection; neither is independent human review"
+  },
+  "source_authority": "Frozen GOV.UK PDF bytes and their existing unreviewed machine-extracted page JSON. Page JSON anchors are test references; PDF layout review is needed before claiming the structure is correct.",
+  "comparison": {
+    "baseline": "fresh pdftotext -layout -enc UTF-8 extraction over the identical contiguous PDF-page windows",
+    "candidate": "LiteParse 2.14.6 over identical windows",
+    "unit": "one selected source PDF window, with original one-based PDF page numbers retained",
+    "measurement": ["wall-clock elapsed time", "extraction success and boundedness", "source-anchor retention", "declared table blocks and roles"],
+    "normalisation": "For ordinary anchor checks only, collapse runs of Unicode whitespace to one ASCII space. The declared case-014 exception removes all Unicode whitespace to compare the PDF-verified clean phrase with Poppler's spaced-letter extraction. Preserve letters, digits, punctuation and order; do not accept semantic paraphrases or infer spelling accuracy from this exception.",
+    "cross_page_limit": "Contiguous PDF pages establish source order, not a logical-unit join. Record joins and body/navigation classification as unassessed unless a tested assembly adapter implements them."
+  },
+  "stages": [
+    {
+      "stage": 1,
+      "case_count": 12,
+      "advance_if": [
+        "All bound source paths, PDF and page hashes, page indices and required text are verified.",
+        "All candidate outputs are readable and within configured resource bounds.",
+        "Every declared critical anchor is retained in its source window after whitespace normalisation, with declared order preserved where applicable.",
+        "No regression in the two declared cross-page source controls; do not infer a logical-unit join from page order alone.",
+        "At least one declared typed table has fully correct row and column association under PDF layout review, with no table degradation elsewhere."
+      ],
+      "on_fail": "Record the failed gate and stop; make no stage 2 parser calls."
+    },
+    {
+      "stage": 2,
+      "case_count": 24,
+      "advance_if": [
+        "All stage 1 gates continue to hold on the full 36-case set.",
+        "No critical-anchor loss. Record body/navigation confusion and semantic joins as unassessed unless a separately tested unit-assembly adapter evaluates them against the source.",
+        "At least one reproducible structural improvement remains after checking the frozen PDF layout."
+      ],
+      "on_fail": "Record the failed gate and stop; make no conditional 40-case replay."
+    }
+  ],
+  "conditional_replay": {
+    "only_if_stage_2_gate_passes": true,
+    "known_outlier_count": 28,
+    "substantive_chapter_negative_control_count": 9,
+    "additional_same_budget_count": 40,
+    "resource_limits": {"max_input_bytes": 524288, "max_nodes": 64, "max_edges": 128, "max_depth": 6},
+    "additional_prerequisites": "Use a separately tested unit-assembly adapter and frozen variant inputs; raw PDF blocks alone cannot establish body/navigation roles or semantic cross-page joins.",
+    "status": "not-admitted-until-source-gate",
+    "interpretation": "Known outliers and previously reviewed controls are regression cases. Fresh source-selected windows are new to this parser, not independently human-reviewed and not a blinded prevalence estimate."
+  },
+  "prohibitions": ["No LLM answer or defect-detector calls", "No source mutations or dependency resolution during validation or execution; separate pinned setup was authorised", "No legal applicability, answer-quality or specialist-acceptance claims"],
+  "review_status": "source-derived-protocol-pending-independent-pdf-and-specialist-review"
+}

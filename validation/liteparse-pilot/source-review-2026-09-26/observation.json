@@ -1,0 +1,57 @@
+{
+  "schema": "okf-dwp-liteparse-pdf-observation.v1",
+  "status": "model-assisted-source-inspection-before-candidate-outcomes",
+  "reviewer": "Codex root; separate from the Sol fixture author",
+  "independent_human_review": false,
+  "scope": "Three PDF pages checked before any LiteParse DWP fixture execution. Table rows and readable case-014 text informed predeclared expectations. No legal applicability assessment.",
+  "findings": [
+    "Amendment page 2 has separate Remove and Insert columns with paired Chapter 2 references.",
+    "Chapter 84 page 130 contains a three-column capital-band table; the first three numeric rows are fixed as expected cell associations.",
+    "Case 014 PDF page 28 is visually readable; spacing corruption occurs in the frozen Poppler text. A whitespace-insensitive literal check preserves content while allowing spacing differences."
+  ],
+  "render_warning": "Fontconfig reported no writable cache directories; all three images rendered and were visually inspected.",
+  "pages": [
+    {
+      "case_id": "s1-03",
+      "source_pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol1-amendment50.pdf",
+      "source_pdf_sha256": "68506ff29d9616f3415192fec4836c91ab0f23137627f535d5900287f6121d03",
+      "pdf_page": 2,
+      "render_path": "validation/liteparse-pilot/source-review-2026-09-26/amendment-table.png",
+      "render_sha256": "38908fbbad7612bba123f3a34eeaa45c21a02df9031a549abea8b30843b87a66",
+      "render_settings": {
+        "tool": "pdftoppm",
+        "format": "png",
+        "scale_to": 1200,
+        "singlefile": true
+      }
+    },
+    {
+      "case_id": "s1-05",
+      "source_pdf_path": "source/pdf/dmg-vol14-ch84.pdf",
+      "source_pdf_sha256": "f5c610b29bdb81e11736409b7f33ccf7917a4d8945f2821802801073e0d753ee",
+      "pdf_page": 130,
+      "render_path": "validation/liteparse-pilot/source-review-2026-09-26/capital-table.png",
+      "render_sha256": "44a14b094d24221d66451c93443fd59f783d99d51d8185949d3d784917037a1d",
+      "render_settings": {
+        "tool": "pdftoppm",
+        "format": "png",
+        "scale_to": 1200,
+        "singlefile": true
+      }
+    },
+    {
+      "case_id": "s1-04",
+      "source_pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol2-amendment40.pdf",
+      "source_pdf_sha256": "0d8234f4787b83827a6d1e0cc73507ec2df224aea166bd5ce170d7fa17ace2c8",
+      "pdf_page": 28,
+      "render_path": "validation/liteparse-pilot/source-review-2026-09-26/case014.png",
+      "render_sha256": "6f78609bebd698a3200bfde5531e3dfdf8327bd3b9b1474deffc19db450af2f9",
+      "render_settings": {
+        "tool": "pdftoppm",
+        "format": "png",
+        "scale_to": 1200,
+        "singlefile": true
+      }
+    }
+  ]
+}
