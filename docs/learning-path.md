@@ -42,7 +42,9 @@ publication. The [0.6.0 public verification report](../validation/compact-delive
 
 The earlier [0.5.0 browser observations](../validation/compact-delivery/v0.5.0/README.md) retain their own sources and results, including Firefox hosting-cookie warnings. The [full public Reader check](household-reader-public-verification.md) separately verified conceptual filters, a statutory relationship graph and source/audit dates in Chrome. No new 0.6.0 public browser or Voice acceptance is implied.
 
-### How law, guidance and people fit together
+#For shortened legal citations, see the [legislation bridge](reading-help-legislation-bridge.md). It explains work titles, dated provisions and geographical versions, and why a source link does not prove applicability.
+
+## How law, guidance and people fit together
 
 This map shows where different kinds of material come from and who uses them.
 An arrow means “may inform” or “is used by”; it does **not** mean that one

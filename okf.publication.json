@@ -1480,6 +1480,76 @@
         "browser",
         "release"
       ]
+    },
+    {
+      "id": "reading-help-statutory-bridge",
+      "label": "Bounded source-backed citation bridge and geographical provision variants",
+      "kind": "structured-data-folder",
+      "paths": [
+        "source/reading-help-law-2026-09-26/**",
+        "source/reading-help-law-2026-09-26-v2/**",
+        "domain-profile/reading-help-law/**"
+      ],
+      "origin": "mixed",
+      "authority": "mixed",
+      "snapshot_policy": "content-addressed",
+      "rights": {
+        "status": "mixed",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/source/reading-help-law-2026-09-26/rights/1.json",
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/source/reading-help-law-2026-09-26/rights/2.json"
+        ],
+        "limitations": [
+          "MIT-original-structure; OGL-source-passages-with-exceptions",
+          "Licence and source-level exceptions remain as documented in the linked evidence; this classification is not a new rights clearance."
+        ]
+      },
+      "limitations": [
+        "Three captured provisions yield four observed complete variants. The offline successor manifest binds the preserved acquisition manifest and failed first projection.",
+        "Navigation and extraction do not establish legal applicability, dependency closure or specialist acceptance.",
+        "Exact successful raw responses are retained in a local audit cache; published XML-tree projections are lossy and explicitly labelled."
+      ],
+      "formats": [
+        "application/ld+yaml",
+        "application/json",
+        "application/gzip",
+        "text/markdown"
+      ],
+      "inventory": {
+        "method": "content-addressed-manifest",
+        "manifest_path": "source/reading-help-law-2026-09-26-v2/manifest.json",
+        "identity": [
+          "relative-path",
+          "bytes",
+          "sha256",
+          "source-identifier",
+          "source-version"
+        ]
+      },
+      "extraction": {
+        "mode": "deterministic-local",
+        "network_access": "prohibited",
+        "command_ids": [
+          "reading-help-law-build"
+        ],
+        "limitations": [
+          "Deterministic projection of frozen local sources and public evaluation data; no network, source refresh, model inference or personal case data."
+        ]
+      },
+      "sensitivity": {
+        "status": "not-assessed",
+        "assessment": "Only public guidance, catalogue metadata and project-authored research are in this declared family. No claimant case files are acquired. An exhaustive personal-data assessment of all public source content is not claimed.",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md"
+        ]
+      },
+      "invalidates": [
+        "semantic",
+        "runtime",
+        "documentation",
+        "browser",
+        "release"
+      ]
     }
   ],
   "boundaries": {
@@ -1777,8 +1847,12 @@
         "role": "registry-projection",
         "plane": "semantic",
         "required": true,
-        "build_command_ids": ["reading-help-build"],
-        "check_command_ids": ["reading-help-check"]
+        "build_command_ids": [
+          "reading-help-build"
+        ],
+        "check_command_ids": [
+          "reading-help-check"
+        ]
       },
       {
         "path": "pdf-structure/bounded-v2/**",
@@ -1910,7 +1984,12 @@
         "pdf-structure/**",
         "profiles/pdf-structure/**",
         "scripts/build_pdf_structure.py",
-        "scripts/test_pdf_structure.py"
+        "scripts/test_pdf_structure.py",
+        "domain-profile/reading-help-law/**",
+        "scripts/acquire_reading_help_law.py",
+        "scripts/project_reading_help_law.py",
+        "scripts/build_reading_help_law.py",
+        "scripts/test_reading_help_law.py"
       ],
       "command_ids": [
         "validate",
@@ -1920,7 +1999,9 @@
         "source-refresh-build",
         "source-refresh-check",
         "pdf-structure-check",
-        "pdf-structure-controls"
+        "pdf-structure-controls",
+        "reading-help-law-check",
+        "reading-help-law-controls"
       ]
     },
     {
@@ -2006,7 +2087,12 @@
         "scripts/compare_evidence_connect.mjs",
         "scripts/probe_evidence_connect.mjs",
         "scripts/test_evidence_connect.py",
-        "evaluation/evidence-workbench/**"
+        "evaluation/evidence-workbench/**",
+        "domain-profile/reading-help-law/**",
+        "scripts/acquire_reading_help_law.py",
+        "scripts/project_reading_help_law.py",
+        "scripts/build_reading_help_law.py",
+        "scripts/test_reading_help_law.py"
       ],
       "command_ids": [
         "build-check",
@@ -2065,7 +2151,9 @@
         "capital-pilot-metrics",
         "capital-pilot-replay",
         "evidence-connect-build",
-        "evidence-connect-check"
+        "evidence-connect-check",
+        "reading-help-law-check",
+        "reading-help-law-controls"
       ]
     },
     {
@@ -2194,7 +2282,12 @@
         "scripts/compare_passage_boundary_replay.py",
         "scripts/retain_passage_boundary_replay.py",
         "scripts/evaluate_passage_boundary_candidate.py",
-        "scripts/build_substantive_scope_review.py"
+        "scripts/build_substantive_scope_review.py",
+        "domain-profile/reading-help-law/**",
+        "scripts/acquire_reading_help_law.py",
+        "scripts/project_reading_help_law.py",
+        "scripts/build_reading_help_law.py",
+        "scripts/test_reading_help_law.py"
       ],
       "command_ids": [
         "context-discovery-build-check",
@@ -2239,7 +2332,9 @@
         "passage-review-controls",
         "passage-candidate-build",
         "passage-candidate-check",
-        "passage-replay-check"
+        "passage-replay-check",
+        "reading-help-law-check",
+        "reading-help-law-controls"
       ]
     },
     {
@@ -3474,7 +3569,11 @@
       {
         "id": "reading-help-build",
         "kind": "build",
-        "planes": ["source", "semantic", "runtime"],
+        "planes": [
+          "source",
+          "semantic",
+          "runtime"
+        ],
         "command": "uv run --locked python scripts/build_reading_help.py",
         "source": "docs/reading-help-ch60.md",
         "review_status": "unreviewed",
@@ -3485,7 +3584,11 @@
       {
         "id": "reading-help-check",
         "kind": "check",
-        "planes": ["source", "semantic", "runtime"],
+        "planes": [
+          "source",
+          "semantic",
+          "runtime"
+        ],
         "command": "uv run --locked python scripts/build_reading_help.py --check",
         "source": "docs/reading-help-ch60.md",
         "review_status": "unreviewed",
@@ -4010,6 +4113,51 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 5
+      },
+      {
+        "id": "reading-help-law-build",
+        "kind": "build",
+        "planes": [
+          "source",
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_reading_help_law.py",
+        "source": "docs/reading-help-legislation-bridge.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "reading-help-law-check",
+        "kind": "check",
+        "planes": [
+          "source",
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_reading_help_law.py --check",
+        "source": "docs/reading-help-legislation-bridge.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "reading-help-law-controls",
+        "kind": "test",
+        "planes": [
+          "source",
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python -m unittest discover -s scripts -p test_reading_help_law.py",
+        "source": "docs/reading-help-legislation-bridge.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
       }
     ]
   },

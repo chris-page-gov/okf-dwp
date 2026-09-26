@@ -171,6 +171,8 @@ jobs:
           uv run --locked python scripts/build_staff_needs.py --check
           uv run --locked python scripts/build_legal_reconciliation.py --check
           uv run --locked python scripts/build_legal_body_evidence.py --check
+          uv run --locked python scripts/build_reading_help_law.py --check
+          uv run --locked python -m unittest discover -s scripts -p test_reading_help_law.py
           uv run --locked python scripts/build_staff_semantic.py --check
           uv run --locked python scripts/build_combined_reader.py --check
           uv run --locked python scripts/compare_source_census.py --check

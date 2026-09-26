@@ -10,6 +10,13 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+### Reading-help legislation bridge
+
+- Add four source-span-bound work-title mappings and a separately validated statutory context overlay. Reuse the existing 20 statutory units and 43 navigation relationships.
+- Retain the five-request Chapter 60 acquisition and its initial section 70 version failure. An offline successor preserves both geographical variants, complete selected text and source-native dated links, without further requests.
+- Record exact rollout baselines and the failed live health observation separately from historical deployment evidence. Consumer admission and legal applicability remain explicit outstanding gates.
+
+
 - Add a [Chapter 60 reading-help rollout proposal](docs/reading-help-rollout.md) for deterministic-first expansion and later bounded model review; no wider trial or specialist acceptance is claimed.
 
 - Curate a [beginner research guide](docs/research-index.md) and [file-level index](research/README.md) for the eight-file, 90-entry public CPAG contents capture, the 31-file unvalidated UC evaluation starter, concise client-access reports and one historical Pension Credit calculation design prompt. Preserve package checksums and distinguish observed tool fields, model-reported claims and unrun comparative proposals. No source corpus, runtime bundle or legal acceptance status changes.
