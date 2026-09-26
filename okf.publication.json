@@ -2092,7 +2092,10 @@
         "scripts/acquire_reading_help_law.py",
         "scripts/project_reading_help_law.py",
         "scripts/build_reading_help_law.py",
-        "scripts/test_reading_help_law.py"
+        "scripts/test_reading_help_law.py",
+        "reading-help-ch60-references.json",
+        "scripts/build_reading_help_references.py",
+        "scripts/test_reading_help_references.py"
       ],
       "command_ids": [
         "build-check",
@@ -2153,7 +2156,9 @@
         "evidence-connect-build",
         "evidence-connect-check",
         "reading-help-law-check",
-        "reading-help-law-controls"
+        "reading-help-law-controls",
+        "reading-help-reference-check",
+        "reading-help-reference-controls"
       ]
     },
     {
@@ -2287,7 +2292,10 @@
         "scripts/acquire_reading_help_law.py",
         "scripts/project_reading_help_law.py",
         "scripts/build_reading_help_law.py",
-        "scripts/test_reading_help_law.py"
+        "scripts/test_reading_help_law.py",
+        "reading-help-ch60-references.json",
+        "scripts/build_reading_help_references.py",
+        "scripts/test_reading_help_references.py"
       ],
       "command_ids": [
         "context-discovery-build-check",
@@ -2334,7 +2342,9 @@
         "passage-candidate-check",
         "passage-replay-check",
         "reading-help-law-check",
-        "reading-help-law-controls"
+        "reading-help-law-controls",
+        "reading-help-reference-check",
+        "reading-help-reference-controls"
       ]
     },
     {
@@ -4158,6 +4168,51 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 2
+      },
+      {
+        "id": "reading-help-reference-build",
+        "kind": "build",
+        "planes": [
+          "source",
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_reading_help_references.py",
+        "source": "docs/reading-help-legislation-bridge.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "reading-help-reference-check",
+        "kind": "check",
+        "planes": [
+          "source",
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_reading_help_references.py --check",
+        "source": "docs/reading-help-legislation-bridge.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "reading-help-reference-controls",
+        "kind": "test",
+        "planes": [
+          "source",
+          "semantic",
+          "runtime"
+        ],
+        "command": "uv run --locked python -m unittest discover -s scripts -p test_reading_help_references.py",
+        "source": "docs/reading-help-legislation-bridge.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
       }
     ]
   },
@@ -4196,7 +4251,8 @@
       "profiles/pdf-structure/**",
       "capital-pilot/**",
       "domain-profile/evidence-connect/**",
-      "evaluation/evidence-workbench/**"
+      "evaluation/evidence-workbench/**",
+      "reading-help-ch60-references.json"
     ],
     "documentation_paths": [
       "README.md",

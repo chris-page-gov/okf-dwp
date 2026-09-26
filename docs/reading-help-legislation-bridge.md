@@ -15,6 +15,12 @@ The [machine-readable bridge](../domain-profile/reading-help-law/bridge.json) ma
 
 The **comparison date** is 20 September 2026, matching the earlier statutory snapshot. It is distinct from the date of capture, commencement of a provision, and the date relevant to a benefits question. Applicability remains unresolved.
 
+## Select a body marker or its reference row
+
+The separate [Chapter 60 reference-row manifest](../reading-help-ch60-references.json) keeps the v1 reading-help format and all original source bytes. Twenty explicit pairs connect a body marker to its exact footer occurrence through the existing card identity. The original `reading-help-ch60.json` and pinned demonstration URL remain unchanged.
+
+A compatible Reader can select either occurrence and navigate to its partner. Equal digits in paragraphs 60025 and 60033 are different identities. Mixed reference 12 remains unresolved, and the extra printed 2 is not assigned an invented body partner. This is a reference interaction repair, not a correction to the DWP source or a new legal conclusion.
+
 ## Existing evidence is reused
 
 DWP already retained **20 selected statutory units from 16 provisions, with 43 navigation relationships**. A unit is a selected section, regulation or schedule paragraph. Those existing records and their limitations remain unchanged. The bridge links to relevant existing identities instead of copying or reacquiring their text.
@@ -43,6 +49,8 @@ All four observed units retain the complete selected XML subtree, normalised tex
 ```sh
 uv sync --locked
 uv run --locked python scripts/build_reading_help_law.py --check
+uv run --locked python scripts/build_reading_help_references.py --check
+uv run --locked python -m unittest discover -s scripts -p test_reading_help_references.py
 uv run --locked python -m unittest discover -s scripts -p test_reading_help_law.py
 ```
 

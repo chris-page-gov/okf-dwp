@@ -12,6 +12,8 @@ Implementation ownership and handovers belong in the
 
 ### Reading-help legislation bridge
 
+- Add a separate v1-compatible Chapter 60 manifest with 20 exact body/reference-row occurrence pairs. Keep the earlier manifest and unresolved citation meanings unchanged.
+
 - Add four source-span-bound work-title mappings and a separately validated statutory context overlay. Reuse the existing 20 statutory units and 43 navigation relationships.
 - Retain the five-request Chapter 60 acquisition and its initial section 70 version failure. An offline successor preserves both geographical variants, complete selected text and source-native dated links, without further requests.
 - Record exact rollout baselines and the failed live health observation separately from historical deployment evidence. Consumer admission and legal applicability remain explicit outstanding gates.
