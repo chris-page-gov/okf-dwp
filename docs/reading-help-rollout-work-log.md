@@ -11,7 +11,7 @@ The [baseline receipt](../evaluation/reading-help-rollout/baseline.json) records
 - Structural baseline: 513 documents, 19,090 pages, 893 pages without extracted text and 53,727 units.
 - The later 54,577-unit amendment candidate remains separately identified. Its existence does not authorise silent replacement of the structural baseline.
 - Existing statutory evidence: 20 units, 16 provisions, 43 navigation relationships.
-- A new live health request returned HTTP 403. The earlier recorded service 0.7.0 deployment and verification receipts retain their historical meaning; fresh health was not established by this attempt.
+- A new live health request returned HTTP 403. The earlier recorded service 0.7.0 deployment and verification receipts retain their historical meaning; fresh health was not established by this attempt. A [later browser-style user-agent observation](../evaluation/reading-help-rollout/service-health-observation.json) returned service 0.7.0 ready. The [connected compact-manifest tool observation](../evaluation/reading-help-rollout/service-connector-observation.json) also succeeded, while explicitly returning `metadata_budget`, no selected records and `insufficient` at the deliberately small 32 KiB selection budget. These are separate observations, not a whole-corpus answer test.
 
 ### Writer ownership
 
