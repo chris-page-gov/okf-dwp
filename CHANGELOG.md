@@ -10,6 +10,10 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Add a [Chapter 60 reading-help rollout proposal](docs/reading-help-rollout.md) for deterministic-first expansion and later bounded model review; no wider trial or specialist acceptance is claimed.
+
+- Curate a [beginner research guide](docs/research-index.md) and [file-level index](research/README.md) for the eight-file, 90-entry public CPAG contents capture, the 31-file unvalidated UC evaluation starter, concise client-access reports and one historical Pension Credit calculation design prompt. Preserve package checksums and distinguish observed tool fields, model-reported claims and unrun comparative proposals. No source corpus, runtime bundle or legal acceptance status changes.
+
 - Add a [bounded Chapter 60 reading aid](docs/reading-help-ch60.md) for paragraphs 60025 and 60033. Its exact occurrence spans, source-backed expansions, local references and unresolved printed defects are checked deterministically; original model-authored proposals remain unchanged. Broader highlighting and specialist review remain open.
 
 - Complete a [bounded LiteParse 2.14.6 experiment](docs/liteparse-pilot.md):

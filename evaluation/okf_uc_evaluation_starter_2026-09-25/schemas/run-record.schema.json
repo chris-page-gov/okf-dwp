@@ -1,0 +1,252 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Proposed OKF client evaluation run record",
+  "type": "object",
+  "required": [
+    "run_id",
+    "case_id",
+    "condition",
+    "status",
+    "question",
+    "client",
+    "observed_on",
+    "evidence",
+    "inspection",
+    "measurements",
+    "answer",
+    "assessment"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "case_id": {
+      "type": "string"
+    },
+    "condition": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "not_run",
+        "completed",
+        "failed",
+        "stopped",
+        "inconclusive"
+      ]
+    },
+    "question": {
+      "type": "string"
+    },
+    "client": {
+      "type": "object",
+      "required": [
+        "product",
+        "model_reported",
+        "model_identity_verified"
+      ],
+      "properties": {
+        "product": {
+          "type": "string"
+        },
+        "model_reported": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "model_identity_verified": {
+          "type": "boolean"
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "memory_state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "permitted_tools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "observed_on": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "source_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "engine_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "canonical_package_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rendering_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "digest_independently_verified": {
+          "type": "boolean"
+        },
+        "budget": {
+          "type": "object"
+        }
+      }
+    },
+    "inspection": {
+      "type": "object",
+      "properties": {
+        "complete_catalogue": {
+          "type": "boolean"
+        },
+        "complete_diagnostics": {
+          "type": "boolean"
+        },
+        "source_record_ids_read": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "host_clipping_status": {
+          "enum": [
+            "not_instrumented",
+            "not_observed",
+            "observed"
+          ]
+        }
+      }
+    },
+    "measurements": {
+      "type": "object",
+      "properties": {
+        "tool_calls": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "latency_first_useful_evidence_ms": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "latency_total_ms": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "wire_bytes": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "model_input_tokens": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "assembly_bytes": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "human_interventions": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "answer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assessment": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "criterion",
+          "rating",
+          "reason"
+        ],
+        "properties": {
+          "criterion": {
+            "type": "string"
+          },
+          "rating": {
+            "enum": [
+              "pass",
+              "fail",
+              "unknown",
+              "not_applicable"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "failure": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "raw_trace_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

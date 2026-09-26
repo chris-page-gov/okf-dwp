@@ -1,0 +1,85 @@
+{
+  "kind": "manually_transcribed_observation_summary_not_raw_trace",
+  "observed_on": "2026-09-25",
+  "scope": "one natural-language query/context, four actual Ask OKF tool invocations; not a model comparison",
+  "question": "Where a child is awarded the highest-rate care component of DLA from 26 January 2025, but the change is reported to Universal Credit on 28 March 2026, what's the effective date of the higher disabled-child addition, and from which assessment period should it be paid?",
+  "endpoint": "https://ask-okf.crpage.chatgpt.site/okf/mcp",
+  "bundle": "okf-dwp",
+  "source_version": "7eeded763042ddd0070f4fed834c6074149e8e2f",
+  "engine_id": "urn:okf:context-engine:sha256:256b19d6d8a2e16191866ead0ffd48d9edb7f705143bd8a91597b19f242c0968",
+  "context_id": "urn:sha256:f994ed73ca37d12714f9467dba7c2bb597747573b4208a45ee3c2be17ed4ac4d",
+  "budget": {
+    "max_nodes": 64,
+    "max_relationships": 128,
+    "max_depth": 6,
+    "max_bytes": 524288
+  },
+  "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519",
+  "snapshot": "evidence-connect-754be67f82c82e31d17c",
+  "server_reported_package_sha256": "38107c37b04e390a8c87cc91c560ce43ac0249128ff274bb07bbea948d3b9f41",
+  "server_reported": {
+    "selected_records": 38,
+    "relationships": 43,
+    "full_package_bytes": 522218,
+    "context_truncated": true,
+    "retrieval_truncated": true,
+    "evidence_status": "insufficient",
+    "resolved_concepts": 3,
+    "unresolved_terms": 22,
+    "missing_evidence": 9,
+    "requirements": 1,
+    "ai_answer": null
+  },
+  "calls": [
+    {
+      "tool": "ask_okf_manifest",
+      "offset": 0,
+      "returned_records": 20,
+      "next_offset": 20,
+      "server_reported_response_bytes": 16236
+    },
+    {
+      "tool": "read_okf_evidence",
+      "section": "diagnostics",
+      "offset": 0,
+      "end_offset": 30526,
+      "total_characters": 88131,
+      "next_offset": 30526,
+      "complete": false,
+      "server_reported_delivery_used_bytes": 32735
+    },
+    {
+      "tool": "ask_okf_manifest",
+      "offset": 20,
+      "returned_records": 18,
+      "next_offset": null,
+      "server_reported_response_bytes": 15269
+    },
+    {
+      "tool": "read_okf_evidence",
+      "section": "record_text",
+      "record_label": "ADM F1123",
+      "offset": 0,
+      "end_offset": 751,
+      "next_offset": null,
+      "complete": true,
+      "server_reported_delivery_used_bytes": 1943
+    }
+  ],
+  "observed_findings": [
+    "All 38 selected catalogue entries were inspected; no entry was from ADM A4.",
+    "F1123 source text was read in full, with its official PDF page also inspected independently.",
+    "Many selected catalogue entries concern Pension Credit, Severe Disablement Allowance, PIP transfer or overseas absence rather than the effective-date issue.",
+    "The visible diagnostics report retrieval query, candidate and resource budgets and an acronym-resolution requirement, not a tailored effective-date requirement.",
+    "The controlling A4361 rule was found separately through official web sources, not returned by this selected evidence context."
+  ],
+  "limitations": [
+    "Only one selected source passage was read in full; the other selected source texts were not all read.",
+    "Diagnostics inspection stopped at the first explicit bounded slice; the rest was not read.",
+    "The full package was not reconstructed, so its server-supplied digest was not independently verified here.",
+    "No latency, model-token count, billed cost or complete host-wire trace was measured.",
+    "The experiment does not establish a root cause, overall retrieval accuracy, answer accuracy or comparative performance.",
+    "Explicit tool pagination was observed; independent host-level clipping detection was not instrumented.",
+    "No Codex, Claude, Gemini, M365 Copilot or browser page-tool run was performed here."
+  ]
+}
