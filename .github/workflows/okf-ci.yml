@@ -355,6 +355,8 @@ jobs:
         run: |
           uv run --locked python scripts/build_pdf_structure.py --check
           uv run --locked python scripts/build_manual_guide.py --check
+          uv run --locked python scripts/build_reading_help.py --check
+          uv run --locked python -m unittest discover -s scripts -p test_reading_help.py
           uv run --locked python scripts/build_structured_units.py --check
           uv run --locked python scripts/check_structured_context_with_successor.py
           uv run --locked python scripts/test_check_structured_context_with_successor.py

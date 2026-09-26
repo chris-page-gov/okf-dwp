@@ -140,6 +140,7 @@ retain their recorded scope until new checks justify publication.
 | DWP-BL-023 | P1 | Hosting and Content Security Policy integration | `in_progress` | DWP-BL-008 |
 | DWP-BL-024 | P1 | ADM Reader and cross-manual navigation | `recorded_complete` | DWP-BL-004, DWP-BL-009 |
 | DWP-BL-025 | P0 | Evidence workbench and all-question inspection | `in_progress` | DWP-BL-005, DWP-BL-007, DWP-BL-008 |
+| DWP-BL-026 | P0 | Occurrence-specific Chapter 60 reading help | `in_progress` | DWP-BL-004, DWP-BL-007 |
 
 ## Acceptance before closure
 

@@ -36,6 +36,9 @@
       "domain-profile/logical-units/*.json",
       "domain-profile/learning/*.yamlld",
       "domain-profile/manual-guide/*.yamlld",
+      "domain-profile/reading-help/ch60.json",
+      "research/ch60-reading-help/vocabulary-proposals.jsonl",
+      "research/ch60-reading-help/citation-proposals.jsonl",
       "profiles/manual-guide/v1/*.json",
       "profiles/pdf-structure/v1/*.json",
       "pdf-structure/bounded-v2/manifest.json",
@@ -209,6 +212,11 @@
       {
         "path": "logical-context/data/semantic/*.jsonld.gz",
         "role": "semantic-json-ld-shards",
+        "generated": true
+      },
+      {
+        "path": "reading-help-ch60.json",
+        "role": "explorer-runtime",
         "generated": true
       },
       {
@@ -415,6 +423,7 @@
       "The additive household candidate includes 20 selected dated statutory units as derived, unreviewed extractions; this does not resolve complete legal dependencies, commencement, applicability or specialist review. Earlier reference-only outputs and receipts keep their original scope.",
       "Logical-unit mode is additive. All extracted bytes are accounted, but machine boundaries remain uncertain; separately authored dependencies and profiles are unreviewed and do not satisfy frozen page-level obligations.",
       "The manual guide records local conventions with exact frozen source support. Its 513-document census retains original roles; a convention observed in one document is not asserted across the manuals.",
+      "The Chapter 60 reading-help projection is a two-paragraph, occurrence-bound, unreviewed reading aid. Original model-authored proposals and printed ambiguities retain their status; no legal definition, answerability or corpus-wide selection is established.",
       "Retained PDF tag trees are source-declared structural observations, not accepted semantic or legal interpretations. Bounded replay preserves original observations, unparsed lines and failed or absent structures; normal checks do not invoke Poppler or acquire sources.",
       "The additive structured-unit and structured-context candidates separate source locations, proposed content boundaries and compact discovery cards. A card supplies navigation, not evidence or a complete rule; dependency matches and better segmentation do not establish legal applicability or complete answerability.",
       "Guarded source-selection profiles are model-derived research proposals. The separate location-migration ledger preserves the 40 earlier staff requirements and 203 open obligations; exact overlap provides navigation only and never substitutes for an original required page or relationship path.",
@@ -467,6 +476,7 @@
       "uv run --locked python scripts/build_logical_context.py",
       "uv run --locked python scripts/build_pdf_structure.py --check",
       "uv run --locked python scripts/build_manual_guide.py",
+      "uv run --locked python scripts/build_reading_help.py",
       "uv run --locked python scripts/build_structured_units.py",
       "uv run --locked python scripts/build_structured_context.py",
       "uv run --locked python scripts/build_capital_pilot.py",
@@ -502,6 +512,8 @@
       "uv run --locked python -m unittest discover -s scripts -p 'test_logical*.py'",
       "uv run --locked python scripts/build_pdf_structure.py --check",
       "uv run --locked python scripts/build_manual_guide.py --check",
+      "uv run --locked python scripts/build_reading_help.py --check",
+      "uv run --locked python -m unittest discover -s scripts -p test_reading_help.py",
       "uv run --locked python scripts/build_structured_units.py --check",
       "uv run --locked python scripts/build_structured_context.py --check",
       "uv run --locked python -m unittest discover -s scripts -p 'test_manual*.py'",
