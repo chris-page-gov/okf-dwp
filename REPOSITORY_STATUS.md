@@ -1,6 +1,6 @@
 # Repository status
 
-## Current overview: 25 September 2026
+## Current overview: 26 September 2026
 
 Start with [remaining work and next priorities](docs/remaining-work.md), the
 [Evidence workbench](docs/evidence-workbench.md) and the
@@ -21,6 +21,12 @@ files match the reviewed build. The [release record](validation/passage-boundari
 keeps CI, publication and source acceptance separate. Fifteen target boundaries
 are corrected, twelve are partial and one remains unresolved; the 40-question
 replay establishes no improved expected-page coverage.
+
+The [LiteParse source pilot](docs/liteparse-pilot.md) is complete as a bounded
+experiment: 12 windows were compared with Poppler, the source-quality gate
+failed, and the 24-window expansion was not admitted. Coordinates and numeric
+table rows are promising, but full header associations and exact text checks
+need further work. This result changes neither corpus defaults nor answer scores.
 
 All 40 retained packages remain insufficient. The known capital transfer-wording
 and UC selection failures, unreviewed unit boundaries, legal dependencies,

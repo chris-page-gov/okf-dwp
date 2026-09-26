@@ -1,0 +1,1147 @@
+{
+  "schema": "okf-dwp-liteparse-source-cases.v1",
+  "status": "frozen-before-parser-outcomes",
+  "cases": [
+    {
+      "id": "s1-01",
+      "stage": 1,
+      "purpose": "Reviewed cross-page regression control 01013; page transition within example is source-visible, but a logical join remains unassessed.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol1-ch1",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol1-ch1.json",
+        "pages_sha256": "cf7a000e2c54c5361a03ec4ad73fa22cc14e8cdb0d4f03b53919a4a509a6eacb",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol1-ch1.pdf",
+        "pdf_sha256": "58b168c7b0a01f54713f6cfa60953549ebc099cbe568ffaeea551d0b756495d2",
+        "pdf_pages": [
+          3,
+          4
+        ],
+        "page_text_sha256": [
+          "d778af62ea469290eec77f68ff8fd8d37295d833e6569125c716d1e42bd7f67f",
+          "83d6129f6fd415697997161483811df4864a75d36046335820a7ef143265e0ee"
+        ]
+      },
+      "exposure": "reviewed-control-baseline-exposed",
+      "critical_anchors": [
+        {
+          "text": "The DM may use the help of an expert in cases where a question of fact needs special expertise",
+          "match": "whitespace-normalised-literal"
+        },
+        {
+          "text": "decide the disability questions. The DM requests a report from an examining HCP.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "source-order",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s1-02",
+      "stage": 1,
+      "purpose": "Reviewed cross-page regression control A2022; condition list and example cross the page transition.",
+      "source": {
+        "family": "adm",
+        "document_id": "adm-chapter-a2",
+        "pages_path": "source/adm-2026-09-19/pages/adm-chapter-a2.json",
+        "pages_sha256": "57bfd43edf37dc9f3c0cfec0967a8fd1103599cd9e9eee86a544bd1a2f7e2690",
+        "pdf_path": "source/adm-2026-09-19/pdf/adm-chapter-a2.pdf",
+        "pdf_sha256": "e5e5b99dac44670dc8e6c50094bd669edc565e7dc61694a72928070e8ee4c9bc",
+        "pdf_pages": [
+          8,
+          9
+        ],
+        "page_text_sha256": [
+          "78e345ceca022355a77cee5835340303892cfec2bc835ecdbf2c8be32c3a2cd7",
+          "afe483f9322b72e5423b546d0d7be2d86dbeaed51c6b822768c689e2a4c271c7"
+        ]
+      },
+      "exposure": "reviewed-control-baseline-exposed",
+      "critical_anchors": [
+        {
+          "text": "A claim for UC is not required",
+          "match": "whitespace-normalised-literal"
+        },
+        {
+          "text": "Jackie’s award of UC ended because a child for who she had responsibility left the benefit unit.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "source-order",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s1-03",
+      "stage": 1,
+      "purpose": "Amendment Remove / Insert navigation table; references are not body guidance.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol1-amendment50",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol1-amendment50.json",
+        "pages_sha256": "98fa0bed99787767aa00634b0c815794914b5a806c9243d3c6c4448ed819e51a",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol1-amendment50.pdf",
+        "pdf_sha256": "68506ff29d9616f3415192fec4836c91ab0f23137627f535d5900287f6121d03",
+        "pdf_pages": [
+          2
+        ],
+        "page_text_sha256": [
+          "53af922f3e8b6ec70d224d0d5ad9fd2731739b79bd751871ac2ad7683794454a"
+        ]
+      },
+      "exposure": "baseline-exposed",
+      "critical_anchors": [
+        {
+          "text": "Remove Insert",
+          "match": "whitespace-normalised-literal"
+        },
+        {
+          "text": "02009 – 02037 (2 pages)",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "source-order",
+      "expected_blocks": [
+        {
+          "kind": "table",
+          "table_type": "amendment-remove-insert",
+          "columns": [
+            "Remove",
+            "Insert"
+          ],
+          "rows": [
+            [
+              "02009 – 02037 (2 pages)",
+              "02009 – 02037 (2 pages)"
+            ],
+            [
+              "02373 – 02377 (1 page)",
+              "02373 – 02377 (1 page)"
+            ]
+          ],
+          "contains": [
+            "Remove",
+            "Insert",
+            "02009 – 02037 (2 pages)"
+          ],
+          "review_status": "source-derived-proposal-pending-pdf-review"
+        }
+      ],
+      "review_status": "model-assisted-pdf-visual-check-by-codex-root; pending-independent-human-review"
+    },
+    {
+      "id": "s1-04",
+      "stage": 1,
+      "purpose": "Known case-014 garbled historical amendment, retained as a regression and readability stress case; no spelling repair expected.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol2-amendment40",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-amendment40.json",
+        "pages_sha256": "eb87bf88344f4c2c971489f2085bcff53bd7d744ac0b278f82a960eeffaf598e",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol2-amendment40.pdf",
+        "pdf_sha256": "0d8234f4787b83827a6d1e0cc73507ec2df224aea166bd5ce170d7fa17ace2c8",
+        "pdf_pages": [
+          28,
+          29
+        ],
+        "page_text_sha256": [
+          "6a7c4a5085cdb28d7a5aded32698cafc48a63a16dabde78614b6c7bcab04b567",
+          "f22afbd89f20acd829c1374062b3f24080e2331940b54a47f6ef64ebc0492f3b"
+        ]
+      },
+      "exposure": "known-28-baseline-exposed",
+      "critical_anchors": [
+        {
+          "text": "071915 In particular, EC provisions may assist the claimant",
+          "match": "whitespace-insensitive-literal"
+        },
+        {
+          "text": "Vol 2 Amendment 40 June 2018",
+          "match": "whitespace-insensitive-literal"
+        }
+      ],
+      "anchor_order": "source-order",
+      "expected_blocks": [],
+      "review_status": "model-assisted-pdf-visual-check-by-codex-root; pending-independent-human-review"
+    },
+    {
+      "id": "s1-05",
+      "stage": 1,
+      "purpose": "Chapter 84 typed capital-band table, substantive appendix.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol14-ch84",
+        "pages_path": "source/pages/dmg-vol14-ch84.json",
+        "pages_sha256": "bf1cc65d4b7521b7acb9193a212855e07a88d5a3ef03f5f9eaa74c3c222f39f5",
+        "pdf_path": "source/pdf/dmg-vol14-ch84.pdf",
+        "pdf_sha256": "f5c610b29bdb81e11736409b7f33ccf7917a4d8945f2821802801073e0d753ee",
+        "pdf_pages": [
+          130
+        ],
+        "page_text_sha256": [
+          "8229637e96ade6b94a41a24520b89af3979b1e60a8509668bd0466f1718993c8"
+        ]
+      },
+      "exposure": "baseline-exposed",
+      "critical_anchors": [
+        {
+          "text": "Total capital Deemed weekly income from capital",
+          "match": "whitespace-normalised-literal"
+        },
+        {
+          "text": "10,000.01 10,500.00 1",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "source-order",
+      "expected_blocks": [
+        {
+          "kind": "table",
+          "table_type": "capital-band",
+          "columns": [
+            "From",
+            "To",
+            "Deemed weekly income from capital"
+          ],
+          "rows": [
+            [
+              "NIL",
+              "10,000.00",
+              "NIL"
+            ],
+            [
+              "10,000.01",
+              "10,500.00",
+              "1"
+            ],
+            [
+              "10,500.01",
+              "11,000.00",
+              "2"
+            ]
+          ],
+          "contains": [
+            "Total capital",
+            "Deemed weekly income from capital",
+            "10,000.01",
+            "10,500.00"
+          ],
+          "review_status": "source-derived-proposal-pending-pdf-review"
+        }
+      ],
+      "review_status": "model-assisted-pdf-visual-check-by-codex-root; pending-independent-human-review"
+    },
+    {
+      "id": "s1-06",
+      "stage": 1,
+      "purpose": "Chapter 84 substantive numbered body and list.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol14-ch84",
+        "pages_path": "source/pages/dmg-vol14-ch84.json",
+        "pages_sha256": "bf1cc65d4b7521b7acb9193a212855e07a88d5a3ef03f5f9eaa74c3c222f39f5",
+        "pdf_path": "source/pdf/dmg-vol14-ch84.pdf",
+        "pdf_sha256": "f5c610b29bdb81e11736409b7f33ccf7917a4d8945f2821802801073e0d753ee",
+        "pdf_pages": [
+          128
+        ],
+        "page_text_sha256": [
+          "3a5de8ac920cad738902274e91a354f78cc573bd0b27a0fbce574b5e4a3e8d68"
+        ]
+      },
+      "exposure": "baseline-exposed",
+      "critical_anchors": [
+        {
+          "text": "The amount of deemed weekly income from capital is £1",
+          "match": "whitespace-normalised-literal"
+        },
+        {
+          "text": "The total amount of capital each person has is the total of the value of each item of actual capital",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "source-order",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s1-07",
+      "stage": 1,
+      "purpose": "Chapter 84 trust and life-interest substantive body.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol14-ch84",
+        "pages_path": "source/pages/dmg-vol14-ch84.json",
+        "pages_sha256": "bf1cc65d4b7521b7acb9193a212855e07a88d5a3ef03f5f9eaa74c3c222f39f5",
+        "pdf_path": "source/pdf/dmg-vol14-ch84.pdf",
+        "pdf_sha256": "f5c610b29bdb81e11736409b7f33ccf7917a4d8945f2821802801073e0d753ee",
+        "pdf_pages": [
+          20
+        ],
+        "page_text_sha256": [
+          "092927e196779fe8660b5ca5f74da3ab5c89d63d119466fe03ac6602c0539956"
+        ]
+      },
+      "exposure": "baseline-exposed",
+      "critical_anchors": [
+        {
+          "text": "84212 People keep the right to live in the property even if they do not live in it.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s1-08",
+      "stage": 1,
+      "purpose": "DMG substantive decision-making body following contents.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol1-ch1",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol1-ch1.json",
+        "pages_sha256": "cf7a000e2c54c5361a03ec4ad73fa22cc14e8cdb0d4f03b53919a4a509a6eacb",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol1-ch1.pdf",
+        "pdf_sha256": "58b168c7b0a01f54713f6cfa60953549ebc099cbe568ffaeea551d0b756495d2",
+        "pdf_pages": [
+          2
+        ],
+        "page_text_sha256": [
+          "a37464dad598a7181923dec0e39d48f0e9275bdbaa74a43bbbad78c6d102f7ed"
+        ]
+      },
+      "exposure": "baseline-exposed",
+      "critical_anchors": [
+        {
+          "text": "01001 Decisions on claims and applications are made by the Secretary of State.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s1-09",
+      "stage": 1,
+      "purpose": "ADM entitlement conditions with nested numbered list.",
+      "source": {
+        "family": "adm",
+        "document_id": "adm-chapter-e1",
+        "pages_path": "source/adm-2026-09-19/pages/adm-chapter-e1.json",
+        "pages_sha256": "e2bd272a8d2f1ae93b0d9bf03c8f63143056abe94110ff81aab32c3183ab2968",
+        "pdf_path": "source/adm-2026-09-19/pdf/adm-chapter-e1.pdf",
+        "pdf_sha256": "f52610d10f81128fa0bc31c8db39bdfe8faa30fdc7aceb100595eff23d48094f",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "5f8a831041482844f0c1662f15239e0e76fd4d4953f4a8d91d88674182010848"
+        ]
+      },
+      "exposure": "baseline-exposed",
+      "critical_anchors": [
+        {
+          "text": "has accepted a claimant commitment (see E1121)",
+          "match": "whitespace-normalised-literal"
+        },
+        {
+          "text": "capital does not exceed the prescribed amount",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "source-order",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s1-10",
+      "stage": 1,
+      "purpose": "ADM definition and references.",
+      "source": {
+        "family": "adm",
+        "document_id": "adm-chapter-a2",
+        "pages_path": "source/adm-2026-09-19/pages/adm-chapter-a2.json",
+        "pages_sha256": "57bfd43edf37dc9f3c0cfec0967a8fd1103599cd9e9eee86a544bd1a2f7e2690",
+        "pdf_path": "source/adm-2026-09-19/pdf/adm-chapter-a2.pdf",
+        "pdf_sha256": "e5e5b99dac44670dc8e6c50094bd669edc565e7dc61694a72928070e8ee4c9bc",
+        "pdf_pages": [
+          4
+        ],
+        "page_text_sha256": [
+          "de113e3aead1a737fbd9e0f307c8ed7037bb1a86f7f4c26807244e71ba77069b"
+        ]
+      },
+      "exposure": "baseline-exposed",
+      "critical_anchors": [
+        {
+          "text": "A2004 “Assessment Period” means a period as defined in prescribed legislation 1 see ADM Chapter E2.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s1-11",
+      "stage": 1,
+      "purpose": "ADM substantive body, different chapter family.",
+      "source": {
+        "family": "adm",
+        "document_id": "adm-chapter-h1",
+        "pages_path": "source/adm-2026-09-19/pages/adm-chapter-h1.json",
+        "pages_sha256": "05e025345b3270e4e706c906f19317f8002a3e11cd745d905b81ae9bea23604b",
+        "pdf_path": "source/adm-2026-09-19/pdf/adm-chapter-h1.pdf",
+        "pdf_sha256": "255f0de0cd9e7ab18fd2cebe36ef3de1f1a3ed32dd5b79c502ca57a6b5202a72",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "ac601ab41a89614125c5ffc9278aec342c9bdc28c667437ce0ca114c56bb9e63"
+        ]
+      },
+      "exposure": "baseline-exposed",
+      "critical_anchors": [
+        {
+          "text": "On 1.3.10 Sonia agreed to sell her house to her brother Norman for £95,000.",
+          "match": "whitespace-normalised-literal"
+        },
+        {
+          "text": "The DM decides that Sonia has rights to capital.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "source-order",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s1-12",
+      "stage": 1,
+      "purpose": "DMG substantive claim guidance, different chapter.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol1-ch2",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol1-ch2.json",
+        "pages_sha256": "77cb8966f05e501c4d970026bdfcd5bc271abe17a546b02ec8c8704395e56ee3",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol1-ch2.pdf",
+        "pdf_sha256": "218f6a34945a5dd17cdccb1737ea317b2dcfd1ab62f66a9a0b8d681202e8934f",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "501c681d59c54fc9f76edc72ebdb470992228126f9bd357f5d5c6cf2507e12e3"
+        ]
+      },
+      "exposure": "baseline-exposed",
+      "critical_anchors": [
+        {
+          "text": "02006 In the case of joint-claims to JSA, the definitions of “claimant”, “joint claim couples” and “joint claims JSA” should also generally be applied to this Chapter.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-01",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol2-ch7-part1",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part1.json",
+        "pages_sha256": "4ffe86a4c907dcc7b8bf3883bfdc46b6a8b9db03a0ccda563189ee12cbead47c",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol2-ch7-part1.pdf",
+        "pdf_sha256": "32a065d37da4bd460b25258d71b5dfc3127d6c98e65c53ab5562491aea16f18a",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "b6e58ad16696eec5ebf1bccbb3371dbdc65424524fe94597917a8b949c06e8a7"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "070002 The common terms section contains guidance in alphabetical order on terms or subjects that are common to the international volume of the Chapter.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-02",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol8-ch42",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol8-ch42.json",
+        "pages_sha256": "76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol8-ch42.pdf",
+        "pdf_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "c4e10489b5fc287f5cbb3b3e714de9f5ba77b5c3048ec905c8c4c7c68c5c3820"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "Claimants are treated as having LCW and do not have to undergo the LCWA if any of the circumstances in DMG 42032 apply to them1",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-03",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol3-ch13",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol3-ch13.json",
+        "pages_sha256": "1c3e2ae8cf5c3f45273274f24d1bafff88d21a657237c557d555fed53088c931",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol3-ch13.pdf",
+        "pdf_sha256": "fc4496aae0bb510fea99ee047b82bbb00182dd336af8dfb065ef040f3967078f",
+        "pdf_pages": [
+          10
+        ],
+        "page_text_sha256": [
+          "13d26b4d812391530b6aa2ff48aa2c53178ac611531fb91e46b0759bed6f7076"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "13101 Evidence of incapacity should be provided for the day or days of incapacity for work until the person has been assessed for the PCA.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-04",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol4-ch20",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol4-ch20.json",
+        "pages_sha256": "ed007251fa43ff9c63f5116f603798f2279c84006af8539bbbfd50194ab0ab56",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol4-ch20.pdf",
+        "pdf_sha256": "0474580014a697c47370992feee115d49c80b105b9c43270bf89afff0e4b0aa5",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "dc6b59104cd7c782a757639eaba4d45f758f340a2973f7cb7527881b1c8fd56d"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "20004 Where the context specifies “the claimant,” in the case of joint claims it should be read as a “claimant”.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-05",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol5-ch27",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol5-ch27.json",
+        "pages_sha256": "7f84279f4a44373405ce06d32bf1c927a9f25dda507895b1540e6bb8b1b5185a",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol5-ch27.pdf",
+        "pdf_sha256": "90b6c5ec739d2366936d67d78cd5a6f857b764b92000200f4a44ac956c88b3ac",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "11f1c634849a72d969d6d4dbe7460f46721f0017ea9ea5a1441aff2059d0e61e"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "27007 Where the DM is considering whether the claimant and/or partner is a S/E earner then it is important to keep that determination separate from the issue of remunerative work (see DMG Chapter 20).",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-06",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol6-ch30",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol6-ch30.json",
+        "pages_sha256": "768537aba8259637b2425c4f5359b19a59adee89282078ead1e22f6c4f973665",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol6-ch30.pdf",
+        "pdf_sha256": "1540b54680884fdaa8a71e26fdebe12899d876b459d448198a7c941a37960780",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "1331d69eb5f0af6a6dbc876584fe2316302e9392f5a297ef81c83399fb88d5c4"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "30009 For IS the income of a claimant, or any member of their family, may be taken into account 1.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-07",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol7-ch39",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol7-ch39.json",
+        "pages_sha256": "625425d7933417f8895628354b1be65fc86df4d1f97a55acb13426d6cbe2b8a7",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol7-ch39.pdf",
+        "pdf_sha256": "ab13db0cf4d33fd90fb4cd8a90b909af568d39169f617f4b86b1037278d3fa9f",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "fa5e93042ff7c6e2141625b5ebcbc5f26fb1b75e28011c0f6195d7b0e8253815"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "39101 There are several conditions of entitlement for an SFFP.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-08",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol9-ch50",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol9-ch50.json",
+        "pages_sha256": "9ea4b8075301b50de51d295b6d676a1a92b66ad11c35522b8fe467869c2e9f39",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol9-ch50.pdf",
+        "pdf_sha256": "6b49f1951d5c6d26dac8fd8932178608a01b3971fde8bb36ef63e69a35702f03",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "08c9dd4b709948cc4333126c2128471c60eb3ab466b00f2b8b3a19ea157fe5e4"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "50016 A limited company, of whatever size, is separate from its employees, officers and shareholders 1.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-09",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol10-ch60",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch60.json",
+        "pages_sha256": "bc5925c0d434fbc4bec575bea2e1e2dbd020b014497ab156973054e80e326f2f",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol10-ch60.pdf",
+        "pdf_sha256": "ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "d6af42ce09b38add95311d44a991be3976e98f3f2fa51f574d3ba6551a74b363"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "60036 As long as the total number of hours spent in caring amounts to 35 or more a week, the claimant does not need to care for the severely disabled person every day of the week.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-10",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol11-ch67",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol11-ch67.json",
+        "pages_sha256": "f6415f436f2f1eea4febaa9f82fbd0ad34a6fc754ce3c59c24fd10311ba0ad12",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol11-ch67.pdf",
+        "pdf_sha256": "3c7414b2ec9ba0ec4073199a063a97072e1bf2c670f1620e241884a39b7e201a",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "53eca7b6f60eef256d8b95c9f8c7016c81eb377407255005715677689c2eba82"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "67011 For a claim for a PD there is a specific requirement 1 for a claimant to provide sufficient information or evidence to establish their NINO.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-11",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol12-ch75",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol12-ch75.json",
+        "pages_sha256": "0d037880d2aeaff1be89235ee987ca4acb1c839fcf1ead8b8be2daa9f6795465",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol12-ch75.pdf",
+        "pdf_sha256": "655e7acb31f09f5169efbe40419091ee479f88c0c45b65c7a507b042b67712f9",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "3803d08526887bf321fe32657b181e6436aad2825adfb37573a28512557a85bc"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "3. a person who is married includes a person who is married to a person of the same sex 1.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-12",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "dmg",
+        "document_id": "dmg-vol1-ch1",
+        "pages_path": "source/full-dmg-2026-09-15/pages/dmg-vol1-ch1.json",
+        "pages_sha256": "cf7a000e2c54c5361a03ec4ad73fa22cc14e8cdb0d4f03b53919a4a509a6eacb",
+        "pdf_path": "source/full-dmg-2026-09-15/pdf/dmg-vol1-ch1.pdf",
+        "pdf_sha256": "58b168c7b0a01f54713f6cfa60953549ebc099cbe568ffaeea551d0b756495d2",
+        "pdf_pages": [
+          9
+        ],
+        "page_text_sha256": [
+          "f69f23dce2a7baadba833ed35dcd069f18c4edcfcb7559261c5b76c0f9bfd56b"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "01060 The DM can make assumptions about certain matters where the evidence required to make a determination for the purposes of an outcome decision is incomplete.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-13",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "adm",
+        "document_id": "adm-chapter-a1",
+        "pages_path": "source/adm-2026-09-19/pages/adm-chapter-a1.json",
+        "pages_sha256": "3c3381ee20c170c67f493584feb468fc59cbe01ed426f83e55f0c9a30c5ce3d9",
+        "pdf_path": "source/adm-2026-09-19/pdf/adm-chapter-a1.pdf",
+        "pdf_sha256": "0b0b490ac845ea4a36546d3282f3b0d1e74dfed2f533c35bdcef434d26a4cbad",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "3a464b34c0e315661937d880a5b72a6c87a3d0617ba8fcaf42c32e99b1dd03ec"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "A1015 A decision is valid as soon as it is properly recorded by the DM.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-14",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "adm",
+        "document_id": "adm-chapter-b1",
+        "pages_path": "source/adm-2026-09-19/pages/adm-chapter-b1.json",
+        "pages_sha256": "45d76fcb114abbbd57d7cc18abd895ed58f86b439792a51fc6660d949714cac5",
+        "pdf_path": "source/adm-2026-09-19/pdf/adm-chapter-b1.pdf",
+        "pdf_sha256": "112bd49ff500d4871d2d710ab9776e48f820e2ab56ce0460ba9c944d0af3a83a",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "8ce06a6965d08a967c3e7a51c5a47a3dc130767226281ef13a9e41993d2e1c38"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "B1006 New Payment Exception Service (nPES) is an alternative short-term payment method available in exceptional circumstances to pay benefits to customers who are unable to be paid by any other method.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-15",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "adm",
+        "document_id": "adm-chapter-c1",
+        "pages_path": "source/adm-2026-09-19/pages/adm-chapter-c1.json",
+        "pages_sha256": "117c20e6810738228c3161f5989e528ae84ce9fd09bec3d473573dcfb9ba6b09",
+        "pdf_path": "source/adm-2026-09-19/pdf/adm-chapter-c1.pdf",
+        "pdf_sha256": "05e2c02fad77e7d7a21d77de410639fa38984fa330a7f8fb48aabc815c7d3a91",
+        "pdf_pages": [
+          8
+        ],
+        "page_text_sha256": [
+          "414ea86d028e5ebd4aff06c22d0d9e4f054b0e772dd41420cf25ac633e85197d"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "There are occasions where a person subject to immigration control can claim public funds.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-16",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "adm",
+        "document_id": "adm-chapter-d1",
+        "pages_path": "source/adm-2026-09-19/pages/adm-chapter-d1.json",
+        "pages_sha256": "c2478f47aa6347c395327371affe1bff942a4bacfa128469de923a6e2e8e48a9",
+        "pdf_path": "source/adm-2026-09-19/pdf/adm-chapter-d1.pdf",
+        "pdf_sha256": "281c1de58241379e18f18068678b8c97077994e9d869609ecc3f12cbfd754083",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "22b030f47f7f9665a9f6d93fb6c059b14900db67aadfff6b8580bcfebee76b61"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "overpayment1 means an amount of UC, JSA or ESA which may be recovered under specified legislation2.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-17",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "adm",
+        "document_id": "adm-chapter-f1",
+        "pages_path": "source/adm-2026-09-19/pages/adm-chapter-f1.json",
+        "pages_sha256": "c5b5c405f2c77cece7da418826dbcf298a89323a3788bda3cfebf1136dc6cf27",
+        "pdf_path": "source/adm-2026-09-19/pdf/adm-chapter-f1.pdf",
+        "pdf_sha256": "124b7e41af2b491209f694941482e6e4bb69e78692a84a343299dc53f25b8731",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "69de5896cee431468fa1b6692d911d261b1856ecb006749b5e4cc04ef40689b7"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "is a member of a couple, the other member of which is a parent of the child, where both are responsible for that child",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-18",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "adm",
+        "document_id": "adm-chapter-g1",
+        "pages_path": "source/adm-2026-09-19/pages/adm-chapter-g1.json",
+        "pages_sha256": "36561a57ebf9aa76c25f788f11b40afabc57e59a591bc0719860bb0aec7d6bd8",
+        "pdf_path": "source/adm-2026-09-19/pdf/adm-chapter-g1.pdf",
+        "pdf_sha256": "563aef50a07ef7da620c80db51c5b50ee25ab5ebdf894da3241e5ac55daa7546",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "69cb4e63606a918bfc70fb796fe5b0309755d080ea21107c9ee07c999b7d8d64"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "Unless any of the exceptions in G1032 apply, the WCA is not carried out, so entitlement to the LCWRA element cannot be considered3.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-19",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "adm",
+        "document_id": "adm-chapter-j2",
+        "pages_path": "source/adm-2026-09-19/pages/adm-chapter-j2.json",
+        "pages_sha256": "372b601a7edccae195073127b1866bb9a580e4952683a0a9e838bfa85267348c",
+        "pdf_path": "source/adm-2026-09-19/pdf/adm-chapter-j2.pdf",
+        "pdf_sha256": "a5404a476f448ca7e8ce17ab4b6feb9599bb90745faa946aca07b0cf90109c56",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "b1ac4cd82a459873a10b374c062ffddfa62719013cb50fded8bbf7231cf203c7"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "J2031 An adopter means1 a person who has been matched with a child for adoption who is, or is intended to be, the responsible carer for the child.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-20",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "adm",
+        "document_id": "adm-chapter-k2",
+        "pages_path": "source/adm-2026-09-19/pages/adm-chapter-k2.json",
+        "pages_sha256": "9e5b3c676296101457e3aa5083e040970b89f4c7ce91a7a3fef0e55a8c65bc0b",
+        "pdf_path": "source/adm-2026-09-19/pdf/adm-chapter-k2.pdf",
+        "pdf_sha256": "76847118ceeed47fa26dcd9f4272c50ded5ccca4bb672081d98348b84ac04fcd",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "b70ad355d323d652d6f89c765f855236bb37d0b06100f11491a949b832ae0936"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "K2009 Good reason should be considered in all cases before a sanction is imposed taking into account individual circumstances and reasonableness.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-21",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "adm",
+        "document_id": "adm-chapter-l1",
+        "pages_path": "source/adm-2026-09-19/pages/adm-chapter-l1.json",
+        "pages_sha256": "33165df0f74436caae02eb19f6752bb515e6aa9dde8311b880c9c7667b71e789",
+        "pdf_path": "source/adm-2026-09-19/pdf/adm-chapter-l1.pdf",
+        "pdf_sha256": "02f98761af86797c758d37726b9483cdf56d00e12d30ed3e6269ac18ac649b54",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "3ecfd410ea39d52541fa3c376cff89913810e215b399c4c6dec356587ca4db00"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "L1010 The guidance in this chapter on hardship will apply in the same way to reductions in benefit due to fraud or other penalties.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-22",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "adm",
+        "document_id": "adm-chapter-r1",
+        "pages_path": "source/adm-2026-09-19/pages/adm-chapter-r1.json",
+        "pages_sha256": "aa0fb9eef9c6f44a5e94287df4f9d5f7e1758883e47386febbe4bb9dd2f5cf6c",
+        "pdf_path": "source/adm-2026-09-19/pdf/adm-chapter-r1.pdf",
+        "pdf_sha256": "70801463fff984c6c9483019cce0a9c121df6402b37e59f408780b86da722b56",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "c398340d878c230c677b2bf775fdaf46190d0d7271b9f6172e53d5e678105d29"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "The two periods of JSA link and can be treated as one JSP as they are separated by linked periods that are separated by a period of twelve weeks or less (see R1021 3.).",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-23",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "adm",
+        "document_id": "adm-chapter-s2",
+        "pages_path": "source/adm-2026-09-19/pages/adm-chapter-s2.json",
+        "pages_sha256": "127957f98cf4da14ef708e4d7f60d2d0ed8c3bb1112b2a4e6d45605600e151b3",
+        "pdf_path": "source/adm-2026-09-19/pdf/adm-chapter-s2.pdf",
+        "pdf_sha256": "45ed82b67aed81ab4c3c72bd404839c0240d6938cd23604c2c091ac8bd78414b",
+        "pdf_pages": [
+          5
+        ],
+        "page_text_sha256": [
+          "754ec124fffbc72f6120cff67099413931f206ccd312f80183a056a89058b19d"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "holiday pay (see S2059), but not where it is payable more than four weeks after the employment ended, or was interrupted",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    },
+    {
+      "id": "s2-24",
+      "stage": 2,
+      "purpose": "Fresh preselected substantive chapter window; source diversity control, not a prevalence sample.",
+      "source": {
+        "family": "adm",
+        "document_id": "adm-chapter-h1",
+        "pages_path": "source/adm-2026-09-19/pages/adm-chapter-h1.json",
+        "pages_sha256": "05e025345b3270e4e706c906f19317f8002a3e11cd745d905b81ae9bea23604b",
+        "pdf_path": "source/adm-2026-09-19/pdf/adm-chapter-h1.pdf",
+        "pdf_sha256": "255f0de0cd9e7ab18fd2cebe36ef3de1f1a3ed32dd5b79c502ca57a6b5202a72",
+        "pdf_pages": [
+          10
+        ],
+        "page_text_sha256": [
+          "926fd5ecab6973749d21f3217d1f0b60d1ea6870392fa111f86b9352a1c4e6c7"
+        ]
+      },
+      "exposure": "baseline-exposed-new-to-liteparse",
+      "critical_anchors": [
+        {
+          "text": "H1098 A legal owner of a bank account is the beneficial owner of any money in the account which has been lent or given to the legal owner by another person.",
+          "match": "whitespace-normalised-literal"
+        }
+      ],
+      "anchor_order": "not-applicable",
+      "expected_blocks": [],
+      "review_status": "source-derived-proposal-pending-pdf-review"
+    }
+  ]
+}

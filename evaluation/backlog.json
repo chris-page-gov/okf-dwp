@@ -1,6 +1,6 @@
 {
   "schema": "okf-dwp-backlog.v1",
-  "updated_on": "2026-09-25",
+  "updated_on": "2026-09-26",
   "status_meanings": {
     "recorded_complete": "Named bounded result has retained evidence, not perpetual assurance.",
     "in_progress": "Work is being prepared or implemented; publication/acceptance is not implied.",
@@ -520,7 +520,15 @@
         "scripts/test_passage_boundary_review.py",
         "evaluation/passage-boundary-candidate/question-replay.json",
         "domain-profile/passage-boundary-review/replay-protocol.json",
-        "validation/passage-boundaries/2026-09-25/README.md"
+        "validation/passage-boundaries/2026-09-25/README.md",
+        "docs/liteparse-pilot.md",
+        "domain-profile/liteparse-pilot/protocol.json",
+        "domain-profile/liteparse-pilot/cases.json",
+        "validation/liteparse-pilot/source-review-2026-09-26/observation.json",
+        "evaluation/liteparse-pilot/stage-1-001/report.json",
+        "evaluation/liteparse-pilot/stage-1-001/REPORT.md",
+        "validation/liteparse-pilot/README.md",
+        "scripts/test_liteparse_pilot.py"
       ],
       "acceptance_checks": [
         "Independently agree source requirements/qualifications and negative cases; missing routes fail closed; broad corpus stays insufficient until profile accepted."
@@ -976,6 +984,23 @@
             "scripts/build_passage_boundary_review.py",
             "scripts/test_passage_boundary_review.py",
             "validation/passage-boundaries/2026-09-25/README.md"
+          ]
+        },
+        {
+          "id": "DWP-BL-007.liteparse-source-pilot",
+          "kind": "research",
+          "status": "recorded_complete",
+          "executor": "agent",
+          "next_action": "The frozen 12-window local LiteParse 2.14.6 comparison is complete: 8/12 literal anchor checks pass; both complete table-association checks fail. Preserve the failed gate, punctuation/spacing diagnosis and unchanged corpus defaults. The 24 fresh windows and 40-question replay were not admitted. A spatial sidecar with explicit header, partial-table and reversible character alignment needs a new reviewed protocol; no retrieval or answer-quality gain is claimed.",
+          "evidence": [
+            "docs/liteparse-pilot.md",
+            "domain-profile/liteparse-pilot/protocol.json",
+            "domain-profile/liteparse-pilot/cases.json",
+            "validation/liteparse-pilot/source-review-2026-09-26/observation.json",
+            "evaluation/liteparse-pilot/stage-1-001/report.json",
+            "evaluation/liteparse-pilot/stage-1-001/REPORT.md",
+            "validation/liteparse-pilot/README.md",
+            "scripts/test_liteparse_pilot.py"
           ]
         }
       ]

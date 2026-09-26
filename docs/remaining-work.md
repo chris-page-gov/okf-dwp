@@ -1,6 +1,6 @@
 # Remaining work and next priorities
 
-Status reviewed on 25 September 2026. This is the current short guide to the
+Status reviewed on 26 September 2026. This is the current short guide to the
 work queue; the [backlog register](backlog-work-packages.md) retains the detailed
 tasks and evidence. Older reports retain the results for their own versions.
 
@@ -42,6 +42,14 @@ question is repaired, but transfer-to-another-person wording still misses.
 The [UC follow-up](uc-disabled-child-supersession-follow-up.md) selected one
 relevant passage but missed required conditional guidance. Both are measurable
 failures with existing source leads.
+
+The [local LiteParse pilot](liteparse-pilot.md), **BL007.liteparse-source-pilot**,
+ran 12 precommitted windows and stopped at a failed gate. The reserved 24 windows
+were not parsed. Any follow-up should test a source-bound spatial sidecar and
+explicit header/partial-table handling under a new versioned protocol. Keep
+punctuation alignment separate from lost guidance and from retrieval gains.
+This deterministic parser experiment is separate from the optional model
+defect detector above, whose call budget remains a prerequisite.
 
 The original amendment experiment remains preserved: its broad census changed
 134 documents without a context replay. The new
