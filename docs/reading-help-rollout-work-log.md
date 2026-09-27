@@ -49,7 +49,7 @@ The 28-case passage review was rechecked from its frozen inputs on 27 September:
 
 ### Independent control review
 
-The first held-out reading-help run retained a 23/24 failure. A separate coordinator check confirmed the H05 extraction hash and surrounding source text: the source prints `see DMG 070831 to 070834`, whereas the frozen expected target named only paragraph 070831. The complete range must remain unresolved rather than being narrowed to satisfy that expectation. The original failed case and result remain unchanged. A further unexecuted set was also rejected at review because `et seq` (and the following paragraphs) needs to remain visible, and the case mix needed stronger continuation and abbreviation coverage. These are quality controls, not specialist legal acceptance.
+The first held-out reading-help run retained 23 passing cases and one failed case. A separate coordinator check confirmed the H05 extraction hash and surrounding source text: the source prints `see DMG 070831 to 070834`, whereas the frozen expected target named only paragraph 070831. The complete range must remain unresolved rather than being narrowed to satisfy that expectation. The original failed case and result remain unchanged. A further unexecuted set was also rejected at review because `et seq` (and the following paragraphs) needs to remain visible, and the case mix needed stronger continuation and abbreviation coverage. These are quality controls, not specialist legal acceptance.
 
 CI verifies the retained 40-question receipt with `python scripts/check_reading_help_replay.py`: source and engine declarations, all 40 package hashes, selected text and paths, obligations, and performance totals are checked without rerunning 80 assemblies. A changed engine or evidence baseline requires a separately named replay, not an overwritten receipt.
 
@@ -127,3 +127,20 @@ the updated consumer limits, including the printed table with 166 abbreviations.
 The integrated focused reading-help suite passes 50 tests. The withdrawn
 learning-only change was rechecked: all 4,905 logical-context and 4,758 combined
 Reader outputs reproduce exactly from their original inputs.
+
+### Merged consumer and follow-up checks
+
+Explorer [PR 158](https://github.com/chris-page-gov/okf-explorer/pull/158)
+merged as `936da562e4629ed2021bb09fcc55c6ac53ca3a9c` on 27 September.
+All required checks passed at head `6b7ec7c0b181ed431b2f04c0fbb5a46b9f04a113`,
+including the full three-engine browser suite. Public Pages verification is a
+separate gate. The corpus producer merged through DWP
+[PR 50](https://github.com/chris-page-gov/okf-dwp/pull/50), commit
+`239f974c6cba23a2a37182af722ebba0803504b6`.
+
+The independent legislation browser gate exposed undersized facet controls.
+A separate Explorer follow-up repairs those controls and explicitly separates
+a footer row's source identity from a target in another document. The existing
+corpus contains no fabricated cross-document targets. Historical failed runtime
+receipts remain retained in the legislation candidate; its publication remains
+separate from this presentation release.

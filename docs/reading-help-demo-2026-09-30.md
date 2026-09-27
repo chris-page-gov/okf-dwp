@@ -29,10 +29,13 @@ They become presentation links only after the public verification receipt passes
    marker, follow its exact paired footer occurrence and return. Explain that
    a repeated number elsewhere is a different occurrence. Unresolved references
    stay unresolved.
-4. Follow a dated statutory link. A **provision** is a section or regulation
-   within a legal work. Show its complete retained text, any bounded excerpt,
-   date and geographical variant. A complete provision is still not a complete
-   set of legal dependencies.
+4. Inspect a dated statutory link. A **provision** is a section or regulation
+   within a legal work. Show the printed citation, proposed full title and
+   date in the link. This reading-help card is navigation, not retained legal
+   text. The [optional legal bridge](reading-help-legislation-bridge.md)
+   separately records acquired bodies and section 70's territorial variants.
+   A link does not resolve which variant applies; a complete provision is still
+   not a complete set of legal dependencies.
 5. Open the 40-question evidence workbench. Choose a retained evidence record
    and open its exact reading-help passage. The retained packages, evidence
    requirements and insufficient status have not been changed by this link.

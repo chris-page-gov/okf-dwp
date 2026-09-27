@@ -16,6 +16,7 @@ import { gunzipSync } from 'node:zlib';
 
 const EXPLORER = 'https://chris-page-gov.github.io/okf-explorer/';
 const RAW = 'https://raw.githubusercontent.com/chris-page-gov/okf-dwp/';
+const FALLBACK_REVISION = '46a85142e0fe3a73b686b91029d357770b68591d';
 const HEX40 = /^[a-f0-9]{40}$/;
 const allowedDataRevisions = new Set();
 let AxeBuilder;
@@ -106,12 +107,17 @@ async function sourceSample(root, catalogue, family, document, needle) {
   const row = parse(decoded).passages.find(x => x.id === passage.unit_id);
   insist(row && row.source_spans.length && row.segment.text, 'Selected source row is absent or empty');
   const extraction = parse(await local(root, index.extraction.path, index.extraction));
-  const span = row.source_spans[0];
-  const page = extraction.pages.find(x => x.page === span.page);
-  insist(page?.text, 'Frozen extraction page is unavailable');
-  const literal = Buffer.from(page.text, 'utf8').subarray(span.start_utf8, span.end_utf8).toString('utf8');
-  insist(sha(Buffer.from(literal)) === span.literal_sha256, 'Frozen source span differs');
-  return { ref, index, passage, row, leaf, literal };
+  const literals = row.source_spans.map(span => {
+    const page = extraction.pages.find(x => x.page === span.page);
+    insist(page?.text, 'Frozen extraction page is unavailable');
+    const bytes = Buffer.from(page.text, 'utf8');
+    insist(Number.isSafeInteger(span.start_utf8) && Number.isSafeInteger(span.end_utf8) && span.start_utf8 >= 0 && span.end_utf8 > span.start_utf8 && span.end_utf8 <= bytes.length, 'Frozen source span bounds differ');
+    const literal = bytes.subarray(span.start_utf8, span.end_utf8).toString('utf8');
+    insist(sha(Buffer.from(literal)) === span.literal_sha256, 'Frozen source span differs');
+    return literal;
+  });
+  return { ref, index, passage, row, leaf, literals };
+
 }
 async function browserCheck(browser, name, url, operation, output) {
   return check(name, async () => {
@@ -159,7 +165,7 @@ async function main() {
   result.inputs = { data_root: root, data_commit: opt['data-commit'], workbench_commit: opt['workbench-commit'], chapter60_revision: opt['chapter60-revision'], explorer_commit: opt['explorer-commit'], explorer_root: explorerRoot, output };
   result.script_sha256 = sha(await readFile(fileURLToPath(import.meta.url)));
   result.invocation = process.argv.slice(2);
-  for (const revision of [opt['data-commit'], opt['workbench-commit'], opt['chapter60-revision']]) allowedDataRevisions.add(revision);
+  for (const revision of [opt['data-commit'], opt['workbench-commit'], opt['chapter60-revision'], FALLBACK_REVISION]) allowedDataRevisions.add(revision);
   let browser;
   try {
     const require = createRequire(pathToFileURL(join(explorerRoot, 'package.json')));
@@ -220,7 +226,7 @@ async function main() {
       return { url: `${RAW}${opt['workbench-commit']}/${path}`, cases: refs.length, targets, distinct_document_indexes: loaded.size, catalogue_sha256: boundCatalogue.sha256, staff016: parse(await local(root, 'evaluation/evidence-workbench/reading-help/staff-016.json', refs.find(x => x.case_id === 'staff-016'))) };
     }, x => ({ url: x.url, cases: x.cases, targets: x.targets, distinct_document_indexes: x.distinct_document_indexes, catalogue_sha256: x.catalogue_sha256 }));
     if (!workbench) return;
-    const briefSource = x => ({ document_id: x.ref.document_id, unit_id: x.passage.unit_id, source_span_sha256: x.row.source_spans[0].literal_sha256 });
+    const briefSource = x => ({ document_id: x.ref.document_id, unit_id: x.passage.unit_id, source_span_sha256s: x.row.source_spans.map(span => span.literal_sha256) });
     const dmg = await check('local Chapter 60 source controls', async () => sourceSample(root, catalogue.value, 'dmg', 'dmg-vol10-ch60', '60025'), briefSource);
     const adm = await check('local ADM source controls', async () => sourceSample(root, catalogue.value, 'adm', 'adm-chapter-a1', 'A1001'), briefSource);
     const abbrev = await check('printed 166-literal table control', async () => {
@@ -267,7 +273,8 @@ async function main() {
       const coldStarted = performance.now();
       await page.getByRole('heading', { name: 'Selected source passage' }).waitFor();
       const selected = page.getByRole('region', { name: 'Selected source passage' });
-      insist((await selected.locator('.source-page pre').first().textContent()) === dmg.literal, 'Displayed 60025 source differs from exact frozen UTF-8 span');
+      const sourceText = await selected.locator('.source-page pre').allTextContents();
+      insist(sourceText.length === dmg.literals.length && sourceText.every((text, i) => text === dmg.literals[i]), 'Displayed 60025 source differs from the complete ordered frozen UTF-8 spans');
       insist((await selected.textContent()).includes(dmg.passage.unit_id), 'Selected unit identity missing');
       const cold = (await selected.textContent()).match(/Selected load: ([\d,]+) files and ([\d,]+) bytes fetched; ([\d,]+) verified cache hits/);
       insist(cold && Number(cold[1].replaceAll(',', '')) > 0 && Number(cold[2].replaceAll(',', '')) > 0, 'Cold load metrics absent');
@@ -286,14 +293,14 @@ async function main() {
       await page.getByRole('button', { name: 'Close reading help' }).click();
       insist(await occurrence.evaluate(el => el === document.activeElement), 'Close did not return keyboard focus');
       const numbers = match => ({ fetched_files: Number(match[1].replaceAll(',', '')), fetched_bytes: Number(match[2].replaceAll(',', '')), cache_hits: Number(match[3].replaceAll(',', '')) });
-      return { source_span_sha256: dmg.row.source_spans[0].literal_sha256, cold: { ...numbers(cold), elapsed_ms: coldElapsed }, warm: { ...numbers(warm), elapsed_ms: warmElapsed }, occurrence_id: await occurrence.getAttribute('data-occurrence-id') };
+      return { source_span_sha256s: dmg.row.source_spans.map(span => span.literal_sha256), cold: { ...numbers(cold), elapsed_ms: coldElapsed }, warm: { ...numbers(warm), elapsed_ms: warmElapsed }, occurrence_id: await occurrence.getAttribute('data-occurrence-id') };
     }, output);
     await browserCheck(browser, 'ADM source passage', route(adm), async page => {
       await page.getByRole('heading', { name: 'Selected source passage' }).waitFor();
-      const displayed = await page.locator('.passage .source-page pre').first().textContent();
-      insist(displayed === adm.literal, 'Displayed ADM source differs from frozen UTF-8 span');
+      const displayed = await page.locator('.passage .source-page pre').allTextContents();
+      insist(displayed.length === adm.literals.length && displayed.every((text, i) => text === adm.literals[i]), 'Displayed ADM source differs from the complete ordered frozen UTF-8 spans');
       insist((await page.locator('.passage').textContent()).includes('Candidate meanings and legal applicability remain unreviewed'), 'ADM boundary label missing');
-      return { source_span_sha256: adm.row.source_spans[0].literal_sha256, unit_id: adm.passage.unit_id };
+      return { source_span_sha256s: adm.row.source_spans.map(span => span.literal_sha256), unit_id: adm.passage.unit_id };
     }, output);
     await browserCheck(browser, 'printed table and extraction gap', corpusRoute(catalogue.url, 'dmg', abbrev.ref.document_id, abbrev.row.unit_id), async page => {
       await page.getByRole('heading', { name: 'Selected source passage' }).waitFor();
@@ -307,7 +314,7 @@ async function main() {
       insist((await page.getByRole('link', { name: 'Open source PDF at page 10' }).count()) === 1, 'ADM extraction gap is not visible');
       return { document_id: gap.ref.document_id, page: gap.page };
     }, output);
-    const chapter = async (file, name, paired) => browserCheck(browser, name, new URL(`reading-help/?manifest=${encodeURIComponent(`${RAW}${opt['chapter60-revision']}/${file}`)}&passage=dmg-60025`, EXPLORER).href, async page => {
+    const chapter = async (file, name, paired) => browserCheck(browser, name, new URL(`reading-help/?manifest=${encodeURIComponent(`${RAW}${paired ? opt['chapter60-revision'] : FALLBACK_REVISION}/${file}`)}&passage=dmg-60025`, EXPLORER).href, async page => {
       await page.getByRole('heading', { name: /60025/ }).waitFor();
       const marker = page.locator('[data-occurrence-id="60025-fte-marker-5"]');
       if (paired) {
@@ -327,6 +334,11 @@ async function main() {
       return { manifest: file, paired_marker: paired };
     }, output);
     await check('immutable Chapter 60 v1 manifests', async () => {
+      const baseline = parse(await local(root, 'evaluation/reading-help-rollout/baseline.json'));
+      const fallback = baseline.bindings.find(row => row.path === 'reading-help-ch60.json');
+      insist(fallback?.bytes === 67503 && fallback.sha256 === '22def29ab585e623f8b570f50d10dac4e6a0b54b8d4958ab199297b6f252a478', 'Original fallback baseline differs');
+      await local(root, fallback.path, fallback);
+      await remote(`${RAW}${FALLBACK_REVISION}/${fallback.path}`, fallback, 'frozen original Chapter 60 v1 manifest');
       for (const file of ['reading-help-ch60.json', 'reading-help-ch60-references.json', 'reading-help-ch60-law.json']) {
         const bytes = await local(root, file);
         await remote(`${RAW}${opt['chapter60-revision']}/${file}`, { bytes: bytes.length, sha256: sha(bytes) }, file);
