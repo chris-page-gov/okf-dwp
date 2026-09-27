@@ -6,6 +6,8 @@
 
 To practise reading a difficult source passage, use the [bounded Chapter 60 reading aid](reading-help-ch60.md). It separates an abbreviation, a numbered condition and a raised source marker in paragraphs 60025 and 60033, with exact source locations and visible unresolved references.
 
+For the broader candidate, use the [source-linked reading-help walkthrough](reading-help-demo-2026-09-30.md). It keeps source text, proposed explanations, extraction gaps and publication status separate.
+
 For a practical introduction to source preparation, follow
 [Review how a passage was built](passage-boundary-review.md). It explains the
 28-case inspection queue, source fingerprints and the difference between a

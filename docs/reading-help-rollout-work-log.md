@@ -104,3 +104,13 @@ graph links; these are being corrected before another candidate observation.
 The first runtime attempt also stopped because the coordinator archived an old
 receipt during the identity check; that failure is retained. No new legislation
 release or specialist acceptance is claimed.
+
+### Frozen-context integration correction
+
+CI detected that the new teaching link inside the combined Reader changed inputs
+used by frozen logical and structured context projections. The teaching link now
+lives in the beginner documentation. The combined Reader and authored learning
+activity were restored to their exact pre-increment bytes; no frozen context
+outputs were regenerated. The withdrawn optional-context observation is retained
+in `evaluation/reading-help-rollout/reverted-learning-navigation-01/`.
+Occurrence-specific workbench links remain a separate additive sidecar.

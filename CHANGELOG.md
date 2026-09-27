@@ -8,12 +8,9 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
-## 27 September 2026 — source-linked beginner navigation
-
-- Link the beginner glossary and additive Reader learning activity to the reading-help demonstration walkthrough. Frozen staff packages and earlier demonstration manifests are preserved.
-- Regenerate the combined Reader after the authored learning change. Preserve the prior optional statutory-context observation separately; the same query and budget still do not retain the bridge.
-
 ## Unreleased
+
+- Link the beginner glossary and learning-path documentation to the reading-help walkthrough. Keep the combined Reader and its frozen downstream context inputs unchanged; preserve the withdrawn learning-navigation observation separately.
 
 - Link all 40 retained question cases to the bounded reading-help catalogue: 401 of 403 distinct evidence records match exact unit and source identities. Keep the two unmatched capital composites explicit and every package unchanged.
 - Generate both backlog views from the authored register and record the passed source controls separately from pending public verification.
