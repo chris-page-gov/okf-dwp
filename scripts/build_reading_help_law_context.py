@@ -5,7 +5,7 @@ import argparse
 from copy import deepcopy
 import json
 from pathlib import Path
-from build_reading_help_law import build as bridge_build, read_safe, sha, pretty, BASE, AUTHORING, PROJECTED, LIMITATIONS, OGL, REPO, DCT
+from build_reading_help_law import build as bridge_build, read_safe, sha, pretty, BASE, AUTHORING, PROJECTED, LIMITATIONS, OGL, REPO, DCT, DWP_INVENTORY, capture_for_pages
 from build_reading_help_references import build as reference_build
 ROOT=Path(__file__).resolve().parents[1]
 BASELINE='combined/context/assembly-index.json'
@@ -34,16 +34,29 @@ def build(root=ROOT):
     sources={s['id']:s for s in helper['sources']};occurrences={o['id']:o for o in helper['occurrences']};cards={c['id']:c for c in helper['cards']}
     for p in helper['passages']:
         source=sources[p['source_id']];identifier=BASE+'reading-help-law/passage/'+p['id']
+        capture=capture_for_pages(root,source['pages_url'],source['pages_sha256'])
+        text='\n'.join(s['literal'] for s in p['spans']);digest=sha(text.encode())
+        extraction=load(root,source['pages_url']);unit_spans=[];offset=0
+        for ordinal,span in enumerate(p['spans']):
+            page=next(row['text'] for row in extraction['pages'] if row['page']==span['page']).encode()
+            literal=page[span['page_start_utf8']:span['page_end_utf8']]
+            if literal.decode()!=span['literal'] or sha(literal)!=span['literal_sha256']:raise ValueError('Source fragment integrity differs')
+            start=offset+(1 if ordinal else 0);offset=start+len(literal)
+            unit_spans.append({'source_url':source['pdf_url']+'#page='+str(span['page']),'source_sha256':source['pdf_sha256'],
+              'extraction_url':REPO+source['pages_url'],'extraction_sha256':source['pages_sha256'],
+              'locator':f"pages[{span['page']-1}].text",'source_text_sha256':sha(page),'source_text_bytes':len(page),
+              'source_start':span['page_start_utf8'],'source_end':span['page_end_utf8'],'unit_start':start,'unit_end':offset,'literal_sha256':span['literal_sha256']})
         records[identifier]={'id':identifier,'route':'reading-help-law/passage/'+p['id'],'label':p['label'],'kind':'evidence',
-          'text':'\n'.join(s['literal'] for s in p['spans']),'assertion_status':'normalized','review_status':'unreviewed',
+          'text':text,'evidence_unit':{'schema':'okf-evidence-unit.v1','kind':'compound','boundary_status':'author-declared','completeness':'complete-within-declared-boundary','offset_unit':'utf-8-bytes','joiner':'\n','spans':unit_spans},'assertion_status':'normalized','review_status':'unreviewed',
           'authority':{'class':'derived','label':'Frozen machine extraction of DWP guidance; applicability unreviewed','source':source['pdf_url']},
           'scope':'Selected complete reading-help passage including retained notes and citations; dependency closure not established.','rights':OGL,'access':'public',
-          'provenance':[{'url':source['pdf_url']+'#page='+str(s['page']),'source_sha256':source['pdf_sha256'],'literal_sha256':s['literal_sha256'],
-           'locator':f"PDF page {s['page']}; extracted UTF-8 bytes {s['page_start_utf8']}:{s['page_end_utf8']}"} for s in p['spans']]}
+          'provenance':[{'url':source['pdf_url']+'#page='+str(s['page']),'source_sha256':source['pdf_sha256'],'literal_sha256':digest,'captured_at':capture['observed_at'],
+           'locator':f"PDF page {s['page']}; extracted UTF-8 bytes {s['page_start_utf8']}:{s['page_end_utf8']}"} for s in p['spans']]+[{'url':REPO+source['pages_url'],'source_sha256':source['pages_sha256'],'literal_sha256':digest,'captured_at':capture['extraction_observed_at'] or capture['observed_at'],'locator':'Exact ordered source fragments in evidence_unit; dependency completeness unreviewed'}]}
     # Reuse existing concept-to-page routes, then normalise each exact overlapping
     # source location to the complete retained reading-help passage.
     for p in helper['passages']:
         destination=BASE+'reading-help-law/passage/'+p['id'];source=sources[p['source_id']]
+        capture=capture_for_pages(root,source['pages_url'],source['pages_sha256'])
         for span in p['spans']:
             page_id=BASE+'page/'+p['source_id']+'/'+str(span['page']).zfill(4)
             if page_id not in records: continue
@@ -56,7 +69,7 @@ def build(root=ROOT):
               'assertion_status':'normalized','scope':'Source-span navigation only; the passage may continue on another source page.',
               'authority':{'class':'derived','label':'Exact source span normalisation','source':source['pdf_url']},
               'provenance':[{'url':source['pdf_url']+'#page='+str(span['page']),'source_sha256':source['pdf_sha256'],
-                'literal_sha256':span['literal_sha256'],'locator':f"Extracted UTF-8 bytes {span['page_start_utf8']}:{span['page_end_utf8']}"}]}
+                'literal_sha256':span['literal_sha256'],'captured_at':capture['observed_at'],'locator':f"Extracted UTF-8 bytes {span['page_start_utf8']}:{span['page_end_utf8']}"}]}
     outcomes=[];seen=set()
     for m in admission['mappings']:
         if m['card_id'] in seen:raise ValueError('Duplicate citation admission')
@@ -76,7 +89,7 @@ def build(root=ROOT):
               'assertion_status':'normalized','scope':'Exact citation identity only; sibling qualifications and geographical applicability remain separate review tasks.',
               'authority':{'class':'derived','label':'Printed citation normalisation','source':REPO+AUTHORING+'/citation-admission.json'},
               'provenance':[{'url':sources[s['source_id']]['pdf_url']+'#page='+str(s['page']),'source_sha256':sources[s['source_id']]['pdf_sha256'],
-                  'literal_sha256':s['literal_sha256'],'locator':f"Citation card {card['id']}; PDF page {s['page']}; extracted UTF-8 bytes {s['page_start_utf8']}:{s['page_end_utf8']}"} for s in card['source_support']]}
+                  'literal_sha256':s['literal_sha256'],'captured_at':capture_for_pages(root,sources[s['source_id']]['pages_url'],sources[s['source_id']]['pages_sha256'])['observed_at'],'locator':f"Citation card {card['id']}; PDF page {s['page']}; extracted UTF-8 bytes {s['page_start_utf8']}:{s['page_end_utf8']}"} for s in card['source_support']]}
             variants.append({'record_id':dest,'variant':u['variant'],'structural_id':m['structural_id'],'source_native_url':u['version_url']+'#'+m['structural_id']})
         if not variants:raise ValueError('No retained source target for '+m['card_id'])
         # Source-native metadata confirms the dated generic provision route; both variants remain visible in the context.
@@ -85,7 +98,7 @@ def build(root=ROOT):
         card['body']+=' The separately captured provision contains this structural locator. This resolves navigation only; legal applicability and dependency completeness remain unreviewed.'
         outcomes.append({**m,'variants':variants,'source_card_sha256':original_card_sha256})
     if any(cards[c]['target']['status']!='unresolved' for c in admission['unresolved_cards']):raise ValueError('Unsupported reference silently resolved')
-    inputs=[BASELINE,REFERENCE,AUTHORING+'/citation-admission.json',AUTHORING+'/context-overlay.json','scripts/build_reading_help_law_context.py']
+    inputs=[DWP_INVENTORY,BASELINE,REFERENCE,AUTHORING+'/citation-admission.json',AUTHORING+'/context-overlay.json','scripts/build_reading_help_law_context.py']
     bindings=[{'path':p,'sha256':sha(read_safe(root,p))} for p in inputs];snapshot='reading-help-law-'+sha(pretty(bindings))[:20]
     index['records']=sorted(records.values(),key=lambda r:r['id']);index['assertions']=sorted(edges.values(),key=lambda r:r['id'])
     index['bundle']={**index['bundle'],'id':BASE+'bundle/reading-help-law','snapshot':snapshot}

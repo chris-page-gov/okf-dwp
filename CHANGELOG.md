@@ -10,6 +10,8 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Correct statutory-overlay capture provenance and distinguish full-passage hashes from exact source fragments; preserve the failed admission and verify all newly admitted records with Explorer.
+
 - Correct the learning-path insertion to preserve the checked source-roles diagram heading.
 - Validate the retained 40-question replay bindings and measurements in CI without repeating unchanged assemblies.
 

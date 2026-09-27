@@ -52,3 +52,16 @@ The 28-case passage review was rechecked from its frozen inputs on 27 September:
 The first held-out reading-help run retained a 23/24 failure. A separate coordinator check confirmed the H05 extraction hash and surrounding source text: the source prints `see DMG 070831 to 070834`, whereas the frozen expected target named only paragraph 070831. The complete range must remain unresolved rather than being narrowed to satisfy that expectation. The original failed case and result remain unchanged. A further unexecuted set was also rejected at review because `et seq` (and the following paragraphs) needs to remain visible, and the case mix needed stronger continuation and abbreviation coverage. These are quality controls, not specialist legal acceptance.
 
 CI verifies the retained 40-question receipt with `python scripts/check_reading_help_replay.py`: source and engine declarations, all 40 package hashes, selected text and paths, obligations, and performance totals are checked without rerunning 80 assemblies. A changed engine or evidence baseline requires a separately named replay, not an overwritten receipt.
+
+## Admission correction, 27 September 2026
+
+The coordinator's engine review found that the first optional legal context
+omitted source-capture timestamps and confused per-fragment hashes with the
+complete record text hash. The initial failed observation is preserved under
+`evaluation/reading-help-rollout/failed-admission-01/`. The corrected projection
+uses the original acquisition/extraction receipts, complete record digests and
+separate exact fragment metadata. Every added record and relationship now
+passes Explorer's governance check; fragment integrity is checked independently.
+The same question and budget still fail to retain the bridge, so no retrieval
+improvement is claimed. Focused local reading-help tests: 35 passed, including
+six workbench-link controls whose data publication awaits the corpus commit.

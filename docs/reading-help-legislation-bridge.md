@@ -70,4 +70,6 @@ Run the independent engine-shape and retained-probe check with:
 node --experimental-strip-types scripts/check_reading_help_law_context.mjs --explorer-root ../okf-explorer
 ```
 
+The [first admission attempt](../evaluation/reading-help-rollout/failed-admission-01/law-context-probe.json) is preserved: it exposed missing source-capture timestamps and fragment hashes incorrectly supplied as complete-record hashes. The successor uses the original capture receipts, keeps each source-fragment digest in `evidence_unit.spans`, and binds every provenance literal digest to the complete record text. The engine now checks governance and fragment integrity for every added record and relationship before the unchanged retrieval probe. It still does not retain the bridge.
+
 This check distinguishes valid admission from a failed selection observation. Broader semantic routing remains an open task.

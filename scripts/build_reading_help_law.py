@@ -15,6 +15,7 @@ PROJECTED=SOURCE+'-v2'
 BASE='https://chris-page-gov.github.io/okf-dwp/id/'
 REPO='https://github.com/chris-page-gov/okf-dwp/blob/main/'
 DCT='http://purl.org/dc/terms/references'
+DWP_INVENTORY='source/full-dmg-2026-09-15/inventory.json'
 LIMITATIONS=[
  'Navigation identifies cited sources, not legal applicability or satisfaction of an evidence requirement.',
  'The requested comparison date is 20 September 2026; capture date, commencement and case applicability are different.',
@@ -35,6 +36,12 @@ def source_support(root,support):
     if not (0<=a<b<=len(text)):raise ValueError('Source span outside page')
     literal=text[a:b]
     if literal.decode()!=support['quote'] or sha(literal)!=support['literal_sha256']:raise ValueError('Source span binding mismatch')
+
+def capture_for_pages(root,path,digest):
+    matches=[d for d in load(root,DWP_INVENTORY)['documents'] if d.get('pages_path')==path]
+    if len(matches)!=1 or matches[0]['pages_sha256']!=digest:
+        raise ValueError('Source capture identity is missing or differs')
+    return matches[0]
 
 def build(root=ROOT):
     seeds=load(root,AUTHORING+'/seeds.json');date=seeds['comparison_date']
@@ -58,8 +65,8 @@ def build(root=ROOT):
     mappings=[]
     for work in seeds['works']:
         source_support(root,work['support']);ident=BASE+'reading-help-law/work/'+work['target'];work_ids[work['target']]=ident
-        s=work['support'];provenance=[{'url':REPO+s['pages_path'],'source_sha256':s['pages_sha256'],'literal_sha256':s['literal_sha256'],
-            'locator':f"PDF page {s['page']}, UTF-8 bytes {s['start_utf8']}:{s['end_utf8']}"}]
+        s=work['support'];capture=capture_for_pages(root,s['pages_path'],s['pages_sha256']);provenance=[{'url':REPO+s['pages_path'],'source_sha256':s['pages_sha256'],'literal_sha256':s['literal_sha256'],
+            'locator':f"PDF page {s['page']}, UTF-8 bytes {s['start_utf8']}:{s['end_utf8']}",'captured_at':capture['extraction_observed_at'] or capture['observed_at']}]
         mappings.append({**work,'record_id':ident,'assertion_status':'normalized','applicability':'unresolved'})
         records.append({'id':ident,'route':'reading-help-law/work/'+work['target'],'label':work['title'],'kind':'scope',
             'text':work['abbreviation']+' — '+work['title'],'assertion_status':'normalized',
@@ -86,7 +93,7 @@ def build(root=ROOT):
             provenance=[{'url':unit['version_url'],'source_sha256':d['response_sha256'],'literal_sha256':unit['body_text_sha256'],
                 'locator':canonical+'; observed variant '+unit['variant'],'captured_at':d['receipt']['observed_at'],
                 'source_date':date,'source_date_kind':'requested point-in-time version; not applicability'},
-                {'url':REPO+path,'source_sha256':sha(raw),'locator':'Retained tree at source XML target ordinal '+str(unit['source_xml_ordinal'])}]
+                {'url':REPO+path,'source_sha256':sha(raw),'locator':'Retained tree at source XML target ordinal '+str(unit['source_xml_ordinal'])+'; capture timestamp belongs to the underlying response','captured_at':d['receipt']['observed_at']}]
             work='/'.join(target.split('/')[:3]);label=next(w['title'] for w in seeds['works'] if w['target']==work)+' — '+target.split('/',3)[-1]+' ('+unit['variant']+')'
             records.append({'id':ident,'route':'reading-help-law/body/'+target+'/'+unit['variant'].replace('+','-and-'),'label':label,'kind':'evidence','text':text,
                 'assertion_status':'normalized','authority':{'class':'derived','label':'Machine extraction of official source; applicability unreviewed','source':unit['version_url']},
@@ -103,7 +110,7 @@ def build(root=ROOT):
         target=record['id'].split('/legal-body/',1)[1];work='/'.join(target.split('/')[:3])
         if work in work_ids:
             edge(work_ids[work],record['id'],'Work contains previously retained statutory unit',record['provenance']);reused.append(record['id'])
-    for path in [AUTHORING+'/seeds.json',SOURCE+'/manifest.json',PROJECTED+'/manifest.json','domain-profile/legal-bodies/context-overlay.json','scripts/build_reading_help_law.py']:
+    for path in [DWP_INVENTORY,AUTHORING+'/seeds.json',SOURCE+'/manifest.json',PROJECTED+'/manifest.json','domain-profile/legal-bodies/context-overlay.json','scripts/build_reading_help_law.py']:
         bindings.append({'path':path,'sha256':sha(read_safe(root,path))})
     overlay={'schema':'okf-legal-body-context-overlay.v1','records':records,'assertions':assertions,'bindings':bindings,'external_record_ids':reused,'limitations':LIMITATIONS}
     catalogue={'schema':'okf-reading-help-law-bridge.v1','comparison_date':date,'work_mappings':mappings,'new_units':projections,
