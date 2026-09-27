@@ -188,3 +188,12 @@ identities in the release manifest. Failed attempts are retained. All 40
 question packages remain insufficient; no model answers or specialist review
 were added. Final release-record deployment and paired tags follow through the
 normal reviewed PR.
+
+### Release-record CI correction
+
+The first release-record CI run rejected an unregistered work-package evidence
+link: the 28-case recheck was linked from its structural-review package but
+missing from the parent backlog item's evidence inventory. The authored parent
+register is corrected and generated views rebuilt. The check is unchanged; the
+failed workflow 36292138883 remains visible in GitHub. No source, reading-help
+output or public acceptance receipt changed.
