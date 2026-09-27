@@ -1,0 +1,367 @@
+{
+  "corpus_consumer_compatibility": {
+    "boundary": "Read-only index and decoded-leaf shape/hash/size audit against readingHelpCorpus.ts. Frozen page extractions were not re-read; passage source-text equality was not re-run.",
+    "counted_documents": 513,
+    "counted_footer_rows": 12016,
+    "counted_leaves": 1455,
+    "failure_count": 0,
+    "receipt": {
+      "bytes": 3755,
+      "path": "evaluation/reading-help-rollout/consumer-compatibility-01.json",
+      "sha256": "3f7adef4e6f07b5596ab5e46966ee85122306755ca7e1d1288d912f671d943c9"
+    }
+  },
+  "coverage": {
+    "cards": 197564,
+    "definition_proposals": 0,
+    "detected_occurrences": 197564,
+    "documents": 513,
+    "extraction_blocked_pages": 893,
+    "leaves": 1455,
+    "meaning": "Every adopted document/unit has a processing or explicit gap outcome; these totals do not imply complete explanations or answerability.",
+    "occurrences": 197564,
+    "pages": 19090,
+    "passages": 53727,
+    "segments": 54299,
+    "status": "machine-proposed-unreviewed",
+    "unsupported_segments": 0
+  },
+  "deployed_service_observation": {
+    "bytes": 2679,
+    "path": "evaluation/reading-help-rollout/release-20260927/service-health.json",
+    "ready": true,
+    "scope": "Health declaration only; unchanged service, not an invocation or Worker-byte attestation.",
+    "sha256": "3a5dbef3f708410a238bfeaee75ad1447252ab02e219220d3b8d8f98e89f8b17",
+    "version": "0.7.0"
+  },
+  "fixed_budget_replay": {
+    "all_insufficient": true,
+    "budget": {
+      "max_bytes": 524288,
+      "max_depth": 6,
+      "max_nodes": 64,
+      "max_relationships": 128
+    },
+    "cases": 40,
+    "cold_total_fetched_bytes": 158837842,
+    "engine_files": {
+      "corpus.ts": "a770352c6e4628f0c391b0c12bbdaf185b476a714ca212e99459d135f8f57f6f",
+      "corpusV3.ts": "944617e1630362b7a41d60da92651007b96252eff3075eb4c4b852f420f5a5c0",
+      "index.ts": "689f8b8ab1cfb5ccc21b6dd9b5527fcad04de01f5876b44cbb2dc0240fceb010",
+      "types.ts": "febf83b5c65153fd2e49ac070b6117525463034fb1b33534a086a1cc7bbb42cc"
+    },
+    "failed": [],
+    "meaning": "Non-regression of retained evidence, not a claim of improved retrieval, entitlement accuracy or legal answerability.",
+    "model_calls": 0,
+    "network_calls": 0,
+    "packages_equal_to_retained": true,
+    "passed": 40,
+    "protocol": {
+      "bytes": 2603,
+      "path": "evaluation/reading-help-rollout/replays/reading-help-20260927-01/protocol.json",
+      "sha256": "141dcee157541e51cf81bf366ac7b894f40763c4f1a605178b95a2bba6a80a99"
+    },
+    "report": {
+      "bytes": 8754,
+      "path": "evaluation/reading-help-rollout/replays/reading-help-20260927-01/report.json",
+      "sha256": "97c11c6f04e8b299dc2558c141c2e99e15b1f5562cba7ffa675970e418b4fab9"
+    },
+    "source": {
+      "corpus": "structured-context/evidence-connect-manifest.json",
+      "corpus_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519",
+      "delivery_sha256": "f05cd5cf6378ecb9e33f5c8a4d43a6bd74d7c6983413316d3663b5bd733f7b35",
+      "engine_files": {
+        "corpus.ts": "a770352c6e4628f0c391b0c12bbdaf185b476a714ca212e99459d135f8f57f6f",
+        "corpusV3.ts": "944617e1630362b7a41d60da92651007b96252eff3075eb4c4b852f420f5a5c0",
+        "index.ts": "689f8b8ab1cfb5ccc21b6dd9b5527fcad04de01f5876b44cbb2dc0240fceb010",
+        "types.ts": "febf83b5c65153fd2e49ac070b6117525463034fb1b33534a086a1cc7bbb42cc"
+      },
+      "model_calls": 0,
+      "network_calls": 0,
+      "registry": "evaluation/staff-questions/cases.json",
+      "registry_sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a"
+    },
+    "warm_total_fetched_bytes": 0
+  },
+  "identity": {
+    "cache_boundary": "Warm cache is source/hash validated within each document; authoritative --check bypasses cache. Portable gzip uses fixed mtime and OS-neutral header.",
+    "cache_key_inputs": [
+      "producer bytes",
+      "reference-parser bytes",
+      "structured-helper bytes",
+      "schema identifiers",
+      "rule revision",
+      "all frozen printed-table PDF and extraction bindings",
+      "each document extraction and structured-unit bindings"
+    ],
+    "catalogue": {
+      "bytes": 260797,
+      "path": "reading-help-corpus/manifest.json",
+      "sha256": "6c53b659b519aa4cbf7529e7e10eb4ad3bfe8efcac18055ec2a5ade724998b46"
+    },
+    "chat_export_import": {
+      "bytes": 10980,
+      "path": "scripts/reading_help_chat.py",
+      "sha256": "484e9d6e76bbab3e79368abd65607f5d9046aa6e70adde131f0450e12bad206b"
+    },
+    "contracts": [
+      {
+        "bytes": 24914,
+        "path": "okf.semantic.json",
+        "sha256": "c6278632d1222b5c41e7d103bf668b3b9344bc8394607d6db2c01183b1d6d8a8"
+      },
+      {
+        "bytes": 162581,
+        "path": "okf.publication.json",
+        "sha256": "278d165b765d5c6f9665303a6de9636ffb8e8d39342ceeff708c3952be1d63be"
+      }
+    ],
+    "fallback_manifest": {
+      "bytes": 67503,
+      "path": "reading-help-ch60.json",
+      "sha256": "22def29ab585e623f8b570f50d10dac4e6a0b54b8d4958ab199297b6f252a478"
+    },
+    "learning_site_verifier": {
+      "bytes": 3315,
+      "path": "evaluation/reading-help-rollout/release-20260927/learning-site-attempt-01/verify_public.py",
+      "sha256": "99f8eed6e8706abbe27b807259279e927973ca4ebb3b31216fde8fbf21e62515"
+    },
+    "producer": {
+      "bytes": 23684,
+      "path": "scripts/build_reading_help_corpus.py",
+      "sha256": "3dc6099a2156bf9f0c1cd038f816f0540cdd5940f3f163b28daba2d14da5e50e"
+    },
+    "public_verifier": {
+      "bytes": 30547,
+      "path": "scripts/verify_reading_help_public.mjs",
+      "sha256": "ec21528e9d5f779ddf01a6138ebecab1c8eaad4b6858b004e288d6f6b2bc1ebe"
+    },
+    "reference_parser": {
+      "bytes": 7263,
+      "path": "scripts/manual_references.py",
+      "sha256": "27d02e4a1244f8102ebf6abb6ce5a8a014edcf87225ca0556ba5a9814f6af8d0"
+    },
+    "rules_sha256": "be8b7eb48de3d9eb9171d790f78bc3f56e77c6a74e2b207b8d36e830d59798c1",
+    "schema_ids": [
+      "okf-reading-help-catalogue.v1",
+      "okf-reading-help-document.v1",
+      "okf-reading-help.v2"
+    ],
+    "source_baseline_bindings": [
+      {
+        "bytes": 940722,
+        "path": "structured-units/manifest.json",
+        "sha256": "8b620634bf686566d30c0cf4cd12f69535af7ef546a356333e3b0f9011d15741"
+      },
+      {
+        "bytes": 950088,
+        "path": "evaluation/passage-boundary-candidate/versioned-census-02/candidate-manifest.json",
+        "sha256": "6788b541231bad5d61e1e74552273553bb8e5d8de3f18a0dc476ab9c3b73ff9b"
+      },
+      {
+        "bytes": 96866,
+        "path": "domain-profile/legal-bodies/coverage.json",
+        "sha256": "30d4fa19ce31c592c02e6a57908a073e79a5737b442c4c5a9a2218d6438485c7"
+      },
+      {
+        "bytes": 67503,
+        "path": "reading-help-ch60.json",
+        "sha256": "22def29ab585e623f8b570f50d10dac4e6a0b54b8d4958ab199297b6f252a478"
+      },
+      {
+        "bytes": 559,
+        "path": "evaluation/service-publication.json",
+        "sha256": "2ba3e4fd4a5be5ab2054df3a00326733a6d04f19847c082a7f4eb5281f2567a6"
+      }
+    ],
+    "structured_helper": {
+      "bytes": 35977,
+      "path": "scripts/build_logical_units.py",
+      "sha256": "364be1718db1697baa8af62362e8d4f65178dd9506f7cba5b8d16ff5f3aece38"
+    },
+    "structured_manifest": {
+      "bytes": 940722,
+      "path": "structured-units/manifest.json",
+      "sha256": "8b620634bf686566d30c0cf4cd12f69535af7ef546a356333e3b0f9011d15741"
+    },
+    "structured_snapshot": "dwp-structured-units-9d7908c23642199bb048",
+    "workbench_manifest": {
+      "bytes": 190805,
+      "path": "evaluation/evidence-workbench/reading-help-manifest.json",
+      "sha256": "3afb59e4f811378b555b18b02e78fd021f5afecf33fd5efd0dba0f69ec0d71dd"
+    }
+  },
+  "independent_technical_review": {
+    "bytes": 1351,
+    "path": "evaluation/reading-help-rollout/release-20260927/independent-review.json",
+    "sha256": "8a01c1b2e6714629e3581b2f100cfd3df2750cbf779bb23125c6e48bc7a5ecab"
+  },
+  "pending_gates": [
+    "Final release-record PR, exact merged documentation deployment and paired demonstration tag; final observation is a release asset to avoid self-referential commit hashes.",
+    "Specialist review of proposed meanings, legal applicability and unresolved source boundaries.",
+    "Separate legislation format candidate remains release-blocked pending a successor release contract, fresh assurance and locked reproduction."
+  ],
+  "recorded_at_utc": "2026-09-27T03:38:21.224Z",
+  "retained_boundary_recheck": {
+    "boundary": "Exact frozen hash/span and output non-regression only; case 014 remains unresolved.",
+    "cases": 28,
+    "files": 55,
+    "receipt": {
+      "bytes": 8429,
+      "path": "evaluation/reading-help-rollout/release-20260927/boundary-recheck-01/receipt.json",
+      "sha256": "faf36ceab4921cfd842e98e1eaac98dc7b3be21c4242f7fee4a0825d855069d5"
+    },
+    "substantive_chapters": 9,
+    "verifier": {
+      "bytes": 2453,
+      "path": "evaluation/reading-help-rollout/release-20260927/boundary-recheck-01/verify_boundaries.py",
+      "sha256": "3e8c5d3a6ba8593d1d1c883c6af9328719a7b108fc784d012d1805e1b1594d86"
+    }
+  },
+  "retained_limits": [
+    "893 pages have no usable extracted text; PDFs are not established blank.",
+    "Case 014 of the 28-case passage review remains unresolved.",
+    "The first held-out H05 result remains failed; the later 24-case fixture is separate and source-reviewed, not a replacement.",
+    "Mixed-case abbreviations such as WDisP may be unrecognised; repeated phrase proposals are capped at 100 per document.",
+    "The 54,577-unit historical-amendment candidate was not silently adopted.",
+    "The Chapter 60 v1 manifest and its verified fallback tag remain untouched.",
+    "No new content-processing or answer-model calls were made; the deterministic corpus contains unreviewed candidates.",
+    "The legal bridge is optional and not the deployed default service or a specialist acceptance."
+  ],
+  "revisions": {
+    "consumer_followup_ci_run": 36290277261,
+    "consumer_followup_head": "26af7231c8350d123bbd72324dfbfeca9feaa497",
+    "consumer_followup_pages_run": 36291402585,
+    "consumer_followup_pr": 159,
+    "consumer_merge_commit": "b633038c6173f1405199df9f08e8d8aa2ff51c0b",
+    "consumer_pr": 159,
+    "corpus_data_commit": "cbada7bf544106bdceb2445fc379c8b3e5b73ee4",
+    "corpus_pr50_merge": "239f974c6cba23a2a37182af722ebba0803504b6",
+    "fallback_manifest_commit": "46a85142e0fe3a73b686b91029d357770b68591d",
+    "fallback_tag": "demo-2026-09-30-reading-help-v1",
+    "initial_consumer_merge_commit": "936da562e4629ed2021bb09fcc55c6ac53ca3a9c",
+    "initial_consumer_pr": 158,
+    "integrated_workbench_commit": "2ad33add6d8660fec98bf34fb98480a9d0de9e27",
+    "observed_integration_worktree_head": "2ad33add6d8660fec98bf34fb98480a9d0de9e27",
+    "public_browser_receipt": {
+      "bytes": 29571,
+      "path": "evaluation/reading-help-rollout/release-20260927/public-attempt-03/receipt.json",
+      "sha256": "989adb3aeeebc085457e52cc7d1fdca3ecb30b3284b43af775ae1ba1dc9d38ec"
+    },
+    "public_dwp_commit": "f61d41b689427c27275ae3b7e64b612925b6321e",
+    "public_dwp_observation": {
+      "bytes": 4205,
+      "path": "evaluation/reading-help-rollout/release-20260927/learning-site-attempt-01/receipt.json",
+      "sha256": "5efa600111438abe4fdc2b34114eb27706af76293f4f838af5d6ef3cb0ee21ae"
+    },
+    "public_explorer_commit": "b633038c6173f1405199df9f08e8d8aa2ff51c0b",
+    "structural_baseline_dwp": "2c46fbd4e0807b1c9dfa0e9d79e33987d245ef21",
+    "structural_baseline_explorer": "0326460034345c7b5227c530065b7f21cb4e3970",
+    "workbench_pr49_merge": "f61d41b689427c27275ae3b7e64b612925b6321e"
+  },
+  "schema": "okf-reading-help-release.v1",
+  "scope": "Independent experimental DWP source-linked reading help; technical delivery and structural checks remain distinct from legal answerability and specialist acceptance.",
+  "source_controls": {
+    "fixture": {
+      "bytes": 17822,
+      "path": "evaluation/reading-help-rollout/heldout-03-controls.json",
+      "sha256": "ec6ddc9423618fb28b8405661b62a100581a8da5155c352f9df5a47125dcf0fd"
+    },
+    "initial_fixture": {
+      "bytes": 9284,
+      "path": "evaluation/reading-help-rollout/meaningful-controls.json",
+      "sha256": "24c4248dc0b70eebc286160be26a2c369afee479be5e604777c9512d24c312e1"
+    },
+    "initial_passed": 12,
+    "initial_receipt": {
+      "bytes": 560,
+      "path": "evaluation/reading-help-rollout/initial-gate-02.json",
+      "sha256": "ffdcae0af7d5e4a8b03c3d2064190b69a8307484bc76a842eae17093cfb36795"
+    },
+    "interpretation": "Source-led structural controls only; no specialist legal review.",
+    "latest_regression": {
+      "bytes": 1044,
+      "path": "evaluation/reading-help-rollout/heldout-03-producer-replay-03.json",
+      "sha256": "123c2d5a114c468e61c1fc8bb04326855b27e457e54b551c3ef2e1cee4c1355a"
+    },
+    "latest_regression_failed": 0,
+    "original_heldout_failed": {
+      "bytes": 1221,
+      "path": "evaluation/reading-help-rollout/heldout-gate-02.json",
+      "sha256": "e7602b1d0f95eb6f45b1ccc6e02964e247cf2c5a69905b65910a58728c18bdbb"
+    },
+    "original_heldout_fixture": {
+      "bytes": 17044,
+      "path": "evaluation/reading-help-rollout/heldout-controls.json",
+      "sha256": "570126860ca2fc5ebbe8ab0e0f7f24e97ac73eb0785926aafa2618bb09ac6af9"
+    },
+    "original_heldout_result": "23 passed and 1 failed; H05 expected only 070831 but frozen source says 070831 to 070834; producer retained range as unresolved",
+    "pre_execution_rejected_fixture": {
+      "bytes": 709,
+      "path": "evaluation/reading-help-rollout/heldout-02-review-rejection.json",
+      "sha256": "f7aa8e06f92c880dfa72c0dd00d02c68ce105279026111ae352c332ad7f48f46"
+    },
+    "revised_fresh_heldout_passed": 24
+  },
+  "status": "technically-verified-awaiting-specialist-review",
+  "statutory_bridge": {
+    "admission_receipt": {
+      "bytes": 15991,
+      "path": "domain-profile/reading-help-law/admission.json",
+      "sha256": "a1d28b41b770e33f2b49f7d6ff33555223016c12ba58e82f44f5f0e448189abc"
+    },
+    "boundary": "Optional context passes structural/governance admission, but the unchanged ordinary natural-language query misses the bridge. Citation identity does not establish jurisdiction, date applicability or a complete legal answer.",
+    "bridge": {
+      "bytes": 10670,
+      "path": "domain-profile/reading-help-law/bridge.json",
+      "sha256": "b7cd2ed698ec3ec6bd39079d87b33ef806fe97f0bef5d5661b65f531e32c5408"
+    },
+    "citation_bindings": 16,
+    "deployed_service": "unchanged; this optional context is explicitly selected",
+    "existing_navigation_relationships": 43,
+    "existing_provisions": 16,
+    "existing_statutory_units": 20,
+    "full_title_mappings": 4,
+    "new_observed_territorial_bodies": 4,
+    "new_requested_targets": 3,
+    "optional_added_records": 10,
+    "optional_added_relationships": 51,
+    "optional_assembly_index": {
+      "bytes": 5866278,
+      "path": "domain-profile/reading-help-law/assembly-index.json",
+      "sha256": "01147a38204f45fefc1ad2dbf68c995a5888c007282f6bad5e4ba36190a76d44"
+    },
+    "original_requirements_preserved": 40,
+    "probe": {
+      "bytes": 40809,
+      "path": "evaluation/reading-help-rollout/law-context-probe.json",
+      "sha256": "95a986b85313a56198e537e605bf285923ba0e8580498d4a5c810625ce9ec4bd"
+    },
+    "probe_bridge_selected": false,
+    "probe_evidence_status": "insufficient",
+    "unresolved_citation_cards": [
+      "60033-marker-9",
+      "60033-marker-10",
+      "60033-marker-11",
+      "60033-marker-12",
+      "60033-extra-2"
+    ]
+  },
+  "workbench": {
+    "evidence_requirements_changed": false,
+    "exact_links": 401,
+    "packages_changed": false,
+    "question_cases": 40,
+    "report": {
+      "bytes": 606,
+      "path": "evaluation/reading-help-rollout/workbench-link-report.json",
+      "sha256": "cb508185bc171cbaeca6c39e097fdbf97a9a0d511ddf806684b6b012fc7f3df3"
+    },
+    "selected_distinct_records": 403,
+    "sidecar_count": 40,
+    "unmatched_records": [
+      "https://chris-page-gov.github.io/okf-dwp/id/unit/zz-evidence-connect/pc-capital-u06",
+      "https://chris-page-gov.github.io/okf-dwp/id/unit/zz-evidence-connect/pc-capital-u10"
+    ]
+  }
+}

@@ -50,7 +50,11 @@ extraction hashes, page, exact literal and UTF-8 span; their target scope names 
 found. Equal letters do not establish equal meanings.
 
 Future body-to-footer links use exact occurrence IDs. A cross-leaf link must
-carry `{document_id,passage_id,occurrence_id,leaf_url,leaf_sha256}`. Neither a
+carry an explicit nested `target` containing
+`{document_id,passage_id,occurrence_id,leaf_url,leaf_sha256}`. The printed
+reference row keeps its own source passage and occurrence identity; these must
+not be reused as the destination identity. A consumer verifies the destination
+against its catalogue, document index and exact occurrence before navigation. Neither a
 digit nor a paragraph label alone is a valid footer target. The deterministic build records exact printed reference-list rows with
 `body_occurrence_ids:[]` where an exact body/footer pairing is unproven. Consumers must show such references as
 unresolved and must not infer a link.

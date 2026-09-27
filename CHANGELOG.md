@@ -1,5 +1,11 @@
 # Changelog
 
+## Source-linked reading-help release — 27 September 2026
+
+- Bind the 513-document corpus, 12/24 source controls, 28-case and nine-chapter rechecks, unchanged 40-question replay, and 401/403 exact workbench links in a checked release manifest.
+- Record all 16 successful public browser checks at Explorer b633038c, preserve earlier failures and the Chapter 60 v1 fallback, and publish the beginner demonstration script.
+- Add CI checks that reject mismatched source, verifier, consumer, data and Pages identities. Candidate meanings, extraction gaps and legal answerability remain explicitly unreviewed.
+
 Notable changes for readers, in reverse date order. We use the
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) distinction between
 unreleased work and dated changes; this repository currently uses dated research
@@ -9,6 +15,13 @@ Implementation ownership and handovers belong in the
 [backlog](docs/backlog.md).
 
 ## Unreleased
+
+- Gate the versioned reading-help release record in CI: confined hash bindings, fresh 12/24 controls, all 40 retained packages, and exact verifier, consumer and data identities. Preserve failed public attempts.
+
+- Add a bounded public reading-help verifier: immutable catalogue and 40 sidecars, exact source text, continuations, cache measurements, keyboard focus, dated links, automated accessibility snapshots and the preserved Chapter 60 route. Existing receipts cannot be overwritten.
+- Clarify the optional cross-document target contract and distinguish its destination identity from the printed reference row. Frozen corpus rows remain unresolved where no target is declared.
+- Reconcile reading-help backlog acceptance with the authorised literal-highlight scope; proposed meanings and legal applicability still require qualified review.
+
 
 - Link the beginner glossary and learning-path documentation to the reading-help walkthrough. Keep the combined Reader and its frozen downstream context inputs unchanged; preserve the withdrawn learning-navigation observation separately.
 
@@ -31,7 +44,7 @@ Implementation ownership and handovers belong in the
 - Retain the five-request Chapter 60 acquisition and its initial section 70 version failure. An offline successor preserves both geographical variants, complete selected text and source-native dated links, without further requests.
 - Record exact rollout baselines and the failed live health observation separately from historical deployment evidence. Consumer admission and legal applicability remain explicit outstanding gates.
 
-- Add a [deterministic DMG/ADM reading-help corpus](docs/reading-help-corpus-contract.md) over the adopted 53,727 structured units in 513 documents. Bounded, source-bound leaves retain 893 extraction-blocked pages, printed abbreviation-row candidates, unresolved local references and explicit review limits. The source-led initial gate passed 12/12 after a retained failed run; the first fresh held-out gate remains failed 23/24 on an expected label that omitted a printed range qualifier. A separately frozen and source-reviewed fresh 24-case gate passed 24/24, including abbreviation collisions, continuing tables, exceptions and unresolved references. The Chat pack now reports truncated selection and bounds input/output paths. The corpus leaf writer uses an OS-neutral, mtime-zero gzip header; warm-cache reads are confined to hash-bound leaves in their own document. This remains an unreviewed candidate; no model or legal review was run.
+- Add a [deterministic DMG/ADM reading-help corpus](docs/reading-help-corpus-contract.md) over the adopted 53,727 structured units in 513 documents. Bounded, source-bound leaves retain 893 extraction-blocked pages, printed abbreviation-row candidates, unresolved local references and explicit review limits. The source-led initial gate passed 12/12 after a retained failed run; the first fresh held-out gate remains failed overall, with 23 passes and one failure on an expected label that omitted a printed range qualifier. A separately frozen and source-reviewed fresh 24-case gate passed 24/24, including abbreviation collisions, continuing tables, exceptions and unresolved references. The Chat pack now reports truncated selection and bounds input/output paths. The corpus leaf writer uses an OS-neutral, mtime-zero gzip header; warm-cache reads are confined to hash-bound leaves in their own document. This remains an unreviewed candidate; no model or legal review was run.
 
 - Add a [Chapter 60 reading-help rollout proposal](docs/reading-help-rollout.md) for deterministic-first expansion and later bounded model review; no wider trial or specialist acceptance is claimed.
 

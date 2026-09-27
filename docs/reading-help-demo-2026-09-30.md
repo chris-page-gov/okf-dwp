@@ -4,18 +4,19 @@ This is an independent experimental reading aid, not official DWP guidance or a
 benefits calculator. DMG means **Decision makers’ guide**; ADM means **Advice for
 decision making**. Both are DWP staff manuals with different scopes and histories.
 
-Publication state: candidate under technical checks. The release record will
-supply exact pinned links after paired data and consumer verification. Keep the
+Publication state: exact paired consumer and data passed 16 public browser
+checks on 27 September 2026. Check the release record for final tag and
+documentation deployment identities. Keep the
 [verified Chapter 60 demonstration](reading-help-ch60.md) as the fallback.
 
-## Pinned candidate links
+## Pinned demonstration links
 
-These immutable data links require the companion Explorer consumer from PR 158.
-They become presentation links only after the public verification receipt passes.
+These immutable data links passed against Explorer `b633038c` (PRs 158 and 159).
+The source and data stay pinned even when the Explorer Pages application updates.
 
 - [Corpus reading help — Chapter 60, paragraph 60025](https://chris-page-gov.github.io/okf-explorer/reading-help/corpus/?catalogue=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fcbada7bf544106bdceb2445fc379c8b3e5b73ee4%2Freading-help-corpus%2Fmanifest.json&catalogue_sha256=6c53b659b519aa4cbf7529e7e10eb4ad3bfe8efcac18055ec2a5ade724998b46&catalogue_bytes=260797&family=dmg&document=dmg-vol10-ch60&unit=https%3A%2F%2Fchris-page-gov.github.io%2Fokf-dwp%2Fid%2Funit%2Fdmg%2Fdmg-vol10-ch60%2Fmanual-structure-v1%2Fsource-0000002117-000-5fac0d6d5c5e)
-- [Paired body/footer references and dated statutory links](https://chris-page-gov.github.io/okf-explorer/reading-help/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fa314fc708e512bb4827a1cdacb8158709a02c3d9%2Freading-help-ch60-law.json&passage=dmg-60025)
-- [All 40 staff questions — start at the calculation question](https://chris-page-gov.github.io/okf-explorer/evidence/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fa314fc708e512bb4827a1cdacb8158709a02c3d9%2Fevaluation%2Fevidence-workbench%2Freading-help-manifest.json&case=staff-016)
+- [Paired body/footer references and dated statutory links](https://chris-page-gov.github.io/okf-explorer/reading-help/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F2ad33add6d8660fec98bf34fb98480a9d0de9e27%2Freading-help-ch60-law.json&passage=dmg-60025)
+- [All 40 staff questions — start at the calculation question](https://chris-page-gov.github.io/okf-explorer/evidence/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F2ad33add6d8660fec98bf34fb98480a9d0de9e27%2Fevaluation%2Fevidence-workbench%2Freading-help-manifest.json&case=staff-016)
 
 ## A five-minute walkthrough
 
@@ -29,10 +30,13 @@ They become presentation links only after the public verification receipt passes
    marker, follow its exact paired footer occurrence and return. Explain that
    a repeated number elsewhere is a different occurrence. Unresolved references
    stay unresolved.
-4. Follow a dated statutory link. A **provision** is a section or regulation
-   within a legal work. Show its complete retained text, any bounded excerpt,
-   date and geographical variant. A complete provision is still not a complete
-   set of legal dependencies.
+4. Inspect a dated statutory link. A **provision** is a section or regulation
+   within a legal work. Show the printed citation, proposed full title and
+   date in the link. This reading-help card is navigation, not retained legal
+   text. The [optional legal bridge](reading-help-legislation-bridge.md)
+   separately records acquired bodies and section 70's territorial variants.
+   A link does not resolve which variant applies; a complete provision is still
+   not a complete set of legal dependencies.
 5. Open the 40-question evidence workbench. Choose a retained evidence record
    and open its exact reading-help passage. The retained packages, evidence
    requirements and insufficient status have not been changed by this link.

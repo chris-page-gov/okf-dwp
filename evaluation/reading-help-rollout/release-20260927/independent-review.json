@@ -1,0 +1,29 @@
+{
+  "schema": "okf-reading-help-release-technical-review.v1",
+  "reviewed_commit": "f5b7e400fac1272e80c6746dc7b12f4d13fce689",
+  "review_role": "Separate bounded implementation agent, read-only technical review",
+  "scope": [
+    "public browser verifier source-span checks",
+    "origin and immutable-revision confinement",
+    "failed-attempt retention",
+    "release identity and answerability claims"
+  ],
+  "verifier": {
+    "path": "scripts/verify_reading_help_public.mjs",
+    "bytes": 30547,
+    "sha256": "ec21528e9d5f779ddf01a6138ebecab1c8eaad4b6858b004e288d6f6b2bc1ebe"
+  },
+  "validator": {
+    "path": "scripts/check_reading_help_release.py",
+    "bytes": 20128,
+    "sha256": "292e45ee1c2064baccad7a33b4f4b3a3d488bdb5f309428e756978ab402383f7"
+  },
+  "findings": [],
+  "pending_identity_step": "Bind both public_explorer_commit and consumer_merge_commit to the final PR159 Pages commit before promotion. DWP Pages f61, workbench2ad and corpuscbada are separate identities.",
+  "limitations": [
+    "No legal or specialist acceptance.",
+    "Browser transport is origin/revision confined, with individual bound source requests; this review makes no aggregate browser byte-budget claim.",
+    "The final public receipt and later release documentation are subsequent observations."
+  ],
+  "recorded_at": "2026-09-27T03:18:40.926198+00:00"
+}

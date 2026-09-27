@@ -484,6 +484,8 @@ jobs:
           node scripts/build_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench --check
           node scripts/check_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench
           node --experimental-strip-types scripts/check_reading_help_law_context.mjs --explorer-root .ci/okf-explorer-workbench
+          uv run --locked python -m unittest discover -s scripts -p test_check_reading_help_release.py
+          uv run --locked python scripts/check_reading_help_release.py --root . --manifest evaluation/reading-help-rollout/release-20260927/manifest.json
           uv run --locked python scripts/build_workbench_models.py --check
           uv run --locked python -m unittest discover -s scripts -p test_workbench_models.py
           node --test scripts/test_learning_site_v3.mjs

@@ -49,7 +49,7 @@ The 28-case passage review was rechecked from its frozen inputs on 27 September:
 
 ### Independent control review
 
-The first held-out reading-help run retained a 23/24 failure. A separate coordinator check confirmed the H05 extraction hash and surrounding source text: the source prints `see DMG 070831 to 070834`, whereas the frozen expected target named only paragraph 070831. The complete range must remain unresolved rather than being narrowed to satisfy that expectation. The original failed case and result remain unchanged. A further unexecuted set was also rejected at review because `et seq` (and the following paragraphs) needs to remain visible, and the case mix needed stronger continuation and abbreviation coverage. These are quality controls, not specialist legal acceptance.
+The first held-out reading-help run retained 23 passing cases and one failed case. A separate coordinator check confirmed the H05 extraction hash and surrounding source text: the source prints `see DMG 070831 to 070834`, whereas the frozen expected target named only paragraph 070831. The complete range must remain unresolved rather than being narrowed to satisfy that expectation. The original failed case and result remain unchanged. A further unexecuted set was also rejected at review because `et seq` (and the following paragraphs) needs to remain visible, and the case mix needed stronger continuation and abbreviation coverage. These are quality controls, not specialist legal acceptance.
 
 CI verifies the retained 40-question receipt with `python scripts/check_reading_help_replay.py`: source and engine declarations, all 40 package hashes, selected text and paths, obligations, and performance totals are checked without rerunning 80 assemblies. A changed engine or evidence baseline requires a separately named replay, not an overwritten receipt.
 
@@ -127,3 +127,73 @@ the updated consumer limits, including the printed table with 166 abbreviations.
 The integrated focused reading-help suite passes 50 tests. The withdrawn
 learning-only change was rechecked: all 4,905 logical-context and 4,758 combined
 Reader outputs reproduce exactly from their original inputs.
+
+### Merged consumer and follow-up checks
+
+Explorer [PR 158](https://github.com/chris-page-gov/okf-explorer/pull/158)
+merged as `936da562e4629ed2021bb09fcc55c6ac53ca3a9c` on 27 September.
+All required checks passed at head `6b7ec7c0b181ed431b2f04c0fbb5a46b9f04a113`,
+including the full three-engine browser suite. Public Pages verification is a
+separate gate. The corpus producer merged through DWP
+[PR 50](https://github.com/chris-page-gov/okf-dwp/pull/50), commit
+`239f974c6cba23a2a37182af722ebba0803504b6`.
+
+The independent legislation browser gate exposed undersized facet controls.
+A separate Explorer follow-up repairs those controls and explicitly separates
+a footer row's source identity from a target in another document. The existing
+corpus contains no fabricated cross-document targets. Historical failed runtime
+receipts remain retained in the legislation candidate; its publication remains
+separate from this presentation release.
+
+### Public browser defects retained
+
+The first public browser attempt passed immutable data checks but failed in the
+verifier's accessibility setup; explicit browser contexts fixed that setup.
+The [second attempt](../evaluation/reading-help-rollout/release-20260927/public-attempt-02/receipt.json)
+passed 14 of 16 checks against the merged public consumer. It found two actual
+accessibility defects: adjacent extraction-gap links need larger targets or
+spacing, and the workbench's scrollable source text needs keyboard focus.
+Both repairs remain on the existing consumer follow-up branch; neither failure
+is waived or represented as a public release pass.
+
+### Exact DWP documentation observation
+
+The seven checked public documentation resources matched the successful Pages
+artefact for merged DWP commit `f61d41b689427c27275ae3b7e64b612925b6321e`
+(workflow 36289751755). The receipt and bounded verifier are retained under
+`evaluation/reading-help-rollout/release-20260927/learning-site-attempt-01/`.
+This verifies the implementation documentation at that revision, not the later
+release notes or the still-pending consumer browser repair. The offline release
+gate now checks the recorded file bindings and cannot promote a candidate to
+verified without the complete paired public browser evidence.
+
+### Follow-up consumer merged
+
+Explorer [PR 159](https://github.com/chris-page-gov/okf-explorer/pull/159)
+merged as `b633038c6173f1405199df9f08e8d8aa2ff51c0b` after every CI job
+passed at exact head `26af7231c8350d123bbd72324dfbfeca9feaa497`
+(workflow 36290277261). It fixes the two public accessibility findings,
+keeps proportional facet displays accessible, and validates explicit
+cross-document targets against their exact leaf segments. Public deployment
+and the final paired receipt remain distinct checks.
+
+### Paired public acceptance passed
+
+The exact merged Explorer deployment passed workflow 36291402585. Public attempt
+03 then passed all 16 checks, including source spans, continuations, extraction
+gaps, all 40 bound case sidecars, dated references, keyboard/accessibility and
+the original v1 fallback. Consumer `b633038c`, corpus `cbada7bf`, workbench
+`2ad33add` and the DWP implementation Pages observation `f61d41b6` remain separate
+identities in the release manifest. Failed attempts are retained. All 40
+question packages remain insufficient; no model answers or specialist review
+were added. Final release-record deployment and paired tags follow through the
+normal reviewed PR.
+
+### Release-record CI correction
+
+The first release-record CI run rejected an unregistered work-package evidence
+link: the 28-case recheck was linked from its structural-review package but
+missing from the parent backlog item's evidence inventory. The authored parent
+register is corrected and generated views rebuilt. The check is unchanged; the
+failed workflow 36292138883 remains visible in GitHub. No source, reading-help
+output or public acceptance receipt changed.
