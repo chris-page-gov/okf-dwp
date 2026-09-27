@@ -1,0 +1,40 @@
+{
+  "schema": "okf-reading-help-gate-result.v1",
+  "gate": "heldout-24",
+  "attempt": 2,
+  "status": "failed",
+  "expected_source": "evaluation/reading-help-rollout/heldout-controls.json",
+  "passed_count": 23,
+  "failed_count": 1,
+  "failed_cases": [
+    {
+      "id": "H05",
+      "source": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part2.json",
+      "page": 4,
+      "control_span_utf8": [
+        760,
+        774
+      ],
+      "frozen_literal": "see DMG 070831",
+      "frozen_expected": {
+        "target_kind": "paragraph",
+        "target_label": "070831",
+        "status": "proposed"
+      },
+      "actual_source_continuation": "see DMG 070831 to 070834",
+      "producer_span_utf8": [
+        764,
+        784
+      ],
+      "producer_literal": "DMG 070831 to 070834",
+      "producer_target": {
+        "target_kind": "paragraph-range",
+        "target_label": "070831–070834",
+        "status": "unresolved"
+      },
+      "assessment": "Control omitted a printed range qualifier; producer retained it. Original expectation remains unchanged and failed."
+    }
+  ],
+  "model_calls": 0,
+  "next_step": "Separate fresh gate, pre-frozen and reviewed before execution; no tuning or H05 replacement."
+}
