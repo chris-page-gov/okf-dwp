@@ -1,5 +1,11 @@
 # Changelog
 
+## Source-linked reading-help release — 27 September 2026
+
+- Bind the 513-document corpus, 12/24 source controls, 28-case and nine-chapter rechecks, unchanged 40-question replay, and 401/403 exact workbench links in a checked release manifest.
+- Record all 16 successful public browser checks at Explorer b633038c, preserve earlier failures and the Chapter 60 v1 fallback, and publish the beginner demonstration script.
+- Add CI checks that reject mismatched source, verifier, consumer, data and Pages identities. Candidate meanings, extraction gaps and legal answerability remain explicitly unreviewed.
+
 Notable changes for readers, in reverse date order. We use the
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) distinction between
 unreleased work and dated changes; this repository currently uses dated research

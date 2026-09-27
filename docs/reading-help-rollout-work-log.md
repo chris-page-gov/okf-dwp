@@ -166,3 +166,25 @@ This verifies the implementation documentation at that revision, not the later
 release notes or the still-pending consumer browser repair. The offline release
 gate now checks the recorded file bindings and cannot promote a candidate to
 verified without the complete paired public browser evidence.
+
+### Follow-up consumer merged
+
+Explorer [PR 159](https://github.com/chris-page-gov/okf-explorer/pull/159)
+merged as `b633038c6173f1405199df9f08e8d8aa2ff51c0b` after every CI job
+passed at exact head `26af7231c8350d123bbd72324dfbfeca9feaa497`
+(workflow 36290277261). It fixes the two public accessibility findings,
+keeps proportional facet displays accessible, and validates explicit
+cross-document targets against their exact leaf segments. Public deployment
+and the final paired receipt remain distinct checks.
+
+### Paired public acceptance passed
+
+The exact merged Explorer deployment passed workflow 36291402585. Public attempt
+03 then passed all 16 checks, including source spans, continuations, extraction
+gaps, all 40 bound case sidecars, dated references, keyboard/accessibility and
+the original v1 fallback. Consumer `b633038c`, corpus `cbada7bf`, workbench
+`2ad33add` and the DWP implementation Pages observation `f61d41b6` remain separate
+identities in the release manifest. Failed attempts are retained. All 40
+question packages remain insufficient; no model answers or specialist review
+were added. Final release-record deployment and paired tags follow through the
+normal reviewed PR.
