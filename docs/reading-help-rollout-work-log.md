@@ -114,3 +114,16 @@ activity were restored to their exact pre-increment bytes; no frozen context
 outputs were regenerated. The withdrawn optional-context observation is retained
 in `evaluation/reading-help-rollout/reverted-learning-navigation-01/`.
 Occurrence-specific workbench links remain a separate additive sidecar.
+
+### Portable corpus and complete consumer audit
+
+Corpus commit `cbada7bf544106bdceb2445fc379c8b3e5b73ee4` uses the existing
+platform-neutral gzip writer. The catalogue SHA-256 is
+`6c53b659b519aa4cbf7529e7e10eb4ad3bfe8efcac18055ec2a5ade724998b46`.
+The unchanged 12 and 24 source expectations pass again; earlier failures remain
+frozen. All 1,455 compressed headers, exact hashes and byte limits were checked.
+An independent full compatibility audit found no remaining violations against
+the updated consumer limits, including the printed table with 166 abbreviations.
+The integrated focused reading-help suite passes 50 tests. The withdrawn
+learning-only change was rechecked: all 4,905 logical-context and 4,758 combined
+Reader outputs reproduce exactly from their original inputs.
