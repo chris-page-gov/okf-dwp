@@ -8,6 +8,15 @@ Publication state: candidate under technical checks. The release record will
 supply exact pinned links after paired data and consumer verification. Keep the
 [verified Chapter 60 demonstration](reading-help-ch60.md) as the fallback.
 
+## Pinned candidate links
+
+These immutable data links require the companion Explorer consumer from PR 158.
+They become presentation links only after the public verification receipt passes.
+
+- [Corpus reading help — Chapter 60, paragraph 60025](https://chris-page-gov.github.io/okf-explorer/reading-help/corpus/?catalogue=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F115397c19e0b1e1e16d476df788c33a1196a3990%2Freading-help-corpus%2Fmanifest.json&catalogue_sha256=acb63e18d10c1a8a0a6c7d57f8ebfc41948e3837cd27c4589d4540061507d8a6&catalogue_bytes=260797&family=dmg&document=dmg-vol10-ch60&unit=https%3A%2F%2Fchris-page-gov.github.io%2Fokf-dwp%2Fid%2Funit%2Fdmg%2Fdmg-vol10-ch60%2Fmanual-structure-v1%2Fsource-0000002117-000-5fac0d6d5c5e)
+- [Paired body/footer references and dated statutory links](https://chris-page-gov.github.io/okf-explorer/reading-help/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fa314fc708e512bb4827a1cdacb8158709a02c3d9%2Freading-help-ch60-law.json&passage=dmg-60025)
+- [All 40 staff questions — start at the calculation question](https://chris-page-gov.github.io/okf-explorer/evidence/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fa314fc708e512bb4827a1cdacb8158709a02c3d9%2Fevaluation%2Fevidence-workbench%2Freading-help-manifest.json&case=staff-016)
+
 ## A five-minute walkthrough
 
 1. Open the corpus reading-help catalogue. Explain that **513 processed
