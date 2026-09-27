@@ -14,8 +14,8 @@ These immutable data links require the companion Explorer consumer from PR 158.
 They become presentation links only after the public verification receipt passes.
 
 - [Corpus reading help — Chapter 60, paragraph 60025](https://chris-page-gov.github.io/okf-explorer/reading-help/corpus/?catalogue=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fcbada7bf544106bdceb2445fc379c8b3e5b73ee4%2Freading-help-corpus%2Fmanifest.json&catalogue_sha256=6c53b659b519aa4cbf7529e7e10eb4ad3bfe8efcac18055ec2a5ade724998b46&catalogue_bytes=260797&family=dmg&document=dmg-vol10-ch60&unit=https%3A%2F%2Fchris-page-gov.github.io%2Fokf-dwp%2Fid%2Funit%2Fdmg%2Fdmg-vol10-ch60%2Fmanual-structure-v1%2Fsource-0000002117-000-5fac0d6d5c5e)
-- [Paired body/footer references and dated statutory links](https://chris-page-gov.github.io/okf-explorer/reading-help/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fa314fc708e512bb4827a1cdacb8158709a02c3d9%2Freading-help-ch60-law.json&passage=dmg-60025)
-- [All 40 staff questions — start at the calculation question](https://chris-page-gov.github.io/okf-explorer/evidence/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fa314fc708e512bb4827a1cdacb8158709a02c3d9%2Fevaluation%2Fevidence-workbench%2Freading-help-manifest.json&case=staff-016)
+- [Paired body/footer references and dated statutory links](https://chris-page-gov.github.io/okf-explorer/reading-help/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F2ad33add6d8660fec98bf34fb98480a9d0de9e27%2Freading-help-ch60-law.json&passage=dmg-60025)
+- [All 40 staff questions — start at the calculation question](https://chris-page-gov.github.io/okf-explorer/evidence/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F2ad33add6d8660fec98bf34fb98480a9d0de9e27%2Fevaluation%2Fevidence-workbench%2Freading-help-manifest.json&case=staff-016)
 
 ## A five-minute walkthrough
 

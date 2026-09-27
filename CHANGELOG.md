@@ -10,6 +10,11 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Add a bounded public reading-help verifier: immutable catalogue and 40 sidecars, exact source text, continuations, cache measurements, keyboard focus, dated links and the preserved Chapter 60 route. Existing receipts cannot be overwritten.
+- Clarify the optional cross-document target contract and distinguish its destination identity from the printed reference row. Frozen corpus rows remain unresolved where no target is declared.
+- Reconcile reading-help backlog acceptance with the authorised literal-highlight scope; proposed meanings and legal applicability still require qualified review.
+
+
 - Link the beginner glossary and learning-path documentation to the reading-help walkthrough. Keep the combined Reader and its frozen downstream context inputs unchanged; preserve the withdrawn learning-navigation observation separately.
 
 - Link all 40 retained question cases to the bounded reading-help catalogue: 401 of 403 distinct evidence records match exact unit and source identities. Keep the two unmatched capital composites explicit and every package unchanged.
