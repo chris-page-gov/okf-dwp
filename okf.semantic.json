@@ -37,6 +37,7 @@
       "domain-profile/learning/*.yamlld",
       "domain-profile/manual-guide/*.yamlld",
       "domain-profile/reading-help/ch60.json",
+      "evaluation/reading-help-rollout/source-controls.json",
       "research/ch60-reading-help/vocabulary-proposals.jsonl",
       "research/ch60-reading-help/citation-proposals.jsonl",
       "profiles/manual-guide/v1/*.json",
@@ -212,6 +213,16 @@
       {
         "path": "logical-context/data/semantic/*.jsonld.gz",
         "role": "semantic-json-ld-shards",
+        "generated": true
+      },
+      {
+        "path": "reading-help-corpus/manifest.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "reading-help-corpus/documents/**/*.json*",
+        "role": "explorer-runtime",
         "generated": true
       },
       {
@@ -513,6 +524,8 @@
       "uv run --locked python scripts/build_pdf_structure.py --check",
       "uv run --locked python scripts/build_manual_guide.py --check",
       "uv run --locked python scripts/build_reading_help.py --check",
+      "uv run --locked python scripts/build_reading_help_corpus.py --check",
+      "uv run --locked python -m unittest discover -s scripts -p test_reading_help_corpus.py",
       "uv run --locked python -m unittest discover -s scripts -p test_reading_help.py",
       "uv run --locked python scripts/build_structured_units.py --check",
       "uv run --locked python scripts/build_structured_context.py --check",

@@ -1,10 +1,13 @@
 # Extend reading help across DMG and ADM efficiently
 
-Status: proposed rollout, 26 September 2026. This is a plan for source-linked
-reading assistance, not a claim that the corpus is fully explained or that its
-benefits questions can all be answered. No new model trial was run for this plan.
+Status: deterministic corpus candidate built, 27 September 2026; later explanation
+and review stages remain proposed. The catalogue accounts for the adopted source
+passages but does not fully explain them or establish answerability. No model
+trial was run for this corpus candidate.
 
 ## Start from what we already have
+
+The deterministic first stage now has a separate [corpus wire contract](reading-help-corpus-contract.md) and [generated catalogue](../reading-help-corpus/manifest.json). It accounts for all adopted structured passages with source-bound candidate annotations and explicit extraction gaps. The earlier 12+24 first-page controls are preliminary source-integrity smoke checks. A separate meaningful 12-case source-led gate passed after retaining its first failed run. Its first fresh 24-case held-out gate failed 23/24: H05 omitted a printed range qualifier in the expected label, while the producer retained that range. The failed expectation remains frozen. A pre-execution rejected second fixture is also retained. A separately revised fresh 24-case fixture passed 24/24 after direct-source review, with printed abbreviation collisions, continuing tables, exceptions, unresolved references, footers and extraction gaps. These are source-structure controls, not specialist judgement on explanations. The deterministic recognisers primarily cover uppercase abbreviations and cap repeated-phrase proposals at 100 per document; mixed-case forms such as `WDisP` can remain unrecognised even when a document is processed. Model comparison, specialist legal review and the separately recorded 40-question retrieval replay remain distinct from these corpus source controls.
 
 The Decision makers’ guide (DMG) and Advice for decision making (ADM) are two DWP
 staff manuals. The frozen capture already contains **513 PDFs and 19,090 measured
@@ -16,18 +19,19 @@ The [Chapter 60 reading aid](reading-help-ch60.md) covers only paragraphs 60025
 and 60033. It demonstrates occurrence-specific help: an explanation is attached
 to these exact letters at this exact source location. Its 219 original vocabulary
 proposals are candidates, not a reviewed dictionary for the whole department.
-The current footer reference lists are readable but their individual rows have
-no clickable occurrence annotations; the body-marker cards cite those rows.
-Adding footer occurrences is a small, separate reader increment.
+The frozen v1 aid has readable footer reference lists without individual row
+occurrences. The separate [paired-reference successor](../reading-help-ch60-references.json)
+adds exact body and footer occurrence identities for 20 printed pairs. This
+adds navigation only; it does not resolve legal applicability or change v1.
 
 ## Recommended pipeline
 
-| Stage | Run by default | Output and acceptance boundary |
+| Stage | Route | Output and acceptance boundary |
 | --- | --- | --- |
 | 1. Inventory | Local deterministic scripts | Account for every document, abbreviation table, passage, local reference list and extraction warning. Keep hashes and source dates. Do not treat a missing text page as blank. |
 | 2. Extract candidates | Local deterministic scripts | Propose term occurrences, abbreviations, numbered references and paragraph pointers. Preserve document and passage scope, exact spans, cross-page notes and unresolved fragments. |
 | 3. Reuse checked meanings | Local deterministic scripts | Reuse a definition only in its declared scope. The same abbreviation can mean different things in different contexts; do not substitute globally. |
-| 4. Explain exceptions | Small, bounded model batches | Supply complete logical passages and supporting lists. Request structured proposals with exact source spans, dependencies and uncertainty. No unsupported definitions or legal conclusions. |
+| 4. Explain exceptions | Optional model batches only after a recorded call budget | Supply complete logical passages and supporting lists. Request structured proposals with exact source spans, dependencies and uncertainty. No unsupported definitions or legal conclusions. |
 | 5. Validate and review | Scripts, then targeted people | Check hashes, spans, schema, local-reference scope, qualification retention and wrong-context matches. A structural pass does not establish legal correctness. |
 | 6. Publish additively | Existing build and PR process | Compile a separate reading-help manifest. Preserve frozen PDFs, extraction and releases. Release only the reviewed scope with its coverage and unresolved counts. |
 

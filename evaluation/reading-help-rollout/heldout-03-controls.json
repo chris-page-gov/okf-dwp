@@ -1,0 +1,452 @@
+{
+  "schema": "okf-reading-help-heldout-controls.v1",
+  "status": "frozen-before-third-heldout-evaluation",
+  "selection": "Twenty-four fresh source-led locations, twelve each DMG and ADM, in distinct documents. This fixture revises a pre-execution rejected draft: it preserves an unbounded et seq qualifier and includes abbreviation collision, two continuing tables, two explicit exceptions, references, footers, spare material and extraction gaps. Expected outcomes derive from the printed source and frozen structured boundary, not from reading-help candidate output. Earlier 23/24 failed fixture remains separate.",
+  "cases": [
+    {
+      "id": "N01",
+      "family": "dmg",
+      "document_id": "dmg-vol1-ch5",
+      "source_pdf_sha256": "7c9bdb92c805924d6f5b185651f5e21e2d3b7e78214dc3d8ec2a549c73b70728",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol1-ch5.json",
+      "extraction_sha256": "08ac847e2add5e0757829b9491ec4f248002ad040b5fb707a7812c2464d6e2bc",
+      "page": 2,
+      "start_utf8": 0,
+      "end_utf8": 0,
+      "literal": "",
+      "literal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected": {
+        "kind": "extraction_blocked",
+        "status": "extraction_blocked"
+      }
+    },
+    {
+      "id": "N02",
+      "family": "dmg",
+      "document_id": "dmg-vol1-ch6",
+      "source_pdf_sha256": "dcd2a7ede4499792d9bc6762c94a2d6c0ca6e811cb077abbbd4e41e4d405a4e4",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol1-ch6.json",
+      "extraction_sha256": "e95434f7e856adbd1c8550b369066644a6bf6aa7567af05a1d41768d3dae0c3e",
+      "page": 3,
+      "start_utf8": 1376,
+      "end_utf8": 1389,
+      "literal": "see DMG 06150",
+      "literal_sha256": "65175bb788ff709fa9ccaba6d182143d9bd54a34bce4a803b7bb684ab211268d",
+      "expected": {
+        "kind": "reference",
+        "target_kind": "paragraph",
+        "target_label": "06150",
+        "status": "proposed"
+      }
+    },
+    {
+      "id": "N03",
+      "family": "dmg",
+      "document_id": "dmg-vol2-ch7-part3",
+      "source_pdf_sha256": "f7cc7cf0322c94442e298509b9f8b91254bb7186a242d790fe32e60d06955e70",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol2-ch7-part3.json",
+      "extraction_sha256": "bb4be572465a2e6a522fc07e675172436459d73a8850e76d7d112c9f88db0471",
+      "page": 2,
+      "start_utf8": 1164,
+      "end_utf8": 1178,
+      "literal": "see DMG 073234",
+      "literal_sha256": "8457ce1d5d132c3a3f457a1719bd92bb35857aadf3457f5ed737784c930cc2a1",
+      "expected": {
+        "kind": "reference",
+        "target_kind": "paragraph",
+        "target_label": "073234",
+        "status": "proposed"
+      }
+    },
+    {
+      "id": "N04",
+      "family": "dmg",
+      "document_id": "dmg-vol3-ch10",
+      "source_pdf_sha256": "e87cd0079de36002a9ae5d065256197eccce3b9257537a29da5bd3220145021a",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol3-ch10.json",
+      "extraction_sha256": "0fdc816b2a57b058f8826c36ac756cd414da56c94f580a9b5b32e0ff874a68b8",
+      "page": 2,
+      "start_utf8": 1375,
+      "end_utf8": 1400,
+      "literal": "1 SS (C&P) Regs, reg 7(1)",
+      "literal_sha256": "cd99c0defed9fa372fc6e6be924e4cf101f36078e900e3138d172d52c44d48b3",
+      "expected": {
+        "kind": "footer_unlinked",
+        "marker": "1",
+        "status": "unresolved"
+      }
+    },
+    {
+      "id": "N05",
+      "family": "dmg",
+      "document_id": "dmg-vol4-ch20",
+      "source_pdf_sha256": "0474580014a697c47370992feee115d49c80b105b9c43270bf89afff0e4b0aa5",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol4-ch20.json",
+      "extraction_sha256": "ed007251fa43ff9c63f5116f603798f2279c84006af8539bbbfd50194ab0ab56",
+      "page": 5,
+      "start_utf8": 160,
+      "end_utf8": 216,
+      "literal": "are in GB (except for certain temporary absences abroad)",
+      "literal_sha256": "6fb864e3a457bd3302750de20ae33af0ecb584049d242cafc0e227976123a187",
+      "expected": {
+        "kind": "exception_retained",
+        "condition": "are in GB",
+        "exception": "except for certain temporary absences abroad"
+      }
+    },
+    {
+      "id": "N06",
+      "family": "dmg",
+      "document_id": "dmg-vol6-ch30",
+      "source_pdf_sha256": "1540b54680884fdaa8a71e26fdebe12899d876b459d448198a7c941a37960780",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol6-ch30.json",
+      "extraction_sha256": "768537aba8259637b2425c4f5359b19a59adee89282078ead1e22f6c4f973665",
+      "page": 5,
+      "start_utf8": 744,
+      "end_utf8": 768,
+      "literal": "1 SS CB Act 92, s 124(1)",
+      "literal_sha256": "277087fb7e17481d4b077767053f6264bb427da035689d148f0325eba55aa9e4",
+      "expected": {
+        "kind": "footer_unlinked",
+        "marker": "1",
+        "status": "unresolved"
+      }
+    },
+    {
+      "id": "N07",
+      "family": "dmg",
+      "document_id": "dmg-vol8-ch42",
+      "source_pdf_sha256": "94a571d424358872f55f212b4c831a4cd4d33d478233d15f860a00d2eb1ab110",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol8-ch42.json",
+      "extraction_sha256": "76f4177f72f76ab6250f9d08c9901dd5be53b71af1100ada6a7403f9c3f379f5",
+      "page": 110,
+      "start_utf8": 0,
+      "end_utf8": 0,
+      "literal": "",
+      "literal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected": {
+        "kind": "extraction_blocked",
+        "status": "extraction_blocked"
+      }
+    },
+    {
+      "id": "N08",
+      "family": "dmg",
+      "document_id": "dmg-vol9-ch49",
+      "source_pdf_sha256": "fbebe7a07e841df655ca881b7c2d699f5b332e91187ba3d5ce600758f206beee",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol9-ch49.json",
+      "extraction_sha256": "d2d03afaaefe6a6df5f85e2883ae04dfead57fd44bf931850cb407c766c2cf25",
+      "page": 4,
+      "start_utf8": 1336,
+      "end_utf8": 1356,
+      "literal": "see DMG 20530 et seq",
+      "literal_sha256": "4a8ca04222b2b60289443963e9854245fe05bf4cf6a40b34a6de1c5ff1c912f6",
+      "expected": {
+        "kind": "reference",
+        "target_kind": "unresolved-reference",
+        "target_label": "20530 et seq",
+        "status": "unresolved",
+        "retain_literal": "et seq"
+      }
+    },
+    {
+      "id": "N09",
+      "family": "dmg",
+      "document_id": "dmg-vol1-ch1",
+      "source_pdf_sha256": "58b168c7b0a01f54713f6cfa60953549ebc099cbe568ffaeea551d0b756495d2",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol1-ch1.json",
+      "extraction_sha256": "cf7a000e2c54c5361a03ec4ad73fa22cc14e8cdb0d4f03b53919a4a509a6eacb",
+      "page": 7,
+      "start_utf8": 1632,
+      "end_utf8": 1634,
+      "literal": "AP",
+      "literal_sha256": "84810bfea2375dab1b1c8417b8eed248488f55b002f091f4d4ef37dffca3b307",
+      "expected": {
+        "kind": "abbreviation",
+        "token": "AP",
+        "status": "proposed",
+        "expansion": "Additional Pension",
+        "source_table_document_id": "dmg-abbreviations-0db6c476b0"
+      }
+    },
+    {
+      "id": "N10",
+      "family": "dmg",
+      "document_id": "dmg-vol11-ch65",
+      "source_pdf_sha256": "77e4d8a316f375cc3ca6b27b3d618f4e0eb98b4e417045f9c97abc54f5f44523",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol11-ch65.json",
+      "extraction_sha256": "b5b9025db6002298f518d99594e79ea2b2a3378cd0bdf98e70e4b197c6d1297e",
+      "page": 1,
+      "start_utf8": 47,
+      "end_utf8": 111,
+      "literal": "Chapter 65 – This chapter is spare and is intentionally blank.",
+      "literal_sha256": "b7365f89f2a787ebcd6c94d521e5c5aee1ed541997045b8e46ae32c4b22ed7d4",
+      "expected": {
+        "kind": "source_retained",
+        "limitation": "An intentionally spare chapter must not become an inferred benefits rule."
+      }
+    },
+    {
+      "id": "N11",
+      "family": "dmg",
+      "document_id": "dmg-vol12-ch75",
+      "source_pdf_sha256": "655e7acb31f09f5169efbe40419091ee479f88c0c45b65c7a507b042b67712f9",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol12-ch75.json",
+      "extraction_sha256": "0d037880d2aeaff1be89235ee987ca4acb1c839fcf1ead8b8be2daa9f6795465",
+      "page": 2,
+      "start_utf8": 354,
+      "end_utf8": 372,
+      "literal": "See DMG Chapter 74",
+      "literal_sha256": "236ed3a3c4ab37672e6f6573056e23e2ffe5335d54b1a9b808b00ee395c1eaa6",
+      "expected": {
+        "kind": "reference",
+        "target_kind": "chapter",
+        "target_label": "74",
+        "status": "proposed"
+      }
+    },
+    {
+      "id": "N12",
+      "family": "dmg",
+      "document_id": "dmg-vol14-ch84",
+      "source_pdf_sha256": "f5c610b29bdb81e11736409b7f33ccf7917a4d8945f2821802801073e0d753ee",
+      "extraction_path": "source/pages/dmg-vol14-ch84.json",
+      "extraction_sha256": "bf1cc65d4b7521b7acb9193a212855e07a88d5a3ef03f5f9eaa74c3c222f39f5",
+      "page": 130,
+      "start_utf8": 144,
+      "end_utf8": 201,
+      "literal": "Total capital           Deemed weekly income from capital",
+      "literal_sha256": "a5e24c0a049de780e921891b450196cf24966c4ce19631bc9b4f22413236aa68",
+      "expected": {
+        "kind": "table_continuation",
+        "role": "table",
+        "other_page": 131,
+        "other_literal": "16,000.01 16,500.00 13"
+      }
+    },
+    {
+      "id": "N13",
+      "family": "adm",
+      "document_id": "adm-chapter-a4",
+      "source_pdf_sha256": "4933d66a1cd118687bbc10e30faf9ee8214d09b3e465e58efdbd9b832a58a8e8",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-a4.json",
+      "extraction_sha256": "b0ee68894700815ac73f5b08cc3782524ae1a288a68337c1400bb9eca11b0f74",
+      "page": 4,
+      "start_utf8": 121,
+      "end_utf8": 139,
+      "literal": "See ADM Chapter D1",
+      "literal_sha256": "9143ac45bf2b408900b2581502054a3b346db7c983fa4e0f4376c9b9f4e0d607",
+      "expected": {
+        "kind": "reference",
+        "target_kind": "chapter",
+        "target_label": "D1",
+        "status": "proposed"
+      }
+    },
+    {
+      "id": "N14",
+      "family": "adm",
+      "document_id": "adm-chapter-a5",
+      "source_pdf_sha256": "d7b14aa89b654ccd25500afdc67ebf3bf1ab157f7ecc6b144e3de197a8b4d172",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-a5.json",
+      "extraction_sha256": "5adff5e03e99ae74940549c5ef2f05a8bbd798460db39e59153c9c7c5eeb9728",
+      "page": 2,
+      "start_utf8": 782,
+      "end_utf8": 803,
+      "literal": "see ADM U7020 - U7023",
+      "literal_sha256": "9935a61bd91f1efe56a90efaa28a0f3b62ac5a7e57765db1b2b03f60cbaec6d7",
+      "expected": {
+        "kind": "reference",
+        "target_kind": "paragraph-range",
+        "target_label": "U7020–U7023",
+        "status": "unresolved"
+      }
+    },
+    {
+      "id": "N15",
+      "family": "adm",
+      "document_id": "adm-chapter-b3",
+      "source_pdf_sha256": "59e7d900484c92da62d30411ee3c020fed56722e3e6f30dd846b40eb6e6617d0",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-b3.json",
+      "extraction_sha256": "789f69ebaf6280851ae016a5c69685ac36585bf106bf9255742cf3f784f5daf9",
+      "page": 2,
+      "start_utf8": 550,
+      "end_utf8": 568,
+      "literal": "See ADM Chapter E1",
+      "literal_sha256": "2d727254ca418ad106c539d7bcf0c3308a48edcb6019b0a8134ee3b5f508dfbb",
+      "expected": {
+        "kind": "reference",
+        "target_kind": "chapter",
+        "target_label": "E1",
+        "status": "proposed"
+      }
+    },
+    {
+      "id": "N16",
+      "family": "adm",
+      "document_id": "adm-chapter-c3",
+      "source_pdf_sha256": "ed1ea291fc21f3c0c4b8c7a9c861dbc6501085792f9c9e6233a6f538f96b8502",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-c3.json",
+      "extraction_sha256": "8323654e9ff02841d58b9281471c6f4a1b6db46ba113d30c55040a1c66e0945d",
+      "page": 3,
+      "start_utf8": 1057,
+      "end_utf8": 1069,
+      "literal": "1 R(U) 18/60",
+      "literal_sha256": "f7cc52df6d884768f29d3df4105c73f0ae29b2e3f468e30f4c13c18058b53532",
+      "expected": {
+        "kind": "footer_unlinked",
+        "marker": "1",
+        "status": "unresolved"
+      }
+    },
+    {
+      "id": "N17",
+      "family": "adm",
+      "document_id": "adm-chapter-d2",
+      "source_pdf_sha256": "4aeeaaca41a9fdca81d820082f106d576d21cfd8013055bf7a98a43b74500b36",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-d2.json",
+      "extraction_sha256": "72b3fa3851cb5ddaed2476f2ceafdddf64caa5d90ad356b80bcf7803b756a501",
+      "page": 3,
+      "start_utf8": 0,
+      "end_utf8": 0,
+      "literal": "",
+      "literal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected": {
+        "kind": "extraction_blocked",
+        "status": "extraction_blocked"
+      }
+    },
+    {
+      "id": "N18",
+      "family": "adm",
+      "document_id": "adm-chapter-e2",
+      "source_pdf_sha256": "d74b8051227f3367a607f7ed8151780b007d360bc1b826ff04938608168bd4d2",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-e2.json",
+      "extraction_sha256": "e3bfd608565fc9477cb7300550f307cffa1ccbb1830951d6b3b81a78a2954d3c",
+      "page": 8,
+      "start_utf8": 782,
+      "end_utf8": 865,
+      "literal": "Bernie does not meet all the basic conditions for UC because he is over pension age",
+      "literal_sha256": "777b4b49c2e5f0407ccab8059acd313ad5dddf71213e98e006c7ae628b636bc8",
+      "expected": {
+        "kind": "exception_retained",
+        "condition": "does not meet all the basic conditions for UC",
+        "exception": "however he is treated as if he had met all the conditions"
+      }
+    },
+    {
+      "id": "N19",
+      "family": "adm",
+      "document_id": "adm-chapter-f2",
+      "source_pdf_sha256": "5f2d6c465f6f542976917ff71651504ea443f21f8db361656ba9bff3405dc903",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-f2.json",
+      "extraction_sha256": "7cdc672d0a148fec4f2934179604e0f375ec6a2932f49050787004b01f036221",
+      "page": 11,
+      "start_utf8": 1147,
+      "end_utf8": 1160,
+      "literal": "see ADM F3182",
+      "literal_sha256": "79370ddc502a65bea40e255ce5dddcacdbdb8dd2f1adcadc256fbfd562b17c81",
+      "expected": {
+        "kind": "reference",
+        "target_kind": "paragraph",
+        "target_label": "F3182",
+        "status": "proposed"
+      }
+    },
+    {
+      "id": "N20",
+      "family": "adm",
+      "document_id": "adm-chapter-e5",
+      "source_pdf_sha256": "095083e2fa5854fb64fd417776ed448aae21924492f4dfd89a412051ff464310",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-e5.json",
+      "extraction_sha256": "8de88de98547b0c750bc51067ba52f4304971f0867a74d6c81d8506a7a1c1290",
+      "page": 20,
+      "start_utf8": 103,
+      "end_utf8": 105,
+      "literal": "AP",
+      "literal_sha256": "84810bfea2375dab1b1c8417b8eed248488f55b002f091f4d4ef37dffca3b307",
+      "expected": {
+        "kind": "abbreviation",
+        "token": "AP",
+        "status": "proposed",
+        "expansion": "Assessment period",
+        "source_table_document_id": "adm-list-of-abbreviations"
+      }
+    },
+    {
+      "id": "N21",
+      "family": "adm",
+      "document_id": "adm-chapter-h2",
+      "source_pdf_sha256": "8f59c2f7e66947ebdbe9e046c6b68de19da8ad2c0f02588e7d741b1a2c06df10",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-h2.json",
+      "extraction_sha256": "bb240c610f692a7a2797928a8f3a2efb9c8b2c76aaee19477c170c94aea5071e",
+      "page": 5,
+      "start_utf8": 1955,
+      "end_utf8": 1973,
+      "literal": "see ADM Chapter H4",
+      "literal_sha256": "21a837de317c4465d4c39163640293653a86efca5d87bfacd8e21886352605ce",
+      "expected": {
+        "kind": "reference",
+        "target_kind": "chapter",
+        "target_label": "H4",
+        "status": "proposed"
+      }
+    },
+    {
+      "id": "N22",
+      "family": "adm",
+      "document_id": "adm-chapter-k2",
+      "source_pdf_sha256": "76847118ceeed47fa26dcd9f4272c50ded5ccca4bb672081d98348b84ac04fcd",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-k2.json",
+      "extraction_sha256": "9e5b3c676296101457e3aa5083e040970b89f4c7ce91a7a3fef0e55a8c65bc0b",
+      "page": 3,
+      "start_utf8": 265,
+      "end_utf8": 283,
+      "literal": "1 UC Regs, reg 113",
+      "literal_sha256": "f32a01b4d2f6d06bf9eb4166cfe2f99ccd94278f5ca4f5088e68300d3fc7af21",
+      "expected": {
+        "kind": "footer_unlinked",
+        "marker": "1",
+        "status": "unresolved"
+      }
+    },
+    {
+      "id": "N23",
+      "family": "adm",
+      "document_id": "adm-chapter-r1",
+      "source_pdf_sha256": "70801463fff984c6c9483019cce0a9c121df6402b37e59f408780b86da722b56",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-r1.json",
+      "extraction_sha256": "aa0fb9eef9c6f44a5e94287df4f9d5f7e1758883e47386febbe4bb9dd2f5cf6c",
+      "page": 31,
+      "start_utf8": 51,
+      "end_utf8": 75,
+      "literal": "From   To    Amount (£)",
+      "literal_sha256": "6d5aa0a988dedaab0f57aabeeace7988b5ce3ca85d15cf192592435b2d6a80ca",
+      "expected": {
+        "kind": "table_continuation",
+        "role": "table",
+        "other_page": 32,
+        "other_literal": "6.4.10 5.4.11   97"
+      }
+    },
+    {
+      "id": "N24",
+      "family": "adm",
+      "document_id": "adm-chapter-v2",
+      "source_pdf_sha256": "66cc3473c7dad8ba4cddea726650548155fd98b6899e17dc19b15e208d811eb8",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-v2.json",
+      "extraction_sha256": "618e0882b0e971564a888ff46fe5be06d3eba242b62903b2d42d36e12a1135af",
+      "page": 2,
+      "start_utf8": 275,
+      "end_utf8": 293,
+      "literal": "See DMG Chapter 45",
+      "literal_sha256": "6b880e63e533a2bbef149e6d509b3c1bad426442a67bafb80faa02d8b4386010",
+      "expected": {
+        "kind": "reference",
+        "target_kind": "chapter",
+        "target_label": "45",
+        "status": "proposed"
+      }
+    }
+  ]
+}

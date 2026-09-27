@@ -1,0 +1,14 @@
+{
+  "schema": "okf-reading-help-source-control-result.v1",
+  "fixture": "evaluation/reading-help-rollout/heldout-03-controls.json",
+  "fixture_sha256": "ec6ddc9423618fb28b8405661b62a100581a8da5155c352f9df5a47125dcf0fd",
+  "producer_sha256": "3dc6099a2156bf9f0c1cd038f816f0540cdd5940f3f163b28daba2d14da5e50e",
+  "evaluator_sha256": "e38b39f69fa42544f6f1e91c1be3cf792f61b3225c7c75141743f373affec197",
+  "catalogue_sha256": "6c53b659b519aa4cbf7529e7e10eb4ad3bfe8efcac18055ec2a5ade724998b46",
+  "command": "uv run --locked python -m unittest discover -s scripts -p test_reading_help_meaningful.py",
+  "outcome": "passed-unchanged-expectations-after-portable-gzip-repair",
+  "initial_passed": 12,
+  "revised_heldout_passed": 24,
+  "failed": 0,
+  "boundary": "Regression replay of unchanged frozen expectations after OS-neutral gzip and confined warm-cache changes. Source content, card counts and exact candidate spans unchanged. The earlier 23/24 failed held-out result remains separate; no new independently selected gate or specialist review."
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "okf-reading-help-gate-result.v1",
+  "gate": "initial-12",
+  "attempt": 1,
+  "status": "failed",
+  "expected_source": "evaluation/reading-help-rollout/meaningful-controls.json",
+  "selected_before_evaluation": true,
+  "passed_cases": [
+    "D05",
+    "D06",
+    "A01",
+    "A03",
+    "A04",
+    "A05",
+    "A06"
+  ],
+  "failed_cases": [
+    {
+      "id": "D01",
+      "reason": "Evaluator required entire context to be one occurrence; source-backed target token was narrower."
+    },
+    {
+      "id": "D02",
+      "reason": "Evaluator required entire context to be one occurrence; source-backed target token was narrower."
+    },
+    {
+      "id": "D03",
+      "reason": "Single-space printed footer row was not detected."
+    },
+    {
+      "id": "D04",
+      "reason": "Attached footnote marker AA1 hid the abbreviation token."
+    },
+    {
+      "id": "A02",
+      "reason": "Evaluator required entire context to be one occurrence; source-backed target token was narrower."
+    }
+  ],
+  "action": "Retain this failed run. Correct evaluator span semantics without changing expected source, fix attached marker and footer detection, then rerun the same 12. No held-out cases selected or model calls."
+}

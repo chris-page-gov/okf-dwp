@@ -10,6 +10,8 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Add a [deterministic DMG/ADM reading-help corpus](docs/reading-help-corpus-contract.md) over the adopted 53,727 structured units in 513 documents. Bounded, source-bound leaves retain 893 extraction-blocked pages, printed abbreviation-row candidates, unresolved local references and explicit review limits. The source-led initial gate passed 12/12 after a retained failed run; the first fresh held-out gate remains failed 23/24 on an expected label that omitted a printed range qualifier. A separately frozen and source-reviewed fresh 24-case gate passed 24/24, including abbreviation collisions, continuing tables, exceptions and unresolved references. The Chat pack now reports truncated selection and bounds input/output paths. The corpus leaf writer uses an OS-neutral, mtime-zero gzip header; warm-cache reads are confined to hash-bound leaves in their own document. This remains an unreviewed candidate; no model or legal review was run.
+
 - Add a [Chapter 60 reading-help rollout proposal](docs/reading-help-rollout.md) for deterministic-first expansion and later bounded model review; no wider trial or specialist acceptance is claimed.
 
 - Curate a [beginner research guide](docs/research-index.md) and [file-level index](research/README.md) for the eight-file, 90-entry public CPAG contents capture, the 31-file unvalidated UC evaluation starter, concise client-access reports and one historical Pension Credit calculation design prompt. Preserve package checksums and distinguish observed tool fields, model-reported claims and unrun comparative proposals. No source corpus, runtime bundle or legal acceptance status changes.
