@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 import re
 
-from build_logical_units import Inputs, canonical, require, sha
+from build_logical_units import Inputs, canonical, gzip_bytes, require, sha
 from manual_references import paragraph_references
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,6 +28,14 @@ def binding(path, data):
     return {"url": path, "path": path, "sha256": sha(data), "bytes": len(data)}
 
 
+def portable_gzip(data):
+    """Write an mtime-zero gzip stream with the OS byte fixed to unknown (255)."""
+    packed = gzip_bytes(data)
+    require(packed[:10] == bytes.fromhex("1f8b08000000000002ff"),
+            "Gzip header differs from the portable contract")
+    return packed
+
+
 def rules_identity(producer_sha256, reference_parser_sha256, shared_helper_sha256, table_bindings):
     """Bind all inputs that can change a candidate in another document."""
     return sha(canonical({"rule": RULE, "schemas": SCHEMAS,
@@ -38,11 +46,21 @@ def rules_identity(producer_sha256, reference_parser_sha256, shared_helper_sha25
 
 
 def cache_matches(index, rules_hash, extraction_hash, structured_hash):
-    return (index.get("schema") == SCHEMAS[1] and
+    return (isinstance(index, dict) and index.get("schema") == SCHEMAS[1] and
             index.get("rules_sha256") == rules_hash and
             index.get("extraction", {}).get("sha256") == extraction_hash and
             index.get("structured_document", {}).get("sha256") == structured_hash and
             "occurrences" in index.get("counts", {}))
+
+
+def cached_leaf_path(leaf, base):
+    path = leaf["path"]
+    require(isinstance(path, str) and re.fullmatch(re.escape(base) + r"/leaves/[0-9]{4}\.json\.gz", path) and
+            leaf.get("url") == path and
+            isinstance(leaf.get("bytes"), int) and 0 < leaf["bytes"] <= MAX_LEAF and
+            isinstance(leaf.get("sha256"), str) and re.fullmatch(r"[0-9a-f]{64}", leaf["sha256"]),
+            "Cached leaf escaped its document or byte bound")
+    return path
 
 
 def location(unit, start, end):
@@ -239,27 +257,27 @@ def compile_corpus(root=ROOT, use_cache=True):
         pages = {p["page"]: p["text"].encode("utf-8") for p in source["pages"]}
         base = f"reading-help-corpus/documents/{family}/{docid}"
         index_path = f"{base}/index.json"
-        cached_path = root / index_path
-        if use_cache and cached_path.is_file():
-            cached_raw = cached_path.read_bytes()
-            cached = json.loads(cached_raw)
-            if cache_matches(cached, rules_hash, sha(extraction), sha(packed)):
-                try:
-                    cached_outputs = {index_path: cached_raw}
-                    for leaf in cached["leaves"]:
-                        leaf_data = (root / leaf["path"]).read_bytes()
-                        require(len(leaf_data) == leaf["bytes"] and sha(leaf_data) == leaf["sha256"],
-                                "Cached leaf hash differs")
-                        cached_outputs[leaf["path"]] = leaf_data
-                except (OSError, ValueError):
-                    pass
-                else:
-                    outputs.update(cached_outputs)
-                    doc_refs.append({"family": family, "document_id": docid,
-                                     **binding(index_path, cached_raw), "counts": cached["counts"],
-                                     "status": "extraction_blocked" if cached["extraction_blocked_pages"] else "processed"})
-                    totals.update({"documents": 1, **cached["counts"]})
-                    continue
+        if use_cache:
+            try:
+                cached_raw = inputs.read(index_path, limit=1024*1024)
+                cached = json.loads(cached_raw)
+                require(cache_matches(cached, rules_hash, sha(extraction), sha(packed)) and
+                        cached.get("family") == family and cached.get("document_id") == docid and
+                        cached.get("source", {}).get("sha256") == doc["source"]["sha256"],
+                        "Cached index binding differs")
+                cached_outputs = {index_path: cached_raw}
+                for leaf in cached["leaves"]:
+                    path = cached_leaf_path(leaf, base)
+                    cached_outputs[path] = inputs.read(path, leaf["sha256"], leaf["bytes"], limit=MAX_LEAF)
+            except (OSError, ValueError, KeyError, TypeError, AttributeError):
+                pass
+            else:
+                outputs.update(cached_outputs)
+                doc_refs.append({"family": family, "document_id": docid,
+                                 **binding(index_path, cached_raw), "counts": cached["counts"],
+                                 "status": "extraction_blocked" if cached["extraction_blocked_pages"] else "processed"})
+                totals.update({"documents": 1, **cached["counts"]})
+                continue
         _local_defs, proposals, phrases = definitions_and_phrases(units)
         defs = tables[family]
         leaves, passage_refs, waiting = [], [], []
@@ -275,7 +293,7 @@ def compile_corpus(root=ROOT, use_cache=True):
                               "extraction_sha256": sha(extraction), "rules_sha256": rules_hash,
                               "source_instructions_inert": True, "passages": waiting})
             require(len(data) <= MAX_LEAF, "Leaf exceeds 256 KiB")
-            packed = gzip.compress(data, mtime=0)
+            packed = portable_gzip(data)
             outputs[path] = packed
             leaves.append({**binding(path, packed), "decoded_bytes": len(data),
                            "decoded_sha256": sha(data), "encoding": "gzip",
