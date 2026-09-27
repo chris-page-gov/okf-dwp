@@ -1,0 +1,951 @@
+{
+  "engine": {
+    "comparison": "Exact module hashes; these bytes are present at CI consumer e6084059f9b09633cfb8385be20099b952915e82 and baseline 0326460034345c7b5227c530065b7f21cb4e3970",
+    "files": [
+      {
+        "path": "apps/okf-explorer/src/lib/context/corpus.ts",
+        "sha256": "a770352c6e4628f0c391b0c12bbdaf185b476a714ca212e99459d135f8f57f6f"
+      },
+      {
+        "path": "apps/okf-explorer/src/lib/context/corpusV3.ts",
+        "sha256": "944617e1630362b7a41d60da92651007b96252eff3075eb4c4b852f420f5a5c0"
+      },
+      {
+        "path": "apps/okf-explorer/src/lib/context/delivery.ts",
+        "sha256": "5df92c0e7edf437f9ff23b25b9a812e947930dd2369f2e954104962f04c91d90"
+      },
+      {
+        "path": "apps/okf-explorer/src/lib/context/index.ts",
+        "sha256": "689f8b8ab1cfb5ccc21b6dd9b5527fcad04de01f5876b44cbb2dc0240fceb010"
+      },
+      {
+        "path": "apps/okf-explorer/src/lib/context/packageDelivery.ts",
+        "sha256": "f05cd5cf6378ecb9e33f5c8a4d43a6bd74d7c6983413316d3663b5bd733f7b35"
+      },
+      {
+        "path": "apps/okf-explorer/src/lib/context/types.ts",
+        "sha256": "febf83b5c65153fd2e49ac070b6117525463034fb1b33534a086a1cc7bbb42cc"
+      },
+      {
+        "path": "apps/okf-explorer/src/lib/context/unit.ts",
+        "sha256": "7cd989c00564ad2e0469073c66685ffb5111809e7f598dc42b6f3df1bf693aa6"
+      },
+      {
+        "path": "apps/okf-explorer/src/lib/context/webmcp.ts",
+        "sha256": "455a8cebf9e4f184e19cb6f12d45d02ca00d3a2c2d85501e9536c3c1437756ca"
+      }
+    ]
+  },
+  "source": {
+    "path": "domain-profile/reading-help-law/assembly-index.json",
+    "sha256": "b0652de580ffa9574cee267cca556acb1de27e83423fec2bdecd820b3ef140de",
+    "snapshot": "reading-help-law-4c7138e602c70b20273e"
+  },
+  "question": "DMG 60025 Carer’s Allowance section 70 entitlement",
+  "evidence_status": "insufficient",
+  "bridge_selected": false,
+  "citation_path_selected": false,
+  "resolved_concepts": [
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/carers-allowance",
+      "label": "Carer’s Allowance",
+      "matched": [
+        "Carer’s Allowance"
+      ],
+      "method": "declared-phrase",
+      "confidence": "exact-alias"
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/entitlement",
+      "label": "Entitlement",
+      "matched": [
+        "Entitlement"
+      ],
+      "method": "declared-phrase",
+      "confidence": "exact-alias"
+    },
+    {
+      "id": "https://chris-page-gov.github.io/okf-dwp/id/term/dmg-imprisonment-guidance",
+      "label": "DMG imprisonment guidance routing",
+      "matched": [
+        "DMG"
+      ],
+      "method": "declared-phrase",
+      "confidence": "exact-alias"
+    }
+  ],
+  "budget": {
+    "max_nodes": 32,
+    "max_relationships": 64,
+    "max_depth": 3,
+    "max_bytes": 131072,
+    "used_nodes": 14,
+    "used_relationships": 25,
+    "used_bytes": 126268,
+    "reached_depth": 2,
+    "truncated": true,
+    "omissions": [
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/75e15a278e3af9ea6d4c9ae8cc9fbbb210cf71863e2b43dced546425943c079b",
+          "https://chris-page-gov.github.io/okf-dwp/id/term/capital"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/8cdaeb0dcae3b67c88d0b134bf1250dacb57f17c607f2da78364a36e689bd201",
+          "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/mixed-age-pension-credit"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9048daf32323f17763953919fbceb9e7a5fb1ec502691054787e4d6de2c6ff4d",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/a6007a93a933ac2e81909c9a10692770d6b7f5e07b2e42e214d636f00d6de5ed",
+          "https://chris-page-gov.github.io/okf-dwp/id/term/guarantee-credit"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/ee01d8a5bf2ca3c307b1538c25c1fa70639fea1da53821a6779072a78b1f74a6",
+          "https://chris-page-gov.github.io/okf-dwp/id/term/savings-credit"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-legal/0ffbb063fdbe86e512cf9782e6cb6e9450837c45b99857a98edd086c09e8bfc9",
+          "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/1987/1968/regulation/9"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-legal/d038a224231099a7fe5ec1a02fe72127478b6cc117dec8d9efcfb639d9a16d0d",
+          "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/1987/1968/schedule/1"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-legal/fa33bf3fe48ce465ec2136a7d86ce91bcab6a76075d1a7fa9d299f6f3c471947",
+          "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/1992/4/section/68"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/0962562f70eddb5d888fb518250d205a1eba6a1b22fdfc9152350cdd37b15770",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/14c892511f155b3bc74d2c6cebef1360f75c38916ff9bc849c243e1f5231bab5",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/1c4ff2305c769a7afa227ee119d099f3346cf377be0caa0031b4a59951540a1d",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0015"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/26bed8a210801cb8e6c7afcb0532285da9716ff6f1f884f33391e749c7554985",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0023"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/2f1dc378e0f899865de902865e699089f58932e02193e713f957713f13ee7ce9",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0017"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/3c4e521474fdedb463f80eec3a2bc2b82fc8e2b92e29f5129cb1b9ee8d794275",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/44c486121753e094acf43deac017ade9528ce8457372de8d55ba654756540b15",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/53b2dee3d823ee349b591448548af5aa250aa94caa0f7d3adbecc58d21b2a501",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/5897115f695cd98499e786dee63c2e3582628e91517516e6858492ae389d4efb",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-01-26-0605724317/0003"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/5a3fb8ea7deae417042d2aedff2a5424e8f4617618bb6cf06c4ab926c14a8b67",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/5b9c089b37b334fa00bc4a628458faadc94b5c5beac46aa85a639c41f0ddef4b",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0016"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/626e4fed3c05aa0ae6d9e35f9f38ee36dfaee45a412a7cd9414ee92120083b8a",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0016"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/69ac690750a62ad2db60b5f77a6169c992253f94f92bb84fbb21d627b82cb9e6",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-25-e03b36ce3e/0005"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/76b17cd9322c58e9f8f1e74d75e60be5727585d480006b120e572ee5c9e782a8",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/8752bff6ad5e948c5153f7177426dee3197dc593cff72fda6ff6e2efbe46ca2c",
+          "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-ignored-persons"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9ae23ccea9b555e25774eb82ccefa2be7a5d68e7d9fd951367a77399e8b3c9a6",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/9f3a4c2de72f2f842b9b73bdbbab8272050535409a5098efb2128442989f382a",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0003"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/a66afb37d4f7ca35f71a27ed38fe07d28a24dfffa6477b0f9d2b54878a1cc405",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0022"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/b0b987b7d89facb137a6082da75c83f3fc6453226dd4180299dab592076592ee",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/d7b8f48019eab4057255f7a1f16230b1a581a81fddc8a6656fc2807a5ec3a27c",
+          "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-ignored-persons"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/dae2a7515901fad8cb19b58c4dcfc96c6e70c0e19c2166ed5f60406b3ef2a6af",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0017"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/e2fe2b90fe177e471714b2f20d80a6ebdef7363e232d4f8afe99f0b125f9ada3",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/e32a9ff1d3db361343b926f4c2206abf221d5abe8cf35f2d4ef9cbfda99bfe51",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-06-25-5fee4f859a/0009"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f043c02be8cb5c85e892aa2df2fd822dbf4c8b4fcd96a494ae001d664119d73d",
+          "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/scottish-disability-carer-dependencies"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f0541b9851cc0684d4a43380c22402223c012aa45ae70414e825f5d8acc02e18",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0015"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-semantic/f896f899dc594172600c9a43157105e0ecb5d8c977752927002c930f4f10bb21",
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0021"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-legal/251b572cd7f541eabbbc4c5caa18a60da7ed48a1206dee94d52ea2feb20b8a78",
+          "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/2002/1792/schedule/I"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-legal/4c59f4dbba2a4c0430f4d5d98cf2b0bdfa61e4e978dbf56771a62a23459e7f98",
+          "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/2002/1792/regulation/6"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/assertion/staff-legal/d3994cf8ec61f95badf5fc9d4a3a62f1b098bf559809eb32554d169e3e7ad0eb",
+          "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/2002/16/section/2"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/24a90d20f53bb71c78a86167c92a54a0af418796321787d7d96445be40fceac2",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/england+wales"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/2c8a096e5c04f9396152280ed5bf856069dd76266c24fdb5942254ed3f532290",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/scotland"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/3d5da2f665269721fdb41632522d5d3e74dd2962ebede8b85c24ef5b06357269",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/uksi/1976/409/regulation/6/unqualified-source-route"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/42abfa09328b17a209b1c66c9b4f857c1daabef3546fd5f5ed2c05a4f4df57e9",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/england+wales"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/464d743f011afb4f31b6d8d0bffb67b15aa1c53424a6982fc2727a874f3dbffb",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/england+wales"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/6a341ade44e459c496be92ff277e761769f89f5ea9a7ddd26620c5185f151e75",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/england+wales"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/74c50b7eba5faaed85be07704b3827215e9850cbd9957babc0854d0985330626",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/scotland"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/8e8f501b3cad805d8eb0c7ec7970486e2555bfe8ce3be47baa9cdacc97aa7aa0",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/scotland"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/b59c78e1cafac94146a8e31d58d34377d4289433c1127e53ccc76b55f82b6e0d",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/scotland"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/d364d9ce983c5bedefea50e3d537a77432a5f2b12f32db7bdcdfa0f333144338",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/england+wales"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/d8fa9a6a8ab700ee23972ccc3257af62b52c0c9591bdfbd60abab73aa3a18050",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/england+wales"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/e9fe628910b962dbcd400d055323a6a06c58525e7c469314d58addd328d09484",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/scotland"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/f3c91b67d6082c033a0c5ce2b97cb083fedfe32399dc4991b8b036f1cb4e4a1e",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/scotland"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/006c666572985bc25e86dc50def61aadda36fb361687374a19c7dfc91ae77ad5",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/scotland"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/1376f8fd6c195509b8a8e6238666e9d773a877389b3ff08db5c0c068769c6fb2",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/england+wales"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/1bdf5e5c1b19f14479f3359afb506ebea5524f7295ca2e6ca9b18b6ad595d8ab",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/scotland"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/5abe7938dd2006b3e2a9322b467e61db33375dc9210ee0c2a7b307a0625f085d",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/uksi/1976/409/regulation/3/unqualified-source-route"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/76ed94482a5fc065437dd08c632f352157af2b8936740a69195ec2a3b85bafdc",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/england+wales"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/7810ebe623722ec480bd4e008d0239c056293b382e194deab5d4539bb9624118",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/uksi/1976/409/regulation/3/unqualified-source-route"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/83e6dad6dfbd979e5c1101d3469497aa078cdfbc87b0afe21f3da546bff37286",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/england+wales"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/8fe0cba55d322a43d78db7781a029cd6f2d5a3858bbb2e0acdb737513aa21c20",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/uksi/1976/409/regulation/3/unqualified-source-route"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/95fae3c1c70f677fc0181d104935c29f6e8fd4f258afe84f5c113d953c38b26e",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/england+wales"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/9dd2a6e822263adb4cde96377ca82cd12361c53d8747ae3e34f21203f9319508",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/scotland"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/a818c10e093a29be909980ed5534ff073b55ac4b7ef2d3a61eca26bd0b3a26c4",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/uksi/1976/409/regulation/3/unqualified-source-route"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/dd600542b6403d9558f300dac2d99b1c0a6ed2d1aea811f20584e43fc0999075",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/uksi/1976/409/regulation/3/unqualified-source-route"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law-citation/fb52218b8974c2affdc98decf457fce0eb199c09d5fec7c5f25a9b4485fcd136",
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/body/ukpga/1992/4/section/70/scotland"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/1088b1a608130b40a9155bd4",
+          "https://chris-page-gov.github.io/okf-dwp/id/legal-body/ukpga/2002/16/section/1"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/3496783bea6080cd62a9a030",
+          "https://chris-page-gov.github.io/okf-dwp/id/legal-body/ukpga/1992/5/section/1"
+        ]
+      },
+      {
+        "code": "relationship_budget",
+        "message": "The relationship budget prevented traversal.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal-body-link/3b11c36eaddfdf0585c40a7b",
+          "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/schedule/III/paragraph/1"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal-body/ukpga/2002/16/section/1"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-adm-m1-spare"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-memo-07-20-removal"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch53"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol9-ch54"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/chapter/78"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/document/dmg-vol4-ch24"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/2002/1792/schedule/I"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/2002/1792/regulation/5"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/schedule/I/paragraph/2"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/schedule/I/paragraph/1"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/regulation/5"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/2002/1792/regulation/6"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/page/77/0003"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/term/savings-credit"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/chapter/77"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/term/guarantee-credit"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/term/income-other-than-earnings"
+        ]
+      },
+      {
+        "code": "node_budget",
+        "message": "The node budget prevented inclusion.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal-body/uksi/2002/1792/schedule/III/paragraph/1"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal-body/ukpga/1992/5/section/1"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/2002/1792/schedule/III"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/1992/5/section/1"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/2002/16/section/1"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/1992/4/section/78"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/passage/dmg-60033"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/1976/409/regulation/7"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal/ukpga/1992/4/section/70"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/reading-help-law/passage/dmg-60025"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/legal/uksi/1976/409/regulation/4"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0027"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/no-partner-disability-addition"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch57/0005"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011"
+        ]
+      },
+      {
+        "code": "byte_budget",
+        "message": "A whole item was omitted to meet the package byte budget.",
+        "ids": [
+          "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025"
+        ]
+      }
+    ]
+  },
+  "missing_evidence": [
+    {
+      "code": "uncovered_resolved_concept",
+      "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+      "ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/entitlement"
+      ]
+    },
+    {
+      "code": "uncovered_resolved_concept",
+      "message": "No applicable evidence requirement covers this resolved concept. Its evidence completeness cannot be established.",
+      "ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/dmg-imprisonment-guidance"
+      ]
+    },
+    {
+      "code": "unresolved_terms",
+      "message": "The question contains terms outside the declared concept vocabulary.",
+      "ids": []
+    },
+    {
+      "code": "missing_dependency",
+      "message": "An explicitly required context dependency was not included.",
+      "ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-adm-m1-spare"
+      ]
+    },
+    {
+      "code": "missing_dependency",
+      "message": "An explicitly required context dependency was not included.",
+      "ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-addition",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011"
+      ]
+    },
+    {
+      "code": "missing_dependency",
+      "message": "An explicitly required context dependency was not included.",
+      "ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-addition",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch57/0005"
+      ]
+    },
+    {
+      "code": "missing_dependency",
+      "message": "An explicitly required context dependency was not included.",
+      "ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-addition",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025"
+      ]
+    },
+    {
+      "code": "missing_dependency",
+      "message": "An explicitly required context dependency was not included.",
+      "ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/severe-disability-addition",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0012"
+      ]
+    },
+    {
+      "code": "missing_required_evidence",
+      "message": "Evidence required by staff-038: Complete Carer’s Allowance conditions, exclusions, territorial changes and relevant definitions with effective dates. was absent, omitted or lacked governance.",
+      "ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-038/applicability_unresolved/applicability",
+        "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-038/evidence_closure_unverified/source-requirement-1",
+        "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-038/independent_review_pending/meaning-review",
+        "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-038/legal_version_unreconciled/legal-version",
+        "https://chris-page-gov.github.io/okf-dwp/id/obligation/staff/staff-038/question_scope_unresolved/question-scope"
+      ]
+    }
+  ],
+  "context_id": "urn:sha256:c147ead326163ca1425903631beb0addfa0b8f5cc6e43e224732f329383e8449",
+  "limitation": "Consumer shape validation passed. This unchanged-budget natural-language probe did not establish retrieval improvement; omissions remain explicit."
+}

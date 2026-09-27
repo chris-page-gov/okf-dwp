@@ -1,0 +1,23 @@
+{
+  "schema": "okf-reading-help-ci-failures.v1",
+  "failures": [
+    {
+      "job_url": "https://github.com/chris-page-gov/okf-dwp/actions/runs/36283889487/job/108520842586",
+      "head_commit": "115397c19e0b1e1e16d476df788c33a1196a3990",
+      "failure": "Output differs: reading-help-corpus/documents/dmg/dmg-01-22-0028981aa5/leaves/0000.json.gz",
+      "raw_log_sha256": "0483ccf8a103632d63e87ee1feeddd232942d770fd744799512e518e2950fe5c",
+      "raw_log_bytes": 35655,
+      "repair": "Python 3.12 gzip OS-header byte differs between macOS and Linux; use the existing platform-neutral compression helper and regenerate only the new reading-help outputs.",
+      "boundary": "This is a retained failed CI observation, not a passing release check."
+    },
+    {
+      "job_url": "https://github.com/chris-page-gov/okf-dwp/actions/runs/36284352465/job/108522145625",
+      "head_commit": "0768335d04918605257330f72223843f08a6c239",
+      "failure": "Stale logical context: logical-context/base-index.json",
+      "raw_log_sha256": "c5e5eff5c644ac2a1670a60ac69d8c06067994ccaed80f7c14cf74074045ea49",
+      "raw_log_bytes": 214460,
+      "repair": "Withdraw the learning-only combined Reader change; keep navigation in documentation and workbench sidecars. Restore exact frozen inputs, without regenerating their downstream projections.",
+      "boundary": "This is a retained failed CI observation, not a passing release check."
+    }
+  ]
+}

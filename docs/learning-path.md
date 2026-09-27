@@ -6,6 +6,8 @@
 
 To practise reading a difficult source passage, use the [bounded Chapter 60 reading aid](reading-help-ch60.md). It separates an abbreviation, a numbered condition and a raised source marker in paragraphs 60025 and 60033, with exact source locations and visible unresolved references.
 
+For the broader candidate, use the [source-linked reading-help walkthrough](reading-help-demo-2026-09-30.md). It keeps source text, proposed explanations, extraction gaps and publication status separate.
+
 For a practical introduction to source preparation, follow
 [Review how a passage was built](passage-boundary-review.md). It explains the
 28-case inspection queue, source fingerprints and the difference between a
@@ -41,6 +43,8 @@ Use the [shared service status](service-publication.md) for the latest recorded
 publication. The [0.6.0 public verification report](../validation/compact-delivery/v0.6.0/README.md) records 121 requests checking 11 evidence cases, including current, historical and empty results. Both client libraries returned matching tool definitions. The first failed verification remains recorded. These are delivery checks, not evidence of complete benefits answers or AI accuracy.
 
 The earlier [0.5.0 browser observations](../validation/compact-delivery/v0.5.0/README.md) retain their own sources and results, including Firefox hosting-cookie warnings. The [full public Reader check](household-reader-public-verification.md) separately verified conceptual filters, a statutory relationship graph and source/audit dates in Chrome. No new 0.6.0 public browser or Voice acceptance is implied.
+
+For shortened legal citations, see the [legislation bridge](reading-help-legislation-bridge.md). It explains work titles, dated provisions and geographical versions, and why a source link does not prove applicability.
 
 ### How law, guidance and people fit together
 

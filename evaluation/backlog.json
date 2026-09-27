@@ -1,6 +1,6 @@
 {
   "schema": "okf-dwp-backlog.v1",
-  "updated_on": "2026-09-26",
+  "updated_on": "2026-09-27",
   "status_meanings": {
     "recorded_complete": "Named bounded result has retained evidence, not perpetual assurance.",
     "in_progress": "Work is being prepared or implemented; publication/acceptance is not implied.",
@@ -340,7 +340,13 @@
         "docs/legal-body-evidence.md",
         "domain-profile/legal-bodies/coverage.json",
         "evaluation/out-of-sample/uc-disabled-child-supersession-001.json",
-        "docs/uc-disabled-child-supersession-follow-up.md"
+        "docs/uc-disabled-child-supersession-follow-up.md",
+        "docs/reading-help-legislation-bridge.md",
+        "domain-profile/reading-help-law/bridge.json",
+        "docs/reading-help-rollout-work-log.md",
+        "domain-profile/reading-help-law/admission.json",
+        "evaluation/reading-help-rollout/law-context-probe.json",
+        "reading-help-ch60-law.json"
       ],
       "acceptance_checks": [
         "Verify work/provision/version identities, effects, commencement and territory; record unresolved citations; catalogue links are not legal completeness."
@@ -364,14 +370,17 @@
           "kind": "research",
           "status": "in_progress",
           "executor": "agent",
-          "next_action": "Twenty selected statutory units and 43 navigation relationships are implemented with dated sources and retained failures. Next resolve remaining statutory dependencies, 12 unknown extents, commencement/effects and the missing judgment bodies; do not promote extraction to applicability. For the new UC/DLA case, obtain and verify the exact operative Schedule 1 paragraph 31 and UC regulation 24 bodies, amendments, territory and effective dates; then test whether A4361 governs this disabled-child addition, rather than inferring it from the carer-element example.",
+          "next_action": "Twenty selected statutory units and 43 navigation relationships are implemented with dated sources and retained failures. Next resolve remaining statutory dependencies, 12 unknown extents, commencement/effects and the missing judgment bodies; do not promote extraction to applicability. For the new UC/DLA case, obtain and verify the exact operative Schedule 1 paragraph 31 and UC regulation 24 bodies, amendments, territory and effective dates; then test whether A4361 governs this disabled-child addition, rather than inferring it from the carer-element example. The reading-help bridge separately retains three Chapter 60 targets as four observed geographical variants, with the original failed attempt preserved. Explicit consumer admission and applicability review remain outstanding; see the rollout work log.",
           "evidence": [
             "docs/legal-reconciliation.md",
             "docs/monday-delivery-work-log.md",
             "docs/legal-body-evidence.md",
             "domain-profile/legal-bodies/coverage.json",
             "evaluation/out-of-sample/uc-disabled-child-supersession-001.json",
-            "docs/uc-disabled-child-supersession-follow-up.md"
+            "docs/uc-disabled-child-supersession-follow-up.md",
+            "docs/reading-help-legislation-bridge.md",
+            "domain-profile/reading-help-law/bridge.json",
+            "docs/reading-help-rollout-work-log.md"
           ]
         },
         {
@@ -2044,7 +2053,7 @@
     },
     {
       "id": "DWP-BL-026",
-      "title": "Occurrence-specific Chapter 60 reading help",
+      "title": "Occurrence-specific DMG and ADM reading help",
       "status": "in_progress",
       "priority": "P0",
       "depends_on": [
@@ -2059,7 +2068,23 @@
         "reading-help-ch60.json",
         "scripts/build_reading_help.py",
         "scripts/test_reading_help.py",
-        "docs/learning-path.md"
+        "docs/learning-path.md",
+        "validation/reading-help/2026-09-26-v1/reading-help-public-browser-receipt.json",
+        "validation/reading-help/2026-09-26-v1/reading-help-ci-deployment-receipt.json",
+        "validation/reading-help/2026-09-26-v1/provenance.json",
+        "docs/reading-help-rollout-work-log.md",
+        "evaluation/reading-help-rollout/replays/reading-help-20260927-01/report.json",
+        "reading-help-corpus/manifest.json",
+        "docs/reading-help-corpus-contract.md",
+        "evaluation/reading-help-rollout/initial-gate-02.json",
+        "evaluation/reading-help-rollout/heldout-gate-01.json",
+        "evaluation/reading-help-rollout/heldout-03-controls.json",
+        "evaluation/reading-help-rollout/heldout-03-gate-01.json",
+        "evaluation/reading-help-rollout/heldout-03-producer-replay-02.json",
+        "evaluation/reading-help-rollout/workbench-link-report.json",
+        "evaluation/evidence-workbench/reading-help-manifest.json",
+        "docs/reading-help-demo-2026-09-30.md",
+        "evaluation/reading-help-rollout/heldout-03-producer-replay-03.json"
       ],
       "acceptance_checks": [
         "The bounded paragraphs 60025 and 60033 display exact source-bound occurrences across their continuation pages, including all 20 body citation markers and unresolved printed defects.",
@@ -2067,7 +2092,7 @@
         "A held-out passage set, wider occurrence coverage and qualified review are completed before any automatic whole-chapter or corpus-wide highlighting.",
         "The exact merged manifest and compatible Explorer revision receive separate public browser verification for the 30 September demonstration."
       ],
-      "scope_note": "The two-paragraph source-bound implementation is a bounded reading aid. Original Chat proposals remain model-authored and unreviewed; this does not close BL007, all 40 staff-question obligations, legal answerability or specialist acceptance.",
+      "scope_note": "The original two-paragraph demonstration is preserved. The additive candidate accounts for all 513 documents, 53,727 units and 893 extraction gaps, with source-bound proposals and 401/403 exact retained-record links. It does not close structural defects, the 40 insufficient question packages, legal answerability or specialist acceptance.",
       "work_packages": [
         {
           "id": "DWP-BL-026.bounded-implementation",
@@ -2085,18 +2110,31 @@
         {
           "id": "DWP-BL-026.public-verification",
           "kind": "live_observation",
-          "status": "not_started",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "After merging both repositories, check the exact manifest and Explorer revision through the public reading-help route before claiming the demonstration is live.",
-          "evidence": []
+          "next_action": "The paired Chapter 60 v1 release was publicly verified on 26 September 2026. Preserve the byte-identical release receipts and fallback tag. This closes only the two-paragraph display check; no new corpus release, legal acceptance or ChatGPT sidebar acceptance is implied.",
+          "evidence": [
+            "validation/reading-help/2026-09-26-v1/reading-help-public-browser-receipt.json",
+            "validation/reading-help/2026-09-26-v1/reading-help-ci-deployment-receipt.json",
+            "validation/reading-help/2026-09-26-v1/provenance.json"
+          ]
         },
         {
           "id": "DWP-BL-026.held-out-coverage",
           "kind": "research",
-          "status": "not_started",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Freeze and test held-out passages, ambiguous uses and wider citation selection before enabling automatic Chapter 60 or corpus-wide matching.",
-          "evidence": []
+          "next_action": "Deterministic processing and source controls are retained: 12 initial cases passed; the first 24 held-out cases failed 23/24 and remain frozen. A separately reviewed fresh 24-case set passed, as did unchanged-expectation regression after the cache repair. No automated content-processing model calls. Review unsupported mixed-case forms, meaning scope and remaining extraction defects separately.",
+          "evidence": [
+            "reading-help-corpus/manifest.json",
+            "docs/reading-help-corpus-contract.md",
+            "evaluation/reading-help-rollout/initial-gate-02.json",
+            "evaluation/reading-help-rollout/heldout-gate-01.json",
+            "evaluation/reading-help-rollout/heldout-03-controls.json",
+            "evaluation/reading-help-rollout/heldout-03-gate-01.json",
+            "evaluation/reading-help-rollout/heldout-03-producer-replay-02.json",
+            "evaluation/reading-help-rollout/heldout-03-producer-replay-03.json"
+          ]
         },
         {
           "id": "DWP-BL-026.specialist-review",
@@ -2105,6 +2143,18 @@
           "executor": "human",
           "next_action": "Review explanations, disputed source associations and legal-reference meanings without promoting machine extraction or model prose to official authority.",
           "evidence": []
+        },
+        {
+          "id": "DWP-BL-026.corpus-public-verification",
+          "kind": "live_observation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Verify the exact merged consumer and corpus through public Pages; check the 40-question reading-help links, preserve the Chapter 60 fallback and tag only the passing paired increment. Two composite evidence records remain explicitly unmatched.",
+          "evidence": [
+            "evaluation/reading-help-rollout/workbench-link-report.json",
+            "evaluation/evidence-workbench/reading-help-manifest.json",
+            "docs/reading-help-demo-2026-09-30.md"
+          ]
         }
       ]
     }

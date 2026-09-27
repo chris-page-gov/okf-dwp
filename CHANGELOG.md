@@ -10,6 +10,27 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Link the beginner glossary and learning-path documentation to the reading-help walkthrough. Keep the combined Reader and its frozen downstream context inputs unchanged; preserve the withdrawn learning-navigation observation separately.
+
+- Link all 40 retained question cases to the bounded reading-help catalogue: 401 of 403 distinct evidence records match exact unit and source identities. Keep the two unmatched capital composites explicit and every package unchanged.
+- Generate both backlog views from the authored register and record the passed source controls separately from pending public verification.
+
+- Correct statutory-overlay capture provenance and distinguish full-passage hashes from exact source fragments; preserve the failed admission and verify all newly admitted records with Explorer.
+
+- Correct the learning-path insertion to preserve the checked source-roles diagram heading.
+- Validate the retained 40-question replay bindings and measurements in CI without repeating unchanged assemblies.
+
+### Reading-help legislation bridge
+
+- Add a separately selected statutory context and 16 source-checked dated citation mappings. Preserve unresolved references, all earlier requirements and the failed fixed-budget natural-language selection probe.
+- Retain an 80-invocation offline replay of all 40 staff occurrences: cold and warm packages match the frozen baseline exactly, with latency and cache measurements. This is non-regression, not an answer-quality improvement.
+
+- Add a separate v1-compatible Chapter 60 manifest with 20 exact body/reference-row occurrence pairs. Keep the earlier manifest and unresolved citation meanings unchanged.
+
+- Add four source-span-bound work-title mappings and a separately validated statutory context overlay. Reuse the existing 20 statutory units and 43 navigation relationships.
+- Retain the five-request Chapter 60 acquisition and its initial section 70 version failure. An offline successor preserves both geographical variants, complete selected text and source-native dated links, without further requests.
+- Record exact rollout baselines and the failed live health observation separately from historical deployment evidence. Consumer admission and legal applicability remain explicit outstanding gates.
+
 - Add a [deterministic DMG/ADM reading-help corpus](docs/reading-help-corpus-contract.md) over the adopted 53,727 structured units in 513 documents. Bounded, source-bound leaves retain 893 extraction-blocked pages, printed abbreviation-row candidates, unresolved local references and explicit review limits. The source-led initial gate passed 12/12 after a retained failed run; the first fresh held-out gate remains failed 23/24 on an expected label that omitted a printed range qualifier. A separately frozen and source-reviewed fresh 24-case gate passed 24/24, including abbreviation collisions, continuing tables, exceptions and unresolved references. The Chat pack now reports truncated selection and bounds input/output paths. The corpus leaf writer uses an OS-neutral, mtime-zero gzip header; warm-cache reads are confined to hash-bound leaves in their own document. This remains an unreviewed candidate; no model or legal review was run.
 
 - Add a [Chapter 60 reading-help rollout proposal](docs/reading-help-rollout.md) for deterministic-first expansion and later bounded model review; no wider trial or specialist acceptance is claimed.

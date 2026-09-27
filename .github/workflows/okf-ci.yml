@@ -171,6 +171,15 @@ jobs:
           uv run --locked python scripts/build_staff_needs.py --check
           uv run --locked python scripts/build_legal_reconciliation.py --check
           uv run --locked python scripts/build_legal_body_evidence.py --check
+          uv run --locked python scripts/build_reading_help_law.py --check
+          uv run --locked python -m unittest discover -s scripts -p test_reading_help_law.py
+          uv run --locked python scripts/build_reading_help_references.py --check
+          uv run --locked python -m unittest discover -s scripts -p test_reading_help_references.py
+          uv run --locked python scripts/build_reading_help_law_context.py --check
+          uv run --locked python scripts/check_reading_help_replay.py
+          uv run --locked python scripts/build_reading_help_workbench.py --check
+          uv run --locked python -m unittest discover -s scripts -p test_reading_help_workbench.py
+          uv run --locked python -m unittest discover -s scripts -p test_reading_help_law_context.py
           uv run --locked python scripts/build_staff_semantic.py --check
           uv run --locked python scripts/build_combined_reader.py --check
           uv run --locked python scripts/compare_source_census.py --check
@@ -474,6 +483,7 @@ jobs:
           node --test scripts/test_evidence_workbench_paths.mjs
           node scripts/build_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench --check
           node scripts/check_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench
+          node --experimental-strip-types scripts/check_reading_help_law_context.mjs --explorer-root .ci/okf-explorer-workbench
           uv run --locked python scripts/build_workbench_models.py --check
           uv run --locked python -m unittest discover -s scripts -p test_workbench_models.py
           node --test scripts/test_learning_site_v3.mjs

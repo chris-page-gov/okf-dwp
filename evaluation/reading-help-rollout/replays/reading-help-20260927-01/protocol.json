@@ -1,0 +1,80 @@
+{
+  "schema": "okf-reading-help-question-replay.v1",
+  "source": {
+    "registry": "evaluation/staff-questions/cases.json",
+    "registry_sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a",
+    "corpus": "structured-context/evidence-connect-manifest.json",
+    "corpus_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519",
+    "engine_files": {
+      "index.ts": "689f8b8ab1cfb5ccc21b6dd9b5527fcad04de01f5876b44cbb2dc0240fceb010",
+      "corpus.ts": "a770352c6e4628f0c391b0c12bbdaf185b476a714ca212e99459d135f8f57f6f",
+      "corpusV3.ts": "944617e1630362b7a41d60da92651007b96252eff3075eb4c4b852f420f5a5c0",
+      "types.ts": "febf83b5c65153fd2e49ac070b6117525463034fb1b33534a086a1cc7bbb42cc"
+    },
+    "delivery_sha256": "f05cd5cf6378ecb9e33f5c8a4d43a6bd74d7c6983413316d3663b5bd733f7b35",
+    "model_calls": 0,
+    "network_calls": 0
+  },
+  "engine_files": {
+    "index.ts": "689f8b8ab1cfb5ccc21b6dd9b5527fcad04de01f5876b44cbb2dc0240fceb010",
+    "corpus.ts": "a770352c6e4628f0c391b0c12bbdaf185b476a714ca212e99459d135f8f57f6f",
+    "corpusV3.ts": "944617e1630362b7a41d60da92651007b96252eff3075eb4c4b852f420f5a5c0",
+    "types.ts": "febf83b5c65153fd2e49ac070b6117525463034fb1b33534a086a1cc7bbb42cc"
+  },
+  "budget": {
+    "max_bytes": 524288,
+    "max_nodes": 64,
+    "max_relationships": 128,
+    "max_depth": 6
+  },
+  "cases": [
+    "staff-001",
+    "staff-002",
+    "staff-003",
+    "staff-004",
+    "staff-005",
+    "staff-006",
+    "staff-007",
+    "staff-008",
+    "staff-009",
+    "staff-010",
+    "staff-011",
+    "staff-012",
+    "staff-013",
+    "staff-014",
+    "staff-015",
+    "staff-016",
+    "staff-017",
+    "staff-018",
+    "staff-019",
+    "staff-020",
+    "staff-021",
+    "staff-022",
+    "staff-023",
+    "staff-024",
+    "staff-025",
+    "staff-026",
+    "staff-027",
+    "staff-028",
+    "staff-029",
+    "staff-030",
+    "staff-031",
+    "staff-032",
+    "staff-033",
+    "staff-034",
+    "staff-035",
+    "staff-036",
+    "staff-037",
+    "staff-038",
+    "staff-039",
+    "staff-040"
+  ],
+  "model_calls": 0,
+  "network_calls": 0,
+  "purpose": "Non-regression of retained evidence while reading assistance changes separately; not a retrieval-improvement or legal-answer benchmark.",
+  "limitations": [
+    "Expected text and qualifications use the fixed retained packages, not an independently reviewed complete legal answer key.",
+    "Warm measurement repeats each question with the same byte cache; engine assembly is repeated.",
+    "Reading-help labels do not create concepts, applicability or evidence requirements."
+  ]
+}

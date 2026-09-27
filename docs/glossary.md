@@ -6,6 +6,27 @@ help readers distinguish benefits; they are not eligibility rules or advice.
 Official links were checked on 19 September 2026. Current official information
 can differ from the project's frozen source collection.
 
+## Look up a word where it occurs
+
+Start with the [reading-help walkthrough](reading-help-demo-2026-09-30.md).
+Choose the manual, document and numbered paragraph before selecting an
+abbreviation. A **source occurrence** means these exact letters at this location;
+it is more specific than a dictionary entry. The same letters can have different
+meanings in different manuals.
+
+The reader separates the original extracted text, a proposed expansion and its
+review status. A verified text span means that the letters match the frozen
+source; it does not certify the proposed meaning. Unresolved references remain
+visible. Small raised numbers normally refer to that paragraph's printed
+reference list; a matching digit elsewhere is not enough to identify a target.
+The Chapter 60 demonstration has separately checked body-to-footer pairs.
+
+A **shard** is a small file containing part of the collection. The reader loads
+only the selected document and passage files, checks their digital fingerprints
+(SHA-256 hashes), and keeps a bounded local cache for repeat visits. A failed
+hash check stops that load. Reading help supplies navigation and explanation;
+it does not calculate an award or change an evidence package's answerability.
+
 ## Benefit names
 
 ### DWP, DMG and ADM
