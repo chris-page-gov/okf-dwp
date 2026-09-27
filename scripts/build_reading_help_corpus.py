@@ -17,11 +17,11 @@ SCHEMAS = ("okf-reading-help-catalogue.v1", "okf-reading-help-document.v1", "okf
 RULE = "deterministic-reading-help-2026-09-26.v1"
 MAX_LEAF = 256 * 1024
 TARGET_LEAF = MAX_LEAF - 8192
-ABBREV = re.compile(r"\b[A-Z][A-Z0-9]{1,7}\b")
+ABBREV = re.compile(r"(?<![A-Za-z0-9])[A-Z]{2,8}(?=[0-9]*\b)")
 DEFINITION = re.compile(r"(?m)^\s*([A-Z][A-Z0-9]{1,7})\s+(?:means|stands for)\s+([^\n.]{3,100})")
 TABLE_ROW = re.compile(r'(?m)^([ \t]*)([“"]?)([A-Z][A-Z0-9]{1,7})([”"]?)[ \t]{2,}([^\n]{3,120})$')
 PHRASE = re.compile(r"\b(?:[A-Za-z][a-z]+\s+){2,3}[A-Za-z][a-z]+\b")
-FOOTER_ROW = re.compile(r"(?m)^([1-9][0-9]?)\s{2,}([^\n]{10,180})$")
+FOOTER_ROW = re.compile(r"(?m)^[ \t]*([1-9][0-9]?)[ \t]+((?:SS\b|UC\b|R\(|reg\b|s\s|Art\b)[^\n]{8,180})$")
 
 
 def binding(path, data):
@@ -73,8 +73,15 @@ def segments(unit):
 def extract(unit, family, pages, definitions, docid):
     text = unit["text"]
     raw = text.encode("utf-8")
-    matches = [(r["start_utf8"], r["end_utf8"], "manual_reference", r)
-               for r in paragraph_references(text, family)]
+    matches = []
+    for reference in paragraph_references(text, family):
+        start, end = reference["start_utf8"], reference["end_utf8"]
+        suffix = re.match(rb"\s+et seq\b", raw[end:], re.IGNORECASE)
+        if suffix and reference["target_kind"] == "paragraph":
+            end += suffix.end()
+            reference = {**reference, "target_kind": "unresolved-reference",
+                         "target_label": reference["target_label"] + " et seq"}
+        matches.append((start, end, "manual_reference", reference))
     for match in ABBREV.finditer(text):
         if match.group() in definitions:
             matches.append((len(text[:match.start()].encode()), len(text[:match.end()].encode()),
@@ -303,6 +310,8 @@ def compile_corpus(root=ROOT, use_cache=True):
                 waiting.append(row)
                 passage_refs.append({"unit_id": unit["id"], "unit_sha256": unit["record_sha256"],
                                      "role": unit["role"], "pages": [s["page"] for s in unit["spans"]],
+                                     "label": unit.get("label"),
+                                     "paragraph_labels": unit.get("paragraph_labels", []),
                                      "segment_ordinal": part["ordinal"], "segment_count": len(parts),
                                      "leaf_url": leaf_path, "status": row["status"]})
             totals["passages"] += 1

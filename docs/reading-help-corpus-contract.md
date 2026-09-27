@@ -31,6 +31,10 @@ extraction is `extraction_blocked`, not evidence of a blank PDF page.
 
 ## Leaf objects
 
+The document index gives each segment a source-declared `label` and
+`paragraph_labels` for navigation, alongside the exact unit ID, role, pages
+and leaf binding. These labels do not imply a new legal category.
+
 Each leaf binds `family`, `document_id`, `source_sha256`,
 `extraction_sha256` and `rules_sha256`. Each passage has the adopted `id`,
 `unit_sha256`, `role`, `paragraph_labels`, complete ordered `source_spans`,
@@ -50,16 +54,20 @@ digit nor a paragraph label alone is a valid footer target. The deterministic bu
 unresolved and must not infer a link.
 
 
-The current frozen build has a 260,754-byte catalogue. The largest document
-index is 412,967 bytes; the largest leaf is 51,252 bytes compressed and
-254,316 bytes decoded. A reader can fetch one index and its selected leaf,
-without loading 1,414 leaves or the adopted structured-unit file.
+The current frozen build has a 260,791-byte catalogue. The largest document
+index is 478,774 bytes; the largest leaf is 51,222 bytes compressed and
+254,317 bytes decoded. A reader can fetch one index and its selected leaf,
+without loading 1,455 leaves or the adopted structured-unit file.
 
-The 12 initial and 24 fresh held-out controls cover exact frozen source
-locations and projection preservation across both manuals. They do not assess
-abbreviation meaning, citation resolution, legal currency or staff answer
-quality. The observed candidate counts are coverage measurements, not a
-quality pass for model proposals or publication as reviewed guidance.
+The preliminary 12+24 first-page controls check exact source locations and
+projection preservation. A separate source-led initial 12-case gate passed
+after its first failure was retained. The first fresh 24-case held-out gate
+remains failed at 23/24: one frozen expected label omitted a printed range
+qualifier. The revised fresh 24-case gate passed 24/24, including abbreviation
+scope, continuing tables, explicit exceptions and unresolved references. Its
+source-reviewed fixture, exact evaluator and result are under
+`evaluation/reading-help-rollout/heldout-03-*`. None of these checks establishes
+legal currency, specialist review or staff answer quality.
 
 The Chapter 60 `okf-reading-help.v1` aid remains separate and unchanged.
 Source text and generated candidate content are inert data. No model call,
@@ -75,5 +83,7 @@ rebuilds all documents from frozen source and compares exact bytes without using
 the output cache. The ordinary Chat pack utility is
 `scripts/reading_help_chat.py`; `export --document-id ID --limit 12 --output FILE`
 selects unresolved candidates, and `import --requests FILE --requests-sha256
-SHA256 --replies FILE --output FILE` saves gated, unpublished proposals. No
-network or model call is made.
+SHA256 --replies FILE --output FILE` saves gated, unpublished proposals. The exported pack includes a reply JSON
+schema, total and selected candidate counts, selection truncation, a bounded
+skip count and complete selected passages. Output is confined to the resolved
+local quarantine and created exclusively. No network or model call is made.

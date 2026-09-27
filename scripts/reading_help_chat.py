@@ -15,12 +15,29 @@ MAX_PACK = 1024 * 1024
 
 
 def safe_output(path):
-    path = path.absolute()
-    require(not path.exists() and path.parent.is_dir(), "Output must be new and its parent must exist")
-    require(path.is_relative_to(Path("/Users/crpage/tmp")) or path.is_relative_to(
-        ROOT / "evaluation/reading-help-rollout/chat-imports"), "Output must stay in tmp or evaluation quarantine")
-    require(not any(p.is_symlink() for p in [path, *path.parents] if p.exists()), "Symlink output path")
-    return path
+    """Resolve the authorised tmp relocation, then confine the actual parent."""
+    path = path.expanduser().absolute()
+    roots = (Path("/Users/crpage/tmp").resolve(strict=True),
+             (ROOT / "evaluation/reading-help-rollout/chat-imports").resolve())
+    require(path.parent.is_dir(), "Output parent must exist")
+    parent = path.parent.resolve(strict=True)
+    require(any(parent == root or parent.is_relative_to(root) for root in roots),
+            "Output must stay in tmp or evaluation quarantine")
+    require(not path.is_symlink() and not path.exists(), "Output must be a new regular file")
+    return parent / path.name
+
+
+def write_new(path, data):
+    with path.open("xb") as stream:
+        stream.write(data)
+
+
+def bounded_file(path, limit):
+    require(path.is_file() and not path.is_symlink(), "Input must be a regular file")
+    with path.open("rb") as stream:
+        data = stream.read(limit + 1)
+    require(len(data) <= limit, "Input exceeds byte bound")
+    return data
 
 
 def read_json(path, expected=None, limit=16*1024*1024):
@@ -71,21 +88,33 @@ def export(document_id, limit, output):
     pack = {"schema": SCHEMA, "document_id": document_id, "family": index["family"],
             "source_sha256": index["source"]["sha256"],
             "extraction_sha256": index["extraction"]["sha256"],
-            "rules_sha256": index["rules_sha256"], "complete": True,
+            "rules_sha256": index["rules_sha256"], "complete_selected_passages": True,
+            "total_candidate_count": sum(c["status"] in ("unresolved", "ambiguous")
+                for passage in source.values() for c in passage["cards"]),
+            "selected_count": 0, "selection_truncated": False, "skipped_count": 0,
             "passages": {}, "requests": [], "skipped": [],
-            "instruction": "Suggest reading help only. Quote exact source occurrences; retain ambiguity and legal uncertainty."}
+            "instruction": "Suggest reading help only. Quote exact source occurrences; retain ambiguity and legal uncertainty.",
+            "reply_json_schema": {"type": "object", "additionalProperties": False,
+                "required": ["schema", "request_id", "occurrence_id", "literal_sha256", "status", "proposal"],
+                "properties": {"schema": {"const": SCHEMA}, "request_id": {"type": "string"},
+                    "occurrence_id": {"type": "string"}, "literal_sha256": {"type": "string"},
+                    "status": {"enum": ["proposed", "unresolved", "rejected"]},
+                    "proposal": {"type": "string", "maxLength": 2000}}}}
     for passage_id, passage in source.items():
         for card in passage["cards"]:
             if card["status"] not in ("unresolved", "ambiguous"):
                 continue
             if len(pack["requests"]) >= limit:
-                break
+                pack["selection_truncated"] = True
+                continue
             occurrence = next(o for o in passage["occurrences"] if o["id"] == card["occurrence_id"])
             ident = sha(canonical([document_id, card["id"], index["rules_sha256"]]))[:24]
             if len(canonical(passage)) > 96*1024:
-                pack["skipped"].append({"request_id": ident, "passage_id": passage_id,
-                                        "reason": "complete-passage-exceeds-bound"})
-                pack["complete"] = False
+                pack["skipped_count"] += 1
+                if len(pack["skipped"]) < 24:
+                    pack["skipped"].append({"request_id": ident, "passage_id": passage_id,
+                                            "reason": "complete-passage-exceeds-bound"})
+                pack["selection_truncated"] = True
                 continue
             pack["passages"][passage_id] = passage
             pack["requests"].append({"request_id": ident, "passage_id": passage_id,
@@ -95,20 +124,24 @@ def export(document_id, limit, output):
                 pack["requests"].pop()
                 if not any(r["passage_id"] == passage_id for r in pack["requests"]):
                     del pack["passages"][passage_id]
-                pack["skipped"].append({"request_id": ident, "passage_id": passage_id,
-                                        "reason": "pack-exceeds-bound"})
-                pack["complete"] = False
-    require(pack["requests"] or pack["skipped"], "No unresolved candidates")
+                pack["skipped_count"] += 1
+                if len(pack["skipped"]) < 24:
+                    pack["skipped"].append({"request_id": ident, "passage_id": passage_id,
+                                            "reason": "pack-exceeds-bound"})
+                pack["selection_truncated"] = True
+    pack["selected_count"] = len(pack["requests"])
+    pack["selection_truncated"] |= pack["selected_count"] < pack["total_candidate_count"]
+    require(pack["total_candidate_count"], "No unresolved candidates")
     data = canonical(pack)
     require(len(data) <= MAX_PACK, "Pack byte bound")
-    output.write_bytes(data)
-    print(json.dumps({"requests": len(pack["requests"]), "skipped": len(pack["skipped"]),
+    write_new(output, data)
+    print(json.dumps({"requests": len(pack["requests"]), "skipped": pack["skipped_count"],
                       "sha256": sha(data), "path": str(output)}))
 
 
 def import_replies(requests, request_hash, replies, output):
     output = safe_output(output)
-    raw = requests.read_bytes()
+    raw = bounded_file(requests, MAX_PACK)
     require(len(raw) <= MAX_PACK and sha(raw) == request_hash, "Request pack size/hash differs")
     pack = json.loads(raw)
     require(pack["schema"] == SCHEMA and len(pack["requests"]) <= 24, "Invalid request pack")
@@ -126,7 +159,7 @@ def import_replies(requests, request_hash, replies, output):
                 request["card"] in passage["cards"], "Request/card/source passage differs")
         require(request["request_id"] not in issued, "Duplicate request")
         issued[request["request_id"]] = request
-    reply_raw = replies.read_bytes()
+    reply_raw = bounded_file(replies, 128*1024)
     require(len(reply_raw) <= 128*1024, "Reply file exceeds bound")
     accepted = []
     for line in reply_raw.splitlines():
@@ -146,7 +179,7 @@ def import_replies(requests, request_hash, replies, output):
                          "request_pack_sha256": request_hash})
     require(len({r["request_id"] for r in accepted}) == len(accepted), "Duplicate response")
     data = b"".join(canonical(row) for row in accepted)
-    output.write_bytes(data)
+    write_new(output, data)
     print(json.dumps({"imported": len(accepted), "sha256": sha(data), "path": str(output)}))
 
 

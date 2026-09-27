@@ -1,0 +1,232 @@
+{
+  "schema": "okf-reading-help-meaningful-controls.v1",
+  "status": "frozen-before-evaluation",
+  "selection": "Twelve manually selected source locations from frozen DWP extraction; expected navigation or abstention follows visible text and known published-reader limitations. No model or producer output used to derive expectations. Not specialist legal review.",
+  "initial": [
+    {
+      "id": "D01",
+      "family": "dmg",
+      "document_id": "dmg-vol10-ch60",
+      "source_pdf_sha256": "ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch60.json",
+      "extraction_sha256": "bc5925c0d434fbc4bec575bea2e1e2dbd020b014497ab156973054e80e326f2f",
+      "page": 3,
+      "start_utf8": 715,
+      "end_utf8": 736,
+      "literal": "see DMG 60035 - 60042",
+      "literal_sha256": "b2e610753c0e42a5d4dc9b41d047c1da9805f829e4f7d2b1acc9fabea1433bb6",
+      "expected": {
+        "kind": "reference",
+        "target_kind": "paragraph-range",
+        "target_label": "60035–60042",
+        "status": "unresolved"
+      }
+    },
+    {
+      "id": "D02",
+      "family": "dmg",
+      "document_id": "dmg-vol10-ch60",
+      "source_pdf_sha256": "ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch60.json",
+      "extraction_sha256": "bc5925c0d434fbc4bec575bea2e1e2dbd020b014497ab156973054e80e326f2f",
+      "page": 4,
+      "start_utf8": 94,
+      "end_utf8": 107,
+      "literal": "See DMG 60033",
+      "literal_sha256": "461afcde0a8b9082f82be277e0872930e94bd3625bba93e95fb0b46d1e68cd6b",
+      "expected": {
+        "kind": "reference",
+        "target_kind": "paragraph",
+        "target_label": "60033",
+        "status": "proposed"
+      }
+    },
+    {
+      "id": "D03",
+      "family": "dmg",
+      "document_id": "dmg-vol10-ch60",
+      "source_pdf_sha256": "ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch60.json",
+      "extraction_sha256": "bc5925c0d434fbc4bec575bea2e1e2dbd020b014497ab156973054e80e326f2f",
+      "page": 4,
+      "start_utf8": 162,
+      "end_utf8": 199,
+      "literal": "1 SS CB Act 92, s 70(1); 2 s 70(1)(a)",
+      "literal_sha256": "0e9dd93685716bbf585b9199f934d80923d6b288a8b64487e6afd15c1706fd46",
+      "expected": {
+        "kind": "footer_unlinked",
+        "marker": "1",
+        "status": "unresolved"
+      }
+    },
+    {
+      "id": "D04",
+      "family": "dmg",
+      "document_id": "dmg-vol10-ch60",
+      "source_pdf_sha256": "ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch60.json",
+      "extraction_sha256": "bc5925c0d434fbc4bec575bea2e1e2dbd020b014497ab156973054e80e326f2f",
+      "page": 4,
+      "start_utf8": 1366,
+      "end_utf8": 1372,
+      "literal": "AA1 or",
+      "literal_sha256": "351ea5b5a5e5ab1ae540e71eed8090b923f9af1568c3f33a0d309cb2a14fc52d",
+      "expected": {
+        "kind": "abbreviation",
+        "token": "AA",
+        "status": "ambiguous",
+        "source_table_document_id": "dmg-abbreviations-0db6c476b0"
+      }
+    },
+    {
+      "id": "D05",
+      "family": "dmg",
+      "document_id": "dmg-vol10-ch60",
+      "source_pdf_sha256": "ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch60.json",
+      "extraction_sha256": "bc5925c0d434fbc4bec575bea2e1e2dbd020b014497ab156973054e80e326f2f",
+      "page": 4,
+      "start_utf8": 1279,
+      "end_utf8": 1305,
+      "literal": "60033 [see DMG memo 02/25]",
+      "literal_sha256": "5990e4460eb833e6833df50d4d3742aa347fd9aa3a1668c37568c4ef43cde360",
+      "expected": {
+        "kind": "cross_page",
+        "other_page": 5,
+        "other_literal": "is payable provided that it is payable at a weekly rate of at least that specified in legislation 12."
+      }
+    },
+    {
+      "id": "D06",
+      "family": "dmg",
+      "document_id": "dmg-vol10-ch60",
+      "source_pdf_sha256": "ab9fed933c167b4ac18039204c3853c425731ffb4239022a11b41884caaee22a",
+      "extraction_path": "source/full-dmg-2026-09-15/pages/dmg-vol10-ch60.json",
+      "extraction_sha256": "bc5925c0d434fbc4bec575bea2e1e2dbd020b014497ab156973054e80e326f2f",
+      "page": 29,
+      "start_utf8": 93,
+      "end_utf8": 118,
+      "literal": "FROM      TO       AMOUNT",
+      "literal_sha256": "9fc7b4fd144afdb0fb2cf13ec8ec7b92ff051a613d43629b3128bfabafdad7f1",
+      "expected": {
+        "kind": "source_retained",
+        "limitation": "Table heading association is not validated; no award or rule is inferred."
+      }
+    },
+    {
+      "id": "A01",
+      "family": "adm",
+      "document_id": "adm-list-of-abbreviations",
+      "source_pdf_sha256": "b7ca118176a5bb78d0892d08549f61787bd463930b9975b9d84e8af943ff4100",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-list-of-abbreviations.json",
+      "extraction_sha256": "592643e40a5d953ce246c46ed483cf72994159ade6dee863715d95876bf4182f",
+      "page": 1,
+      "start_utf8": 107,
+      "end_utf8": 146,
+      "literal": "AA                 Attendance Allowance",
+      "literal_sha256": "491188f78ac8d8287fc50e5fc8ff9b846d022098e99eb52f01723fd41bf4e6d9",
+      "expected": {
+        "kind": "abbreviation",
+        "token": "AA",
+        "status": "ambiguous",
+        "source_table_document_id": "adm-list-of-abbreviations"
+      }
+    },
+    {
+      "id": "A02",
+      "family": "adm",
+      "document_id": "adm-chapter-a1",
+      "source_pdf_sha256": "0b0b490ac845ea4a36546d3282f3b0d1e74dfed2f533c35bdcef434d26a4cbad",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-a1.json",
+      "extraction_sha256": "3c3381ee20c170c67f493584feb468fc59cbe01ed426f83e55f0c9a30c5ce3d9",
+      "page": 4,
+      "start_utf8": 1096,
+      "end_utf8": 1114,
+      "literal": "See ADM Chapter A2",
+      "literal_sha256": "d03f312be8de4f6e89c6f4b83acb1214e0632f4c3a8ca49b00d0491c048bf747",
+      "expected": {
+        "kind": "reference",
+        "target_kind": "chapter",
+        "target_label": "A2",
+        "status": "proposed",
+        "retain_literal": "But there are variations and exceptions"
+      }
+    },
+    {
+      "id": "A03",
+      "family": "adm",
+      "document_id": "adm-chapter-a1",
+      "source_pdf_sha256": "0b0b490ac845ea4a36546d3282f3b0d1e74dfed2f533c35bdcef434d26a4cbad",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-a1.json",
+      "extraction_sha256": "3c3381ee20c170c67f493584feb468fc59cbe01ed426f83e55f0c9a30c5ce3d9",
+      "page": 5,
+      "start_utf8": 972,
+      "end_utf8": 981,
+      "literal": "see A1119",
+      "literal_sha256": "e76f5fe931a50826d2cd3f03a73276de67669c4c66bd33b89bda23536af51932",
+      "expected": {
+        "kind": "reference",
+        "target_kind": "paragraph",
+        "target_label": "A1119",
+        "status": "proposed"
+      }
+    },
+    {
+      "id": "A04",
+      "family": "adm",
+      "document_id": "adm-chapter-a1",
+      "source_pdf_sha256": "0b0b490ac845ea4a36546d3282f3b0d1e74dfed2f533c35bdcef434d26a4cbad",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-a1.json",
+      "extraction_sha256": "3c3381ee20c170c67f493584feb468fc59cbe01ed426f83e55f0c9a30c5ce3d9",
+      "page": 3,
+      "start_utf8": 1999,
+      "end_utf8": 2052,
+      "literal": "A1006 Although a DM may undertake all these functions",
+      "literal_sha256": "fc7498168f743a53566cfef88c15d75e7617e58619583b17d644c3e1a225dfcf",
+      "expected": {
+        "kind": "cross_page",
+        "other_page": 4,
+        "other_literal": "to divide functions between different members of staff."
+      }
+    },
+    {
+      "id": "A05",
+      "family": "adm",
+      "document_id": "adm-chapter-b1",
+      "source_pdf_sha256": "112bd49ff500d4871d2d710ab9776e48f820e2ab56ce0460ba9c944d0af3a83a",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-b1.json",
+      "extraction_sha256": "45d76fcb114abbbd57d7cc18abd895ed58f86b439792a51fc6660d949714cac5",
+      "page": 5,
+      "start_utf8": 305,
+      "end_utf8": 320,
+      "literal": "DCT into a bank",
+      "literal_sha256": "e5a2518449266ce452532b1c36cd493907881bab6371e40a4905f8a7c9bf5739",
+      "expected": {
+        "kind": "abbreviation",
+        "token": "DCT",
+        "status": "proposed",
+        "expansion": "Direct Credit Transfer",
+        "source_table_document_id": "adm-list-of-abbreviations"
+      }
+    },
+    {
+      "id": "A06",
+      "family": "adm",
+      "document_id": "adm-chapter-a2",
+      "source_pdf_sha256": "e5e5b99dac44670dc8e6c50094bd669edc565e7dc61694a72928070e8ee4c9bc",
+      "extraction_path": "source/adm-2026-09-19/pages/adm-chapter-a2.json",
+      "extraction_sha256": "57bfd43edf37dc9f3c0cfec0967a8fd1103599cd9e9eee86a544bd1a2f7e2690",
+      "page": 10,
+      "start_utf8": 0,
+      "end_utf8": 0,
+      "literal": "",
+      "literal_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected": {
+        "kind": "extraction_blocked",
+        "status": "extraction_blocked"
+      }
+    }
+  ],
+  "heldout_status": "not-selected-until-initial-gate-passes",
+  "heldout": []
+}
