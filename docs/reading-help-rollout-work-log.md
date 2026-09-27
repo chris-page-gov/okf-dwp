@@ -155,3 +155,14 @@ accessibility defects: adjacent extraction-gap links need larger targets or
 spacing, and the workbench's scrollable source text needs keyboard focus.
 Both repairs remain on the existing consumer follow-up branch; neither failure
 is waived or represented as a public release pass.
+
+### Exact DWP documentation observation
+
+The seven checked public documentation resources matched the successful Pages
+artefact for merged DWP commit `f61d41b689427c27275ae3b7e64b612925b6321e`
+(workflow 36289751755). The receipt and bounded verifier are retained under
+`evaluation/reading-help-rollout/release-20260927/learning-site-attempt-01/`.
+This verifies the implementation documentation at that revision, not the later
+release notes or the still-pending consumer browser repair. The offline release
+gate now checks the recorded file bindings and cannot promote a candidate to
+verified without the complete paired public browser evidence.

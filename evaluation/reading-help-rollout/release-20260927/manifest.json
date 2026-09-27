@@ -26,6 +26,14 @@
     "status": "machine-proposed-unreviewed",
     "unsupported_segments": 0
   },
+  "deployed_service_observation": {
+    "bytes": 2679,
+    "path": "evaluation/reading-help-rollout/release-20260927/service-health.json",
+    "ready": true,
+    "scope": "Health declaration only; unchanged service, not an invocation or Worker-byte attestation.",
+    "sha256": "3a5dbef3f708410a238bfeaee75ad1447252ab02e219220d3b8d8f98e89f8b17",
+    "version": "0.7.0"
+  },
   "fixed_budget_replay": {
     "all_insufficient": true,
     "budget": {
@@ -113,10 +121,20 @@
       "path": "reading-help-ch60.json",
       "sha256": "22def29ab585e623f8b570f50d10dac4e6a0b54b8d4958ab199297b6f252a478"
     },
+    "learning_site_verifier": {
+      "bytes": 3315,
+      "path": "evaluation/reading-help-rollout/release-20260927/learning-site-attempt-01/verify_public.py",
+      "sha256": "99f8eed6e8706abbe27b807259279e927973ca4ebb3b31216fde8fbf21e62515"
+    },
     "producer": {
       "bytes": 23684,
       "path": "scripts/build_reading_help_corpus.py",
       "sha256": "3dc6099a2156bf9f0c1cd038f816f0540cdd5940f3f163b28daba2d14da5e50e"
+    },
+    "public_verifier": {
+      "bytes": 30547,
+      "path": "scripts/verify_reading_help_public.mjs",
+      "sha256": "ec21528e9d5f779ddf01a6138ebecab1c8eaad4b6858b004e288d6f6b2bc1ebe"
     },
     "reference_parser": {
       "bytes": 7263,
@@ -197,13 +215,18 @@
     "corpus_pr50_merge": "239f974c6cba23a2a37182af722ebba0803504b6",
     "fallback_manifest_commit": "46a85142e0fe3a73b686b91029d357770b68591d",
     "fallback_tag": "demo-2026-09-30-reading-help-v1",
+    "integrated_workbench_commit": "2ad33add6d8660fec98bf34fb98480a9d0de9e27",
     "observed_integration_worktree_head": "2ad33add6d8660fec98bf34fb98480a9d0de9e27",
     "public_browser_receipt": null,
-    "public_dwp_commit": null,
+    "public_dwp_commit": "f61d41b689427c27275ae3b7e64b612925b6321e",
+    "public_dwp_observation": {
+      "bytes": 4205,
+      "path": "evaluation/reading-help-rollout/release-20260927/learning-site-attempt-01/receipt.json",
+      "sha256": "5efa600111438abe4fdc2b34114eb27706af76293f4f838af5d6ef3cb0ee21ae"
+    },
     "public_explorer_commit": null,
     "structural_baseline_dwp": "2c46fbd4e0807b1c9dfa0e9d79e33987d245ef21",
     "structural_baseline_explorer": "0326460034345c7b5227c530065b7f21cb4e3970",
-    "integrated_workbench_commit": "2ad33add6d8660fec98bf34fb98480a9d0de9e27",
     "workbench_pr49_merge": "f61d41b689427c27275ae3b7e64b612925b6321e"
   },
   "schema": "okf-reading-help-release.v1",
@@ -214,7 +237,17 @@
       "path": "evaluation/reading-help-rollout/heldout-03-controls.json",
       "sha256": "ec6ddc9423618fb28b8405661b62a100581a8da5155c352f9df5a47125dcf0fd"
     },
+    "initial_fixture": {
+      "bytes": 9284,
+      "path": "evaluation/reading-help-rollout/meaningful-controls.json",
+      "sha256": "24c4248dc0b70eebc286160be26a2c369afee479be5e604777c9512d24c312e1"
+    },
     "initial_passed": 12,
+    "initial_receipt": {
+      "bytes": 560,
+      "path": "evaluation/reading-help-rollout/initial-gate-02.json",
+      "sha256": "ffdcae0af7d5e4a8b03c3d2064190b69a8307484bc76a842eae17093cfb36795"
+    },
     "interpretation": "Source-led structural controls only; no specialist legal review.",
     "latest_regression": {
       "bytes": 1044,
@@ -227,28 +260,18 @@
       "path": "evaluation/reading-help-rollout/heldout-gate-02.json",
       "sha256": "e7602b1d0f95eb6f45b1ccc6e02964e247cf2c5a69905b65910a58728c18bdbb"
     },
+    "original_heldout_fixture": {
+      "bytes": 17044,
+      "path": "evaluation/reading-help-rollout/heldout-controls.json",
+      "sha256": "570126860ca2fc5ebbe8ab0e0f7f24e97ac73eb0785926aafa2618bb09ac6af9"
+    },
     "original_heldout_result": "23 passed and 1 failed; H05 expected only 070831 but frozen source says 070831 to 070834; producer retained range as unresolved",
     "pre_execution_rejected_fixture": {
       "bytes": 709,
       "path": "evaluation/reading-help-rollout/heldout-02-review-rejection.json",
       "sha256": "f7aa8e06f92c880dfa72c0dd00d02c68ce105279026111ae352c332ad7f48f46"
     },
-    "revised_fresh_heldout_passed": 24,
-    "initial_fixture": {
-      "path": "evaluation/reading-help-rollout/meaningful-controls.json",
-      "bytes": 9284,
-      "sha256": "24c4248dc0b70eebc286160be26a2c369afee479be5e604777c9512d24c312e1"
-    },
-    "initial_receipt": {
-      "path": "evaluation/reading-help-rollout/initial-gate-02.json",
-      "bytes": 560,
-      "sha256": "ffdcae0af7d5e4a8b03c3d2064190b69a8307484bc76a842eae17093cfb36795"
-    },
-    "original_heldout_fixture": {
-      "path": "evaluation/reading-help-rollout/heldout-controls.json",
-      "bytes": 17044,
-      "sha256": "570126860ca2fc5ebbe8ab0e0f7f24e97ac73eb0785926aafa2618bb09ac6af9"
-    }
+    "revised_fresh_heldout_passed": 24
   },
   "status": "candidate-awaiting-public-verification",
   "statutory_bridge": {
@@ -310,13 +333,5 @@
       "https://chris-page-gov.github.io/okf-dwp/id/unit/zz-evidence-connect/pc-capital-u06",
       "https://chris-page-gov.github.io/okf-dwp/id/unit/zz-evidence-connect/pc-capital-u10"
     ]
-  },
-  "deployed_service_observation": {
-    "path": "evaluation/reading-help-rollout/release-20260927/service-health.json",
-    "bytes": 2679,
-    "sha256": "3a5dbef3f708410a238bfeaee75ad1447252ab02e219220d3b8d8f98e89f8b17",
-    "version": "0.7.0",
-    "ready": true,
-    "scope": "Health declaration only; unchanged service, not an invocation or Worker-byte attestation."
   }
 }

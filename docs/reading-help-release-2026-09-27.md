@@ -31,3 +31,20 @@ Before public release, bind the merged consumer commit, exact DWP and Explorer P
 - `evaluation/reading-help-rollout/workbench-link-report.json` — 401/403 exact target mapping.
 - `domain-profile/reading-help-law/admission.json` and `evaluation/reading-help-rollout/law-context-probe.json` — optional legal admission and failed ordinary selection.
 - [Release manifest](../evaluation/reading-help-rollout/release-20260927/manifest.json) — candidate hashes and identities for release binding.
+
+## Verify the retained release evidence
+
+Run this offline check from the repository root:
+
+```sh
+uv run --locked python scripts/check_reading_help_release.py \
+  --root . \
+  --manifest evaluation/reading-help-rollout/release-20260927/manifest.json
+```
+
+CI runs the same check. It verifies the bound artefacts, the separate 12/24
+controls, all 40 unchanged insufficient packages and the exact public verifier.
+A candidate can be structurally valid while public verification remains false.
+A technically verified status requires the complete passing public receipt,
+matching consumer and data identities, and the exact verifier script hash.
+These checks do not establish legal completeness or specialist acceptance.

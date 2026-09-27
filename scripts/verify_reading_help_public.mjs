@@ -126,7 +126,7 @@ async function browserCheck(browser, name, url, operation, output) {
     const failures = [];
     page.on('pageerror', error => failures.push(String(error)));
     page.on('console', message => { if (message.type() === 'error') failures.push(message.text()); });
-    await page.route('**/*', route => {
+    await context.route('**/*', route => {
       const request = route.request(), uri = new URL(request.url());
       // Only public Explorer assets and immutable DWP raw blobs are needed.
       const revision = uri.pathname.match(/^\/chris-page-gov\/okf-dwp\/([a-f0-9]{40})\//)?.[1];
