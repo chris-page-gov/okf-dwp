@@ -65,3 +65,13 @@ passes Explorer's governance check; fragment integrity is checked independently.
 The same question and budget still fail to retain the bridge, so no retrieval
 improvement is claimed. Focused local reading-help tests: 35 passed, including
 six workbench-link controls whose data publication awaits the corpus commit.
+
+### Beginner navigation integration
+
+The glossary and authored `learning/p01/s03` activity now point to the same
+reading-help walkthrough. Regenerating the additive Reader changed its snapshot
+identity, so the preceding optional-context observation is preserved under
+`evaluation/reading-help-rollout/pre-learning-navigation-01/`. The successor
+uses the same query, engine and budget and still does not select the bridge.
+The 40 frozen staff packages remain unchanged. The local focused suite now
+passes 36 controls, including rejection of conflicting retained record IDs.

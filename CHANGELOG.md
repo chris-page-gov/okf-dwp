@@ -8,6 +8,11 @@ Implementation ownership and handovers belong in the
 [multi-agent work log](docs/work-log-2026-09-20.md), with stable work items in the
 [backlog](docs/backlog.md).
 
+## 27 September 2026 — source-linked beginner navigation
+
+- Link the beginner glossary and additive Reader learning activity to the reading-help demonstration walkthrough. Frozen staff packages and earlier demonstration manifests are preserved.
+- Regenerate the combined Reader after the authored learning change. Preserve the prior optional statutory-context observation separately; the same query and budget still do not retain the bridge.
+
 ## Unreleased
 
 - Correct statutory-overlay capture provenance and distinguish full-passage hashes from exact source fragments; preserve the failed admission and verify all newly admitted records with Explorer.
