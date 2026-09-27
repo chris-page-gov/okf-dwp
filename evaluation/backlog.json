@@ -2053,7 +2053,7 @@
     },
     {
       "id": "DWP-BL-026",
-      "title": "Occurrence-specific Chapter 60 reading help",
+      "title": "Occurrence-specific DMG and ADM reading help",
       "status": "in_progress",
       "priority": "P0",
       "depends_on": [
@@ -2073,7 +2073,17 @@
         "validation/reading-help/2026-09-26-v1/reading-help-ci-deployment-receipt.json",
         "validation/reading-help/2026-09-26-v1/provenance.json",
         "docs/reading-help-rollout-work-log.md",
-        "evaluation/reading-help-rollout/replays/reading-help-20260927-01/report.json"
+        "evaluation/reading-help-rollout/replays/reading-help-20260927-01/report.json",
+        "reading-help-corpus/manifest.json",
+        "docs/reading-help-corpus-contract.md",
+        "evaluation/reading-help-rollout/initial-gate-02.json",
+        "evaluation/reading-help-rollout/heldout-gate-01.json",
+        "evaluation/reading-help-rollout/heldout-03-controls.json",
+        "evaluation/reading-help-rollout/heldout-03-gate-01.json",
+        "evaluation/reading-help-rollout/heldout-03-producer-replay-02.json",
+        "evaluation/reading-help-rollout/workbench-link-report.json",
+        "evaluation/evidence-workbench/reading-help-manifest.json",
+        "docs/reading-help-demo-2026-09-30.md"
       ],
       "acceptance_checks": [
         "The bounded paragraphs 60025 and 60033 display exact source-bound occurrences across their continuation pages, including all 20 body citation markers and unresolved printed defects.",
@@ -2081,7 +2091,7 @@
         "A held-out passage set, wider occurrence coverage and qualified review are completed before any automatic whole-chapter or corpus-wide highlighting.",
         "The exact merged manifest and compatible Explorer revision receive separate public browser verification for the 30 September demonstration."
       ],
-      "scope_note": "The two-paragraph source-bound implementation is a bounded reading aid. Original Chat proposals remain model-authored and unreviewed; this does not close BL007, all 40 staff-question obligations, legal answerability or specialist acceptance.",
+      "scope_note": "The original two-paragraph demonstration is preserved. The additive candidate accounts for all 513 documents, 53,727 units and 893 extraction gaps, with source-bound proposals and 401/403 exact retained-record links. It does not close structural defects, the 40 insufficient question packages, legal answerability or specialist acceptance.",
       "work_packages": [
         {
           "id": "DWP-BL-026.bounded-implementation",
@@ -2111,12 +2121,17 @@
         {
           "id": "DWP-BL-026.held-out-coverage",
           "kind": "research",
-          "status": "in_progress",
+          "status": "recorded_complete",
           "executor": "agent",
-          "next_action": "Implement the authorised deterministic 513-document catalogue and bounded consumer. Freeze 12 source-backed cases; only after passing, test 24 fresh cases. Keep the 893 empty pages and ambiguous meanings explicit. No new content-processing model calls. The 40-question cold/warm replay is unchanged at the exact package level; all 40 remain insufficient. This is non-regression, not improved answerability.",
+          "next_action": "Deterministic processing and source controls are retained: 12 initial cases passed; the first 24 held-out cases failed 23/24 and remain frozen. A separately reviewed fresh 24-case set passed, as did unchanged-expectation regression after the cache repair. No automated content-processing model calls. Review unsupported mixed-case forms, meaning scope and remaining extraction defects separately.",
           "evidence": [
-            "docs/reading-help-rollout-work-log.md",
-            "evaluation/reading-help-rollout/replays/reading-help-20260927-01/report.json"
+            "reading-help-corpus/manifest.json",
+            "docs/reading-help-corpus-contract.md",
+            "evaluation/reading-help-rollout/initial-gate-02.json",
+            "evaluation/reading-help-rollout/heldout-gate-01.json",
+            "evaluation/reading-help-rollout/heldout-03-controls.json",
+            "evaluation/reading-help-rollout/heldout-03-gate-01.json",
+            "evaluation/reading-help-rollout/heldout-03-producer-replay-02.json"
           ]
         },
         {
@@ -2126,6 +2141,18 @@
           "executor": "human",
           "next_action": "Review explanations, disputed source associations and legal-reference meanings without promoting machine extraction or model prose to official authority.",
           "evidence": []
+        },
+        {
+          "id": "DWP-BL-026.corpus-public-verification",
+          "kind": "live_observation",
+          "status": "in_progress",
+          "executor": "agent",
+          "next_action": "Verify the exact merged consumer and corpus through public Pages; check the 40-question reading-help links, preserve the Chapter 60 fallback and tag only the passing paired increment. Two composite evidence records remain explicitly unmatched.",
+          "evidence": [
+            "evaluation/reading-help-rollout/workbench-link-report.json",
+            "evaluation/evidence-workbench/reading-help-manifest.json",
+            "docs/reading-help-demo-2026-09-30.md"
+          ]
         }
       ]
     }

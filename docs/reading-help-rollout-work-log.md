@@ -75,3 +75,32 @@ identity, so the preceding optional-context observation is preserved under
 uses the same query, engine and budget and still does not select the bridge.
 The 40 frozen staff packages remain unchanged. The local focused suite now
 passes 36 controls, including rejection of conflicting retained record IDs.
+
+### Corpus and workbench integration
+
+The corpus producer is published for review in DWP PR 50 at commit
+`115397c19e0b1e1e16d476df788c33a1196a3990`. Catalogue SHA-256:
+`acb63e18d10c1a8a0a6c7d57f8ebfc41948e3837cd27c4589d4540061507d8a6`.
+It accounts for 513 documents, 19,090 pages, 53,727 units and 893 empty
+extractions. There are 1,455 bounded leaves and 197,564 delivered literal
+occurrences; proposed meanings have no specialist acceptance. Shared parser,
+helper and printed-table inputs invalidate the cache when changed.
+
+The additive workbench manifest retains all 40 cases and links 401 of 403
+distinct retained evidence records by exact unit and source identity. Capital
+composites U06 and U10 remain unmatched rather than receiving guessed links.
+The integrated focused reading-help suite passes 48 controls. The small and
+held-out gates and their failed predecessors remain separate artefacts.
+
+A second agent independently checked the legal bridge, including all 16
+resolved citation mappings, four work identities, separate territorial variants,
+rights notices and the actual context-engine checks. It found no further
+material fault. This technical review is separate from legal acceptance.
+
+The independent legislation migration remains a candidate. Exhaustive semantic
+validation passed 929,053 assertions, but browser release checks have not passed.
+Review identified public-main escapes from pinned/local federation and narrow
+graph links; these are being corrected before another candidate observation.
+The first runtime attempt also stopped because the coordinator archived an old
+receipt during the identity check; that failure is retained. No new legislation
+release or specialist acceptance is claimed.

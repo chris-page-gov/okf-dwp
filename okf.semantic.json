@@ -57,7 +57,8 @@
       "source/reading-help-law-2026-09-26/manifest.json",
       "source/reading-help-law-2026-09-26-v2/manifest.json",
       "domain-profile/reading-help-law/reference-links.json",
-      "domain-profile/reading-help-law/citation-admission.json"
+      "domain-profile/reading-help-law/citation-admission.json",
+      "domain-profile/reading-help/workbench-link.json"
     ],
     "outputs": [
       {
@@ -457,6 +458,21 @@
         "role": "explorer-runtime",
         "generated": true,
         "required": true
+      },
+      {
+        "path": "evaluation/evidence-workbench/reading-help-manifest.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "evaluation/evidence-workbench/reading-help/*.json",
+        "role": "explorer-runtime",
+        "generated": true
+      },
+      {
+        "path": "evaluation/reading-help-rollout/workbench-link-report.json",
+        "role": "semantic-validation",
+        "generated": true
       }
     ],
     "context_policy": "pinned-local-contexts-no-browser-remote-expansion",

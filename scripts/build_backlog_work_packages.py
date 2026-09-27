@@ -2,6 +2,7 @@
 """Project the delivery and acceptance ledger without deciding review outcomes."""
 import argparse
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -29,7 +30,22 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
-    result = render(json.loads((ROOT / "evaluation/backlog.json").read_text()))
+    register = json.loads((ROOT / "evaluation/backlog.json").read_text())
+    result = render(register)
+    overview = ROOT / "docs/backlog.md"
+    original = overview.read_text()
+    rows = ["| " + " | ".join([item["id"], item["priority"], item["title"],
+            f'`{item["status"]}`', ", ".join(item["depends_on"]) or "—"]) + " |"
+            for item in register["items"]]
+    updated, count = re.subn(r"(?:^\| DWP-BL-[^\n]*\n)+", "\n".join(rows) + "\n",
+                             original, flags=re.MULTILINE)
+    if count != 1:
+        raise SystemExit("Expected one generated register table in docs/backlog.md")
+    if args.check:
+        if updated != original:
+            raise SystemExit("Backlog overview table differs from the register")
+    else:
+        overview.write_text(updated)
     output = ROOT / "docs/backlog-work-packages.md"
     if args.check:
         if not output.is_file() or output.read_text() != result:

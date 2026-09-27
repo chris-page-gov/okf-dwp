@@ -15,6 +15,9 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Link all 40 retained question cases to the bounded reading-help catalogue: 401 of 403 distinct evidence records match exact unit and source identities. Keep the two unmatched capital composites explicit and every package unchanged.
+- Generate both backlog views from the authored register and record the passed source controls separately from pending public verification.
+
 - Correct statutory-overlay capture provenance and distinguish full-passage hashes from exact source fragments; preserve the failed admission and verify all newly admitted records with Explorer.
 
 - Correct the learning-path insertion to preserve the checked source-roles diagram heading.
