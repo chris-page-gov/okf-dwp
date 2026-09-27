@@ -176,6 +176,7 @@ jobs:
           uv run --locked python scripts/build_reading_help_references.py --check
           uv run --locked python -m unittest discover -s scripts -p test_reading_help_references.py
           uv run --locked python scripts/build_reading_help_law_context.py --check
+          uv run --locked python scripts/check_reading_help_replay.py
           uv run --locked python -m unittest discover -s scripts -p test_reading_help_law_context.py
           uv run --locked python scripts/build_staff_semantic.py --check
           uv run --locked python scripts/build_combined_reader.py --check

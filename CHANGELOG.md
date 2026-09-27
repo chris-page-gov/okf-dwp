@@ -10,6 +10,9 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
+- Correct the learning-path insertion to preserve the checked source-roles diagram heading.
+- Validate the retained 40-question replay bindings and measurements in CI without repeating unchanged assemblies.
+
 ### Reading-help legislation bridge
 
 - Add a separately selected statutory context and 16 source-checked dated citation mappings. Preserve unresolved references, all earlier requirements and the failed fixed-budget natural-language selection probe.
@@ -704,5 +707,3 @@ failures. Earlier dated observations keep their original scope.
 - Clarify the seminar host as ChatGPT live voice; record verified desktop Voice documentation and usage boundaries while retaining the untested integration status.
 - Correct CPAG temporal metadata: publisher-described April 2026 edition release and 6 April online announcement remain separate from September project capture; preserve month precision.
 - Verify the corrected Timeline in both public bundle formats against the deployed Explorer, and retain the exact deployment receipts. Refresh current launch links, distinguish source-date coverage from labelled record dates, and clarify extraction gaps and the remaining legislation/website work.
-
-- Correct the learning-path insertion to preserve the checked source-roles diagram heading.

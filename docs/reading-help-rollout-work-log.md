@@ -46,3 +46,9 @@ The term **full processing coverage** means that every captured document has a r
 Publication and paired browser gates remain outstanding until their exact receipts are recorded.
 
 The 28-case passage review was rechecked from its frozen inputs on 27 September: 28 cases, 55 files, manifest SHA-256 `488df312d1672270e9d458ad0944a30e07d2fc56062896ad3d9e8ca2ad0a21f2`. Its recorded nine-chapter review is retained. Case 014 remains unresolved; this check does not turn that finding into acceptance.
+
+### Independent control review
+
+The first held-out reading-help run retained a 23/24 failure. A separate coordinator check confirmed the H05 extraction hash and surrounding source text: the source prints `see DMG 070831 to 070834`, whereas the frozen expected target named only paragraph 070831. The complete range must remain unresolved rather than being narrowed to satisfy that expectation. The original failed case and result remain unchanged. A further unexecuted set was also rejected at review because `et seq` (and the following paragraphs) needs to remain visible, and the case mix needed stronger continuation and abbreviation coverage. These are quality controls, not specialist legal acceptance.
+
+CI verifies the retained 40-question receipt with `python scripts/check_reading_help_replay.py`: source and engine declarations, all 40 package hashes, selected text and paths, obligations, and performance totals are checked without rerunning 80 assemblies. A changed engine or evidence baseline requires a separately named replay, not an overwritten receipt.
