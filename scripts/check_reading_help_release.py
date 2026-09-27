@@ -19,6 +19,7 @@ VERIFIED = "technically-verified-awaiting-specialist-review"
 SHA256 = re.compile(r"[0-9a-f]{64}\Z")
 COMMIT = re.compile(r"[0-9a-f]{40}\Z")
 MAX_BOUND_BYTES = 64 * 1024 * 1024
+MAX_MANIFEST_BYTES = 1024 * 1024
 MANDATORY_BROWSER_CHECKS = frozenset({
     "public Explorer identity", "immutable corpus catalogue",
     "40 bound workbench sidecars", "local Chapter 60 source controls",
@@ -44,7 +45,7 @@ def confined(root: Path, relative: str) -> Path:
     """Resolve a declared path, including symlinks, inside the release checkout."""
     require(isinstance(relative, str) and relative and "\\" not in relative, "Invalid bound path")
     path = Path(relative)
-    require(not path.is_absolute() and all(part not in (".", "..") for part in relative.split("/")),
+    require(not path.is_absolute() and all(part not in ("", ".", "..") for part in relative.split("/")),
             f"Bound path is not a confined relative path: {relative}")
     base = root.resolve(strict=True)
     try:
@@ -63,7 +64,9 @@ def bound_bytes(root: Path, binding: dict[str, Any], label: str) -> bytes:
             isinstance(digest, str) and SHA256.fullmatch(digest), f"Invalid byte/hash binding: {label}")
     path = confined(root, binding["path"])
     require(path.stat().st_size == count, f"Byte count differs: {label}")
-    body = path.read_bytes()
+    with path.open("rb") as handle:
+        body = handle.read(count + 1)
+    require(len(body) == count, f"Byte count differs: {label}")
     require(hashlib.sha256(body).hexdigest() == digest, f"SHA-256 differs: {label}")
     return body
 
@@ -191,6 +194,11 @@ def validate_controls(root: Path, manifest: dict[str, Any]) -> None:
 
 def validate_public(root: Path, manifest: dict[str, Any]) -> None:
     revisions = manifest["revisions"]
+    verifier = manifest["identity"].get("public_verifier")
+    require(isinstance(verifier, dict) and {"path", "bytes", "sha256"} <= verifier.keys() and
+            verifier["path"] == "scripts/verify_reading_help_public.mjs",
+            "Verified release lacks a bound public verifier")
+    bound_bytes(root, verifier, "public verifier")
     for key in ("public_explorer_commit", "public_dwp_commit", "consumer_merge_commit", "integrated_workbench_commit", "corpus_data_commit"):
         require(isinstance(revisions.get(key), str) and COMMIT.fullmatch(revisions[key]),
                 f"Missing exact public or paired commit: {key}")
@@ -198,6 +206,8 @@ def validate_public(root: Path, manifest: dict[str, Any]) -> None:
     require(receipt.get("schema") == "okf-reading-help-public-verification.v1" and
             receipt.get("status") == "passed" and receipt.get("errors") == [],
             "Public browser receipt is failed or incomplete")
+    require(receipt.get("script_sha256") == verifier["sha256"],
+            "Public browser receipt was made by another verifier")
     inputs = receipt.get("inputs")
     require(isinstance(inputs, dict) and inputs.get("explorer_commit") == revisions["public_explorer_commit"] == revisions["consumer_merge_commit"] and
             inputs.get("workbench_commit") == revisions["integrated_workbench_commit"] and
@@ -220,7 +230,11 @@ def validate(root: Path, manifest_path: Path) -> dict[str, Any]:
     except (OSError, RuntimeError) as error:
         raise ReleaseError("Release manifest is missing or invalid") from error
     require(path.is_relative_to(base) and path.is_file(), "Release manifest escapes the checkout")
-    manifest = json_body(path.read_bytes(), "release manifest")
+    require(path.stat().st_size <= MAX_MANIFEST_BYTES, "Release manifest exceeds 1 MiB")
+    with path.open("rb") as handle:
+        manifest_bytes = handle.read(MAX_MANIFEST_BYTES + 1)
+    require(len(manifest_bytes) <= MAX_MANIFEST_BYTES, "Release manifest exceeds 1 MiB")
+    manifest = json_body(manifest_bytes, "release manifest")
     require(manifest.get("schema") == SCHEMA, "Unsupported release manifest schema")
     status = manifest.get("status")
     require(status in {CANDIDATE, VERIFIED}, "Unsupported or overstated release status")

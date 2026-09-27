@@ -131,9 +131,12 @@ class ReleaseManifestTests(unittest.TestCase):
 
     def verified(self):
         self.manifest["status"] = "technically-verified-awaiting-specialist-review"
+        verifier = self.bind("scripts/verify_reading_help_public.mjs", b"verifier\n")
+        self.manifest["identity"]["public_verifier"] = verifier
         self.manifest["revisions"].update(public_explorer_commit="e" * 40,
                                           public_dwp_commit="d" * 40)
         receipt = {"schema": "okf-reading-help-public-verification.v1", "status": "passed",
+                   "script_sha256": verifier["sha256"],
                    "errors": [], "inputs": {"explorer_commit": "e" * 40,
                    "workbench_commit": "d" * 40, "data_commit": "c" * 40},
                    "checks": [{"name": name, "passed": True}
@@ -200,6 +203,28 @@ class ReleaseManifestTests(unittest.TestCase):
         self.manifest["revisions"]["public_browser_receipt"] = self.bind("public/receipt.json", receipt)
         self.save_manifest()
         with self.assertRaisesRegex(ReleaseError, "another consumer or data"):
+            self.verify()
+
+    def test_verified_receipt_requires_exact_bound_verifier(self):
+        receipt = self.verified()
+        del self.manifest["identity"]["public_verifier"]
+        self.save_manifest()
+        with self.assertRaisesRegex(ReleaseError, "lacks a bound public verifier"):
+            self.verify()
+        verifier = self.bind("scripts/verify_reading_help_public.mjs", b"verifier\n")
+        self.manifest["identity"]["public_verifier"] = verifier
+        receipt["script_sha256"] = "f" * 64
+        self.manifest["revisions"]["public_browser_receipt"] = self.bind("public/receipt.json", receipt)
+        self.save_manifest()
+        with self.assertRaisesRegex(ReleaseError, "another verifier"):
+            self.verify()
+
+    def test_manifest_and_path_bounds(self):
+        for path in ("folder//file", "folder/", "/file"):
+            with self.subTest(path=path), self.assertRaises(ReleaseError):
+                confined(self.root, path)
+        (self.root / self.manifest_path).write_bytes(b" " * (1024 * 1024 + 1))
+        with self.assertRaisesRegex(ReleaseError, "exceeds 1 MiB"):
             self.verify()
 
     def test_insufficient_and_retained_failure_are_not_upgraded(self):
