@@ -1,0 +1,14 @@
+{
+  "schema": "okf-reading-help-source-control-result.v1",
+  "fixture": "evaluation/reading-help-rollout/heldout-03-controls.json",
+  "fixture_sha256": "ec6ddc9423618fb28b8405661b62a100581a8da5155c352f9df5a47125dcf0fd",
+  "producer_sha256": "aea0b4cf917ef69b6b9877bfb7c7ccc8ee7b45bc9358b534b5bb30db0f73946c",
+  "evaluator_sha256": "e38b39f69fa42544f6f1e91c1be3cf792f61b3225c7c75141743f373affec197",
+  "catalogue_sha256": "acb63e18d10c1a8a0a6c7d57f8ebfc41948e3837cd27c4589d4540061507d8a6",
+  "command": "uv run --locked python -m unittest discover -s scripts -p test_reading_help_meaningful.py",
+  "outcome": "passed-unchanged-expectations-after-cache-and-index-repair",
+  "initial_passed": 12,
+  "revised_heldout_passed": 24,
+  "failed": 0,
+  "boundary": "Regression replay of unchanged frozen expectations after producer cache/input-key and index-navigation changes. First fresh held-out result remains failed 23/24; this replay is not another independently selected gate or specialist legal review."
+}

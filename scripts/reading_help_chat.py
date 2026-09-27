@@ -6,18 +6,22 @@ import argparse
 import gzip
 import json
 from pathlib import Path
+import tempfile
 
 from build_logical_units import Inputs, canonical, require, sha
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = "okf-reading-help-chat.v1"
 MAX_PACK = 1024 * 1024
+# Prefer the authorised relocated ExtSSD tmp on this host; elsewhere use the
+# operating system's configured temporary directory. Tests can narrow this root.
+CHAT_TMP_ROOT = Path("/Users/crpage/tmp") if Path("/Users/crpage/tmp").is_dir() else Path(tempfile.gettempdir())
 
 
 def safe_output(path):
     """Resolve the authorised tmp relocation, then confine the actual parent."""
     path = path.expanduser().absolute()
-    roots = (Path("/Users/crpage/tmp").resolve(strict=True),
+    roots = (CHAT_TMP_ROOT.resolve(strict=True),
              (ROOT / "evaluation/reading-help-rollout/chat-imports").resolve())
     require(path.parent.is_dir(), "Output parent must exist")
     parent = path.parent.resolve(strict=True)

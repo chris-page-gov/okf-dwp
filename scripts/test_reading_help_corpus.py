@@ -9,7 +9,11 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
+import reading_help_chat
 from reading_help_chat import export, import_replies
+from build_logical_units import Inputs
+from build_reading_help_corpus import abbreviation_tables, cache_matches, rules_identity
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTROLS = ROOT / "evaluation/reading-help-rollout/source-controls.json"
@@ -78,8 +82,14 @@ class CorpusChecks(unittest.TestCase):
         for family, docid in (("dmg", "dmg-vol10-ch60"), ("adm", "adm-chapter-a1")):
             ref = self.docs[(family, docid)]
             index = json.loads((ROOT / ref["path"]).read_text())
+            index_abbreviations = {(r["unit_id"], r["segment_ordinal"]): r["abbreviations"]
+                                   for r in index["passages"]}
             for leaf in index["leaves"]:
                 for passage in json.loads(gzip.decompress((ROOT / leaf["path"]).read_bytes()))["passages"]:
+                    expected_abbreviations = sorted({o["literal"] for o in passage["occurrences"]
+                                                     if o["role"] == "abbreviation"})
+                    self.assertEqual(index_abbreviations[(passage["id"], passage["segment"]["ordinal"])],
+                                     expected_abbreviations)
                     for card in passage["cards"]:
                         if card["kind"] == "expansion":
                             self.assertEqual(card["scope"]["target_document_id"], docid)
@@ -88,7 +98,8 @@ class CorpusChecks(unittest.TestCase):
                         self.assertEqual(footer["status"], "unresolved")
 
     def test_chat_pack_rejects_forged_current_card(self):
-        with tempfile.TemporaryDirectory(dir="/Users/crpage/tmp") as directory:
+        with tempfile.TemporaryDirectory() as directory, patch.object(
+                reading_help_chat, "CHAT_TMP_ROOT", Path(directory)):
             directory = Path(directory)
             pack_path, forged_path = directory / "pack.json", directory / "forged.json"
             export("dmg-vol10-ch60", 1, pack_path)
@@ -110,6 +121,27 @@ class CorpusChecks(unittest.TestCase):
                                directory / "quarantine.jsonl")
             with self.assertRaisesRegex(ValueError, "Output must stay"):
                 export("dmg-vol10-ch60", 1, ROOT / "source/forbidden.json")
+
+    def test_cache_key_changes_with_reference_parser_and_support_table(self):
+        ref = self.docs[("dmg", "dmg-vol10-ch60")]
+        index = json.loads((ROOT / ref["path"]).read_text())
+        producer = digest((ROOT / "scripts/build_reading_help_corpus.py").read_bytes())
+        parser = digest((ROOT / "scripts/manual_references.py").read_bytes())
+        helper = digest((ROOT / "scripts/build_logical_units.py").read_bytes())
+        inputs = Inputs(ROOT)
+        inventories = {family: json.loads(inputs.read(path)) for family, path in (
+            ("dmg", "source/full-dmg-2026-09-15/inventory.json"),
+            ("adm", "source/adm-2026-09-19/inventory.json"))}
+        _, tables = abbreviation_tables(inputs, inventories)
+        self.assertTrue(tables)
+        original = rules_identity(producer, parser, helper, tables)
+        self.assertEqual(original, index["rules_sha256"])
+        self.assertNotEqual(original, rules_identity(producer, "c" * 64, helper, tables))
+        self.assertNotEqual(original, rules_identity(producer, parser, "e" * 64, tables))
+        changed = [{**tables[0], "extraction_sha256": "d" * 64}, *tables[1:]]
+        self.assertNotEqual(original, rules_identity(producer, parser, helper, changed))
+        self.assertFalse(cache_matches(index, rules_identity(producer, parser, helper, changed), index["extraction"]["sha256"],
+                                       index["structured_document"]["sha256"]))
 
 
 if __name__ == "__main__":

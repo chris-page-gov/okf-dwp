@@ -28,6 +28,23 @@ def binding(path, data):
     return {"url": path, "path": path, "sha256": sha(data), "bytes": len(data)}
 
 
+def rules_identity(producer_sha256, reference_parser_sha256, shared_helper_sha256, table_bindings):
+    """Bind all inputs that can change a candidate in another document."""
+    return sha(canonical({"rule": RULE, "schemas": SCHEMAS,
+                         "producer_sha256": producer_sha256,
+                         "reference_parser_sha256": reference_parser_sha256,
+                         "shared_helper_sha256": shared_helper_sha256,
+                         "table_bindings": table_bindings}))
+
+
+def cache_matches(index, rules_hash, extraction_hash, structured_hash):
+    return (index.get("schema") == SCHEMAS[1] and
+            index.get("rules_sha256") == rules_hash and
+            index.get("extraction", {}).get("sha256") == extraction_hash and
+            index.get("structured_document", {}).get("sha256") == structured_hash and
+            "occurrences" in index.get("counts", {}))
+
+
 def location(unit, start, end):
     cursor = 0
     for number, span in enumerate(unit["spans"]):
@@ -157,11 +174,15 @@ def reference_list_rows(unit, pages):
 def abbreviation_tables(inputs, inventories):
     """Read only explicitly named printed abbreviation documents."""
     tables = defaultdict(lambda: defaultdict(list))
+    bindings = []
     for family, inventory in inventories.items():
         for row in inventory["documents"]:
             if "abbreviations" not in row["id"] or "summary-of-changes" in row["id"]:
                 continue
             extraction_raw = inputs.read(row["pages_path"], row["pages_sha256"], limit=32*1024*1024)
+            bindings.append({"family": family, "document_id": row["id"],
+                             "pdf_sha256": row["sha256"], "path": row["pages_path"],
+                             "extraction_sha256": sha(extraction_raw)})
             data = json.loads(extraction_raw)
             for page in data["pages"]:
                 text = page["text"]
@@ -181,7 +202,7 @@ def abbreviation_tables(inputs, inventories):
                                                   "extraction_sha256": sha(extraction_raw),
                                                   "printed_quoted_term": bool(match.group(2)),
                                                   "status": "source_verified"})
-    return tables
+    return tables, sorted(bindings, key=lambda item: (item["family"], item["document_id"]))
 
 
 def compile_corpus(root=ROOT, use_cache=True):
@@ -190,16 +211,17 @@ def compile_corpus(root=ROOT, use_cache=True):
     manifest = json.loads(manifest_raw)
     require(manifest["schema"] == "okf-dwp-structured-units.v1" and
             manifest["counts"]["units"] == 53727, "Adopted unit baseline differs")
-    rules_hash = sha(canonical({"rule": RULE, "schemas": SCHEMAS,
-                                "producer": inputs.read("scripts/build_reading_help_corpus.py").hex()[:0] or
-                                inputs.files["scripts/build_reading_help_corpus.py"]["sha256"]}))
     source_paths, inventories = {}, {}
     for family, inventory_path in (("dmg", "source/full-dmg-2026-09-15/inventory.json"),
                                    ("adm", "source/adm-2026-09-19/inventory.json")):
         inventory = json.loads(inputs.read(inventory_path))
         inventories[family] = inventory
         source_paths.update({(family, row["id"]): row["pages_path"] for row in inventory["documents"]})
-    tables = abbreviation_tables(inputs, inventories)
+    tables, table_bindings = abbreviation_tables(inputs, inventories)
+    rules_hash = rules_identity(
+        sha(inputs.read("scripts/build_reading_help_corpus.py")),
+        sha(inputs.read("scripts/manual_references.py")),
+        sha(inputs.read("scripts/build_logical_units.py")), table_bindings)
     outputs, doc_refs, totals = {}, [], Counter()
     for source_doc in manifest["documents"]:
         family, docid = source_doc["family"], source_doc["document_id"]
@@ -221,10 +243,7 @@ def compile_corpus(root=ROOT, use_cache=True):
         if use_cache and cached_path.is_file():
             cached_raw = cached_path.read_bytes()
             cached = json.loads(cached_raw)
-            if (cached.get("schema") == SCHEMAS[1] and cached.get("rules_sha256") == rules_hash
-                    and cached.get("extraction", {}).get("sha256") == sha(extraction)
-                    and cached.get("structured_document", {}).get("sha256") == sha(packed)
-                    and "occurrences" in cached.get("counts", {})):
+            if cache_matches(cached, rules_hash, sha(extraction), sha(packed)):
                 try:
                     cached_outputs = {index_path: cached_raw}
                     for leaf in cached["leaves"]:
@@ -312,6 +331,8 @@ def compile_corpus(root=ROOT, use_cache=True):
                                      "role": unit["role"], "pages": [s["page"] for s in unit["spans"]],
                                      "label": unit.get("label"),
                                      "paragraph_labels": unit.get("paragraph_labels", []),
+                                     "abbreviations": sorted({o["literal"] for o in part_occurrences
+                                         if o["role"] == "abbreviation"}) if row["status"] != "unsupported" else [],
                                      "segment_ordinal": part["ordinal"], "segment_count": len(parts),
                                      "leaf_url": leaf_path, "status": row["status"]})
             totals["passages"] += 1
