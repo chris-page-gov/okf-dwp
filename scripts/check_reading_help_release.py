@@ -20,6 +20,15 @@ SHA256 = re.compile(r"[0-9a-f]{64}\Z")
 COMMIT = re.compile(r"[0-9a-f]{40}\Z")
 MAX_BOUND_BYTES = 64 * 1024 * 1024
 MAX_MANIFEST_BYTES = 1024 * 1024
+MAX_OBSERVED_RESPONSE_BYTES = 4 * 1024 * 1024
+LEARNING_SITE_URL = "https://chris-page-gov.github.io/okf-dwp/"
+LEARNING_SITE_PATHS = frozenset({
+    "site-manifest.json", "index.html", "docs/learning-path.html",
+    "docs/reading-help-demo-2026-09-30.html",
+    "docs/reading-help-corpus-contract.html",
+    "docs/reading-help-legislation-bridge.html",
+    "docs/backlog-work-packages.html",
+})
 MANDATORY_BROWSER_CHECKS = frozenset({
     "public Explorer identity", "immutable corpus catalogue",
     "40 bound workbench sidecars", "local Chapter 60 source controls",
@@ -220,6 +229,40 @@ def validate_public(root: Path, manifest: dict[str, Any]) -> None:
     names = [row["name"] for row in checks]
     require(len(names) == len(set(names)) and MANDATORY_BROWSER_CHECKS <= set(names),
             "A mandatory public browser check is missing or duplicated")
+    validate_learning_site(root, manifest)
+
+
+def validate_learning_site(root: Path, manifest: dict[str, Any]) -> None:
+    """Check the separate, pinned DWP Pages observation for a verified release."""
+    verifier = manifest["identity"].get("learning_site_verifier")
+    require(isinstance(verifier, dict) and {"path", "bytes", "sha256"} <= verifier.keys(),
+            "Verified release lacks a bound learning-site verifier")
+    bound_bytes(root, verifier, "learning-site verifier")
+    receipt = json_body(bound_bytes(root, manifest["revisions"].get("public_dwp_observation"),
+                                   "public DWP observation"), "public DWP observation")
+    require(receipt.get("schema") == "okf-reading-help-learning-site-observation.v1" and
+            receipt.get("status") == "passed" and receipt.get("errors") == [] and
+            receipt.get("source_commit") == manifest["revisions"]["public_dwp_commit"],
+            "Public DWP observation is failed or for another commit")
+    require(receipt.get("verifier_sha256") == verifier["sha256"],
+            "Public DWP observation was made by another verifier")
+    requests = receipt.get("requests")
+    require(isinstance(requests, list) and len(requests) == len(LEARNING_SITE_PATHS) and
+            all(isinstance(row, dict) for row in requests),
+            "Public DWP observation does not cover seven paths")
+    paths = [row.get("path") for row in requests]
+    require(all(isinstance(path, str) for path in paths) and
+            set(paths) == LEARNING_SITE_PATHS and len(paths) == len(set(paths)),
+            "Public DWP observation paths are missing or duplicated")
+    for row in requests:
+        url = LEARNING_SITE_URL + row["path"]
+        require(row.get("url") == url and row.get("response_url") == url and
+                type(row.get("status")) is int and row["status"] == 200 and
+                row.get("matched") is True and
+                type(row.get("bytes")) is int and 0 < row["bytes"] <= MAX_OBSERVED_RESPONSE_BYTES and
+                isinstance(row.get("sha256"), str) and SHA256.fullmatch(row["sha256"]) and
+                row.get("expected_sha256") == row["sha256"],
+                f"Public DWP observation differs: {row['path']}")
 
 
 def validate(root: Path, manifest_path: Path) -> dict[str, Any]:

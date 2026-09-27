@@ -9,7 +9,8 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from check_reading_help_release import (MANDATORY_BROWSER_CHECKS, ReleaseError,
+from check_reading_help_release import (LEARNING_SITE_PATHS, LEARNING_SITE_URL,
+                                        MANDATORY_BROWSER_CHECKS, ReleaseError,
                                         confined, validate)
 
 
@@ -142,8 +143,27 @@ class ReleaseManifestTests(unittest.TestCase):
                    "checks": [{"name": name, "passed": True}
                               for name in sorted(MANDATORY_BROWSER_CHECKS)]}
         self.manifest["revisions"]["public_browser_receipt"] = self.bind("public/receipt.json", receipt)
+        learning_verifier = self.bind("public/verify_learning_site.py", b"learning verifier\n")
+        self.manifest["identity"]["learning_site_verifier"] = learning_verifier
+        observation = {
+            "schema": "okf-reading-help-learning-site-observation.v1", "status": "passed",
+            "errors": [], "source_commit": "d" * 40,
+            "verifier_sha256": learning_verifier["sha256"],
+            "requests": [{"path": path, "url": LEARNING_SITE_URL + path,
+                          "response_url": LEARNING_SITE_URL + path, "status": 200,
+                          "bytes": 25, "sha256": "a" * 64,
+                          "expected_sha256": "a" * 64, "matched": True}
+                         for path in sorted(LEARNING_SITE_PATHS)]}
+        self.manifest["revisions"]["public_dwp_observation"] = self.bind("public/dwp-observation.json", observation)
         self.save_manifest()
         return receipt
+
+    def observation(self):
+        return json.loads((self.root / "public/dwp-observation.json").read_text())
+
+    def save_observation(self, observation):
+        self.manifest["revisions"]["public_dwp_observation"] = self.bind("public/dwp-observation.json", observation)
+        self.save_manifest()
 
     def test_candidate_and_verified_states(self):
         self.assertFalse(self.verify()["public_browser_verified"])
@@ -225,6 +245,40 @@ class ReleaseManifestTests(unittest.TestCase):
                 confined(self.root, path)
         (self.root / self.manifest_path).write_bytes(b" " * (1024 * 1024 + 1))
         with self.assertRaisesRegex(ReleaseError, "exceeds 1 MiB"):
+            self.verify()
+
+    def test_learning_site_wrong_commit_or_verifier_fails(self):
+        self.verified()
+        observation = self.observation()
+        observation["source_commit"] = "f" * 40
+        self.save_observation(observation)
+        with self.assertRaisesRegex(ReleaseError, "another commit"):
+            self.verify()
+        observation["source_commit"] = "d" * 40
+        observation["verifier_sha256"] = "f" * 64
+        self.save_observation(observation)
+        with self.assertRaisesRegex(ReleaseError, "another verifier"):
+            self.verify()
+
+    def test_learning_site_missing_path_or_wrong_hash_fails(self):
+        self.verified()
+        observation = self.observation()
+        removed = observation["requests"].pop()
+        self.save_observation(observation)
+        with self.assertRaisesRegex(ReleaseError, "seven paths"):
+            self.verify()
+        observation = self.observation()
+        observation["requests"].append(removed)
+        observation["requests"][0]["sha256"] = "f" * 64
+        self.save_observation(observation)
+        with self.assertRaisesRegex(ReleaseError, "observation differs"):
+            self.verify()
+
+    def test_verified_learning_site_receipt_is_required(self):
+        self.verified()
+        self.manifest["revisions"].pop("public_dwp_observation")
+        self.save_manifest()
+        with self.assertRaisesRegex(ReleaseError, "Incomplete binding"):
             self.verify()
 
     def test_insufficient_and_retained_failure_are_not_upgraded(self):
