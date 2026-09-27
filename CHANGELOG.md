@@ -10,7 +10,7 @@ Implementation ownership and handovers belong in the
 
 ## Unreleased
 
-- Add a bounded public reading-help verifier: immutable catalogue and 40 sidecars, exact source text, continuations, cache measurements, keyboard focus, dated links and the preserved Chapter 60 route. Existing receipts cannot be overwritten.
+- Add a bounded public reading-help verifier: immutable catalogue and 40 sidecars, exact source text, continuations, cache measurements, keyboard focus, dated links, automated accessibility snapshots and the preserved Chapter 60 route. Existing receipts cannot be overwritten.
 - Clarify the optional cross-document target contract and distinguish its destination identity from the printed reference row. Frozen corpus rows remain unresolved where no target is declared.
 - Reconcile reading-help backlog acceptance with the authorised literal-highlight scope; proposed meanings and legal applicability still require qualified review.
 

@@ -18,6 +18,7 @@ const EXPLORER = 'https://chris-page-gov.github.io/okf-explorer/';
 const RAW = 'https://raw.githubusercontent.com/chris-page-gov/okf-dwp/';
 const HEX40 = /^[a-f0-9]{40}$/;
 const allowedDataRevisions = new Set();
+let AxeBuilder;
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const insist = (condition, message) => { if (!condition) throw Error(message); };
 const parse = bytes => JSON.parse(bytes.toString('utf8'));
@@ -132,7 +133,11 @@ async function browserCheck(browser, name, url, operation, output) {
       await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 25000 });
       const detail = await operation(page);
       insist(!failures.length, `Browser errors: ${failures.join('; ')}`);
-      return { url: page.url(), chrome: browser.version(), elapsed_ms: Math.round(performance.now() - started), ...detail };
+      const scan = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']).analyze();
+      const blocking = scan.violations.filter(row => row.impact === 'serious' || row.impact === 'critical').map(row => ({ id: row.id, impact: row.impact, help: row.help, targets: row.nodes.flatMap(node => node.target) }));
+      const accessibility = { standard: 'WCAG 2.2 AA automated snapshot', serious_or_critical: blocking, all_violation_count: scan.violations.length, incomplete: scan.incomplete.length, passes: scan.passes.length };
+      insist(blocking.length === 0, `Accessibility check failed: ${JSON.stringify(blocking)}`);
+      return { url: page.url(), chrome: browser.version(), elapsed_ms: Math.round(performance.now() - started), accessibility, ...detail };
     } catch (error) {
       const shot = output.replace(/\.json$/i, '') + `-${name.replace(/[^a-z0-9]+/gi, '-')}.png`;
       try { await page.screenshot({ path: shot, fullPage: true }); result.screenshots.push(shot); } catch {}
@@ -159,6 +164,8 @@ async function main() {
   try {
     const require = createRequire(pathToFileURL(join(explorerRoot, 'package.json')));
     const { chromium } = require(join(explorerRoot, 'apps/okf-explorer/node_modules/@playwright/test'));
+  ({ AxeBuilder } = require(join(explorerRoot, 'apps/okf-explorer/node_modules/@axe-core/playwright')));
+  result.axe_version = parse(await readFile(join(explorerRoot, 'apps/okf-explorer/node_modules/@axe-core/playwright/package.json'))).version;
     const identity = await check('public Explorer identity', async () => {
       const url = new URL('okf-publication-identity.json', EXPLORER).href;
       const response = await fetch(url, { redirect: 'error', signal: AbortSignal.timeout(15000) });
