@@ -1,0 +1,614 @@
+{
+  "schema": "okf-reading-help-public-verification.v1",
+  "status": "failed",
+  "started_at": "2026-09-27T02:29:30.702Z",
+  "inputs": {
+    "data_root": "/Volumes/ExtSSD-Data/!From MacBook M4Max/tmp/okf-dwp-service-status",
+    "data_commit": "cbada7bf544106bdceb2445fc379c8b3e5b73ee4",
+    "workbench_commit": "2ad33add6d8660fec98bf34fb98480a9d0de9e27",
+    "chapter60_revision": "2ad33add6d8660fec98bf34fb98480a9d0de9e27",
+    "explorer_commit": "936da562e4629ed2021bb09fcc55c6ac53ca3a9c",
+    "explorer_root": "/Volumes/ExtSSD-Data/!From MacBook M4Max/tmp/okf-explorer-passage-reviewed",
+    "output": "/private/tmp/reading-help-public-20260927-02.json"
+  },
+  "checks": [
+    {
+      "name": "public Explorer identity",
+      "passed": true,
+      "elapsed_ms": 165,
+      "detail": {
+        "url": "https://chris-page-gov.github.io/okf-explorer/okf-publication-identity.json",
+        "commit": "936da562e4629ed2021bb09fcc55c6ac53ca3a9c",
+        "sha256": "a647c065aa4adb95e2f2eb7bc5c309fb61fa4e3d76f96892f81cc1899ad333f0"
+      }
+    },
+    {
+      "name": "immutable corpus catalogue",
+      "passed": true,
+      "elapsed_ms": 42,
+      "detail": {
+        "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/cbada7bf544106bdceb2445fc379c8b3e5b73ee4/reading-help-corpus/manifest.json",
+        "sha256": "6c53b659b519aa4cbf7529e7e10eb4ad3bfe8efcac18055ec2a5ade724998b46",
+        "bytes": 260797,
+        "documents": 513
+      }
+    },
+    {
+      "name": "40 bound workbench sidecars",
+      "passed": true,
+      "elapsed_ms": 543,
+      "detail": {
+        "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help-manifest.json",
+        "cases": 40,
+        "targets": 1421,
+        "distinct_document_indexes": 57,
+        "catalogue_sha256": "6c53b659b519aa4cbf7529e7e10eb4ad3bfe8efcac18055ec2a5ade724998b46"
+      }
+    },
+    {
+      "name": "local Chapter 60 source controls",
+      "passed": true,
+      "elapsed_ms": 5,
+      "detail": {
+        "document_id": "dmg-vol10-ch60",
+        "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-vol10-ch60/manual-structure-v1/source-0000002117-000-5fac0d6d5c5e",
+        "source_span_sha256s": [
+          "71eceaec0dd5a6e7ee5a6e4314babec5adfcb519f2dfcdb40a13ee9743e2ac66",
+          "1b17130ba25abb66dcf398facebb4bd8c13bda416cce86e3d17d95690a1e844b"
+        ]
+      }
+    },
+    {
+      "name": "local ADM source controls",
+      "passed": true,
+      "elapsed_ms": 4,
+      "detail": {
+        "document_id": "adm-chapter-a1",
+        "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a1/manual-structure-v1/source-0000000776-000-8f372d3fe955",
+        "source_span_sha256s": [
+          "fd304c12e70cfd09db2e384b740538e4931ab4aed1cbac078f2a2ff4647668db",
+          "4d931a7c961549353a7d41838cb48d7eec4b4d65aa92b1af97dcbbb81ef36ab5"
+        ]
+      }
+    },
+    {
+      "name": "printed 166-literal table control",
+      "passed": true,
+      "elapsed_ms": 5,
+      "detail": {
+        "document_id": "dmg-abbreviations-0db6c476b0",
+        "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-abbreviations-0db6c476b0/manual-structure-v1/source-0000000000-000-3c355ba67515",
+        "abbreviation_literals": 166,
+        "source_spans": 17
+      }
+    },
+    {
+      "name": "explicit ADM extraction gap control",
+      "passed": true,
+      "elapsed_ms": 1,
+      "detail": {
+        "document_id": "adm-chapter-a2",
+        "page": 10
+      }
+    },
+    {
+      "name": "DMG 60025 source and cache",
+      "passed": true,
+      "elapsed_ms": 1074,
+      "detail": {
+        "url": "https://chris-page-gov.github.io/okf-explorer/reading-help/corpus/?catalogue=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fcbada7bf544106bdceb2445fc379c8b3e5b73ee4%2Freading-help-corpus%2Fmanifest.json&catalogue_sha256=6c53b659b519aa4cbf7529e7e10eb4ad3bfe8efcac18055ec2a5ade724998b46&catalogue_bytes=260797&family=dmg&document=dmg-vol10-ch60&unit=https%3A%2F%2Fchris-page-gov.github.io%2Fokf-dwp%2Fid%2Funit%2Fdmg%2Fdmg-vol10-ch60%2Fmanual-structure-v1%2Fsource-0000002117-000-5fac0d6d5c5e",
+        "chrome": "154.0.8037.57",
+        "elapsed_ms": 955,
+        "accessibility": {
+          "standard": "WCAG 2.2 AA automated snapshot",
+          "serious_or_critical": [],
+          "all_violation_count": 0,
+          "incomplete": 0,
+          "passes": 25
+        },
+        "source_span_sha256s": [
+          "71eceaec0dd5a6e7ee5a6e4314babec5adfcb519f2dfcdb40a13ee9743e2ac66",
+          "1b17130ba25abb66dcf398facebb4bd8c13bda416cce86e3d17d95690a1e844b"
+        ],
+        "cold": {
+          "fetched_files": 2,
+          "fetched_bytes": 87978,
+          "cache_hits": 0,
+          "elapsed_ms": 207
+        },
+        "warm": {
+          "fetched_files": 0,
+          "fetched_bytes": 0,
+          "cache_hits": 2,
+          "elapsed_ms": 78
+        },
+        "occurrence_id": "5e3f607fcf0a3926920b8f55"
+      }
+    },
+    {
+      "name": "ADM source passage",
+      "passed": true,
+      "elapsed_ms": 770,
+      "detail": {
+        "url": "https://chris-page-gov.github.io/okf-explorer/reading-help/corpus/?catalogue=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fcbada7bf544106bdceb2445fc379c8b3e5b73ee4%2Freading-help-corpus%2Fmanifest.json&catalogue_sha256=6c53b659b519aa4cbf7529e7e10eb4ad3bfe8efcac18055ec2a5ade724998b46&catalogue_bytes=260797&family=adm&document=adm-chapter-a1&unit=https%3A%2F%2Fchris-page-gov.github.io%2Fokf-dwp%2Fid%2Funit%2Fadm%2Fadm-chapter-a1%2Fmanual-structure-v1%2Fsource-0000000776-000-8f372d3fe955",
+        "chrome": "154.0.8037.57",
+        "elapsed_ms": 689,
+        "accessibility": {
+          "standard": "WCAG 2.2 AA automated snapshot",
+          "serious_or_critical": [],
+          "all_violation_count": 0,
+          "incomplete": 0,
+          "passes": 25
+        },
+        "source_span_sha256s": [
+          "fd304c12e70cfd09db2e384b740538e4931ab4aed1cbac078f2a2ff4647668db",
+          "4d931a7c961549353a7d41838cb48d7eec4b4d65aa92b1af97dcbbb81ef36ab5"
+        ],
+        "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a1/manual-structure-v1/source-0000000776-000-8f372d3fe955"
+      }
+    },
+    {
+      "name": "printed table and extraction gap",
+      "passed": true,
+      "elapsed_ms": 1195,
+      "detail": {
+        "url": "https://chris-page-gov.github.io/okf-explorer/reading-help/corpus/?catalogue=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2Fcbada7bf544106bdceb2445fc379c8b3e5b73ee4%2Freading-help-corpus%2Fmanifest.json&family=dmg&document=dmg-abbreviations-0db6c476b0&unit=https%3A%2F%2Fchris-page-gov.github.io%2Fokf-dwp%2Fid%2Funit%2Fdmg%2Fdmg-abbreviations-0db6c476b0%2Fmanual-structure-v1%2Fsource-0000000000-000-3c355ba67515",
+        "chrome": "154.0.8037.57",
+        "elapsed_ms": 1113,
+        "accessibility": {
+          "standard": "WCAG 2.2 AA automated snapshot",
+          "serious_or_critical": [],
+          "all_violation_count": 0,
+          "incomplete": 0,
+          "passes": 25
+        },
+        "abbreviation_literals": 166,
+        "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/dmg/dmg-abbreviations-0db6c476b0/manual-structure-v1/source-0000000000-000-3c355ba67515",
+        "source_spans": 17
+      }
+    },
+    {
+      "name": "ADM extraction gap",
+      "passed": false,
+      "elapsed_ms": 784,
+      "error": "Error: Accessibility check failed: [{\"id\":\"target-size\",\"impact\":\"serious\",\"help\":\"All touch targets must be 24px large, or leave sufficient space\",\"targets\":[\"li:nth-child(1) > a[target=\\\"_blank\\\"][rel=\\\"noopener noreferrer\\\"]\",\"li:nth-child(2) > a[target=\\\"_blank\\\"][rel=\\\"noopener noreferrer\\\"]\",\"li:nth-child(3) > a[target=\\\"_blank\\\"][rel=\\\"noopener noreferrer\\\"]\"]}]"
+    },
+    {
+      "name": "immutable Chapter 60 v1 manifests",
+      "passed": true,
+      "elapsed_ms": 74,
+      "detail": {
+        "revision": "2ad33add6d8660fec98bf34fb98480a9d0de9e27"
+      }
+    },
+    {
+      "name": "original Chapter 60 v1 fallback",
+      "passed": true,
+      "elapsed_ms": 824,
+      "detail": {
+        "url": "https://chris-page-gov.github.io/okf-explorer/reading-help/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F46a85142e0fe3a73b686b91029d357770b68591d%2Freading-help-ch60.json&passage=dmg-60025",
+        "chrome": "154.0.8037.57",
+        "elapsed_ms": 752,
+        "accessibility": {
+          "standard": "WCAG 2.2 AA automated snapshot",
+          "serious_or_critical": [],
+          "all_violation_count": 0,
+          "incomplete": 0,
+          "passes": 22
+        },
+        "manifest": "reading-help-ch60.json",
+        "paired_marker": false
+      }
+    },
+    {
+      "name": "paired Chapter 60 footer",
+      "passed": true,
+      "elapsed_ms": 663,
+      "detail": {
+        "url": "https://chris-page-gov.github.io/okf-explorer/reading-help/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F2ad33add6d8660fec98bf34fb98480a9d0de9e27%2Freading-help-ch60-references.json&passage=dmg-60025",
+        "chrome": "154.0.8037.57",
+        "elapsed_ms": 581,
+        "accessibility": {
+          "standard": "WCAG 2.2 AA automated snapshot",
+          "serious_or_critical": [],
+          "all_violation_count": 0,
+          "incomplete": 0,
+          "passes": 23
+        },
+        "manifest": "reading-help-ch60-references.json",
+        "paired_marker": true
+      }
+    },
+    {
+      "name": "dated Chapter 60 provision link",
+      "passed": true,
+      "elapsed_ms": 637,
+      "detail": {
+        "url": "https://chris-page-gov.github.io/okf-explorer/reading-help/?manifest=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F2ad33add6d8660fec98bf34fb98480a9d0de9e27%2Freading-help-ch60-law.json&passage=dmg-60025",
+        "chrome": "154.0.8037.57",
+        "elapsed_ms": 558,
+        "accessibility": {
+          "standard": "WCAG 2.2 AA automated snapshot",
+          "serious_or_critical": [],
+          "all_violation_count": 0,
+          "incomplete": 0,
+          "passes": 23
+        },
+        "candidate_card": "60025-marker-5",
+        "dated_url": "https://www.legislation.gov.uk/ukpga/1992/4/section/70/2026-09-20#section-70-3",
+        "statutory_document_fetched": false
+      }
+    },
+    {
+      "name": "staff-016 bound reading-help link",
+      "passed": false,
+      "elapsed_ms": 1583,
+      "error": "Error: Accessibility check failed: [{\"id\":\"scrollable-region-focusable\",\"impact\":\"serious\",\"help\":\"Scrollable region must have keyboard access\",\"targets\":[\"pre\"]}]"
+    }
+  ],
+  "requests": [
+    {
+      "label": "Explorer identity",
+      "url": "https://chris-page-gov.github.io/okf-explorer/okf-publication-identity.json",
+      "bytes": 1138,
+      "sha256": "a647c065aa4adb95e2f2eb7bc5c309fb61fa4e3d76f96892f81cc1899ad333f0"
+    },
+    {
+      "label": "corpus catalogue",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/cbada7bf544106bdceb2445fc379c8b3e5b73ee4/reading-help-corpus/manifest.json",
+      "bytes": 260797,
+      "sha256": "6c53b659b519aa4cbf7529e7e10eb4ad3bfe8efcac18055ec2a5ade724998b46",
+      "elapsed_ms": 40
+    },
+    {
+      "label": "workbench manifest",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help-manifest.json",
+      "bytes": 190805,
+      "sha256": "3afb59e4f811378b555b18b02e78fd021f5afecf33fd5efd0dba0f69ec0d71dd",
+      "elapsed_ms": 14
+    },
+    {
+      "label": "workbench-bound catalogue",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/cbada7bf544106bdceb2445fc379c8b3e5b73ee4/reading-help-corpus/manifest.json",
+      "bytes": 260797,
+      "sha256": "6c53b659b519aa4cbf7529e7e10eb4ad3bfe8efcac18055ec2a5ade724998b46",
+      "elapsed_ms": 13
+    },
+    {
+      "label": "sidecar staff-001",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-001.json",
+      "bytes": 11326,
+      "sha256": "dd67b5804fd1f995c3e58a978d312d5fc9f885394fca1aa5158def19c07be79e",
+      "elapsed_ms": 10
+    },
+    {
+      "label": "sidecar staff-002",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-002.json",
+      "bytes": 12801,
+      "sha256": "0d354c925c9f98956741c53d962b9b91dbe117646235b27e65ef793092f245e0",
+      "elapsed_ms": 11
+    },
+    {
+      "label": "sidecar staff-003",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-003.json",
+      "bytes": 13226,
+      "sha256": "6e1f62387f42c3f4bb41d971a012a0566a86254fdbbe7c42db82a7017bcb30ef",
+      "elapsed_ms": 11
+    },
+    {
+      "label": "sidecar staff-004",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-004.json",
+      "bytes": 11543,
+      "sha256": "8b0724a3294db1cd313ff7ecc7dd42a9261300a78b2b7879695679ba29a6fee0",
+      "elapsed_ms": 10
+    },
+    {
+      "label": "sidecar staff-005",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-005.json",
+      "bytes": 11283,
+      "sha256": "f9ea01751a50b693c0d9e92ab1a3280fb4f743504c7528cc298ef5a7e19dacf1",
+      "elapsed_ms": 9
+    },
+    {
+      "label": "sidecar staff-006",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-006.json",
+      "bytes": 8447,
+      "sha256": "565c43bf0ae906041010cb7e6906e6baa8277f491ab5c4b5a89abd47931a0a92",
+      "elapsed_ms": 10
+    },
+    {
+      "label": "sidecar staff-007",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-007.json",
+      "bytes": 9042,
+      "sha256": "0ca6f6347b4b3858c8731a7383217d9bce76b0657c74c297e223ef41facf0ade",
+      "elapsed_ms": 10
+    },
+    {
+      "label": "sidecar staff-008",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-008.json",
+      "bytes": 13246,
+      "sha256": "a01991a5147b3b24841049c74ba2a95aba710a8d5003ff9193d879ed4b57ced9",
+      "elapsed_ms": 11
+    },
+    {
+      "label": "sidecar staff-009",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-009.json",
+      "bytes": 8355,
+      "sha256": "c600e694f90a096c74df6374dd634b0a87b36f88dafc4fcf5018f0d339475d47",
+      "elapsed_ms": 10
+    },
+    {
+      "label": "sidecar staff-010",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-010.json",
+      "bytes": 8758,
+      "sha256": "8cb000a1a9124796282f9e3aa76748a99e71aae2db87fb7ca223fb22421447e2",
+      "elapsed_ms": 9
+    },
+    {
+      "label": "sidecar staff-011",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-011.json",
+      "bytes": 12135,
+      "sha256": "3f205d9791d467a59f7fb03334bb91836007fb06eec7d6c9050d4bc4ab0f7c98",
+      "elapsed_ms": 10
+    },
+    {
+      "label": "sidecar staff-012",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-012.json",
+      "bytes": 5181,
+      "sha256": "48468d95a0e7b0721957df0e4fff32e23e2170b8adc59ef99b2fd3f3db2de921",
+      "elapsed_ms": 10
+    },
+    {
+      "label": "sidecar staff-013",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-013.json",
+      "bytes": 5181,
+      "sha256": "7454065ab9d3eecf6ee63f4c08a21ba8203823f7eea7a0b9921837eb6114fb98",
+      "elapsed_ms": 9
+    },
+    {
+      "label": "sidecar staff-014",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-014.json",
+      "bytes": 8401,
+      "sha256": "37ad450ce72da362b623e1996ffdc6de8e1fd36b3224da76d4becbb17ce610e0",
+      "elapsed_ms": 10
+    },
+    {
+      "label": "sidecar staff-015",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-015.json",
+      "bytes": 9045,
+      "sha256": "9f0f9fbc6309a3ab800108f26312fdb40223f30b6be5d638605c1f51970e4f57",
+      "elapsed_ms": 8
+    },
+    {
+      "label": "sidecar staff-016",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-016.json",
+      "bytes": 8725,
+      "sha256": "4f1eacdccf619db0b3daf29289f50375a9028f382e77d9c81d37b5a6e85338fd",
+      "elapsed_ms": 9
+    },
+    {
+      "label": "sidecar staff-017",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-017.json",
+      "bytes": 9041,
+      "sha256": "a76ddd50d864a42eee9a57356e07e5bcbf18b7bac22a1aeb76f94f1d850a63e3",
+      "elapsed_ms": 12
+    },
+    {
+      "label": "sidecar staff-018",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-018.json",
+      "bytes": 10241,
+      "sha256": "b6c298228583d0616762a1252dc9b9255c5d7e69a70200ac56b02a57799b3b0e",
+      "elapsed_ms": 12
+    },
+    {
+      "label": "sidecar staff-019",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-019.json",
+      "bytes": 14705,
+      "sha256": "488198d7efdd5ad8448b4f632bbef16e32e4fe6337bad1aa6eb41367f656404d",
+      "elapsed_ms": 10
+    },
+    {
+      "label": "sidecar staff-020",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-020.json",
+      "bytes": 9136,
+      "sha256": "48a0d89693e8bb1b818bc553af523a756b70ce55927efc28565921acf0c12afe",
+      "elapsed_ms": 11
+    },
+    {
+      "label": "sidecar staff-021",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-021.json",
+      "bytes": 5618,
+      "sha256": "54e369bb3a2b902295fa95724b11563ff5a940f9c472b6750ae96d21a0f7378e",
+      "elapsed_ms": 12
+    },
+    {
+      "label": "sidecar staff-022",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-022.json",
+      "bytes": 12875,
+      "sha256": "a8f77732309d6f39124902cd1d3251d567e229db9982ebc0cfdebab35f46e020",
+      "elapsed_ms": 11
+    },
+    {
+      "label": "sidecar staff-023",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-023.json",
+      "bytes": 11898,
+      "sha256": "4216d2cfbfebbeab17536f6970e74a212863074d858068c37abf4df0cf1b4f2a",
+      "elapsed_ms": 11
+    },
+    {
+      "label": "sidecar staff-024",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-024.json",
+      "bytes": 9656,
+      "sha256": "16ca4936aadd0ac5f4a50d47e35e1ae7510ed290e22a14a3d536f70eb7c2ccb4",
+      "elapsed_ms": 11
+    },
+    {
+      "label": "sidecar staff-025",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-025.json",
+      "bytes": 14492,
+      "sha256": "dd246f323d458235516cad0b547f3ee3c81b1ce98ba80ee7bea95c62e11be7e7",
+      "elapsed_ms": 10
+    },
+    {
+      "label": "sidecar staff-026",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-026.json",
+      "bytes": 15835,
+      "sha256": "8b98be383d049df79e3d05db129d58535cd49149342581a6c0460c0b3e876c6d",
+      "elapsed_ms": 10
+    },
+    {
+      "label": "sidecar staff-027",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-027.json",
+      "bytes": 12508,
+      "sha256": "6a9082ab24f2613afd2ef41df745b8eea559092ac2266655b86c31e2fc31be37",
+      "elapsed_ms": 10
+    },
+    {
+      "label": "sidecar staff-028",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-028.json",
+      "bytes": 12822,
+      "sha256": "7671d2e84ba4578192d58705f7824ec8345d901f46b944d890759daf7e3d9a62",
+      "elapsed_ms": 10
+    },
+    {
+      "label": "sidecar staff-029",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-029.json",
+      "bytes": 10449,
+      "sha256": "d172cfcbdaa167e543dde5398d6dd5c9682ca89a160aa6463a0c192fbdf30009",
+      "elapsed_ms": 11
+    },
+    {
+      "label": "sidecar staff-030",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-030.json",
+      "bytes": 13528,
+      "sha256": "465de78820ee507fd6891732b64d9fa9383f8c14af358ffc45026574babdd87b",
+      "elapsed_ms": 10
+    },
+    {
+      "label": "sidecar staff-031",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-031.json",
+      "bytes": 13205,
+      "sha256": "a99e2206f5bd79667975d4f151a3d66c586b93423266d60e0da5b3cfd5b184bc",
+      "elapsed_ms": 12
+    },
+    {
+      "label": "sidecar staff-032",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-032.json",
+      "bytes": 13205,
+      "sha256": "03dadd0631d550463b6f57d1b17a232bd98ce535a724cf8f19c38de128d693e8",
+      "elapsed_ms": 10
+    },
+    {
+      "label": "sidecar staff-033",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-033.json",
+      "bytes": 15835,
+      "sha256": "97fdce15490dfcfa2841d046e366c1585d566d58c04f7bfc75f2061c9d5e3892",
+      "elapsed_ms": 11
+    },
+    {
+      "label": "sidecar staff-034",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-034.json",
+      "bytes": 15708,
+      "sha256": "0edf88484b40ad4f48d546dc7e801c18fb1a324c21968a5bb8cf8bcb3c744ecc",
+      "elapsed_ms": 10
+    },
+    {
+      "label": "sidecar staff-035",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-035.json",
+      "bytes": 16713,
+      "sha256": "f6ab4e751af1c7aa3b8d6241b1e220904a3d4f850ea677fcb5b56a84407cc156",
+      "elapsed_ms": 12
+    },
+    {
+      "label": "sidecar staff-036",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-036.json",
+      "bytes": 13264,
+      "sha256": "0545c0e840b75ea23a5fd480898ca27061ccec1834979d488d5f241f9e736aca",
+      "elapsed_ms": 11
+    },
+    {
+      "label": "sidecar staff-037",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-037.json",
+      "bytes": 16686,
+      "sha256": "b770c44f17c6ae434924a931f5ee567b485217fb5b7b7d2ea79c1e285e87bd6e",
+      "elapsed_ms": 11
+    },
+    {
+      "label": "sidecar staff-038",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-038.json",
+      "bytes": 11201,
+      "sha256": "481c76b5ecdb3bf62aff480176a37ec7b69b6c419f4973b1a6cdd58138e2a0d7",
+      "elapsed_ms": 11
+    },
+    {
+      "label": "sidecar staff-039",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-039.json",
+      "bytes": 12840,
+      "sha256": "acb8676bc9bfe8225d3733d03acfb727dfe5fa36ab6b3612016153c681e20d1f",
+      "elapsed_ms": 11
+    },
+    {
+      "label": "sidecar staff-040",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/evaluation/evidence-workbench/reading-help/staff-040.json",
+      "bytes": 9579,
+      "sha256": "ce6828551ed498a7352b6a9266158aa3c5eb4e361dbd6cf7be8027dba3875367",
+      "elapsed_ms": 11
+    },
+    {
+      "label": "frozen original Chapter 60 v1 manifest",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/46a85142e0fe3a73b686b91029d357770b68591d/reading-help-ch60.json",
+      "bytes": 67503,
+      "sha256": "22def29ab585e623f8b570f50d10dac4e6a0b54b8d4958ab199297b6f252a478",
+      "elapsed_ms": 37
+    },
+    {
+      "label": "reading-help-ch60.json",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/reading-help-ch60.json",
+      "bytes": 67503,
+      "sha256": "22def29ab585e623f8b570f50d10dac4e6a0b54b8d4958ab199297b6f252a478",
+      "elapsed_ms": 13
+    },
+    {
+      "label": "reading-help-ch60-references.json",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/reading-help-ch60-references.json",
+      "bytes": 75908,
+      "sha256": "6541e83e4eb464cff696cf9704c33fdac64cd6773d1be65ae0ca60e78a9604e4",
+      "elapsed_ms": 12
+    },
+    {
+      "label": "reading-help-ch60-law.json",
+      "url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/2ad33add6d8660fec98bf34fb98480a9d0de9e27/reading-help-ch60-law.json",
+      "bytes": 80823,
+      "sha256": "1cf1de6332612d03563c436f46be76e7df3486b474b0af862b28a3c7a1a74db1",
+      "elapsed_ms": 11
+    }
+  ],
+  "errors": [
+    "ADM extraction gap: Error: Accessibility check failed: [{\"id\":\"target-size\",\"impact\":\"serious\",\"help\":\"All touch targets must be 24px large, or leave sufficient space\",\"targets\":[\"li:nth-child(1) > a[target=\\\"_blank\\\"][rel=\\\"noopener noreferrer\\\"]\",\"li:nth-child(2) > a[target=\\\"_blank\\\"][rel=\\\"noopener noreferrer\\\"]\",\"li:nth-child(3) > a[target=\\\"_blank\\\"][rel=\\\"noopener noreferrer\\\"]\"]}]\n    at insist (file:///Volumes/ExtSSD-Data/!From%20MacBook%20M4Max/tmp/okf-dwp-service-status/scripts/verify_reading_help_public.mjs:24:64)\n    at file:///Volumes/ExtSSD-Data/!From%20MacBook%20M4Max/tmp/okf-dwp-service-status/scripts/verify_reading_help_public.mjs:146:7\n    at async check (file:///Volumes/ExtSSD-Data/!From%20MacBook%20M4Max/tmp/okf-dwp-service-status/scripts/verify_reading_help_public.mjs:84:24)\n    at async main (file:///Volumes/ExtSSD-Data/!From%20MacBook%20M4Max/tmp/okf-dwp-service-status/scripts/verify_reading_help_public.mjs:312:5)",
+    "staff-016 bound reading-help link: Error: Accessibility check failed: [{\"id\":\"scrollable-region-focusable\",\"impact\":\"serious\",\"help\":\"Scrollable region must have keyboard access\",\"targets\":[\"pre\"]}]\n    at insist (file:///Volumes/ExtSSD-Data/!From%20MacBook%20M4Max/tmp/okf-dwp-service-status/scripts/verify_reading_help_public.mjs:24:64)\n    at file:///Volumes/ExtSSD-Data/!From%20MacBook%20M4Max/tmp/okf-dwp-service-status/scripts/verify_reading_help_public.mjs:146:7\n    at async check (file:///Volumes/ExtSSD-Data/!From%20MacBook%20M4Max/tmp/okf-dwp-service-status/scripts/verify_reading_help_public.mjs:84:24)\n    at async main (file:///Volumes/ExtSSD-Data/!From%20MacBook%20M4Max/tmp/okf-dwp-service-status/scripts/verify_reading_help_public.mjs:361:5)",
+    "Required check did not pass: ADM extraction gap",
+    "Required check did not pass: staff-016 bound reading-help link"
+  ],
+  "screenshots": [
+    "/private/tmp/reading-help-public-20260927-02-ADM-extraction-gap.png",
+    "/private/tmp/reading-help-public-20260927-02-staff-016-bound-reading-help-link.png"
+  ],
+  "script_sha256": "ee1952960c455e84c543de07dc9fa65a9a797173bd610e5599b78bfb19a527fd",
+  "invocation": [
+    "--data-root",
+    "/Users/crpage/tmp/okf-dwp-service-status",
+    "--data-commit",
+    "cbada7bf544106bdceb2445fc379c8b3e5b73ee4",
+    "--workbench-commit",
+    "2ad33add6d8660fec98bf34fb98480a9d0de9e27",
+    "--explorer-commit",
+    "936da562e4629ed2021bb09fcc55c6ac53ca3a9c",
+    "--explorer-root",
+    "/Users/crpage/tmp/okf-explorer-passage-reviewed",
+    "--output",
+    "/private/tmp/reading-help-public-20260927-02.json"
+  ],
+  "axe_version": "4.13.0",
+  "chrome_version": "154.0.8037.57",
+  "finished_at": "2026-09-27T02:29:39.558Z"
+}

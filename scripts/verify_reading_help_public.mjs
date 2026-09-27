@@ -121,7 +121,8 @@ async function sourceSample(root, catalogue, family, document, needle) {
 }
 async function browserCheck(browser, name, url, operation, output) {
   return check(name, async () => {
-    const page = await browser.newPage();
+    const context = await browser.newContext();
+    const page = await context.newPage();
     const failures = [];
     page.on('pageerror', error => failures.push(String(error)));
     page.on('console', message => { if (message.type() === 'error') failures.push(message.text()); });
@@ -148,7 +149,7 @@ async function browserCheck(browser, name, url, operation, output) {
       const shot = output.replace(/\.json$/i, '') + `-${name.replace(/[^a-z0-9]+/gi, '-')}.png`;
       try { await page.screenshot({ path: shot, fullPage: true }); result.screenshots.push(shot); } catch {}
       throw error;
-    } finally { await page.close(); }
+    } finally { await context.close(); }
   });
 }
 

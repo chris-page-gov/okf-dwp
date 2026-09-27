@@ -144,3 +144,14 @@ a footer row's source identity from a target in another document. The existing
 corpus contains no fabricated cross-document targets. Historical failed runtime
 receipts remain retained in the legislation candidate; its publication remains
 separate from this presentation release.
+
+### Public browser defects retained
+
+The first public browser attempt passed immutable data checks but failed in the
+verifier's accessibility setup; explicit browser contexts fixed that setup.
+The [second attempt](../evaluation/reading-help-rollout/release-20260927/public-attempt-02/receipt.json)
+passed 14 of 16 checks against the merged public consumer. It found two actual
+accessibility defects: adjacent extraction-gap links need larger targets or
+spacing, and the workbench's scrollable source text needs keyboard focus.
+Both repairs remain on the existing consumer follow-up branch; neither failure
+is waived or represented as a public release pass.
