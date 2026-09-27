@@ -13,7 +13,7 @@ from unittest.mock import patch
 import reading_help_chat
 from reading_help_chat import export, import_replies
 from build_logical_units import Inputs
-from build_reading_help_corpus import abbreviation_tables, cache_matches, rules_identity
+from build_reading_help_corpus import abbreviation_tables, cache_matches, cached_leaf_path, portable_gzip, rules_identity
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTROLS = ROOT / "evaluation/reading-help-rollout/source-controls.json"
@@ -24,6 +24,24 @@ def digest(data):
 
 
 class CorpusChecks(unittest.TestCase):
+    def test_portable_gzip_header_and_bytes(self):
+        data = b"Cross-platform reading help: source bytes remain exact.\n" * 7
+        first = portable_gzip(data)
+        self.assertEqual(first, portable_gzip(data))
+        self.assertEqual(first[:10], bytes.fromhex("1f8b08000000000002ff"))
+        self.assertEqual(gzip.decompress(first), data)
+
+    def test_cached_leaf_cannot_escape_its_document(self):
+        base = 'reading-help-corpus/documents/dmg/example'
+        row = {'path': base + '/leaves/0000.json.gz', 'url': base + '/leaves/0000.json.gz',
+               'sha256': 'a' * 64, 'bytes': 100}
+        self.assertEqual(cached_leaf_path(row, base), row['path'])
+        for forged in (base + '/leaves/../../source/secret.json.gz',
+                       'reading-help-corpus/documents/adm/other/leaves/0000.json.gz',
+                       '/private/tmp/secret.json.gz'):
+            with self.subTest(path=forged), self.assertRaises(ValueError):
+                cached_leaf_path({**row, 'path': forged, 'url': forged}, base)
+
     @classmethod
     def setUpClass(cls):
         cls.controls = json.loads(CONTROLS.read_text())

@@ -57,7 +57,7 @@ unresolved and must not infer a link.
 
 
 The current frozen build has a 260,797-byte catalogue. The largest document
-index is 498,791 bytes; the largest leaf is 51,222 bytes compressed and
+index is 498,791 bytes; the largest leaf is 51,223 bytes compressed and
 254,317 bytes decoded. A reader can fetch one index and its selected leaf,
 without loading 1,455 leaves or the adopted structured-unit file.
 
@@ -83,7 +83,9 @@ builds or resumes unchanged, hash-bound document leaves on ExtSSD.
 `PYTHONDONTWRITEBYTECODE=1 python3 scripts/build_reading_help_corpus.py --check`
 rebuilds all documents from frozen source and compares exact bytes without using
 the output cache. The warm cache key binds producer, shared structured-input helper, reference
-parser and every printed abbreviation-table PDF and extraction hash. A change
+parser and every printed abbreviation-table PDF and extraction hash. Leaves
+use the shared mtime-zero gzip writer with OS header byte 255, removing
+the platform-dependent header from cross-platform byte checks. A change
 to a supporting table invalidates dependent document caches. The ordinary Chat pack utility is
 `scripts/reading_help_chat.py`; `export --document-id ID --limit 12 --output FILE`
 selects unresolved candidates, and `import --requests FILE --requests-sha256
