@@ -305,6 +305,7 @@ jobs:
           uv run --locked python -m unittest discover -s scripts -p test_graph_service_publication.py
           git fetch --no-tags --depth=1 origin 2e12f20cfd20e62a67197e7aade4ea612b873684
           uv run --locked python validation/graph-evidence/v0.8.0/sdk/attempt-01/verify_native_observation.py --dwp-root .
+          uv run --locked python validation/graph-evidence/v0.8.0/sdk/attempt-01/verify_graph_packet.py --packet-root validation/graph-evidence/v0.8.0/sdk/attempt-01
       - name: Verify the v4 paired outputs without calling a provider
         run: |
           git fetch --no-tags --depth=1 origin "$DWP_DIRECT_V4_TRIAL_COMMIT"

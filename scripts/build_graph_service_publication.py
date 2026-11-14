@@ -192,7 +192,8 @@ def validate_plan(plan, summary, identities):
     S.require(counts.get('source_case_occurrences') == occurrences and counts.get('expected_positive_targets', 0) >= positive_targets,
               'Graph summary case or target count differs from plan')
     S.require(counts.get('original_graph_obligation_count') == 203, 'Original graph obligation census differs')
-    return {'questions': len(questions), 'case_occurrences': occurrences, 'positive_targets': counts['expected_positive_targets']}
+    return {'questions': len(questions), 'case_occurrences': occurrences,
+            'positive_targets': counts['expected_positive_targets'], 'unique_question_target_pairs': positive_targets}
 
 
 def validate_summary(summary, deployed, evidence):
@@ -367,7 +368,8 @@ def render(result):
         completed_at = started_at + timedelta(milliseconds=sdk['duration_ms'])
         lines += [f"The pinned SDK observation completed at **{completed_at.astimezone(timezone.utc).isoformat()}** "
                   f"and passed **{counts['completed_unique_questions']} unique questions**, covering **{counts['source_case_occurrences']} case occurrences** "
-                  f"and **{counts['expected_positive_targets']} expected positive source targets**.", '',
+                  f"and **{counts['expected_positive_targets']} expected positive source-target checks**, "
+                  f"representing **{sdk['plan']['unique_question_target_pairs']} distinct question/target pairs**.", '',
                   f"It recorded **{wire['calls']} HTTP requests** and **{wire['bytes']:,} response bytes**. "
                   f"The largest evidence response was **{wire['evidence_max_bytes']:,} bytes** (8,192-byte ceiling).", '',
                   f"- Graph producer commit: `{ids['producer_commit']}`.", f"- Graph SHA-256: `{ids['graph_sha256']}`.",

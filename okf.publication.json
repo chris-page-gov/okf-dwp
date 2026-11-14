@@ -2425,7 +2425,9 @@
         "evaluation/graph-service-publication.json",
         "scripts/build_graph_service_publication.py",
         "scripts/test_graph_service_publication.py",
-        "validation/graph-evidence/v0.8.0/sdk/attempt-01/verify_native_observation.py"
+        "validation/graph-evidence/v0.8.0/sdk/attempt-01/verify_native_observation.py",
+        "validation/graph-evidence/v0.8.0/sdk/attempt-01/verify_graph_packet.py",
+        "validation/graph-evidence/v0.8.0/sdk/attempt-01/expected-cases.json"
       ],
       "command_ids": [
         "diff-check",
@@ -2443,7 +2445,8 @@
         "graph-service-publication-build",
         "graph-service-publication-check",
         "graph-service-publication-controls",
-        "graph-service-native-replay"
+        "graph-service-native-replay",
+        "graph-service-sdk-archive-replay"
       ]
     },
     {
@@ -2697,7 +2700,8 @@
         "graph-service-publication-build",
         "graph-service-publication-check",
         "graph-service-publication-controls",
-        "graph-service-native-replay"
+        "graph-service-native-replay",
+        "graph-service-sdk-archive-replay"
       ]
     },
     {
@@ -4986,6 +4990,20 @@
           "release"
         ],
         "command": "uv run --locked python validation/graph-evidence/v0.8.0/sdk/attempt-01/verify_native_observation.py --dwp-root .",
+        "source": "docs/graph-service-publication.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "graph-service-sdk-archive-replay",
+        "kind": "check",
+        "planes": [
+          "documentation",
+          "release"
+        ],
+        "command": "uv run --locked python validation/graph-evidence/v0.8.0/sdk/attempt-01/verify_graph_packet.py --packet-root validation/graph-evidence/v0.8.0/sdk/attempt-01",
         "source": "docs/graph-service-publication.md",
         "review_status": "unreviewed",
         "network": "none",

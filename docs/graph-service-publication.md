@@ -8,7 +8,22 @@ Selected deployment: service **0.8.0**, recorded **2026-11-14T19:40:08.549506+00
 
 ## Public graph SDK verification
 
-**Pending for this deployment.** No matching public graph SDK receipt is selected.
+The pinned SDK observation completed at **2026-11-14T21:28:51.201000+00:00** and passed **106 unique questions**, covering **108 case occurrences** and **355 expected positive source-target checks**, representing **352 distinct question/target pairs**.
+
+It recorded **8265 HTTP requests** and **60,985,809 response bytes**. The largest evidence response was **7,469 bytes** (8,192-byte ceiling).
+
+- Graph producer commit: `2e12f20cfd20e62a67197e7aade4ea612b873684`.
+- Graph SHA-256: `ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426`.
+- Engine identifier: `urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42`.
+- Local verifier Worker SHA-256: `c5cf076b16e254657396047636709720931fcfc5220c46f8ffdbfa25982ddaa1` (local build identity; not remote attestation).
+
+Pinned inputs: [exact recorded receipt](https://github.com/chris-page-gov/okf-dwp/blob/9e60e7385143fb389084d308bbe1e6d13b3af352/validation/graph-evidence/v0.8.0/sdk/attempt-01/summary.json) · [exact recorded receipt](https://github.com/chris-page-gov/okf-dwp/blob/9e60e7385143fb389084d308bbe1e6d13b3af352/validation/graph-evidence/v0.8.0/sdk/attempt-01/plan.json) · [exact recorded receipt](https://github.com/chris-page-gov/okf-dwp/blob/9e60e7385143fb389084d308bbe1e6d13b3af352/validation/graph-evidence/v0.8.0/sdk/attempt-01/wire.json).
+
+The pinned verifier labels this as a public-mode SDK run and records the `/graph/mcp` route under its fixed-origin contract. It is a software test client, not the native plugin host.
+
+Passed checks included package identity, expected targets and paths, source-text hashes, open obligations, no truncation and the full HTTP envelope limit.
+
+The recorded retrieval gates do not establish legal sufficiency, entitlement correctness, human accessibility review, specialist approval or a correct answer.
 
 ## Native plugin host observation
 

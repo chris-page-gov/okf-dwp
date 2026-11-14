@@ -17,9 +17,11 @@ is at most 8,192 bytes. There are no assembly omissions in this run.
 The [persona coverage ledger](../evaluation/retrieval-gate/persona-coverage.json)
 covers all eight authored personas and all 21 declared interest areas. The
 75-case protocol contains 62 positive retrieval cases, ten boundary controls,
-two UI checks and one integrity check. The original 40 question occurrences are
-preserved. Five underspecified prompts retain their original wording as boundary
-controls and have separately documented benefit-framed positive pairs. Their
+two UI checks and one integrity check. All original 40 staff question occurrences
+remain positive retrieval cases with unchanged wording and targets. Five broad
+supplementary stage-2 prompts retain their initial wording as boundary controls.
+Four have separately documented benefit-framed positive pairs; `stage2-005`
+remains boundary-only. Their
 declared source targets have not been dropped. UI and specialist checks retain
 their own pending status rather than being counted as successful retrieval.
 
@@ -166,7 +168,9 @@ not by itself establish that the source is absent from the acquired corpus.
 
 The preserved 203 obligations comprise 43 evidence-closure gaps and 40 each for
 applicability, legal version, specialist review and question scope. Successful
-source retrieval does not silently close them. The statutory catalogue crosswalk
+source retrieval does not silently close them. The 43 evidence-closure gaps
+record unverified completeness of the required evidence chain; they do not
+establish that 43 source passages are missing from the corpus. The statutory catalogue crosswalk
 is a separate source-identity aid; metadata alone supplies no provision body,
 current-law assurance or case law.
 
