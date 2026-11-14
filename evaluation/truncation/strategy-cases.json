@@ -1,0 +1,23 @@
+{
+  "schema": "okf-dwp-truncation-strategy-protocol.v1",
+  "purpose": "Separate assembly bytes, graph fan-out, semantic alias resolution and missing-rule discovery without changing frozen outputs.",
+  "cases": [
+    {"id": "baseline", "strategy": "Original frozen natural-language question", "original": true, "expected_targets": [true, false, false, false]},
+    {"id": "small-bytes", "strategy": "Reduce context to 32 KiB", "original": true, "budget": {"max_bytes": 32768}, "expected_targets": [false, false, false, false]},
+    {"id": "medium-bytes", "strategy": "Reduce context to 128 KiB", "original": true, "budget": {"max_bytes": 131072}, "expected_targets": [true, false, false, false]},
+    {"id": "shallow", "strategy": "Limit graph traversal to one hop", "original": true, "budget": {"max_depth": 1}, "expected_targets": [true, false, false, false]},
+    {"id": "zero-depth", "strategy": "Retain lexical evidence seeds without graph hops", "original": true, "budget": {"max_depth": 0}, "expected_targets": [true, false, false, false]},
+    {"id": "without-rate", "strategy": "Counterfactual: remove ambiguous generic rate alias", "original": true, "remove_generic_rate_alias": true, "expected_targets": [true, false, false, false]},
+    {"id": "qualification", "strategy": "Split qualification dimension", "question": "Universal Credit disabled child addition highest DLA care component", "expected_targets": [true, false, false, false]},
+    {"id": "effective-date", "strategy": "Split ordinary-language effective-date dimension", "question": "Universal Credit DLA child award reported late effective date assessment period", "expected_targets": [false, false, false, false]},
+    {"id": "expert-control", "strategy": "Locator-bearing positive retrieval control", "question": "Universal Credit relevant benefit supersession A4361 DLA disabled child addition", "expected_targets": [true, true, false, true]},
+    {"id": "plain-paraphrase", "strategy": "Ordinary-language paraphrase", "question": "My child's DLA was increased retrospectively but I told UC much later. When should the extra disabled-child amount start?", "expected_targets": [true, true, false, false]},
+    {"id": "pure-dla-control", "strategy": "DLA qualification-only negative control", "question": "What are the DLA care component qualifying conditions for a child?", "expected_targets": [true, false, false, false]},
+    {"id": "bridge-other-benefits", "strategy": "Specialist vocabulary without locator", "question": "Universal Credit relevant benefit supersession award of other benefits", "expected_targets": [false, false, false, false]},
+    {"id": "bridge-effective-date", "strategy": "Specialist vocabulary with timing dimension", "question": "UC relevant benefit supersession effective date assessment period", "expected_targets": [false, false, true, false]},
+    {"id": "bridge-dla-child", "strategy": "Specialist vocabulary with benefit scope", "question": "Universal Credit relevant benefit supersession DLA child addition", "expected_targets": [false, false, false, false]},
+    {"id": "literal-heading", "strategy": "Compact source-heading query without paragraph locator", "question": "UC and award of other benefits", "expected_targets": [false, false, false, true]},
+    {"id": "literal-heading-timing", "strategy": "Source heading and timing vocabulary without paragraph locator", "question": "UC supersession award of other benefits first day assessment period", "expected_targets": [false, false, false, true]},
+    {"id": "specialist-rate", "strategy": "Specialist rate-change phrase also triggers generic rate concept", "question": "UC relevant benefit alteration in rate", "expected_targets": [false, false, false, true]}
+  ]
+}

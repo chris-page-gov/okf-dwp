@@ -493,11 +493,33 @@ jobs:
           uv run --locked --project tools/learning-site python -m unittest discover -s scripts -p test_workbench_publication.py
           uv run --locked --project tools/learning-site python scripts/build_learning_site.py --commit "$GITHUB_SHA" --output "$RUNNER_TEMP/workbench-site"
 
+  current_explorer_validation:
+    # Additive consumer compatibility never rewrites the frozen replay pins.
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      EXPLORER_CURRENT_COMMIT: 40e659408485a7dfa0e8cb51ab27c1b0f890bc3c
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '26.7.0'
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: chris-page-gov/okf-explorer
+          ref: ${{ env.EXPLORER_CURRENT_COMMIT }}
+          path: .ci/okf-explorer-current
+          persist-credentials: false
+      - name: Reject changed evidence delivery and corpus bindings
+        run: node --test scripts/test_current_explorer_compatibility.mjs
+      - name: Check current consumer APIs and bounded exact delivery offline
+        run: node scripts/check_current_explorer_compatibility.mjs --explorer-root .ci/okf-explorer-current
+
   validate:
     # Preserve the existing protected check name and fail for skipped,
     # cancelled or failed prerequisite jobs, including setup failures.
     if: ${{ always() }}
-    needs: [legacy_validation, structured_validation, workbench_validation]
+    needs: [legacy_validation, structured_validation, workbench_validation, current_explorer_validation]
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -506,7 +528,9 @@ jobs:
           LEGACY_RESULT: ${{ needs.legacy_validation.result }}
           STRUCTURED_RESULT: ${{ needs.structured_validation.result }}
           WORKBENCH_RESULT: ${{ needs.workbench_validation.result }}
+          CURRENT_EXPLORER_RESULT: ${{ needs.current_explorer_validation.result }}
         run: |
           test "$LEGACY_RESULT" = success
           test "$STRUCTURED_RESULT" = success
           test "$WORKBENCH_RESULT" = success
+          test "$CURRENT_EXPLORER_RESULT" = success
