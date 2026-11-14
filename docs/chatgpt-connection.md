@@ -2,6 +2,12 @@
 
 [Learning path](learning-path.md) · [Recorded service status](service-publication.md) · [Backlog](backlog.md)
 
+For the additive November graph connection, start with
+[Read graph-guided evidence in small parts](graph-evidence-connection.md).
+It uses `plan_okf_evidence` and `read_okf_planned_evidence` at `/mcp`, with
+separate [deployment, SDK and native client observations](graph-service-publication.md).
+The three-tool `/okf/mcp` instructions below preserve the historical connection.
+
 **An available service is not proof that a particular chat can call it.** A
 plugin connects ChatGPT to tools. A tool is a named operation the AI can request;
 its **schema** defines the accepted inputs. Each conversation must have the

@@ -2421,7 +2421,10 @@
         "scripts/build_service_publication.py",
         "scripts/test_service_publication.py",
         "scripts/workbench_publication.py",
-        "scripts/test_workbench_publication.py"
+        "scripts/test_workbench_publication.py",
+        "evaluation/graph-service-publication.json",
+        "scripts/build_graph_service_publication.py",
+        "scripts/test_graph_service_publication.py"
       ],
       "command_ids": [
         "diff-check",
@@ -2435,7 +2438,10 @@
         "service-publication-build",
         "service-publication-check",
         "service-publication-controls",
-        "workbench-publication-controls"
+        "workbench-publication-controls",
+        "graph-service-publication-build",
+        "graph-service-publication-check",
+        "graph-service-publication-controls"
       ]
     },
     {
@@ -2659,7 +2665,10 @@
         "scripts/build_service_publication.py",
         "scripts/test_service_publication.py",
         "profiles/manual-guide/**",
-        "profiles/pdf-structure/**"
+        "profiles/pdf-structure/**",
+        "evaluation/graph-service-publication.json",
+        "scripts/build_graph_service_publication.py",
+        "scripts/test_graph_service_publication.py"
       ],
       "command_ids": [
         "private-input-check",
@@ -2682,7 +2691,10 @@
         "service-publication-build",
         "service-publication-check",
         "service-publication-controls",
-        "frozen-reading-release-check"
+        "frozen-reading-release-check",
+        "graph-service-publication-build",
+        "graph-service-publication-check",
+        "graph-service-publication-controls"
       ]
     },
     {
@@ -4916,6 +4928,48 @@
         ],
         "command": "uv run --locked python scripts/check_reading_help_release.py --root . --manifest evaluation/reading-help-rollout/release-20260927/manifest.json --frozen-contracts-commit 77ef16047415ee48dcb93b80adf1ba057ea00d9b",
         "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "graph-service-publication-build",
+        "kind": "build",
+        "planes": [
+          "documentation",
+          "release"
+        ],
+        "command": "uv run --locked python scripts/build_graph_service_publication.py",
+        "source": "docs/graph-service-publication.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "graph-service-publication-check",
+        "kind": "check",
+        "planes": [
+          "documentation",
+          "release"
+        ],
+        "command": "uv run --locked python scripts/build_graph_service_publication.py --check",
+        "source": "docs/graph-service-publication.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "graph-service-publication-controls",
+        "kind": "test",
+        "planes": [
+          "documentation",
+          "release"
+        ],
+        "command": "uv run --locked python -m unittest discover -s scripts -p test_graph_service_publication.py",
+        "source": "docs/graph-service-publication.md",
         "review_status": "unreviewed",
         "network": "none",
         "mutates": "none",

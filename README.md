@@ -24,6 +24,8 @@ explains the runnable offline inspector, source-bound recovery queries and exact
 progressive delivery. The additive graph candidate reaches **263/263 declared
 persona targets**, **35/35 original custody targets** and **4/4 UC targets**.
 It covers all eight authored personas and their 21 interest areas in 75 cases.
+The [persona coverage review](docs/persona-coverage-and-evidence-limits-2026-11-14.md)
+maps every interest area to its test types and remaining evidence gaps.
 A separate withheld wording trial reaches 45/45 targets and passes 12/12 negative
 controls. These are measured source-retrieval results, with full response
 envelopes at most 8 KiB. Public service and client acceptance remain separately
@@ -59,12 +61,13 @@ Use the **[latest recorded service publication status](docs/service-publication.
 for the selected deployment and SDK observations. This generated page is the shared
 status reference for DWP and Explorer; it does not claim real-time health.
 
-The latest retained successful observation selects **service 0.7.0**, DWP source
-`7eeded763042ddd0070f4fed834c6074149e8e2f` and context engine
-`d6930bbcddaab616deec002d9e6efff6e3aae953`. Its
-[recorded verification](validation/compact-delivery/v0.7.0/README.md) covers bounded
-delivery. The November producer candidate has its own offline receipts and is
-not an adopted service release.
+The [separate graph service status](docs/graph-service-publication.md) records
+the additive graph producer, public SDK checks and native client observations.
+Use the [bounded graph connection guide](docs/graph-evidence-connection.md) for
+its two-tool route. The legacy default source and engine remain separate;
+the [0.7.0 verification](validation/compact-delivery/v0.7.0/README.md) retains
+its dated scope. Consult the selected receipts before claiming that any newer
+source or client has been adopted.
 
 ### Dated observation: 21 September 2026
 

@@ -1,5 +1,10 @@
 # Ask OKF demonstration: recorded full-corpus journey
 
+For the additive November graph route, use the
+[bounded graph connection guide](graph-evidence-connection.md). Its
+[deployment, SDK and native client status](graph-service-publication.md) is
+recorded separately from the historical full-corpus journey below.
+
 [What changed](../CHANGELOG.md) · [Current work log](work-log-2026-09-19.md) · [Backlog](backlog.md)
 
 For the **[latest recorded service status](service-publication.md)**, use the

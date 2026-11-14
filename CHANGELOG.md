@@ -1,7 +1,26 @@
 # Changelog
 
+## Service 0.8.0 publication — 14 November 2026
+
+- Publish the reviewed bounded graph interface and retain the separate legacy
+  replay route. Record the exact tested Worker, pushed Site source and version 13
+  hosting identity after all required Explorer checks passed.
+- Verify all ten legacy source/engine combinations and two controls through the
+  public SDK: 12 cases, 135 requests, exact complete packages and no model calls.
+- Add independently pinned graph SDK and native client status. Keep native
+  acceptance pending when the available conversation lacks the graph tools;
+  a public SDK or landing-page check cannot substitute for that observation.
+- Add a source-research starter and a plain-English persona coverage review.
+  Preserve the original legal, source and specialist-review obligations.
+- Check the September release's service-selection binding at its immutable
+  baseline alongside its two historical contracts. Validate the current 0.8.0
+  selection separately; the frozen release manifest and other evidence stay strict.
+
 ## Context review candidate — 14 November 2026
 
+- Add a plain-English review mapping every projected persona and interest area
+  to test types, measured retrieval and the remaining policy, legal and human
+  accessibility evidence gaps.
 - Compile an additive source-bound graph with directed navigation repairs and
   compositional concept bridges. Preserve frozen source projections, original
   requirements and all 203 open obligations.

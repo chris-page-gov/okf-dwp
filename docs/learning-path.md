@@ -345,6 +345,12 @@ September capture does not turn an April publication into a September edition.
 
 ## 5. Connect an AI to the same evidence
 
+For the additive November graph route, use the
+[bounded graph connection guide](graph-evidence-connection.md) and inspect its
+[recorded deployment and client checks](graph-service-publication.md).
+Its two tools retrieve source plans and read them in small, verified parts.
+The three-tool connection described below retains the earlier release journey.
+
 **[MCP](glossary.md#api-mcp-and-webmcp)** is a protocol through which an AI client
 can discover and call a service's tools. The remote Ask OKF tools include
 `ask_okf` for a full package, `ask_okf_manifest` for a small catalogue, and

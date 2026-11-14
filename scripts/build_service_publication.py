@@ -305,6 +305,9 @@ def render(result):
              f"See the {evidence_link(selected['deployment'])}.", '',
              f"[Open the service]({ORIGIN}/) · [Monday walkthrough](monday-handover-2026-09-21.md) · "
              '[What Search, Ask OKF and an AI answer mean](learning-path.md)', '',
+             'The separate [graph service status](graph-service-publication.md) records graph retrieval, '
+             'public SDK verification and native client observations. Its producer and engine identities '
+             'are distinct from the legacy default source and context engine below.', '',
              '| Recorded identity | Value |', '| --- | --- |',
              f"| Service version | `{deployed['version']}` |", f'| DWP source commit | `{source}` |',
              f"| Deployed runtime commit | `{raw['runtime_commit']}` |",

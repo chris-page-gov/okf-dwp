@@ -1,0 +1,29 @@
+{
+  "schema": "okf-graph-native-availability.v1",
+  "status": "unavailable",
+  "observation_window": {
+    "started_at": "2026-11-14T19:40:19Z",
+    "completed_at": "2026-11-14T19:43:43Z"
+  },
+  "contexts_checked": [
+    "primary Codex task",
+    "fresh turn of the existing independent review agent"
+  ],
+  "requested_tools": [
+    "plan_okf_evidence",
+    "read_okf_planned_evidence"
+  ],
+  "available_ask_okf_tools": [
+    "ask_okf",
+    "ask_okf_manifest",
+    "read_okf_evidence"
+  ],
+  "native_graph_tool_calls": 0,
+  "connection_metadata": {
+    "mcp_url": "https://ask-okf.crpage.chatgpt.site/mcp",
+    "hosting_reports_mcp_enabled": true,
+    "installed_state": "Plugin Management reports were inconsistent; no installed or authenticated state is inferred."
+  },
+  "boundary": "No native graph invocation or no-truncation pass is claimed. Public SDK and browser observations are separate. Private plugin, broker, account and authentication metadata are excluded.",
+  "next_action": "Connect or refresh the Site-provided graph plugin in the intended signed-in account, confirm both graph tools in the conversation, then run the representative source-text check."
+}

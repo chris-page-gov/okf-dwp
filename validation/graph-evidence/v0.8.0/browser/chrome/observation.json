@@ -1,0 +1,42 @@
+{
+  "schema": "okf-graph-public-browser-observation.v1",
+  "classification": "actual-public-browser",
+  "observed_at": "2026-11-14T19:44:34.518Z",
+  "browser": {
+    "channel": "Chrome",
+    "version": "157.0.8103.51",
+    "headless": true
+  },
+  "landing": {
+    "url": "https://ask-okf.crpage.chatgpt.site/",
+    "http_status": 200,
+    "title": "Ask OKF \u2014 inspect the evidence",
+    "bounded_graph_heading_visible": true,
+    "legacy_replay_heading_visible": true
+  },
+  "health": {
+    "url": "https://ask-okf.crpage.chatgpt.site/health",
+    "http_status": 200,
+    "service_version": "0.8.0",
+    "ready": true,
+    "legacy_source_commit": "7eeded763042ddd0070f4fed834c6074149e8e2f",
+    "graph_sha256": "ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426",
+    "graph_engine_id": "urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42",
+    "graph_publication_status": "pinned"
+  },
+  "fresh_context_page_errors": 0,
+  "fresh_context_console_errors": 0,
+  "screenshot": {
+    "path": "landing.png",
+    "bytes": 526883,
+    "sha256": "4b46f9bc5bbdcf6b59ddaa10f6881615f3eebd92c3f8756e30fadfd2d056d53b"
+  },
+  "earlier_probe": {
+    "observation": "An injected in-page fetch of /health failed. Its cause was not established by that probe. A subsequent top-level health navigation and the fresh Chrome context both succeeded.",
+    "retained_as": "separate unsuccessful probe; excluded from the fresh-context zero-error count"
+  },
+  "limitations": [
+    "This is a public landing-page and top-level health observation, not a native MCP tool call or full accessibility review.",
+    "Health reports service identities; it does not independently attest hosted Worker bytes."
+  ]
+}
