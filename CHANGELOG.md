@@ -23,6 +23,12 @@
 - Pin CI and learning-site runners to Ubuntu 24.04 so Python 3.12.11 remains
   available after `ubuntu-latest` moved to Ubuntu 26.04. Required check names,
   dependencies and the locked Python version remain unchanged.
+- Correct the statutory crosswalk's file-inventory labels, check out its exact
+  catalogue shards in CI and validate the historical reading-help contracts
+  against their immutable baseline while all other evidence bindings stay strict.
+- Observe the assisted-support capital-source journey in Chrome and Edge using
+  keyboard search and expansion, exact paragraph 84351 and the original PDF
+  page locator. Retain human assistive-technology acceptance as a separate gap.
 - Separate the reported truncation into question routing, retrieval limits,
   whole-item assembly omissions and host delivery; preserve the exact original
   failure and existing annotated release tag.

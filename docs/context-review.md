@@ -229,6 +229,20 @@ historical prerequisite jobs. The protected aggregate remains `validate`.
 
 ## Publication and remaining limits
 
+The [capital-source persona observation](../evaluation/retrieval-gate/browser/capital-persona-observation.json)
+adds a dedicated automated check for `stage2-006` and
+`unhinted-accessible-reading`. In both installed browsers, keyboard search and
+Enter expansion reach exact source record `page/84/0035`, retain paragraph
+84351, expose the official PDF's page 35 locator and show the independent,
+unreviewed and extraction labels in text. Its
+[capital inspector](../evaluation/retrieval-gate/capital-review/index.html)
+uses the retained benefit-framed research query. Human assistive-technology
+acceptance remains not run. The
+[persona mutation controls](../evaluation/retrieval-gate/persona-mutation-controls.txt)
+also exercise altered PDF, literal, source-context and provenance bindings for
+the integrity area. These supplemental checks do not silently regrade the
+earlier retrieval report's separately pending UI and integrity fields.
+
 The [local browser observation](../evaluation/retrieval-gate/browser/observation.json)
 binds the generated report and HTML. Installed Chrome 157.0.8103.51 and Edge
 157.0.4341.46 passed five-context selection, exact F1120 search, source expansion,
@@ -236,6 +250,14 @@ keyboard radio navigation, empty search state and 390-pixel layout checks with
 no console warnings or errors. Retained screenshots show desktop and mobile
 layouts. These headless observations do not certify comprehensive accessibility,
 a public deployment or the intended connected client.
+
+The historical reading-help release binds the two September contracts. Its
+checker now accepts an explicit `--frozen-contracts-commit` solely for those
+two files, validates their original byte counts and hashes against Git and
+continues to validate every other source and receipt binding strictly. Current
+contracts have their own mandatory check. This preserves the historical
+release manifest when a later candidate changes its contracts; no historical
+receipt or source projection is rewritten.
 
 The existing tag `demo-2026-09-30-reading-help-v2` already identifies baseline
 `77ef16047415ee48dcb93b80adf1ba057ea00d9b`. It has not been moved or duplicated.

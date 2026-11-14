@@ -552,6 +552,21 @@
         "path": "evaluation/retrieval-gate/withheld/attempt-02/run-summary.json",
         "role": "semantic-validation",
         "generated": true
+      },
+      {
+        "path": "evaluation/retrieval-gate/capital-review/report.json",
+        "role": "semantic-validation",
+        "generated": true
+      },
+      {
+        "path": "evaluation/retrieval-gate/capital-review/index.html",
+        "role": "semantic-validation",
+        "generated": true
+      },
+      {
+        "path": "evaluation/retrieval-gate/capital-review/contexts/*.json",
+        "role": "semantic-validation",
+        "generated": true
       }
     ],
     "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
@@ -634,7 +649,8 @@
       "uv run --locked python scripts/build_evidence_route_graph.py",
       "uv run --locked python scripts/build_persona_evaluation.py",
       "node scripts/evaluate_graph_retrieval.mjs --explorer-root .ci/okf-explorer-current --output evaluation/retrieval-gate/graph-evaluation.json",
-      "uv run --locked python scripts/build_legislation_crosswalk.py --legislation-root .ci/okf-uk-legislation"
+      "uv run --locked python scripts/build_legislation_crosswalk.py --legislation-root .ci/okf-uk-legislation",
+      "node scripts/run_context_review.mjs --explorer-root .ci/okf-explorer-current --question 'For State Pension Credit capital disregards, trace the relevant DWP decision-maker guidance entry point, the legal references visible on its page and the dependencies still unresolved.' --output-dir evaluation/retrieval-gate/capital-review"
     ],
     "check": [
       "uv run --locked python scripts/check_semantic_contract.py",
@@ -706,7 +722,9 @@
       "uv run --locked python scripts/build_legislation_crosswalk.py --legislation-root .ci/okf-uk-legislation --check",
       "uv run --locked python scripts/test_legislation_crosswalk.py --legislation-root .ci/okf-uk-legislation",
       "OKF_EXPLORER_ROOT=.ci/okf-explorer-current node evaluation/retrieval-gate/withheld/attempt-02/run.mjs",
-      "OKF_EXPLORER_ROOT=.ci/okf-explorer-current node --test scripts/test_replay_frozen_wording.mjs"
+      "OKF_EXPLORER_ROOT=.ci/okf-explorer-current node --test scripts/test_replay_frozen_wording.mjs",
+      "node scripts/run_context_review.mjs --explorer-root .ci/okf-explorer-current --question 'For State Pension Credit capital disregards, trace the relevant DWP decision-maker guidance entry point, the legal references visible on its page and the dependencies still unresolved.' --output-dir evaluation/retrieval-gate/capital-review --check",
+      "uv run --locked python scripts/check_reading_help_release.py --root . --manifest evaluation/reading-help-rollout/release-20260927/manifest.json --frozen-contracts-commit 77ef16047415ee48dcb93b80adf1ba057ea00d9b"
     ]
   },
   "reader": {

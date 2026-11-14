@@ -2174,6 +2174,18 @@
           "legislation-crosswalk-check",
           "legislation-crosswalk-controls"
         ]
+      },
+      {
+        "path": "evaluation/retrieval-gate/capital-review/**",
+        "role": "explorer-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "capital-inspector-build"
+        ],
+        "check_command_ids": [
+          "capital-inspector-check"
+        ]
       }
     ]
   },
@@ -2609,7 +2621,9 @@
         "legislation-crosswalk-check",
         "legislation-crosswalk-controls",
         "reviewed-wording-regression",
-        "frozen-wording-controls"
+        "frozen-wording-controls",
+        "capital-inspector-build",
+        "capital-inspector-check"
       ]
     },
     {
@@ -2667,7 +2681,8 @@
         "monday-compact-critique-integrity",
         "service-publication-build",
         "service-publication-check",
-        "service-publication-controls"
+        "service-publication-controls",
+        "frozen-reading-release-check"
       ]
     },
     {
@@ -4866,6 +4881,45 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 10
+      },
+      {
+        "id": "capital-inspector-build",
+        "kind": "build",
+        "planes": [
+          "runtime"
+        ],
+        "command": "node scripts/run_context_review.mjs --explorer-root .ci/okf-explorer-current --question 'For State Pension Credit capital disregards, trace the relevant DWP decision-maker guidance entry point, the legal references visible on its page and the dependencies still unresolved.' --output-dir evaluation/retrieval-gate/capital-review",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "capital-inspector-check",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "node scripts/run_context_review.mjs --explorer-root .ci/okf-explorer-current --question 'For State Pension Credit capital disregards, trace the relevant DWP decision-maker guidance entry point, the legal references visible on its page and the dependencies still unresolved.' --output-dir evaluation/retrieval-gate/capital-review --check",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "frozen-reading-release-check",
+        "kind": "check",
+        "planes": [
+          "release"
+        ],
+        "command": "uv run --locked python scripts/check_reading_help_release.py --root . --manifest evaluation/reading-help-rollout/release-20260927/manifest.json --frozen-contracts-commit 77ef16047415ee48dcb93b80adf1ba057ea00d9b",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
       }
     ]
   },

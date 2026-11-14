@@ -45,6 +45,12 @@ class LegislationCrosswalkTests(unittest.TestCase):
         self.assertTrue(report['identities']['catalogue_manifest']['verified_by_bundle_checksum'])
         self.assertTrue(all(row['matches_immutable_git_object']
                             for row in report['identities']['catalogue_selected_files']))
+        self.assertTrue(all(row['path'].startswith('bundle/')
+                            and row['git_commit'] == report['identities']['legislation_commit']
+                            for row in report['identities']['catalogue_selected_files']))
+        self.assertTrue(report['identities']['dwp_source_files'])
+        self.assertTrue(all(row['git_commit'] == report['identities']['dwp_commit']
+                            for row in report['identities']['dwp_source_files']))
 
     def test_work_metadata_is_not_provision_body(self):
         work = next(row for row in self.report['works']
