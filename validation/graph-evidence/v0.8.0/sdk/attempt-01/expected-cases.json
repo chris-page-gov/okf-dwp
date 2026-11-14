@@ -1,0 +1,1765 @@
+{
+  "schema": "okf-graph-archive-case-bindings.v1",
+  "producer_commit": "2e12f20cfd20e62a67197e7aade4ea612b873684",
+  "graph_sha256": "ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426",
+  "engine_id": "urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42",
+  "verifier_provenance": {
+    "repository_git_head": "e6af80e6759c1d7b59dbfc9b9cf31a9c48ad62f1",
+    "repository_worktree_clean": true,
+    "verifier_module_sha256": "53899b238ce43910cb8f11440fdf33b6baada23a5ac82be8e2ca34bad913e2ef",
+    "verifier_git_head_sha256": "53899b238ce43910cb8f11440fdf33b6baada23a5ac82be8e2ca34bad913e2ef",
+    "verifier_matches_git_head": true,
+    "package_lock_sha256": "762e1437b2530f8251da62788c7d63eb409815c7f9d1024f8c20f822a7b6448a",
+    "package_lock_git_head_sha256": "762e1437b2530f8251da62788c7d63eb409815c7f9d1024f8c20f822a7b6448a",
+    "package_lock_matches_git_head": true,
+    "local_worker_sha256": "c5cf076b16e254657396047636709720931fcfc5220c46f8ffdbfa25982ddaa1",
+    "build_receipt_sha256": "64e7f6f345491a64ee7958dfd6744ca3310816e746a0e2b19631112c3713b47b",
+    "build_receipt_worker_sha256": "c5cf076b16e254657396047636709720931fcfc5220c46f8ffdbfa25982ddaa1",
+    "worker_matches_build_receipt": true,
+    "build_receipt_package_lock_sha256": "762e1437b2530f8251da62788c7d63eb409815c7f9d1024f8c20f822a7b6448a",
+    "package_lock_matches_build_receipt": true,
+    "build_receipt_verifier_sha256": "53899b238ce43910cb8f11440fdf33b6baada23a5ac82be8e2ca34bad913e2ef",
+    "verifier_matches_build_receipt": true,
+    "build_receipt_status": "valid",
+    "build_receipt_input_file_count": 63,
+    "build_receipt_inputs_match_worktree": true,
+    "worker_hash_scope": "local dist/server/index.js only; not a remote deployment attestation",
+    "source_identity_status": "tracked-source-and-local-worker-match"
+  },
+  "cases": [
+    {
+      "question_sha256": "00d701d636f72762e0f1d44960f83dddefc884c83be8c6d20a6d14a791ca9131",
+      "case_id": "unhinted-age-first-payment",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0068",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0015"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0003": "e9384a7baa1bc5df6f0f2d74a6fde38f59676128e0043eab61174ef0311f4c5b",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0068": "f4f77eaa686605051418e609f2a448f7c48a60c73f060d6106dfe578744b0a43",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0011": "c87eaad5624b2684ff70e548cb582399e80b200e912fe6b47937657a1d7194fd",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0015": "f5f426f1bf08c0ff50e7441234ed0bc76397a2dbf434df9d8f81a4f54ff0198c"
+      },
+      "expected_path_count": 6,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "0417b8cdfe57daa0291146845ff1f57b1aa58ef8237e2f15169ddb56f0d864a1",
+      "case_id": "legacy-unknown-vocabulary",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "04beae4aeda2dae4fd300cfb732aaef9a3a1de8a883a0e16c280c88bb76de900",
+      "case_id": "unhinted-household-partner-change",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015": "3c97a680ad9014e99f75e863f64fe299d6f50bc5e476a4ed433543150f89f6ac",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020": "7b180a03e1223b3342815309993eb83ff72a1d74523509cf4a711e869d7376f1",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026": "fb85bf7a3bba8a29a887748211745fab47b6d5121676138942d6cf7e5e826335",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128": "3a5de8ac920cad738902274e91a354f78cc573bd0b27a0fbce574b5e4a3e8d68",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3"
+      },
+      "expected_path_count": 8,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "07f7779ac6440de54d4b594590128065efafb5ab26470dd22430fa9ffe08ab13",
+      "case_id": "staff-025",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch71/0117",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0001",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0003": "8dea9134f5667435284dffb9f77162ed78878405682241c1d422fdf5687766a7",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch71/0117": "d78e401eb330938d7c3475dc2f82914029c49d961df2dee337c4910652728b72",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0001": "f9dea680f5d1bdf2882902e865fbd2eca356dc294e102274cef50de3d444efe7",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011": "2e1dc492f4911a3f984b93baa21d4cb02fba726d41158d188441e91b2654a9f0"
+      },
+      "expected_path_count": 5,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "1010557c1a690f0b438ce648e8ffac416204bce826bb146c7ec0a1b5721bd963",
+      "case_id": "staff-004",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0001",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0015"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0001": "f9dea680f5d1bdf2882902e865fbd2eca356dc294e102274cef50de3d444efe7",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0011": "c87eaad5624b2684ff70e548cb582399e80b200e912fe6b47937657a1d7194fd",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0015": "f5f426f1bf08c0ff50e7441234ed0bc76397a2dbf434df9d8f81a4f54ff0198c"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "1262a71d9d5e24d79c2adcdecc20fa03a96a108bc589d570aa4bac236eb9a7b4",
+      "case_id": "staff-021",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0059",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0062",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0064",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0066",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0044",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015": "3c97a680ad9014e99f75e863f64fe299d6f50bc5e476a4ed433543150f89f6ac",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0059": "5afef2085aab5c5f832f412f88a07e69beec10da73a5fce1cfecb070df2685fd",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060": "b3b7fa95eb1521e90091569f5fcf77ad3c2d4c16f5f1af1551e58b28b8e6362d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061": "5a0547f2e5fa050f0c08deafee5a76a884362d1aedd0cf42b842275139bf2eba",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0062": "2aa66b6e7627c73c358fc05cc99d8c099e5fabf4a9f13218c05db2650942a97d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063": "4b8882feb36c30b151d425c33469736dcf4e61f533be8e6ae7a452fbaa18bc25",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0064": "708b3f487d5d8d3a89bf97442087169574d5ce18944aa40fe73c616c0d0b132a",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065": "b51521d425d3f428ec361c0bd860e248c89d96ed7b6f04ca99db95c6ccac7bc9",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0066": "68b73958c5e4b5aaab9d643a2fb714a1f8600fda1eb5bbbbf168e40e40476d8c",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067": "e8a57d5ac46e61f0d3dc8bdd3367b588b9a65182c641e66fb905cb35dfd6447e",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068": "88a60dfc5e3c1e39c77eb4ee08e13f8dac2097fdca7cd04b226e29f095c3d3dc",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0044": "3d893d36b217db6208e7d73d665019a3c8a273d0fa416444d4883d420c33e6f1",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002": "c13ec589896ce784027f54745896e8087a6f3a8bc1fa0e8c3a825b8a14ea3ff3"
+      },
+      "expected_path_count": 28,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "147f96888f4709d7c3aba9a535116a04cbe07448084e1339edf6d3d3729a7a06",
+      "case_id": "staff-036",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011": "2e1dc492f4911a3f984b93baa21d4cb02fba726d41158d188441e91b2654a9f0"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "17bdb138cd3f0640fc5add36eb1ebd2282c35a2b88d0d79d3775a2c597f4be29",
+      "case_id": "legacy-hospital",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "1b30852f4940fc17be51831b4a8aa6634fad696c60dbb9d4cd9898adfd446e97",
+      "case_id": "unhinted-operational-proof",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "20280d0bb6ef72e9a0937ae4291dbe112f98b379fe1c09704d428f37158af8ec",
+      "case_id": "recovery-retrospective-paraphrase",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1": "7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6": "a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4"
+      },
+      "expected_path_count": 0,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "214d21f943a7f2bd243d3a1838c7f54231ef1af84f6d2919dfd85622d61ebf83",
+      "case_id": "staff-019",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035": "e46f68c7eb118a7ea16618740f519ccf78d0afd8b38c5d8185e81ed28a669440",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128": "3a5de8ac920cad738902274e91a354f78cc573bd0b27a0fbce574b5e4a3e8d68",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030": "4314a87f93de3485784722ae71572897449f41d33fbbab7bd397bf3154186c54"
+      },
+      "expected_path_count": 5,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "24f11ef15fd4301aca44c174af20bbc705d9a651a24ffee8e7a1428352519cd6",
+      "case_id": "staff-026",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d"
+      },
+      "expected_path_count": 1,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "24f11ef15fd4301aca44c174af20bbc705d9a651a24ffee8e7a1428352519cd6",
+      "case_id": "staff-033",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d"
+      },
+      "expected_path_count": 1,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "26fc8817696d4bc5ff965f7a8ccefe0a6aaaff16a8439d7e7b708e4b11ac3c1c",
+      "case_id": "staff-017",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015": "3c97a680ad9014e99f75e863f64fe299d6f50bc5e476a4ed433543150f89f6ac",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020": "7b180a03e1223b3342815309993eb83ff72a1d74523509cf4a711e869d7376f1",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026": "fb85bf7a3bba8a29a887748211745fab47b6d5121676138942d6cf7e5e826335",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128": "3a5de8ac920cad738902274e91a354f78cc573bd0b27a0fbce574b5e4a3e8d68",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3"
+      },
+      "expected_path_count": 7,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "27703aca61cd0837d19bb71dd4a1f5f8fae1fef2f1d5b5ac8aa51e8d4fc0d194",
+      "case_id": "unhinted-absence-permanent",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part1/0116",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0008"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part1/0116": "b56c472e93beadef43a70c42c71fc2eca8123efb315a3e1b0b67570b05b8c891",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0008": "66d8ef3b312b9e08c1dd4fdafd26f54a5224a8bc688b06a5bccef096fb79f6dd"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "2b4a7352770037f0702bf218acd2d50558fece4a407da3594ec616b6c04d8361",
+      "case_id": "staff-029",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0042",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0003": "8dea9134f5667435284dffb9f77162ed78878405682241c1d422fdf5687766a7",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0042": "e4b115ed254feb12b5478a467117fa9e004f4d5768983d271bbf830934c20bf3",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011": "2e1dc492f4911a3f984b93baa21d4cb02fba726d41158d188441e91b2654a9f0"
+      },
+      "expected_path_count": 6,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "33df714f957199eb8759ef7f5d9f228c6dd64337268ce87638f27da8a66852bc",
+      "case_id": "staff-005",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0001",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0001": "f9dea680f5d1bdf2882902e865fbd2eca356dc294e102274cef50de3d444efe7",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030": "4314a87f93de3485784722ae71572897449f41d33fbbab7bd397bf3154186c54",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003": "97f524ef78657a456deb3a2712b72bc34e933c4624b2102f2961bb21aecbb999"
+      },
+      "expected_path_count": 5,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "36b556907ea994ccb2a40ec2ccecb14f7ff60843d1e8de285cf38de4b7d6660f",
+      "case_id": "staff-039",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0027",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003": "97f524ef78657a456deb3a2712b72bc34e933c4624b2102f2961bb21aecbb999",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004": "da32faef31e491cbc565d0d34edba35e594321f26361ac8f6822a7c3e12b9edb",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0027": "8d56be6275d60ebc6d50c043d765b563aa9360f979cd7157a537aa49c803af70",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011": "593c872bf5e7db6e942244c673d499ab16ca30e727f2ff7415a37b4850026818",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011": "2e1dc492f4911a3f984b93baa21d4cb02fba726d41158d188441e91b2654a9f0"
+      },
+      "expected_path_count": 5,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "3769a361119d22871109be121fed0b88a0fac60e533fefaa31b76d383b92f1d3",
+      "case_id": "staff-035",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011": "2e1dc492f4911a3f984b93baa21d4cb02fba726d41158d188441e91b2654a9f0",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004": "da32faef31e491cbc565d0d34edba35e594321f26361ac8f6822a7c3e12b9edb"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "37f169bd12095be1bcfafb17664853f1aea310c0a7de01661e7244db78d8a39a",
+      "case_id": "staff-006",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128": "3a5de8ac920cad738902274e91a354f78cc573bd0b27a0fbce574b5e4a3e8d68",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51"
+      },
+      "expected_path_count": 5,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "39cb778865711b8fee6cd46305645d4620c0afe83964ce6aeaa789a7f55a7acf",
+      "case_id": "withheld-holdout-n02",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "3c93f00521d9f4ca0801312feefd3fed65c9a00dae75e7f9aefd45135758ae5c",
+      "case_id": "unhinted-pc-inputs-separate",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035": "e46f68c7eb118a7ea16618740f519ccf78d0afd8b38c5d8185e81ed28a669440",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128": "3a5de8ac920cad738902274e91a354f78cc573bd0b27a0fbce574b5e4a3e8d68",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030": "4314a87f93de3485784722ae71572897449f41d33fbbab7bd397bf3154186c54"
+      },
+      "expected_path_count": 11,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "3d4c9c3f2e23f81e37bd00c5d6cdf507a55d043c61d1c3ebaf13aa4810d75b54",
+      "case_id": "unhinted-rate-date-v-capture",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0059",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0062",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0064",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0066",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0059": "5afef2085aab5c5f832f412f88a07e69beec10da73a5fce1cfecb070df2685fd",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060": "b3b7fa95eb1521e90091569f5fcf77ad3c2d4c16f5f1af1551e58b28b8e6362d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061": "5a0547f2e5fa050f0c08deafee5a76a884362d1aedd0cf42b842275139bf2eba",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0062": "2aa66b6e7627c73c358fc05cc99d8c099e5fabf4a9f13218c05db2650942a97d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063": "4b8882feb36c30b151d425c33469736dcf4e61f533be8e6ae7a452fbaa18bc25",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0064": "708b3f487d5d8d3a89bf97442087169574d5ce18944aa40fe73c616c0d0b132a",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065": "b51521d425d3f428ec361c0bd860e248c89d96ed7b6f04ca99db95c6ccac7bc9",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0066": "68b73958c5e4b5aaab9d643a2fb714a1f8600fda1eb5bbbbf168e40e40476d8c",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067": "e8a57d5ac46e61f0d3dc8bdd3367b588b9a65182c641e66fb905cb35dfd6447e",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068": "88a60dfc5e3c1e39c77eb4ee08e13f8dac2097fdca7cd04b226e29f095c3d3dc",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002": "c13ec589896ce784027f54745896e8087a6f3a8bc1fa0e8c3a825b8a14ea3ff3"
+      },
+      "expected_path_count": 11,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "3ef719e2690f4dd1bfc9b729483ee46f0610aa54fc041617e1664b3cc3a2f76c",
+      "case_id": "staff-032",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0003"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0003": "e9384a7baa1bc5df6f0f2d74a6fde38f59676128e0043eab61174ef0311f4c5b"
+      },
+      "expected_path_count": 2,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "4002b3908ee6a747240804c623c7e25872baae05a0c47f7267eb3c4f26be2967",
+      "case_id": "withheld-holdout-p07",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015": "3c97a680ad9014e99f75e863f64fe299d6f50bc5e476a4ed433543150f89f6ac",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020": "7b180a03e1223b3342815309993eb83ff72a1d74523509cf4a711e869d7376f1",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026": "fb85bf7a3bba8a29a887748211745fab47b6d5121676138942d6cf7e5e826335",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128": "3a5de8ac920cad738902274e91a354f78cc573bd0b27a0fbce574b5e4a3e8d68",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3"
+      },
+      "expected_path_count": 7,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "4080ddd3e8d8353dfbde4719c473da5c3307fc15378fa62f58e0a2c2f62f8f2d",
+      "case_id": "withheld-holdout-p01",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part1/0116",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0008"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part1/0116": "b56c472e93beadef43a70c42c71fc2eca8123efb315a3e1b0b67570b05b8c891",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0008": "66d8ef3b312b9e08c1dd4fdafd26f54a5224a8bc688b06a5bccef096fb79f6dd"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "409b52a85b9356e5ea51112095e3baa7ee76e4205a4e8546c03a1c64ba39d658",
+      "case_id": "stage2-003",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "413ac8401822b3bb98df54e6c5ad9f667d8dd22e0717f81f5ce7db214fb12dcf",
+      "case_id": "stage2-001",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "4605a1cc0827478ae5e64bcc54fa50d8466800282fd7c96196cf83b575c935a7",
+      "case_id": "unhinted-pc-legal-hierarchy",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0035"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0035": "18679de6e6a1cfefe05d06a134e79ce387a4420a578e78748034c8ced8f62768"
+      },
+      "expected_path_count": 1,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "482f5c5cf08337980056722127f283ae2fbf9f7f0b8060b4809e35c2168a78ac",
+      "case_id": "staff-020",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015": "3c97a680ad9014e99f75e863f64fe299d6f50bc5e476a4ed433543150f89f6ac",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026": "fb85bf7a3bba8a29a887748211745fab47b6d5121676138942d6cf7e5e826335",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3"
+      },
+      "expected_path_count": 5,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "48f3c41fa3ab34097c5141cf972be69b6fc82e580cbd90cb6eed99d8d1224c65",
+      "case_id": "staff-018",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025": "a1e2462f65812d22a647562270b9ebb3a3d64c4c76a205bd5cf6d243e607b193",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020": "7b180a03e1223b3342815309993eb83ff72a1d74523509cf4a711e869d7376f1",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026": "fb85bf7a3bba8a29a887748211745fab47b6d5121676138942d6cf7e5e826335",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058": "54d1aadd860c1716513097da3470a231fa41c84f651850dd404fb9b58ee80a6b"
+      },
+      "expected_path_count": 4,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "4ad73974d7f152607848496ef288c4cb22016dc868e3b7f9b1055996975ebc20",
+      "case_id": "withheld-holdout-p11",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0007",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0007": "c29b3ae10c0d0c2470155e6b7d2f4a3732fd07ec9d59e7add5b9a51f4158e1fc",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003": "97f524ef78657a456deb3a2712b72bc34e933c4624b2102f2961bb21aecbb999",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004": "da32faef31e491cbc565d0d34edba35e594321f26361ac8f6822a7c3e12b9edb"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "4f7e0314f409ce03545148d976ce6a9e1184ebd81fa3ba07c6eca613e40a3c09",
+      "case_id": "stage2-001-pc-context",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0035"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0035": "18679de6e6a1cfefe05d06a134e79ce387a4420a578e78748034c8ced8f62768"
+      },
+      "expected_path_count": 1,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "4f8b7572979ac5c976456563ede9cbff373a8e50d695a0f71f87a44d826fa33e",
+      "case_id": "withheld-holdout-p05",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0059",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0062",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0064",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0066",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0059": "5afef2085aab5c5f832f412f88a07e69beec10da73a5fce1cfecb070df2685fd",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060": "b3b7fa95eb1521e90091569f5fcf77ad3c2d4c16f5f1af1551e58b28b8e6362d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061": "5a0547f2e5fa050f0c08deafee5a76a884362d1aedd0cf42b842275139bf2eba",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0062": "2aa66b6e7627c73c358fc05cc99d8c099e5fabf4a9f13218c05db2650942a97d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063": "4b8882feb36c30b151d425c33469736dcf4e61f533be8e6ae7a452fbaa18bc25",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0064": "708b3f487d5d8d3a89bf97442087169574d5ce18944aa40fe73c616c0d0b132a",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065": "b51521d425d3f428ec361c0bd860e248c89d96ed7b6f04ca99db95c6ccac7bc9",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0066": "68b73958c5e4b5aaab9d643a2fb714a1f8600fda1eb5bbbbf168e40e40476d8c",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067": "e8a57d5ac46e61f0d3dc8bdd3367b588b9a65182c641e66fb905cb35dfd6447e",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068": "88a60dfc5e3c1e39c77eb4ee08e13f8dac2097fdca7cd04b226e29f095c3d3dc",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002": "c13ec589896ce784027f54745896e8087a6f3a8bc1fa0e8c3a825b8a14ea3ff3"
+      },
+      "expected_path_count": 11,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "523f3cf692384073b7a2fd39484058c336a522b618e9501f1d3890dbd5184bf3",
+      "case_id": "recovery-hospital-control",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "544b01ef7f093d08b1858d5dbcf796366cc8392736fa7ee396afc0e2552fee0e",
+      "case_id": "staff-038",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003": "97f524ef78657a456deb3a2712b72bc34e933c4624b2102f2961bb21aecbb999",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004": "da32faef31e491cbc565d0d34edba35e594321f26361ac8f6822a7c3e12b9edb"
+      },
+      "expected_path_count": 2,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "5746d9d332c8359d9ab1cf2e58042036db902884b512a43ab42247608c6333ca",
+      "case_id": "recovery-transition-control",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "5848921d50ee8eb2b2131dc4264f1d4b2a252a5fde7438aa45bcf8283c90b207",
+      "case_id": "staff-030",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0042",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0003": "8dea9134f5667435284dffb9f77162ed78878405682241c1d422fdf5687766a7",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0042": "e4b115ed254feb12b5478a467117fa9e004f4d5768983d271bbf830934c20bf3",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011": "2e1dc492f4911a3f984b93baa21d4cb02fba726d41158d188441e91b2654a9f0"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "59fc2d44d13d10dea1d4438623af9170543eb5de8c428b995a78b520b889c8d9",
+      "case_id": "legacy-custody",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0002",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0037",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0039",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0040",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0041",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0042",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0043",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0129",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0131",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0077",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0078",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0079",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0053",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0054",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0055",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0056",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0057",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0058",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0059",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0060",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0031",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0032",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0033",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0035",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0100",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0101",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0102",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0103",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0104",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0105",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0106",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0107",
+        "https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-memo-07-20-removal",
+        "https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-adm-m1-spare"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0002": "465e5bdf836f79f91173c943b9456dd72fab55b16f40da488d9e63ae0d5a195e",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch12/0003": "efad9105dc1ffba4f4e2f2e60e8c675c185cef41c6299f90d9a32c746a2ec014",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0037": "90fc4f02c48b03b40cf34d460eb6599dc4b1dfe0b9ad0f652b6b472d410e1a2d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0039": "7ccffcf7612a570d345d269849b374ff1b32b35a4fbb5a777ded3d1248648f08",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0040": "e964ed24deb7d35015da082315468cd3eb5a38769b452d5c903e7f90806b6823",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0041": "412d2593de1158a778a5a24af8cfd8dea941447563bcd5e55adb89205568c111",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0042": "7a6cce18c59907c6993b9dee37c27624208f3861a829a9456e9ea7a87513cfe7",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol4-ch24/0043": "857830bfef89f163daa68983e917123f1179619b65de39a984c6d8866ad90ecb",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0129": "0fae22080ddb2a9c1075c2f4a8c6ab070f466041ac41b3e8a7e8df843f2faeb9",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch41/0131": "854407c86c776e99000c2836c6f3ef4161bf1a7468494c5a520a679aa08f5b98",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0077": "005f49cafe59bf7840dd8340f0c4dbf6edb2e49c5af2de56e9322706a3e99de9",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0078": "fb8b55c7cb681a2509199dcde0b81290a8740ef5dbecbfa6f1ba942651beca7b",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol8-ch42/0079": "ca0078af35b1b13139bd23614d0764d605c7aa6823ebe0c6977ddb8cb601453d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0053": "3010d7b21816d1dc4c2cb259ea03aff996e8e5002057b4ba6bda74b90feededa",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0054": "0e0ca65bd114cf6796df5e774023cd636182e76e1b4a20f973a1e6ed45d7ccf2",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0055": "cd39c6483e8479225fff37da28559fd557fa464d779a031163787fb532033af3",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0056": "2f4f1e1c38a9f5f1687a94bf522027209aee24c5bd6b41b23289cfbfed727d3a",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0057": "120c1f403aa29a47ffab3208837fb79124a87b0cd19e4aa4cfef48cb251f8b44",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0058": "0d6ac81e876d562b01c186cec3c8abb62d7fc20cd3cc2d069f231de67e4234c9",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0059": "47c39f82e1a13fadfd75cc1db3dff282b55264fdeb0a81bda5a4b448085991ce",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch53/0060": "b214041e5883a83da0f16c8d69c592201e63fa75b1ee53363c92264859f5ea5b",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0031": "76958e7b78c972c55b50b7184b22527dc7d14abc530e511379380c024a64bee2",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0032": "f791b1eae545ae67b37f534fb2544d67c404e5d87bfc7d3f6dfbc7a28ef09621",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0033": "db762e8c4a86c984fe99ee63fc97c69de95e56cb9c79b7ffad499615486fec95",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol9-ch54/0035": "2cc8367450bc588ac72a5323cad6810f154f4054c9a2c5d5c1e82e29f1994c0d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0100": "b56b29e3617c6917bad9485e3e7d530b05e720d376941884e1b287d860a18151",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0101": "b0fc596c9dbfa298bd7b4b9969880177e1ec1c4eecbec6f2d69b788c092e2b13",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0102": "04173c737a7a0f6191a685be5819a9015fbe3bdce4b7fa4353b16a750a7f9429",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0103": "41aac82f1b0368c7a387cdac50d7e6c07907f096d4b5a9f80278977499611b78",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0104": "b89a91b856535ce9298399cd55e38000ef03e853114a4b867022755e14f99ae8",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0105": "f2dea1ea9312c0b21da20d757eaf3b43878948ff35fc42748ff5b951c47d1a42",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0106": "ecdccb38ef661980f07a7f1cc937566f6aff2393332db08be08f0cb4aaf14a6c",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0107": "142e5cdb139c8bc7fe26d8e5e92d9090314f5186285d3e942d51faac956474d5",
+        "https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-memo-07-20-removal": "ec292aa1c69fe35883c2614aceaac048eb64bebafa74d424a794652249793b7f",
+        "https://chris-page-gov.github.io/okf-dwp/id/evidence/imprisonment-adm-m1-spare": "114d9d19ba75f890b4acf9ec168746566fe209373df97930a19a032bc8522d18"
+      },
+      "expected_path_count": 0,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "5ab5d032e529e921b1491ecdefc8eff92186c37be13c5cc2b5ef116667ddd314",
+      "case_id": "unhinted-pip-other-benefits",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004": "da32faef31e491cbc565d0d34edba35e594321f26361ac8f6822a7c3e12b9edb",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011": "593c872bf5e7db6e942244c673d499ab16ca30e727f2ff7415a37b4850026818"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "5bdd75bad5c4de6483f8ed25b7b5a3fc853d184d2d7c2e0e1bcc2f9452f3b7b5",
+      "case_id": "withheld-holdout-n07",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "5f0e2c0d267ad078435678112a484fe167cb85ece74e245df8de68efe74b9a5e",
+      "case_id": "recovery-backdated-paraphrase",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1": "7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6": "a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4"
+      },
+      "expected_path_count": 0,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "63819bc238f671afaa7b4d68a82033e0d7217f84df2d7d433fddb90eaaffb0eb",
+      "case_id": "recovery-rates-control",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "638eaecc321b492500038787636a5890b4aa944c867acba4b6f6acd59b4b192c",
+      "case_id": "unhinted-pc-rate-periods",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0059",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0062",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0064",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0066",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0059": "5afef2085aab5c5f832f412f88a07e69beec10da73a5fce1cfecb070df2685fd",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060": "b3b7fa95eb1521e90091569f5fcf77ad3c2d4c16f5f1af1551e58b28b8e6362d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061": "5a0547f2e5fa050f0c08deafee5a76a884362d1aedd0cf42b842275139bf2eba",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0062": "2aa66b6e7627c73c358fc05cc99d8c099e5fabf4a9f13218c05db2650942a97d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063": "4b8882feb36c30b151d425c33469736dcf4e61f533be8e6ae7a452fbaa18bc25",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0064": "708b3f487d5d8d3a89bf97442087169574d5ce18944aa40fe73c616c0d0b132a",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065": "b51521d425d3f428ec361c0bd860e248c89d96ed7b6f04ca99db95c6ccac7bc9",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0066": "68b73958c5e4b5aaab9d643a2fb714a1f8600fda1eb5bbbbf168e40e40476d8c",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067": "e8a57d5ac46e61f0d3dc8bdd3367b588b9a65182c641e66fb905cb35dfd6447e",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068": "88a60dfc5e3c1e39c77eb4ee08e13f8dac2097fdca7cd04b226e29f095c3d3dc",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002": "c13ec589896ce784027f54745896e8087a6f3a8bc1fa0e8c3a825b8a14ea3ff3"
+      },
+      "expected_path_count": 11,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "670f61e6a1d2e6a74e4e6d709939c265fb159e558a43c28799b6e93ef2f4adeb",
+      "case_id": "staff-015",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035": "e46f68c7eb118a7ea16618740f519ccf78d0afd8b38c5d8185e81ed28a669440",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128": "3a5de8ac920cad738902274e91a354f78cc573bd0b27a0fbce574b5e4a3e8d68",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030": "4314a87f93de3485784722ae71572897449f41d33fbbab7bd397bf3154186c54"
+      },
+      "expected_path_count": 10,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "687e7ccdb36ada278293ea085379dcc70d103950ee039456ae469222e9c571e3",
+      "case_id": "staff-009",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0008",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0027",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0059",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0062",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0064",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0066",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0044",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0008": "6e72a2140d8735b2d64d583938b0fbb7b34d1c096cf4b70ad633b2ae880e82af",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011": "593c872bf5e7db6e942244c673d499ab16ca30e727f2ff7415a37b4850026818",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0027": "8d56be6275d60ebc6d50c043d765b563aa9360f979cd7157a537aa49c803af70",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0059": "5afef2085aab5c5f832f412f88a07e69beec10da73a5fce1cfecb070df2685fd",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060": "b3b7fa95eb1521e90091569f5fcf77ad3c2d4c16f5f1af1551e58b28b8e6362d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061": "5a0547f2e5fa050f0c08deafee5a76a884362d1aedd0cf42b842275139bf2eba",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0062": "2aa66b6e7627c73c358fc05cc99d8c099e5fabf4a9f13218c05db2650942a97d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063": "4b8882feb36c30b151d425c33469736dcf4e61f533be8e6ae7a452fbaa18bc25",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0064": "708b3f487d5d8d3a89bf97442087169574d5ce18944aa40fe73c616c0d0b132a",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065": "b51521d425d3f428ec361c0bd860e248c89d96ed7b6f04ca99db95c6ccac7bc9",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0066": "68b73958c5e4b5aaab9d643a2fb714a1f8600fda1eb5bbbbf168e40e40476d8c",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067": "e8a57d5ac46e61f0d3dc8bdd3367b588b9a65182c641e66fb905cb35dfd6447e",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068": "88a60dfc5e3c1e39c77eb4ee08e13f8dac2097fdca7cd04b226e29f095c3d3dc",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0044": "3d893d36b217db6208e7d73d665019a3c8a273d0fa416444d4883d420c33e6f1",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002": "c13ec589896ce784027f54745896e8087a6f3a8bc1fa0e8c3a825b8a14ea3ff3"
+      },
+      "expected_path_count": 28,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "72596d88915baf860522c51452e625939b8d3f9c209c8c59923c151d652ed36d",
+      "case_id": "unhinted-household-care-home",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025": "a1e2462f65812d22a647562270b9ebb3a3d64c4c76a205bd5cf6d243e607b193",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058": "54d1aadd860c1716513097da3470a231fa41c84f651850dd404fb9b58ee80a6b",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020": "7b180a03e1223b3342815309993eb83ff72a1d74523509cf4a711e869d7376f1",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026": "fb85bf7a3bba8a29a887748211745fab47b6d5121676138942d6cf7e5e826335"
+      },
+      "expected_path_count": 10,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "72f9b164ff4dca724ad9be72cf7e944da46252e906cd5af1f754305b6a0de74a",
+      "case_id": "withheld-holdout-n09",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "734e3cd09ee311a5b18f11cefe71be41808fb1f5164bd12704a724547e9ed9b9",
+      "case_id": "withheld-holdout-p02",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0068",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0015"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0003": "e9384a7baa1bc5df6f0f2d74a6fde38f59676128e0043eab61174ef0311f4c5b",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0068": "f4f77eaa686605051418e609f2a448f7c48a60c73f060d6106dfe578744b0a43",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0011": "c87eaad5624b2684ff70e548cb582399e80b200e912fe6b47937657a1d7194fd",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0015": "f5f426f1bf08c0ff50e7441234ed0bc76397a2dbf434df9d8f81a4f54ff0198c"
+      },
+      "expected_path_count": 6,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "79b08531085c51e67b60d8f7ff4696e4a3c7b9c27bef7fe75eb925bc7675d96d",
+      "case_id": "staff-027",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0003": "8dea9134f5667435284dffb9f77162ed78878405682241c1d422fdf5687766a7",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011": "2e1dc492f4911a3f984b93baa21d4cb02fba726d41158d188441e91b2654a9f0",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030": "4314a87f93de3485784722ae71572897449f41d33fbbab7bd397bf3154186c54"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "81e9fc2ae2748187459795df3ae9c34b38bb15b1d379c0165193f783deb3a135",
+      "case_id": "withheld-holdout-p08",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0077",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0077": "ebbb9bbd561fa2ec1349fbcb186ad65379dc43013f477d3fe35e160d219e1eeb",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058": "54d1aadd860c1716513097da3470a231fa41c84f651850dd404fb9b58ee80a6b",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015": "3c97a680ad9014e99f75e863f64fe299d6f50bc5e476a4ed433543150f89f6ac"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "8553b01ee8d3b72f7c8dae511bcaff9760c0365127fb3f29fa23ebec7c5d6e5c",
+      "case_id": "recovery-qualification-control",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "889ee7955d5d9c2acd1eafb64519501cd341c30a5810828cc3feef2c234f6576",
+      "case_id": "staff-031",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004": "da32faef31e491cbc565d0d34edba35e594321f26361ac8f6822a7c3e12b9edb",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011": "593c872bf5e7db6e942244c673d499ab16ca30e727f2ff7415a37b4850026818"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "8f8165252872ddc28ea3d195181b5c3facfd446d6ff676706703ac39a2be12a9",
+      "case_id": "staff-011",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0077",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0077": "ebbb9bbd561fa2ec1349fbcb186ad65379dc43013f477d3fe35e160d219e1eeb",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058": "54d1aadd860c1716513097da3470a231fa41c84f651850dd404fb9b58ee80a6b",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015": "3c97a680ad9014e99f75e863f64fe299d6f50bc5e476a4ed433543150f89f6ac"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "953fb5442e06f863e34f6a14ce80f3bc7f64f335ca32baa1513b7b650947dc41",
+      "case_id": "withheld-holdout-n03",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "964475634718c98716ce1f52f64e78eca3a6ec99437201d840b6d991df31cdc3",
+      "case_id": "staff-040",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0007",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0007": "c29b3ae10c0d0c2470155e6b7d2f4a3732fd07ec9d59e7add5b9a51f4158e1fc",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003": "97f524ef78657a456deb3a2712b72bc34e933c4624b2102f2961bb21aecbb999",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004": "da32faef31e491cbc565d0d34edba35e594321f26361ac8f6822a7c3e12b9edb"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "9a7cd6e8f4f21f87a6aef96d8e45abd2979936f4f709c762f1663692affad81c",
+      "case_id": "staff-024",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0042",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0003": "8dea9134f5667435284dffb9f77162ed78878405682241c1d422fdf5687766a7",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0042": "e4b115ed254feb12b5478a467117fa9e004f4d5768983d271bbf830934c20bf3",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004": "da32faef31e491cbc565d0d34edba35e594321f26361ac8f6822a7c3e12b9edb",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030": "4314a87f93de3485784722ae71572897449f41d33fbbab7bd397bf3154186c54"
+      },
+      "expected_path_count": 4,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "a08b4cb652453b0f607ebf3a8882a78a9080b34c4bcc7cebbfb765094934b153",
+      "case_id": "staff-023",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0008",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0008": "66d8ef3b312b9e08c1dd4fdafd26f54a5224a8bc688b06a5bccef096fb79f6dd",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015": "3c97a680ad9014e99f75e863f64fe299d6f50bc5e476a4ed433543150f89f6ac"
+      },
+      "expected_path_count": 4,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "a250146759b6591708efd4f6598d8cf6c3250dec90823ac31538fe48dc43a0ac",
+      "case_id": "staff-003",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0001",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0001": "f9dea680f5d1bdf2882902e865fbd2eca356dc294e102274cef50de3d444efe7",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011": "2e1dc492f4911a3f984b93baa21d4cb02fba726d41158d188441e91b2654a9f0"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "a2ff075a0b947210359105277fe047f84f88dc654787058cc5aaf096e76350e7",
+      "case_id": "staff-028",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0003": "8dea9134f5667435284dffb9f77162ed78878405682241c1d422fdf5687766a7",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011": "2e1dc492f4911a3f984b93baa21d4cb02fba726d41158d188441e91b2654a9f0",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030": "4314a87f93de3485784722ae71572897449f41d33fbbab7bd397bf3154186c54"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "a3a7a4fb9e73d08dbbc94695e542599beb663bd0bc600735a5272e1c35f990b6",
+      "case_id": "withheld-holdout-n04",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "a4ec130f4996c090fcb7a4c4480662afa623c9f0d00378a8b0e292502aa55949",
+      "case_id": "unhinted-rule-boundary",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "a63fa10cf0fcbc3444611871036114c6f89a6a12c7af85074ebe0fd04dcf98f8",
+      "case_id": "staff-002",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0068",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0015"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0003": "e9384a7baa1bc5df6f0f2d74a6fde38f59676128e0043eab61174ef0311f4c5b",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0068": "f4f77eaa686605051418e609f2a448f7c48a60c73f060d6106dfe578744b0a43",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0011": "c87eaad5624b2684ff70e548cb582399e80b200e912fe6b47937657a1d7194fd",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0015": "f5f426f1bf08c0ff50e7441234ed0bc76397a2dbf434df9d8f81a4f54ff0198c"
+      },
+      "expected_path_count": 6,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "a7c36a2e4833b0ad281e621074140b4d7f3f9488851c9c20907f6f3988fc5afa",
+      "case_id": "stage2-004",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "a87ce33a56e667ec0af4f598341480bb6043114e09a6b20a4988e113a3a2b6d1",
+      "case_id": "unhinted-absence-temporary",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part1/0116",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0008"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part1/0116": "b56c472e93beadef43a70c42c71fc2eca8123efb315a3e1b0b67570b05b8c891",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0008": "66d8ef3b312b9e08c1dd4fdafd26f54a5224a8bc688b06a5bccef096fb79f6dd"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "af08aec2040f4dd337e8a89ceaa68c905a469b315a9083baf352ffdfe7ab4be4",
+      "case_id": "recovery-late-award-paraphrase",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1": "7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6": "a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4"
+      },
+      "expected_path_count": 0,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "b2062ebdff2c9f2b60ae9c10a26077260fd282d8cefe66cb4ea15285decd20b6",
+      "case_id": "staff-012",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025": "a1e2462f65812d22a647562270b9ebb3a3d64c4c76a205bd5cf6d243e607b193",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058": "54d1aadd860c1716513097da3470a231fa41c84f651850dd404fb9b58ee80a6b",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020": "7b180a03e1223b3342815309993eb83ff72a1d74523509cf4a711e869d7376f1"
+      },
+      "expected_path_count": 7,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "b3f14d448dcc1170e48c556336197fc3b44350e65880b4b4f1b4cde199e51e5f",
+      "case_id": "stage2-004-pc-context",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026": "fb85bf7a3bba8a29a887748211745fab47b6d5121676138942d6cf7e5e826335"
+      },
+      "expected_path_count": 2,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "b7197deb3952ba14537c88d40bd66f03a20c1991f9a776c4842cf6158ddf5236",
+      "case_id": "staff-007",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0059",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0062",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0064",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0066",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0044",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0059": "5afef2085aab5c5f832f412f88a07e69beec10da73a5fce1cfecb070df2685fd",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060": "b3b7fa95eb1521e90091569f5fcf77ad3c2d4c16f5f1af1551e58b28b8e6362d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061": "5a0547f2e5fa050f0c08deafee5a76a884362d1aedd0cf42b842275139bf2eba",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0062": "2aa66b6e7627c73c358fc05cc99d8c099e5fabf4a9f13218c05db2650942a97d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063": "4b8882feb36c30b151d425c33469736dcf4e61f533be8e6ae7a452fbaa18bc25",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0064": "708b3f487d5d8d3a89bf97442087169574d5ce18944aa40fe73c616c0d0b132a",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065": "b51521d425d3f428ec361c0bd860e248c89d96ed7b6f04ca99db95c6ccac7bc9",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0066": "68b73958c5e4b5aaab9d643a2fb714a1f8600fda1eb5bbbbf168e40e40476d8c",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067": "e8a57d5ac46e61f0d3dc8bdd3367b588b9a65182c641e66fb905cb35dfd6447e",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068": "88a60dfc5e3c1e39c77eb4ee08e13f8dac2097fdca7cd04b226e29f095c3d3dc",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0044": "3d893d36b217db6208e7d73d665019a3c8a273d0fa416444d4883d420c33e6f1",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002": "c13ec589896ce784027f54745896e8087a6f3a8bc1fa0e8c3a825b8a14ea3ff3"
+      },
+      "expected_path_count": 12,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "b7f3da03e2a474dad8a496fbd8ffebb715d6fe9a9c4f19d91c7af873ac3d562e",
+      "case_id": "unhinted-carer-claims",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0007",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0007": "c29b3ae10c0d0c2470155e6b7d2f4a3732fd07ec9d59e7add5b9a51f4158e1fc",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003": "97f524ef78657a456deb3a2712b72bc34e933c4624b2102f2961bb21aecbb999",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004": "da32faef31e491cbc565d0d34edba35e594321f26361ac8f6822a7c3e12b9edb"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "b804e2bd69cdbeb45ba918734000341f807e4dcb5036dbd74ad6cd7d7b431bc8",
+      "case_id": "withheld-holdout-p06",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025": "a1e2462f65812d22a647562270b9ebb3a3d64c4c76a205bd5cf6d243e607b193",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058": "54d1aadd860c1716513097da3470a231fa41c84f651850dd404fb9b58ee80a6b",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020": "7b180a03e1223b3342815309993eb83ff72a1d74523509cf4a711e869d7376f1"
+      },
+      "expected_path_count": 7,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "b81cae01d580169f7dcd89f3b65606c9eb8857e59940cfb6a8785bc89bb61bad",
+      "case_id": "stage2-002",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "b83ccc014a01f3d04d9d233f0953702a46f46a79d6594a29a39eb8d412395b46",
+      "case_id": "staff-001",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part1/0116",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0008"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part1/0116": "b56c472e93beadef43a70c42c71fc2eca8123efb315a3e1b0b67570b05b8c891",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol2-ch7-part6/0008": "66d8ef3b312b9e08c1dd4fdafd26f54a5224a8bc688b06a5bccef096fb79f6dd"
+      },
+      "expected_path_count": 2,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "b96451a76d72b76222acb96b598efeb7519de9a067ab1c5c692ca4c5217a9d01",
+      "case_id": "stage2-005",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "ba61540e8802d03d4466feedbce8ad2cd3199ce85cfbf8c85ef50ca0d93b7bda",
+      "case_id": "staff-014",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0015": "3c97a680ad9014e99f75e863f64fe299d6f50bc5e476a4ed433543150f89f6ac",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020": "7b180a03e1223b3342815309993eb83ff72a1d74523509cf4a711e869d7376f1",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026": "fb85bf7a3bba8a29a887748211745fab47b6d5121676138942d6cf7e5e826335",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128": "3a5de8ac920cad738902274e91a354f78cc573bd0b27a0fbce574b5e4a3e8d68",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3"
+      },
+      "expected_path_count": 7,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "bb2fa58ad6c234bc226675ea5fafe34ee289e2fe434fe0afb209c1a9f8d33bcb",
+      "case_id": "staff-013",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0025": "a1e2462f65812d22a647562270b9ebb3a3d64c4c76a205bd5cf6d243e607b193",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0058": "54d1aadd860c1716513097da3470a231fa41c84f651850dd404fb9b58ee80a6b",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0020": "7b180a03e1223b3342815309993eb83ff72a1d74523509cf4a711e869d7376f1"
+      },
+      "expected_path_count": 7,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "bcf412999ba0a3e613fe4cf2ef1be7dc0bfb9ced784df2659e1b1f6b54ab6eba",
+      "case_id": "staff-037",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0042"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011": "2e1dc492f4911a3f984b93baa21d4cb02fba726d41158d188441e91b2654a9f0",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0042": "e4b115ed254feb12b5478a467117fa9e004f4d5768983d271bbf830934c20bf3"
+      },
+      "expected_path_count": 2,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "c224ca359a090e29fbca4e58127f5e94968aab1808e2e1ae3801b395a39eb3e8",
+      "case_id": "recovery-original",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1": "7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6": "a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4"
+      },
+      "expected_path_count": 0,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "c224ca359a090e29fbca4e58127f5e94968aab1808e2e1ae3801b395a39eb3e8",
+      "case_id": "uc-disabled-child-supersession-001",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000023318-000-bec866c4cfa0",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000055420-000-9e9c31f56b39",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1": "7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000023318-000-bec866c4cfa0": "2aa85228042811fecbcff1d80e4de24760b4f6acd73aee98473dec6de4795cf1",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000055420-000-9e9c31f56b39": "24682e686930781dfa1b19a81c090129991d1b1d89cd6d92ad2e781bb90b6e30",
+        "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6": "a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4"
+      },
+      "expected_path_count": 0,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "c426baed523c962745925bb03d6055bd731323cdc40a54573c896e7c2c595ab4",
+      "case_id": "staff-008",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch57/0005",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0059",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0062",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0064",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0066",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0044",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch57/0005": "03d2cd839caa547ed6a0e3906fc72b69cefe883b6a89510f3459e205259cc17b",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/78/0011": "593c872bf5e7db6e942244c673d499ab16ca30e727f2ff7415a37b4850026818",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0059": "5afef2085aab5c5f832f412f88a07e69beec10da73a5fce1cfecb070df2685fd",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060": "b3b7fa95eb1521e90091569f5fcf77ad3c2d4c16f5f1af1551e58b28b8e6362d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061": "5a0547f2e5fa050f0c08deafee5a76a884362d1aedd0cf42b842275139bf2eba",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0062": "2aa66b6e7627c73c358fc05cc99d8c099e5fabf4a9f13218c05db2650942a97d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063": "4b8882feb36c30b151d425c33469736dcf4e61f533be8e6ae7a452fbaa18bc25",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0064": "708b3f487d5d8d3a89bf97442087169574d5ce18944aa40fe73c616c0d0b132a",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065": "b51521d425d3f428ec361c0bd860e248c89d96ed7b6f04ca99db95c6ccac7bc9",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0066": "68b73958c5e4b5aaab9d643a2fb714a1f8600fda1eb5bbbbf168e40e40476d8c",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067": "e8a57d5ac46e61f0d3dc8bdd3367b588b9a65182c641e66fb905cb35dfd6447e",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068": "88a60dfc5e3c1e39c77eb4ee08e13f8dac2097fdca7cd04b226e29f095c3d3dc",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0044": "3d893d36b217db6208e7d73d665019a3c8a273d0fa416444d4883d420c33e6f1",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002": "c13ec589896ce784027f54745896e8087a6f3a8bc1fa0e8c3a825b8a14ea3ff3"
+      },
+      "expected_path_count": 14,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "c5456f92055daee31607ee2ba8ed9680d39a431cf0917cbf3fa6617c4b53827b",
+      "case_id": "staff-022",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0001",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0001": "f9dea680f5d1bdf2882902e865fbd2eca356dc294e102274cef50de3d444efe7",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030": "4314a87f93de3485784722ae71572897449f41d33fbbab7bd397bf3154186c54",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3"
+      },
+      "expected_path_count": 4,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "c648c4105fb4c5f745edc74ef6a8053baa85ffc3a192c1b84f34676f5037a0fc",
+      "case_id": "withheld-holdout-p03",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035": "e46f68c7eb118a7ea16618740f519ccf78d0afd8b38c5d8185e81ed28a669440",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128": "3a5de8ac920cad738902274e91a354f78cc573bd0b27a0fbce574b5e4a3e8d68",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030": "4314a87f93de3485784722ae71572897449f41d33fbbab7bd397bf3154186c54"
+      },
+      "expected_path_count": 5,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "c8dec29290b60c04a1dc259808f0385bcc8972eccf932660cfbfc0bcb9d57914",
+      "case_id": "unhinted-legal-hierarchy",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "cabba8670d0934cb68e3248eb949b175d6eb9846d8f3d515913d37effccbb151",
+      "case_id": "unhinted-service-route",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "cc5c1a44a09446ae762614b667d024066a2d1878f539725ebc78b142a3c5f8bb",
+      "case_id": "withheld-holdout-n12",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "cd345d65d5e41e1de5261d6768190f8de917d8f1c02c7251241de2eb0a74df2e",
+      "case_id": "withheld-holdout-n01",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "d75c54502fcbc9f8b6b286949d09c3ee6986557a302bd5b17347370fa0d43b5d",
+      "case_id": "staff-034",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011": "2e1dc492f4911a3f984b93baa21d4cb02fba726d41158d188441e91b2654a9f0",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004": "da32faef31e491cbc565d0d34edba35e594321f26361ac8f6822a7c3e12b9edb"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "d95972cc01c0b67f500cc26feb757e3c3d7deb0ed6826a02955119f28aa0beb2",
+      "case_id": "unhinted-carer-qualifying-conditions",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003": "97f524ef78657a456deb3a2712b72bc34e933c4624b2102f2961bb21aecbb999",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004": "da32faef31e491cbc565d0d34edba35e594321f26361ac8f6822a7c3e12b9edb"
+      },
+      "expected_path_count": 2,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "db4f1995b49703987eb36f884fe93ef21b7ccd627c2487c057327f8c016fd554",
+      "case_id": "unhinted-age-contribution-rules",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0068",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0015"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0003": "e9384a7baa1bc5df6f0f2d74a6fde38f59676128e0043eab61174ef0311f4c5b",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0068": "f4f77eaa686605051418e609f2a448f7c48a60c73f060d6106dfe578744b0a43",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0011": "c87eaad5624b2684ff70e548cb582399e80b200e912fe6b47937657a1d7194fd",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0015": "f5f426f1bf08c0ff50e7441234ed0bc76397a2dbf434df9d8f81a4f54ff0198c"
+      },
+      "expected_path_count": 6,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "dc5703742b02d94768647a6daa88e9e8aaf48dede65e998919a44653080ecd17",
+      "case_id": "unhinted-carer-overlap",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0007",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0007": "c29b3ae10c0d0c2470155e6b7d2f4a3732fd07ec9d59e7add5b9a51f4158e1fc",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003": "97f524ef78657a456deb3a2712b72bc34e933c4624b2102f2961bb21aecbb999",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004": "da32faef31e491cbc565d0d34edba35e594321f26361ac8f6822a7c3e12b9edb"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "de1fb0cfc181a1026abef505890afa183408db1b3f67c3fce3b0960cb3539a39",
+      "case_id": "stage2-002-pc-context",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0035"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0035": "18679de6e6a1cfefe05d06a134e79ce387a4420a578e78748034c8ced8f62768"
+      },
+      "expected_path_count": 1,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "de3afee1b5fe760ad39cd8c3520b0033622e7ee0eb7ea60265f296fb678b7503",
+      "case_id": "withheld-holdout-n10",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "dfe6f5dd087f94d2d2944035f8e1ae2e492040e9baf3cfca5de3d252452da30f",
+      "case_id": "withheld-holdout-p09",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d"
+      },
+      "expected_path_count": 1,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "e162e33800f7a7000286b5f5b463633fa32a6135a61e614de08dfcb23bdd5bc4",
+      "case_id": "withheld-holdout-p10",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0003": "97f524ef78657a456deb3a2712b72bc34e933c4624b2102f2961bb21aecbb999",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch60/0004": "da32faef31e491cbc565d0d34edba35e594321f26361ac8f6822a7c3e12b9edb"
+      },
+      "expected_path_count": 2,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "e228aa7b3420dece3854af68fbd5130f08c41a7e97f6f65b100c76854d4028c5",
+      "case_id": "withheld-holdout-p12",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0003",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol11-ch69/0003": "8dea9134f5667435284dffb9f77162ed78878405682241c1d422fdf5687766a7",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011": "2e1dc492f4911a3f984b93baa21d4cb02fba726d41158d188441e91b2654a9f0",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030": "4314a87f93de3485784722ae71572897449f41d33fbbab7bd397bf3154186c54"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "ea757deacb5c196a8740f4ef67dcb88768e1883314a831f9ad7488d273b88073",
+      "case_id": "staff-016",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035": "e46f68c7eb118a7ea16618740f519ccf78d0afd8b38c5d8185e81ed28a669440",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128": "3a5de8ac920cad738902274e91a354f78cc573bd0b27a0fbce574b5e4a3e8d68",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030": "4314a87f93de3485784722ae71572897449f41d33fbbab7bd397bf3154186c54"
+      },
+      "expected_path_count": 8,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "ea85b3780df6f1d32f002f8337a7bb10597159e4ac77da3af8ad4505a544f3c3",
+      "case_id": "unhinted-pip-state-pension-overlap",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0001",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0001": "f9dea680f5d1bdf2882902e865fbd2eca356dc294e102274cef50de3d444efe7",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol10-ch61/0005": "b707a130240faaaed3f3b04d9f9d5c59f31cf42ba2f8abc060cc21913972725d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol3-ch17/0011": "2e1dc492f4911a3f984b93baa21d4cb02fba726d41158d188441e91b2654a9f0"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "ead675918c2b309ece64c397a9219407f8a3e6387d05f22e87f6639da3725dcd",
+      "case_id": "unhinted-income-capital",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035": "e46f68c7eb118a7ea16618740f519ccf78d0afd8b38c5d8185e81ed28a669440",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128": "3a5de8ac920cad738902274e91a354f78cc573bd0b27a0fbce574b5e4a3e8d68",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030": "4314a87f93de3485784722ae71572897449f41d33fbbab7bd397bf3154186c54"
+      },
+      "expected_path_count": 5,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "ec1b0f1ef6127825427570a0ed64879858f946c79f6c07a3bdf25bf816b2fece",
+      "case_id": "withheld-holdout-n11",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "ec4b438579d94bcfd3b49c0c5c6bc633262b1a6c95b9fc3481155f9cde2d3029",
+      "case_id": "withheld-holdout-p04",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0001",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0011",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0015"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0001": "f9dea680f5d1bdf2882902e865fbd2eca356dc294e102274cef50de3d444efe7",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0011": "c87eaad5624b2684ff70e548cb582399e80b200e912fe6b47937657a1d7194fd",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-vol12-ch74/0015": "f5f426f1bf08c0ff50e7441234ed0bc76397a2dbf434df9d8f81a4f54ff0198c"
+      },
+      "expected_path_count": 3,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "f1c5bdfdccff174d913d635db204e122c61b8c9d2df96bd4a1c87e58b43d603f",
+      "case_id": "unhinted-pc-capital-valuation",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128": "3a5de8ac920cad738902274e91a354f78cc573bd0b27a0fbce574b5e4a3e8d68",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035": "e46f68c7eb118a7ea16618740f519ccf78d0afd8b38c5d8185e81ed28a669440",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030": "4314a87f93de3485784722ae71572897449f41d33fbbab7bd397bf3154186c54"
+      },
+      "expected_path_count": 5,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "f47fbc87bed57dab1ef2210ed8287ef8a6f208d51c3856adfb3cd39626f6f7db",
+      "case_id": "withheld-holdout-n06",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "f4e23ca6beac9aa000853d64ab509482355a4140f3d3bef24794bb087265808a",
+      "case_id": "withheld-holdout-n08",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "f842f492f77bfd85bc61184e9939686b62afcf51a47bb2aef7653b4c6375ddd8",
+      "case_id": "unhinted-history-capture-date",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0059",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0062",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0064",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0066",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0059": "5afef2085aab5c5f832f412f88a07e69beec10da73a5fce1cfecb070df2685fd",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0060": "b3b7fa95eb1521e90091569f5fcf77ad3c2d4c16f5f1af1551e58b28b8e6362d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0061": "5a0547f2e5fa050f0c08deafee5a76a884362d1aedd0cf42b842275139bf2eba",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0062": "2aa66b6e7627c73c358fc05cc99d8c099e5fabf4a9f13218c05db2650942a97d",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0063": "4b8882feb36c30b151d425c33469736dcf4e61f533be8e6ae7a452fbaa18bc25",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0064": "708b3f487d5d8d3a89bf97442087169574d5ce18944aa40fe73c616c0d0b132a",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0065": "b51521d425d3f428ec361c0bd860e248c89d96ed7b6f04ca99db95c6ccac7bc9",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0066": "68b73958c5e4b5aaab9d643a2fb714a1f8600fda1eb5bbbbf168e40e40476d8c",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0067": "e8a57d5ac46e61f0d3dc8bdd3367b588b9a65182c641e66fb905cb35dfd6447e",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0068": "88a60dfc5e3c1e39c77eb4ee08e13f8dac2097fdca7cd04b226e29f095c3d3dc",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/dmg-memo-02-26-f7835f1e40/0002": "c13ec589896ce784027f54745896e8087a6f3a8bc1fa0e8c3a825b8a14ea3ff3"
+      },
+      "expected_path_count": 11,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "f864a8f851ed8ff4de0b640d83df7b58713098e38d994b22b83dbf94f580e47a",
+      "case_id": "staff-010",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0014": "778cf7afd24bc128315a7d9f874d6f213c574ea1b2e845acee3308d749b3fb51",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0033": "a1e114d526e804b150dec4b3a135d5e52fcfb4e384a6e5e2603374a5a21703b3",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0035": "e46f68c7eb118a7ea16618740f519ccf78d0afd8b38c5d8185e81ed28a669440",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/84/0128": "3a5de8ac920cad738902274e91a354f78cc573bd0b27a0fbce574b5e4a3e8d68",
+        "https://chris-page-gov.github.io/okf-dwp/id/page/85/0030": "4314a87f93de3485784722ae71572897449f41d33fbbab7bd397bf3154186c54"
+      },
+      "expected_path_count": 11,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "fb58a85f6c7e252c423d84442803425e51ce6ccca006a3854d4c892b188f9117",
+      "case_id": "stage2-003-pc-context",
+      "expected_record_ids": [
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026"
+      ],
+      "expected_source_text_hashes": {
+        "https://chris-page-gov.github.io/okf-dwp/id/page/77/0026": "fb85bf7a3bba8a29a887748211745fab47b6d5121676138942d6cf7e5e826335"
+      },
+      "expected_path_count": 2,
+      "negative_boundary": false
+    },
+    {
+      "question_sha256": "fe74ac3a9e04fc2b8100031260a62dc205af9b22de43f72c5b90b47cd422f7e0",
+      "case_id": "withheld-holdout-n05",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    },
+    {
+      "question_sha256": "fed9cd74d726a8733e069cd3be86511d2e6f4b5fc4c3dc894adef10f4e1ee448",
+      "case_id": "unhinted-damaged-extract",
+      "expected_record_ids": [],
+      "expected_source_text_hashes": {},
+      "expected_path_count": 0,
+      "negative_boundary": true
+    }
+  ]
+}
