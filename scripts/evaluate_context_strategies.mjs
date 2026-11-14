@@ -9,7 +9,8 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
 const option = name => { const n = args.indexOf(name); return n < 0 ? undefined : args[n + 1]; };
-assert(option('--explorer-root'), 'Usage: --explorer-root PATH [--output PATH]');
+assert(option('--explorer-root'), 'Usage: --explorer-root PATH [--output PATH] [--check]');
+assert(!args.includes('--check') || option('--output'), '--check requires --output');
 const engine = resolve(option('--explorer-root'), 'apps/okf-explorer/src/lib/context');
 const digest = value => createHash('sha256').update(value).digest('hex');
 const spec = JSON.parse(readFileSync(resolve(root, 'evaluation/out-of-sample/uc-disabled-child-supersession-001.json')));
@@ -101,6 +102,7 @@ for (const item of experiment.cases) {
 }
 const output = {
   schema: 'okf-dwp-truncation-strategy-evaluation.v1',
+  evaluator_sha256: digest(readFileSync(fileURLToPath(import.meta.url))),
   source_case: spec.id, corpus_sha256: digest(manifestBytes), engine_files: spec.source_binding.engine_files,
   protocol_sha256: digest(readFileSync(resolve(root, 'evaluation/truncation/strategy-cases.json'))),
   model_calls: 0, network_calls: 0, frozen_source_changes: 0, cases: rows,
@@ -113,7 +115,11 @@ const output = {
   ],
 };
 const serialised = JSON.stringify(output, null, 2) + '\n';
-if (option('--output')) writeFileSync(resolve(option('--output')), serialised);
+if (option('--output')) {
+  const path = resolve(option('--output'));
+  if (args.includes('--check')) assert.equal(readFileSync(path, 'utf8'), serialised, 'Strategy evaluation drift');
+  else writeFileSync(path, serialised);
+}
 process.stdout.write(JSON.stringify({ schema: output.schema, cases: rows.length,
   target_hits: rows.map(row => ({ id: row.id, context_bytes: row.context_bytes,
     selected: row.targets.filter(target => target.selected).map(target => target.paragraph) })),

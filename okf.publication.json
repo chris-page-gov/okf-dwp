@@ -1,6 +1,6 @@
 {
   "schema": "okf-repository-publication-contract.v1",
-  "modified": "2026-09-27",
+  "modified": "2026-11-14",
   "locale": "en-GB",
   "time_zone": "Europe/London",
   "repository": {
@@ -1550,6 +1550,132 @@
         "browser",
         "release"
       ]
+    },
+    {
+      "id": "context-recovery-proposals",
+      "label": "Bounded source-heading recovery and delivery evaluation",
+      "kind": "structured-data-folder",
+      "paths": [
+        "domain-profile/context-recovery/**",
+        "evaluation/truncation/strategy-cases.json",
+        "evaluation/truncation/recovery-cases.json"
+      ],
+      "formats": [
+        "application/ld+yaml",
+        "application/json"
+      ],
+      "origin": "authored",
+      "authority": "editorial",
+      "snapshot_policy": "pinned-revision",
+      "inventory": {
+        "method": "pinned-source-register",
+        "manifest_path": "domain-profile/context-recovery/policy.yamlld",
+        "identity": [
+          "relative-path",
+          "sha256",
+          "source-identifier",
+          "source-version"
+        ]
+      },
+      "rights": {
+        "status": "mixed",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md",
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/LICENSE"
+        ],
+        "limitations": [
+          "MIT-original-navigation; OGL-source-support-with-original-exceptions"
+        ]
+      },
+      "sensitivity": {
+        "status": "not-assessed",
+        "assessment": "Public research questions and source-bound navigation only; no personal claimant data requested or acquired.",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md"
+        ]
+      },
+      "extraction": {
+        "mode": "none",
+        "network_access": "prohibited",
+        "command_ids": [],
+        "limitations": [
+          "No acquisition, source refresh or model inference. Policy meanings remain model-derived and unreviewed."
+        ]
+      },
+      "invalidates": [
+        "semantic",
+        "runtime",
+        "documentation",
+        "browser",
+        "release"
+      ],
+      "limitations": [
+        "Every context retains its independent identity and insufficient evidence status; complete delivery is not a complete legal answer.",
+        "The development cases are known tests, not a blind legal or model-answer evaluation."
+      ]
+    },
+    {
+      "id": "source-route-navigation-proposals",
+      "label": "Source-bound graph navigation and persona evaluation",
+      "kind": "structured-data-folder",
+      "paths": [
+        "domain-profile/retrieval-graph/**",
+        "domain-profile/staff-needs/persona-evaluation.json",
+        "evaluation/retrieval-gate/withheld/attempt-01/protocol.json"
+      ],
+      "formats": [
+        "application/ld+yaml",
+        "application/json"
+      ],
+      "origin": "authored",
+      "authority": "editorial",
+      "snapshot_policy": "pinned-revision",
+      "inventory": {
+        "method": "pinned-source-register",
+        "manifest_path": "domain-profile/retrieval-graph/policy.yamlld",
+        "identity": [
+          "relative-path",
+          "sha256",
+          "source-identifier",
+          "source-version"
+        ]
+      },
+      "rights": {
+        "status": "mixed",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md",
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/LICENSE"
+        ],
+        "limitations": [
+          "MIT-original-navigation; OGL-source-support-with-original-exceptions"
+        ]
+      },
+      "sensitivity": {
+        "status": "not-assessed",
+        "assessment": "Public research questions and source-bound navigation only; no personal claimant data requested or acquired.",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-dwp/blob/main/NOTICE.md"
+        ]
+      },
+      "extraction": {
+        "mode": "none",
+        "network_access": "prohibited",
+        "command_ids": [],
+        "limitations": [
+          "No acquisition, source refresh or model inference. Policy meanings remain model-derived and unreviewed."
+        ]
+      },
+      "invalidates": [
+        "semantic",
+        "runtime",
+        "documentation",
+        "browser",
+        "release"
+      ],
+      "limitations": [
+        "Directed navigation repairs and compositional concept bridges are model-derived hypotheses, never legal assertions or specialist acceptance.",
+        "Declared source recall is measured separately from question ambiguity, legal applicability, interpretation and complete law coverage. Case law is excluded from the statutory catalogue crosswalk."
+      ]
     }
   ],
   "boundaries": {
@@ -1983,6 +2109,71 @@
           "passage-review-controls",
           "passage-replay-check"
         ]
+      },
+      {
+        "path": "retrieval-graph/**",
+        "role": "explorer-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "route-graph-build"
+        ],
+        "check_command_ids": [
+          "route-graph-check",
+          "route-graph-controls"
+        ]
+      },
+      {
+        "path": "evaluation/retrieval-gate/persona-*.json",
+        "role": "explorer-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "persona-evaluation-build"
+        ],
+        "check_command_ids": [
+          "persona-evaluation-check",
+          "persona-evaluation-controls"
+        ]
+      },
+      {
+        "path": "evaluation/retrieval-gate/graph-evaluation.json",
+        "role": "explorer-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "graph-retrieval-evaluation"
+        ],
+        "check_command_ids": [
+          "graph-retrieval-check",
+          "graph-delivery-controls"
+        ]
+      },
+      {
+        "path": "evaluation/truncation/review/**",
+        "role": "explorer-runtime",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "context-review-build"
+        ],
+        "check_command_ids": [
+          "context-review-check",
+          "context-review-controls"
+        ]
+      },
+      {
+        "path": "evaluation/retrieval-gate/legislation-crosswalk.json",
+        "role": "validation-receipt",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "legislation-crosswalk-build"
+        ],
+        "check_command_ids": [
+          "legislation-crosswalk-check",
+          "legislation-crosswalk-controls"
+        ]
       }
     ]
   },
@@ -2124,7 +2315,8 @@
         "scripts/build_reading_help_law_context.py",
         "scripts/test_reading_help_law_context.py",
         "scripts/check_reading_help_law_context.mjs",
-        "scripts/replay_reading_help_questions.mjs"
+        "scripts/replay_reading_help_questions.mjs",
+        "domain-profile/context-recovery/**"
       ],
       "command_ids": [
         "build-check",
@@ -2331,7 +2523,23 @@
         "scripts/build_reading_help_law_context.py",
         "scripts/test_reading_help_law_context.py",
         "scripts/check_reading_help_law_context.mjs",
-        "scripts/replay_reading_help_questions.mjs"
+        "scripts/replay_reading_help_questions.mjs",
+        "domain-profile/context-recovery/**",
+        "evaluation/truncation/**",
+        "scripts/context_recovery.mjs",
+        "scripts/progressive_evidence_client.mjs",
+        "scripts/context_review_html.mjs",
+        "scripts/run_context_review.mjs",
+        "domain-profile/retrieval-graph/**",
+        "retrieval-graph/**",
+        "evaluation/retrieval-gate/**",
+        "scripts/*graph*.mjs",
+        "scripts/*graph*.py",
+        "scripts/*persona*.py",
+        "scripts/insufficiency_categories.mjs",
+        "scripts/test_insufficiency_categories.mjs",
+        "scripts/build_legislation_crosswalk.py",
+        "scripts/test_legislation_crosswalk.py"
       ],
       "command_ids": [
         "context-discovery-build-check",
@@ -2380,7 +2588,26 @@
         "reading-help-law-check",
         "reading-help-law-controls",
         "reading-help-reference-check",
-        "reading-help-reference-controls"
+        "reading-help-reference-controls",
+        "context-review-build",
+        "context-review-check",
+        "context-review-controls",
+        "current-explorer-compatibility",
+        "context-strategies-check",
+        "context-recovery-check",
+        "route-graph-build",
+        "route-graph-check",
+        "route-graph-controls",
+        "persona-evaluation-build",
+        "persona-evaluation-check",
+        "persona-evaluation-controls",
+        "graph-delivery-controls",
+        "graph-retrieval-evaluation",
+        "graph-retrieval-check",
+        "withheld-wording-check",
+        "legislation-crosswalk-build",
+        "legislation-crosswalk-check",
+        "legislation-crosswalk-controls"
       ]
     },
     {
@@ -4364,6 +4591,253 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 2
+      },
+      {
+        "id": "context-review-build",
+        "kind": "build",
+        "planes": [
+          "runtime"
+        ],
+        "command": "node scripts/run_context_review.mjs --explorer-root .ci/okf-explorer-current",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "context-review-check",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "node scripts/run_context_review.mjs --explorer-root .ci/okf-explorer-current --check",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "context-review-controls",
+        "kind": "test",
+        "planes": [
+          "runtime"
+        ],
+        "command": "OKF_EXPLORER_ROOT=.ci/okf-explorer-current node --test scripts/test_context_recovery.mjs scripts/test_progressive_evidence_client.mjs scripts/test_context_review_html.mjs scripts/test_run_context_review.mjs scripts/test_current_explorer_compatibility.mjs",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "current-explorer-compatibility",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "node scripts/check_current_explorer_compatibility.mjs --explorer-root .ci/okf-explorer-current",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "context-strategies-check",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "node scripts/evaluate_context_strategies.mjs --explorer-root .ci/okf-explorer-current --output evaluation/truncation/strategy-results.json --check",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "context-recovery-check",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "node scripts/evaluate_context_recovery.mjs --explorer-root .ci/okf-explorer-current --output evaluation/truncation/recovery-results.json --check",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "route-graph-build",
+        "kind": "build",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_evidence_route_graph.py",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "route-graph-check",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_evidence_route_graph.py --check",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "route-graph-controls",
+        "kind": "test",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python -m unittest discover -s scripts -p test_evidence_route_graph.py",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "persona-evaluation-build",
+        "kind": "build",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_persona_evaluation.py",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "persona-evaluation-check",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_persona_evaluation.py --check",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "persona-evaluation-controls",
+        "kind": "test",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python -m unittest discover -s scripts -p test_persona_evaluation.py",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "graph-delivery-controls",
+        "kind": "test",
+        "planes": [
+          "runtime"
+        ],
+        "command": "OKF_EXPLORER_ROOT=.ci/okf-explorer-current node --test scripts/test_graph_evidence_runtime.mjs scripts/test_graph_evidence_client.mjs scripts/test_insufficiency_categories.mjs",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "graph-retrieval-evaluation",
+        "kind": "build",
+        "planes": [
+          "runtime"
+        ],
+        "command": "node scripts/evaluate_graph_retrieval.mjs --explorer-root .ci/okf-explorer-current --output evaluation/retrieval-gate/graph-evaluation.json",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "graph-retrieval-check",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "node scripts/evaluate_graph_retrieval.mjs --explorer-root .ci/okf-explorer-current --output evaluation/retrieval-gate/graph-evaluation.json --check",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "withheld-wording-check",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "OKF_EXPLORER_ROOT=.ci/okf-explorer-current node evaluation/retrieval-gate/withheld/attempt-01/run.mjs",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "legislation-crosswalk-build",
+        "kind": "build",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_legislation_crosswalk.py --legislation-root .ci/okf-uk-legislation",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "legislation-crosswalk-check",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_legislation_crosswalk.py --legislation-root .ci/okf-uk-legislation --check",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "legislation-crosswalk-controls",
+        "kind": "test",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/test_legislation_crosswalk.py --legislation-root .ci/okf-uk-legislation",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
       }
     ]
   },
@@ -4403,7 +4877,8 @@
       "capital-pilot/**",
       "domain-profile/evidence-connect/**",
       "evaluation/evidence-workbench/**",
-      "reading-help-ch60-references.json"
+      "reading-help-ch60-references.json",
+      "retrieval-graph/**"
     ],
     "documentation_paths": [
       "README.md",
@@ -4565,7 +5040,8 @@
     ],
     "console_policy": "documented-allowlist",
     "command_ids": [
-      "browser-evidence-check"
+      "browser-evidence-check",
+      "context-review-check"
     ]
   },
   "limitations": [
@@ -4586,7 +5062,10 @@
     "The source-led manual guide is generated into the static learning site from committed Markdown by the existing learning-site renderer. Publication and browser acceptance remain exact-commit checks; generated HTML is never authored directly.",
     "The root-level Chapter 60 reading-help manifest is a bounded generated candidate for two passages. Offline source-span checks do not establish public Explorer delivery, specialist review, legal applicability or whole-chapter highlighting.",
     "The separate structured-context/location-migration.json ledger distinguishes exact source-location overlap, restored navigation and explicitly inferred associations. It retains all 40 original staff requirements and 203 open obligations without asserting semantic equivalence or complete answerability.",
-    "CI keeps every legacy replay step in a separate job and runs the source-led checks independently. The existing protected validate check runs after both jobs and fails unless both succeeded; Pages still requires the whole exact-commit workflow to succeed.",
-    "The original custody acceptance migration has its own source-bound ledger and evaluation, separate from the 40 staff occurrences. A source-read profile, retained historical scope or complete declared passage does not establish all legal qualifications or a correct AI answer."
+    "CI preserves frozen legacy, structured-source and workbench replays and adds current-Explorer validation separately. The protected validate check fails unless every required prerequisite job succeeds; Pages still requires the whole exact-commit workflow to succeed.",
+    "The original custody acceptance migration has its own source-bound ledger and evaluation, separate from the 40 staff occurrences. A source-read profile, retained historical scope or complete declared passage does not establish all legal qualifications or a correct AI answer.",
+    "The November recovery and progressive client are local producer candidates; they do not redeploy the public plugin or change service defaults. A generated inspector verifies retained package delivery, not current law, complete discovery or an individual entitlement.",
+    "Local Chrome and Edge inspector journeys are documented in docs/context-review.md; the canonical HTTPS journeys retain their historical publication scope. The context-review-check command verifies generated bytes and does not itself launch a browser.",
+    "The separate retrieval graph preserves the original requirements and 203 open obligations. Source-bound navigation repairs and compositional bridges are unreviewed hypotheses. All measured target hits and complete bounded delivery remain insufficient for legal applicability, current law, specialist acceptance or an individual answer."
   ]
 }

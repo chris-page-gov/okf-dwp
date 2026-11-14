@@ -19,6 +19,17 @@ tested source-led evidence, forty-question gaps and a four-call comparison cap.
 
 **An independent, unofficial experimental exemplar. Not an official DWP document, benefits advice or an entitlement calculator.**
 
+**14 November review candidate:** the [context review guide](docs/context-review.md)
+explains the runnable offline inspector, source-bound recovery queries and exact
+progressive delivery. The additive graph candidate reaches **263/263 declared
+persona targets**, **35/35 original custody targets** and **4/4 UC targets**.
+It covers all eight authored personas and their 21 interest areas in 75 cases.
+A separate withheld wording trial reaches 45/45 targets and passes 12/12 negative
+controls. These are measured source-retrieval results, with full response
+envelopes at most 8 KiB. Public service and client acceptance remain separately
+recorded. Every candidate context remains insufficient, with no AI answer;
+the 203 original obligations remain open.
+
 **[What changed: changelog](CHANGELOG.md)** · [Current work log](docs/evidence-workbench-work-log.md)
 · [Backlog and acceptance checks](docs/backlog.md) · [How to repeat the method](docs/methodology.md)
 · [What we learned](docs/retrospective.md)
@@ -47,6 +58,13 @@ explicit. Neither replaces the exact receipts below.
 Use the **[latest recorded service publication status](docs/service-publication.md)**
 for the selected deployment and SDK observations. This generated page is the shared
 status reference for DWP and Explorer; it does not claim real-time health.
+
+The latest retained successful observation selects **service 0.7.0**, DWP source
+`7eeded763042ddd0070f4fed834c6074149e8e2f` and context engine
+`d6930bbcddaab616deec002d9e6efff6e3aae953`. Its
+[recorded verification](validation/compact-delivery/v0.7.0/README.md) covers bounded
+delivery. The November producer candidate has its own offline receipts and is
+not an adopted service release.
 
 ### Dated observation: 21 September 2026
 
@@ -371,7 +389,13 @@ protections.
 
 ## Ask OKF: governed context assembly
 
-The recorded 0.6.0 service uses both captured manuals and the partner-qualified household/statutory
+Use the [generated service publication status](docs/service-publication.md) for
+the latest retained source and engine pair: service 0.7.0, source
+`7eeded763042ddd0070f4fed834c6074149e8e2f`, engine
+`d6930bbcddaab616deec002d9e6efff6e3aae953`. The additive
+[November context review](docs/context-review.md) is a local research candidate.
+
+The historical 0.6.0 service used both captured manuals and the partner-qualified household/statutory
 semantic layer at content version `723bcc5b015ab38a026625c2148edbd784edf7c7`.
 Open [that fixed source in Explorer](https://chris-page-gov.github.io/okf-explorer/explore/?bundle=https%3A%2F%2Fraw.githubusercontent.com%2Fchris-page-gov%2Fokf-dwp%2F723bcc5b015ab38a026625c2148edbd784edf7c7%2Fcombined%2Fokf-explorer.json#overview)
 or follow the [Monday handover](docs/monday-handover-2026-09-21.md). A fixed source
@@ -573,9 +597,10 @@ all retained. Fresh PDF observation is an explicit maintenance operation, outsid
 normal CI. Missing structure or an unresolved boundary remains visible.
 
 **Continuous integration (CI)** means the automated checks run for each proposed
-change. The existing replay and the new source-led checks run in parallel jobs,
-each with its own resources. The protected `validate` check succeeds only when
-both jobs succeed. The learning website still publishes only after the complete
+change. Legacy replay, structured-source, workbench and current-Explorer checks
+run in four prerequisite jobs, each with its own resources. The protected
+`validate` check succeeds only when every required validation job succeeds.
+The learning website still publishes only after the complete
 workflow passes for the exact main-branch commit.
 
 For keyword retrieval with JSON citations:

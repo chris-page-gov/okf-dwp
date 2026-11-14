@@ -138,6 +138,8 @@ export async function createEvidenceSession({ transport, request, limits: suppli
   require(Object.keys(supplied).every(k => k in PROGRESSIVE_LIMITS), 'unknown client limit');
   const limits = { ...PROGRESSIVE_LIMITS, ...supplied };
   require(Object.values(limits).every(value => integer(value) && value > 0), 'client limits must be positive integers');
+  require(Object.entries(limits).every(([key, value]) => key === 'deliveryBytes' || value <= PROGRESSIVE_LIMITS[key]),
+    'client limits cannot exceed hard ceilings');
   require(limits.deliveryBytes >= 8192 && limits.deliveryBytes <= 65536, 'delivery bytes outside protocol range');
   const started = performance.now();
   const stats = { calls: 0, response_bytes: 0, max_response_bytes: 0, max_value_json_bytes: 0,

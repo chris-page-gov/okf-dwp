@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import test from 'node:test';
-import { createEvidenceSession, collectProgressiveEvidence, unwrapEvidenceResponse } from './progressive_evidence_client.mjs';
+import { createEvidenceSession, collectProgressiveEvidence, unwrapEvidenceResponse, PROGRESSIVE_LIMITS } from './progressive_evidence_client.mjs';
 
 const sha = text => createHash('sha256').update(text).digest('hex');
 const bytes = value => Buffer.byteLength(JSON.stringify(value));
@@ -14,6 +14,16 @@ function canonical(value) {
 const clone = value => JSON.parse(JSON.stringify(value));
 const question = 'Where is the public source evidence for this research question?';
 const request = { question, bundle: 'okf-dwp', version: 'a'.repeat(40), budget: { max_bytes: 524288 } };
+
+test('callers can tighten resource limits but cannot remove hard ceilings', async () => {
+  for (const [key, maximum] of Object.entries(PROGRESSIVE_LIMITS)) {
+    if (key === 'deliveryBytes') continue;
+    let calls = 0;
+    const transport = { manifest: () => { calls++; }, read: () => { calls++; } };
+    await assert.rejects(createEvidenceSession({ transport, request, limits: { [key]: maximum + 1 } }), /hard ceilings/);
+    assert.equal(calls, 0, key);
+  }
+});
 function fixture() {
   const records = ['first', 'second', 'concept'].map((name, i) => ({
     record: { id: `https://example.invalid/id/${name}`, route: `unit/${name}`, label: `Source ${name}`,

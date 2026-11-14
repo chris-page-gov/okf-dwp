@@ -1,0 +1,28 @@
+{
+  "schema": "okf-dwp-topic-navigation-profiles.v1",
+  "assertion_status": "model-derived",
+  "review_status": "unreviewed",
+  "profiles": [
+    {
+      "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/capital-disregards",
+      "via_concepts": [],
+      "scope": "Direct captured source references for the capital-disregard research example; no legal completeness."
+    },
+    {
+      "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/household",
+      "via_concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/mixed-age-couples"
+      ],
+      "scope": "Direct household sources and the explicitly related mixed-age source branch; role and date remain unresolved."
+    },
+    {
+      "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/mixed-age-couples",
+      "via_concepts": [],
+      "scope": "Direct source references for the named mixed-age research branch; no claim/change or entitlement decision."
+    }
+  ],
+  "limitations": [
+    "Profiles select existing declared directed reference paths only. They never seed a page from an evaluator target.",
+    "Each bounded topic profile retains unresolved applicability and specialist review."
+  ]
+}

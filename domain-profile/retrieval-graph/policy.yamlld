@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "@vocab": "https://chris-page-gov.github.io/okf-dwp/profile/retrieval-graph/"
+  },
+  "@id": "https://chris-page-gov.github.io/okf-dwp/id/retrieval-graph/v1",
+  "schema": "okf-dwp-evidence-route-policy.v1",
+  "authored_at": "2026-11-14",
+  "assertion_status": "model-derived",
+  "review_status": "unreviewed",
+  "source_commit": "77ef16047415ee48dcb93b80adf1ba057ea00d9b",
+  "inputs": [
+    {
+      "path": "combined/context/assembly-index.json",
+      "sha256": "547623cd08ca6b2ab59ff7bc52ddbdabea4ead6e1aa26ad1f7983b63b91b71d4"
+    },
+    {
+      "path": "full-dmg/context/assembly-index.json",
+      "sha256": "38159445a60d4bcabc23cb2cf728e14cbd0a4b55013276c291356e7a1452ff54"
+    },
+    {
+      "path": "structured-context/evidence-connect-manifest.json",
+      "sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+    },
+    {
+      "path": "structured-context/evidence-connect/base-index.json",
+      "sha256": "79c17cb04079e128f192c21ea65a1e8d4383dcdd0d5551e633c1d4c22dee8066"
+    },
+    {
+      "path": "domain-profile/context-recovery/policy.yamlld",
+      "sha256": "4b5efdc1fbe5c5fa01b0f6f00ce7fdd927f35eaab232271ada8f5b90cb483278"
+    },
+    {
+      "path": "domain-profile/retrieval-graph/navigation-repairs.yamlld",
+      "sha256": "848f940331528e4f3663e35cb7c5746c3c8776c97e9e1cc1a4d5d7aed534c847"
+    },
+    {
+      "path": "domain-profile/retrieval-graph/concept-bridges.yamlld",
+      "sha256": "73556c81eff80bd7eb59e045c88726324c33814fe5d64232cc85744951917e10"
+    },
+    {
+      "path": "domain-profile/retrieval-graph/topic-profiles.yamlld",
+      "sha256": "3cbf68fade3044761d92d662b9c4106d9089772327df362514c736ab5188b8fc"
+    }
+  ],
+  "scope": "Additive directed navigation over preserved staff pages, custody profiles and structured-unit dependencies. No legal applicability assertion.",
+  "limits": {
+    "records": 5000,
+    "assertions": 12000,
+    "requirements": 500,
+    "path_depth": 16
+  },
+  "conflicting_concept_policy": "Retain the first concept record unchanged and record later variants; later scope-only assertion variants retain the first scope. Conflicting evidence, predicates or endpoints fail closed.",
+  "limitations": [
+    "Required routes are source-bound navigation proposals, not assessor question lookups or accepted legal interpretations.",
+    "Original source graphs and failure receipts remain unchanged; all203 original obligations remain open.",
+    "The source corpus is a dated September capture. Missing operational evidence, case law and current legal applicability must not be invented."
+  ],
+  "route_dependencies": [
+    {
+      "route_id": "other-benefit-timing",
+      "source_support": [
+        2
+      ],
+      "reason": "Read the ordinary late-notification branch alongside the explicitly supported other-benefit exception; this is navigation, not a conclusion that either applies."
+    }
+  ]
+}

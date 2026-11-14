@@ -18,6 +18,7 @@ jobs:
     env:
       # Reviewed immutable consumer source; execution receipts bind its bytes too.
       EXPLORER_LOGICAL_UNIT_COMMIT: 2e557f4b78db10cf69471e4a106a98d3a6c43c5b
+      OKF_LEGISLATION_ROOT: .ci/okf-uk-legislation
       EXPLORER_CONTEXT_COMMIT: 97f13d22b689d92cd785de04758fe932d4a4d369
       EXPLORER_CORPUS_COMMIT: 31ee08ec259e165a478e9c36826fe3721643631d
       EXPLORER_STAFF_COMMIT: f8daf84a4c04afb4839695d38a97cbf21b0ed0a0
@@ -45,6 +46,27 @@ jobs:
         with:
           version: '0.12.2'
       - run: uv sync --locked
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: chris-page-gov/okf-uk-legislation
+          ref: 9830fde2d32052f10713298f16b8ab1e321b1928
+          path: .ci/okf-uk-legislation
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            bundle/checksums.json
+            bundle/data/records/
+      - name: Verify the pinned statutory work crosswalk without acquisition
+        run: |
+          git fetch --no-tags --depth=1 origin 77ef16047415ee48dcb93b80adf1ba057ea00d9b
+          uv run --locked python scripts/build_legislation_crosswalk.py --legislation-root .ci/okf-uk-legislation --check
+          uv run --locked python scripts/test_legislation_crosswalk.py --legislation-root .ci/okf-uk-legislation
+      - name: Verify the additive source-route graph and persona protocol
+        run: |
+          uv run --locked python scripts/build_evidence_route_graph.py --check
+          uv run --locked python scripts/build_persona_evaluation.py --check
+          uv run --locked python -m unittest discover -s scripts -p test_evidence_route_graph.py
+          uv run --locked python -m unittest discover -s scripts -p test_persona_evaluation.py
       - name: Validate the isolated learning-site renderer
         run: |
           uv sync --locked --project tools/learning-site
@@ -510,10 +532,25 @@ jobs:
           ref: ${{ env.EXPLORER_CURRENT_COMMIT }}
           path: .ci/okf-explorer-current
           persist-credentials: false
-      - name: Reject changed evidence delivery and corpus bindings
-        run: node --test scripts/test_current_explorer_compatibility.mjs
+      - name: Reject changed recovery, delivery and corpus bindings
+        env:
+          OKF_EXPLORER_ROOT: .ci/okf-explorer-current
+        run: >-
+          node --test scripts/test_current_explorer_compatibility.mjs
+          scripts/test_context_recovery.mjs scripts/test_progressive_evidence_client.mjs
+          scripts/test_context_review_html.mjs scripts/test_run_context_review.mjs
+          scripts/test_graph_evidence_runtime.mjs scripts/test_graph_evidence_client.mjs
+          scripts/test_insufficiency_categories.mjs
       - name: Check current consumer APIs and bounded exact delivery offline
         run: node scripts/check_current_explorer_compatibility.mjs --explorer-root .ci/okf-explorer-current
+      - name: Replay the fixed strategy and recovery comparisons
+        run: |
+          node scripts/evaluate_context_strategies.mjs --explorer-root .ci/okf-explorer-current --output evaluation/truncation/strategy-results.json --check
+          node scripts/evaluate_context_recovery.mjs --explorer-root .ci/okf-explorer-current --output evaluation/truncation/recovery-results.json --check
+          node scripts/run_context_review.mjs --explorer-root .ci/okf-explorer-current --check
+          node scripts/evaluate_graph_retrieval.mjs --explorer-root .ci/okf-explorer-current --output evaluation/retrieval-gate/graph-evaluation.json --check
+          OKF_EXPLORER_ROOT=.ci/okf-explorer-current node evaluation/retrieval-gate/withheld/attempt-01/run.mjs
+          git diff --exit-code -- evaluation/retrieval-gate/withheld/attempt-01/receipt.json evaluation/retrieval-gate/withheld/attempt-01/run-summary.json
 
   validate:
     # Preserve the existing protected check name and fail for skipped,

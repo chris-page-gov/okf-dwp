@@ -9,7 +9,8 @@ import { createContextRecovery, recoverySha256 } from './context_recovery.mjs';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
 const option = name => { const n = args.indexOf(name); return n < 0 ? undefined : args[n + 1]; };
-assert(option('--explorer-root'), 'Usage: --explorer-root PATH [--output PATH]');
+assert(option('--explorer-root'), 'Usage: --explorer-root PATH [--output PATH] [--check]');
+assert(!args.includes('--check') || option('--output'), '--check requires --output');
 const spec = JSON.parse(readFileSync(resolve(root, 'evaluation/out-of-sample/uc-disabled-child-supersession-001.json')));
 const adapter = await createContextRecovery({ root, explorerRoot: resolve(option('--explorer-root')) });
 const protocolRaw = readFileSync(resolve(root, 'evaluation/truncation/recovery-cases.json'));
@@ -80,7 +81,12 @@ const output = {
     'The local adapter is a review candidate. The public Ask OKF service and frozen source projections remain unchanged.',
   ],
 };
-if (option('--output')) writeFileSync(resolve(option('--output')), JSON.stringify(output, null, 2) + '\n');
+const serialised = JSON.stringify(output, null, 2) + '\n';
+if (option('--output')) {
+  const path = resolve(option('--output'));
+  if (args.includes('--check')) assert.equal(readFileSync(path, 'utf8'), serialised, 'Recovery evaluation drift');
+  else writeFileSync(path, serialised);
+}
 process.stdout.write(JSON.stringify({schema: output.schema, cases: cases.length,
   original_staff_followup_activations: output.original_staff_followup_activations,
   original_staff_alias_changes: output.original_staff_alias_changes,

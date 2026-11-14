@@ -19,6 +19,30 @@ The truncation and semantic-routing investigation has a separate report. These
 publication findings should not be interpreted as a second diagnosis of the
 retrieval mechanism.
 
+## Candidate treatment and fresh evidence
+
+The accompanying candidate addresses the four publication findings: current
+entry points foreground the selected service observation, September work logs
+remain explicitly historical, every required CI job is named accurately and a
+fourth current-Explorer gate preserves all earlier immutable engine pins.
+The protected aggregate name remains `validate`.
+
+The [context review guide](context-review.md) links the new source-retrieval
+evaluation, retained initial failures, persona coverage, frozen withheld wording
+trial, statutory crosswalk and exact local Chrome/Edge inspector observation.
+Local verification passed 985 repository Python tests (one existing skip), six
+additional statutory-crosswalk tests, 85 candidate Node tests and the earlier
+83 historical Node checks. The renderer correction was then checked with its
+eight affected tests. Deterministic source and pilot-projection checks passed.
+These results do not represent remote service or connected-client acceptance.
+
+The graph runtime and client were frozen before the separate agent's withheld
+wording trial. All 263 persona target occurrences, 35 custody targets, four UC
+targets and 45 withheld targets were reached through admitted directed source
+paths, with complete bounded delivery. Twelve withheld negative controls
+passed. All original requirements and 203 obligations remain open. Directed
+navigation repairs and concept bridges retain model-derived, unreviewed status.
+
 ## Release identity
 
 The current DWP baseline already has the annotated tag
