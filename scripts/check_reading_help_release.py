@@ -24,6 +24,9 @@ COMMIT = re.compile(r"[0-9a-f]{40}\Z")
 MAX_BOUND_BYTES = 64 * 1024 * 1024
 MAX_MANIFEST_BYTES = 1024 * 1024
 _HISTORICAL_CONTRACTS = ContextVar('historical_contracts', default=None)
+HISTORICAL_CONTRACT_PATHS = (
+    'okf.semantic.json', 'okf.publication.json', 'evaluation/service-publication.json',
+)
 MAX_OBSERVED_RESPONSE_BYTES = 4 * 1024 * 1024
 LEARNING_SITE_URL = "https://chris-page-gov.github.io/okf-dwp/"
 LEARNING_SITE_PATHS = frozenset({
@@ -92,11 +95,11 @@ def bound_bytes(root: Path, binding: dict[str, Any], label: str) -> bytes:
 
 @contextmanager
 def historical_contracts(root: Path, commit: str):
-    """Check only the two frozen contracts from Git; all other bindings stay current and strict."""
+    """Check the named frozen contracts and service selection; keep all other bindings current."""
     require(isinstance(commit, str) and COMMIT.fullmatch(commit), 'Full historical contract commit required')
     files = {}
     try:
-        for path in ('okf.semantic.json', 'okf.publication.json'):
+        for path in HISTORICAL_CONTRACT_PATHS:
             identity = f'{commit}:{path}'
             size = int(subprocess.check_output(['git', '-C', str(root), 'cat-file', '-s', identity], stderr=subprocess.PIPE))
             require(0 < size <= MAX_BOUND_BYTES, 'Historical contract exceeds its byte ceiling')
@@ -355,7 +358,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--manifest", type=Path, required=True)
-    parser.add_argument('--frozen-contracts-commit', help='Check only the two historical contract bindings against this full Git commit')
+    parser.add_argument('--frozen-contracts-commit', help='Check the two historical contracts and service-selection binding against this full Git commit')
     args = parser.parse_args()
     try:
         with historical_contracts(args.root, args.frozen_contracts_commit) if args.frozen_contracts_commit else nullcontext():

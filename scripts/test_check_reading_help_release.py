@@ -133,7 +133,8 @@ class ReleaseManifestTests(unittest.TestCase):
 
     def test_historical_contracts_are_exact_and_do_not_override_other_evidence(self):
         originals = {'okf.semantic.json': b'original semantic contract\n',
-                     'okf.publication.json': b'original publication contract\n'}
+                     'okf.publication.json': b'original publication contract\n',
+                     'evaluation/service-publication.json': b'original service selection\n'}
         bindings = {path: self.bind(path, body) for path, body in originals.items()}
         for path in originals:
             (self.root / path).write_bytes(b'new candidate contract\n')
@@ -144,7 +145,8 @@ class ReleaseManifestTests(unittest.TestCase):
             bound_bytes(self.root, bindings['okf.semantic.json'], 'current contract')
         with patch('check_reading_help_release.subprocess.check_output', side_effect=git_output):
             with historical_contracts(self.root, 'a' * 40):
-                self.assertEqual(bound_bytes(self.root, bindings['okf.semantic.json'], 'frozen contract'), originals['okf.semantic.json'])
+                for path, original in originals.items():
+                    self.assertEqual(bound_bytes(self.root, bindings[path], 'frozen contract'), original)
                 wrong = {**bindings['okf.semantic.json'], 'sha256': '0' * 64}
                 with self.assertRaisesRegex(ReleaseError, 'Historical contract SHA-256'):
                     bound_bytes(self.root, wrong, 'tampered contract binding')

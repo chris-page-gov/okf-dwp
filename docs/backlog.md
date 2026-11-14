@@ -17,6 +17,21 @@ name the missing decision; `not_started` records work that has not been done.
 P0 means the next demonstration or evidence-quality priority, not an instruction
 to bypass source, rights or review boundaries.
 
+## Bounded retrieval and persona coverage — 14 November 2026
+
+The [persona review](persona-coverage-and-evidence-limits-2026-11-14.md) maps all
+eight projected personas and 21 interests to the additive 75-case suite. The
+[graph evaluation](../evaluation/retrieval-gate/graph-evaluation.json) records
+263/263 declared persona targets, 35/35 custody targets and 4/4 UC targets.
+The original questions, failed runs and 203 open obligations remain preserved.
+This bounded implementation does not close BL001's domain or user review.
+
+The [graph publication status](graph-service-publication.md) records deployment,
+public SDK and native host evidence separately. Current law, case-law reasoning,
+operational evidence, human accessibility acceptance and specialist approval
+remain separate work. See the [insufficiency categories](context-review.md#why-evidence-remains-insufficient)
+for the recorded reasons rather than interpreting every gap as a retrieval failure.
+
 ## What broader semantic modelling means
 
 The original work was incomplete; it was not recorded as done. The previous single
