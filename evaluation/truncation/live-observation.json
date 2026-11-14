@@ -1,0 +1,87 @@
+{
+  "schema": "okf-dwp-truncation-live-observation.v1",
+  "observed_date": "2026-11-14",
+  "tool": "ask_okf",
+  "input": {
+    "bundle": "okf-dwp",
+    "question": "Where a child is awarded the highest-rate care component of DLA from 26 January 2025, but the change is reported to Universal Credit on 28 March 2026, what is the effective date of the higher disabled-child addition, and from which assessment period should it be paid?"
+  },
+  "context_id": "urn:sha256:ad353d312d85cc9ce21cbc960cc9d00ff4e7a23f81b912a09e282eec63d4ca34",
+  "binding": {
+    "index_url": "https://raw.githubusercontent.com/chris-page-gov/okf-dwp/7eeded763042ddd0070f4fed834c6074149e8e2f/structured-context/evidence-connect-manifest.json",
+    "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+  },
+  "bundle": {
+    "id": "https://chris-page-gov.github.io/okf-dwp/id/bundle/evidence-connect",
+    "snapshot": "evidence-connect-754be67f82c82e31d17c",
+    "source_url": "https://github.com/chris-page-gov/okf-dwp"
+  },
+  "replay_identity": {
+    "engine_id": "urn:okf:context-engine:sha256:256b19d6d8a2e16191866ead0ffd48d9edb7f705143bd8a91597b19f242c0968",
+    "mode": "current-default",
+    "original_engine_id": null,
+    "matching_engine_ids": [
+      "urn:okf:context-engine:sha256:256b19d6d8a2e16191866ead0ffd48d9edb7f705143bd8a91597b19f242c0968"
+    ],
+    "package_sha256": "d604d5ff429070e8be250e7f64b2c61de7adc21682d9a0dfcc2ac2cd64dfb55c"
+  },
+  "budget": {
+    "max_nodes": 64,
+    "max_relationships": 128,
+    "max_depth": 6,
+    "max_bytes": 524288,
+    "used_nodes": 38,
+    "used_relationships": 43,
+    "used_bytes": 522215,
+    "reached_depth": 4,
+    "truncated": true,
+    "omissions": {
+      "retrieval_query_budget": 1,
+      "retrieval_candidate_budget": 1,
+      "retrieval_resource_budget": 43,
+      "relationship_byte_budget": 15,
+      "byte_budget": 1
+    }
+  },
+  "retrieval": {
+    "candidate_count": 24158,
+    "admitted_candidates": 4,
+    "fetched_files": 64,
+    "fetched_bytes": 4838010,
+    "decoded_bytes": 23057209,
+    "limits": {
+      "query_tokens": 24,
+      "candidates": 16,
+      "files": 64,
+      "fetched_bytes": 16777216,
+      "decoded_bytes": 33554432
+    },
+    "truncated": true,
+    "omissions": {
+      "retrieval_query_budget": 1,
+      "retrieval_candidate_budget": 1,
+      "retrieval_resource_budget": 43
+    }
+  },
+  "selected_records": 38,
+  "selected_evidence": 35,
+  "selected_text_utf16_units": 68454,
+  "evidence_status": "insufficient",
+  "ai_answer": null,
+  "response_measurement": {
+    "method": "UTF-8 bytes of JSON.stringify on the connector-returned result; text copies measured as exact UTF-8 text bytes",
+    "package_bytes": 522215,
+    "text_copies_bytes": [
+      522215,
+      386
+    ],
+    "connector_result_bytes": 1071946,
+    "host_truncation_observed": false,
+    "host_limit_known": false
+  },
+  "limitations": [
+    "Connector envelope size is not a measurement of a model context limit or the HTTP wire transfer.",
+    "This read-only call reproduced the current allowlisted source and engine; no live service code was changed.",
+    "Offline context identities differ because the binding index URL is deliberately example.invalid."
+  ]
+}

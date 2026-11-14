@@ -1,0 +1,1538 @@
+{
+  "schema": "okf-persona-evaluation-authoring.v1",
+  "review_status": "projected-not-user-validated",
+  "source_files": {
+    "knowledge/guided-discovery.yamlld": "913a74b8513c591be8f164e199fcb495aec5015d06600c7496464d2d4ac8ab94",
+    "knowledge/evaluation-journeys.yamlld": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85",
+    "domain-profile/staff-needs/journeys.json": "84393d075425808b7a298cda32cbcf60d0c127c8577684a4ab35e8ead88f22c7"
+  },
+  "personas": [
+    {
+      "id": "persona/welfare-rights-adviser",
+      "status": "projected",
+      "areas": [
+        {
+          "id": "find-original-guidance",
+          "interest": "Find the right chapter, inspect original guidance, follow cross-references and identify further evidence to check.",
+          "source": {
+            "file": "knowledge/guided-discovery.yamlld",
+            "locator": "persona/welfare-rights-adviser; description and body",
+            "lines": [
+              16,
+              33
+            ],
+            "sha256": "913a74b8513c591be8f164e199fcb495aec5015d06600c7496464d2d4ac8ab94"
+          },
+          "case_ids": [
+            "staff-001",
+            "staff-003",
+            "staff-005",
+            "staff-011",
+            "staff-022",
+            "staff-024",
+            "staff-026",
+            "staff-027",
+            "staff-028",
+            "staff-029",
+            "staff-030",
+            "staff-031",
+            "staff-033",
+            "staff-034",
+            "staff-035",
+            "staff-036",
+            "staff-037",
+            "staff-038",
+            "staff-039",
+            "staff-040",
+            "stage2-004",
+            "unhinted-carer-claims",
+            "unhinted-income-capital",
+            "unhinted-absence-temporary",
+            "unhinted-absence-permanent",
+            "unhinted-pip-state-pension-overlap",
+            "unhinted-pip-other-benefits",
+            "unhinted-carer-qualifying-conditions",
+            "unhinted-carer-overlap",
+            "stage2-004-pc-context"
+          ]
+        },
+        {
+          "id": "identify-missing-qualifications",
+          "interest": "Explain cited guidance while exposing missing qualifications, benefit variants, dates and scope before making an interpretation.",
+          "source": {
+            "file": "domain-profile/staff-needs/journeys.json",
+            "locator": "persona/welfare-rights-adviser; goal; benefit-interactions, absence-and-residence and carer-qualification journeys",
+            "lines": [
+              5,
+              20
+            ],
+            "sha256": "84393d075425808b7a298cda32cbcf60d0c127c8577684a4ab35e8ead88f22c7"
+          },
+          "case_ids": [
+            "staff-001",
+            "staff-023",
+            "staff-024",
+            "staff-026",
+            "staff-027",
+            "staff-028",
+            "staff-029",
+            "staff-030",
+            "staff-031",
+            "staff-033",
+            "staff-034",
+            "staff-035",
+            "staff-036",
+            "staff-037",
+            "staff-038",
+            "staff-039",
+            "staff-040",
+            "stage2-004",
+            "stage2-005",
+            "unhinted-carer-claims",
+            "unhinted-absence-temporary",
+            "unhinted-absence-permanent",
+            "unhinted-pip-state-pension-overlap",
+            "unhinted-pip-other-benefits",
+            "unhinted-household-partner-change",
+            "unhinted-household-care-home",
+            "unhinted-carer-qualifying-conditions",
+            "unhinted-carer-overlap",
+            "stage2-004-pc-context"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "persona/pensions-specialist",
+      "status": "projected",
+      "areas": [
+        {
+          "id": "inspect-original-context",
+          "interest": "Review source passages and expose surrounding context an informal summary could miss.",
+          "source": {
+            "file": "knowledge/guided-discovery.yamlld",
+            "locator": "persona/pensions-specialist; description and body",
+            "lines": [
+              3,
+              15
+            ],
+            "sha256": "913a74b8513c591be8f164e199fcb495aec5015d06600c7496464d2d4ac8ab94"
+          },
+          "case_ids": [
+            "staff-002",
+            "staff-004",
+            "staff-006",
+            "staff-010",
+            "staff-012",
+            "staff-013",
+            "staff-014",
+            "staff-015",
+            "staff-016",
+            "staff-017",
+            "staff-018",
+            "staff-019",
+            "staff-020",
+            "staff-021",
+            "staff-022",
+            "staff-025",
+            "staff-032",
+            "stage2-004",
+            "unhinted-income-capital",
+            "unhinted-age-first-payment",
+            "unhinted-age-contribution-rules",
+            "unhinted-pc-inputs-separate",
+            "unhinted-household-partner-change",
+            "unhinted-household-care-home",
+            "unhinted-pc-capital-valuation",
+            "stage2-004-pc-context"
+          ]
+        },
+        {
+          "id": "separate-income-capital",
+          "interest": "Keep earnings, other income and capital as distinct topics with separate source routes.",
+          "source": {
+            "file": "knowledge/guided-discovery.yamlld",
+            "locator": "story/income-map; earnings, other income and capital",
+            "lines": [
+              67,
+              85
+            ],
+            "sha256": "913a74b8513c591be8f164e199fcb495aec5015d06600c7496464d2d4ac8ab94"
+          },
+          "case_ids": [
+            "staff-006",
+            "staff-010",
+            "staff-015",
+            "staff-016",
+            "staff-019",
+            "staff-020",
+            "staff-021",
+            "unhinted-income-capital",
+            "unhinted-pc-inputs-separate",
+            "unhinted-pc-capital-valuation"
+          ]
+        },
+        {
+          "id": "retain-historical-gaps",
+          "interest": "Keep historical provisions and missing memos visible; do not let an orderly graph conceal uncertainty.",
+          "source": {
+            "file": "knowledge/guided-discovery.yamlld",
+            "locator": "story/context-review; historical provisions and missing memos",
+            "lines": [
+              86,
+              102
+            ],
+            "sha256": "913a74b8513c591be8f164e199fcb495aec5015d06600c7496464d2d4ac8ab94"
+          },
+          "case_ids": [
+            "staff-007",
+            "staff-008",
+            "staff-009",
+            "staff-021",
+            "unhinted-history-capture-date",
+            "unhinted-pc-rate-periods",
+            "unhinted-rate-date-v-capture"
+          ]
+        },
+        {
+          "id": "pension-distinctions-dates",
+          "interest": "Check Pension Credit and State Pension distinctions, dates and cross-references; separate age, entitlement, transition and first payment.",
+          "source": {
+            "file": "domain-profile/staff-needs/journeys.json",
+            "locator": "persona/pensions-specialist; age-and-transition and historical-rates journeys",
+            "lines": [
+              5,
+              18
+            ],
+            "sha256": "84393d075425808b7a298cda32cbcf60d0c127c8577684a4ab35e8ead88f22c7"
+          },
+          "case_ids": [
+            "staff-002",
+            "staff-004",
+            "staff-007",
+            "staff-008",
+            "staff-009",
+            "staff-025",
+            "staff-032",
+            "unhinted-history-capture-date",
+            "unhinted-age-first-payment",
+            "unhinted-age-contribution-rules",
+            "unhinted-pc-rate-periods",
+            "unhinted-rate-date-v-capture"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "persona/policy-law-reviewer",
+      "status": "projected",
+      "areas": [
+        {
+          "id": "distinguish-guidance-law",
+          "interest": "Distinguish operational guidance, legal sources and project interpretation; a preference for consulting guidance first does not mean guidance overrides legislation.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/policy-law-reviewer; body",
+            "lines": [
+              4,
+              30
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "staff-001",
+            "staff-002",
+            "staff-007",
+            "staff-008",
+            "staff-009",
+            "staff-023",
+            "staff-025",
+            "staff-032",
+            "stage2-001",
+            "unhinted-legal-hierarchy",
+            "unhinted-absence-temporary",
+            "unhinted-absence-permanent",
+            "stage2-001-pc-context",
+            "unhinted-pc-legal-hierarchy"
+          ]
+        },
+        {
+          "id": "test-temporal-jurisdictional-scope",
+          "interest": "Inspect temporal and jurisdictional scope, exact source locators, source type and capture date; keep unresolved dependencies visible.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/policy-law-reviewer; goal and success criteria",
+            "lines": [
+              4,
+              30
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "staff-001",
+            "staff-002",
+            "staff-007",
+            "staff-008",
+            "staff-009",
+            "staff-023",
+            "staff-025",
+            "staff-032",
+            "stage2-001",
+            "stage2-004",
+            "unhinted-history-capture-date",
+            "unhinted-absence-temporary",
+            "unhinted-absence-permanent",
+            "unhinted-age-first-payment",
+            "unhinted-age-contribution-rules",
+            "unhinted-pc-rate-periods",
+            "unhinted-rate-date-v-capture",
+            "stage2-001-pc-context",
+            "stage2-004-pc-context"
+          ]
+        },
+        {
+          "id": "separate-capture-and-effectiveness",
+          "interest": "Do not infer source publication, legal commencement or current applicability from capture dates, links or a guidance citation.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "question/stage2-001; acceptance and negative control",
+            "lines": [
+              341,
+              405
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "stage2-001",
+            "unhinted-legal-hierarchy",
+            "unhinted-history-capture-date",
+            "stage2-001-pc-context",
+            "unhinted-pc-legal-hierarchy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "persona/evidence-assurance-reviewer",
+      "status": "projected",
+      "areas": [
+        {
+          "id": "audit-evidence-per-claim",
+          "interest": "Check whether evidence supports each claim and state what remains missing; keep source support separate from completeness.",
+          "source": {
+            "file": "domain-profile/staff-needs/journeys.json",
+            "locator": "persona/evidence-assurance-reviewer; source-audit journey",
+            "lines": [
+              9,
+              23
+            ],
+            "sha256": "84393d075425808b7a298cda32cbcf60d0c127c8577684a4ab35e8ead88f22c7"
+          },
+          "case_ids": [
+            "staff-003",
+            "staff-005",
+            "staff-010",
+            "staff-011",
+            "staff-012",
+            "staff-013",
+            "staff-014",
+            "staff-015",
+            "staff-016",
+            "staff-017",
+            "staff-018",
+            "staff-019",
+            "staff-020",
+            "staff-021",
+            "staff-024",
+            "staff-026",
+            "staff-027",
+            "staff-028",
+            "staff-029",
+            "staff-030",
+            "staff-031",
+            "staff-033",
+            "staff-034",
+            "staff-035",
+            "staff-036",
+            "staff-037",
+            "staff-038",
+            "staff-039",
+            "staff-040",
+            "stage2-003",
+            "stage2-004",
+            "unhinted-operational-proof",
+            "unhinted-pip-state-pension-overlap",
+            "unhinted-pip-other-benefits",
+            "unhinted-pc-inputs-separate",
+            "unhinted-household-partner-change",
+            "unhinted-household-care-home",
+            "unhinted-carer-qualifying-conditions",
+            "unhinted-pc-capital-valuation",
+            "unhinted-carer-overlap",
+            "stage2-003-pc-context",
+            "stage2-004-pc-context"
+          ]
+        },
+        {
+          "id": "separate-policy-and-operational-evidence",
+          "interest": "Distinguish policy interpretation from additional operational evidence and label each requirement source-backed, stakeholder-derived or unresolved.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/evidence-assurance-reviewer; goal",
+            "lines": [
+              60,
+              86
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "stage2-003",
+            "unhinted-operational-proof",
+            "stage2-003-pc-context"
+          ]
+        },
+        {
+          "id": "privacy-fraud-error-owner-boundary",
+          "interest": "Leave operational evidence, privacy, fraud and error requirements to authorised specialists; provide no checklist, claimant risk model, fraud method or real claimant data.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "Goal: see which requirements are supported; body",
+            "lines": [
+              82,
+              86
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "stage2-003",
+            "unhinted-operational-proof",
+            "stage2-003-pc-context"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "persona/knowledge-engineer",
+      "status": "projected",
+      "areas": [
+        {
+          "id": "reproduce-evidence-transform",
+          "interest": "Inspect identities, extraction boundaries, relationships and provenance; reproduce an extract against its original PDF hash and relationship evidence.",
+          "source": {
+            "file": "knowledge/guided-discovery.yamlld",
+            "locator": "persona/knowledge-engineer; description and body",
+            "lines": [
+              34,
+              48
+            ],
+            "sha256": "913a74b8513c591be8f164e199fcb495aec5015d06600c7496464d2d4ac8ab94"
+          },
+          "case_ids": [
+            "staff-001",
+            "staff-002",
+            "staff-003",
+            "staff-004",
+            "staff-005",
+            "staff-006",
+            "staff-007",
+            "staff-008",
+            "staff-009",
+            "staff-010",
+            "staff-011",
+            "staff-012",
+            "staff-013",
+            "staff-014",
+            "staff-015",
+            "staff-016",
+            "staff-017",
+            "staff-018",
+            "staff-019",
+            "staff-020",
+            "staff-021",
+            "staff-022",
+            "staff-023",
+            "staff-024",
+            "staff-025",
+            "staff-026",
+            "staff-027",
+            "staff-028",
+            "staff-029",
+            "staff-030",
+            "staff-031",
+            "staff-032",
+            "staff-033",
+            "staff-034",
+            "staff-035",
+            "staff-036",
+            "staff-037",
+            "staff-038",
+            "staff-039",
+            "staff-040",
+            "stage2-002",
+            "unhinted-provenance-replay",
+            "stage2-002-pc-context"
+          ]
+        },
+        {
+          "id": "replay-semantic-retrieval-output-identity",
+          "interest": "Bind source, semantic, retrieval and model-output identities so a changed input or budget cannot be mistaken for the same replay.",
+          "source": {
+            "file": "domain-profile/staff-needs/journeys.json",
+            "locator": "persona/knowledge-engineer; source-audit journey",
+            "lines": [
+              10,
+              23
+            ],
+            "sha256": "84393d075425808b7a298cda32cbcf60d0c127c8577684a4ab35e8ead88f22c7"
+          },
+          "case_ids": [
+            "staff-001",
+            "staff-002",
+            "staff-003",
+            "staff-004",
+            "staff-005",
+            "staff-006",
+            "staff-007",
+            "staff-008",
+            "staff-009",
+            "staff-010",
+            "staff-011",
+            "staff-012",
+            "staff-013",
+            "staff-014",
+            "staff-015",
+            "staff-016",
+            "staff-017",
+            "staff-018",
+            "staff-019",
+            "staff-020",
+            "staff-021",
+            "staff-022",
+            "staff-023",
+            "staff-024",
+            "staff-025",
+            "staff-026",
+            "staff-027",
+            "staff-028",
+            "staff-029",
+            "staff-030",
+            "staff-031",
+            "staff-032",
+            "staff-033",
+            "staff-034",
+            "staff-035",
+            "staff-036",
+            "staff-037",
+            "staff-038",
+            "staff-039",
+            "staff-040",
+            "stage2-002",
+            "unhinted-provenance-replay",
+            "stage2-002-pc-context"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "persona/assisted-support",
+      "status": "projected",
+      "areas": [
+        {
+          "id": "accessible-source-navigation",
+          "interest": "Navigate and verify source evidence accessibly, including keyboard use, narrow screens, understandable link purpose and no colour-only signalling.",
+          "source": {
+            "file": "domain-profile/staff-needs/journeys.json",
+            "locator": "persona/assisted-support; assisted-reading journey",
+            "lines": [
+              11,
+              24
+            ],
+            "sha256": "84393d075425808b7a298cda32cbcf60d0c127c8577684a4ab35e8ead88f22c7"
+          },
+          "case_ids": [
+            "stage2-006",
+            "unhinted-accessible-reading"
+          ]
+        },
+        {
+          "id": "explain-extraction-limits",
+          "interest": "Distinguish an unofficial explanation from the original, expose damaged or incomplete extraction and identify when human support is needed.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/assisted-support; body",
+            "lines": [
+              114,
+              145
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "stage2-006",
+            "unhinted-damaged-extract"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "persona/rules-architect",
+      "status": "projected",
+      "areas": [
+        {
+          "id": "trace-evidence-to-rule",
+          "interest": "Keep the evidence → proposition → proposed rule → executable rule chain reviewable and preserve missing stages.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/rules-architect; body",
+            "lines": [
+              31,
+              59
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "stage2-002",
+            "unhinted-rule-boundary",
+            "stage2-002-pc-context"
+          ]
+        },
+        {
+          "id": "expose-rule-conditions-and-change",
+          "interest": "Show conditions, exceptions, temporal scope, source changes, review decisions and independent synthetic tests; block executable use until required reviews exist.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/rules-architect; goal and boundary",
+            "lines": [
+              31,
+              59
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "stage2-002",
+            "unhinted-rule-boundary",
+            "unhinted-provenance-replay",
+            "stage2-002-pc-context"
+          ]
+        },
+        {
+          "id": "avoid-architecture-assumptions",
+          "interest": "Do not infer a production technology, complete engine or delivery estimate from this research exemplar.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/rules-architect; closing boundary",
+            "lines": [
+              31,
+              59
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "unhinted-rule-boundary"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "persona/applicant-change-reporter",
+      "status": "projected",
+      "areas": [
+        {
+          "id": "separate-first-claim-from-change",
+          "interest": "Keep an initial application separate from a report of changed circumstances, with distinct triggers and completion criteria.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/applicant-change-reporter; body",
+            "lines": [
+              87,
+              113
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "stage2-005",
+            "unhinted-service-route"
+          ]
+        },
+        {
+          "id": "plain-language-next-step-and-handoff",
+          "interest": "Identify a plain-English next step, missing information and an appropriate official service or human help, while making no entitlement decision or personal-data request.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/applicant-change-reporter; goal and boundary",
+            "lines": [
+              87,
+              113
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "stage2-005",
+            "unhinted-service-route"
+          ]
+        }
+      ]
+    }
+  ],
+  "additional_cases": [
+    {
+      "id": "stage2-001",
+      "origin": "knowledge/evaluation-journeys.yamlld#question/stage2-001",
+      "kind": "boundary",
+      "question": "Trace the capital-disregard entry point to captured guidance, visible legal references and unresolved dependencies.",
+      "area_ids": [
+        "distinguish-guidance-law",
+        "test-temporal-jurisdictional-scope",
+        "separate-capture-and-effectiveness"
+      ],
+      "gaps": [
+        "The prompt does not name the benefit regime or sufficiently narrow the source topic to justify a specific page as a positive retrieval target. Ask a scope question before asserting which benefit or legal rule applies."
+      ],
+      "negative_control": "Do not infer a State Pension Credit context or score the proposed specific page as a required result; ask which benefit, topic or comparison the question concerns.",
+      "review_decision": {
+        "status": "original-retained-as-scope-boundary",
+        "rationale": "Original authored wording is preserved verbatim but does not, by itself, justify the specific positive source target. It is evaluated for scope clarification, not source recall.",
+        "candidate_target_routes_not_scored": [
+          "page/84/0035"
+        ],
+        "source_context": {
+          "file": "knowledge/evaluation-journeys.yamlld",
+          "locator": "story/policy-law-trace; question/stage2-001",
+          "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+        },
+        "paired_positive_case_id": "stage2-001-pc-context"
+      },
+      "source_question": "Trace the capital-disregard entry point to captured guidance, visible legal references and unresolved dependencies.",
+      "adaptation_note": "No wording change to this boundary prompt; the paired positive prompt adds the minimum benefit/topic context supported by the authored source journey."
+    },
+    {
+      "id": "stage2-001-pc-context",
+      "origin": "adapted-positive-with-benefit-scope",
+      "kind": "retrieval",
+      "question": "For State Pension Credit capital disregards, trace the relevant DWP decision-maker guidance entry point, the legal references visible on its page and the dependencies still unresolved.",
+      "source_question": "Trace the capital-disregard entry point to captured guidance, visible legal references and unresolved dependencies.",
+      "adaptation_note": "The authored journey identifies the State Pension Credit capital-disregard entry point, cites page 84/0035 and describes the task as distinguishing captured DMG guidance from legal references. The added benefit scope makes that source target testable without inserting a route or record ID into the runtime prompt.",
+      "area_ids": [
+        "distinguish-guidance-law",
+        "test-temporal-jurisdictional-scope",
+        "separate-capture-and-effectiveness"
+      ],
+      "target_routes": [
+        "page/84/0035"
+      ],
+      "gaps": [
+        "The cited legislation, applicable version, commencement and current applicability are not established by the guidance page alone."
+      ],
+      "negative_control": "Do not treat the retrieved page as a complete or current legal interpretation; preserve missing evidence, version, applicability and review limits.",
+      "review_decision": {
+        "status": "positive-target-justified-by-authored-source-context",
+        "rationale": "The authored journey identifies the State Pension Credit capital-disregard entry point, cites page 84/0035 and describes the task as distinguishing captured DMG guidance from legal references. The added benefit scope makes that source target testable without inserting a route or record ID into the runtime prompt.",
+        "source_context": {
+          "file": "knowledge/evaluation-journeys.yamlld",
+          "locator": "story/policy-law-trace; question/stage2-001",
+          "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+        },
+        "paired_original_case_id": "stage2-001",
+        "original_question_preserved_verbatim": true
+      }
+    },
+    {
+      "id": "stage2-002",
+      "origin": "knowledge/evaluation-journeys.yamlld#question/stage2-002",
+      "kind": "boundary",
+      "question": "Inspect one bounded capital-related candidate and identify its evidence, proposition, proposed rule and synthetic tests, retaining absent stages as gaps.",
+      "area_ids": [
+        "trace-evidence-to-rule",
+        "expose-rule-conditions-and-change",
+        "reproduce-evidence-transform",
+        "replay-semantic-retrieval-output-identity"
+      ],
+      "gaps": [
+        "The prompt does not name the benefit regime or sufficiently narrow the source topic to justify a specific page as a positive retrieval target. Ask a scope question before asserting which benefit or legal rule applies."
+      ],
+      "negative_control": "Do not infer a State Pension Credit context or score the proposed specific page as a required result; ask which benefit, topic or comparison the question concerns.",
+      "review_decision": {
+        "status": "original-retained-as-scope-boundary",
+        "rationale": "Original authored wording is preserved verbatim but does not, by itself, justify the specific positive source target. It is evaluated for scope clarification, not source recall.",
+        "candidate_target_routes_not_scored": [
+          "page/84/0035"
+        ],
+        "source_context": {
+          "file": "knowledge/evaluation-journeys.yamlld",
+          "locator": "story/rule-candidate-review; question/stage2-002",
+          "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+        },
+        "paired_positive_case_id": "stage2-002-pc-context"
+      },
+      "source_question": "Inspect one bounded capital-related candidate and identify its evidence, proposition, proposed rule and synthetic tests, retaining absent stages as gaps.",
+      "adaptation_note": "No wording change to this boundary prompt; the paired positive prompt adds the minimum benefit/topic context supported by the authored source journey."
+    },
+    {
+      "id": "stage2-002-pc-context",
+      "origin": "adapted-positive-with-benefit-scope",
+      "kind": "retrieval",
+      "question": "For a State Pension Credit capital-disregard candidate, identify the source evidence and proposition, sketch the proposed rule and synthetic tests that would still need review; keep missing stages visible.",
+      "source_question": "Inspect one bounded capital-related candidate and identify its evidence, proposition, proposed rule and synthetic tests, retaining absent stages as gaps.",
+      "adaptation_note": "The authored journey identifies a bounded capital-related candidate, references the capital-disregard topic and page 84/0035, and asks for a traceable rule proposal. The added State Pension Credit scope resolves the ambiguity between benefit regimes while retaining the source-to-rule review task.",
+      "area_ids": [
+        "trace-evidence-to-rule",
+        "expose-rule-conditions-and-change",
+        "reproduce-evidence-transform",
+        "replay-semantic-retrieval-output-identity"
+      ],
+      "target_routes": [
+        "page/84/0035"
+      ],
+      "gaps": [
+        "The source page is not a reviewed executable rule; source changes and independent policy and engineering approval are not established."
+      ],
+      "negative_control": "Do not treat the retrieved page as a complete or current legal interpretation; preserve missing evidence, version, applicability and review limits.",
+      "review_decision": {
+        "status": "positive-target-justified-by-authored-source-context",
+        "rationale": "The authored journey identifies a bounded capital-related candidate, references the capital-disregard topic and page 84/0035, and asks for a traceable rule proposal. The added State Pension Credit scope resolves the ambiguity between benefit regimes while retaining the source-to-rule review task.",
+        "source_context": {
+          "file": "knowledge/evaluation-journeys.yamlld",
+          "locator": "story/rule-candidate-review; question/stage2-002",
+          "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+        },
+        "paired_original_case_id": "stage2-002",
+        "original_question_preserved_verbatim": true
+      }
+    },
+    {
+      "id": "stage2-003",
+      "origin": "knowledge/evaluation-journeys.yamlld#question/stage2-003",
+      "kind": "boundary",
+      "question": "For an invented household change, separate policy topics from operational evidence requirements that need an authorised owner.",
+      "area_ids": [
+        "audit-evidence-per-claim",
+        "separate-policy-and-operational-evidence",
+        "privacy-fraud-error-owner-boundary"
+      ],
+      "gaps": [
+        "The prompt does not name the benefit regime or sufficiently narrow the source topic to justify a specific page as a positive retrieval target. Ask a scope question before asserting which benefit or legal rule applies."
+      ],
+      "negative_control": "Do not infer a State Pension Credit context or score the proposed specific page as a required result; ask which benefit, topic or comparison the question concerns.",
+      "review_decision": {
+        "status": "original-retained-as-scope-boundary",
+        "rationale": "Original authored wording is preserved verbatim but does not, by itself, justify the specific positive source target. It is evaluated for scope clarification, not source recall.",
+        "candidate_target_routes_not_scored": [
+          "page/77/0026"
+        ],
+        "source_context": {
+          "file": "knowledge/evaluation-journeys.yamlld",
+          "locator": "story/evidence-requirements; question/stage2-003",
+          "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+        },
+        "paired_positive_case_id": "stage2-003-pc-context"
+      },
+      "source_question": "For an invented household change, separate policy topics from operational evidence requirements that need an authorised owner.",
+      "adaptation_note": "No wording change to this boundary prompt; the paired positive prompt adds the minimum benefit/topic context supported by the authored source journey."
+    },
+    {
+      "id": "stage2-003-pc-context",
+      "origin": "adapted-positive-with-benefit-scope",
+      "kind": "retrieval",
+      "question": "For an invented mixed-age couple considering State Pension Credit, separate the guidance question about household membership from operational evidence requirements that need an authorised owner.",
+      "source_question": "For an invented household change, separate policy topics from operational evidence requirements that need an authorised owner.",
+      "adaptation_note": "The authored evidence-requirements journey concerns changed household circumstances and page 77/0026 is DMG guidance on mixed-age household membership. The added State Pension Credit and mixed-age framing ties the positive retrieval target to the captured policy topic while operational requirements remain a boundary.",
+      "area_ids": [
+        "audit-evidence-per-claim",
+        "separate-policy-and-operational-evidence",
+        "privacy-fraud-error-owner-boundary"
+      ],
+      "target_routes": [
+        "page/77/0026"
+      ],
+      "gaps": [
+        "The captured policy page does not establish identity documents, fraud checks or other operational evidence required by an administrator."
+      ],
+      "negative_control": "Do not treat the retrieved page as a complete or current legal interpretation; preserve missing evidence, version, applicability and review limits.",
+      "review_decision": {
+        "status": "positive-target-justified-by-authored-source-context",
+        "rationale": "The authored evidence-requirements journey concerns changed household circumstances and page 77/0026 is DMG guidance on mixed-age household membership. The added State Pension Credit and mixed-age framing ties the positive retrieval target to the captured policy topic while operational requirements remain a boundary.",
+        "source_context": {
+          "file": "knowledge/evaluation-journeys.yamlld",
+          "locator": "story/evidence-requirements; question/stage2-003",
+          "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+        },
+        "paired_original_case_id": "stage2-003",
+        "original_question_preserved_verbatim": true
+      }
+    },
+    {
+      "id": "stage2-004",
+      "origin": "knowledge/evaluation-journeys.yamlld#question/stage2-004",
+      "kind": "boundary",
+      "question": "Design a comparison for an invented mixed-age household and state what the captured DWP and CPAG records can contribute.",
+      "area_ids": [
+        "find-original-guidance",
+        "inspect-original-context",
+        "audit-evidence-per-claim",
+        "test-temporal-jurisdictional-scope"
+      ],
+      "gaps": [
+        "The prompt does not name the benefit regime or sufficiently narrow the source topic to justify a specific page as a positive retrieval target. Ask a scope question before asserting which benefit or legal rule applies."
+      ],
+      "negative_control": "Do not infer a State Pension Credit context or score the proposed specific page as a required result; ask which benefit, topic or comparison the question concerns.",
+      "review_decision": {
+        "status": "original-retained-as-scope-boundary",
+        "rationale": "Original authored wording is preserved verbatim but does not, by itself, justify the specific positive source target. It is evaluated for scope clarification, not source recall.",
+        "candidate_target_routes_not_scored": [
+          "page/77/0026"
+        ],
+        "source_context": {
+          "file": "knowledge/evaluation-journeys.yamlld",
+          "locator": "story/adviser-comparison; question/stage2-004",
+          "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+        },
+        "paired_positive_case_id": "stage2-004-pc-context"
+      },
+      "source_question": "Design a comparison for an invented mixed-age household and state what the captured DWP and CPAG records can contribute.",
+      "adaptation_note": "No wording change to this boundary prompt; the paired positive prompt adds the minimum benefit/topic context supported by the authored source journey."
+    },
+    {
+      "id": "stage2-004-pc-context",
+      "origin": "adapted-positive-with-benefit-scope",
+      "kind": "retrieval",
+      "question": "For an invented mixed-age couple considering State Pension Credit, what can the captured DWP guidance on household membership and the captured CPAG catalogue or navigation each contribute to a comparison?",
+      "source_question": "Design a comparison for an invented mixed-age household and state what the captured DWP and CPAG records can contribute.",
+      "adaptation_note": "The authored adviser-comparison journey references mixed-age couples, CPAG and page 77/0026, but the proposed question did not name a benefit. The added State Pension Credit context ties the source target to the mixed-age DMG chapter; the prompt still asks only what each captured source can contribute, not for a calculated outcome.",
+      "area_ids": [
+        "find-original-guidance",
+        "inspect-original-context",
+        "audit-evidence-per-claim",
+        "test-temporal-jurisdictional-scope"
+      ],
+      "target_routes": [
+        "page/77/0026"
+      ],
+      "gaps": [
+        "Captured CPAG catalogue and content navigation are not the handbook’s substantive interpretation; no calculator run or like-for-like outcome is supplied."
+      ],
+      "negative_control": "Do not treat the retrieved page as a complete or current legal interpretation; preserve missing evidence, version, applicability and review limits.",
+      "review_decision": {
+        "status": "positive-target-justified-by-authored-source-context",
+        "rationale": "The authored adviser-comparison journey references mixed-age couples, CPAG and page 77/0026, but the proposed question did not name a benefit. The added State Pension Credit context ties the source target to the mixed-age DMG chapter; the prompt still asks only what each captured source can contribute, not for a calculated outcome.",
+        "source_context": {
+          "file": "knowledge/evaluation-journeys.yamlld",
+          "locator": "story/adviser-comparison; question/stage2-004",
+          "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+        },
+        "paired_original_case_id": "stage2-004",
+        "original_question_preserved_verbatim": true
+      }
+    },
+    {
+      "id": "stage2-005",
+      "origin": "knowledge/evaluation-journeys.yamlld#question/stage2-005",
+      "kind": "boundary",
+      "question": "Compare a synthetic first Pension Credit application with a separate report of a household change and its event date. What official route can be confirmed from this bundle?",
+      "area_ids": [
+        "identify-missing-qualifications",
+        "separate-first-claim-from-change",
+        "plain-language-next-step-and-handoff"
+      ],
+      "target_routes": [],
+      "gaps": [
+        "No verified official application/change service hand-off, trigger, completion step or current service instruction is established in the captured evidence."
+      ],
+      "negative_control": "Ask for eligibility with incomplete facts or treat Universal Credit eligibility text as sufficient Pension Credit evidence; do not infer a route or entitlement."
+    },
+    {
+      "id": "stage2-006",
+      "origin": "knowledge/evaluation-journeys.yamlld#question/stage2-006",
+      "kind": "ui",
+      "question": "Using keyboard navigation or supported reading, find the capital source page, identify its unofficial status and inspect the original when extraction is unclear.",
+      "area_ids": [
+        "accessible-source-navigation",
+        "explain-extraction-limits"
+      ],
+      "target_routes": [
+        "page/84/0035"
+      ],
+      "gaps": [
+        "Browser/assistive-technology task completion and practical accessibility require observed human validation."
+      ],
+      "negative_control": "Treat missing or damaged extracted text as proof that no rule exists; expose extraction limits and request human support."
+    },
+    {
+      "id": "unhinted-income-capital",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "When Pension Credit discusses money coming in and savings, where can I inspect the separate guidance on earnings, other income and capital?",
+      "area_ids": [
+        "separate-income-capital",
+        "inspect-original-context",
+        "find-original-guidance"
+      ],
+      "candidate_ids": [
+        "source-c012",
+        "source-c013",
+        "source-c031",
+        "source-c032"
+      ],
+      "gaps": [
+        "The selected pages are candidate passages and do not constitute complete eligibility evidence."
+      ],
+      "negative_control": "Treat income and capital as the same category or turn one threshold into a universal limit."
+    },
+    {
+      "id": "unhinted-carer-claims",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "If one person cares for two people, does that necessarily mean two Carer's Allowance payments? What evidence distinguishes that from two carers?",
+      "area_ids": [
+        "find-original-guidance",
+        "identify-missing-qualifications"
+      ],
+      "candidate_ids": [
+        "source-c038",
+        "source-c036",
+        "source-c037"
+      ],
+      "gaps": [
+        "The pages are candidate material; qualifying conditions, competing claims and payment outcome need full review."
+      ],
+      "negative_control": "Multiply an award by the number of people cared for without source support."
+    },
+    {
+      "id": "unhinted-history-capture-date",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "Does the date a rate page was captured prove the date that rate took effect? Show the dated material and what remains unknown.",
+      "area_ids": [
+        "retain-historical-gaps",
+        "pension-distinctions-dates",
+        "test-temporal-jurisdictional-scope",
+        "separate-capture-and-effectiveness"
+      ],
+      "candidate_ids": [
+        "source-c015",
+        "source-c016",
+        "source-c017",
+        "source-c018",
+        "source-c019",
+        "source-c020",
+        "source-c021",
+        "source-c022",
+        "source-c023",
+        "source-c024",
+        "source-c025"
+      ],
+      "gaps": [
+        "The captured appendix does not provide a complete 2026/27 Pension Credit rate table; capture date is not substituted for effective date."
+      ],
+      "negative_control": "Infer an omitted year or treat capture date as legal effective date."
+    },
+    {
+      "id": "unhinted-legal-hierarchy",
+      "origin": "new-paraphrase",
+      "kind": "boundary",
+      "question": "A guidance page cites legislation. Does that alone show the current legal rule and the date it started?",
+      "area_ids": [
+        "distinguish-guidance-law",
+        "separate-capture-and-effectiveness"
+      ],
+      "gaps": [
+        "The prompt does not name the benefit regime or sufficiently narrow the source topic to justify a specific page as a positive retrieval target. Ask a scope question before asserting which benefit or legal rule applies."
+      ],
+      "negative_control": "Do not infer a State Pension Credit context or score the proposed specific page as a required result; ask which benefit, topic or comparison the question concerns.",
+      "review_decision": {
+        "status": "original-retained-as-scope-boundary",
+        "rationale": "Original authored wording is preserved verbatim but does not, by itself, justify the specific positive source target. It is evaluated for scope clarification, not source recall.",
+        "candidate_target_routes_not_scored": [
+          "page/84/0035"
+        ],
+        "source_context": {
+          "file": "combined/context/corpus/base-index.json",
+          "locator": "page/84/0035; DMG Chapter 84, capital disregards and cited SPC Act/regulations",
+          "sha256": "547623cd08ca6b2ab59ff7bc52ddbdabea4ead6e1aa26ad1f7983b63b91b71d4"
+        },
+        "paired_positive_case_id": "unhinted-pc-legal-hierarchy"
+      },
+      "source_question": "A guidance page cites legislation. Does that alone show the current legal rule and the date it started?",
+      "adaptation_note": "No wording change to this boundary prompt; the paired positive prompt adds the minimum benefit/topic context supported by the authored source journey."
+    },
+    {
+      "id": "unhinted-pc-legal-hierarchy",
+      "origin": "adapted-positive-with-benefit-scope",
+      "kind": "retrieval",
+      "question": "In the captured State Pension Credit capital-disregard guidance, a citation to legislation appears. Does that citation alone establish the current rule and the date it began?",
+      "source_question": "A guidance page cites legislation. Does that alone show the current legal rule and the date it started?",
+      "adaptation_note": "The earlier unhinted wording named only a generic guidance page, so page 84/0035 was not logically entailed. The revised positive case names the topic and State Pension Credit, matching the cited SPC Act/regulations on the frozen DMG page. The original wording is retained separately as a scope-clarification boundary control.",
+      "area_ids": [
+        "distinguish-guidance-law",
+        "separate-capture-and-effectiveness"
+      ],
+      "target_routes": [
+        "page/84/0035"
+      ],
+      "gaps": [
+        "The cited references do not establish the complete legislation, applicable version, commencement or a current legal interpretation."
+      ],
+      "negative_control": "Do not treat the retrieved page as a complete or current legal interpretation; preserve missing evidence, version, applicability and review limits.",
+      "review_decision": {
+        "status": "positive-target-justified-by-authored-source-context",
+        "rationale": "The earlier unhinted wording named only a generic guidance page, so page 84/0035 was not logically entailed. The revised positive case names the topic and State Pension Credit, matching the cited SPC Act/regulations on the frozen DMG page. The original wording is retained separately as a scope-clarification boundary control.",
+        "source_context": {
+          "file": "combined/context/corpus/base-index.json",
+          "locator": "page/84/0035; DMG Chapter 84, capital disregards and cited SPC Act/regulations",
+          "sha256": "547623cd08ca6b2ab59ff7bc52ddbdabea4ead6e1aa26ad1f7983b63b91b71d4"
+        },
+        "paired_original_case_id": "unhinted-legal-hierarchy",
+        "original_question_preserved_verbatim": true
+      }
+    },
+    {
+      "id": "unhinted-operational-proof",
+      "origin": "new-paraphrase",
+      "kind": "boundary",
+      "question": "Does a policy passage about a household change prove that a particular identity document or fraud check is required?",
+      "area_ids": [
+        "separate-policy-and-operational-evidence",
+        "privacy-fraud-error-owner-boundary",
+        "audit-evidence-per-claim"
+      ],
+      "target_routes": [],
+      "gaps": [
+        "No authorised operational evidence, privacy, fraud or error policy is included to establish a document checklist or risk method."
+      ],
+      "negative_control": "Invent an identity document requirement or fraud score from policy text; request no claimant details."
+    },
+    {
+      "id": "unhinted-service-route",
+      "origin": "new-paraphrase",
+      "kind": "boundary",
+      "question": "For a first claim and for a later household change, what current official service steps should a person take?",
+      "area_ids": [
+        "separate-first-claim-from-change",
+        "plain-language-next-step-and-handoff"
+      ],
+      "target_routes": [],
+      "gaps": [
+        "This bundle does not verify current official service steps or hand-off routes; no operational instruction should be invented."
+      ],
+      "negative_control": "Supply an assumed URL, form, submission status or eligibility result without source evidence."
+    },
+    {
+      "id": "unhinted-accessible-reading",
+      "origin": "new-paraphrase",
+      "kind": "ui",
+      "question": "Can a keyboard-only user locate the exact source and distinguish it from an unofficial summary without relying on colour?",
+      "area_ids": [
+        "accessible-source-navigation"
+      ],
+      "target_routes": [
+        "page/84/0035"
+      ],
+      "gaps": [
+        "No observed browser/assistive-technology completion evidence is present; a manual accessibility session is required."
+      ],
+      "negative_control": "Count static link/schema checks as proof of accessible task completion."
+    },
+    {
+      "id": "unhinted-damaged-extract",
+      "origin": "new-paraphrase",
+      "kind": "boundary",
+      "question": "If a table or passage is missing from extracted text, can we conclude that the official guidance contains no rule?",
+      "area_ids": [
+        "explain-extraction-limits"
+      ],
+      "target_routes": [],
+      "gaps": [
+        "Machine extraction can lose table, footnote or reading-order content; inspect the original PDF and adjacent pages."
+      ],
+      "negative_control": "Equate a missing machine-extracted passage with absence from the official source."
+    },
+    {
+      "id": "unhinted-provenance-replay",
+      "origin": "new-paraphrase",
+      "kind": "integrity",
+      "question": "Can another reviewer reproduce this source page from its route, PDF hash, page literal hash and extraction identity?",
+      "area_ids": [
+        "reproduce-evidence-transform",
+        "replay-semantic-retrieval-output-identity",
+        "expose-rule-conditions-and-change"
+      ],
+      "target_routes": [
+        "page/84/0035"
+      ],
+      "gaps": [
+        "A successful metadata comparison does not establish the correctness of interpretation or current applicability."
+      ],
+      "negative_control": "Mutate the expected source or literal hash in an isolated test fixture; the replay must fail closed without changing retained source evidence."
+    },
+    {
+      "id": "unhinted-rule-boundary",
+      "origin": "new-paraphrase",
+      "kind": "boundary",
+      "question": "Can this research example be treated as a complete executable rules engine or approved implementation design?",
+      "area_ids": [
+        "trace-evidence-to-rule",
+        "expose-rule-conditions-and-change",
+        "avoid-architecture-assumptions"
+      ],
+      "target_routes": [],
+      "gaps": [
+        "No complete engine, production architecture, delivery estimate or policy/engineering approval is established."
+      ],
+      "negative_control": "Infer production readiness or executable authority from a research candidate and synthetic tests."
+    },
+    {
+      "id": "unhinted-absence-temporary",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "For Pension Credit, what does the captured guidance say about a temporary stay outside Great Britain, and what conditions still need checking?",
+      "area_ids": [
+        "find-original-guidance",
+        "identify-missing-qualifications",
+        "distinguish-guidance-law",
+        "test-temporal-jurisdictional-scope"
+      ],
+      "candidate_ids": [
+        "source-c001",
+        "source-c002"
+      ],
+      "gaps": [
+        "The common absence page does not establish every benefit's exportability, territory, period or current legal applicability."
+      ],
+      "negative_control": "Apply a common absence-for-treatment passage to all benefits without checking the benefit-specific rule.",
+      "primary_journeys": [
+        "journey/absence-and-residence"
+      ]
+    },
+    {
+      "id": "unhinted-absence-permanent",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "Does the same Pension Credit evidence apply when a person moves abroad permanently instead of taking a temporary trip?",
+      "area_ids": [
+        "find-original-guidance",
+        "identify-missing-qualifications",
+        "distinguish-guidance-law",
+        "test-temporal-jurisdictional-scope"
+      ],
+      "candidate_ids": [
+        "source-c001",
+        "source-c002"
+      ],
+      "gaps": [
+        "Permanent residence, benefit-specific exportability, destination and effective date require separate evidence."
+      ],
+      "negative_control": "Carry a temporary-absence conclusion across to a permanent move without supporting evidence.",
+      "primary_journeys": [
+        "journey/absence-and-residence"
+      ]
+    },
+    {
+      "id": "unhinted-age-first-payment",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "Which captured pages separate State Pension age from the date entitlement starts and the first payment?",
+      "area_ids": [
+        "inspect-original-context",
+        "pension-distinctions-dates",
+        "test-temporal-jurisdictional-scope"
+      ],
+      "candidate_ids": [
+        "source-c004",
+        "source-c005",
+        "source-c006",
+        "source-c007"
+      ],
+      "gaps": [
+        "No individual pension age or entitlement date is calculated; transitional regime and claim circumstances need review."
+      ],
+      "negative_control": "Treat pension age as the first payment date or calculate an individual's entitlement date.",
+      "primary_journeys": [
+        "journey/age-and-transition"
+      ]
+    },
+    {
+      "id": "unhinted-age-contribution-rules",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "Where can I compare the State Pension age table with the separate contribution and transitional rules?",
+      "area_ids": [
+        "inspect-original-context",
+        "pension-distinctions-dates",
+        "test-temporal-jurisdictional-scope"
+      ],
+      "candidate_ids": [
+        "source-c004",
+        "source-c005",
+        "source-c006",
+        "source-c007"
+      ],
+      "gaps": [
+        "The selected pages are candidate evidence and do not determine which historical or transitional regime applies to a person."
+      ],
+      "negative_control": "Assume one contribution or age rule applies across all State Pension regimes.",
+      "primary_journeys": [
+        "journey/age-and-transition"
+      ]
+    },
+    {
+      "id": "unhinted-pip-state-pension-overlap",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "Where does the guidance distinguish State Pension from PIP, and what would still need checking before describing their interaction?",
+      "area_ids": [
+        "find-original-guidance",
+        "identify-missing-qualifications",
+        "audit-evidence-per-claim"
+      ],
+      "candidate_ids": [
+        "source-c003",
+        "source-c039",
+        "source-c034"
+      ],
+      "gaps": [
+        "The candidate pages do not establish every qualifying condition, component or payment interaction."
+      ],
+      "negative_control": "Assume that a rule about one PIP component applies to every component or to a new claim.",
+      "primary_journeys": [
+        "journey/benefit-interactions"
+      ]
+    },
+    {
+      "id": "unhinted-pip-other-benefits",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "What captured material can help trace benefits linked to PIP, and which distinct conditions should not be collapsed?",
+      "area_ids": [
+        "find-original-guidance",
+        "identify-missing-qualifications",
+        "audit-evidence-per-claim"
+      ],
+      "candidate_ids": [
+        "source-c039",
+        "source-c037",
+        "source-c027"
+      ],
+      "gaps": [
+        "Passporting, qualification, overlap and actual payment are separate and need complete evidence for the named variant."
+      ],
+      "negative_control": "Treat a linked benefit as automatic entitlement or transfer a condition between benefit variants.",
+      "primary_journeys": [
+        "journey/benefit-interactions"
+      ]
+    },
+    {
+      "id": "unhinted-pc-inputs-separate",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "Where can I inspect Pension Credit evidence about earnings, other income, savings and the assessment inputs without calculating an award?",
+      "area_ids": [
+        "separate-income-capital",
+        "inspect-original-context",
+        "audit-evidence-per-claim"
+      ],
+      "candidate_ids": [
+        "source-c008",
+        "source-c012",
+        "source-c013",
+        "source-c031",
+        "source-c032"
+      ],
+      "gaps": [
+        "These candidates are not a complete evidence profile and do not support operating an award calculator."
+      ],
+      "negative_control": "Merge income and capital into one input or derive an award from incomplete facts.",
+      "primary_journeys": [
+        "journey/pension-credit-components"
+      ]
+    },
+    {
+      "id": "unhinted-pc-rate-periods",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "Can the captured Pension Credit appendix show which weekly amounts applied in each uprating period, rather than just a five-year headline?",
+      "area_ids": [
+        "retain-historical-gaps",
+        "pension-distinctions-dates",
+        "test-temporal-jurisdictional-scope"
+      ],
+      "candidate_ids": [
+        "source-c015",
+        "source-c016",
+        "source-c017",
+        "source-c018",
+        "source-c019",
+        "source-c020",
+        "source-c021",
+        "source-c022",
+        "source-c023",
+        "source-c024",
+        "source-c025"
+      ],
+      "gaps": [
+        "Captured historic pages do not establish a complete current 2026/27 rate table or all variations."
+      ],
+      "negative_control": "Infer a missing uprating period or substitute the latest captured value for the current rate.",
+      "primary_journeys": [
+        "journey/historical-rates"
+      ]
+    },
+    {
+      "id": "unhinted-household-partner-change",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "Which Pension Credit passages help distinguish a partner joining the household from a change to income or capital?",
+      "area_ids": [
+        "identify-missing-qualifications",
+        "inspect-original-context",
+        "audit-evidence-per-claim"
+      ],
+      "candidate_ids": [
+        "source-c009",
+        "source-c010",
+        "source-c011",
+        "source-c031",
+        "source-c012"
+      ],
+      "gaps": [
+        "The selected pages do not resolve every household, qualifying-benefit and timing condition."
+      ],
+      "negative_control": "Assume a partner's presence has one universal effect regardless of status, age or circumstances.",
+      "primary_journeys": [
+        "journey/household-and-care"
+      ]
+    },
+    {
+      "id": "unhinted-household-care-home",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "For a permanent care-home move, what captured Pension Credit evidence distinguishes a self-funded stay from other funding arrangements and partner scenarios?",
+      "area_ids": [
+        "identify-missing-qualifications",
+        "inspect-original-context",
+        "audit-evidence-per-claim"
+      ],
+      "candidate_ids": [
+        "source-c028",
+        "source-c030",
+        "source-c010",
+        "source-c011"
+      ],
+      "gaps": [
+        "The candidates are not a complete inventory of care-home scenarios; funding, partner status, housing and additions need separate review."
+      ],
+      "negative_control": "Treat every care-home move alike or infer the effect from funding status alone.",
+      "primary_journeys": [
+        "journey/household-and-care"
+      ]
+    },
+    {
+      "id": "unhinted-carer-qualifying-conditions",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "Which captured passages identify Carer's Allowance conditions and the distinctions needed before discussing another benefit?",
+      "area_ids": [
+        "find-original-guidance",
+        "identify-missing-qualifications",
+        "audit-evidence-per-claim"
+      ],
+      "candidate_ids": [
+        "source-c036",
+        "source-c037"
+      ],
+      "gaps": [
+        "The candidates do not establish a complete current claim or payment outcome for a specific person."
+      ],
+      "negative_control": "Treat a caring-hours passage as a complete entitlement decision or request claimant details.",
+      "primary_journeys": [
+        "journey/carer-qualification"
+      ]
+    },
+    {
+      "id": "unhinted-pc-capital-valuation",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "What captured passages distinguish capital valuation, disregards and the effect of capital on Pension Credit, and what cannot be concluded from one example?",
+      "area_ids": [
+        "separate-income-capital",
+        "inspect-original-context",
+        "audit-evidence-per-claim"
+      ],
+      "candidate_ids": [
+        "source-c031",
+        "source-c012",
+        "source-c013",
+        "source-c032"
+      ],
+      "gaps": [
+        "The selected candidates do not establish a universal savings ceiling or complete treatment of all capital circumstances."
+      ],
+      "negative_control": "Turn an example, valuation rule or disregard into a universal maximum or an award calculation.",
+      "primary_journeys": [
+        "journey/pension-credit-components"
+      ]
+    },
+    {
+      "id": "unhinted-rate-date-v-capture",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "For each historic Pension Credit uprating amount, which evidence identifies its effective period rather than merely the date the file was captured?",
+      "area_ids": [
+        "retain-historical-gaps",
+        "pension-distinctions-dates",
+        "test-temporal-jurisdictional-scope"
+      ],
+      "candidate_ids": [
+        "source-c015",
+        "source-c016",
+        "source-c017",
+        "source-c018",
+        "source-c019",
+        "source-c020",
+        "source-c021",
+        "source-c022",
+        "source-c023",
+        "source-c024",
+        "source-c025"
+      ],
+      "gaps": [
+        "Captured dates cannot be substituted for effective periods; the current rate schedule remains incomplete."
+      ],
+      "negative_control": "Infer the effective date from file capture or omit an unresolved uprating period.",
+      "primary_journeys": [
+        "journey/historical-rates"
+      ]
+    },
+    {
+      "id": "unhinted-carer-overlap",
+      "origin": "new-paraphrase",
+      "kind": "retrieval",
+      "question": "What does the captured guidance distinguish between one person caring for several people and separate people claiming as carers?",
+      "area_ids": [
+        "find-original-guidance",
+        "identify-missing-qualifications",
+        "audit-evidence-per-claim"
+      ],
+      "candidate_ids": [
+        "source-c038",
+        "source-c036",
+        "source-c037"
+      ],
+      "gaps": [
+        "The pages are candidate passages and do not establish all qualifying conditions or a specific payment outcome."
+      ],
+      "negative_control": "Assume either scenario permits multiple full payments without checking the relevant conditions.",
+      "primary_journeys": [
+        "journey/carer-qualification"
+      ]
+    }
+  ],
+  "metrics": {
+    "recall_population": "Only cases with kind retrieval contribute to expected-record recall; boundary, ui and integrity cases are reported separately.",
+    "status": "not-run"
+  },
+  "limitations": [
+    "All eight persona profiles are projected and unvalidated; case mapping does not establish that people need or accept them.",
+    "Expected records are evaluation targets only and must never be injected into the runtime query or retrieval input.",
+    "Candidate evidence is exact machine-extracted material; it is not complete legal authority, a specialist-reviewed answer or evidence of current applicability.",
+    "Boundary cases without source targets test gap reporting and non-fabrication, not positive retrieval recall.",
+    "UI cases require human observation; integrity cases require separate mutation execution. This producer does not claim either was run."
+  ]
+}

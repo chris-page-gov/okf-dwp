@@ -1,0 +1,85 @@
+{
+  "schema": "okf-dwp-context-inspector-browser-observation.v1",
+  "observed_at": "2026-11-14T18:17:18Z",
+  "previous_observation_commit": "5516e6c604793a5c98c57a3ddb9c3c13f46afe64",
+  "mode": "installed headless browser through Playwright; local HTTP source",
+  "url": "http://127.0.0.1:8765/evaluation/truncation/review/index.html",
+  "inputs": [
+    {
+      "path": "evaluation/truncation/review/index.html",
+      "bytes": 1157219,
+      "sha256": "4c4944ef1a2d078a15e83e7a2cbe2a371e746fc0376074d21019554fe47fd4f5"
+    },
+    {
+      "path": "evaluation/truncation/review/report.json",
+      "bytes": 1462560,
+      "sha256": "f03de58408fdae6004b0eebf94d798ae452c049febb032569768912e9dc741c4"
+    },
+    {
+      "path": "scripts/context_review_html.mjs",
+      "bytes": 21437,
+      "sha256": "cac2628a7c02e2f57404c3183e917d6ba65351b3fde459cd89c2238ee1eddff4"
+    }
+  ],
+  "browsers": [
+    {
+      "channel": "chrome",
+      "version": "157.0.8103.51"
+    },
+    {
+      "channel": "msedge",
+      "version": "157.0.4341.46"
+    }
+  ],
+  "viewports": [
+    {
+      "width": 1366,
+      "height": 900
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "checks": {
+    "five_contexts": "passed",
+    "graph_plan_initial_selection": "passed",
+    "exact_F1120_search": "passed",
+    "expanded_source_text_and_https_locator": "passed",
+    "radio_group_arrow_key_navigation": "passed",
+    "empty_search_state": "passed",
+    "mobile_horizontal_overflow": false,
+    "console_errors_and_warnings": [],
+    "whole_package_delivery": "verified in displayed receipt",
+    "largest_response_bytes": 8028,
+    "calls": 22
+  },
+  "screenshots": [
+    {
+      "path": "evaluation/retrieval-gate/browser/chrome-desktop.png",
+      "bytes": 138499,
+      "sha256": "922a3768b7b370cfdf73b7e89451bc36ced09db9f4002a3e83839bd4ddf495ea"
+    },
+    {
+      "path": "evaluation/retrieval-gate/browser/chrome-mobile.png",
+      "bytes": 71689,
+      "sha256": "4da1b1cb93d55fed5903d2d7bb850373110faf89044efa8f9dbd183467d0747b"
+    },
+    {
+      "path": "evaluation/retrieval-gate/browser/msedge-desktop.png",
+      "bytes": 138499,
+      "sha256": "922a3768b7b370cfdf73b7e89451bc36ced09db9f4002a3e83839bd4ddf495ea"
+    },
+    {
+      "path": "evaluation/retrieval-gate/browser/msedge-mobile.png",
+      "bytes": 71689,
+      "sha256": "4da1b1cb93d55fed5903d2d7bb850373110faf89044efa8f9dbd183467d0747b"
+    }
+  ],
+  "limitations": [
+    "This verifies the generated local inspector, not a public URL, remote MCP deployment or connected client.",
+    "Source link href and retained passage were inspected; external PDF contents were not revalidated.",
+    "Keyboard and layout checks are bounded automated observations, not comprehensive accessibility or assistive-technology certification.",
+    "Native desktop was locked; no claim of an interactive unlocked desktop session."
+  ]
+}

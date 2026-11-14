@@ -1,0 +1,186 @@
+{
+  "@context": {
+    "@vocab": "https://chris-page-gov.github.io/okf-dwp/profile/context-recovery/"
+  },
+  "@id": "https://chris-page-gov.github.io/okf-dwp/id/context-recovery/v1",
+  "schema": "okf-dwp-context-recovery-policy.v1",
+  "authored_at": "2026-11-14",
+  "assertion_status": "model-derived",
+  "review_status": "unreviewed",
+  "scope": "Bounded discovery hypotheses over the frozen experimental DMG/ADM corpus. A route does not establish a rule, individual applicability or an answer.",
+  "source_manifest": {
+    "path": "structured-context/evidence-connect-manifest.json",
+    "sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+  },
+  "engine": {
+    "repository": "https://github.com/chris-page-gov/okf-explorer",
+    "commit": "d6930bbcddaab616deec002d9e6efff6e3aae953",
+    "files": {
+      "index.ts": "689f8b8ab1cfb5ccc21b6dd9b5527fcad04de01f5876b44cbb2dc0240fceb010",
+      "corpus.ts": "a770352c6e4628f0c391b0c12bbdaf185b476a714ca212e99459d135f8f57f6f",
+      "corpusV3.ts": "944617e1630362b7a41d60da92651007b96252eff3075eb4c4b852f420f5a5c0",
+      "types.ts": "febf83b5c65153fd2e49ac070b6117525463034fb1b33534a086a1cc7bbb42cc",
+      "unit.ts": "7cd989c00564ad2e0469073c66685ffb5111809e7f598dc42b6f3df1bf693aa6"
+    }
+  },
+  "limits": {
+    "max_followups": 3,
+    "max_question_characters": 2000,
+    "max_query_characters": 400
+  },
+  "compound_alias_guard": {
+    "mode": "suppress-only-single-word-aliases-with-exclusively-hyphenated-occurrences",
+    "preserve_original_context": true
+  },
+  "source_support": [
+    {
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1",
+      "text_sha256": "7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca",
+      "literal": "The higher rate of disabled child addition",
+      "source_sha256": "124b7e41af2b491209f694941482e6e4bb69e78692a84a343299dc53f25b8731",
+      "role": "higher-rate condition"
+    },
+    {
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000023318-000-bec866c4cfa0",
+      "text_sha256": "2aa85228042811fecbcff1d80e4de24760b4f6acd73aee98473dec6de4795cf1",
+      "literal": "Disabled child addition",
+      "source_sha256": "124b7e41af2b491209f694941482e6e4bb69e78692a84a343299dc53f25b8731",
+      "role": "child addition context"
+    },
+    {
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000055420-000-9e9c31f56b39",
+      "text_sha256": "24682e686930781dfa1b19a81c090129991d1b1d89cd6d92ad2e781bb90b6e30",
+      "literal": "Change notified outside the time limits",
+      "source_sha256": "4933d66a1cd118687bbc10e30faf9ee8214d09b3e465e58efdbd9b832a58a8e8",
+      "role": "ordinary late notification and explicit exception pointer"
+    },
+    {
+      "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6",
+      "text_sha256": "a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4",
+      "literal": "UC and award of other benefits",
+      "source_sha256": "4933d66a1cd118687bbc10e30faf9ee8214d09b3e465e58efdbd9b832a58a8e8",
+      "role": "other-benefit effective-date branch and examples"
+    }
+  ],
+  "routes": [
+    {
+      "id": "other-benefit-timing",
+      "label": "Timing after another benefit award or alteration",
+      "all_of": [
+        [
+          "universal credit",
+          "uc"
+        ],
+        [
+          "dla",
+          "disability living allowance",
+          "pip",
+          "personal independence payment",
+          "carer allowance",
+          "carers allowance",
+          "another benefit",
+          "other benefit",
+          "other benefits"
+        ],
+        [
+          "awarded",
+          "award",
+          "entitled",
+          "entitlement",
+          "starts",
+          "stops",
+          "ceased",
+          "changed",
+          "backdated",
+          "retrospective",
+          "increased",
+          "decreased",
+          "backdate",
+          "retrospectively",
+          "ended",
+          "received"
+        ],
+        [
+          "effective date",
+          "when",
+          "assessment period",
+          "late",
+          "reported",
+          "report",
+          "notified",
+          "notification",
+          "backdated",
+          "retrospective"
+        ]
+      ],
+      "query": "UC and award of other benefits",
+      "support": [
+        3
+      ]
+    },
+    {
+      "id": "disabled-child-qualification",
+      "label": "Disabled-child addition conditions",
+      "all_of": [
+        [
+          "universal credit",
+          "uc"
+        ],
+        [
+          "child",
+          "children",
+          "daughter",
+          "son",
+          "young person"
+        ],
+        [
+          "dla",
+          "disability living allowance",
+          "pip",
+          "personal independence payment",
+          "disabled child"
+        ]
+      ],
+      "query": "Universal Credit disabled child addition qualifying conditions",
+      "support": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "late-notification",
+      "label": "Ordinary late-notification rule and its exception pointers",
+      "all_of": [
+        [
+          "universal credit",
+          "uc"
+        ],
+        [
+          "reported",
+          "report",
+          "notified",
+          "notification",
+          "told"
+        ],
+        [
+          "late",
+          "later",
+          "delay",
+          "delayed",
+          "outside time limits",
+          "out of time"
+        ]
+      ],
+      "query": "Universal Credit change notified outside time limits",
+      "support": [
+        2
+      ]
+    }
+  ],
+  "limitations": [
+    "Source support is exact frozen machine-extracted text; source capture and machine boundaries do not establish current legal applicability.",
+    "The public Ask OKF service and frozen corpus are unchanged. This local additive adapter returns independent contexts and preserves their gaps.",
+    "The original failure is retained. Recovery never combines partial contexts into a sufficient legal answer.",
+    "The wording and routes are model-authored development hypotheses awaiting independent specialist review."
+  ]
+}

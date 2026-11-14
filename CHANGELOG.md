@@ -1,5 +1,45 @@
 # Changelog
 
+## Context review candidate — 14 November 2026
+
+- Compile an additive source-bound graph with directed navigation repairs and
+  compositional concept bridges. Preserve frozen source projections, original
+  requirements and all 203 open obligations.
+- Extend the evaluation to all eight authored personas and 21 interest areas:
+  75 cases, 263/263 declared persona targets, 35/35 custody targets and 4/4 UC
+  targets. Retain the initial failures and ambiguity decisions. A frozen,
+  withheld wording trial reaches 45/45 targets and passes 12/12 negative controls.
+- Deliver complete graph plans in bounded manifest/read parts, verifying plan,
+  graph, engine, package and source-text identities. Categorise insufficiency
+  without changing the original reason codes or legal review status.
+- Cross-reference 20 statutory works and 53 provision targets against the
+  immutable legislation catalogue. Distinguish 13 existing text projections,
+  38 metadata-only observations and two work-only targets; exclude case law
+  and preserve every unresolved applicability and version question.
+- Address independent review: reject unexpected concept conflicts, report
+  resolver-budget exhaustion as incomplete and allow a bounded ten-minute
+  paced collection. Preserve the first frozen trial in an immutable replay
+  harness and retain a separate corrected-candidate regression receipt.
+- Pin CI and learning-site runners to Ubuntu 24.04 so Python 3.12.11 remains
+  available after `ubuntu-latest` moved to Ubuntu 26.04. Required check names,
+  dependencies and the locked Python version remain unchanged.
+- Correct the statutory crosswalk's file-inventory labels, check out its exact
+  catalogue shards in CI and validate the historical reading-help contracts
+  against their immutable baseline while all other evidence bindings stay strict.
+- Observe the assisted-support capital-source journey in Chrome and Edge using
+  keyboard search and expansion, exact paragraph 84351 and the original PDF
+  page locator. Retain human assistive-technology acceptance as a separate gap.
+- Separate the reported truncation into question routing, retrieval limits,
+  whole-item assembly omissions and host delivery; preserve the exact original
+  failure and existing annotated release tag.
+- Add bounded source-heading recovery, a hash-verifying progressive client and
+  a runnable offline inspector. Each context retains its query, provenance,
+  diagnostics and independent identity; all remain insufficient with no answer.
+- Add current-Explorer compatibility checks alongside frozen historical pins,
+  deterministic strategy and recovery replays, and resource-limit controls.
+  Update the contracts and current entry points without changing service 0.7.0
+  or closing the 203 original obligations.
+
 ## Source-linked reading-help release — 27 September 2026
 
 - Bind the 513-document corpus, 12/24 source controls, 28-case and nine-chapter rechecks, unchanged 40-question replay, and 401/403 exact workbench links in a checked release manifest.

@@ -1,6 +1,28 @@
 # Repository status
 
-## Current overview: 26 September 2026
+## Current candidate: 14 November 2026
+
+The [context review candidate](docs/context-review.md) adds a runnable offline
+inspector, bounded source-heading recovery and verified progressive delivery.
+Its separate source-route graph passes 263/263 declared persona targets,
+35/35 custody targets and 4/4 UC targets. All eight authored personas and
+21 interest areas are represented in 75 cases. The frozen withheld wording
+trial passes 45/45 targets and 12/12 negative controls. These are scoped
+source-retrieval measurements; all response envelopes are at most 8 KiB.
+It retains the original question and baseline beside each independently
+identified recovery context. The [diagnosis](evaluation/truncation/README.md)
+distinguishes missed discovery, retrieval caps, assembly omissions and host
+delivery. Recovering selected passages does not establish their applicability
+or a complete answer. All 203 original obligations remain open.
+
+The baseline already has the annotated tag `demo-2026-09-30-reading-help-v2` at
+`77ef16047415ee48dcb93b80adf1ba057ea00d9b`. It is preserved. The selected
+[recorded public service](docs/service-publication.md) remains 0.7.0; this
+producer candidate does not update the deployed plugin. Fresh implementation,
+CI and browser evidence are recorded in the context review guide separately
+from the historical results below.
+
+## Earlier overview: 26 September 2026
 
 Start with [remaining work and next priorities](docs/remaining-work.md), the
 [Evidence workbench](docs/evidence-workbench.md) and the

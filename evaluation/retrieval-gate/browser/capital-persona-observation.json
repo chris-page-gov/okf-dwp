@@ -1,0 +1,64 @@
+{
+  "schema": "okf-dwp-persona-source-browser-observation.v1",
+  "observed_at": "2026-11-14T18:23:01Z",
+  "mode": "installed headless Chrome and Edge; keyboard input through Playwright; local HTTP",
+  "case_ids": [
+    "stage2-006",
+    "unhinted-accessible-reading"
+  ],
+  "query_case_id": "stage2-001-pc-context",
+  "query": "For State Pension Credit capital disregards, trace the relevant DWP decision-maker guidance entry point, the legal references visible on its page and the dependencies still unresolved.",
+  "inputs": [
+    {
+      "path": "evaluation/retrieval-gate/persona-cases.json",
+      "bytes": 319671,
+      "sha256": "6d6f10f35faf7daff9a263d84e4dec9326296b2b7d953e67bf386888a9d924e1"
+    },
+    {
+      "path": "evaluation/retrieval-gate/capital-review/report.json",
+      "bytes": 733395,
+      "sha256": "8cf117aa277ef8a62940c6199496b9ca11c7f9d957324b8e0861f265364e06f6"
+    },
+    {
+      "path": "evaluation/retrieval-gate/capital-review/index.html",
+      "bytes": 592591,
+      "sha256": "b276df8b257cb92fe32d95e32af030f66790b3a6e20b9fcd1a89319d0ea747ba"
+    }
+  ],
+  "browsers": [
+    {
+      "channel": "chrome",
+      "version": "157.0.8103.51"
+    },
+    {
+      "channel": "msedge",
+      "version": "157.0.4341.46"
+    }
+  ],
+  "checks": {
+    "exact_record_id": "https://chris-page-gov.github.io/okf-dwp/id/page/84/0035",
+    "keyboard_search_and_enter_expansion": "passed",
+    "retained_paragraph": "84351",
+    "official_pdf_page_locator": 35,
+    "independent_unreviewed_and_extraction_labels": "visible in text; colour not required",
+    "console_errors_and_warnings": []
+  },
+  "screenshots": [
+    {
+      "path": "evaluation/retrieval-gate/browser/capital-chrome.png",
+      "bytes": 60699,
+      "sha256": "c62280eb2e552af40239834f725c0420c331b7eb4459a929000b7416caeea626"
+    },
+    {
+      "path": "evaluation/retrieval-gate/browser/capital-msedge.png",
+      "bytes": 60699,
+      "sha256": "c62280eb2e552af40239834f725c0420c331b7eb4459a929000b7416caeea626"
+    }
+  ],
+  "human_assistive_technology_acceptance": "not-run",
+  "limitations": [
+    "Bounded automated keyboard/source navigation only; no comprehensive accessibility or human assistive-technology certification.",
+    "Official PDF href was inspected; PDF contents were not newly acquired or human-reviewed.",
+    "The main retrieval evaluation retains its own earlier UI/integrity-not-run scope; this separate observation does not silently regrade it."
+  ]
+}

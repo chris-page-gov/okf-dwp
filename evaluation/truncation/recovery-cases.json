@@ -1,0 +1,14 @@
+{
+  "schema": "okf-dwp-context-recovery-evaluation-protocol.v1",
+  "purpose": "Check additive navigation recovery on original wording, paraphrases and negative controls while preserving insufficient status.",
+  "cases": [
+    {"id": "original", "original": true, "required_hits": ["F1123", "A4361"], "expect_timing_route": true},
+    {"id": "retrospective-paraphrase", "question": "My child's DLA was increased retrospectively but I told UC much later. When should the extra disabled-child amount start?", "required_hits": ["F1123", "A4361"], "expect_timing_route": true},
+    {"id": "backdated-paraphrase", "question": "DLA was backdated for my child. Does UC backdate the higher disabled-child element too?", "required_hits": ["F1123", "A4361"], "expect_timing_route": true},
+    {"id": "late-award-paraphrase", "question": "UC was told a year late about a child's highest-rate DLA award. Which assessment period should the higher addition start in?", "required_hits": ["F1123", "A4361"], "expect_timing_route": true},
+    {"id": "qualification-control", "question": "What are the DLA care component qualifying conditions for a child?", "required_hits": [], "expect_timing_route": false},
+    {"id": "rates-control", "question": "What are the current DLA care component rates?", "required_hits": [], "expect_timing_route": false},
+    {"id": "hospital-control", "question": "What happens to DLA when a child goes into hospital?", "required_hits": [], "expect_timing_route": false},
+    {"id": "transition-control", "question": "How does a child move from DLA to PIP at age sixteen?", "required_hits": [], "expect_timing_route": false}
+  ]
+}

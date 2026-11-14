@@ -7,9 +7,12 @@ legal applicability, answer quality, continuous service health or specialist rev
 from __future__ import annotations
 
 import argparse
+from contextlib import contextmanager, nullcontext
+from contextvars import ContextVar
 import hashlib
 import json
 import re
+import subprocess
 from pathlib import Path
 from typing import Any
 
@@ -20,6 +23,7 @@ SHA256 = re.compile(r"[0-9a-f]{64}\Z")
 COMMIT = re.compile(r"[0-9a-f]{40}\Z")
 MAX_BOUND_BYTES = 64 * 1024 * 1024
 MAX_MANIFEST_BYTES = 1024 * 1024
+_HISTORICAL_CONTRACTS = ContextVar('historical_contracts', default=None)
 MAX_OBSERVED_RESPONSE_BYTES = 4 * 1024 * 1024
 LEARNING_SITE_URL = "https://chris-page-gov.github.io/okf-dwp/"
 LEARNING_SITE_PATHS = frozenset({
@@ -71,6 +75,12 @@ def bound_bytes(root: Path, binding: dict[str, Any], label: str) -> bytes:
     count, digest = binding["bytes"], binding["sha256"]
     require(type(count) is int and 0 < count <= MAX_BOUND_BYTES and
             isinstance(digest, str) and SHA256.fullmatch(digest), f"Invalid byte/hash binding: {label}")
+    historical = _HISTORICAL_CONTRACTS.get()
+    if historical and binding['path'] in historical['files']:
+        body = historical['files'][binding['path']]
+        require(len(body) == count, f"Historical contract byte count differs: {label}")
+        require(hashlib.sha256(body).hexdigest() == digest, f"Historical contract SHA-256 differs: {label}")
+        return body
     path = confined(root, binding["path"])
     require(path.stat().st_size == count, f"Byte count differs: {label}")
     with path.open("rb") as handle:
@@ -78,6 +88,28 @@ def bound_bytes(root: Path, binding: dict[str, Any], label: str) -> bytes:
     require(len(body) == count, f"Byte count differs: {label}")
     require(hashlib.sha256(body).hexdigest() == digest, f"SHA-256 differs: {label}")
     return body
+
+
+@contextmanager
+def historical_contracts(root: Path, commit: str):
+    """Check only the two frozen contracts from Git; all other bindings stay current and strict."""
+    require(isinstance(commit, str) and COMMIT.fullmatch(commit), 'Full historical contract commit required')
+    files = {}
+    try:
+        for path in ('okf.semantic.json', 'okf.publication.json'):
+            identity = f'{commit}:{path}'
+            size = int(subprocess.check_output(['git', '-C', str(root), 'cat-file', '-s', identity], stderr=subprocess.PIPE))
+            require(0 < size <= MAX_BOUND_BYTES, 'Historical contract exceeds its byte ceiling')
+            body = subprocess.check_output(['git', '-C', str(root), 'show', identity], stderr=subprocess.PIPE)
+            require(len(body) == size, 'Historical contract Git byte count differs')
+            files[path] = body
+    except (subprocess.CalledProcessError, ValueError) as error:
+        raise ReleaseError('Pinned historical contract Git objects are unavailable') from error
+    token = _HISTORICAL_CONTRACTS.set({'commit': commit, 'files': files})
+    try:
+        yield
+    finally:
+        _HISTORICAL_CONTRACTS.reset(token)
 
 
 def json_body(body: bytes, label: str) -> dict[str, Any]:
@@ -314,6 +346,8 @@ def validate(root: Path, manifest_path: Path) -> dict[str, Any]:
         validate_public(base, manifest)
     return {"schema": "okf-reading-help-release-check.v1", "status": status,
             "bound_files_checked": count, "public_browser_verified": status == VERIFIED,
+            **({'historical_contract_commit': _HISTORICAL_CONTRACTS.get()['commit']}
+               if _HISTORICAL_CONTRACTS.get() else {}),
             "boundary": "Technical evidence only; specialist legal review and service health are separate."}
 
 
@@ -321,9 +355,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--manifest", type=Path, required=True)
+    parser.add_argument('--frozen-contracts-commit', help='Check only the two historical contract bindings against this full Git commit')
     args = parser.parse_args()
     try:
-        print(json.dumps(validate(args.root, args.manifest), sort_keys=True))
+        with historical_contracts(args.root, args.frozen_contracts_commit) if args.frozen_contracts_commit else nullcontext():
+            print(json.dumps(validate(args.root, args.manifest), sort_keys=True))
     except (ReleaseError, OSError, KeyError, TypeError, ValueError) as error:
         parser.exit(1, f"Reading-help release check failed: {error}\n")
     return 0

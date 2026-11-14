@@ -1,8 +1,18 @@
 # Remaining work and next priorities
 
-Status reviewed on 26 September 2026. This is the current short guide to the
+Status reviewed on 14 November 2026. This is the current short guide to the
 work queue; the [backlog register](backlog-work-packages.md) retains the detailed
 tasks and evidence. Older reports retain the results for their own versions.
+
+The [November context review candidate](context-review.md) now addresses the
+reported UC discovery and delivery failure with separate source-bound queries
+and exact package reconstruction. Review its known development cases and
+negative controls before expanding the navigation policy. The expanded graph
+evaluation passes every declared source target across the persona, custody and
+UC cases; the frozen withheld wording trial also passes. Specialist review,
+wider unseen subjects, an admitted remote service pair and actual host delivery remain
+separate acceptance tasks. The earlier work queue below remains open; the
+candidate does not close its legal dependencies or the 203 original obligations.
 
 ## What works now
 
@@ -66,8 +76,9 @@ candidate, not the successor's acceptance evidence.
   and source completeness. The 203 original obligations include 43 source-closure
   requirements and 40 each for applicability, legal version, independent review
   and question scope. Engineering cannot mark these accepted on its own.
-- **Presenter:** rehearse the intended ChatGPT account, microphone, MacBook
-  sound, projection and room PA before the **30 September** conference. A text
+- **Presenter:** repeat the intended ChatGPT account, microphone, MacBook
+  sound, projection and room PA checks before a future demonstration. The
+  earlier 30 September rehearsal requirement is historical. A text
   sidebar demonstration does not prove Voice or room-audio operation. **BL016**.
 - **Representative users:** check keyboard, screen-reader and other assistive
   technology journeys. Resolve the separately recorded Firefox hosting result.

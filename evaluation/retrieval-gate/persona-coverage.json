@@ -1,0 +1,826 @@
+{
+  "schema": "okf-persona-coverage.v1",
+  "review_status": "projected-not-user-validated",
+  "personas": [
+    {
+      "id": "persona/welfare-rights-adviser",
+      "status": "projected",
+      "areas": [
+        {
+          "id": "find-original-guidance",
+          "interest": "Find the right chapter, inspect original guidance, follow cross-references and identify further evidence to check.",
+          "source": {
+            "file": "knowledge/guided-discovery.yamlld",
+            "locator": "persona/welfare-rights-adviser; description and body",
+            "lines": [
+              16,
+              33
+            ],
+            "sha256": "913a74b8513c591be8f164e199fcb495aec5015d06600c7496464d2d4ac8ab94"
+          },
+          "case_ids": [
+            "staff-001",
+            "staff-003",
+            "staff-005",
+            "staff-011",
+            "staff-022",
+            "staff-024",
+            "staff-026",
+            "staff-027",
+            "staff-028",
+            "staff-029",
+            "staff-030",
+            "staff-031",
+            "staff-033",
+            "staff-034",
+            "staff-035",
+            "staff-036",
+            "staff-037",
+            "staff-038",
+            "staff-039",
+            "staff-040",
+            "stage2-004",
+            "stage2-004-pc-context",
+            "unhinted-absence-permanent",
+            "unhinted-absence-temporary",
+            "unhinted-carer-claims",
+            "unhinted-carer-overlap",
+            "unhinted-carer-qualifying-conditions",
+            "unhinted-income-capital",
+            "unhinted-pip-other-benefits",
+            "unhinted-pip-state-pension-overlap"
+          ],
+          "case_kinds": [
+            "boundary",
+            "retrieval"
+          ],
+          "coverage_status": "mapped-not-executed"
+        },
+        {
+          "id": "identify-missing-qualifications",
+          "interest": "Explain cited guidance while exposing missing qualifications, benefit variants, dates and scope before making an interpretation.",
+          "source": {
+            "file": "domain-profile/staff-needs/journeys.json",
+            "locator": "persona/welfare-rights-adviser; goal; benefit-interactions, absence-and-residence and carer-qualification journeys",
+            "lines": [
+              5,
+              20
+            ],
+            "sha256": "84393d075425808b7a298cda32cbcf60d0c127c8577684a4ab35e8ead88f22c7"
+          },
+          "case_ids": [
+            "staff-001",
+            "staff-023",
+            "staff-024",
+            "staff-026",
+            "staff-027",
+            "staff-028",
+            "staff-029",
+            "staff-030",
+            "staff-031",
+            "staff-033",
+            "staff-034",
+            "staff-035",
+            "staff-036",
+            "staff-037",
+            "staff-038",
+            "staff-039",
+            "staff-040",
+            "stage2-004",
+            "stage2-004-pc-context",
+            "stage2-005",
+            "unhinted-absence-permanent",
+            "unhinted-absence-temporary",
+            "unhinted-carer-claims",
+            "unhinted-carer-overlap",
+            "unhinted-carer-qualifying-conditions",
+            "unhinted-household-care-home",
+            "unhinted-household-partner-change",
+            "unhinted-pip-other-benefits",
+            "unhinted-pip-state-pension-overlap"
+          ],
+          "case_kinds": [
+            "boundary",
+            "retrieval"
+          ],
+          "coverage_status": "mapped-not-executed"
+        }
+      ]
+    },
+    {
+      "id": "persona/pensions-specialist",
+      "status": "projected",
+      "areas": [
+        {
+          "id": "inspect-original-context",
+          "interest": "Review source passages and expose surrounding context an informal summary could miss.",
+          "source": {
+            "file": "knowledge/guided-discovery.yamlld",
+            "locator": "persona/pensions-specialist; description and body",
+            "lines": [
+              3,
+              15
+            ],
+            "sha256": "913a74b8513c591be8f164e199fcb495aec5015d06600c7496464d2d4ac8ab94"
+          },
+          "case_ids": [
+            "staff-002",
+            "staff-004",
+            "staff-006",
+            "staff-010",
+            "staff-012",
+            "staff-013",
+            "staff-014",
+            "staff-015",
+            "staff-016",
+            "staff-017",
+            "staff-018",
+            "staff-019",
+            "staff-020",
+            "staff-021",
+            "staff-022",
+            "staff-025",
+            "staff-032",
+            "stage2-004",
+            "stage2-004-pc-context",
+            "unhinted-age-contribution-rules",
+            "unhinted-age-first-payment",
+            "unhinted-household-care-home",
+            "unhinted-household-partner-change",
+            "unhinted-income-capital",
+            "unhinted-pc-capital-valuation",
+            "unhinted-pc-inputs-separate"
+          ],
+          "case_kinds": [
+            "boundary",
+            "retrieval"
+          ],
+          "coverage_status": "mapped-not-executed"
+        },
+        {
+          "id": "separate-income-capital",
+          "interest": "Keep earnings, other income and capital as distinct topics with separate source routes.",
+          "source": {
+            "file": "knowledge/guided-discovery.yamlld",
+            "locator": "story/income-map; earnings, other income and capital",
+            "lines": [
+              67,
+              85
+            ],
+            "sha256": "913a74b8513c591be8f164e199fcb495aec5015d06600c7496464d2d4ac8ab94"
+          },
+          "case_ids": [
+            "staff-006",
+            "staff-010",
+            "staff-015",
+            "staff-016",
+            "staff-019",
+            "staff-020",
+            "staff-021",
+            "unhinted-income-capital",
+            "unhinted-pc-capital-valuation",
+            "unhinted-pc-inputs-separate"
+          ],
+          "case_kinds": [
+            "retrieval"
+          ],
+          "coverage_status": "mapped-not-executed"
+        },
+        {
+          "id": "retain-historical-gaps",
+          "interest": "Keep historical provisions and missing memos visible; do not let an orderly graph conceal uncertainty.",
+          "source": {
+            "file": "knowledge/guided-discovery.yamlld",
+            "locator": "story/context-review; historical provisions and missing memos",
+            "lines": [
+              86,
+              102
+            ],
+            "sha256": "913a74b8513c591be8f164e199fcb495aec5015d06600c7496464d2d4ac8ab94"
+          },
+          "case_ids": [
+            "staff-007",
+            "staff-008",
+            "staff-009",
+            "staff-021",
+            "unhinted-history-capture-date",
+            "unhinted-pc-rate-periods",
+            "unhinted-rate-date-v-capture"
+          ],
+          "case_kinds": [
+            "retrieval"
+          ],
+          "coverage_status": "mapped-not-executed"
+        },
+        {
+          "id": "pension-distinctions-dates",
+          "interest": "Check Pension Credit and State Pension distinctions, dates and cross-references; separate age, entitlement, transition and first payment.",
+          "source": {
+            "file": "domain-profile/staff-needs/journeys.json",
+            "locator": "persona/pensions-specialist; age-and-transition and historical-rates journeys",
+            "lines": [
+              5,
+              18
+            ],
+            "sha256": "84393d075425808b7a298cda32cbcf60d0c127c8577684a4ab35e8ead88f22c7"
+          },
+          "case_ids": [
+            "staff-002",
+            "staff-004",
+            "staff-007",
+            "staff-008",
+            "staff-009",
+            "staff-025",
+            "staff-032",
+            "unhinted-age-contribution-rules",
+            "unhinted-age-first-payment",
+            "unhinted-history-capture-date",
+            "unhinted-pc-rate-periods",
+            "unhinted-rate-date-v-capture"
+          ],
+          "case_kinds": [
+            "retrieval"
+          ],
+          "coverage_status": "mapped-not-executed"
+        }
+      ]
+    },
+    {
+      "id": "persona/policy-law-reviewer",
+      "status": "projected",
+      "areas": [
+        {
+          "id": "distinguish-guidance-law",
+          "interest": "Distinguish operational guidance, legal sources and project interpretation; a preference for consulting guidance first does not mean guidance overrides legislation.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/policy-law-reviewer; body",
+            "lines": [
+              4,
+              30
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "staff-001",
+            "staff-002",
+            "staff-007",
+            "staff-008",
+            "staff-009",
+            "staff-023",
+            "staff-025",
+            "staff-032",
+            "stage2-001",
+            "stage2-001-pc-context",
+            "unhinted-absence-permanent",
+            "unhinted-absence-temporary",
+            "unhinted-legal-hierarchy",
+            "unhinted-pc-legal-hierarchy"
+          ],
+          "case_kinds": [
+            "boundary",
+            "retrieval"
+          ],
+          "coverage_status": "mapped-not-executed"
+        },
+        {
+          "id": "test-temporal-jurisdictional-scope",
+          "interest": "Inspect temporal and jurisdictional scope, exact source locators, source type and capture date; keep unresolved dependencies visible.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/policy-law-reviewer; goal and success criteria",
+            "lines": [
+              4,
+              30
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "staff-001",
+            "staff-002",
+            "staff-007",
+            "staff-008",
+            "staff-009",
+            "staff-023",
+            "staff-025",
+            "staff-032",
+            "stage2-001",
+            "stage2-001-pc-context",
+            "stage2-004",
+            "stage2-004-pc-context",
+            "unhinted-absence-permanent",
+            "unhinted-absence-temporary",
+            "unhinted-age-contribution-rules",
+            "unhinted-age-first-payment",
+            "unhinted-history-capture-date",
+            "unhinted-pc-rate-periods",
+            "unhinted-rate-date-v-capture"
+          ],
+          "case_kinds": [
+            "boundary",
+            "retrieval"
+          ],
+          "coverage_status": "mapped-not-executed"
+        },
+        {
+          "id": "separate-capture-and-effectiveness",
+          "interest": "Do not infer source publication, legal commencement or current applicability from capture dates, links or a guidance citation.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "question/stage2-001; acceptance and negative control",
+            "lines": [
+              341,
+              405
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "stage2-001",
+            "stage2-001-pc-context",
+            "unhinted-history-capture-date",
+            "unhinted-legal-hierarchy",
+            "unhinted-pc-legal-hierarchy"
+          ],
+          "case_kinds": [
+            "boundary",
+            "retrieval"
+          ],
+          "coverage_status": "mapped-not-executed"
+        }
+      ]
+    },
+    {
+      "id": "persona/evidence-assurance-reviewer",
+      "status": "projected",
+      "areas": [
+        {
+          "id": "audit-evidence-per-claim",
+          "interest": "Check whether evidence supports each claim and state what remains missing; keep source support separate from completeness.",
+          "source": {
+            "file": "domain-profile/staff-needs/journeys.json",
+            "locator": "persona/evidence-assurance-reviewer; source-audit journey",
+            "lines": [
+              9,
+              23
+            ],
+            "sha256": "84393d075425808b7a298cda32cbcf60d0c127c8577684a4ab35e8ead88f22c7"
+          },
+          "case_ids": [
+            "staff-003",
+            "staff-005",
+            "staff-010",
+            "staff-011",
+            "staff-012",
+            "staff-013",
+            "staff-014",
+            "staff-015",
+            "staff-016",
+            "staff-017",
+            "staff-018",
+            "staff-019",
+            "staff-020",
+            "staff-021",
+            "staff-024",
+            "staff-026",
+            "staff-027",
+            "staff-028",
+            "staff-029",
+            "staff-030",
+            "staff-031",
+            "staff-033",
+            "staff-034",
+            "staff-035",
+            "staff-036",
+            "staff-037",
+            "staff-038",
+            "staff-039",
+            "staff-040",
+            "stage2-003",
+            "stage2-003-pc-context",
+            "stage2-004",
+            "stage2-004-pc-context",
+            "unhinted-carer-overlap",
+            "unhinted-carer-qualifying-conditions",
+            "unhinted-household-care-home",
+            "unhinted-household-partner-change",
+            "unhinted-operational-proof",
+            "unhinted-pc-capital-valuation",
+            "unhinted-pc-inputs-separate",
+            "unhinted-pip-other-benefits",
+            "unhinted-pip-state-pension-overlap"
+          ],
+          "case_kinds": [
+            "boundary",
+            "retrieval"
+          ],
+          "coverage_status": "mapped-not-executed"
+        },
+        {
+          "id": "separate-policy-and-operational-evidence",
+          "interest": "Distinguish policy interpretation from additional operational evidence and label each requirement source-backed, stakeholder-derived or unresolved.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/evidence-assurance-reviewer; goal",
+            "lines": [
+              60,
+              86
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "stage2-003",
+            "stage2-003-pc-context",
+            "unhinted-operational-proof"
+          ],
+          "case_kinds": [
+            "boundary",
+            "retrieval"
+          ],
+          "coverage_status": "mapped-not-executed"
+        },
+        {
+          "id": "privacy-fraud-error-owner-boundary",
+          "interest": "Leave operational evidence, privacy, fraud and error requirements to authorised specialists; provide no checklist, claimant risk model, fraud method or real claimant data.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "Goal: see which requirements are supported; body",
+            "lines": [
+              82,
+              86
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "stage2-003",
+            "stage2-003-pc-context",
+            "unhinted-operational-proof"
+          ],
+          "case_kinds": [
+            "boundary",
+            "retrieval"
+          ],
+          "coverage_status": "mapped-not-executed"
+        }
+      ]
+    },
+    {
+      "id": "persona/knowledge-engineer",
+      "status": "projected",
+      "areas": [
+        {
+          "id": "reproduce-evidence-transform",
+          "interest": "Inspect identities, extraction boundaries, relationships and provenance; reproduce an extract against its original PDF hash and relationship evidence.",
+          "source": {
+            "file": "knowledge/guided-discovery.yamlld",
+            "locator": "persona/knowledge-engineer; description and body",
+            "lines": [
+              34,
+              48
+            ],
+            "sha256": "913a74b8513c591be8f164e199fcb495aec5015d06600c7496464d2d4ac8ab94"
+          },
+          "case_ids": [
+            "staff-001",
+            "staff-002",
+            "staff-003",
+            "staff-004",
+            "staff-005",
+            "staff-006",
+            "staff-007",
+            "staff-008",
+            "staff-009",
+            "staff-010",
+            "staff-011",
+            "staff-012",
+            "staff-013",
+            "staff-014",
+            "staff-015",
+            "staff-016",
+            "staff-017",
+            "staff-018",
+            "staff-019",
+            "staff-020",
+            "staff-021",
+            "staff-022",
+            "staff-023",
+            "staff-024",
+            "staff-025",
+            "staff-026",
+            "staff-027",
+            "staff-028",
+            "staff-029",
+            "staff-030",
+            "staff-031",
+            "staff-032",
+            "staff-033",
+            "staff-034",
+            "staff-035",
+            "staff-036",
+            "staff-037",
+            "staff-038",
+            "staff-039",
+            "staff-040",
+            "stage2-002",
+            "stage2-002-pc-context",
+            "unhinted-provenance-replay"
+          ],
+          "case_kinds": [
+            "boundary",
+            "integrity",
+            "retrieval"
+          ],
+          "coverage_status": "mapped-not-executed"
+        },
+        {
+          "id": "replay-semantic-retrieval-output-identity",
+          "interest": "Bind source, semantic, retrieval and model-output identities so a changed input or budget cannot be mistaken for the same replay.",
+          "source": {
+            "file": "domain-profile/staff-needs/journeys.json",
+            "locator": "persona/knowledge-engineer; source-audit journey",
+            "lines": [
+              10,
+              23
+            ],
+            "sha256": "84393d075425808b7a298cda32cbcf60d0c127c8577684a4ab35e8ead88f22c7"
+          },
+          "case_ids": [
+            "staff-001",
+            "staff-002",
+            "staff-003",
+            "staff-004",
+            "staff-005",
+            "staff-006",
+            "staff-007",
+            "staff-008",
+            "staff-009",
+            "staff-010",
+            "staff-011",
+            "staff-012",
+            "staff-013",
+            "staff-014",
+            "staff-015",
+            "staff-016",
+            "staff-017",
+            "staff-018",
+            "staff-019",
+            "staff-020",
+            "staff-021",
+            "staff-022",
+            "staff-023",
+            "staff-024",
+            "staff-025",
+            "staff-026",
+            "staff-027",
+            "staff-028",
+            "staff-029",
+            "staff-030",
+            "staff-031",
+            "staff-032",
+            "staff-033",
+            "staff-034",
+            "staff-035",
+            "staff-036",
+            "staff-037",
+            "staff-038",
+            "staff-039",
+            "staff-040",
+            "stage2-002",
+            "stage2-002-pc-context",
+            "unhinted-provenance-replay"
+          ],
+          "case_kinds": [
+            "boundary",
+            "integrity",
+            "retrieval"
+          ],
+          "coverage_status": "mapped-not-executed"
+        }
+      ]
+    },
+    {
+      "id": "persona/assisted-support",
+      "status": "projected",
+      "areas": [
+        {
+          "id": "accessible-source-navigation",
+          "interest": "Navigate and verify source evidence accessibly, including keyboard use, narrow screens, understandable link purpose and no colour-only signalling.",
+          "source": {
+            "file": "domain-profile/staff-needs/journeys.json",
+            "locator": "persona/assisted-support; assisted-reading journey",
+            "lines": [
+              11,
+              24
+            ],
+            "sha256": "84393d075425808b7a298cda32cbcf60d0c127c8577684a4ab35e8ead88f22c7"
+          },
+          "case_ids": [
+            "stage2-006",
+            "unhinted-accessible-reading"
+          ],
+          "case_kinds": [
+            "ui"
+          ],
+          "coverage_status": "mapped-not-executed"
+        },
+        {
+          "id": "explain-extraction-limits",
+          "interest": "Distinguish an unofficial explanation from the original, expose damaged or incomplete extraction and identify when human support is needed.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/assisted-support; body",
+            "lines": [
+              114,
+              145
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "stage2-006",
+            "unhinted-damaged-extract"
+          ],
+          "case_kinds": [
+            "boundary",
+            "ui"
+          ],
+          "coverage_status": "mapped-not-executed"
+        }
+      ]
+    },
+    {
+      "id": "persona/rules-architect",
+      "status": "projected",
+      "areas": [
+        {
+          "id": "trace-evidence-to-rule",
+          "interest": "Keep the evidence → proposition → proposed rule → executable rule chain reviewable and preserve missing stages.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/rules-architect; body",
+            "lines": [
+              31,
+              59
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "stage2-002",
+            "stage2-002-pc-context",
+            "unhinted-rule-boundary"
+          ],
+          "case_kinds": [
+            "boundary",
+            "retrieval"
+          ],
+          "coverage_status": "mapped-not-executed"
+        },
+        {
+          "id": "expose-rule-conditions-and-change",
+          "interest": "Show conditions, exceptions, temporal scope, source changes, review decisions and independent synthetic tests; block executable use until required reviews exist.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/rules-architect; goal and boundary",
+            "lines": [
+              31,
+              59
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "stage2-002",
+            "stage2-002-pc-context",
+            "unhinted-provenance-replay",
+            "unhinted-rule-boundary"
+          ],
+          "case_kinds": [
+            "boundary",
+            "integrity",
+            "retrieval"
+          ],
+          "coverage_status": "mapped-not-executed"
+        },
+        {
+          "id": "avoid-architecture-assumptions",
+          "interest": "Do not infer a production technology, complete engine or delivery estimate from this research exemplar.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/rules-architect; closing boundary",
+            "lines": [
+              31,
+              59
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "unhinted-rule-boundary"
+          ],
+          "case_kinds": [
+            "boundary"
+          ],
+          "coverage_status": "mapped-not-executed"
+        }
+      ]
+    },
+    {
+      "id": "persona/applicant-change-reporter",
+      "status": "projected",
+      "areas": [
+        {
+          "id": "separate-first-claim-from-change",
+          "interest": "Keep an initial application separate from a report of changed circumstances, with distinct triggers and completion criteria.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/applicant-change-reporter; body",
+            "lines": [
+              87,
+              113
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "stage2-005",
+            "unhinted-service-route"
+          ],
+          "case_kinds": [
+            "boundary"
+          ],
+          "coverage_status": "mapped-not-executed"
+        },
+        {
+          "id": "plain-language-next-step-and-handoff",
+          "interest": "Identify a plain-English next step, missing information and an appropriate official service or human help, while making no entitlement decision or personal-data request.",
+          "source": {
+            "file": "knowledge/evaluation-journeys.yamlld",
+            "locator": "persona/applicant-change-reporter; goal and boundary",
+            "lines": [
+              87,
+              113
+            ],
+            "sha256": "741e36472a556963005f415392e82f8f4fc6c2f307b38b8ddbd704ffff1f7b85"
+          },
+          "case_ids": [
+            "stage2-005",
+            "unhinted-service-route"
+          ],
+          "case_kinds": [
+            "boundary"
+          ],
+          "coverage_status": "mapped-not-executed"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "personas": 8,
+    "areas": 21,
+    "cases": 75,
+    "frozen_question_occurrences": 40,
+    "additional_cases": 35,
+    "cases_by_kind": {
+      "boundary": 10,
+      "integrity": 1,
+      "retrieval": 62,
+      "ui": 2
+    },
+    "recall_eligible_cases": 62,
+    "expected_record_targets": 263
+  },
+  "recall_metric": {
+    "status": "not-run",
+    "population": "retrieval cases only",
+    "non_retrieval_cases_excluded": true
+  },
+  "limitations": [
+    "All eight persona profiles are projected and unvalidated; case mapping does not establish that people need or accept them.",
+    "Expected records are evaluation targets only and must never be injected into the runtime query or retrieval input.",
+    "Candidate evidence is exact machine-extracted material; it is not complete legal authority, a specialist-reviewed answer or evidence of current applicability.",
+    "Boundary cases without source targets test gap reporting and non-fabrication, not positive retrieval recall.",
+    "UI cases require human observation; integrity cases require separate mutation execution. This producer does not claim either was run."
+  ],
+  "inputs": [
+    {
+      "path": "domain-profile/staff-needs/persona-evaluation.json",
+      "sha256": "034fb28734fbbdbd0b1532d9f2a64342db321add61f40e924455c71c66751fa7",
+      "bytes": 65492
+    },
+    {
+      "path": "evaluation/staff-questions/cases.json",
+      "sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a",
+      "bytes": 205988
+    },
+    {
+      "path": "evaluation/staff-needs/matrix.json",
+      "sha256": "5d25297a0cb98cb44dc87dae64da2e9b4d59bdfc574d738dd901b07da12542f8",
+      "bytes": 64897
+    },
+    {
+      "path": "combined/context/corpus/base-index.json",
+      "sha256": "547623cd08ca6b2ab59ff7bc52ddbdabea4ead6e1aa26ad1f7983b63b91b71d4",
+      "bytes": 4993059
+    },
+    {
+      "path": "domain-profile/staff-needs/journeys.json",
+      "sha256": "84393d075425808b7a298cda32cbcf60d0c127c8577684a4ab35e8ead88f22c7",
+      "bytes": 5062
+    }
+  ]
+}

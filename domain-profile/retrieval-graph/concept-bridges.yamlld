@@ -1,0 +1,449 @@
+{
+  "@context": {
+    "@vocab": "https://chris-page-gov.github.io/okf-dwp/profile/retrieval-graph/"
+  },
+  "@id": "https://chris-page-gov.github.io/okf-dwp/id/retrieval-graph/concept-bridges/v1",
+  "schema": "okf-dwp-concept-bridges.v1",
+  "assertion_status": "model-derived",
+  "review_status": "unreviewed",
+  "bridges": [
+    {
+      "id": "state-pension-age-and-start",
+      "label": "State Pension age, contribution and start-date source branches",
+      "all_of": [
+        [
+          "state pension",
+          "retirement pension"
+        ],
+        [
+          "age",
+          "contribution",
+          "first payment",
+          "entitlement starts",
+          "transitional"
+        ]
+      ],
+      "concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/state-pension",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pension-age"
+      ],
+      "source_support": [
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/state-pension",
+          "record_sha256": "c4a386b4c1547d41758655c11f5a7a79ba2bcf7e10a0052de72139224db79fa5"
+        },
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pension-age",
+          "record_sha256": "0dde9328ab8de0429e1c4a9a21cf98a25aeef62dd580429c6198e848b9ce3f6e"
+        }
+      ],
+      "scope": "Named State Pension and age/start vocabulary activates navigation to separate captured conditions. No relevant regime, date or actual entitlement is inferred.",
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed",
+      "case_sensitive_phrases": []
+    },
+    {
+      "id": "pip-linked-benefits",
+      "label": "PIP and separately qualified linked benefits",
+      "all_of": [
+        [
+          "PIP",
+          "personal independence payment"
+        ],
+        [
+          "linked",
+          "other benefits",
+          "additional benefits",
+          "qualifying benefit",
+          "passporting",
+          "extra benefits"
+        ]
+      ],
+      "concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pip",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/additional-benefits"
+      ],
+      "source_support": [
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/pip",
+          "record_sha256": "e13234dcf6f58666efa6c5d38c15ccb6d49878b2393dc4d2ee8626ec9aac807f"
+        },
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/additional-benefits",
+          "record_sha256": "27af446576900b0d4ea967e125af677475a9a063b6a6879862b0972f84a11153"
+        }
+      ],
+      "scope": "Find candidate qualifying-benefit branches only. PIP, Carer’s Allowance and Pension Credit conditions are not treated as interchangeable or complete.",
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed",
+      "case_sensitive_phrases": [
+        "PIP"
+      ]
+    },
+    {
+      "id": "multiple-caring-roles",
+      "label": "Multiple caring roles and competing-claim source branches",
+      "all_of": [
+        [
+          "cares for",
+          "caring",
+          "carer",
+          "carers",
+          "care for",
+          "carers allowance",
+          "carer’s allowance",
+          "carer's allowance"
+        ],
+        [
+          "two",
+          "several",
+          "multiple",
+          "more than one"
+        ]
+      ],
+      "concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/carers-allowance",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/multiple-care"
+      ],
+      "source_support": [
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/carers-allowance",
+          "record_sha256": "ff6967d978d267d9b0f50e48028d509f003534ecd5d4dea91fde353e80eb5166"
+        },
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/multiple-care",
+          "record_sha256": "1e2453e452fc5f4e31d6fd72d2ded83136aa460b6368aea5dc7f07ed01109d7a"
+        }
+      ],
+      "scope": "Captured Carer’s Allowance guidance is a navigation candidate for the stated caring roles. Benefit regime, claimant role and any payment conclusion remain unresolved.",
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed",
+      "case_sensitive_phrases": []
+    },
+    {
+      "id": "pension-credit-uprating",
+      "label": "Pension Credit effective rate-period source branches",
+      "all_of": [
+        [
+          "pension credit",
+          "SPC",
+          "PC"
+        ],
+        [
+          "uprating",
+          "historic",
+          "historical",
+          "rate",
+          "rates",
+          "weekly",
+          "amount"
+        ]
+      ],
+      "concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+        "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/rates"
+      ],
+      "source_support": [
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+          "record_sha256": "f9c53e089829fe49884e715ea098751c41fc080a0a57ffe6283b32e3fd9e0ef0"
+        },
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/rates",
+          "record_sha256": "8f995f4019d1640c09ddf3c268a39c7bc207986bcc208d1445d4705091587de9"
+        }
+      ],
+      "scope": "Preserve dated figures as historical source evidence. Capture dates never become effective dates, and no requested year is inferred.",
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed",
+      "case_sensitive_phrases": [
+        "PC",
+        "SPC"
+      ]
+    },
+    {
+      "id": "custody-jsa-branches",
+      "label": "Captured JSA custody guidance",
+      "all_of": [
+        [
+          "prison",
+          "imprisoned",
+          "imprisonment",
+          "custody",
+          "detained",
+          "gaol",
+          "jail"
+        ],
+        [
+          "JSA",
+          "jobseekers allowance",
+          "jobseeker’s allowance",
+          "jobseeker's allowance"
+        ]
+      ],
+      "concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability"
+      ],
+      "source_support": [
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+          "record_sha256": "259fe601c0af50d97f8dd2e7cc69d857f7da976fe0c148e5830bd6969515e004"
+        },
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/legacy-jsa-custody-availability",
+          "record_sha256": "f9db103d6ac9df547c72bff9e34453354a4951e9f004935c5cf599fbfbc14526"
+        }
+      ],
+      "scope": "Navigation to the captured legacy JSA source branch, without deciding whether a current claim or New Style regime has the same rules.",
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed",
+      "case_sensitive_phrases": [
+        "JSA"
+      ]
+    },
+    {
+      "id": "custody-income-support-branches",
+      "label": "Captured Income Support custody guidance",
+      "all_of": [
+        [
+          "prison",
+          "imprisoned",
+          "imprisonment",
+          "custody",
+          "detained",
+          "gaol",
+          "jail"
+        ],
+        [
+          "income support",
+          "IS"
+        ]
+      ],
+      "concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount"
+      ],
+      "source_support": [
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+          "record_sha256": "259fe601c0af50d97f8dd2e7cc69d857f7da976fe0c148e5830bd6969515e004"
+        },
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/is-prisoner-applicable-amount",
+          "record_sha256": "be32f1597ca811d94a98e028ca0bd2849e7b1b89200917f325ea5eb86dba656e"
+        }
+      ],
+      "scope": "Captured Income Support custody source branch only. Questions about entitlement and payment remain distinct.",
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed",
+      "case_sensitive_phrases": [
+        "IS"
+      ]
+    },
+    {
+      "id": "custody-pension-credit-branches",
+      "label": "Captured Pension Credit custody guidance",
+      "all_of": [
+        [
+          "prison",
+          "imprisoned",
+          "imprisonment",
+          "custody",
+          "detained",
+          "gaol",
+          "jail"
+        ],
+        [
+          "pension credit",
+          "SPC",
+          "PC"
+        ]
+      ],
+      "concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates"
+      ],
+      "source_support": [
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+          "record_sha256": "259fe601c0af50d97f8dd2e7cc69d857f7da976fe0c148e5830bd6969515e004"
+        },
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/pc-prisoner-credit-rates",
+          "record_sha256": "003a2376119a7592bb9879efdf1211e42e8ab43268a72837c8c0e15d8829ef44"
+        }
+      ],
+      "scope": "Captured Pension Credit custody source branch only. Nil credit, payment and continuing entitlement must not be conflated.",
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed",
+      "case_sensitive_phrases": [
+        "PC",
+        "SPC"
+      ]
+    },
+    {
+      "id": "custody-esa-branches",
+      "label": "Captured ESA custody source variants",
+      "all_of": [
+        [
+          "prison",
+          "imprisoned",
+          "imprisonment",
+          "custody",
+          "detained",
+          "gaol",
+          "jail"
+        ],
+        [
+          "ESA",
+          "employment and support allowance"
+        ]
+      ],
+      "concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/esa-custody-regimes",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody"
+      ],
+      "source_support": [
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/common-imprisonment-payability",
+          "record_sha256": "259fe601c0af50d97f8dd2e7cc69d857f7da976fe0c148e5830bd6969515e004"
+        },
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-custody-regimes",
+          "record_sha256": "b4bdb88d7911831412c47dee60de17cf9a4113af65e27bc675459b81a8dc2b81"
+        },
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-contributory-custody",
+          "record_sha256": "c03ef2546d005e5c5f2690d9073b32bd8026d694156389071a6dddd8f69c6c0d"
+        },
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/esa-income-related-custody",
+          "record_sha256": "5a6bd4c4cb114dff8d82a2eb5f4c1ed7b7597157495c31d62ec5d79f2f91cf0a"
+        }
+      ],
+      "scope": "Retrieve the distinct captured ESA variants together as review branches; do not choose a regime, transfer a qualification or assert current applicability.",
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed",
+      "case_sensitive_phrases": [
+        "ESA"
+      ]
+    },
+    {
+      "id": "capital-research-pipeline",
+      "label": "Captured capital-disregard research entry point",
+      "all_of": [
+        [
+          "capital",
+          "capital disregards",
+          "capital disregard"
+        ],
+        [
+          "disregard",
+          "disregards",
+          "candidate",
+          "proposition",
+          "proposed rule",
+          "synthetic tests"
+        ]
+      ],
+      "concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/capital-disregards"
+      ],
+      "source_support": [
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/capital-disregards",
+          "record_sha256": "3448a85b8f0639396a3f6fb89b4c8538c5a58ceb7b49017bbd43b7c67e991fab"
+        }
+      ],
+      "scope": "Navigate the captured Pension Credit capital-disregard example. Source evidence, proposed rules, synthetic tests and legal acceptance remain distinct; the benefit context must be confirmed.",
+      "case_sensitive_phrases": [
+        "PC",
+        "SPC"
+      ],
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "pc-household-research",
+      "label": "Pension Credit household source concepts",
+      "all_of": [
+        [
+          "pension credit",
+          "PC",
+          "SPC"
+        ],
+        [
+          "household",
+          "membership",
+          "partner",
+          "couple"
+        ]
+      ],
+      "concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/household"
+      ],
+      "source_support": [
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+          "record_sha256": "f9c53e089829fe49884e715ea098751c41fc080a0a57ffe6283b32e3fd9e0ef0"
+        },
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/household",
+          "record_sha256": "cbb00735a7255728c6db8b464ccb4ba16aba78e7d9cb4865b1c0425fc9ec6225"
+        }
+      ],
+      "scope": "Navigate the captured household definition and related source branches. A household query does not establish a partner relationship or operational evidence requirements.",
+      "case_sensitive_phrases": [
+        "PC",
+        "SPC"
+      ],
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed"
+    },
+    {
+      "id": "pc-mixed-age-research",
+      "label": "Pension Credit mixed-age source branch",
+      "all_of": [
+        [
+          "pension credit",
+          "PC",
+          "SPC"
+        ],
+        [
+          "mixed age",
+          "mixed-age"
+        ]
+      ],
+      "concepts": [
+        "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+        "https://chris-page-gov.github.io/okf-dwp/id/term/mixed-age-couples"
+      ],
+      "source_support": [
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/pension-credit",
+          "record_sha256": "f9c53e089829fe49884e715ea098751c41fc080a0a57ffe6283b32e3fd9e0ef0"
+        },
+        {
+          "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/term/mixed-age-couples",
+          "record_sha256": "c129d69374941b5683a1b86fcb63b7a82066732a3fa0ff7545823820b6f2f6ff"
+        }
+      ],
+      "scope": "Navigate the specifically named mixed-age branch without deciding entitlement, claim/change route or date applicability.",
+      "case_sensitive_phrases": [
+        "PC",
+        "SPC"
+      ],
+      "assertion_status": "model-derived",
+      "review_status": "unreviewed"
+    }
+  ],
+  "limitations": [
+    "Composition and synonym groups are unreviewed navigation proposals. Source-supported branches never become verified legal meanings or individual claim facts.",
+    "No evaluation question ID, assessor target record or paragraph locator is accepted by the runtime.",
+    "The original graph records and resolver receipts remain unchanged; every bridged concept and matched phrase is exposed separately."
+  ]
+}

@@ -1,0 +1,1116 @@
+{
+  "schema": "okf-dwp-context-recovery-evaluation.v1",
+  "source_case": "uc-disabled-child-supersession-001",
+  "adapter_identity": {
+    "policy_path": "domain-profile/context-recovery/policy.yamlld",
+    "policy_sha256": "4b5efdc1fbe5c5fa01b0f6f00ce7fdd927f35eaab232271ada8f5b90cb483278",
+    "source_binding": {
+      "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+      "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+    },
+    "engine": {
+      "repository": "https://github.com/chris-page-gov/okf-explorer",
+      "commit": "d6930bbcddaab616deec002d9e6efff6e3aae953",
+      "files": {
+        "index.ts": "689f8b8ab1cfb5ccc21b6dd9b5527fcad04de01f5876b44cbb2dc0240fceb010",
+        "corpus.ts": "a770352c6e4628f0c391b0c12bbdaf185b476a714ca212e99459d135f8f57f6f",
+        "corpusV3.ts": "944617e1630362b7a41d60da92651007b96252eff3075eb4c4b852f420f5a5c0",
+        "types.ts": "febf83b5c65153fd2e49ac070b6117525463034fb1b33534a086a1cc7bbb42cc",
+        "unit.ts": "7cd989c00564ad2e0469073c66685ffb5111809e7f598dc42b6f3df1bf693aa6"
+      }
+    }
+  },
+  "adapter_module_sha256": "81db026984b6af418b16feeba3c3f22c4f4504dae7ea8ffb14c05dbd28c51087",
+  "evaluator_sha256": "68882702367683592609d28c8c450d430d0337ad767a93c75ff62bf7e7daeb11",
+  "protocol_sha256": "cbdbd97eaa62d4f2e5889dae513b7e875db408d0e0bd0ce1e13a3f22e6ff4217",
+  "budget": {
+    "max_bytes": 524288,
+    "max_nodes": 64,
+    "max_relationships": 128,
+    "max_depth": 6
+  },
+  "cases": [
+    {
+      "id": "original",
+      "question": "Where a child is awarded the highest-rate care component of DLA from 26 January 2025, but the change is reported to Universal Credit on 28 March 2026, what is the effective date of the higher disabled-child addition, and from which assessment period should it be paid?",
+      "baseline": {
+        "context_id": "urn:sha256:43f4938a16557acbdb593e9f74687b682e7630a08bcd7a5be8185bf9bad9fcf2",
+        "binding": {
+          "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+          "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+        },
+        "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+        "evidence_status": "insufficient",
+        "ai_answer": null,
+        "context_bytes": 522141,
+        "selected_records": 38,
+        "relationships": 43,
+        "context_truncated": true,
+        "retrieval_truncated": true,
+        "fetched_files": 64,
+        "target_hits": [
+          "F1123"
+        ],
+        "compound_rate_concept_resolved": true,
+        "unrelated_staff_008_active": true
+      },
+      "guarded": {
+        "context_id": "urn:sha256:9118cdd3d04904f5bf11883f33b982d86ea2c8c8d23f9abe189603cb97636947",
+        "binding": {
+          "index_url": "https://example.invalid/structured-context/context-recovery-manifest.json",
+          "index_sha256": "ffd4907d5f242e003488147dc0af993198a456c32db1bd432a3f08100ec26ce6"
+        },
+        "source_snapshot": "dwp-context-recovery-1b7953ecf65ef6f67188",
+        "evidence_status": "insufficient",
+        "ai_answer": null,
+        "context_bytes": 263154,
+        "selected_records": 28,
+        "relationships": 28,
+        "context_truncated": true,
+        "retrieval_truncated": true,
+        "fetched_files": 64,
+        "target_hits": [
+          "F1123"
+        ],
+        "compound_rate_concept_resolved": false,
+        "unrelated_staff_008_active": false,
+        "derivation": {
+          "source_manifest_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519",
+          "policy_sha256": "4b5efdc1fbe5c5fa01b0f6f00ce7fdd927f35eaab232271ada8f5b90cb483278",
+          "suppressed": [
+            {
+              "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/rates",
+              "alias": "rate",
+              "compounds": [
+                "highest-rate"
+              ],
+              "reason": "The alias occurs only within a hyphenated compound; baseline interpretation is retained separately."
+            }
+          ]
+        }
+      },
+      "followups": [
+        {
+          "id": "other-benefit-timing",
+          "query": "UC and award of other benefits",
+          "matched_phrases": [
+            [
+              "universal credit"
+            ],
+            [
+              "dla"
+            ],
+            [
+              "awarded"
+            ],
+            [
+              "effective date",
+              "assessment period",
+              "reported"
+            ]
+          ],
+          "source_support": [
+            {
+              "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6",
+              "text_sha256": "a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4",
+              "literal": "UC and award of other benefits",
+              "source_sha256": "4933d66a1cd118687bbc10e30faf9ee8214d09b3e465e58efdbd9b832a58a8e8",
+              "role": "other-benefit effective-date branch and examples"
+            }
+          ],
+          "context_id": "urn:sha256:cb7e22b6a630fca74c63312b360662667876715e0015ee5013b3d49534726279",
+          "binding": {
+            "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+            "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+          },
+          "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+          "evidence_status": "insufficient",
+          "ai_answer": null,
+          "context_bytes": 241867,
+          "selected_records": 34,
+          "relationships": 20,
+          "context_truncated": true,
+          "retrieval_truncated": true,
+          "fetched_files": 64,
+          "target_hits": [
+            "A4361"
+          ],
+          "compound_rate_concept_resolved": false,
+          "unrelated_staff_008_active": false
+        },
+        {
+          "id": "disabled-child-qualification",
+          "query": "Universal Credit disabled child addition qualifying conditions",
+          "matched_phrases": [
+            [
+              "universal credit"
+            ],
+            [
+              "child"
+            ],
+            [
+              "dla",
+              "disabled child"
+            ]
+          ],
+          "source_support": [
+            {
+              "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1",
+              "text_sha256": "7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca",
+              "literal": "The higher rate of disabled child addition",
+              "source_sha256": "124b7e41af2b491209f694941482e6e4bb69e78692a84a343299dc53f25b8731",
+              "role": "higher-rate condition"
+            },
+            {
+              "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000023318-000-bec866c4cfa0",
+              "text_sha256": "2aa85228042811fecbcff1d80e4de24760b4f6acd73aee98473dec6de4795cf1",
+              "literal": "Disabled child addition",
+              "source_sha256": "124b7e41af2b491209f694941482e6e4bb69e78692a84a343299dc53f25b8731",
+              "role": "child addition context"
+            }
+          ],
+          "context_id": "urn:sha256:9da3d343331eecfec1164a0c789bdccbc164ead4559f10bc50b70bb9564ab435",
+          "binding": {
+            "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+            "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+          },
+          "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+          "evidence_status": "insufficient",
+          "ai_answer": null,
+          "context_bytes": 280864,
+          "selected_records": 36,
+          "relationships": 21,
+          "context_truncated": true,
+          "retrieval_truncated": true,
+          "fetched_files": 64,
+          "target_hits": [
+            "F1123",
+            "F1120–F1121"
+          ],
+          "compound_rate_concept_resolved": false,
+          "unrelated_staff_008_active": false
+        }
+      ],
+      "combined_navigation_hits": [
+        "F1123",
+        "F1120–F1121",
+        "A4361"
+      ],
+      "combined_evidence_status": "insufficient",
+      "ai_answer": null,
+      "maximum_individual_context_bytes": 522141,
+      "total_context_bytes": 1308026
+    },
+    {
+      "id": "retrospective-paraphrase",
+      "question": "My child's DLA was increased retrospectively but I told UC much later. When should the extra disabled-child amount start?",
+      "baseline": {
+        "context_id": "urn:sha256:de64dcac31785ec18ed08de40a6d41905280505dc8c5666c5aa033f91cdb47e1",
+        "binding": {
+          "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+          "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+        },
+        "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+        "evidence_status": "insufficient",
+        "ai_answer": null,
+        "context_bytes": 321585,
+        "selected_records": 40,
+        "relationships": 28,
+        "context_truncated": true,
+        "retrieval_truncated": true,
+        "fetched_files": 64,
+        "target_hits": [
+          "F1123",
+          "F1120–F1121"
+        ],
+        "compound_rate_concept_resolved": false,
+        "unrelated_staff_008_active": false
+      },
+      "guarded": null,
+      "followups": [
+        {
+          "id": "other-benefit-timing",
+          "query": "UC and award of other benefits",
+          "matched_phrases": [
+            [
+              "uc"
+            ],
+            [
+              "dla"
+            ],
+            [
+              "increased",
+              "retrospectively"
+            ],
+            [
+              "when"
+            ]
+          ],
+          "source_support": [
+            {
+              "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6",
+              "text_sha256": "a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4",
+              "literal": "UC and award of other benefits",
+              "source_sha256": "4933d66a1cd118687bbc10e30faf9ee8214d09b3e465e58efdbd9b832a58a8e8",
+              "role": "other-benefit effective-date branch and examples"
+            }
+          ],
+          "context_id": "urn:sha256:cb7e22b6a630fca74c63312b360662667876715e0015ee5013b3d49534726279",
+          "binding": {
+            "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+            "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+          },
+          "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+          "evidence_status": "insufficient",
+          "ai_answer": null,
+          "context_bytes": 241867,
+          "selected_records": 34,
+          "relationships": 20,
+          "context_truncated": true,
+          "retrieval_truncated": true,
+          "fetched_files": 64,
+          "target_hits": [
+            "A4361"
+          ],
+          "compound_rate_concept_resolved": false,
+          "unrelated_staff_008_active": false
+        },
+        {
+          "id": "disabled-child-qualification",
+          "query": "Universal Credit disabled child addition qualifying conditions",
+          "matched_phrases": [
+            [
+              "uc"
+            ],
+            [
+              "child"
+            ],
+            [
+              "dla",
+              "disabled child"
+            ]
+          ],
+          "source_support": [
+            {
+              "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1",
+              "text_sha256": "7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca",
+              "literal": "The higher rate of disabled child addition",
+              "source_sha256": "124b7e41af2b491209f694941482e6e4bb69e78692a84a343299dc53f25b8731",
+              "role": "higher-rate condition"
+            },
+            {
+              "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000023318-000-bec866c4cfa0",
+              "text_sha256": "2aa85228042811fecbcff1d80e4de24760b4f6acd73aee98473dec6de4795cf1",
+              "literal": "Disabled child addition",
+              "source_sha256": "124b7e41af2b491209f694941482e6e4bb69e78692a84a343299dc53f25b8731",
+              "role": "child addition context"
+            }
+          ],
+          "context_id": "urn:sha256:9da3d343331eecfec1164a0c789bdccbc164ead4559f10bc50b70bb9564ab435",
+          "binding": {
+            "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+            "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+          },
+          "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+          "evidence_status": "insufficient",
+          "ai_answer": null,
+          "context_bytes": 280864,
+          "selected_records": 36,
+          "relationships": 21,
+          "context_truncated": true,
+          "retrieval_truncated": true,
+          "fetched_files": 64,
+          "target_hits": [
+            "F1123",
+            "F1120–F1121"
+          ],
+          "compound_rate_concept_resolved": false,
+          "unrelated_staff_008_active": false
+        },
+        {
+          "id": "late-notification",
+          "query": "Universal Credit change notified outside time limits",
+          "matched_phrases": [
+            [
+              "uc"
+            ],
+            [
+              "told"
+            ],
+            [
+              "later"
+            ]
+          ],
+          "source_support": [
+            {
+              "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000055420-000-9e9c31f56b39",
+              "text_sha256": "24682e686930781dfa1b19a81c090129991d1b1d89cd6d92ad2e781bb90b6e30",
+              "literal": "Change notified outside the time limits",
+              "source_sha256": "4933d66a1cd118687bbc10e30faf9ee8214d09b3e465e58efdbd9b832a58a8e8",
+              "role": "ordinary late notification and explicit exception pointer"
+            }
+          ],
+          "context_id": "urn:sha256:be7faedd485ae9fce11597dade804f2f41b4c5cd0138b68c692e8101734a3def",
+          "binding": {
+            "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+            "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+          },
+          "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+          "evidence_status": "insufficient",
+          "ai_answer": null,
+          "context_bytes": 241848,
+          "selected_records": 34,
+          "relationships": 21,
+          "context_truncated": true,
+          "retrieval_truncated": true,
+          "fetched_files": 63,
+          "target_hits": [
+            "A4352"
+          ],
+          "compound_rate_concept_resolved": false,
+          "unrelated_staff_008_active": false
+        }
+      ],
+      "combined_navigation_hits": [
+        "F1123",
+        "F1120–F1121",
+        "A4352",
+        "A4361"
+      ],
+      "combined_evidence_status": "insufficient",
+      "ai_answer": null,
+      "maximum_individual_context_bytes": 321585,
+      "total_context_bytes": 1086164
+    },
+    {
+      "id": "backdated-paraphrase",
+      "question": "DLA was backdated for my child. Does UC backdate the higher disabled-child element too?",
+      "baseline": {
+        "context_id": "urn:sha256:1b27192ee17fae789a74560b7f713016ce287bb6754b980a0d0ebcf1483dd500",
+        "binding": {
+          "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+          "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+        },
+        "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+        "evidence_status": "insufficient",
+        "ai_answer": null,
+        "context_bytes": 329569,
+        "selected_records": 41,
+        "relationships": 31,
+        "context_truncated": true,
+        "retrieval_truncated": true,
+        "fetched_files": 64,
+        "target_hits": [
+          "F1123",
+          "F1120–F1121"
+        ],
+        "compound_rate_concept_resolved": false,
+        "unrelated_staff_008_active": false
+      },
+      "guarded": null,
+      "followups": [
+        {
+          "id": "other-benefit-timing",
+          "query": "UC and award of other benefits",
+          "matched_phrases": [
+            [
+              "uc"
+            ],
+            [
+              "dla"
+            ],
+            [
+              "backdated",
+              "backdate"
+            ],
+            [
+              "backdated"
+            ]
+          ],
+          "source_support": [
+            {
+              "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6",
+              "text_sha256": "a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4",
+              "literal": "UC and award of other benefits",
+              "source_sha256": "4933d66a1cd118687bbc10e30faf9ee8214d09b3e465e58efdbd9b832a58a8e8",
+              "role": "other-benefit effective-date branch and examples"
+            }
+          ],
+          "context_id": "urn:sha256:cb7e22b6a630fca74c63312b360662667876715e0015ee5013b3d49534726279",
+          "binding": {
+            "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+            "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+          },
+          "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+          "evidence_status": "insufficient",
+          "ai_answer": null,
+          "context_bytes": 241867,
+          "selected_records": 34,
+          "relationships": 20,
+          "context_truncated": true,
+          "retrieval_truncated": true,
+          "fetched_files": 64,
+          "target_hits": [
+            "A4361"
+          ],
+          "compound_rate_concept_resolved": false,
+          "unrelated_staff_008_active": false
+        },
+        {
+          "id": "disabled-child-qualification",
+          "query": "Universal Credit disabled child addition qualifying conditions",
+          "matched_phrases": [
+            [
+              "uc"
+            ],
+            [
+              "child"
+            ],
+            [
+              "dla",
+              "disabled child"
+            ]
+          ],
+          "source_support": [
+            {
+              "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1",
+              "text_sha256": "7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca",
+              "literal": "The higher rate of disabled child addition",
+              "source_sha256": "124b7e41af2b491209f694941482e6e4bb69e78692a84a343299dc53f25b8731",
+              "role": "higher-rate condition"
+            },
+            {
+              "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000023318-000-bec866c4cfa0",
+              "text_sha256": "2aa85228042811fecbcff1d80e4de24760b4f6acd73aee98473dec6de4795cf1",
+              "literal": "Disabled child addition",
+              "source_sha256": "124b7e41af2b491209f694941482e6e4bb69e78692a84a343299dc53f25b8731",
+              "role": "child addition context"
+            }
+          ],
+          "context_id": "urn:sha256:9da3d343331eecfec1164a0c789bdccbc164ead4559f10bc50b70bb9564ab435",
+          "binding": {
+            "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+            "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+          },
+          "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+          "evidence_status": "insufficient",
+          "ai_answer": null,
+          "context_bytes": 280864,
+          "selected_records": 36,
+          "relationships": 21,
+          "context_truncated": true,
+          "retrieval_truncated": true,
+          "fetched_files": 64,
+          "target_hits": [
+            "F1123",
+            "F1120–F1121"
+          ],
+          "compound_rate_concept_resolved": false,
+          "unrelated_staff_008_active": false
+        }
+      ],
+      "combined_navigation_hits": [
+        "F1123",
+        "F1120–F1121",
+        "A4361"
+      ],
+      "combined_evidence_status": "insufficient",
+      "ai_answer": null,
+      "maximum_individual_context_bytes": 329569,
+      "total_context_bytes": 852300
+    },
+    {
+      "id": "late-award-paraphrase",
+      "question": "UC was told a year late about a child's highest-rate DLA award. Which assessment period should the higher addition start in?",
+      "baseline": {
+        "context_id": "urn:sha256:9fec5e302b4d374daf71faa975ff78470682f45ed9d5ee0f20c3ceae5bf3630f",
+        "binding": {
+          "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+          "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+        },
+        "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+        "evidence_status": "insufficient",
+        "ai_answer": null,
+        "context_bytes": 517724,
+        "selected_records": 37,
+        "relationships": 41,
+        "context_truncated": true,
+        "retrieval_truncated": true,
+        "fetched_files": 64,
+        "target_hits": [
+          "F1123",
+          "F1120–F1121"
+        ],
+        "compound_rate_concept_resolved": true,
+        "unrelated_staff_008_active": true
+      },
+      "guarded": {
+        "context_id": "urn:sha256:a98a0215c46e0b0ac3d6fb15458e0a2319983384ba26716a59511814fcaf1f01",
+        "binding": {
+          "index_url": "https://example.invalid/structured-context/context-recovery-manifest.json",
+          "index_sha256": "ffd4907d5f242e003488147dc0af993198a456c32db1bd432a3f08100ec26ce6"
+        },
+        "source_snapshot": "dwp-context-recovery-1b7953ecf65ef6f67188",
+        "evidence_status": "insufficient",
+        "ai_answer": null,
+        "context_bytes": 310296,
+        "selected_records": 38,
+        "relationships": 28,
+        "context_truncated": true,
+        "retrieval_truncated": true,
+        "fetched_files": 64,
+        "target_hits": [
+          "F1123",
+          "F1120–F1121"
+        ],
+        "compound_rate_concept_resolved": false,
+        "unrelated_staff_008_active": false,
+        "derivation": {
+          "source_manifest_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519",
+          "policy_sha256": "4b5efdc1fbe5c5fa01b0f6f00ce7fdd927f35eaab232271ada8f5b90cb483278",
+          "suppressed": [
+            {
+              "concept_id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/rates",
+              "alias": "rate",
+              "compounds": [
+                "highest-rate"
+              ],
+              "reason": "The alias occurs only within a hyphenated compound; baseline interpretation is retained separately."
+            }
+          ]
+        }
+      },
+      "followups": [
+        {
+          "id": "other-benefit-timing",
+          "query": "UC and award of other benefits",
+          "matched_phrases": [
+            [
+              "uc"
+            ],
+            [
+              "dla"
+            ],
+            [
+              "award"
+            ],
+            [
+              "assessment period",
+              "late"
+            ]
+          ],
+          "source_support": [
+            {
+              "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6",
+              "text_sha256": "a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4",
+              "literal": "UC and award of other benefits",
+              "source_sha256": "4933d66a1cd118687bbc10e30faf9ee8214d09b3e465e58efdbd9b832a58a8e8",
+              "role": "other-benefit effective-date branch and examples"
+            }
+          ],
+          "context_id": "urn:sha256:cb7e22b6a630fca74c63312b360662667876715e0015ee5013b3d49534726279",
+          "binding": {
+            "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+            "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+          },
+          "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+          "evidence_status": "insufficient",
+          "ai_answer": null,
+          "context_bytes": 241867,
+          "selected_records": 34,
+          "relationships": 20,
+          "context_truncated": true,
+          "retrieval_truncated": true,
+          "fetched_files": 64,
+          "target_hits": [
+            "A4361"
+          ],
+          "compound_rate_concept_resolved": false,
+          "unrelated_staff_008_active": false
+        },
+        {
+          "id": "disabled-child-qualification",
+          "query": "Universal Credit disabled child addition qualifying conditions",
+          "matched_phrases": [
+            [
+              "uc"
+            ],
+            [
+              "child"
+            ],
+            [
+              "dla"
+            ]
+          ],
+          "source_support": [
+            {
+              "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1",
+              "text_sha256": "7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca",
+              "literal": "The higher rate of disabled child addition",
+              "source_sha256": "124b7e41af2b491209f694941482e6e4bb69e78692a84a343299dc53f25b8731",
+              "role": "higher-rate condition"
+            },
+            {
+              "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000023318-000-bec866c4cfa0",
+              "text_sha256": "2aa85228042811fecbcff1d80e4de24760b4f6acd73aee98473dec6de4795cf1",
+              "literal": "Disabled child addition",
+              "source_sha256": "124b7e41af2b491209f694941482e6e4bb69e78692a84a343299dc53f25b8731",
+              "role": "child addition context"
+            }
+          ],
+          "context_id": "urn:sha256:9da3d343331eecfec1164a0c789bdccbc164ead4559f10bc50b70bb9564ab435",
+          "binding": {
+            "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+            "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+          },
+          "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+          "evidence_status": "insufficient",
+          "ai_answer": null,
+          "context_bytes": 280864,
+          "selected_records": 36,
+          "relationships": 21,
+          "context_truncated": true,
+          "retrieval_truncated": true,
+          "fetched_files": 64,
+          "target_hits": [
+            "F1123",
+            "F1120–F1121"
+          ],
+          "compound_rate_concept_resolved": false,
+          "unrelated_staff_008_active": false
+        },
+        {
+          "id": "late-notification",
+          "query": "Universal Credit change notified outside time limits",
+          "matched_phrases": [
+            [
+              "uc"
+            ],
+            [
+              "told"
+            ],
+            [
+              "late"
+            ]
+          ],
+          "source_support": [
+            {
+              "unit_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000055420-000-9e9c31f56b39",
+              "text_sha256": "24682e686930781dfa1b19a81c090129991d1b1d89cd6d92ad2e781bb90b6e30",
+              "literal": "Change notified outside the time limits",
+              "source_sha256": "4933d66a1cd118687bbc10e30faf9ee8214d09b3e465e58efdbd9b832a58a8e8",
+              "role": "ordinary late notification and explicit exception pointer"
+            }
+          ],
+          "context_id": "urn:sha256:be7faedd485ae9fce11597dade804f2f41b4c5cd0138b68c692e8101734a3def",
+          "binding": {
+            "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+            "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+          },
+          "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+          "evidence_status": "insufficient",
+          "ai_answer": null,
+          "context_bytes": 241848,
+          "selected_records": 34,
+          "relationships": 21,
+          "context_truncated": true,
+          "retrieval_truncated": true,
+          "fetched_files": 63,
+          "target_hits": [
+            "A4352"
+          ],
+          "compound_rate_concept_resolved": false,
+          "unrelated_staff_008_active": false
+        }
+      ],
+      "combined_navigation_hits": [
+        "F1123",
+        "F1120–F1121",
+        "A4352",
+        "A4361"
+      ],
+      "combined_evidence_status": "insufficient",
+      "ai_answer": null,
+      "maximum_individual_context_bytes": 517724,
+      "total_context_bytes": 1592599
+    },
+    {
+      "id": "qualification-control",
+      "question": "What are the DLA care component qualifying conditions for a child?",
+      "baseline": {
+        "context_id": "urn:sha256:42fe800f49cfc9029e3043e1268ef950184e3ba851aa390e14e4de331df52f78",
+        "binding": {
+          "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+          "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+        },
+        "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+        "evidence_status": "insufficient",
+        "ai_answer": null,
+        "context_bytes": 341452,
+        "selected_records": 38,
+        "relationships": 34,
+        "context_truncated": true,
+        "retrieval_truncated": true,
+        "fetched_files": 64,
+        "target_hits": [
+          "F1123"
+        ],
+        "compound_rate_concept_resolved": false,
+        "unrelated_staff_008_active": false
+      },
+      "guarded": null,
+      "followups": [],
+      "combined_navigation_hits": [
+        "F1123"
+      ],
+      "combined_evidence_status": "insufficient",
+      "ai_answer": null,
+      "maximum_individual_context_bytes": 341452,
+      "total_context_bytes": 341452
+    },
+    {
+      "id": "rates-control",
+      "question": "What are the current DLA care component rates?",
+      "baseline": {
+        "context_id": "urn:sha256:4871162e3e4c7300de362ed4db3f2300eafc0ba1a9a085404e4b08ef8b93e0fa",
+        "binding": {
+          "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+          "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+        },
+        "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+        "evidence_status": "insufficient",
+        "ai_answer": null,
+        "context_bytes": 523963,
+        "selected_records": 40,
+        "relationships": 42,
+        "context_truncated": true,
+        "retrieval_truncated": true,
+        "fetched_files": 64,
+        "target_hits": [],
+        "compound_rate_concept_resolved": true,
+        "unrelated_staff_008_active": true
+      },
+      "guarded": null,
+      "followups": [],
+      "combined_navigation_hits": [],
+      "combined_evidence_status": "insufficient",
+      "ai_answer": null,
+      "maximum_individual_context_bytes": 523963,
+      "total_context_bytes": 523963
+    },
+    {
+      "id": "hospital-control",
+      "question": "What happens to DLA when a child goes into hospital?",
+      "baseline": {
+        "context_id": "urn:sha256:f81947dff7508ac47d41fc81e5c7a7068c820707ba68a23457e873c88e74552c",
+        "binding": {
+          "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+          "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+        },
+        "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+        "evidence_status": "insufficient",
+        "ai_answer": null,
+        "context_bytes": 216644,
+        "selected_records": 28,
+        "relationships": 15,
+        "context_truncated": true,
+        "retrieval_truncated": true,
+        "fetched_files": 62,
+        "target_hits": [],
+        "compound_rate_concept_resolved": false,
+        "unrelated_staff_008_active": false
+      },
+      "guarded": null,
+      "followups": [],
+      "combined_navigation_hits": [],
+      "combined_evidence_status": "insufficient",
+      "ai_answer": null,
+      "maximum_individual_context_bytes": 216644,
+      "total_context_bytes": 216644
+    },
+    {
+      "id": "transition-control",
+      "question": "How does a child move from DLA to PIP at age sixteen?",
+      "baseline": {
+        "context_id": "urn:sha256:604649c451296ed7c89ba9ef8fc16a624424d3251e9de2dbac1198ca34d2c532",
+        "binding": {
+          "index_url": "https://example.invalid/structured-context/evidence-connect-manifest.json",
+          "index_sha256": "4e65253f72b2d771164d5ddd64374ed8142cf66b4a249f193a1fe44d5679f519"
+        },
+        "source_snapshot": "evidence-connect-754be67f82c82e31d17c",
+        "evidence_status": "insufficient",
+        "ai_answer": null,
+        "context_bytes": 470100,
+        "selected_records": 47,
+        "relationships": 52,
+        "context_truncated": true,
+        "retrieval_truncated": true,
+        "fetched_files": 64,
+        "target_hits": [],
+        "compound_rate_concept_resolved": false,
+        "unrelated_staff_008_active": false
+      },
+      "guarded": null,
+      "followups": [],
+      "combined_navigation_hits": [],
+      "combined_evidence_status": "insufficient",
+      "ai_answer": null,
+      "maximum_individual_context_bytes": 470100,
+      "total_context_bytes": 470100
+    }
+  ],
+  "original_staff_registry_sha256": "3c28bd57e3a0892a60c1fc3379c08cd06ab9c7e209e61a4614abee511d49730a",
+  "original_staff_plans": [
+    {
+      "id": "staff-001",
+      "question_sha256": "b83ccc014a01f3d04d9d233f0953702a46f46a79d6594a29a39eb8d412395b46",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-002",
+      "question_sha256": "a63fa10cf0fcbc3444611871036114c6f89a6a12c7af85074ebe0fd04dcf98f8",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-003",
+      "question_sha256": "a250146759b6591708efd4f6598d8cf6c3250dec90823ac31538fe48dc43a0ac",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-004",
+      "question_sha256": "1010557c1a690f0b438ce648e8ffac416204bce826bb146c7ec0a1b5721bd963",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-005",
+      "question_sha256": "33df714f957199eb8759ef7f5d9f228c6dd64337268ce87638f27da8a66852bc",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-006",
+      "question_sha256": "37f169bd12095be1bcfafb17664853f1aea310c0a7de01661e7244db78d8a39a",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-007",
+      "question_sha256": "b7197deb3952ba14537c88d40bd66f03a20c1991f9a776c4842cf6158ddf5236",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-008",
+      "question_sha256": "c426baed523c962745925bb03d6055bd731323cdc40a54573c896e7c2c595ab4",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-009",
+      "question_sha256": "687e7ccdb36ada278293ea085379dcc70d103950ee039456ae469222e9c571e3",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-010",
+      "question_sha256": "f864a8f851ed8ff4de0b640d83df7b58713098e38d994b22b83dbf94f580e47a",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-011",
+      "question_sha256": "8f8165252872ddc28ea3d195181b5c3facfd446d6ff676706703ac39a2be12a9",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-012",
+      "question_sha256": "b2062ebdff2c9f2b60ae9c10a26077260fd282d8cefe66cb4ea15285decd20b6",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-013",
+      "question_sha256": "bb2fa58ad6c234bc226675ea5fafe34ee289e2fe434fe0afb209c1a9f8d33bcb",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-014",
+      "question_sha256": "ba61540e8802d03d4466feedbce8ad2cd3199ce85cfbf8c85ef50ca0d93b7bda",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-015",
+      "question_sha256": "670f61e6a1d2e6a74e4e6d709939c265fb159e558a43c28799b6e93ef2f4adeb",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-016",
+      "question_sha256": "ea757deacb5c196a8740f4ef67dcb88768e1883314a831f9ad7488d273b88073",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-017",
+      "question_sha256": "26fc8817696d4bc5ff965f7a8ccefe0a6aaaff16a8439d7e7b708e4b11ac3c1c",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-018",
+      "question_sha256": "48f3c41fa3ab34097c5141cf972be69b6fc82e580cbd90cb6eed99d8d1224c65",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-019",
+      "question_sha256": "214d21f943a7f2bd243d3a1838c7f54231ef1af84f6d2919dfd85622d61ebf83",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-020",
+      "question_sha256": "482f5c5cf08337980056722127f283ae2fbf9f7f0b8060b4809e35c2168a78ac",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-021",
+      "question_sha256": "1262a71d9d5e24d79c2adcdecc20fa03a96a108bc589d570aa4bac236eb9a7b4",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-022",
+      "question_sha256": "c5456f92055daee31607ee2ba8ed9680d39a431cf0917cbf3fa6617c4b53827b",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-023",
+      "question_sha256": "a08b4cb652453b0f607ebf3a8882a78a9080b34c4bcc7cebbfb765094934b153",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-024",
+      "question_sha256": "9a7cd6e8f4f21f87a6aef96d8e45abd2979936f4f709c762f1663692affad81c",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-025",
+      "question_sha256": "07f7779ac6440de54d4b594590128065efafb5ab26470dd22430fa9ffe08ab13",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-026",
+      "question_sha256": "24f11ef15fd4301aca44c174af20bbc705d9a651a24ffee8e7a1428352519cd6",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-027",
+      "question_sha256": "79b08531085c51e67b60d8f7ff4696e4a3c7b9c27bef7fe75eb925bc7675d96d",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-028",
+      "question_sha256": "a2ff075a0b947210359105277fe047f84f88dc654787058cc5aaf096e76350e7",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-029",
+      "question_sha256": "2b4a7352770037f0702bf218acd2d50558fece4a407da3594ec616b6c04d8361",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-030",
+      "question_sha256": "5848921d50ee8eb2b2131dc4264f1d4b2a252a5fde7438aa45bcf8283c90b207",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-031",
+      "question_sha256": "889ee7955d5d9c2acd1eafb64519501cd341c30a5810828cc3feef2c234f6576",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-032",
+      "question_sha256": "3ef719e2690f4dd1bfc9b729483ee46f0610aa54fc041617e1664b3cc3a2f76c",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-033",
+      "question_sha256": "24f11ef15fd4301aca44c174af20bbc705d9a651a24ffee8e7a1428352519cd6",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-034",
+      "question_sha256": "d75c54502fcbc9f8b6b286949d09c3ee6986557a302bd5b17347370fa0d43b5d",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-035",
+      "question_sha256": "3769a361119d22871109be121fed0b88a0fac60e533fefaa31b76d383b92f1d3",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-036",
+      "question_sha256": "147f96888f4709d7c3aba9a535116a04cbe07448084e1339edf6d3d3729a7a06",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-037",
+      "question_sha256": "bcf412999ba0a3e613fe4cf2ef1be7dc0bfb9ced784df2659e1b1f6b54ab6eba",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-038",
+      "question_sha256": "544b01ef7f093d08b1858d5dbcf796366cc8392736fa7ee396afc0e2552fee0e",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-039",
+      "question_sha256": "36b556907ea994ccb2a40ec2ccecb14f7ff60843d1e8de285cf38de4b7d6660f",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    },
+    {
+      "id": "staff-040",
+      "question_sha256": "964475634718c98716ce1f52f64e78eca3a6ec99437201d840b6d991df31cdc3",
+      "followup_ids": [],
+      "suppressed_aliases": []
+    }
+  ],
+  "original_staff_followup_activations": 0,
+  "original_staff_alias_changes": 0,
+  "model_calls": 0,
+  "network_calls": 0,
+  "source_modifications": 0,
+  "limitations": [
+    "These are development questions evaluated against already inspected source targets, not an independent blind test.",
+    "Combined navigation hits are a set comparison only. Independent contexts and provenance are not merged into an answerable legal package.",
+    "All forty original staff questions were checked for recovery-plan changes. This is a plan non-regression check, not a replay of their earlier acceptance receipts.",
+    "The local adapter is a review candidate. The public Ask OKF service and frozen source projections remain unchanged."
+  ]
+}

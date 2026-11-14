@@ -6,12 +6,13 @@ import json
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from check_reading_help_release import (LEARNING_SITE_PATHS, LEARNING_SITE_URL,
                                         MANDATORY_BROWSER_CHECKS, ReleaseError,
-                                        confined, validate)
+                                        bound_bytes, confined, historical_contracts, validate)
 
 
 def serial(value):
@@ -129,6 +130,37 @@ class ReleaseManifestTests(unittest.TestCase):
 
     def verify(self):
         return validate(self.root, self.manifest_path)
+
+    def test_historical_contracts_are_exact_and_do_not_override_other_evidence(self):
+        originals = {'okf.semantic.json': b'original semantic contract\n',
+                     'okf.publication.json': b'original publication contract\n'}
+        bindings = {path: self.bind(path, body) for path, body in originals.items()}
+        for path in originals:
+            (self.root / path).write_bytes(b'new candidate contract\n')
+        def git_output(args, **_kwargs):
+            body = originals[args[-1].split(':', 1)[1]]
+            return str(len(body)).encode() if '-s' in args else body
+        with self.assertRaisesRegex(ReleaseError, 'differs'):
+            bound_bytes(self.root, bindings['okf.semantic.json'], 'current contract')
+        with patch('check_reading_help_release.subprocess.check_output', side_effect=git_output):
+            with historical_contracts(self.root, 'a' * 40):
+                self.assertEqual(bound_bytes(self.root, bindings['okf.semantic.json'], 'frozen contract'), originals['okf.semantic.json'])
+                wrong = {**bindings['okf.semantic.json'], 'sha256': '0' * 64}
+                with self.assertRaisesRegex(ReleaseError, 'Historical contract SHA-256'):
+                    bound_bytes(self.root, wrong, 'tampered contract binding')
+                other = self.bind('other-evidence.json', b'original evidence\n')
+                (self.root / other['path']).write_bytes(b'changed evidence\n')
+                with self.assertRaisesRegex(ReleaseError, 'differs'):
+                    bound_bytes(self.root, other, 'other evidence stays strict')
+        with self.assertRaisesRegex(ReleaseError, 'differs'):
+            bound_bytes(self.root, bindings['okf.semantic.json'], 'context restored')
+
+    def test_missing_historical_git_objects_fail_closed(self):
+        import subprocess
+        with patch('check_reading_help_release.subprocess.check_output', side_effect=subprocess.CalledProcessError(128, 'git')):
+            with self.assertRaisesRegex(ReleaseError, 'unavailable'):
+                with historical_contracts(self.root, 'a' * 40):
+                    self.fail('Missing historical objects must not enter the context')
 
     def verified(self):
         self.manifest["status"] = "technically-verified-awaiting-specialist-review"

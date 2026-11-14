@@ -11,13 +11,14 @@ permissions:
 
 jobs:
   legacy_validation:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # The complete frozen-source and consumer replay exceeded 30 minutes on
     # merged learning release bd945377. Keep every check with bounded headroom.
     timeout-minutes: 45
     env:
       # Reviewed immutable consumer source; execution receipts bind its bytes too.
       EXPLORER_LOGICAL_UNIT_COMMIT: 2e557f4b78db10cf69471e4a106a98d3a6c43c5b
+      OKF_LEGISLATION_ROOT: .ci/okf-uk-legislation
       EXPLORER_CONTEXT_COMMIT: 97f13d22b689d92cd785de04758fe932d4a4d369
       EXPLORER_CORPUS_COMMIT: 31ee08ec259e165a478e9c36826fe3721643631d
       EXPLORER_STAFF_COMMIT: f8daf84a4c04afb4839695d38a97cbf21b0ed0a0
@@ -45,6 +46,63 @@ jobs:
         with:
           version: '0.12.2'
       - run: uv sync --locked
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: chris-page-gov/okf-uk-legislation
+          ref: 9830fde2d32052f10713298f16b8ab1e321b1928
+          path: .ci/okf-uk-legislation
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            bundle/checksums.json
+            bundle/data/records/locator/3c.json.gz
+            bundle/data/records/locator/48.json.gz
+            bundle/data/records/locator/57.json.gz
+            bundle/data/records/locator/5b.json.gz
+            bundle/data/records/locator/7a.json.gz
+            bundle/data/records/locator/8d.json.gz
+            bundle/data/records/locator/91.json.gz
+            bundle/data/records/locator/92.json.gz
+            bundle/data/records/locator/95.json.gz
+            bundle/data/records/locator/96.json.gz
+            bundle/data/records/locator/97.json.gz
+            bundle/data/records/locator/9d.json.gz
+            bundle/data/records/locator/a6.json.gz
+            bundle/data/records/locator/a9.json.gz
+            bundle/data/records/locator/ac.json.gz
+            bundle/data/records/locator/c0.json.gz
+            bundle/data/records/locator/d3.json.gz
+            bundle/data/records/locator/db.json.gz
+            bundle/data/records/locator/f9.json.gz
+            bundle/data/records/manifest.json
+            bundle/data/works-114.json.gz
+            bundle/data/works-115.json.gz
+            bundle/data/works-132.json.gz
+            bundle/data/works-158.json.gz
+            bundle/data/works-177.json.gz
+            bundle/data/works-183.json.gz
+            bundle/data/works-210.json.gz
+            bundle/data/works-221.json.gz
+            bundle/data/works-229.json.gz
+            bundle/data/works-240.json.gz
+            bundle/data/works-272.json.gz
+            bundle/data/works-277.json.gz
+            bundle/data/works-44.json.gz
+            bundle/data/works-48.json.gz
+            bundle/data/works-57.json.gz
+            bundle/data/works-85.json.gz
+            bundle/data/works-90.json.gz
+      - name: Verify the pinned statutory work crosswalk without acquisition
+        run: |
+          git fetch --no-tags --depth=1 origin 77ef16047415ee48dcb93b80adf1ba057ea00d9b
+          uv run --locked python scripts/build_legislation_crosswalk.py --legislation-root .ci/okf-uk-legislation --check
+          uv run --locked python scripts/test_legislation_crosswalk.py --legislation-root .ci/okf-uk-legislation
+      - name: Verify the additive source-route graph and persona protocol
+        run: |
+          uv run --locked python scripts/build_evidence_route_graph.py --check
+          uv run --locked python scripts/build_persona_evaluation.py --check
+          uv run --locked python -m unittest discover -s scripts -p test_evidence_route_graph.py
+          uv run --locked python -m unittest discover -s scripts -p test_persona_evaluation.py
       - name: Validate the isolated learning-site renderer
         run: |
           uv sync --locked --project tools/learning-site
@@ -344,7 +402,7 @@ jobs:
         run: git diff --check
 
   structured_validation:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # Separate resources keep the new full-source checks outside the measured
     # 22–25 minute legacy replay. Neither job may bypass the validate gate.
     timeout-minutes: 45
@@ -445,7 +503,7 @@ jobs:
         run: node .ci/okf-dwp-original-acceptance/scripts/evaluate_original_acceptance.mjs --explorer-root .ci/okf-explorer-original-acceptance --attempt acceptance-01 --check
 
   workbench_validation:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -485,7 +543,8 @@ jobs:
           node scripts/check_evidence_workbench.mjs --explorer-root .ci/okf-explorer-workbench
           node --experimental-strip-types scripts/check_reading_help_law_context.mjs --explorer-root .ci/okf-explorer-workbench
           uv run --locked python -m unittest discover -s scripts -p test_check_reading_help_release.py
-          uv run --locked python scripts/check_reading_help_release.py --root . --manifest evaluation/reading-help-rollout/release-20260927/manifest.json
+          git fetch --no-tags --depth=1 origin 77ef16047415ee48dcb93b80adf1ba057ea00d9b
+          uv run --locked python scripts/check_reading_help_release.py --root . --manifest evaluation/reading-help-rollout/release-20260927/manifest.json --frozen-contracts-commit 77ef16047415ee48dcb93b80adf1ba057ea00d9b
           uv run --locked python scripts/build_workbench_models.py --check
           uv run --locked python -m unittest discover -s scripts -p test_workbench_models.py
           node --test scripts/test_learning_site_v3.mjs
@@ -493,12 +552,56 @@ jobs:
           uv run --locked --project tools/learning-site python -m unittest discover -s scripts -p test_workbench_publication.py
           uv run --locked --project tools/learning-site python scripts/build_learning_site.py --commit "$GITHUB_SHA" --output "$RUNNER_TEMP/workbench-site"
 
+  current_explorer_validation:
+    # Additive consumer compatibility never rewrites the frozen replay pins.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      EXPLORER_CURRENT_COMMIT: 40e659408485a7dfa0e8cb51ab27c1b0f890bc3c
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '26.7.0'
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: chris-page-gov/okf-explorer
+          ref: ${{ env.EXPLORER_CURRENT_COMMIT }}
+          path: .ci/okf-explorer-current
+          persist-credentials: false
+      - name: Fetch the immutable first-trial producer
+        run: git fetch --no-tags --depth=1 origin 5516e6c604793a5c98c57a3ddb9c3c13f46afe64
+      - name: Reject changed recovery, delivery and corpus bindings
+        env:
+          OKF_EXPLORER_ROOT: .ci/okf-explorer-current
+        run: >-
+          node --test scripts/test_current_explorer_compatibility.mjs
+          scripts/test_context_recovery.mjs scripts/test_progressive_evidence_client.mjs
+          scripts/test_context_review_html.mjs scripts/test_run_context_review.mjs
+          scripts/test_graph_evidence_runtime.mjs scripts/test_graph_evidence_client.mjs
+          scripts/test_insufficiency_categories.mjs scripts/test_replay_frozen_wording.mjs
+      - name: Check current consumer APIs and bounded exact delivery offline
+        run: node scripts/check_current_explorer_compatibility.mjs --explorer-root .ci/okf-explorer-current
+      - name: Replay the fixed strategy and recovery comparisons
+        run: |
+          node scripts/evaluate_context_strategies.mjs --explorer-root .ci/okf-explorer-current --output evaluation/truncation/strategy-results.json --check
+          node scripts/evaluate_context_recovery.mjs --explorer-root .ci/okf-explorer-current --output evaluation/truncation/recovery-results.json --check
+          node scripts/run_context_review.mjs --explorer-root .ci/okf-explorer-current --check
+          node scripts/evaluate_graph_retrieval.mjs --explorer-root .ci/okf-explorer-current --output evaluation/retrieval-gate/graph-evaluation.json --check
+          node scripts/replay_frozen_wording.mjs --explorer-root .ci/okf-explorer-current
+          OKF_EXPLORER_ROOT=.ci/okf-explorer-current node evaluation/retrieval-gate/withheld/attempt-02/run.mjs
+          git diff --exit-code -- evaluation/retrieval-gate/withheld/attempt-02/receipt.json evaluation/retrieval-gate/withheld/attempt-02/run-summary.json
+
+      - name: Check the source-bound assisted-support inspection
+        run: >-
+          node scripts/run_context_review.mjs --explorer-root .ci/okf-explorer-current --question 'For State Pension Credit capital disregards, trace the relevant DWP decision-maker guidance entry point, the legal references visible on its page and the dependencies still unresolved.' --output-dir evaluation/retrieval-gate/capital-review --check
+
   validate:
     # Preserve the existing protected check name and fail for skipped,
     # cancelled or failed prerequisite jobs, including setup failures.
     if: ${{ always() }}
-    needs: [legacy_validation, structured_validation, workbench_validation]
-    runs-on: ubuntu-latest
+    needs: [legacy_validation, structured_validation, workbench_validation, current_explorer_validation]
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
       - name: Require every independent validation plane
@@ -506,7 +609,9 @@ jobs:
           LEGACY_RESULT: ${{ needs.legacy_validation.result }}
           STRUCTURED_RESULT: ${{ needs.structured_validation.result }}
           WORKBENCH_RESULT: ${{ needs.workbench_validation.result }}
+          CURRENT_EXPLORER_RESULT: ${{ needs.current_explorer_validation.result }}
         run: |
           test "$LEGACY_RESULT" = success
           test "$STRUCTURED_RESULT" = success
           test "$WORKBENCH_RESULT" = success
+          test "$CURRENT_EXPLORER_RESULT" = success
