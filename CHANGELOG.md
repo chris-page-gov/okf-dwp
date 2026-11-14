@@ -7,6 +7,14 @@
   hosting identity after all required Explorer checks passed.
 - Verify all ten legacy source/engine combinations and two controls through the
   public SDK: 12 cases, 135 requests, exact complete packages and no model calls.
+- Pass the complete public graph SDK matrix: 106 unique questions, 108 case
+  occurrences and 355/355 source-target checks (352 distinct question/target
+  pairs). Retain 8,265 request events, complete packages and source hashes; the
+  largest evidence HTTP body is 7,469 bytes. SDK v1 matches the v2 tool rows and
+  fixed UC package. No retries, model calls or paid API calls were made.
+- Bind the archived result to each case’s frozen targets and source hashes,
+  and replay its package integrity and bounded wire-event census offline in CI.
+  Keep the original directed-path gate distinct from archive integrity checks.
 - Add independently pinned graph SDK and native client status. Keep native
   acceptance pending when the available conversation lacks the graph tools;
   a public SDK or landing-page check cannot substitute for that observation.

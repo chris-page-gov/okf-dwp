@@ -28,8 +28,12 @@ The [persona coverage review](docs/persona-coverage-and-evidence-limits-2026-11-
 maps every interest area to its test types and remaining evidence gaps.
 A separate withheld wording trial reaches 45/45 targets and passes 12/12 negative
 controls. These are measured source-retrieval results, with full response
-envelopes at most 8 KiB. Public service and client acceptance remain separately
-recorded. Every candidate context remains insufficient, with no AI answer;
+envelopes at most 8 KiB. The [public graph SDK gate](docs/graph-service-publication.md) also passed
+**355/355 source-target checks** across 106 distinct questions and 108 case
+occurrences. Complete evidence HTTP responses stayed within 7,469 bytes, and
+the representative native UC source read completed without clipped output.
+These are separate SDK and native observations; full native-suite and human
+acceptance remain unverified. Every candidate context remains insufficient, with no AI answer;
 the 203 original obligations remain open.
 
 **[What changed: changelog](CHANGELOG.md)** · [Current work log](docs/evidence-workbench-work-log.md)

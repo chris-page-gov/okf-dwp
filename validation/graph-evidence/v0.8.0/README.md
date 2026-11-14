@@ -9,16 +9,43 @@ default corpus. Its graph SHA-256 is
 
 Use the generated [graph status](../../../docs/graph-service-publication.md)
 for the independently selected public SDK and native client observations.
-An in-progress SDK run is not a completed pass. The planned public protocol
-contains 106 unique questions across 108 case occurrences and 352 positive
-source-target occurrences. Empty-target controls remain outside positive recall.
+The [actual public SDK run](sdk/attempt-01/summary.json) passed 106 unique
+questions across 108 case occurrences: **355/355 positive source-target checks**,
+representing 352 distinct question/target pairs. It completed 8,265 HTTP requests
+with no retries or model calls and received 60,985,809 response bytes. The largest
+complete evidence HTTP body was **7,469 bytes**, below the 8,192-byte ceiling.
+Empty-target controls remain outside positive recall. SDK v2 ran the complete
+matrix; SDK v1 independently reconstructed the fixed UC package and matched
+the tool rows and package identity.
 The portable client checks complete packages, source-text hashes, scoped paths,
 open obligations and complete HTTP evidence responses of at most 8,192 bytes.
 The frozen wording cases are an attempt-02 regression replay, not a new blind trial.
 
+Replay the archived public packet without network access:
+
+```sh
+uv run --locked python validation/graph-evidence/v0.8.0/sdk/attempt-01/verify_graph_packet.py --packet-root validation/graph-evidence/v0.8.0/sdk/attempt-01
+```
+
+The [case fixture](sdk/attempt-01/expected-cases.json) was extracted from the
+unchanged pinned verifier and producer inputs. It binds each of the 108 cases
+to its exact expected records and source hashes, preserving all 355 checks
+rather than multiplying the question-level union by its case count. The audit
+recomputes package and source-text hashes, checks every case against that
+fixture and validates the wire-event census and response-size classes.
+It retains the original directed-path gate rather than repeating path resolution.
+Wire response bodies are not retained: their digests and byte counts are recorded
+metadata. [Eight mutation controls](sdk/archive-controls.txt) rejected altered
+case counts, fixture bytes, unknown wire routes, tools and methods, and oversized
+requests and responses. The [unaltered run log](sdk/attempt-01-run.log) retains
+one non-fatal Node timer warning; the final pacing minimum was 750.0035 ms and
+all run gates passed.
+
 The [public Chrome observation](browser/chrome/observation.json) records the
 0.8.0 landing page and health response with a separate screenshot. It is a public
-browser check. The [initial native availability observation](native/attempt-01/availability.json)
+browser check. A [fresh post-SDK browser observation](browser/chrome/post-sdk-observation.json)
+returned HTTP 200 for the landing page and health route with the same graph
+and engine identities and no page errors. The [initial native availability observation](native/attempt-01/availability.json)
 records that both available tool contexts lacked the new graph actions; no
 native graph call or no-truncation pass was made. An installed-state message
 does not establish that the intended conversation can call those actions.
