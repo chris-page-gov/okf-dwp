@@ -40,6 +40,21 @@ prompt could be sent. The success used authorised native page tools through
 the existing CDP connection; it did not discover the remote MCP tools or prove
 automatic WebMCP availability in other clients.
 
+## What was observed on 14 November 2026
+
+The graph actions became available in this ongoing Codex conversation after
+publication. A [representative native UC read](../validation/graph-evidence/v0.8.0/sdk/attempt-01/native-observation.json)
+used five actual calls to retrieve and hash-check all four reference passages.
+The catalogue was complete and no tool output was clipped. The largest observed
+MCP result JSON was 6,370 bytes; this measures the connector-visible result,
+not the HTTP envelope. The service returned insufficient evidence and no AI answer.
+
+The [initial unavailable-tool observation](../validation/graph-evidence/v0.8.0/native/attempt-01/availability.json)
+is preserved separately. A later successful call in this conversation does not
+establish access in every account, an entire native test matrix, Voice support
+or a legal decision. See the [recorded graph status](graph-service-publication.md)
+for the independently selected public SDK result.
+
 ## What was observed on 25 September 2026
 
 Service 0.7.0 admits the additive Evidence Connect source at `7eeded763…`.

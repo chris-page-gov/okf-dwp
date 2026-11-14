@@ -303,6 +303,8 @@ jobs:
           done < "$RUNNER_TEMP/graph-service-publication-commits"
           uv run --locked python scripts/build_graph_service_publication.py --check
           uv run --locked python -m unittest discover -s scripts -p test_graph_service_publication.py
+          git fetch --no-tags --depth=1 origin 2e12f20cfd20e62a67197e7aade4ea612b873684
+          uv run --locked python validation/graph-evidence/v0.8.0/sdk/attempt-01/verify_native_observation.py --dwp-root .
       - name: Verify the v4 paired outputs without calling a provider
         run: |
           git fetch --no-tags --depth=1 origin "$DWP_DIRECT_V4_TRIAL_COMMIT"

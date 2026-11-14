@@ -23,6 +23,25 @@ records that both available tool contexts lacked the new graph actions; no
 native graph call or no-truncation pass was made. An installed-state message
 does not establish that the intended conversation can call those actions.
 
+The actions subsequently became available in the primary conversation. The
+separate [native observation](sdk/attempt-01/native-observation.json) records
+five actual tool calls and four complete UC source-text hashes, with a maximum
+observed MCP result JSON size of 6,370 bytes. The [raw native results](sdk/attempt-01/native-results.json)
+retain the source slices and identities. This representative native read does
+not claim the complete SDK matrix, native full-package reconstruction or HTTP
+envelope measurement. The earlier unavailable observation remains unchanged.
+
+Replay the retained native evidence without contacting the service or a model:
+
+```sh
+uv run --locked python validation/graph-evidence/v0.8.0/sdk/attempt-01/verify_native_observation.py --dwp-root .
+```
+
+The local Git object database must contain producer commit `2e12f20cfd20e62a67197e7aade4ea612b873684`.
+CI fetches that exact public object before the offline replay. The replay checks
+the receipt-bound raw results, capture order, normalised result sizes, UTF-16
+slices and the four source hashes against the frozen graph and evaluation.
+
 The [legacy SDK packet](../../compact-delivery/v0.8.0/README.md) has its own
 successful replay and source/engine identities. No legacy result is substituted
 for a graph or native result. Hosted Worker bytes are not independently attested

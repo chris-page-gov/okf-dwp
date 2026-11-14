@@ -10,6 +10,10 @@
 - Add independently pinned graph SDK and native client status. Keep native
   acceptance pending when the available conversation lacks the graph tools;
   a public SDK or landing-page check cannot substitute for that observation.
+- Observe the representative UC source read through the new native actions in
+  this conversation: five calls, four complete source-text hashes and no clipped
+  output. The largest observed MCP result JSON is 6,370 bytes; this is not an
+  HTTP envelope measurement or full native-suite acceptance.
 - Add a source-research starter and a plain-English persona coverage review.
   Preserve the original legal, source and specialist-review obligations.
 - Check the September release's service-selection binding at its immutable

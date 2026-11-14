@@ -12,7 +12,7 @@ Selected deployment: service **0.8.0**, recorded **2026-11-14T19:40:08.549506+00
 
 ## Native plugin host observation
 
-**Pending.** No separate native plugin host receipt is selected. Public SDK evidence does not establish native host behaviour.
+A separate native observation passed for **representative-uc-client-observation** with 5 observed tool calls and a maximum MCP result JSON size of 6,370 bytes. See the [exact recorded receipt](https://github.com/chris-page-gov/okf-dwp/blob/0936a411e84c5d987afefd2b4865a0c54f05f2b0/validation/graph-evidence/v0.8.0/sdk/attempt-01/native-observation.json). This is not an HTTP envelope measurement or a full-suite claim.
 
 ## Scope
 
