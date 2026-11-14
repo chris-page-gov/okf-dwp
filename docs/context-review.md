@@ -30,6 +30,18 @@ controls passed. The [receipt](../evaluation/retrieval-gate/withheld/attempt-01/
 binds the protocol and frozen bytes. This is a bounded withheld wording trial,
 not an independent human blind benchmark or proof of complete legal reasoning.
 
+Independent review then tightened concept-conflict admission, made resolver
+budget exhaustion explicitly incomplete and increased the collector's bounded
+session from three to ten minutes. The 30-second call and 8 KiB response limits
+remain unchanged. The largest measured package needs at least 331 calls; a
+virtual-clock regression verifies complete delivery at 750 ms per call, beyond
+the old three-minute ceiling. A separate
+[post-review replay](../evaluation/retrieval-gate/withheld/attempt-02/receipt.json)
+passes the same 45 targets and 12 controls under the corrected identities.
+It is a regression replay, not a fresh blind trial. The original trial remains
+byte-for-byte replayable from producer commit
+`5516e6c604793a5c98c57a3ddb9c3c13f46afe64` through the disposable-tree harness.
+
 ## How graph navigation helps
 
 `domain-profile/retrieval-graph/*.yamlld` compiles into the separate
@@ -202,9 +214,10 @@ OKF_EXPLORER_ROOT=/path/to/okf-explorer node --test \
   scripts/test_insufficiency_categories.mjs
 node scripts/evaluate_graph_retrieval.mjs --explorer-root /path/to/okf-explorer \
   --output evaluation/retrieval-gate/graph-evaluation.json --check
-OKF_EXPLORER_ROOT=/path/to/okf-explorer node evaluation/retrieval-gate/withheld/attempt-01/run.mjs
-git diff --exit-code -- evaluation/retrieval-gate/withheld/attempt-01/receipt.json \
-  evaluation/retrieval-gate/withheld/attempt-01/run-summary.json
+node scripts/replay_frozen_wording.mjs --explorer-root /path/to/okf-explorer
+OKF_EXPLORER_ROOT=/path/to/okf-explorer node evaluation/retrieval-gate/withheld/attempt-02/run.mjs
+git diff --exit-code -- evaluation/retrieval-gate/withheld/attempt-02/receipt.json \
+  evaluation/retrieval-gate/withheld/attempt-02/run-summary.json
 ```
 
 The strategy matrix covers 17 known development cases. The recovery comparison

@@ -16,6 +16,13 @@
   immutable legislation catalogue. Distinguish 13 existing text projections,
   38 metadata-only observations and two work-only targets; exclude case law
   and preserve every unresolved applicability and version question.
+- Address independent review: reject unexpected concept conflicts, report
+  resolver-budget exhaustion as incomplete and allow a bounded ten-minute
+  paced collection. Preserve the first frozen trial in an immutable replay
+  harness and retain a separate corrected-candidate regression receipt.
+- Pin CI and learning-site runners to Ubuntu 24.04 so Python 3.12.11 remains
+  available after `ubuntu-latest` moved to Ubuntu 26.04. Required check names,
+  dependencies and the locked Python version remain unchanged.
 - Separate the reported truncation into question routing, retrieval limits,
   whole-item assembly omissions and host delivery; preserve the exact original
   failure and existing annotated release tag.

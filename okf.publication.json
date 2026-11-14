@@ -2607,7 +2607,9 @@
         "withheld-wording-check",
         "legislation-crosswalk-build",
         "legislation-crosswalk-check",
-        "legislation-crosswalk-controls"
+        "legislation-crosswalk-controls",
+        "reviewed-wording-regression",
+        "frozen-wording-controls"
       ]
     },
     {
@@ -4793,7 +4795,7 @@
         "planes": [
           "runtime"
         ],
-        "command": "OKF_EXPLORER_ROOT=.ci/okf-explorer-current node evaluation/retrieval-gate/withheld/attempt-01/run.mjs",
+        "command": "node scripts/replay_frozen_wording.mjs --explorer-root .ci/okf-explorer-current",
         "source": "docs/context-review.md",
         "review_status": "unreviewed",
         "network": "none",
@@ -4838,6 +4840,32 @@
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 5
+      },
+      {
+        "id": "reviewed-wording-regression",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "OKF_EXPLORER_ROOT=.ci/okf-explorer-current node evaluation/retrieval-gate/withheld/attempt-02/run.mjs",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 10
+      },
+      {
+        "id": "frozen-wording-controls",
+        "kind": "test",
+        "planes": [
+          "runtime"
+        ],
+        "command": "OKF_EXPLORER_ROOT=.ci/okf-explorer-current node --test scripts/test_replay_frozen_wording.mjs",
+        "source": "docs/context-review.md",
+        "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
       }
     ]
   },

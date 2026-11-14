@@ -4,7 +4,7 @@ const check = (value, message) => { if (!value) throw new Error('Invalid graph e
 const HASH = /^[a-f0-9]{64}$/;
 const equal = (a, b, message) => check(graphCanonical(a) === graphCanonical(b), message);
 const limits = Object.freeze({ calls: 4096, bytes: 32 * 1024 * 1024, valueCharacters: 16 * 1024 * 1024,
-  responseBytes: 16384, deadlineMs: 180000, callMs: 30000 });
+  responseBytes: 16384, deadlineMs: 600000, callMs: 30000 });
 
 function unwrap(response) {
   check(response && typeof response === 'object' && response.isError !== true, 'tool failed');

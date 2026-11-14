@@ -50,6 +50,21 @@ class EvidenceRouteGraphTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'hard ceilings'):
             build(root)
 
+    def test_new_concept_meaning_conflict_is_rejected_even_with_rebound_file(self):
+        root = self.copied_inputs()
+        variant = self.graph['concept_variants'][0]
+        path = root / variant['origin']
+        index = json.loads(path.read_text())
+        record = next(row for row in index['records'] if row['id'] == variant['id'])
+        record['text'] += ' Unreviewed replacement meaning.'
+        path.write_text(json.dumps(index))
+        policy_path = root / POLICY
+        policy = json.loads(policy_path.read_text())
+        next(row for row in policy['inputs'] if row['path'] == variant['origin'])['sha256'] = digest(path.read_bytes())
+        policy_path.write_text(json.dumps(policy))
+        with self.assertRaisesRegex(ValueError, 'Conflicting graph evidence or assertion'):
+            build(root)
+
     def test_authoring_cannot_escape_the_input_root(self):
         root = self.copied_inputs()
         path = root / POLICY

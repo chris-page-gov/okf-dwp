@@ -1,6 +1,9 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { readFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
 import { collectGraphEvidence } from './graph_evidence_client.mjs';
+import { loadEvidenceRouteRuntime } from './load_evidence_route_runtime.mjs';
 import { createGraphEvidenceRuntime, graphBytes, graphEvidenceManifest, graphSha, readGraphEvidence } from './graph_evidence_runtime.mjs';
 
 const ENGINE = 'urn:okf:graph-engine:sha256:' + 'b'.repeat(64);
@@ -68,6 +71,30 @@ function transportFor(plan, { mutateManifest, mutateRead, extraResponseBytes = 0
 const optionsFor = fixture => ({ transport: fixture.transport,
   question: 'client integration question', expectedGraphSha256: fixture.graphSha256,
   expectedEngineId: ENGINE, deliveryBytes: 8192 });
+
+test('the measured largest persona package survives 750 ms pacing inside the bounded session', async t => {
+  const root = resolve(new URL('..', import.meta.url).pathname);
+  const suite = JSON.parse(await readFile(resolve(root, 'evaluation/retrieval-gate/persona-cases.json'), 'utf8'));
+  const question = suite.cases.find(row => row.id === 'unhinted-household-care-home').prompt.question;
+  const loaded = await loadEvidenceRouteRuntime({ root,
+    explorerRoot: process.env.OKF_EXPLORER_ROOT || resolve(root, '.ci/okf-explorer-current') });
+  const plan = await loaded.runtime.plan(question);
+  const served = transportFor(plan);
+  let elapsed = 0;
+  t.mock.method(performance, 'now', () => elapsed);
+  const paced = Object.fromEntries(Object.entries(served.transport).map(([method, invoke]) => [method, async args => {
+    const result = await invoke(args); elapsed += 750; return result;
+  }]));
+  const result = await collectGraphEvidence({ transport: paced, question,
+    expectedGraphSha256: loaded.graphSha256, expectedEngineId: loaded.engineId, deliveryBytes: 8192 });
+  assert(result.summary.delivery.calls >= 331);
+  assert(elapsed > 180000 && elapsed < 600000);
+  assert.equal(result.summary.delivery_complete, true);
+  assert.equal(result.summary.package_complete, true);
+  assert.equal(result.summary.delivery.calls, served.responseBytes.length);
+  assert(Math.max(...served.responseBytes) <= 8192);
+  assert.deepEqual(result.package, plan);
+});
 
 test('collects the complete package losslessly under an 8192-byte JSON-RPC/MCP envelope cap', async () => {
   const sourceText = 'Résumé and source locator 😀 — ' + 'long passage '.repeat(1200);

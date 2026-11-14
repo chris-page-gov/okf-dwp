@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   legacy_validation:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # The complete frozen-source and consumer replay exceeded 30 minutes on
     # merged learning release bd945377. Keep every check with bounded headroom.
     timeout-minutes: 45
@@ -366,7 +366,7 @@ jobs:
         run: git diff --check
 
   structured_validation:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # Separate resources keep the new full-source checks outside the measured
     # 22–25 minute legacy replay. Neither job may bypass the validate gate.
     timeout-minutes: 45
@@ -467,7 +467,7 @@ jobs:
         run: node .ci/okf-dwp-original-acceptance/scripts/evaluate_original_acceptance.mjs --explorer-root .ci/okf-explorer-original-acceptance --attempt acceptance-01 --check
 
   workbench_validation:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -517,7 +517,7 @@ jobs:
 
   current_explorer_validation:
     # Additive consumer compatibility never rewrites the frozen replay pins.
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
       EXPLORER_CURRENT_COMMIT: 40e659408485a7dfa0e8cb51ab27c1b0f890bc3c
@@ -532,6 +532,8 @@ jobs:
           ref: ${{ env.EXPLORER_CURRENT_COMMIT }}
           path: .ci/okf-explorer-current
           persist-credentials: false
+      - name: Fetch the immutable first-trial producer
+        run: git fetch --no-tags --depth=1 origin 5516e6c604793a5c98c57a3ddb9c3c13f46afe64
       - name: Reject changed recovery, delivery and corpus bindings
         env:
           OKF_EXPLORER_ROOT: .ci/okf-explorer-current
@@ -540,7 +542,7 @@ jobs:
           scripts/test_context_recovery.mjs scripts/test_progressive_evidence_client.mjs
           scripts/test_context_review_html.mjs scripts/test_run_context_review.mjs
           scripts/test_graph_evidence_runtime.mjs scripts/test_graph_evidence_client.mjs
-          scripts/test_insufficiency_categories.mjs
+          scripts/test_insufficiency_categories.mjs scripts/test_replay_frozen_wording.mjs
       - name: Check current consumer APIs and bounded exact delivery offline
         run: node scripts/check_current_explorer_compatibility.mjs --explorer-root .ci/okf-explorer-current
       - name: Replay the fixed strategy and recovery comparisons
@@ -549,15 +551,16 @@ jobs:
           node scripts/evaluate_context_recovery.mjs --explorer-root .ci/okf-explorer-current --output evaluation/truncation/recovery-results.json --check
           node scripts/run_context_review.mjs --explorer-root .ci/okf-explorer-current --check
           node scripts/evaluate_graph_retrieval.mjs --explorer-root .ci/okf-explorer-current --output evaluation/retrieval-gate/graph-evaluation.json --check
-          OKF_EXPLORER_ROOT=.ci/okf-explorer-current node evaluation/retrieval-gate/withheld/attempt-01/run.mjs
-          git diff --exit-code -- evaluation/retrieval-gate/withheld/attempt-01/receipt.json evaluation/retrieval-gate/withheld/attempt-01/run-summary.json
+          node scripts/replay_frozen_wording.mjs --explorer-root .ci/okf-explorer-current
+          OKF_EXPLORER_ROOT=.ci/okf-explorer-current node evaluation/retrieval-gate/withheld/attempt-02/run.mjs
+          git diff --exit-code -- evaluation/retrieval-gate/withheld/attempt-02/receipt.json evaluation/retrieval-gate/withheld/attempt-02/run-summary.json
 
   validate:
     # Preserve the existing protected check name and fail for skipped,
     # cancelled or failed prerequisite jobs, including setup failures.
     if: ${{ always() }}
     needs: [legacy_validation, structured_validation, workbench_validation, current_explorer_validation]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
       - name: Require every independent validation plane

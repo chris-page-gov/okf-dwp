@@ -65,7 +65,9 @@
       "domain-profile/retrieval-graph/*.yamlld",
       "domain-profile/staff-needs/persona-evaluation.json",
       "evaluation/retrieval-gate/freeze-01.json",
-      "evaluation/retrieval-gate/withheld/attempt-01/protocol.json"
+      "evaluation/retrieval-gate/withheld/attempt-01/protocol.json",
+      "evaluation/retrieval-gate/freeze-02.json",
+      "evaluation/retrieval-gate/withheld/attempt-02/protocol.json"
     ],
     "outputs": [
       {
@@ -540,6 +542,16 @@
         "path": "evaluation/retrieval-gate/legislation-crosswalk.json",
         "role": "semantic-validation",
         "generated": true
+      },
+      {
+        "path": "evaluation/retrieval-gate/withheld/attempt-02/receipt.json",
+        "role": "semantic-validation",
+        "generated": true
+      },
+      {
+        "path": "evaluation/retrieval-gate/withheld/attempt-02/run-summary.json",
+        "role": "semantic-validation",
+        "generated": true
       }
     ],
     "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
@@ -690,9 +702,11 @@
       "uv run --locked python -m unittest discover -s scripts -p test_persona_evaluation.py",
       "OKF_EXPLORER_ROOT=.ci/okf-explorer-current node --test scripts/test_graph_evidence_runtime.mjs scripts/test_graph_evidence_client.mjs scripts/test_insufficiency_categories.mjs",
       "node scripts/evaluate_graph_retrieval.mjs --explorer-root .ci/okf-explorer-current --output evaluation/retrieval-gate/graph-evaluation.json --check",
-      "OKF_EXPLORER_ROOT=.ci/okf-explorer-current node evaluation/retrieval-gate/withheld/attempt-01/run.mjs",
+      "node scripts/replay_frozen_wording.mjs --explorer-root .ci/okf-explorer-current",
       "uv run --locked python scripts/build_legislation_crosswalk.py --legislation-root .ci/okf-uk-legislation --check",
-      "uv run --locked python scripts/test_legislation_crosswalk.py --legislation-root .ci/okf-uk-legislation"
+      "uv run --locked python scripts/test_legislation_crosswalk.py --legislation-root .ci/okf-uk-legislation",
+      "OKF_EXPLORER_ROOT=.ci/okf-explorer-current node evaluation/retrieval-gate/withheld/attempt-02/run.mjs",
+      "OKF_EXPLORER_ROOT=.ci/okf-explorer-current node --test scripts/test_replay_frozen_wording.mjs"
     ]
   },
   "reader": {

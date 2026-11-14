@@ -71,6 +71,8 @@ export async function createGraphEvidenceRuntime({ graphText, graphSha256, engin
       }
     }
     const chosen = new Map(), selectedEdges = new Map(), issues = [];
+    if (resolution.truncated) issues.push({ code: 'resolution_budget',
+      message: 'Concept resolution exhausted its bounded work budget. Selected paths are partial and cannot establish complete retrieval.', ids: [] });
     if (hypotheses.some(row => row.bridged_concepts)) issues.push({ code: 'applicability_unresolved',
       message: 'Composed source branches are navigation hypotheses. Benefit variants, relevant dates, claimant roles and legal applicability remain unresolved.', ids: [] });
     const include = (id, reason, path) => {
@@ -161,8 +163,8 @@ export async function createGraphEvidenceRuntime({ graphText, graphSha256, engin
       ambiguities: resolution.ambiguities, unresolved_terms: resolution.unresolved, navigation_hypotheses: hypotheses,
       suppressed_compound_aliases: suppressed, selected, relationships: [...selectedEdges.values()].sort((a, b) => compare(a.id, b.id)),
       requirements, diagnostics: issues, insufficiency_categories: categoriseInsufficiency(issues, { availableRecordIds: records.keys() }),
-      retrieval_complete: applicable.length > 0 && !issues.some(i => ['missing_required_path', 'source_absent'].includes(i.code)),
-      retrieval_status: !applicable.length ? 'no-declared-profile' : issues.some(i => ['missing_required_path', 'source_absent'].includes(i.code)) ? 'incomplete' : 'complete-declared-routes',
+      retrieval_complete: applicable.length > 0 && !issues.some(i => ['missing_required_path', 'source_absent', 'resolution_budget'].includes(i.code)),
+      retrieval_status: !applicable.length ? 'no-declared-profile' : issues.some(i => ['missing_required_path', 'source_absent', 'resolution_budget'].includes(i.code)) ? 'incomplete' : 'complete-declared-routes',
       assembly_truncated: false, source_instructions: 'inert-data',
       limitations: ['Complete graph-route retrieval is scoped to declared navigation, not complete law or an individual entitlement decision.',
         'Every original obligation, source classification and review limitation remains open unless separately evidenced.',

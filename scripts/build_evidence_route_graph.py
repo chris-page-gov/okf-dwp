@@ -71,7 +71,12 @@ def build(root=ROOT):
         old = collection.get(row['id'])
         if old is not None and old != row:
             different = sorted(k for k in set(old) | set(row) if old.get(k) != row.get(k))
-            concept_variant = collection is records and old['kind'] == 'concept' and row['kind'] == 'concept'
+            allowed_concept_variants = {
+                'full-dmg/context/assembly-index.json': [['aliases'], ['scope']],
+                'structured-context/evidence-connect/base-index.json': [['aliases', 'provenance', 'scope']],
+            }
+            concept_variant = (collection is records and old['kind'] == 'concept' and row['kind'] == 'concept'
+                               and different in allowed_concept_variants.get(origin, []))
             scope_variant = collection is assertions and different == ['scope']
             if not (concept_variant or scope_variant):
                 raise ValueError('Conflicting graph evidence or assertion: ' + row['id'])

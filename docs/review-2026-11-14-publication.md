@@ -43,6 +43,22 @@ paths, with complete bounded delivery. Twelve withheld negative controls
 passed. All original requirements and 203 obligations remain open. Directed
 navigation repairs and concept bridges retain model-derived, unreviewed status.
 
+Independent source review identified three candidate hardening issues:
+concept-conflict acceptance was too broad, a resolver work-budget signal was
+ignored and the collector's three-minute window could not accommodate the
+largest 331-call package at 750 ms pacing. The corrected candidate restricts
+admitted conflict fields and origins, explicitly marks exhausted resolution as
+incomplete and retains a bounded ten-minute session with unchanged 30-second
+call and 8 KiB response limits. New mutation and paced regression tests pass.
+The first trial is preserved at its exact producer commit and replayed in a
+disposable tree; the corrected candidate has its own freeze and regression
+receipt. No fresh blind evaluation is claimed.
+
+The first PR CI attempt failed before Python tests because Ubuntu 26.04 lacks
+the pinned setup-python 3.12.11 distribution. CI and Pages runners are pinned
+to Ubuntu 24.04; no dependency or Python upgrade is introduced. The original
+failure remains in the PR's Actions history.
+
 ## Release identity
 
 The current DWP baseline already has the annotated tag

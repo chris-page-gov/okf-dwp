@@ -80,6 +80,17 @@ test('unrelated resolved roots cannot satisfy another requirement', async () => 
   assert(!plan.selected.some(row => row.record.id === id('source')));
 });
 
+test('exhausted concept resolution cannot report complete retrieval even when selected paths exist', async () => {
+  const setup = await fixture({ records: [record('root'), record('source', 'evidence')],
+    assertions: [edge('root', 'source')], requirements: [requirement('route', ['root'], ['source'])],
+    resolver: () => ({ ...resolved('root')(), truncated: true }) });
+  const plan = await setup.runtime.plan('a question that exhausted concept resolution');
+  assert(plan.selected.some(row => row.record.id === id('source')));
+  assert.equal(plan.retrieval_complete, false);
+  assert.equal(plan.retrieval_status, 'incomplete');
+  assert(plan.diagnostics.some(row => row.code === 'resolution_budget'));
+});
+
 test('unresolved context guards do not admit a directed edge', async () => {
   const setup = await fixture({ records: [record('root'), record('guard'), record('source', 'evidence')],
     assertions: [edge('root', 'source', ['guard'])],
