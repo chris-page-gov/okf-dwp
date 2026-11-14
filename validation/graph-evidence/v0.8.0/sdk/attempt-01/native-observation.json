@@ -1,0 +1,87 @@
+{
+  "schema": "okf-graph-native-host-observation.v1",
+  "classification": "actual-native-plugin-host",
+  "status": "passed",
+  "scope": "representative-uc-client-observation",
+  "started_at": "2026-11-14T20:00:21.680Z",
+  "completed_at": "2026-11-14T20:01:14.186Z",
+  "origin": "https://ask-okf.crpage.chatgpt.site",
+  "route": "/mcp",
+  "deployment_binding": {
+    "service_version": "0.8.0",
+    "source_commit": "7eeded763042ddd0070f4fed834c6074149e8e2f",
+    "worker_sha256": "c5cf076b16e254657396047636709720931fcfc5220c46f8ffdbfa25982ddaa1",
+    "scope": "declared-selection-only; not remotely attested"
+  },
+  "identities": {
+    "producer_commit": "2e12f20cfd20e62a67197e7aade4ea612b873684",
+    "question_sha256": "c224ca359a090e29fbca4e58127f5e94968aab1808e2e1ae3801b395a39eb3e8",
+    "graph_sha256": "ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426",
+    "engine_id": "urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42",
+    "plan_id": "urn:sha256:dc6f63b47864c1fd81781d3f4459ae08e4a611150470a509a494198582547a39",
+    "package_sha256": "ce30679c784930b4db9a0ec9cdc6b88a3dfdf99ffab86c51ca94f07f4ffd2406"
+  },
+  "identity_sources": {
+    "producer_commit": "declared pinned producer; graph digest matches the native result",
+    "graph_sha256": "observed native results",
+    "engine_id": "observed native results",
+    "plan_id": "observed native results",
+    "package_sha256": "observed manifest; native full package not reconstructed"
+  },
+  "discovery": {
+    "tool_names": [
+      "plan_okf_evidence",
+      "read_okf_planned_evidence"
+    ],
+    "tool_rows_sha256": null
+  },
+  "counts": {
+    "observed_tool_calls": 5,
+    "max_mcp_result_json_bytes": 6370,
+    "continuation_calls": 0
+  },
+  "source_text_checks": [
+    {
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000055420-000-9e9c31f56b39",
+      "source_text_sha256": "24682e686930781dfa1b19a81c090129991d1b1d89cd6d92ad2e781bb90b6e30",
+      "expected_source_text_sha256": "24682e686930781dfa1b19a81c090129991d1b1d89cd6d92ad2e781bb90b6e30",
+      "matched": true
+    },
+    {
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6",
+      "source_text_sha256": "a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4",
+      "expected_source_text_sha256": "a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4",
+      "matched": true
+    },
+    {
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000023318-000-bec866c4cfa0",
+      "source_text_sha256": "2aa85228042811fecbcff1d80e4de24760b4f6acd73aee98473dec6de4795cf1",
+      "expected_source_text_sha256": "2aa85228042811fecbcff1d80e4de24760b4f6acd73aee98473dec6de4795cf1",
+      "matched": true
+    },
+    {
+      "record_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1",
+      "source_text_sha256": "7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca",
+      "expected_source_text_sha256": "7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca",
+      "matched": true
+    }
+  ],
+  "gates": {
+    "manifest_continuation": "passed",
+    "source_text_hashes": "passed",
+    "no_truncated_tool_output": "passed"
+  },
+  "transport_scope": "MCP result JSON bytes observed by connector; not HTTP envelope bytes",
+  "full_matrix_claimed": false,
+  "raw_credentials": false,
+  "raw_observation": {
+    "path": "native-results.json",
+    "bytes": 34574,
+    "sha256": "9aff7ec74475a3b7f4b73c763d6b83c4eb239ab1ed5e0ce12ddbf058767ee748"
+  },
+  "limitations": [
+    "Representative native source-text check only; not the complete SDK matrix.",
+    "Native results do not independently attest service version, source commit or hosted Worker bytes.",
+    "Source retrieval does not establish an award date, current legal applicability, specialist review, human accessibility acceptance or Voice compatibility."
+  ]
+}

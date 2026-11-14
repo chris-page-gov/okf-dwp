@@ -1,0 +1,320 @@
+{
+  "schema": "okf-graph-native-host-raw-observation.v1",
+  "classification": "actual-native-plugin-host",
+  "host_scope": "current primary Codex conversation",
+  "started_at": "2026-11-14T20:00:21.680Z",
+  "completed_at": "2026-11-14T20:01:14.186Z",
+  "question": "Where a child is awarded the highest-rate care component of DLA from 26 January 2025, but the change is reported to Universal Credit on 28 March 2026, what is the effective date of the higher disabled-child addition, and from which assessment period should it be paid?",
+  "calls": [
+    {
+      "tool": "plan_okf_evidence",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "question": "Where a child is awarded the highest-rate care component of DLA from 26 January 2025, but the change is reported to Universal Credit on 28 March 2026, what is the effective date of the higher disabled-child addition, and from which assessment period should it be paid?",
+        "delivery_bytes": 8192
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"schema\":\"okf-graph-evidence-manifest.v1\",\"plan_id\":\"urn:sha256:dc6f63b47864c1fd81781d3f4459ae08e4a611150470a509a494198582547a39\",\"graph_sha256\":\"ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426\",\"engine_id\":\"urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42\",\"evidence_status\":\"insufficient\",\"ai_answer\":null,\"retrieval_complete\":true,\"assembly_truncated\":false,\"package_sha256\":\"ce30679c784930b4db9a0ec9cdc6b88a3dfdf99ffab86c51ca94f07f4ffd2406\",\"counts\":{\"records\":8,\"source_records\":4,\"relationships\":4,\"requirements\":2,\"diagnostics\":7},\"records\":[{\"id\":\"https://chris-page-gov.github.io/okf-dwp/id/retrieval-intent/disabled-child-qualification\",\"label\":\"Disabled-child addition conditions\",\"kind\":\"concept\",\"text_sha256\":\"0393c6cf133f3c113c81b49a3dd70d546fb6c79daf89166e887b22e92826e1c1\",\"text_characters\":85},{\"id\":\"https://chris-page-gov.github.io/okf-dwp/id/retrieval-intent/other-benefit-timing\",\"label\":\"Timing after another benefit award or alteration\",\"kind\":\"concept\",\"text_sha256\":\"d78346743fca27d2b141af345215dcd7d7046c20ea8f7956d6ead94c2b68362a\",\"text_characters\":53},{\"id\":\"https://chris-page-gov.github.io/okf-dwp/id/staff-domain/dla\",\"label\":\"Disability Living Allowance\",\"kind\":\"concept\",\"text_sha256\":\"e7a82e76de08b5a677fa239b6efc495761858cbbf4a7d5915ba4d1b152fe857d\",\"text_characters\":150},{\"id\":\"https://chris-page-gov.github.io/okf-dwp/id/staff-domain/universal-credit\",\"label\":\"Universal Credit\",\"kind\":\"concept\",\"text_sha256\":\"73eaa378c7a1942ac01afb4b51df46dedfe48abfeba73fc58208230385cd5af8\",\"text_characters\":235},{\"id\":\"https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000055420-000-9e9c31f56b39\",\"label\":\"Chapter A4: Supersession, suspension and termination — A4352 — Decisions advantageous to the claimant\",\"kind\":\"evidence\",\"text_sha256\":\"24682e686930781dfa1b19a81c090129991d1b1d89cd6d92ad2e781bb90b6e30\",\"text_characters\":736},{\"id\":\"https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6\",\"label\":\"Chapter A4: Supersession, suspension and termination — A4361 — UC\",\"kind\":\"evidence\",\"text_sha256\":\"a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4\",\"text_characters\":2068},{\"id\":\"https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000023318-000-bec866c4cfa0\",\"label\":\"Chapter F1: Child element — F1120 — Disabled child addition\",\"kind\":\"evidence\",\"text_sha256\":\"2aa85228042811fecbcff1d80e4de24760b4f6acd73aee98473dec6de4795cf1\",\"text_characters\":389},{\"id\":\"https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1\",\"label\":\"Chapter F1: Child element — F1123 — Disabled child addition\",\"kind\":\"evidence\",\"text_sha256\":\"7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca\",\"text_characters\":751}],\"delivery\":{\"offset\":0,\"next_offset\":null,\"total\":8,\"max_bytes\":8192,\"used_bytes\":3047}}"
+          }
+        ],
+        "structuredContent": {
+          "schema": "okf-graph-evidence-manifest.v1",
+          "plan_id": "urn:sha256:dc6f63b47864c1fd81781d3f4459ae08e4a611150470a509a494198582547a39",
+          "graph_sha256": "ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426",
+          "engine_id": "urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42",
+          "evidence_status": "insufficient",
+          "ai_answer": null,
+          "retrieval_complete": true,
+          "assembly_truncated": false,
+          "package_sha256": "ce30679c784930b4db9a0ec9cdc6b88a3dfdf99ffab86c51ca94f07f4ffd2406",
+          "counts": {
+            "records": 8,
+            "source_records": 4,
+            "relationships": 4,
+            "requirements": 2,
+            "diagnostics": 7
+          },
+          "records": [
+            {
+              "id": "https://chris-page-gov.github.io/okf-dwp/id/retrieval-intent/disabled-child-qualification",
+              "label": "Disabled-child addition conditions",
+              "kind": "concept",
+              "text_sha256": "0393c6cf133f3c113c81b49a3dd70d546fb6c79daf89166e887b22e92826e1c1",
+              "text_characters": 85
+            },
+            {
+              "id": "https://chris-page-gov.github.io/okf-dwp/id/retrieval-intent/other-benefit-timing",
+              "label": "Timing after another benefit award or alteration",
+              "kind": "concept",
+              "text_sha256": "d78346743fca27d2b141af345215dcd7d7046c20ea8f7956d6ead94c2b68362a",
+              "text_characters": 53
+            },
+            {
+              "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/dla",
+              "label": "Disability Living Allowance",
+              "kind": "concept",
+              "text_sha256": "e7a82e76de08b5a677fa239b6efc495761858cbbf4a7d5915ba4d1b152fe857d",
+              "text_characters": 150
+            },
+            {
+              "id": "https://chris-page-gov.github.io/okf-dwp/id/staff-domain/universal-credit",
+              "label": "Universal Credit",
+              "kind": "concept",
+              "text_sha256": "73eaa378c7a1942ac01afb4b51df46dedfe48abfeba73fc58208230385cd5af8",
+              "text_characters": 235
+            },
+            {
+              "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000055420-000-9e9c31f56b39",
+              "label": "Chapter A4: Supersession, suspension and termination — A4352 — Decisions advantageous to the claimant",
+              "kind": "evidence",
+              "text_sha256": "24682e686930781dfa1b19a81c090129991d1b1d89cd6d92ad2e781bb90b6e30",
+              "text_characters": 736
+            },
+            {
+              "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6",
+              "label": "Chapter A4: Supersession, suspension and termination — A4361 — UC",
+              "kind": "evidence",
+              "text_sha256": "a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4",
+              "text_characters": 2068
+            },
+            {
+              "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000023318-000-bec866c4cfa0",
+              "label": "Chapter F1: Child element — F1120 — Disabled child addition",
+              "kind": "evidence",
+              "text_sha256": "2aa85228042811fecbcff1d80e4de24760b4f6acd73aee98473dec6de4795cf1",
+              "text_characters": 389
+            },
+            {
+              "id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1",
+              "label": "Chapter F1: Child element — F1123 — Disabled child addition",
+              "kind": "evidence",
+              "text_sha256": "7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca",
+              "text_characters": 751
+            }
+          ],
+          "delivery": {
+            "offset": 0,
+            "next_offset": null,
+            "total": 8,
+            "max_bytes": 8192,
+            "used_bytes": 3047
+          }
+        },
+        "isError": false
+      },
+      "observed_at": "2026-11-14T20:00:24.559Z",
+      "mcp_result_json_bytes": 6370
+    },
+    {
+      "tool": "read_okf_planned_evidence",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "question": "Where a child is awarded the highest-rate care component of DLA from 26 January 2025, but the change is reported to Universal Credit on 28 March 2026, what is the effective date of the higher disabled-child addition, and from which assessment period should it be paid?",
+        "graph_sha256": "ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426",
+        "engine_id": "urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42",
+        "plan_id": "urn:sha256:dc6f63b47864c1fd81781d3f4459ae08e4a611150470a509a494198582547a39",
+        "section": "record_text",
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000055420-000-9e9c31f56b39",
+        "offset": 0,
+        "delivery_bytes": 8192
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"schema\":\"okf-graph-evidence-read.v1\",\"plan_id\":\"urn:sha256:dc6f63b47864c1fd81781d3f4459ae08e4a611150470a509a494198582547a39\",\"graph_sha256\":\"ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426\",\"engine_id\":\"urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42\",\"evidence_status\":\"insufficient\",\"ai_answer\":null,\"section\":\"record_text\",\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000055420-000-9e9c31f56b39\",\"character_unit\":\"utf-16-code-units\",\"total_characters\":736,\"content_sha256\":\"24682e686930781dfa1b19a81c090129991d1b1d89cd6d92ad2e781bb90b6e30\",\"offset\":0,\"end_offset\":736,\"next_offset\":null,\"data\":\"Change notified outside the time limits\\n\\nA4352 Where an advantageous change of circumstances is notified later than one month after it\\noccurred, or for UC after the end of the assessment period in which the change occurred (or such longer\\nperiod as the DM may have allowed under A4310 - A4315) then the effective date of the supersession\\nwill be\\n\\n\\n1. for ESA and JSA1, from the beginning of the benefit week in which the notification was made\\n\\n\\n2. for PIP2, from the date of notification of the change (but see A4353)\\n\\n\\n3. for UC3, from the first day of the AP in which the notification was made (but see A4360 - A4361)\\n\\n\\n      1 UC, PIP, JSA & ESA (D&A) Regs Sch 1, part 1, para 6; 2 Sch 1, part 2, para 14; 3 Sch 1, part 3, para 21\\n\\n\\n\",\"delivery\":{\"max_bytes\":8192,\"used_bytes\":1532}}"
+          }
+        ],
+        "structuredContent": {
+          "schema": "okf-graph-evidence-read.v1",
+          "plan_id": "urn:sha256:dc6f63b47864c1fd81781d3f4459ae08e4a611150470a509a494198582547a39",
+          "graph_sha256": "ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426",
+          "engine_id": "urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42",
+          "evidence_status": "insufficient",
+          "ai_answer": null,
+          "section": "record_text",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000055420-000-9e9c31f56b39",
+          "character_unit": "utf-16-code-units",
+          "total_characters": 736,
+          "content_sha256": "24682e686930781dfa1b19a81c090129991d1b1d89cd6d92ad2e781bb90b6e30",
+          "offset": 0,
+          "end_offset": 736,
+          "next_offset": null,
+          "data": "Change notified outside the time limits\n\nA4352 Where an advantageous change of circumstances is notified later than one month after it\noccurred, or for UC after the end of the assessment period in which the change occurred (or such longer\nperiod as the DM may have allowed under A4310 - A4315) then the effective date of the supersession\nwill be\n\n\n1. for ESA and JSA1, from the beginning of the benefit week in which the notification was made\n\n\n2. for PIP2, from the date of notification of the change (but see A4353)\n\n\n3. for UC3, from the first day of the AP in which the notification was made (but see A4360 - A4361)\n\n\n      1 UC, PIP, JSA & ESA (D&A) Regs Sch 1, part 1, para 6; 2 Sch 1, part 2, para 14; 3 Sch 1, part 3, para 21\n\n\n",
+          "delivery": {
+            "max_bytes": 8192,
+            "used_bytes": 1532
+          }
+        },
+        "isError": false
+      },
+      "observed_at": "2026-11-14T20:01:06.874Z",
+      "mcp_result_json_bytes": 3216
+    },
+    {
+      "tool": "read_okf_planned_evidence",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "question": "Where a child is awarded the highest-rate care component of DLA from 26 January 2025, but the change is reported to Universal Credit on 28 March 2026, what is the effective date of the higher disabled-child addition, and from which assessment period should it be paid?",
+        "graph_sha256": "ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426",
+        "engine_id": "urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42",
+        "plan_id": "urn:sha256:dc6f63b47864c1fd81781d3f4459ae08e4a611150470a509a494198582547a39",
+        "section": "record_text",
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6",
+        "offset": 0,
+        "delivery_bytes": 8192
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"schema\":\"okf-graph-evidence-read.v1\",\"plan_id\":\"urn:sha256:dc6f63b47864c1fd81781d3f4459ae08e4a611150470a509a494198582547a39\",\"graph_sha256\":\"ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426\",\"engine_id\":\"urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42\",\"evidence_status\":\"insufficient\",\"ai_answer\":null,\"section\":\"record_text\",\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6\",\"character_unit\":\"utf-16-code-units\",\"total_characters\":2068,\"content_sha256\":\"a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4\",\"offset\":0,\"end_offset\":2068,\"next_offset\":null,\"data\":\"UC and award of other benefits\\n\\nA4361 In the case of UC where the claimant or a member of their family becomes entitled to another\\nrelevant benefit, ceases to be entitled or the rate of another such benefit alters then the superseding\\n\\ndecision takes effect1 from the first day of the assessment period in which entitlement to the other\\nbenefit or an alteration in its rate arises or entitlement ends.\\n\\n\\n 1 SS Act 98, s 8(3); DAWAP(S)Regs, reg 2; DACYP (S)Regs, reg 2; UC, PIP, JSA & ESA (D&A) Regs, Sch 1,\\n                                                                                 Part 4, para 31(1) & 31(2)(a)\\n\\n\\nExample 1\\n\\n\\nSam has been in receipt of UC from 21.11.19. On 28.5.20 she was awarded CA from 30.3.20 meaning that\\nshe is also entitled to the carer element in UC. Sam didn't notify the change until 24.9.20. The\\nsupersession effective date rule means that she did not have to report the change within a certain\\nperiod. The UC award is superseded on the grounds of a relevant change of circumstances and the carer\\nelement is awarded from 21.3.20.\\n\\n\\nExample 2\\n\\n\\nConnor has been in receipt of UC from 14.12.18. On 11.5.21 his daughter was awarded DLA at the middle\\nrate from 8.2.21. He didn't notify the change until 26.5.21. The DM is satisfied that Connor had regular\\nand substantial caring responsibilities for a severely disabled person since 8.2.21 and so there is a clear\\nand direct link between the award of DLA and entitlement to the carer element. The supersession\\neffective date rule means that he did not have to report the change within a certain period. The UC award\\nis superseded on the grounds of a relevant change of circumstances and the carer element is awarded\\nfrom 14.1.21.\\n\\n\\nExample 3\\n\\n\\nMatt is in receipt of UC and JSA. He starts part time work and receives payment from this employment in\\nthe final week of his assessment period. His award of JSA is terminated. The DM supersedes the award\\n\\nof UC from the first day of the assessment period so that JSA is no longer taken into account when\\ndetermining the amount of UC payable.\\n\\n\\n\",\"delivery\":{\"max_bytes\":8192,\"used_bytes\":2891}}"
+          }
+        ],
+        "structuredContent": {
+          "schema": "okf-graph-evidence-read.v1",
+          "plan_id": "urn:sha256:dc6f63b47864c1fd81781d3f4459ae08e4a611150470a509a494198582547a39",
+          "graph_sha256": "ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426",
+          "engine_id": "urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42",
+          "evidence_status": "insufficient",
+          "ai_answer": null,
+          "section": "record_text",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6",
+          "character_unit": "utf-16-code-units",
+          "total_characters": 2068,
+          "content_sha256": "a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4",
+          "offset": 0,
+          "end_offset": 2068,
+          "next_offset": null,
+          "data": "UC and award of other benefits\n\nA4361 In the case of UC where the claimant or a member of their family becomes entitled to another\nrelevant benefit, ceases to be entitled or the rate of another such benefit alters then the superseding\n\ndecision takes effect1 from the first day of the assessment period in which entitlement to the other\nbenefit or an alteration in its rate arises or entitlement ends.\n\n\n 1 SS Act 98, s 8(3); DAWAP(S)Regs, reg 2; DACYP (S)Regs, reg 2; UC, PIP, JSA & ESA (D&A) Regs, Sch 1,\n                                                                                 Part 4, para 31(1) & 31(2)(a)\n\n\nExample 1\n\n\nSam has been in receipt of UC from 21.11.19. On 28.5.20 she was awarded CA from 30.3.20 meaning that\nshe is also entitled to the carer element in UC. Sam didn't notify the change until 24.9.20. The\nsupersession effective date rule means that she did not have to report the change within a certain\nperiod. The UC award is superseded on the grounds of a relevant change of circumstances and the carer\nelement is awarded from 21.3.20.\n\n\nExample 2\n\n\nConnor has been in receipt of UC from 14.12.18. On 11.5.21 his daughter was awarded DLA at the middle\nrate from 8.2.21. He didn't notify the change until 26.5.21. The DM is satisfied that Connor had regular\nand substantial caring responsibilities for a severely disabled person since 8.2.21 and so there is a clear\nand direct link between the award of DLA and entitlement to the carer element. The supersession\neffective date rule means that he did not have to report the change within a certain period. The UC award\nis superseded on the grounds of a relevant change of circumstances and the carer element is awarded\nfrom 14.1.21.\n\n\nExample 3\n\n\nMatt is in receipt of UC and JSA. He starts part time work and receives payment from this employment in\nthe final week of his assessment period. His award of JSA is terminated. The DM supersedes the award\n\nof UC from the first day of the assessment period so that JSA is no longer taken into account when\ndetermining the amount of UC payable.\n\n\n",
+          "delivery": {
+            "max_bytes": 8192,
+            "used_bytes": 2891
+          }
+        },
+        "isError": false
+      },
+      "observed_at": "2026-11-14T20:01:09.375Z",
+      "mcp_result_json_bytes": 5959
+    },
+    {
+      "tool": "read_okf_planned_evidence",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "question": "Where a child is awarded the highest-rate care component of DLA from 26 January 2025, but the change is reported to Universal Credit on 28 March 2026, what is the effective date of the higher disabled-child addition, and from which assessment period should it be paid?",
+        "graph_sha256": "ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426",
+        "engine_id": "urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42",
+        "plan_id": "urn:sha256:dc6f63b47864c1fd81781d3f4459ae08e4a611150470a509a494198582547a39",
+        "section": "record_text",
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000023318-000-bec866c4cfa0",
+        "offset": 0,
+        "delivery_bytes": 8192
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"schema\":\"okf-graph-evidence-read.v1\",\"plan_id\":\"urn:sha256:dc6f63b47864c1fd81781d3f4459ae08e4a611150470a509a494198582547a39\",\"graph_sha256\":\"ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426\",\"engine_id\":\"urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42\",\"evidence_status\":\"insufficient\",\"ai_answer\":null,\"section\":\"record_text\",\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000023318-000-bec866c4cfa0\",\"character_unit\":\"utf-16-code-units\",\"total_characters\":389,\"content_sha256\":\"2aa85228042811fecbcff1d80e4de24760b4f6acd73aee98473dec6de4795cf1\",\"offset\":0,\"end_offset\":389,\"next_offset\":null,\"data\":\"Disabled child addition\\n\\nF1120 In addition to the child element described at F1055, a further amount is included in the calculation\\n\\nof the UC maximum amount for each child or qualifying young person who is disabled 1. This will be\\nawarded at either a lower or a higher rate.\\n\\n\\n                                                                                        1 UC Regs, reg 24(2)\\n\\n\\n\",\"delivery\":{\"max_bytes\":8192,\"used_bytes\":1176}}"
+          }
+        ],
+        "structuredContent": {
+          "schema": "okf-graph-evidence-read.v1",
+          "plan_id": "urn:sha256:dc6f63b47864c1fd81781d3f4459ae08e4a611150470a509a494198582547a39",
+          "graph_sha256": "ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426",
+          "engine_id": "urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42",
+          "evidence_status": "insufficient",
+          "ai_answer": null,
+          "section": "record_text",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000023318-000-bec866c4cfa0",
+          "character_unit": "utf-16-code-units",
+          "total_characters": 389,
+          "content_sha256": "2aa85228042811fecbcff1d80e4de24760b4f6acd73aee98473dec6de4795cf1",
+          "offset": 0,
+          "end_offset": 389,
+          "next_offset": null,
+          "data": "Disabled child addition\n\nF1120 In addition to the child element described at F1055, a further amount is included in the calculation\n\nof the UC maximum amount for each child or qualifying young person who is disabled 1. This will be\nawarded at either a lower or a higher rate.\n\n\n                                                                                        1 UC Regs, reg 24(2)\n\n\n",
+          "delivery": {
+            "max_bytes": 8192,
+            "used_bytes": 1176
+          }
+        },
+        "isError": false
+      },
+      "observed_at": "2026-11-14T20:01:11.746Z",
+      "mcp_result_json_bytes": 2495
+    },
+    {
+      "tool": "read_okf_planned_evidence",
+      "arguments": {
+        "bundle": "okf-dwp",
+        "question": "Where a child is awarded the highest-rate care component of DLA from 26 January 2025, but the change is reported to Universal Credit on 28 March 2026, what is the effective date of the higher disabled-child addition, and from which assessment period should it be paid?",
+        "graph_sha256": "ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426",
+        "engine_id": "urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42",
+        "plan_id": "urn:sha256:dc6f63b47864c1fd81781d3f4459ae08e4a611150470a509a494198582547a39",
+        "section": "record_text",
+        "record_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1",
+        "offset": 0,
+        "delivery_bytes": 8192
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"schema\":\"okf-graph-evidence-read.v1\",\"plan_id\":\"urn:sha256:dc6f63b47864c1fd81781d3f4459ae08e4a611150470a509a494198582547a39\",\"graph_sha256\":\"ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426\",\"engine_id\":\"urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42\",\"evidence_status\":\"insufficient\",\"ai_answer\":null,\"section\":\"record_text\",\"record_id\":\"https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1\",\"character_unit\":\"utf-16-code-units\",\"total_characters\":751,\"content_sha256\":\"7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca\",\"offset\":0,\"end_offset\":751,\"next_offset\":null,\"data\":\"F1123 The higher rate of disabled child addition1 is included where the child or qualifying young person is\\n\\n\\n1. entitled to the care component of DLA at the highest rate or\\n\\n\\n2. entitled to the care component of SADLA at the highest rate or\\n\\n\\n3. entitled to the care component of CDP at the highest rate or\\n\\n\\n4. entitled to the daily living component of ADP at the enhanced rate or\\n\\n\\n5. entitled to the daily living component of PIP at the enhanced rate or\\n\\n\\n6. blind2\\n\\n\\n                                                                             1 UC Regs, reg 24(2)(b); 2 reg 2\\n\\n\\n\\n\\nAdditional amount for disabled child or qualifying young person\\n\\n\\nLower rate                             £164.79\\n\\n\\nHigher rate                            £514.71\\n\\n\\n\\n\",\"delivery\":{\"max_bytes\":8192,\"used_bytes\":1565}}"
+          }
+        ],
+        "structuredContent": {
+          "schema": "okf-graph-evidence-read.v1",
+          "plan_id": "urn:sha256:dc6f63b47864c1fd81781d3f4459ae08e4a611150470a509a494198582547a39",
+          "graph_sha256": "ff51d877ed13f7089e7512224a4a8dcd356d0ae8e5964fe33349edf0a263b426",
+          "engine_id": "urn:okf:graph-engine:sha256:c75b01d322236e4c13fc1ad72a7e3424203dbae2413c4e6be64b960d8566cb42",
+          "evidence_status": "insufficient",
+          "ai_answer": null,
+          "section": "record_text",
+          "record_id": "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1",
+          "character_unit": "utf-16-code-units",
+          "total_characters": 751,
+          "content_sha256": "7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca",
+          "offset": 0,
+          "end_offset": 751,
+          "next_offset": null,
+          "data": "F1123 The higher rate of disabled child addition1 is included where the child or qualifying young person is\n\n\n1. entitled to the care component of DLA at the highest rate or\n\n\n2. entitled to the care component of SADLA at the highest rate or\n\n\n3. entitled to the care component of CDP at the highest rate or\n\n\n4. entitled to the daily living component of ADP at the enhanced rate or\n\n\n5. entitled to the daily living component of PIP at the enhanced rate or\n\n\n6. blind2\n\n\n                                                                             1 UC Regs, reg 24(2)(b); 2 reg 2\n\n\n\n\nAdditional amount for disabled child or qualifying young person\n\n\nLower rate                             £164.79\n\n\nHigher rate                            £514.71\n\n\n\n",
+          "delivery": {
+            "max_bytes": 8192,
+            "used_bytes": 1565
+          }
+        },
+        "isError": false
+      },
+      "observed_at": "2026-11-14T20:01:14.184Z",
+      "mcp_result_json_bytes": 3298
+    }
+  ],
+  "source_texts": {
+    "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000055420-000-9e9c31f56b39": {
+      "text": "Change notified outside the time limits\n\nA4352 Where an advantageous change of circumstances is notified later than one month after it\noccurred, or for UC after the end of the assessment period in which the change occurred (or such longer\nperiod as the DM may have allowed under A4310 - A4315) then the effective date of the supersession\nwill be\n\n\n1. for ESA and JSA1, from the beginning of the benefit week in which the notification was made\n\n\n2. for PIP2, from the date of notification of the change (but see A4353)\n\n\n3. for UC3, from the first day of the AP in which the notification was made (but see A4360 - A4361)\n\n\n      1 UC, PIP, JSA & ESA (D&A) Regs Sch 1, part 1, para 6; 2 Sch 1, part 2, para 14; 3 Sch 1, part 3, para 21\n\n\n",
+      "declared_text_sha256": "24682e686930781dfa1b19a81c090129991d1b1d89cd6d92ad2e781bb90b6e30",
+      "characters": 736
+    },
+    "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-a4/manual-structure-v1/source-0000059337-000-65ba8377e1e6": {
+      "text": "UC and award of other benefits\n\nA4361 In the case of UC where the claimant or a member of their family becomes entitled to another\nrelevant benefit, ceases to be entitled or the rate of another such benefit alters then the superseding\n\ndecision takes effect1 from the first day of the assessment period in which entitlement to the other\nbenefit or an alteration in its rate arises or entitlement ends.\n\n\n 1 SS Act 98, s 8(3); DAWAP(S)Regs, reg 2; DACYP (S)Regs, reg 2; UC, PIP, JSA & ESA (D&A) Regs, Sch 1,\n                                                                                 Part 4, para 31(1) & 31(2)(a)\n\n\nExample 1\n\n\nSam has been in receipt of UC from 21.11.19. On 28.5.20 she was awarded CA from 30.3.20 meaning that\nshe is also entitled to the carer element in UC. Sam didn't notify the change until 24.9.20. The\nsupersession effective date rule means that she did not have to report the change within a certain\nperiod. The UC award is superseded on the grounds of a relevant change of circumstances and the carer\nelement is awarded from 21.3.20.\n\n\nExample 2\n\n\nConnor has been in receipt of UC from 14.12.18. On 11.5.21 his daughter was awarded DLA at the middle\nrate from 8.2.21. He didn't notify the change until 26.5.21. The DM is satisfied that Connor had regular\nand substantial caring responsibilities for a severely disabled person since 8.2.21 and so there is a clear\nand direct link between the award of DLA and entitlement to the carer element. The supersession\neffective date rule means that he did not have to report the change within a certain period. The UC award\nis superseded on the grounds of a relevant change of circumstances and the carer element is awarded\nfrom 14.1.21.\n\n\nExample 3\n\n\nMatt is in receipt of UC and JSA. He starts part time work and receives payment from this employment in\nthe final week of his assessment period. His award of JSA is terminated. The DM supersedes the award\n\nof UC from the first day of the assessment period so that JSA is no longer taken into account when\ndetermining the amount of UC payable.\n\n\n",
+      "declared_text_sha256": "a3b6540962b7c6133630213b584fdf30117e574f6e5182bd4b8ff8ce63c87ef4",
+      "characters": 2068
+    },
+    "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000023318-000-bec866c4cfa0": {
+      "text": "Disabled child addition\n\nF1120 In addition to the child element described at F1055, a further amount is included in the calculation\n\nof the UC maximum amount for each child or qualifying young person who is disabled 1. This will be\nawarded at either a lower or a higher rate.\n\n\n                                                                                        1 UC Regs, reg 24(2)\n\n\n",
+      "declared_text_sha256": "2aa85228042811fecbcff1d80e4de24760b4f6acd73aee98473dec6de4795cf1",
+      "characters": 389
+    },
+    "https://chris-page-gov.github.io/okf-dwp/id/unit/adm/adm-chapter-f1/manual-structure-v1/source-0000024273-000-64312571d5f1": {
+      "text": "F1123 The higher rate of disabled child addition1 is included where the child or qualifying young person is\n\n\n1. entitled to the care component of DLA at the highest rate or\n\n\n2. entitled to the care component of SADLA at the highest rate or\n\n\n3. entitled to the care component of CDP at the highest rate or\n\n\n4. entitled to the daily living component of ADP at the enhanced rate or\n\n\n5. entitled to the daily living component of PIP at the enhanced rate or\n\n\n6. blind2\n\n\n                                                                             1 UC Regs, reg 24(2)(b); 2 reg 2\n\n\n\n\nAdditional amount for disabled child or qualifying young person\n\n\nLower rate                             £164.79\n\n\nHigher rate                            £514.71\n\n\n\n",
+      "declared_text_sha256": "7c2c3b22bbfa15c3d390442be6713ec97dd9806fafb382f98c5c3863e82319ca",
+      "characters": 751
+    }
+  },
+  "transport_scope": "MCP result JSON bytes observed by connector; not HTTP envelope bytes",
+  "full_matrix_claimed": false
+}
