@@ -711,3 +711,7 @@ The [bounded Chapter 60 reading aid](docs/reading-help-ch60.md) gives occurrence
 The [demonstration learning programme](docs/learning/README.md) adds 12 paths and 112 activities to the combined Reader, with assessed prerequisites and inspectable evidence. It is independent teaching material, not official DWP training.
 
 The [bounded reading-help legislation bridge](docs/reading-help-legislation-bridge.md) reuses the existing statutory evidence and retains three further Chapter 60 targets with separate geographical versions. The [rollout work log](docs/reading-help-rollout-work-log.md) records engineering and publication gates; candidate overlays do not silently change deployed evidence.
+
+## OKF standards and bundle discovery
+
+The [central standards register](https://github.com/chris-page-gov/okf-explorer/blob/main/docs/okf-standards.md) records current and historical OKF specifications, version-specific pins and the public bundle catalogue. Use the [machine-readable register](https://raw.githubusercontent.com/chris-page-gov/okf-explorer/main/registry/okf-standards.json) to resolve the version implemented by this repository.
