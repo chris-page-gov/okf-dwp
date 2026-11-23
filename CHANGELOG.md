@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased — standards references
+
+- Link the central current and historical OKF standards register and public bundle catalogue.
+
+
 ## Service 0.8.0 publication — 14 November 2026
 
 - Publish the reviewed bounded graph interface and retain the separate legacy
