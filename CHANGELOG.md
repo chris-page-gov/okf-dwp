@@ -1,8 +1,10 @@
 # Changelog
 
-## Unreleased — standards references
+## Unreleased
 
 - Link the central current and historical OKF standards register and public bundle catalogue.
+- Add a deterministic Core 0.3 candidate for the frozen Pension Credit pilot,
+  with a source-linked walkthrough and complete record and assertion checks.
 
 
 ## Service 0.8.0 publication — 14 November 2026
