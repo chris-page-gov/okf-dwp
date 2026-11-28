@@ -401,6 +401,8 @@ jobs:
         run: uv run --locked python scripts/build_bundle.py --check
       - name: Validate every source and semantic assertion
         run: uv run --locked python scripts/validate_bundle.py
+      - name: Verify the separate Core 0.3 pilot projection
+        run: uv run --locked python -m unittest discover -s scripts -p test_core03_pilot.py
       - name: Validate the discovery handoff
         run: uv run --locked python domain-profile/validate.py
       - name: Check retrieval and citation controls

@@ -1,6 +1,6 @@
 {
   "schema": "okf-repository-publication-contract.v1",
-  "modified": "2026-11-14",
+  "modified": "2026-11-28",
   "locale": "en-GB",
   "time_zone": "Europe/London",
   "repository": {
@@ -2457,6 +2457,8 @@
       ],
       "paths": [
         "context/**",
+        "scripts/build_core03_pilot.py",
+        "scripts/test_core03_pilot.py",
         "scripts/build_context_discovery.py",
         "scripts/build_context_corpus.py",
         "scripts/test_context_discovery.py",
@@ -2565,6 +2567,7 @@
         "scripts/test_legislation_crosswalk.py"
       ],
       "command_ids": [
+        "core03-pilot-controls",
         "context-discovery-build-check",
         "context-corpus-build-check",
         "review-navigation-check",
@@ -3484,6 +3487,19 @@
         "command": "uv run --locked python scripts/check_staff_service_observations.py",
         "source": "docs/staff-service-browser-verification.md",
         "review_status": "unreviewed",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 2
+      },
+      {
+        "id": "core03-pilot-controls",
+        "kind": "test",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python -m unittest discover -s scripts -p test_core03_pilot.py",
+        "source": "docs/core-0.3-pilot.md",
+        "review_status": "reviewed-local-guidance",
         "network": "none",
         "mutates": "none",
         "timeout_minutes": 2

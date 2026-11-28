@@ -59,6 +59,13 @@ explicit. Neither replaces the exact receipts below.
 
 <a id="current-public-release-household-evidence"></a>
 
+## Core 0.3 review candidate
+
+The [Pension Credit Core 0.3 candidate](docs/core-0.3-pilot.md) preserves
+the frozen pilot's source records, typed assertions and provenance. Its
+source, Reader projection and local walkthrough can be reproduced and
+checked against an exact manifest.
+
 ## Current public release: versioned evidence and paired review
 
 Use the **[latest recorded service publication status](docs/service-publication.md)**
